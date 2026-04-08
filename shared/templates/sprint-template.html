@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprint [N]: [Theme] | [Course Name]</title>
+  <style>
+    :root {
+      --theme-primary: #14b8a6;
+      --theme-dark: #0d9488;
+      --theme-light: #f0fdfa;
+      --text-primary: #111827;
+      --text-secondary: #6b7280;
+      --border-color: #e5e7eb;
+      --bg-white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 16px;
+      color: var(--text-primary);
+      line-height: 1.6;
+      background: #f9fafb;
+    }
+
+    /* ── Sticky Week Counter ── */
+    .week-counter {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 0;
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .week-counter strong {
+      color: var(--theme-dark);
+    }
+
+    /* ── Journey Navigation Pills ── */
+    .journey-nav {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      padding: 16px 0;
+      flex-wrap: wrap;
+    }
+
+    .journey-nav a {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-size: 0.8125rem;
+      text-decoration: none;
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      background: var(--bg-white);
+      transition: all 0.2s;
+    }
+
+    .journey-nav a:hover {
+      border-color: var(--theme-primary);
+      color: var(--theme-primary);
+    }
+
+    .journey-nav a.active {
+      background: var(--theme-primary);
+      color: white;
+      border-color: var(--theme-primary);
+    }
+
+    /* ── Sprint Header ── */
+    .sprint-header {
+      background: var(--theme-light);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 32px 24px;
+      margin: 16px 0;
+    }
+
+    .sprint-header .breadcrumb {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .sprint-header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--theme-dark);
+    }
+
+    .sprint-header .theme-statement {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .metadata-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .metadata-pills span {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+    }
+
+    /* ── Collapsible Sprint Details ── */
+    .sprint-details {
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin: 16px 0;
+      background: var(--bg-white);
+      overflow: hidden;
+    }
+
+    .sprint-details summary {
+      padding: 16px 24px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      user-select: none;
+    }
+
+    .sprint-details summary::-webkit-details-marker { display: none; }
+
+    .sprint-details summary .toggle-icon {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      transition: transform 0.2s;
+    }
+
+    .sprint-details[open] summary .toggle-icon {
+      transform: rotate(180deg);
+    }
+
+    .sprint-details-content {
+      padding: 0 24px 24px;
+    }
+
+    .sprint-details-content h3 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin: 16px 0 8px;
+      color: var(--theme-dark);
+    }
+
+    .sprint-details-content ul {
+      padding-left: 20px;
+      font-size: 0.875rem;
+      color: var(--text-primary);
+    }
+
+    .sprint-details-content ul li {
+      margin-bottom: 4px;
+    }
+
+    .sprint-details-content .assessment {
+      background: var(--theme-light);
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 0.875rem;
+      margin-top: 8px;
+    }
+
+    /* ── Content Zone ── */
+    .content-zone {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 32px 24px;
+      margin: 16px 0;
+      min-height: 200px;
+    }
+
+    .content-zone h2 {
+      font-size: 1.125rem;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+
+    .content-zone p {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 32px 0;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border-color);
+      margin-top: 32px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Week Counter -->
+  <div class="week-counter">
+    Week <strong>[X]</strong> of 10 &mdash; Sprint [N] of 4
+  </div>
+
+  <!-- Journey Navigation Pills -->
+  <nav class="journey-nav">
+    <a href="#">Orientation</a>
+    <a href="#">Sprint 1</a>
+    <a href="#">Sprint 2</a>
+    <a href="#" class="active">Sprint [N]</a>
+    <a href="#">Sprint 4</a>
+    <a href="#">Capstone</a>
+  </nav>
+
+  <!-- Sprint Header -->
+  <header class="sprint-header">
+    <div class="breadcrumb">Home / Sprint [N]</div>
+    <h1>Sprint [N]: [Theme Title]</h1>
+    <p class="theme-statement">[Sprint theme statement &mdash; what this sprint is about in one sentence]</p>
+    <div class="metadata-pills">
+      <span>Weeks [X&ndash;Y]</span>
+      <span>Scaffolding: [Level]</span>
+      <span>Stakeholder: [Type]</span>
+    </div>
+  </header>
+
+  <!-- Collapsible Sprint Details -->
+  <details class="sprint-details" open>
+    <summary>
+      Sprint details &mdash; outcomes, assessment, weeks
+      <span class="toggle-icon">&#9660;</span>
+    </summary>
+    <div class="sprint-details-content">
+      <h3>By Sprint End, You Will Have:</h3>
+      <ul>
+        <li>[Sprint outcome 1]</li>
+        <li>[Sprint outcome 2]</li>
+        <li>[Sprint outcome 3]</li>
+      </ul>
+
+      <h3>Sprint [N] Assessment</h3>
+      <div class="assessment">
+        [Assessment description &mdash; for the team to define]
+      </div>
+    </div>
+  </details>
+
+  <!-- Content Zone: Weekly Briefings -->
+  <section class="content-zone">
+    <h2>Weekly Briefing</h2>
+    <p>
+      [Weekly briefing content goes here. In the production system, this is
+      rendered dynamically from a config file. For static prototypes, fill
+      in directly.]
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    Applying AI at Work: Build Solutions with a Human Touch &mdash;
+    CTI + De Anza College
+  </footer>
+
+  <!--
+    Dynamic rendering placeholder:
+    In the production system, a JS config file defines weekly briefings,
+    dates, and sprint metadata. The static template above captures the
+    visual design intent. To make it dynamic, bring over the CTI rendering
+    system or build a new delivery approach.
+
+    <script>
+      var SPRINT_NUM = [N];
+      // ... initialization code
+    </script>
+  -->
+
+</body>
+</html>
