@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Applying AI at Work — Build Solutions with a Human Touch</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --teal-50: #f0fdfa;
+      --teal-100: #ccfbf1;
+      --teal-200: #99f6e4;
+      --teal-500: #14b8a6;
+      --teal-600: #0d9488;
+      --teal-700: #0f766e;
+      --teal-800: #115e59;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-400: #9ca3af;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+      --gray-900: #111827;
+      --sidebar-w: 260px;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      color: var(--gray-900);
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      position: fixed;
+      top: 0; left: 0;
+      width: var(--sidebar-w);
+      height: 100vh;
+      overflow-y: auto;
+      background: var(--gray-900);
+      color: var(--gray-300);
+      padding: 32px 20px 40px;
+      font-size: 0.8125rem;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar-logo { margin-bottom: 36px; }
+    .sidebar-logo .logo-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--teal-200);
+      line-height: 1.3;
+    }
+    .sidebar-logo .logo-sub {
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      margin-top: 4px;
+    }
+
+    .sidebar-section { margin-bottom: 24px; }
+    .sidebar-section-title {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gray-500);
+      margin-bottom: 8px;
+    }
+    .sidebar-section a {
+      display: block;
+      padding: 5px 0;
+      color: var(--gray-300);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .sidebar-section a:hover { color: var(--teal-200); }
+
+    .sidebar-footer {
+      margin-top: auto;
+      padding-top: 24px;
+      border-top: 1px solid var(--gray-700);
+      font-size: 0.6875rem;
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+
+    /* ── Mobile menu toggle ── */
+    .menu-toggle {
+      display: none;
+      position: fixed;
+      top: 12px; left: 12px;
+      z-index: 300;
+      background: var(--gray-900);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      width: 40px; height: 40px;
+      font-size: 1.25rem;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── Main ── */
+    .main {
+      margin-left: var(--sidebar-w);
+      min-height: 100vh;
+    }
+
+    .section {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 32px;
+    }
+
+    .section + .section { padding-top: 0; }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, var(--teal-50) 0%, #fff 60%);
+      padding: 80px 32px 64px;
+    }
+    .hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: var(--teal-100);
+      color: var(--teal-700);
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--gray-900);
+      margin-bottom: 16px;
+    }
+    .hero .subtitle {
+      font-size: 1.125rem;
+      color: var(--gray-600);
+      max-width: 600px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .hero .meta {
+      font-size: 0.8125rem;
+      color: var(--gray-400);
+      letter-spacing: 0.01em;
+    }
+
+    /* ── Section labels & titles ── */
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--teal-600);
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    .section-body {
+      font-size: 0.9375rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    /* ── Highlight box ── */
+    .highlight {
+      background: var(--teal-50);
+      border-left: 4px solid var(--teal-500);
+      padding: 20px 24px;
+      border-radius: 0 8px 8px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--teal-800);
+      line-height: 1.5;
+    }
+
+    /* ── Cards grid ── */
+    .cards { display: grid; gap: 16px; margin-bottom: 24px; }
+    .cards-2 { grid-template-columns: 1fr 1fr; }
+
+    .card {
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 24px;
+      background: #fff;
+    }
+    .card-label {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--teal-600);
+      margin-bottom: 6px;
+    }
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* Question cards */
+    .qcard {
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 20px 24px;
+      background: var(--gray-50);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .qcard-num {
+      flex-shrink: 0;
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--teal-500);
+      color: #fff;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .qcard p {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    /* ── Theory box ── */
+    .theory-box {
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .theory-box-header {
+      background: var(--gray-50);
+      padding: 16px 24px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .pillars { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+    .pillar {
+      padding: 24px;
+      border-right: 1px solid var(--gray-200);
+    }
+    .pillar:last-child { border-right: none; }
+    .pillar h4 {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--teal-700);
+      margin-bottom: 8px;
+    }
+    .pillar p {
+      font-size: 0.8125rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    /* ── Capability badges ── */
+    .badge-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .cap-badge {
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .cap-badge.meta { background: var(--teal-50); border-color: var(--teal-200); }
+    .cap-badge.cap  { background: var(--gray-50); }
+    .cap-badge h4 {
+      font-size: 0.875rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .cap-badge.meta h4 { color: var(--teal-700); }
+    .cap-badge.cap  h4 { color: var(--gray-800); }
+    .cap-badge p {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      line-height: 1.4;
+    }
+
+    .foundation-note {
+      text-align: center;
+      font-size: 0.8125rem;
+      color: var(--gray-400);
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 860px) {
+      .sidebar { transform: translateX(-100%); transition: transform 0.25s ease; }
+      .sidebar.open { transform: translateX(0); }
+      .menu-toggle { display: flex; }
+      .main { margin-left: 0; }
+      .hero { padding: 64px 20px 48px; }
+      .section { padding: 48px 20px; }
+      .cards-2 { grid-template-columns: 1fr; }
+      .pillars { grid-template-columns: 1fr; }
+      .pillar { border-right: none; border-bottom: 1px solid var(--gray-200); }
+      .pillar:last-child { border-bottom: none; }
+      .badge-row { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Mobile menu toggle -->
+<button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+
+<!-- Sidebar -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-title">Applying AI at Work</div>
+    <div class="logo-sub">A CTI + De Anza Certificate</div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Overview</div>
+    <a href="#challenge">The Challenge</a>
+    <a href="#philosophy">Course Philosophy</a>
+    <a href="#theory">Theoretical Foundation</a>
+    <a href="#approach">How It Works</a>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Course 1 — Problem Framing</div>
+    <a href="course1/README.md">Overview</a>
+    <a href="course1/structure.md">Structure</a>
+    <a href="course1/outcomes.md">Outcomes</a>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Course 2 — Building Solutions</div>
+    <a href="course2/README.md">Overview</a>
+    <a href="course2/structure.md">Structure</a>
+    <a href="course2/outcomes.md">Outcomes</a>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Frameworks</div>
+    <a href="context/frameworks.md">Framework Layers</a>
+    <a href="context/design-principles.md">Design Principles</a>
+    <a href="context/sdt-design.md">SDT Design</a>
+  </div>
+
+  <div class="sidebar-footer">
+    CTI &middot; De Anza College<br>
+    Certificate design repository
+  </div>
+</nav>
+
+<!-- Main content -->
+<div class="main">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="badge">Fall 2026 Launch</span>
+      <h1>Applying AI at Work</h1>
+      <p class="subtitle">Build Solutions with a Human Touch &mdash; a certificate for working professionals developing the judgment to direct AI strategically and create measurable value.</p>
+      <p class="meta">Two 10-week courses &middot; Online &middot; Asynchronous &middot; Built with employers</p>
+    </div>
+  </div>
+
+  <!-- The Challenge -->
+  <div class="section" id="challenge">
+    <div class="section-label">The Challenge</div>
+    <h2 class="section-title">Generic AI Training Doesn't Develop Judgment</h2>
+    <p class="section-body">
+      AI is reshaping every job. Most training teaches people to use AI tools &mdash; but tool familiarity is not the same as the judgment to direct AI in service of real work. The people who create value in an AI-augmented economy are the ones who can frame the right problems, bring institutional knowledge to bear, and direct AI toward outcomes that matter. That capability is not in the tool. It is in the person.
+    </p>
+    <div class="highlight">
+      Your employees already know your business. We teach them to direct AI with that knowledge.
+    </div>
+  </div>
+
+  <!-- Course Philosophy -->
+  <div class="section" id="philosophy">
+    <div class="section-label">Course Philosophy</div>
+    <h2 class="section-title">Superagency + Human Value</h2>
+
+    <div class="cards cards-2">
+      <div class="card">
+        <div class="card-label">Superagency</div>
+        <h3>Expanded capability</h3>
+        <p>What becomes possible when humans direct AI well: solving problems neither could solve alone. Not just doing old work faster &mdash; reaching outcomes that were previously out of scope.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Human Value</div>
+        <h3>What makes it worth amplifying</h3>
+        <p>The human contribution that AI cannot provide: judgment, organizational context, stakeholder relationships, and accountability for the consequences of decisions.</p>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="qcard">
+        <div class="qcard-num">1</div>
+        <p>What problems are now within reach that I would not have attempted before?</p>
+      </div>
+      <div class="qcard">
+        <div class="qcard-num">2</div>
+        <p>What did I bring that AI could not?</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Theoretical Foundation -->
+  <div class="section" id="theory">
+    <div class="section-label">Theoretical Foundation</div>
+    <h2 class="section-title">Self-Determination Theory as Design Principle</h2>
+
+    <div class="theory-box">
+      <div class="theory-box-header">Three Psychological Needs</div>
+      <div class="pillars">
+        <div class="pillar">
+          <h4>Autonomy</h4>
+          <p>Participants choose their own problem from their own workplace. They are not all working the same scenario.</p>
+        </div>
+        <div class="pillar">
+          <h4>Competence</h4>
+          <p>Visible, calibrated evidence of growing capability throughout the course &mdash; not just at the end.</p>
+        </div>
+        <div class="pillar">
+          <h4>Relatedness</h4>
+          <p>Real human connection &mdash; real stakeholders, real peers. Not simulated, not AI-roleplayed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- How It Works -->
+  <div class="section" id="approach">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">Two Courses, Real Problems, Real Stakeholders</h2>
+    <p class="section-body">
+      Each course is 10 weeks. Week 1 is orientation &mdash; participants choose their problem, meet their cohort, and set the terms of their work. Weeks 2 through 9 are four two-week sprints, each building capability through real work on real problems. Week 10 is a capstone where participants demonstrate their work to peers and stakeholders. Throughout, participants engage real stakeholders in their organizations and develop the meta-habits and capabilities to direct AI in service of value that matters.
+    </p>
+
+    <div class="section-label" style="margin-top:32px;">Meta-Habits &mdash; How You Show Up</div>
+    <div class="badge-row">
+      <div class="cap-badge meta">
+        <h4>Slow Down</h4>
+        <p>Make space for thinking before acting. Speed without judgment produces volume, not value.</p>
+      </div>
+      <div class="cap-badge meta">
+        <h4>Know Yourself</h4>
+        <p>Understand your assumptions, strengths, and gaps. Know what you bring that AI does not.</p>
+      </div>
+      <div class="cap-badge meta">
+        <h4>Take the Lead</h4>
+        <p>Direct AI rather than be led by it. Own the outcomes and the human consequences.</p>
+      </div>
+    </div>
+
+    <div class="section-label">Capabilities &mdash; What You Develop</div>
+    <div class="badge-row">
+      <div class="cap-badge cap">
+        <h4>Self-Directed Learner</h4>
+        <p>Identify what you don't know, design how to learn it, use AI as a learning partner.</p>
+      </div>
+      <div class="cap-badge cap">
+        <h4>Integrative Solver</h4>
+        <p>Synthesize across stakeholders and perspectives to find solutions that hold.</p>
+      </div>
+      <div class="cap-badge cap">
+        <h4>Adaptive Builder</h4>
+        <p>Test assumptions, build prototypes, pivot on evidence, iterate toward working solutions.</p>
+      </div>
+    </div>
+
+    <div class="foundation-note">
+      The foundational layer: reading closely, writing to think, listening actively, and talking to test ideas &mdash; the mechanisms of thought itself.
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
