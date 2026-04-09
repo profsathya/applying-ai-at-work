@@ -20,6 +20,6 @@ Real human connection — real stakeholders in their workplace, real peers in th
 
 Relatedness is the most commonly under-designed of the three needs. It is easy to design for autonomy (let people choose) and competence (give feedback). Designing for authentic relatedness in an asynchronous online format is harder, and therefore more important to get right.
 
-The Integrative Solver meta-habit specifically depends on authentic relatedness. A participant cannot develop the capability to synthesize across stakeholder perspectives without actually talking to stakeholders. AI can simulate a conversation, but it cannot simulate a relationship. The course must create structures that require real human interaction — with workplace stakeholders, with peers, and potentially with instructors or mentors.
+The Integrative Solver capability specifically depends on authentic relatedness. A participant cannot develop the capability to synthesize across stakeholder perspectives without actually talking to stakeholders. AI can simulate a conversation, but it cannot simulate a relationship. The course must create structures that require real human interaction — with workplace stakeholders, with peers, and potentially with instructors or mentors.
 
 Relatedness is a design priority for this certificate. It should receive explicit attention in every sprint design, not be treated as something that will happen naturally.

@@ -6,13 +6,21 @@ These are CTI internal terms used in course design and team communication. They 
 
 **Read / Write / Listen / Talk** — The foundational layer of the CTI framework. Not communication skills, but the mechanisms of thought: reading closely, writing to think, listening actively, and talking to test ideas. All other frameworks rest on these.
 
-**Self-Directed Learner (SDL)** — A meta-habit. Identifies what they don't know, designs how to learn it, and uses AI as a learning partner rather than a shortcut around learning.
+**Slow Down** — A meta-habit. Resist the speed temptation that AI creates. Make space for thinking before acting. Do not accept the first AI output without consideration.
 
-**Integrative Solver (IS)** — A meta-habit. Synthesizes across stakeholders, domains, and perspectives. Requires authentic relatedness with real people.
+**Know Yourself** — A meta-habit. Develop awareness of your own assumptions, biases, gaps, and strengths. Know what you bring that AI does not.
 
-**Adaptive Builder (AB)** — A meta-habit. Tests assumptions, builds prototypes, pivots on evidence, and iterates toward working solutions.
+**Take the Lead** — A meta-habit. Direct AI rather than be led by it. Take responsibility for outcomes, decisions, and the human consequences of your work.
 
-**Meta-habits** — Collective term for SDL, IS, and AB. These are not skills to acquire but ways a capable practitioner operates in an AI-augmented environment. All three work together and rest on the Read/Write/Listen/Talk foundation.
+**Meta-habits** — Collective term for Slow Down, Know Yourself, and Take the Lead. Behavioral practices that shape how a person engages with thinking, learning, and AI. Practiced repeatedly, not learned once.
+
+**Self-Directed Learner (SDL)** — A capability. Identifies what they don't know, designs how to learn it, and uses AI as a learning partner rather than a shortcut around learning.
+
+**Integrative Solver (IS)** — A capability. Synthesizes across stakeholders, domains, and perspectives. Requires authentic relatedness with real people.
+
+**Adaptive Builder (AB)** — A capability. Tests assumptions, builds prototypes, pivots on evidence, and iterates toward working solutions.
+
+**Capabilities** — Collective term for SDL, IS, and AB. What a participant develops over time by practicing the meta-habits in real work. The capabilities depend on the meta-habits.
 
 **Symbiotic Thinking** — Treating AI as a cognitive partner, not a tool. The human and AI each contribute things the other cannot, and the result is greater than either alone.
 

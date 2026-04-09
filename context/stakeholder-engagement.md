@@ -14,8 +14,8 @@ Working professionals have access to actual people in their organizations — ma
 
 **AI may help prepare for or analyze stakeholder conversations, but does not replace them.** AI can help a participant draft interview questions, organize themes from stakeholder feedback, or prepare a presentation. These are legitimate uses of AI as a partner. But AI cannot replace the conversation itself. The human relationship, the trust, the ability to read the room — these are human contributions.
 
-## Connection to the Integrative Solver meta-habit
+## Connection to the Integrative Solver capability
 
-The Integrative Solver meta-habit requires authentic human relatedness. It is the capability to synthesize across stakeholder perspectives, which means actually holding those perspectives — not reading about them, not having AI summarize them, but hearing them from real people and making sense of the tensions between them.
+The Integrative Solver capability requires authentic human relatedness. It is the capability to synthesize across stakeholder perspectives, which means actually holding those perspectives — not reading about them, not having AI summarize them, but hearing them from real people and making sense of the tensions between them.
 
-Stakeholder engagement is one of the primary mechanisms through which participants develop integrative solving capability. If the course allows simulated stakeholders as the default, it undermines this meta-habit at its foundation.
+Stakeholder engagement is one of the primary mechanisms through which participants develop integrative solving capability. If the course allows simulated stakeholders as the default, it undermines this capability at its foundation.
