@@ -156,10 +156,10 @@
       "submission_type": "none",
       "publish": true,
       "body_brief": "Module header for Sprint 1 (Weeks 2-3). Theme: move from a vague concern to a first articulated problem statement, with one real stakeholder conversation behind it.",
-      "status": "pending",
+      "status": "done",
       "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "canvas_module_id": 1884,
+      "last_built_at": "2026-04-20T15:13:35"
     },
     {
       "id": 8,
