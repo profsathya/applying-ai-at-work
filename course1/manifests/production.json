@@ -96,6 +96,14 @@
       "content_hash": "d6197d61db42dc088747680bf7e0c5c4cfa2bf5696fd6d9d65dc5be90d9180a7",
       "last_pushed": "2026-04-20T22:13:26+00:00"
     },
+    "course1/sprints/sprint-2/scope-and-boundaries-draft.md": {
+      "canvas_id": 6697,
+      "canvas_module_id": 1885,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "3626eb06d0191fa07bcf054c1f728172d1c89ac1f1f46ba2e10b13eb7b767a6a",
+      "last_pushed": "2026-04-20T22:26:53+00:00"
+    },
     "course1/sprints/sprint-2/sprint-2-briefing.md": {
       "canvas_id": 3343,
       "canvas_module_id": 1885,
@@ -119,5 +127,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:25:11+00:00"
+  "last_sync": "2026-04-20T22:26:53+00:00"
 }
