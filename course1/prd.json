@@ -475,10 +475,10 @@
       "submission_type": "none",
       "publish": true,
       "body_brief": "Brief the sprint. The participant will examine whether AI actually adds value to this problem or is being forced in (AI fit analysis), draft concrete success criteria, test those criteria with a stakeholder, and produce a clean map of what AI contributes vs. what the participant must contribute. Be direct: if AI does not belong in the solution, the frame should say so.",
-      "status": "pending",
-      "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "status": "done",
+      "canvas_id": 3344,
+      "canvas_module_id": 1886,
+      "last_built_at": "2026-04-20T22:36:23Z"
     },
     {
       "id": 21,

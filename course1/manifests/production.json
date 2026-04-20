@@ -143,6 +143,14 @@
       "canvas_type": "module_header",
       "content_hash": "f19c60e8ae513d06c0d9ca36ed67f2adc155d0498068f134380edb275e858f3b",
       "last_pushed": "2026-04-20T22:34:29+00:00"
+    },
+    "course1/sprints/sprint-3/sprint-3-briefing.md": {
+      "canvas_id": 3344,
+      "canvas_module_id": 1886,
+      "canvas_page_url": "sprint-3-briefing",
+      "canvas_type": "page",
+      "content_hash": "2f593086a72f5832198cf433ffe0c30968863c59cdbe122b7d9897d71c54790b",
+      "last_pushed": "2026-04-20T22:36:13+00:00"
     }
   },
   "instance": {
@@ -151,5 +159,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:34:29+00:00"
+  "last_sync": "2026-04-20T22:36:13+00:00"
 }
