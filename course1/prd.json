@@ -324,10 +324,10 @@
       "submission_type": "none",
       "publish": true,
       "body_brief": "Brief the sprint. The participant will draft an explicit scope (what counts as part of this problem, what does not), interview a stakeholder whose relationship to the problem is different from the Sprint 1 contact (an authority figure, an affected end user, or a cross-functional partner), and synthesize what the two stakeholder perspectives imply for the frame. Note that disagreement between stakeholders is expected and useful.",
-      "status": "pending",
-      "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "status": "done",
+      "canvas_id": 3343,
+      "canvas_module_id": 1885,
+      "last_built_at": "2026-04-20T15:40:00Z"
     },
     {
       "id": 15,
