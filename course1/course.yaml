@@ -1,0 +1,8 @@
+course:
+  slug: course1
+  name: "Problem Framing with AI"
+  code: "AIW-101"
+  term: "Fall 2026"
+  partner: "De Anza College"
+  canvas_course_id: 180  # populated from COURSE1_CANVAS_ID at push time
+  planned_at: "2026-04-20T15:00:00Z"

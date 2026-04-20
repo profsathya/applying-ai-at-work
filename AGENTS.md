@@ -6,8 +6,8 @@ Keep entries concise. One line per learning. Reference specific files or PRs whe
 
 ## Build history
 
-(Append a one-line summary after each course build completes.)
+- 2026-04-20: PRD written for course1, 35 artifacts across 6 sprints (sprint-0 orientation, sprint-1..4 middle, sprint-5 capstone).
 
 ## Learnings
 
-(Append patterns worth preserving across iterations.)
+- Schemas `schema/prd.schema.json` and `schema/frontmatter.schema.json` originally defined `sprint: minimum: 1`, which conflicted with the CLAUDE.md convention that orientation is `sprint-0` and capstone is `sprint-5`. Relaxed to `minimum: 0, maximum: 5` during course1 planning.
