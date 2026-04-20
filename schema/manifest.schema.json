@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Canvas Instance Manifest",
+  "description": "Per-canvas-instance state: which local MD files map to which canvas IDs.",
+  "type": "object",
+  "required": ["instance", "artifacts"],
+  "properties": {
+    "instance": {
+      "type": "object",
+      "required": ["name", "base_url", "course_id"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Instance identifier (e.g., 'sandbox', 'production')"
+        },
+        "base_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "course_id": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "term": {
+          "type": "string"
+        }
+      }
+    },
+    "last_sync": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "artifacts": {
+      "type": "object",
+      "description": "Keyed by repo-relative MD file path",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["canvas_type", "content_hash"],
+        "properties": {
+          "canvas_type": {
+            "type": "string",
+            "enum": ["assignment", "page", "discussion", "quiz", "module_header"]
+          },
+          "canvas_id": {
+            "type": ["integer", "null"]
+          },
+          "canvas_page_url": {
+            "type": ["string", "null"],
+            "description": "Page URL slug (pages don't use numeric IDs in canvas)"
+          },
+          "canvas_module_id": {
+            "type": ["integer", "null"]
+          },
+          "content_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "last_pushed": {
+            "type": ["string", "null"],
+            "format": "date-time"
+          },
+          "orphaned": {
+            "type": "boolean",
+            "description": "True if the artifact exists in manifest but is gone from canvas"
+          }
+        }
+      }
+    }
+  }
+}

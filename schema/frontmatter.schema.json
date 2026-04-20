@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Artifact Frontmatter",
+  "description": "YAML frontmatter for a canvas artifact (assignment, page, discussion, quiz, module_header)",
+  "type": "object",
+  "required": ["type", "title", "slug", "sprint", "module", "position", "publish"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": ["assignment", "page", "discussion", "quiz", "module_header"]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "sprint": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "week": {
+      "type": ["integer", "null"],
+      "minimum": 1
+    },
+    "module": {
+      "type": "string",
+      "minLength": 1
+    },
+    "position": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "points": {
+      "type": ["number", "null"],
+      "minimum": 0
+    },
+    "submission_type": {
+      "type": "string",
+      "enum": ["text_entry", "file_upload", "discussion_topic", "online_quiz", "none"]
+    },
+    "due": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}(:\\d{2})?)?$"
+    },
+    "publish": {
+      "type": "boolean"
+    },
+    "rubric": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["description", "points"],
+        "properties": {
+          "description": {"type": "string"},
+          "points": {"type": "number", "minimum": 0}
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "prompt"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["multiple_choice", "short_answer", "essay", "true_false"]
+          },
+          "prompt": {"type": "string"},
+          "points": {"type": "number", "minimum": 0},
+          "answers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["text"],
+              "properties": {
+                "text": {"type": "string"},
+                "correct": {"type": "boolean"}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

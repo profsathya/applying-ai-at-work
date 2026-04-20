@@ -1,0 +1,188 @@
+{
+  "name": "Canvas Grading (HITL)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "canvas-submission",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "name": "Canvas Submission Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [200, 300],
+      "webhookId": "canvas-submission-grading"
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.CANVAS_API_URL }}/api/v1/courses/{{ $json.body.course_id }}/assignments/{{ $json.body.assignment_id }}/submissions/{{ $json.body.user_id }}?include[]=submission_history&include[]=rubric_assessment",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "name": "Fetch Submission",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [420, 300]
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.CANVAS_API_URL }}/api/v1/courses/{{ $json.body.course_id }}/assignments/{{ $json.body.assignment_id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "name": "Fetch Assignment + Rubric",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [420, 480]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Compose the grading prompt from rubric + assignment + submission\nconst submission = $('Fetch Submission').first().json;\nconst assignment = $('Fetch Assignment + Rubric').first().json;\n\nconst prompt_template = `\nYou are a feedback assistant supporting self-regulated learning. Respond with valid JSON only.\n\nAssignment: ${assignment.name}\n\nAssignment body:\n${assignment.description}\n\nRubric:\n${JSON.stringify(assignment.rubric || [], null, 2)}\n\nStudent submission:\n${submission.body || submission.submitted_at}\n\nReturn: {score, rubric_breakdown, feedback_comment, flags, srl_phase_focus, notes_for_instructor}\n`;\n\nreturn [{ json: { prompt: prompt_template, submission, assignment } }];"
+      },
+      "name": "Build Grading Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [640, 390]
+    },
+    {
+      "parameters": {
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "method": "POST",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-opus-4-7\",\n  \"max_tokens\": 2000,\n  \"messages\": [{ \"role\": \"user\", \"content\": \"{{ $json.prompt }}\" }]\n}",
+        "options": {}
+      },
+      "name": "Claude API Grading Call",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [860, 390]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Claude's JSON response and prep row for review queue\nconst resp = $input.first().json;\nconst content = resp.content[0].text;\nconst parsed = JSON.parse(content.replace(/```json|```/g, '').trim());\n\nconst row = {\n  student_id: $('Fetch Submission').first().json.user_id,\n  assignment_id: $('Fetch Assignment + Rubric').first().json.id,\n  assignment_title: $('Fetch Assignment + Rubric').first().json.name,\n  drafted_score: parsed.score,\n  drafted_feedback: parsed.feedback_comment,\n  rubric_breakdown: JSON.stringify(parsed.rubric_breakdown),\n  flags: (parsed.flags || []).join('; '),\n  srl_phase: parsed.srl_phase_focus,\n  instructor_notes: parsed.notes_for_instructor,\n  status: 'pending_review',\n  submitted_at: new Date().toISOString()\n};\n\nreturn [{ json: row }];"
+      },
+      "name": "Parse + Shape Row",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1080, 390]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": "={{ $env.REVIEW_QUEUE_SHEET_ID }}",
+        "sheetName": "review_queue",
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "name": "Append to Review Queue",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [1300, 390]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "channel": "#grading-review",
+        "text": "=New submission ready for review: {{ $json.assignment_title }} by student {{ $json.student_id }}. Drafted score: {{ $json.drafted_score }}. Review in the sheet."
+      },
+      "name": "Slack Notify",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2,
+      "position": [1520, 390]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "canvas-grading-approved",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "name": "Approval Webhook (from sheet)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [200, 720],
+      "webhookId": "canvas-grading-approved"
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.CANVAS_API_URL }}/api/v1/courses/{{ $json.body.course_id }}/assignments/{{ $json.body.assignment_id }}/submissions/{{ $json.body.student_id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "method": "PUT",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"submission\": {\n    \"posted_grade\": \"{{ $json.body.final_score }}\"\n  },\n  \"comment\": {\n    \"text_comment\": \"{{ $json.body.final_feedback }}\"\n  }\n}",
+        "options": {}
+      },
+      "name": "Post Grade to Canvas",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [420, 720]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": "={{ $env.AUDIT_SHEET_ID }}",
+        "sheetName": "audit_log",
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {}
+        },
+        "options": {}
+      },
+      "name": "Append to Audit Log",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [640, 720]
+    }
+  ],
+  "connections": {
+    "Canvas Submission Webhook": {
+      "main": [[
+        {"node": "Fetch Submission", "type": "main", "index": 0},
+        {"node": "Fetch Assignment + Rubric", "type": "main", "index": 0}
+      ]]
+    },
+    "Fetch Submission": {
+      "main": [[{"node": "Build Grading Prompt", "type": "main", "index": 0}]]
+    },
+    "Fetch Assignment + Rubric": {
+      "main": [[{"node": "Build Grading Prompt", "type": "main", "index": 0}]]
+    },
+    "Build Grading Prompt": {
+      "main": [[{"node": "Claude API Grading Call", "type": "main", "index": 0}]]
+    },
+    "Claude API Grading Call": {
+      "main": [[{"node": "Parse + Shape Row", "type": "main", "index": 0}]]
+    },
+    "Parse + Shape Row": {
+      "main": [[{"node": "Append to Review Queue", "type": "main", "index": 0}]]
+    },
+    "Append to Review Queue": {
+      "main": [[{"node": "Slack Notify", "type": "main", "index": 0}]]
+    },
+    "Approval Webhook (from sheet)": {
+      "main": [[{"node": "Post Grade to Canvas", "type": "main", "index": 0}]]
+    },
+    "Post Grade to Canvas": {
+      "main": [[{"node": "Append to Audit Log", "type": "main", "index": 0}]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "pinData": {},
+  "versionId": "0.1.0",
+  "triggerCount": 2
+}

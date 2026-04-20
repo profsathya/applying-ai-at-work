@@ -1,0 +1,31 @@
+name: Validate schemas
+
+on:
+  pull_request:
+    paths:
+      - 'courses/**'
+      - 'schema/**'
+      - 'canvas_sync/**'
+  push:
+    branches: [main]
+    paths:
+      - 'courses/**'
+      - 'schema/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install deps
+        run: pip install -r canvas_sync/requirements.txt
+
+      - name: Run schema validation on all artifacts
+        run: python canvas_sync/schema.py --all

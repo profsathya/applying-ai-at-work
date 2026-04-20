@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Course PRD",
+  "description": "Product requirements for a course build: ordered list of artifacts to create in canvas.",
+  "type": "object",
+  "required": ["course", "items"],
+  "properties": {
+    "course": {
+      "type": "object",
+      "required": ["slug", "name", "code"],
+      "properties": {
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "name": {"type": "string"},
+        "code": {"type": "string"},
+        "term": {"type": "string"},
+        "planned_at": {"type": "string", "format": "date-time"}
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id", "type", "title", "slug", "sprint",
+          "module", "position", "body_brief", "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": ["assignment", "page", "discussion", "quiz", "module_header"]
+          },
+          "title": {"type": "string", "minLength": 1},
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "sprint": {"type": "integer", "minimum": 1},
+          "week": {"type": ["integer", "null"], "minimum": 1},
+          "module": {"type": "string", "minLength": 1},
+          "position": {"type": "integer", "minimum": 1},
+          "points": {"type": ["number", "null"], "minimum": 0},
+          "submission_type": {
+            "type": "string",
+            "enum": ["text_entry", "file_upload", "discussion_topic", "online_quiz", "none"]
+          },
+          "due": {"type": ["string", "null"]},
+          "publish": {"type": "boolean"},
+          "body_brief": {"type": "string", "minLength": 10},
+          "rubric": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "description": {"type": "string"},
+                "points": {"type": "number"}
+              }
+            }
+          },
+          "status": {
+            "type": "string",
+            "enum": ["pending", "done", "failed", "blocked"]
+          },
+          "canvas_id": {"type": ["integer", "null"]},
+          "canvas_module_id": {"type": ["integer", "null"]},
+          "last_built_at": {"type": ["string", "null"], "format": "date-time"},
+          "error": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,12 @@
 # Decision Log
 
+
+---
+
+**2026-04-20 - Adopted canvas-course-builder; answered "delivery platform" open question**
+
+Adopted the canvas-course-builder scaffold as the delivery pipeline: a Ralph-loop-driven system that generates canvas artifacts directly from canvas-agnostic markdown via the Canvas REST API. Canvas is now the delivery platform. Canvas-agnostic markdown in this repo is the source of truth; per-canvas-course manifests (one per course shell) map MD files to canvas IDs. The legacy iframe-embedding pattern used in CST349 and CST395 is archived to archive/legacy-iframe-template/ for reference. The corresponding entry in open-questions.md is now resolved.
+
 Timestamped record of significant design decisions and their reasoning. Newest entries at the top.
 
 ---
