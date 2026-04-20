@@ -507,10 +507,11 @@
           "points": 5
         }
       ],
-      "status": "pending",
+      "status": "failed",
       "canvas_id": null,
       "canvas_module_id": null,
-      "last_built_at": null
+      "last_built_at": null,
+      "error": "Canvas 400: Invalid datetime for due_at (format 2026-10-22T23:59 rejected)"
     },
     {
       "id": 22,

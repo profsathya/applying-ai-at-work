@@ -70,11 +70,11 @@ while [ "$iteration" -lt "$MAX_ITERATIONS" ]; do
   if [ "$VERBOSE" -eq 1 ]; then
     output=$(claude -p "TARGET COURSE: $TARGET_COURSE
 
-$(cat $PROMPT_FILE)" --permission-mode acceptEdits 2>&1 | tee -a "$LOG_FILE")
+$(cat $PROMPT_FILE)" --permission-mode bypassPermissions 2>&1 | tee -a "$LOG_FILE")
   else
     output=$(claude -p "TARGET COURSE: $TARGET_COURSE
 
-$(cat $PROMPT_FILE)" --permission-mode acceptEdits 2>&1)
+$(cat $PROMPT_FILE)" --permission-mode bypassPermissions 2>&1)
     echo "$output" >> "$LOG_FILE"
     # Surface the last few lines so the operator sees progress
     echo "$output" | tail -5
