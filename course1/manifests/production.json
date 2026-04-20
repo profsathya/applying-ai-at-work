@@ -160,6 +160,14 @@
       "content_hash": "2f593086a72f5832198cf433ffe0c30968863c59cdbe122b7d9897d71c54790b",
       "last_pushed": "2026-04-20T22:36:13+00:00"
     },
+    "course1/sprints/sprint-3/sprint-3-peer-critique.md": {
+      "canvas_id": 1387,
+      "canvas_module_id": 1886,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "68a0699f8be20d140ab0f0c3ab3fdaf1873a696e3025229fd14531ce7f9dad8f",
+      "last_pushed": "2026-04-20T22:43:39+00:00"
+    },
     "course1/sprints/sprint-3/success-criteria-with-a-stakeholder.md": {
       "canvas_id": 6700,
       "canvas_module_id": 1886,
@@ -175,5 +183,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:42:03+00:00"
+  "last_sync": "2026-04-20T22:43:39+00:00"
 }

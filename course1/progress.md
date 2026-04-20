@@ -59,3 +59,5 @@ FAILED AI-Fit Analysis, Canvas 400 Invalid datetime for due_at (2026-10-22T23:59
 BUILT Success Criteria with a Stakeholder, canvas ID 6700, 2026-04-20T22:40:23Z.
 
 BUILT Human and AI Contribution Map, canvas ID 6701, 2026-04-20T22:42:10Z.
+
+BUILT Sprint 3 Peer Critique, canvas ID 1387, 2026-04-20T22:43:49Z.

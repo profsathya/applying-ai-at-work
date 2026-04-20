@@ -590,10 +590,10 @@
       "submission_type": "discussion_topic",
       "publish": true,
       "body_brief": "Peer discussion closing the sprint. Ask each participant to post their AI-fit conclusion in one sentence and their sharpest success criterion. Respond to two peers by pushing back: is the AI-fit conclusion actually supported by what they described, or is it just 'AI seems useful'? Is the success criterion specific enough that a stakeholder would know when it was met? Direct peer critique, not affirmation.",
-      "status": "pending",
-      "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "status": "done",
+      "canvas_id": 1387,
+      "canvas_module_id": 1886,
+      "last_built_at": "2026-04-20T22:43:48Z"
     },
     {
       "id": 25,
