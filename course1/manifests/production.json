@@ -48,6 +48,14 @@
       "content_hash": "3ef465affa10ce55c3e96573710f33dac5187823a415f3554dd76b1051d6c49e",
       "last_pushed": "2026-04-20T21:40:45+00:00"
     },
+    "course1/sprints/sprint-1/assumption-audit-with-ai.md": {
+      "canvas_id": 6694,
+      "canvas_module_id": 1884,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "275c55b2bd67e904545e62af7bd4504d57a6b4b1519287d1ed7502e52e7015f2",
+      "last_pushed": "2026-04-20T22:18:42+00:00"
+    },
     "course1/sprints/sprint-1/first-pass-problem-statement.md": {
       "canvas_id": 6693,
       "canvas_module_id": 1884,
@@ -79,5 +87,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:17:09+00:00"
+  "last_sync": "2026-04-20T22:18:42+00:00"
 }
