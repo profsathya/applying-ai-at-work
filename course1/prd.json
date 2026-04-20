@@ -608,10 +608,10 @@
       "submission_type": "none",
       "publish": true,
       "body_brief": "Module header for Sprint 4 (Weeks 8-9). Theme: integrate everything from Sprints 1-3 into a complete problem frame, validate it with a decision-maker, and revise based on what they heard.",
-      "status": "pending",
+      "status": "done",
       "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "canvas_module_id": 1887,
+      "last_built_at": "2026-04-20T15:45:17"
     },
     {
       "id": 26,
