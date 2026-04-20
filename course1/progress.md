@@ -43,3 +43,5 @@ BUILT Sprint 2: Scope and Stakeholders, canvas module ID 1885, 2026-04-20 15:23.
 BUILT Sprint 2 Briefing, canvas ID 3343, 2026-04-20 15:40.
 
 BUILT scope-and-boundaries-draft, canvas ID 6697, 2026-04-20T22:27:11Z.
+
+BUILT Second Stakeholder Interview, canvas ID 6698, 2026-04-20T22:28:57Z.
