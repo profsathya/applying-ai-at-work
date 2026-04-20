@@ -176,6 +176,14 @@
       "content_hash": "44a2fccb4d2d68deff7810d974e2aae5b28285bc763b3687d1ce1273cf75467c",
       "last_pushed": "2026-04-20T22:40:13+00:00"
     },
+    "course1/sprints/sprint-4/integrated-problem-frame.md": {
+      "canvas_id": 6703,
+      "canvas_module_id": 1887,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "23ccd5cea4c7ac15a27771c96e9a3181c4ac9dd788832ffc6857767bbeeaf87a",
+      "last_pushed": "2026-04-20T22:48:57+00:00"
+    },
     "course1/sprints/sprint-4/sprint-4-briefing.md": {
       "canvas_id": 3345,
       "canvas_module_id": 1887,
@@ -199,5 +207,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:46:41+00:00"
+  "last_sync": "2026-04-20T22:48:57+00:00"
 }
