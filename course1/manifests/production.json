@@ -136,6 +136,14 @@
       "content_hash": "0acfd16b6729de4b7ebf36c3212a0aa376c1411a97d38a36adc4dd27ddf9ee67",
       "last_pushed": "2026-04-20T22:23:41+00:00"
     },
+    "course1/sprints/sprint-3/human-and-ai-contribution-map.md": {
+      "canvas_id": 6701,
+      "canvas_module_id": 1886,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "3c266b25a395e25134af10e714e22fdb4a07664de175a40584e6c024abbbb1fd",
+      "last_pushed": "2026-04-20T22:42:03+00:00"
+    },
     "course1/sprints/sprint-3/sprint-3-ai-fit-and-success-criteria.md": {
       "canvas_id": null,
       "canvas_module_id": 1886,
@@ -167,5 +175,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:40:13+00:00"
+  "last_sync": "2026-04-20T22:42:03+00:00"
 }
