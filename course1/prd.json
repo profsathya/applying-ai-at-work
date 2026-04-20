@@ -420,10 +420,11 @@
           "points": 5
         }
       ],
-      "status": "pending",
+      "status": "failed",
       "canvas_id": null,
       "canvas_module_id": null,
-      "last_built_at": null
+      "last_built_at": "2026-04-20T22:31:06.246625Z",
+      "error": "Canvas rejected due_at field (canvas-author added 'due: 2026-10-15T23:59' which is not ISO 8601 with TZ). Field removed from MD; reset status to pending to retry."
     },
     {
       "id": 18,
