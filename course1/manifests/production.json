@@ -151,6 +151,14 @@
       "canvas_type": "page",
       "content_hash": "2f593086a72f5832198cf433ffe0c30968863c59cdbe122b7d9897d71c54790b",
       "last_pushed": "2026-04-20T22:36:13+00:00"
+    },
+    "course1/sprints/sprint-3/success-criteria-with-a-stakeholder.md": {
+      "canvas_id": 6700,
+      "canvas_module_id": 1886,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "44a2fccb4d2d68deff7810d974e2aae5b28285bc763b3687d1ce1273cf75467c",
+      "last_pushed": "2026-04-20T22:40:13+00:00"
     }
   },
   "instance": {
@@ -159,5 +167,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:36:13+00:00"
+  "last_sync": "2026-04-20T22:40:13+00:00"
 }
