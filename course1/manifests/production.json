@@ -135,6 +135,14 @@
       "canvas_type": "module_header",
       "content_hash": "0acfd16b6729de4b7ebf36c3212a0aa376c1411a97d38a36adc4dd27ddf9ee67",
       "last_pushed": "2026-04-20T22:23:41+00:00"
+    },
+    "course1/sprints/sprint-3/sprint-3-ai-fit-and-success-criteria.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1886,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "f19c60e8ae513d06c0d9ca36ed67f2adc155d0498068f134380edb275e858f3b",
+      "last_pushed": "2026-04-20T22:34:29+00:00"
     }
   },
   "instance": {
@@ -143,5 +151,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:33:04+00:00"
+  "last_sync": "2026-04-20T22:34:29+00:00"
 }
