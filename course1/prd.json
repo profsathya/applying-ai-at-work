@@ -270,10 +270,10 @@
           "points": 10
         }
       ],
-      "status": "pending",
-      "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "status": "done",
+      "canvas_id": 6695,
+      "canvas_module_id": 1884,
+      "last_built_at": "2026-04-20 15:20"
     },
     {
       "id": 12,

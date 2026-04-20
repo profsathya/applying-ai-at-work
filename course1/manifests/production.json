@@ -64,6 +64,14 @@
       "content_hash": "d128ded48cbc349b66d853767acddd4069d2670912b00fb8a4ac17b6cf5aad8e",
       "last_pushed": "2026-04-20T22:17:09+00:00"
     },
+    "course1/sprints/sprint-1/listening-conversation-with-a-stakeholder.md": {
+      "canvas_id": 6695,
+      "canvas_module_id": 1884,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "34027ae66bcadd3bf757cbc78f3946b852d626ae5121f9a860cdba54a1b8172f",
+      "last_pushed": "2026-04-20T22:20:47+00:00"
+    },
     "course1/sprints/sprint-1/sprint-1-briefing.md": {
       "canvas_id": 3342,
       "canvas_module_id": 1884,
@@ -87,5 +95,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:18:42+00:00"
+  "last_sync": "2026-04-20T22:20:47+00:00"
 }
