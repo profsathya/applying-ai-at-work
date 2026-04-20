@@ -77,3 +77,5 @@ BUILT Sprint 4 Peer Exchange, canvas ID 1388, 2026-04-20T22:54:28Z.
 BUILT Week 10: Capstone, canvas module ID 1888, 2026-04-20T22:55:59+00:00.
 
 BUILT Capstone Brief, canvas ID 3346, 2026-04-20T22:58:00Z.
+BUILT Capstone Demonstration, canvas ID 6707, 2026-04-20T23:00:14Z.
+
