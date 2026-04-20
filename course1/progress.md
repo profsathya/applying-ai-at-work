@@ -32,3 +32,5 @@ Each sprint (1-4) contains exactly one real-stakeholder touchpoint (listening co
 - BUILT Initial Stakeholder Map, canvas ID 6692, 2026-04-20 15:30.
 
 BUILT Sprint 1: Surfacing the Problem, canvas module ID 1884, 2026-04-20T15:13:35.
+
+BUILT Sprint 1 Briefing, canvas ID 3342, 2026-04-20 15:15.

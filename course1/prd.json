@@ -174,10 +174,10 @@
       "submission_type": "none",
       "publish": true,
       "body_brief": "Brief the sprint. Explain that this sprint produces three things: a first-pass written problem statement, a candid audit of the assumptions baked into it, and notes from one real conversation with a stakeholder. Emphasize that the goal is not a polished statement; the goal is surfacing what the participant actually believes about the problem so it can be tested. Keep the briefing short and operational.",
-      "status": "pending",
-      "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "status": "done",
+      "canvas_id": 3342,
+      "canvas_module_id": 1884,
+      "last_built_at": "2026-04-20T15:15:40"
     },
     {
       "id": 9,

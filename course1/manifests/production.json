@@ -48,6 +48,14 @@
       "content_hash": "3ef465affa10ce55c3e96573710f33dac5187823a415f3554dd76b1051d6c49e",
       "last_pushed": "2026-04-20T21:40:45+00:00"
     },
+    "course1/sprints/sprint-1/sprint-1-briefing.md": {
+      "canvas_id": 3342,
+      "canvas_module_id": 1884,
+      "canvas_page_url": "sprint-1-briefing",
+      "canvas_type": "page",
+      "content_hash": "0438bce01552eca227b1ec2bc8544a30685a10a0a5d6eec21295d1c58e578823",
+      "last_pushed": "2026-04-20T22:15:28+00:00"
+    },
     "course1/sprints/sprint-1/sprint-1-surfacing-the-problem.md": {
       "canvas_id": null,
       "canvas_module_id": 1884,
@@ -63,5 +71,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:13:26+00:00"
+  "last_sync": "2026-04-20T22:15:28+00:00"
 }
