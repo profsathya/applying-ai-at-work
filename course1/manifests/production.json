@@ -16,6 +16,14 @@
       "content_hash": "af9905a12820f514ceb805a96737e9cce0a1f7db5ad6ec1dc706ce36eb747297",
       "last_pushed": "2026-04-20T22:06:13+00:00"
     },
+    "course1/sprints/sprint-0/initial-stakeholder-map.md": {
+      "canvas_id": 6692,
+      "canvas_module_id": 1883,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "571e6ec5c32fbb0479e8b6f8e88b214e6fb955c5a82e025b528e91baac8f8379",
+      "last_pushed": "2026-04-20T22:12:00+00:00"
+    },
     "course1/sprints/sprint-0/orientation-check.md": {
       "canvas_id": 2912,
       "canvas_module_id": 1883,
@@ -47,5 +55,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:10:12+00:00"
+  "last_sync": "2026-04-20T22:12:00+00:00"
 }
