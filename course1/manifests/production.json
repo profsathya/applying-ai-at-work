@@ -120,6 +120,14 @@
       "content_hash": "8da761ecaf74e7eb0980262130c7cec9c96ba50dd2430087f6da83f0ef9fc56f",
       "last_pushed": "2026-04-20T22:25:11+00:00"
     },
+    "course1/sprints/sprint-2/sprint-2-peer-exchange.md": {
+      "canvas_id": 1386,
+      "canvas_module_id": 1885,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "cfd5d51d8df576694fa48c33b8984e8bed8c599bc2571c96e1b8bf0a02a72a79",
+      "last_pushed": "2026-04-20T22:33:04+00:00"
+    },
     "course1/sprints/sprint-2/sprint-2-scope-and-stakeholders.md": {
       "canvas_id": null,
       "canvas_module_id": 1885,
@@ -135,5 +143,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:28:47+00:00"
+  "last_sync": "2026-04-20T22:33:04+00:00"
 }

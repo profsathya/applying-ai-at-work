@@ -439,10 +439,10 @@
       "submission_type": "discussion_topic",
       "publish": true,
       "body_brief": "Peer discussion closing the sprint. Ask each participant to share one scope call they made that was harder than expected and one stakeholder tension they are still working through. Respond to two peers, ideally naming a tension in their frame that they may not be seeing.",
-      "status": "pending",
-      "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "status": "done",
+      "canvas_id": 1386,
+      "canvas_module_id": 1885,
+      "last_built_at": "2026-04-20T15:33:12"
     },
     {
       "id": 19,
