@@ -95,6 +95,14 @@
       "canvas_type": "module_header",
       "content_hash": "d6197d61db42dc088747680bf7e0c5c4cfa2bf5696fd6d9d65dc5be90d9180a7",
       "last_pushed": "2026-04-20T22:13:26+00:00"
+    },
+    "course1/sprints/sprint-2/sprint-2-scope-and-stakeholders.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1885,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "0acfd16b6729de4b7ebf36c3212a0aa376c1411a97d38a36adc4dd27ddf9ee67",
+      "last_pushed": "2026-04-20T22:23:41+00:00"
     }
   },
   "instance": {
@@ -103,5 +111,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:22:16+00:00"
+  "last_sync": "2026-04-20T22:23:41+00:00"
 }

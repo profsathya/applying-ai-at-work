@@ -39,3 +39,4 @@ BUILT First-Pass Problem Statement, canvas ID 6693, 2026-04-20T22:17:18Z.
 BUILT Assumption Audit with AI, canvas ID 6694, 2026-04-20 22:18 UTC.
 BUILT Listening Conversation with a Stakeholder, canvas ID 6695, 2026-04-20 15:20.
 BUILT Sprint 1 Peer Exchange, canvas ID 1385, 2026-04-20T22:22:25Z.
+BUILT Sprint 2: Scope and Stakeholders, canvas module ID 1885, 2026-04-20 15:23.

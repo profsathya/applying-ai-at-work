@@ -306,10 +306,10 @@
       "submission_type": "none",
       "publish": true,
       "body_brief": "Module header for Sprint 2 (Weeks 4-5). Theme: define what is in and out of the problem, and deepen stakeholder understanding through a structured interview with someone whose perspective differs from the Sprint 1 contact.",
-      "status": "pending",
+      "status": "done",
       "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "canvas_module_id": 1885,
+      "last_built_at": "2026-04-20T15:23:47"
     },
     {
       "id": 14,
