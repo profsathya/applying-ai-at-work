@@ -20,10 +20,10 @@
       "submission_type": "none",
       "publish": true,
       "body_brief": "Module header for Week 1. Sets the tone that this course is about your real workplace problem, not a case study. Signal that the week closes with a committed problem choice and an initial stakeholder map.",
-      "status": "pending",
+      "status": "done",
       "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "canvas_module_id": 1883,
+      "last_built_at": "2026-04-20 14:39"
     },
     {
       "id": 2,
@@ -93,9 +93,18 @@
       "publish": true,
       "body_brief": "The autonomy moment. Ask the participant to commit to the workplace problem they will work on for the next nine weeks. They should name the problem in one or two sentences, describe why it matters in their organization right now, who is affected, and what makes them think it is worth 10 weeks of attention. The problem must be real, current, and from their own workplace. Do not accept hypothetical or historical problems. Make clear they can refine the problem statement later, but the topic commitment stays.",
       "rubric": [
-        {"description": "Problem is real, current, and grounded in the participant's own workplace", "points": 10},
-        {"description": "Stakes and affected people are named concretely, not in abstractions", "points": 10},
-        {"description": "Written with professional specificity: named roles, real functions, actual consequences", "points": 5}
+        {
+          "description": "Problem is real, current, and grounded in the participant's own workplace",
+          "points": 10
+        },
+        {
+          "description": "Stakes and affected people are named concretely, not in abstractions",
+          "points": 10
+        },
+        {
+          "description": "Written with professional specificity: named roles, real functions, actual consequences",
+          "points": 5
+        }
       ],
       "status": "pending",
       "canvas_id": null,
@@ -116,16 +125,24 @@
       "publish": true,
       "body_brief": "Ask the participant to produce a first-pass map of the stakeholders connected to their chosen problem. Upload a diagram, sketch, or annotated list (photo of whiteboard is fine). For each stakeholder, capture their role, how they are connected to the problem, and whether they have authority, influence, or just skin in the game. At least one of these people will be interviewed in Sprint 1, so ask the participant to flag who they plan to approach first and why.",
       "rubric": [
-        {"description": "Stakeholders are named by role and relationship to the problem, not generic labels", "points": 10},
-        {"description": "Authority, influence, and impact are distinguished", "points": 5},
-        {"description": "A clear first-conversation candidate is identified with a reason", "points": 5}
+        {
+          "description": "Stakeholders are named by role and relationship to the problem, not generic labels",
+          "points": 10
+        },
+        {
+          "description": "Authority, influence, and impact are distinguished",
+          "points": 5
+        },
+        {
+          "description": "A clear first-conversation candidate is identified with a reason",
+          "points": 5
+        }
       ],
       "status": "pending",
       "canvas_id": null,
       "canvas_module_id": null,
       "last_built_at": null
     },
-
     {
       "id": 7,
       "type": "module_header",
@@ -176,9 +193,18 @@
       "publish": true,
       "body_brief": "Ask the participant to write a first-pass problem statement in their own words, without using AI. Roughly one paragraph. It should name the problem, who is affected, why it matters now, and what a better state would look like. This draft will almost certainly be wrong in ways they cannot yet see. That is the point. They will return to this draft at the end of the course and compare.",
       "rubric": [
-        {"description": "Problem, affected people, stakes, and desired state are each present", "points": 10},
-        {"description": "Writing is concrete, grounded in the participant's real context", "points": 5},
-        {"description": "Draft was produced without AI (participant confirms)", "points": 5}
+        {
+          "description": "Problem, affected people, stakes, and desired state are each present",
+          "points": 10
+        },
+        {
+          "description": "Writing is concrete, grounded in the participant's real context",
+          "points": 5
+        },
+        {
+          "description": "Draft was produced without AI (participant confirms)",
+          "points": 5
+        }
       ],
       "status": "pending",
       "canvas_id": null,
@@ -199,9 +225,18 @@
       "publish": true,
       "body_brief": "Ask the participant to use an AI tool to surface the assumptions embedded in their first-pass problem statement. They should share the statement with the AI, ask it to list the assumptions it detects, and push back on the ones that feel wrong or too generic. Submit a short write-up covering: the assumptions AI surfaced, which ones genuinely surprised the participant, which ones they rejected and why, and one assumption they now want to test with a stakeholder. This is the first structured experience of the partnership: AI generates breadth, the participant exercises judgment.",
       "rubric": [
-        {"description": "Assumptions surfaced by AI are listed clearly", "points": 5},
-        {"description": "Participant's own judgment is visible: what they kept, what they rejected, why", "points": 10},
-        {"description": "At least one assumption is named as testable with a specific stakeholder", "points": 10}
+        {
+          "description": "Assumptions surfaced by AI are listed clearly",
+          "points": 5
+        },
+        {
+          "description": "Participant's own judgment is visible: what they kept, what they rejected, why",
+          "points": 10
+        },
+        {
+          "description": "At least one assumption is named as testable with a specific stakeholder",
+          "points": 10
+        }
       ],
       "status": "pending",
       "canvas_id": null,
@@ -222,9 +257,18 @@
       "publish": true,
       "body_brief": "The stakeholder touchpoint for Sprint 1. Ask the participant to hold one real conversation with a stakeholder from their map. The purpose is listening, not pitching: they want to hear how the stakeholder actually sees the problem. Upload notes from the conversation (photo of handwritten notes, typed doc, or transcript is fine) along with a one-paragraph debrief: what surprised them, what contradicted their first-pass statement, and what one follow-up question they now want to ask. No role-play. No simulated stakeholder. A real person from their organization.",
       "rubric": [
-        {"description": "Evidence of a real conversation with a named stakeholder (role, relationship)", "points": 10},
-        {"description": "Notes capture what the stakeholder said, not what the participant wanted to hear", "points": 10},
-        {"description": "Debrief names at least one surprise or contradiction with the first-pass statement", "points": 10}
+        {
+          "description": "Evidence of a real conversation with a named stakeholder (role, relationship)",
+          "points": 10
+        },
+        {
+          "description": "Notes capture what the stakeholder said, not what the participant wanted to hear",
+          "points": 10
+        },
+        {
+          "description": "Debrief names at least one surprise or contradiction with the first-pass statement",
+          "points": 10
+        }
       ],
       "status": "pending",
       "canvas_id": null,
@@ -249,7 +293,6 @@
       "canvas_module_id": null,
       "last_built_at": null
     },
-
     {
       "id": 13,
       "type": "module_header",
@@ -300,9 +343,18 @@
       "publish": true,
       "body_brief": "Ask the participant to draft an explicit scope for their problem. Structure: what is in scope (the parts of the problem this work will address), what is out of scope (adjacent issues this work will not address), and why those boundaries make sense given their role, authority, and timeline. AI may be used to brainstorm candidates for the in/out lists, but the reasoning for the boundaries must be the participant's own.",
       "rubric": [
-        {"description": "In-scope and out-of-scope items are specific, not generic", "points": 10},
-        {"description": "Boundary reasoning reflects the participant's actual role, authority, and constraints", "points": 10},
-        {"description": "Scope is tight enough to be tractable in 10 weeks", "points": 5}
+        {
+          "description": "In-scope and out-of-scope items are specific, not generic",
+          "points": 10
+        },
+        {
+          "description": "Boundary reasoning reflects the participant's actual role, authority, and constraints",
+          "points": 10
+        },
+        {
+          "description": "Scope is tight enough to be tractable in 10 weeks",
+          "points": 5
+        }
       ],
       "status": "pending",
       "canvas_id": null,
@@ -323,9 +375,18 @@
       "publish": true,
       "body_brief": "The stakeholder touchpoint for Sprint 2. Ask the participant to interview a second stakeholder, chosen for a perspective that differs from the Sprint 1 contact. This is a structured interview: the participant prepares questions in advance (AI can help draft), runs the conversation, and uploads the interview plan plus notes or recording. Emphasize that the goal is to hear a view that might contradict the first one, not to confirm what they already believe.",
       "rubric": [
-        {"description": "Interview plan shows intentional question design tied to the problem frame", "points": 10},
-        {"description": "Stakeholder is genuinely different in role or perspective from the Sprint 1 contact", "points": 10},
-        {"description": "Notes capture what the stakeholder said, including anything that cuts against the participant's current view", "points": 10}
+        {
+          "description": "Interview plan shows intentional question design tied to the problem frame",
+          "points": 10
+        },
+        {
+          "description": "Stakeholder is genuinely different in role or perspective from the Sprint 1 contact",
+          "points": 10
+        },
+        {
+          "description": "Notes capture what the stakeholder said, including anything that cuts against the participant's current view",
+          "points": 10
+        }
       ],
       "status": "pending",
       "canvas_id": null,
@@ -346,9 +407,18 @@
       "publish": true,
       "body_brief": "Ask the participant to synthesize across the two stakeholder conversations. Where do the perspectives agree? Where do they conflict? What does each stakeholder see that the other does not? Which tensions are real and must be navigated in the problem frame, and which are just differences in language? AI may help organize themes, but the judgment about which tensions matter is the participant's.",
       "rubric": [
-        {"description": "Points of agreement and disagreement between stakeholders are named concretely", "points": 10},
-        {"description": "At least one real tension is identified and its implication for the frame explained", "points": 10},
-        {"description": "Participant's own judgment about what matters is visible, not just AI-generated themes", "points": 5}
+        {
+          "description": "Points of agreement and disagreement between stakeholders are named concretely",
+          "points": 10
+        },
+        {
+          "description": "At least one real tension is identified and its implication for the frame explained",
+          "points": 10
+        },
+        {
+          "description": "Participant's own judgment about what matters is visible, not just AI-generated themes",
+          "points": 5
+        }
       ],
       "status": "pending",
       "canvas_id": null,
@@ -373,7 +443,6 @@
       "canvas_module_id": null,
       "last_built_at": null
     },
-
     {
       "id": 19,
       "type": "module_header",
@@ -424,9 +493,18 @@
       "publish": true,
       "body_brief": "Ask the participant to analyze whether AI genuinely fits this problem. Questions to address: what specifically would AI do in a solution? What signals that AI belongs here (scale, breadth, pattern recognition across more data than a person can hold)? What signals that AI does not (relationship work, one-off judgment calls, high-consequence decisions where accountability must stay human)? If AI does not fit, say so. A participant who concludes their problem is not actually an AI problem has done the work correctly.",
       "rubric": [
-        {"description": "Specific AI roles in the solution are named, not generic 'use AI' claims", "points": 10},
-        {"description": "Signals for and against AI fit are balanced; participant takes a defensible position", "points": 10},
-        {"description": "Conclusion is grounded in the participant's organizational context, not generic AI hype", "points": 5}
+        {
+          "description": "Specific AI roles in the solution are named, not generic 'use AI' claims",
+          "points": 10
+        },
+        {
+          "description": "Signals for and against AI fit are balanced; participant takes a defensible position",
+          "points": 10
+        },
+        {
+          "description": "Conclusion is grounded in the participant's organizational context, not generic AI hype",
+          "points": 5
+        }
       ],
       "status": "pending",
       "canvas_id": null,
@@ -447,9 +525,18 @@
       "publish": true,
       "body_brief": "The stakeholder touchpoint for Sprint 3. Ask the participant to draft success criteria for their problem (what would have to be true for them to call this work a success?) and then hold a short conversation with a stakeholder to test those criteria. Ideally the stakeholder is someone with authority over whether this work would be considered successful. Upload the draft criteria, notes from the conversation, and a revised set of criteria reflecting what they heard.",
       "rubric": [
-        {"description": "Draft criteria are specific and measurable or observable, not aspirational", "points": 10},
-        {"description": "Real stakeholder conversation is documented, with the stakeholder's role clear", "points": 10},
-        {"description": "Revised criteria reflect what the stakeholder said, not just what the participant thought", "points": 10}
+        {
+          "description": "Draft criteria are specific and measurable or observable, not aspirational",
+          "points": 10
+        },
+        {
+          "description": "Real stakeholder conversation is documented, with the stakeholder's role clear",
+          "points": 10
+        },
+        {
+          "description": "Revised criteria reflect what the stakeholder said, not just what the participant thought",
+          "points": 10
+        }
       ],
       "status": "pending",
       "canvas_id": null,
@@ -470,9 +557,18 @@
       "publish": true,
       "body_brief": "Ask the participant to produce a clear two-column map for their problem: what AI would contribute (scale, breadth, speed on specific tasks) and what the participant and their stakeholders must contribute (judgment, relationships, organizational knowledge, accountability for decisions and their consequences). For each entry, name the specific thing, not a category. The participant should be able to point to a moment in their work so far where they contributed something AI could not have provided, and use it as evidence.",
       "rubric": [
-        {"description": "Contributions are specific and tied to this problem, not generic statements about AI", "points": 10},
-        {"description": "Human contributions include judgment, relationships, and accountability (not just domain knowledge)", "points": 10},
-        {"description": "At least one concrete moment from the participant's own work is cited as evidence", "points": 5}
+        {
+          "description": "Contributions are specific and tied to this problem, not generic statements about AI",
+          "points": 10
+        },
+        {
+          "description": "Human contributions include judgment, relationships, and accountability (not just domain knowledge)",
+          "points": 10
+        },
+        {
+          "description": "At least one concrete moment from the participant's own work is cited as evidence",
+          "points": 5
+        }
       ],
       "status": "pending",
       "canvas_id": null,
@@ -497,7 +593,6 @@
       "canvas_module_id": null,
       "last_built_at": null
     },
-
     {
       "id": 25,
       "type": "module_header",
@@ -548,9 +643,18 @@
       "publish": true,
       "body_brief": "Ask the participant to write the integrated problem frame: problem statement, stakeholders and their perspectives, scope, success criteria, and the human/AI contribution split. Roughly two to three pages. This replaces the Sprint 1 first-pass statement. AI is a legitimate drafting partner for this document, but every section must reflect decisions the participant has made and can defend.",
       "rubric": [
-        {"description": "All five elements are present and internally consistent", "points": 15},
-        {"description": "Document is written for a reader who does not know the organization", "points": 10},
-        {"description": "Participant's professional judgment is visible in the framing choices, not just AI phrasing", "points": 10}
+        {
+          "description": "All five elements are present and internally consistent",
+          "points": 15
+        },
+        {
+          "description": "Document is written for a reader who does not know the organization",
+          "points": 10
+        },
+        {
+          "description": "Participant's professional judgment is visible in the framing choices, not just AI phrasing",
+          "points": 10
+        }
       ],
       "status": "pending",
       "canvas_id": null,
@@ -571,9 +675,18 @@
       "publish": true,
       "body_brief": "The stakeholder touchpoint for Sprint 4. Ask the participant to share the integrated frame with someone in their organization who has authority over whether this problem gets worked on (a manager, a director, a client lead). The goal is validation and pushback, not approval. Upload the frame as shared, notes from the conversation, and the specific pieces of feedback that will change the frame.",
       "rubric": [
-        {"description": "The decision-maker is genuinely senior or authoritative for this problem", "points": 10},
-        {"description": "Conversation notes include pushback, not just agreement", "points": 10},
-        {"description": "Specific feedback-driven changes to the frame are identified", "points": 10}
+        {
+          "description": "The decision-maker is genuinely senior or authoritative for this problem",
+          "points": 10
+        },
+        {
+          "description": "Conversation notes include pushback, not just agreement",
+          "points": 10
+        },
+        {
+          "description": "Specific feedback-driven changes to the frame are identified",
+          "points": 10
+        }
       ],
       "status": "pending",
       "canvas_id": null,
@@ -594,9 +707,18 @@
       "publish": true,
       "body_brief": "Ask the participant to revise the integrated problem frame based on the validation conversation. Submit the revised frame along with a short change log: what changed, what stayed, and why. If nothing changed, that is a finding worth defending in writing. This revised frame is what the participant will demonstrate in the capstone.",
       "rubric": [
-        {"description": "Revisions are traceable to specific feedback, not cosmetic edits", "points": 10},
-        {"description": "Change log explains the reasoning behind each substantive change or non-change", "points": 10},
-        {"description": "Revised frame is tighter and more defensible than the draft", "points": 5}
+        {
+          "description": "Revisions are traceable to specific feedback, not cosmetic edits",
+          "points": 10
+        },
+        {
+          "description": "Change log explains the reasoning behind each substantive change or non-change",
+          "points": 10
+        },
+        {
+          "description": "Revised frame is tighter and more defensible than the draft",
+          "points": 5
+        }
       ],
       "status": "pending",
       "canvas_id": null,
@@ -621,7 +743,6 @@
       "canvas_module_id": null,
       "last_built_at": null
     },
-
     {
       "id": 31,
       "type": "module_header",
@@ -672,10 +793,22 @@
       "publish": true,
       "body_brief": "Ask the participant to demonstrate their validated problem frame. Format is their choice: a recorded walk-through (video or audio), a narrated slide deck, or a polished written artifact. The demonstration should cover the problem, stakeholders, scope, success criteria, human/AI contributions, and how the frame evolved across the sprints. Ask them to share the demonstration with at least one stakeholder from their map and include that stakeholder's response (written, recorded, or summarized) as part of the upload.",
       "rubric": [
-        {"description": "Demonstration clearly conveys the full validated frame to an outside audience", "points": 20},
-        {"description": "Evolution of the frame across sprints is visible (first-pass vs. final)", "points": 10},
-        {"description": "At least one stakeholder's response to the final frame is included", "points": 10},
-        {"description": "Format choice suits the participant's context and is professionally executed", "points": 10}
+        {
+          "description": "Demonstration clearly conveys the full validated frame to an outside audience",
+          "points": 20
+        },
+        {
+          "description": "Evolution of the frame across sprints is visible (first-pass vs. final)",
+          "points": 10
+        },
+        {
+          "description": "At least one stakeholder's response to the final frame is included",
+          "points": 10
+        },
+        {
+          "description": "Format choice suits the participant's context and is professionally executed",
+          "points": 10
+        }
       ],
       "status": "pending",
       "canvas_id": null,
@@ -696,9 +829,18 @@
       "publish": true,
       "body_brief": "Ask the participant to write a short, direct articulation of the human judgment they brought to this work - the things AI could not have provided. Specific prompts: what organizational context shaped the frame that AI did not know? Which stakeholder relationships influenced the scope? Which prioritization calls were judgment calls that could have gone another way? Where in the process did they slow down and override what AI suggested, and why? One to two pages. This is the articulation that Outcome 4 asks for, and it is the artifact that differentiates a completer from someone who used AI to write a problem statement.",
       "rubric": [
-        {"description": "Organizational context the participant contributed is named concretely", "points": 10},
-        {"description": "Stakeholder-relationship and prioritization judgments are made visible", "points": 10},
-        {"description": "At least one moment of overriding or redirecting AI is described with reasoning", "points": 10}
+        {
+          "description": "Organizational context the participant contributed is named concretely",
+          "points": 10
+        },
+        {
+          "description": "Stakeholder-relationship and prioritization judgments are made visible",
+          "points": 10
+        },
+        {
+          "description": "At least one moment of overriding or redirecting AI is described with reasoning",
+          "points": 10
+        }
       ],
       "status": "pending",
       "canvas_id": null,

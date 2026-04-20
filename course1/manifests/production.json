@@ -1,10 +1,19 @@
 {
+  "artifacts": {
+    "course1/sprints/sprint-0/week-1-orientation.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1883,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "d840fff624b56ed59ba9bc4b26d6ea98a91caf60a44efc139b935d50f6849ca3",
+      "last_pushed": "2026-04-20T21:39:07+00:00"
+    }
+  },
   "instance": {
-    "name": "production",
     "base_url": "https://cti-courses.instructure.com/",
     "course_id": 180,
+    "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": null,
-  "artifacts": {}
+  "last_sync": "2026-04-20T21:39:07+00:00"
 }
