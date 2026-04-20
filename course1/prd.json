@@ -56,10 +56,10 @@
       "submission_type": "discussion_topic",
       "publish": true,
       "body_brief": "Peer introductions. Ask each participant to post a short introduction: their role, their organization in broad strokes, and one workplace situation where AI has already shown up or is being pushed onto them. Ask them to respond to two others whose context differs from their own. Keep it professional and concrete, not a get-to-know-you exercise.",
-      "status": "pending",
-      "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "status": "done",
+      "canvas_id": 1384,
+      "canvas_module_id": 1883,
+      "last_built_at": "2026-04-20T15:05"
     },
     {
       "id": 4,

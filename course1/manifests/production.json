@@ -1,5 +1,13 @@
 {
   "artifacts": {
+    "course1/sprints/sprint-0/cohort-introductions.md": {
+      "canvas_id": 1384,
+      "canvas_module_id": 1883,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "af9905a12820f514ceb805a96737e9cce0a1f7db5ad6ec1dc706ce36eb747297",
+      "last_pushed": "2026-04-20T22:06:13+00:00"
+    },
     "course1/sprints/sprint-0/week-1-orientation.md": {
       "canvas_id": null,
       "canvas_module_id": 1883,
@@ -23,5 +31,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T21:40:45+00:00"
+  "last_sync": "2026-04-20T22:06:13+00:00"
 }
