@@ -288,10 +288,10 @@
       "submission_type": "discussion_topic",
       "publish": true,
       "body_brief": "Peer discussion closing the sprint. Ask each participant to post one assumption their stakeholder conversation shifted, and one question they are now stuck on. Respond to two peers whose organizational context is different from their own. The purpose is cross-context exposure, not validation.",
-      "status": "pending",
-      "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "status": "done",
+      "canvas_id": 1385,
+      "canvas_module_id": 1884,
+      "last_built_at": "2026-04-20T22:22:25Z"
     },
     {
       "id": 13,
