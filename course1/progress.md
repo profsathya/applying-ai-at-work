@@ -67,3 +67,5 @@ BUILT Sprint 4: Validated Framing, canvas module ID 1887, 2026-04-20T15:45:17.
 BUILT Sprint 4 Briefing, canvas ID 3345, 2026-04-20T22:46:41Z.
 
 BUILT Integrated Problem Frame, canvas ID 6703, 2026-04-20T22:49:02Z.
+
+BUILT Validation Conversation with a Decision-Maker, canvas ID 6704, 2026-04-20 22:50 UTC.

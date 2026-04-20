@@ -199,6 +199,14 @@
       "canvas_type": "module_header",
       "content_hash": "a9917afbedeceb1d8c61c017b75e6996e321e2c2f7fd40df8e3e19c2b0674aa5",
       "last_pushed": "2026-04-20T22:45:11+00:00"
+    },
+    "course1/sprints/sprint-4/validation-conversation-with-a-decision-maker.md": {
+      "canvas_id": 6704,
+      "canvas_module_id": 1887,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "eb5a4305c2405018675c6afe3f439135d9b0b4eb76a392bbb8390f54e6cc462e",
+      "last_pushed": "2026-04-20T22:50:47+00:00"
     }
   },
   "instance": {
@@ -207,5 +215,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:48:57+00:00"
+  "last_sync": "2026-04-20T22:50:47+00:00"
 }
