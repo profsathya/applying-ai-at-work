@@ -74,10 +74,10 @@
       "submission_type": "online_quiz",
       "publish": true,
       "body_brief": "Short low-stakes quiz (4-6 questions) confirming participants understand the course expectations: problems are real and from their workplace, stakeholder conversations are required, AI is used as a partner rather than a replacement for thinking, and each sprint produces a visible artifact. Use short-answer and true/false questions. This is a check for understanding, not a gate.",
-      "status": "pending",
-      "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "status": "done",
+      "canvas_id": 2912,
+      "canvas_module_id": 1883,
+      "last_built_at": "2026-04-20 15:07"
     },
     {
       "id": 5,
