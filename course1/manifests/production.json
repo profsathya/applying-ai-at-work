@@ -223,6 +223,14 @@
       "canvas_type": "assignment",
       "content_hash": "eb5a4305c2405018675c6afe3f439135d9b0b4eb76a392bbb8390f54e6cc462e",
       "last_pushed": "2026-04-20T22:50:47+00:00"
+    },
+    "course1/sprints/sprint-5/week-10-capstone.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1888,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "8f9485de27b18aa71ff7c32039039d1b2a576faa28eb6b4ed07986eb3d31f07c",
+      "last_pushed": "2026-04-20T22:55:46+00:00"
     }
   },
   "instance": {
@@ -231,5 +239,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:54:21+00:00"
+  "last_sync": "2026-04-20T22:55:46+00:00"
 }

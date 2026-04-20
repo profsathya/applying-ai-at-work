@@ -758,10 +758,10 @@
       "submission_type": "none",
       "publish": true,
       "body_brief": "Module header for Week 10. The capstone: demonstrate the validated problem frame to peers and stakeholders and articulate the human judgment behind it.",
-      "status": "pending",
+      "status": "done",
       "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "canvas_module_id": 1888,
+      "last_built_at": "2026-04-20T22:55:59+00:00"
     },
     {
       "id": 32,
