@@ -240,6 +240,14 @@
       "content_hash": "d57cfe2cc09991c1d76e52cd13a37cbd1667762b65a7d0f98b27c816d26039a7",
       "last_pushed": "2026-04-20T23:00:01+00:00"
     },
+    "course1/sprints/sprint-5/human-judgment-articulation.md": {
+      "canvas_id": 6708,
+      "canvas_module_id": 1888,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "3fb87fdf5c550ee567564c31b705ecb694a7ddd1f791b33d4ac06450c522350d",
+      "last_pushed": "2026-04-20T23:01:53+00:00"
+    },
     "course1/sprints/sprint-5/week-10-capstone.md": {
       "canvas_id": null,
       "canvas_module_id": 1888,
@@ -255,5 +263,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T23:00:01+00:00"
+  "last_sync": "2026-04-20T23:01:53+00:00"
 }

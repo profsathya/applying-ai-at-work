@@ -79,3 +79,5 @@ BUILT Week 10: Capstone, canvas module ID 1888, 2026-04-20T22:55:59+00:00.
 BUILT Capstone Brief, canvas ID 3346, 2026-04-20T22:58:00Z.
 BUILT Capstone Demonstration, canvas ID 6707, 2026-04-20T23:00:14Z.
 
+
+BUILT Human Judgment Articulation, canvas ID 6708, 2026-04-20T16:02:00Z.
