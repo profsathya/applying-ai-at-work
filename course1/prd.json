@@ -862,10 +862,10 @@
       "submission_type": "discussion_topic",
       "publish": true,
       "body_brief": "Closing discussion. Ask each participant to post: one thing they can now do with a workplace problem that they could not do in Week 1, and one thing they want to carry forward into Course 2. Respond to two peers whose growth or direction surprised them. The intent is relatedness and a visible close to the cohort arc, not summative reflection.",
-      "status": "pending",
-      "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "status": "done",
+      "canvas_id": 1389,
+      "canvas_module_id": 1888,
+      "last_built_at": "2026-04-20T16:03:44"
     }
   ]
 }

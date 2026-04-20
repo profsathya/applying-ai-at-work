@@ -240,6 +240,14 @@
       "content_hash": "d57cfe2cc09991c1d76e52cd13a37cbd1667762b65a7d0f98b27c816d26039a7",
       "last_pushed": "2026-04-20T23:00:01+00:00"
     },
+    "course1/sprints/sprint-5/closing-cohort-reflection.md": {
+      "canvas_id": 1389,
+      "canvas_module_id": 1888,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "198ec62ad3d0a88edc400fb0af17d0e24d794c6870686cf34b35cdd3b1ac519d",
+      "last_pushed": "2026-04-20T23:03:38+00:00"
+    },
     "course1/sprints/sprint-5/human-judgment-articulation.md": {
       "canvas_id": 6708,
       "canvas_module_id": 1888,
@@ -263,5 +271,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T23:01:53+00:00"
+  "last_sync": "2026-04-20T23:03:38+00:00"
 }
