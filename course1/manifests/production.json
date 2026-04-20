@@ -1,5 +1,13 @@
 {
   "artifacts": {
+    "course1/sprints/sprint-0/choose-your-problem.md": {
+      "canvas_id": 6691,
+      "canvas_module_id": 1883,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "ff6d33c2133c27f139146f0774e882805e52818c1057076b9a00a99a8d44c401",
+      "last_pushed": "2026-04-20T22:10:12+00:00"
+    },
     "course1/sprints/sprint-0/cohort-introductions.md": {
       "canvas_id": 1384,
       "canvas_module_id": 1883,
@@ -39,5 +47,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:07:46+00:00"
+  "last_sync": "2026-04-20T22:10:12+00:00"
 }

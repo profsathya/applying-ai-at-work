@@ -64,12 +64,27 @@ def save_manifest(path: Path, manifest: dict) -> None:
     tmp.replace(path)
 
 
+CANVAS_SUBMISSION_TYPE_MAP = {
+    "text_entry": "online_text_entry",
+    "file_upload": "online_upload",
+    "online_quiz": "online_quiz",
+    "discussion_topic": "discussion_topic",
+    "none": "none",
+    "on_paper": "on_paper",
+    "media_recording": "media_recording",
+    "online_url": "online_url",
+    "external_tool": "external_tool",
+}
+
+
 def push_assignment(client: CanvasClient, fm: dict, html: str, existing_id: int | None) -> dict:
+    submission_type = fm.get("submission_type", "text_entry")
+    canvas_submission_type = CANVAS_SUBMISSION_TYPE_MAP.get(submission_type, submission_type)
     payload = {
         "name": fm["title"],
         "description": html,
         "points_possible": fm.get("points"),
-        "submission_types": [fm.get("submission_type", "text_entry")],
+        "submission_types": [canvas_submission_type],
         "published": fm.get("publish", True),
     }
     if fm.get("due"):

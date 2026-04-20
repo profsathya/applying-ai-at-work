@@ -11,3 +11,4 @@ Keep entries concise. One line per learning. Reference specific files or PRs whe
 ## Learnings
 
 - Schemas `schema/prd.schema.json` and `schema/frontmatter.schema.json` originally defined `sprint: minimum: 1`, which conflicted with the CLAUDE.md convention that orientation is `sprint-0` and capstone is `sprint-5`. Relaxed to `minimum: 0, maximum: 5` during course1 planning.
+- Canvas's assignment API expects `online_text_entry`/`online_upload` in `submission_types`, not the shortened `text_entry`/`file_upload` we use in frontmatter. Added `CANVAS_SUBMISSION_TYPE_MAP` in `canvas_sync/push.py` to translate on the way out. First assignment push (Choose Your Problem) 400'd before the fix.
