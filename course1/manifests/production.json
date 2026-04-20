@@ -7,6 +7,14 @@
       "canvas_type": "module_header",
       "content_hash": "d840fff624b56ed59ba9bc4b26d6ea98a91caf60a44efc139b935d50f6849ca3",
       "last_pushed": "2026-04-20T21:39:07+00:00"
+    },
+    "course1/sprints/sprint-0/welcome-and-how-this-course-works.md": {
+      "canvas_id": 3341,
+      "canvas_module_id": 1883,
+      "canvas_page_url": "welcome-and-how-this-course-works",
+      "canvas_type": "page",
+      "content_hash": "3ef465affa10ce55c3e96573710f33dac5187823a415f3554dd76b1051d6c49e",
+      "last_pushed": "2026-04-20T21:40:45+00:00"
     }
   },
   "instance": {
@@ -15,5 +23,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T21:39:07+00:00"
+  "last_sync": "2026-04-20T21:40:45+00:00"
 }

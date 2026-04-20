@@ -38,10 +38,10 @@
       "submission_type": "none",
       "publish": true,
       "body_brief": "Short orientation page. Explain the 10-week arc (orientation, four two-week sprints, capstone), the expectation that every participant will pick a real problem from their own workplace and talk to real stakeholders, and the weekly time commitment. Be direct. Assume professional judgment. Acknowledge that time is tight and every activity is designed to deliver value the same week it is assigned.",
-      "status": "pending",
-      "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "status": "done",
+      "canvas_id": 3341,
+      "canvas_module_id": 1883,
+      "last_built_at": "2026-04-20T14:40:52"
     },
     {
       "id": 3,
