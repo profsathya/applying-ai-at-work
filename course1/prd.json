@@ -776,10 +776,10 @@
       "submission_type": "none",
       "publish": true,
       "body_brief": "Brief the capstone. Explain what participants will produce: a short demonstration of their validated problem frame (a written walk-through, a recorded presentation, or a slide deck with narration - participant chooses the format) shared with both peers and at least one stakeholder from their map, plus a written articulation of the human judgment they brought to the work. Make clear this is a competence moment, not a test: they will be showing what they can now do that they could not do in Week 1.",
-      "status": "pending",
-      "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "status": "done",
+      "canvas_id": 3346,
+      "canvas_module_id": 1888,
+      "last_built_at": "2026-04-20T22:58:00Z"
     },
     {
       "id": 33,

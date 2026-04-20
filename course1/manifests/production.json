@@ -224,6 +224,14 @@
       "content_hash": "eb5a4305c2405018675c6afe3f439135d9b0b4eb76a392bbb8390f54e6cc462e",
       "last_pushed": "2026-04-20T22:50:47+00:00"
     },
+    "course1/sprints/sprint-5/capstone-brief.md": {
+      "canvas_id": 3346,
+      "canvas_module_id": 1888,
+      "canvas_page_url": "capstone-brief",
+      "canvas_type": "page",
+      "content_hash": "bfd8433d7614760f81812920533ca792e4efeed933bf6eaf8970e7d7a01927d9",
+      "last_pushed": "2026-04-20T22:57:59+00:00"
+    },
     "course1/sprints/sprint-5/week-10-capstone.md": {
       "canvas_id": null,
       "canvas_module_id": 1888,
@@ -239,5 +247,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:55:46+00:00"
+  "last_sync": "2026-04-20T22:57:59+00:00"
 }
