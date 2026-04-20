@@ -200,6 +200,14 @@
       "content_hash": "e81914290fb0e4eb9a0c146f0c57f48580f2d8f7ba40eef978a25891c30e2d86",
       "last_pushed": "2026-04-20T22:46:41+00:00"
     },
+    "course1/sprints/sprint-4/sprint-4-peer-exchange.md": {
+      "canvas_id": 1388,
+      "canvas_module_id": 1887,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "0260856821b3d3a87b291882dfcfad337614b1aa277761593f8c2761e0017953",
+      "last_pushed": "2026-04-20T22:54:21+00:00"
+    },
     "course1/sprints/sprint-4/sprint-4-validated-framing.md": {
       "canvas_id": null,
       "canvas_module_id": 1887,
@@ -223,5 +231,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:52:28+00:00"
+  "last_sync": "2026-04-20T22:54:21+00:00"
 }

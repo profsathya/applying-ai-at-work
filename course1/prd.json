@@ -740,10 +740,10 @@
       "submission_type": "discussion_topic",
       "publish": true,
       "body_brief": "Peer discussion closing the sprint. Ask each participant to share the single most important thing their decision-maker said, and how their frame changed (or did not) because of it. Respond to two peers. This is the last peer exchange before the capstone, so signal that the cohort will see these frames again in Week 10.",
-      "status": "pending",
-      "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "status": "done",
+      "canvas_id": 1388,
+      "canvas_module_id": 1887,
+      "last_built_at": "2026-04-20T22:54:28Z"
     },
     {
       "id": 31,
