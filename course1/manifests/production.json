@@ -176,6 +176,14 @@
       "content_hash": "44a2fccb4d2d68deff7810d974e2aae5b28285bc763b3687d1ce1273cf75467c",
       "last_pushed": "2026-04-20T22:40:13+00:00"
     },
+    "course1/sprints/sprint-4/sprint-4-briefing.md": {
+      "canvas_id": 3345,
+      "canvas_module_id": 1887,
+      "canvas_page_url": "sprint-4-briefing",
+      "canvas_type": "page",
+      "content_hash": "e81914290fb0e4eb9a0c146f0c57f48580f2d8f7ba40eef978a25891c30e2d86",
+      "last_pushed": "2026-04-20T22:46:41+00:00"
+    },
     "course1/sprints/sprint-4/sprint-4-validated-framing.md": {
       "canvas_id": null,
       "canvas_module_id": 1887,
@@ -191,5 +199,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T22:45:11+00:00"
+  "last_sync": "2026-04-20T22:46:41+00:00"
 }

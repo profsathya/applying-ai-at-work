@@ -626,10 +626,10 @@
       "submission_type": "none",
       "publish": true,
       "body_brief": "Brief the sprint. This sprint produces the integrated problem frame that will be demonstrated in the capstone. The participant pulls together the problem statement, scope, stakeholder perspectives, success criteria, and human/AI contribution split into one coherent document. Then they validate it with a decision-maker (someone with authority over whether this problem gets worked on) and revise. The frame should be tight enough that a stranger to the organization could understand what problem is being framed, why, and for whom.",
-      "status": "pending",
-      "canvas_id": null,
-      "canvas_module_id": null,
-      "last_built_at": null
+      "status": "done",
+      "canvas_id": 3345,
+      "canvas_module_id": 1887,
+      "last_built_at": "2026-04-20T22:46:41Z"
     },
     {
       "id": 27,
