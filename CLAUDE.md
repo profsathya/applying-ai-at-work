@@ -66,6 +66,17 @@ Subagents run in isolated context windows. Each one:
 
 This certificate serves working professionals, not undergraduates. See `context/audience.md`. Course mechanics assume participants have real jobs, real stakeholders, and existing institutional knowledge. Never ask them to pretend or simulate what they can do for real.
 
+## Known issues and gotchas
+
+For anyone modifying the scaffold itself (as distinct from operators running it; operator-facing gotchas live in `README.md`).
+
+- **Settings.json requires both `python` and `python3` matcher forms.** Subagent prompts sometimes invoke `python` and sometimes `python3`. If the allowlist has only one form, pushes stall. Always keep both `Bash(python canvas_sync/*.py:*)` AND `Bash(python3 canvas_sync/*.py:*)`, plus the `-m` module variants.
+- **Hook references must point to real scripts.** An earlier scaffold referenced `./scripts/guard-manifest-writes.sh` as a PreToolUse hook without the script ever being written. The hook block has since been removed from settings.json. If you add hooks back, verify every referenced script exists and is executable before committing.
+- **`--permission-mode bypassPermissions` is what `ralph.sh` uses, not `acceptEdits`.** `acceptEdits` only authorizes file edits; Bash tools will still prompt for approval, which deadlocks the loop because there is no human present. If you modify `ralph.sh`, keep this flag.
+- **Overloaded API errors.** `ralph.sh` retries the same iteration up to 3 consecutive times with a 30s backoff on `"type":"overloaded_error"` or `"message":"Overloaded"`. Repeated overloads past that threshold mean waiting, not raising the retry cap. State is safe to re-run.
+- **`course<N>/prd.json` and `course<N>/manifests/*.json` are generated.** Don't hand-edit. Edit the design docs and re-plan, or use `/sync` / `/reconcile` to drive state changes through the pipeline.
+- **`course<N>/design/` is authoritative input; `course<N>/sprints/` and `course<N>/manifests/` are generated output.** The builder reads design, writes sprints and manifests. This directionality is a core invariant — the scaffold should never write into `design/`.
+
 ## What Jeremy cares about
 
 - Honest, direct feedback over reassurance.
