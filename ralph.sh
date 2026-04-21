@@ -61,6 +61,7 @@ mkdir -p "$LOG_DIR"
 echo "=== Ralph loop started $(date '+%Y-%m-%d %H:%M:%S') ===" >> "$LOG_FILE"
 
 iteration=0
+overload_retries=0
 while [ "$iteration" -lt "$MAX_ITERATIONS" ]; do
   iteration=$((iteration + 1))
   echo ""
@@ -79,6 +80,21 @@ $(cat $PROMPT_FILE)" --permission-mode bypassPermissions 2>&1)
     # Surface the last few lines so the operator sees progress
     echo "$output" | tail -5
   fi
+
+  # Retry transient Anthropic API overloads without advancing the iteration counter.
+  # Cap at 3 consecutive retries; after that, let the iteration count normally.
+  if echo "$output" | grep -qE '"type":"overloaded_error"|"message":"Overloaded"'; then
+    overload_retries=$((overload_retries + 1))
+    if [ "$overload_retries" -le 3 ]; then
+      echo "API overloaded (retry $overload_retries/3). Sleeping 30s and retrying iteration $iteration."
+      echo "--- overload retry $overload_retries for iteration $iteration ---" >> "$LOG_FILE"
+      iteration=$((iteration - 1))
+      sleep 30
+      continue
+    fi
+    echo "API overloaded after 3 retries; proceeding normally."
+  fi
+  overload_retries=0
 
   if echo "$output" | grep -q "<promise>$COMPLETION_SIGIL</promise>"; then
     echo ""
