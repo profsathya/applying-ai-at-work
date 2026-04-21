@@ -55,11 +55,12 @@ Subagents run in isolated context windows. Each one:
 ## Reading order for a fresh Claude Code session
 
 1. This file
-2. `README-BUILDER.md` (top-level build instructions)
-3. `prompts/ralph-prompt.md` (the loop prompt)
-4. `AGENTS.md` (accumulated learnings from prior builds)
-5. `briefs/<target>.md` and the referenced design docs (if planning)
-6. `course<N>/progress.md` (most recent course, if building)
+2. `README.md` (builder + teammate usage, first-read overview)
+3. `README-BUILDER.md` (deep-dive technical reference)
+4. `prompts/ralph-prompt.md` (the loop prompt)
+5. `AGENTS.md` (accumulated learnings from prior builds)
+6. `briefs/<target>.md` and the referenced design docs (if planning)
+7. `course<N>/progress.md` (most recent course, if building)
 
 ## Audience
 
