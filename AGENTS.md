@@ -6,10 +6,17 @@ Keep entries concise. One line per learning. Reference specific files or PRs whe
 
 ## Build history
 
+- 2026-04-20: course1 build complete. 35 artifacts planned, 33 built across 6 modules in De Anza canvas course 180 (cti-courses.instructure.com). 2 failed on `due_at` format (ids 17, 21) and were left in `failed` state; MD files corrected but PRD not reset (human review required). Wall-clock: ~90 min total including ~25 min of failed attempts while the permission-mode bug was diagnosed. 1 transient Anthropic API overload mid-run (iteration 3 of successful run); lost one iteration before retry-with-backoff was added to `ralph.sh`.
 - 2026-04-20: PRD written for course1, 35 artifacts across 6 sprints (sprint-0 orientation, sprint-1..4 middle, sprint-5 capstone).
 
 ## Learnings
 
+- `--permission-mode bypassPermissions` is required for autonomous bash calls from subagents. `acceptEdits` only covers file edits; it does not authorize Bash tools and leaves every `python3 canvas_sync/push.py` prompting for approval. The first two course1 loop attempts burned ~25 min on this before the flag was corrected in `ralph.sh`.
+- Subagents invoke Python as `python3`, not `python`. `.claude/settings.json` must allowlist both forms (`Bash(python canvas_sync/*.py:*)` AND `Bash(python3 canvas_sync/*.py:*)`), plus `python -m` / `python3 -m` for module-style invocation.
+- Transient Anthropic API overloads (`"type":"overloaded_error"`) happen mid-run under load. `ralph.sh` now retries the same iteration up to 3 times with a 30s backoff rather than silent-ticking the counter.
+- sprint-planner catches schema bugs when CLAUDE.md conventions conflict with JSON schema bounds (e.g., `sprint: minimum: 1` vs. sprint-0 orientation). Trust its relaxations when the conflict is real, verify when it is not.
+- Iteration timing: iteration 1 runs opus (2-5 min, PLAN or complex BUILD). Typical BUILD iterations are 30-90 seconds (sonnet author + haiku push). A course with ~35 artifacts finishes in about 90 minutes once the loop is running cleanly.
+- Failed items stay in `failed` state; the loop does not auto-retry. After a build with any failures, a human must decide whether to reset the PRD item to `pending` (if the underlying cause has been fixed) or accept the gap and close out.
 - Schemas `schema/prd.schema.json` and `schema/frontmatter.schema.json` originally defined `sprint: minimum: 1`, which conflicted with the CLAUDE.md convention that orientation is `sprint-0` and capstone is `sprint-5`. Relaxed to `minimum: 0, maximum: 5` during course1 planning.
 - Canvas's assignment API expects `online_text_entry`/`online_upload` in `submission_types`, not the shortened `text_entry`/`file_upload` we use in frontmatter. Added `CANVAS_SUBMISSION_TYPE_MAP` in `canvas_sync/push.py` to translate on the way out. First assignment push (Choose Your Problem) 400'd before the fix.
-- Canvas's `due_at` requires full ISO 8601 with timezone (e.g. `2026-10-15T23:59:00Z`). A bare local datetime like `2026-10-15T23:59` will 400. Course1 assignments to date omit `due` entirely; canvas-author should not invent a `due` field unless the PRD item specifies one. (Synthesize What You Heard, id=17, failed on first push.)
+- Canvas's `due_at` requires full ISO 8601 with timezone (e.g. `2026-10-15T23:59:00Z`). A bare local datetime like `2026-10-15T23:59` will 400. Course1 assignments to date omit `due` entirely; canvas-author should not invent a `due` field unless the PRD item specifies one. (Synthesize What You Heard id=17 and AI-Fit Analysis id=21 both failed on first push for this reason.)
