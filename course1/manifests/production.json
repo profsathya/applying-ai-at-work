@@ -29,8 +29,8 @@
       "canvas_module_id": 1883,
       "canvas_page_url": null,
       "canvas_type": "quiz",
-      "content_hash": "4dedfe8f323cfd39db6be86c363a395c5a98d5f4830ef2b2d8e8aa49a317b07c",
-      "last_pushed": "2026-04-20T22:07:46+00:00"
+      "content_hash": "5d3c3200f45f878a4925f97c3efae19289d2a9991baf25ec48b2ea4645d92301",
+      "last_pushed": "2026-04-22T19:40:47+00:00"
     },
     "course1/sprints/sprint-0/week-1-orientation.md": {
       "canvas_id": null,
@@ -271,5 +271,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-20T23:03:38+00:00"
+  "last_sync": "2026-04-22T19:40:47+00:00"
 }

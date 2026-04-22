@@ -8,9 +8,10 @@ module: "Week 1: Orientation"
 position: 4
 points: 5
 submission_type: online_quiz
+due: 2026-04-24T23:59
 publish: true
 questions:
-  - type: true_false
+  - type: multiple_choice
     prompt: "Your problem for this course must come from your actual workplace. Hypotheticals and borrowed case studies are not acceptable substitutes."
     points: 1
     answers:
@@ -18,7 +19,7 @@ questions:
         correct: true
       - text: "False"
         correct: false
-  - type: true_false
+  - type: multiple_choice
     prompt: "Each sprint in this course includes a required touchpoint with a real stakeholder in your organization -- not a simulated conversation or a peer role-play."
     points: 1
     answers:
@@ -26,7 +27,7 @@ questions:
         correct: true
       - text: "False"
         correct: false
-  - type: true_false
+  - type: multiple_choice
     prompt: "The role of AI in this course is to do the thinking for you so you can focus on the stakeholder conversations."
     points: 1
     answers:
