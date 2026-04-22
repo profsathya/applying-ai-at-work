@@ -48,7 +48,7 @@ Now you are talking to Claude with access to the repo, the subagents, and the sl
 
     /add-artifact add a 20-point reflection to course 1 sprint 2 called "Stakeholder Midpoint Check" asking participants to summarize one conversation that surprised them
 
-Claude writes the MD file, validates it, pushes to canvas, updates the manifest, commits. 30 seconds end to end.
+Claude writes the MD file, validates it, pushes to canvas, updates the manifest, appends a `BUILT` entry to `course1/progress.md` (with an indented `(added mid-build via /add-artifact, ...)` line below it), and commits. 30 seconds end to end.
 
 ### Edit an existing artifact
 
@@ -71,6 +71,8 @@ When you need more than one artifact but less than a full course re-plan (e.g., 
 The context doc is a markdown file describing what the sprint should contain. It can be a formal design-doc excerpt, an informal brief, or a rebuild note. The sprint-module-builder agent reads it alongside every existing sprint in the target course, infers the scaffolding (artifact count, type mix, rubric pattern, voice), and produces a coherent set of 4-6 MD files: module header, briefing, capability assignments, optional stakeholder touchpoint, peer discussion.
 
 MD only — the slash command then validates, asks you to review, and waits for explicit confirmation before pushing. If course2 has no built sprints yet, it reads course1 sprints and flags that cross-course inference in its summary.
+
+After a successful push, the command appends a `## Sprint N added post-build (<timestamp>)` section to `<target>/progress.md` with one `BUILT` line per artifact and a summary line referencing the context doc path. This mirrors how the Ralph loop logs initial builds, so post-build additions show up in the same history surface.
 
 Use this instead of chaining `/add-artifact` six times. Use `/add-artifact` for a single addition and design-doc-then-re-plan for whole-course restructures.
 

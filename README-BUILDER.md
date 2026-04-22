@@ -77,8 +77,8 @@ Rules subagents must obey (enforced by their prompts):
 
 Five slash commands in `.claude/commands/`. These are for day-to-day work after the initial build. The top-level `README.md` covers operator usage; the internals:
 
-- `/add-artifact` — natural language in, one new MD file + schema validation + push + manifest update + commit out.
-- `/build-sprint` — build a complete sprint (4-6 artifacts) from a context doc. Invokes `sprint-module-builder`, then `schema-validator` on each file, waits for user review, then pushes via `canvas-pusher` and optionally appends to the PRD as `status: done`. Fills the gap between `/add-artifact` (one artifact) and a full course re-plan.
+- `/add-artifact` — natural language in, one new MD file + schema validation + push + manifest update + progress.md append + commit out. Appends `BUILT <title>, canvas ID <id>, <iso-timestamp>.` (or `canvas module ID` for module_headers, or `FAILED` on push failure) followed by an indented `(added mid-build via /add-artifact, <reason>)` line.
+- `/build-sprint` — build a complete sprint (4-6 artifacts) from a context doc. Invokes `sprint-module-builder`, then `schema-validator` on each file, waits for user review, then pushes via `canvas-pusher` and optionally appends to the PRD as `status: done`. Fills the gap between `/add-artifact` (one artifact) and a full course re-plan. After pushes, appends a `## Sprint N added post-build (<iso-timestamp>)` section to `<target>/progress.md` with one BUILT (or FAILED) line per artifact and a summary line referencing the context doc. Matches the Ralph loop's build-log format.
 - `/sync` — push an already-authored MD file to canvas. Used after hand-editing.
 - `/reconcile` — pull canvas drift back into MD. Canvas wins. Shows the diff and asks before applying.
 - `/update-dues` — change the `due` field on one or many artifacts. Accepts a file path plus ISO date, `--from <mapping-file>` (YAML or markdown table keyed by slug or path), or a natural-language description. Invokes `due-date-updater`, then `schema-validator`, then asks before pushing via `canvas-pusher`.
