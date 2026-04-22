@@ -1,6 +1,8 @@
 # Applying AI at Work
 
-This repo is two things in one: a canvas course builder, and the design for the "Applying AI at Work" workforce certificate (CTI + De Anza). Course content is authored as canvas-agnostic markdown in `course1/` and `course2/`, then pushed to canvas by a Ralph-loop-driven pipeline that talks to the Canvas REST API. Once a course is live, day-to-day edits happen through three slash commands in a Claude Code session; the loop is only for the initial build or a from-scratch rebuild. The certificate's pedagogical design (audience, frameworks, outcomes) lives in `context/certificate-overview.md`.
+This repo is two things in one: a canvas course builder, and the design for the "Applying AI at Work" workforce certificate (CTI + De Anza). Course content is authored as canvas-agnostic markdown in `course1/` and `course2/`, then pushed to canvas by a Ralph-loop-driven pipeline that talks to the Canvas REST API. Once a course is live, day-to-day edits happen through five slash commands in a Claude Code session (`/add-artifact`, `/build-sprint`, `/sync`, `/update-dues`, `/reconcile`); the loop is only for the initial build or a from-scratch rebuild. The certificate's pedagogical design (audience, frameworks, outcomes) lives in `context/certificate-overview.md`.
+
+New to the repo? Skip to [Your first session (novice walkthrough)](#your-first-session-novice-walkthrough) and the [Slash commands at a glance](#slash-commands-at-a-glance) table. That's the minimum you need to start editing course content today.
 
 ## What's in this repo
 
@@ -36,7 +38,32 @@ Expected output: `Connected to course <id>. Found N modules.`
 
 ## How teammates use this
 
-The Ralph loop is only for the initial build or a from-scratch rebuild. Day-to-day, everyone edits course content through a regular Claude Code session using three slash commands. Here is what that looks like in practice.
+The Ralph loop is only for the initial build or a from-scratch rebuild. Day-to-day, everyone edits course content through a regular Claude Code session using five slash commands. If you have never used this repo before, the rest of this section is the only part you need to read.
+
+### Your first session (novice walkthrough)
+
+1. Open a terminal.
+2. `cd` into this repo: `cd applying-ai-at-work`.
+3. Activate the virtualenv if it isn't already: `source .venv/bin/activate`.
+4. Start Claude Code: `claude`.
+5. You should see a `>` prompt. You're now talking to an orchestrator that can read the repo, call the subagents, and run the five slash commands.
+6. Type a slash: `/`. An autocomplete menu appears listing every available command. Pick one and keep typing the rest of the sentence.
+7. Press Enter. Claude narrates each step (write MD, validate, push, commit). Anything risky (pushing to canvas, deleting a file) waits for your `yes` first.
+8. To end the session: Ctrl+C or type `/exit`.
+
+If something goes wrong: Ctrl+C to stop the current action. Your MD files and manifest are safe - every step commits, so `git log` shows exactly how far it got. You can restart `claude` and ask Claude to resume.
+
+### Slash commands at a glance
+
+| Command | What it does | Touches canvas? | Asks before pushing? |
+|---|---|---|---|
+| `/add-artifact` | Add one new assignment/page/discussion/quiz from a plain-English description | yes | no (pushes directly) |
+| `/build-sprint` | Build a whole sprint (4-6 artifacts) from a context doc | yes | yes |
+| `/sync` | Push a hand-edited MD file to canvas | yes | no |
+| `/update-dues` | Change due dates on one or many artifacts | yes | yes |
+| `/reconcile` | Pull canvas-side edits back into the MD files | no (pulls) | yes (shows diff first) |
+
+The ones that don't ask are the narrow, safe ones; the ones that ask are the broad, coarse ones. Either way, every step commits to git so you can always `git log` and `git diff` to see what changed.
 
 ### Start a session
 
@@ -44,87 +71,114 @@ The Ralph loop is only for the initial build or a from-scratch rebuild. Day-to-d
 
 Now you are talking to Claude with access to the repo, the subagents, and the slash commands.
 
-### Add one artifact
+### `/add-artifact` — add one assignment, page, discussion, or quiz
+
+Use this when you need exactly one new item somewhere in an already-built course. It takes a plain-English description. You do not need to know what MD looks like, which sprint folder to write to, or how the manifest works.
+
+Copy-paste example (novice):
+
+    /add-artifact add a page to course 1 sprint 0 called "How to ask for help" explaining the three channels we use and when to use each
+
+Slightly richer example:
 
     /add-artifact add a 20-point reflection to course 1 sprint 2 called "Stakeholder Midpoint Check" asking participants to summarize one conversation that surprised them
 
-Claude writes the MD file, validates it, pushes to canvas, updates the manifest, appends a `BUILT` entry to `course1/progress.md` (with an indented `(added mid-build via /add-artifact, ...)` line below it), and commits. 30 seconds end to end.
+What you'll see: Claude writes the MD file, validates it, pushes to canvas, updates the manifest, appends a `BUILT` entry to `course1/progress.md` (with an indented `(added mid-build via /add-artifact, ...)` line below it), and commits. 30 seconds end to end.
 
-### Edit an existing artifact
+If your description is missing something critical (sprint number, point value on a graded item), Claude asks one clarifying question instead of guessing.
+
+### `/sync` — push after hand-editing an MD file
+
+Use this after you or a teammate opened a markdown file in an editor, changed something, and want canvas to reflect the change. Don't use it as a general "apply my changes" command - it's specifically for MD-file changes.
+
+Copy-paste example:
+
+    /sync course1/sprints/sprint-2/stakeholder-interview.md
+
+You can also let Claude find the file for you by describing the edit you want:
 
     Open course1/sprints/sprint-1/gap-statement.md. Change the rubric so "validates with a real stakeholder" is 15 points and "applies structured thinking" is 5, then push the change to canvas.
 
 Claude edits the MD file and runs `/sync` on it. The push updates the canvas artifact in place.
 
-### Push after manually editing an MD file
+What you'll see: schema-validator output (should say `PASS`), then a push confirmation with the canvas ID and the action (`updated` for an existing artifact, `created` if it's new).
 
-If you hand-edited a markdown file and want it in canvas:
+### `/build-sprint` — build a whole sprint from a context doc
 
-    /sync course1/sprints/sprint-2/stakeholder-interview.md
+Use this when you need more than one artifact but less than a full course re-plan (e.g., adding a new sprint to an already-built course, or rebuilding one sprint from scratch because the design shifted). The context doc is a markdown file you write first describing what the sprint should contain - a formal design-doc excerpt, an informal brief, or a rebuild note. Save it anywhere (`/tmp/` is fine).
 
-### Build a whole sprint from a context doc
-
-When you need more than one artifact but less than a full course re-plan (e.g., adding a new sprint to an already-built course, or rebuilding one sprint from scratch because the design shifted):
+Copy-paste example:
 
     /build-sprint course2 sprint 1 /tmp/sprint-1-context.md
 
-The context doc is a markdown file describing what the sprint should contain. It can be a formal design-doc excerpt, an informal brief, or a rebuild note. The sprint-module-builder agent reads it alongside every existing sprint in the target course, infers the scaffolding (artifact count, type mix, rubric pattern, voice), and produces a coherent set of 4-6 MD files: module header, briefing, capability assignments, optional stakeholder touchpoint, peer discussion.
+The sprint-module-builder agent reads your context doc alongside every existing sprint in the target course, infers the scaffolding (artifact count, type mix, rubric pattern, voice), and produces a coherent set of 4-6 MD files: module header, briefing, capability assignments, optional stakeholder touchpoint, peer discussion.
 
-MD only — the slash command then validates, asks you to review, and waits for explicit confirmation before pushing. If course2 has no built sprints yet, it reads course1 sprints and flags that cross-course inference in its summary.
+MD only - the slash command then validates, asks you to review, and waits for explicit confirmation before pushing. If course2 has no built sprints yet, the agent reads course1 sprints and flags that cross-course inference in its summary.
 
 After a successful push, the command appends a `## Sprint N added post-build (<timestamp>)` section to `<target>/progress.md` with one `BUILT` line per artifact and a summary line referencing the context doc path. This mirrors how the Ralph loop logs initial builds, so post-build additions show up in the same history surface.
 
 Use this instead of chaining `/add-artifact` six times. Use `/add-artifact` for a single addition and design-doc-then-re-plan for whole-course restructures.
 
-### Change due dates
+### `/update-dues` — change due dates
 
-Shift one or many deadlines without touching anything else in the artifact:
+Shift one or many deadlines without touching anything else in the artifact. Three input modes:
 
-    /update-dues push all sprint 3 assignments to 2026-10-22T23:59:00Z
+One file, one date:
 
     /update-dues course1/sprints/sprint-3/ai-fit-analysis.md 2026-10-22T23:59:00Z
 
+All matching artifacts at once (natural language):
+
+    /update-dues push all sprint 3 assignments to 2026-10-22T23:59:00Z
+
+Bulk changes from a mapping file:
+
     /update-dues --from /tmp/fall-dues.yaml
 
-Claude resolves the targets, updates only the `due` field in each MD file, runs schema-validator, asks before pushing, then commits. If the natural-language phrase resolves to more than one candidate, the command lists them and stops instead of guessing.
+Claude resolves the targets, updates only the `due` field in each MD file, runs schema-validator, asks before pushing, then commits. If the natural-language phrase resolves to more than one candidate, the command lists them and stops instead of guessing - that's your signal to narrow the description.
 
 The agent always writes full ISO 8601 with timezone (`YYYY-MM-DDTHH:MM:SSZ`). Canvas 400s on bare local datetimes, so the agent also normalizes any malformed `due` values it encounters on the target files.
 
-### Pull canvas edits back into the repo
+### `/reconcile` — pull canvas edits back into the repo
 
 If someone edited a page directly in canvas (Sathya rearranging a module, an admin fixing a typo) and you want the repo to catch up:
 
     /reconcile course1
 
-Claude shows the diff first and asks before applying.
+Claude shows the diff first (dry run), then asks "Apply these changes? (yes/no/partial)". Pick `partial` if you want to cherry-pick which artifacts to pull. Nothing gets written locally until you say yes.
 
-### Restructure one sprint
+### Things you can ask Claude without a slash command
+
+The slash commands are the safe lanes for the common work. For larger or more nuanced changes, just describe what you want. Claude picks the right subagents and tools.
+
+Restructure one sprint:
 
     Sprint 3 currently has five artifacts. Restructure it around three themes: information diet audit, source evaluation, claim formation. Reduce to four artifacts total: one per theme plus a capstone discussion. Write the new MD files, delete the ones that no longer fit (both locally and in canvas), and push everything.
 
 Give Claude Opus for this, not Haiku. Mid-size restructures need judgment.
 
-### Restructure a whole course
+Restructure a whole course (design-doc first, then replan):
 
-Don't do this in chat. Edit `course1/design/structure.md` first (this is the authoritative design spec). Then:
+Don't do this in chat as an ad-hoc request. Edit `course1/design/structure.md` first (this is the authoritative design spec). Then:
 
     Re-plan course 1. The design docs in course1/design/ have changed since the original build. Produce a new PRD, show me the diff against the old PRD before touching canvas, and do not push anything until I approve.
 
 Claude invokes the sprint-planner subagent, produces a new PRD, you review, approve, push. Only changed items actually hit canvas (manifest idempotency). 10 minutes, not 90.
 
-### Build Course 2
+### Build Course 2 (the one time you run the loop)
 
-This is the one case where you run the loop:
+This is the only case where you leave Claude Code and run a shell script:
 
     TARGET_COURSE=course2 ./ralph.sh --verbose
 
-Same command used for Course 1 initially.
+Same command used for Course 1 initially. Expect ~90 minutes for a ~35-artifact course. The loop commits after every iteration, so you can Ctrl+C at any point and resume later - it will pick up from the first `pending` PRD item.
 
 ### The rule of thumb
 
 - **One artifact**: use `/add-artifact` or `/sync` in a chat session.
 - **Due dates only**: use `/update-dues` (single file, mapping file, or natural language).
 - **One sprint's worth of artifacts**: use `/build-sprint` with a context doc describing the sprint.
+- **Canvas changed out from under you**: use `/reconcile`.
 - **Many artifacts across sprints**: edit the design doc first, then ask Claude to re-plan.
 - **Whole course from scratch**: run `./ralph.sh`.
 
@@ -139,8 +193,16 @@ Same command used for Course 1 initially.
 
 - `course<N>/design/` is the design spec. Edit it to restructure the course.
 - `course<N>/sprints/` and `course<N>/manifests/` are generated output. Edit individual sprint files with `/sync`; don't restructure the directory manually.
-- `/add-artifact`, `/sync`, `/reconcile`, `/update-dues` cover almost all day-to-day work.
+- `/add-artifact`, `/build-sprint`, `/sync`, `/update-dues`, `/reconcile` cover almost all day-to-day work.
 - `.env` is local and has secrets. Never commit it.
+
+### Common first-session hiccups
+
+- **"Command not found: claude".** The Claude Code CLI isn't installed or isn't on your PATH. Run `npm install -g @anthropic-ai/claude-code`.
+- **"ERROR: .env not found" when running `./ralph.sh`.** Copy `.env.example` to `.env` and fill in the canvas credentials.
+- **Claude says "course1 has no PRD yet".** The course was never planned. Either run `./ralph.sh` to plan + build, or ask Claude to invoke the sprint-planner directly for a PRD-only run.
+- **Canvas push returns 400 on `due_at`.** You (or an MD file) have a bare local datetime. Run `/update-dues` on that file with a full ISO-8601 Zulu timestamp, or delete the `due` line entirely.
+- **"requires approval" loops.** You ran `ralph.sh` but it was edited to use `acceptEdits` instead of `bypassPermissions`. Put it back - see the Gotchas section.
 
 ## Repo layout
 
