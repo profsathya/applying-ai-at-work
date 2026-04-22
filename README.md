@@ -7,8 +7,8 @@ This repo is two things in one: a canvas course builder, and the design for the 
 - `course1/` and `course2/` — the two certificate courses. Each has `design/` (authoritative design docs, hand-authored), `sprints/` (canvas artifacts, generated), and `manifests/` (canvas instance state, generated).
 - `context/` — shared design docs that inform both courses: audience, frameworks, design principles, SDT, stakeholder engagement, AI partnership, certificate overview, decision log.
 - `canvas_sync/` — the Python sync engine (Canvas API client, push, pull, schema validation).
-- `.claude/agents/` — the six subagents (sprint-planner, canvas-author, canvas-pusher, canvas-puller, schema-validator, due-date-updater).
-- `.claude/commands/` — the four slash commands (`/add-artifact`, `/sync`, `/reconcile`, `/update-dues`).
+- `.claude/agents/` — the seven subagents (sprint-planner, sprint-module-builder, canvas-author, canvas-pusher, canvas-puller, schema-validator, due-date-updater).
+- `.claude/commands/` — the five slash commands (`/add-artifact`, `/build-sprint`, `/sync`, `/reconcile`, `/update-dues`).
 - `prompts/ralph-prompt.md` — the system prompt for initial builds.
 - `ralph.sh` — the Ralph loop driver.
 - `schema/` — JSON schemas for PRDs, manifests, and artifact frontmatter.
@@ -62,6 +62,18 @@ If you hand-edited a markdown file and want it in canvas:
 
     /sync course1/sprints/sprint-2/stakeholder-interview.md
 
+### Build a whole sprint from a context doc
+
+When you need more than one artifact but less than a full course re-plan (e.g., adding a new sprint to an already-built course, or rebuilding one sprint from scratch because the design shifted):
+
+    /build-sprint course2 sprint 1 /tmp/sprint-1-context.md
+
+The context doc is a markdown file describing what the sprint should contain. It can be a formal design-doc excerpt, an informal brief, or a rebuild note. The sprint-module-builder agent reads it alongside every existing sprint in the target course, infers the scaffolding (artifact count, type mix, rubric pattern, voice), and produces a coherent set of 4-6 MD files: module header, briefing, capability assignments, optional stakeholder touchpoint, peer discussion.
+
+MD only — the slash command then validates, asks you to review, and waits for explicit confirmation before pushing. If course2 has no built sprints yet, it reads course1 sprints and flags that cross-course inference in its summary.
+
+Use this instead of chaining `/add-artifact` six times. Use `/add-artifact` for a single addition and design-doc-then-re-plan for whole-course restructures.
+
 ### Change due dates
 
 Shift one or many deadlines without touching anything else in the artifact:
@@ -110,7 +122,8 @@ Same command used for Course 1 initially.
 
 - **One artifact**: use `/add-artifact` or `/sync` in a chat session.
 - **Due dates only**: use `/update-dues` (single file, mapping file, or natural language).
-- **Many artifacts**: edit the design doc first, then ask Claude to re-plan.
+- **One sprint's worth of artifacts**: use `/build-sprint` with a context doc describing the sprint.
+- **Many artifacts across sprints**: edit the design doc first, then ask Claude to re-plan.
 - **Whole course from scratch**: run `./ralph.sh`.
 
 ### What teammates don't need to understand
@@ -146,8 +159,8 @@ applying-ai-at-work/
 
   .claude/
     settings.json                # permissions (python + python3 both allowlisted)
-    agents/*.md                  # six subagents
-    commands/*.md                # four slash commands
+    agents/*.md                  # seven subagents
+    commands/*.md                # five slash commands
 
   canvas_sync/                   # Python sync layer (hand-authored)
     canvas_client.py             # Canvas REST API client

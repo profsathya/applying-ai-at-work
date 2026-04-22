@@ -54,9 +54,10 @@ Iteration timing (observed on course1):
 
 ## Subagents
 
-Six narrow subagents, each in its own context window. Defined in `.claude/agents/`.
+Seven narrow subagents, each in its own context window. Defined in `.claude/agents/`.
 
 - `sprint-planner` (opus) — reads design docs, writes `course<N>/prd.json` and initializes the manifest. Runs once at start of build.
+- `sprint-module-builder` (opus) — only invoked by `/build-sprint`. Plans and authors one sprint's worth of coherent artifacts (module header, briefing, capability assignments, stakeholder touchpoint, peer discussion) from a context doc. Infers scaffolding by reading existing built sprints in the target course. MD only; no validation, no canvas access, no manifest writes.
 - `canvas-author` (sonnet) — writes one MD artifact per iteration. Has no canvas access.
 - `schema-validator` (haiku) — validates frontmatter + manifest + PRD against the JSON schemas in `schema/`.
 - `canvas-pusher` (haiku) — runs `canvas_sync/push.py`, updates the manifest with the canvas ID.
@@ -74,9 +75,10 @@ Rules subagents must obey (enforced by their prompts):
 
 ## Slash commands
 
-Four slash commands in `.claude/commands/`. These are for day-to-day work after the initial build. The top-level `README.md` covers operator usage; the internals:
+Five slash commands in `.claude/commands/`. These are for day-to-day work after the initial build. The top-level `README.md` covers operator usage; the internals:
 
 - `/add-artifact` — natural language in, one new MD file + schema validation + push + manifest update + commit out.
+- `/build-sprint` — build a complete sprint (4-6 artifacts) from a context doc. Invokes `sprint-module-builder`, then `schema-validator` on each file, waits for user review, then pushes via `canvas-pusher` and optionally appends to the PRD as `status: done`. Fills the gap between `/add-artifact` (one artifact) and a full course re-plan.
 - `/sync` — push an already-authored MD file to canvas. Used after hand-editing.
 - `/reconcile` — pull canvas drift back into MD. Canvas wins. Shows the diff and asks before applying.
 - `/update-dues` — change the `due` field on one or many artifacts. Accepts a file path plus ISO date, `--from <mapping-file>` (YAML or markdown table keyed by slug or path), or a natural-language description. Invokes `due-date-updater`, then `schema-validator`, then asks before pushing via `canvas-pusher`.
