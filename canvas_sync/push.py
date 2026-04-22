@@ -139,16 +139,30 @@ def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None
     else:
         result = client.create_quiz(payload)
 
-    # Add questions if specified
     quiz_id = result["id"]
+
+    # Wipe existing questions so an update replaces rather than appends.
+    if existing_id:
+        for q in client.list_quiz_questions(quiz_id):
+            client.delete_quiz_question(quiz_id, q["id"])
+
+    question_type_map = {
+        "multiple_choice": "multiple_choice_question",
+        "true_false": "true_false_question",
+        "short_answer": "short_answer_question",
+        "essay": "essay_question",
+    }
+
     for q in fm.get("questions", []):
+        q_type = q.get("type", "short_answer")
+        canvas_q_type = question_type_map.get(q_type, q_type)
         question_payload = {
             "question_name": q.get("prompt", "")[:50],
             "question_text": q.get("prompt", ""),
-            "question_type": q.get("type", "short_answer_question"),
+            "question_type": canvas_q_type,
             "points_possible": q.get("points", 1),
         }
-        if q.get("type") == "multiple_choice":
+        if q_type in ("multiple_choice", "true_false"):
             question_payload["answers"] = [
                 {"answer_text": a["text"], "answer_weight": 100 if a.get("correct") else 0}
                 for a in q.get("answers", [])

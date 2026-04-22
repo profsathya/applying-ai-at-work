@@ -154,6 +154,17 @@ class CanvasClient:
             "POST", f"quizzes/{quiz_id}/questions", {"question": question}
         )
 
+    def list_quiz_questions(self, quiz_id: int) -> list[dict]:
+        result = self._request(
+            "GET", f"quizzes/{quiz_id}/questions", params={"per_page": 100}
+        )
+        return result if isinstance(result, list) else []
+
+    def delete_quiz_question(self, quiz_id: int, question_id: int) -> dict:
+        return self._request(
+            "DELETE", f"quizzes/{quiz_id}/questions/{question_id}"
+        )
+
     # ---- Modules ----
 
     def list_modules(self) -> list[dict]:
