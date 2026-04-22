@@ -31,5 +31,8 @@ Thumbs.db
 # Agent memory that should stay local
 .claude/agent-memory-local/
 
+# Per-user Claude Code overrides
+.claude/settings.local.json
+
 # Manifests that are marked private (optional per-project)
 # courses/*/manifests/*.local.json

@@ -22,11 +22,20 @@
       "Bash(cat:*)",
       "Bash(echo:*)",
       "Bash(pwd)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(rm -rf course1/sprints/sprint-*)",
+      "Bash(rm -rf course2/sprints/sprint-*)",
+      "Bash(rm -rf /tmp/smoke-test-*)",
+      "Bash(rm -rf /tmp/test-sprint-*)",
+      "Bash(rm /tmp/test-sprint-*:*)"
     ],
     "deny": [
-      "Bash(rm -rf:*)",
-      "Bash(git push:*)",
+      "Bash(rm -rf /:*)",
+      "Bash(rm -rf ~:*)",
+      "Bash(rm -rf $HOME:*)",
+      "Bash(rm -rf ..:*)",
+      "Bash(rm -rf .:*)",
+      "Bash(rm -rf *:*)",
       "Bash(git reset --hard:*)",
       "Bash(sudo:*)",
       "Bash(curl:*)",
