@@ -7,8 +7,8 @@ This repo is two things in one: a canvas course builder, and the design for the 
 - `course1/` and `course2/` — the two certificate courses. Each has `design/` (authoritative design docs, hand-authored), `sprints/` (canvas artifacts, generated), and `manifests/` (canvas instance state, generated).
 - `context/` — shared design docs that inform both courses: audience, frameworks, design principles, SDT, stakeholder engagement, AI partnership, certificate overview, decision log.
 - `canvas_sync/` — the Python sync engine (Canvas API client, push, pull, schema validation).
-- `.claude/agents/` — the five subagents (sprint-planner, canvas-author, canvas-pusher, canvas-puller, schema-validator).
-- `.claude/commands/` — the three slash commands (`/add-artifact`, `/sync`, `/reconcile`).
+- `.claude/agents/` — the six subagents (sprint-planner, canvas-author, canvas-pusher, canvas-puller, schema-validator, due-date-updater).
+- `.claude/commands/` — the four slash commands (`/add-artifact`, `/sync`, `/reconcile`, `/update-dues`).
 - `prompts/ralph-prompt.md` — the system prompt for initial builds.
 - `ralph.sh` — the Ralph loop driver.
 - `schema/` — JSON schemas for PRDs, manifests, and artifact frontmatter.
@@ -62,6 +62,20 @@ If you hand-edited a markdown file and want it in canvas:
 
     /sync course1/sprints/sprint-2/stakeholder-interview.md
 
+### Change due dates
+
+Shift one or many deadlines without touching anything else in the artifact:
+
+    /update-dues push all sprint 3 assignments to 2026-10-22T23:59:00Z
+
+    /update-dues course1/sprints/sprint-3/ai-fit-analysis.md 2026-10-22T23:59:00Z
+
+    /update-dues --from /tmp/fall-dues.yaml
+
+Claude resolves the targets, updates only the `due` field in each MD file, runs schema-validator, asks before pushing, then commits. If the natural-language phrase resolves to more than one candidate, the command lists them and stops instead of guessing.
+
+The agent always writes full ISO 8601 with timezone (`YYYY-MM-DDTHH:MM:SSZ`). Canvas 400s on bare local datetimes, so the agent also normalizes any malformed `due` values it encounters on the target files.
+
 ### Pull canvas edits back into the repo
 
 If someone edited a page directly in canvas (Sathya rearranging a module, an admin fixing a typo) and you want the repo to catch up:
@@ -95,6 +109,7 @@ Same command used for Course 1 initially.
 ### The rule of thumb
 
 - **One artifact**: use `/add-artifact` or `/sync` in a chat session.
+- **Due dates only**: use `/update-dues` (single file, mapping file, or natural language).
 - **Many artifacts**: edit the design doc first, then ask Claude to re-plan.
 - **Whole course from scratch**: run `./ralph.sh`.
 
@@ -109,7 +124,7 @@ Same command used for Course 1 initially.
 
 - `course<N>/design/` is the design spec. Edit it to restructure the course.
 - `course<N>/sprints/` and `course<N>/manifests/` are generated output. Edit individual sprint files with `/sync`; don't restructure the directory manually.
-- `/add-artifact`, `/sync`, `/reconcile` cover almost all day-to-day work.
+- `/add-artifact`, `/sync`, `/reconcile`, `/update-dues` cover almost all day-to-day work.
 - `.env` is local and has secrets. Never commit it.
 
 ## Repo layout
@@ -131,8 +146,8 @@ applying-ai-at-work/
 
   .claude/
     settings.json                # permissions (python + python3 both allowlisted)
-    agents/*.md                  # five subagents
-    commands/*.md                # three slash commands
+    agents/*.md                  # six subagents
+    commands/*.md                # four slash commands
 
   canvas_sync/                   # Python sync layer (hand-authored)
     canvas_client.py             # Canvas REST API client
@@ -191,7 +206,7 @@ applying-ai-at-work/
 - **Push blocked by permission system.** If you see subagents stalling on "requires approval" for `python3 canvas_sync/push.py`, confirm `.claude/settings.json` has both `Bash(python canvas_sync/*.py:*)` AND `Bash(python3 canvas_sync/*.py:*)` in the allow list, and that `ralph.sh` uses `--permission-mode bypassPermissions` (not `acceptEdits`). This was the first-build blocker for course1 and cost ~25 minutes to diagnose.
 - **Overloaded API errors.** Transient 529s from the Anthropic API happen under load. The loop now retries with 30s backoff, capped at 3 consecutive retries. If you see 3+ consecutive overloads, stop the loop and come back later. The state is safe; re-running resumes.
 - **`.env` not loading.** `canvas_sync/canvas_client.py`'s smoke test doesn't auto-load `.env`; `push.py` and `pull.py` do. For manual canvas connection tests, run `set -a; source .env; set +a` first.
-- **Invalid `due_at` formats.** Canvas rejects bare local datetimes like `2026-10-15T23:59`. Use full ISO 8601 with timezone (`2026-10-15T23:59:00Z`) or omit `due` entirely. Two course1 artifacts failed on this during the first build.
+- **Invalid `due_at` formats.** Canvas rejects bare local datetimes like `2026-10-15T23:59`. Use full ISO 8601 with timezone (`2026-10-15T23:59:00Z`) or omit `due` entirely. Two course1 artifacts failed on this during the first build. `/update-dues` normalizes to the canonical form automatically.
 - **`course<N>/prd.json` got edited by hand.** Don't hand-edit the PRD. Edit `course<N>/design/*.md` instead and ask Claude to re-plan.
 
 ## Deeper technical reference

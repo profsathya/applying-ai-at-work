@@ -54,13 +54,14 @@ Iteration timing (observed on course1):
 
 ## Subagents
 
-Five narrow subagents, each in its own context window. Defined in `.claude/agents/`.
+Six narrow subagents, each in its own context window. Defined in `.claude/agents/`.
 
 - `sprint-planner` (opus) — reads design docs, writes `course<N>/prd.json` and initializes the manifest. Runs once at start of build.
 - `canvas-author` (sonnet) — writes one MD artifact per iteration. Has no canvas access.
 - `schema-validator` (haiku) — validates frontmatter + manifest + PRD against the JSON schemas in `schema/`.
 - `canvas-pusher` (haiku) — runs `canvas_sync/push.py`, updates the manifest with the canvas ID.
 - `canvas-puller` (haiku) — only invoked by `/reconcile`. Diffs canvas state against MD and writes canvas changes back to MD.
+- `due-date-updater` (sonnet) — only invoked by `/update-dues`. Updates the `due` field in one or more artifact MD files from NLP, a slug-to-date mapping file, or a path plus date. Normalizes to `YYYY-MM-DDTHH:MM:SSZ`. No canvas access.
 
 Rules subagents must obey (enforced by their prompts):
 
@@ -73,11 +74,12 @@ Rules subagents must obey (enforced by their prompts):
 
 ## Slash commands
 
-Three slash commands in `.claude/commands/`. These are for day-to-day work after the initial build. The top-level `README.md` covers operator usage; the internals:
+Four slash commands in `.claude/commands/`. These are for day-to-day work after the initial build. The top-level `README.md` covers operator usage; the internals:
 
 - `/add-artifact` — natural language in, one new MD file + schema validation + push + manifest update + commit out.
 - `/sync` — push an already-authored MD file to canvas. Used after hand-editing.
 - `/reconcile` — pull canvas drift back into MD. Canvas wins. Shows the diff and asks before applying.
+- `/update-dues` — change the `due` field on one or many artifacts. Accepts a file path plus ISO date, `--from <mapping-file>` (YAML or markdown table keyed by slug or path), or a natural-language description. Invokes `due-date-updater`, then `schema-validator`, then asks before pushing via `canvas-pusher`.
 
 ## Schemas
 
@@ -100,7 +102,7 @@ Three slash commands in `.claude/commands/`. These are for day-to-day work after
 Canvas quirks captured in push.py:
 
 - `submission_types` API expects `online_text_entry` / `online_upload`, not the shortened `text_entry` / `file_upload` we use in frontmatter. Mapped in the push layer.
-- `due_at` requires full ISO 8601 with timezone (`2026-10-15T23:59:00Z`). Bare local datetimes fail. Let `canvas-author` omit the `due` field unless the PRD item specifies one.
+- `due_at` requires full ISO 8601 with timezone (`2026-10-15T23:59:00Z`). Bare local datetimes fail. Let `canvas-author` omit the `due` field unless the PRD item specifies one. To change or add dues after the initial build, use `/update-dues` rather than hand-editing frontmatter; the agent normalizes any malformed values it encounters.
 
 ## Grading
 
