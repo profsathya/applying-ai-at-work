@@ -1,0 +1,52 @@
+---
+name: canvas-author
+description: Author exactly one Canvas-agnostic Markdown artifact from a PRD-shaped item.
+---
+
+# Canvas Author Skill
+
+Write one artifact Markdown file from one PRD-shaped item.
+
+## Required Output
+
+Write exactly one file:
+
+```text
+<target>/sprints/sprint-<n>/<slug>.md
+```
+
+## Frontmatter
+
+Copy PRD fields exactly where applicable:
+
+- `type`
+- `title`
+- `slug`
+- `sprint`
+- `week`
+- `module`
+- `position`
+- `points`
+- `submission_type`
+- `publish`
+- `rubric`
+- `questions`
+
+Do not include `canvas_id`, `canvas_module_id`, `status`, `last_built_at`, or `error`.
+
+## Body Rules
+
+- Canvas-native Markdown only.
+- No em dashes.
+- No HTML, iframes, JavaScript, scripts, inline styles, or external CDN references.
+- Write for working professionals in second person.
+- Make the human contribution visible when AI is involved.
+- Do not name internal CTI frameworks unless the design doc explicitly says to.
+
+## Validation
+
+After writing, run:
+
+```bash
+python3 canvas_sync/schema.py --artifact <file>
+```

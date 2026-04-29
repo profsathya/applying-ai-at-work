@@ -1,64 +1,70 @@
 #!/bin/bash
-# ralph.sh - autonomous course build loop
+# codex-ralph.sh - Codex-backed autonomous course build loop
 #
-# Runs claude code with the Ralph prompt repeatedly until the course is
-# fully built in canvas (emits COURSE_COMPLETE) or a HALT condition fires.
+# Codex replacement for the legacy Ralph loop. It keeps the same file-backed
+# PLAN/BUILD/VERIFY contract and sigils, and calls Codex non-interactively.
 #
 # Usage:
-#   ./ralph.sh                    # normal run
-#   MAX_ITERATIONS=50 ./ralph.sh  # override iteration cap
-#   ./ralph.sh --verbose          # tail iteration output live
+#   ./codex-ralph.sh
+#   TARGET_COURSE=course2 ./codex-ralph.sh --verbose
+#   CODEX_RALPH_ARGS="--full-auto" ./codex-ralph.sh
+#
+# Do not use dangerous approval bypass modes against production Canvas courses
+# until the Codex pilot has passed on a sandbox course.
 
 set -euo pipefail
 
 MAX_ITERATIONS="${MAX_ITERATIONS:-100}"
 COMPLETION_SIGIL="COURSE_COMPLETE"
 HALT_SIGIL="HALT:"
-PROMPT_FILE="prompts/ralph-prompt.md"
+PROMPT_FILE="prompts/codex/ralph-prompt.md"
 LOG_DIR=".ralph"
-LOG_FILE="$LOG_DIR/log.txt"
+LOG_FILE="$LOG_DIR/codex-log.txt"
 VERBOSE=0
+
+# Conservative default: full-auto is intended for unattended local execution,
+# but still keeps Codex's sandbox/approval model in play. Override with
+# CODEX_RALPH_ARGS only after reviewing Codex permissions for this repo.
+CODEX_RALPH_ARGS="${CODEX_RALPH_ARGS:---full-auto}"
 
 for arg in "$@"; do
   case "$arg" in
     --verbose) VERBOSE=1 ;;
     --help)
-      echo "Usage: ./ralph.sh [--verbose]"
+      echo "Usage: ./codex-ralph.sh [--verbose]"
       echo "  MAX_ITERATIONS env var caps iteration count (default 100)"
       echo "  TARGET_COURSE env var selects course1 or course2 (default from .env)"
+      echo "  CODEX_RALPH_ARGS overrides Codex exec args (default: --full-auto)"
       exit 0
       ;;
   esac
 done
 
-# Load .env so TARGET_COURSE and canvas creds are available to claude
 if [ -f .env ]; then
   set -a
   source .env
   set +a
 fi
 
-# Expose target course to claude via an extra instruction line prepended to the prompt
 TARGET_COURSE="${TARGET_COURSE:-course1}"
 
-# Sanity checks
 if [ ! -f "$PROMPT_FILE" ]; then
   echo "ERROR: $PROMPT_FILE not found. Run this from the repo root."
   exit 1
 fi
 
 if [ ! -f ".env" ]; then
-  echo "ERROR: .env not found. Copy .env.example and fill in your canvas credentials."
+  echo "ERROR: .env not found. Copy .env.example and fill in your Canvas credentials."
   exit 1
 fi
 
-if ! command -v claude &> /dev/null; then
-  echo "ERROR: claude CLI not found. Install with: npm install -g @anthropic-ai/claude-code"
+if ! command -v codex &> /dev/null; then
+  echo "ERROR: codex CLI not found. Install with: npm i -g @openai/codex"
   exit 1
 fi
 
 mkdir -p "$LOG_DIR"
-echo "=== Ralph loop started $(date '+%Y-%m-%d %H:%M:%S') ===" >> "$LOG_FILE"
+echo "=== Codex Ralph loop started $(date '+%Y-%m-%d %H:%M:%S') ===" >> "$LOG_FILE"
 
 iteration=0
 overload_retries=0
@@ -68,31 +74,28 @@ while [ "$iteration" -lt "$MAX_ITERATIONS" ]; do
   echo "=== Iteration $iteration/$MAX_ITERATIONS ==="
   echo "--- iteration $iteration $(date '+%H:%M:%S') ---" >> "$LOG_FILE"
 
+  prompt="TARGET COURSE: $TARGET_COURSE
+
+$(cat "$PROMPT_FILE")"
+
   if [ "$VERBOSE" -eq 1 ]; then
-    output=$(claude -p "TARGET COURSE: $TARGET_COURSE
-
-$(cat $PROMPT_FILE)" --permission-mode bypassPermissions 2>&1 | tee -a "$LOG_FILE")
+    output=$(codex exec $CODEX_RALPH_ARGS "$prompt" 2>&1 | tee -a "$LOG_FILE")
   else
-    output=$(claude -p "TARGET COURSE: $TARGET_COURSE
-
-$(cat $PROMPT_FILE)" --permission-mode bypassPermissions 2>&1)
+    output=$(codex exec $CODEX_RALPH_ARGS "$prompt" 2>&1)
     echo "$output" >> "$LOG_FILE"
-    # Surface the last few lines so the operator sees progress
     echo "$output" | tail -5
   fi
 
-  # Retry transient Anthropic API overloads without advancing the iteration counter.
-  # Cap at 3 consecutive retries; after that, let the iteration count normally.
-  if echo "$output" | grep -qE '"type":"overloaded_error"|"message":"Overloaded"'; then
+  if echo "$output" | grep -qiE 'overloaded|rate.?limit|temporarily unavailable'; then
     overload_retries=$((overload_retries + 1))
     if [ "$overload_retries" -le 3 ]; then
-      echo "API overloaded (retry $overload_retries/3). Sleeping 30s and retrying iteration $iteration."
+      echo "Model service overloaded or rate-limited (retry $overload_retries/3). Sleeping 30s and retrying iteration $iteration."
       echo "--- overload retry $overload_retries for iteration $iteration ---" >> "$LOG_FILE"
       iteration=$((iteration - 1))
       sleep 30
       continue
     fi
-    echo "API overloaded after 3 retries; proceeding normally."
+    echo "Model service still unavailable after 3 retries; proceeding normally."
   fi
   overload_retries=0
 
@@ -110,7 +113,7 @@ $(cat $PROMPT_FILE)" --permission-mode bypassPermissions 2>&1)
     echo "========================================"
     echo "  HALTED after $iteration iterations"
     echo "========================================"
-    halt_msg=$(echo "$output" | grep -oP '(?<=<promise>HALT: )[^<]+' | head -1)
+    halt_msg=$(echo "$output" | grep -oE '<promise>HALT: [^<]+' | sed 's/<promise>HALT: //' | head -1)
     echo "  $halt_msg"
     echo "See progress.md and $LOG_FILE for details."
     exit 1

@@ -16,7 +16,7 @@ __pycache__/
 .venv/
 venv/
 
-# Node (in case claude-code cache lands here)
+# Node
 node_modules/
 
 # OS
@@ -28,11 +28,11 @@ Thumbs.db
 .idea/
 *.swp
 
-# Agent memory that should stay local
-.claude/agent-memory-local/
-
-# Per-user Claude Code overrides
-.claude/settings.local.json
+# Local agent memory that should stay local
+.agents/memory-local/
 
 # Manifests that are marked private (optional per-project)
 # courses/*/manifests/*.local.json
+
+# Runtime locks for manifest writes
+course*/manifests/*.lock

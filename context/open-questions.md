@@ -1,6 +1,6 @@
 # Open Questions
 
-Things the team needs to decide. These are unresolved by design — the repository captures the structure and philosophy, but these decisions require team discussion.
+Things the team needs to decide. These are unresolved by design: the repository captures the structure and philosophy, but these decisions require team discussion.
 
 - What is the end-of-course capstone for each course? What does the Week 10 deliverable look like?
 - What happens during the Week 1 orientation specifically? What activities, introductions, and problem-selection mechanics are involved?
@@ -13,4 +13,4 @@ Things the team needs to decide. These are unresolved by design — the reposito
 
 ## Resolved
 
-- What delivery platform will be used? **Canvas.** See `context/decision-log.md` for the adoption entry. The pipeline lives in `canvas_sync/`, `.claude/`, and `prompts/ralph-prompt.md`.
+- What delivery platform will be used? **Canvas.** See `context/decision-log.md` for the adoption entry. The pipeline lives in `canvas_sync/`, `.agents/skills/`, `.codex/`, and `prompts/codex/ralph-prompt.md`.

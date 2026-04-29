@@ -1,0 +1,10 @@
+# Project-scoped Codex defaults. Codex only loads this file after the project is trusted.
+# Keep this conservative while Claude compatibility remains available.
+
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+# AGENTS.md is the Codex-native source for this repo.
+
+[features]
+multi_agent = true

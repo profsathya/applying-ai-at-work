@@ -18,6 +18,8 @@ Exit codes:
 from __future__ import annotations
 
 import argparse
+from contextlib import contextmanager
+import fcntl
 import json
 import os
 import sys
@@ -62,6 +64,18 @@ def save_manifest(path: Path, manifest: dict) -> None:
         json.dump(manifest, f, indent=2, sort_keys=True)
         f.write("\n")
     tmp.replace(path)
+
+
+@contextmanager
+def manifest_lock(path: Path):
+    """Serialize manifest reads/writes across concurrent push processes."""
+    lock_path = path.with_suffix(path.suffix + ".lock")
+    with open(lock_path, "w") as lock_file:
+        fcntl.flock(lock_file, fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(lock_file, fcntl.LOCK_UN)
 
 
 CANVAS_SUBMISSION_TYPE_MAP = {
@@ -173,6 +187,10 @@ def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None
 
 
 def push_artifact(md_path: Path, manifest_path: Path) -> dict:
+    repo_root = Path.cwd().resolve()
+    md_path = md_path.resolve()
+    manifest_path = manifest_path.resolve()
+
     # Validate first
     errors = validate_artifact(md_path)
     if errors:
@@ -181,107 +199,108 @@ def push_artifact(md_path: Path, manifest_path: Path) -> dict:
     fm, body = parse_frontmatter(md_path)
     html = md_body_to_canvas_html(body)
 
-    manifest = load_manifest(manifest_path)
+    with manifest_lock(manifest_path):
+        manifest = load_manifest(manifest_path)
 
-    # Determine course from path. In this repo, the MD file lives under
-    # course1/sprints/... or course2/sprints/..., and the corresponding
-    # canvas course_id comes from COURSE1_CANVAS_ID or COURSE2_CANVAS_ID.
-    rel_path = str(md_path.relative_to(Path.cwd()))
-    if rel_path.startswith("course1/"):
-        env_course_id = int(os.environ.get("COURSE1_CANVAS_ID", "0"))
-    elif rel_path.startswith("course2/"):
-        env_course_id = int(os.environ.get("COURSE2_CANVAS_ID", "0"))
-    else:
-        env_course_id = 0
+        # Determine course from path. In this repo, the MD file lives under
+        # course1/sprints/... or course2/sprints/..., and the corresponding
+        # canvas course_id comes from COURSE1_CANVAS_ID or COURSE2_CANVAS_ID.
+        rel_path = str(md_path.relative_to(repo_root))
+        if rel_path.startswith("course1/"):
+            env_course_id = int(os.environ.get("COURSE1_CANVAS_ID", "0"))
+        elif rel_path.startswith("course2/"):
+            env_course_id = int(os.environ.get("COURSE2_CANVAS_ID", "0"))
+        else:
+            env_course_id = 0
 
-    # Prefer manifest course_id; fall back to env if manifest still has 0
-    manifest_course_id = manifest.get("instance", {}).get("course_id") or 0
-    course_id = manifest_course_id or env_course_id
-    if not course_id:
-        raise ValueError(
-            f"No course_id available for {rel_path}. Set COURSE1_CANVAS_ID or COURSE2_CANVAS_ID in .env."
-        )
+        # Prefer manifest course_id; fall back to env if manifest still has 0
+        manifest_course_id = manifest.get("instance", {}).get("course_id") or 0
+        course_id = manifest_course_id or env_course_id
+        if not course_id:
+            raise ValueError(
+                f"No course_id available for {rel_path}. Set COURSE1_CANVAS_ID or COURSE2_CANVAS_ID in .env."
+            )
 
-    # If the manifest had 0 and we filled from env, persist the backfill
-    if not manifest_course_id and env_course_id:
-        manifest["instance"]["course_id"] = env_course_id
+        # If the manifest had 0 and we filled from env, persist the backfill
+        if not manifest_course_id and env_course_id:
+            manifest["instance"]["course_id"] = env_course_id
 
-    client = CanvasClient.from_env(course_id=course_id)
+        client = CanvasClient.from_env(course_id=course_id)
 
-    # Look up existing canvas entry for this file
-    artifacts = manifest.setdefault("artifacts", {})
-    existing = artifacts.get(rel_path, {})
-    existing_id = existing.get("canvas_id")
-    existing_page_url = existing.get("canvas_page_url")
+        # Look up existing canvas entry for this file
+        artifacts = manifest.setdefault("artifacts", {})
+        existing = artifacts.get(rel_path, {})
+        existing_id = existing.get("canvas_id")
+        existing_page_url = existing.get("canvas_page_url")
 
-    artifact_type = fm["type"]
-    action = "updated" if (existing_id or existing_page_url) else "created"
+        artifact_type = fm["type"]
+        action = "updated" if (existing_id or existing_page_url) else "created"
 
-    if artifact_type == "assignment":
-        result = push_assignment(client, fm, html, existing_id)
-        canvas_id = result["id"]
-        canvas_page_url = None
-    elif artifact_type == "page":
-        result = push_page(client, fm, html, existing_page_url)
-        canvas_id = result.get("page_id")
-        canvas_page_url = result.get("url")
-    elif artifact_type == "discussion":
-        result = push_discussion(client, fm, html, existing_id)
-        canvas_id = result["id"]
-        canvas_page_url = None
-    elif artifact_type == "quiz":
-        result = push_quiz(client, fm, html, existing_id)
-        canvas_id = result["id"]
-        canvas_page_url = None
-    elif artifact_type == "module_header":
-        canvas_id = None
-        canvas_page_url = None
-        result = {}
-    else:
-        raise ValueError(f"Unknown artifact type: {artifact_type}")
+        if artifact_type == "assignment":
+            result = push_assignment(client, fm, html, existing_id)
+            canvas_id = result["id"]
+            canvas_page_url = None
+        elif artifact_type == "page":
+            result = push_page(client, fm, html, existing_page_url)
+            canvas_id = result.get("page_id")
+            canvas_page_url = result.get("url")
+        elif artifact_type == "discussion":
+            result = push_discussion(client, fm, html, existing_id)
+            canvas_id = result["id"]
+            canvas_page_url = None
+        elif artifact_type == "quiz":
+            result = push_quiz(client, fm, html, existing_id)
+            canvas_id = result["id"]
+            canvas_page_url = None
+        elif artifact_type == "module_header":
+            canvas_id = None
+            canvas_page_url = None
+            result = {}
+        else:
+            raise ValueError(f"Unknown artifact type: {artifact_type}")
 
-    # Resolve module and add to it if not already present
-    module_id = resolve_or_create_module(client, fm["module"])
+        # Resolve module and add to it if not already present
+        module_id = resolve_or_create_module(client, fm["module"])
 
-    if artifact_type != "module_header" and action == "created":
-        content_type_map = {
-            "assignment": "Assignment",
-            "page": "Page",
-            "discussion": "Discussion",
-            "quiz": "Quiz",
+        if artifact_type != "module_header" and action == "created":
+            content_type_map = {
+                "assignment": "Assignment",
+                "page": "Page",
+                "discussion": "Discussion",
+                "quiz": "Quiz",
+            }
+            client.add_module_item(
+                module_id,
+                title=fm["title"],
+                content_type=content_type_map[artifact_type],
+                content_id=canvas_id if artifact_type != "page" else None,
+                page_url=canvas_page_url if artifact_type == "page" else None,
+                position=fm.get("position"),
+            )
+
+        # Update manifest
+        import hashlib
+        from datetime import datetime, timezone
+
+        content_hash = hashlib.sha256(md_path.read_bytes()).hexdigest()
+
+        artifacts[rel_path] = {
+            "canvas_type": artifact_type,
+            "canvas_id": canvas_id,
+            "canvas_page_url": canvas_page_url,
+            "canvas_module_id": module_id,
+            "content_hash": content_hash,
+            "last_pushed": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         }
-        client.add_module_item(
-            module_id,
-            title=fm["title"],
-            content_type=content_type_map[artifact_type],
-            content_id=canvas_id if artifact_type != "page" else None,
-            page_url=canvas_page_url if artifact_type == "page" else None,
-            position=fm.get("position"),
-        )
+        manifest["last_sync"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        save_manifest(manifest_path, manifest)
 
-    # Update manifest
-    import hashlib
-    from datetime import datetime, timezone
-
-    content_hash = hashlib.sha256(md_path.read_bytes()).hexdigest()
-
-    artifacts[rel_path] = {
-        "canvas_type": artifact_type,
-        "canvas_id": canvas_id,
-        "canvas_page_url": canvas_page_url,
-        "canvas_module_id": module_id,
-        "content_hash": content_hash,
-        "last_pushed": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-    }
-    manifest["last_sync"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    save_manifest(manifest_path, manifest)
-
-    return {
-        "action": action,
-        "file": rel_path,
-        "canvas_id": canvas_id,
-        "canvas_module_id": module_id,
-    }
+        return {
+            "action": action,
+            "file": rel_path,
+            "canvas_id": canvas_id,
+            "canvas_module_id": module_id,
+        }
 
 
 def main() -> int:

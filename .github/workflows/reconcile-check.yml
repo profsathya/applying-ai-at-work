@@ -26,15 +26,18 @@ jobs:
           CANVAS_API_TOKEN: ${{ secrets.CANVAS_API_TOKEN }}
         run: |
           set -e
-          for manifest in courses/*/manifests/*.json; do
+          drift_found=0
+          for manifest in course*/manifests/*.json; do
             echo "=== Checking $manifest ==="
             python canvas_sync/pull.py --manifest "$manifest" --dry-run > /tmp/drift.json || true
             drifted=$(jq '.drifted' /tmp/drift.json)
             if [ "$drifted" -gt 0 ]; then
               echo "::warning::Drift detected in $manifest: $drifted artifacts"
               cat /tmp/drift.json
+              drift_found=1
             fi
           done
+          exit "$drift_found"
 
       - name: Create issue on drift
         if: failure()

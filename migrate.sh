@@ -21,8 +21,8 @@ if [ ! -f "context/decision-log.md" ]; then
   exit 1
 fi
 
-if [ ! -f "prompts/ralph-prompt.md" ]; then
-  echo "ERROR: prompts/ralph-prompt.md not found. Unzip the builder scaffold first."
+if [ ! -f "prompts/codex/ralph-prompt.md" ]; then
+  echo "ERROR: prompts/codex/ralph-prompt.md not found. Unzip the builder scaffold first."
   exit 1
 fi
 
@@ -137,7 +137,7 @@ if ! grep -q "$DECISION_MARKER" context/decision-log.md; then
 
 **$TODAY - Adopted canvas-course-builder; answered "delivery platform" open question**
 
-Adopted the canvas-course-builder scaffold as the delivery pipeline: a Ralph-loop-driven system that generates canvas artifacts directly from canvas-agnostic markdown via the Canvas REST API. Canvas is now the delivery platform. Canvas-agnostic markdown in this repo is the source of truth; per-canvas-course manifests (one per course shell) map MD files to canvas IDs. The legacy iframe-embedding pattern used in CST349 and CST395 is archived to archive/legacy-iframe-template/ for reference. The corresponding entry in open-questions.md is now resolved.
+Adopted the canvas-course-builder scaffold as the delivery pipeline: a Codex Ralph loop that generates canvas artifacts directly from canvas-agnostic markdown via the Canvas REST API. Canvas is now the delivery platform. Canvas-agnostic markdown in this repo is the source of truth; per-canvas-course manifests (one per course shell) map MD files to canvas IDs. The legacy iframe-embedding pattern used in CST349 and CST395 is archived to archive/legacy-iframe-template/ for reference. The corresponding entry in open-questions.md is now resolved.
 
 EOF
   tail -n +3 context/decision-log.md >> "$TMP"
@@ -160,7 +160,7 @@ if old in text:
     text = text.replace(old, "")
 if "## Resolved" not in text:
     text = text.rstrip() + "\n\n## Resolved\n\n"
-resolved_line = "- What delivery platform will be used? **Canvas.** See `context/decision-log.md` for the adoption entry. The pipeline lives in `canvas_sync/`, `.claude/`, and `prompts/ralph-prompt.md`.\n"
+resolved_line = "- What delivery platform will be used? **Canvas.** See `context/decision-log.md` for the adoption entry. The pipeline lives in `canvas_sync/`, `.agents/skills/`, `.codex/`, and `prompts/codex/ralph-prompt.md`.\n"
 if resolved_line not in text:
     text += resolved_line
 p.write_text(text)
@@ -174,7 +174,7 @@ echo ""
 echo "--- Step 6: Merge .gitignore additions ---"
 if [ -f .gitignore ]; then
   # Append builder-specific ignores if not already present
-  for pattern in ".env" ".ralph/" "__pycache__/" ".claude/agent-memory-local/"; do
+  for pattern in ".env" ".ralph/" "__pycache__/" ".agents/memory-local/"; do
     if ! grep -qF "$pattern" .gitignore 2>/dev/null; then
       echo "$pattern" >> .gitignore
       echo "  added to .gitignore: $pattern"
@@ -186,8 +186,8 @@ fi
 
 echo ""
 echo "--- Step 7: Make scripts executable ---"
-chmod +x ralph.sh migrate.sh 2>/dev/null || true
-echo "  chmod +x ralph.sh migrate.sh"
+chmod +x codex-ralph.sh migrate.sh 2>/dev/null || true
+echo "  chmod +x codex-ralph.sh migrate.sh"
 
 echo ""
 echo "=== Migration complete ==="

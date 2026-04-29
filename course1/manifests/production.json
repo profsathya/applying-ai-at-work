@@ -248,6 +248,30 @@
       "content_hash": "198ec62ad3d0a88edc400fb0af17d0e24d794c6870686cf34b35cdd3b1ac519d",
       "last_pushed": "2026-04-20T23:03:38+00:00"
     },
+    "course1/sprints/sprint-5/codex-pilot-capstone-readiness-brief.md": {
+      "canvas_id": 3351,
+      "canvas_module_id": 1888,
+      "canvas_page_url": "codex-pilot-capstone-readiness-brief",
+      "canvas_type": "page",
+      "content_hash": "84bdfb311913cce73c6097d40e5c435d8b47df302e1c1a7df988c3788ed505db",
+      "last_pushed": "2026-04-29T19:55:26+00:00"
+    },
+    "course1/sprints/sprint-5/codex-pilot-capstone-readiness-sprint.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1888,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "da18678f7cfd5d105a9fdcd511979dce452c8709b6eef5e7f7c82f5d74d2d6bc",
+      "last_pushed": "2026-04-29T19:52:48+00:00"
+    },
+    "course1/sprints/sprint-5/codex-pilot-final-readiness-check.md": {
+      "canvas_id": 6720,
+      "canvas_module_id": 1888,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "426da8a8fe7b315661a038d8dae285f726a536580fb10ce590602ec91f29d77a",
+      "last_pushed": "2026-04-29T19:52:58+00:00"
+    },
     "course1/sprints/sprint-5/human-judgment-articulation.md": {
       "canvas_id": 6708,
       "canvas_module_id": 1888,
@@ -271,5 +295,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-22T19:40:47+00:00"
+  "last_sync": "2026-04-29T19:55:26+00:00"
 }

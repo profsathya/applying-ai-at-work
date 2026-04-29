@@ -3,14 +3,17 @@ name: Validate schemas
 on:
   pull_request:
     paths:
-      - 'courses/**'
+      - 'course1/**'
+      - 'course2/**'
       - 'schema/**'
       - 'canvas_sync/**'
   push:
     branches: [main]
     paths:
-      - 'courses/**'
+      - 'course1/**'
+      - 'course2/**'
       - 'schema/**'
+      - 'canvas_sync/**'
 
 jobs:
   validate:
