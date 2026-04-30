@@ -46,6 +46,10 @@ Move all course1 sprint 3 assignment due dates to 2026-10-22T23:59:00Z.
 Canvas was edited directly for course1. Show me the dry-run reconcile report before applying anything.
 ```
 
+```text
+Inspect course1 on Canvas, include module items, and update the local ledger.
+```
+
 ## What Codex Does
 
 Codex infers the workflow from the request:
@@ -57,6 +61,7 @@ Codex infers the workflow from the request:
 | One page, assignment, quiz, discussion, or module header | `add-artifact` |
 | Reviewed Markdown pushed to Canvas | `sync` |
 | Due date changes | `update-dues` |
+| Live Canvas module/item inventory and ledger | `canvas-inspector` with `inspect-canvas` |
 | Canvas edits pulled back into the repo | `reconcile` dry-run first |
 
 The tool names are optional. They are here so maintainers can understand the routing.
@@ -88,6 +93,18 @@ Discussion ID: 1391
 Manifest updated.
 ```
 
+For Canvas inspections, Codex should report the live-course summary and ledger paths:
+
+```text
+Inspected course1 on Canvas.
+
+Ledger:
+- course1/reports/canvas-ledger-production.md
+- course1/reports/canvas-ledger-production.json
+
+No Canvas writes were made.
+```
+
 ## Context Specs
 
 Codex can work from either pasted context or a Markdown spec file.
@@ -105,6 +122,8 @@ Canvas writes are real side effects.
 - Draft requests should say `stop before Canvas`.
 - Codex validates before pushing.
 - Codex only pushes after explicit approval.
+- `canvas_sync/inspect_canvas.py` is read-only against Canvas and can update local ledgers under `course<N>/reports/`.
+- Use `canvas-inspector` before reconcile when you need a current Canvas module/item inventory and manifest alignment check.
 - `canvas_sync/push.py` owns Canvas IDs and manifest updates.
 - Do not write Canvas IDs into Markdown frontmatter.
 - Do not commit `.env`.
@@ -144,6 +163,7 @@ Connected to course <id>. Found N modules.
 course1/ and course2/       Course design, sprint Markdown, manifests, PRDs
 context/                    Shared design docs and course/module specs
 canvas_sync/                Deterministic Canvas push, pull, and validation scripts
+course*/reports/            Generated Canvas inspection ledgers
 schema/                     JSON schemas for artifacts, manifests, and PRDs
 .agents/skills/             Reusable Codex workflows
 .codex/agents/              Specialized Codex agents

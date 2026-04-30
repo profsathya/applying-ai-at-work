@@ -83,3 +83,5 @@ BUILT Capstone Demonstration, canvas ID 6707, 2026-04-20T23:00:14Z.
 BUILT Human Judgment Articulation, canvas ID 6708, 2026-04-20T16:02:00Z.
 BUILT Closing Cohort Reflection, canvas ID 1389, 2026-04-20T16:03:44.
 BUILT Practice: Using Codex Agents NLP test module, canvas module ID 1896; page 3352, assignment 6721, quiz 2914, discussion 1391, 2026-04-30T18:57:38Z.
+BUILT Using This Codex Course Builder tutorial module, canvas module ID 1897; pages 3353, 3354, 3355, quiz 2915, discussion 1392, 2026-04-30T22:28:46Z.
+UPDATED Reviewing Drafts Before Canvas with canvas-inspector guidance, canvas ID 3355, 2026-04-30T22:54:49Z.

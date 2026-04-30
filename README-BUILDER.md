@@ -92,6 +92,7 @@ Codex skills live in `.agents/skills/`.
 - `build-course` - generate a full course from pasted context or a course spec file, validate, then optionally push after review.
 - `build-sprint` - generate one sprint from pasted context or a spec file, validate, then optionally push after review.
 - `update-dues` - edit `due` fields, validate, and optionally push.
+- `inspect-canvas` - read live Canvas modules and module items, compare with the manifest and local files, and write a local ledger under `course<N>/reports/`.
 - `reconcile` - dry-run Canvas drift, then optionally apply Canvas changes locally.
 - `canvas-author` - write exactly one artifact from a PRD-shaped item.
 - `sprint-planner` - decompose course design into PRD, metadata, progress log, and manifest.
@@ -107,8 +108,9 @@ Codex custom agents live in `.codex/agents/`.
 - `course-drafter.toml` - full-course and sprint/module drafting through `build-course` or `build-sprint`.
 - `sprint-planner.toml` - high-context course decomposition.
 - `canvas-author.toml` - artifact authoring.
+- `canvas-inspector.toml` - read-only Canvas inventory and reconcile-readiness reporting through `inspect-canvas`.
 
-Use direct Python commands for validation, push, and pull.
+Use direct Python commands for validation, inspect, push, and pull.
 
 ## Schemas
 
@@ -138,6 +140,7 @@ Rules enforced or expected:
 
 - `canvas_client.py` - Canvas REST API wrapper.
 - `push.py` - validates one MD file, converts Markdown to Canvas HTML, creates or updates the Canvas artifact, adds it to the module, and updates the manifest.
+- `inspect_canvas.py` - reads live Canvas modules and module items, compares them with the manifest and local Markdown files, and writes JSON/Markdown ledgers under `course<N>/reports/`.
 - `pull.py` - fetches Canvas state, reports drift, and optionally writes Canvas changes back to MD.
 - `schema.py` - validates artifacts, manifests, and PRDs.
 

@@ -288,6 +288,54 @@
       "content_hash": "411c6a58b7407a4b23843dae07a490c39974f6b51c50ae39e7f9e434343cc2fa",
       "last_pushed": "2026-04-30T18:57:38+00:00"
     },
+    "course1/sprints/sprint-5/codex-builder-tutorial-check.md": {
+      "canvas_id": 2915,
+      "canvas_module_id": 1897,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "761175fb0f7e971eb99899557f9e8bdce91e538416ae520567eb989bca914492",
+      "last_pushed": "2026-04-30T22:28:42+00:00"
+    },
+    "course1/sprints/sprint-5/codex-builder-tutorial-module.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1897,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "45dc570da89c027f0055c29b9cf7bcbd2ecdc260ce7700d684f3cd0658096f7a",
+      "last_pushed": "2026-04-30T22:28:22+00:00"
+    },
+    "course1/sprints/sprint-5/codex-builder-tutorial-prompt-exchange.md": {
+      "canvas_id": 1392,
+      "canvas_module_id": 1897,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "db30b73122b1947f61bd71c7a067b14ae30102b3b6948ddf464972c78b80078f",
+      "last_pushed": "2026-04-30T22:28:46+00:00"
+    },
+    "course1/sprints/sprint-5/codex-builder-tutorial-review-and-push.md": {
+      "canvas_id": 3355,
+      "canvas_module_id": 1897,
+      "canvas_page_url": "reviewing-drafts-before-canvas",
+      "canvas_type": "page",
+      "content_hash": "5ce5f57302f36d1cb1e025fca1eeedd1b33292f4bbe02926f7b50c021034bd55",
+      "last_pushed": "2026-04-30T22:54:20+00:00"
+    },
+    "course1/sprints/sprint-5/codex-builder-tutorial-starting-codex.md": {
+      "canvas_id": 3353,
+      "canvas_module_id": 1897,
+      "canvas_page_url": "starting-codex-from-the-repo",
+      "canvas_type": "page",
+      "content_hash": "304f3a4115d88bb3521dd97c049d4fe90bedc065b3b64a3d93a36fe756985e3f",
+      "last_pushed": "2026-04-30T22:28:26+00:00"
+    },
+    "course1/sprints/sprint-5/codex-builder-tutorial-writing-requests.md": {
+      "canvas_id": 3354,
+      "canvas_module_id": 1897,
+      "canvas_page_url": "writing-a-useful-codex-request",
+      "canvas_type": "page",
+      "content_hash": "6b65978d6786000dee332a6c1b601e59af0dd4edc499d768edcb224b04024ad5",
+      "last_pushed": "2026-04-30T22:28:32+00:00"
+    },
     "course1/sprints/sprint-5/codex-pilot-capstone-readiness-brief.md": {
       "canvas_id": 3351,
       "canvas_module_id": 1888,
@@ -335,5 +383,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-30T18:57:38+00:00"
+  "last_sync": "2026-04-30T22:54:20+00:00"
 }

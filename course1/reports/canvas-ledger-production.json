@@ -1,0 +1,982 @@
+{
+  "checks": {
+    "canvas_items_not_in_manifest": [],
+    "canvas_modules_not_in_manifest": [],
+    "canvas_orphans": [],
+    "drift_errors": [],
+    "drifted_artifacts": [
+      {
+        "drift": {
+          "body": {
+            "canvas_chars": 3617,
+            "canvas_preview": "# Sprint 4 Peer Exchange\n\nThis is the last peer exchange before the capstone. You have taken your integrated problem frame to a real decision-maker, heard how they read it, and revised it based on wha",
+            "local_chars": 3618,
+            "local_preview": "# Sprint 4 Peer Exchange\n\nThis is the last peer exchange before the capstone. You have taken your integrated problem frame to a real decision-maker, heard how they read it, and revised it based on wha"
+          }
+        },
+        "file": "course1/sprints/sprint-4/sprint-4-peer-exchange.md"
+      },
+      {
+        "drift": {
+          "points": {
+            "canvas": 0.0,
+            "local": 5
+          }
+        },
+        "file": "course1/sprints/sprint-5/codex-agent-practice-check.md"
+      }
+    ],
+    "manifest_artifacts_not_in_module_items": [],
+    "manifest_module_ids_not_live": [],
+    "missing_local_files": [],
+    "unmanifested_local_files": [
+      {
+        "file": "course1/sprints/sprint-2/synthesize-what-you-heard.md",
+        "module": "Sprint 2: Scope and Stakeholders",
+        "position": 5,
+        "title": "Synthesize What You Heard",
+        "type": "assignment"
+      },
+      {
+        "file": "course1/sprints/sprint-3/ai-fit-analysis.md",
+        "module": "Sprint 3: AI Fit and Success Criteria",
+        "position": 3,
+        "title": "AI-Fit Analysis",
+        "type": "assignment"
+      }
+    ],
+    "unpublished_items": [],
+    "unpublished_modules": [
+      {
+        "id": 1896,
+        "items_count": 4,
+        "name": "Practice: Using Codex Agents",
+        "position": 7
+      }
+    ]
+  },
+  "generated_at": "2026-04-30T22:54:37+00:00",
+  "manifest": {
+    "instance": {
+      "base_url": "https://cti-courses.instructure.com/",
+      "course_id": 180,
+      "name": "production",
+      "term": "Fall 2026"
+    },
+    "last_sync": "2026-04-30T22:54:20+00:00",
+    "path": "course1/manifests/production.json"
+  },
+  "modules": [
+    {
+      "id": 1883,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/welcome-and-how-this-course-works",
+          "content_id": null,
+          "module_item_id": 17231,
+          "page_url": "welcome-and-how-this-course-works",
+          "position": 2,
+          "published": true,
+          "title": "Welcome and How This Course Works",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1384",
+          "content_id": 1384,
+          "module_item_id": 17232,
+          "page_url": null,
+          "position": 3,
+          "published": true,
+          "title": "Cohort Introductions",
+          "type": "Discussion"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/quizzes/2912",
+          "content_id": 2912,
+          "module_item_id": 17233,
+          "page_url": null,
+          "position": 4,
+          "published": true,
+          "title": "Orientation Check",
+          "type": "Quiz"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6691",
+          "content_id": 6691,
+          "module_item_id": 17234,
+          "page_url": null,
+          "position": 5,
+          "published": true,
+          "title": "Choose Your Problem",
+          "type": "Assignment"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6692",
+          "content_id": 6692,
+          "module_item_id": 17235,
+          "page_url": null,
+          "position": 6,
+          "published": true,
+          "title": "Initial Stakeholder Map",
+          "type": "Assignment"
+        }
+      ],
+      "items_count": 5,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 6691,
+          "canvas_module_id": 1883,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-0/choose-your-problem.md",
+          "last_pushed": "2026-04-20T22:10:12+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 1384,
+          "canvas_module_id": 1883,
+          "canvas_page_url": null,
+          "canvas_type": "discussion",
+          "file": "course1/sprints/sprint-0/cohort-introductions.md",
+          "last_pushed": "2026-04-20T22:06:13+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6692,
+          "canvas_module_id": 1883,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-0/initial-stakeholder-map.md",
+          "last_pushed": "2026-04-20T22:12:00+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 2912,
+          "canvas_module_id": 1883,
+          "canvas_page_url": null,
+          "canvas_type": "quiz",
+          "file": "course1/sprints/sprint-0/orientation-check.md",
+          "last_pushed": "2026-04-22T19:40:47+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1883,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course1/sprints/sprint-0/week-1-orientation.md",
+          "last_pushed": "2026-04-20T21:39:07+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3341,
+          "canvas_module_id": 1883,
+          "canvas_page_url": "welcome-and-how-this-course-works",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-0/welcome-and-how-this-course-works.md",
+          "last_pushed": "2026-04-20T21:40:45+00:00",
+          "local_exists": true
+        }
+      ],
+      "name": "Week 1: Orientation",
+      "position": 1,
+      "published": true
+    },
+    {
+      "id": 1884,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/sprint-1-briefing",
+          "content_id": null,
+          "module_item_id": 17236,
+          "page_url": "sprint-1-briefing",
+          "position": 2,
+          "published": true,
+          "title": "Sprint 1 Briefing",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6693",
+          "content_id": 6693,
+          "module_item_id": 17237,
+          "page_url": null,
+          "position": 3,
+          "published": true,
+          "title": "First-Pass Problem Statement",
+          "type": "Assignment"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6694",
+          "content_id": 6694,
+          "module_item_id": 17238,
+          "page_url": null,
+          "position": 4,
+          "published": true,
+          "title": "Assumption Audit with AI",
+          "type": "Assignment"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6695",
+          "content_id": 6695,
+          "module_item_id": 17239,
+          "page_url": null,
+          "position": 5,
+          "published": true,
+          "title": "Listening Conversation with a Stakeholder",
+          "type": "Assignment"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1385",
+          "content_id": 1385,
+          "module_item_id": 17240,
+          "page_url": null,
+          "position": 6,
+          "published": true,
+          "title": "Sprint 1 Peer Exchange",
+          "type": "Discussion"
+        }
+      ],
+      "items_count": 5,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 6694,
+          "canvas_module_id": 1884,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-1/assumption-audit-with-ai.md",
+          "last_pushed": "2026-04-20T22:18:42+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6693,
+          "canvas_module_id": 1884,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-1/first-pass-problem-statement.md",
+          "last_pushed": "2026-04-20T22:17:09+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6695,
+          "canvas_module_id": 1884,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-1/listening-conversation-with-a-stakeholder.md",
+          "last_pushed": "2026-04-20T22:20:47+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3342,
+          "canvas_module_id": 1884,
+          "canvas_page_url": "sprint-1-briefing",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-1/sprint-1-briefing.md",
+          "last_pushed": "2026-04-20T22:15:28+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 1385,
+          "canvas_module_id": 1884,
+          "canvas_page_url": null,
+          "canvas_type": "discussion",
+          "file": "course1/sprints/sprint-1/sprint-1-peer-exchange.md",
+          "last_pushed": "2026-04-20T22:22:16+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1884,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course1/sprints/sprint-1/sprint-1-surfacing-the-problem.md",
+          "last_pushed": "2026-04-20T22:13:26+00:00",
+          "local_exists": true
+        }
+      ],
+      "name": "Sprint 1: Surfacing the Problem",
+      "position": 2,
+      "published": true
+    },
+    {
+      "id": 1885,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/sprint-2-briefing",
+          "content_id": null,
+          "module_item_id": 17241,
+          "page_url": "sprint-2-briefing",
+          "position": 2,
+          "published": true,
+          "title": "Sprint 2 Briefing",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6697",
+          "content_id": 6697,
+          "module_item_id": 17242,
+          "page_url": null,
+          "position": 3,
+          "published": true,
+          "title": "Scope and Boundaries Draft",
+          "type": "Assignment"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6698",
+          "content_id": 6698,
+          "module_item_id": 17243,
+          "page_url": null,
+          "position": 4,
+          "published": true,
+          "title": "Second Stakeholder Interview",
+          "type": "Assignment"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1386",
+          "content_id": 1386,
+          "module_item_id": 17244,
+          "page_url": null,
+          "position": 6,
+          "published": true,
+          "title": "Sprint 2 Peer Exchange",
+          "type": "Discussion"
+        }
+      ],
+      "items_count": 4,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 6697,
+          "canvas_module_id": 1885,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-2/scope-and-boundaries-draft.md",
+          "last_pushed": "2026-04-20T22:26:53+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6698,
+          "canvas_module_id": 1885,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-2/second-stakeholder-interview.md",
+          "last_pushed": "2026-04-20T22:28:47+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3343,
+          "canvas_module_id": 1885,
+          "canvas_page_url": "sprint-2-briefing",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-2/sprint-2-briefing.md",
+          "last_pushed": "2026-04-20T22:25:11+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 1386,
+          "canvas_module_id": 1885,
+          "canvas_page_url": null,
+          "canvas_type": "discussion",
+          "file": "course1/sprints/sprint-2/sprint-2-peer-exchange.md",
+          "last_pushed": "2026-04-20T22:33:04+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1885,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course1/sprints/sprint-2/sprint-2-scope-and-stakeholders.md",
+          "last_pushed": "2026-04-20T22:23:41+00:00",
+          "local_exists": true
+        }
+      ],
+      "name": "Sprint 2: Scope and Stakeholders",
+      "position": 3,
+      "published": true
+    },
+    {
+      "id": 1886,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/sprint-3-briefing",
+          "content_id": null,
+          "module_item_id": 17245,
+          "page_url": "sprint-3-briefing",
+          "position": 2,
+          "published": true,
+          "title": "Sprint 3 Briefing",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6700",
+          "content_id": 6700,
+          "module_item_id": 17246,
+          "page_url": null,
+          "position": 4,
+          "published": true,
+          "title": "Success Criteria with a Stakeholder",
+          "type": "Assignment"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6701",
+          "content_id": 6701,
+          "module_item_id": 17247,
+          "page_url": null,
+          "position": 5,
+          "published": true,
+          "title": "Human and AI Contribution Map",
+          "type": "Assignment"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1387",
+          "content_id": 1387,
+          "module_item_id": 17248,
+          "page_url": null,
+          "position": 6,
+          "published": true,
+          "title": "Sprint 3 Peer Critique",
+          "type": "Discussion"
+        }
+      ],
+      "items_count": 4,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 6701,
+          "canvas_module_id": 1886,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-3/human-and-ai-contribution-map.md",
+          "last_pushed": "2026-04-20T22:42:03+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1886,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course1/sprints/sprint-3/sprint-3-ai-fit-and-success-criteria.md",
+          "last_pushed": "2026-04-20T22:34:29+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3344,
+          "canvas_module_id": 1886,
+          "canvas_page_url": "sprint-3-briefing",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-3/sprint-3-briefing.md",
+          "last_pushed": "2026-04-20T22:36:13+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 1387,
+          "canvas_module_id": 1886,
+          "canvas_page_url": null,
+          "canvas_type": "discussion",
+          "file": "course1/sprints/sprint-3/sprint-3-peer-critique.md",
+          "last_pushed": "2026-04-20T22:43:39+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6700,
+          "canvas_module_id": 1886,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-3/success-criteria-with-a-stakeholder.md",
+          "last_pushed": "2026-04-20T22:40:13+00:00",
+          "local_exists": true
+        }
+      ],
+      "name": "Sprint 3: AI Fit and Success Criteria",
+      "position": 4,
+      "published": true
+    },
+    {
+      "id": 1887,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/sprint-4-briefing",
+          "content_id": null,
+          "module_item_id": 17249,
+          "page_url": "sprint-4-briefing",
+          "position": 2,
+          "published": true,
+          "title": "Sprint 4 Briefing",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6703",
+          "content_id": 6703,
+          "module_item_id": 17250,
+          "page_url": null,
+          "position": 3,
+          "published": true,
+          "title": "Integrated Problem Frame",
+          "type": "Assignment"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6704",
+          "content_id": 6704,
+          "module_item_id": 17251,
+          "page_url": null,
+          "position": 4,
+          "published": true,
+          "title": "Validation Conversation with a Decision-Maker",
+          "type": "Assignment"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6705",
+          "content_id": 6705,
+          "module_item_id": 17252,
+          "page_url": null,
+          "position": 5,
+          "published": true,
+          "title": "Revise Based on What You Learned",
+          "type": "Assignment"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1388",
+          "content_id": 1388,
+          "module_item_id": 17253,
+          "page_url": null,
+          "position": 6,
+          "published": true,
+          "title": "Sprint 4 Peer Exchange",
+          "type": "Discussion"
+        }
+      ],
+      "items_count": 5,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 6703,
+          "canvas_module_id": 1887,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-4/integrated-problem-frame.md",
+          "last_pushed": "2026-04-20T22:48:57+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6705,
+          "canvas_module_id": 1887,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-4/revise-based-on-what-you-learned.md",
+          "last_pushed": "2026-04-20T22:52:28+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3345,
+          "canvas_module_id": 1887,
+          "canvas_page_url": "sprint-4-briefing",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-4/sprint-4-briefing.md",
+          "last_pushed": "2026-04-20T22:46:41+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 1388,
+          "canvas_module_id": 1887,
+          "canvas_page_url": null,
+          "canvas_type": "discussion",
+          "file": "course1/sprints/sprint-4/sprint-4-peer-exchange.md",
+          "last_pushed": "2026-04-20T22:54:21+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1887,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course1/sprints/sprint-4/sprint-4-validated-framing.md",
+          "last_pushed": "2026-04-20T22:45:11+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6704,
+          "canvas_module_id": 1887,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-4/validation-conversation-with-a-decision-maker.md",
+          "last_pushed": "2026-04-20T22:50:47+00:00",
+          "local_exists": true
+        }
+      ],
+      "name": "Sprint 4: Validated Framing",
+      "position": 5,
+      "published": true
+    },
+    {
+      "id": 1888,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/capstone-brief",
+          "content_id": null,
+          "module_item_id": 17254,
+          "page_url": "capstone-brief",
+          "position": 2,
+          "published": true,
+          "title": "Capstone Brief",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6707",
+          "content_id": 6707,
+          "module_item_id": 17255,
+          "page_url": null,
+          "position": 3,
+          "published": true,
+          "title": "Capstone Demonstration",
+          "type": "Assignment"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6708",
+          "content_id": 6708,
+          "module_item_id": 17256,
+          "page_url": null,
+          "position": 4,
+          "published": true,
+          "title": "Human Judgment Articulation",
+          "type": "Assignment"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1389",
+          "content_id": 1389,
+          "module_item_id": 17257,
+          "page_url": null,
+          "position": 5,
+          "published": true,
+          "title": "Closing Cohort Reflection",
+          "type": "Discussion"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/codex-pilot-capstone-readiness-brief",
+          "content_id": null,
+          "module_item_id": 17302,
+          "page_url": "codex-pilot-capstone-readiness-brief",
+          "position": 7,
+          "published": true,
+          "title": "Codex Pilot: Capstone Readiness Brief",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6720",
+          "content_id": 6720,
+          "module_item_id": 17303,
+          "page_url": null,
+          "position": 8,
+          "published": true,
+          "title": "Codex Pilot: Final Readiness Check",
+          "type": "Assignment"
+        }
+      ],
+      "items_count": 6,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 3346,
+          "canvas_module_id": 1888,
+          "canvas_page_url": "capstone-brief",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-5/capstone-brief.md",
+          "last_pushed": "2026-04-20T22:57:59+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6707,
+          "canvas_module_id": 1888,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-5/capstone-demonstration.md",
+          "last_pushed": "2026-04-20T23:00:01+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 1389,
+          "canvas_module_id": 1888,
+          "canvas_page_url": null,
+          "canvas_type": "discussion",
+          "file": "course1/sprints/sprint-5/closing-cohort-reflection.md",
+          "last_pushed": "2026-04-20T23:03:38+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3351,
+          "canvas_module_id": 1888,
+          "canvas_page_url": "codex-pilot-capstone-readiness-brief",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-5/codex-pilot-capstone-readiness-brief.md",
+          "last_pushed": "2026-04-29T19:55:26+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1888,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course1/sprints/sprint-5/codex-pilot-capstone-readiness-sprint.md",
+          "last_pushed": "2026-04-29T19:52:48+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6720,
+          "canvas_module_id": 1888,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-5/codex-pilot-final-readiness-check.md",
+          "last_pushed": "2026-04-29T19:52:58+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6708,
+          "canvas_module_id": 1888,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-5/human-judgment-articulation.md",
+          "last_pushed": "2026-04-20T23:01:53+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1888,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course1/sprints/sprint-5/week-10-capstone.md",
+          "last_pushed": "2026-04-20T22:55:46+00:00",
+          "local_exists": true
+        }
+      ],
+      "name": "Week 10: Capstone",
+      "position": 6,
+      "published": true
+    },
+    {
+      "id": 1896,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/codex-agent-practice-briefing",
+          "content_id": null,
+          "module_item_id": 17304,
+          "page_url": "codex-agent-practice-briefing",
+          "position": 10,
+          "published": true,
+          "title": "Codex Agent Practice Briefing",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6721",
+          "content_id": 6721,
+          "module_item_id": 17305,
+          "page_url": null,
+          "position": 11,
+          "published": true,
+          "title": "Codex Agent Practice: First Request",
+          "type": "Assignment"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/quizzes/2914",
+          "content_id": 2914,
+          "module_item_id": 17306,
+          "page_url": null,
+          "position": 12,
+          "published": true,
+          "title": "Codex Agent Practice Check",
+          "type": "Quiz"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1391",
+          "content_id": 1391,
+          "module_item_id": 17307,
+          "page_url": null,
+          "position": 13,
+          "published": true,
+          "title": "Codex Agent Practice Peer Exchange",
+          "type": "Discussion"
+        }
+      ],
+      "items_count": 4,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 3352,
+          "canvas_module_id": 1896,
+          "canvas_page_url": "codex-agent-practice-briefing",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-5/codex-agent-practice-briefing.md",
+          "last_pushed": "2026-04-30T18:57:32+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 2914,
+          "canvas_module_id": 1896,
+          "canvas_page_url": null,
+          "canvas_type": "quiz",
+          "file": "course1/sprints/sprint-5/codex-agent-practice-check.md",
+          "last_pushed": "2026-04-30T18:57:36+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6721,
+          "canvas_module_id": 1896,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-5/codex-agent-practice-first-request.md",
+          "last_pushed": "2026-04-30T18:57:33+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1896,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course1/sprints/sprint-5/codex-agent-practice-module.md",
+          "last_pushed": "2026-04-30T18:57:30+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 1391,
+          "canvas_module_id": 1896,
+          "canvas_page_url": null,
+          "canvas_type": "discussion",
+          "file": "course1/sprints/sprint-5/codex-agent-practice-peer-exchange.md",
+          "last_pushed": "2026-04-30T18:57:38+00:00",
+          "local_exists": true
+        }
+      ],
+      "name": "Practice: Using Codex Agents",
+      "position": 7,
+      "published": false
+    },
+    {
+      "id": 1897,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/starting-codex-from-the-repo",
+          "content_id": null,
+          "module_item_id": 17308,
+          "page_url": "starting-codex-from-the-repo",
+          "position": 15,
+          "published": true,
+          "title": "Starting Codex From The Repo",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/writing-a-useful-codex-request",
+          "content_id": null,
+          "module_item_id": 17309,
+          "page_url": "writing-a-useful-codex-request",
+          "position": 16,
+          "published": true,
+          "title": "Writing A Useful Codex Request",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/reviewing-drafts-before-canvas",
+          "content_id": null,
+          "module_item_id": 17310,
+          "page_url": "reviewing-drafts-before-canvas",
+          "position": 17,
+          "published": true,
+          "title": "Reviewing Drafts Before Canvas",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/quizzes/2915",
+          "content_id": 2915,
+          "module_item_id": 17311,
+          "page_url": null,
+          "position": 18,
+          "published": true,
+          "title": "Using Codex Course Builder Check",
+          "type": "Quiz"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1392",
+          "content_id": 1392,
+          "module_item_id": 17312,
+          "page_url": null,
+          "position": 19,
+          "published": true,
+          "title": "Prompt Exchange: Ask Codex For A Course Or Module Build",
+          "type": "Discussion"
+        }
+      ],
+      "items_count": 5,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 2915,
+          "canvas_module_id": 1897,
+          "canvas_page_url": null,
+          "canvas_type": "quiz",
+          "file": "course1/sprints/sprint-5/codex-builder-tutorial-check.md",
+          "last_pushed": "2026-04-30T22:28:42+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1897,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course1/sprints/sprint-5/codex-builder-tutorial-module.md",
+          "last_pushed": "2026-04-30T22:28:22+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 1392,
+          "canvas_module_id": 1897,
+          "canvas_page_url": null,
+          "canvas_type": "discussion",
+          "file": "course1/sprints/sprint-5/codex-builder-tutorial-prompt-exchange.md",
+          "last_pushed": "2026-04-30T22:28:46+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3355,
+          "canvas_module_id": 1897,
+          "canvas_page_url": "reviewing-drafts-before-canvas",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-5/codex-builder-tutorial-review-and-push.md",
+          "last_pushed": "2026-04-30T22:54:20+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3353,
+          "canvas_module_id": 1897,
+          "canvas_page_url": "starting-codex-from-the-repo",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-5/codex-builder-tutorial-starting-codex.md",
+          "last_pushed": "2026-04-30T22:28:26+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3354,
+          "canvas_module_id": 1897,
+          "canvas_page_url": "writing-a-useful-codex-request",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-5/codex-builder-tutorial-writing-requests.md",
+          "last_pushed": "2026-04-30T22:28:32+00:00",
+          "local_exists": true
+        }
+      ],
+      "name": "Using This Codex Course Builder",
+      "position": 8,
+      "published": true
+    }
+  ],
+  "options": {
+    "include_drift": true,
+    "include_items": true
+  },
+  "summary": {
+    "canvas_items_not_in_manifest": 0,
+    "canvas_modules_not_in_manifest": 0,
+    "canvas_orphans": 0,
+    "drift_errors": 0,
+    "drifted_artifacts": 2,
+    "live_modules": 8,
+    "manifest_artifacts": 47,
+    "manifest_artifacts_not_in_module_items": 0,
+    "manifest_module_ids": 8,
+    "manifest_module_ids_not_live": 0,
+    "missing_local_files": 0,
+    "unmanifested_local_files": 2,
+    "unpublished_items": 0,
+    "unpublished_modules": 1
+  }
+}

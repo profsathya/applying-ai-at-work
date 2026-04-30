@@ -105,6 +105,24 @@ class CanvasClient:
 
         raise CanvasError(f"Exhausted retries: {last_error}")
 
+    def _request_paginated(self, method: str, path: str, params: dict | None = None) -> list[dict]:
+        """Fetch all pages for Canvas list endpoints."""
+        merged_params = dict(params or {})
+        merged_params.setdefault("per_page", 100)
+        page = 1
+        results: list[dict] = []
+
+        while True:
+            page_params = {**merged_params, "page": page}
+            result = self._request(method, path, params=page_params)
+            if not isinstance(result, list):
+                return results
+
+            results.extend(result)
+            if len(result) < int(merged_params["per_page"]):
+                return results
+            page += 1
+
     # ---- Assignments ----
 
     def create_assignment(self, payload: dict) -> dict:
@@ -168,8 +186,10 @@ class CanvasClient:
     # ---- Modules ----
 
     def list_modules(self) -> list[dict]:
-        result = self._request("GET", "modules", params={"per_page": 100})
-        return result if isinstance(result, list) else []
+        return self._request_paginated("GET", "modules")
+
+    def list_module_items(self, module_id: int) -> list[dict]:
+        return self._request_paginated("GET", f"modules/{module_id}/items")
 
     def create_module(self, name: str, position: int | None = None) -> dict:
         payload = {"module": {"name": name}}
