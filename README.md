@@ -2,21 +2,20 @@
 
 This repo is two things in one: a Canvas course builder, and the design for the "Applying AI at Work" workforce certificate (CTI + De Anza). Course content is authored as Canvas-agnostic Markdown in `course1/` and `course2/`, validated locally, then pushed to Canvas through the Python sync layer in `canvas_sync/`.
 
-OpenAI Codex is now the supported orchestration layer. Durable repo guidance lives in `AGENTS.md`; reusable workflows live in `.agents/skills/`; specialized authoring and planning agents live in `.codex/agents/`; the autonomous build loop is `codex-ralph.sh`.
+OpenAI Codex is now the supported orchestration layer. Durable repo guidance lives in `AGENTS.md`; reusable workflows live in `.agents/skills/`; specialized authoring and planning agents live in `.codex/agents/`.
 
 ## What's In This Repo
 
 - `course1/` and `course2/` - the two certificate courses. Each has `design/`, `sprints/`, and `manifests/`.
 - `context/` - shared design docs: audience, frameworks, design principles, SDT, stakeholder engagement, AI partnership, certificate overview, decision log.
+- `context/course-specs/` - optional human-authored specs for building a whole course from one Markdown file.
+- `context/module-specs/` - optional human-authored specs for building whole sprints/modules.
 - `canvas_sync/` - deterministic Python sync engine for Canvas API calls, pull, push, and schema validation.
-- `.agents/skills/` - Codex skills for `sync`, `add-artifact`, `build-sprint`, `update-dues`, `reconcile`, `ralph-build-loop`, `canvas-author`, and `sprint-planner`.
+- `.agents/skills/` - Codex skills for `build-course`, `build-sprint`, `sync`, `add-artifact`, `update-dues`, `reconcile`, `canvas-author`, and `sprint-planner`.
 - `.codex/` - Codex project config and custom agent definitions.
-- `prompts/codex/ralph-prompt.md` - the Codex Ralph loop prompt for initial builds.
-- `codex-ralph.sh` - the Codex-backed autonomous build loop.
 - `schema/` - JSON schemas for PRDs, manifests, and artifact frontmatter.
 - `briefs/` - pointer files the planner reads.
 - `docs/codex-migration/` - migration audit, compatibility matrix, plan, and open questions.
-- `n8n/` - optional grading workflow, separate from the course-builder runtime.
 - `archive/` - superseded iframe pattern, kept for reference.
 
 ## Quick Start
@@ -57,131 +56,93 @@ source .venv/bin/activate
 codex
 ```
 
-Then ask for the workflow you want:
+Then ask for what you want in plain English:
 
 ```text
-Use the sync skill for course1/sprints/sprint-2/synthesize-what-you-heard.md.
+Draft course2 from context/course-specs/course2-ai-implementation.md. Generate the Markdown files and stop before Canvas.
 ```
 
 ```text
-Use the add-artifact skill to add a page to course 1 sprint 0 called "How to ask for help" explaining the three channels we use and when to use each.
+Draft course2 sprint 1 from context/module-specs/course2-sprint-1-stakeholder-framing.md. Generate the Markdown files and stop before Canvas.
 ```
 
 ```text
-Use the update-dues skill to push all sprint 3 assignments to 2026-10-22T23:59:00Z.
+Add a page to course1 sprint 0 called "How to ask for help" explaining the three channels we use and when to use each.
 ```
 
 ```text
-Use the reconcile skill for course1 and show me the dry-run report before applying anything.
+Push the reviewed course2 files to Canvas.
 ```
 
-You can also pass the first prompt directly when starting Codex:
+```text
+Move all course1 sprint 3 assignment due dates to 2026-10-22T23:59:00Z.
+```
+
+```text
+Canvas was edited directly for course1. Show me the dry-run reconcile report before applying anything.
+```
+
+For course or module drafting, Codex routes through the `course-drafter` agent. You do not need to name the internal skills unless you want advanced control.
+
+You can also pass a request directly when starting Codex:
 
 ```bash
-codex "Use the sync skill for course1/sprints/sprint-5/codex-pilot-final-readiness-check.md."
+codex "Draft course2 from context/course-specs/course2-ai-implementation.md and stop before Canvas."
 ```
 
-Use `codex exec` for non-interactive runs when the task is already concrete:
+## Drafting Workflow
 
-```bash
-codex exec "Validate all course artifacts and summarize any failures."
-```
+Use plain English as the front door for new course content:
 
-Canvas-writing `codex exec` tasks should stay narrow. Prefer one file or one explicit workflow at a time.
+1. Write or paste a course spec or module spec.
+2. Ask Codex to draft the course or module.
+3. Codex routes full-course requests through `build-course` and one-sprint/module requests through `build-sprint`.
+4. Codex generates local Markdown under `course<N>/sprints/sprint-<n>/`.
+5. Codex validates every generated artifact and runs the full validator.
+6. Codex reports the file list, artifact types, and validation result.
+7. You review the local Markdown.
+8. Codex pushes to Canvas only after explicit confirmation.
 
-## Invoking Skills, Agents, And Tools
+Use one file per whole course in `context/course-specs/`, or one file per sprint/module in `context/module-specs/`. Pasted specs work too.
 
-This repo gives Codex three kinds of capability:
+## Advanced Controls
 
-1. **Skills** in `.agents/skills/`: reusable workflows.
-2. **Custom agents** in `.codex/agents/`: specialized LLM workers for planner and author roles.
-3. **Python tools** in `canvas_sync/`: deterministic scripts that validate, push, and pull Canvas content.
-
-### Skills
-
-Ask for a skill by name in plain language:
-
-```text
-Use the build-sprint skill for course2 sprint 1 using /tmp/sprint-1-context.md. Write MD only and stop before any Canvas push.
-```
-
-```text
-Use the update-dues skill to remove the due date from course1/sprints/sprint-3/ai-fit-analysis.md, validate it, and ask before pushing.
-```
+Skill and agent names are optional. Use them when you want to be precise:
 
 Available skills:
 
 | Skill | Use it when |
 |---|---|
+| `build-course` | You need a full course generated from one pasted context spec or spec file. |
 | `sync` | An existing MD artifact should be pushed to Canvas. |
 | `add-artifact` | You need one new assignment, page, discussion, quiz, or module header. |
-| `build-sprint` | You need a coherent sprint/module built from a context document. |
+| `build-sprint` | You need a coherent sprint/module built from a pasted context spec or spec file. |
 | `update-dues` | You need due dates changed without touching other content. |
 | `reconcile` | Canvas was edited directly and the repo needs to pull those changes back. |
-| `ralph-build-loop` | You are running or maintaining the autonomous build loop. |
 | `canvas-author` | You need exactly one artifact written from a PRD-shaped item. |
 | `sprint-planner` | A course needs a PRD, metadata file, progress log, and empty manifest. |
 
 ### Custom Agents
 
-Custom agents are for specialized LLM work, not mechanical script execution. Ask for them explicitly when the task benefits from a separate role:
-
-```text
-Use the sprint-planner agent to inspect briefs/course2.md and draft a plan. Do not push to Canvas.
-```
-
-```text
-Use the canvas-author agent to write exactly one artifact from this PRD item, then validate the file.
-```
+Custom agents are for specialized drafting, planning, and authoring:
 
 Current custom agents:
 
+- `course-drafter`
 - `sprint-planner`
 - `canvas-author`
 
-### Direct Python Tools
+Direct Python commands are documented in `README-BUILDER.md`. Most users should use plain English requests instead.
 
-Codex can run these scripts directly, and the skills are written to use them:
+## Which Request Should I Make?
 
-```bash
-python3 canvas_sync/schema.py --all
-python3 canvas_sync/schema.py --artifact course1/sprints/sprint-5/codex-pilot-final-readiness-check.md
-python3 canvas_sync/push.py --file course1/sprints/sprint-5/codex-pilot-final-readiness-check.md --manifest course1/manifests/production.json
-python3 canvas_sync/pull.py --manifest course1/manifests/production.json --dry-run
-```
-
-Use direct tools when you already know the exact file and operation. Use skills when target resolution, sequencing, validation, or user review matters.
-
-## Workflow Guide
-
-| Workflow | What it does | Touches Canvas? | Confirmation expected? |
-|---|---|---:|---:|
-| `sync` | Push one or more edited MD files to Canvas | yes | yes unless the current request explicitly says to push |
-| `add-artifact` | Add one new assignment, page, discussion, quiz, or module header | yes | yes before push unless explicitly requested |
-| `build-sprint` | Build a whole sprint from a context doc | yes | yes |
-| `update-dues` | Change due dates on one or many artifacts | optional | yes before push |
-| `reconcile` | Pull Canvas-side edits back into MD | no Canvas write | yes before local apply |
-| `ralph-build-loop` | Maintain or run the Codex initial-build loop | yes during BUILD | only after sandbox policy is settled |
-
-## Build Course 2
-
-The autonomous loop is only for an initial build or a from-scratch rebuild:
-
-```bash
-TARGET_COURSE=course2 ./codex-ralph.sh --verbose
-```
-
-Expect a full course to take many iterations. The loop reads file state each time and picks up from the first pending PRD item. Do not run unattended against production Canvas until the sandbox pilot has passed.
-
-## Rule Of Thumb
-
-- One existing artifact changed: use `sync`.
-- One new artifact: use `add-artifact`.
-- Due dates only: use `update-dues`.
-- One sprint of artifacts: use `build-sprint`.
-- Canvas changed directly: use `reconcile`.
-- Whole course from scratch: run `codex-ralph.sh`.
-- Course structure changed broadly: edit `course<N>/design/` first, then re-plan.
+- Whole course from one spec: "Draft course2 from `context/course-specs/...` and stop before Canvas."
+- One sprint or module from one spec: "Draft course2 sprint 1 from `context/module-specs/...` and stop before Canvas."
+- One new item: "Add a page/assignment/quiz/discussion to course1 sprint 2 called ..."
+- Reviewed local edits ready for Canvas: "Push these reviewed files to Canvas: ..."
+- Due dates only: "Move course1 sprint 3 due dates to `2026-10-22T23:59:00Z`."
+- Canvas was edited directly: "Show me a dry-run reconcile report for course1."
+- Course structure changed broadly: update `course<N>/design/` first, then ask Codex to draft from the updated design or a new course spec.
 
 ## Repo Layout
 
@@ -191,21 +152,19 @@ applying-ai-at-work/
   README.md                      # operator overview
   README-BUILDER.md              # technical reference
   .env.example                   # Canvas credentials template
-  codex-ralph.sh                 # Codex-backed build loop
-  migrate.sh                     # historical one-time migration utility
 
   .agents/skills/                # Codex workflow skills
   .codex/                        # Codex project config and custom agents
-  prompts/codex/                 # Codex loop prompt
   docs/codex-migration/          # migration audit and plan
 
   canvas_sync/                   # Python Canvas sync layer
   schema/                        # JSON schemas
   briefs/                        # planner pointer files
   context/                       # shared design docs
+  context/course-specs/          # optional whole-course build specs
+  context/module-specs/          # optional whole-module build specs
   course1/                       # course 1 design, sprints, manifests, PRD
   course2/                       # course 2 design, sprints, manifests, PRD
-  n8n/                           # optional grading workflow
   archive/                       # legacy reference materials
 ```
 

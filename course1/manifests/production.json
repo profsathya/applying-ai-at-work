@@ -248,6 +248,46 @@
       "content_hash": "198ec62ad3d0a88edc400fb0af17d0e24d794c6870686cf34b35cdd3b1ac519d",
       "last_pushed": "2026-04-20T23:03:38+00:00"
     },
+    "course1/sprints/sprint-5/codex-agent-practice-briefing.md": {
+      "canvas_id": 3352,
+      "canvas_module_id": 1896,
+      "canvas_page_url": "codex-agent-practice-briefing",
+      "canvas_type": "page",
+      "content_hash": "b9ba6f273d5b2e9c5b86c0b3eb2cc7fe6a21a73a60fdc2e860a4f3b868c019f3",
+      "last_pushed": "2026-04-30T18:57:32+00:00"
+    },
+    "course1/sprints/sprint-5/codex-agent-practice-check.md": {
+      "canvas_id": 2914,
+      "canvas_module_id": 1896,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "138b6210a0ad0e854c078c78239b50833b726549ec12b7ae42f396ef1d431e83",
+      "last_pushed": "2026-04-30T18:57:36+00:00"
+    },
+    "course1/sprints/sprint-5/codex-agent-practice-first-request.md": {
+      "canvas_id": 6721,
+      "canvas_module_id": 1896,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "cd83534b1f5f81c1cf64a050ddd05d8c22631554a50a960fbebc199412d721a9",
+      "last_pushed": "2026-04-30T18:57:33+00:00"
+    },
+    "course1/sprints/sprint-5/codex-agent-practice-module.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1896,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "cbd0548f71993c63135b94308a3f46a9a06960fb2db3dce38ef63c7586ef9d81",
+      "last_pushed": "2026-04-30T18:57:30+00:00"
+    },
+    "course1/sprints/sprint-5/codex-agent-practice-peer-exchange.md": {
+      "canvas_id": 1391,
+      "canvas_module_id": 1896,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "411c6a58b7407a4b23843dae07a490c39974f6b51c50ae39e7f9e434343cc2fa",
+      "last_pushed": "2026-04-30T18:57:38+00:00"
+    },
     "course1/sprints/sprint-5/codex-pilot-capstone-readiness-brief.md": {
       "canvas_id": 3351,
       "canvas_module_id": 1888,
@@ -295,5 +335,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-29T19:55:26+00:00"
+  "last_sync": "2026-04-30T18:57:38+00:00"
 }

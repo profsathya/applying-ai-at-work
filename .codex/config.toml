@@ -1,5 +1,5 @@
 # Project-scoped Codex defaults. Codex only loads this file after the project is trusted.
-# Keep this conservative while Claude compatibility remains available.
+# Keep this conservative because Canvas writes are real side effects.
 
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"

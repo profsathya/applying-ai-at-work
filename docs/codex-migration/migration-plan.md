@@ -2,7 +2,7 @@
 
 ## Current Status
 
-The scaffold from this plan has been implemented and the legacy Claude Code orchestration files have been removed from the active runtime. Remaining work is validation against a sandbox Canvas course and, separately, deciding whether to migrate the optional n8n grading workflow.
+The scaffold from this plan has been implemented and the legacy Claude Code orchestration files have been removed from the active runtime. Remaining work is validation against a sandbox Canvas course.
 
 ## Target-State Architecture
 
@@ -26,8 +26,8 @@ Use this smallest viable target:
 - `.agents/skills/*` holds repeatable workflows.
 - `.codex/agents/*` holds only role-specialized LLM workers that need separate context.
 - `canvas_sync/*` stays as the side-effect boundary.
-- `codex-ralph.sh` preserves the Ralph loop contract but calls Codex.
-- Claude files remain until Codex completes at least one safe pilot and one initial-build-style dry run.
+- `build-course` is the full-course path: generate local Markdown, validate, review, then optionally push.
+- Legacy Claude files have been removed; Codex is the supported runtime.
 
 ## Migration Strategy
 
@@ -35,7 +35,6 @@ Use this smallest viable target:
 - Replace mechanical Claude subagents with direct script calls.
 - Keep the migration audit for history, but do not reintroduce the Claude runner unless a rollback is explicitly requested.
 - Require explicit approval for Canvas writes in interactive workflows.
-- Treat n8n grading as a separate optional migration.
 
 ## Phased Plan
 
@@ -51,7 +50,7 @@ Use this smallest viable target:
 ### Phase 1: Isolate Claude-Specific Orchestration Surfaces
 
 - **Objective:** Ensure every Claude dependency has a known target.
-- **Scope:** `ralph.sh`, `prompts/ralph-prompt.md`, `.claude/*`, `CLAUDE.md`, `README*`, `n8n/*`.
+- **Scope:** Legacy shell runner, legacy prompt, `.claude/*`, `CLAUDE.md`, `README*`.
 - **Expected changes:** Add inventory and compatibility docs, then remove Claude files once Codex scaffolding exists.
 - **Risks:** Hidden user-level Claude settings may still affect local behavior but are outside repo scope.
 - **Validation:** Repeat `rg -i 'claude|anthropic|mcp|codex|subagent|permission|approval'`.
@@ -77,18 +76,18 @@ Use this smallest viable target:
 
 ### Phase 4: Migrate Remaining Orchestration Components
 
-- **Objective:** Reach day-to-day workflow parity and one initial-build path.
-- **Scope:** `add-artifact`, `update-dues`, `reconcile`, `build-sprint`, planner/author prompts, Ralph runner.
-- **Expected changes:** Convert workflows to Codex skills, convert planner/author to Codex agents or skills, add `codex-ralph.sh`.
+- **Objective:** Reach day-to-day workflow parity and one full-course build path.
+- **Scope:** `add-artifact`, `update-dues`, `reconcile`, `build-sprint`, `build-course`, planner/author prompts.
+- **Expected changes:** Convert workflows to Codex skills, convert planner/author to Codex agents or skills, and add a single-pass full-course build workflow.
 - **Risks:** LLM output quality may change; unattended runner behavior may differ; Canvas writes need approval policy testing.
 - **Validation:** Build one `course2` sprint locally in review mode before pushing; run `schema.py --all`.
-- **Exit criteria:** Codex handles daily operations and one initial-build-style dry run.
+- **Exit criteria:** Codex handles daily operations and one full-course dry run.
 
 ### Phase 5: Remove Deprecated Claude-Specific Code And Update Docs/Tests/Ops
 
 - **Objective:** Make Codex the primary runtime after parity.
-- **Scope:** `.claude/*`, `CLAUDE.md`, `README*`, n8n docs, CI paths.
-- **Expected changes:** Delete Claude config and runner, update operator docs, optionally migrate n8n grading.
+- **Scope:** `.claude/*`, `CLAUDE.md`, `README*`, CI paths.
+- **Expected changes:** Delete Claude config and runner, update operator docs.
 - **Risks:** Removing Claude loses the immediate old-runner rollback path.
 - **Validation:** Keep the Claude runner available until Codex completes a real workflow.
 - **Exit criteria:** New operators can run documented workflows without installing Claude Code.
@@ -106,7 +105,7 @@ Start with the Codex `sync` skill. It has the smallest behavioral surface:
 
 ## Rollback / Fallback
 
-- Legacy `ralph.sh`, `.claude/*`, and `CLAUDE.md` have been removed. Rollback would require restoring them from git history.
+- Legacy shell runner, `.claude/*`, and `CLAUDE.md` have been removed. Rollback would require restoring them from git history.
 - Do not modify `canvas_sync/*` for the first pilot.
 - If Codex runner behavior is unreliable, use Codex as an MCP server from a small OpenAI Agents SDK orchestrator.
 - If Canvas push fails, rely on manifest idempotency and do not retry in the same workflow unless a human confirms.
@@ -126,7 +125,7 @@ Start with the Codex `sync` skill. It has the smallest behavioral surface:
 - `AGENTS.md` contains operational Codex guidance and preserves `## Learnings`.
 - Codex skills exist for daily workflows.
 - Codex planner and author surfaces exist.
-- `codex-ralph.sh` exists and preserves Ralph sigils.
+- `build-course` exists for full-course local generation from one course context spec.
 - No application code or Canvas sync behavior changed in the initial migration scaffold.
 
 ## Implementation Backlog
@@ -138,9 +137,8 @@ Start with the Codex `sync` skill. It has the smallest behavioral surface:
 5. Add remaining Codex workflow skills.
 6. Add `.codex/agents/sprint-planner.toml`.
 7. Add `.codex/agents/canvas-author.toml`.
-8. Add `prompts/codex/ralph-prompt.md`.
-9. Add `codex-ralph.sh`.
-10. Pilot one schema-only sync, then one sandbox Canvas push.
+8. Add `build-course`.
+9. Pilot one schema-only full-course generation, then one sandbox Canvas push.
 
 ## Sources
 

@@ -22,7 +22,7 @@ Each sprint (1-4) contains exactly one real-stakeholder touchpoint (listening co
 
 ## Build log
 
-(Each Ralph BUILD iteration appends one line here.)
+(Build workflows append one line here when Canvas is called.)
 
 - BUILT Week 1: Orientation, canvas module ID 1883, 2026-04-20 14:39.
 - BUILT Welcome and How This Course Works, canvas ID 3341, 2026-04-20 14:44.
@@ -82,3 +82,4 @@ BUILT Capstone Demonstration, canvas ID 6707, 2026-04-20T23:00:14Z.
 
 BUILT Human Judgment Articulation, canvas ID 6708, 2026-04-20T16:02:00Z.
 BUILT Closing Cohort Reflection, canvas ID 1389, 2026-04-20T16:03:44.
+BUILT Practice: Using Codex Agents NLP test module, canvas module ID 1896; page 3352, assignment 6721, quiz 2914, discussion 1391, 2026-04-30T18:57:38Z.

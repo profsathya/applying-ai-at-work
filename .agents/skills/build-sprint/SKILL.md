@@ -1,6 +1,6 @@
 ---
 name: build-sprint
-description: Build a complete sprint/module from a context document, infer scaffolding from existing sprints, validate generated MD, and optionally push after review.
+description: Build a complete sprint/module from pasted context or a module context spec file, infer scaffolding from existing sprints, validate generated MD, and optionally push after review.
 ---
 
 # Build Sprint Skill
@@ -9,27 +9,43 @@ Build one sprint worth of artifacts for an existing course.
 
 ## Required Inputs
 
-- Context document path
 - Target course: `course1` or `course2`
 - Sprint number: `0` through `5`
+- Module context, supplied in one of two ways:
+  - Inline pasted context in the user's request
+  - A Markdown file path, preferably under `context/module-specs/`
 
-Ask before writing if any input is missing.
+If the user gives course and sprint but no context source, look for exactly one matching file:
+
+```text
+context/module-specs/<course>-sprint-<n>-*.md
+```
+
+Use it if exactly one match exists. Ask before writing if there is no match, more than one match, or any required input is still missing.
+
+## Module Context Spec
+
+Use `context/module-specs/README.md` as the recommended spec. A full spec may include target, purpose, audience, artifact list, required ideas, prompts, constraints, tone, source material, and open questions.
+
+If the user pastes context directly into chat, use it as the module context. Do not require a file path. If the user supplies a file path, read that file first. If the user relies on folder lookup, report which spec file was selected before writing.
 
 ## Workflow
 
-1. Confirm the target course, sprint number, and context doc path with the user.
-2. Read the context doc, `AGENTS.md`, relevant course design docs, shared context docs, schemas, and existing built sprints.
-3. If the target course has no built sprints, infer scaffolding from `course1` and say so.
-4. Write MD files only under `<target>/sprints/sprint-<n>/`.
-5. Validate every written file:
+1. Confirm the target course, sprint number, and module context source with the user.
+2. Read the module context if it is a file. If it is pasted inline, treat the pasted text as the source.
+3. Read `context/module-specs/README.md`, `AGENTS.md`, relevant course design docs, shared context docs, schemas, and existing built sprints.
+4. Treat explicit module context instructions as higher priority than inferred sprint patterns, unless they violate repo rules or schema constraints.
+5. If the target course has no built sprints, infer scaffolding from `course1` and say so.
+6. Write MD files only under `<target>/sprints/sprint-<n>/`.
+7. Validate every written file:
 
    ```bash
    python3 canvas_sync/schema.py --artifact <file>
    ```
 
-6. Show the file list and validation result. Ask the user to review before pushing.
-7. Push only after explicit confirmation, one file at a time, through `canvas_sync/push.py`.
-8. Append a post-build section to `<target>/progress.md` only if Canvas was called.
+8. Show the file list and validation result. Ask the user to review before pushing.
+9. Push only after explicit confirmation, one file at a time, through `canvas_sync/push.py`.
+10. Append a post-build section to `<target>/progress.md` only if Canvas was called.
 
 ## Rules
 
@@ -37,3 +53,4 @@ Ask before writing if any input is missing.
 - Do not push before human review and confirmation.
 - Use Canvas-native Markdown only.
 - Do not write due dates unless explicitly provided.
+- Do not edit files under `context/module-specs/` unless the user explicitly asks to create or update a spec.

@@ -12,10 +12,8 @@ This matrix records the legacy Claude mechanisms that were migrated. The old Cla
 
 | Mechanism | Current files | Current role | Claude-specific dependency | Recommended Codex replacement | Difficulty | Confidence | Evidence |
 |---|---|---|---|---|---|---|---|
-| Autonomous loop | `ralph.sh` | Called agent repeatedly until build completed or halted | `claude -p`, `--permission-mode bypassPermissions`, Anthropic overload retry strings | `codex-ralph.sh` using `codex exec`; preserves sigils and file-backed state | high | medium | Legacy file removed after migration. |
-| Loop prompt | `prompts/ralph-prompt.md` | PLAN/BUILD/VERIFY state machine | Named Claude subagents and `.claude` scaffold | `prompts/codex/ralph-prompt.md` and `ralph-build-loop` skill | medium | high | Legacy file removed after migration. |
 | Project guidance | `CLAUDE.md` | Core repo conventions | Codex does not read it by default | Essential rules merged into `AGENTS.md` | low | high | Legacy file removed after migration. |
-| Build memory | `AGENTS.md` | Accumulated gotchas | Previously treated as memory only | Keep and expand as Codex root guide with build learnings preserved | low | high | Repo fact: Ralph prompt appends under `## Learnings`. |
+| Build memory | `AGENTS.md` | Accumulated gotchas | Previously treated as memory only | Keep and expand as Codex root guide with build learnings preserved | low | high | Repo fact: build workflows preserve `## Learnings`. |
 | Planner worker | `.claude/agents/sprint-planner.md` | Course design to PRD | Claude agent Markdown frontmatter and model alias `opus` | Codex custom agent plus `sprint-planner` skill | medium | high | External fact: Codex custom agents and skills use different file formats. |
 | Author worker | `.claude/agents/canvas-author.md` | One PRD item to Markdown artifact | Claude agent Markdown frontmatter and model alias `sonnet` | Codex custom agent plus `canvas-author` skill | medium | high | Role prompt body is portable; metadata is not. |
 | Mechanical validator | `.claude/agents/schema-validator.md` | Runs `schema.py` | Unnecessary LLM wrapper | Direct script call inside skills and runner | low | high | Repo fact: validation is deterministic Python. |
@@ -30,7 +28,6 @@ This matrix records the legacy Claude mechanisms that were migrated. The old Cla
 | Update dues command | `.claude/commands/update-dues.md` | Edit due fields and optionally push | Claude slash command discovery | Codex skill `update-dues` | medium | high | Needs careful target resolution. |
 | Permissions | `.claude/settings.json` | Allows and denies tools | Claude matcher syntax | Codex sandbox and approval policy; optional hooks/rules later | high | medium | External fact: Codex uses `approval_policy` and `sandbox_mode`. |
 | MCP | none found | Not currently used | none | Optional `.codex/config.toml` MCP entries later | low | high | External fact: Codex MCP config uses `config.toml`. |
-| n8n grading | `n8n/grading-workflow.json` | Drafts grading feedback | Anthropic Messages API and Claude model | Separate optional migration to OpenAI Responses or Agents SDK | medium | high | Not build runtime. |
 | CI path filters | `.github/workflows/*.yml` | Schema and reconcile checks | stale path, not Claude-specific | Replace `courses/**` with `course1/**` and `course2/**` | low | high | Repo fact: course roots are `course1/` and `course2/`. |
 
 ## Model Mapping Recommendation

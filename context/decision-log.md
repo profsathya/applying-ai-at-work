@@ -5,13 +5,13 @@
 
 **2026-04-20 - First real canvas-course-builder build (course1)**
 
-Executed first real canvas-course-builder build against De Anza canvas course 180. Planner produced 35 artifacts across 6 modules. Build completed after resolving the permission-mode bug and adding python3 allowlist entries. Loop now handles overloaded API errors with retry-with-backoff. Top-level README restructured to be builder + teammate-usage focused; certificate overview moved to context/certificate-overview.md. Lessons captured in AGENTS.md (cross-iteration memory), CLAUDE.md (developer reference), and README.md (operator reference).
+Executed first real canvas-course-builder build against De Anza canvas course 180. Planner produced 35 artifacts across 6 modules. Build completed after resolving the permission-mode bug and adding python3 allowlist entries. The legacy iterative runner handled overloaded API errors with retry-with-backoff. Top-level README restructured to be builder + teammate-usage focused; certificate overview moved to context/certificate-overview.md. Lessons captured in AGENTS.md and README.md.
 
 ---
 
 **2026-04-20 - Adopted canvas-course-builder; answered "delivery platform" open question**
 
-Adopted the canvas-course-builder scaffold as the delivery pipeline: a Ralph-loop-driven system that generates canvas artifacts directly from canvas-agnostic markdown via the Canvas REST API. Canvas is now the delivery platform. Canvas-agnostic markdown in this repo is the source of truth; per-canvas-course manifests (one per course shell) map MD files to canvas IDs. The legacy iframe-embedding pattern used in CST349 and CST395 is archived to archive/legacy-iframe-template/ for reference. The corresponding entry in open-questions.md is now resolved.
+Adopted the canvas-course-builder scaffold as the delivery pipeline: a system that generates Canvas artifacts directly from Canvas-agnostic Markdown via the Canvas REST API. Canvas is now the delivery platform. Canvas-agnostic Markdown in this repo is the source of truth; per-canvas-course manifests map MD files to Canvas IDs. The legacy iframe-embedding pattern used in CST349 and CST395 is archived to archive/legacy-iframe-template/ for reference. The corresponding entry in open-questions.md is now resolved.
 
 Timestamped record of significant design decisions and their reasoning. Newest entries at the top.
 

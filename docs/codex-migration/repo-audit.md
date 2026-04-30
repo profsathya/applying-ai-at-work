@@ -6,7 +6,7 @@ The legacy Claude Code orchestration files identified in this audit have now bee
 
 ## Executive Summary
 
-This repository is split into a portable Canvas sync backend and a Codex orchestration layer. The Canvas backend in `canvas_sync/`, the course state in `course*/`, and the schemas in `schema/` are preserved. The previous Claude-specific runner, prompt, agents, commands, and permissions were replaced by Codex guidance, skills, custom agents, and `codex-ralph.sh`.
+This repository is split into a portable Canvas sync backend and a Codex orchestration layer. The Canvas backend in `canvas_sync/`, the course state in `course*/`, and the schemas in `schema/` are preserved. The previous Claude-specific runner, prompt, agents, commands, and permissions were replaced by Codex guidance, skills, and custom agents.
 
 ## Evidence Legend
 
@@ -18,8 +18,8 @@ This repository is split into a portable Canvas sync backend and a Codex orchest
 
 **Pre-removal repo facts**
 
-- Initial course builds previously started in `ralph.sh`, which repeatedly called `claude -p` with `prompts/ralph-prompt.md` and `--permission-mode bypassPermissions`.
-- The Ralph prompt is a file-backed state machine. It checks scaffold integrity, selects a target course, then enters PLAN, BUILD, or VERIFY.
+- Initial course builds previously started in a legacy shell runner, which repeatedly called `claude -p` with a file-backed prompt and `--permission-mode bypassPermissions`.
+- The legacy prompt was a file-backed state machine. It checked scaffold integrity, selected a target course, then entered PLAN, BUILD, or VERIFY.
 - PLAN invokes `sprint-planner`; BUILD invokes `canvas-author`, `schema-validator`, and `canvas-pusher`; VERIFY runs manifest and schema checks.
 - Day-to-day operations are Claude slash commands under `.claude/commands/`: `add-artifact`, `build-sprint`, `sync`, `reconcile`, and `update-dues`.
 - The actual Canvas integration is deterministic Python:
@@ -42,8 +42,6 @@ The Canvas sync layer stayed unchanged. Claude orchestration was removed from th
 
 | Path | Role | Classification | Notes |
 |---|---|---|---|
-| `ralph.sh` | Autonomous initial build loop | removed legacy dependency | Called `claude -p`; watched `COURSE_COMPLETE` and `HALT` sigils. |
-| `prompts/ralph-prompt.md` | Claude-oriented build state machine | removed legacy dependency | Named `.claude/agents` and delegated to Claude subagents. |
 | `.claude/agents/*.md` | Specialized worker prompts | hard production dependency | Uses Claude frontmatter: `name`, `description`, `tools`, `model`, `color`. |
 | `.claude/commands/*.md` | Operator workflows | hard production dependency | Claude slash commands. Codex does not consume these directly. |
 | `.claude/settings.json` | Claude permissions | hard production dependency | Claude-specific allow/deny syntax and Bash matchers. |
@@ -51,16 +49,12 @@ The Canvas sync layer stayed unchanged. Claude orchestration was removed from th
 | `CLAUDE.md` | Operational conventions | development/runtime guidance | Must be merged into `AGENTS.md` for Codex. |
 | `AGENTS.md` | Build memory and now Codex guidance | runtime guidance | Codex-native durable repo instructions. |
 | `README.md`, `README-BUILDER.md` | Operator and technical docs | documentation-only reference | Currently Claude-first; should be updated after Codex pilot. |
-| `n8n/grading-workflow.json` | Grading workflow | optional integration | Direct Anthropic Messages API call. Not part of build runtime. |
-| `n8n/grading-prompt-template.md` | Grading prompt | optional integration | Claude-oriented wording but portable prompt structure. |
 | `course1/sprints/.../assumption-audit-with-ai.md` | Participant-facing example | documentation-only reference | Mentions Claude as one possible learner tool. |
 
 ## Dependency Classification
 
 **Removed hard production dependencies**
 
-- `ralph.sh`
-- `prompts/ralph-prompt.md`
 - `.claude/agents/*.md`
 - `.claude/commands/*.md`
 - `.claude/settings.json`
@@ -70,12 +64,6 @@ The Canvas sync layer stayed unchanged. Claude orchestration was removed from th
 - `.claude/settings.local.json`
 - Claude installation instructions in `README.md` and `README-BUILDER.md`
 - Claude-specific gotchas in `CLAUDE.md` and `AGENTS.md`
-
-**Optional integrations**
-
-- `n8n/grading-workflow.json`
-- `n8n/grading-prompt-template.md`
-- `n8n/README.md`
 
 **Documentation-only references**
 
@@ -94,13 +82,12 @@ The Canvas sync layer stayed unchanged. Claude orchestration was removed from th
 
 **Repo facts**
 
-1. Operator runs `./codex-ralph.sh` or asks Codex to use a skill.
-2. The Codex Ralph loop loads `.env`, prepends `TARGET COURSE`, and sends the Codex prompt to `codex exec`.
-3. Claude reads file state and performs one phase per iteration.
-4. Authoring writes Markdown under `course*/sprints/sprint-*`.
-5. Validation runs before every push.
-6. `push.py` writes to Canvas and updates `course*/manifests/production.json`.
-7. The orchestrator updates `course*/prd.json`, `course*/progress.md`, and commits.
+1. Operator asks Codex to use a skill.
+2. Full-course builds use `build-course` to read a course context spec or pasted context.
+3. Codex writes Markdown under `course*/sprints/sprint-*`.
+4. Validation runs before every push.
+5. `push.py` writes to Canvas and updates `course*/manifests/production.json`.
+6. The workflow reports changed files and asks before Canvas writes.
 
 ## Implicit Behavior Needing Documentation
 
@@ -114,7 +101,6 @@ The Canvas sync layer stayed unchanged. Claude orchestration was removed from th
 
 - CI path globs must match `course1/**` and `course2/**`.
 - Claude permissions did not map directly to Codex. The replacement uses Codex project config plus explicit skill-level safety rules.
-- `n8n` still uses Anthropic. It should be treated as a separate migration.
 - Cloud Codex is not the default target for Canvas writes because secrets, internet access, and side-effect approvals need deliberate setup.
 
 ## External Sources

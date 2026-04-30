@@ -4,13 +4,11 @@
 
 - Which Canvas course should be used as the sandbox for the first Codex-driven push?
 - Should the old Claude runner remain restorable from git history only, or should a tagged archive branch be created for rollback?
-- Should the optional n8n grading workflow migrate to OpenAI now, or remain Anthropic-backed until build orchestration is complete?
 - Who should approve Canvas-writing Codex runs: the local operator only, or a named course owner?
-- Should `codex-ralph.sh` ever run with a dangerous bypass mode, or should unattended Canvas builds require a separate orchestrator with explicit guardrails?
 
 ## Assumptions That Might Be Wrong
 
-- Codex `exec` is sufficient for the Ralph loop without moving to Codex-as-MCP-server orchestration.
+- Single-pass Codex course generation is sufficient without moving to Codex-as-MCP-server orchestration.
 - Existing prompts can be ported with minimal behavior changes once Claude metadata is removed.
 - `AGENTS.md` can carry both durable operating rules and accumulated build memory without becoming too long for effective instruction loading.
 - Course2 remains the safest pilot target because it is less built out than course1.

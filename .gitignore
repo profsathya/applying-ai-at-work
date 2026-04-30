@@ -4,8 +4,7 @@
 *.pem
 *.key
 
-# Ralph loop state
-.ralph/
+# Build logs
 *.log
 
 # Python

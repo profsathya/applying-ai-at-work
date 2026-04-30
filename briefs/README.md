@@ -1,31 +1,15 @@
 # Briefs
 
-Briefs are short pointer files. They tell the Codex sprint-planner workflow which course to plan and where to find the authoritative design.
+Briefs are short pointer files. They tell the optional Codex `sprint-planner` workflow which course to plan and where to find the authoritative design.
 
-This repo already has well-developed design docs in `course1/design/`, `course2/design/`, and `context/`. Briefs do not duplicate that content. They point at it.
+For normal whole-course generation, prefer a course context spec in `context/course-specs/` and the `build-course` skill. Briefs remain useful when a human explicitly wants a PRD-backed planning pass.
 
-## Invoking a build
+## Invoking The Planner
 
-To build Course 1:
-
-```
-./codex-ralph.sh
+```text
+Use the sprint-planner skill to plan course2 from briefs/course2.md.
 ```
 
-(defaults to Course 1 if no target is specified)
+## Editing A Brief
 
-To build Course 2 after Course 1 is done:
-
-```
-TARGET_COURSE=course2 ./codex-ralph.sh
-```
-
-Or invoke the planner directly for a specific course:
-
-```
-codex exec "Use the sprint-planner skill to plan course2 from briefs/course2.md."
-```
-
-## Editing a brief
-
-If the design for a course changes (new sprint theme, updated outcomes, different assessment philosophy), update the design docs in `course1/design/` or `course2/design/`, not the brief. The brief just points.
+If the design for a course changes, update the design docs in `course1/design/` or `course2/design/`, not the brief. The brief just points.

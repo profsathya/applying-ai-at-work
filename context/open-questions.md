@@ -13,4 +13,4 @@ Things the team needs to decide. These are unresolved by design: the repository 
 
 ## Resolved
 
-- What delivery platform will be used? **Canvas.** See `context/decision-log.md` for the adoption entry. The pipeline lives in `canvas_sync/`, `.agents/skills/`, `.codex/`, and `prompts/codex/ralph-prompt.md`.
+- What delivery platform will be used? **Canvas.** See `context/decision-log.md` for the adoption entry. The pipeline lives in `canvas_sync/`, `.agents/skills/`, and `.codex/`.
