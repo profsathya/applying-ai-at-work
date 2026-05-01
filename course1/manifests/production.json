@@ -1,5 +1,21 @@
 {
   "artifacts": {
+    "course1/sprints/sprint-0/bread-machine-basics.md": {
+      "canvas_id": 3356,
+      "canvas_module_id": 1898,
+      "canvas_page_url": "bread-machine-basics",
+      "canvas_type": "page",
+      "content_hash": "db72fc1f80d1a2b4e46d2ac308b17f63f39e32de0746b07e5a5a4000e5365717",
+      "last_pushed": "2026-04-30T23:30:10+00:00"
+    },
+    "course1/sprints/sprint-0/bread-machine-readiness-check.md": {
+      "canvas_id": 2916,
+      "canvas_module_id": 1898,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "70a05e3b7c76d100d27cde2a64b68533be2987453b60bded6905ef2ee7fb98d2",
+      "last_pushed": "2026-04-30T23:30:33+00:00"
+    },
     "course1/sprints/sprint-0/choose-your-problem.md": {
       "canvas_id": 6691,
       "canvas_module_id": 1883,
@@ -15,6 +31,22 @@
       "canvas_type": "discussion",
       "content_hash": "af9905a12820f514ceb805a96737e9cce0a1f7db5ad6ec1dc706ce36eb747297",
       "last_pushed": "2026-04-20T22:06:13+00:00"
+    },
+    "course1/sprints/sprint-0/first-loaf-discussion.md": {
+      "canvas_id": 1393,
+      "canvas_module_id": 1898,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "e844f37cce3e66cf0c06bd984a2c14f497e23d530cb26e35be925197e34c7c57",
+      "last_pushed": "2026-04-30T23:30:25+00:00"
+    },
+    "course1/sprints/sprint-0/ingredients-and-settings.md": {
+      "canvas_id": 3357,
+      "canvas_module_id": 1898,
+      "canvas_page_url": "ingredients-and-settings",
+      "canvas_type": "page",
+      "content_hash": "2c5a9ef1cb5c3d0f35dcc8c561822d18ef772245bd7541051f55a6a3fbf98e81",
+      "last_pushed": "2026-04-30T23:30:17+00:00"
     },
     "course1/sprints/sprint-0/initial-stakeholder-map.md": {
       "canvas_id": 6692,
@@ -383,5 +415,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-30T22:54:20+00:00"
+  "last_sync": "2026-04-30T23:30:33+00:00"
 }
