@@ -11,7 +11,7 @@ This workflow is intentionally single-pass at the local file layer: generate the
 
 ## Required Inputs
 
-- Target course: `course1` or `course2`
+- Target course: any existing local course directory, for example `course1`, `course2`, `course3`, or a named course key
 - Course context, supplied in one of two ways:
   - Inline pasted context in the user's request
   - A Markdown file path, preferably under `context/course-specs/`

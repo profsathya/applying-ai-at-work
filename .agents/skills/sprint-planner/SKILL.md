@@ -9,7 +9,7 @@ Use this when a target course has no PRD or a human explicitly requests a re-pla
 
 ## Inputs
 
-- Target course: `course1` or `course2`
+- Target course: any existing local course directory, for example `course1`, `course2`, `course3`, or a named course key
 - Brief file: `briefs/<target>.md`
 
 ## Read Order

@@ -4,7 +4,7 @@ This is the root guidance file for OpenAI Codex and other repo-aware agents. It 
 
 ## Repository Role
 
-This repo builds the "Applying AI at Work" certificate for CTI and De Anza. It has two canvas-LMS courses, `course1` and `course2`. Course content is authored as canvas-agnostic Markdown, validated locally, then pushed to Canvas through the deterministic Python sync layer in `canvas_sync/`.
+This repo builds the "Applying AI at Work" certificate for CTI and De Anza. It has local Canvas LMS course directories such as `course1` and `course2`, and can initialize additional course keys as needed. Course content is authored as canvas-agnostic Markdown, validated locally, then pushed to Canvas through the deterministic Python sync layer in `canvas_sync/`.
 
 ## Core Principles
 
@@ -13,7 +13,7 @@ This repo builds the "Applying AI at Work" certificate for CTI and De Anza. It h
 3. Generate broad course changes locally first, validate them, then ask before Canvas writes.
 4. Schema validation is mandatory before any Canvas push.
 5. Artifact bodies must remain Canvas-native Markdown. Do not add HTML, iframes, JavaScript, inline styles, or external CDN references.
-6. Design docs are read-only build inputs: `context/`, `course1/design/`, `course2/design/`, and `archive/`.
+6. Design docs are read-only build inputs: `context/`, `<course>/design/`, and `archive/`.
 
 ## Style Conventions
 
@@ -25,14 +25,14 @@ This repo builds the "Applying AI at Work" certificate for CTI and De Anza. It h
 
 ## File And State Conventions
 
-- Artifact MD: `course<N>/sprints/sprint-<n>/<slug>.md`
+- Artifact MD: `<course>/sprints/sprint-<n>/<slug>.md`
 - Optional course context specs: `context/course-specs/<course>-<slug>.md`
 - Optional module context specs: `context/module-specs/<course>-sprint-<n>-<slug>.md`
-- Manifest: `course<N>/manifests/production.json`
-- PRD: `course<N>/prd.json`
-- Progress log: `course<N>/progress.md`
-- Brief: `briefs/course<N>.md`
-- Design docs: `course<N>/design/`
+- Manifest: `<course>/manifests/production.json`
+- PRD: `<course>/prd.json`
+- Progress log: `<course>/progress.md`
+- Brief: `briefs/<course>.md`
+- Design docs: `<course>/design/`
 - Shared design: `context/`
 
 Sprint numbers are `sprint-0` for Week 1 orientation, `sprint-1` through `sprint-4` for the middle 8 weeks, and `sprint-5` for Week 10 capstone.
@@ -54,7 +54,7 @@ Sprint numbers are `sprint-0` for Week 1 orientation, `sprint-1` through `sprint
 4. `docs/codex-migration/migration-plan.md`
 5. `context/course-specs/` or `context/module-specs/` if building from a human spec
 6. `briefs/<target>.md` and the referenced design docs if planning
-7. `course<N>/progress.md` and `course<N>/prd.json` if building or reconciling existing state
+7. `<course>/progress.md` and `<course>/prd.json` if building or reconciling existing state
 
 ## Commit Message Conventions
 

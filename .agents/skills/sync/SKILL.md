@@ -9,10 +9,9 @@ Push specified artifact Markdown files to Canvas using the active production man
 
 ## Workflow
 
-1. Resolve each requested file path. It must live under `course1/sprints/` or `course2/sprints/`.
+1. Resolve each requested file path. It must live under `<course>/sprints/sprint-<n>/`.
 2. Determine the manifest from the file prefix:
-   - `course1/...` -> `course1/manifests/production.json`
-   - `course2/...` -> `course2/manifests/production.json`
+   - `<course>/...` -> `<course>/manifests/production.json`
 3. Run validation first:
 
    ```bash
@@ -24,7 +23,7 @@ Push specified artifact Markdown files to Canvas using the active production man
 6. Push files serially with:
 
    ```bash
-   python3 canvas_sync/push.py --file <md_file_path> --manifest <manifest_path>
+   python3 canvas_sync/push.py --file <md_file_path> --manifest <course>/manifests/production.json
    ```
 
 7. Report `action`, `canvas_id`, and `canvas_module_id` from the JSON output.

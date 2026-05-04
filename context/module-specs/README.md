@@ -29,7 +29,7 @@ context/module-specs/<course>-sprint-<n>-*.md
 # Module Context Spec: <Module Title>
 
 ## Target
-- Course: course1 | course2
+- Course: <local course key>
 - Sprint: 0-5
 - Canvas module title: <title>
 - Working title or theme: <short label>

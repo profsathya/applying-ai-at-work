@@ -134,6 +134,9 @@ class CanvasClient:
     def get_assignment(self, assignment_id: int) -> dict:
         return self._request("GET", f"assignments/{assignment_id}")
 
+    def delete_assignment(self, assignment_id: int) -> dict:
+        return self._request("DELETE", f"assignments/{assignment_id}")
+
     # ---- Pages ----
 
     def create_page(self, payload: dict) -> dict:
@@ -144,6 +147,9 @@ class CanvasClient:
 
     def get_page(self, page_url: str) -> dict:
         return self._request("GET", f"pages/{page_url}")
+
+    def delete_page(self, page_url: str) -> dict:
+        return self._request("DELETE", f"pages/{page_url}")
 
     # ---- Discussions ----
 
@@ -156,6 +162,9 @@ class CanvasClient:
     def get_discussion(self, topic_id: int) -> dict:
         return self._request("GET", f"discussion_topics/{topic_id}")
 
+    def delete_discussion(self, topic_id: int) -> dict:
+        return self._request("DELETE", f"discussion_topics/{topic_id}")
+
     # ---- Quizzes ----
 
     def create_quiz(self, payload: dict) -> dict:
@@ -166,6 +175,9 @@ class CanvasClient:
 
     def get_quiz(self, quiz_id: int) -> dict:
         return self._request("GET", f"quizzes/{quiz_id}")
+
+    def delete_quiz(self, quiz_id: int) -> dict:
+        return self._request("DELETE", f"quizzes/{quiz_id}")
 
     def add_quiz_question(self, quiz_id: int, question: dict) -> dict:
         return self._request(
@@ -191,6 +203,9 @@ class CanvasClient:
     def list_module_items(self, module_id: int) -> list[dict]:
         return self._request_paginated("GET", f"modules/{module_id}/items")
 
+    def delete_module(self, module_id: int) -> dict:
+        return self._request("DELETE", f"modules/{module_id}")
+
     def create_module(self, name: str, position: int | None = None) -> dict:
         payload = {"module": {"name": name}}
         if position is not None:
@@ -215,6 +230,9 @@ class CanvasClient:
         if position is not None:
             item["position"] = position
         return self._request("POST", f"modules/{module_id}/items", {"module_item": item})
+
+    def delete_module_item(self, module_id: int, module_item_id: int) -> dict:
+        return self._request("DELETE", f"modules/{module_id}/items/{module_item_id}")
 
     # ---- Rubrics ----
 

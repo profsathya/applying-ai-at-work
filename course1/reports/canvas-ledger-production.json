@@ -2,30 +2,9 @@
   "checks": {
     "canvas_items_not_in_manifest": [],
     "canvas_modules_not_in_manifest": [],
-    "canvas_orphans": [],
-    "drift_errors": [],
-    "drifted_artifacts": [
-      {
-        "drift": {
-          "body": {
-            "canvas_chars": 3617,
-            "canvas_preview": "# Sprint 4 Peer Exchange\n\nThis is the last peer exchange before the capstone. You have taken your integrated problem frame to a real decision-maker, heard how they read it, and revised it based on wha",
-            "local_chars": 3618,
-            "local_preview": "# Sprint 4 Peer Exchange\n\nThis is the last peer exchange before the capstone. You have taken your integrated problem frame to a real decision-maker, heard how they read it, and revised it based on wha"
-          }
-        },
-        "file": "course1/sprints/sprint-4/sprint-4-peer-exchange.md"
-      },
-      {
-        "drift": {
-          "points": {
-            "canvas": 0.0,
-            "local": 5
-          }
-        },
-        "file": "course1/sprints/sprint-5/codex-agent-practice-check.md"
-      }
-    ],
+    "canvas_orphans": null,
+    "drift_errors": null,
+    "drifted_artifacts": null,
     "manifest_artifacts_not_in_module_items": [],
     "manifest_module_ids_not_live": [],
     "missing_local_files": [],
@@ -52,10 +31,16 @@
         "items_count": 4,
         "name": "Practice: Using Codex Agents",
         "position": 7
+      },
+      {
+        "id": 1899,
+        "items_count": 4,
+        "name": "Underwater Basket Weaving",
+        "position": 10
       }
     ]
   },
-  "generated_at": "2026-04-30T22:54:37+00:00",
+  "generated_at": "2026-05-04T21:27:22+00:00",
   "manifest": {
     "instance": {
       "base_url": "https://cti-courses.instructure.com/",
@@ -63,7 +48,7 @@
       "name": "production",
       "term": "Fall 2026"
     },
-    "last_sync": "2026-04-30T22:54:20+00:00",
+    "last_sync": "2026-05-04T20:56:10+00:00",
     "path": "course1/manifests/production.json"
   },
   "modules": [
@@ -73,6 +58,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/welcome-and-how-this-course-works",
           "content_id": null,
+          "manifest_file": "course1/sprints/sprint-0/welcome-and-how-this-course-works.md",
           "module_item_id": 17231,
           "page_url": "welcome-and-how-this-course-works",
           "position": 2,
@@ -83,6 +69,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1384",
           "content_id": 1384,
+          "manifest_file": "course1/sprints/sprint-0/cohort-introductions.md",
           "module_item_id": 17232,
           "page_url": null,
           "position": 3,
@@ -93,6 +80,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/quizzes/2912",
           "content_id": 2912,
+          "manifest_file": "course1/sprints/sprint-0/orientation-check.md",
           "module_item_id": 17233,
           "page_url": null,
           "position": 4,
@@ -103,6 +91,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6691",
           "content_id": 6691,
+          "manifest_file": "course1/sprints/sprint-0/choose-your-problem.md",
           "module_item_id": 17234,
           "page_url": null,
           "position": 5,
@@ -113,6 +102,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6692",
           "content_id": 6692,
+          "manifest_file": "course1/sprints/sprint-0/initial-stakeholder-map.md",
           "module_item_id": 17235,
           "page_url": null,
           "position": 6,
@@ -188,6 +178,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/sprint-1-briefing",
           "content_id": null,
+          "manifest_file": "course1/sprints/sprint-1/sprint-1-briefing.md",
           "module_item_id": 17236,
           "page_url": "sprint-1-briefing",
           "position": 2,
@@ -198,6 +189,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6693",
           "content_id": 6693,
+          "manifest_file": "course1/sprints/sprint-1/first-pass-problem-statement.md",
           "module_item_id": 17237,
           "page_url": null,
           "position": 3,
@@ -208,6 +200,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6694",
           "content_id": 6694,
+          "manifest_file": "course1/sprints/sprint-1/assumption-audit-with-ai.md",
           "module_item_id": 17238,
           "page_url": null,
           "position": 4,
@@ -218,6 +211,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6695",
           "content_id": 6695,
+          "manifest_file": "course1/sprints/sprint-1/listening-conversation-with-a-stakeholder.md",
           "module_item_id": 17239,
           "page_url": null,
           "position": 5,
@@ -228,6 +222,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1385",
           "content_id": 1385,
+          "manifest_file": "course1/sprints/sprint-1/sprint-1-peer-exchange.md",
           "module_item_id": 17240,
           "page_url": null,
           "position": 6,
@@ -303,6 +298,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/sprint-2-briefing",
           "content_id": null,
+          "manifest_file": "course1/sprints/sprint-2/sprint-2-briefing.md",
           "module_item_id": 17241,
           "page_url": "sprint-2-briefing",
           "position": 2,
@@ -313,6 +309,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6697",
           "content_id": 6697,
+          "manifest_file": "course1/sprints/sprint-2/scope-and-boundaries-draft.md",
           "module_item_id": 17242,
           "page_url": null,
           "position": 3,
@@ -323,6 +320,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6698",
           "content_id": 6698,
+          "manifest_file": "course1/sprints/sprint-2/second-stakeholder-interview.md",
           "module_item_id": 17243,
           "page_url": null,
           "position": 4,
@@ -333,6 +331,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1386",
           "content_id": 1386,
+          "manifest_file": "course1/sprints/sprint-2/sprint-2-peer-exchange.md",
           "module_item_id": 17244,
           "page_url": null,
           "position": 6,
@@ -399,6 +398,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/sprint-3-briefing",
           "content_id": null,
+          "manifest_file": "course1/sprints/sprint-3/sprint-3-briefing.md",
           "module_item_id": 17245,
           "page_url": "sprint-3-briefing",
           "position": 2,
@@ -409,6 +409,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6700",
           "content_id": 6700,
+          "manifest_file": "course1/sprints/sprint-3/success-criteria-with-a-stakeholder.md",
           "module_item_id": 17246,
           "page_url": null,
           "position": 4,
@@ -419,6 +420,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6701",
           "content_id": 6701,
+          "manifest_file": "course1/sprints/sprint-3/human-and-ai-contribution-map.md",
           "module_item_id": 17247,
           "page_url": null,
           "position": 5,
@@ -429,6 +431,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1387",
           "content_id": 1387,
+          "manifest_file": "course1/sprints/sprint-3/sprint-3-peer-critique.md",
           "module_item_id": 17248,
           "page_url": null,
           "position": 6,
@@ -495,6 +498,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/sprint-4-briefing",
           "content_id": null,
+          "manifest_file": "course1/sprints/sprint-4/sprint-4-briefing.md",
           "module_item_id": 17249,
           "page_url": "sprint-4-briefing",
           "position": 2,
@@ -505,6 +509,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6703",
           "content_id": 6703,
+          "manifest_file": "course1/sprints/sprint-4/integrated-problem-frame.md",
           "module_item_id": 17250,
           "page_url": null,
           "position": 3,
@@ -515,6 +520,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6704",
           "content_id": 6704,
+          "manifest_file": "course1/sprints/sprint-4/validation-conversation-with-a-decision-maker.md",
           "module_item_id": 17251,
           "page_url": null,
           "position": 4,
@@ -525,6 +531,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6705",
           "content_id": 6705,
+          "manifest_file": "course1/sprints/sprint-4/revise-based-on-what-you-learned.md",
           "module_item_id": 17252,
           "page_url": null,
           "position": 5,
@@ -535,6 +542,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1388",
           "content_id": 1388,
+          "manifest_file": "course1/sprints/sprint-4/sprint-4-peer-exchange.md",
           "module_item_id": 17253,
           "page_url": null,
           "position": 6,
@@ -610,6 +618,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/capstone-brief",
           "content_id": null,
+          "manifest_file": "course1/sprints/sprint-5/capstone-brief.md",
           "module_item_id": 17254,
           "page_url": "capstone-brief",
           "position": 2,
@@ -620,6 +629,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6707",
           "content_id": 6707,
+          "manifest_file": "course1/sprints/sprint-5/capstone-demonstration.md",
           "module_item_id": 17255,
           "page_url": null,
           "position": 3,
@@ -630,6 +640,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6708",
           "content_id": 6708,
+          "manifest_file": "course1/sprints/sprint-5/human-judgment-articulation.md",
           "module_item_id": 17256,
           "page_url": null,
           "position": 4,
@@ -640,6 +651,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1389",
           "content_id": 1389,
+          "manifest_file": "course1/sprints/sprint-5/closing-cohort-reflection.md",
           "module_item_id": 17257,
           "page_url": null,
           "position": 5,
@@ -650,6 +662,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/codex-pilot-capstone-readiness-brief",
           "content_id": null,
+          "manifest_file": "course1/sprints/sprint-5/codex-pilot-capstone-readiness-brief.md",
           "module_item_id": 17302,
           "page_url": "codex-pilot-capstone-readiness-brief",
           "position": 7,
@@ -660,6 +673,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6720",
           "content_id": 6720,
+          "manifest_file": "course1/sprints/sprint-5/codex-pilot-final-readiness-check.md",
           "module_item_id": 17303,
           "page_url": null,
           "position": 8,
@@ -753,6 +767,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/codex-agent-practice-briefing",
           "content_id": null,
+          "manifest_file": "course1/sprints/sprint-5/codex-agent-practice-briefing.md",
           "module_item_id": 17304,
           "page_url": "codex-agent-practice-briefing",
           "position": 10,
@@ -763,6 +778,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6721",
           "content_id": 6721,
+          "manifest_file": "course1/sprints/sprint-5/codex-agent-practice-first-request.md",
           "module_item_id": 17305,
           "page_url": null,
           "position": 11,
@@ -773,6 +789,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/quizzes/2914",
           "content_id": 2914,
+          "manifest_file": "course1/sprints/sprint-5/codex-agent-practice-check.md",
           "module_item_id": 17306,
           "page_url": null,
           "position": 12,
@@ -783,6 +800,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1391",
           "content_id": 1391,
+          "manifest_file": "course1/sprints/sprint-5/codex-agent-practice-peer-exchange.md",
           "module_item_id": 17307,
           "page_url": null,
           "position": 13,
@@ -849,6 +867,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/starting-codex-from-the-repo",
           "content_id": null,
+          "manifest_file": "course1/sprints/sprint-5/codex-builder-tutorial-starting-codex.md",
           "module_item_id": 17308,
           "page_url": "starting-codex-from-the-repo",
           "position": 15,
@@ -859,6 +878,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/writing-a-useful-codex-request",
           "content_id": null,
+          "manifest_file": "course1/sprints/sprint-5/codex-builder-tutorial-writing-requests.md",
           "module_item_id": 17309,
           "page_url": "writing-a-useful-codex-request",
           "position": 16,
@@ -869,6 +889,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/reviewing-drafts-before-canvas",
           "content_id": null,
+          "manifest_file": "course1/sprints/sprint-5/codex-builder-tutorial-review-and-push.md",
           "module_item_id": 17310,
           "page_url": "reviewing-drafts-before-canvas",
           "position": 17,
@@ -879,6 +900,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/quizzes/2915",
           "content_id": 2915,
+          "manifest_file": "course1/sprints/sprint-5/codex-builder-tutorial-check.md",
           "module_item_id": 17311,
           "page_url": null,
           "position": 18,
@@ -889,6 +911,7 @@
         {
           "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1392",
           "content_id": 1392,
+          "manifest_file": "course1/sprints/sprint-5/codex-builder-tutorial-prompt-exchange.md",
           "module_item_id": 17312,
           "page_url": null,
           "position": 19,
@@ -957,26 +980,205 @@
       "name": "Using This Codex Course Builder",
       "position": 8,
       "published": true
+    },
+    {
+      "id": 1898,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/bread-machine-basics",
+          "content_id": null,
+          "manifest_file": "course1/sprints/sprint-0/bread-machine-basics.md",
+          "module_item_id": 17313,
+          "page_url": "bread-machine-basics",
+          "position": 1,
+          "published": true,
+          "title": "Bread Machine Basics",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/ingredients-and-settings",
+          "content_id": null,
+          "manifest_file": "course1/sprints/sprint-0/ingredients-and-settings.md",
+          "module_item_id": 17314,
+          "page_url": "ingredients-and-settings",
+          "position": 2,
+          "published": true,
+          "title": "Ingredients and Settings",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1393",
+          "content_id": 1393,
+          "manifest_file": "course1/sprints/sprint-0/first-loaf-discussion.md",
+          "module_item_id": 17315,
+          "page_url": null,
+          "position": 3,
+          "published": true,
+          "title": "First Loaf Discussion",
+          "type": "Discussion"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/quizzes/2916",
+          "content_id": 2916,
+          "manifest_file": "course1/sprints/sprint-0/bread-machine-readiness-check.md",
+          "module_item_id": 17316,
+          "page_url": null,
+          "position": 4,
+          "published": true,
+          "title": "Bread Machine Readiness Check",
+          "type": "Quiz"
+        }
+      ],
+      "items_count": 4,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 3356,
+          "canvas_module_id": 1898,
+          "canvas_page_url": "bread-machine-basics",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-0/bread-machine-basics.md",
+          "last_pushed": "2026-04-30T23:30:10+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 2916,
+          "canvas_module_id": 1898,
+          "canvas_page_url": null,
+          "canvas_type": "quiz",
+          "file": "course1/sprints/sprint-0/bread-machine-readiness-check.md",
+          "last_pushed": "2026-04-30T23:30:33+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 1393,
+          "canvas_module_id": 1898,
+          "canvas_page_url": null,
+          "canvas_type": "discussion",
+          "file": "course1/sprints/sprint-0/first-loaf-discussion.md",
+          "last_pushed": "2026-04-30T23:30:25+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3357,
+          "canvas_module_id": 1898,
+          "canvas_page_url": "ingredients-and-settings",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-0/ingredients-and-settings.md",
+          "last_pushed": "2026-04-30T23:30:17+00:00",
+          "local_exists": true
+        }
+      ],
+      "name": "Week 1: Bread Machine Bread Basics",
+      "position": 9,
+      "published": true
+    },
+    {
+      "id": 1899,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/underwater-basket-weaving-basics",
+          "content_id": null,
+          "manifest_file": "course1/sprints/sprint-0/underwater-basket-weaving-basics.md",
+          "module_item_id": 17317,
+          "page_url": "underwater-basket-weaving-basics",
+          "position": 1,
+          "published": true,
+          "title": "Underwater Basket Weaving Basics",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/shallow-water-setup-and-technique",
+          "content_id": null,
+          "manifest_file": "course1/sprints/sprint-0/shallow-water-setup-and-technique.md",
+          "module_item_id": 17318,
+          "page_url": "shallow-water-setup-and-technique",
+          "position": 2,
+          "published": true,
+          "title": "Shallow-Water Setup And Technique",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1394",
+          "content_id": 1394,
+          "manifest_file": "course1/sprints/sprint-0/first-underwater-weave-discussion.md",
+          "module_item_id": 17319,
+          "page_url": null,
+          "position": 3,
+          "published": true,
+          "title": "First Underwater Weave Discussion",
+          "type": "Discussion"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/quizzes/2917",
+          "content_id": 2917,
+          "manifest_file": "course1/sprints/sprint-0/underwater-basket-weaving-readiness-check.md",
+          "module_item_id": 17320,
+          "page_url": null,
+          "position": 4,
+          "published": true,
+          "title": "Underwater Basket Weaving Readiness Check",
+          "type": "Quiz"
+        }
+      ],
+      "items_count": 4,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 1394,
+          "canvas_module_id": 1899,
+          "canvas_page_url": null,
+          "canvas_type": "discussion",
+          "file": "course1/sprints/sprint-0/first-underwater-weave-discussion.md",
+          "last_pushed": "2026-05-04T20:56:02+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3359,
+          "canvas_module_id": 1899,
+          "canvas_page_url": "shallow-water-setup-and-technique",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-0/shallow-water-setup-and-technique.md",
+          "last_pushed": "2026-05-04T20:55:54+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3358,
+          "canvas_module_id": 1899,
+          "canvas_page_url": "underwater-basket-weaving-basics",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-0/underwater-basket-weaving-basics.md",
+          "last_pushed": "2026-05-04T20:55:48+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 2917,
+          "canvas_module_id": 1899,
+          "canvas_page_url": null,
+          "canvas_type": "quiz",
+          "file": "course1/sprints/sprint-0/underwater-basket-weaving-readiness-check.md",
+          "last_pushed": "2026-05-04T20:56:10+00:00",
+          "local_exists": true
+        }
+      ],
+      "name": "Underwater Basket Weaving",
+      "position": 10,
+      "published": false
     }
   ],
   "options": {
-    "include_drift": true,
+    "include_drift": false,
     "include_items": true
   },
   "summary": {
     "canvas_items_not_in_manifest": 0,
     "canvas_modules_not_in_manifest": 0,
-    "canvas_orphans": 0,
-    "drift_errors": 0,
-    "drifted_artifacts": 2,
-    "live_modules": 8,
-    "manifest_artifacts": 47,
+    "live_modules": 10,
+    "manifest_artifacts": 55,
     "manifest_artifacts_not_in_module_items": 0,
-    "manifest_module_ids": 8,
+    "manifest_module_ids": 10,
     "manifest_module_ids_not_live": 0,
     "missing_local_files": 0,
     "unmanifested_local_files": 2,
     "unpublished_items": 0,
-    "unpublished_modules": 1
+    "unpublished_modules": 2
   }
 }

@@ -29,7 +29,7 @@ context/course-specs/<course>-*.md
 # Course Context Spec: <Course Title>
 
 ## Target
-- Course: course1 | course2
+- Course: <local course key>
 - Course title:
 - Course code:
 - Term or delivery context:

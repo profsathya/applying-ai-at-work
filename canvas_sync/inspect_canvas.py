@@ -2,7 +2,7 @@
 Inspect live Canvas course state and compare it with a local manifest.
 
 This script is read-only against Canvas. It may write local ledger files under
-course<N>/reports/ when --write-ledger is provided.
+<course>/reports/ when --write-ledger is provided.
 
 Usage:
   python canvas_sync/inspect_canvas.py --manifest course1/manifests/production.json --include-items
@@ -93,7 +93,7 @@ def artifact_record(rel_path: str, entry: dict) -> dict:
     }
 
 
-def module_item_record(item: dict) -> dict:
+def module_item_record(item: dict, manifest_file: str | None = None) -> dict:
     return {
         "module_item_id": item.get("id"),
         "position": item.get("position"),
@@ -103,6 +103,7 @@ def module_item_record(item: dict) -> dict:
         "page_url": item.get("page_url"),
         "canvas_url": item.get("url"),
         "published": item.get("published"),
+        "manifest_file": manifest_file,
     }
 
 
@@ -214,6 +215,7 @@ def build_report(manifest_path: Path, *, include_items: bool, include_drift: boo
     manifest_by_module_id: dict[int, list[dict]] = defaultdict(list)
     manifest_module_ids: set[int] = set()
     manifest_item_keys: set[tuple[str, Any]] = set()
+    manifest_files_by_item_key: dict[tuple[str, Any], list[str]] = defaultdict(list)
     missing_local_files: list[dict] = []
 
     for rel_path, entry in sorted(artifacts.items()):
@@ -227,6 +229,7 @@ def build_report(manifest_path: Path, *, include_items: bool, include_drift: boo
         key = artifact_canvas_key(entry)
         if key:
             manifest_item_keys.add(key)
+            manifest_files_by_item_key[key].append(rel_path)
 
     live_module_ids = {int(m["id"]) for m in live_modules if m.get("id") is not None}
     live_item_keys: set[tuple[str, Any]] = set()
@@ -237,7 +240,13 @@ def build_report(manifest_path: Path, *, include_items: bool, include_drift: boo
     for module in sorted(live_modules, key=lambda m: (m.get("position") or 999999, m.get("id") or 0)):
         module_id = int(module["id"])
         items = client.list_module_items(module_id) if include_items else []
-        item_records = [module_item_record(item) for item in items]
+        item_records = [
+            module_item_record(
+                item,
+                (manifest_files_by_item_key.get(module_item_canvas_key(item)) or [None])[0],
+            )
+            for item in items
+        ]
 
         for item, item_record in zip(items, item_records):
             key = module_item_canvas_key(item)
@@ -446,14 +455,16 @@ def render_markdown(report: dict) -> str:
                 lines.append("No module items returned.")
                 continue
             lines.extend([
-                "| Position | Type | Title | Published | Content ID | Page URL |",
-                "|---:|---|---|---|---:|---|",
+                "| Position | Module item ID | Type | Title | Published | Content ID | Page URL | Manifest file |",
+                "|---:|---:|---|---|---|---:|---|---|",
             ])
             for item in items:
                 published = "" if item.get("published") is None else ("yes" if item.get("published") else "no")
                 lines.append(
-                    f"| {item.get('position') or ''} | {item.get('type') or ''} | {item.get('title') or ''} | "
-                    f"{published} | {item.get('content_id') or ''} | {item.get('page_url') or ''} |"
+                    f"| {item.get('position') or ''} | {item.get('module_item_id') or ''} | "
+                    f"{item.get('type') or ''} | {item.get('title') or ''} | {published} | "
+                    f"{item.get('content_id') or ''} | {item.get('page_url') or ''} | "
+                    f"{item.get('manifest_file') or ''} |"
                 )
 
     return "\n".join(lines).rstrip() + "\n"
@@ -480,7 +491,7 @@ def main() -> int:
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--include-items", action="store_true")
     parser.add_argument("--drift", action="store_true", help="Fetch known artifacts and report title/body/points drift.")
-    parser.add_argument("--write-ledger", action="store_true", help="Write JSON and Markdown ledgers under course<N>/reports/.")
+    parser.add_argument("--write-ledger", action="store_true", help="Write JSON and Markdown ledgers under <course>/reports/.")
     parser.add_argument("--ledger-dir", type=Path)
     parser.add_argument("--format", choices=("json", "markdown"), default="json")
     args = parser.parse_args()

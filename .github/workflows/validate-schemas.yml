@@ -7,6 +7,7 @@ on:
       - 'course2/**'
       - 'schema/**'
       - 'canvas_sync/**'
+      - 'tests/**'
   push:
     branches: [main]
     paths:
@@ -14,6 +15,7 @@ on:
       - 'course2/**'
       - 'schema/**'
       - 'canvas_sync/**'
+      - 'tests/**'
 
 jobs:
   validate:
@@ -32,3 +34,6 @@ jobs:
 
       - name: Run schema validation on all artifacts
         run: python canvas_sync/schema.py --all
+
+      - name: Run unit tests
+        run: python -m unittest discover

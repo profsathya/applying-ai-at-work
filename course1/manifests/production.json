@@ -40,6 +40,14 @@
       "content_hash": "e844f37cce3e66cf0c06bd984a2c14f497e23d530cb26e35be925197e34c7c57",
       "last_pushed": "2026-04-30T23:30:25+00:00"
     },
+    "course1/sprints/sprint-0/first-underwater-weave-discussion.md": {
+      "canvas_id": 1394,
+      "canvas_module_id": 1899,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "869b7da188c5b0aaa25383dfc26a93a381f5549a810f82a2b6343accd39e908a",
+      "last_pushed": "2026-05-04T20:56:02+00:00"
+    },
     "course1/sprints/sprint-0/ingredients-and-settings.md": {
       "canvas_id": 3357,
       "canvas_module_id": 1898,
@@ -63,6 +71,30 @@
       "canvas_type": "quiz",
       "content_hash": "5d3c3200f45f878a4925f97c3efae19289d2a9991baf25ec48b2ea4645d92301",
       "last_pushed": "2026-04-22T19:40:47+00:00"
+    },
+    "course1/sprints/sprint-0/shallow-water-setup-and-technique.md": {
+      "canvas_id": 3359,
+      "canvas_module_id": 1899,
+      "canvas_page_url": "shallow-water-setup-and-technique",
+      "canvas_type": "page",
+      "content_hash": "1dd4c3cb34eec7779b9ac090a548d53e10932f2cfa326fe02c95981840691867",
+      "last_pushed": "2026-05-04T20:55:54+00:00"
+    },
+    "course1/sprints/sprint-0/underwater-basket-weaving-basics.md": {
+      "canvas_id": 3358,
+      "canvas_module_id": 1899,
+      "canvas_page_url": "underwater-basket-weaving-basics",
+      "canvas_type": "page",
+      "content_hash": "8e3587ba5cc8bfbe46377c63f1d5a088b3c0625462c64f0b5b12cc222fa59dd1",
+      "last_pushed": "2026-05-04T20:55:48+00:00"
+    },
+    "course1/sprints/sprint-0/underwater-basket-weaving-readiness-check.md": {
+      "canvas_id": 2917,
+      "canvas_module_id": 1899,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "fff49d1a9df2d00bbea0fc25053e35ed0f535f5078c8a4a753a1dbaa1a884548",
+      "last_pushed": "2026-05-04T20:56:10+00:00"
     },
     "course1/sprints/sprint-0/week-1-orientation.md": {
       "canvas_id": null,
@@ -415,5 +447,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-04-30T23:30:33+00:00"
+  "last_sync": "2026-05-04T20:56:10+00:00"
 }

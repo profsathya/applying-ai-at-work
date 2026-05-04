@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import glob
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -25,6 +26,7 @@ import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_DIR = REPO_ROOT / "schema"
+COURSE_KEY_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 
 
 def load_schema(name: str) -> dict:
@@ -118,19 +120,30 @@ def validate_prd(prd_path: Path) -> list[str]:
     return errors
 
 
+def discover_course_dirs() -> list[Path]:
+    course_dirs: list[Path] = []
+    for path in sorted(REPO_ROOT.iterdir()):
+        if not path.is_dir():
+            continue
+        if not COURSE_KEY_RE.fullmatch(path.name):
+            continue
+        if (path / "sprints").is_dir() or (path / "manifests").is_dir():
+            course_dirs.append(path)
+    return course_dirs
+
+
 def validate_all() -> list[str]:
     errors: list[str] = []
 
-    # In this repo, courses are course1 and course2 at the root.
-    for course_dir in ("course1", "course2"):
-        md_pattern = str(REPO_ROOT / course_dir / "sprints" / "sprint-*" / "**" / "*.md")
+    for course_path in discover_course_dirs():
+        md_pattern = str(course_path / "sprints" / "sprint-*" / "**" / "*.md")
         for md_file in glob.glob(md_pattern, recursive=True):
             errors.extend(validate_artifact(Path(md_file)))
 
-        for manifest_file in glob.glob(str(REPO_ROOT / course_dir / "manifests" / "*.json")):
+        for manifest_file in glob.glob(str(course_path / "manifests" / "*.json")):
             errors.extend(validate_manifest(Path(manifest_file)))
 
-        prd_path = REPO_ROOT / course_dir / "prd.json"
+        prd_path = course_path / "prd.json"
         if prd_path.exists():
             errors.extend(validate_prd(prd_path))
 

@@ -9,7 +9,7 @@ Build one sprint worth of artifacts for an existing course.
 
 ## Required Inputs
 
-- Target course: `course1` or `course2`
+- Target course: any existing local course directory, for example `course1`, `course2`, `course3`, or a named course key
 - Sprint number: `0` through `5`
 - Module context, supplied in one of two ways:
   - Inline pasted context in the user's request
@@ -35,7 +35,7 @@ If the user pastes context directly into chat, use it as the module context. Do 
 2. Read the module context if it is a file. If it is pasted inline, treat the pasted text as the source.
 3. Read `context/module-specs/README.md`, `AGENTS.md`, relevant course design docs, shared context docs, schemas, and existing built sprints.
 4. Treat explicit module context instructions as higher priority than inferred sprint patterns, unless they violate repo rules or schema constraints.
-5. If the target course has no built sprints, infer scaffolding from `course1` and say so.
+5. If the target course has no built sprints, infer scaffolding from a comparable built course such as `course1` and say so.
 6. Write MD files only under `<target>/sprints/sprint-<n>/`.
 7. Validate every written file:
 

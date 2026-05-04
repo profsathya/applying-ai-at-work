@@ -21,7 +21,6 @@ import argparse
 from contextlib import contextmanager
 import fcntl
 import json
-import os
 import sys
 from pathlib import Path
 
@@ -76,6 +75,25 @@ def manifest_lock(path: Path):
             yield
         finally:
             fcntl.flock(lock_file, fcntl.LOCK_UN)
+
+
+def course_dir_for_manifest(manifest_path: Path) -> Path:
+    if manifest_path.parent.name != "manifests":
+        raise ValueError(
+            f"Manifest must live under <course>/manifests/: {manifest_path}"
+        )
+    return manifest_path.parent.parent
+
+
+def validate_artifact_manifest_pair(md_path: Path, manifest_path: Path) -> None:
+    course_dir = course_dir_for_manifest(manifest_path)
+    sprint_dir = course_dir / "sprints"
+    try:
+        md_path.relative_to(sprint_dir)
+    except ValueError as exc:
+        raise ValueError(
+            f"Artifact {md_path} must live under {sprint_dir} for manifest {manifest_path}"
+        ) from exc
 
 
 CANVAS_SUBMISSION_TYPE_MAP = {
@@ -190,6 +208,7 @@ def push_artifact(md_path: Path, manifest_path: Path) -> dict:
     repo_root = Path.cwd().resolve()
     md_path = md_path.resolve()
     manifest_path = manifest_path.resolve()
+    validate_artifact_manifest_pair(md_path, manifest_path)
 
     # Validate first
     errors = validate_artifact(md_path)
@@ -202,28 +221,13 @@ def push_artifact(md_path: Path, manifest_path: Path) -> dict:
     with manifest_lock(manifest_path):
         manifest = load_manifest(manifest_path)
 
-        # Determine course from path. In this repo, the MD file lives under
-        # course1/sprints/... or course2/sprints/..., and the corresponding
-        # canvas course_id comes from COURSE1_CANVAS_ID or COURSE2_CANVAS_ID.
         rel_path = str(md_path.relative_to(repo_root))
-        if rel_path.startswith("course1/"):
-            env_course_id = int(os.environ.get("COURSE1_CANVAS_ID", "0"))
-        elif rel_path.startswith("course2/"):
-            env_course_id = int(os.environ.get("COURSE2_CANVAS_ID", "0"))
-        else:
-            env_course_id = 0
-
-        # Prefer manifest course_id; fall back to env if manifest still has 0
         manifest_course_id = manifest.get("instance", {}).get("course_id") or 0
-        course_id = manifest_course_id or env_course_id
-        if not course_id:
+        if not manifest_course_id:
             raise ValueError(
-                f"No course_id available for {rel_path}. Set COURSE1_CANVAS_ID or COURSE2_CANVAS_ID in .env."
+                f"{manifest_path}: manifest instance.course_id is required and must be greater than zero"
             )
-
-        # If the manifest had 0 and we filled from env, persist the backfill
-        if not manifest_course_id and env_course_id:
-            manifest["instance"]["course_id"] = env_course_id
+        course_id = int(manifest_course_id)
 
         client = CanvasClient.from_env(course_id=course_id)
 

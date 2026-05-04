@@ -1,6 +1,6 @@
 ---
 name: inspect-canvas
-description: Inspect a live Canvas course in one read-only pass, list modules and module items, compare them with the local production manifest and local Markdown files, optionally report reconcile drift, and write an up-to-date local Canvas ledger under course<N>/reports/.
+description: Inspect a live Canvas course in one read-only pass, list modules and module items, compare them with the local production manifest and local Markdown files, optionally report reconcile drift, and write an up-to-date local Canvas ledger under <course>/reports/.
 ---
 
 # Inspect Canvas Skill
@@ -12,8 +12,7 @@ This workflow reads Canvas and may write local ledger files. It must not write t
 ## Workflow
 
 1. Resolve the target course and manifest:
-   - `course1` -> `course1/manifests/production.json`
-   - `course2` -> `course2/manifests/production.json`
+   - `<course>` -> `<course>/manifests/production.json`
 2. Run the inspector with module items and ledger output:
 
    ```bash
