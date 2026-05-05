@@ -1,0 +1,811 @@
+{
+  "checks": {
+    "canvas_items_not_in_manifest": [],
+    "canvas_modules_not_in_manifest": [],
+    "canvas_orphans": null,
+    "drift_errors": null,
+    "drifted_artifacts": null,
+    "manifest_artifacts_not_in_module_items": [],
+    "manifest_module_ids_not_live": [],
+    "missing_local_files": [],
+    "unmanifested_local_files": [],
+    "unpublished_items": [
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/course-builder-map",
+        "content_id": null,
+        "manifest_file": "course3/sprints/sprint-0/course-builder-map.md",
+        "module_id": 1900,
+        "module_item_id": 17321,
+        "module_name": "Module 1: Orientation to the Repo, Codex, and the Agentic Workflow",
+        "page_url": "course-builder-map",
+        "position": 2,
+        "published": false,
+        "title": "Course Builder Map",
+        "type": "Page"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/codex-app-and-ide-workflow",
+        "content_id": null,
+        "manifest_file": "course3/sprints/sprint-0/codex-app-and-ide-workflow.md",
+        "module_id": 1900,
+        "module_item_id": 17322,
+        "module_name": "Module 1: Orientation to the Repo, Codex, and the Agentic Workflow",
+        "page_url": "codex-app-and-ide-workflow",
+        "position": 3,
+        "published": false,
+        "title": "Codex App and IDE Workflow",
+        "type": "Page"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/safety-boundaries-and-human-review",
+        "content_id": null,
+        "manifest_file": "course3/sprints/sprint-0/safety-boundaries-and-human-review.md",
+        "module_id": 1900,
+        "module_item_id": 17323,
+        "module_name": "Module 1: Orientation to the Repo, Codex, and the Agentic Workflow",
+        "page_url": "safety-boundaries-and-human-review",
+        "position": 4,
+        "published": false,
+        "title": "Safety Boundaries and Human Review",
+        "type": "Page"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/quizzes/2918",
+        "content_id": 2918,
+        "manifest_file": "course3/sprints/sprint-0/orientation-workflow-check.md",
+        "module_id": 1900,
+        "module_item_id": 17324,
+        "module_name": "Module 1: Orientation to the Repo, Codex, and the Agentic Workflow",
+        "page_url": null,
+        "position": 5,
+        "published": false,
+        "title": "Orientation Workflow Check",
+        "type": "Quiz"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/assignments/6731",
+        "content_id": 6731,
+        "manifest_file": "course3/sprints/sprint-0/repo-inspection-practice.md",
+        "module_id": 1900,
+        "module_item_id": 17325,
+        "module_name": "Module 1: Orientation to the Repo, Codex, and the Agentic Workflow",
+        "page_url": null,
+        "position": 6,
+        "published": false,
+        "title": "Repo Inspection Practice",
+        "type": "Assignment"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/local-course-shell-and-manifest",
+        "content_id": null,
+        "manifest_file": "course3/sprints/sprint-1/local-course-shell-and-manifest.md",
+        "module_id": 1901,
+        "module_item_id": 17326,
+        "module_name": "Module 2: Setup, Configuration, and Safe First Run",
+        "page_url": "local-course-shell-and-manifest",
+        "position": 2,
+        "published": false,
+        "title": "Local Course Shell and Manifest",
+        "type": "Page"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/secrets-and-environment-placeholders",
+        "content_id": null,
+        "manifest_file": "course3/sprints/sprint-1/secrets-and-environment-placeholders.md",
+        "module_id": 1901,
+        "module_item_id": 17327,
+        "module_name": "Module 2: Setup, Configuration, and Safe First Run",
+        "page_url": "secrets-and-environment-placeholders",
+        "position": 3,
+        "published": false,
+        "title": "Secrets and Environment Placeholders",
+        "type": "Page"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/technical-appendix-setup-commands",
+        "content_id": null,
+        "manifest_file": "course3/sprints/sprint-1/technical-appendix-setup-commands.md",
+        "module_id": 1901,
+        "module_item_id": 17328,
+        "module_name": "Module 2: Setup, Configuration, and Safe First Run",
+        "page_url": "technical-appendix-setup-commands",
+        "position": 4,
+        "published": false,
+        "title": "Technical Appendix: Setup Commands",
+        "type": "Page"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/quizzes/2919",
+        "content_id": 2919,
+        "manifest_file": "course3/sprints/sprint-1/setup-and-first-run-check.md",
+        "module_id": 1901,
+        "module_item_id": 17329,
+        "module_name": "Module 2: Setup, Configuration, and Safe First Run",
+        "page_url": null,
+        "position": 5,
+        "published": false,
+        "title": "Setup and First Run Check",
+        "type": "Quiz"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/assignments/6733",
+        "content_id": 6733,
+        "manifest_file": "course3/sprints/sprint-1/safe-first-run-plan.md",
+        "module_id": 1901,
+        "module_item_id": 17330,
+        "module_name": "Module 2: Setup, Configuration, and Safe First Run",
+        "page_url": null,
+        "position": 6,
+        "published": false,
+        "title": "Safe First Run Plan",
+        "type": "Assignment"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/draft-artifacts-with-codex",
+        "content_id": null,
+        "manifest_file": "course3/sprints/sprint-2/draft-artifacts-with-codex.md",
+        "module_id": 1902,
+        "module_item_id": 17331,
+        "module_name": "Module 3: Building and Publishing Content with Codex and Agents",
+        "page_url": "draft-artifacts-with-codex",
+        "position": 2,
+        "published": false,
+        "title": "Draft Artifacts with Codex",
+        "type": "Page"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/use-skills-and-agents-for-builds",
+        "content_id": null,
+        "manifest_file": "course3/sprints/sprint-2/use-skills-and-agents-for-builds.md",
+        "module_id": 1902,
+        "module_item_id": 17332,
+        "module_name": "Module 3: Building and Publishing Content with Codex and Agents",
+        "page_url": "use-skills-and-agents-for-builds",
+        "position": 3,
+        "published": false,
+        "title": "Use Skills and Agents for Builds",
+        "type": "Page"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/review-and-publish-path",
+        "content_id": null,
+        "manifest_file": "course3/sprints/sprint-2/review-and-publish-path.md",
+        "module_id": 1902,
+        "module_item_id": 17333,
+        "module_name": "Module 3: Building and Publishing Content with Codex and Agents",
+        "page_url": "review-and-publish-path",
+        "position": 4,
+        "published": false,
+        "title": "Review and Publish Path",
+        "type": "Page"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/quizzes/2920",
+        "content_id": 2920,
+        "manifest_file": "course3/sprints/sprint-2/content-build-check.md",
+        "module_id": 1902,
+        "module_item_id": 17334,
+        "module_name": "Module 3: Building and Publishing Content with Codex and Agents",
+        "page_url": null,
+        "position": 5,
+        "published": false,
+        "title": "Content Build Check",
+        "type": "Quiz"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/assignments/6735",
+        "content_id": 6735,
+        "manifest_file": "course3/sprints/sprint-2/staged-module-build-review.md",
+        "module_id": 1902,
+        "module_item_id": 17335,
+        "module_name": "Module 3: Building and Publishing Content with Codex and Agents",
+        "page_url": null,
+        "position": 6,
+        "published": false,
+        "title": "Staged Module Build Review",
+        "type": "Assignment"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/inspect-before-you-change",
+        "content_id": null,
+        "manifest_file": "course3/sprints/sprint-3/inspect-before-you-change.md",
+        "module_id": 1903,
+        "module_item_id": 17336,
+        "module_name": "Module 4: Verification, Maintenance, and Extension",
+        "page_url": "inspect-before-you-change",
+        "position": 2,
+        "published": false,
+        "title": "Inspect Before You Change",
+        "type": "Page"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/reconcile-and-remove-safely",
+        "content_id": null,
+        "manifest_file": "course3/sprints/sprint-3/reconcile-and-remove-safely.md",
+        "module_id": 1903,
+        "module_item_id": 17337,
+        "module_name": "Module 4: Verification, Maintenance, and Extension",
+        "page_url": "reconcile-and-remove-safely",
+        "position": 3,
+        "published": false,
+        "title": "Reconcile and Remove Safely",
+        "type": "Page"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/extend-the-workflow",
+        "content_id": null,
+        "manifest_file": "course3/sprints/sprint-3/extend-the-workflow.md",
+        "module_id": 1903,
+        "module_item_id": 17338,
+        "module_name": "Module 4: Verification, Maintenance, and Extension",
+        "page_url": "extend-the-workflow",
+        "position": 4,
+        "published": false,
+        "title": "Extend the Workflow",
+        "type": "Page"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/quizzes/2921",
+        "content_id": 2921,
+        "manifest_file": "course3/sprints/sprint-3/verification-maintenance-check.md",
+        "module_id": 1903,
+        "module_item_id": 17339,
+        "module_name": "Module 4: Verification, Maintenance, and Extension",
+        "page_url": null,
+        "position": 5,
+        "published": false,
+        "title": "Verification and Maintenance Check",
+        "type": "Quiz"
+      },
+      {
+        "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/assignments/6737",
+        "content_id": 6737,
+        "manifest_file": "course3/sprints/sprint-3/workflow-extension-proposal.md",
+        "module_id": 1903,
+        "module_item_id": 17340,
+        "module_name": "Module 4: Verification, Maintenance, and Extension",
+        "page_url": null,
+        "position": 6,
+        "published": false,
+        "title": "Workflow Extension Proposal",
+        "type": "Assignment"
+      }
+    ],
+    "unpublished_modules": [
+      {
+        "id": 1900,
+        "items_count": 5,
+        "name": "Module 1: Orientation to the Repo, Codex, and the Agentic Workflow",
+        "position": 1
+      },
+      {
+        "id": 1901,
+        "items_count": 5,
+        "name": "Module 2: Setup, Configuration, and Safe First Run",
+        "position": 2
+      },
+      {
+        "id": 1902,
+        "items_count": 5,
+        "name": "Module 3: Building and Publishing Content with Codex and Agents",
+        "position": 3
+      },
+      {
+        "id": 1903,
+        "items_count": 5,
+        "name": "Module 4: Verification, Maintenance, and Extension",
+        "position": 4
+      }
+    ]
+  },
+  "generated_at": "2026-05-05T17:48:32+00:00",
+  "manifest": {
+    "instance": {
+      "base_url": "https://cti-courses.instructure.com/",
+      "course_id": 181,
+      "name": "production",
+      "term": ""
+    },
+    "last_sync": "2026-05-05T17:48:16+00:00",
+    "path": "course3/manifests/production.json"
+  },
+  "modules": [
+    {
+      "id": 1900,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/course-builder-map",
+          "content_id": null,
+          "manifest_file": "course3/sprints/sprint-0/course-builder-map.md",
+          "module_item_id": 17321,
+          "page_url": "course-builder-map",
+          "position": 2,
+          "published": false,
+          "title": "Course Builder Map",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/codex-app-and-ide-workflow",
+          "content_id": null,
+          "manifest_file": "course3/sprints/sprint-0/codex-app-and-ide-workflow.md",
+          "module_item_id": 17322,
+          "page_url": "codex-app-and-ide-workflow",
+          "position": 3,
+          "published": false,
+          "title": "Codex App and IDE Workflow",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/safety-boundaries-and-human-review",
+          "content_id": null,
+          "manifest_file": "course3/sprints/sprint-0/safety-boundaries-and-human-review.md",
+          "module_item_id": 17323,
+          "page_url": "safety-boundaries-and-human-review",
+          "position": 4,
+          "published": false,
+          "title": "Safety Boundaries and Human Review",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/quizzes/2918",
+          "content_id": 2918,
+          "manifest_file": "course3/sprints/sprint-0/orientation-workflow-check.md",
+          "module_item_id": 17324,
+          "page_url": null,
+          "position": 5,
+          "published": false,
+          "title": "Orientation Workflow Check",
+          "type": "Quiz"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/assignments/6731",
+          "content_id": 6731,
+          "manifest_file": "course3/sprints/sprint-0/repo-inspection-practice.md",
+          "module_item_id": 17325,
+          "page_url": null,
+          "position": 6,
+          "published": false,
+          "title": "Repo Inspection Practice",
+          "type": "Assignment"
+        }
+      ],
+      "items_count": 5,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 3361,
+          "canvas_module_id": 1900,
+          "canvas_page_url": "codex-app-and-ide-workflow",
+          "canvas_type": "page",
+          "file": "course3/sprints/sprint-0/codex-app-and-ide-workflow.md",
+          "last_pushed": "2026-05-05T17:47:37+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3360,
+          "canvas_module_id": 1900,
+          "canvas_page_url": "course-builder-map",
+          "canvas_type": "page",
+          "file": "course3/sprints/sprint-0/course-builder-map.md",
+          "last_pushed": "2026-05-05T17:47:35+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1900,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course3/sprints/sprint-0/module-1-orientation-to-the-repo-codex-and-agentic-workflow.md",
+          "last_pushed": "2026-05-05T17:47:34+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 2918,
+          "canvas_module_id": 1900,
+          "canvas_page_url": null,
+          "canvas_type": "quiz",
+          "file": "course3/sprints/sprint-0/orientation-workflow-check.md",
+          "last_pushed": "2026-05-05T17:47:42+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6731,
+          "canvas_module_id": 1900,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course3/sprints/sprint-0/repo-inspection-practice.md",
+          "last_pushed": "2026-05-05T17:47:44+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3362,
+          "canvas_module_id": 1900,
+          "canvas_page_url": "safety-boundaries-and-human-review",
+          "canvas_type": "page",
+          "file": "course3/sprints/sprint-0/safety-boundaries-and-human-review.md",
+          "last_pushed": "2026-05-05T17:47:38+00:00",
+          "local_exists": true
+        }
+      ],
+      "name": "Module 1: Orientation to the Repo, Codex, and the Agentic Workflow",
+      "position": 1,
+      "published": false
+    },
+    {
+      "id": 1901,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/local-course-shell-and-manifest",
+          "content_id": null,
+          "manifest_file": "course3/sprints/sprint-1/local-course-shell-and-manifest.md",
+          "module_item_id": 17326,
+          "page_url": "local-course-shell-and-manifest",
+          "position": 2,
+          "published": false,
+          "title": "Local Course Shell and Manifest",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/secrets-and-environment-placeholders",
+          "content_id": null,
+          "manifest_file": "course3/sprints/sprint-1/secrets-and-environment-placeholders.md",
+          "module_item_id": 17327,
+          "page_url": "secrets-and-environment-placeholders",
+          "position": 3,
+          "published": false,
+          "title": "Secrets and Environment Placeholders",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/technical-appendix-setup-commands",
+          "content_id": null,
+          "manifest_file": "course3/sprints/sprint-1/technical-appendix-setup-commands.md",
+          "module_item_id": 17328,
+          "page_url": "technical-appendix-setup-commands",
+          "position": 4,
+          "published": false,
+          "title": "Technical Appendix: Setup Commands",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/quizzes/2919",
+          "content_id": 2919,
+          "manifest_file": "course3/sprints/sprint-1/setup-and-first-run-check.md",
+          "module_item_id": 17329,
+          "page_url": null,
+          "position": 5,
+          "published": false,
+          "title": "Setup and First Run Check",
+          "type": "Quiz"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/assignments/6733",
+          "content_id": 6733,
+          "manifest_file": "course3/sprints/sprint-1/safe-first-run-plan.md",
+          "module_item_id": 17330,
+          "page_url": null,
+          "position": 6,
+          "published": false,
+          "title": "Safe First Run Plan",
+          "type": "Assignment"
+        }
+      ],
+      "items_count": 5,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 3363,
+          "canvas_module_id": 1901,
+          "canvas_page_url": "local-course-shell-and-manifest",
+          "canvas_type": "page",
+          "file": "course3/sprints/sprint-1/local-course-shell-and-manifest.md",
+          "last_pushed": "2026-05-05T17:47:46+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1901,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course3/sprints/sprint-1/module-2-setup-configuration-and-safe-first-run.md",
+          "last_pushed": "2026-05-05T17:47:45+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6733,
+          "canvas_module_id": 1901,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course3/sprints/sprint-1/safe-first-run-plan.md",
+          "last_pushed": "2026-05-05T17:47:55+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3364,
+          "canvas_module_id": 1901,
+          "canvas_page_url": "secrets-and-environment-placeholders",
+          "canvas_type": "page",
+          "file": "course3/sprints/sprint-1/secrets-and-environment-placeholders.md",
+          "last_pushed": "2026-05-05T17:47:49+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 2919,
+          "canvas_module_id": 1901,
+          "canvas_page_url": null,
+          "canvas_type": "quiz",
+          "file": "course3/sprints/sprint-1/setup-and-first-run-check.md",
+          "last_pushed": "2026-05-05T17:47:54+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3365,
+          "canvas_module_id": 1901,
+          "canvas_page_url": "technical-appendix-setup-commands",
+          "canvas_type": "page",
+          "file": "course3/sprints/sprint-1/technical-appendix-setup-commands.md",
+          "last_pushed": "2026-05-05T17:47:50+00:00",
+          "local_exists": true
+        }
+      ],
+      "name": "Module 2: Setup, Configuration, and Safe First Run",
+      "position": 2,
+      "published": false
+    },
+    {
+      "id": 1902,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/draft-artifacts-with-codex",
+          "content_id": null,
+          "manifest_file": "course3/sprints/sprint-2/draft-artifacts-with-codex.md",
+          "module_item_id": 17331,
+          "page_url": "draft-artifacts-with-codex",
+          "position": 2,
+          "published": false,
+          "title": "Draft Artifacts with Codex",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/use-skills-and-agents-for-builds",
+          "content_id": null,
+          "manifest_file": "course3/sprints/sprint-2/use-skills-and-agents-for-builds.md",
+          "module_item_id": 17332,
+          "page_url": "use-skills-and-agents-for-builds",
+          "position": 3,
+          "published": false,
+          "title": "Use Skills and Agents for Builds",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/review-and-publish-path",
+          "content_id": null,
+          "manifest_file": "course3/sprints/sprint-2/review-and-publish-path.md",
+          "module_item_id": 17333,
+          "page_url": "review-and-publish-path",
+          "position": 4,
+          "published": false,
+          "title": "Review and Publish Path",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/quizzes/2920",
+          "content_id": 2920,
+          "manifest_file": "course3/sprints/sprint-2/content-build-check.md",
+          "module_item_id": 17334,
+          "page_url": null,
+          "position": 5,
+          "published": false,
+          "title": "Content Build Check",
+          "type": "Quiz"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/assignments/6735",
+          "content_id": 6735,
+          "manifest_file": "course3/sprints/sprint-2/staged-module-build-review.md",
+          "module_item_id": 17335,
+          "page_url": null,
+          "position": 6,
+          "published": false,
+          "title": "Staged Module Build Review",
+          "type": "Assignment"
+        }
+      ],
+      "items_count": 5,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 2920,
+          "canvas_module_id": 1902,
+          "canvas_page_url": null,
+          "canvas_type": "quiz",
+          "file": "course3/sprints/sprint-2/content-build-check.md",
+          "last_pushed": "2026-05-05T17:48:04+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3366,
+          "canvas_module_id": 1902,
+          "canvas_page_url": "draft-artifacts-with-codex",
+          "canvas_type": "page",
+          "file": "course3/sprints/sprint-2/draft-artifacts-with-codex.md",
+          "last_pushed": "2026-05-05T17:47:57+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1902,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course3/sprints/sprint-2/module-3-building-and-publishing-content-with-codex-and-agents.md",
+          "last_pushed": "2026-05-05T17:47:56+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3368,
+          "canvas_module_id": 1902,
+          "canvas_page_url": "review-and-publish-path",
+          "canvas_type": "page",
+          "file": "course3/sprints/sprint-2/review-and-publish-path.md",
+          "last_pushed": "2026-05-05T17:48:00+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6735,
+          "canvas_module_id": 1902,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course3/sprints/sprint-2/staged-module-build-review.md",
+          "last_pushed": "2026-05-05T17:48:05+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3367,
+          "canvas_module_id": 1902,
+          "canvas_page_url": "use-skills-and-agents-for-builds",
+          "canvas_type": "page",
+          "file": "course3/sprints/sprint-2/use-skills-and-agents-for-builds.md",
+          "last_pushed": "2026-05-05T17:47:59+00:00",
+          "local_exists": true
+        }
+      ],
+      "name": "Module 3: Building and Publishing Content with Codex and Agents",
+      "position": 3,
+      "published": false
+    },
+    {
+      "id": 1903,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/inspect-before-you-change",
+          "content_id": null,
+          "manifest_file": "course3/sprints/sprint-3/inspect-before-you-change.md",
+          "module_item_id": 17336,
+          "page_url": "inspect-before-you-change",
+          "position": 2,
+          "published": false,
+          "title": "Inspect Before You Change",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/reconcile-and-remove-safely",
+          "content_id": null,
+          "manifest_file": "course3/sprints/sprint-3/reconcile-and-remove-safely.md",
+          "module_item_id": 17337,
+          "page_url": "reconcile-and-remove-safely",
+          "position": 3,
+          "published": false,
+          "title": "Reconcile and Remove Safely",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/pages/extend-the-workflow",
+          "content_id": null,
+          "manifest_file": "course3/sprints/sprint-3/extend-the-workflow.md",
+          "module_item_id": 17338,
+          "page_url": "extend-the-workflow",
+          "position": 4,
+          "published": false,
+          "title": "Extend the Workflow",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/quizzes/2921",
+          "content_id": 2921,
+          "manifest_file": "course3/sprints/sprint-3/verification-maintenance-check.md",
+          "module_item_id": 17339,
+          "page_url": null,
+          "position": 5,
+          "published": false,
+          "title": "Verification and Maintenance Check",
+          "type": "Quiz"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/181/assignments/6737",
+          "content_id": 6737,
+          "manifest_file": "course3/sprints/sprint-3/workflow-extension-proposal.md",
+          "module_item_id": 17340,
+          "page_url": null,
+          "position": 6,
+          "published": false,
+          "title": "Workflow Extension Proposal",
+          "type": "Assignment"
+        }
+      ],
+      "items_count": 5,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 3371,
+          "canvas_module_id": 1903,
+          "canvas_page_url": "extend-the-workflow",
+          "canvas_type": "page",
+          "file": "course3/sprints/sprint-3/extend-the-workflow.md",
+          "last_pushed": "2026-05-05T17:48:10+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3369,
+          "canvas_module_id": 1903,
+          "canvas_page_url": "inspect-before-you-change",
+          "canvas_type": "page",
+          "file": "course3/sprints/sprint-3/inspect-before-you-change.md",
+          "last_pushed": "2026-05-05T17:48:08+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1903,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course3/sprints/sprint-3/module-4-verification-maintenance-and-extension.md",
+          "last_pushed": "2026-05-05T17:48:06+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 3370,
+          "canvas_module_id": 1903,
+          "canvas_page_url": "reconcile-and-remove-safely",
+          "canvas_type": "page",
+          "file": "course3/sprints/sprint-3/reconcile-and-remove-safely.md",
+          "last_pushed": "2026-05-05T17:48:09+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 2921,
+          "canvas_module_id": 1903,
+          "canvas_page_url": null,
+          "canvas_type": "quiz",
+          "file": "course3/sprints/sprint-3/verification-maintenance-check.md",
+          "last_pushed": "2026-05-05T17:48:15+00:00",
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6737,
+          "canvas_module_id": 1903,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course3/sprints/sprint-3/workflow-extension-proposal.md",
+          "last_pushed": "2026-05-05T17:48:16+00:00",
+          "local_exists": true
+        }
+      ],
+      "name": "Module 4: Verification, Maintenance, and Extension",
+      "position": 4,
+      "published": false
+    }
+  ],
+  "options": {
+    "include_drift": false,
+    "include_items": true
+  },
+  "summary": {
+    "canvas_items_not_in_manifest": 0,
+    "canvas_modules_not_in_manifest": 0,
+    "live_modules": 4,
+    "manifest_artifacts": 24,
+    "manifest_artifacts_not_in_module_items": 0,
+    "manifest_module_ids": 4,
+    "manifest_module_ids_not_live": 0,
+    "missing_local_files": 0,
+    "unmanifested_local_files": 0,
+    "unpublished_items": 20,
+    "unpublished_modules": 4
+  }
+}

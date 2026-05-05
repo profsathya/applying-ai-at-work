@@ -1,0 +1,203 @@
+{
+  "artifacts": {
+    "course3/sprints/sprint-0/codex-app-and-ide-workflow.md": {
+      "canvas_id": 3361,
+      "canvas_module_id": 1900,
+      "canvas_page_url": "codex-app-and-ide-workflow",
+      "canvas_type": "page",
+      "content_hash": "88ceee7e054079d373d99ffde24784e512d376d9e55ef24cb483024420c0c30d",
+      "last_pushed": "2026-05-05T17:47:37+00:00"
+    },
+    "course3/sprints/sprint-0/course-builder-map.md": {
+      "canvas_id": 3360,
+      "canvas_module_id": 1900,
+      "canvas_page_url": "course-builder-map",
+      "canvas_type": "page",
+      "content_hash": "fb944b3d8cf23f55ddf9c8745f1aeba76dcbc097000ca55f006e6097e3b96c9f",
+      "last_pushed": "2026-05-05T17:47:35+00:00"
+    },
+    "course3/sprints/sprint-0/module-1-orientation-to-the-repo-codex-and-agentic-workflow.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1900,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "fa5e45cc21b7695118badd36e87399dc00c517cd99c0b3c180b6cb617b214b55",
+      "last_pushed": "2026-05-05T17:47:34+00:00"
+    },
+    "course3/sprints/sprint-0/orientation-workflow-check.md": {
+      "canvas_id": 2918,
+      "canvas_module_id": 1900,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "678f47235ec8aecc64cd53022aa592c44cf0e5d282f62453ece8b63a14088670",
+      "last_pushed": "2026-05-05T17:47:42+00:00"
+    },
+    "course3/sprints/sprint-0/repo-inspection-practice.md": {
+      "canvas_id": 6731,
+      "canvas_module_id": 1900,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "6d760e25ff5fceeead469f94283341da49ee82ee359c795b4cbab2457f3bd7f7",
+      "last_pushed": "2026-05-05T17:47:44+00:00"
+    },
+    "course3/sprints/sprint-0/safety-boundaries-and-human-review.md": {
+      "canvas_id": 3362,
+      "canvas_module_id": 1900,
+      "canvas_page_url": "safety-boundaries-and-human-review",
+      "canvas_type": "page",
+      "content_hash": "02b54037038ef6f163c751aa86be2f67cc36a5ce50356ca4fcb622ee1c124151",
+      "last_pushed": "2026-05-05T17:47:38+00:00"
+    },
+    "course3/sprints/sprint-1/local-course-shell-and-manifest.md": {
+      "canvas_id": 3363,
+      "canvas_module_id": 1901,
+      "canvas_page_url": "local-course-shell-and-manifest",
+      "canvas_type": "page",
+      "content_hash": "28bb37ede514d423f8da7bc68470b11ec2c9a995bd63c66ffda981d2911cdddd",
+      "last_pushed": "2026-05-05T17:47:46+00:00"
+    },
+    "course3/sprints/sprint-1/module-2-setup-configuration-and-safe-first-run.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1901,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "b3dbfb92909004f72beba333487180f23ba2dac3bcc69f1540fbc834eca07531",
+      "last_pushed": "2026-05-05T17:47:45+00:00"
+    },
+    "course3/sprints/sprint-1/safe-first-run-plan.md": {
+      "canvas_id": 6733,
+      "canvas_module_id": 1901,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "a40c750fb96c0a97d93772eb953e9348a57a861db1f0d12082f9d601ad1cf24e",
+      "last_pushed": "2026-05-05T17:47:55+00:00"
+    },
+    "course3/sprints/sprint-1/secrets-and-environment-placeholders.md": {
+      "canvas_id": 3364,
+      "canvas_module_id": 1901,
+      "canvas_page_url": "secrets-and-environment-placeholders",
+      "canvas_type": "page",
+      "content_hash": "a24a841e326e35760b7618ff2549c2fa967b8da342f7af5273880124102e7c5c",
+      "last_pushed": "2026-05-05T17:47:49+00:00"
+    },
+    "course3/sprints/sprint-1/setup-and-first-run-check.md": {
+      "canvas_id": 2919,
+      "canvas_module_id": 1901,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "9a6038995a163f3d43226893895209a902d93ee06789c13be42c61edea42a6c3",
+      "last_pushed": "2026-05-05T17:47:54+00:00"
+    },
+    "course3/sprints/sprint-1/technical-appendix-setup-commands.md": {
+      "canvas_id": 3365,
+      "canvas_module_id": 1901,
+      "canvas_page_url": "technical-appendix-setup-commands",
+      "canvas_type": "page",
+      "content_hash": "9f4ae5e241447fb5212503ab95a4d42209f5c634a2a6e964cf440d6d31652467",
+      "last_pushed": "2026-05-05T17:47:50+00:00"
+    },
+    "course3/sprints/sprint-2/content-build-check.md": {
+      "canvas_id": 2920,
+      "canvas_module_id": 1902,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "ef61ddb0262c7bc27ae5e6c75f5778119cefa76727a7c64279ece283675bbfbb",
+      "last_pushed": "2026-05-05T17:48:04+00:00"
+    },
+    "course3/sprints/sprint-2/draft-artifacts-with-codex.md": {
+      "canvas_id": 3366,
+      "canvas_module_id": 1902,
+      "canvas_page_url": "draft-artifacts-with-codex",
+      "canvas_type": "page",
+      "content_hash": "6dea6c87b6841887785c9f8221f3d2ebd324e5f0d3a6c187f5ff160ed5e93c0d",
+      "last_pushed": "2026-05-05T17:47:57+00:00"
+    },
+    "course3/sprints/sprint-2/module-3-building-and-publishing-content-with-codex-and-agents.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1902,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "a91f7cc105858f3f1f301d15a7a2b72307b726315781099ec0c0eef84928667d",
+      "last_pushed": "2026-05-05T17:47:56+00:00"
+    },
+    "course3/sprints/sprint-2/review-and-publish-path.md": {
+      "canvas_id": 3368,
+      "canvas_module_id": 1902,
+      "canvas_page_url": "review-and-publish-path",
+      "canvas_type": "page",
+      "content_hash": "fd9e87010d7e679c0340921f77926f41090ce54eab11bd5c02e230a920696537",
+      "last_pushed": "2026-05-05T17:48:00+00:00"
+    },
+    "course3/sprints/sprint-2/staged-module-build-review.md": {
+      "canvas_id": 6735,
+      "canvas_module_id": 1902,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "cff88e1695b6a784b14ede22b54510b3541d8348f47549ca4cbd431f753218e6",
+      "last_pushed": "2026-05-05T17:48:05+00:00"
+    },
+    "course3/sprints/sprint-2/use-skills-and-agents-for-builds.md": {
+      "canvas_id": 3367,
+      "canvas_module_id": 1902,
+      "canvas_page_url": "use-skills-and-agents-for-builds",
+      "canvas_type": "page",
+      "content_hash": "d97957f68ebc2cfd2db0ca37fdfecc7136647515023ef0c6ce7e397ccab0e5c3",
+      "last_pushed": "2026-05-05T17:47:59+00:00"
+    },
+    "course3/sprints/sprint-3/extend-the-workflow.md": {
+      "canvas_id": 3371,
+      "canvas_module_id": 1903,
+      "canvas_page_url": "extend-the-workflow",
+      "canvas_type": "page",
+      "content_hash": "5dd4ea6be78dc233561d12ac362010632d1e22b17791895b3c1f66cb14f7ad55",
+      "last_pushed": "2026-05-05T17:48:10+00:00"
+    },
+    "course3/sprints/sprint-3/inspect-before-you-change.md": {
+      "canvas_id": 3369,
+      "canvas_module_id": 1903,
+      "canvas_page_url": "inspect-before-you-change",
+      "canvas_type": "page",
+      "content_hash": "2596e692df7c8ad139fff11028bf75d115b9fda2a064b722807c65847f4f7111",
+      "last_pushed": "2026-05-05T17:48:08+00:00"
+    },
+    "course3/sprints/sprint-3/module-4-verification-maintenance-and-extension.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1903,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "0af55d9f36615a728db142e70b06474aef07dbf528ca66d3cb2a615d7fa8d595",
+      "last_pushed": "2026-05-05T17:48:06+00:00"
+    },
+    "course3/sprints/sprint-3/reconcile-and-remove-safely.md": {
+      "canvas_id": 3370,
+      "canvas_module_id": 1903,
+      "canvas_page_url": "reconcile-and-remove-safely",
+      "canvas_type": "page",
+      "content_hash": "9628e66892ea2736b151306d21b94eed118cb3792b8130f024eb63cc81331599",
+      "last_pushed": "2026-05-05T17:48:09+00:00"
+    },
+    "course3/sprints/sprint-3/verification-maintenance-check.md": {
+      "canvas_id": 2921,
+      "canvas_module_id": 1903,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "55c8ff439ee76d006d5ecbda46a3a9e385bf4ad23d20c73f6bd277836b5fd888",
+      "last_pushed": "2026-05-05T17:48:15+00:00"
+    },
+    "course3/sprints/sprint-3/workflow-extension-proposal.md": {
+      "canvas_id": 6737,
+      "canvas_module_id": 1903,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "59e7587fc8a55aa48375ed0d4d41176d0a02323edef8ca01ae8e808c9e8c28a3",
+      "last_pushed": "2026-05-05T17:48:16+00:00"
+    }
+  },
+  "instance": {
+    "base_url": "https://cti-courses.instructure.com/",
+    "course_id": 181,
+    "name": "production",
+    "term": ""
+  },
+  "last_sync": "2026-05-05T17:48:16+00:00"
+}
