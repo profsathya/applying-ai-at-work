@@ -2,13 +2,90 @@
   "checks": {
     "canvas_items_not_in_manifest": [],
     "canvas_modules_not_in_manifest": [],
-    "canvas_orphans": null,
-    "drift_errors": null,
-    "drifted_artifacts": null,
+    "canvas_orphans": [],
+    "drift_errors": [],
+    "drifted_artifacts": [
+      {
+        "drift": {
+          "body": {
+            "canvas_chars": 3617,
+            "canvas_preview": "# Sprint 4 Peer Exchange\n\nThis is the last peer exchange before the capstone. You have taken your integrated problem frame to a real decision-maker, heard how they read it, and revised it based on wha",
+            "local_chars": 3618,
+            "local_preview": "# Sprint 4 Peer Exchange\n\nThis is the last peer exchange before the capstone. You have taken your integrated problem frame to a real decision-maker, heard how they read it, and revised it based on wha"
+          }
+        },
+        "file": "course1/sprints/sprint-4/sprint-4-peer-exchange.md"
+      },
+      {
+        "drift": {
+          "points": {
+            "canvas": 0.0,
+            "local": 5
+          }
+        },
+        "file": "course1/sprints/sprint-5/codex-agent-practice-check.md"
+      }
+    ],
     "manifest_artifacts_not_in_module_items": [],
     "manifest_module_ids_not_live": [],
     "missing_local_files": [],
     "unmanifested_local_files": [
+      {
+        "file": "course1/sprints/sprint-0/bread-machine-basics.md",
+        "module": "Week 1: Bread Machine Bread Basics",
+        "position": 1,
+        "title": "Bread Machine Basics",
+        "type": "page"
+      },
+      {
+        "file": "course1/sprints/sprint-0/bread-machine-readiness-check.md",
+        "module": "Week 1: Bread Machine Bread Basics",
+        "position": 4,
+        "title": "Bread Machine Readiness Check",
+        "type": "quiz"
+      },
+      {
+        "file": "course1/sprints/sprint-0/first-loaf-discussion.md",
+        "module": "Week 1: Bread Machine Bread Basics",
+        "position": 3,
+        "title": "First Loaf Discussion",
+        "type": "discussion"
+      },
+      {
+        "file": "course1/sprints/sprint-0/first-underwater-weave-discussion.md",
+        "module": "Underwater Basket Weaving",
+        "position": 3,
+        "title": "First Underwater Weave Discussion",
+        "type": "discussion"
+      },
+      {
+        "file": "course1/sprints/sprint-0/ingredients-and-settings.md",
+        "module": "Week 1: Bread Machine Bread Basics",
+        "position": 2,
+        "title": "Ingredients and Settings",
+        "type": "page"
+      },
+      {
+        "file": "course1/sprints/sprint-0/shallow-water-setup-and-technique.md",
+        "module": "Underwater Basket Weaving",
+        "position": 2,
+        "title": "Shallow-Water Setup And Technique",
+        "type": "page"
+      },
+      {
+        "file": "course1/sprints/sprint-0/underwater-basket-weaving-basics.md",
+        "module": "Underwater Basket Weaving",
+        "position": 1,
+        "title": "Underwater Basket Weaving Basics",
+        "type": "page"
+      },
+      {
+        "file": "course1/sprints/sprint-0/underwater-basket-weaving-readiness-check.md",
+        "module": "Underwater Basket Weaving",
+        "position": 4,
+        "title": "Underwater Basket Weaving Readiness Check",
+        "type": "quiz"
+      },
       {
         "file": "course1/sprints/sprint-2/synthesize-what-you-heard.md",
         "module": "Sprint 2: Scope and Stakeholders",
@@ -31,16 +108,10 @@
         "items_count": 4,
         "name": "Practice: Using Codex Agents",
         "position": 7
-      },
-      {
-        "id": 1899,
-        "items_count": 4,
-        "name": "Underwater Basket Weaving",
-        "position": 10
       }
     ]
   },
-  "generated_at": "2026-05-04T21:27:22+00:00",
+  "generated_at": "2026-05-05T18:14:36+00:00",
   "manifest": {
     "instance": {
       "base_url": "https://cti-courses.instructure.com/",
@@ -48,7 +119,7 @@
       "name": "production",
       "term": "Fall 2026"
     },
-    "last_sync": "2026-05-04T20:56:10+00:00",
+    "last_sync": "2026-05-05T18:13:42+00:00",
     "path": "course1/manifests/production.json"
   },
   "modules": [
@@ -980,205 +1051,26 @@
       "name": "Using This Codex Course Builder",
       "position": 8,
       "published": true
-    },
-    {
-      "id": 1898,
-      "items": [
-        {
-          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/bread-machine-basics",
-          "content_id": null,
-          "manifest_file": "course1/sprints/sprint-0/bread-machine-basics.md",
-          "module_item_id": 17313,
-          "page_url": "bread-machine-basics",
-          "position": 1,
-          "published": true,
-          "title": "Bread Machine Basics",
-          "type": "Page"
-        },
-        {
-          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/ingredients-and-settings",
-          "content_id": null,
-          "manifest_file": "course1/sprints/sprint-0/ingredients-and-settings.md",
-          "module_item_id": 17314,
-          "page_url": "ingredients-and-settings",
-          "position": 2,
-          "published": true,
-          "title": "Ingredients and Settings",
-          "type": "Page"
-        },
-        {
-          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1393",
-          "content_id": 1393,
-          "manifest_file": "course1/sprints/sprint-0/first-loaf-discussion.md",
-          "module_item_id": 17315,
-          "page_url": null,
-          "position": 3,
-          "published": true,
-          "title": "First Loaf Discussion",
-          "type": "Discussion"
-        },
-        {
-          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/quizzes/2916",
-          "content_id": 2916,
-          "manifest_file": "course1/sprints/sprint-0/bread-machine-readiness-check.md",
-          "module_item_id": 17316,
-          "page_url": null,
-          "position": 4,
-          "published": true,
-          "title": "Bread Machine Readiness Check",
-          "type": "Quiz"
-        }
-      ],
-      "items_count": 4,
-      "manifest_artifacts": [
-        {
-          "canvas_id": 3356,
-          "canvas_module_id": 1898,
-          "canvas_page_url": "bread-machine-basics",
-          "canvas_type": "page",
-          "file": "course1/sprints/sprint-0/bread-machine-basics.md",
-          "last_pushed": "2026-04-30T23:30:10+00:00",
-          "local_exists": true
-        },
-        {
-          "canvas_id": 2916,
-          "canvas_module_id": 1898,
-          "canvas_page_url": null,
-          "canvas_type": "quiz",
-          "file": "course1/sprints/sprint-0/bread-machine-readiness-check.md",
-          "last_pushed": "2026-04-30T23:30:33+00:00",
-          "local_exists": true
-        },
-        {
-          "canvas_id": 1393,
-          "canvas_module_id": 1898,
-          "canvas_page_url": null,
-          "canvas_type": "discussion",
-          "file": "course1/sprints/sprint-0/first-loaf-discussion.md",
-          "last_pushed": "2026-04-30T23:30:25+00:00",
-          "local_exists": true
-        },
-        {
-          "canvas_id": 3357,
-          "canvas_module_id": 1898,
-          "canvas_page_url": "ingredients-and-settings",
-          "canvas_type": "page",
-          "file": "course1/sprints/sprint-0/ingredients-and-settings.md",
-          "last_pushed": "2026-04-30T23:30:17+00:00",
-          "local_exists": true
-        }
-      ],
-      "name": "Week 1: Bread Machine Bread Basics",
-      "position": 9,
-      "published": true
-    },
-    {
-      "id": 1899,
-      "items": [
-        {
-          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/underwater-basket-weaving-basics",
-          "content_id": null,
-          "manifest_file": "course1/sprints/sprint-0/underwater-basket-weaving-basics.md",
-          "module_item_id": 17317,
-          "page_url": "underwater-basket-weaving-basics",
-          "position": 1,
-          "published": true,
-          "title": "Underwater Basket Weaving Basics",
-          "type": "Page"
-        },
-        {
-          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/shallow-water-setup-and-technique",
-          "content_id": null,
-          "manifest_file": "course1/sprints/sprint-0/shallow-water-setup-and-technique.md",
-          "module_item_id": 17318,
-          "page_url": "shallow-water-setup-and-technique",
-          "position": 2,
-          "published": true,
-          "title": "Shallow-Water Setup And Technique",
-          "type": "Page"
-        },
-        {
-          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1394",
-          "content_id": 1394,
-          "manifest_file": "course1/sprints/sprint-0/first-underwater-weave-discussion.md",
-          "module_item_id": 17319,
-          "page_url": null,
-          "position": 3,
-          "published": true,
-          "title": "First Underwater Weave Discussion",
-          "type": "Discussion"
-        },
-        {
-          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/quizzes/2917",
-          "content_id": 2917,
-          "manifest_file": "course1/sprints/sprint-0/underwater-basket-weaving-readiness-check.md",
-          "module_item_id": 17320,
-          "page_url": null,
-          "position": 4,
-          "published": true,
-          "title": "Underwater Basket Weaving Readiness Check",
-          "type": "Quiz"
-        }
-      ],
-      "items_count": 4,
-      "manifest_artifacts": [
-        {
-          "canvas_id": 1394,
-          "canvas_module_id": 1899,
-          "canvas_page_url": null,
-          "canvas_type": "discussion",
-          "file": "course1/sprints/sprint-0/first-underwater-weave-discussion.md",
-          "last_pushed": "2026-05-04T20:56:02+00:00",
-          "local_exists": true
-        },
-        {
-          "canvas_id": 3359,
-          "canvas_module_id": 1899,
-          "canvas_page_url": "shallow-water-setup-and-technique",
-          "canvas_type": "page",
-          "file": "course1/sprints/sprint-0/shallow-water-setup-and-technique.md",
-          "last_pushed": "2026-05-04T20:55:54+00:00",
-          "local_exists": true
-        },
-        {
-          "canvas_id": 3358,
-          "canvas_module_id": 1899,
-          "canvas_page_url": "underwater-basket-weaving-basics",
-          "canvas_type": "page",
-          "file": "course1/sprints/sprint-0/underwater-basket-weaving-basics.md",
-          "last_pushed": "2026-05-04T20:55:48+00:00",
-          "local_exists": true
-        },
-        {
-          "canvas_id": 2917,
-          "canvas_module_id": 1899,
-          "canvas_page_url": null,
-          "canvas_type": "quiz",
-          "file": "course1/sprints/sprint-0/underwater-basket-weaving-readiness-check.md",
-          "last_pushed": "2026-05-04T20:56:10+00:00",
-          "local_exists": true
-        }
-      ],
-      "name": "Underwater Basket Weaving",
-      "position": 10,
-      "published": false
     }
   ],
   "options": {
-    "include_drift": false,
+    "include_drift": true,
     "include_items": true
   },
   "summary": {
     "canvas_items_not_in_manifest": 0,
     "canvas_modules_not_in_manifest": 0,
-    "live_modules": 10,
-    "manifest_artifacts": 55,
+    "canvas_orphans": 0,
+    "drift_errors": 0,
+    "drifted_artifacts": 2,
+    "live_modules": 8,
+    "manifest_artifacts": 47,
     "manifest_artifacts_not_in_module_items": 0,
-    "manifest_module_ids": 10,
+    "manifest_module_ids": 8,
     "manifest_module_ids_not_live": 0,
     "missing_local_files": 0,
-    "unmanifested_local_files": 2,
+    "unmanifested_local_files": 10,
     "unpublished_items": 0,
-    "unpublished_modules": 2
+    "unpublished_modules": 1
   }
 }

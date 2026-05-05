@@ -1,6 +1,6 @@
 # Canvas Ledger
 
-Generated: 2026-05-04T21:27:22+00:00
+Generated: 2026-05-05T18:14:36+00:00
 Manifest: `course1/manifests/production.json`
 Course: production (https://cti-courses.instructure.com/courses/180)
 
@@ -8,17 +8,20 @@ Course: production (https://cti-courses.instructure.com/courses/180)
 
 | Metric | Count |
 |---|---:|
-| live modules | 10 |
-| manifest module ids | 10 |
-| manifest artifacts | 55 |
+| live modules | 8 |
+| manifest module ids | 8 |
+| manifest artifacts | 47 |
 | missing local files | 0 |
-| unmanifested local files | 2 |
+| unmanifested local files | 10 |
 | canvas modules not in manifest | 0 |
 | manifest module ids not live | 0 |
-| unpublished modules | 2 |
+| unpublished modules | 1 |
 | canvas items not in manifest | 0 |
 | manifest artifacts not in module items | 0 |
 | unpublished items | 0 |
+| drifted artifacts | 2 |
+| canvas orphans | 0 |
+| drift errors | 0 |
 
 ## Live Modules
 
@@ -32,18 +35,28 @@ Course: production (https://cti-courses.instructure.com/courses/180)
 | 6 | 1888 | Week 10: Capstone | yes | 6 | 8 |
 | 7 | 1896 | Practice: Using Codex Agents | no | 4 | 5 |
 | 8 | 1897 | Using This Codex Course Builder | yes | 5 | 6 |
-| 9 | 1898 | Week 1: Bread Machine Bread Basics | yes | 4 | 4 |
-| 10 | 1899 | Underwater Basket Weaving | no | 4 | 4 |
 
 ## Unmanifested Local Files
 
+- `course1/sprints/sprint-0/bread-machine-basics.md`
+- `course1/sprints/sprint-0/bread-machine-readiness-check.md`
+- `course1/sprints/sprint-0/first-loaf-discussion.md`
+- `course1/sprints/sprint-0/first-underwater-weave-discussion.md`
+- `course1/sprints/sprint-0/ingredients-and-settings.md`
+- `course1/sprints/sprint-0/shallow-water-setup-and-technique.md`
+- `course1/sprints/sprint-0/underwater-basket-weaving-basics.md`
+- `course1/sprints/sprint-0/underwater-basket-weaving-readiness-check.md`
 - `course1/sprints/sprint-2/synthesize-what-you-heard.md`
 - `course1/sprints/sprint-3/ai-fit-analysis.md`
 
 ## Unpublished Modules
 
 - `Practice: Using Codex Agents`
-- `Underwater Basket Weaving`
+
+## Drifted Artifacts
+
+- `course1/sprints/sprint-4/sprint-4-peer-exchange.md`
+- `course1/sprints/sprint-5/codex-agent-practice-check.md`
 
 ## Module Items
 
@@ -125,21 +138,3 @@ Course: production (https://cti-courses.instructure.com/courses/180)
 | 17 | 17310 | Page | Reviewing Drafts Before Canvas | yes |  | reviewing-drafts-before-canvas | course1/sprints/sprint-5/codex-builder-tutorial-review-and-push.md |
 | 18 | 17311 | Quiz | Using Codex Course Builder Check | yes | 2915 |  | course1/sprints/sprint-5/codex-builder-tutorial-check.md |
 | 19 | 17312 | Discussion | Prompt Exchange: Ask Codex For A Course Or Module Build | yes | 1392 |  | course1/sprints/sprint-5/codex-builder-tutorial-prompt-exchange.md |
-
-### 9. Week 1: Bread Machine Bread Basics (1898)
-
-| Position | Module item ID | Type | Title | Published | Content ID | Page URL | Manifest file |
-|---:|---:|---|---|---|---:|---|---|
-| 1 | 17313 | Page | Bread Machine Basics | yes |  | bread-machine-basics | course1/sprints/sprint-0/bread-machine-basics.md |
-| 2 | 17314 | Page | Ingredients and Settings | yes |  | ingredients-and-settings | course1/sprints/sprint-0/ingredients-and-settings.md |
-| 3 | 17315 | Discussion | First Loaf Discussion | yes | 1393 |  | course1/sprints/sprint-0/first-loaf-discussion.md |
-| 4 | 17316 | Quiz | Bread Machine Readiness Check | yes | 2916 |  | course1/sprints/sprint-0/bread-machine-readiness-check.md |
-
-### 10. Underwater Basket Weaving (1899)
-
-| Position | Module item ID | Type | Title | Published | Content ID | Page URL | Manifest file |
-|---:|---:|---|---|---|---:|---|---|
-| 1 | 17317 | Page | Underwater Basket Weaving Basics | yes |  | underwater-basket-weaving-basics | course1/sprints/sprint-0/underwater-basket-weaving-basics.md |
-| 2 | 17318 | Page | Shallow-Water Setup And Technique | yes |  | shallow-water-setup-and-technique | course1/sprints/sprint-0/shallow-water-setup-and-technique.md |
-| 3 | 17319 | Discussion | First Underwater Weave Discussion | yes | 1394 |  | course1/sprints/sprint-0/first-underwater-weave-discussion.md |
-| 4 | 17320 | Quiz | Underwater Basket Weaving Readiness Check | yes | 2917 |  | course1/sprints/sprint-0/underwater-basket-weaving-readiness-check.md |
