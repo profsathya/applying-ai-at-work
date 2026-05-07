@@ -6,7 +6,7 @@ sprint: 5
 week: 10
 module: "Practice: Using Codex Agents"
 position: 12
-points: 5
+points: 0
 submission_type: online_quiz
 publish: true
 questions:

@@ -41,7 +41,7 @@ Post before reading your peers' responses. Four to eight sentences is the right 
 
 Reply to at least two peers. Your response should do one of two things - pick the one that is most honest given what you read:
 
-**Option A: Name what their decision-maker's feedback reveals about their problem.**
+**Option A: Name what their decision-maker’s feedback reveals about their problem.**
 
 Sometimes the most important information in a validation conversation is not what changes in the frame, but what the pushback tells you about how the problem sits in the organization. If you read your peer's post and notice something about what their decision-maker said - an organizational dynamic, a constraint, a way the problem is politically positioned - that their revised frame does not fully account for, name it.
 

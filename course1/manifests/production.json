@@ -205,7 +205,7 @@
       "canvas_module_id": 1887,
       "canvas_page_url": null,
       "canvas_type": "discussion",
-      "content_hash": "0260856821b3d3a87b291882dfcfad337614b1aa277761593f8c2761e0017953",
+      "content_hash": "51972b57a4c575a2c21ed8784cc547b1c5c5156b1f4e8206ec98cc556496e7b4",
       "last_pushed": "2026-04-20T22:54:21+00:00"
     },
     "course1/sprints/sprint-4/sprint-4-validated-framing.md": {
@@ -223,6 +223,30 @@
       "canvas_type": "assignment",
       "content_hash": "eb5a4305c2405018675c6afe3f439135d9b0b4eb76a392bbb8390f54e6cc462e",
       "last_pushed": "2026-04-20T22:50:47+00:00"
+    },
+    "course1/sprints/sprint-5/basketball-rules-check-2.md": {
+      "canvas_id": 2923,
+      "canvas_module_id": 1905,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "1e31ef6246dcef18fd930f74bbd97800e38492d4631b69b388cc6da6281d55c8",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/basketball-rules-check.md": {
+      "canvas_id": 2924,
+      "canvas_module_id": 1905,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "d14f8da4ccdc725e3d77198cf67a24326808498f77786c5b53b2152dffa99b0f",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/basketball-rules-overview.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1905,
+      "canvas_page_url": "basketball-rules-overview",
+      "canvas_type": "page",
+      "content_hash": "b6fff0651ab0ce926b632a0b1c11113921929abc6db344ef6c8333544a9a6833",
+      "last_pushed": null
     },
     "course1/sprints/sprint-5/capstone-brief.md": {
       "canvas_id": 3346,
@@ -261,7 +285,7 @@
       "canvas_module_id": 1896,
       "canvas_page_url": null,
       "canvas_type": "quiz",
-      "content_hash": "138b6210a0ad0e854c078c78239b50833b726549ec12b7ae42f396ef1d431e83",
+      "content_hash": "560c5c96a5db7cc41a5bbf38a24e3860da68106ac1b7549045a47e054ac8159c",
       "last_pushed": "2026-04-30T18:57:36+00:00"
     },
     "course1/sprints/sprint-5/codex-agent-practice-first-request.md": {
@@ -360,6 +384,54 @@
       "content_hash": "426da8a8fe7b315661a038d8dae285f726a536580fb10ce590602ec91f29d77a",
       "last_pushed": "2026-04-29T19:52:58+00:00"
     },
+    "course1/sprints/sprint-5/favorite-nba-team-discussion-2.md": {
+      "canvas_id": 1396,
+      "canvas_module_id": 1905,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "e37d5753adb34f27326bf1a4a3bb7430790223c876cd3d53295000fa9c8c9e31",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/favorite-nba-team-discussion.md": {
+      "canvas_id": 1397,
+      "canvas_module_id": 1905,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "cf0408883402f6a88e9af05a2b206c2c361604bfc39dea99c336556d34dee4b8",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/general-rules-for-basketball.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1905,
+      "canvas_page_url": "general-rules-for-basketball",
+      "canvas_type": "page",
+      "content_hash": "48c33874587e6bf07b0c9b2eb1e30e65ba0aa62c8a2f90d18e7a564648f30d2b",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/hiragana-katakana-and-romaji-practice.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1904,
+      "canvas_page_url": "hiragana-katakana-and-romaji-practice",
+      "canvas_type": "page",
+      "content_hash": "beed6f823287108f6f7b537acd25c4fbf269412523541e3cc8b514c1468985e5",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/how-to-introduce-yourself-in-japanese.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1904,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "579e9a5f5e14b933ac4e386d6717bbb66a8fc8248f01d083d0b6d9de9444351b",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/how-to-play-basketball.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1905,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "fa0f8dfc148b73f71be4d90ad0a2e513da3574b1ae75d82d7057b4e430a57cfc",
+      "last_pushed": null
+    },
     "course1/sprints/sprint-5/human-judgment-articulation.md": {
       "canvas_id": 6708,
       "canvas_module_id": 1888,
@@ -367,6 +439,86 @@
       "canvas_type": "assignment",
       "content_hash": "3fb87fdf5c550ee567564c31b705ecb694a7ddd1f791b33d4ac06450c522350d",
       "last_pushed": "2026-04-20T23:01:53+00:00"
+    },
+    "course1/sprints/sprint-5/introduce-yourself-in-japanese.md": {
+      "canvas_id": 1395,
+      "canvas_module_id": 1904,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "953d1fe62ad5d5bdbe6481b394c9f0c7e7ad0cdf8106b605b6914b508d043641",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/japanese-introduction-basics.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1904,
+      "canvas_page_url": "japanese-introduction-basics",
+      "canvas_type": "page",
+      "content_hash": "b3c60442b96605c6e8d37acc3410e8e232f650d6c4f590e882ed68331188a6ba",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/japanese-introduction-check.md": {
+      "canvas_id": 2922,
+      "canvas_module_id": 1904,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "f0edbb5ae31a54c46e2b9266c89461bfd17b3d03fe974c33e2d1cf28aed134b9",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/nba-teams-overview-2.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1905,
+      "canvas_page_url": "nba-teams-overview-2",
+      "canvas_type": "page",
+      "content_hash": "e9248c22c1196b92d7a79230b8b14e9a319b0339bb255838e3c01242919741e0",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/nba-teams-overview.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1905,
+      "canvas_page_url": "nba-teams-overview",
+      "canvas_type": "page",
+      "content_hash": "e075f946fdadafb6cb486794c6f7e458b60133e0c2d81582d2009560dc59ce3b",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/python-lists-check.md": {
+      "canvas_id": 2925,
+      "canvas_module_id": 1906,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "eb19ba7da3562aca1985787f16f167297dc40d0a25a6f7c1ce682dad976bc374",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/python-lists-coding-homework.md": {
+      "canvas_id": 6745,
+      "canvas_module_id": 1906,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "2a19b17562326e60e1a4aea4925e604323238f0511ab9477a4409b0f7a1216d7",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/python-lists-exercises.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1906,
+      "canvas_page_url": "python-lists-exercises",
+      "canvas_type": "page",
+      "content_hash": "6eed56afd62a2d29c2587efdda85b976ae893b6f06420795253d64d31b7697ef",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/python-lists-explanation.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1906,
+      "canvas_page_url": "python-lists-explanation",
+      "canvas_type": "page",
+      "content_hash": "5d89929c739303ce9b057f7fc0848405319d942f8557e2cb9b58f7f7ba7072b4",
+      "last_pushed": null
+    },
+    "course1/sprints/sprint-5/python-lists.md": {
+      "canvas_id": null,
+      "canvas_module_id": 1906,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "fbe9b2b122ff9d81ac5216c88995e433258f59992238b8be800b9d7627570ff2",
+      "last_pushed": null
     },
     "course1/sprints/sprint-5/week-10-capstone.md": {
       "canvas_id": null,
@@ -383,5 +535,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-05-05T18:13:42+00:00"
+  "last_sync": "2026-05-07T16:42:23+00:00"
 }

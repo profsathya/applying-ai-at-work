@@ -1,6 +1,6 @@
 # Canvas Ledger
 
-Generated: 2026-05-05T18:14:36+00:00
+Generated: 2026-05-07T16:42:59+00:00
 Manifest: `course1/manifests/production.json`
 Course: production (https://cti-courses.instructure.com/courses/180)
 
@@ -8,9 +8,9 @@ Course: production (https://cti-courses.instructure.com/courses/180)
 
 | Metric | Count |
 |---|---:|
-| live modules | 8 |
-| manifest module ids | 8 |
-| manifest artifacts | 47 |
+| live modules | 11 |
+| manifest module ids | 11 |
+| manifest artifacts | 66 |
 | missing local files | 0 |
 | unmanifested local files | 10 |
 | canvas modules not in manifest | 0 |
@@ -19,7 +19,7 @@ Course: production (https://cti-courses.instructure.com/courses/180)
 | canvas items not in manifest | 0 |
 | manifest artifacts not in module items | 0 |
 | unpublished items | 0 |
-| drifted artifacts | 2 |
+| drifted artifacts | 0 |
 | canvas orphans | 0 |
 | drift errors | 0 |
 
@@ -35,6 +35,9 @@ Course: production (https://cti-courses.instructure.com/courses/180)
 | 6 | 1888 | Week 10: Capstone | yes | 6 | 8 |
 | 7 | 1896 | Practice: Using Codex Agents | no | 4 | 5 |
 | 8 | 1897 | Using This Codex Course Builder | yes | 5 | 6 |
+| 9 | 1904 | How to Introduce Yourself in Japanese | yes | 4 | 5 |
+| 10 | 1905 | How to Play Basketball | yes | 8 | 9 |
+| 11 | 1906 | Python Lists | yes | 4 | 5 |
 
 ## Unmanifested Local Files
 
@@ -52,11 +55,6 @@ Course: production (https://cti-courses.instructure.com/courses/180)
 ## Unpublished Modules
 
 - `Practice: Using Codex Agents`
-
-## Drifted Artifacts
-
-- `course1/sprints/sprint-4/sprint-4-peer-exchange.md`
-- `course1/sprints/sprint-5/codex-agent-practice-check.md`
 
 ## Module Items
 
@@ -138,3 +136,34 @@ Course: production (https://cti-courses.instructure.com/courses/180)
 | 17 | 17310 | Page | Reviewing Drafts Before Canvas | yes |  | reviewing-drafts-before-canvas | course1/sprints/sprint-5/codex-builder-tutorial-review-and-push.md |
 | 18 | 17311 | Quiz | Using Codex Course Builder Check | yes | 2915 |  | course1/sprints/sprint-5/codex-builder-tutorial-check.md |
 | 19 | 17312 | Discussion | Prompt Exchange: Ask Codex For A Course Or Module Build | yes | 1392 |  | course1/sprints/sprint-5/codex-builder-tutorial-prompt-exchange.md |
+
+### 9. How to Introduce Yourself in Japanese (1904)
+
+| Position | Module item ID | Type | Title | Published | Content ID | Page URL | Manifest file |
+|---:|---:|---|---|---|---:|---|---|
+| 1 | 17341 | Page | Japanese Introduction Basics | yes |  | japanese-introduction-basics | course1/sprints/sprint-5/japanese-introduction-basics.md |
+| 2 | 17342 | Page | Hiragana, Katakana, and Romaji Practice | yes |  | hiragana-katakana-and-romaji-practice | course1/sprints/sprint-5/hiragana-katakana-and-romaji-practice.md |
+| 3 | 17343 | Quiz | Japanese Introduction Check | yes | 2922 |  | course1/sprints/sprint-5/japanese-introduction-check.md |
+| 4 | 17344 | Discussion | Introduce Yourself in Japanese | yes | 1395 |  | course1/sprints/sprint-5/introduce-yourself-in-japanese.md |
+
+### 10. How to Play Basketball (1905)
+
+| Position | Module item ID | Type | Title | Published | Content ID | Page URL | Manifest file |
+|---:|---:|---|---|---|---:|---|---|
+| 2 | 17349 | Page | General Rules for Basketball | yes |  | general-rules-for-basketball | course1/sprints/sprint-5/general-rules-for-basketball.md |
+| 3 | 17350 | Page | NBA Teams Overview | yes |  | nba-teams-overview-2 | course1/sprints/sprint-5/nba-teams-overview-2.md |
+| 4 | 17351 | Discussion | Favorite NBA Team Discussion | yes | 1397 |  | course1/sprints/sprint-5/favorite-nba-team-discussion.md |
+| 5 | 17352 | Quiz | Basketball Rules Check | yes | 2924 |  | course1/sprints/sprint-5/basketball-rules-check.md |
+| 21 | 17345 | Page | Basketball Rules Overview | yes |  | basketball-rules-overview | course1/sprints/sprint-5/basketball-rules-overview.md |
+| 22 | 17346 | Page | NBA Teams Overview | yes |  | nba-teams-overview | course1/sprints/sprint-5/nba-teams-overview.md |
+| 23 | 17347 | Discussion | Favorite NBA Team Discussion | yes | 1396 |  | course1/sprints/sprint-5/favorite-nba-team-discussion-2.md |
+| 24 | 17348 | Quiz | Basketball Rules Check | yes | 2923 |  | course1/sprints/sprint-5/basketball-rules-check-2.md |
+
+### 11. Python Lists (1906)
+
+| Position | Module item ID | Type | Title | Published | Content ID | Page URL | Manifest file |
+|---:|---:|---|---|---|---:|---|---|
+| 26 | 17353 | Page | Python Lists Explanation | yes |  | python-lists-explanation | course1/sprints/sprint-5/python-lists-explanation.md |
+| 27 | 17354 | Page | Python Lists Exercises | yes |  | python-lists-exercises | course1/sprints/sprint-5/python-lists-exercises.md |
+| 28 | 17355 | Quiz | Python Lists Check | yes | 2925 |  | course1/sprints/sprint-5/python-lists-check.md |
+| 29 | 17356 | Assignment | Python Lists Coding Homework | yes | 6745 |  | course1/sprints/sprint-5/python-lists-coding-homework.md |

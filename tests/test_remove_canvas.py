@@ -163,8 +163,7 @@ class CanvasRemovalPlanTests(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=".") as tmp:
             tmp_path = Path(tmp)
             local_md = tmp_path / "page.md"
-            local_rel = str(local_md)
-            local_rel = local_rel[2:] if local_rel.startswith("./") else local_rel
+            local_rel = local_md.resolve().relative_to(Path.cwd().resolve()).as_posix()
             local_md.write_text("---\ntitle: Test\n---\n\nBody\n", encoding="utf-8")
 
             manifest = base_manifest()

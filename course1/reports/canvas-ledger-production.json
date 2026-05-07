@@ -4,28 +4,7 @@
     "canvas_modules_not_in_manifest": [],
     "canvas_orphans": [],
     "drift_errors": [],
-    "drifted_artifacts": [
-      {
-        "drift": {
-          "body": {
-            "canvas_chars": 3617,
-            "canvas_preview": "# Sprint 4 Peer Exchange\n\nThis is the last peer exchange before the capstone. You have taken your integrated problem frame to a real decision-maker, heard how they read it, and revised it based on wha",
-            "local_chars": 3618,
-            "local_preview": "# Sprint 4 Peer Exchange\n\nThis is the last peer exchange before the capstone. You have taken your integrated problem frame to a real decision-maker, heard how they read it, and revised it based on wha"
-          }
-        },
-        "file": "course1/sprints/sprint-4/sprint-4-peer-exchange.md"
-      },
-      {
-        "drift": {
-          "points": {
-            "canvas": 0.0,
-            "local": 5
-          }
-        },
-        "file": "course1/sprints/sprint-5/codex-agent-practice-check.md"
-      }
-    ],
+    "drifted_artifacts": [],
     "manifest_artifacts_not_in_module_items": [],
     "manifest_module_ids_not_live": [],
     "missing_local_files": [],
@@ -111,7 +90,7 @@
       }
     ]
   },
-  "generated_at": "2026-05-05T18:14:36+00:00",
+  "generated_at": "2026-05-07T16:42:59+00:00",
   "manifest": {
     "instance": {
       "base_url": "https://cti-courses.instructure.com/",
@@ -119,7 +98,7 @@
       "name": "production",
       "term": "Fall 2026"
     },
-    "last_sync": "2026-05-05T18:13:42+00:00",
+    "last_sync": "2026-05-07T16:42:23+00:00",
     "path": "course1/manifests/production.json"
   },
   "modules": [
@@ -1051,6 +1030,386 @@
       "name": "Using This Codex Course Builder",
       "position": 8,
       "published": true
+    },
+    {
+      "id": 1904,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/japanese-introduction-basics",
+          "content_id": null,
+          "manifest_file": "course1/sprints/sprint-5/japanese-introduction-basics.md",
+          "module_item_id": 17341,
+          "page_url": "japanese-introduction-basics",
+          "position": 1,
+          "published": true,
+          "title": "Japanese Introduction Basics",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/hiragana-katakana-and-romaji-practice",
+          "content_id": null,
+          "manifest_file": "course1/sprints/sprint-5/hiragana-katakana-and-romaji-practice.md",
+          "module_item_id": 17342,
+          "page_url": "hiragana-katakana-and-romaji-practice",
+          "position": 2,
+          "published": true,
+          "title": "Hiragana, Katakana, and Romaji Practice",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/quizzes/2922",
+          "content_id": 2922,
+          "manifest_file": "course1/sprints/sprint-5/japanese-introduction-check.md",
+          "module_item_id": 17343,
+          "page_url": null,
+          "position": 3,
+          "published": true,
+          "title": "Japanese Introduction Check",
+          "type": "Quiz"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1395",
+          "content_id": 1395,
+          "manifest_file": "course1/sprints/sprint-5/introduce-yourself-in-japanese.md",
+          "module_item_id": 17344,
+          "page_url": null,
+          "position": 4,
+          "published": true,
+          "title": "Introduce Yourself in Japanese",
+          "type": "Discussion"
+        }
+      ],
+      "items_count": 4,
+      "manifest_artifacts": [
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1904,
+          "canvas_page_url": "hiragana-katakana-and-romaji-practice",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-5/hiragana-katakana-and-romaji-practice.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1904,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course1/sprints/sprint-5/how-to-introduce-yourself-in-japanese.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": 1395,
+          "canvas_module_id": 1904,
+          "canvas_page_url": null,
+          "canvas_type": "discussion",
+          "file": "course1/sprints/sprint-5/introduce-yourself-in-japanese.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1904,
+          "canvas_page_url": "japanese-introduction-basics",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-5/japanese-introduction-basics.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": 2922,
+          "canvas_module_id": 1904,
+          "canvas_page_url": null,
+          "canvas_type": "quiz",
+          "file": "course1/sprints/sprint-5/japanese-introduction-check.md",
+          "last_pushed": null,
+          "local_exists": true
+        }
+      ],
+      "name": "How to Introduce Yourself in Japanese",
+      "position": 9,
+      "published": true
+    },
+    {
+      "id": 1905,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/general-rules-for-basketball",
+          "content_id": null,
+          "manifest_file": "course1/sprints/sprint-5/general-rules-for-basketball.md",
+          "module_item_id": 17349,
+          "page_url": "general-rules-for-basketball",
+          "position": 2,
+          "published": true,
+          "title": "General Rules for Basketball",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/nba-teams-overview-2",
+          "content_id": null,
+          "manifest_file": "course1/sprints/sprint-5/nba-teams-overview-2.md",
+          "module_item_id": 17350,
+          "page_url": "nba-teams-overview-2",
+          "position": 3,
+          "published": true,
+          "title": "NBA Teams Overview",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1397",
+          "content_id": 1397,
+          "manifest_file": "course1/sprints/sprint-5/favorite-nba-team-discussion.md",
+          "module_item_id": 17351,
+          "page_url": null,
+          "position": 4,
+          "published": true,
+          "title": "Favorite NBA Team Discussion",
+          "type": "Discussion"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/quizzes/2924",
+          "content_id": 2924,
+          "manifest_file": "course1/sprints/sprint-5/basketball-rules-check.md",
+          "module_item_id": 17352,
+          "page_url": null,
+          "position": 5,
+          "published": true,
+          "title": "Basketball Rules Check",
+          "type": "Quiz"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/basketball-rules-overview",
+          "content_id": null,
+          "manifest_file": "course1/sprints/sprint-5/basketball-rules-overview.md",
+          "module_item_id": 17345,
+          "page_url": "basketball-rules-overview",
+          "position": 21,
+          "published": true,
+          "title": "Basketball Rules Overview",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/nba-teams-overview",
+          "content_id": null,
+          "manifest_file": "course1/sprints/sprint-5/nba-teams-overview.md",
+          "module_item_id": 17346,
+          "page_url": "nba-teams-overview",
+          "position": 22,
+          "published": true,
+          "title": "NBA Teams Overview",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/discussion_topics/1396",
+          "content_id": 1396,
+          "manifest_file": "course1/sprints/sprint-5/favorite-nba-team-discussion-2.md",
+          "module_item_id": 17347,
+          "page_url": null,
+          "position": 23,
+          "published": true,
+          "title": "Favorite NBA Team Discussion",
+          "type": "Discussion"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/quizzes/2923",
+          "content_id": 2923,
+          "manifest_file": "course1/sprints/sprint-5/basketball-rules-check-2.md",
+          "module_item_id": 17348,
+          "page_url": null,
+          "position": 24,
+          "published": true,
+          "title": "Basketball Rules Check",
+          "type": "Quiz"
+        }
+      ],
+      "items_count": 8,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 2923,
+          "canvas_module_id": 1905,
+          "canvas_page_url": null,
+          "canvas_type": "quiz",
+          "file": "course1/sprints/sprint-5/basketball-rules-check-2.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": 2924,
+          "canvas_module_id": 1905,
+          "canvas_page_url": null,
+          "canvas_type": "quiz",
+          "file": "course1/sprints/sprint-5/basketball-rules-check.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1905,
+          "canvas_page_url": "basketball-rules-overview",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-5/basketball-rules-overview.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": 1396,
+          "canvas_module_id": 1905,
+          "canvas_page_url": null,
+          "canvas_type": "discussion",
+          "file": "course1/sprints/sprint-5/favorite-nba-team-discussion-2.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": 1397,
+          "canvas_module_id": 1905,
+          "canvas_page_url": null,
+          "canvas_type": "discussion",
+          "file": "course1/sprints/sprint-5/favorite-nba-team-discussion.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1905,
+          "canvas_page_url": "general-rules-for-basketball",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-5/general-rules-for-basketball.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1905,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course1/sprints/sprint-5/how-to-play-basketball.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1905,
+          "canvas_page_url": "nba-teams-overview-2",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-5/nba-teams-overview-2.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1905,
+          "canvas_page_url": "nba-teams-overview",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-5/nba-teams-overview.md",
+          "last_pushed": null,
+          "local_exists": true
+        }
+      ],
+      "name": "How to Play Basketball",
+      "position": 10,
+      "published": true
+    },
+    {
+      "id": 1906,
+      "items": [
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/python-lists-explanation",
+          "content_id": null,
+          "manifest_file": "course1/sprints/sprint-5/python-lists-explanation.md",
+          "module_item_id": 17353,
+          "page_url": "python-lists-explanation",
+          "position": 26,
+          "published": true,
+          "title": "Python Lists Explanation",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/pages/python-lists-exercises",
+          "content_id": null,
+          "manifest_file": "course1/sprints/sprint-5/python-lists-exercises.md",
+          "module_item_id": 17354,
+          "page_url": "python-lists-exercises",
+          "position": 27,
+          "published": true,
+          "title": "Python Lists Exercises",
+          "type": "Page"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/quizzes/2925",
+          "content_id": 2925,
+          "manifest_file": "course1/sprints/sprint-5/python-lists-check.md",
+          "module_item_id": 17355,
+          "page_url": null,
+          "position": 28,
+          "published": true,
+          "title": "Python Lists Check",
+          "type": "Quiz"
+        },
+        {
+          "canvas_url": "https://cti-courses.instructure.com/api/v1/courses/180/assignments/6745",
+          "content_id": 6745,
+          "manifest_file": "course1/sprints/sprint-5/python-lists-coding-homework.md",
+          "module_item_id": 17356,
+          "page_url": null,
+          "position": 29,
+          "published": true,
+          "title": "Python Lists Coding Homework",
+          "type": "Assignment"
+        }
+      ],
+      "items_count": 4,
+      "manifest_artifacts": [
+        {
+          "canvas_id": 2925,
+          "canvas_module_id": 1906,
+          "canvas_page_url": null,
+          "canvas_type": "quiz",
+          "file": "course1/sprints/sprint-5/python-lists-check.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": 6745,
+          "canvas_module_id": 1906,
+          "canvas_page_url": null,
+          "canvas_type": "assignment",
+          "file": "course1/sprints/sprint-5/python-lists-coding-homework.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1906,
+          "canvas_page_url": "python-lists-exercises",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-5/python-lists-exercises.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1906,
+          "canvas_page_url": "python-lists-explanation",
+          "canvas_type": "page",
+          "file": "course1/sprints/sprint-5/python-lists-explanation.md",
+          "last_pushed": null,
+          "local_exists": true
+        },
+        {
+          "canvas_id": null,
+          "canvas_module_id": 1906,
+          "canvas_page_url": null,
+          "canvas_type": "module_header",
+          "file": "course1/sprints/sprint-5/python-lists.md",
+          "last_pushed": null,
+          "local_exists": true
+        }
+      ],
+      "name": "Python Lists",
+      "position": 11,
+      "published": true
     }
   ],
   "options": {
@@ -1062,11 +1421,11 @@
     "canvas_modules_not_in_manifest": 0,
     "canvas_orphans": 0,
     "drift_errors": 0,
-    "drifted_artifacts": 2,
-    "live_modules": 8,
-    "manifest_artifacts": 47,
+    "drifted_artifacts": 0,
+    "live_modules": 11,
+    "manifest_artifacts": 66,
     "manifest_artifacts_not_in_module_items": 0,
-    "manifest_module_ids": 8,
+    "manifest_module_ids": 11,
     "manifest_module_ids_not_live": 0,
     "missing_local_files": 0,
     "unmanifested_local_files": 10,
