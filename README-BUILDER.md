@@ -129,6 +129,7 @@ Codex skills live in `.agents/skills/`.
 - `build-sprint` - generate one sprint from pasted context or a spec file, validate, then optionally push after review.
 - `update-dues` - edit `due` fields, validate, and optionally push.
 - `inspect-canvas` - read live Canvas modules and module items, compare with the manifest and local files, and write a local ledger under `<course>/reports/`.
+- `update-artifact` - list live Canvas module items, prepare exactly one `module_item_id` for local Markdown editing, validate the edited artifact, and stop before Canvas writes.
 - `reconcile` - dry-run Canvas drift, then optionally apply Canvas changes locally.
 - `remove-canvas` - inspect Canvas, dry-run manifest-backed removals, then delete only after confirmation token approval.
 - `canvas-author` - write exactly one artifact from a PRD-shaped item.
@@ -181,6 +182,7 @@ Rules enforced or expected:
 - `init_course.py` - local-only course directory, manifest, starter metadata, and context spec setup for an existing Canvas course ID.
 - `push.py` - validates one MD file, converts Markdown to Canvas HTML, creates or updates the Canvas artifact, adds it to the module, and updates the manifest.
 - `inspect_canvas.py` - reads live Canvas modules and module items, compares them with the manifest and local Markdown files, and writes JSON/Markdown ledgers under `<course>/reports/`.
+- `update_artifact.py` - lists live module items by `module_item_id`, refreshes or imports one selected item into local Markdown for editing, and verifies that identity fields stayed fixed.
 - `pull.py` - fetches Canvas state, reports drift, and optionally writes Canvas changes back to MD.
 - `remove.py` - dry-runs and applies confirmed deletion of manifest-backed Canvas modules/items while keeping local Markdown files.
 - `schema.py` - validates artifacts, manifests, and PRDs.

@@ -59,6 +59,10 @@
             "type": ["string", "null"],
             "format": "date-time"
           },
+          "last_pulled": {
+            "type": ["string", "null"],
+            "format": "date-time"
+          },
           "orphaned": {
             "type": "boolean",
             "description": "True if the artifact exists in manifest but is gone from canvas"

@@ -59,6 +59,10 @@ Inspect course1 on Canvas, include module items, and update the local ledger.
 ```
 
 ```text
+For Canvas course 180, list artifact module item IDs and prepare module_item_id:123 for editing.
+```
+
+```text
 Remove the manifest-backed Canvas item module_item_id:123 from course1. Show the dry run first and ask me for the confirmation token before deleting anything.
 ```
 
@@ -75,6 +79,7 @@ Codex infers the workflow from the request:
 | Reviewed Markdown pushed to Canvas | `sync` |
 | Due date changes | `update-dues` |
 | Live Canvas module/item inventory and ledger | `canvas-inspector` with `inspect-canvas` |
+| One live Canvas artifact prepared for local editing by module item ID | `update-artifact` |
 | Canvas edits pulled back into the repo | `reconcile` dry-run first |
 | Manifest-backed Canvas modules/items removed | `canvas-remover` with `remove-canvas` |
 
