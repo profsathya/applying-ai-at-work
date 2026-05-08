@@ -1,0 +1,671 @@
+{
+  "artifacts": {
+    "course1-sprints-sprint-0-choose-your-problem": {
+      "artifact_id": "course1-sprints-sprint-0-choose-your-problem",
+      "canvas_id": 6691,
+      "canvas_module_id": 1883,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "c90af1f75b9c3bc5fe22c1f6bd022391004eca71f81d225b667039847a5e1097",
+      "last_pushed": "2026-04-20T22:10:12+00:00",
+      "local_path": "course1/sprints/sprint-0/choose-your-problem.md"
+    },
+    "course1-sprints-sprint-0-cohort-introductions": {
+      "artifact_id": "course1-sprints-sprint-0-cohort-introductions",
+      "canvas_id": 1384,
+      "canvas_module_id": 1883,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "efb0640bbc0a458626be7816959f8554c0a30235c8f371b35b252fa5a1c347ba",
+      "last_pushed": "2026-04-20T22:06:13+00:00",
+      "local_path": "course1/sprints/sprint-0/cohort-introductions.md"
+    },
+    "course1-sprints-sprint-0-initial-stakeholder-map": {
+      "artifact_id": "course1-sprints-sprint-0-initial-stakeholder-map",
+      "canvas_id": 6692,
+      "canvas_module_id": 1883,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "922485e3d28f384873253fc4c969a6760f13ec3da0f67573d7b30781969fd89f",
+      "last_pushed": "2026-04-20T22:12:00+00:00",
+      "local_path": "course1/sprints/sprint-0/initial-stakeholder-map.md"
+    },
+    "course1-sprints-sprint-0-orientation-check": {
+      "artifact_id": "course1-sprints-sprint-0-orientation-check",
+      "canvas_id": 2912,
+      "canvas_module_id": 1883,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "01d4f9a5f76254dc863c6ecedb69c4999b856c527f0fb5a39927ac1237549485",
+      "last_pushed": "2026-04-22T19:40:47+00:00",
+      "local_path": "course1/sprints/sprint-0/orientation-check.md"
+    },
+    "course1-sprints-sprint-0-week-1-orientation": {
+      "artifact_id": "course1-sprints-sprint-0-week-1-orientation",
+      "canvas_id": null,
+      "canvas_module_id": 1883,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "40bb73b73f41a2d4ec2b56d0a2b55c6c453a049a4a9f7d21eebca6f2d4162b3d",
+      "last_pushed": "2026-04-20T21:39:07+00:00",
+      "local_path": "course1/sprints/sprint-0/week-1-orientation.md"
+    },
+    "course1-sprints-sprint-0-welcome-and-how-this-course-works": {
+      "artifact_id": "course1-sprints-sprint-0-welcome-and-how-this-course-works",
+      "canvas_id": 3341,
+      "canvas_module_id": 1883,
+      "canvas_page_url": "welcome-and-how-this-course-works",
+      "canvas_type": "page",
+      "content_hash": "8d210bcf9858ae00083e77559271fd12354bdc97e9d22233f7d3dd4926ae40f7",
+      "last_pushed": "2026-04-20T21:40:45+00:00",
+      "local_path": "course1/sprints/sprint-0/welcome-and-how-this-course-works.md"
+    },
+    "course1-sprints-sprint-1-assumption-audit-with-ai": {
+      "artifact_id": "course1-sprints-sprint-1-assumption-audit-with-ai",
+      "canvas_id": 6694,
+      "canvas_module_id": 1884,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "9e9126bc17fbf31732eabf9737f49d97d11b768481ee784d61cdf8fdc104805e",
+      "last_pushed": "2026-04-20T22:18:42+00:00",
+      "local_path": "course1/sprints/sprint-1/assumption-audit-with-ai.md"
+    },
+    "course1-sprints-sprint-1-first-pass-problem-statement": {
+      "artifact_id": "course1-sprints-sprint-1-first-pass-problem-statement",
+      "canvas_id": 6693,
+      "canvas_module_id": 1884,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "e1de7f95dd32c88c0dfcb820489aec33875c3b2567de0142da6d7c078a091e32",
+      "last_pushed": "2026-04-20T22:17:09+00:00",
+      "local_path": "course1/sprints/sprint-1/first-pass-problem-statement.md"
+    },
+    "course1-sprints-sprint-1-listening-conversation-with-a-stakeholder": {
+      "artifact_id": "course1-sprints-sprint-1-listening-conversation-with-a-stakeholder",
+      "canvas_id": 6695,
+      "canvas_module_id": 1884,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "5b542296540e93c98f6ebf08b7d8208a786c0cf3f799ef6d2d4344be69e516e1",
+      "last_pushed": "2026-04-20T22:20:47+00:00",
+      "local_path": "course1/sprints/sprint-1/listening-conversation-with-a-stakeholder.md"
+    },
+    "course1-sprints-sprint-1-sprint-1-briefing": {
+      "artifact_id": "course1-sprints-sprint-1-sprint-1-briefing",
+      "canvas_id": 3342,
+      "canvas_module_id": 1884,
+      "canvas_page_url": "sprint-1-briefing",
+      "canvas_type": "page",
+      "content_hash": "e10e4d8299877dfa9ea83f859fc151ee9cf50a4a2fb025b8c4ba1aa37744045f",
+      "last_pushed": "2026-04-20T22:15:28+00:00",
+      "local_path": "course1/sprints/sprint-1/sprint-1-briefing.md"
+    },
+    "course1-sprints-sprint-1-sprint-1-peer-exchange": {
+      "artifact_id": "course1-sprints-sprint-1-sprint-1-peer-exchange",
+      "canvas_id": 1385,
+      "canvas_module_id": 1884,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "d6dd8d34133fbd0ffafb83d706c2c57ec3029b46c086904846bc2b0a0eb92616",
+      "last_pushed": "2026-04-20T22:22:16+00:00",
+      "local_path": "course1/sprints/sprint-1/sprint-1-peer-exchange.md"
+    },
+    "course1-sprints-sprint-1-sprint-1-surfacing-the-problem": {
+      "artifact_id": "course1-sprints-sprint-1-sprint-1-surfacing-the-problem",
+      "canvas_id": null,
+      "canvas_module_id": 1884,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "5f7b5d959d214fe678928726a10f060ca502828da562f7f4383e987100f957d3",
+      "last_pushed": "2026-04-20T22:13:26+00:00",
+      "local_path": "course1/sprints/sprint-1/sprint-1-surfacing-the-problem.md"
+    },
+    "course1-sprints-sprint-2-scope-and-boundaries-draft": {
+      "artifact_id": "course1-sprints-sprint-2-scope-and-boundaries-draft",
+      "canvas_id": 6697,
+      "canvas_module_id": 1885,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "8e4b9d83517f42af7f84693cd4001cccab86dec4339cc1a82a4c4e84726a6997",
+      "last_pushed": "2026-04-20T22:26:53+00:00",
+      "local_path": "course1/sprints/sprint-2/scope-and-boundaries-draft.md"
+    },
+    "course1-sprints-sprint-2-second-stakeholder-interview": {
+      "artifact_id": "course1-sprints-sprint-2-second-stakeholder-interview",
+      "canvas_id": 6698,
+      "canvas_module_id": 1885,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "fe3ed6d12640b81f001a582f197780687132f7e56a543dddd208f5550593b42e",
+      "last_pushed": "2026-04-20T22:28:47+00:00",
+      "local_path": "course1/sprints/sprint-2/second-stakeholder-interview.md"
+    },
+    "course1-sprints-sprint-2-sprint-2-briefing": {
+      "artifact_id": "course1-sprints-sprint-2-sprint-2-briefing",
+      "canvas_id": 3343,
+      "canvas_module_id": 1885,
+      "canvas_page_url": "sprint-2-briefing",
+      "canvas_type": "page",
+      "content_hash": "c27d998e854d594f30ea38556b72a4ac817f27fb77db687972c11eeb856d3c3a",
+      "last_pushed": "2026-04-20T22:25:11+00:00",
+      "local_path": "course1/sprints/sprint-2/sprint-2-briefing.md"
+    },
+    "course1-sprints-sprint-2-sprint-2-peer-exchange": {
+      "artifact_id": "course1-sprints-sprint-2-sprint-2-peer-exchange",
+      "canvas_id": 1386,
+      "canvas_module_id": 1885,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "ecde5a7245396b504ef287356934c3b445de15f25693528654aa8b0b544cbb06",
+      "last_pushed": "2026-04-20T22:33:04+00:00",
+      "local_path": "course1/sprints/sprint-2/sprint-2-peer-exchange.md"
+    },
+    "course1-sprints-sprint-2-sprint-2-scope-and-stakeholders": {
+      "artifact_id": "course1-sprints-sprint-2-sprint-2-scope-and-stakeholders",
+      "canvas_id": null,
+      "canvas_module_id": 1885,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "50a34749d93a33bda4579d4084c81ce313c1cc67254dda5c13dc3f73ecd19597",
+      "last_pushed": "2026-04-20T22:23:41+00:00",
+      "local_path": "course1/sprints/sprint-2/sprint-2-scope-and-stakeholders.md"
+    },
+    "course1-sprints-sprint-3-human-and-ai-contribution-map": {
+      "artifact_id": "course1-sprints-sprint-3-human-and-ai-contribution-map",
+      "canvas_id": 6701,
+      "canvas_module_id": 1886,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "05354072f18c513da1a1383fe851a958e739e7b3a76f7f7623b0a68bc569ed4f",
+      "last_pushed": "2026-04-20T22:42:03+00:00",
+      "local_path": "course1/sprints/sprint-3/human-and-ai-contribution-map.md"
+    },
+    "course1-sprints-sprint-3-sprint-3-ai-fit-and-success-criteria": {
+      "artifact_id": "course1-sprints-sprint-3-sprint-3-ai-fit-and-success-criteria",
+      "canvas_id": null,
+      "canvas_module_id": 1886,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "70df7e283ee3d4c51f62ecca0b7bf0367e060b8366f4b47525e51f4f4407f291",
+      "last_pushed": "2026-04-20T22:34:29+00:00",
+      "local_path": "course1/sprints/sprint-3/sprint-3-ai-fit-and-success-criteria.md"
+    },
+    "course1-sprints-sprint-3-sprint-3-briefing": {
+      "artifact_id": "course1-sprints-sprint-3-sprint-3-briefing",
+      "canvas_id": 3344,
+      "canvas_module_id": 1886,
+      "canvas_page_url": "sprint-3-briefing",
+      "canvas_type": "page",
+      "content_hash": "af78aff65d082f357be035ab6d0d54455b89e75922141ecf9eccdbe7db4ecd57",
+      "last_pushed": "2026-04-20T22:36:13+00:00",
+      "local_path": "course1/sprints/sprint-3/sprint-3-briefing.md"
+    },
+    "course1-sprints-sprint-3-sprint-3-peer-critique": {
+      "artifact_id": "course1-sprints-sprint-3-sprint-3-peer-critique",
+      "canvas_id": 1387,
+      "canvas_module_id": 1886,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "1432b11941b0e774ea5eac9371a27b7badd379c0667ffb663fe54a4d07d5067c",
+      "last_pushed": "2026-04-20T22:43:39+00:00",
+      "local_path": "course1/sprints/sprint-3/sprint-3-peer-critique.md"
+    },
+    "course1-sprints-sprint-3-success-criteria-with-a-stakeholder": {
+      "artifact_id": "course1-sprints-sprint-3-success-criteria-with-a-stakeholder",
+      "canvas_id": 6700,
+      "canvas_module_id": 1886,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "151dba4efc251dc25488b4a65da0885d9522022c3cea6c7262bba602376a9d16",
+      "last_pushed": "2026-04-20T22:40:13+00:00",
+      "local_path": "course1/sprints/sprint-3/success-criteria-with-a-stakeholder.md"
+    },
+    "course1-sprints-sprint-4-integrated-problem-frame": {
+      "artifact_id": "course1-sprints-sprint-4-integrated-problem-frame",
+      "canvas_id": 6703,
+      "canvas_module_id": 1887,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "774312dbf54e18ac5ac81afc5ebb474b88626863b28199901b62195124ff776d",
+      "last_pushed": "2026-04-20T22:48:57+00:00",
+      "local_path": "course1/sprints/sprint-4/integrated-problem-frame.md"
+    },
+    "course1-sprints-sprint-4-revise-based-on-what-you-learned": {
+      "artifact_id": "course1-sprints-sprint-4-revise-based-on-what-you-learned",
+      "canvas_id": 6705,
+      "canvas_module_id": 1887,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "221769258e6322c98166831c2600b0c76d2b216a77e4050c5392919605f722cf",
+      "last_pushed": "2026-04-20T22:52:28+00:00",
+      "local_path": "course1/sprints/sprint-4/revise-based-on-what-you-learned.md"
+    },
+    "course1-sprints-sprint-4-sprint-4-briefing": {
+      "artifact_id": "course1-sprints-sprint-4-sprint-4-briefing",
+      "canvas_id": 3345,
+      "canvas_module_id": 1887,
+      "canvas_page_url": "sprint-4-briefing",
+      "canvas_type": "page",
+      "content_hash": "4193338f9277dbcf7823cfae38205cb5bb2b73e41fc43b4c55c4c78b3f635f4a",
+      "last_pushed": "2026-04-20T22:46:41+00:00",
+      "local_path": "course1/sprints/sprint-4/sprint-4-briefing.md"
+    },
+    "course1-sprints-sprint-4-sprint-4-peer-exchange": {
+      "artifact_id": "course1-sprints-sprint-4-sprint-4-peer-exchange",
+      "canvas_id": 1388,
+      "canvas_module_id": 1887,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "efaa8b655b3e54b53f4fe51cb2684f21a15447205217caf9120623b0f299de18",
+      "last_pushed": "2026-04-20T22:54:21+00:00",
+      "local_path": "course1/sprints/sprint-4/sprint-4-peer-exchange.md"
+    },
+    "course1-sprints-sprint-4-sprint-4-validated-framing": {
+      "artifact_id": "course1-sprints-sprint-4-sprint-4-validated-framing",
+      "canvas_id": null,
+      "canvas_module_id": 1887,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "0df663f325f12d3c1ab834f171fb1d5bdbf486930f3d20f806394e0e7c975ff1",
+      "last_pushed": "2026-04-20T22:45:11+00:00",
+      "local_path": "course1/sprints/sprint-4/sprint-4-validated-framing.md"
+    },
+    "course1-sprints-sprint-4-validation-conversation-with-a-decision-maker": {
+      "artifact_id": "course1-sprints-sprint-4-validation-conversation-with-a-decision-maker",
+      "canvas_id": 6704,
+      "canvas_module_id": 1887,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "b18bb99af6e5a370f645dd90fa07c31804a581bebc273da26f301f64762e7663",
+      "last_pushed": "2026-04-20T22:50:47+00:00",
+      "local_path": "course1/sprints/sprint-4/validation-conversation-with-a-decision-maker.md"
+    },
+    "course1-sprints-sprint-5-basketball-rules-check": {
+      "artifact_id": "course1-sprints-sprint-5-basketball-rules-check",
+      "canvas_id": 2924,
+      "canvas_module_id": 1905,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "f7444fb1b630f728fea057ac1ec847b09646e4d86402def84fcbb61b46c054e6",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/basketball-rules-check.md"
+    },
+    "course1-sprints-sprint-5-basketball-rules-check-2": {
+      "artifact_id": "course1-sprints-sprint-5-basketball-rules-check-2",
+      "canvas_id": 2923,
+      "canvas_module_id": 1905,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "b6f33b0c2cc51096af902138f978f3a902635f3c02d7397261942aeee5e33445",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/basketball-rules-check-2.md"
+    },
+    "course1-sprints-sprint-5-basketball-rules-overview": {
+      "artifact_id": "course1-sprints-sprint-5-basketball-rules-overview",
+      "canvas_id": null,
+      "canvas_module_id": 1905,
+      "canvas_page_url": "basketball-rules-overview",
+      "canvas_type": "page",
+      "content_hash": "5f8455e3b56ac09c4a1a643e69884c3f1845568f7e1729e7db5922567c0c5a88",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/basketball-rules-overview.md"
+    },
+    "course1-sprints-sprint-5-capstone-brief": {
+      "artifact_id": "course1-sprints-sprint-5-capstone-brief",
+      "canvas_id": 3346,
+      "canvas_module_id": 1888,
+      "canvas_page_url": "capstone-brief",
+      "canvas_type": "page",
+      "content_hash": "0e865575dc4562a21205f43e3ac1f988d3310cd496dcb451e667d3407dfcf76d",
+      "last_pushed": "2026-04-20T22:57:59+00:00",
+      "local_path": "course1/sprints/sprint-5/capstone-brief.md"
+    },
+    "course1-sprints-sprint-5-capstone-demonstration": {
+      "artifact_id": "course1-sprints-sprint-5-capstone-demonstration",
+      "canvas_id": 6707,
+      "canvas_module_id": 1888,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "171497f985bbcdebc6280d3b43ec6760513c7389226f377a96fa12ac5f467556",
+      "last_pushed": "2026-04-20T23:00:01+00:00",
+      "local_path": "course1/sprints/sprint-5/capstone-demonstration.md"
+    },
+    "course1-sprints-sprint-5-closing-cohort-reflection": {
+      "artifact_id": "course1-sprints-sprint-5-closing-cohort-reflection",
+      "canvas_id": 1389,
+      "canvas_module_id": 1888,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "f59a19f16f8360789ff6a4cb3ca57b09b4bf2f1a3a969bd8d57b6bc92580750c",
+      "last_pushed": "2026-04-20T23:03:38+00:00",
+      "local_path": "course1/sprints/sprint-5/closing-cohort-reflection.md"
+    },
+    "course1-sprints-sprint-5-codex-agent-practice-briefing": {
+      "artifact_id": "course1-sprints-sprint-5-codex-agent-practice-briefing",
+      "canvas_id": 3352,
+      "canvas_module_id": 1896,
+      "canvas_page_url": "codex-agent-practice-briefing",
+      "canvas_type": "page",
+      "content_hash": "d54213f7fd30657f9cd501bbb8cc555ff4cee0e6559581e2a15ae309eed3ccf9",
+      "last_pushed": "2026-04-30T18:57:32+00:00",
+      "local_path": "course1/sprints/sprint-5/codex-agent-practice-briefing.md"
+    },
+    "course1-sprints-sprint-5-codex-agent-practice-check": {
+      "artifact_id": "course1-sprints-sprint-5-codex-agent-practice-check",
+      "canvas_id": 2914,
+      "canvas_module_id": 1896,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "a4eb27203d516bf60aac317066fc1f03f6fee84a32211ece9becce4c8084967b",
+      "last_pushed": "2026-04-30T18:57:36+00:00",
+      "local_path": "course1/sprints/sprint-5/codex-agent-practice-check.md"
+    },
+    "course1-sprints-sprint-5-codex-agent-practice-first-request": {
+      "artifact_id": "course1-sprints-sprint-5-codex-agent-practice-first-request",
+      "canvas_id": 6721,
+      "canvas_module_id": 1896,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "267c8ff31826019091261c8d357aaabf7dc84f66a924f026e09246a4aa245dec",
+      "last_pushed": "2026-04-30T18:57:33+00:00",
+      "local_path": "course1/sprints/sprint-5/codex-agent-practice-first-request.md"
+    },
+    "course1-sprints-sprint-5-codex-agent-practice-module": {
+      "artifact_id": "course1-sprints-sprint-5-codex-agent-practice-module",
+      "canvas_id": null,
+      "canvas_module_id": 1896,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "943a5ba76bcd203310fb7ab75cca1661341f3ca2c781ca47e0b7fce00a629720",
+      "last_pushed": "2026-04-30T18:57:30+00:00",
+      "local_path": "course1/sprints/sprint-5/codex-agent-practice-module.md"
+    },
+    "course1-sprints-sprint-5-codex-agent-practice-peer-exchange": {
+      "artifact_id": "course1-sprints-sprint-5-codex-agent-practice-peer-exchange",
+      "canvas_id": 1391,
+      "canvas_module_id": 1896,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "368918ac4a79132bb12dcd76d620ae12972b1acbc94b6d722175b1a478a3d516",
+      "last_pushed": "2026-04-30T18:57:38+00:00",
+      "local_path": "course1/sprints/sprint-5/codex-agent-practice-peer-exchange.md"
+    },
+    "course1-sprints-sprint-5-codex-builder-tutorial-check": {
+      "artifact_id": "course1-sprints-sprint-5-codex-builder-tutorial-check",
+      "canvas_id": 2915,
+      "canvas_module_id": 1897,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "521a7d340a0c1f8b63afa4c73ec78282b16c26900c452840a97c8a153500e92b",
+      "last_pushed": "2026-04-30T22:28:42+00:00",
+      "local_path": "course1/sprints/sprint-5/codex-builder-tutorial-check.md"
+    },
+    "course1-sprints-sprint-5-codex-builder-tutorial-module": {
+      "artifact_id": "course1-sprints-sprint-5-codex-builder-tutorial-module",
+      "canvas_id": null,
+      "canvas_module_id": 1897,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "e08afc3a9035ad8d4c64b5f0177877c660027ef2d8e168944cf4e79be590ee53",
+      "last_pushed": "2026-04-30T22:28:22+00:00",
+      "local_path": "course1/sprints/sprint-5/codex-builder-tutorial-module.md"
+    },
+    "course1-sprints-sprint-5-codex-builder-tutorial-prompt-exchange": {
+      "artifact_id": "course1-sprints-sprint-5-codex-builder-tutorial-prompt-exchange",
+      "canvas_id": 1392,
+      "canvas_module_id": 1897,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "c20d5a47175a46040b266b6c61ff1e702a8d9f2a73b2efedae04b692010b628d",
+      "last_pushed": "2026-04-30T22:28:46+00:00",
+      "local_path": "course1/sprints/sprint-5/codex-builder-tutorial-prompt-exchange.md"
+    },
+    "course1-sprints-sprint-5-codex-builder-tutorial-review-and-push": {
+      "artifact_id": "course1-sprints-sprint-5-codex-builder-tutorial-review-and-push",
+      "canvas_id": 3355,
+      "canvas_module_id": 1897,
+      "canvas_page_url": "reviewing-drafts-before-canvas",
+      "canvas_type": "page",
+      "content_hash": "31fb4873c97c94fc2863ed46fd4996418b9918e264a56fb9f984f162106f3098",
+      "last_pushed": "2026-04-30T22:54:20+00:00",
+      "local_path": "course1/sprints/sprint-5/codex-builder-tutorial-review-and-push.md"
+    },
+    "course1-sprints-sprint-5-codex-builder-tutorial-starting-codex": {
+      "artifact_id": "course1-sprints-sprint-5-codex-builder-tutorial-starting-codex",
+      "canvas_id": 3353,
+      "canvas_module_id": 1897,
+      "canvas_page_url": "starting-codex-from-the-repo",
+      "canvas_type": "page",
+      "content_hash": "33b62c6b925ae22af385f2c3d82f07465ea46f90421956709a8f24181beef227",
+      "last_pushed": "2026-04-30T22:28:26+00:00",
+      "local_path": "course1/sprints/sprint-5/codex-builder-tutorial-starting-codex.md"
+    },
+    "course1-sprints-sprint-5-codex-builder-tutorial-writing-requests": {
+      "artifact_id": "course1-sprints-sprint-5-codex-builder-tutorial-writing-requests",
+      "canvas_id": 3354,
+      "canvas_module_id": 1897,
+      "canvas_page_url": "writing-a-useful-codex-request",
+      "canvas_type": "page",
+      "content_hash": "894752cfa9296776b7e830bea1a58a41a48068198c88bc9f17e4ad1eadc8d8bd",
+      "last_pushed": "2026-04-30T22:28:32+00:00",
+      "local_path": "course1/sprints/sprint-5/codex-builder-tutorial-writing-requests.md"
+    },
+    "course1-sprints-sprint-5-codex-pilot-capstone-readiness-brief": {
+      "artifact_id": "course1-sprints-sprint-5-codex-pilot-capstone-readiness-brief",
+      "canvas_id": 3351,
+      "canvas_module_id": 1888,
+      "canvas_page_url": "codex-pilot-capstone-readiness-brief",
+      "canvas_type": "page",
+      "content_hash": "80b8623d34faac7602bc45de57a1146ca60de71ee61241f524dda53b5cde42f4",
+      "last_pushed": "2026-04-29T19:55:26+00:00",
+      "local_path": "course1/sprints/sprint-5/codex-pilot-capstone-readiness-brief.md"
+    },
+    "course1-sprints-sprint-5-codex-pilot-capstone-readiness-sprint": {
+      "artifact_id": "course1-sprints-sprint-5-codex-pilot-capstone-readiness-sprint",
+      "canvas_id": null,
+      "canvas_module_id": 1888,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "9a3317fa66e061fb332dbd3d13a707cd8f53770840535a1fa5242f60fc8cf2ff",
+      "last_pushed": "2026-04-29T19:52:48+00:00",
+      "local_path": "course1/sprints/sprint-5/codex-pilot-capstone-readiness-sprint.md"
+    },
+    "course1-sprints-sprint-5-codex-pilot-final-readiness-check": {
+      "artifact_id": "course1-sprints-sprint-5-codex-pilot-final-readiness-check",
+      "canvas_id": 6720,
+      "canvas_module_id": 1888,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "3bebed2bcd5b44187b2abf6c5a08c169ab5f77b48ce22c40611307b74861683f",
+      "last_pushed": "2026-04-29T19:52:58+00:00",
+      "local_path": "course1/sprints/sprint-5/codex-pilot-final-readiness-check.md"
+    },
+    "course1-sprints-sprint-5-favorite-nba-team-discussion": {
+      "artifact_id": "course1-sprints-sprint-5-favorite-nba-team-discussion",
+      "canvas_id": 1397,
+      "canvas_module_id": 1905,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "f5fd4894ac31f8b681511b1d16e24491bf2cc554598f04ddc07027938cbb4ea4",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/favorite-nba-team-discussion.md"
+    },
+    "course1-sprints-sprint-5-favorite-nba-team-discussion-2": {
+      "artifact_id": "course1-sprints-sprint-5-favorite-nba-team-discussion-2",
+      "canvas_id": 1396,
+      "canvas_module_id": 1905,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "b27b299feb927639a3449a8fe42d5d6add33807f25c8f77ac4215b37aee01a1a",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/favorite-nba-team-discussion-2.md"
+    },
+    "course1-sprints-sprint-5-general-rules-for-basketball": {
+      "artifact_id": "course1-sprints-sprint-5-general-rules-for-basketball",
+      "canvas_id": null,
+      "canvas_module_id": 1905,
+      "canvas_page_url": "general-rules-for-basketball",
+      "canvas_type": "page",
+      "content_hash": "678783bf80698f59c905def72ec616d3270377155b642f240443c65e8ed78267",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/general-rules-for-basketball.md"
+    },
+    "course1-sprints-sprint-5-hiragana-katakana-and-romaji-practice": {
+      "artifact_id": "course1-sprints-sprint-5-hiragana-katakana-and-romaji-practice",
+      "canvas_id": null,
+      "canvas_module_id": 1904,
+      "canvas_page_url": "hiragana-katakana-and-romaji-practice",
+      "canvas_type": "page",
+      "content_hash": "7429a0ed1370332af8a339f4cbe7829d2754a93ecc1ac5fe4b1389bdd48a1790",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/hiragana-katakana-and-romaji-practice.md"
+    },
+    "course1-sprints-sprint-5-how-to-introduce-yourself-in-japanese": {
+      "artifact_id": "course1-sprints-sprint-5-how-to-introduce-yourself-in-japanese",
+      "canvas_id": null,
+      "canvas_module_id": 1904,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "75f8b4049ea0335096f710797a35d7606c023f553f22bce37e250318cb496a89",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/how-to-introduce-yourself-in-japanese.md"
+    },
+    "course1-sprints-sprint-5-how-to-play-basketball": {
+      "artifact_id": "course1-sprints-sprint-5-how-to-play-basketball",
+      "canvas_id": null,
+      "canvas_module_id": 1905,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "7c8482b19ba1520f550f2674bdddb80a7e74b4c3985b6d3173d9ff3814b937a8",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/how-to-play-basketball.md"
+    },
+    "course1-sprints-sprint-5-human-judgment-articulation": {
+      "artifact_id": "course1-sprints-sprint-5-human-judgment-articulation",
+      "canvas_id": 6708,
+      "canvas_module_id": 1888,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "3fa6d1bd2ab58515cb35484d1162d7894ebfbc27779fdf314c52ba6fce0785c4",
+      "last_pushed": "2026-04-20T23:01:53+00:00",
+      "local_path": "course1/sprints/sprint-5/human-judgment-articulation.md"
+    },
+    "course1-sprints-sprint-5-introduce-yourself-in-japanese": {
+      "artifact_id": "course1-sprints-sprint-5-introduce-yourself-in-japanese",
+      "canvas_id": 1395,
+      "canvas_module_id": 1904,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "01b7ecf5adba2c5df495415ba3173b80b83541a9b9771c418bf6e1bfbeaafd36",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/introduce-yourself-in-japanese.md"
+    },
+    "course1-sprints-sprint-5-japanese-introduction-basics": {
+      "artifact_id": "course1-sprints-sprint-5-japanese-introduction-basics",
+      "canvas_id": null,
+      "canvas_module_id": 1904,
+      "canvas_page_url": "japanese-introduction-basics",
+      "canvas_type": "page",
+      "content_hash": "da8244b38515c33e331384320e2ccc305ce07a1e1fb9bb3edd28d20bf7164583",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/japanese-introduction-basics.md"
+    },
+    "course1-sprints-sprint-5-japanese-introduction-check": {
+      "artifact_id": "course1-sprints-sprint-5-japanese-introduction-check",
+      "canvas_id": 2922,
+      "canvas_module_id": 1904,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "05b2585efa093fbc7bbc98f4e473d12b494d9f7f3809dbc99d81b965914816b1",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/japanese-introduction-check.md"
+    },
+    "course1-sprints-sprint-5-nba-teams-overview": {
+      "artifact_id": "course1-sprints-sprint-5-nba-teams-overview",
+      "canvas_id": null,
+      "canvas_module_id": 1905,
+      "canvas_page_url": "nba-teams-overview",
+      "canvas_type": "page",
+      "content_hash": "98285fc0d254d0760d7560a56adfbc2f7b4e05f3aa605204396b86ec269aa862",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/nba-teams-overview.md"
+    },
+    "course1-sprints-sprint-5-nba-teams-overview-2": {
+      "artifact_id": "course1-sprints-sprint-5-nba-teams-overview-2",
+      "canvas_id": null,
+      "canvas_module_id": 1905,
+      "canvas_page_url": "nba-teams-overview-2",
+      "canvas_type": "page",
+      "content_hash": "f9993806778e764fde111ad5d31f8320069b3cd5edccd1445f12a2673779f812",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/nba-teams-overview-2.md"
+    },
+    "course1-sprints-sprint-5-python-lists": {
+      "artifact_id": "course1-sprints-sprint-5-python-lists",
+      "canvas_id": null,
+      "canvas_module_id": 1906,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "5a60a002bd6904380db374a19059276fc6b62dc0769b31028d9e277b22dcf63d",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/python-lists.md"
+    },
+    "course1-sprints-sprint-5-python-lists-check": {
+      "artifact_id": "course1-sprints-sprint-5-python-lists-check",
+      "canvas_id": 2925,
+      "canvas_module_id": 1906,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "7335f3e393ff0fba7f41871a123329e3af7922f69561aa7a9cd0f7b5f7eef304",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/python-lists-check.md"
+    },
+    "course1-sprints-sprint-5-python-lists-coding-homework": {
+      "artifact_id": "course1-sprints-sprint-5-python-lists-coding-homework",
+      "canvas_id": 6745,
+      "canvas_module_id": 1906,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "7feab016b329911951a9821c7257182af312e51742c1661ce81c386a383e69b5",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/python-lists-coding-homework.md"
+    },
+    "course1-sprints-sprint-5-python-lists-exercises": {
+      "artifact_id": "course1-sprints-sprint-5-python-lists-exercises",
+      "canvas_id": null,
+      "canvas_module_id": 1906,
+      "canvas_page_url": "python-lists-exercises",
+      "canvas_type": "page",
+      "content_hash": "bc0e580ac5afa234891177686d72662d6f2877c82a89f184f89c99ea3fc90913",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/python-lists-exercises.md"
+    },
+    "course1-sprints-sprint-5-python-lists-explanation": {
+      "artifact_id": "course1-sprints-sprint-5-python-lists-explanation",
+      "canvas_id": null,
+      "canvas_module_id": 1906,
+      "canvas_page_url": "python-lists-explanation",
+      "canvas_type": "page",
+      "content_hash": "4ee8057d0c4cdb6448600deffa2ce020ad08f6d0d8efa6c66eac5f9824ab2e07",
+      "last_pushed": null,
+      "local_path": "course1/sprints/sprint-5/python-lists-explanation.md"
+    },
+    "course1-sprints-sprint-5-week-10-capstone": {
+      "artifact_id": "course1-sprints-sprint-5-week-10-capstone",
+      "canvas_id": null,
+      "canvas_module_id": 1888,
+      "canvas_page_url": null,
+      "canvas_type": "module_header",
+      "content_hash": "eba0185e846472bb4200017dfb8893073d9343d0360cabfae338a62c3510b519",
+      "last_pushed": "2026-04-20T22:55:46+00:00",
+      "local_path": "course1/sprints/sprint-5/week-10-capstone.md"
+    }
+  },
+  "instance": {
+    "base_url": "https://cti-courses.instructure.com/",
+    "course_id": 180,
+    "name": "production",
+    "term": "Fall 2026"
+  },
+  "last_sync": "2026-05-07T16:42:23+00:00"
+}
