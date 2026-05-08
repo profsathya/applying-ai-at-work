@@ -241,7 +241,11 @@ def push_artifact(md_path: Path, manifest_path: Path, state_dir: Path | None = N
             raise ValueError(f"Unknown artifact type: {artifact_type}")
 
         # Resolve module and add to it if not already present
-        module_id = resolve_or_create_module(client, fm["module"])
+        module_id = resolve_or_create_module(
+            client,
+            fm["module"],
+            publish=fm.get("publish", True),
+        )
 
         if artifact_type != "module_header" and action == "created":
             content_type_map = {

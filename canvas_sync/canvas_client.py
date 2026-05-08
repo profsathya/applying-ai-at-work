@@ -206,10 +206,20 @@ class CanvasClient:
     def delete_module(self, module_id: int) -> dict:
         return self._request("DELETE", f"modules/{module_id}")
 
-    def create_module(self, name: str, position: int | None = None) -> dict:
+    def update_module(self, module_id: int, payload: dict) -> dict:
+        return self._request("PUT", f"modules/{module_id}", {"module": payload})
+
+    def create_module(
+        self,
+        name: str,
+        position: int | None = None,
+        published: bool | None = True,
+    ) -> dict:
         payload = {"module": {"name": name}}
         if position is not None:
             payload["module"]["position"] = position
+        if published is not None:
+            payload["module"]["published"] = published
         return self._request("POST", "modules", payload)
 
     def add_module_item(
@@ -240,13 +250,20 @@ class CanvasClient:
         return self._request("POST", "rubrics", payload)
 
 
-def resolve_or_create_module(client: CanvasClient, module_name: str) -> int:
+def resolve_or_create_module(
+    client: CanvasClient,
+    module_name: str,
+    *,
+    publish: bool | None = None,
+) -> int:
     """Idempotent: find module by name, create if missing, return module_id."""
     modules = client.list_modules()
     for m in modules:
         if m.get("name") == module_name:
+            if publish and not m.get("published"):
+                client.update_module(m["id"], {"published": True})
             return m["id"]
-    result = client.create_module(module_name)
+    result = client.create_module(module_name, published=publish)
     return result["id"]
 
 

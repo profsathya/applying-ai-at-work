@@ -9,7 +9,7 @@ module: "Week 1: Orientation"
 position: 4
 points: 5
 submission_type: online_quiz
-due: 2026-04-24T23:59
+due: "2026-04-24T23:59:00Z"
 publish: true
 questions:
   - type: multiple_choice

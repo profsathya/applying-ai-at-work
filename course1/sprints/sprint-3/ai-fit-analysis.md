@@ -9,7 +9,7 @@ module: "Sprint 3: AI Fit and Success Criteria"
 position: 3
 points: 25
 submission_type: text_entry
-due: 2026-10-22T23:59
+due: "2026-10-22T23:59:00Z"
 publish: true
 rubric:
   - description: "Specific AI roles in the solution are named, not generic 'use AI' claims"

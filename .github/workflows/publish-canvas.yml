@@ -10,6 +10,11 @@ on:
       - 'canvas_sync/**'
       - 'tests/**'
   workflow_dispatch:
+    inputs:
+      course:
+        description: 'Course key to publish, for example course1'
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -27,6 +32,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: content
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -45,7 +51,51 @@ jobs:
           python canvas_sync/schema.py --all
           python -m unittest discover
 
+      - name: Resolve target manifests
+        id: target_manifests
+        working-directory: content
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          INPUT_COURSE: ${{ inputs.course }}
+        run: |
+          set -euo pipefail
+          manifests_file="$(mktemp)"
+
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            manifest="${INPUT_COURSE}/manifests/production.json"
+            if [ ! -f "$manifest" ]; then
+              echo "::error::Manifest not found: $manifest"
+              exit 1
+            fi
+            printf '%s\n' "$manifest" > "$manifests_file"
+          elif [ -n "${BEFORE_SHA:-}" ] && [ "$BEFORE_SHA" != "0000000000000000000000000000000000000000" ]; then
+            git diff --name-only "$BEFORE_SHA" "$GITHUB_SHA" \
+              | awk -F/ '/^course[0-9]+\/(sprints\/|manifests\/production.json)/ { print $1 "/manifests/production.json" }' \
+              | sort -u \
+              | while IFS= read -r manifest; do
+                  [ -f "$manifest" ] && printf '%s\n' "$manifest"
+                done > "$manifests_file"
+          fi
+
+          if [ ! -s "$manifests_file" ]; then
+            echo "has_targets=false" >> "$GITHUB_OUTPUT"
+            echo "manifests=" >> "$GITHUB_OUTPUT"
+            echo "::notice::No course content changes detected; skipping Canvas publish."
+            exit 0
+          fi
+
+          echo "has_targets=true" >> "$GITHUB_OUTPUT"
+          {
+            echo "manifests<<EOF"
+            cat "$manifests_file"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          echo "Target manifests:"
+          cat "$manifests_file"
+
       - name: Check out or initialize canvas-state branch
+        if: steps.target_manifests.outputs.has_targets == 'true'
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
@@ -69,11 +119,21 @@ jobs:
           fi
 
       - name: Bootstrap missing state files from legacy manifests
+        if: steps.target_manifests.outputs.has_targets == 'true'
         working-directory: content
-        run: python canvas_sync/bootstrap_state.py --all-manifests --state-dir ../canvas-state --skip-existing
+        env:
+          TARGET_MANIFESTS: ${{ steps.target_manifests.outputs.manifests }}
+        run: |
+          set -euo pipefail
+          args=()
+          while IFS= read -r manifest; do
+            [ -n "$manifest" ] && args+=(--manifest "$manifest")
+          done <<< "$TARGET_MANIFESTS"
+          python canvas_sync/bootstrap_state.py "${args[@]}" --state-dir ../canvas-state --skip-existing
 
       - name: Check Canvas credentials
         id: canvas_credentials
+        if: steps.target_manifests.outputs.has_targets == 'true'
         env:
           CANVAS_API_URL: ${{ secrets.CANVAS_API_URL }}
           CANVAS_API_TOKEN: ${{ secrets.CANVAS_API_TOKEN }}
@@ -88,32 +148,45 @@ jobs:
           fi
 
       - name: Hydrate missing Canvas fingerprints
-        if: steps.canvas_credentials.outputs.available == 'true'
+        if: steps.target_manifests.outputs.has_targets == 'true' && steps.canvas_credentials.outputs.available == 'true'
         working-directory: content
         env:
           CANVAS_API_URL: ${{ secrets.CANVAS_API_URL }}
           CANVAS_API_TOKEN: ${{ secrets.CANVAS_API_TOKEN }}
-        run: python canvas_sync/hydrate_state.py --all-manifests --state-dir ../canvas-state
+          TARGET_MANIFESTS: ${{ steps.target_manifests.outputs.manifests }}
+        run: |
+          set -euo pipefail
+          args=()
+          while IFS= read -r manifest; do
+            [ -n "$manifest" ] && args+=(--manifest "$manifest")
+          done <<< "$TARGET_MANIFESTS"
+          python canvas_sync/hydrate_state.py "${args[@]}" --state-dir ../canvas-state
 
       - name: Publish changed artifacts
         id: publish
-        if: steps.canvas_credentials.outputs.available == 'true'
+        if: steps.target_manifests.outputs.has_targets == 'true' && steps.canvas_credentials.outputs.available == 'true'
         continue-on-error: true
         working-directory: content
         env:
           CANVAS_API_URL: ${{ secrets.CANVAS_API_URL }}
           CANVAS_API_TOKEN: ${{ secrets.CANVAS_API_TOKEN }}
+          TARGET_MANIFESTS: ${{ steps.target_manifests.outputs.manifests }}
         run: |
+          set -euo pipefail
+          args=()
+          while IFS= read -r manifest; do
+            [ -n "$manifest" ] && args+=(--manifest "$manifest")
+          done <<< "$TARGET_MANIFESTS"
           set -o pipefail
           python canvas_sync/publish_changed.py \
-            --all-manifests \
+            "${args[@]}" \
             --state-dir ../canvas-state \
             --check-drift \
             --require-state | tee ../publish-result.json
 
       - name: Validate state files
         id: validate_state
-        if: always()
+        if: always() && steps.target_manifests.outputs.has_targets == 'true'
         working-directory: content
         run: |
           set -euo pipefail
@@ -123,7 +196,7 @@ jobs:
           done
 
       - name: Commit canvas-state changes
-        if: always() && steps.validate_state.outcome == 'success'
+        if: always() && steps.target_manifests.outputs.has_targets == 'true' && steps.validate_state.outcome == 'success'
         working-directory: canvas-state
         run: |
           set -euo pipefail
@@ -136,7 +209,7 @@ jobs:
           fi
 
       - name: Fail if publish reported errors
-        if: steps.canvas_credentials.outputs.available == 'true' && steps.publish.outcome == 'failure'
+        if: steps.target_manifests.outputs.has_targets == 'true' && steps.canvas_credentials.outputs.available == 'true' && steps.publish.outcome == 'failure'
         run: |
           echo "Publish step failed. Result:"
           cat publish-result.json 2>/dev/null || true
