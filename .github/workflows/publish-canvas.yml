@@ -83,7 +83,8 @@ jobs:
             echo "available=true" >> "$GITHUB_OUTPUT"
           else
             echo "available=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::Canvas credentials are not configured. State bootstrap will be committed, but Canvas publish is skipped."
+            echo "::error::Canvas credentials are not configured. Add CANVAS_API_URL and CANVAS_API_TOKEN to the canvas-production environment before publishing."
+            exit 1
           fi
 
       - name: Hydrate missing Canvas fingerprints
