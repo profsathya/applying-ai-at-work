@@ -1,0 +1,126 @@
+name: Publish Canvas
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'course*/sprints/**'
+      - 'course*/manifests/production.json'
+      - 'schema/**'
+      - 'canvas_sync/**'
+      - 'tests/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: canvas-publish-production
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: canvas-production
+    steps:
+      - name: Check out content branch
+        uses: actions/checkout@v4
+        with:
+          path: content
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: content/canvas_sync/requirements.txt
+
+      - name: Install deps
+        working-directory: content
+        run: pip install -r canvas_sync/requirements.txt
+
+      - name: Validate content
+        working-directory: content
+        run: |
+          python canvas_sync/schema.py --all
+          python -m unittest discover
+
+      - name: Check out or initialize canvas-state branch
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir canvas-state
+          cd canvas-state
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git ls-remote --exit-code --heads origin canvas-state >/dev/null 2>&1; then
+            git fetch --depth=1 origin canvas-state
+            git checkout -B canvas-state FETCH_HEAD
+          else
+            git checkout --orphan canvas-state
+            git rm -rf . >/dev/null 2>&1 || true
+            printf "# Canvas State\n\nMutable Canvas deployment state. Updated by GitHub Actions.\n" > README.md
+            git add README.md
+            git commit -m "init canvas state"
+            git push origin HEAD:canvas-state
+          fi
+
+      - name: Bootstrap missing state files from legacy manifests
+        working-directory: content
+        run: python canvas_sync/bootstrap_state.py --all-manifests --state-dir ../canvas-state --skip-existing
+
+      - name: Hydrate missing Canvas fingerprints
+        working-directory: content
+        env:
+          CANVAS_API_URL: ${{ secrets.CANVAS_API_URL }}
+          CANVAS_API_TOKEN: ${{ secrets.CANVAS_API_TOKEN }}
+        run: python canvas_sync/hydrate_state.py --all-manifests --state-dir ../canvas-state
+
+      - name: Publish changed artifacts
+        id: publish
+        continue-on-error: true
+        working-directory: content
+        env:
+          CANVAS_API_URL: ${{ secrets.CANVAS_API_URL }}
+          CANVAS_API_TOKEN: ${{ secrets.CANVAS_API_TOKEN }}
+        run: |
+          set -o pipefail
+          python canvas_sync/publish_changed.py \
+            --all-manifests \
+            --state-dir ../canvas-state \
+            --check-drift \
+            --require-state | tee ../publish-result.json
+
+      - name: Validate state files
+        id: validate_state
+        if: always()
+        working-directory: content
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          for state_file in ../canvas-state/course*/production.json; do
+            python canvas_sync/schema.py --state "$state_file"
+          done
+
+      - name: Commit canvas-state changes
+        if: always() && steps.validate_state.outcome == 'success'
+        working-directory: canvas-state
+        run: |
+          set -euo pipefail
+          git add .
+          if git diff --cached --quiet; then
+            echo "No canvas-state changes to commit."
+          else
+            git commit -m "sync canvas state for ${GITHUB_SHA}"
+            git push origin HEAD:canvas-state
+          fi
+
+      - name: Fail if publish reported errors
+        if: steps.publish.outcome == 'failure'
+        run: |
+          echo "Publish step failed. Result:"
+          cat publish-result.json 2>/dev/null || true
+          exit 1

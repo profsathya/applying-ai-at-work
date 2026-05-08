@@ -2,6 +2,7 @@
 type: page
 title: Hiragana, Katakana, and Romaji Practice
 slug: hiragana-katakana-and-romaji-practice
+artifact_id: course1-sprints-sprint-5-hiragana-katakana-and-romaji-practice
 sprint: 5
 week: 10
 module: How to Introduce Yourself in Japanese

@@ -2,6 +2,7 @@
 type: assignment
 title: "Revise Based on What You Learned"
 slug: revise-based-on-what-you-learned
+artifact_id: course1-sprints-sprint-4-revise-based-on-what-you-learned
 sprint: 4
 week: 9
 module: "Sprint 4: Validated Framing"

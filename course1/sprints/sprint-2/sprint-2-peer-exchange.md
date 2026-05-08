@@ -2,6 +2,7 @@
 type: discussion
 title: "Sprint 2 Peer Exchange"
 slug: sprint-2-peer-exchange
+artifact_id: course1-sprints-sprint-2-sprint-2-peer-exchange
 sprint: 2
 week: 5
 module: "Sprint 2: Scope and Stakeholders"

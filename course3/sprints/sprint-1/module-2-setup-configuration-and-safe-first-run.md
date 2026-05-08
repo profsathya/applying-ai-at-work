@@ -2,6 +2,7 @@
 type: module_header
 title: "Module 2: Setup, Configuration, and Safe First Run"
 slug: module-2-setup-configuration-and-safe-first-run
+artifact_id: course3-sprints-sprint-1-module-2-setup-configuration-and-safe-first-run
 sprint: 1
 week: 2
 module: "Module 2: Setup, Configuration, and Safe First Run"

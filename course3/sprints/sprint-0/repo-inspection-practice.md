@@ -2,6 +2,7 @@
 type: assignment
 title: "Repo Inspection Practice"
 slug: repo-inspection-practice
+artifact_id: course3-sprints-sprint-0-repo-inspection-practice
 sprint: 0
 week: 1
 module: "Module 1: Orientation to the Repo, Codex, and the Agentic Workflow"

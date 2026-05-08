@@ -2,6 +2,7 @@
 type: assignment
 title: "Initial Stakeholder Map"
 slug: initial-stakeholder-map
+artifact_id: course1-sprints-sprint-0-initial-stakeholder-map
 sprint: 0
 week: 1
 module: "Week 1: Orientation"

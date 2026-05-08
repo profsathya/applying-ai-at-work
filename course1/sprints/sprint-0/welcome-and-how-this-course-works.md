@@ -2,6 +2,7 @@
 type: page
 title: "Welcome and How This Course Works"
 slug: welcome-and-how-this-course-works
+artifact_id: course1-sprints-sprint-0-welcome-and-how-this-course-works
 sprint: 0
 week: 1
 module: "Week 1: Orientation"

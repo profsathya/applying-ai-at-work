@@ -2,6 +2,7 @@
 type: module_header
 title: "Sprint 3: AI Fit and Success Criteria"
 slug: sprint-3-ai-fit-and-success-criteria
+artifact_id: course1-sprints-sprint-3-sprint-3-ai-fit-and-success-criteria
 sprint: 3
 week: 6
 module: "Sprint 3: AI Fit and Success Criteria"

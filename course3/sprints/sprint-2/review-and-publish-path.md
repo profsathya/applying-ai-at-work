@@ -2,6 +2,7 @@
 type: page
 title: "Review and Publish Path"
 slug: review-and-publish-path
+artifact_id: course3-sprints-sprint-2-review-and-publish-path
 sprint: 2
 week: 3
 module: "Module 3: Building and Publishing Content with Codex and Agents"

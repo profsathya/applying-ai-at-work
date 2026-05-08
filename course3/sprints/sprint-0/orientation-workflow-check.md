@@ -2,6 +2,7 @@
 type: quiz
 title: "Orientation Workflow Check"
 slug: orientation-workflow-check
+artifact_id: course3-sprints-sprint-0-orientation-workflow-check
 sprint: 0
 week: 1
 module: "Module 1: Orientation to the Repo, Codex, and the Agentic Workflow"

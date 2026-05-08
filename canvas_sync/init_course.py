@@ -10,7 +10,8 @@ Usage:
     --canvas-course-id 12345 \
     --base-url https://example.instructure.com \
     --title "Applying AI at Work, Cohort 3" \
-    --term "Spring 2027"
+    --term "Spring 2027" \
+    --sprint-count 6
 
 Safe smoke check:
   python3 canvas_sync/init_course.py \
@@ -18,7 +19,8 @@ Safe smoke check:
     --canvas-course-id 999999 \
     --base-url https://example.instructure.com \
     --title "Test Init Course" \
-    --term "Test Term"
+    --term "Test Term" \
+    --sprint-count 4
 
 Then inspect the created files and remove course-test-init plus
 context/course-specs/course-test-init-context.md.
@@ -38,7 +40,6 @@ from urllib.parse import urlparse
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 COURSE_KEY_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
-SPRINTS = range(0, 6)
 
 
 class InitCourseError(ValueError):
@@ -54,6 +55,12 @@ def parse_bool(value: str | bool) -> bool:
     if normalized in {"0", "false", "no", "n"}:
         return False
     raise argparse.ArgumentTypeError(f"Expected true or false, got {value!r}")
+
+
+def validate_sprint_count(sprint_count: int) -> int:
+    if sprint_count < 1:
+        raise InitCourseError("sprint-count must be at least 1")
+    return sprint_count
 
 
 def validate_course_key(course_key: str) -> str:
@@ -183,7 +190,7 @@ def build_design_readme(course_key: str, title: str, term: str, course_code: str
         "## Audience And Situation\n\n"
         "Describe participants, workplace context, constraints, and prior knowledge.\n\n"
         "## Course Arc\n\n"
-        "Summarize the sequence from orientation through capstone.\n\n"
+        "Summarize the sequence from the first module through the final module.\n\n"
         "## Assessment Strategy\n\n"
         "Describe points, rubrics, quiz expectations, discussions, stakeholder evidence, and capstone expectations.\n\n"
         "## Constraints\n\n"
@@ -196,47 +203,36 @@ def build_context_placeholder(
     title: str,
     term: str,
     course_code: str | None,
+    sprint_count: int,
 ) -> str:
     code = course_code or ""
     term_value = term or ""
+    sprint_sections = []
+    for sprint in range(sprint_count):
+        label = "Orientation Title" if sprint == 0 else "Module Title"
+        sprint_sections.append(
+            f"### Sprint {sprint}: <{label}>\n"
+            "- Week or sequence position:\n"
+            "- Purpose:\n"
+            "- Required artifacts:\n"
+        )
     return (
         f"# Course Context Spec: {title}\n\n"
         "## Target\n"
         f"- Course: {course_key}\n"
         f"- Course title: {title}\n"
         f"- Course code: {code}\n"
-        f"- Term or delivery context: {term_value}\n\n"
+        f"- Term or delivery context: {term_value}\n"
+        f"- Sprint/module count: {sprint_count}\n\n"
         "## Course Purpose\n"
         "Describe what participants should be able to do by the end of the course.\n\n"
         "## Audience And Situation\n"
         "Name what participants already know, what workplace context they bring, and what constraints matter.\n\n"
         "## Course Arc\n"
-        "Summarize the sequence from orientation through capstone.\n\n"
+        "Summarize the sequence from the first module through the final module.\n\n"
         "## Sprint / Module Map\n\n"
-        "### Sprint 0: <Orientation Title>\n"
-        "- Week:\n"
-        "- Purpose:\n"
-        "- Required artifacts:\n\n"
-        "### Sprint 1: <Module Title>\n"
-        "- Weeks:\n"
-        "- Purpose:\n"
-        "- Required artifacts:\n\n"
-        "### Sprint 2: <Module Title>\n"
-        "- Weeks:\n"
-        "- Purpose:\n"
-        "- Required artifacts:\n\n"
-        "### Sprint 3: <Module Title>\n"
-        "- Weeks:\n"
-        "- Purpose:\n"
-        "- Required artifacts:\n\n"
-        "### Sprint 4: <Module Title>\n"
-        "- Weeks:\n"
-        "- Purpose:\n"
-        "- Required artifacts:\n\n"
-        "### Sprint 5: <Capstone Title>\n"
-        "- Week:\n"
-        "- Purpose:\n"
-        "- Required artifacts:\n\n"
+        + "\n".join(sprint_sections)
+        + "\n\n"
         "## Assessment Strategy\n"
         "Describe points, rubrics, quiz expectations, discussions, stakeholder evidence, and capstone expectations.\n\n"
         "## Required Ideas\n"
@@ -308,9 +304,11 @@ def init_course(
     course_code: str | None,
     context_spec_source: Path | None,
     context_spec_inline_file: Path | None,
+    sprint_count: int,
     force: bool,
 ) -> dict:
     course_key = validate_course_key(course_key)
+    sprint_count = validate_sprint_count(sprint_count)
     base_url = normalize_base_url(base_url)
     if canvas_course_id <= 0:
         raise InitCourseError("canvas-course-id must be a positive integer")
@@ -337,7 +335,7 @@ def init_course(
         course_dir,
         course_dir / "design",
         course_dir / "sprints",
-        *(course_dir / "sprints" / f"sprint-{i}" for i in SPRINTS),
+        *(course_dir / "sprints" / f"sprint-{i}" for i in range(sprint_count)),
         course_dir / "manifests",
         course_dir / "reports",
         REPO_ROOT / "context" / "course-specs",
@@ -407,7 +405,7 @@ def init_course(
                 raise InitCourseError(f"context-spec-inline-file not found: {inline_path}")
             content = inline_path.read_text(encoding="utf-8")
         else:
-            content = build_context_placeholder(course_key, title, term, course_code)
+            content = build_context_placeholder(course_key, title, term, course_code, sprint_count)
         write_text_file(
             context_spec_path,
             content,
@@ -419,6 +417,7 @@ def init_course(
 
     return {
         "course": course_key,
+        "sprint_count": sprint_count,
         "manifest_path": repo_relative(manifest_path),
         "context_spec_path": repo_relative(context_spec_path),
         "created_directories": created_dirs,
@@ -443,6 +442,7 @@ def main() -> int:
     parser.add_argument("--base-url", required=True)
     parser.add_argument("--title", required=True)
     parser.add_argument("--term", default="")
+    parser.add_argument("--sprint-count", type=int, required=True)
     parser.add_argument("--instance-name", default="production")
     parser.add_argument("--course-code")
     parser.add_argument("--context-spec-source", type=Path)
@@ -461,6 +461,7 @@ def main() -> int:
             course_code=args.course_code,
             context_spec_source=args.context_spec_source,
             context_spec_inline_file=args.context_spec_inline_file,
+            sprint_count=args.sprint_count,
             force=args.force,
         )
     except InitCourseError as exc:

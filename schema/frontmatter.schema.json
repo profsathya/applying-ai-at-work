@@ -3,7 +3,7 @@
   "title": "Artifact Frontmatter",
   "description": "YAML frontmatter for a canvas artifact (assignment, page, discussion, quiz, module_header)",
   "type": "object",
-  "required": ["type", "title", "slug", "sprint", "module", "position", "publish"],
+  "required": ["type", "title", "slug", "artifact_id", "sprint", "module", "position", "publish"],
   "properties": {
     "type": {
       "type": "string",
@@ -17,10 +17,14 @@
       "type": "string",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
     },
+    "artifact_id": {
+      "type": "string",
+      "description": "Stable identity for deployment state. Do not change when a file moves.",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
     "sprint": {
       "type": "integer",
-      "minimum": 0,
-      "maximum": 5
+      "minimum": 0
     },
     "week": {
       "type": ["integer", "null"],

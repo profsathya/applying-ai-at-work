@@ -2,6 +2,7 @@
 type: assignment
 title: "Codex Agent Practice: First Request"
 slug: codex-agent-practice-first-request
+artifact_id: course1-sprints-sprint-5-codex-agent-practice-first-request
 sprint: 5
 week: 10
 module: "Practice: Using Codex Agents"

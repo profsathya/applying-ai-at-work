@@ -2,6 +2,7 @@
 type: module_header
 title: "Sprint 4: Validated Framing"
 slug: sprint-4-validated-framing
+artifact_id: course1-sprints-sprint-4-sprint-4-validated-framing
 sprint: 4
 week: 8
 module: "Sprint 4: Validated Framing"

@@ -2,6 +2,7 @@
 type: quiz
 title: "Underwater Basket Weaving Readiness Check"
 slug: underwater-basket-weaving-readiness-check
+artifact_id: course1-sprints-sprint-0-underwater-basket-weaving-readiness-check
 sprint: 0
 week: 1
 module: "Underwater Basket Weaving"

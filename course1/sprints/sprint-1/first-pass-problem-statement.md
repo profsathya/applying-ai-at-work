@@ -2,6 +2,7 @@
 type: assignment
 title: "First-Pass Problem Statement"
 slug: first-pass-problem-statement
+artifact_id: course1-sprints-sprint-1-first-pass-problem-statement
 sprint: 1
 week: 2
 module: "Sprint 1: Surfacing the Problem"

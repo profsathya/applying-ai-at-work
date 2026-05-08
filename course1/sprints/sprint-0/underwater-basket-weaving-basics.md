@@ -2,6 +2,7 @@
 type: page
 title: "Underwater Basket Weaving Basics"
 slug: underwater-basket-weaving-basics
+artifact_id: course1-sprints-sprint-0-underwater-basket-weaving-basics
 sprint: 0
 week: 1
 module: "Underwater Basket Weaving"

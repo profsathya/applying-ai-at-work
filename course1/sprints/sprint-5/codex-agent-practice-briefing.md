@@ -2,6 +2,7 @@
 type: page
 title: "Codex Agent Practice Briefing"
 slug: codex-agent-practice-briefing
+artifact_id: course1-sprints-sprint-5-codex-agent-practice-briefing
 sprint: 5
 week: 10
 module: "Practice: Using Codex Agents"

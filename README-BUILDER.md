@@ -10,18 +10,19 @@ The builder supersedes the legacy iframe pattern in `archive/legacy-iframe-templ
 course spec or module spec -> Codex skill -> MD files -> schema validation -> review
                                                                        |
                                                                        v
-                                                             push.py -> Canvas API
+                                                   protected publish workflow -> push.py -> Canvas API
                                                                        |
                                                                        v
-                                                    <course>/manifests/production.json
+                                                               canvas-state branch
 ```
 
 Core invariants:
 
 - MD is authoritative during build.
-- Canvas IDs live only in manifests.
+- Canvas IDs live only in deployment state. Legacy local pushes may still write manifest state.
 - Canvas wins on live-course drift.
 - Schema validation is a hard gate before Canvas writes.
+- Production Canvas writes run through GitHub Actions with one serialized publisher.
 - Artifact bodies stay Canvas-native Markdown.
 - `context/`, `course*/design/`, and `archive/` are read-only build inputs.
 
@@ -66,7 +67,7 @@ npm i -g @openai/codex
 cp .env.example .env
 ```
 
-Fill in Canvas API credentials in `.env`. Course-specific Canvas IDs live in `<course>/manifests/production.json`.
+Fill in Canvas API credentials in `.env`. Course-specific Canvas course IDs live in `<course>/manifests/production.json`. Mutable production deployment state lives on the protected `canvas-state` branch.
 
 Smoke test:
 
@@ -89,13 +90,14 @@ python3 canvas_sync/init_course.py \
   --canvas-course-id 12345 \
   --base-url https://example.instructure.com \
   --title "Applying AI at Work, Cohort 3" \
-  --term "Spring 2027"
+  --term "Spring 2027" \
+  --sprint-count 4
 ```
 
 Prompt example:
 
 ```text
-Configure a new course called course3 for Canvas course ID 12345. Create an empty shell and stop before Canvas writes.
+Configure a new four-module course called course3 for Canvas course ID 12345. Create an empty shell and stop before Canvas writes.
 ```
 
 After setup:
@@ -107,10 +109,10 @@ Draft course3 from context/course-specs/course3-context.md and stop before Canva
 Push after review:
 
 ```text
-Push reviewed course3 sprint 0 files to Canvas.
+Push reviewed course3 sprint <n> files to Canvas.
 ```
 
-The setup script creates `<course>/design/`, six sprint folders, `<course>/manifests/production.json`, `<course>/reports/`, starter progress and PRD files, and a course context spec under `context/course-specs/`.
+The setup script creates `<course>/design/`, the requested number of sprint folders, `<course>/manifests/production.json`, `<course>/reports/`, starter progress and PRD files, and a course context spec under `context/course-specs/`.
 
 ## Full Course Builds
 
@@ -122,7 +124,7 @@ Course specs can be pasted into chat or saved under `context/course-specs/`. If 
 
 Codex skills live in `.agents/skills/`.
 
-- `sync` - validate and push one or more existing artifact MD files.
+- `sync` - validate and push one or more existing artifact MD files for approved admin or sandbox use.
 - `configure-course` - create a new local course shell for an existing Canvas course ID without Canvas writes.
 - `add-artifact` - add one new artifact from a natural-language request.
 - `build-course` - generate a full course from pasted context or a course spec file, validate, then optionally push after review.
@@ -158,6 +160,7 @@ Use direct Python commands for validation, inspect, push, pull, and remove.
 
 - `frontmatter.schema.json`
 - `manifest.schema.json`
+- `canvas_state.schema.json`
 - `prd.schema.json`
 
 Run all validation:
@@ -169,10 +172,27 @@ python3 canvas_sync/schema.py --all
 Rules enforced or expected:
 
 - No em dashes.
-- Sprint bounds are 0 through 5.
+- Artifact frontmatter includes stable `artifact_id`.
+- Sprint values are non-negative integers. Course setup creates the count requested by the human.
 - Pages and module headers have no points.
 - Assignments, quizzes, and graded discussions have points.
 - Artifact bodies cannot contain iframes, scripts, styles, or JavaScript URLs.
+
+## GitOps Publish Layer
+
+Production publishing uses `.github/workflows/publish-canvas.yml`:
+
+```text
+main checkout + canvas-state checkout -> validate -> bootstrap missing state -> hydrate fingerprints -> publish changed artifacts -> commit canvas-state
+```
+
+- `canvas-state` stores `<course>/production.json` files keyed by `artifact_id`.
+- The workflow uses the protected `canvas-production` environment and a single concurrency group.
+- `canvas_sync/bootstrap_state.py` converts legacy manifest state into external state files.
+- `canvas_sync/hydrate_state.py` records live Canvas fingerprints only when Canvas still matches local Markdown.
+- `canvas_sync/publish_changed.py` publishes only artifacts whose content hash differs from state.
+- `canvas_sync/check_drift.py` compares live Canvas with `canvas-state` and local Markdown for nightly drift detection.
+- Direct local `push.py` without `--state-dir` is retained for backwards compatibility and emergency repair.
 
 ## Canvas Sync Layer
 
@@ -180,7 +200,11 @@ Rules enforced or expected:
 
 - `canvas_client.py` - Canvas REST API wrapper.
 - `init_course.py` - local-only course directory, manifest, starter metadata, and context spec setup for an existing Canvas course ID.
-- `push.py` - validates one MD file, converts Markdown to Canvas HTML, creates or updates the Canvas artifact, adds it to the module, and updates the manifest.
+- `push.py` - validates one MD file, converts Markdown to Canvas HTML, creates or updates the Canvas artifact, adds it to the module, and updates legacy manifest state or external `canvas-state`.
+- `state.py` - shared deployment-state helpers, state file locks, state bootstrap conversion, and Canvas fingerprints.
+- `bootstrap_state.py` - writes initial external state files from existing manifests.
+- `publish_changed.py` - publishes changed artifacts against external state.
+- `check_drift.py` - checks live Canvas against external state.
 - `inspect_canvas.py` - reads live Canvas modules and module items, compares them with the manifest and local Markdown files, and writes JSON/Markdown ledgers under `<course>/reports/`.
 - `update_artifact.py` - lists live module items by `module_item_id`, refreshes or imports one selected item into local Markdown for editing, and verifies that identity fields stayed fixed.
 - `pull.py` - fetches Canvas state, reports drift, and optionally writes Canvas changes back to MD.

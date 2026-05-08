@@ -2,6 +2,7 @@
 type: page
 title: "Technical Appendix: Setup Commands"
 slug: technical-appendix-setup-commands
+artifact_id: course3-sprints-sprint-1-technical-appendix-setup-commands
 sprint: 1
 week: 2
 module: "Module 2: Setup, Configuration, and Safe First Run"

@@ -2,6 +2,7 @@
 type: quiz
 title: "Setup and First Run Check"
 slug: setup-and-first-run-check
+artifact_id: course3-sprints-sprint-1-setup-and-first-run-check
 sprint: 1
 week: 2
 module: "Module 2: Setup, Configuration, and Safe First Run"

@@ -2,6 +2,7 @@
 type: page
 title: "Safety Boundaries and Human Review"
 slug: safety-boundaries-and-human-review
+artifact_id: course3-sprints-sprint-0-safety-boundaries-and-human-review
 sprint: 0
 week: 1
 module: "Module 1: Orientation to the Repo, Codex, and the Agentic Workflow"

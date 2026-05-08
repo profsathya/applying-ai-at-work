@@ -2,6 +2,7 @@
 type: page
 title: General Rules for Basketball
 slug: general-rules-for-basketball
+artifact_id: course1-sprints-sprint-5-general-rules-for-basketball
 sprint: 5
 week: 10
 module: How to Play Basketball

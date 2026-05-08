@@ -2,6 +2,7 @@
 type: discussion
 title: "Sprint 3 Peer Critique"
 slug: sprint-3-peer-critique
+artifact_id: course1-sprints-sprint-3-sprint-3-peer-critique
 sprint: 3
 week: 7
 module: "Sprint 3: AI Fit and Success Criteria"

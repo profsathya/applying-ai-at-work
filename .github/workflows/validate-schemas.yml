@@ -35,5 +35,8 @@ jobs:
       - name: Run schema validation on all artifacts
         run: python canvas_sync/schema.py --all
 
+      - name: Compile sync scripts
+        run: python -m py_compile canvas_sync/*.py
+
       - name: Run unit tests
         run: python -m unittest discover

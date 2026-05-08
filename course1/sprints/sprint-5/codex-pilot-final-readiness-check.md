@@ -2,6 +2,7 @@
 type: assignment
 title: "Codex Pilot: Final Readiness Check"
 slug: codex-pilot-final-readiness-check
+artifact_id: course1-sprints-sprint-5-codex-pilot-final-readiness-check
 sprint: 5
 week: 10
 module: "Week 10: Capstone"

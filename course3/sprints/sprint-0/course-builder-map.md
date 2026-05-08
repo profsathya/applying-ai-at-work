@@ -2,6 +2,7 @@
 type: page
 title: "Course Builder Map"
 slug: course-builder-map
+artifact_id: course3-sprints-sprint-0-course-builder-map
 sprint: 0
 week: 1
 module: "Module 1: Orientation to the Repo, Codex, and the Agentic Workflow"

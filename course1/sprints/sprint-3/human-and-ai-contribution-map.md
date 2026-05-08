@@ -2,6 +2,7 @@
 type: assignment
 title: "Human and AI Contribution Map"
 slug: human-and-ai-contribution-map
+artifact_id: course1-sprints-sprint-3-human-and-ai-contribution-map
 sprint: 3
 week: 7
 module: "Sprint 3: AI Fit and Success Criteria"

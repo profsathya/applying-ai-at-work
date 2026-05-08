@@ -2,6 +2,7 @@
 type: module_header
 title: "Week 1: Orientation"
 slug: week-1-orientation
+artifact_id: course1-sprints-sprint-0-week-1-orientation
 sprint: 0
 week: 1
 module: "Week 1: Orientation"

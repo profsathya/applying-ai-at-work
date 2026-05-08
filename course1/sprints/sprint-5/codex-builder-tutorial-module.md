@@ -2,6 +2,7 @@
 type: module_header
 title: "Using This Codex Course Builder"
 slug: codex-builder-tutorial-module
+artifact_id: course1-sprints-sprint-5-codex-builder-tutorial-module
 sprint: 5
 week: 10
 module: "Using This Codex Course Builder"

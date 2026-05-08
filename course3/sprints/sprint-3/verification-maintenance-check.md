@@ -2,6 +2,7 @@
 type: quiz
 title: "Verification and Maintenance Check"
 slug: verification-maintenance-check
+artifact_id: course3-sprints-sprint-3-verification-maintenance-check
 sprint: 3
 week: 4
 module: "Module 4: Verification, Maintenance, and Extension"

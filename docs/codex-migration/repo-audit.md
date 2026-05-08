@@ -24,7 +24,7 @@ This repository is split into a portable Canvas sync backend and a Codex orchest
 - Day-to-day operations are Claude slash commands under `.claude/commands/`: `add-artifact`, `build-sprint`, `sync`, `reconcile`, and `update-dues`.
 - The actual Canvas integration is deterministic Python:
   - `canvas_sync/schema.py` validates artifacts, manifests, and PRDs.
-  - `canvas_sync/push.py` writes Markdown artifacts to Canvas and updates manifests.
+  - `canvas_sync/push.py` writes Markdown artifacts to Canvas and updates legacy manifests or external deployment state.
   - `canvas_sync/pull.py` reconciles Canvas drift back into Markdown.
   - `canvas_sync/canvas_client.py` wraps Canvas REST API calls.
 
@@ -86,13 +86,13 @@ The Canvas sync layer stayed unchanged. Claude orchestration was removed from th
 2. Full-course builds use `build-course` to read a course context spec or pasted context.
 3. Codex writes Markdown under `course*/sprints/sprint-*`.
 4. Validation runs before every push.
-5. `push.py` writes to Canvas and updates `course*/manifests/production.json`.
+5. `push.py` writes to Canvas and updates `canvas-state` for GitOps publishing or `course*/manifests/production.json` for legacy local pushes.
 6. The workflow reports changed files and asks before Canvas writes.
 
 ## Implicit Behavior Needing Documentation
 
 - `course*/prd.json` is a queue and checkpoint, not a hand-edited source of truth.
-- `course*/manifests/production.json` is the only durable Canvas ID store.
+- `canvas-state` is the production Canvas ID store. `course*/manifests/production.json` remains the static course config and legacy local state store.
 - `AGENTS.md` is build memory and Codex guidance; keep `## Learnings` intact because existing prompts append there.
 - Canvas push side effects are real and should require explicit approval outside the autonomous build runner.
 - Claude subagent model labels encode workload type, not just model preference: planning/design, authoring/date editing, and mechanical script execution.

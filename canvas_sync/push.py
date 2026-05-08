@@ -1,9 +1,11 @@
 """
 Push one MD artifact to canvas.
 
-Reads the MD file, extracts frontmatter, checks manifest for an existing
-canvas_id, then either creates or updates the artifact via the Canvas API.
-Writes canvas_id and canvas_module_id back to the manifest atomically.
+Reads the MD file, extracts frontmatter, checks deployment state for an
+existing canvas_id, then either creates or updates the artifact via the Canvas
+API. By default this keeps legacy manifest-backed state. In GitOps mode,
+--state-dir writes mutable Canvas IDs and publish hashes outside the content
+branch.
 
 Usage:
   python canvas_sync/push.py --file <md_path> --manifest <manifest_path>
@@ -18,9 +20,8 @@ Exit codes:
 from __future__ import annotations
 
 import argparse
-from contextlib import contextmanager
-import fcntl
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -30,6 +31,17 @@ from dotenv import load_dotenv
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient, CanvasError, resolve_or_create_module
 from canvas_sync.schema import parse_frontmatter, validate_artifact
+from canvas_sync.state import (
+    CanvasStateStore,
+    artifact_entry_key,
+    canvas_fingerprint,
+    content_hash,
+    course_dir_for_manifest,
+    derive_artifact_id,
+    entry_for_push,
+    fetch_canvas_state,
+    utc_now,
+)
 
 
 def md_body_to_canvas_html(body: str) -> str:
@@ -47,42 +59,6 @@ def md_body_to_canvas_html(body: str) -> str:
         extensions=["extra", "sane_lists", "smarty", "toc"],
         output_format="html5",
     )
-
-
-def load_manifest(path: Path) -> dict:
-    if not path.exists():
-        raise FileNotFoundError(f"Manifest not found: {path}")
-    with open(path) as f:
-        return json.load(f)
-
-
-def save_manifest(path: Path, manifest: dict) -> None:
-    # Atomic write via temp file
-    tmp = path.with_suffix(".json.tmp")
-    with open(tmp, "w") as f:
-        json.dump(manifest, f, indent=2, sort_keys=True)
-        f.write("\n")
-    tmp.replace(path)
-
-
-@contextmanager
-def manifest_lock(path: Path):
-    """Serialize manifest reads/writes across concurrent push processes."""
-    lock_path = path.with_suffix(path.suffix + ".lock")
-    with open(lock_path, "w") as lock_file:
-        fcntl.flock(lock_file, fcntl.LOCK_EX)
-        try:
-            yield
-        finally:
-            fcntl.flock(lock_file, fcntl.LOCK_UN)
-
-
-def course_dir_for_manifest(manifest_path: Path) -> Path:
-    if manifest_path.parent.name != "manifests":
-        raise ValueError(
-            f"Manifest must live under <course>/manifests/: {manifest_path}"
-        )
-    return manifest_path.parent.parent
 
 
 def validate_artifact_manifest_pair(md_path: Path, manifest_path: Path) -> None:
@@ -204,7 +180,7 @@ def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None
     return result
 
 
-def push_artifact(md_path: Path, manifest_path: Path) -> dict:
+def push_artifact(md_path: Path, manifest_path: Path, state_dir: Path | None = None) -> dict:
     repo_root = Path.cwd().resolve()
     md_path = md_path.resolve()
     manifest_path = manifest_path.resolve()
@@ -217,11 +193,11 @@ def push_artifact(md_path: Path, manifest_path: Path) -> dict:
 
     fm, body = parse_frontmatter(md_path)
     html = md_body_to_canvas_html(body)
+    rel_path = str(md_path.relative_to(repo_root))
+    artifact_id = fm.get("artifact_id") or derive_artifact_id(rel_path)
 
-    with manifest_lock(manifest_path):
-        manifest = load_manifest(manifest_path)
-
-        rel_path = str(md_path.relative_to(repo_root))
+    store = CanvasStateStore(manifest_path=manifest_path, repo_root=repo_root, state_dir=state_dir)
+    with store.locked() as (manifest, deployment_state, state_path):
         manifest_course_id = manifest.get("instance", {}).get("course_id") or 0
         if not manifest_course_id:
             raise ValueError(
@@ -232,8 +208,9 @@ def push_artifact(md_path: Path, manifest_path: Path) -> dict:
         client = CanvasClient.from_env(course_id=course_id)
 
         # Look up existing canvas entry for this file
-        artifacts = manifest.setdefault("artifacts", {})
-        existing = artifacts.get(rel_path, {})
+        artifacts = deployment_state.setdefault("artifacts", {})
+        state_key = artifact_entry_key(fm, rel_path, external_state=store.external)
+        existing = artifacts.get(state_key, {})
         existing_id = existing.get("canvas_id")
         existing_page_url = existing.get("canvas_page_url")
 
@@ -282,28 +259,36 @@ def push_artifact(md_path: Path, manifest_path: Path) -> dict:
                 position=fm.get("position"),
             )
 
-        # Update manifest
-        import hashlib
-        from datetime import datetime, timezone
+        pushed_at = utc_now()
+        entry = entry_for_push(
+            artifact_id=artifact_id,
+            rel_path=rel_path,
+            artifact_type=artifact_type,
+            canvas_id=canvas_id,
+            canvas_page_url=canvas_page_url,
+            canvas_module_id=module_id,
+            hash_value=content_hash(md_path),
+            pushed_at=pushed_at,
+            source_commit=os.environ.get("GITHUB_SHA"),
+            external_state=store.external,
+        )
+        if store.external:
+            live_state = fetch_canvas_state(client, entry)
+            fingerprint = canvas_fingerprint(live_state, artifact_type)
+            if fingerprint:
+                entry["canvas_fingerprint"] = fingerprint
 
-        content_hash = hashlib.sha256(md_path.read_bytes()).hexdigest()
-
-        artifacts[rel_path] = {
-            "canvas_type": artifact_type,
-            "canvas_id": canvas_id,
-            "canvas_page_url": canvas_page_url,
-            "canvas_module_id": module_id,
-            "content_hash": content_hash,
-            "last_pushed": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        }
-        manifest["last_sync"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
-        save_manifest(manifest_path, manifest)
+        artifacts[state_key] = entry
+        deployment_state["last_sync"] = pushed_at
+        store.save(deployment_state, state_path)
 
         return {
             "action": action,
             "file": rel_path,
+            "artifact_id": artifact_id,
             "canvas_id": canvas_id,
             "canvas_module_id": module_id,
+            "state_path": str(state_path),
         }
 
 
@@ -313,10 +298,15 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--file", type=Path, required=True)
     parser.add_argument("--manifest", type=Path, required=True)
+    parser.add_argument(
+        "--state-dir",
+        type=Path,
+        help="External deployment-state checkout, for example a canvas-state branch worktree.",
+    )
     args = parser.parse_args()
 
     try:
-        result = push_artifact(args.file, args.manifest)
+        result = push_artifact(args.file, args.manifest, state_dir=args.state_dir)
         print(json.dumps(result, indent=2))
         return 0
     except ValueError as e:

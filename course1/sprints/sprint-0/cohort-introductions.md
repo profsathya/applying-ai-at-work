@@ -2,6 +2,7 @@
 type: discussion
 title: "Cohort Introductions"
 slug: cohort-introductions
+artifact_id: course1-sprints-sprint-0-cohort-introductions
 sprint: 0
 week: 1
 module: "Week 1: Orientation"

@@ -2,6 +2,7 @@
 type: module_header
 title: "Module 3: Building and Publishing Content with Codex and Agents"
 slug: module-3-building-and-publishing-content-with-codex-and-agents
+artifact_id: course3-sprints-sprint-2-module-3-building-and-publishing-content-with-codex-and-agents
 sprint: 2
 week: 3
 module: "Module 3: Building and Publishing Content with Codex and Agents"

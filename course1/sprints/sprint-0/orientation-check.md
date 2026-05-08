@@ -2,6 +2,7 @@
 type: quiz
 title: "Orientation Check"
 slug: orientation-check
+artifact_id: course1-sprints-sprint-0-orientation-check
 sprint: 0
 week: 1
 module: "Week 1: Orientation"

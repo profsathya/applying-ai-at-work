@@ -2,6 +2,7 @@
 type: page
 title: Python Lists Explanation
 slug: python-lists-explanation
+artifact_id: course1-sprints-sprint-5-python-lists-explanation
 sprint: 5
 week: 10
 module: Python Lists

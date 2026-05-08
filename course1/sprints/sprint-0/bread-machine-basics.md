@@ -2,6 +2,7 @@
 type: page
 title: "Bread Machine Basics"
 slug: bread-machine-basics
+artifact_id: course1-sprints-sprint-0-bread-machine-basics
 sprint: 0
 week: 1
 module: "Week 1: Bread Machine Bread Basics"

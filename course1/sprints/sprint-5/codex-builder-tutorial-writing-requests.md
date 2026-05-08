@@ -2,6 +2,7 @@
 type: page
 title: "Writing A Useful Codex Request"
 slug: codex-builder-tutorial-writing-requests
+artifact_id: course1-sprints-sprint-5-codex-builder-tutorial-writing-requests
 sprint: 5
 week: 10
 module: "Using This Codex Course Builder"

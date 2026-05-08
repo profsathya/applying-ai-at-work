@@ -2,6 +2,7 @@
 type: page
 title: "Sprint 2 Briefing"
 slug: sprint-2-briefing
+artifact_id: course1-sprints-sprint-2-sprint-2-briefing
 sprint: 2
 week: 4
 module: "Sprint 2: Scope and Stakeholders"

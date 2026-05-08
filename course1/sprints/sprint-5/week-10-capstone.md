@@ -2,6 +2,7 @@
 type: module_header
 title: "Week 10: Capstone"
 slug: week-10-capstone
+artifact_id: course1-sprints-sprint-5-week-10-capstone
 sprint: 5
 week: 10
 module: "Week 10: Capstone"

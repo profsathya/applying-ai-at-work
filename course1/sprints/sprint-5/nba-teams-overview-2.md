@@ -2,6 +2,7 @@
 type: page
 title: NBA Teams Overview
 slug: nba-teams-overview-2
+artifact_id: course1-sprints-sprint-5-nba-teams-overview-2
 sprint: 5
 week: 10
 module: How to Play Basketball

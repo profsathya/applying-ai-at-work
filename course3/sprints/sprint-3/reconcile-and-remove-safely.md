@@ -2,6 +2,7 @@
 type: page
 title: "Reconcile and Remove Safely"
 slug: reconcile-and-remove-safely
+artifact_id: course3-sprints-sprint-3-reconcile-and-remove-safely
 sprint: 3
 week: 4
 module: "Module 4: Verification, Maintenance, and Extension"

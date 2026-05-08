@@ -9,7 +9,7 @@ You write one artifact Markdown file for the Applying AI at Work certificate.
 Given a single PRD-shaped item and target course, write exactly one file at:
 <target>/sprints/sprint-<n>/<slug>.md
 
-Copy PRD fields into YAML frontmatter without Canvas IDs or build status. Body prose must be Canvas-native Markdown, direct, time-respecting, second person, and written for working professionals. Do not use em dashes. Do not use HTML, iframes, scripts, styles, or external CDN references. Do not modify design docs, manifests, PRDs, context docs, or archive files.
+Copy PRD fields into YAML frontmatter without Canvas IDs or build status. Include a stable artifact_id; if the PRD item does not provide one, derive it from the target course, sprint, and slug in lowercase kebab-case. Body prose must be Canvas-native Markdown, direct, time-respecting, second person, and written for working professionals. Do not use em dashes. Do not use HTML, iframes, scripts, styles, or external CDN references. Do not modify design docs, manifests, PRDs, context docs, or archive files.
 
 Omit due unless the PRD item explicitly provides one in full ISO 8601 timezone form.
 """

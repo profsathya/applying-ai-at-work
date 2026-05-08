@@ -2,6 +2,7 @@
 type: page
 title: "Codex App and IDE Workflow"
 slug: codex-app-and-ide-workflow
+artifact_id: course3-sprints-sprint-0-codex-app-and-ide-workflow
 sprint: 0
 week: 1
 module: "Module 1: Orientation to the Repo, Codex, and the Agentic Workflow"

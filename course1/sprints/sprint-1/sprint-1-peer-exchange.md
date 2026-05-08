@@ -2,6 +2,7 @@
 type: discussion
 title: "Sprint 1 Peer Exchange"
 slug: sprint-1-peer-exchange
+artifact_id: course1-sprints-sprint-1-sprint-1-peer-exchange
 sprint: 1
 week: 3
 module: "Sprint 1: Surfacing the Problem"

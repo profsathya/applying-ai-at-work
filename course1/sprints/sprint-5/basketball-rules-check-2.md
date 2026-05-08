@@ -2,6 +2,7 @@
 type: quiz
 title: Basketball Rules Check
 slug: basketball-rules-check-2
+artifact_id: course1-sprints-sprint-5-basketball-rules-check-2
 sprint: 5
 week: 10
 module: How to Play Basketball

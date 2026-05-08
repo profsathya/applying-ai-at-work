@@ -2,6 +2,7 @@
 type: page
 title: "Inspect Before You Change"
 slug: inspect-before-you-change
+artifact_id: course3-sprints-sprint-3-inspect-before-you-change
 sprint: 3
 week: 4
 module: "Module 4: Verification, Maintenance, and Extension"

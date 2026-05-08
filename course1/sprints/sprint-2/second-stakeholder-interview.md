@@ -2,6 +2,7 @@
 type: assignment
 title: "Second Stakeholder Interview"
 slug: second-stakeholder-interview
+artifact_id: course1-sprints-sprint-2-second-stakeholder-interview
 sprint: 2
 week: 5
 module: "Sprint 2: Scope and Stakeholders"

@@ -2,6 +2,7 @@
 type: assignment
 title: "Success Criteria with a Stakeholder"
 slug: success-criteria-with-a-stakeholder
+artifact_id: course1-sprints-sprint-3-success-criteria-with-a-stakeholder
 sprint: 3
 week: 7
 module: "Sprint 3: AI Fit and Success Criteria"

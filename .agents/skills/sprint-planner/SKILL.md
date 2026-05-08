@@ -11,6 +11,7 @@ Use this when a target course has no PRD or a human explicitly requests a re-pla
 
 - Target course: any existing local course directory, for example `course1`, `course2`, `course3`, or a named course key
 - Brief file: `briefs/<target>.md`
+- Sprint/module count, either stated directly by the human or clearly specified in the brief or design docs
 
 ## Read Order
 
@@ -33,8 +34,9 @@ Use this when a target course has no PRD or a human explicitly requests a re-pla
 ## Rules
 
 - Decompose the existing design. Do not invent course structure.
+- If the sprint/module count is missing, ask for it before writing.
 - Do not write artifact bodies.
 - Do not push to Canvas.
-- Use sprint bounds 0 through 5.
+- Use non-negative sprint numbers that match the human-provided course structure.
 - Keep body briefs participant-facing but do not name internal framework labels.
 - Validate the PRD and manifest after writing.

@@ -2,6 +2,7 @@
 type: quiz
 title: Python Lists Check
 slug: python-lists-check
+artifact_id: course1-sprints-sprint-5-python-lists-check
 sprint: 5
 week: 10
 module: Python Lists

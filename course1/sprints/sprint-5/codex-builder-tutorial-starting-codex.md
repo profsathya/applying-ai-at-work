@@ -2,6 +2,7 @@
 type: page
 title: "Starting Codex From The Repo"
 slug: codex-builder-tutorial-starting-codex
+artifact_id: course1-sprints-sprint-5-codex-builder-tutorial-starting-codex
 sprint: 5
 week: 10
 module: "Using This Codex Course Builder"

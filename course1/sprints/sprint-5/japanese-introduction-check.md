@@ -2,6 +2,7 @@
 type: quiz
 title: Japanese Introduction Check
 slug: japanese-introduction-check
+artifact_id: course1-sprints-sprint-5-japanese-introduction-check
 sprint: 5
 week: 10
 module: How to Introduce Yourself in Japanese

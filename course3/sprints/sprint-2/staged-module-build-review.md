@@ -2,6 +2,7 @@
 type: assignment
 title: "Staged Module Build Review"
 slug: staged-module-build-review
+artifact_id: course3-sprints-sprint-2-staged-module-build-review
 sprint: 2
 week: 3
 module: "Module 3: Building and Publishing Content with Codex and Agents"

@@ -4,6 +4,7 @@ Schema validation for artifact frontmatter, manifests, and PRDs.
 Usage:
   python canvas_sync/schema.py --artifact <md_file>
   python canvas_sync/schema.py --manifest <json_file>
+  python canvas_sync/schema.py --state <json_file>
   python canvas_sync/schema.py --prd <json_file>
   python canvas_sync/schema.py --all
 
@@ -98,6 +99,29 @@ def validate_manifest(manifest_path: Path) -> list[str]:
     return errors
 
 
+def validate_canvas_state(state_path: Path) -> list[str]:
+    try:
+        with open(state_path) as f:
+            state = json.load(f)
+    except (json.JSONDecodeError, OSError) as e:
+        return [f"{state_path}: {e}"]
+
+    schema = load_schema("canvas_state")
+    errors: list[str] = []
+    try:
+        jsonschema.validate(state, schema)
+    except jsonschema.ValidationError as e:
+        errors.append(f"{state_path}: {e.message} (at {'/'.join(str(p) for p in e.path)})")
+
+    for artifact_id, entry in state.get("artifacts", {}).items():
+        if entry.get("artifact_id") != artifact_id:
+            errors.append(
+                f"{state_path}: artifact key {artifact_id!r} does not match "
+                f"entry artifact_id {entry.get('artifact_id')!r}"
+            )
+    return errors
+
+
 def validate_prd(prd_path: Path) -> list[str]:
     try:
         with open(prd_path) as f:
@@ -134,11 +158,27 @@ def discover_course_dirs() -> list[Path]:
 
 def validate_all() -> list[str]:
     errors: list[str] = []
+    artifact_ids: dict[str, Path] = {}
 
     for course_path in discover_course_dirs():
         md_pattern = str(course_path / "sprints" / "sprint-*" / "**" / "*.md")
         for md_file in glob.glob(md_pattern, recursive=True):
-            errors.extend(validate_artifact(Path(md_file)))
+            md_path = Path(md_file)
+            errors.extend(validate_artifact(md_path))
+            try:
+                frontmatter, _ = parse_frontmatter(md_path)
+            except (ValueError, yaml.YAMLError):
+                continue
+            artifact_id = frontmatter.get("artifact_id")
+            if not artifact_id:
+                continue
+            if artifact_id in artifact_ids:
+                errors.append(
+                    f"{md_path}: duplicate artifact_id {artifact_id!r}; "
+                    f"already used by {artifact_ids[artifact_id]}"
+                )
+            else:
+                artifact_ids[artifact_id] = md_path
 
         for manifest_file in glob.glob(str(course_path / "manifests" / "*.json")):
             errors.extend(validate_manifest(Path(manifest_file)))
@@ -155,6 +195,7 @@ def main() -> int:
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--artifact", type=Path)
     group.add_argument("--manifest", type=Path)
+    group.add_argument("--state", type=Path)
     group.add_argument("--prd", type=Path)
     group.add_argument("--all", action="store_true")
     args = parser.parse_args()
@@ -163,6 +204,8 @@ def main() -> int:
         errors = validate_artifact(args.artifact)
     elif args.manifest:
         errors = validate_manifest(args.manifest)
+    elif args.state:
+        errors = validate_canvas_state(args.state)
     elif args.prd:
         errors = validate_prd(args.prd)
     else:

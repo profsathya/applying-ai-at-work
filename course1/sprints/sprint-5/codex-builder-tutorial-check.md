@@ -2,6 +2,7 @@
 type: quiz
 title: "Using Codex Course Builder Check"
 slug: codex-builder-tutorial-check
+artifact_id: course1-sprints-sprint-5-codex-builder-tutorial-check
 sprint: 5
 week: 10
 module: "Using This Codex Course Builder"

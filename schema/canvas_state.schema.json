@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Canvas Deployment State",
+  "description": "Mutable per-canvas-instance state stored outside the content branch.",
+  "type": "object",
+  "required": ["instance", "artifacts"],
+  "properties": {
+    "instance": {
+      "type": "object",
+      "required": ["name", "base_url", "course_id"],
+      "properties": {
+        "name": {"type": "string"},
+        "base_url": {"type": "string", "format": "uri"},
+        "course_id": {"type": "integer", "minimum": 1},
+        "term": {"type": "string"}
+      }
+    },
+    "last_sync": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["artifact_id", "local_path", "canvas_type", "content_hash"],
+        "properties": {
+          "artifact_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "local_path": {
+            "type": "string",
+            "pattern": "^course[a-z0-9-]*/sprints/sprint-[0-9]+/.+\\.md$"
+          },
+          "canvas_type": {
+            "type": "string",
+            "enum": ["assignment", "page", "discussion", "quiz", "module_header"]
+          },
+          "canvas_id": {"type": ["integer", "null"]},
+          "canvas_page_url": {"type": ["string", "null"]},
+          "canvas_module_id": {"type": ["integer", "null"]},
+          "content_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "canvas_fingerprint": {
+            "type": ["string", "null"],
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "last_pushed": {"type": ["string", "null"], "format": "date-time"},
+          "last_pulled": {"type": ["string", "null"], "format": "date-time"},
+          "source_commit": {"type": ["string", "null"]},
+          "orphaned": {"type": "boolean"}
+        }
+      }
+    }
+  }
+}

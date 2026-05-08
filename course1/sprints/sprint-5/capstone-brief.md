@@ -2,6 +2,7 @@
 type: page
 title: "Capstone Brief"
 slug: capstone-brief
+artifact_id: course1-sprints-sprint-5-capstone-brief
 sprint: 5
 week: 10
 module: "Week 10: Capstone"

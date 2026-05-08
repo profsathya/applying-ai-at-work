@@ -2,6 +2,7 @@
 type: page
 title: "Reviewing Drafts Before Canvas"
 slug: codex-builder-tutorial-review-and-push
+artifact_id: course1-sprints-sprint-5-codex-builder-tutorial-review-and-push
 sprint: 5
 week: 10
 module: "Using This Codex Course Builder"

@@ -2,6 +2,7 @@
 type: page
 title: "Sprint 3 Briefing"
 slug: sprint-3-briefing
+artifact_id: course1-sprints-sprint-3-sprint-3-briefing
 sprint: 3
 week: 6
 module: "Sprint 3: AI Fit and Success Criteria"

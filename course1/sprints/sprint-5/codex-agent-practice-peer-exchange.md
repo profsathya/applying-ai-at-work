@@ -2,6 +2,7 @@
 type: discussion
 title: "Codex Agent Practice Peer Exchange"
 slug: codex-agent-practice-peer-exchange
+artifact_id: course1-sprints-sprint-5-codex-agent-practice-peer-exchange
 sprint: 5
 week: 10
 module: "Practice: Using Codex Agents"

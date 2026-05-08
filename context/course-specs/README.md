@@ -33,6 +33,7 @@ context/course-specs/<course>-*.md
 - Course title:
 - Course code:
 - Term or delivery context:
+- Sprint/module count:
 
 ## Course Purpose
 Describe what participants should be able to do by the end of the course.
@@ -41,37 +42,14 @@ Describe what participants should be able to do by the end of the course.
 Name what participants already know, what workplace context they bring, and what constraints matter.
 
 ## Course Arc
-Summarize the sequence from orientation through capstone.
+Summarize the sequence from the first module through the final module.
 
 ## Sprint / Module Map
 
-### Sprint 0: <Orientation Title>
-- Week:
-- Purpose:
-- Required artifacts:
+Repeat this section for the number of sprints/modules the course should contain.
 
-### Sprint 1: <Module Title>
-- Weeks:
-- Purpose:
-- Required artifacts:
-
-### Sprint 2: <Module Title>
-- Weeks:
-- Purpose:
-- Required artifacts:
-
-### Sprint 3: <Module Title>
-- Weeks:
-- Purpose:
-- Required artifacts:
-
-### Sprint 4: <Module Title>
-- Weeks:
-- Purpose:
-- Required artifacts:
-
-### Sprint 5: <Capstone Title>
-- Week:
+### Sprint 0: <Module Title>
+- Week or sequence position:
 - Purpose:
 - Required artifacts:
 
@@ -101,9 +79,9 @@ List anything Codex should ask before writing.
 For quick chat use, this is enough:
 
 ```md
-Build course2 as a six-module course on applying AI to implementation planning.
+Build course2 as a four-module course on applying AI to implementation planning.
 Audience: working professionals with real workplace problems.
-Arc: orientation, problem selection, stakeholder framing, AI-fit analysis, implementation planning, risk review, capstone.
+Arc: orientation, problem selection, stakeholder framing, AI-fit analysis, implementation planning.
 Artifacts per sprint: module header, briefing page, 2-3 assignments, one short quiz when useful, one peer discussion.
 Constraints: no due dates, no file uploads, use real workplace stakeholders, write for professionals, generate Markdown only and stop before Canvas push.
 ```

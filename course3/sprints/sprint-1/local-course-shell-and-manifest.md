@@ -2,6 +2,7 @@
 type: page
 title: "Local Course Shell and Manifest"
 slug: local-course-shell-and-manifest
+artifact_id: course3-sprints-sprint-1-local-course-shell-and-manifest
 sprint: 1
 week: 2
 module: "Module 2: Setup, Configuration, and Safe First Run"

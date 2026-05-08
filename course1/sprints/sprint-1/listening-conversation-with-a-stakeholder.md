@@ -2,6 +2,7 @@
 type: assignment
 title: "Listening Conversation with a Stakeholder"
 slug: listening-conversation-with-a-stakeholder
+artifact_id: course1-sprints-sprint-1-listening-conversation-with-a-stakeholder
 sprint: 1
 week: 3
 module: "Sprint 1: Surfacing the Problem"

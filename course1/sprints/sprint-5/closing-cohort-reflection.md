@@ -2,6 +2,7 @@
 type: discussion
 title: "Closing Cohort Reflection"
 slug: closing-cohort-reflection
+artifact_id: course1-sprints-sprint-5-closing-cohort-reflection
 sprint: 5
 week: 10
 module: "Week 10: Capstone"

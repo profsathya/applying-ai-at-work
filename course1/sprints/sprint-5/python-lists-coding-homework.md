@@ -2,6 +2,7 @@
 type: assignment
 title: Python Lists Coding Homework
 slug: python-lists-coding-homework
+artifact_id: course1-sprints-sprint-5-python-lists-coding-homework
 sprint: 5
 week: 10
 module: Python Lists

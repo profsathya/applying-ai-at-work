@@ -2,6 +2,7 @@
 type: page
 title: "Ingredients and Settings"
 slug: ingredients-and-settings
+artifact_id: course1-sprints-sprint-0-ingredients-and-settings
 sprint: 0
 week: 1
 module: "Week 1: Bread Machine Bread Basics"

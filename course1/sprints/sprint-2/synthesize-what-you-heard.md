@@ -2,6 +2,7 @@
 type: assignment
 title: "Synthesize What You Heard"
 slug: synthesize-what-you-heard
+artifact_id: course1-sprints-sprint-2-synthesize-what-you-heard
 sprint: 2
 week: 5
 module: "Sprint 2: Scope and Stakeholders"

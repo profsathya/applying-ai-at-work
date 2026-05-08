@@ -2,6 +2,7 @@
 type: page
 title: "Draft Artifacts with Codex"
 slug: draft-artifacts-with-codex
+artifact_id: course3-sprints-sprint-2-draft-artifacts-with-codex
 sprint: 2
 week: 3
 module: "Module 3: Building and Publishing Content with Codex and Agents"

@@ -2,6 +2,7 @@
 type: module_header
 title: Python Lists
 slug: python-lists
+artifact_id: course1-sprints-sprint-5-python-lists
 sprint: 5
 week: 10
 module: Python Lists

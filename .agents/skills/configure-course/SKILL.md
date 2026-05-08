@@ -15,6 +15,7 @@ This workflow creates local files only. It must not create a Canvas course shell
 - Canvas course ID for an existing Canvas course
 - Canvas base URL, or clear confirmation that `CANVAS_API_URL` from `.env` should be used
 - Course title
+- Sprint/module count
 
 ## Optional Inputs
 
@@ -29,6 +30,7 @@ This workflow creates local files only. It must not create a Canvas course shell
 - Ask only for missing required inputs.
 - If the Canvas course ID is missing, ask for it.
 - If the Canvas base URL is missing and `.env` is available, use `CANVAS_API_URL`; otherwise ask for the base URL.
+- If sprint/module count is missing, ask for it. Do not assume a default course length.
 - If context is missing, proceed with a placeholder context spec. Do not block.
 - If pasted context is supplied, save it to a temporary file and pass it as `--context-spec-inline-file`.
 - If a context file path is supplied, pass it as `--context-spec-source`.
@@ -45,6 +47,7 @@ This workflow creates local files only. It must not create a Canvas course shell
      --base-url <canvas_base_url> \
      --title "<course title>" \
      --term "<term or cohort>" \
+     --sprint-count <sprint_module_count> \
      --instance-name production
    ```
 
@@ -72,11 +75,11 @@ Draft <course> from context/course-specs/<course>-context.md and stop before Can
 ```
 
 ```text
-Draft <course> sprint 0 from context/module-specs/<course>-sprint-0-<slug>.md and stop before Canvas.
+Draft <course> sprint <n> from context/module-specs/<course>-sprint-<n>-<slug>.md and stop before Canvas.
 ```
 
 ```text
-Push reviewed <course> sprint 0 files to Canvas.
+Push reviewed <course> sprint <n> files to Canvas.
 ```
 
 ## Rules

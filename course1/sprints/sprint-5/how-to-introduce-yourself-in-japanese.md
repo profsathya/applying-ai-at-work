@@ -2,6 +2,7 @@
 type: module_header
 title: How to Introduce Yourself in Japanese
 slug: how-to-introduce-yourself-in-japanese
+artifact_id: course1-sprints-sprint-5-how-to-introduce-yourself-in-japanese
 sprint: 5
 week: 10
 module: How to Introduce Yourself in Japanese

@@ -5,7 +5,7 @@ This repo builds Canvas course materials from Markdown.
 For most users, the workflow is simple:
 
 ```text
-plain-English request -> local Markdown draft -> validation -> human review -> explicit Canvas push
+plain-English request -> local Markdown draft -> validation -> human review -> protected Canvas publish
 ```
 
 Codex is the supported course-building assistant. Users do not need to choose the right internal tool. They describe the work, the target course or sprint, and whether Canvas publishing is allowed. Codex routes the request through the right workflow, writes local Markdown, validates it, and stops before Canvas unless the user clearly approves a push.
@@ -27,7 +27,7 @@ Draft course2 from context/course-specs/course2-ai-implementation.md and stop be
 ```
 
 ```text
-Configure a new course called course3 for Canvas course ID 12345. Create an empty shell and stop before Canvas writes.
+Configure a new four-module course called course3 for Canvas course ID 12345. Create an empty shell and stop before Canvas writes.
 ```
 
 ```text
@@ -76,7 +76,7 @@ Codex infers the workflow from the request:
 | A new local course shell for an existing Canvas course | `course-configurator` with `configure-course` |
 | One sprint or module | `course-drafter` with `build-sprint` |
 | One page, assignment, quiz, discussion, or module header | `add-artifact` |
-| Reviewed Markdown pushed to Canvas | `sync` |
+| Reviewed Markdown published to Canvas | merge to `main` for GitOps publish, or `sync` for approved admin use |
 | Due date changes | `update-dues` |
 | Live Canvas module/item inventory and ledger | `canvas-inspector` with `inspect-canvas` |
 | One live Canvas artifact prepared for local editing by module item ID | `update-artifact` |
@@ -102,14 +102,14 @@ No Canvas changes were made. Review the files, then ask to push if approved.
 For Canvas pushes, Codex should report the Canvas IDs:
 
 ```text
-Pushed 5 files to Canvas.
+Published 5 files to Canvas.
 
 Module ID: 1896
 Page ID: 3352
 Assignment ID: 6721
 Quiz ID: 2914
 Discussion ID: 1391
-Manifest updated.
+canvas-state updated.
 ```
 
 For Canvas inspections, Codex should report the live-course summary and ledger paths:
@@ -157,13 +157,14 @@ python3 canvas_sync/init_course.py \
   --canvas-course-id 12345 \
   --base-url https://example.instructure.com \
   --title "Applying AI at Work, Cohort 3" \
-  --term "Spring 2027"
+  --term "Spring 2027" \
+  --sprint-count 4
 ```
 
 Prompt example:
 
 ```text
-Configure a new course called course3 for Canvas course ID 12345. Create an empty shell and stop before Canvas writes.
+Configure a new four-module course called course3 for Canvas course ID 12345. Create an empty shell and stop before Canvas writes.
 ```
 
 After setup:
@@ -175,7 +176,7 @@ Draft course3 from context/course-specs/course3-context.md and stop before Canva
 Push after review:
 
 ```text
-Push reviewed course3 sprint 0 files to Canvas.
+Push reviewed course3 sprint <n> files to Canvas.
 ```
 
 ## Local Validation
@@ -193,16 +194,32 @@ If your shell `python3` does not have the repo dependencies, activate the virtua
 source .venv/bin/activate
 ```
 
+## GitOps Canvas Publishing
+
+Production publishing is branch based:
+
+```text
+instructor branch -> pull request validation -> merge to main -> protected Publish Canvas workflow -> Canvas API -> canvas-state branch
+```
+
+- Markdown stays on `main` as the desired course content.
+- `artifact_id` in frontmatter is the stable deployment identity. Do not change it after creation.
+- Mutable Canvas IDs, module IDs, page URLs, publish hashes, and Canvas fingerprints live on the protected `canvas-state` branch.
+- `.github/workflows/publish-canvas.yml` serializes Canvas writes and uses the protected `canvas-production` GitHub Environment.
+- Existing state is hydrated with live Canvas fingerprints before changed artifacts publish, so Canvas-side edits block overwrite instead of being silently replaced.
+- `.github/workflows/reconcile-check.yml` checks live Canvas against `main` plus `canvas-state` nightly.
+- Direct local `canvas_sync/push.py` remains available for admin repair or sandbox pilots, but it is not the normal production path.
+
 ## Canvas Safety
 
 Canvas writes are real side effects.
 
 - Draft requests should say `stop before Canvas`.
-- Codex validates before pushing.
-- Codex only pushes after explicit approval.
+- Codex validates before publishing.
+- Production publishes happen after merge through the protected GitHub Actions workflow.
 - `canvas_sync/inspect_canvas.py` is read-only against Canvas and can update local ledgers under `<course>/reports/`.
 - Use `canvas-inspector` before reconcile when you need a current Canvas module/item inventory and manifest alignment check.
-- `canvas_sync/push.py` reads the Canvas course ID from `<course>/manifests/production.json` and owns Canvas IDs and manifest updates.
+- `canvas_sync/push.py` reads the Canvas course ID from `<course>/manifests/production.json` and owns Canvas IDs in either legacy manifests or external `canvas-state`.
 - `canvas_sync/remove.py` requires a dry-run confirmation token before deleting Canvas content and keeps local Markdown files.
 - Do not write Canvas IDs into Markdown frontmatter.
 - Do not commit `.env`.
@@ -220,7 +237,7 @@ cp .env.example .env
 ```
 
 Fill in `.env` with Canvas API credentials.
-Course-specific Canvas IDs live in manifests. Use `canvas_sync/init_course.py` to create a local course manifest for each Canvas course.
+Course-specific Canvas course IDs live in manifests. Mutable deployment IDs live in `canvas-state` for production publishing.
 
 Check the Canvas connection:
 
@@ -244,9 +261,10 @@ Connected to course <id>. Found N modules.
 context/                    Shared design docs and course/module specs
 canvas_sync/                Deterministic Canvas push, pull, and validation scripts
 course*/reports/            Generated Canvas inspection ledgers
-schema/                     JSON schemas for artifacts, manifests, and PRDs
+schema/                     JSON schemas for artifacts, manifests, deployment state, and PRDs
 .agents/skills/             Reusable Codex workflows
 .codex/agents/              Specialized Codex agents
+.github/workflows/          PR validation, protected Canvas publish, drift checks
 README-BUILDER.md           Technical reference for maintainers
 AGENTS.md                   Agent guidance and build learnings
 docs/codex-migration/       Migration history

@@ -93,6 +93,10 @@ def repo_relative(path: Path, repo_root: Path = REPO_ROOT) -> str:
     return path.resolve().relative_to(repo_root.resolve()).as_posix()
 
 
+def artifact_id_from_rel_path(rel_path: str) -> str:
+    return "-".join(Path(rel_path).with_suffix("").parts).replace("_", "-")
+
+
 def load_json(path: Path) -> dict:
     with open(path, encoding="utf-8") as f:
         return json.load(f)
@@ -339,6 +343,7 @@ def build_frontmatter(
     state: dict,
     sprint: int,
     slug: str,
+    artifact_id: str,
     existing_frontmatter: dict | None = None,
 ) -> dict:
     local_type = ARTIFACT_TYPE_BY_CANVAS_ITEM.get(item.get("type"))
@@ -351,6 +356,7 @@ def build_frontmatter(
             "type": local_type,
             "title": title_from_state(state, item),
             "slug": fm.get("slug") or slug,
+            "artifact_id": fm.get("artifact_id") or artifact_id,
             "sprint": fm.get("sprint", sprint),
             "module": item["module_name"],
             "position": int(item.get("position") or 1),
@@ -458,10 +464,12 @@ def add_module_header_if_needed(
 
     module_name = module_item["module_name"]
     path = unique_artifact_path(course_dir, sprint, slugify(module_name), manifest, repo_root)
+    rel_path = repo_relative(path, repo_root)
     fm = {
         "type": "module_header",
         "title": module_name,
         "slug": path.stem,
+        "artifact_id": artifact_id_from_rel_path(rel_path),
         "sprint": sprint,
         "module": module_name,
         "position": int(module_item.get("module_position") or 1),
@@ -469,7 +477,6 @@ def add_module_header_if_needed(
     }
     body = f"# {module_name}\n\nImported from live Canvas for single-artifact editing."
     content_hash = write_artifact(path, fm, body)
-    rel_path = repo_relative(path, repo_root)
     manifest["artifacts"][rel_path] = {
         "canvas_type": "module_header",
         "canvas_id": None,
@@ -548,6 +555,7 @@ def prepare_artifact(
         state=state,
         sprint=int(target_sprint),
         slug=slug,
+        artifact_id=(existing_fm or {}).get("artifact_id") or artifact_id_from_rel_path(rel_path),
         existing_frontmatter=existing_fm,
     )
     body = body_from_state(state)

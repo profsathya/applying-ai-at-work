@@ -2,6 +2,7 @@
 type: assignment
 title: "Integrated Problem Frame"
 slug: integrated-problem-frame
+artifact_id: course1-sprints-sprint-4-integrated-problem-frame
 sprint: 4
 week: 8
 module: "Sprint 4: Validated Framing"

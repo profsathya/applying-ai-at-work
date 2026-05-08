@@ -2,6 +2,7 @@
 type: page
 title: "Sprint 4 Briefing"
 slug: sprint-4-briefing
+artifact_id: course1-sprints-sprint-4-sprint-4-briefing
 sprint: 4
 week: 8
 module: "Sprint 4: Validated Framing"

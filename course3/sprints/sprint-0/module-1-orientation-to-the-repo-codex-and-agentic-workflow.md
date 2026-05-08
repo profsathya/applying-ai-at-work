@@ -2,6 +2,7 @@
 type: module_header
 title: "Module 1: Orientation to the Repo, Codex, and the Agentic Workflow"
 slug: module-1-orientation-to-the-repo-codex-and-agentic-workflow
+artifact_id: course3-sprints-sprint-0-module-1-orientation-to-the-repo-codex-and-agentic-workflow
 sprint: 0
 week: 1
 module: "Module 1: Orientation to the Repo, Codex, and the Agentic Workflow"

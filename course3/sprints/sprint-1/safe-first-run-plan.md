@@ -2,6 +2,7 @@
 type: assignment
 title: "Safe First Run Plan"
 slug: safe-first-run-plan
+artifact_id: course3-sprints-sprint-1-safe-first-run-plan
 sprint: 1
 week: 2
 module: "Module 2: Setup, Configuration, and Safe First Run"

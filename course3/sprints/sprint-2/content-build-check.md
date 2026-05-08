@@ -2,6 +2,7 @@
 type: quiz
 title: "Content Build Check"
 slug: content-build-check
+artifact_id: course3-sprints-sprint-2-content-build-check
 sprint: 2
 week: 3
 module: "Module 3: Building and Publishing Content with Codex and Agents"

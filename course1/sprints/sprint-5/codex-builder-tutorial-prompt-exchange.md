@@ -2,6 +2,7 @@
 type: discussion
 title: "Prompt Exchange: Ask Codex For A Course Or Module Build"
 slug: codex-builder-tutorial-prompt-exchange
+artifact_id: course1-sprints-sprint-5-codex-builder-tutorial-prompt-exchange
 sprint: 5
 week: 10
 module: "Using This Codex Course Builder"

@@ -2,6 +2,7 @@
 type: assignment
 title: "Validation Conversation with a Decision-Maker"
 slug: validation-conversation-with-a-decision-maker
+artifact_id: course1-sprints-sprint-4-validation-conversation-with-a-decision-maker
 sprint: 4
 week: 9
 module: "Sprint 4: Validated Framing"

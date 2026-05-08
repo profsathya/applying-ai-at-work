@@ -2,6 +2,7 @@
 type: module_header
 title: "Module 4: Verification, Maintenance, and Extension"
 slug: module-4-verification-maintenance-and-extension
+artifact_id: course3-sprints-sprint-3-module-4-verification-maintenance-and-extension
 sprint: 3
 week: 4
 module: "Module 4: Verification, Maintenance, and Extension"

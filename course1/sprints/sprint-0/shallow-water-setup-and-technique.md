@@ -2,6 +2,7 @@
 type: page
 title: "Shallow-Water Setup And Technique"
 slug: shallow-water-setup-and-technique
+artifact_id: course1-sprints-sprint-0-shallow-water-setup-and-technique
 sprint: 0
 week: 1
 module: "Underwater Basket Weaving"

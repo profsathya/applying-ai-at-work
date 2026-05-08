@@ -5,7 +5,7 @@ description: Push one or more existing course artifact Markdown files to Canvas 
 
 # Sync Skill
 
-Push specified artifact Markdown files to Canvas using the active production manifest.
+Push specified artifact Markdown files to Canvas using the active production manifest. For production courses, prefer the GitOps path: merge reviewed Markdown to `main` and let the protected `Publish Canvas` workflow update Canvas and the `canvas-state` branch. Use direct local pushes only for admin repair, sandbox pilots, or a human-approved emergency.
 
 ## Workflow
 
@@ -26,12 +26,19 @@ Push specified artifact Markdown files to Canvas using the active production man
    python3 canvas_sync/push.py --file <md_file_path> --manifest <course>/manifests/production.json
    ```
 
-7. Report `action`, `canvas_id`, and `canvas_module_id` from the JSON output.
+   If publishing through a local checkout of the deployment-state branch, pass:
+
+   ```bash
+   --state-dir <path-to-canvas-state-checkout>
+   ```
+
+7. Report `action`, `artifact_id`, `canvas_id`, `canvas_module_id`, and `state_path` from the JSON output.
 
 ## Rules
 
 - Never push a file that fails schema validation.
-- Never edit the manifest directly; `push.py` owns manifest updates.
+- Never edit deployment state directly; `push.py` owns manifest or `canvas-state` updates.
 - Do not run multiple `push.py` processes against the same manifest in parallel.
+- Do not use local direct push as the normal production publishing path.
 - Never retry a failed Canvas API push in the same workflow without human confirmation.
 - Do not run this against a production Canvas course as a test. Use a known sandbox course for pilot validation.

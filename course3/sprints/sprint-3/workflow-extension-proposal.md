@@ -2,6 +2,7 @@
 type: assignment
 title: "Workflow Extension Proposal"
 slug: workflow-extension-proposal
+artifact_id: course3-sprints-sprint-3-workflow-extension-proposal
 sprint: 3
 week: 4
 module: "Module 4: Verification, Maintenance, and Extension"

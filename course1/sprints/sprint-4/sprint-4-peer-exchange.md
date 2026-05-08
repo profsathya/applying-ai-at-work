@@ -2,6 +2,7 @@
 type: discussion
 title: "Sprint 4 Peer Exchange"
 slug: sprint-4-peer-exchange
+artifact_id: course1-sprints-sprint-4-sprint-4-peer-exchange
 sprint: 4
 week: 9
 module: "Sprint 4: Validated Framing"

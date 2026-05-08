@@ -28,7 +28,7 @@ Use it if exactly one match exists. Ask before writing if there is no match, mor
 
 Use `context/course-specs/README.md` as the recommended spec. A full spec may include course goals, audience, module map, artifact list by sprint, required ideas, assessment strategy, constraints, tone, source material, and open questions.
 
-If the user pastes context directly into chat, use it as the course context. Do not require a file path. If the user supplies a file path, read that file first. If the user relies on folder lookup, report which spec file was selected before writing.
+If the user pastes context directly into chat, use it as the course context. Do not require a file path. If the user supplies a file path, read that file first. If the user relies on folder lookup, report which spec file was selected before writing. If the course context does not specify or clearly imply a sprint/module count, ask for the count before writing.
 
 ## Workflow
 
@@ -37,7 +37,7 @@ If the user pastes context directly into chat, use it as the course context. Do 
 3. Read `context/course-specs/README.md`, `context/module-specs/README.md`, `AGENTS.md`, relevant course design docs, shared context docs, schemas, and existing built sprints.
 4. Treat explicit course context instructions as higher priority than inferred sprint patterns, unless they violate repo rules or schema constraints.
 5. Generate or update Markdown files under `<target>/sprints/sprint-<n>/` only.
-6. Stay within sprint numbers `0` through `5` unless the schema is deliberately changed in a separate user-approved task.
+6. Use any non-negative sprint number that matches the human-provided course structure.
 7. Validate every written file:
 
    ```bash
@@ -51,14 +51,14 @@ If the user pastes context directly into chat, use it as the course context. Do 
    ```
 
 9. Show the file list, artifact types, and validation result. Ask the user to review before pushing.
-10. Push only after explicit confirmation, one file at a time, through `canvas_sync/push.py`.
+10. For production, stop after validation and review so merge to `main` can publish through the protected GitHub Actions workflow. Use direct `canvas_sync/push.py` only for an approved admin or sandbox push.
 11. Append a post-build section to `<target>/progress.md` only if Canvas was called.
 
 ## Rules
 
 - Do not require or create a PRD unless the user explicitly asks for one.
 - Do not modify manifests directly.
-- Do not push before human review and confirmation.
+- Do not push before human review and confirmation. Prefer the GitOps publish workflow for production courses.
 - Use Canvas-native Markdown only.
 - Do not write due dates unless explicitly provided.
 - Do not edit files under `context/course-specs/` or `context/module-specs/` unless the user explicitly asks to create or update a spec.

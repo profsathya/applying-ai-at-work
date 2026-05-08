@@ -2,6 +2,7 @@
 type: discussion
 title: Favorite NBA Team Discussion
 slug: favorite-nba-team-discussion
+artifact_id: course1-sprints-sprint-5-favorite-nba-team-discussion
 sprint: 5
 week: 10
 module: How to Play Basketball

@@ -43,6 +43,7 @@ def write_module_header(path: Path) -> None:
 type: module_header
 title: "Test Module"
 slug: test-module
+artifact_id: test-module
 sprint: 0
 module: "Test Module"
 position: 1
@@ -74,13 +75,15 @@ class InitCourseTests(unittest.TestCase):
                     course_code=None,
                     context_spec_source=None,
                     context_spec_inline_file=None,
+                    sprint_count=4,
                     force=False,
                 )
 
             course_dir = repo_root / "course-test-init"
             self.assertTrue((course_dir / "design").is_dir())
-            for sprint in range(0, 6):
+            for sprint in range(0, 4):
                 self.assertTrue((course_dir / "sprints" / f"sprint-{sprint}").is_dir())
+            self.assertFalse((course_dir / "sprints" / "sprint-4").exists())
             self.assertTrue((course_dir / "reports").is_dir())
 
             manifest_path = course_dir / "manifests" / "production.json"
@@ -94,6 +97,10 @@ class InitCourseTests(unittest.TestCase):
 
             context_path = repo_root / "context" / "course-specs" / "course-test-init-context.md"
             self.assertTrue(context_path.exists())
+            context = context_path.read_text(encoding="utf-8")
+            self.assertIn("- Sprint/module count: 4", context)
+            self.assertIn("### Sprint 3:", context)
+            self.assertNotIn("### Sprint 4:", context)
             self.assertEqual(summary["context_spec_path"], "context/course-specs/course-test-init-context.md")
 
     def test_rejects_unsafe_course_keys(self) -> None:
@@ -125,6 +132,7 @@ class InitCourseTests(unittest.TestCase):
                     course_code=None,
                     context_spec_source=None,
                     context_spec_inline_file=None,
+                    sprint_count=1,
                     force=False,
                 )
                 with self.assertRaises(init_course.InitCourseError):
@@ -138,8 +146,13 @@ class InitCourseTests(unittest.TestCase):
                         course_code=None,
                         context_spec_source=None,
                         context_spec_inline_file=None,
+                        sprint_count=1,
                         force=False,
                     )
+
+    def test_rejects_sprint_count_less_than_one(self) -> None:
+        with self.assertRaisesRegex(init_course.InitCourseError, "sprint-count must be at least 1"):
+            init_course.validate_sprint_count(0)
 
 
 class PushCourseRoutingTests(unittest.TestCase):

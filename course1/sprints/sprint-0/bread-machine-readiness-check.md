@@ -2,6 +2,7 @@
 type: quiz
 title: "Bread Machine Readiness Check"
 slug: bread-machine-readiness-check
+artifact_id: course1-sprints-sprint-0-bread-machine-readiness-check
 sprint: 0
 week: 1
 module: "Week 1: Bread Machine Bread Basics"

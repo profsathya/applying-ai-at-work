@@ -2,6 +2,7 @@
 type: page
 title: Python Lists Exercises
 slug: python-lists-exercises
+artifact_id: course1-sprints-sprint-5-python-lists-exercises
 sprint: 5
 week: 10
 module: Python Lists

@@ -2,6 +2,7 @@
 type: discussion
 title: "First Underwater Weave Discussion"
 slug: first-underwater-weave-discussion
+artifact_id: course1-sprints-sprint-0-first-underwater-weave-discussion
 sprint: 0
 week: 1
 module: "Underwater Basket Weaving"

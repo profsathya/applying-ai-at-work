@@ -2,6 +2,7 @@
 type: page
 title: "Extend the Workflow"
 slug: extend-the-workflow
+artifact_id: course3-sprints-sprint-3-extend-the-workflow
 sprint: 3
 week: 4
 module: "Module 4: Verification, Maintenance, and Extension"

@@ -2,6 +2,7 @@
 type: assignment
 title: "Assumption Audit with AI"
 slug: assumption-audit-with-ai
+artifact_id: course1-sprints-sprint-1-assumption-audit-with-ai
 sprint: 1
 week: 3
 module: "Sprint 1: Surfacing the Problem"

@@ -2,6 +2,7 @@
 type: assignment
 title: "Capstone Demonstration"
 slug: capstone-demonstration
+artifact_id: course1-sprints-sprint-5-capstone-demonstration
 sprint: 5
 week: 10
 module: "Week 10: Capstone"

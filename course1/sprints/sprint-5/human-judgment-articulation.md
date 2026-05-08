@@ -2,6 +2,7 @@
 type: assignment
 title: "Human Judgment Articulation"
 slug: human-judgment-articulation
+artifact_id: course1-sprints-sprint-5-human-judgment-articulation
 sprint: 5
 week: 10
 module: "Week 10: Capstone"

@@ -22,6 +22,7 @@ Copy PRD fields exactly where applicable:
 - `type`
 - `title`
 - `slug`
+- `artifact_id`
 - `sprint`
 - `week`
 - `module`
@@ -31,6 +32,8 @@ Copy PRD fields exactly where applicable:
 - `publish`
 - `rubric`
 - `questions`
+
+If the PRD item lacks `artifact_id`, set it to a stable lowercase kebab-case ID derived from the target course, sprint, and slug. Do not change it after the file exists.
 
 Do not include `canvas_id`, `canvas_module_id`, `status`, `last_built_at`, or `error`.
 

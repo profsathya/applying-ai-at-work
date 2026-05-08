@@ -30,8 +30,17 @@ Thumbs.db
 # Local agent memory that should stay local
 .agents/memory-local/
 
+# Local checkout of the protected deployment-state branch
+.canvas-state/
+canvas-state/
+
+# Generated Canvas inspection ledgers
+course*/reports/*.json
+course*/reports/*.md
+
 # Manifests that are marked private (optional per-project)
 # courses/*/manifests/*.local.json
 
 # Runtime locks for manifest writes
 course*/manifests/*.lock
+course*/manifests/*.json.lock

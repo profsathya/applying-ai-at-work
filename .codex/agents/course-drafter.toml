@@ -33,7 +33,7 @@ python3 canvas_sync/schema.py --artifact <file>
 python3 canvas_sync/schema.py --all
 ```
 
-Show the file list, artifact types, and validation result. Stop before Canvas writes unless the user explicitly confirms a push. If pushing is confirmed, push serially through `canvas_sync/push.py` and do not run concurrent pushes against the same manifest.
+Show the file list, artifact types, and validation result. Stop before Canvas writes unless the user explicitly confirms a push. For production, prefer merge to `main` so the protected GitHub Actions workflow publishes through `canvas-state`. Use direct `canvas_sync/push.py` only for approved admin or sandbox pushes, and do not run concurrent pushes against the same manifest.
 
 All artifact bodies must be Canvas-native Markdown, direct, time-respecting, second person, and written for working professionals. Do not use em dashes. Do not use HTML, iframes, scripts, styles, JavaScript URLs, or external CDN references. Do not write due dates unless explicitly provided in full Canvas-compatible timestamp form.
 """

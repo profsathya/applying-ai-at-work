@@ -2,6 +2,7 @@
 type: page
 title: "Use Skills and Agents for Builds"
 slug: use-skills-and-agents-for-builds
+artifact_id: course3-sprints-sprint-2-use-skills-and-agents-for-builds
 sprint: 2
 week: 3
 module: "Module 3: Building and Publishing Content with Codex and Agents"

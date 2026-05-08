@@ -2,6 +2,7 @@
 type: page
 title: Basketball Rules Overview
 slug: basketball-rules-overview
+artifact_id: course1-sprints-sprint-5-basketball-rules-overview
 sprint: 5
 week: 10
 module: How to Play Basketball

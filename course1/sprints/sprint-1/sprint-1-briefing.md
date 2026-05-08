@@ -2,6 +2,7 @@
 type: page
 title: "Sprint 1 Briefing"
 slug: sprint-1-briefing
+artifact_id: course1-sprints-sprint-1-sprint-1-briefing
 sprint: 1
 week: 2
 module: "Sprint 1: Surfacing the Problem"

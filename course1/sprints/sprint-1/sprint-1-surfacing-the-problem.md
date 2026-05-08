@@ -2,6 +2,7 @@
 type: module_header
 title: "Sprint 1: Surfacing the Problem"
 slug: sprint-1-surfacing-the-problem
+artifact_id: course1-sprints-sprint-1-sprint-1-surfacing-the-problem
 sprint: 1
 week: 2
 module: "Sprint 1: Surfacing the Problem"

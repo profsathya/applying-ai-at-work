@@ -2,6 +2,7 @@
 type: page
 title: "Codex Pilot: Capstone Readiness Brief"
 slug: codex-pilot-capstone-readiness-brief
+artifact_id: course1-sprints-sprint-5-codex-pilot-capstone-readiness-brief
 sprint: 5
 week: 10
 module: "Week 10: Capstone"

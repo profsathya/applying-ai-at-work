@@ -2,6 +2,7 @@
 type: assignment
 title: "AI-Fit Analysis"
 slug: ai-fit-analysis
+artifact_id: course1-sprints-sprint-3-ai-fit-analysis
 sprint: 3
 week: 6
 module: "Sprint 3: AI Fit and Success Criteria"

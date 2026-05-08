@@ -2,6 +2,7 @@
 type: assignment
 title: "Scope and Boundaries Draft"
 slug: scope-and-boundaries-draft
+artifact_id: course1-sprints-sprint-2-scope-and-boundaries-draft
 sprint: 2
 week: 4
 module: "Sprint 2: Scope and Stakeholders"

@@ -2,6 +2,7 @@
 type: module_header
 title: "Sprint 2: Scope and Stakeholders"
 slug: sprint-2-scope-and-stakeholders
+artifact_id: course1-sprints-sprint-2-sprint-2-scope-and-stakeholders
 sprint: 2
 week: 4
 module: "Sprint 2: Scope and Stakeholders"

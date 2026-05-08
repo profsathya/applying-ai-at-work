@@ -2,6 +2,7 @@
 type: page
 title: "Secrets and Environment Placeholders"
 slug: secrets-and-environment-placeholders
+artifact_id: course3-sprints-sprint-1-secrets-and-environment-placeholders
 sprint: 1
 week: 2
 module: "Module 2: Setup, Configuration, and Safe First Run"
