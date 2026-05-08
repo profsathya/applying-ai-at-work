@@ -47,6 +47,21 @@ Sprint numbers start at `sprint-0` and extend for however many modules the human
 - Treat Canvas writes as real side effects. For production, prefer merge-to-main publishing through GitHub Actions. For interactive local workflows, validate first and ask for explicit confirmation before running `canvas_sync/push.py` or `canvas_sync/pull.py --apply`.
 - Do not run a sandbox or approval bypass for Canvas-writing workflows until it has been explicitly approved for a sandbox course.
 
+## Subagent Routing
+
+- Before acting on any prompt in this repo, check whether the request clearly matches a repo-local subagent in `.codex/agents/` or workflow skill in `.agents/skills/`.
+- If exactly one subagent or skill is relevant, route through it without requiring the human to name it. If multiple routes match, choose the narrowest safe workflow or ask one concise clarification.
+- Use direct deterministic scripts for validation, inspection, sync, pull, and removal mechanics when the relevant skill or subagent instructs you to do so.
+- Do not invoke a subagent just because one exists. Simple file reads, status checks, explanations, and narrowly scoped repo edits can be handled directly.
+- Canvas writes, `canvas_sync/pull.py --apply`, and destructive Canvas removals still require explicit human confirmation in the current turn, even when routed through a subagent.
+- Current routing defaults:
+  - `course-configurator`: add, initialize, configure, scaffold, or onboard a local course shell for an existing Canvas course.
+  - `course-drafter`: draft a full course, one sprint/module, or standalone module from human context or a context spec.
+  - `sprint-planner`: create or re-plan a PRD and course metadata from design inputs.
+  - `canvas-author`: write exactly one artifact from a PRD-shaped item.
+  - `canvas-inspector`: inspect live Canvas state, inventory modules/items, write a ledger, or evaluate drift before reconcile.
+  - `canvas-remover`: remove manifest-backed Canvas modules or items after inspection, dry run, and matching confirmation token.
+
 ## Fresh Session Reading Order
 
 1. `AGENTS.md`
