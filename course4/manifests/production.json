@@ -1,0 +1,10 @@
+{
+  "instance": {
+    "name": "production",
+    "base_url": "https://cti-courses.instructure.com/",
+    "course_id": 182,
+    "term": ""
+  },
+  "last_sync": null,
+  "artifacts": {}
+}
