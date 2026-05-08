@@ -72,7 +72,22 @@ jobs:
         working-directory: content
         run: python canvas_sync/bootstrap_state.py --all-manifests --state-dir ../canvas-state --skip-existing
 
+      - name: Check Canvas credentials
+        id: canvas_credentials
+        env:
+          CANVAS_API_URL: ${{ secrets.CANVAS_API_URL }}
+          CANVAS_API_TOKEN: ${{ secrets.CANVAS_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -n "${CANVAS_API_URL:-}" ] && [ -n "${CANVAS_API_TOKEN:-}" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Canvas credentials are not configured. State bootstrap will be committed, but Canvas publish is skipped."
+          fi
+
       - name: Hydrate missing Canvas fingerprints
+        if: steps.canvas_credentials.outputs.available == 'true'
         working-directory: content
         env:
           CANVAS_API_URL: ${{ secrets.CANVAS_API_URL }}
@@ -81,6 +96,7 @@ jobs:
 
       - name: Publish changed artifacts
         id: publish
+        if: steps.canvas_credentials.outputs.available == 'true'
         continue-on-error: true
         working-directory: content
         env:
@@ -119,7 +135,7 @@ jobs:
           fi
 
       - name: Fail if publish reported errors
-        if: steps.publish.outcome == 'failure'
+        if: steps.canvas_credentials.outputs.available == 'true' && steps.publish.outcome == 'failure'
         run: |
           echo "Publish step failed. Result:"
           cat publish-result.json 2>/dev/null || true
