@@ -1,7 +1,32 @@
 {
   "artifacts": {
+    "course1-sprints-sprint-0-bread-machine-basics": {
+      "artifact_id": "course1-sprints-sprint-0-bread-machine-basics",
+      "canvas_fingerprint": "dd55b3564453a3ef6d2ca1ab5eff593df10b9ff7263950359a6c54532c3a525c",
+      "canvas_id": 3380,
+      "canvas_module_id": 1907,
+      "canvas_page_url": "bread-machine-basics-2",
+      "canvas_type": "page",
+      "content_hash": "90267b8459c9f33b4a12da0560b748841a19a5a1623b56d38e688e9e3448abec",
+      "last_pushed": "2026-05-08T17:33:52+00:00",
+      "local_path": "course1/sprints/sprint-0/bread-machine-basics.md",
+      "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
+    },
+    "course1-sprints-sprint-0-bread-machine-readiness-check": {
+      "artifact_id": "course1-sprints-sprint-0-bread-machine-readiness-check",
+      "canvas_fingerprint": "269353b5fb663bd251a8b725fa4a13b426ebb74e216da042f57bfd6f1cbfe661",
+      "canvas_id": 2926,
+      "canvas_module_id": 1907,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "9e4b4024a7758bcf50357d92b3744e29d1209aae3bf100c643e6a381421ccd24",
+      "last_pushed": "2026-05-08T17:33:56+00:00",
+      "local_path": "course1/sprints/sprint-0/bread-machine-readiness-check.md",
+      "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
+    },
     "course1-sprints-sprint-0-choose-your-problem": {
       "artifact_id": "course1-sprints-sprint-0-choose-your-problem",
+      "canvas_fingerprint": "87bd752f29cf208443a3c9bbe01488f30137d9b1d73d7028c2475a04c0e34bc4",
       "canvas_id": 6691,
       "canvas_module_id": 1883,
       "canvas_page_url": null,
@@ -12,6 +37,7 @@
     },
     "course1-sprints-sprint-0-cohort-introductions": {
       "artifact_id": "course1-sprints-sprint-0-cohort-introductions",
+      "canvas_fingerprint": "eda5b856b84bb89b5478caab2b9f9b99f8330124c53be903687be088e9efff2b",
       "canvas_id": 1384,
       "canvas_module_id": 1883,
       "canvas_page_url": null,
@@ -20,8 +46,45 @@
       "last_pushed": "2026-04-20T22:06:13+00:00",
       "local_path": "course1/sprints/sprint-0/cohort-introductions.md"
     },
+    "course1-sprints-sprint-0-first-loaf-discussion": {
+      "artifact_id": "course1-sprints-sprint-0-first-loaf-discussion",
+      "canvas_fingerprint": "426a262d43ce980962053dd67e53274360c12108e6571f6210749f7ac44d705f",
+      "canvas_id": 1398,
+      "canvas_module_id": 1907,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "8db4533b37ca5efe949d48ee1d718eeec1e2bbfe10e4ca284a2446357c6cbdf8",
+      "last_pushed": "2026-05-08T17:33:59+00:00",
+      "local_path": "course1/sprints/sprint-0/first-loaf-discussion.md",
+      "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
+    },
+    "course1-sprints-sprint-0-first-underwater-weave-discussion": {
+      "artifact_id": "course1-sprints-sprint-0-first-underwater-weave-discussion",
+      "canvas_fingerprint": "25c8d5989fd2bb739fdaa7793087fe298b3290365ac9ada7342ea664ac95546e",
+      "canvas_id": 1399,
+      "canvas_module_id": 1908,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "945b88c6cc357b4a323ed06092aecc0c9e68ce28cd1727b65ecf9f5522140003",
+      "last_pushed": "2026-05-08T17:34:02+00:00",
+      "local_path": "course1/sprints/sprint-0/first-underwater-weave-discussion.md",
+      "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
+    },
+    "course1-sprints-sprint-0-ingredients-and-settings": {
+      "artifact_id": "course1-sprints-sprint-0-ingredients-and-settings",
+      "canvas_fingerprint": "b5b42f1a2edfc6854ff957b051512d2360467e3d3261ab0f34c70165e176055b",
+      "canvas_id": 3381,
+      "canvas_module_id": 1907,
+      "canvas_page_url": "ingredients-and-settings-2",
+      "canvas_type": "page",
+      "content_hash": "f91a52e2c7c6f8bd4719935cb274d21be07584cc3776ca1e851ded63b9f3a473",
+      "last_pushed": "2026-05-08T17:34:03+00:00",
+      "local_path": "course1/sprints/sprint-0/ingredients-and-settings.md",
+      "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
+    },
     "course1-sprints-sprint-0-initial-stakeholder-map": {
       "artifact_id": "course1-sprints-sprint-0-initial-stakeholder-map",
+      "canvas_fingerprint": "d891f7c43559fa8a7ff28b2d1122eddae33793ca0eb2f78a727bbbf7ecad1b44",
       "canvas_id": 6692,
       "canvas_module_id": 1883,
       "canvas_page_url": null,
@@ -32,6 +95,7 @@
     },
     "course1-sprints-sprint-0-orientation-check": {
       "artifact_id": "course1-sprints-sprint-0-orientation-check",
+      "canvas_fingerprint": "9f5a8c4089167f5bbec925a729d4289fbd86153e45eff1571633a9569e9b5e4d",
       "canvas_id": 2912,
       "canvas_module_id": 1883,
       "canvas_page_url": null,
@@ -39,6 +103,42 @@
       "content_hash": "01d4f9a5f76254dc863c6ecedb69c4999b856c527f0fb5a39927ac1237549485",
       "last_pushed": "2026-04-22T19:40:47+00:00",
       "local_path": "course1/sprints/sprint-0/orientation-check.md"
+    },
+    "course1-sprints-sprint-0-shallow-water-setup-and-technique": {
+      "artifact_id": "course1-sprints-sprint-0-shallow-water-setup-and-technique",
+      "canvas_fingerprint": "f098f60b72255fab51bfaba52b58616e9b2c79a6aaace0523f97ad1ef3a6e5ba",
+      "canvas_id": 3382,
+      "canvas_module_id": 1908,
+      "canvas_page_url": "shallow-water-setup-and-technique-2",
+      "canvas_type": "page",
+      "content_hash": "71d27f8be93f6431b4079fe9868fcc7135b437319a6a2685dee2ea12983f04ad",
+      "last_pushed": "2026-05-08T17:34:05+00:00",
+      "local_path": "course1/sprints/sprint-0/shallow-water-setup-and-technique.md",
+      "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
+    },
+    "course1-sprints-sprint-0-underwater-basket-weaving-basics": {
+      "artifact_id": "course1-sprints-sprint-0-underwater-basket-weaving-basics",
+      "canvas_fingerprint": "172ca2657e6c632fe02e357f5621012ad86f465dde0adf9b56c422d9d4892175",
+      "canvas_id": 3383,
+      "canvas_module_id": 1908,
+      "canvas_page_url": "underwater-basket-weaving-basics-2",
+      "canvas_type": "page",
+      "content_hash": "855641792c9fa7c97f65f36e876ade153566000936cfb122fe667725116137e4",
+      "last_pushed": "2026-05-08T17:34:06+00:00",
+      "local_path": "course1/sprints/sprint-0/underwater-basket-weaving-basics.md",
+      "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
+    },
+    "course1-sprints-sprint-0-underwater-basket-weaving-readiness-check": {
+      "artifact_id": "course1-sprints-sprint-0-underwater-basket-weaving-readiness-check",
+      "canvas_fingerprint": "9decfc9d67345fff55d50eda13bb3b328509f01882e4502236dd8c10d14845f7",
+      "canvas_id": 2927,
+      "canvas_module_id": 1908,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "44e0a23d16bff16dffb582b6e5a31353f6c3bba3576ddf08c460b5de7db14e1b",
+      "last_pushed": "2026-05-08T17:34:10+00:00",
+      "local_path": "course1/sprints/sprint-0/underwater-basket-weaving-readiness-check.md",
+      "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
     },
     "course1-sprints-sprint-0-week-1-orientation": {
       "artifact_id": "course1-sprints-sprint-0-week-1-orientation",
@@ -52,6 +152,7 @@
     },
     "course1-sprints-sprint-0-welcome-and-how-this-course-works": {
       "artifact_id": "course1-sprints-sprint-0-welcome-and-how-this-course-works",
+      "canvas_fingerprint": "2fdb28eb1e77a8b40e3910e54b1f5af8605d48900353e7a1d7dc65ac5903f023",
       "canvas_id": 3341,
       "canvas_module_id": 1883,
       "canvas_page_url": "welcome-and-how-this-course-works",
@@ -62,6 +163,7 @@
     },
     "course1-sprints-sprint-1-assumption-audit-with-ai": {
       "artifact_id": "course1-sprints-sprint-1-assumption-audit-with-ai",
+      "canvas_fingerprint": "cd7b0a1f30fa6d594f80cfaf3489181f5ef54711f55c4de97718839d238aa465",
       "canvas_id": 6694,
       "canvas_module_id": 1884,
       "canvas_page_url": null,
@@ -72,6 +174,7 @@
     },
     "course1-sprints-sprint-1-first-pass-problem-statement": {
       "artifact_id": "course1-sprints-sprint-1-first-pass-problem-statement",
+      "canvas_fingerprint": "1db79fd7036e3faa96280c87b6f1461357aa4102df1e2d16ccf829d837d5cf00",
       "canvas_id": 6693,
       "canvas_module_id": 1884,
       "canvas_page_url": null,
@@ -82,6 +185,7 @@
     },
     "course1-sprints-sprint-1-listening-conversation-with-a-stakeholder": {
       "artifact_id": "course1-sprints-sprint-1-listening-conversation-with-a-stakeholder",
+      "canvas_fingerprint": "c648a0f8024a61e227c9cbac977db1b0c3958d6594c56c6aae1b1c9987c4f7b9",
       "canvas_id": 6695,
       "canvas_module_id": 1884,
       "canvas_page_url": null,
@@ -92,6 +196,7 @@
     },
     "course1-sprints-sprint-1-sprint-1-briefing": {
       "artifact_id": "course1-sprints-sprint-1-sprint-1-briefing",
+      "canvas_fingerprint": "8aeefc17ce8915f6110b9b5ab1482db8a54189e31134d3ff4792d6fc2781e296",
       "canvas_id": 3342,
       "canvas_module_id": 1884,
       "canvas_page_url": "sprint-1-briefing",
@@ -102,6 +207,7 @@
     },
     "course1-sprints-sprint-1-sprint-1-peer-exchange": {
       "artifact_id": "course1-sprints-sprint-1-sprint-1-peer-exchange",
+      "canvas_fingerprint": "2d408be5635736af3c4e6e64ece13103a7fb14f6398424cf7fc576b1158e5c5a",
       "canvas_id": 1385,
       "canvas_module_id": 1884,
       "canvas_page_url": null,
@@ -122,6 +228,7 @@
     },
     "course1-sprints-sprint-2-scope-and-boundaries-draft": {
       "artifact_id": "course1-sprints-sprint-2-scope-and-boundaries-draft",
+      "canvas_fingerprint": "6213d4452f23c9ea00ec3d3a3d8679d7d4e6002b560c8ca95b96c4d8cb13e08f",
       "canvas_id": 6697,
       "canvas_module_id": 1885,
       "canvas_page_url": null,
@@ -132,6 +239,7 @@
     },
     "course1-sprints-sprint-2-second-stakeholder-interview": {
       "artifact_id": "course1-sprints-sprint-2-second-stakeholder-interview",
+      "canvas_fingerprint": "3e07012fe3d5bc78acebed710d255dcd0058d9d28bb4dfabc73c4f1d25c1c285",
       "canvas_id": 6698,
       "canvas_module_id": 1885,
       "canvas_page_url": null,
@@ -142,6 +250,7 @@
     },
     "course1-sprints-sprint-2-sprint-2-briefing": {
       "artifact_id": "course1-sprints-sprint-2-sprint-2-briefing",
+      "canvas_fingerprint": "a0130a3eb4bc6874ddfc62b8eafdb69bdacece1f775aed55d51a6d8e43c01edf",
       "canvas_id": 3343,
       "canvas_module_id": 1885,
       "canvas_page_url": "sprint-2-briefing",
@@ -152,6 +261,7 @@
     },
     "course1-sprints-sprint-2-sprint-2-peer-exchange": {
       "artifact_id": "course1-sprints-sprint-2-sprint-2-peer-exchange",
+      "canvas_fingerprint": "b2bf5492814e0cc2eb8703b48e91c40760853131c62682a8485230aad867931e",
       "canvas_id": 1386,
       "canvas_module_id": 1885,
       "canvas_page_url": null,
@@ -170,8 +280,21 @@
       "last_pushed": "2026-04-20T22:23:41+00:00",
       "local_path": "course1/sprints/sprint-2/sprint-2-scope-and-stakeholders.md"
     },
+    "course1-sprints-sprint-2-synthesize-what-you-heard": {
+      "artifact_id": "course1-sprints-sprint-2-synthesize-what-you-heard",
+      "canvas_fingerprint": "2f32a97dd58e8d5f3b6be6751aa0a443fbda8de8588609c609bb5361f2a66167",
+      "canvas_id": 6750,
+      "canvas_module_id": 1885,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "5ba5ec07d0356575d28f8cefd8ce04eae0f7b9a5c09afac591fd9c07054ba62b",
+      "last_pushed": "2026-05-08T17:34:12+00:00",
+      "local_path": "course1/sprints/sprint-2/synthesize-what-you-heard.md",
+      "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
+    },
     "course1-sprints-sprint-3-human-and-ai-contribution-map": {
       "artifact_id": "course1-sprints-sprint-3-human-and-ai-contribution-map",
+      "canvas_fingerprint": "4eef91a99896d2bc4415cdaac37026361b19c030bc9bb01507ddb2fea36d0db4",
       "canvas_id": 6701,
       "canvas_module_id": 1886,
       "canvas_page_url": null,
@@ -192,6 +315,7 @@
     },
     "course1-sprints-sprint-3-sprint-3-briefing": {
       "artifact_id": "course1-sprints-sprint-3-sprint-3-briefing",
+      "canvas_fingerprint": "472f052c812db7dbfc7e1275cf3c49ed15ca06c6f4ddd6c7ec0e159df696790c",
       "canvas_id": 3344,
       "canvas_module_id": 1886,
       "canvas_page_url": "sprint-3-briefing",
@@ -202,6 +326,7 @@
     },
     "course1-sprints-sprint-3-sprint-3-peer-critique": {
       "artifact_id": "course1-sprints-sprint-3-sprint-3-peer-critique",
+      "canvas_fingerprint": "6793d1adbef59e5c5d1593fc7a0794c23da70e0996d3840b8388b4206c5668a2",
       "canvas_id": 1387,
       "canvas_module_id": 1886,
       "canvas_page_url": null,
@@ -212,6 +337,7 @@
     },
     "course1-sprints-sprint-3-success-criteria-with-a-stakeholder": {
       "artifact_id": "course1-sprints-sprint-3-success-criteria-with-a-stakeholder",
+      "canvas_fingerprint": "c9968c6c6a3ea67ce746b99343dbd59a1c5f98ec6dd305795342437e0a4f3897",
       "canvas_id": 6700,
       "canvas_module_id": 1886,
       "canvas_page_url": null,
@@ -222,6 +348,7 @@
     },
     "course1-sprints-sprint-4-integrated-problem-frame": {
       "artifact_id": "course1-sprints-sprint-4-integrated-problem-frame",
+      "canvas_fingerprint": "58402ac71063ef30d214458280e7b1a825d9f93cc47d50318569e4252ec736ce",
       "canvas_id": 6703,
       "canvas_module_id": 1887,
       "canvas_page_url": null,
@@ -232,6 +359,7 @@
     },
     "course1-sprints-sprint-4-revise-based-on-what-you-learned": {
       "artifact_id": "course1-sprints-sprint-4-revise-based-on-what-you-learned",
+      "canvas_fingerprint": "5bfb2b5a39ebd9231141f6ffffab6f99712b94d767512c5e0defbebacbbbb166",
       "canvas_id": 6705,
       "canvas_module_id": 1887,
       "canvas_page_url": null,
@@ -242,6 +370,7 @@
     },
     "course1-sprints-sprint-4-sprint-4-briefing": {
       "artifact_id": "course1-sprints-sprint-4-sprint-4-briefing",
+      "canvas_fingerprint": "54916e3e66addbe399bd569fe8dc86bd938994bf89228457b517590f1ace61c9",
       "canvas_id": 3345,
       "canvas_module_id": 1887,
       "canvas_page_url": "sprint-4-briefing",
@@ -252,6 +381,7 @@
     },
     "course1-sprints-sprint-4-sprint-4-peer-exchange": {
       "artifact_id": "course1-sprints-sprint-4-sprint-4-peer-exchange",
+      "canvas_fingerprint": "804afcc0a06d9ebd1d3e0917243739dcc5623e4ecacea6d67cd2d97c3d57a3ef",
       "canvas_id": 1388,
       "canvas_module_id": 1887,
       "canvas_page_url": null,
@@ -272,6 +402,7 @@
     },
     "course1-sprints-sprint-4-validation-conversation-with-a-decision-maker": {
       "artifact_id": "course1-sprints-sprint-4-validation-conversation-with-a-decision-maker",
+      "canvas_fingerprint": "664e389ce2a75b133bbe4a45b6ec201f3c25d70a73de261421bf76414bb5b522",
       "canvas_id": 6704,
       "canvas_module_id": 1887,
       "canvas_page_url": null,
@@ -282,6 +413,7 @@
     },
     "course1-sprints-sprint-5-basketball-rules-check": {
       "artifact_id": "course1-sprints-sprint-5-basketball-rules-check",
+      "canvas_fingerprint": "b92080240adac48ae7166166e3d78e64e03edb753bcaefcd456e5003e9df514f",
       "canvas_id": 2924,
       "canvas_module_id": 1905,
       "canvas_page_url": null,
@@ -292,6 +424,7 @@
     },
     "course1-sprints-sprint-5-basketball-rules-check-2": {
       "artifact_id": "course1-sprints-sprint-5-basketball-rules-check-2",
+      "canvas_fingerprint": "094d02ef90f8e3365849820e51dfba4a1356036357eeae72649a3c095930cea8",
       "canvas_id": 2923,
       "canvas_module_id": 1905,
       "canvas_page_url": null,
@@ -302,6 +435,7 @@
     },
     "course1-sprints-sprint-5-basketball-rules-overview": {
       "artifact_id": "course1-sprints-sprint-5-basketball-rules-overview",
+      "canvas_fingerprint": "eaa0c5964c060f501d4667d326a0962cffcfb0ac5692bbd9c8ce0ba0e41a3d89",
       "canvas_id": null,
       "canvas_module_id": 1905,
       "canvas_page_url": "basketball-rules-overview",
@@ -312,6 +446,7 @@
     },
     "course1-sprints-sprint-5-capstone-brief": {
       "artifact_id": "course1-sprints-sprint-5-capstone-brief",
+      "canvas_fingerprint": "77e8131da81948c11a3afdef8c1c1ebe9cb3df2791ea65a2dff1a279b73324fa",
       "canvas_id": 3346,
       "canvas_module_id": 1888,
       "canvas_page_url": "capstone-brief",
@@ -322,6 +457,7 @@
     },
     "course1-sprints-sprint-5-capstone-demonstration": {
       "artifact_id": "course1-sprints-sprint-5-capstone-demonstration",
+      "canvas_fingerprint": "8b368ffe4d9bcb4debe3cb8929bf57e8d57302abab386b21e3d6d87a238f66bd",
       "canvas_id": 6707,
       "canvas_module_id": 1888,
       "canvas_page_url": null,
@@ -332,6 +468,7 @@
     },
     "course1-sprints-sprint-5-closing-cohort-reflection": {
       "artifact_id": "course1-sprints-sprint-5-closing-cohort-reflection",
+      "canvas_fingerprint": "e6ddd5e9cabe54c634a14b6b6e988516bd25131c1453c0c1727dc5ff04a87a36",
       "canvas_id": 1389,
       "canvas_module_id": 1888,
       "canvas_page_url": null,
@@ -342,6 +479,7 @@
     },
     "course1-sprints-sprint-5-codex-agent-practice-briefing": {
       "artifact_id": "course1-sprints-sprint-5-codex-agent-practice-briefing",
+      "canvas_fingerprint": "0ccdcc9e635234184130e1b0849111a892d72ecbc89e9673751e74ff31d0d205",
       "canvas_id": 3352,
       "canvas_module_id": 1896,
       "canvas_page_url": "codex-agent-practice-briefing",
@@ -352,6 +490,7 @@
     },
     "course1-sprints-sprint-5-codex-agent-practice-check": {
       "artifact_id": "course1-sprints-sprint-5-codex-agent-practice-check",
+      "canvas_fingerprint": "319c536e99025c0f864f0ce2e46c2175c3b27ecd5c05616773019d1db5b7fb55",
       "canvas_id": 2914,
       "canvas_module_id": 1896,
       "canvas_page_url": null,
@@ -362,6 +501,7 @@
     },
     "course1-sprints-sprint-5-codex-agent-practice-first-request": {
       "artifact_id": "course1-sprints-sprint-5-codex-agent-practice-first-request",
+      "canvas_fingerprint": "c3be9b249bc25fd4ec16082375f82144589b0af70435a5bbb32d80515224b636",
       "canvas_id": 6721,
       "canvas_module_id": 1896,
       "canvas_page_url": null,
@@ -382,6 +522,7 @@
     },
     "course1-sprints-sprint-5-codex-agent-practice-peer-exchange": {
       "artifact_id": "course1-sprints-sprint-5-codex-agent-practice-peer-exchange",
+      "canvas_fingerprint": "ab9473b29d4639ab663e99633af4a1f1a48402370799681d125791d81143ae39",
       "canvas_id": 1391,
       "canvas_module_id": 1896,
       "canvas_page_url": null,
@@ -392,6 +533,7 @@
     },
     "course1-sprints-sprint-5-codex-builder-tutorial-check": {
       "artifact_id": "course1-sprints-sprint-5-codex-builder-tutorial-check",
+      "canvas_fingerprint": "6d94fa74ef362f3a66a434254d2b05c4b43327111bd82bbf3858d644d6b6b920",
       "canvas_id": 2915,
       "canvas_module_id": 1897,
       "canvas_page_url": null,
@@ -412,6 +554,7 @@
     },
     "course1-sprints-sprint-5-codex-builder-tutorial-prompt-exchange": {
       "artifact_id": "course1-sprints-sprint-5-codex-builder-tutorial-prompt-exchange",
+      "canvas_fingerprint": "15fb3bb57d144b97b932dfe8bad8ff0045ea248ba668abbf3b76d1055d9cc78c",
       "canvas_id": 1392,
       "canvas_module_id": 1897,
       "canvas_page_url": null,
@@ -422,6 +565,7 @@
     },
     "course1-sprints-sprint-5-codex-builder-tutorial-review-and-push": {
       "artifact_id": "course1-sprints-sprint-5-codex-builder-tutorial-review-and-push",
+      "canvas_fingerprint": "532e305130ae1d0b529c5bf7fadcc459c5eddb10efe58c627d90acdac5c22709",
       "canvas_id": 3355,
       "canvas_module_id": 1897,
       "canvas_page_url": "reviewing-drafts-before-canvas",
@@ -432,6 +576,7 @@
     },
     "course1-sprints-sprint-5-codex-builder-tutorial-starting-codex": {
       "artifact_id": "course1-sprints-sprint-5-codex-builder-tutorial-starting-codex",
+      "canvas_fingerprint": "9e0b202908d5c525358f459f80b43537639d80766c35e3bd7f9d01bb591790eb",
       "canvas_id": 3353,
       "canvas_module_id": 1897,
       "canvas_page_url": "starting-codex-from-the-repo",
@@ -442,6 +587,7 @@
     },
     "course1-sprints-sprint-5-codex-builder-tutorial-writing-requests": {
       "artifact_id": "course1-sprints-sprint-5-codex-builder-tutorial-writing-requests",
+      "canvas_fingerprint": "7afb910dde03f604b5bba87f208d25b8716755d21c34115efba8a2a3b77b4966",
       "canvas_id": 3354,
       "canvas_module_id": 1897,
       "canvas_page_url": "writing-a-useful-codex-request",
@@ -452,6 +598,7 @@
     },
     "course1-sprints-sprint-5-codex-pilot-capstone-readiness-brief": {
       "artifact_id": "course1-sprints-sprint-5-codex-pilot-capstone-readiness-brief",
+      "canvas_fingerprint": "6389567249cfecb2701321b52be87d2a5e06f0304604921077fc9b6caf4a8f53",
       "canvas_id": 3351,
       "canvas_module_id": 1888,
       "canvas_page_url": "codex-pilot-capstone-readiness-brief",
@@ -472,6 +619,7 @@
     },
     "course1-sprints-sprint-5-codex-pilot-final-readiness-check": {
       "artifact_id": "course1-sprints-sprint-5-codex-pilot-final-readiness-check",
+      "canvas_fingerprint": "7997556adc5919c1772483df5e713c1c6d471862451e1d7db601a6980a1f4d84",
       "canvas_id": 6720,
       "canvas_module_id": 1888,
       "canvas_page_url": null,
@@ -482,6 +630,7 @@
     },
     "course1-sprints-sprint-5-favorite-nba-team-discussion": {
       "artifact_id": "course1-sprints-sprint-5-favorite-nba-team-discussion",
+      "canvas_fingerprint": "c65c6abd053b2919654b1b526e7bbe6631b98ca10b0382e98ad30b73ef13e69e",
       "canvas_id": 1397,
       "canvas_module_id": 1905,
       "canvas_page_url": null,
@@ -492,6 +641,7 @@
     },
     "course1-sprints-sprint-5-favorite-nba-team-discussion-2": {
       "artifact_id": "course1-sprints-sprint-5-favorite-nba-team-discussion-2",
+      "canvas_fingerprint": "1b786071d67d66f6342d1d57fe89bb202e58c89f53ad99571d869c3411b1c47b",
       "canvas_id": 1396,
       "canvas_module_id": 1905,
       "canvas_page_url": null,
@@ -502,6 +652,7 @@
     },
     "course1-sprints-sprint-5-general-rules-for-basketball": {
       "artifact_id": "course1-sprints-sprint-5-general-rules-for-basketball",
+      "canvas_fingerprint": "08a66d7a1d4d7dc1111af87e9b694bc07a7e53a61f461fceb2a224b6f9b814ca",
       "canvas_id": null,
       "canvas_module_id": 1905,
       "canvas_page_url": "general-rules-for-basketball",
@@ -512,6 +663,7 @@
     },
     "course1-sprints-sprint-5-hiragana-katakana-and-romaji-practice": {
       "artifact_id": "course1-sprints-sprint-5-hiragana-katakana-and-romaji-practice",
+      "canvas_fingerprint": "be7754473a54afe8041b82a17c2a385e4fb3edf167c703c8b0b076c7fb0ce1f2",
       "canvas_id": null,
       "canvas_module_id": 1904,
       "canvas_page_url": "hiragana-katakana-and-romaji-practice",
@@ -542,6 +694,7 @@
     },
     "course1-sprints-sprint-5-human-judgment-articulation": {
       "artifact_id": "course1-sprints-sprint-5-human-judgment-articulation",
+      "canvas_fingerprint": "72eb924314bb1d1e6631005f8af9ac0cb8e2ff32dd604d2d3bf26df242217e4e",
       "canvas_id": 6708,
       "canvas_module_id": 1888,
       "canvas_page_url": null,
@@ -552,6 +705,7 @@
     },
     "course1-sprints-sprint-5-introduce-yourself-in-japanese": {
       "artifact_id": "course1-sprints-sprint-5-introduce-yourself-in-japanese",
+      "canvas_fingerprint": "bd4a6ac0dd8319c158d0a065e20a44d69b6bb0e8ba90e955791319ac0d62e907",
       "canvas_id": 1395,
       "canvas_module_id": 1904,
       "canvas_page_url": null,
@@ -562,6 +716,7 @@
     },
     "course1-sprints-sprint-5-japanese-introduction-basics": {
       "artifact_id": "course1-sprints-sprint-5-japanese-introduction-basics",
+      "canvas_fingerprint": "42f20ad04419bcf5fa7a378b9a1847ae5643d5c3c6659d3b7cd8637847d4c393",
       "canvas_id": null,
       "canvas_module_id": 1904,
       "canvas_page_url": "japanese-introduction-basics",
@@ -572,6 +727,7 @@
     },
     "course1-sprints-sprint-5-japanese-introduction-check": {
       "artifact_id": "course1-sprints-sprint-5-japanese-introduction-check",
+      "canvas_fingerprint": "86504bba991c5b389beface866a87e9fd89c6f7b2e4d106f54d02e74abb8a877",
       "canvas_id": 2922,
       "canvas_module_id": 1904,
       "canvas_page_url": null,
@@ -582,6 +738,7 @@
     },
     "course1-sprints-sprint-5-nba-teams-overview": {
       "artifact_id": "course1-sprints-sprint-5-nba-teams-overview",
+      "canvas_fingerprint": "9fa125b034a6df131a189473412f83d91724d955b4ae464f765e0b6089e33c49",
       "canvas_id": null,
       "canvas_module_id": 1905,
       "canvas_page_url": "nba-teams-overview",
@@ -592,6 +749,7 @@
     },
     "course1-sprints-sprint-5-nba-teams-overview-2": {
       "artifact_id": "course1-sprints-sprint-5-nba-teams-overview-2",
+      "canvas_fingerprint": "5c2778c3adc224c02a6351798c596868e907d2a9d5f2538b35b95f23366b0f59",
       "canvas_id": null,
       "canvas_module_id": 1905,
       "canvas_page_url": "nba-teams-overview-2",
@@ -612,6 +770,7 @@
     },
     "course1-sprints-sprint-5-python-lists-check": {
       "artifact_id": "course1-sprints-sprint-5-python-lists-check",
+      "canvas_fingerprint": "cfb7ed13851f866ab54014b530b42ffa3952af57b7d90990efa9d9be1697e6ea",
       "canvas_id": 2925,
       "canvas_module_id": 1906,
       "canvas_page_url": null,
@@ -622,6 +781,7 @@
     },
     "course1-sprints-sprint-5-python-lists-coding-homework": {
       "artifact_id": "course1-sprints-sprint-5-python-lists-coding-homework",
+      "canvas_fingerprint": "0edaeb3b109ba2a0444a2491838539928cbe804d8484a58422c9d53bd9debd39",
       "canvas_id": 6745,
       "canvas_module_id": 1906,
       "canvas_page_url": null,
@@ -632,6 +792,7 @@
     },
     "course1-sprints-sprint-5-python-lists-exercises": {
       "artifact_id": "course1-sprints-sprint-5-python-lists-exercises",
+      "canvas_fingerprint": "d5635cfca3ecc191896d90c5284bf21ace60d3cdd77bbeb2514c4646f345e26b",
       "canvas_id": null,
       "canvas_module_id": 1906,
       "canvas_page_url": "python-lists-exercises",
@@ -642,6 +803,7 @@
     },
     "course1-sprints-sprint-5-python-lists-explanation": {
       "artifact_id": "course1-sprints-sprint-5-python-lists-explanation",
+      "canvas_fingerprint": "5cbdd2a00a5d62265ea7ce1440aaf46e7b826383766574e28b82afc0334812af",
       "canvas_id": null,
       "canvas_module_id": 1906,
       "canvas_page_url": "python-lists-explanation",
@@ -659,6 +821,66 @@
       "content_hash": "eba0185e846472bb4200017dfb8893073d9343d0360cabfae338a62c3510b519",
       "last_pushed": "2026-04-20T22:55:46+00:00",
       "local_path": "course1/sprints/sprint-5/week-10-capstone.md"
+    },
+    "course1-sprints-sprint-6-espresso-diagnosis-exchange": {
+      "artifact_id": "course1-sprints-sprint-6-espresso-diagnosis-exchange",
+      "canvas_fingerprint": "42d947d61f7e6c70085b02e8633d17b44a5e7d250fdfea25b68db37263dbabe8",
+      "canvas_id": 1400,
+      "canvas_module_id": 1909,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "9573b2be33e02fdd217881c3c082f8dcc9f31e1e3d000163ccbf6eee959d6c74",
+      "last_pushed": "2026-05-08T17:34:15+00:00",
+      "local_path": "course1/sprints/sprint-6/espresso-diagnosis-exchange.md",
+      "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
+    },
+    "course1-sprints-sprint-6-espresso-extraction-check": {
+      "artifact_id": "course1-sprints-sprint-6-espresso-extraction-check",
+      "canvas_fingerprint": "a701009564fb202aeedb2855b94e4267992cd7c42cc9e43db9ad923af09795c3",
+      "canvas_id": 2928,
+      "canvas_module_id": 1909,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "3e8ca3b8193ad0dfafcae71af6762af8a69e9b3d7e25a9790644c4cc23f5aa2b",
+      "last_pushed": "2026-05-08T17:34:18+00:00",
+      "local_path": "course1/sprints/sprint-6/espresso-extraction-check.md",
+      "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
+    },
+    "course1-sprints-sprint-6-espresso-workflow-setup": {
+      "artifact_id": "course1-sprints-sprint-6-espresso-workflow-setup",
+      "canvas_fingerprint": "db76d011dfb212cf8b95e2e54a5acce85619ee9317efccac1f990fe89d278bce",
+      "canvas_id": 3384,
+      "canvas_module_id": 1909,
+      "canvas_page_url": "espresso-workflow-setup",
+      "canvas_type": "page",
+      "content_hash": "1ff9aa01f5b1d03d6a4e9bcaefaa5dc9996ba6fa0335979d3c01fcd829ff9065",
+      "last_pushed": "2026-05-08T17:34:20+00:00",
+      "local_path": "course1/sprints/sprint-6/espresso-workflow-setup.md",
+      "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
+    },
+    "course1-sprints-sprint-6-puck-prep-diagnosis-and-tasting": {
+      "artifact_id": "course1-sprints-sprint-6-puck-prep-diagnosis-and-tasting",
+      "canvas_fingerprint": "d2b9d95068dc0004065ae4b3ef8892eaa5e1e312f7cfc3cf0ae167b078c0d149",
+      "canvas_id": 3385,
+      "canvas_module_id": 1909,
+      "canvas_page_url": "puck-prep-diagnosis-and-tasting",
+      "canvas_type": "page",
+      "content_hash": "7f0f5224a3c3dd8e87a977ab0ed4e468a5ca1707980745e79d66e3804dadcd88",
+      "last_pushed": "2026-05-08T17:34:21+00:00",
+      "local_path": "course1/sprints/sprint-6/puck-prep-diagnosis-and-tasting.md",
+      "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
+    },
+    "course1-sprints-sprint-6-pull-and-document-an-espresso-shot": {
+      "artifact_id": "course1-sprints-sprint-6-pull-and-document-an-espresso-shot",
+      "canvas_fingerprint": "a07f0f0c2701f084f7c93b4c57b1c8d7969a476a1d5214176fed2715853491ce",
+      "canvas_id": 6753,
+      "canvas_module_id": 1909,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "510650f1185e594e0557e1392ac8830be38378782de89fc61d6a7c42894b0b45",
+      "last_pushed": "2026-05-08T17:34:23+00:00",
+      "local_path": "course1/sprints/sprint-6/pull-and-document-an-espresso-shot.md",
+      "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
     }
   },
   "instance": {
@@ -667,5 +889,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-05-07T16:42:23+00:00"
+  "last_sync": "2026-05-08T17:34:23+00:00"
 }

@@ -2,6 +2,7 @@
   "artifacts": {
     "course3-sprints-sprint-0-codex-app-and-ide-workflow": {
       "artifact_id": "course3-sprints-sprint-0-codex-app-and-ide-workflow",
+      "canvas_fingerprint": "2fb014076e361e19510dfcffa09b8ddc68d0aae187a037a3052daa19c76fc7d6",
       "canvas_id": 3361,
       "canvas_module_id": 1900,
       "canvas_page_url": "codex-app-and-ide-workflow",
@@ -12,6 +13,7 @@
     },
     "course3-sprints-sprint-0-course-builder-map": {
       "artifact_id": "course3-sprints-sprint-0-course-builder-map",
+      "canvas_fingerprint": "241f20fbc06077024d1fce0939249086627170f0e1cc9411cbc182415ab79c59",
       "canvas_id": 3360,
       "canvas_module_id": 1900,
       "canvas_page_url": "course-builder-map",
@@ -32,6 +34,7 @@
     },
     "course3-sprints-sprint-0-orientation-workflow-check": {
       "artifact_id": "course3-sprints-sprint-0-orientation-workflow-check",
+      "canvas_fingerprint": "1babbfa63797e1ab2babfdee814dd1db0aa82fa5e511d1e1651293076628983f",
       "canvas_id": 2918,
       "canvas_module_id": 1900,
       "canvas_page_url": null,
@@ -52,6 +55,7 @@
     },
     "course3-sprints-sprint-0-safety-boundaries-and-human-review": {
       "artifact_id": "course3-sprints-sprint-0-safety-boundaries-and-human-review",
+      "canvas_fingerprint": "ee15301ad43e2f1e520fd54718b317de557f63c700e3aa3b615b9885e7ee7c9b",
       "canvas_id": 3362,
       "canvas_module_id": 1900,
       "canvas_page_url": "safety-boundaries-and-human-review",
@@ -62,6 +66,7 @@
     },
     "course3-sprints-sprint-1-local-course-shell-and-manifest": {
       "artifact_id": "course3-sprints-sprint-1-local-course-shell-and-manifest",
+      "canvas_fingerprint": "53619512c1a381cf9a3ba348775f7b2bbf416aad374970aad8234843dddfb401",
       "canvas_id": 3363,
       "canvas_module_id": 1901,
       "canvas_page_url": "local-course-shell-and-manifest",
@@ -82,6 +87,7 @@
     },
     "course3-sprints-sprint-1-safe-first-run-plan": {
       "artifact_id": "course3-sprints-sprint-1-safe-first-run-plan",
+      "canvas_fingerprint": "900f0e30ccb799ad2a18ef1a1e1c566e248e98f15b0e8994ed795cd7010a72a4",
       "canvas_id": 6733,
       "canvas_module_id": 1901,
       "canvas_page_url": null,
@@ -92,6 +98,7 @@
     },
     "course3-sprints-sprint-1-secrets-and-environment-placeholders": {
       "artifact_id": "course3-sprints-sprint-1-secrets-and-environment-placeholders",
+      "canvas_fingerprint": "edb10f923611c1788d25d9732d15f4a5af15c78e7f5ed14164b4bde623ccb4dc",
       "canvas_id": 3364,
       "canvas_module_id": 1901,
       "canvas_page_url": "secrets-and-environment-placeholders",
@@ -102,6 +109,7 @@
     },
     "course3-sprints-sprint-1-setup-and-first-run-check": {
       "artifact_id": "course3-sprints-sprint-1-setup-and-first-run-check",
+      "canvas_fingerprint": "ffeb2a9b9edb7d6f24f07c390c36a7168e8cb1709c8b30becb2a0846323dae08",
       "canvas_id": 2919,
       "canvas_module_id": 1901,
       "canvas_page_url": null,
@@ -112,6 +120,7 @@
     },
     "course3-sprints-sprint-1-technical-appendix-setup-commands": {
       "artifact_id": "course3-sprints-sprint-1-technical-appendix-setup-commands",
+      "canvas_fingerprint": "2403c64e785b5e1cc6dc4ed463235a96614ff7e99811c4c2b49e6214441d63dc",
       "canvas_id": 3365,
       "canvas_module_id": 1901,
       "canvas_page_url": "technical-appendix-setup-commands",
@@ -122,6 +131,7 @@
     },
     "course3-sprints-sprint-2-content-build-check": {
       "artifact_id": "course3-sprints-sprint-2-content-build-check",
+      "canvas_fingerprint": "1cad69af3f525814a954fc346f919006f78432a0333c535d796f07f12b4afebc",
       "canvas_id": 2920,
       "canvas_module_id": 1902,
       "canvas_page_url": null,
@@ -132,6 +142,7 @@
     },
     "course3-sprints-sprint-2-draft-artifacts-with-codex": {
       "artifact_id": "course3-sprints-sprint-2-draft-artifacts-with-codex",
+      "canvas_fingerprint": "eb4a2838babbcbc42ac541b5bfedf8b2a1ed310e74c6dbfdc05cba5390f2a411",
       "canvas_id": 3366,
       "canvas_module_id": 1902,
       "canvas_page_url": "draft-artifacts-with-codex",
@@ -152,6 +163,7 @@
     },
     "course3-sprints-sprint-2-review-and-publish-path": {
       "artifact_id": "course3-sprints-sprint-2-review-and-publish-path",
+      "canvas_fingerprint": "9da7c665e7c9f968f5fb899ccc5e0bc3b29d40978bec2a1b27148786a04ef106",
       "canvas_id": 3368,
       "canvas_module_id": 1902,
       "canvas_page_url": "review-and-publish-path",
@@ -162,6 +174,7 @@
     },
     "course3-sprints-sprint-2-staged-module-build-review": {
       "artifact_id": "course3-sprints-sprint-2-staged-module-build-review",
+      "canvas_fingerprint": "7c5eba74f843a409ff675a7cd6a43d92fa360818db67a4d4d9bc83531c1b1d75",
       "canvas_id": 6735,
       "canvas_module_id": 1902,
       "canvas_page_url": null,
@@ -172,6 +185,7 @@
     },
     "course3-sprints-sprint-2-use-skills-and-agents-for-builds": {
       "artifact_id": "course3-sprints-sprint-2-use-skills-and-agents-for-builds",
+      "canvas_fingerprint": "80903fdbc8020e3843307336a95a110f84cf568381c6ddcd6cd402d1f92a461b",
       "canvas_id": 3367,
       "canvas_module_id": 1902,
       "canvas_page_url": "use-skills-and-agents-for-builds",
@@ -182,6 +196,7 @@
     },
     "course3-sprints-sprint-3-extend-the-workflow": {
       "artifact_id": "course3-sprints-sprint-3-extend-the-workflow",
+      "canvas_fingerprint": "2007272e9b61bf93bb9e472e22abe3595484d06f371be51303d1c36c68e2f649",
       "canvas_id": 3371,
       "canvas_module_id": 1903,
       "canvas_page_url": "extend-the-workflow",
@@ -192,6 +207,7 @@
     },
     "course3-sprints-sprint-3-inspect-before-you-change": {
       "artifact_id": "course3-sprints-sprint-3-inspect-before-you-change",
+      "canvas_fingerprint": "5091d64a68788ac0f82671dbba3b5deef5ecccd6fb43038fac512bcee3c8544c",
       "canvas_id": 3369,
       "canvas_module_id": 1903,
       "canvas_page_url": "inspect-before-you-change",
@@ -212,6 +228,7 @@
     },
     "course3-sprints-sprint-3-reconcile-and-remove-safely": {
       "artifact_id": "course3-sprints-sprint-3-reconcile-and-remove-safely",
+      "canvas_fingerprint": "a348fdd86b97bd65fd095d3284ff8db386f7e2c89b19a3fffc38bbd8524777b0",
       "canvas_id": 3370,
       "canvas_module_id": 1903,
       "canvas_page_url": "reconcile-and-remove-safely",
@@ -222,6 +239,7 @@
     },
     "course3-sprints-sprint-3-verification-maintenance-check": {
       "artifact_id": "course3-sprints-sprint-3-verification-maintenance-check",
+      "canvas_fingerprint": "1865443f30c7c8c8eabea7cfd4b4a8e10575d4e6e79e6f688f2f39e7bf915cf1",
       "canvas_id": 2921,
       "canvas_module_id": 1903,
       "canvas_page_url": null,
@@ -232,6 +250,7 @@
     },
     "course3-sprints-sprint-3-workflow-extension-proposal": {
       "artifact_id": "course3-sprints-sprint-3-workflow-extension-proposal",
+      "canvas_fingerprint": "4dc43e76ee94a3917ce3e44e41d2de3cc6507610fed1bc4cdc596558daa88a86",
       "canvas_id": 6737,
       "canvas_module_id": 1903,
       "canvas_page_url": null,
