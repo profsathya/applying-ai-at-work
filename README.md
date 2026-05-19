@@ -5,17 +5,17 @@ This repo builds Canvas course materials from Markdown.
 For most users, the workflow is simple:
 
 ```text
-plain-English request -> local Markdown draft -> validation -> human review -> protected Canvas publish
+plain-English request -> local Markdown draft -> validation -> human review -> merge to main -> protected Canvas publish
 ```
 
-Codex is the supported course-building assistant. Users do not need to choose the right internal tool. They describe the work, the target course or sprint, and whether Canvas publishing is allowed. Codex routes the request through the right workflow, writes local Markdown, validates it, and stops before Canvas unless the user clearly approves a push.
+Codex is the supported course-building assistant. Users do not need to choose the right internal tool. They describe the work, the target course or sprint, and whether Canvas publishing is allowed. Codex routes the request through the right workflow, writes local Markdown, validates it, and stops before Canvas unless the user clearly approves a push. Production publishes normally happen through the protected GitHub Actions workflow after reviewed Markdown is merged to `main`; direct local pushes are reserved for approved admin repair or sandbox pilots.
 
 ## Start Here
 
-From the repo root:
+From your checkout:
 
 ```bash
-cd applying-ai-at-work
+cd /path/to/applying-ai-at-work
 source .venv/bin/activate
 codex
 ```
@@ -23,11 +23,11 @@ codex
 Then ask for what you want in plain English.
 
 ```text
-Draft course2 from context/course-specs/course2-ai-implementation.md and stop before Canvas.
+Draft course4 from context/course-specs/course4-context.md and stop before Canvas.
 ```
 
 ```text
-Configure a new four-module course called course3 for Canvas course ID 12345. Create an empty shell and stop before Canvas writes.
+Configure a new four-module course called course5 for Canvas course ID 12345. Create an empty shell and stop before Canvas writes.
 ```
 
 ```text
@@ -35,7 +35,7 @@ Draft course3 from context/course-specs/course3-context.md and stop before Canva
 ```
 
 ```text
-Draft course2 sprint 1 from context/module-specs/course2-sprint-1-stakeholder-framing.md and stop before Canvas.
+Draft course4 sprint 3 from pasted module context and stop before Canvas.
 ```
 
 ```text
@@ -43,7 +43,11 @@ Add a page to course1 sprint 0 called "How to ask for help".
 ```
 
 ```text
-Push these reviewed files to Canvas: course2/sprints/sprint-1/example.md
+Publish reviewed Markdown through the protected workflow after this branch is merged to main.
+```
+
+```text
+For an approved sandbox push, sync this reviewed file to Canvas: course4/sprints/sprint-1/testing-and-applied-project.md
 ```
 
 ```text
@@ -76,7 +80,7 @@ Codex infers the workflow from the request:
 | A new local course shell for an existing Canvas course | `course-configurator` with `configure-course` |
 | One sprint or module | `course-drafter` with `build-sprint` |
 | One page, assignment, quiz, discussion, or module header | `add-artifact` |
-| Reviewed Markdown published to Canvas | merge to `main` for GitOps publish, or `sync` for approved admin use |
+| Reviewed Markdown published to Canvas | merge the reviewed branch to `main` for GitOps publish, or `sync` for approved admin or sandbox use |
 | Due date changes | `update-dues` |
 | Live Canvas module/item inventory and ledger | `canvas-inspector` with `inspect-canvas` |
 | One live Canvas artifact prepared for local editing by module item ID | `update-artifact` |
@@ -99,17 +103,16 @@ Validation:
 No Canvas changes were made. Review the files, then ask to push if approved.
 ```
 
-For Canvas pushes, Codex should report the Canvas IDs:
+For protected GitOps publishes, the GitHub Actions run publishes changed artifacts and commits deployment state to the `canvas-state` branch. For approved direct local pushes, Codex should report the fields returned by `canvas_sync/push.py`:
 
 ```text
-Published 5 files to Canvas.
+Synced 1 file to Canvas.
 
-Module ID: 1896
-Page ID: 3352
-Assignment ID: 6721
-Quiz ID: 2914
-Discussion ID: 1391
-canvas-state updated.
+action: updated
+artifact_id: course3-sprints-sprint-0-repo-inspection-practice
+canvas_id: 6731
+canvas_module_id: 1900
+state_path: course3/manifests/production.json
 ```
 
 For Canvas inspections, Codex should report the live-course summary and ledger paths:
@@ -153,10 +156,10 @@ Use this when Canvas already has a course shell and the repo needs a matching lo
 
 ```bash
 python3 canvas_sync/init_course.py \
-  --course course3 \
+  --course course5 \
   --canvas-course-id 12345 \
   --base-url https://example.instructure.com \
-  --title "Applying AI at Work, Cohort 3" \
+  --title "Applying AI at Work, Cohort 5" \
   --term "Spring 2027" \
   --sprint-count 4
 ```
@@ -164,19 +167,19 @@ python3 canvas_sync/init_course.py \
 Prompt example:
 
 ```text
-Configure a new four-module course called course3 for Canvas course ID 12345. Create an empty shell and stop before Canvas writes.
+Configure a new four-module course called course5 for Canvas course ID 12345. Create an empty shell and stop before Canvas writes.
 ```
 
 After setup:
 
 ```text
-Draft course3 from context/course-specs/course3-context.md and stop before Canvas.
+Draft course5 from context/course-specs/course5-context.md and stop before Canvas.
 ```
 
-Push after review:
+Publish after review:
 
 ```text
-Push reviewed course3 sprint <n> files to Canvas.
+Merge reviewed course5 Markdown to main for protected publish, or ask for an approved sandbox sync.
 ```
 
 ## Local Validation
@@ -184,8 +187,9 @@ Push reviewed course3 sprint <n> files to Canvas.
 Run these before a commit or Canvas push:
 
 ```bash
-python3 canvas_sync/schema.py --all
-python3 -m unittest discover
+source .venv/bin/activate
+python canvas_sync/schema.py --all
+python -m unittest discover
 ```
 
 If your shell `python3` does not have the repo dependencies, activate the virtualenv first:
@@ -199,13 +203,14 @@ source .venv/bin/activate
 Production publishing is branch based:
 
 ```text
-instructor branch -> pull request validation -> merge to main -> protected Publish Canvas workflow -> Canvas API -> canvas-state branch
+instructor branch -> local validation and configured checks -> merge to main -> protected Publish Canvas workflow -> Canvas API -> canvas-state branch
 ```
 
 - Markdown stays on `main` as the desired course content.
 - `artifact_id` in frontmatter is the stable deployment identity. Do not change it after creation.
 - Mutable Canvas IDs, module IDs, page URLs, publish hashes, and Canvas fingerprints live on the protected `canvas-state` branch.
-- `.github/workflows/publish-canvas.yml` serializes Canvas writes and uses the protected `canvas-production` GitHub Environment.
+- `.github/workflows/publish-canvas.yml` triggers for `course*/sprints/**`, `course*/manifests/production.json`, `schema/**`, `canvas_sync/**`, and `tests/**`. It serializes Canvas writes and uses the protected `canvas-production` GitHub Environment.
+- `.github/workflows/validate-schemas.yml` runs the schema and unit test checks for its configured path filters. Update those filters when a new course folder should receive PR validation.
 - Existing state is hydrated with live Canvas fingerprints before changed artifacts publish, so Canvas-side edits block overwrite instead of being silently replaced.
 - `.github/workflows/reconcile-check.yml` checks live Canvas against `main` plus `canvas-state` nightly.
 - Direct local `canvas_sync/push.py` remains available for admin repair or sandbox pilots, but it is not the normal production path.
@@ -219,7 +224,7 @@ Canvas writes are real side effects.
 - Production publishes happen after merge through the protected GitHub Actions workflow.
 - `canvas_sync/inspect_canvas.py` is read-only against Canvas and can update local ledgers under `<course>/reports/`.
 - Use `canvas-inspector` before reconcile when you need a current Canvas module/item inventory and manifest alignment check.
-- `canvas_sync/push.py` reads the Canvas course ID from `<course>/manifests/production.json` and owns Canvas IDs in either legacy manifests or external `canvas-state`.
+- `canvas_sync/push.py` reads the Canvas course ID from `<course>/manifests/production.json`. Without `--state-dir`, it updates legacy manifest-backed state; with `--state-dir`, it updates external deployment state such as a local `canvas-state` checkout.
 - `canvas_sync/remove.py` requires a dry-run confirmation token before deleting Canvas content and keeps local Markdown files.
 - Do not write Canvas IDs into Markdown frontmatter.
 - Do not commit `.env`.
