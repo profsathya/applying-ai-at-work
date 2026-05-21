@@ -34,7 +34,7 @@ jobs:
       manifests: ${{ steps.target_manifests.outputs.manifests }}
     steps:
       - name: Check out content branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: content
           fetch-depth: 0
@@ -108,7 +108,7 @@ jobs:
       contents: write
     steps:
       - name: Check out content branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: content
           fetch-depth: 0
