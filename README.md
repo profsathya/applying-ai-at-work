@@ -215,6 +215,17 @@ instructor branch -> local validation and configured checks -> merge to main -> 
 - `.github/workflows/reconcile-check.yml` checks live Canvas against `main` plus `canvas-state` nightly.
 - Direct local `canvas_sync/push.py` remains available for admin repair or sandbox pilots, but it is not the normal production path.
 
+## Small-Team CI/CD Policy
+
+This repo is maintained by a small internal educator team, so the CI/CD standard is intentionally pragmatic:
+
+- No mandatory staging Canvas course is required before production.
+- Every production content change should flow through a branch, review, passing `Validate schemas`, merge to `main`, and the protected `Publish Canvas` workflow.
+- Direct local pushes are limited to approved sandbox tests, admin repair, or emergency recovery.
+- `main` should require pull requests, the `Validate schemas / validate` status check, resolved conversations, and no force pushes.
+- `canvas-state` should allow writes only from GitHub Actions or admins, because it is the mutable deployment state store.
+- Drift detected by the nightly check should be reconciled before further production content edits.
+
 ## Canvas Safety
 
 Canvas writes are real side effects.

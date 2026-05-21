@@ -67,7 +67,7 @@ jobs:
             --all-manifests \
             --state-dir ../canvas-state | tee /tmp/canvas-drift.json
 
-      - name: Create issue on drift
+      - name: Create or update issue on drift
         if: failure() && steps.canvas_credentials.outputs.available == 'true'
         uses: actions/github-script@v7
         with:
@@ -77,10 +77,30 @@ jobs:
             try {
               details = fs.readFileSync('/tmp/canvas-drift.json', 'utf8');
             } catch (error) {}
-            github.rest.issues.create({
+            const title = 'Canvas drift detected';
+            const body = `The nightly Canvas drift check found differences between Canvas, main, and canvas-state.\n\n\`\`\`json\n${details.slice(0, 60000)}\n\`\`\``;
+            const { owner, repo } = context.repo;
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: 'open',
+              labels: 'drift',
+              per_page: 100
+            });
+            const existing = issues.find((issue) => issue.title === title && !issue.pull_request);
+            if (existing) {
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: existing.number,
+                body
+              });
+              return;
+            }
+            await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: 'Canvas drift detected',
-              body: `The nightly Canvas drift check found differences between Canvas, main, and canvas-state.\n\n\`\`\`json\n${details.slice(0, 60000)}\n\`\`\``,
+              title,
+              body,
               labels: ['drift']
             })
