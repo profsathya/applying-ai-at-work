@@ -194,6 +194,13 @@ main checkout + canvas-state checkout -> validate -> bootstrap missing state -> 
 - `canvas_sync/check_drift.py` compares live Canvas with `canvas-state` and local Markdown for nightly drift detection.
 - Direct local `push.py` without `--state-dir` is retained for backwards compatibility and emergency repair.
 
+Recommended repository controls:
+
+- Protect `main`: require a pull request, require the `Validate schemas / validate` check, require conversations to be resolved, and block force pushes.
+- Protect `canvas-state`: restrict direct pushes to GitHub Actions or admins.
+- Keep `canvas-production` as a protected GitHub Environment for Canvas secrets.
+- Do not add a mandatory staging Canvas environment unless course volume or reviewer count grows enough to justify it.
+
 ## Canvas Sync Layer
 
 `canvas_sync/` is hand-authored Python:

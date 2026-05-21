@@ -3,19 +3,22 @@ name: Validate schemas
 on:
   pull_request:
     paths:
-      - 'course1/**'
-      - 'course2/**'
+      - 'course*/**'
+      - '.github/workflows/**'
       - 'schema/**'
       - 'canvas_sync/**'
       - 'tests/**'
   push:
     branches: [main]
     paths:
-      - 'course1/**'
-      - 'course2/**'
+      - 'course*/**'
+      - '.github/workflows/**'
       - 'schema/**'
       - 'canvas_sync/**'
       - 'tests/**'
+
+permissions:
+  contents: read
 
 jobs:
   validate:
@@ -28,6 +31,7 @@ jobs:
         with:
           python-version: '3.11'
           cache: 'pip'
+          cache-dependency-path: canvas_sync/requirements.txt
 
       - name: Install deps
         run: pip install -r canvas_sync/requirements.txt
