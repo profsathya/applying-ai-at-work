@@ -50,7 +50,7 @@ def course_dir_for_manifest(manifest_path: Path) -> Path:
 
 
 def repo_relative(path: Path) -> str:
-    return str(path.resolve().relative_to(REPO_ROOT))
+    return path.resolve().relative_to(REPO_ROOT).as_posix()
 
 
 def artifact_canvas_key(entry: dict) -> tuple[str, Any] | None:

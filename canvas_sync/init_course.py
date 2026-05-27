@@ -88,7 +88,7 @@ def slugify(value: str, fallback: str = "context") -> str:
 
 
 def repo_relative(path: Path) -> str:
-    return str(path.resolve().relative_to(REPO_ROOT.resolve()))
+    return path.resolve().relative_to(REPO_ROOT.resolve()).as_posix()
 
 
 def write_text_file(

@@ -527,6 +527,38 @@
       "canvas_type": "module_header",
       "content_hash": "8f9485de27b18aa71ff7c32039039d1b2a576faa28eb6b4ed07986eb3d31f07c",
       "last_pushed": "2026-04-20T22:55:46+00:00"
+    },
+    "course1/sprints/sprint-7/python-dictionaries-check.md": {
+      "canvas_id": 2974,
+      "canvas_module_id": 1929,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "806564e58a3ef9356f1926d575dbbc2ea69cff0e6006e3f156858d2283698ec4",
+      "last_pushed": "2026-05-27T18:09:10+00:00"
+    },
+    "course1/sprints/sprint-7/python-dictionaries-exercises.md": {
+      "canvas_id": 3436,
+      "canvas_module_id": 1929,
+      "canvas_page_url": "python-dictionaries-exercises",
+      "canvas_type": "page",
+      "content_hash": "7262f36446a747ddb4ef4f0afa2297fa98f4d4408785d47787dce63b0ce9a35b",
+      "last_pushed": "2026-05-27T18:08:50+00:00"
+    },
+    "course1/sprints/sprint-7/python-dictionaries-overview.md": {
+      "canvas_id": 3434,
+      "canvas_module_id": 1929,
+      "canvas_page_url": "python-dictionaries-overview",
+      "canvas_type": "page",
+      "content_hash": "48bd2e0dcd1e6765c6597aa84cefa7a90006f2352000d0f4f5cfae1644367547",
+      "last_pushed": "2026-05-27T18:08:15+00:00"
+    },
+    "course1/sprints/sprint-7/reading-and-updating-python-dictionaries.md": {
+      "canvas_id": 3435,
+      "canvas_module_id": 1929,
+      "canvas_page_url": "reading-and-updating-python-dictionaries",
+      "canvas_type": "page",
+      "content_hash": "71e30ceb1d373abd3f23d236be1a3e32ebcad2ddb18f720deb4582b03358f2b4",
+      "last_pushed": "2026-05-27T18:08:35+00:00"
     }
   },
   "instance": {
@@ -535,5 +567,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-05-07T16:42:23+00:00"
+  "last_sync": "2026-05-27T18:09:10+00:00"
 }

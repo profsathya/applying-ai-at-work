@@ -36,7 +36,7 @@ def discover_artifact_files(manifest_path: Path) -> list[Path]:
 
 
 def repo_relative(path: Path) -> str:
-    return str(path.resolve().relative_to(REPO_ROOT))
+    return path.resolve().relative_to(REPO_ROOT).as_posix()
 
 
 def load_state(manifest_path: Path, state_dir: Path, *, require_state: bool) -> tuple[dict, Path]:

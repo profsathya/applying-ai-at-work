@@ -27,7 +27,7 @@ def bootstrap_manifest(manifest_path: Path, state_dir: Path, *, skip_existing: b
 
     if skip_existing and existed:
         return {
-            "manifest": str(manifest_path.relative_to(REPO_ROOT)),
+            "manifest": manifest_path.relative_to(REPO_ROOT).as_posix(),
             "state": str(state_path),
             "action": "skipped",
         }
@@ -39,7 +39,7 @@ def bootstrap_manifest(manifest_path: Path, state_dir: Path, *, skip_existing: b
         raise ValueError("; ".join(errors))
 
     return {
-        "manifest": str(manifest_path.relative_to(REPO_ROOT)),
+        "manifest": manifest_path.relative_to(REPO_ROOT).as_posix(),
         "state": str(state_path),
         "action": "written" if existed else "created",
         "artifacts": len(state.get("artifacts", {})),

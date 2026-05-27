@@ -28,7 +28,7 @@ def discover_manifests() -> list[Path]:
 
 
 def repo_relative(path: Path) -> str:
-    return str(path.resolve().relative_to(REPO_ROOT))
+    return path.resolve().relative_to(REPO_ROOT).as_posix()
 
 
 def check_manifest(manifest_path: Path, state_dir: Path) -> dict:

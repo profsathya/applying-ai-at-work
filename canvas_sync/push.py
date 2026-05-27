@@ -193,7 +193,7 @@ def push_artifact(md_path: Path, manifest_path: Path, state_dir: Path | None = N
 
     fm, body = parse_frontmatter(md_path)
     html = md_body_to_canvas_html(body)
-    rel_path = str(md_path.relative_to(repo_root))
+    rel_path = md_path.relative_to(repo_root).as_posix()
     artifact_id = fm.get("artifact_id") or derive_artifact_id(rel_path)
 
     store = CanvasStateStore(manifest_path=manifest_path, repo_root=repo_root, state_dir=state_dir)

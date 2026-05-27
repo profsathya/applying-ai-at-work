@@ -10,11 +10,16 @@ from __future__ import annotations
 from contextlib import contextmanager
 from dataclasses import dataclass
 from datetime import datetime, timezone
-import fcntl
 import hashlib
 import json
+import os
 from pathlib import Path
 from typing import Any
+
+if os.name == "nt":
+    import msvcrt
+else:
+    import fcntl
 
 from canvas_sync.canvas_client import CanvasClient, CanvasError
 from canvas_sync.schema import parse_frontmatter
@@ -41,11 +46,18 @@ def file_lock(path: Path):
     lock_path = path.with_suffix(path.suffix + ".lock")
     lock_path.parent.mkdir(parents=True, exist_ok=True)
     with open(lock_path, "w", encoding="utf-8") as lock_file:
-        fcntl.flock(lock_file, fcntl.LOCK_EX)
+        if os.name == "nt":
+            msvcrt.locking(lock_file.fileno(), msvcrt.LK_LOCK, 1)
+        else:
+            fcntl.flock(lock_file, fcntl.LOCK_EX)
         try:
             yield
         finally:
-            fcntl.flock(lock_file, fcntl.LOCK_UN)
+            if os.name == "nt":
+                lock_file.seek(0)
+                msvcrt.locking(lock_file.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                fcntl.flock(lock_file, fcntl.LOCK_UN)
 
 
 def utc_now() -> str:
@@ -87,7 +99,7 @@ def derive_artifact_id(rel_path: str) -> str:
 
 
 def artifact_id_for_file(md_path: Path, repo_root: Path) -> str:
-    rel_path = str(md_path.resolve().relative_to(repo_root))
+    rel_path = md_path.resolve().relative_to(repo_root).as_posix()
     frontmatter, _ = parse_frontmatter(md_path)
     return frontmatter.get("artifact_id") or derive_artifact_id(rel_path)
 
