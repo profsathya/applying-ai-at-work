@@ -894,6 +894,76 @@
       "last_pushed": "2026-05-08T17:34:23+00:00",
       "local_path": "course1/sprints/sprint-6/pull-and-document-an-espresso-shot.md",
       "source_commit": "8c385bb39fa2fdea9b7824632f2958dac45bbebf"
+    },
+    "course1-sprints-sprint-99-python-tuples-check": {
+      "artifact_id": "course1-sprints-sprint-99-python-tuples-check",
+      "canvas_fingerprint": "dd2516e0093698f2fa6ca1eaa1faf2752ffe282d0fa1b506f64f4cfe5371e103",
+      "canvas_id": 2978,
+      "canvas_module_id": 1937,
+      "canvas_page_url": null,
+      "canvas_type": "quiz",
+      "content_hash": "a5efa61260a62f6ded5c3c13352911796a4993d747bfc9e5900f3ed52b2182d7",
+      "hosted_path": "course1/sprint-99/python-tuples-check.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/sprint-99/python-tuples-check.html",
+      "last_pushed": "2026-06-12T19:52:20+00:00",
+      "local_path": "course1/sprints/sprint-99/python-tuples-check.md",
+      "source_commit": "4317e9e3ec570f7fc8a6fec5109f3de7a7d4ebfe"
+    },
+    "course1-sprints-sprint-99-python-tuples-overview": {
+      "artifact_id": "course1-sprints-sprint-99-python-tuples-overview",
+      "canvas_fingerprint": "b298822089d68bac69e923ef723c1422ab4506cd602077a0d92a994daede6c77",
+      "canvas_id": 3445,
+      "canvas_module_id": 1937,
+      "canvas_page_url": "python-tuples-overview-2",
+      "canvas_type": "page",
+      "content_hash": "6d9e84e5f5abf3a9672f8b599e8738617406be5b9183bc8126599103579240fc",
+      "hosted_path": "course1/sprint-99/python-tuples-overview.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/sprint-99/python-tuples-overview.html",
+      "last_pushed": "2026-06-12T19:52:22+00:00",
+      "local_path": "course1/sprints/sprint-99/python-tuples-overview.md",
+      "source_commit": "4317e9e3ec570f7fc8a6fec5109f3de7a7d4ebfe"
+    },
+    "course1-sprints-sprint-99-tuple-indexing-and-unpacking": {
+      "artifact_id": "course1-sprints-sprint-99-tuple-indexing-and-unpacking",
+      "canvas_fingerprint": "be597d835b21a0735cf928b7fa19725c0634d281fbf771a95ea2170f5a16bea9",
+      "canvas_id": 3446,
+      "canvas_module_id": 1937,
+      "canvas_page_url": "tuple-indexing-and-unpacking-2",
+      "canvas_type": "page",
+      "content_hash": "e8945a28e6809bf3bbab893676cb3f23a41a534abbc1f82f12108fd073091bd9",
+      "hosted_path": "course1/sprint-99/tuple-indexing-and-unpacking.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/sprint-99/tuple-indexing-and-unpacking.html",
+      "last_pushed": "2026-06-12T19:52:24+00:00",
+      "local_path": "course1/sprints/sprint-99/tuple-indexing-and-unpacking.md",
+      "source_commit": "4317e9e3ec570f7fc8a6fec5109f3de7a7d4ebfe"
+    },
+    "course1-sprints-sprint-99-tuple-practice-assignment": {
+      "artifact_id": "course1-sprints-sprint-99-tuple-practice-assignment",
+      "canvas_fingerprint": "2c8e228f955b648b920d91e2ef3d0ac88af6c68306a79df8174b3f1338c58b1d",
+      "canvas_id": 6879,
+      "canvas_module_id": 1937,
+      "canvas_page_url": null,
+      "canvas_type": "assignment",
+      "content_hash": "93584e0013f1929232321e7db05f168e644b8c3069f27b2a3e6f079c5f126ee0",
+      "hosted_path": "course1/sprint-99/tuple-practice-assignment.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/sprint-99/tuple-practice-assignment.html",
+      "last_pushed": "2026-06-12T19:52:26+00:00",
+      "local_path": "course1/sprints/sprint-99/tuple-practice-assignment.md",
+      "source_commit": "4317e9e3ec570f7fc8a6fec5109f3de7a7d4ebfe"
+    },
+    "course1-sprints-sprint-99-tuple-use-cases-discussion": {
+      "artifact_id": "course1-sprints-sprint-99-tuple-use-cases-discussion",
+      "canvas_fingerprint": "04b3195b4ca006937ca7f348e6780a082f73c6388d06d4697c86d3f3fecb8e93",
+      "canvas_id": 1418,
+      "canvas_module_id": 1937,
+      "canvas_page_url": null,
+      "canvas_type": "discussion",
+      "content_hash": "43e5d5c77639f4f26821e4711aed288d368660da1b3c4a281d4fb7e0629ebf6e",
+      "hosted_path": "course1/sprint-99/tuple-use-cases-discussion.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/sprint-99/tuple-use-cases-discussion.html",
+      "last_pushed": "2026-06-12T19:52:27+00:00",
+      "local_path": "course1/sprints/sprint-99/tuple-use-cases-discussion.md",
+      "source_commit": "4317e9e3ec570f7fc8a6fec5109f3de7a7d4ebfe"
     }
   },
   "instance": {
@@ -902,5 +972,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-05-08T17:38:47+00:00"
+  "last_sync": "2026-06-12T19:52:27+00:00"
 }
