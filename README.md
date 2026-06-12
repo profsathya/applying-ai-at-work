@@ -85,7 +85,7 @@ Codex infers the workflow from the request:
 | Live Canvas module/item inventory and ledger | `canvas-inspector` with `inspect-canvas` |
 | One live Canvas artifact prepared for local editing by module item ID | `update-artifact` |
 | Canvas edits pulled back into the repo | `reconcile` dry-run first |
-| Manifest-backed Canvas modules/items removed | `canvas-remover` with `remove-canvas` |
+| Canvas modules/items removed or a full course content clear | `canvas-remover` with `remove-canvas` |
 
 The tool names are optional. They are here so maintainers can understand the routing.
 
@@ -149,6 +149,80 @@ Codex can work from either pasted context or a Markdown spec file.
 - Templates and examples live in those folders.
 
 A single course spec can describe a whole course. Codex will generate the local Markdown sprint by sprint, validate the files, and stop before Canvas unless a push is approved.
+
+## AI Activity Quizzes And Discussions
+
+Use AI activity delivery when a quiz or discussion should behave like the interactive Common Curriculum activities from CST courses: participants work in hosted HTML, the activity can call Claude through the Common Curriculum backend, and the Canvas submission is a JSON response file.
+
+Prompt examples:
+
+```text
+Draft course1 sprint 2 with 2 pages, 1 AI activity quiz, and 1 AI activity discussion. Use Common Curriculum hosted AI interactions and JSON submission. Stop before Canvas.
+```
+
+```text
+Add an AI activity discussion to course1 sprint 3 called "Stakeholder Assumption Check". It should ask for an initial answer, use Claude to generate follow-up questions, and require JSON upload to Canvas.
+```
+
+In Markdown frontmatter, keep the source artifact semantic type as `quiz` or `discussion`, then opt into the hosted AI activity path:
+
+```yaml
+---
+type: discussion
+title: "Stakeholder Assumption Check"
+slug: stakeholder-assumption-check
+artifact_id: course1-sprints-sprint-3-stakeholder-assumption-check
+sprint: 3
+module: "Sprint 3: AI Fit And Success Criteria"
+position: 4
+points: 10
+submission_type: file_upload
+delivery_mode: ai_activity
+publish: false
+ai_activity:
+  activity_id: course1-stakeholder-assumption-check
+  title: "Stakeholder Assumption Check"
+  description: "Use AI follow-up questions to sharpen a real stakeholder assumption."
+  questions:
+    - id: q1
+      type: ai-discussion
+      prompt: "Name one assumption you are making about a stakeholder's work, need, or constraint."
+      placeholder: "Be specific enough that someone could test the assumption."
+      minLength: 80
+      numQuestions: 3
+      aiContext: "Push for concrete evidence, testability, and real stakeholder contact."
+---
+```
+
+Important behavior:
+
+- `delivery_mode: ai_activity` is opt-in. Native Canvas quizzes and discussions still publish normally when this field is omitted.
+- AI activity quiz/discussion artifacts publish to Canvas as assignment shells, not native Canvas quizzes or discussion topics.
+- Generated hosted output uses Common Curriculum paths: `deanza/<course>/assignments/<slug>.html`, `deanza/<course>/activities/<slug>.html`, and `activities/deanza/<course>/<slug>.json`.
+- `submission_type: file_upload` is required because participants submit the exported JSON file to Canvas.
+- Do not include native Canvas `questions` on AI activity artifacts. Put interactive prompts under `ai_activity.questions`.
+- Existing native Canvas quiz/discussion items are not converted in place. Remove the old manifest-backed Canvas item through the dry-run `remove-canvas` flow first, then republish the AI activity assignment shell.
+
+## Hosted Content Workflow
+
+Markdown remains the source of truth, even when Canvas shows an iframe. Do not edit the generated Common Curriculum HTML or JSON by hand.
+
+When a hosted module or artifact changes:
+
+1. Edit or generate Markdown under `<course>/sprints/sprint-<n>/`.
+2. Validate locally with `python canvas_sync/schema.py --all`.
+3. Publish through one of these paths:
+   - Production: merge reviewed Markdown to `main`; the protected `Publish Canvas` workflow renders Common Curriculum output, commits it to the Common Curriculum repo, updates Canvas, and writes `canvas-state`.
+   - Approved local sandbox or admin push: run `canvas_sync/push.py` with `--hosted-output-dir ../common-curriculum` so hosted files are rendered before Canvas points at them.
+
+Example local hosted push:
+
+```bash
+python canvas_sync/push.py \
+  --file course1/sprints/sprint-2/example-ai-activity.md \
+  --manifest course1/manifests/production.json \
+  --hosted-output-dir ../common-curriculum
+```
 
 ## Configure A New Local Course
 
@@ -236,6 +310,7 @@ Canvas writes are real side effects.
 - `canvas_sync/inspect_canvas.py` is read-only against Canvas and can update local ledgers under `<course>/reports/`.
 - Use `canvas-inspector` before reconcile when you need a current Canvas module/item inventory and manifest alignment check.
 - `canvas_sync/push.py` reads the Canvas course ID from `<course>/manifests/production.json`. Without `--state-dir`, it updates legacy manifest-backed state; with `--state-dir`, it updates external deployment state such as a local `canvas-state` checkout.
+- For hosted HTML or AI activity publishes outside CI, pass `--hosted-output-dir ../common-curriculum` so the Common Curriculum checkout receives the rendered HTML and activity JSON before Canvas points to it.
 - `canvas_sync/remove.py` requires a dry-run confirmation token before deleting Canvas content and keeps local Markdown files.
 - Do not write Canvas IDs into Markdown frontmatter.
 - Do not commit `.env`.

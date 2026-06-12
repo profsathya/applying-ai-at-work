@@ -24,6 +24,7 @@ from canvas_sync.state import course_dir_for_manifest, derive_artifact_id, load_
 
 DEFAULT_BASE_URL = "https://profsathya.github.io/Common-Curriculum/deanza"
 DEFAULT_PATH_PREFIX = "deanza"
+DEFAULT_AI_ENDPOINT = "https://ai-assisted-pedagogy.netlify.app/.netlify/functions/ai-proxy"
 CTI_LOGO_URL = (
     "https://computingtalentinitiative.org/wp-content/uploads/2026/06/"
     "New._CTI_Logo_RGB-1.png"
@@ -79,6 +80,32 @@ def iframe_shell(hosted_url: str, title: str, *, height: int = 900) -> str:
     )
 
 
+def is_ai_activity_delivery(frontmatter: dict) -> bool:
+    return frontmatter.get("delivery_mode", "canvas_native") == "ai_activity"
+
+
+def _artifact_subdir(artifact_type: str) -> str:
+    if artifact_type == "assignment":
+        return "assignments"
+    return "activities"
+
+
+def _artifact_course_relative_path(frontmatter: dict) -> str:
+    if is_ai_activity_delivery(frontmatter):
+        return f"assignments/{frontmatter['slug']}.html"
+    subdir = _artifact_subdir(frontmatter["type"])
+    return f"{subdir}/{frontmatter['slug']}.html"
+
+
+def _ai_activity_shell_course_relative_path(frontmatter: dict) -> str:
+    return f"activities/{frontmatter['slug']}.html"
+
+
+def _ai_activity_config_site_path(course_key: str, frontmatter: dict, manifest: dict) -> Path:
+    config = hosted_config_from_manifest(manifest)
+    return Path("activities") / config.path_prefix / course_key / f"{frontmatter['slug']}.json"
+
+
 def artifact_hosted_info(
     md_path: Path,
     manifest_path: Path,
@@ -89,9 +116,7 @@ def artifact_hosted_info(
     config = hosted_config_from_manifest(manifest_data)
     fm = frontmatter or parse_frontmatter(md_path)[0]
     course_key = course_dir_for_manifest(manifest_path).name
-    sprint = int(fm["sprint"])
-    slug = fm["slug"]
-    hosted_path = f"{course_key}/sprint-{sprint}/{slug}.html"
+    hosted_path = f"{course_key}/{_artifact_course_relative_path(fm)}"
     quoted_path = "/".join(quote(part) for part in hosted_path.split("/"))
     return {
         "enabled": config.enabled,
@@ -178,7 +203,7 @@ def _canvas_item_url(manifest: dict, frontmatter: dict, entry: dict) -> str | No
     course_id = instance.get("course_id")
     if not base_url or not course_id:
         return None
-    artifact_type = frontmatter["type"]
+    artifact_type = entry.get("canvas_type") or frontmatter["type"]
     canvas_id = entry.get("canvas_id")
     if artifact_type == "page" and entry.get("canvas_page_url"):
         page_url = quote(str(entry["canvas_page_url"]), safe="")
@@ -196,6 +221,22 @@ def _canvas_item_url(manifest: dict, frontmatter: dict, entry: dict) -> str | No
 
 def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
     artifact_type = frontmatter["type"]
+    if is_ai_activity_delivery(frontmatter):
+        guidance = (
+            "Complete the interactive activity, copy or download the JSON response file, "
+            "and upload it to the Canvas assignment."
+        )
+        link = ""
+        if canvas_url:
+            escaped = html_lib.escape(canvas_url, quote=True)
+            link = f'\n      <p><a href="{escaped}" target="_blank" rel="noopener">Open the Canvas assignment</a></p>'
+        return (
+            '<div class="submit">\n'
+            "      <h2>Submit to Canvas</h2>\n"
+            f"      <p>{html_lib.escape(guidance)}</p>"
+            f"{link}\n"
+            "    </div>"
+        )
     guidance = {
         "assignment": "Use the Canvas assignment to submit your work.",
         "discussion": "Use the Canvas discussion to post your response and reply to peers.",
@@ -233,9 +274,7 @@ def render_artifact_document(
     goal = html_lib.escape(_learning_goal(frontmatter))
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {})
     submit_guidance = _submit_guidance(frontmatter, canvas_url)
-    back_href = "index.html?context=web"
-    if "/" in str(hosted_info["hosted_path"]):
-        back_href = "../index.html?context=web"
+    back_href = f"../sprint-{sprint}.html?context=web"
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -379,6 +418,276 @@ def render_artifact_document(
 """
 
 
+def _plain_description_from_body(body: str) -> str:
+    for paragraph in re.split(r"\n\s*\n", body):
+        paragraph = paragraph.strip()
+        if not paragraph or paragraph.startswith("#"):
+            continue
+        cleaned = re.sub(r"[#*_`>]+", "", paragraph)
+        cleaned = re.sub(r"\s+", " ", cleaned).strip()
+        if cleaned:
+            return cleaned[:320]
+    return ""
+
+
+def _ai_activity_settings(frontmatter: dict, manifest: dict) -> dict:
+    activity = frontmatter.get("ai_activity") or {}
+    settings = dict(activity.get("settings") or {})
+    manifest_activity = manifest.get("ai_activity") or {}
+    endpoint = (
+        activity.get("ai_endpoint")
+        or settings.get("aiEndpoint")
+        or manifest_activity.get("default_ai_endpoint")
+        or DEFAULT_AI_ENDPOINT
+    )
+    settings["aiEndpoint"] = endpoint
+    settings.setdefault("exportMode", "json")
+    settings.setdefault("maxRetries", 3)
+    settings.setdefault("showHintsAfterAttempt", 2)
+    return settings
+
+
+def _ai_activity_config(frontmatter: dict, body: str, manifest: dict, course_key: str) -> dict:
+    activity = frontmatter.get("ai_activity") or {}
+    config: dict = {
+        "activityId": activity["activity_id"],
+        "version": str(activity.get("version") or "1.0"),
+        "course": activity.get("course") or course_key,
+        "title": activity.get("title") or frontmatter["title"],
+        "description": activity.get("description") or _plain_description_from_body(body),
+        "settings": _ai_activity_settings(frontmatter, manifest),
+        "questions": activity.get("questions") or [],
+    }
+    version_notes = activity.get("version_notes") or activity.get("versionNotes")
+    if version_notes:
+        config["versionNotes"] = version_notes
+    if activity.get("roster"):
+        config["roster"] = activity["roster"]
+    return config
+
+
+def _ai_activity_course_theme(frontmatter: dict, manifest: dict) -> str:
+    activity = frontmatter.get("ai_activity") or {}
+    manifest_activity = manifest.get("ai_activity") or {}
+    return activity.get("course_theme") or manifest_activity.get("course_theme") or "cst349"
+
+
+def _render_ai_activity_wrapper_document(
+    frontmatter: dict,
+    body: str,
+    manifest: dict,
+    hosted_info: dict,
+    state_entry: dict | None = None,
+) -> str:
+    rendered = _strip_leading_h1(markdown_body_to_html(body))
+    sections = _wrap_sections(rendered)
+    title = html_lib.escape(frontmatter["title"])
+    module = html_lib.escape(frontmatter["module"])
+    course_key = html_lib.escape(str(hosted_info["hosted_path"]).split("/", 1)[0])
+    artifact_type = html_lib.escape(_type_label(frontmatter["type"]))
+    sprint = int(frontmatter["sprint"])
+    points = frontmatter.get("points")
+    canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {})
+    canvas_link = ""
+    if canvas_url:
+        canvas_link = (
+            f'<a class="secondary" href="{html_lib.escape(canvas_url, quote=True)}" '
+            'target="_blank" rel="noopener">Submit on Canvas</a>'
+        )
+    activity_href = f"../activities/{html_lib.escape(frontmatter['slug'], quote=True)}.html?context=web"
+    back_href = f"../sprint-{sprint}.html?context=web"
+    points_text = "Ungraded" if points is None else f"{points:g} points"
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title} | {module}</title>
+  <style>
+    * {{ box-sizing: border-box; }}
+    body {{
+      margin: 0;
+      padding: 20px 16px;
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      color: #111827;
+      background: #f8fafc;
+    }}
+    .activity {{ max-width: 760px; margin: 0 auto; }}
+    .meta {{
+      font-size: 12px;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 0 0 6px;
+    }}
+    h1 {{ font-size: 24px; line-height: 1.25; margin: 0 0 18px; }}
+    section, .launch, .submit {{
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin: 0 0 16px;
+    }}
+    section h2, .launch h2, .submit h2 {{ margin: 0 0 10px; font-size: 17px; }}
+    .launch {{
+      border-left: 4px solid #4f46e5;
+      background: #eef2ff;
+    }}
+    .submit {{
+      border-left: 4px solid #059669;
+      background: #ecfdf5;
+    }}
+    .actions {{ display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }}
+    a.button, a.secondary {{
+      display: inline-block;
+      padding: 11px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+    }}
+    a.button {{ color: #fff; background: #4f46e5; }}
+    a.secondary {{ color: #065f46; background: #d1fae5; }}
+    a {{ color: #4f46e5; word-break: break-word; }}
+    .back-link {{
+      display: none;
+      font-size: 13px;
+      margin: 0 0 12px;
+    }}
+    .ctx-web .back-link {{ display: inline-block; }}
+  </style>
+  <script>
+    (function() {{
+      var ctx = new URLSearchParams(location.search).get('context')
+        || (window.self !== window.top ? 'canvas' : 'web');
+      if (ctx !== 'canvas') {{
+        document.documentElement.classList.add('ctx-web');
+      }}
+    }})();
+  </script>
+</head>
+<body>
+  <div class="activity">
+    <a class="back-link" href="{back_href}">&larr; Back to Module</a>
+    <p class="meta">{course_key} &middot; Sprint {sprint} &middot; {module} &middot; {artifact_type} &middot; {html_lib.escape(points_text)}</p>
+    <h1>{title}</h1>
+
+    {sections}
+
+    <div class="launch">
+      <h2>Start the AI activity</h2>
+      <p>Complete the interactive activity in one sitting on the same device. Your responses are saved in this browser while you work.</p>
+      <div class="actions">
+        <a class="button" href="{activity_href}">Open activity &rarr;</a>
+      </div>
+    </div>
+
+    <div class="submit">
+      <h2>Submit to Canvas</h2>
+      <p>When you finish, copy or download the JSON response file from the activity and upload it to the Canvas assignment.</p>
+      <div class="actions">{canvas_link}</div>
+    </div>
+  </div>
+</body>
+</html>
+"""
+
+
+def _render_ai_activity_shell_document(
+    frontmatter: dict,
+    manifest: dict,
+    course_key: str,
+    state_entry: dict | None = None,
+) -> str:
+    title = html_lib.escape(frontmatter["title"])
+    config = hosted_config_from_manifest(manifest)
+    config_url = f"../../../activities/{config.path_prefix}/{course_key}/{frontmatter['slug']}.json"
+    canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {}) or ""
+    course_theme = _ai_activity_course_theme(frontmatter, manifest)
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <link rel="stylesheet" href="../../../css/activity-styles.css">
+  <style>
+    body {{
+      margin: 0;
+      background: #f8fafc;
+      min-height: 100vh;
+    }}
+  </style>
+</head>
+<body>
+  <div id="activity-container"></div>
+
+  <script src="../../../js/activity-components.js"></script>
+  <script src="../../../js/activity-engine.js"></script>
+  <script>
+    ActivityEngine.init({{
+      containerId: 'activity-container',
+      configUrl: {json.dumps(config_url)},
+      courseTheme: {json.dumps(course_theme)},
+      canvasUrl: {json.dumps(canvas_url)}
+    }});
+  </script>
+</body>
+</html>
+"""
+
+
+def _render_ai_activity_artifact(
+    md_path: Path,
+    manifest_path: Path,
+    output_dir: Path,
+    *,
+    manifest: dict,
+    state: dict | None,
+) -> dict:
+    fm, body = parse_frontmatter(md_path)
+    course_key = course_dir_for_manifest(manifest_path).name
+    hosted_info = artifact_hosted_info(md_path, manifest_path, manifest, fm)
+    state_entry = _state_entry_for_artifact(md_path, manifest_path, fm, state or manifest)
+    wrapper = _render_ai_activity_wrapper_document(fm, body, manifest, hosted_info, state_entry)
+    shell = _render_ai_activity_shell_document(fm, manifest, course_key, state_entry)
+    activity_config = _ai_activity_config(fm, body, manifest, course_key)
+
+    wrapper_path = hosted_output_path(output_dir, manifest, hosted_info["hosted_path"])
+    shell_hosted_path = f"{course_key}/{_ai_activity_shell_course_relative_path(fm)}"
+    shell_path = hosted_output_path(output_dir, manifest, shell_hosted_path)
+    config_site_path = _ai_activity_config_site_path(course_key, fm, manifest)
+    config_path = output_dir / config_site_path
+
+    wrapper_changed, wrapper_hash = _write_if_changed(wrapper_path, wrapper)
+    shell_changed, shell_hash = _write_if_changed(shell_path, shell)
+    config_changed, config_hash = _write_if_changed(
+        config_path,
+        json.dumps(activity_config, indent=2, sort_keys=False) + "\n",
+    )
+    hosted_hash = hashlib.sha256(
+        f"{wrapper_hash}:{shell_hash}:{config_hash}".encode("utf-8")
+    ).hexdigest()
+
+    return {
+        "file": str(md_path),
+        "hosted_path": hosted_info["hosted_path"],
+        "hosted_url": hosted_info["hosted_url"],
+        "output_path": str(wrapper_path),
+        "activity_hosted_path": shell_hosted_path,
+        "activity_output_path": str(shell_path),
+        "config_path": str(config_site_path),
+        "config_output_path": str(config_path),
+        "hosted_hash": hosted_hash,
+        "changed": wrapper_changed or shell_changed or config_changed,
+        "outputs": [
+            {"path": str(wrapper_path), "hash": wrapper_hash, "changed": wrapper_changed},
+            {"path": str(shell_path), "hash": shell_hash, "changed": shell_changed},
+            {"path": str(config_path), "hash": config_hash, "changed": config_changed},
+        ],
+    }
+
+
 def _write_if_changed(path: Path, text: str) -> tuple[bool, str]:
     payload = text.encode("utf-8")
     digest = hashlib.sha256(payload).hexdigest()
@@ -404,6 +713,14 @@ def render_hosted_artifact(
     fm, body = parse_frontmatter(md_path)
     if fm["type"] == "module_header":
         raise ValueError(f"Module headers do not render as hosted HTML: {md_path}")
+    if is_ai_activity_delivery(fm):
+        return _render_ai_activity_artifact(
+            md_path,
+            manifest_path,
+            output_dir,
+            manifest=manifest_data,
+            state=state,
+        )
     hosted_info = artifact_hosted_info(md_path, manifest_path, manifest_data, fm)
     state_entry = _state_entry_for_artifact(md_path, manifest_path, fm, state or manifest_data)
     document = render_artifact_document(fm, body, manifest_data, hosted_info, state_entry)
@@ -540,7 +857,7 @@ def _render_sprint_index(
 ) -> dict:
     links = []
     for _path, fm in items:
-        href = f"{fm['slug']}.html?context=web"
+        href = f"{_artifact_course_relative_path(fm)}?context=web"
         label = html_lib.escape(f"{fm['title']} ({_type_label(fm['type'])})")
         links.append(f'<li><a href="{href}" data-keep-context>{label}</a></li>')
     sections = "<section>\n<h2>Module activities</h2>\n<ul>\n" + "\n".join(links) + "\n</ul>\n</section>"
@@ -548,9 +865,9 @@ def _render_sprint_index(
         f"Sprint {sprint}",
         f"{course_key} · Sprint {sprint}",
         sections,
-        back_href="../index.html?context=web",
+        back_href="home.html?context=web",
     )
-    path = output_dir / hosted_config_from_manifest(manifest).path_prefix / course_key / f"sprint-{sprint}" / "index.html"
+    path = output_dir / hosted_config_from_manifest(manifest).path_prefix / course_key / f"sprint-{sprint}.html"
     changed, digest = _write_if_changed(path, document)
     return {"path": str(path), "changed": changed, "hash": digest}
 
@@ -564,7 +881,7 @@ def _render_course_index(
     sections = []
     for sprint in sorted(items_by_sprint):
         module = html_lib.escape(items_by_sprint[sprint][0][1].get("module", f"Sprint {sprint}"))
-        href = f"sprint-{sprint}/index.html?context=web"
+        href = f"sprint-{sprint}.html?context=web"
         sections.append(
             "<section>\n"
             f"<h2>{module}</h2>\n"
@@ -576,9 +893,17 @@ def _render_course_index(
         f"{course_key} · Hosted HTML",
         "\n".join(sections),
     )
-    path = output_dir / hosted_config_from_manifest(manifest).path_prefix / course_key / "index.html"
-    changed, digest = _write_if_changed(path, document)
-    return {"path": str(path), "changed": changed, "hash": digest}
+    course_dir = output_dir / hosted_config_from_manifest(manifest).path_prefix / course_key
+    index_changed, index_digest = _write_if_changed(course_dir / "index.html", document)
+    home_changed, home_digest = _write_if_changed(course_dir / "home.html", document)
+    return {
+        "path": str(course_dir / "index.html"),
+        "changed": index_changed or home_changed,
+        "hash": index_digest,
+        "aliases": [
+            {"path": str(course_dir / "home.html"), "changed": home_changed, "hash": home_digest}
+        ],
+    }
 
 
 def render_hosted_files(

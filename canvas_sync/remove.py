@@ -4,6 +4,7 @@ Remove manifest-backed Canvas modules or artifacts after an explicit dry run.
 Usage:
   python canvas_sync/remove.py --manifest <path> --target module_id:123 --dry-run
   python canvas_sync/remove.py --manifest <path> --target module_id:123 --apply --confirm-token <token>
+  python canvas_sync/remove.py --manifest <path> --course-clear --dry-run
 
 Targets:
   module_id:<canvas_module_id>
@@ -38,6 +39,9 @@ CANVAS_ITEM_TYPE_BY_ARTIFACT = {
     "page": "Page",
     "discussion": "Discussion",
     "quiz": "Quiz",
+}
+CANVAS_ARTIFACT_BY_ITEM_TYPE = {
+    value: key for key, value in CANVAS_ITEM_TYPE_BY_ARTIFACT.items()
 }
 
 
@@ -374,6 +378,30 @@ def content_operation(rel_path: str, entry: dict) -> dict:
     return op
 
 
+def content_operation_for_live_item(item: dict) -> dict | None:
+    atype = CANVAS_ARTIFACT_BY_ITEM_TYPE.get(item.get("type"))
+    if not atype:
+        return None
+
+    op = {
+        "action": "delete_content",
+        "canvas_type": atype,
+        "file": item.get("manifest_file"),
+        "title": item.get("title"),
+    }
+    if atype == "page":
+        page_url = item.get("page_url")
+        if not page_url:
+            return None
+        op["canvas_page_url"] = page_url
+    else:
+        canvas_id = item.get("content_id")
+        if canvas_id in (None, ""):
+            return None
+        op["canvas_id"] = canvas_id
+    return op
+
+
 def build_operations(
     *,
     artifacts: dict,
@@ -430,6 +458,75 @@ def build_operations(
     return operations
 
 
+def build_course_clear_operations(
+    *,
+    modules_by_id: dict[int, dict],
+    live_items: list[dict],
+) -> tuple[list[dict], list[dict]]:
+    operations: list[dict] = []
+    skipped_content: list[dict] = []
+
+    sorted_items = sorted(
+        live_items,
+        key=lambda item: (
+            item.get("module_position") or 999999,
+            item.get("module_id") or 0,
+            item.get("position") or 999999,
+            item.get("module_item_id") or 0,
+        ),
+    )
+    for item in sorted_items:
+        operations.append(
+            {
+                "action": "delete_module_item",
+                "module_id": item["module_id"],
+                "module_item_id": item["module_item_id"],
+                "title": item.get("title"),
+                "type": item.get("type"),
+                "file": item.get("manifest_file"),
+            }
+        )
+
+    seen_content_keys: set[tuple[str, Any]] = set()
+    for item in sorted_items:
+        op = content_operation_for_live_item(item)
+        if op is None:
+            skipped_content.append(
+                {
+                    "module_id": item.get("module_id"),
+                    "module_item_id": item.get("module_item_id"),
+                    "title": item.get("title"),
+                    "type": item.get("type"),
+                    "reason": "module item has no deletable Canvas content identifier",
+                }
+            )
+            continue
+        key = (
+            op["canvas_type"],
+            op.get("canvas_page_url") if op["canvas_type"] == "page" else op.get("canvas_id"),
+        )
+        if key in seen_content_keys:
+            continue
+        seen_content_keys.add(key)
+        operations.append(op)
+
+    for module_id in sorted(
+        modules_by_id,
+        key=lambda mid: (modules_by_id[mid].get("position") or 999999, mid),
+    ):
+        module = modules_by_id[module_id]
+        operations.append(
+            {
+                "action": "delete_module",
+                "module_id": module_id,
+                "name": module.get("name"),
+                "position": module.get("position"),
+            }
+        )
+
+    return operations, skipped_content
+
+
 def confirmation_token_for(plan: dict) -> str:
     payload = {
         "manifest": plan["manifest"],
@@ -441,7 +538,14 @@ def confirmation_token_for(plan: dict) -> str:
     return hashlib.sha256(encoded).hexdigest()[:12]
 
 
-def build_removal_plan(manifest: dict, targets: list[str], client: CanvasClient, manifest_path: Path | None = None) -> dict:
+def build_removal_plan(
+    manifest: dict,
+    targets: list[str],
+    client: CanvasClient,
+    manifest_path: Path | None = None,
+    *,
+    course_clear: bool = False,
+) -> dict:
     artifacts = manifest.get("artifacts", {})
     modules, live_items = fetch_live_state(client)
     indexes = build_manifest_indexes(manifest)
@@ -462,6 +566,30 @@ def build_removal_plan(manifest: dict, targets: list[str], client: CanvasClient,
         items_by_module_id[item["module_id"]].append(item)
         if item.get("canvas_key") is not None:
             live_items_by_key[item["canvas_key"]].append(item)
+
+    if course_clear:
+        operations, skipped_content = build_course_clear_operations(
+            modules_by_id=modules_by_id,
+            live_items=live_items,
+        )
+        manifest_entries_to_remove = sorted(artifacts)
+        plan = {
+            "manifest": {
+                "path": str(manifest_path) if manifest_path else None,
+                "instance": manifest.get("instance", {}),
+                "last_sync": manifest.get("last_sync"),
+            },
+            "targets": ["course_clear"],
+            "course_clear": True,
+            "apply_allowed": bool(operations),
+            "blocked": [],
+            "operations": operations,
+            "skipped_content": skipped_content,
+            "manifest_entries_to_remove": manifest_entries_to_remove,
+            "local_files_kept": manifest_entries_to_remove,
+        }
+        plan["confirmation_token"] = confirmation_token_for(plan) if plan["apply_allowed"] else None
+        return plan
 
     selected_modules: set[int] = set()
     selected_files: set[str] = set()
@@ -601,8 +729,11 @@ def execute_operation(client: CanvasClient, operation: dict) -> None:
 
 def apply_plan_to_manifest(manifest: dict, plan: dict) -> None:
     artifacts = manifest.setdefault("artifacts", {})
-    for rel_path in plan["manifest_entries_to_remove"]:
-        artifacts.pop(rel_path, None)
+    if plan.get("course_clear"):
+        artifacts.clear()
+    else:
+        for rel_path in plan["manifest_entries_to_remove"]:
+            artifacts.pop(rel_path, None)
     manifest["last_sync"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
@@ -611,6 +742,8 @@ def apply_removal(
     targets: list[str],
     confirm_token: str | None,
     client: CanvasClient,
+    *,
+    course_clear: bool = False,
 ) -> dict:
     if not confirm_token:
         raise RemovalPlanError("apply requires --confirm-token from a fresh dry run")
@@ -618,7 +751,13 @@ def apply_removal(
     manifest_path = manifest_path.resolve()
     with manifest_lock(manifest_path):
         manifest = load_manifest(manifest_path)
-        plan = build_removal_plan(manifest, targets, client, manifest_path)
+        plan = build_removal_plan(
+            manifest,
+            targets,
+            client,
+            manifest_path,
+            course_clear=course_clear,
+        )
         if not plan["apply_allowed"]:
             raise RemovalPlanError("removal plan is blocked; run dry-run and resolve blocked targets")
         if confirm_token != plan["confirmation_token"]:
@@ -640,7 +779,12 @@ def main() -> int:
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", type=Path, required=True)
-    parser.add_argument("--target", action="append", required=True)
+    parser.add_argument("--target", action="append", default=[])
+    parser.add_argument(
+        "--course-clear",
+        action="store_true",
+        help="Delete every live module item, supported underlying content object, and module in the course.",
+    )
     mode_group = parser.add_mutually_exclusive_group(required=True)
     mode_group.add_argument("--dry-run", action="store_true")
     mode_group.add_argument("--apply", action="store_true")
@@ -649,17 +793,33 @@ def main() -> int:
 
     try:
         manifest_path = args.manifest.resolve()
+        if args.course_clear and args.target:
+            raise RemovalPlanError("--course-clear cannot be combined with --target")
+        if not args.course_clear and not args.target:
+            raise RemovalPlanError("at least one --target is required unless --course-clear is used")
         if args.dry_run:
             manifest = load_manifest(manifest_path)
             client = CanvasClient.from_env(course_id=manifest["instance"]["course_id"])
-            plan = build_removal_plan(manifest, args.target, client, manifest_path)
+            plan = build_removal_plan(
+                manifest,
+                args.target,
+                client,
+                manifest_path,
+                course_clear=args.course_clear,
+            )
             plan["mode"] = "dry-run"
             print(json.dumps(plan, indent=2, sort_keys=True))
             return 0
 
         manifest = load_manifest(manifest_path)
         client = CanvasClient.from_env(course_id=manifest["instance"]["course_id"])
-        applied = apply_removal(manifest_path, args.target, args.confirm_token, client)
+        applied = apply_removal(
+            manifest_path,
+            args.target,
+            args.confirm_token,
+            client,
+            course_clear=args.course_clear,
+        )
         print(json.dumps(applied, indent=2, sort_keys=True))
         return 0
     except RemovalPlanError as exc:

@@ -194,6 +194,8 @@ def entry_for_push(
     hosted_path: str | None = None,
     hosted_url: str | None = None,
     hosted_hash: str | None = None,
+    source_type: str | None = None,
+    delivery_mode: str | None = None,
     external_state: bool,
 ) -> dict:
     entry = {
@@ -210,6 +212,10 @@ def entry_for_push(
         entry["hosted_url"] = hosted_url
     if hosted_hash:
         entry["hosted_hash"] = hosted_hash
+    if source_type and source_type != artifact_type:
+        entry["source_type"] = source_type
+    if delivery_mode and delivery_mode != "canvas_native":
+        entry["delivery_mode"] = delivery_mode
     if external_state:
         entry["artifact_id"] = artifact_id
         entry["local_path"] = rel_path

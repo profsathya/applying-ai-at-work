@@ -42,6 +42,18 @@
         }
       }
     },
+    "ai_activity": {
+      "type": "object",
+      "properties": {
+        "default_ai_endpoint": {
+          "type": "string",
+          "format": "uri"
+        },
+        "course_theme": {
+          "type": "string"
+        }
+      }
+    },
     "last_sync": {
       "type": ["string", "null"],
       "format": "date-time"
@@ -56,6 +68,14 @@
           "canvas_type": {
             "type": "string",
             "enum": ["assignment", "page", "discussion", "quiz", "module_header"]
+          },
+          "source_type": {
+            "type": "string",
+            "enum": ["assignment", "page", "discussion", "quiz", "module_header"]
+          },
+          "delivery_mode": {
+            "type": "string",
+            "enum": ["canvas_native", "ai_activity"]
           },
           "canvas_id": {
             "type": ["integer", "null"]

@@ -86,6 +86,48 @@ CANVAS_SUBMISSION_TYPE_MAP = {
 }
 
 
+def delivery_mode_for(frontmatter: dict) -> str:
+    return frontmatter.get("delivery_mode", "canvas_native")
+
+
+def is_ai_activity_delivery(frontmatter: dict) -> bool:
+    return delivery_mode_for(frontmatter) == "ai_activity"
+
+
+def canvas_type_for(frontmatter: dict) -> str:
+    if is_ai_activity_delivery(frontmatter):
+        return "assignment"
+    return frontmatter["type"]
+
+
+def frontmatter_for_canvas_push(frontmatter: dict) -> dict:
+    if not is_ai_activity_delivery(frontmatter):
+        return frontmatter
+    canvas_frontmatter = dict(frontmatter)
+    canvas_frontmatter["submission_type"] = "file_upload"
+    return canvas_frontmatter
+
+
+def guard_canvas_type_migration(
+    *,
+    rel_path: str,
+    existing: dict,
+    canvas_artifact_type: str,
+    source_type: str,
+    delivery_mode: str,
+) -> None:
+    existing_canvas_type = existing.get("canvas_type")
+    if not existing_canvas_type or existing_canvas_type == canvas_artifact_type:
+        return
+
+    raise ValueError(
+        f"{rel_path}: existing Canvas state is {existing_canvas_type!r}, but this artifact now "
+        f"publishes as {canvas_artifact_type!r} (source type {source_type!r}, delivery mode "
+        f"{delivery_mode!r}). Use the remove-canvas workflow to dry-run and confirm removal of "
+        "the existing Canvas object, then publish again so Canvas can create the new assignment shell."
+    )
+
+
 def push_assignment(client: CanvasClient, fm: dict, html: str, existing_id: int | None) -> dict:
     submission_type = fm.get("submission_type", "text_entry")
     canvas_submission_type = CANVAS_SUBMISSION_TYPE_MAP.get(submission_type, submission_type)
@@ -202,6 +244,9 @@ def push_artifact(
     rel_path = str(md_path.relative_to(repo_root))
     artifact_id = fm.get("artifact_id") or derive_artifact_id(rel_path)
     artifact_type = fm["type"]
+    delivery_mode = delivery_mode_for(fm)
+    canvas_artifact_type = canvas_type_for(fm)
+    canvas_fm = frontmatter_for_canvas_push(fm)
 
     store = CanvasStateStore(manifest_path=manifest_path, repo_root=repo_root, state_dir=state_dir)
     with store.locked() as (manifest, deployment_state, state_path):
@@ -220,35 +265,44 @@ def push_artifact(
         existing = artifacts.get(state_key, {})
         existing_id = existing.get("canvas_id")
         existing_page_url = existing.get("canvas_page_url")
+        guard_canvas_type_migration(
+            rel_path=rel_path,
+            existing=existing,
+            canvas_artifact_type=canvas_artifact_type,
+            source_type=artifact_type,
+            delivery_mode=delivery_mode,
+        )
 
         hosted_info = artifact_hosted_info(md_path, manifest_path, manifest, fm)
+        if is_ai_activity_delivery(fm) and not hosted_info["enabled"]:
+            raise ValueError(f"{rel_path}: delivery_mode ai_activity requires hosted_html.enabled")
         if hosted_info["enabled"] and artifact_type != "module_header":
             html = iframe_shell(hosted_info["hosted_url"], fm["title"])
 
         action = "updated" if (existing_id or existing_page_url) else "created"
 
-        if artifact_type == "assignment":
-            result = push_assignment(client, fm, html, existing_id)
+        if canvas_artifact_type == "assignment":
+            result = push_assignment(client, canvas_fm, html, existing_id)
             canvas_id = result["id"]
             canvas_page_url = None
-        elif artifact_type == "page":
-            result = push_page(client, fm, html, existing_page_url)
+        elif canvas_artifact_type == "page":
+            result = push_page(client, canvas_fm, html, existing_page_url)
             canvas_id = result.get("page_id")
             canvas_page_url = result.get("url")
-        elif artifact_type == "discussion":
-            result = push_discussion(client, fm, html, existing_id)
+        elif canvas_artifact_type == "discussion":
+            result = push_discussion(client, canvas_fm, html, existing_id)
             canvas_id = result["id"]
             canvas_page_url = None
-        elif artifact_type == "quiz":
-            result = push_quiz(client, fm, html, existing_id)
+        elif canvas_artifact_type == "quiz":
+            result = push_quiz(client, canvas_fm, html, existing_id)
             canvas_id = result["id"]
             canvas_page_url = None
-        elif artifact_type == "module_header":
+        elif canvas_artifact_type == "module_header":
             canvas_id = None
             canvas_page_url = None
             result = {}
         else:
-            raise ValueError(f"Unknown artifact type: {artifact_type}")
+            raise ValueError(f"Unknown artifact type: {canvas_artifact_type}")
 
         # Resolve module and add to it if not already present
         module_id = resolve_or_create_module(
@@ -257,7 +311,7 @@ def push_artifact(
             publish=fm.get("publish", True),
         )
 
-        if artifact_type != "module_header" and action == "created":
+        if canvas_artifact_type != "module_header" and action == "created":
             content_type_map = {
                 "assignment": "Assignment",
                 "page": "Page",
@@ -267,9 +321,9 @@ def push_artifact(
             client.add_module_item(
                 module_id,
                 title=fm["title"],
-                content_type=content_type_map[artifact_type],
-                content_id=canvas_id if artifact_type != "page" else None,
-                page_url=canvas_page_url if artifact_type == "page" else None,
+                content_type=content_type_map[canvas_artifact_type],
+                content_id=canvas_id if canvas_artifact_type != "page" else None,
+                page_url=canvas_page_url if canvas_artifact_type == "page" else None,
                 position=fm.get("position"),
             )
 
@@ -277,7 +331,7 @@ def push_artifact(
         entry = entry_for_push(
             artifact_id=artifact_id,
             rel_path=rel_path,
-            artifact_type=artifact_type,
+            artifact_type=canvas_artifact_type,
             canvas_id=canvas_id,
             canvas_page_url=canvas_page_url,
             canvas_module_id=module_id,
@@ -286,6 +340,8 @@ def push_artifact(
             source_commit=os.environ.get("GITHUB_SHA"),
             hosted_path=hosted_info["hosted_path"] if hosted_info["enabled"] else None,
             hosted_url=hosted_info["hosted_url"] if hosted_info["enabled"] else None,
+            source_type=artifact_type,
+            delivery_mode=delivery_mode,
             external_state=store.external,
         )
         artifacts[state_key] = entry
@@ -302,7 +358,7 @@ def push_artifact(
 
         if store.external:
             live_state = fetch_canvas_state(client, entry)
-            fingerprint = canvas_fingerprint(live_state, artifact_type)
+            fingerprint = canvas_fingerprint(live_state, canvas_artifact_type)
             if fingerprint:
                 entry["canvas_fingerprint"] = fingerprint
 

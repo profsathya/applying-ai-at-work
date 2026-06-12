@@ -13,6 +13,7 @@ Add exactly one new Canvas artifact to an existing course.
 2. If course or required grading details are ambiguous, ask one concise clarification before writing. If the request is for a new standalone module and no sprint is named, use the next unused local sprint number by listing `<course>/sprints/sprint-*`; otherwise ask when sprint placement is ambiguous.
 3. Read the target course PRD to infer the next id and module position, but do not append to the frozen PRD unless the user explicitly asks.
 4. Create one PRD-shaped item and invoke the `canvas-author` workflow or agent to write one MD file.
+   - If the request asks for an AI-powered quiz or discussion, use `delivery_mode: ai_activity`, `submission_type: file_upload`, and ActivityEngine-compatible `ai_activity.questions`.
 5. Run:
 
    ```bash
@@ -20,7 +21,7 @@ Add exactly one new Canvas artifact to an existing course.
    ```
 
 6. Ask for confirmation before pushing to Canvas unless the user explicitly requested an immediate push.
-7. For production, stop after validation so the reviewed branch can publish through GitHub Actions after merge. For an approved direct admin or sandbox push, run `python3 canvas_sync/push.py --file <file> --manifest <manifest>`.
+7. For production, stop after validation so the reviewed branch can publish through GitHub Actions after merge. For an approved direct admin or sandbox push, use the `sync` skill. If `hosted_html.enabled` is true, the push must include `--hosted-output-dir ../common-curriculum`.
 8. Append a `BUILT` or `FAILED` line to `<target>/progress.md` only if Canvas was called.
 9. Commit only when the user requested commit behavior or the surrounding workflow requires it.
 
@@ -28,5 +29,6 @@ Add exactly one new Canvas artifact to an existing course.
 
 - One artifact per invocation.
 - No Canvas push without schema validation.
+- Markdown is the source of truth. Do not hand-edit generated Common Curriculum HTML or activity JSON.
 - No edits to `context/`, `course*/design/`, `archive/`, or schema files.
 - Omit `due` unless the request provides a full ISO 8601 timestamp with timezone.

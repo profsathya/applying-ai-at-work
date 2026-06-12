@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient
+from canvas_sync.hosted_html import render_hosted_files
 from canvas_sync.push import push_artifact
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.state import (
@@ -166,6 +167,23 @@ def publish_manifest(
                 {
                     "file": item["file"],
                     "artifact_id": item["artifact_id"],
+                    "error": str(exc),
+                }
+            )
+    if hosted_output_dir and result["published"]:
+        try:
+            latest_state, _state_path = load_state(manifest_path, state_dir, require_state=True)
+            render_hosted_files(
+                manifest_path,
+                hosted_output_dir,
+                discover_artifact_files(manifest_path),
+                state=latest_state,
+            )
+        except Exception as exc:  # noqa: BLE001 - surface hosted render failures in publish result
+            result["failed"].append(
+                {
+                    "file": "<hosted_html>",
+                    "artifact_id": None,
                     "error": str(exc),
                 }
             )

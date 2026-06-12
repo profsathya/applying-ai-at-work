@@ -20,7 +20,13 @@ Push specified artifact Markdown files to Canvas using the active production man
 
 4. If validation fails, stop and report the errors. Do not push.
 5. Before any Canvas write, confirm the user really wants to push the listed files unless the user already gave explicit push/sync instruction in the current turn.
-6. Push files serially with:
+6. Check the manifest. If `hosted_html.enabled` is true, the local push must render hosted output into a sibling Common Curriculum checkout before Canvas points at it:
+
+   ```bash
+   python3 canvas_sync/push.py --file <md_file_path> --manifest <course>/manifests/production.json --hosted-output-dir ../common-curriculum
+   ```
+
+   Use the plain push command only when hosted HTML is disabled:
 
    ```bash
    python3 canvas_sync/push.py --file <md_file_path> --manifest <course>/manifests/production.json
@@ -37,6 +43,8 @@ Push specified artifact Markdown files to Canvas using the active production man
 ## Rules
 
 - Never push a file that fails schema validation.
+- Markdown is the source of truth. Common Curriculum HTML and activity JSON are generated output from `canvas_sync/hosted_html.py`.
+- For hosted courses, do not run a direct local push without `--hosted-output-dir ../common-curriculum`.
 - Never edit deployment state directly; `push.py` owns manifest or `canvas-state` updates.
 - Do not run multiple `push.py` processes against the same manifest in parallel.
 - Do not use local direct push as the normal production publishing path.

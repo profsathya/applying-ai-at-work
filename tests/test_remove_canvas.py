@@ -280,6 +280,123 @@ class CanvasRemovalPlanTests(unittest.TestCase):
             with self.assertRaises(RemovalPlanError):
                 apply_removal(manifest_path, ["module_item_id:1001"], plan["confirmation_token"], client)
 
+    def test_course_clear_includes_canvas_only_items_and_modules(self) -> None:
+        manifest = base_manifest()
+        client = FakeCanvasClient(
+            modules=[
+                {"id": 10, "position": 1, "name": "Module One", "items_count": 2},
+                {"id": 11, "position": 2, "name": "Canvas Only Module", "items_count": 1},
+            ],
+            items_by_module={
+                10: [
+                    {
+                        "id": 1001,
+                        "position": 1,
+                        "title": "Page One",
+                        "type": "Page",
+                        "content_id": None,
+                        "page_url": "page-one",
+                    },
+                    {
+                        "id": 1002,
+                        "position": 2,
+                        "title": "Quiz One",
+                        "type": "Quiz",
+                        "content_id": 201,
+                        "page_url": None,
+                    },
+                ],
+                11: [
+                    {
+                        "id": 1101,
+                        "position": 1,
+                        "title": "Canvas Only Assignment",
+                        "type": "Assignment",
+                        "content_id": 301,
+                        "page_url": None,
+                    }
+                ],
+            },
+        )
+
+        plan = build_removal_plan(manifest, [], client, course_clear=True)
+
+        self.assertTrue(plan["apply_allowed"])
+        self.assertTrue(plan["course_clear"])
+        self.assertEqual(plan["blocked"], [])
+        self.assertEqual(
+            [op["action"] for op in plan["operations"]],
+            [
+                "delete_module_item",
+                "delete_module_item",
+                "delete_module_item",
+                "delete_content",
+                "delete_content",
+                "delete_content",
+                "delete_module",
+                "delete_module",
+            ],
+        )
+        self.assertEqual(
+            sorted(op["module_item_id"] for op in plan["operations"] if op["action"] == "delete_module_item"),
+            [1001, 1002, 1101],
+        )
+        self.assertEqual(
+            sorted(op["module_id"] for op in plan["operations"] if op["action"] == "delete_module"),
+            [10, 11],
+        )
+        self.assertEqual(plan["manifest_entries_to_remove"], sorted(manifest["artifacts"]))
+
+    def test_course_clear_apply_clears_manifest_after_token_confirmation(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest_path = Path(tmp) / "manifest.json"
+            manifest = base_manifest()
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            client = base_client()
+            plan = build_removal_plan(
+                manifest,
+                [],
+                client,
+                manifest_path.resolve(),
+                course_clear=True,
+            )
+
+            applied = apply_removal(
+                manifest_path,
+                [],
+                plan["confirmation_token"],
+                client,
+                course_clear=True,
+            )
+
+            self.assertEqual(applied["mode"], "apply")
+            self.assertEqual(
+                [call[0] for call in client.calls],
+                [
+                    "delete_module_item",
+                    "delete_module_item",
+                    "delete_page",
+                    "delete_quiz",
+                    "delete_module",
+                ],
+            )
+            updated = json.loads(manifest_path.read_text(encoding="utf-8"))
+            self.assertEqual(updated["artifacts"], {})
+
+    def test_course_clear_requires_matching_confirmation_token(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest_path = Path(tmp) / "manifest.json"
+            manifest_path.write_text(json.dumps(base_manifest()), encoding="utf-8")
+
+            with self.assertRaises(RemovalPlanError):
+                apply_removal(
+                    manifest_path,
+                    [],
+                    "wrong-token",
+                    base_client(),
+                    course_clear=True,
+                )
+
 
 if __name__ == "__main__":
     unittest.main()

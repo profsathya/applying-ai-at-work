@@ -62,6 +62,8 @@ def validate_artifact(md_path: Path) -> list[str]:
     except jsonschema.ValidationError as e:
         errors.append(f"{md_path}: {e.message} (at {'/'.join(str(p) for p in e.path)})")
 
+    errors.extend(validate_ai_activity_delivery(md_path, frontmatter))
+
     # Soft checks that aren't easily expressed in JSON Schema
     if frontmatter.get("type") in ("assignment", "quiz", "discussion"):
         if frontmatter.get("points") is None:
@@ -79,6 +81,29 @@ def validate_artifact(md_path: Path) -> list[str]:
     # Em-dash check (Jeremy's stylistic preference enforced as hard rule)
     if "\u2014" in body or "\u2014" in str(frontmatter.get("title", "")):
         errors.append(f"{md_path}: contains em-dash; use hyphen, colon, or sentence break")
+
+    return errors
+
+
+def validate_ai_activity_delivery(label: object, payload: dict) -> list[str]:
+    errors: list[str] = []
+    delivery_mode = payload.get("delivery_mode", "canvas_native")
+    has_ai_activity = "ai_activity" in payload
+    artifact_type = payload.get("type")
+
+    if delivery_mode == "ai_activity":
+        if artifact_type not in ("quiz", "discussion"):
+            errors.append(f"{label}: delivery_mode ai_activity is only supported for quiz or discussion artifacts")
+        if not has_ai_activity:
+            errors.append(f"{label}: delivery_mode ai_activity requires ai_activity")
+        if payload.get("submission_type") != "file_upload":
+            errors.append(f"{label}: delivery_mode ai_activity requires submission_type file_upload")
+        if payload.get("questions"):
+            errors.append(
+                f"{label}: delivery_mode ai_activity uses ai_activity.questions, not native Canvas questions"
+            )
+    elif has_ai_activity:
+        errors.append(f"{label}: ai_activity requires delivery_mode ai_activity")
 
     return errors
 
@@ -135,6 +160,10 @@ def validate_prd(prd_path: Path) -> list[str]:
         jsonschema.validate(prd, schema)
     except jsonschema.ValidationError as e:
         errors.append(f"{prd_path}: {e.message} (at {'/'.join(str(p) for p in e.path)})")
+
+    for index, item in enumerate(prd.get("items", []), start=1):
+        item_label = f"{prd_path}: item {item.get('id', index)}"
+        errors.extend(validate_ai_activity_delivery(item_label, item))
 
     # ID uniqueness
     ids = [item["id"] for item in prd.get("items", [])]

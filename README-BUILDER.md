@@ -19,6 +19,7 @@ course spec or module spec -> Codex skill -> MD files -> schema validation -> re
 Core invariants:
 
 - MD is authoritative during build.
+- Common Curriculum HTML and activity JSON are generated output, not source.
 - Canvas IDs live only in deployment state. Legacy local pushes may still write manifest state.
 - Canvas wins on live-course drift.
 - Schema validation is a hard gate before Canvas writes.
@@ -133,7 +134,7 @@ Codex skills live in `.agents/skills/`.
 - `inspect-canvas` - read live Canvas modules and module items, compare with the manifest and local files, and write a local ledger under `<course>/reports/`.
 - `update-artifact` - list live Canvas module items, prepare exactly one `module_item_id` for local Markdown editing, validate the edited artifact, and stop before Canvas writes.
 - `reconcile` - dry-run Canvas drift, then optionally apply Canvas changes locally.
-- `remove-canvas` - inspect Canvas, dry-run manifest-backed removals, then delete only after confirmation token approval.
+- `remove-canvas` - inspect Canvas, dry-run manifest-backed removals or an explicit full-course content clear, then delete only after confirmation token approval.
 - `canvas-author` - write exactly one artifact from a PRD-shaped item.
 - `sprint-planner` - decompose course design into PRD, metadata, progress log, and manifest.
 
@@ -150,9 +151,22 @@ Codex custom agents live in `.codex/agents/`.
 - `sprint-planner.toml` - high-context course decomposition.
 - `canvas-author.toml` - artifact authoring.
 - `canvas-inspector.toml` - read-only Canvas inventory and reconcile-readiness reporting through `inspect-canvas`.
-- `canvas-remover.toml` - destructive manifest-backed Canvas removals through `remove-canvas`.
+- `canvas-remover.toml` - destructive manifest-backed removals or explicit full-course content clears through `remove-canvas`.
 
 Use direct Python commands for validation, inspect, push, pull, and remove.
+
+## Hosted Content Updates
+
+Hosted Canvas content is still authored in Markdown under `<course>/sprints/`. The Common Curriculum checkout receives generated HTML and JSON only when the publish layer renders it.
+
+For a changed hosted module or artifact:
+
+1. Update the Markdown source.
+2. Validate the artifact or the repo.
+3. Use the protected `Publish Canvas` workflow for production.
+4. For approved local admin or sandbox pushes, pass `--hosted-output-dir ../common-curriculum` to `canvas_sync/push.py`.
+
+Do not patch generated files under `../common-curriculum/deanza/<course>/` as the source of a course change. Those files should be regenerated from Markdown.
 
 ## Schemas
 
@@ -187,10 +201,12 @@ main checkout + canvas-state checkout -> validate -> bootstrap missing state -> 
 ```
 
 - `canvas-state` stores `<course>/production.json` files keyed by `artifact_id`.
+- The workflow also checks out Common Curriculum, renders hosted De Anza HTML/activity JSON for changed hosted artifacts, and commits those files when publishing succeeds.
 - The workflow uses the protected `canvas-production` environment and a single concurrency group.
 - `canvas_sync/bootstrap_state.py` converts legacy manifest state into external state files.
 - `canvas_sync/hydrate_state.py` records live Canvas fingerprints only when Canvas still matches local Markdown.
 - `canvas_sync/publish_changed.py` publishes only artifacts whose content hash differs from state.
+- For approved local hosted publishes, pass `--hosted-output-dir ../common-curriculum` so Canvas iframe shells point at files that are rendered into the Common Curriculum checkout before Canvas is updated.
 - `canvas_sync/check_drift.py` compares live Canvas with `canvas-state` and local Markdown for nightly drift detection.
 - Direct local `push.py` without `--state-dir` is retained for backwards compatibility and emergency repair.
 
@@ -215,7 +231,7 @@ Recommended repository controls:
 - `inspect_canvas.py` - reads live Canvas modules and module items, compares them with the manifest and local Markdown files, and writes JSON/Markdown ledgers under `<course>/reports/`.
 - `update_artifact.py` - lists live module items by `module_item_id`, refreshes or imports one selected item into local Markdown for editing, and verifies that identity fields stayed fixed.
 - `pull.py` - fetches Canvas state, reports drift, and optionally writes Canvas changes back to MD.
-- `remove.py` - dry-runs and applies confirmed deletion of manifest-backed Canvas modules/items while keeping local Markdown files.
+- `remove.py` - dry-runs and applies confirmed deletion of manifest-backed Canvas modules/items, or a token-gated full course content clear, while keeping local Markdown files.
 - `schema.py` - validates artifacts, manifests, and PRDs.
 
 Canvas quirks:

@@ -62,5 +62,7 @@ This workflow may read Canvas and update one local Markdown file plus its manife
 - The instructor-facing selector is `module_item_id`.
 - The Canvas course ID must match exactly one local production manifest.
 - If the selected item is Canvas-only, import it before editing.
+- For hosted HTML or AI activity artifacts, edit the Markdown source only. Do not edit generated Common Curriculum HTML or activity JSON by hand.
+- After a hosted artifact is reviewed, production publish should happen through merge to `main`; an approved local push must use the `sync` skill so hosted output is rendered before Canvas is updated.
 - Never edit Canvas directly from this workflow.
 - Never push the prepared file unless the instructor gives a separate explicit push request.

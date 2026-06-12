@@ -39,4 +39,5 @@ Use this when a target course has no PRD or a human explicitly requests a re-pla
 - Do not push to Canvas.
 - Use non-negative sprint numbers that match the human-provided course structure.
 - Keep body briefs participant-facing but do not name internal framework labels.
+- For AI-powered quiz or discussion items, include `delivery_mode: ai_activity`, `submission_type: file_upload`, and ActivityEngine-compatible `ai_activity.questions` in the PRD item; do not include native Canvas quiz `questions`.
 - Validate the PRD and manifest after writing.

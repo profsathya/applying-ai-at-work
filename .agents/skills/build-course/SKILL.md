@@ -36,6 +36,7 @@ If the user pastes context directly into chat, use it as the course context. Do 
 2. Read the course context if it is a file. If it is pasted inline, treat the pasted text as the source.
 3. Read `context/course-specs/README.md`, `context/module-specs/README.md`, `AGENTS.md`, relevant course design docs, shared context docs, schemas, and existing built sprints.
 4. Treat explicit course context instructions as higher priority than inferred sprint patterns, unless they violate repo rules or schema constraints.
+   - If the context asks for AI-powered quiz or discussion activities, author them as `delivery_mode: ai_activity` with `submission_type: file_upload` and ActivityEngine-compatible `ai_activity.questions`; do not create native Canvas quiz `questions` for those items.
 5. Generate or update Markdown files under `<target>/sprints/sprint-<n>/` only.
 6. Use any non-negative sprint number that matches the human-provided course structure.
 7. Validate every written file:
@@ -51,14 +52,16 @@ If the user pastes context directly into chat, use it as the course context. Do 
    ```
 
 9. Show the file list, artifact types, and validation result. Ask the user to review before pushing.
-10. For production, stop after validation and review so merge to `main` can publish through the protected GitHub Actions workflow. Use direct `canvas_sync/push.py` only for an approved admin or sandbox push.
-11. Append a post-build section to `<target>/progress.md` only if Canvas was called.
+10. For production, stop after validation and review so merge to `main` can publish through the protected GitHub Actions workflow. That workflow renders Common Curriculum hosted files before Canvas is updated.
+11. Use direct `canvas_sync/push.py` only for an approved admin or sandbox push. If `hosted_html.enabled` is true, route through the `sync` skill so the push includes `--hosted-output-dir ../common-curriculum`.
+12. Append a post-build section to `<target>/progress.md` only if Canvas was called.
 
 ## Rules
 
 - Do not require or create a PRD unless the user explicitly asks for one.
 - Do not modify manifests directly.
 - Do not push before human review and confirmation. Prefer the GitOps publish workflow for production courses.
+- Markdown files under `<target>/sprints/` are the source of truth. Common Curriculum HTML and activity JSON are generated output.
 - Use Canvas-native Markdown only.
 - Do not write due dates unless explicitly provided.
 - Do not edit files under `context/course-specs/` or `context/module-specs/` unless the user explicitly asks to create or update a spec.

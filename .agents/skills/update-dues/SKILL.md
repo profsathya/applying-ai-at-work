@@ -21,11 +21,12 @@ Update only the `due` field in artifact frontmatter.
    ```
 
 7. Ask before pushing due-date changes to Canvas.
-8. Push changed files through `canvas_sync/push.py` only after confirmation.
+8. Push changed files through the `sync` skill only after confirmation. If `hosted_html.enabled` is true, the push must include `--hosted-output-dir ../common-curriculum`.
 
 ## Rules
 
 - Do not edit body content or unrelated frontmatter.
+- Markdown is the source of truth. Do not hand-edit generated Common Curriculum HTML or activity JSON.
 - Do not add `due: null`; remove the key when clearing a due date.
 - Do not push files that fail schema validation.
 - Do not guess vague dates like "sometime next week"; ask for a concrete date.
