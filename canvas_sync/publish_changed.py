@@ -127,6 +127,7 @@ def publish_manifest(
     dry_run: bool,
     check_drift: bool,
     require_state: bool,
+    hosted_output_dir: Path | None = None,
 ) -> dict:
     changed, state_info = changed_artifacts(
         manifest_path,
@@ -155,7 +156,10 @@ def publish_manifest(
 
     for item in changed:
         try:
-            pushed = push_artifact(item["path"], manifest_path, state_dir=state_dir)
+            kwargs = {"state_dir": state_dir}
+            if hosted_output_dir:
+                kwargs["hosted_output_dir"] = hosted_output_dir
+            pushed = push_artifact(item["path"], manifest_path, **kwargs)
             result["published"].append(pushed)
         except Exception as exc:  # noqa: BLE001 - continue so partial success is visible
             result["failed"].append(
@@ -178,6 +182,7 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--check-drift", action="store_true")
     parser.add_argument("--require-state", action="store_true")
+    parser.add_argument("--hosted-output-dir", type=Path)
     args = parser.parse_args()
 
     manifests = args.manifest if args.manifest else discover_manifests()
@@ -191,6 +196,7 @@ def main() -> int:
                 dry_run=args.dry_run,
                 check_drift=args.check_drift,
                 require_state=args.require_state,
+                hosted_output_dir=args.hosted_output_dir.resolve() if args.hosted_output_dir else None,
             )
             results.append(result)
             if result["failed"] or result["drifted"]:

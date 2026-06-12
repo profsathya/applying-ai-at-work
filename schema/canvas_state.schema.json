@@ -15,6 +15,17 @@
         "term": {"type": "string"}
       }
     },
+    "hosted_html": {
+      "type": "object",
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "base_url": {"type": "string", "format": "uri"},
+        "path_prefix": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_/-]*$"
+        }
+      }
+    },
     "last_sync": {
       "type": ["string", "null"],
       "format": "date-time"
@@ -48,6 +59,13 @@
             "type": ["string", "null"],
             "pattern": "^[a-f0-9]{64}$"
           },
+          "hosted_path": {"type": "string"},
+          "hosted_url": {"type": "string", "format": "uri"},
+          "hosted_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "hosted_last_rendered": {"type": ["string", "null"], "format": "date-time"},
           "last_pushed": {"type": ["string", "null"], "format": "date-time"},
           "last_pulled": {"type": ["string", "null"], "format": "date-time"},
           "source_commit": {"type": ["string", "null"]},

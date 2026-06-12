@@ -191,6 +191,9 @@ def entry_for_push(
     pushed_at: str,
     source_commit: str | None = None,
     canvas_fingerprint: str | None = None,
+    hosted_path: str | None = None,
+    hosted_url: str | None = None,
+    hosted_hash: str | None = None,
     external_state: bool,
 ) -> dict:
     entry = {
@@ -201,6 +204,12 @@ def entry_for_push(
         "content_hash": hash_value,
         "last_pushed": pushed_at,
     }
+    if hosted_path:
+        entry["hosted_path"] = hosted_path
+    if hosted_url:
+        entry["hosted_url"] = hosted_url
+    if hosted_hash:
+        entry["hosted_hash"] = hosted_hash
     if external_state:
         entry["artifact_id"] = artifact_id
         entry["local_path"] = rel_path

@@ -30,6 +30,7 @@ from dotenv import load_dotenv
 # Local imports
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient, CanvasError, resolve_or_create_module
+from canvas_sync.hosted_html import artifact_hosted_info, iframe_shell, render_hosted_artifact
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.state import (
     CanvasStateStore,
@@ -180,7 +181,12 @@ def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None
     return result
 
 
-def push_artifact(md_path: Path, manifest_path: Path, state_dir: Path | None = None) -> dict:
+def push_artifact(
+    md_path: Path,
+    manifest_path: Path,
+    state_dir: Path | None = None,
+    hosted_output_dir: Path | None = None,
+) -> dict:
     repo_root = Path.cwd().resolve()
     md_path = md_path.resolve()
     manifest_path = manifest_path.resolve()
@@ -195,6 +201,7 @@ def push_artifact(md_path: Path, manifest_path: Path, state_dir: Path | None = N
     html = md_body_to_canvas_html(body)
     rel_path = str(md_path.relative_to(repo_root))
     artifact_id = fm.get("artifact_id") or derive_artifact_id(rel_path)
+    artifact_type = fm["type"]
 
     store = CanvasStateStore(manifest_path=manifest_path, repo_root=repo_root, state_dir=state_dir)
     with store.locked() as (manifest, deployment_state, state_path):
@@ -214,7 +221,10 @@ def push_artifact(md_path: Path, manifest_path: Path, state_dir: Path | None = N
         existing_id = existing.get("canvas_id")
         existing_page_url = existing.get("canvas_page_url")
 
-        artifact_type = fm["type"]
+        hosted_info = artifact_hosted_info(md_path, manifest_path, manifest, fm)
+        if hosted_info["enabled"] and artifact_type != "module_header":
+            html = iframe_shell(hosted_info["hosted_url"], fm["title"])
+
         action = "updated" if (existing_id or existing_page_url) else "created"
 
         if artifact_type == "assignment":
@@ -274,8 +284,22 @@ def push_artifact(md_path: Path, manifest_path: Path, state_dir: Path | None = N
             hash_value=content_hash(md_path),
             pushed_at=pushed_at,
             source_commit=os.environ.get("GITHUB_SHA"),
+            hosted_path=hosted_info["hosted_path"] if hosted_info["enabled"] else None,
+            hosted_url=hosted_info["hosted_url"] if hosted_info["enabled"] else None,
             external_state=store.external,
         )
+        artifacts[state_key] = entry
+        if hosted_info["enabled"] and artifact_type != "module_header" and hosted_output_dir:
+            hosted_result = render_hosted_artifact(
+                md_path,
+                manifest_path,
+                hosted_output_dir,
+                manifest=manifest,
+                state=deployment_state,
+            )
+            entry["hosted_hash"] = hosted_result["hosted_hash"]
+            entry["hosted_last_rendered"] = pushed_at
+
         if store.external:
             live_state = fetch_canvas_state(client, entry)
             fingerprint = canvas_fingerprint(live_state, artifact_type)
@@ -293,6 +317,7 @@ def push_artifact(md_path: Path, manifest_path: Path, state_dir: Path | None = N
             "canvas_id": canvas_id,
             "canvas_module_id": module_id,
             "state_path": str(state_path),
+            "hosted_url": entry.get("hosted_url"),
         }
 
 
@@ -307,10 +332,20 @@ def main() -> int:
         type=Path,
         help="External deployment-state checkout, for example a canvas-state branch worktree.",
     )
+    parser.add_argument(
+        "--hosted-output-dir",
+        type=Path,
+        help="Common Curriculum checkout root for rendering hosted HTML before saving state.",
+    )
     args = parser.parse_args()
 
     try:
-        result = push_artifact(args.file, args.manifest, state_dir=args.state_dir)
+        result = push_artifact(
+            args.file,
+            args.manifest,
+            state_dir=args.state_dir,
+            hosted_output_dir=args.hosted_output_dir,
+        )
         print(json.dumps(result, indent=2))
         return 0
     except ValueError as e:
