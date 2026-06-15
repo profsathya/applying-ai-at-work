@@ -32,6 +32,12 @@ Prepare for real stakeholder validation by using AI to anticipate perspectives, 
 
 Before using AI, list the stakeholders you already believe are affected by the problem. Mark what you know and what you are guessing.
 
+## Open The Dojo
+
+Use the [Open the Symbiotic Thinking Dojo](https://dojo.symbioticthinking.ai/) link for this lab. First-time users should open Learn About -> Privacy & Setup and configure a Gemini API key in the browser before starting.
+
+Do not paste confidential workplace, client, education, patient, or personal data into the Dojo. De-identify details and keep sensitive information out of the prompt.
+
 ## Dojo Prompt
 
 Use this prompt with the Dojo:
@@ -40,17 +46,22 @@ Use this prompt with the Dojo:
 I am preparing to validate this problem with real people:
 [paste problem statement]
 
-Act as Stakeholder Lens. Help me identify:
+Use Learn + Solve mode. Start with @advocate. Help me identify:
 1. People directly affected.
 2. People who influence whether the problem can be addressed.
 3. People with authority or constraints.
 4. People who may disagree with my framing.
 5. What each stakeholder might need, fear, or value.
 
-Then act as Skeptic:
+Then use @auditor:
+- Which needs am I treating as known, inferred, or unsupported?
+- Which constraints should I verify before changing direction?
+- Which validation questions would help me listen rather than pitch?
+
+Then use @challenger:
 - Which stakeholders am I overlooking?
 - Which needs am I assuming rather than knowing?
-- Which validation questions would help me listen rather than pitch?
+- What would make my current stakeholder map misleading?
 ```
 
 ## Judgment Step

@@ -31,6 +31,12 @@ Use AI to help design a focused learning path, then revise it using your own jud
 
 Before using AI, choose one knowledge or skill gap from your inventory that matters most for moving the problem forward.
 
+## Open The Dojo
+
+Use the [Open the Symbiotic Thinking Dojo](https://dojo.symbioticthinking.ai/) link for this lab. First-time users should open Learn About -> Privacy & Setup and configure a Gemini API key in the browser before starting.
+
+Do not paste confidential workplace, client, education, patient, or personal data into the Dojo. De-identify details and keep sensitive information out of the prompt.
+
 ## Dojo Prompt
 
 Use this prompt with the Dojo:
@@ -42,14 +48,16 @@ I am working on this validated problem:
 Here is what I think I need to learn:
 [paste gap inventory]
 
-Act as Learning Coach. Help me design a focused learning path:
+Use Learn + Solve mode. Start with @framer. Help me design a focused learning path:
 1. What is the smallest set of knowledge I need next?
 2. What should I learn first, second, and third?
 3. What can I ignore for now?
 4. What sources should I use besides AI?
 5. What would count as evidence that I learned enough?
 
-Then act as Reflector. Challenge whether my plan is too broad, too vague, or disconnected from the problem.
+Then use @reflector. Challenge whether my plan is too broad, too vague, or disconnected from the problem.
+
+Then use @auditor. Check whether the verification method is strong enough to prove I learned what the problem requires.
 ```
 
 ## Judgment Step

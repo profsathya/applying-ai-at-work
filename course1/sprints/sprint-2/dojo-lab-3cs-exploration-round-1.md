@@ -29,6 +29,12 @@ Use the Dojo to explore your reframed problem through Context, Choices, and Conf
 
 Before using AI, write three context details you believe matter and one thing you do not want AI to assume.
 
+## Open The Dojo
+
+Use the [Open the Symbiotic Thinking Dojo](https://dojo.symbioticthinking.ai/) link for this lab. First-time users should open Learn About -> Privacy & Setup and configure a Gemini API key in the browser before starting.
+
+Do not paste confidential workplace, client, education, patient, or personal data into the Dojo. De-identify details and keep sensitive information out of the prompt.
+
 ## Dojo Prompt
 
 Use this prompt with the Dojo:
@@ -37,7 +43,7 @@ Use this prompt with the Dojo:
 I am working on this reframed problem:
 [paste problem]
 
-Act as Framer. Help me explore the problem using the 3Cs.
+Use Learn + Solve mode. Start with @framer. Help me explore the problem using the 3Cs.
 
 Context:
 - What context would you need to understand this problem better?
@@ -52,6 +58,8 @@ Choices:
 Confirmation:
 - What would need to be verified before I trust any direction?
 - What evidence could come from stakeholders, data, observation, or small tests?
+
+Then use @auditor. Check whether my context, choices, and confirmation needs are specific enough to guide my next action.
 ```
 
 ## Pushback Step

@@ -31,6 +31,12 @@ Use AI to widen and test your first problem frame, then use your own judgment to
 
 Before opening AI, write your current goal and first problem statement in your own words. Keep this version visible while you work.
 
+## Open The Dojo
+
+Use the [Open the Symbiotic Thinking Dojo](https://dojo.symbioticthinking.ai/) link for this lab. First-time users should open Learn About -> Privacy & Setup and configure a Gemini API key in the browser before starting.
+
+Do not paste confidential workplace, client, education, patient, or personal data into the Dojo. De-identify details and keep sensitive information out of the prompt.
+
 ## Dojo Prompt
 
 Use this prompt with the Dojo:
@@ -44,14 +50,14 @@ My goal is:
 My current surface request or first problem statement is:
 [paste first version]
 
-Act as Framer first. Help me move up and down the abstraction ladder:
+Stay in Learn mode. Start with @framer. Help me move up and down the abstraction ladder:
 1. What specific incidents or examples show this problem?
 2. What patterns might connect those examples?
 3. What underlying causes might be operating?
 4. What broader purpose or value is at stake?
 5. What narrower, workable problem could I focus on in 10 weeks?
 
-After that, switch to Skeptic. Challenge the frame:
+After that, use @challenger. Challenge the frame:
 - What is too vague?
 - What am I assuming?
 - What might not be mine to solve?

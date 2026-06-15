@@ -31,6 +31,12 @@ Use AI to audit your portfolio for evidence, gaps, repetition, and visible human
 
 Before using AI, make your own list of the strongest evidence you have and the weakest part of your final argument.
 
+## Open The Dojo
+
+Use the [Open the Symbiotic Thinking Dojo](https://dojo.symbioticthinking.ai/) link for this lab. First-time users should open Learn About -> Privacy & Setup and configure a Gemini API key in the browser before starting.
+
+Do not paste confidential workplace, client, education, patient, or personal data into the Dojo. De-identify details and keep sensitive information out of the prompt.
+
 ## Dojo Prompt
 
 Use this prompt with the Dojo:
@@ -46,18 +52,20 @@ Here are the parts I have:
 - Learning journey:
 - Current problem statement:
 
-Act as Synthesizer. Help me find:
+Use Learn + Solve + Build mode. Start with @connector. Help me find:
 1. What belongs in the final argument?
 2. What repeats or distracts?
 3. What gaps would a reader notice?
 4. What evidence is strongest?
 5. What evidence is weakest?
 
-Then act as Reflector. Check whether my human judgment is visible:
+Then use @reflector. Check whether my human judgment is visible:
 - Where did I decide?
 - Where did I revise based on evidence?
 - Where did I push back on AI?
 - Where did stakeholder context matter?
+
+Then use @auditor. Check whether the final document direction is coherent, evidence-backed, and more than a compilation of earlier artifacts.
 ```
 
 ## Judgment Step
