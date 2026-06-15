@@ -199,6 +199,7 @@ Important behavior:
 - `delivery_mode: ai_activity` is opt-in. Native Canvas quizzes and discussions still publish normally when this field is omitted.
 - AI activity quiz/discussion artifacts publish to Canvas as assignment shells, not native Canvas quizzes or discussion topics.
 - Generated hosted output uses Common Curriculum paths: `deanza/<course>/assignments/<slug>.html`, `deanza/<course>/activities/<slug>.html`, and `activities/deanza/<course>/<slug>.json`.
+- Course landing pages use `<course>/homepage.yaml` when present. The publish layer combines that curated metadata with artifact frontmatter and deployment state to generate `deanza/<course>/home.html`, `index.html`, and `sprint-<n>.html`.
 - `submission_type: file_upload` is required because participants submit the exported JSON file to Canvas.
 - Do not include native Canvas `questions` on AI activity artifacts. Put interactive prompts under `ai_activity.questions`.
 - Existing native Canvas quiz/discussion items are not converted in place. Remove the old manifest-backed Canvas item through the dry-run `remove-canvas` flow first, then republish the AI activity assignment shell.

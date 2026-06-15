@@ -34,23 +34,25 @@ publish: true
     )
 
 
-def write_manifest(path: Path) -> None:
+def write_manifest(path: Path, *, hosted: bool = False) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        json.dumps(
-            {
-                "instance": {
-                    "name": "production",
-                    "base_url": "https://example.instructure.com/",
-                    "course_id": 12345,
-                    "term": "Test Term",
-                },
-                "last_sync": None,
-                "artifacts": {},
-            }
-        ),
-        encoding="utf-8",
-    )
+    payload = {
+        "instance": {
+            "name": "production",
+            "base_url": "https://example.instructure.com/",
+            "course_id": 12345,
+            "term": "Test Term",
+        },
+        "last_sync": None,
+        "artifacts": {},
+    }
+    if hosted:
+        payload["hosted_html"] = {
+            "enabled": True,
+            "base_url": "https://profsathya.github.io/Common-Curriculum/deanza",
+            "path_prefix": "deanza",
+        }
+    path.write_text(json.dumps(payload), encoding="utf-8")
 
 
 def write_state(path: Path, *, hash_value: str, fingerprint: str = "a" * 64) -> None:
@@ -192,6 +194,35 @@ class PublishChangedTests(unittest.TestCase):
                         check_drift=False,
                         require_state=True,
                     )
+
+    def test_homepage_only_change_renders_hosted_files_without_canvas_push(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            state_path = state_dir / "course1" / "production.json"
+            output_dir = repo_root / "Common-Curriculum"
+            write_page(md_path)
+            write_manifest(manifest_path, hosted=True)
+            write_state(state_path, hash_value=content_hash(md_path))
+
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(publish_changed, "push_artifact") as push:
+                    result = publish_changed.publish_manifest(
+                        manifest_path,
+                        state_dir,
+                        dry_run=False,
+                        check_drift=False,
+                        require_state=True,
+                        hosted_output_dir=output_dir,
+                    )
+
+            self.assertEqual(result["changed"], [])
+            self.assertEqual(result["published"], [])
+            self.assertIsNotNone(result["hosted"])
+            self.assertTrue((output_dir / "deanza" / "course1" / "home.html").exists())
+            push.assert_not_called()
 
 
 if __name__ == "__main__":

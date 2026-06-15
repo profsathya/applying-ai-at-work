@@ -28,6 +28,8 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_DIR = REPO_ROOT / "schema"
 COURSE_KEY_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 
 def load_schema(name: str) -> dict:
@@ -173,6 +175,14 @@ def validate_prd(prd_path: Path) -> list[str]:
     return errors
 
 
+def validate_homepage(homepage_path: Path) -> list[str]:
+    if homepage_path.name != "homepage.yaml":
+        return [f"{homepage_path}: homepage metadata file must be named homepage.yaml"]
+    from canvas_sync.hosted_html import validate_homepage_metadata
+
+    return validate_homepage_metadata(homepage_path.parent)
+
+
 def discover_course_dirs() -> list[Path]:
     course_dirs: list[Path] = []
     for path in sorted(REPO_ROOT.iterdir()):
@@ -216,6 +226,10 @@ def validate_all() -> list[str]:
         if prd_path.exists():
             errors.extend(validate_prd(prd_path))
 
+        homepage_path = course_path / "homepage.yaml"
+        if homepage_path.exists():
+            errors.extend(validate_homepage(homepage_path))
+
     return errors
 
 
@@ -226,6 +240,7 @@ def main() -> int:
     group.add_argument("--manifest", type=Path)
     group.add_argument("--state", type=Path)
     group.add_argument("--prd", type=Path)
+    group.add_argument("--homepage", type=Path)
     group.add_argument("--all", action="store_true")
     args = parser.parse_args()
 
@@ -237,6 +252,8 @@ def main() -> int:
         errors = validate_canvas_state(args.state)
     elif args.prd:
         errors = validate_prd(args.prd)
+    elif args.homepage:
+        errors = validate_homepage(args.homepage)
     else:
         errors = validate_all()
 

@@ -42,5 +42,20 @@ jobs:
       - name: Compile sync scripts
         run: python -m py_compile canvas_sync/*.py
 
+      - name: Render hosted homepage preview
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          from canvas_sync.hosted_html import discover_artifact_files, render_hosted_files
+
+          output_dir = Path("/tmp/aiaw-homepage-preview")
+          for manifest in sorted(Path(".").glob("course*/manifests/production.json")):
+              data = json.loads(manifest.read_text(encoding="utf-8"))
+              if (data.get("hosted_html") or {}).get("enabled"):
+                  render_hosted_files(manifest, output_dir, discover_artifact_files(manifest))
+          PY
+
       - name: Run unit tests
         run: python -m unittest discover

@@ -145,8 +145,27 @@ def publish_manifest(
         "published": [],
         "failed": [],
         "drifted": [],
+        "hosted": None,
     }
-    if not changed or dry_run:
+    if dry_run:
+        return result
+    if not changed:
+        if hosted_output_dir:
+            try:
+                result["hosted"] = render_hosted_files(
+                    manifest_path,
+                    hosted_output_dir,
+                    discover_artifact_files(manifest_path),
+                    state=state_info["state"],
+                )
+            except Exception as exc:  # noqa: BLE001 - surface hosted render failures in publish result
+                result["failed"].append(
+                    {
+                        "file": "<hosted_html>",
+                        "artifact_id": None,
+                        "error": str(exc),
+                    }
+                )
         return result
 
     if check_drift:
@@ -173,7 +192,7 @@ def publish_manifest(
     if hosted_output_dir and result["published"]:
         try:
             latest_state, _state_path = load_state(manifest_path, state_dir, require_state=True)
-            render_hosted_files(
+            result["hosted"] = render_hosted_files(
                 manifest_path,
                 hosted_output_dir,
                 discover_artifact_files(manifest_path),

@@ -1,0 +1,77 @@
+---
+type: assignment
+title: 'Dojo Lab: Abstraction Ladder'
+slug: dojo-lab-abstraction-ladder
+artifact_id: course1-sprints-sprint-1-dojo-lab-abstraction-ladder
+sprint: 1
+week: 1
+module: 'Sprint 1: Frame What Is Worth Solving'
+position: 5
+points: 15
+submission_type: text_entry
+publish: false
+rubric:
+- description: Uses the abstraction ladder with concrete moves
+  points: 5
+- description: Pushes back on AI rather than accepting the first response
+  points: 4
+- description: Revised problem is specific, real, and workable
+  points: 4
+- description: Names one testable question
+  points: 2
+---
+
+# Dojo Lab: Abstraction Ladder
+
+## Purpose
+
+Use AI to widen and test your first problem frame, then use your own judgment to decide what changes.
+
+## Pre-Dojo Pause
+
+Before opening AI, write your current goal and first problem statement in your own words. Keep this version visible while you work.
+
+## Dojo Prompt
+
+Use this prompt with the Dojo:
+
+```text
+I am working on a real goal and I need help reframing it into a problem worth solving.
+
+My goal is:
+[paste goal]
+
+My current surface request or first problem statement is:
+[paste first version]
+
+Act as Framer first. Help me move up and down the abstraction ladder:
+1. What specific incidents or examples show this problem?
+2. What patterns might connect those examples?
+3. What underlying causes might be operating?
+4. What broader purpose or value is at stake?
+5. What narrower, workable problem could I focus on in 10 weeks?
+
+After that, switch to Skeptic. Challenge the frame:
+- What is too vague?
+- What am I assuming?
+- What might not be mine to solve?
+- What evidence would make this frame stronger?
+```
+
+## Pushback Step
+
+Do not accept the first response. Ask at least one follow-up that challenges the Dojo. For example, ask it to make the problem more specific, identify an assumption, reduce the scope, or separate what you know from what you infer.
+
+## Deliverable
+
+Submit a text entry with:
+
+- Your starting statement.
+- Three abstraction ladder moves that changed your thinking.
+- One AI suggestion you rejected and why.
+- Your revised problem statement.
+- One question you need to test with a real person.
+
+## Portfolio Capture
+
+Add the starting statement, useful ladder moves, rejected AI suggestion, revised problem statement, and testable question to your course portfolio.

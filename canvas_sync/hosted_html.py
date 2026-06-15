@@ -17,6 +17,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import parse_qsl, quote, urlencode, urlsplit, urlunsplit
 
+import yaml
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.state import course_dir_for_manifest, derive_artifact_id, load_json
@@ -750,6 +752,540 @@ def _load_artifact_items(paths: list[Path]) -> list[tuple[Path, dict]]:
     return sorted(items, key=_artifact_sort_key)
 
 
+def _homepage_path(course_dir: Path) -> Path:
+    return course_dir / "homepage.yaml"
+
+
+def _load_homepage_metadata(course_dir: Path) -> dict | None:
+    path = _homepage_path(course_dir)
+    if not path.exists():
+        return None
+    payload = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    if not isinstance(payload, dict):
+        raise ValueError(f"{path}: homepage metadata must be a mapping")
+    return payload
+
+
+def _walk_homepage_strings(value: object) -> list[str]:
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, list):
+        strings: list[str] = []
+        for item in value:
+            strings.extend(_walk_homepage_strings(item))
+        return strings
+    if isinstance(value, dict):
+        strings = []
+        for item in value.values():
+            strings.extend(_walk_homepage_strings(item))
+        return strings
+    return []
+
+
+def _homepage_entry_slug(entry: object) -> str | None:
+    if isinstance(entry, str):
+        return entry
+    if isinstance(entry, dict) and isinstance(entry.get("slug"), str):
+        return entry["slug"]
+    return None
+
+
+def validate_homepage_metadata(course_dir: Path) -> list[str]:
+    path = _homepage_path(course_dir)
+    if not path.exists():
+        return []
+
+    errors: list[str] = []
+    try:
+        payload = _load_homepage_metadata(course_dir)
+    except (OSError, yaml.YAMLError, ValueError) as exc:
+        return [f"{path}: {exc}"]
+
+    if payload is None:
+        return []
+
+    forbidden = ("<iframe", "<script", "<style", "javascript:", "onload=")
+    for text in _walk_homepage_strings(payload):
+        lowered = text.lower()
+        for pattern in forbidden:
+            if pattern in lowered:
+                errors.append(f"{path}: contains forbidden homepage text pattern {pattern!r}")
+        if "\u2014" in text:
+            errors.append(f"{path}: contains em-dash; use hyphen, colon, or sentence break")
+
+    modules = payload.get("modules")
+    if not isinstance(modules, list):
+        errors.append(f"{path}: modules must be a list")
+        return errors
+
+    artifact_slugs: set[str] = set()
+    for md_path in sorted((course_dir / "sprints").glob("sprint-*/*.md")):
+        try:
+            fm, _body = parse_frontmatter(md_path)
+        except (ValueError, yaml.YAMLError) as exc:
+            errors.append(f"{md_path}: {exc}")
+            continue
+        if fm.get("type") == "module_header":
+            continue
+        slug = fm.get("slug")
+        if not isinstance(slug, str):
+            continue
+        if slug in artifact_slugs:
+            errors.append(f"{md_path}: duplicate artifact slug {slug!r}")
+        artifact_slugs.add(slug)
+
+    configured_slugs: dict[str, str] = {}
+    for module_index, module in enumerate(modules, start=1):
+        label = f"{path}: module {module_index}"
+        if not isinstance(module, dict):
+            errors.append(f"{label} must be a mapping")
+            continue
+        if not isinstance(module.get("sprint"), int):
+            errors.append(f"{label} requires integer sprint")
+        groups = module.get("groups", [])
+        if not isinstance(groups, list):
+            errors.append(f"{label} groups must be a list")
+            continue
+        for group_index, group in enumerate(groups, start=1):
+            group_label = f"{label} group {group_index}"
+            if not isinstance(group, dict):
+                errors.append(f"{group_label} must be a mapping")
+                continue
+            items = group.get("items", [])
+            if not isinstance(items, list):
+                errors.append(f"{group_label} items must be a list")
+                continue
+            for item_index, entry in enumerate(items, start=1):
+                slug = _homepage_entry_slug(entry)
+                item_label = f"{group_label} item {item_index}"
+                if not slug:
+                    errors.append(f"{item_label} requires slug")
+                    continue
+                if slug in configured_slugs:
+                    errors.append(
+                        f"{item_label} duplicates slug {slug!r}; already used by {configured_slugs[slug]}"
+                    )
+                configured_slugs[slug] = item_label
+                if slug not in artifact_slugs:
+                    errors.append(f"{item_label} references missing artifact slug {slug!r}")
+
+    return errors
+
+
+def _course_metadata(course_dir: Path, course_key: str, homepage: dict | None) -> dict:
+    course_yaml = course_dir / "course.yaml"
+    course_data: dict = {}
+    if course_yaml.exists():
+        try:
+            loaded = yaml.safe_load(course_yaml.read_text(encoding="utf-8")) or {}
+            if isinstance(loaded, dict) and isinstance(loaded.get("course"), dict):
+                course_data = loaded["course"]
+        except (OSError, yaml.YAMLError):
+            course_data = {}
+    homepage_course = homepage.get("course", {}) if isinstance(homepage, dict) else {}
+    if not isinstance(homepage_course, dict):
+        homepage_course = {}
+    title = homepage_course.get("title") or course_data.get("name") or f"{course_key} hosted course pages"
+    lead = homepage_course.get("lead") or (
+        "Your path through the course. Every module opens with what you will learn and why, "
+        "so you always know where you are and what you are building toward."
+    )
+    footer = homepage_course.get("footer") or "Computing Talent Initiative - De Anza College"
+    return {"title": str(title), "lead": str(lead), "footer": str(footer)}
+
+
+def _module_config_by_sprint(homepage: dict | None) -> dict[int, dict]:
+    configs: dict[int, dict] = {}
+    if not isinstance(homepage, dict):
+        return configs
+    modules = homepage.get("modules", [])
+    if not isinstance(modules, list):
+        return configs
+    for module in modules:
+        if isinstance(module, dict) and isinstance(module.get("sprint"), int):
+            configs[module["sprint"]] = module
+    return configs
+
+
+def _homepage_item_groups(
+    sprint_items: list[tuple[Path, dict]],
+    module_config: dict,
+) -> list[tuple[str, list[tuple[Path, dict, dict]]]]:
+    by_slug = {fm["slug"]: (path, fm) for path, fm in sprint_items}
+    used: set[str] = set()
+    groups: list[tuple[str, list[tuple[Path, dict, dict]]]] = []
+
+    for group in module_config.get("groups", []) if isinstance(module_config.get("groups", []), list) else []:
+        if not isinstance(group, dict):
+            continue
+        label = str(group.get("label") or "Items")
+        group_items: list[tuple[Path, dict, dict]] = []
+        for entry in group.get("items", []) if isinstance(group.get("items", []), list) else []:
+            slug = _homepage_entry_slug(entry)
+            if not slug or slug not in by_slug:
+                continue
+            item_config = dict(entry) if isinstance(entry, dict) else {"slug": slug}
+            path, fm = by_slug[slug]
+            group_items.append((path, fm, item_config))
+            used.add(slug)
+        if group_items:
+            groups.append((label, group_items))
+
+    additional = [(path, fm, {"slug": fm["slug"]}) for path, fm in sprint_items if fm["slug"] not in used]
+    if additional:
+        label = str(module_config.get("additional_label") or "Additional items")
+        groups.append((label, additional))
+    return groups
+
+
+def _homepage_icon_svg(kind: str, *, selfcheck: bool = False) -> str:
+    if selfcheck:
+        return (
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">'
+            '<circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>'
+        )
+    if kind == "assignment":
+        return (
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">'
+            '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>'
+            '<path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>'
+        )
+    if kind == "discussion":
+        return (
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">'
+            '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'
+        )
+    if kind == "quiz":
+        return (
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">'
+            '<path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h6v6"/></svg>'
+        )
+    return (
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">'
+        '<path d="M5 3h11l3 3v15H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>'
+    )
+
+
+def _default_homepage_meta(frontmatter: dict) -> str:
+    labels = {
+        "assignment": "Assignment - submit in Canvas",
+        "discussion": "Discussion - post and respond in Canvas",
+        "page": "Page - read before the applied work",
+        "quiz": "Quiz - check your understanding before moving on",
+    }
+    return labels.get(frontmatter["type"], _type_label(frontmatter["type"]))
+
+
+def _render_homepage_item(
+    md_path: Path,
+    frontmatter: dict,
+    item_config: dict,
+    manifest_path: Path,
+    manifest: dict,
+    state: dict | None,
+) -> str:
+    title = html_lib.escape(str(item_config.get("title") or frontmatter["title"]))
+    meta = html_lib.escape(str(item_config.get("meta") or _default_homepage_meta(frontmatter)))
+    badge = item_config.get("badge")
+    badge_html = ""
+    if badge:
+        badge_class = " optional" if str(badge).lower() == "optional" else ""
+        badge_html = f'<span class="badge{badge_class}">{html_lib.escape(str(badge))}</span>'
+    selfcheck = bool(item_config.get("selfcheck")) or bool(badge)
+    item_class = "item selfcheck" if selfcheck else "item"
+    href = f"{_artifact_course_relative_path(frontmatter)}?context=web"
+    state_entry = _state_entry_for_artifact(md_path, manifest_path, frontmatter, state or manifest)
+    canvas_url = _canvas_item_url(manifest, frontmatter, state_entry)
+    canvas_attr = f' data-canvas-href="{html_lib.escape(canvas_url, quote=True)}"' if canvas_url else ""
+    verify = item_config.get("verify")
+    verify_html = ""
+    if verify:
+        verify_html = (
+            '<div class="verify">'
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">'
+            '<path d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4z"/>'
+            '<path d="M3 21v-2a5 5 0 0 1 5-5h3"/><path d="M16 14l2 2 4-4"/></svg>'
+            f"<span>{html_lib.escape(str(verify))}</span></div>"
+        )
+    return (
+        f'<div class="{item_class}">'
+        f'<span class="ico">{_homepage_icon_svg(frontmatter["type"], selfcheck=selfcheck)}</span>'
+        '<div class="body">'
+        f'<div class="title"><a target="_blank" rel="noopener" href="{html_lib.escape(href, quote=True)}"'
+        f'{canvas_attr}>{title}</a>{badge_html}</div>'
+        f'<div class="meta">{meta}</div>{verify_html}'
+        '</div></div>'
+    )
+
+
+def _render_goal_block(module_config: dict) -> str:
+    goals = module_config.get("learning_goals") or module_config.get("goal")
+    if isinstance(goals, list):
+        items = "\n".join(f"<li>{html_lib.escape(str(goal))}</li>" for goal in goals)
+        goal_body = f'<ul class="goal-list">\n{items}\n</ul>'
+    elif goals:
+        goal_body = html_lib.escape(str(goals))
+    else:
+        goal_body = "Complete this module and carry the work forward."
+    return (
+        '<div class="goal">'
+        '<div class="label">Module Learning Goals</div>'
+        f'<div class="text">{goal_body}</div>'
+        '</div>'
+    )
+
+
+def _render_prereq(module_config: dict, *, first: bool) -> str:
+    text = module_config.get("prereq") or ("Start here." if first else "")
+    if not text:
+        return ""
+    if first:
+        icon = '<path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/>'
+    else:
+        icon = '<path d="M5 12h14M13 6l6 6-6 6"/>'
+    return (
+        '<div class="prereq">'
+        f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{icon}</svg>'
+        f'<span>{html_lib.escape(str(text))}</span>'
+        '</div>'
+    )
+
+
+def _render_career_module(
+    sprint: int,
+    sprint_items: list[tuple[Path, dict]],
+    module_config: dict,
+    manifest_path: Path,
+    manifest: dict,
+    state: dict | None,
+    *,
+    first: bool,
+    force_open: bool = False,
+) -> str:
+    module_title = str(module_config.get("title") or sprint_items[0][1].get("module") or f"Sprint {sprint}")
+    tag = str(module_config.get("tag") or f"Sprint {sprint}")
+    open_attr = " open" if force_open or module_config.get("open") else ""
+    muted = bool(module_config.get("muted")) and not force_open
+    module_class = "module module--muted" if muted else "module"
+    not_ready = '<span class="not-ready">Not ready yet</span>' if muted else ""
+    groups_html = []
+    for label, group_items in _homepage_item_groups(sprint_items, module_config):
+        groups_html.append(f'<div class="group-label">{html_lib.escape(label)}</div>')
+        for md_path, fm, item_config in group_items:
+            groups_html.append(_render_homepage_item(md_path, fm, item_config, manifest_path, manifest, state))
+    return (
+        f'<details class="{module_class}"{open_attr}>'
+        '<summary class="module-head">'
+        f'<span class="name">{html_lib.escape(module_title)}</span>'
+        f'<span class="tag">{html_lib.escape(tag)}</span>{not_ready}<span class="chev">&#9656;</span>'
+        '</summary>'
+        f'{_render_goal_block(module_config)}'
+        f'{_render_prereq(module_config, first=first)}'
+        '<div class="items">'
+        + "\n".join(groups_html)
+        + '</div></details>'
+    )
+
+
+def _career_homepage_document(
+    course_meta: dict,
+    modules_html: str,
+    *,
+    title_suffix: str = "Home",
+    back_href: str | None = None,
+) -> str:
+    back = ""
+    if back_href:
+        back = f'<a class="back-link" href="{html_lib.escape(back_href, quote=True)}" data-keep-context>&larr; Back to course home</a>'
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{html_lib.escape(course_meta["title"])} - {html_lib.escape(title_suffix)}</title>
+<style>
+  :root{{
+    --blue:#0374B5; --blue-dark:#0a5a8a; --text:#2D3B45; --muted:#6B7780;
+    --border:#C7CDD1; --border-light:#E8EAEC;
+    --modhead:#F5F5F5; --goal-bg:#F3F8FB; --goal-border:#0374B5;
+    --check-bg:#F2FAF5; --check-border:#0B874B; --check:#0B874B; --warn:#9B6A00;
+    --font:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  }}
+  *{{box-sizing:border-box;}}
+  html,body{{margin:0;padding:0;}}
+  body{{font-family:var(--font);color:var(--text);background:#fff;font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased;}}
+  a{{color:var(--blue);text-decoration:none;}}
+  a:hover{{text-decoration:underline;color:var(--blue-dark);}}
+  .page{{max-width:1040px;margin:0 auto;padding:22px 22px 56px;}}
+  .back-link{{display:inline-block;font-size:13px;margin:0 0 14px;}}
+  .course-header{{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;border-bottom:1px solid var(--border-light);padding-bottom:16px;margin-bottom:20px;}}
+  .course-header h1{{font-size:23px;font-weight:700;margin:0 0 4px;}}
+  .course-header .lead{{color:var(--muted);font-size:13.5px;max-width:660px;}}
+  .cti-logo{{height:34px;width:auto;display:block;opacity:.9;}}
+  .cti-logo-fallback{{display:none;font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.3px;text-align:right;line-height:1.2;}}
+  .module{{border:1px solid var(--border);border-radius:4px;margin-bottom:20px;overflow:hidden;}}
+  details.module > summary{{list-style:none;cursor:pointer;}}
+  details.module > summary::-webkit-details-marker{{display:none;}}
+  .module-head{{background:var(--modhead);border-bottom:1px solid var(--border);padding:11px 14px;display:flex;align-items:center;gap:12px;}}
+  details.module:not([open]) > .module-head{{border-bottom:none;}}
+  .module-head .name{{font-size:15px;font-weight:700;color:var(--text);flex:1;}}
+  .module-head .tag{{font-size:12px;color:var(--muted);white-space:nowrap;}}
+  .module-head .chev{{display:inline-block;font-size:11px;color:var(--muted);transition:transform .15s ease;flex-shrink:0;}}
+  details.module[open] > .module-head .chev{{transform:rotate(90deg);}}
+  .module-head:hover{{background:#EFEFEF;}}
+  .module.module--muted{{opacity:.68;}}
+  .module.module--muted .module-head{{background:#ECECEE;}}
+  .module.module--muted .module-head:hover{{background:#E4E4E6;}}
+  .module.module--muted .name,
+  .module.module--muted .tag{{color:#7C8A93;}}
+  .module-head .not-ready{{display:none;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#5F6B73;background:#D8DCDF;border-radius:3px;padding:1px 7px;}}
+  .module.module--muted .module-head .not-ready{{display:inline-block;}}
+  .goal{{background:var(--goal-bg);border-left:4px solid var(--goal-border);padding:11px 14px;}}
+  .goal .label{{font-size:10.5px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--blue);margin-bottom:3px;}}
+  .goal .text{{font-size:14px;color:var(--text);}}
+  .goal-list{{margin:4px 0 0 0;padding-left:18px;}}
+  .prereq{{padding:8px 14px 4px;color:var(--muted);font-size:12.5px;display:flex;gap:7px;align-items:flex-start;border-bottom:1px solid var(--border-light);}}
+  .prereq svg{{width:14px;height:14px;flex:0 0 14px;margin-top:2px;}}
+  .items{{padding:2px 0 4px;}}
+  .item{{display:flex;gap:11px;padding:11px 14px 11px 26px;border-bottom:1px solid var(--border-light);align-items:flex-start;}}
+  .item:last-child{{border-bottom:none;}}
+  .item .ico{{flex:0 0 18px;margin-top:1px;color:var(--muted);}}
+  .item .ico svg{{width:18px;height:18px;display:block;}}
+  .item .body{{flex:1;min-width:0;}}
+  .item .title{{font-size:14.5px;font-weight:600;}}
+  .item .meta{{color:var(--muted);font-size:12px;margin-top:2px;}}
+  .group-label{{padding:10px 14px 4px;font-size:10.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);background:#FAFBFC;border-bottom:1px solid var(--border-light);}}
+  .item.selfcheck{{background:var(--check-bg);}}
+  .item.selfcheck .ico{{color:var(--check);}}
+  .selfcheck .badge{{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:var(--check);border-radius:3px;padding:1px 6px;margin-left:8px;vertical-align:middle;}}
+  .selfcheck .badge.optional{{background:#7C8A93;}}
+  .selfcheck .verify{{margin-top:5px;font-size:12.5px;color:#3d5346;display:flex;gap:6px;align-items:flex-start;}}
+  .selfcheck .verify svg{{width:14px;height:14px;flex:0 0 14px;margin-top:2px;}}
+  .page-footer{{margin-top:30px;padding-top:16px;border-top:1px solid var(--border-light);display:flex;align-items:center;gap:10px;color:var(--muted);font-size:11.5px;}}
+  .page-footer img{{height:20px;opacity:.55;}}
+</style>
+</head>
+<body>
+  <div class="page">
+    {back}
+    <div class="course-header">
+      <div>
+        <h1>{html_lib.escape(course_meta["title"])}</h1>
+        <div class="lead">{html_lib.escape(course_meta["lead"])}</div>
+      </div>
+      <div>
+        <img class="cti-logo" src="{CTI_LOGO_URL}" alt="Computing Talent Initiative" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+        <div class="cti-logo-fallback">Computing Talent<br>Initiative</div>
+      </div>
+    </div>
+    {modules_html}
+    <footer class="page-footer">
+      <img src="{CTI_LOGO_URL}" alt="" onerror="this.style.display='none'">
+      <span>{html_lib.escape(course_meta["footer"])}</span>
+    </footer>
+  </div>
+  <script>
+    (function() {{
+      var ctx = new URLSearchParams(location.search).get('context')
+        || (window.self !== window.top ? 'canvas' : 'web');
+      document.querySelectorAll('a[data-canvas-href]').forEach(function(a) {{
+        if (ctx === 'canvas') {{
+          a.href = a.getAttribute('data-canvas-href');
+        }} else {{
+          try {{
+            var u = new URL(a.getAttribute('href'), location.href);
+            u.searchParams.set('context', 'web');
+            a.href = u.pathname + u.search + u.hash;
+          }} catch (e) {{ }}
+        }}
+      }});
+      document.querySelectorAll('a[data-keep-context]').forEach(function(a) {{
+        try {{
+          var u = new URL(a.getAttribute('href'), location.href);
+          u.searchParams.set('context', ctx === 'canvas' ? 'canvas' : 'web');
+          a.href = u.pathname + u.search + u.hash;
+        }} catch (e) {{ }}
+      }});
+    }})();
+  </script>
+</body>
+</html>
+"""
+
+
+def _render_career_sprint_index(
+    output_dir: Path,
+    manifest_path: Path,
+    manifest: dict,
+    course_key: str,
+    sprint: int,
+    sprint_items: list[tuple[Path, dict]],
+    homepage: dict,
+    state: dict | None,
+) -> dict:
+    course_dir = course_dir_for_manifest(manifest_path)
+    course_meta = _course_metadata(course_dir, course_key, homepage)
+    module_config = _module_config_by_sprint(homepage).get(sprint, {})
+    module_html = _render_career_module(
+        sprint,
+        sprint_items,
+        module_config,
+        manifest_path,
+        manifest,
+        state,
+        first=True,
+        force_open=True,
+    )
+    document = _career_homepage_document(
+        course_meta,
+        module_html,
+        title_suffix=f"Sprint {sprint}",
+        back_href="home.html?context=web",
+    )
+    path = output_dir / hosted_config_from_manifest(manifest).path_prefix / course_key / f"sprint-{sprint}.html"
+    changed, digest = _write_if_changed(path, document)
+    return {"path": str(path), "changed": changed, "hash": digest}
+
+
+def _render_career_course_index(
+    output_dir: Path,
+    manifest_path: Path,
+    manifest: dict,
+    course_key: str,
+    items_by_sprint: dict[int, list[tuple[Path, dict]]],
+    homepage: dict,
+    state: dict | None,
+) -> dict:
+    course_dir = course_dir_for_manifest(manifest_path)
+    course_meta = _course_metadata(course_dir, course_key, homepage)
+    configs = _module_config_by_sprint(homepage)
+    modules = []
+    for index, sprint in enumerate(sorted(items_by_sprint), start=1):
+        modules.append(
+            _render_career_module(
+                sprint,
+                items_by_sprint[sprint],
+                configs.get(sprint, {}),
+                manifest_path,
+                manifest,
+                state,
+                first=index == 1,
+            )
+        )
+    document = _career_homepage_document(course_meta, "\n".join(modules))
+    course_dir_out = output_dir / hosted_config_from_manifest(manifest).path_prefix / course_key
+    index_changed, index_digest = _write_if_changed(course_dir_out / "index.html", document)
+    home_changed, home_digest = _write_if_changed(course_dir_out / "home.html", document)
+    return {
+        "path": str(course_dir_out / "index.html"),
+        "changed": index_changed or home_changed,
+        "hash": index_digest,
+        "aliases": [
+            {"path": str(course_dir_out / "home.html"), "changed": home_changed, "hash": home_digest}
+        ],
+    }
+
+
 def _index_document(
     title: str,
     meta: str,
@@ -916,6 +1452,8 @@ def render_hosted_files(
 ) -> dict:
     manifest_data = manifest or load_json(manifest_path)
     course_key = course_dir_for_manifest(manifest_path).name
+    course_dir = course_dir_for_manifest(manifest_path)
+    index_files = discover_artifact_files(manifest_path)
     results = []
     for md_path in files:
         errors = validate_artifact(md_path)
@@ -934,17 +1472,55 @@ def render_hosted_files(
             )
         )
 
-    items = _load_artifact_items(files)
+    for md_path in index_files:
+        errors = validate_artifact(md_path)
+        if errors:
+            raise ValueError("; ".join(errors))
+
+    homepage = _load_homepage_metadata(course_dir)
+    if homepage is not None:
+        homepage_errors = validate_homepage_metadata(course_dir)
+        if homepage_errors:
+            raise ValueError("; ".join(homepage_errors))
+
+    items = _load_artifact_items(index_files)
     items_by_sprint: dict[int, list[tuple[Path, dict]]] = {}
     for item in items:
         sprint = int(item[1]["sprint"])
         items_by_sprint.setdefault(sprint, []).append(item)
 
     indexes = []
-    for sprint, sprint_items in sorted(items_by_sprint.items()):
-        indexes.append(_render_sprint_index(output_dir, manifest_data, course_key, sprint, sprint_items))
-    if items_by_sprint:
-        indexes.append(_render_course_index(output_dir, manifest_data, course_key, items_by_sprint))
+    if homepage is not None:
+        for sprint, sprint_items in sorted(items_by_sprint.items()):
+            indexes.append(
+                _render_career_sprint_index(
+                    output_dir,
+                    manifest_path,
+                    manifest_data,
+                    course_key,
+                    sprint,
+                    sprint_items,
+                    homepage,
+                    state or manifest_data,
+                )
+            )
+        if items_by_sprint:
+            indexes.append(
+                _render_career_course_index(
+                    output_dir,
+                    manifest_path,
+                    manifest_data,
+                    course_key,
+                    items_by_sprint,
+                    homepage,
+                    state or manifest_data,
+                )
+            )
+    else:
+        for sprint, sprint_items in sorted(items_by_sprint.items()):
+            indexes.append(_render_sprint_index(output_dir, manifest_data, course_key, sprint, sprint_items))
+        if items_by_sprint:
+            indexes.append(_render_course_index(output_dir, manifest_data, course_key, items_by_sprint))
 
     return {"rendered": results, "indexes": indexes}
 

@@ -1,8 +1,9 @@
 course:
   slug: course1
-  name: "Problem Framing with AI"
-  code: "AIW-101"
+  name: "Reframing Problems with AI"
+  code: "CIS 501"
   term: "Fall 2026"
   partner: "De Anza College"
+  certificate: "Applying AI at Work: Build Solutions with a Human Touch"
   canvas_course_id: 180  # populated from COURSE1_CANVAS_ID at push time
-  planned_at: "2026-04-20T15:00:00Z"
+  planned_at: "2026-06-12T00:00:00Z"

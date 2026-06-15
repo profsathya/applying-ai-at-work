@@ -10,7 +10,12 @@ from pathlib import Path
 from unittest.mock import patch
 
 from canvas_sync import push
-from canvas_sync.hosted_html import iframe_shell, render_hosted_artifact, render_hosted_files
+from canvas_sync.hosted_html import (
+    iframe_shell,
+    render_hosted_artifact,
+    render_hosted_files,
+    validate_homepage_metadata,
+)
 from canvas_sync.state import state_path_for_manifest
 
 
@@ -85,6 +90,58 @@ ai_activity:
 # Tuple AI Discussion
 
 Use the activity to test whether your tuple example is specific enough for another person to maintain.
+""",
+        encoding="utf-8",
+    )
+
+
+def write_second_page(path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        """---
+type: page
+title: "Second Overview"
+slug: second-overview
+artifact_id: second-overview
+sprint: 99
+module: "Hosted HTML Pilot"
+position: 2
+points: null
+submission_type: none
+publish: false
+---
+
+# Second Overview
+
+A second page for homepage index checks.
+""",
+        encoding="utf-8",
+    )
+
+
+def write_homepage(path: Path, *, body: str | None = None) -> None:
+    path.write_text(
+        body
+        or """course:
+  title: "Hosted HTML Pilot"
+  lead: "A compact homepage for the hosted pilot."
+  footer: "Computing Talent Initiative - Test"
+modules:
+  - sprint: 99
+    tag: "Pilot"
+    open: true
+    learning_goals:
+      - "Understand the hosted pilot."
+      - "Use the generated links."
+    prereq: "Start here."
+    groups:
+      - label: "Start here"
+        items:
+          - slug: "tuple-overview"
+            meta: "Page - read first"
+            badge: "Self-check"
+            selfcheck: true
+            verify: "Ask a peer to confirm the tuple example is concrete."
 """,
         encoding="utf-8",
     )
@@ -169,9 +226,23 @@ class HostedHtmlTests(unittest.TestCase):
             manifest_path = repo_root / "course1" / "manifests" / "production.json"
             output_dir = repo_root / "Common-Curriculum"
             write_page(md_path)
+            write_homepage(repo_root / "course1" / "homepage.yaml")
             write_manifest(manifest_path)
+            state = {
+                "artifacts": {
+                    "tuple-overview": {
+                        "artifact_id": "tuple-overview",
+                        "local_path": "course1/sprints/sprint-99/tuple-overview.md",
+                        "canvas_type": "page",
+                        "canvas_id": 1001,
+                        "canvas_page_url": "tuple-overview",
+                        "canvas_module_id": 55,
+                        "content_hash": "a" * 64,
+                    }
+                }
+            }
 
-            result = render_hosted_files(manifest_path, output_dir, [md_path])
+            result = render_hosted_files(manifest_path, output_dir, [md_path], state=state)
 
             sprint_index = output_dir / "deanza" / "course1" / "sprint-99.html"
             course_index = output_dir / "deanza" / "course1" / "index.html"
@@ -180,8 +251,63 @@ class HostedHtmlTests(unittest.TestCase):
             self.assertTrue(course_index.exists())
             self.assertTrue(course_home.exists())
             self.assertEqual(result["indexes"][0]["path"], str(sprint_index))
-            self.assertIn("activities/tuple-overview.html?context=web", sprint_index.read_text(encoding="utf-8"))
-            self.assertIn("sprint-99.html?context=web", course_index.read_text(encoding="utf-8"))
+            sprint_html = sprint_index.read_text(encoding="utf-8")
+            home_html = course_home.read_text(encoding="utf-8")
+            self.assertIn('class="course-header"', home_html)
+            self.assertIn('class="module"', home_html)
+            self.assertIn("Module Learning Goals", home_html)
+            self.assertIn("Start here", home_html)
+            self.assertIn("New._CTI_Logo_RGB-1.png", home_html)
+            self.assertIn("data-canvas-href", home_html)
+            self.assertIn("Ask a peer to confirm the tuple example is concrete.", home_html)
+            self.assertIn("activities/tuple-overview.html?context=web", sprint_html)
+            self.assertIn("activities/tuple-overview.html?context=web", course_index.read_text(encoding="utf-8"))
+
+    def test_homepage_indexes_add_and_remove_artifact_links(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            first_path = repo_root / "course1" / "sprints" / "sprint-99" / "tuple-overview.md"
+            second_path = repo_root / "course1" / "sprints" / "sprint-99" / "second-overview.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            output_dir = repo_root / "Common-Curriculum"
+            write_page(first_path)
+            write_second_page(second_path)
+            write_homepage(repo_root / "course1" / "homepage.yaml")
+            write_manifest(manifest_path)
+
+            render_hosted_files(manifest_path, output_dir, [first_path, second_path])
+            home_path = output_dir / "deanza" / "course1" / "home.html"
+            self.assertIn("second-overview.html?context=web", home_path.read_text(encoding="utf-8"))
+
+            second_path.unlink()
+            render_hosted_files(manifest_path, output_dir, [first_path])
+            self.assertNotIn("second-overview.html?context=web", home_path.read_text(encoding="utf-8"))
+
+    def test_homepage_validation_rejects_stale_and_duplicate_slugs(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-99" / "tuple-overview.md"
+            homepage_path = repo_root / "course1" / "homepage.yaml"
+            write_page(md_path)
+            write_homepage(
+                homepage_path,
+                body="""course:
+  title: "Hosted HTML Pilot"
+modules:
+  - sprint: 99
+    groups:
+      - label: "Broken"
+        items:
+          - slug: "tuple-overview"
+          - slug: "tuple-overview"
+          - slug: "missing-page"
+""",
+            )
+
+            errors = validate_homepage_metadata(repo_root / "course1")
+
+            self.assertTrue(any("duplicates slug 'tuple-overview'" in error for error in errors))
+            self.assertTrue(any("references missing artifact slug 'missing-page'" in error for error in errors))
 
     def test_ai_activity_renders_wrapper_shell_and_config(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -255,6 +381,8 @@ class HostedHtmlTests(unittest.TestCase):
             self.assertEqual(entry["hosted_path"], "course1/activities/tuple-overview.html")
             self.assertEqual(entry["hosted_url"], result["hosted_url"])
             self.assertRegex(entry["hosted_hash"], re.compile(r"^[a-f0-9]{64}$"))
+            self.assertTrue((output_dir / "deanza" / "course1" / "home.html").exists())
+            self.assertTrue((output_dir / "deanza" / "course1" / "sprint-99.html").exists())
 
     def test_assignment_discussion_and_quiz_keep_canvas_native_metadata(self) -> None:
         class PayloadClient:

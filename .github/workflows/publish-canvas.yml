@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'course*/sprints/**'
+      - 'course*/homepage.yaml'
       - 'course*/manifests/production.json'
       - '.github/workflows/publish-canvas.yml'
       - 'schema/**'
@@ -76,7 +77,7 @@ jobs:
             printf '%s\n' "$manifest" > "$manifests_file"
           elif [ -n "${BEFORE_SHA:-}" ] && [ "$BEFORE_SHA" != "0000000000000000000000000000000000000000" ]; then
             git diff --name-only "$BEFORE_SHA" "$GITHUB_SHA" \
-              | awk -F/ '/^course[0-9]+\/(sprints\/|manifests\/production.json)/ { print $1 "/manifests/production.json" }' \
+              | awk -F/ '/^course[0-9]+\/(sprints\/|homepage.yaml|manifests\/production.json)/ { print $1 "/manifests/production.json" }' \
               | sort -u \
               | while IFS= read -r manifest; do
                   [ -f "$manifest" ] && printf '%s\n' "$manifest"

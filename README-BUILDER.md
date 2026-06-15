@@ -159,6 +159,8 @@ Use direct Python commands for validation, inspect, push, pull, and remove.
 
 Hosted Canvas content is still authored in Markdown under `<course>/sprints/`. The Common Curriculum checkout receives generated HTML and JSON only when the publish layer renders it.
 
+When `<course>/homepage.yaml` exists, it is the curated source for the generated hosted landing pages. The renderer combines that YAML with artifact frontmatter and deployment state to write `deanza/<course>/home.html`, `index.html`, and `sprint-<n>.html`.
+
 For a changed hosted module or artifact:
 
 1. Update the Markdown source.

@@ -1,0 +1,179 @@
+course:
+  title: "Reframing Problems with AI"
+  lead: "Your path through the course. Each sprint shows what you will learn, what you will build, and where the work carries forward."
+  footer: "Computing Talent Initiative - De Anza College - Reframing Problems with AI"
+modules:
+  - sprint: 1
+    tag: "Framing"
+    open: true
+    learning_goals:
+      - "Move from a broad goal or surface request to a problem that is specific enough to test."
+      - "Use AI to widen and challenge your thinking without handing it final judgment."
+      - "Create a problem frame grounded in real people, constraints, and evidence."
+    prereq: "Start with a real goal from work, job search, community work, caregiving, learning, or another setting where actual people are affected."
+    groups:
+      - label: "Start here"
+        items:
+          - slug: "start-here-frame-what-is-worth-solving"
+            meta: "Page - orient to the sprint, portfolio thread, and completion criteria"
+      - label: "Build the frame"
+        items:
+          - slug: "concept-from-goal-to-problem"
+            meta: "Page - distinguish goals, surface requests, and underlying problems"
+          - slug: "pre-dojo-goal-pause"
+            meta: "Assignment - write your own first thoughts before asking AI"
+          - slug: "dojo-lab-abstraction-ladder"
+            meta: "Assignment - use AI to move between concrete examples, patterns, causes, and purpose"
+      - label: "Test and submit"
+        items:
+          - slug: "peer-exchange-what-problem-sits-beneath-it"
+            meta: "Discussion - let peers identify what still sounds vague or assumed"
+          - slug: "goal-plan-and-problem-reframing-document"
+            meta: "Assignment - submit the problem frame you will carry forward"
+          - slug: "problem-framing-check"
+            meta: "Quiz - check the goal-to-problem distinction before moving on"
+            badge: "Self-check"
+            selfcheck: true
+            verify: "Ask another person to read the problem statement and name what they think you are actually trying to solve."
+          - slug: "sprint-1-reflection-what-changed"
+            meta: "Assignment - name what changed between your starting goal and your current problem frame"
+
+  - sprint: 2
+    tag: "AI Direction"
+    open: false
+    learning_goals:
+      - "Give AI enough context, constraints, and standards to make its output useful."
+      - "Judge AI suggestions instead of accepting the first fluent answer."
+      - "Document how your choices improved the work."
+    prereq: "Builds on the problem frame from Sprint 1. AI can help only after you can explain what needs to be explored."
+    groups:
+      - label: "Start here"
+        items:
+          - slug: "start-here-direct-ai-deliberately"
+            meta: "Page - orient to deliberate AI direction and the sprint rhythm"
+      - label: "Practice direction"
+        items:
+          - slug: "concept-context-choices-confirmation"
+            meta: "Page - learn the context, choices, and confirmation pattern"
+          - slug: "dojo-lab-3cs-exploration-round-1"
+            meta: "Assignment - run a focused AI exploration round on your real problem"
+          - slug: "ai-output-assessment-and-pushback"
+            meta: "Assignment - push back on weak, generic, or unverified AI output"
+      - label: "Compare, check, and reflect"
+        items:
+          - slug: "peer-exchange-which-ai-suggestion-would-you-not-trust-yet"
+            meta: "Discussion - compare what you would not trust yet and why"
+          - slug: "ai-exploration-log-and-3cs-application-log"
+            meta: "Assignment - preserve prompts, choices, outputs, and judgment calls"
+          - slug: "directing-ai-check"
+            meta: "Quiz - confirm how to direct and evaluate AI output"
+            badge: "Self-check"
+            selfcheck: true
+            verify: "Show one AI output and your pushback notes to a peer. Ask whether your standard is clear."
+          - slug: "sprint-2-reflection-my-judgment-improved-the-output"
+            meta: "Assignment - explain where your judgment changed the result"
+
+  - sprint: 3
+    tag: "People and Context"
+    open: false
+    learning_goals:
+      - "Identify stakeholders, needs, constraints, and assumptions around the problem."
+      - "Design validation questions that produce real evidence rather than confirmation."
+      - "Revise the problem frame using human input and context."
+    prereq: "Builds on your Sprint 2 AI exploration. This sprint asks what actual people and settings confirm, complicate, or change."
+    groups:
+      - label: "Start here"
+        items:
+          - slug: "start-here-integrate-people-and-context"
+            meta: "Page - orient to stakeholder evidence and context"
+      - label: "Map and prepare"
+        items:
+          - slug: "concept-stakeholders-needs-constraints-and-validation"
+            meta: "Page - distinguish stakeholder needs, constraints, and validation"
+          - slug: "dojo-lab-stakeholder-lens-preparation"
+            meta: "Assignment - use AI to prepare better stakeholder questions"
+          - slug: "stakeholder-map-draft"
+            meta: "Assignment - draft who is affected, who can validate, and what matters to each group"
+      - label: "Validate and revise"
+        items:
+          - slug: "peer-exchange-validation-questions"
+            meta: "Discussion - improve the questions before you ask them"
+          - slug: "stakeholder-validation-report"
+            meta: "Assignment - report what you learned from real stakeholder work"
+          - slug: "stakeholder-validation-check"
+            meta: "Quiz - check whether your validation plan seeks evidence, not approval"
+            badge: "Self-check"
+            selfcheck: true
+            verify: "Ask a real stakeholder or peer to identify one assumption your questions may still carry."
+          - slug: "sprint-3-reflection-and-mid-course-goal-plan-revision"
+            meta: "Assignment - revise your goal plan based on evidence"
+
+  - sprint: 4
+    tag: "Learning Gap"
+    open: false
+    learning_goals:
+      - "Name the knowledge gaps that block stronger work on the problem."
+      - "Use AI to design a focused learning path without outsourcing the learning."
+      - "Show evidence that your learning changed what you can now do."
+    prereq: "Builds on validated stakeholder and context evidence. Learn only what the problem now proves you need."
+    groups:
+      - label: "Start here"
+        items:
+          - slug: "start-here-close-the-learning-gap"
+            meta: "Page - orient to focused self-directed learning"
+      - label: "Plan the learning"
+        items:
+          - slug: "concept-self-directed-learning-with-ai"
+            meta: "Page - use AI as a learning partner while keeping your own standards"
+          - slug: "knowledge-gap-inventory"
+            meta: "Assignment - identify what you need to know and why it matters"
+          - slug: "dojo-lab-learning-path-design"
+            meta: "Assignment - design a practical learning path with AI support"
+      - label: "Apply, compare, and check"
+        items:
+          - slug: "peer-exchange-what-are-you-choosing-not-to-learn"
+            meta: "Discussion - compare what you are deliberately leaving out"
+          - slug: "self-learning-journey-and-learning-plan"
+            meta: "Assignment - show the learning path and what it changed"
+          - slug: "self-directed-learning-check"
+            meta: "Quiz - check whether your learning plan is focused and testable"
+            badge: "Self-check"
+            selfcheck: true
+            verify: "Have someone ask how each learning step helps the actual problem, not just your general curiosity."
+          - slug: "sprint-4-reflection-what-i-learned-and-how-i-know"
+            meta: "Assignment - explain what you learned and what evidence proves it"
+
+  - sprint: 5
+    tag: "Synthesis"
+    open: false
+    learning_goals:
+      - "Turn course artifacts into a coherent argument about the problem and your readiness."
+      - "Identify gaps in evidence, logic, and stakeholder grounding before final submission."
+      - "Submit a final integrated problem document that a reader can follow."
+    prereq: "Builds on the full course portfolio. Synthesis works when your artifacts show real changes in judgment, evidence, and scope."
+    groups:
+      - label: "Start here"
+        items:
+          - slug: "start-here-synthesize-and-show-readiness"
+            meta: "Page - orient to the final synthesis and readiness standard"
+      - label: "Draft the argument"
+        items:
+          - slug: "concept-from-artifacts-to-argument"
+            meta: "Page - connect artifacts into a claim a reader can follow"
+          - slug: "dojo-lab-synthesis-gap-audit"
+            meta: "Assignment - use AI to find gaps without letting it write the argument"
+          - slug: "integrated-problem-document-draft"
+            meta: "Assignment - draft the integrated problem document"
+      - label: "Review, submit, and close"
+        items:
+          - slug: "peer-review-can-a-reader-follow-the-argument"
+            meta: "Discussion - test whether another reader can follow your reasoning"
+          - slug: "final-integrated-problem-document-and-readiness-report"
+            meta: "Assignment - submit the final integrated document and readiness report"
+          - slug: "closing-reflection-and-final-goal-plan-check"
+            meta: "Assignment - close the loop on your goal plan"
+          - slug: "readiness-self-check"
+            meta: "Quiz - confirm that the final submission is evidence-backed and readable"
+            badge: "Self-check"
+            selfcheck: true
+            verify: "Walk a peer or stakeholder through the argument before final submission and note where they get lost."

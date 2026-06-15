@@ -30,7 +30,13 @@ from dotenv import load_dotenv
 # Local imports
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient, CanvasError, resolve_or_create_module
-from canvas_sync.hosted_html import artifact_hosted_info, iframe_shell, render_hosted_artifact
+from canvas_sync.hosted_html import (
+    artifact_hosted_info,
+    discover_artifact_files as discover_hosted_artifact_files,
+    iframe_shell,
+    render_hosted_artifact,
+    render_hosted_files,
+)
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.state import (
     CanvasStateStore,
@@ -355,6 +361,13 @@ def push_artifact(
             )
             entry["hosted_hash"] = hosted_result["hosted_hash"]
             entry["hosted_last_rendered"] = pushed_at
+            render_hosted_files(
+                manifest_path,
+                hosted_output_dir,
+                discover_hosted_artifact_files(manifest_path),
+                manifest=manifest,
+                state=deployment_state,
+            )
 
         if store.external:
             live_state = fetch_canvas_state(client, entry)

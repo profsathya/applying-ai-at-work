@@ -54,11 +54,13 @@ Sprint numbers start at `sprint-0` and extend for however many modules the human
 - Use direct deterministic scripts for validation, inspection, sync, pull, and removal mechanics when the relevant skill or subagent instructs you to do so.
 - Do not invoke a subagent just because one exists. Simple file reads, status checks, explanations, and narrowly scoped repo edits can be handled directly.
 - Canvas writes, `canvas_sync/pull.py --apply`, and destructive Canvas removals still require explicit human confirmation in the current turn, even when routed through a subagent.
+- When content under `course*/sprints/**` is added, edited, or removed and the course has `homepage.yaml`, route through `homepage-maintainer` before final validation so the curated homepage metadata stays aligned.
 - Current routing defaults:
   - `course-configurator`: add, initialize, configure, scaffold, or onboard a local course shell for an existing Canvas course.
   - `course-drafter`: draft a full course, one sprint/module, or standalone module from human context or a context spec.
   - `sprint-planner`: create or re-plan a PRD and course metadata from design inputs.
   - `canvas-author`: write exactly one artifact from a PRD-shaped item.
+  - `homepage-maintainer`: update `<course>/homepage.yaml` after course artifact additions, edits, or removals.
   - `canvas-inspector`: inspect live Canvas state, inventory modules/items, write a ledger, or evaluate drift before reconcile.
   - `canvas-remover`: remove manifest-backed Canvas modules or items after inspection, dry run, and matching confirmation token.
 
