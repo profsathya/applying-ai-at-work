@@ -27,11 +27,11 @@ modules:
       - label: "Test and submit"
         items:
           - slug: "peer-exchange-what-problem-sits-beneath-it"
-            meta: "Discussion - let peers identify what still sounds vague or assumed"
+            meta: "AI activity - use follow-up questions to sharpen the problem beneath the goal"
           - slug: "goal-plan-and-problem-reframing-document"
             meta: "Assignment - submit the problem frame you will carry forward"
           - slug: "problem-framing-check"
-            meta: "Quiz - check the goal-to-problem distinction before moving on"
+            meta: "AI self-check - apply the goal-to-problem distinction to your own frame"
             badge: "Self-check"
             selfcheck: true
             verify: "Ask another person to read the problem statement and name what they think you are actually trying to solve."
@@ -62,11 +62,11 @@ modules:
       - label: "Compare, check, and reflect"
         items:
           - slug: "peer-exchange-which-ai-suggestion-would-you-not-trust-yet"
-            meta: "Discussion - compare what you would not trust yet and why"
+            meta: "AI activity - test what remains unverified in a plausible AI suggestion"
           - slug: "ai-exploration-log-and-3cs-application-log"
             meta: "Assignment - preserve prompts, choices, outputs, and judgment calls"
           - slug: "directing-ai-check"
-            meta: "Quiz - confirm how to direct and evaluate AI output"
+            meta: "AI self-check - refine context, choices, and confirmation for one AI interaction"
             badge: "Self-check"
             selfcheck: true
             verify: "Show one AI output and your pushback notes to a peer. Ask whether your standard is clear."
@@ -97,11 +97,11 @@ modules:
       - label: "Validate and revise"
         items:
           - slug: "peer-exchange-validation-questions"
-            meta: "Discussion - improve the questions before you ask them"
+            meta: "AI activity - improve stakeholder questions before you ask them"
           - slug: "stakeholder-validation-report"
             meta: "Assignment - report what you learned from real stakeholder work"
           - slug: "stakeholder-validation-check"
-            meta: "Quiz - check whether your validation plan seeks evidence, not approval"
+            meta: "AI self-check - test whether your validation plan seeks evidence, not approval"
             badge: "Self-check"
             selfcheck: true
             verify: "Ask a real stakeholder or peer to identify one assumption your questions may still carry."
@@ -132,11 +132,11 @@ modules:
       - label: "Apply, compare, and check"
         items:
           - slug: "peer-exchange-what-are-you-choosing-not-to-learn"
-            meta: "Discussion - compare what you are deliberately leaving out"
+            meta: "AI activity - test whether a learning exclusion is strategic and responsible"
           - slug: "self-learning-journey-and-learning-plan"
             meta: "Assignment - show the learning path and what it changed"
           - slug: "self-directed-learning-check"
-            meta: "Quiz - check whether your learning plan is focused and testable"
+            meta: "AI self-check - refine a focused, verifiable learning plan"
             badge: "Self-check"
             selfcheck: true
             verify: "Have someone ask how each learning step helps the actual problem, not just your general curiosity."
@@ -167,13 +167,13 @@ modules:
       - label: "Review, submit, and close"
         items:
           - slug: "peer-review-can-a-reader-follow-the-argument"
-            meta: "Discussion - test whether another reader can follow your reasoning"
+            meta: "AI activity - test whether a reader can follow your readiness argument"
           - slug: "final-integrated-problem-document-and-readiness-report"
             meta: "Assignment - submit the final integrated document and readiness report"
           - slug: "closing-reflection-and-final-goal-plan-check"
             meta: "Assignment - close the loop on your goal plan"
           - slug: "readiness-self-check"
-            meta: "Quiz - confirm that the final submission is evidence-backed and readable"
+            meta: "AI self-check - refine an evidence-backed readiness judgment"
             badge: "Self-check"
             selfcheck: true
             verify: "Walk a peer or stakeholder through the argument before final submission and note where they get lost."

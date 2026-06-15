@@ -8,62 +8,61 @@ week: 7
 module: 'Sprint 4: Close The Learning Gap'
 position: 8
 points: 5
-submission_type: online_quiz
+submission_type: file_upload
+delivery_mode: ai_activity
 publish: false
-questions:
-- type: multiple_choice
-  prompt: What makes a learning gap useful in this sprint?
-  points: 1
-  answers:
-  - text: It is specific and connected to moving the problem forward.
-    correct: true
-  - text: It covers the broadest possible topic.
-    correct: false
-  - text: It can be answered only by AI.
-    correct: false
-  - text: It avoids the current problem frame.
-    correct: false
-- type: true_false
-  prompt: Strategic ignorance means deciding what not to learn yet and explaining
-    why that choice is reasonable.
-  points: 1
-  answers:
-  - text: 'True'
-    correct: true
-  - text: 'False'
-    correct: false
-- type: multiple_choice
-  prompt: Which source plan is strongest for an important claim?
-  points: 1
-  answers:
-  - text: Use AI for explanation, then verify with an appropriate source such as documentation,
-      expert input, data, or stakeholder evidence.
-    correct: true
-  - text: Use AI once and trust the most confident answer.
-    correct: false
-  - text: Avoid AI entirely even when it could help sequence learning.
-    correct: false
-  - text: Ask peers to guess whether the claim is true.
-    correct: false
-- type: true_false
-  prompt: A learning path should connect back to the problem rather than become a
-    disconnected research project.
-  points: 1
-  answers:
-  - text: 'True'
-    correct: true
-  - text: 'False'
-    correct: false
-- type: short_answer
-  prompt: Name one verification step you could use for an important claim in your
-    problem context.
-  points: 1
+ai_activity:
+  activity_id: course1-self-directed-learning-check
+  version: "1.0"
+  title: Self-Directed Learning Check
+  description: Use AI follow-up questions to check whether your learning plan is focused, problem-linked, and verifiable.
+  questions:
+    - id: q1-learning-gap-check
+      type: ai-discussion
+      prompt: >
+        Describe one knowledge gap that matters for your problem, how AI can help
+        you learn it, and how you will verify an important claim outside AI.
+      placeholder: >
+        Name the gap, why it matters to the problem, how AI fits into the learning
+        path, and the source or person you will use to verify important claims.
+      minLength: 120
+      numQuestions: 3
+      aiContext: >
+        This is a Sprint 4 concept check on focused self-directed learning with AI.
+        The participant should connect the learning gap to the problem rather than
+        a disconnected research interest. Push for strategic ignorance, a practical
+        learning path, and verification through documentation, expert input, data,
+        stakeholder evidence, or another appropriate source. Challenge overbroad
+        topics and unverified AI explanations.
+      generateButtonText: Get Follow-up Questions
+      loadingText: Generating follow-up questions...
+      discussionPrompt: >
+        Use the follow-up questions to revise your answer. Your refined response
+        should show a focused learning gap, a bounded AI-supported learning plan,
+        and a verification step.
+      summaryLabel: Your Refined Learning Check
+      summaryPlaceholder: >
+        Rewrite your answer with the learning gap, why it matters, how you will use
+        AI, what you are choosing not to learn yet, and how you will verify claims.
+      saveButtonText: Save Response
+      updateButtonText: Update Response
+      digDeeperText: Dig deeper with AI guidance
 ---
 
 # Self-Directed Learning Check
 
 ## Purpose
 
-Check your understanding of focused learning gaps, strategic exclusions, AI-supported learning, and verification.
+Check whether your learning plan is focused and testable. This is an applied AI-guided check on knowledge gaps, strategic exclusions, AI-supported learning, and verification.
 
-This is a short, low-stakes concept check. Use it to confirm that you can apply the sprint ideas to your own work. The goal is not memorization. The goal is to recognize the difference between AI plausibility and evidence you can trust.
+## How It Works
+
+1. Write about one knowledge gap connected to your real problem.
+2. Generate AI follow-up questions.
+3. Revise your answer so it names the learning path, what you will not learn yet, and how you will verify important claims.
+4. Use the deeper AI guidance button if the plan still sounds like general curiosity instead of focused learning.
+5. Save the refined response in the activity.
+
+## What To Submit
+
+Download the JSON response file from the activity and upload it to Canvas. Your final response should show how AI supports your learning without becoming the final authority.

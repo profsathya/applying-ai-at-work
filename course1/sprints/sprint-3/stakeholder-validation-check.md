@@ -8,60 +8,62 @@ week: 5
 module: 'Sprint 3: Integrate People And Context'
 position: 8
 points: 5
-submission_type: online_quiz
+submission_type: file_upload
+delivery_mode: ai_activity
 publish: false
-questions:
-- type: multiple_choice
-  prompt: Which option best describes stakeholder validation in this course?
-  points: 1
-  answers:
-  - text: Testing the problem frame through real listening and evidence.
-    correct: true
-  - text: Asking AI to predict all stakeholder reactions.
-    correct: false
-  - text: Convincing a stakeholder that your solution is correct.
-    correct: false
-  - text: Getting a peer to approve your assignment.
-    correct: false
-- type: true_false
-  prompt: A stakeholder can be highly affected by a problem even if they have little
-    authority to change it.
-  points: 1
-  answers:
-  - text: 'True'
-    correct: true
-  - text: 'False'
-    correct: false
-- type: multiple_choice
-  prompt: Why should needs be marked as known, inferred, or validated?
-  points: 1
-  answers:
-  - text: To avoid treating assumptions as evidence.
-    correct: true
-  - text: To make the report longer.
-    correct: false
-  - text: To remove uncertainty from the work.
-    correct: false
-  - text: To let AI choose the strongest stakeholder.
-    correct: false
-- type: true_false
-  prompt: Dojo preparation can replace a real stakeholder conversation when time is
-    limited.
-  points: 1
-  answers:
-  - text: 'True'
-    correct: false
-  - text: 'False'
-    correct: true
-- type: short_answer
-  prompt: Write one validation question that invites listening rather than pitching.
-  points: 1
+ai_activity:
+  activity_id: course1-stakeholder-validation-check
+  version: "1.0"
+  title: Stakeholder Validation Check
+  description: Use AI follow-up questions to check whether your validation plan seeks evidence rather than approval.
+  questions:
+    - id: q1-validation-evidence-check
+      type: ai-discussion
+      prompt: >
+        Describe one assumption in your current problem frame, the stakeholder who
+        can help test it, and the question you would ask to seek evidence rather
+        than approval.
+      placeholder: >
+        Name the assumption, the stakeholder role, your draft validation question,
+        and what evidence would change your understanding.
+      minLength: 110
+      numQuestions: 3
+      aiContext: >
+        This is a Sprint 3 concept check on stakeholder validation. The participant
+        should distinguish real listening and evidence from approval-seeking. Push
+        them to mark needs as known, inferred, or validated. Challenge attempts to
+        replace a real stakeholder conversation with AI prediction or peer approval.
+        Ask whether the question invites listening rather than pitching.
+      generateButtonText: Get Follow-up Questions
+      loadingText: Generating follow-up questions...
+      discussionPrompt: >
+        Use the follow-up questions to revise your answer. Your refined response
+        should show the assumption, the right stakeholder, and what evidence would
+        confirm or complicate the problem frame.
+      summaryLabel: Your Refined Validation Check
+      summaryPlaceholder: >
+        Rewrite your answer with the assumption, stakeholder role, validation
+        question, evidence status, and what you would change if the evidence
+        contradicted you.
+      saveButtonText: Save Response
+      updateButtonText: Update Response
+      digDeeperText: Dig deeper with AI guidance
 ---
 
 # Stakeholder Validation Check
 
 ## Purpose
 
-Check your understanding of stakeholder roles, validation, evidence status, and real conversation requirements.
+Check whether your validation plan seeks evidence rather than approval. This is an applied AI-guided check on stakeholder roles, evidence status, assumptions, and real conversation requirements.
 
-This is a short, low-stakes concept check. Use it to confirm that you can apply the sprint ideas to your own work. The goal is not memorization. The goal is to recognize the difference between AI plausibility and evidence you can trust.
+## How It Works
+
+1. Write about one assumption, one stakeholder role, and one validation question.
+2. Generate AI follow-up questions.
+3. Revise your answer so it shows what evidence you need and how that evidence could change your frame.
+4. Use the deeper AI guidance button if the question still sounds like pitching or confirmation-seeking.
+5. Save the refined response in the activity.
+
+## What To Submit
+
+Download the JSON response file from the activity and upload it to Canvas. Your final response should show that stakeholder validation means real listening and evidence, not AI prediction or approval.

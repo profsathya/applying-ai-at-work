@@ -8,62 +8,60 @@ week: 3
 module: 'Sprint 2: Direct AI Deliberately'
 position: 8
 points: 5
-submission_type: online_quiz
+submission_type: file_upload
+delivery_mode: ai_activity
 publish: false
-questions:
-- type: multiple_choice
-  prompt: In the 3Cs, what does Context primarily provide?
-  points: 1
-  answers:
-  - text: The situation, constraints, audience, purpose, and details AI needs to be
-      useful.
-    correct: true
-  - text: A final answer from AI.
-    correct: false
-  - text: A list of grading criteria only.
-    correct: false
-  - text: A way to avoid stakeholder evidence.
-    correct: false
-- type: multiple_choice
-  prompt: Which question best fits the Choices part of the 3Cs?
-  points: 1
-  answers:
-  - text: What are different approaches, and what tradeoffs or assumptions come with
-      each one?
-    correct: true
-  - text: Can you write the final report for me?
-    correct: false
-  - text: Can you make this sound polished?
-    correct: false
-  - text: Can you confirm this is true without evidence?
-    correct: false
-- type: true_false
-  prompt: Confirmation asks what must be verified outside AI before a direction can
-    be trusted.
-  points: 1
-  answers:
-  - text: 'True'
-    correct: true
-  - text: 'False'
-    correct: false
-- type: true_false
-  prompt: If an AI suggestion sounds confident, it should be treated as confirmed
-    evidence.
-  points: 1
-  answers:
-  - text: 'True'
-    correct: false
-  - text: 'False'
-    correct: true
-- type: short_answer
-  prompt: Name one way you can push back on an AI output to make it more useful.
-  points: 1
+ai_activity:
+  activity_id: course1-directing-ai-check
+  version: "1.0"
+  title: Directing AI Check
+  description: Use AI follow-up questions to check how well you provided context, considered choices, and planned confirmation.
+  questions:
+    - id: q1-context-choices-confirmation
+      type: ai-discussion
+      prompt: >
+        Describe one recent AI interaction from this sprint. What context did you
+        provide, what choices or tradeoffs did you ask AI to surface, and what
+        still needs confirmation outside AI?
+      placeholder: >
+        Use a real prompt or output. Name the context you gave, the options AI
+        returned, and the evidence you would need before acting on the output.
+      minLength: 110
+      numQuestions: 3
+      aiContext: >
+        This is a Sprint 2 concept check on directing AI deliberately. The
+        participant should show context, choices, and confirmation in a real AI
+        interaction. Push vague answers toward specific constraints, audience,
+        purpose, tradeoffs, assumptions, and external verification. Challenge any
+        claim that confidence from AI is the same as confirmed evidence.
+      generateButtonText: Get Follow-up Questions
+      loadingText: Generating follow-up questions...
+      discussionPrompt: >
+        Use the follow-up questions to revise your answer. Your refined response
+        should show how your judgment improved or limited the AI output.
+      summaryLabel: Your Refined Check Response
+      summaryPlaceholder: >
+        Rewrite your answer with concrete context, the choices or tradeoffs AI
+        surfaced, and the confirmation step needed before using the output.
+      saveButtonText: Save Response
+      updateButtonText: Update Response
+      digDeeperText: Dig deeper with AI guidance
 ---
 
 # Directing AI Check
 
 ## Purpose
 
-Check your understanding of context, choices, confirmation, prompt iteration, and AI output assessment.
+Check whether you can direct AI deliberately instead of accepting the first fluent answer. This is an applied AI-guided check on context, choices, confirmation, prompt iteration, and output assessment.
 
-This is a short, low-stakes concept check. Use it to confirm that you can apply the sprint ideas to your own work. The goal is not memorization. The goal is to recognize the difference between AI plausibility and evidence you can trust.
+## How It Works
+
+1. Write about one real AI interaction from this sprint.
+2. Generate AI follow-up questions.
+3. Revise your answer so it shows the context you provided, the choices you considered, and what still needs confirmation.
+4. Use the deeper AI guidance button if the answer does not yet show your judgment.
+5. Save the refined response in the activity.
+
+## What To Submit
+
+Download the JSON response file from the activity and upload it to Canvas. Your final response should show how your judgment changed the AI output or limited what you were willing to trust.

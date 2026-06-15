@@ -8,34 +8,62 @@ week: 9
 module: 'Sprint 5: Synthesize And Show Readiness'
 position: 6
 points: 10
-submission_type: discussion_topic
+submission_type: file_upload
+delivery_mode: ai_activity
 publish: false
+ai_activity:
+  activity_id: course1-peer-review-can-a-reader-follow-the-argument
+  version: "1.0"
+  title: 'Peer Review: Can A Reader Follow The Argument?'
+  description: Use AI follow-up questions to test whether an outside reader can follow your problem, evidence, and readiness claim.
+  questions:
+    - id: q1-reader-follow-argument
+      type: ai-discussion
+      prompt: >
+        Share your executive summary, one section you worry is weak, and one
+        specific question you need answered before final submission.
+      placeholder: >
+        Include the problem you are carrying forward, the evidence you think is
+        strongest, where the argument may lose a reader, and the question you want
+        tested.
+      minLength: 140
+      numQuestions: 3
+      aiContext: >
+        This is Sprint 5 of Reframing Problems with AI. The participant is turning
+        prior artifacts into a coherent readiness argument. Push for a clear problem,
+        evidence that supports the claim, stakeholder integration, visible human
+        judgment, and places where a reader could get lost. Challenge pasted
+        summaries, unsupported readiness claims, and places where AI polish hides
+        weak evidence.
+      generateButtonText: Get Follow-up Questions
+      loadingText: Generating follow-up questions...
+      discussionPrompt: >
+        Use these questions to refine the argument. Your final response should name
+        what an outside reader can follow, where the evidence is thin, and what you
+        will revise before final submission.
+      summaryLabel: Your Refined Reader Check
+      summaryPlaceholder: >
+        Rewrite your reader check. Include the problem, strongest evidence, weak
+        section, revision plan, and what your human judgment adds.
+      saveButtonText: Save Response
+      updateButtonText: Update Response
+      digDeeperText: Dig deeper with AI guidance
 ---
 
 # Peer Review: Can A Reader Follow The Argument?
 
 ## Purpose
 
-Use peer review to test whether an outside reader can follow your problem, evidence, and readiness claim.
+Use AI to test whether an outside reader can follow your problem, evidence, and readiness claim. The goal is not to let AI write the argument. The goal is to expose gaps before final submission.
 
-## Initial Post
+## How It Works
 
-Post:
+1. Write your executive summary, the section you worry is weak, and one question you need answered.
+2. Generate AI follow-up questions.
+3. Use the questions to identify where the argument is clear, where evidence is thin, and where your human judgment is visible.
+4. Use the deeper AI guidance button if your revision plan is still too general.
+5. Save the refined response in the activity.
 
-1. Your executive summary.
-2. One section you worry is weak.
-3. One specific question you want peers to answer.
+## What To Submit
 
-## Replies
-
-Reply to at least two peers. In each reply, address:
-
-1. What problem do I think you are carrying forward.
-2. What evidence convinced me.
-3. Where I got lost.
-4. Where your human judgment is clearest.
-5. What question I would ask in a readiness conversation.
-
-## Discussion Standard
-
-Be concrete and respectful. Help the other person see what is clear, what still sounds like an assumption, and what would make the work stronger. Do not solve their problem for them.
+Download the JSON response file from the activity and upload it to Canvas. Your final response should name what you will revise so a reader can follow the argument without seeing every prior artifact.
