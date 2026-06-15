@@ -208,6 +208,33 @@ Important behavior:
 
 Markdown remains the source of truth, even when Canvas shows an iframe. Do not edit the generated Common Curriculum HTML or JSON by hand.
 
+### How The Two Repos Fit Together
+
+The system has three coordinated layers: this source repo, the hosted output repo, and Canvas deployment state.
+
+```mermaid
+flowchart LR
+    A["applying-ai-at-work\nMarkdown source\ncourse*/sprints/*.md\nhomepage.yaml"] --> B["canvas_sync renderer\nschema validation\nhosted_html.py or push.py"]
+    B --> C["Common-Curriculum\nGenerated HTML and AI JSON\nPublished by GitHub Pages"]
+    B --> D["Canvas API\nPages and assignment shells\nLinks to hosted pages"]
+    D --> E["canvas-state branch\nCanvas IDs, hashes, fingerprints"]
+    E --> B
+    C --> F["Participant opens hosted activity"]
+    F --> G["Participant exports JSON"]
+    G --> D
+```
+
+| Layer | What lives there | Why it exists |
+|---|---|---|
+| `applying-ai-at-work` on `main` | Canvas-agnostic Markdown, frontmatter, homepage metadata, schemas, and sync scripts | Authoritative course source. Edit this repo first. |
+| `Common-Curriculum` on `main` | Generated hosted HTML pages and AI activity JSON configs | Public GitHub Pages host for rich activities that Canvas links to. |
+| Canvas course | Modules, pages, and assignment shells | Learner-facing LMS structure, grading, submissions, and publish visibility. |
+| `canvas-state` branch | Canvas IDs, module IDs, page URLs, content hashes, hosted hashes, and fingerprints | Deployment memory so future publishes update existing Canvas objects instead of guessing. |
+
+For the normal production path, maintainers edit Markdown in this repo, merge to `main`, and let the protected `Publish Canvas` workflow render Common Curriculum output, update Canvas, and write `canvas-state`.
+
+For an approved local admin repair, `canvas_sync/push.py --hosted-output-dir ../common-curriculum` renders hosted files into the sibling Common Curriculum checkout before updating Canvas. If that local path is used, the generated Common Curriculum files and the updated deployment state must also be pushed so the three layers stay aligned.
+
 When a hosted module or artifact changes:
 
 1. Edit or generate Markdown under `<course>/sprints/sprint-<n>/`.
