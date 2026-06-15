@@ -106,13 +106,15 @@
       "canvas_module_id": 1946,
       "canvas_page_url": null,
       "canvas_type": "assignment",
-      "content_hash": "dc8489f12b3c8deca928d6332c2c6cd928e0cc981489dfb963db7885fda3c6cd",
-      "hosted_hash": "34e01565377ca131949534a5ec4b9f29f8b0c1d3ff77c7fc419f701783536b4e",
-      "hosted_last_rendered": "2026-06-15T17:33:18+00:00",
+      "content_hash": "6e07f83071f1f2fe627b104808b421bc9885d8d872a75d3bc219af25e8e78c21",
+      "delivery_mode": "ai_activity",
+      "hosted_hash": "2052d5a429a72d90832663df34d09425f415465dfd7397676d01fb1eeda57b47",
+      "hosted_last_rendered": "2026-06-15T18:57:40+00:00",
       "hosted_path": "course1/assignments/sprint-1-reflection-what-changed.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-1-reflection-what-changed.html",
-      "last_pushed": "2026-06-15T17:33:18+00:00",
-      "local_path": "course1/sprints/sprint-1/sprint-1-reflection-what-changed.md"
+      "last_pushed": "2026-06-15T18:57:40+00:00",
+      "local_path": "course1/sprints/sprint-1/sprint-1-reflection-what-changed.md",
+      "source_type": "quiz"
     },
     "course1-sprints-sprint-1-start-here-frame-what-is-worth-solving": {
       "artifact_id": "course1-sprints-sprint-1-start-here-frame-what-is-worth-solving",
@@ -120,12 +122,12 @@
       "canvas_module_id": 1946,
       "canvas_page_url": "start-here-frame-what-is-worth-solving-3",
       "canvas_type": "page",
-      "content_hash": "c2ba086772b4fb39b0beaf8c8976aa14136fbc325e7cd9e5e7f16d6e2f729c51",
-      "hosted_hash": "e94754edb6746a7ae3b5a939f7b06b3063a4f3ef13583714ad8a106d777fac7e",
-      "hosted_last_rendered": "2026-06-15T17:33:03+00:00",
+      "content_hash": "10ee73dbbddcb0eac10b60ccddd4c3060030b010965a2027ad3987aadb154c28",
+      "hosted_hash": "3a3c37c30f8f5aadabc22234ce67b07127c1df104573efeda4747fecc4032855",
+      "hosted_last_rendered": "2026-06-15T18:57:38+00:00",
       "hosted_path": "course1/activities/start-here-frame-what-is-worth-solving.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/start-here-frame-what-is-worth-solving.html",
-      "last_pushed": "2026-06-15T17:33:03+00:00",
+      "last_pushed": "2026-06-15T18:57:38+00:00",
       "local_path": "course1/sprints/sprint-1/start-here-frame-what-is-worth-solving.md"
     },
     "course1-sprints-sprint-2-ai-exploration-log-and-3cs-application-log": {
@@ -234,13 +236,15 @@
       "canvas_module_id": 1947,
       "canvas_page_url": null,
       "canvas_type": "assignment",
-      "content_hash": "ab5df31e2a2eafe21d3d583404c860b759c4045396abb06e544ab034aaf1b103",
-      "hosted_hash": "9dacf0e180ef0dfffa0f75bace6be0da9a45e2ccde94a2afbec10a6243b63bc6",
-      "hosted_last_rendered": "2026-06-15T17:33:35+00:00",
+      "content_hash": "2f1496c13bd78178726b20a50166350f634090d652223e8bf79b96ee3d9f9ede",
+      "delivery_mode": "ai_activity",
+      "hosted_hash": "536a3b202b9e446d994e6f8be6eed086f2e0cf791574c5682acbf8132a330cbd",
+      "hosted_last_rendered": "2026-06-15T18:57:44+00:00",
       "hosted_path": "course1/assignments/sprint-2-reflection-my-judgment-improved-the-output.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-2-reflection-my-judgment-improved-the-output.html",
-      "last_pushed": "2026-06-15T17:33:35+00:00",
-      "local_path": "course1/sprints/sprint-2/sprint-2-reflection-my-judgment-improved-the-output.md"
+      "last_pushed": "2026-06-15T18:57:44+00:00",
+      "local_path": "course1/sprints/sprint-2/sprint-2-reflection-my-judgment-improved-the-output.md",
+      "source_type": "quiz"
     },
     "course1-sprints-sprint-2-start-here-direct-ai-deliberately": {
       "artifact_id": "course1-sprints-sprint-2-start-here-direct-ai-deliberately",
@@ -248,12 +252,12 @@
       "canvas_module_id": 1947,
       "canvas_page_url": "start-here-direct-ai-deliberately-3",
       "canvas_type": "page",
-      "content_hash": "a5def9fb2cc3954ebedba8a62e35bbdf30de1728796d14413d620a9abee9cf93",
-      "hosted_hash": "eece79294e73e16f49c4a342d2619d6d762fa70dd6a95269bc958dce8b48a383",
-      "hosted_last_rendered": "2026-06-15T17:33:20+00:00",
+      "content_hash": "cee3b3f4d3dd7174f3645fc3780a506a4fb144baeeec1b5e8868905590a53693",
+      "hosted_hash": "96b7d6a30fc0dc9b750ddc79c73bf0be50e76276cb16b1e8e71c9b7be00d46de",
+      "hosted_last_rendered": "2026-06-15T18:57:42+00:00",
       "hosted_path": "course1/activities/start-here-direct-ai-deliberately.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/start-here-direct-ai-deliberately.html",
-      "last_pushed": "2026-06-15T17:33:20+00:00",
+      "last_pushed": "2026-06-15T18:57:42+00:00",
       "local_path": "course1/sprints/sprint-2/start-here-direct-ai-deliberately.md"
     },
     "course1-sprints-sprint-3-concept-stakeholders-needs-constraints-and-validation": {
@@ -318,13 +322,15 @@
       "canvas_module_id": 1948,
       "canvas_page_url": null,
       "canvas_type": "assignment",
-      "content_hash": "26492166fe78a264edd6b7bbc8b77ab375e17cc6f8811a03ea05454dfbf02995",
-      "hosted_hash": "38c52331bd95e207f8e28a8143c456ec3d49b1d228ce0e74e9728ce9e5c2e0d3",
-      "hosted_last_rendered": "2026-06-15T17:33:53+00:00",
+      "content_hash": "a56327f9d5164db71013606312a58dedc4592c0325314743c4378396c3d890d3",
+      "delivery_mode": "ai_activity",
+      "hosted_hash": "2055d9ad77ee3e604a39c3fcb2cf0be2852de6425b2fcaa75e1fb84315d62196",
+      "hosted_last_rendered": "2026-06-15T18:57:48+00:00",
       "hosted_path": "course1/assignments/sprint-3-reflection-and-mid-course-goal-plan-revision.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-3-reflection-and-mid-course-goal-plan-revision.html",
-      "last_pushed": "2026-06-15T17:33:53+00:00",
-      "local_path": "course1/sprints/sprint-3/sprint-3-reflection-and-mid-course-goal-plan-revision.md"
+      "last_pushed": "2026-06-15T18:57:48+00:00",
+      "local_path": "course1/sprints/sprint-3/sprint-3-reflection-and-mid-course-goal-plan-revision.md",
+      "source_type": "quiz"
     },
     "course1-sprints-sprint-3-stakeholder-map-draft": {
       "artifact_id": "course1-sprints-sprint-3-stakeholder-map-draft",
@@ -376,12 +382,12 @@
       "canvas_module_id": 1948,
       "canvas_page_url": "start-here-integrate-people-and-context-3",
       "canvas_type": "page",
-      "content_hash": "a0536109a49938b5eda05a8aea3502bfc45152e37eed4ce126e2de425ef1d217",
-      "hosted_hash": "98ad4ff633b102303b53245880678be9ce9ceaaf8d2729089fbcc85376a04eec",
-      "hosted_last_rendered": "2026-06-15T17:33:38+00:00",
+      "content_hash": "72f9a8c9a79a0ba2d1191bdebdaf459ae3e0dc6d7cd5ebac4cfa490d95e4a8e3",
+      "hosted_hash": "899724cde7beb631fdf607d7d5fed5c21f2a594f00eac23562d754ceab96f370",
+      "hosted_last_rendered": "2026-06-15T18:57:46+00:00",
       "hosted_path": "course1/activities/start-here-integrate-people-and-context.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/start-here-integrate-people-and-context.html",
-      "last_pushed": "2026-06-15T17:33:38+00:00",
+      "last_pushed": "2026-06-15T18:57:46+00:00",
       "local_path": "course1/sprints/sprint-3/start-here-integrate-people-and-context.md"
     },
     "course1-sprints-sprint-4-concept-self-directed-learning-with-ai": {
@@ -490,13 +496,15 @@
       "canvas_module_id": 1949,
       "canvas_page_url": null,
       "canvas_type": "assignment",
-      "content_hash": "adbc83c5512d8f0e02b3b2d706c4eab2460229cfdc50295c2e3f3af8fb1a6c9a",
-      "hosted_hash": "68f59e099c1c7abd8b3967b4cc6580a95c8d5858aa2d1ee002c0e3ca6450ab2e",
-      "hosted_last_rendered": "2026-06-15T17:34:11+00:00",
+      "content_hash": "7eeb3db22673e8c96fdf829d0b841df0f6fc6efc89a8642cd901bbc46322c9ec",
+      "delivery_mode": "ai_activity",
+      "hosted_hash": "ac2759e5ebae140538da751dd1b75b012718dcc69ad43e4fbc39d8e2e34f2204",
+      "hosted_last_rendered": "2026-06-15T18:57:52+00:00",
       "hosted_path": "course1/assignments/sprint-4-reflection-what-i-learned-and-how-i-know.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-4-reflection-what-i-learned-and-how-i-know.html",
-      "last_pushed": "2026-06-15T17:34:11+00:00",
-      "local_path": "course1/sprints/sprint-4/sprint-4-reflection-what-i-learned-and-how-i-know.md"
+      "last_pushed": "2026-06-15T18:57:52+00:00",
+      "local_path": "course1/sprints/sprint-4/sprint-4-reflection-what-i-learned-and-how-i-know.md",
+      "source_type": "quiz"
     },
     "course1-sprints-sprint-4-start-here-close-the-learning-gap": {
       "artifact_id": "course1-sprints-sprint-4-start-here-close-the-learning-gap",
@@ -504,12 +512,12 @@
       "canvas_module_id": 1949,
       "canvas_page_url": "start-here-close-the-learning-gap-3",
       "canvas_type": "page",
-      "content_hash": "052648062ddfaf31dfbd4c774bacae19bf86980849d996c44829deeff0ae9834",
-      "hosted_hash": "06c6d9d701c20bf00e800ad56ccb45df42e1d0da916de076eb7a73c3664907a1",
-      "hosted_last_rendered": "2026-06-15T17:33:56+00:00",
+      "content_hash": "2128ca08e200c49437fe05288344f674f31e7534aed1b594bc10eb67b3fca5a4",
+      "hosted_hash": "9353cfcb320262279ea3a84bf5ccf98bcc226ffb12fb553bd680779fa0ab9d5f",
+      "hosted_last_rendered": "2026-06-15T18:57:50+00:00",
       "hosted_path": "course1/activities/start-here-close-the-learning-gap.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/start-here-close-the-learning-gap.html",
-      "last_pushed": "2026-06-15T17:33:56+00:00",
+      "last_pushed": "2026-06-15T18:57:50+00:00",
       "local_path": "course1/sprints/sprint-4/start-here-close-the-learning-gap.md"
     },
     "course1-sprints-sprint-5-closing-reflection-and-final-goal-plan-check": {
@@ -518,13 +526,15 @@
       "canvas_module_id": 1950,
       "canvas_page_url": null,
       "canvas_type": "assignment",
-      "content_hash": "81ff072f92f73b9cb787175ec7aef789d6e71945acf28e6567839fc2b419f7c3",
-      "hosted_hash": "9e579f84804ec331585d5415392171a97aec821da5e1da144c8c3282dd60c11a",
-      "hosted_last_rendered": "2026-06-15T17:34:26+00:00",
+      "content_hash": "aae961306bceddd1ce55c1449b6ed261559f1b4adf902df26f520e5a37c9626b",
+      "delivery_mode": "ai_activity",
+      "hosted_hash": "454291d91422686394d109dc0791ea62679ea21ac56f9d3749071f6750f02f94",
+      "hosted_last_rendered": "2026-06-15T18:57:56+00:00",
       "hosted_path": "course1/assignments/closing-reflection-and-final-goal-plan-check.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/closing-reflection-and-final-goal-plan-check.html",
-      "last_pushed": "2026-06-15T17:34:26+00:00",
-      "local_path": "course1/sprints/sprint-5/closing-reflection-and-final-goal-plan-check.md"
+      "last_pushed": "2026-06-15T18:57:56+00:00",
+      "local_path": "course1/sprints/sprint-5/closing-reflection-and-final-goal-plan-check.md",
+      "source_type": "quiz"
     },
     "course1-sprints-sprint-5-concept-from-artifacts-to-argument": {
       "artifact_id": "course1-sprints-sprint-5-concept-from-artifacts-to-argument",
@@ -632,12 +642,12 @@
       "canvas_module_id": 1950,
       "canvas_page_url": "start-here-synthesize-and-show-readiness-3",
       "canvas_type": "page",
-      "content_hash": "91482fcc79cd4f5509e0b5b0010b03bd8664d092d563c256109eeda428a2a0c0",
-      "hosted_hash": "66ffd935037fcb6dd1154ba5742bfc75c07da434c950d3cb3e8e763716779b08",
-      "hosted_last_rendered": "2026-06-15T17:34:14+00:00",
+      "content_hash": "e09afd1f359987dea68582ca885a1ee066fca23200ba561931226906f8ec17ea",
+      "hosted_hash": "29bff0af9cc3b1dd8a1ccfab1db69a655d56e06337b3a82f9e07f8e4d76ba6d0",
+      "hosted_last_rendered": "2026-06-15T18:57:54+00:00",
       "hosted_path": "course1/activities/start-here-synthesize-and-show-readiness.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/start-here-synthesize-and-show-readiness.html",
-      "last_pushed": "2026-06-15T17:34:14+00:00",
+      "last_pushed": "2026-06-15T18:57:54+00:00",
       "local_path": "course1/sprints/sprint-5/start-here-synthesize-and-show-readiness.md"
     }
   },
@@ -647,5 +657,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-06-15T17:50:28+00:00"
+  "last_sync": "2026-06-15T18:57:56+00:00"
 }
