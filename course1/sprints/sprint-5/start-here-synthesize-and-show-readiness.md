@@ -28,6 +28,13 @@ You will use AI as a thinking partner, but you remain responsible for the goal, 
 4. Use peer review to check whether the argument is clear.
 5. Submit the final readiness report and closing reflection.
 
+## Two-Week Sprint Map
+
+This sprint spans two course weeks. Use these labels for pacing; Canvas keeps the work in one module.
+
+- Sprint Week 1: Start here, read the concept page, use the Dojo to audit gaps, and draft the integrated problem document.
+- Sprint Week 2: Complete the AI peer review, submit the final readiness report, refine the AI-guided closing reflection, and complete the readiness self-check.
+
 ## Time Guidance
 
 Plan for focused work across two weeks. Short concept reading, Dojo practice, peer exchange, and a final artifact should all serve the same real problem rather than becoming separate assignments.

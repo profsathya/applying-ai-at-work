@@ -28,6 +28,13 @@ You will use AI as a thinking partner, but you remain responsible for the goal, 
 4. Conduct at least one real validation conversation.
 5. Revise your problem statement and Goal Plan based on what you learn.
 
+## Two-Week Sprint Map
+
+This sprint spans two course weeks. Use these labels for pacing; Canvas keeps the work in one module.
+
+- Sprint Week 1: Start here, read the concept page, use the Dojo to prepare, and draft the stakeholder map.
+- Sprint Week 2: Complete the AI peer exchange, conduct and report stakeholder validation, complete the AI self-check, and refine the AI-guided mid-course reflection.
+
 ## Time Guidance
 
 Plan for focused work across two weeks. Short concept reading, Dojo practice, peer exchange, and a final artifact should all serve the same real problem rather than becoming separate assignments.

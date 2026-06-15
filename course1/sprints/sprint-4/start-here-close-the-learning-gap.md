@@ -27,6 +27,13 @@ You will use AI as a thinking partner, but you remain responsible for the goal, 
 3. Choose what not to learn yet and explain the risk.
 4. Submit a Self-Learning Journey and Learning Plan tied to your problem.
 
+## Two-Week Sprint Map
+
+This sprint spans two course weeks. Use these labels for pacing; Canvas keeps the work in one module.
+
+- Sprint Week 1: Start here, read the concept page, complete the gap inventory, and use the Dojo to design the learning path.
+- Sprint Week 2: Complete the AI peer exchange, submit the Self-Learning Journey and Learning Plan, complete the AI self-check, and refine the AI-guided reflection.
+
 ## Time Guidance
 
 Plan for focused work across two weeks. Short concept reading, Dojo practice, peer exchange, and a final artifact should all serve the same real problem rather than becoming separate assignments.

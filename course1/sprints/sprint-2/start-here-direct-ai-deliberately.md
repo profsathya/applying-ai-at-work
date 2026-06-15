@@ -27,6 +27,13 @@ You will use AI as a thinking partner, but you remain responsible for the goal, 
 3. Critique one AI output and push back on it.
 4. Create an exploration log that shows iterations, assumptions, decisions, and evidence needs.
 
+## Two-Week Sprint Map
+
+This sprint spans two course weeks. Use these labels for pacing; Canvas keeps the work in one module.
+
+- Sprint Week 1: Start here, read the concept page, run the Dojo exploration round, and complete the AI output assessment.
+- Sprint Week 2: Complete the AI peer exchange, submit the AI Exploration Log and 3Cs Application Log, complete the AI self-check, and refine the AI-guided reflection.
+
 ## Time Guidance
 
 Plan for focused work across two weeks. Short concept reading, Dojo practice, peer exchange, and a final artifact should all serve the same real problem rather than becoming separate assignments.

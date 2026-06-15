@@ -27,6 +27,13 @@ You will use AI as a thinking partner, but you remain responsible for the goal, 
 3. Invite peer feedback on what still sounds vague or assumed.
 4. Submit a Goal Plan and Problem Reframing Document that you can carry forward.
 
+## Two-Week Sprint Map
+
+This sprint spans two course weeks. Use these labels for pacing; Canvas keeps the work in one module.
+
+- Sprint Week 1: Start here, read the concept page, complete the Pre-Dojo Goal Pause, and run the Dojo Lab.
+- Sprint Week 2: Complete the AI peer exchange, submit the Goal Plan and Problem Reframing Document, complete the AI self-check, and refine the AI-guided reflection.
+
 ## Time Guidance
 
 Plan for focused work across two weeks. Short concept reading, Dojo practice, peer exchange, and a final artifact should all serve the same real problem rather than becoming separate assignments.

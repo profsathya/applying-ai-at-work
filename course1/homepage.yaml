@@ -12,11 +12,11 @@ modules:
       - "Create a problem frame grounded in real people, constraints, and evidence."
     prereq: "Start with a real goal from work, job search, community work, caregiving, learning, or another setting where actual people are affected."
     groups:
-      - label: "Start here"
+      - label: "Sprint Week 1: Start here"
         items:
           - slug: "start-here-frame-what-is-worth-solving"
             meta: "Page - orient to the sprint, portfolio thread, and completion criteria"
-      - label: "Build the frame"
+      - label: "Sprint Week 1: Build the frame"
         items:
           - slug: "concept-from-goal-to-problem"
             meta: "Page - distinguish goals, surface requests, and underlying problems"
@@ -24,7 +24,7 @@ modules:
             meta: "Assignment - write your own first thoughts before asking AI"
           - slug: "dojo-lab-abstraction-ladder"
             meta: "Dojo activity - use the Symbiotic Thinking Dojo to move between concrete examples, patterns, causes, and purpose"
-      - label: "Test and submit"
+      - label: "Sprint Week 2: Test and submit"
         items:
           - slug: "peer-exchange-what-problem-sits-beneath-it"
             meta: "AI activity - use follow-up questions to sharpen the problem beneath the goal"
@@ -36,7 +36,7 @@ modules:
             selfcheck: true
             verify: "Ask another person to read the problem statement and name what they think you are actually trying to solve."
           - slug: "sprint-1-reflection-what-changed"
-            meta: "Assignment - name what changed between your starting goal and your current problem frame"
+            meta: "AI reflection activity - refine what changed between your starting goal and your current problem frame"
 
   - sprint: 2
     tag: "AI Direction"
@@ -47,11 +47,11 @@ modules:
       - "Document how your choices improved the work."
     prereq: "Builds on the problem frame from Sprint 1. AI can help only after you can explain what needs to be explored."
     groups:
-      - label: "Start here"
+      - label: "Sprint Week 1: Start here"
         items:
           - slug: "start-here-direct-ai-deliberately"
             meta: "Page - orient to deliberate AI direction and the sprint rhythm"
-      - label: "Practice direction"
+      - label: "Sprint Week 1: Practice direction"
         items:
           - slug: "concept-context-choices-confirmation"
             meta: "Page - learn the context, choices, and confirmation pattern"
@@ -59,7 +59,7 @@ modules:
             meta: "Dojo activity - run a focused Symbiotic Thinking Dojo exploration round on your real problem"
           - slug: "ai-output-assessment-and-pushback"
             meta: "Assignment - push back on weak, generic, or unverified AI output"
-      - label: "Compare, check, and reflect"
+      - label: "Sprint Week 2: Compare, check, and reflect"
         items:
           - slug: "peer-exchange-which-ai-suggestion-would-you-not-trust-yet"
             meta: "AI activity - test what remains unverified in a plausible AI suggestion"
@@ -71,7 +71,7 @@ modules:
             selfcheck: true
             verify: "Show one AI output and your pushback notes to a peer. Ask whether your standard is clear."
           - slug: "sprint-2-reflection-my-judgment-improved-the-output"
-            meta: "Assignment - explain where your judgment changed the result"
+            meta: "AI reflection activity - refine where your judgment changed the result"
 
   - sprint: 3
     tag: "People and Context"
@@ -82,11 +82,11 @@ modules:
       - "Revise the problem frame using human input and context."
     prereq: "Builds on your Sprint 2 AI exploration. This sprint asks what actual people and settings confirm, complicate, or change."
     groups:
-      - label: "Start here"
+      - label: "Sprint Week 1: Start here"
         items:
           - slug: "start-here-integrate-people-and-context"
             meta: "Page - orient to stakeholder evidence and context"
-      - label: "Map and prepare"
+      - label: "Sprint Week 1: Map and prepare"
         items:
           - slug: "concept-stakeholders-needs-constraints-and-validation"
             meta: "Page - distinguish stakeholder needs, constraints, and validation"
@@ -94,7 +94,7 @@ modules:
             meta: "Dojo activity - use the Symbiotic Thinking Dojo to prepare better stakeholder questions"
           - slug: "stakeholder-map-draft"
             meta: "Assignment - draft who is affected, who can validate, and what matters to each group"
-      - label: "Validate and revise"
+      - label: "Sprint Week 2: Validate and revise"
         items:
           - slug: "peer-exchange-validation-questions"
             meta: "AI activity - improve stakeholder questions before you ask them"
@@ -106,7 +106,7 @@ modules:
             selfcheck: true
             verify: "Ask a real stakeholder or peer to identify one assumption your questions may still carry."
           - slug: "sprint-3-reflection-and-mid-course-goal-plan-revision"
-            meta: "Assignment - revise your goal plan based on evidence"
+            meta: "AI reflection activity - refine your goal plan revision based on evidence"
 
   - sprint: 4
     tag: "Learning Gap"
@@ -117,11 +117,11 @@ modules:
       - "Show evidence that your learning changed what you can now do."
     prereq: "Builds on validated stakeholder and context evidence. Learn only what the problem now proves you need."
     groups:
-      - label: "Start here"
+      - label: "Sprint Week 1: Start here"
         items:
           - slug: "start-here-close-the-learning-gap"
             meta: "Page - orient to focused self-directed learning"
-      - label: "Plan the learning"
+      - label: "Sprint Week 1: Plan the learning"
         items:
           - slug: "concept-self-directed-learning-with-ai"
             meta: "Page - use AI as a learning partner while keeping your own standards"
@@ -129,7 +129,7 @@ modules:
             meta: "Assignment - identify what you need to know and why it matters"
           - slug: "dojo-lab-learning-path-design"
             meta: "Dojo activity - design a practical learning path with Symbiotic Thinking Dojo support"
-      - label: "Apply, compare, and check"
+      - label: "Sprint Week 2: Apply, compare, and check"
         items:
           - slug: "peer-exchange-what-are-you-choosing-not-to-learn"
             meta: "AI activity - test whether a learning exclusion is strategic and responsible"
@@ -141,7 +141,7 @@ modules:
             selfcheck: true
             verify: "Have someone ask how each learning step helps the actual problem, not just your general curiosity."
           - slug: "sprint-4-reflection-what-i-learned-and-how-i-know"
-            meta: "Assignment - explain what you learned and what evidence proves it"
+            meta: "AI reflection activity - refine what you learned and what evidence proves it"
 
   - sprint: 5
     tag: "Synthesis"
@@ -152,11 +152,11 @@ modules:
       - "Submit a final integrated problem document that a reader can follow."
     prereq: "Builds on the full course portfolio. Synthesis works when your artifacts show real changes in judgment, evidence, and scope."
     groups:
-      - label: "Start here"
+      - label: "Sprint Week 1: Start here"
         items:
           - slug: "start-here-synthesize-and-show-readiness"
             meta: "Page - orient to the final synthesis and readiness standard"
-      - label: "Draft the argument"
+      - label: "Sprint Week 1: Draft the argument"
         items:
           - slug: "concept-from-artifacts-to-argument"
             meta: "Page - connect artifacts into a claim a reader can follow"
@@ -164,14 +164,14 @@ modules:
             meta: "Dojo activity - use the Symbiotic Thinking Dojo to find gaps without letting it write the argument"
           - slug: "integrated-problem-document-draft"
             meta: "Assignment - draft the integrated problem document"
-      - label: "Review, submit, and close"
+      - label: "Sprint Week 2: Review, submit, and close"
         items:
           - slug: "peer-review-can-a-reader-follow-the-argument"
             meta: "AI activity - test whether a reader can follow your readiness argument"
           - slug: "final-integrated-problem-document-and-readiness-report"
             meta: "Assignment - submit the final integrated document and readiness report"
           - slug: "closing-reflection-and-final-goal-plan-check"
-            meta: "Assignment - close the loop on your goal plan"
+            meta: "AI reflection activity - close the loop on your goal plan"
           - slug: "readiness-self-check"
             meta: "AI self-check - refine an evidence-backed readiness judgment"
             badge: "Self-check"
