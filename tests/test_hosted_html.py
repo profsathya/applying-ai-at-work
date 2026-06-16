@@ -234,12 +234,14 @@ class HostedHtmlTests(unittest.TestCase):
                         "artifact_id": "tuple-overview",
                         "local_path": "course1/sprints/sprint-99/tuple-overview.md",
                         "canvas_type": "page",
-                        "canvas_id": 1001,
-                        "canvas_page_url": "tuple-overview",
-                        "canvas_module_id": 55,
-                        "content_hash": "a" * 64,
-                    }
+                    "canvas_id": 1001,
+                    "canvas_page_url": "tuple-overview",
+                    "canvas_module_id": 55,
+                    "canvas_module_item_id": 9001,
+                    "completion_requirement": "must_view",
+                    "content_hash": "a" * 64,
                 }
+            }
             }
 
             result = render_hosted_files(manifest_path, output_dir, [md_path], state=state)
@@ -247,9 +249,11 @@ class HostedHtmlTests(unittest.TestCase):
             sprint_index = output_dir / "deanza" / "course1" / "sprint-99.html"
             course_index = output_dir / "deanza" / "course1" / "index.html"
             course_home = output_dir / "deanza" / "course1" / "home.html"
+            progress_map = output_dir / "deanza" / "course1" / "progress-map.json"
             self.assertTrue(sprint_index.exists())
             self.assertTrue(course_index.exists())
             self.assertTrue(course_home.exists())
+            self.assertTrue(progress_map.exists())
             self.assertEqual(result["indexes"][0]["path"], str(sprint_index))
             sprint_html = sprint_index.read_text(encoding="utf-8")
             home_html = course_home.read_text(encoding="utf-8")
@@ -259,9 +263,15 @@ class HostedHtmlTests(unittest.TestCase):
             self.assertIn("Start here", home_html)
             self.assertIn("New._CTI_Logo_RGB-1.png", home_html)
             self.assertIn("data-canvas-href", home_html)
+            self.assertIn('data-progress-id="tuple-overview"', home_html)
+            self.assertIn('data-canvas-module-item-id="9001"', home_html)
+            self.assertIn("canvas-progress", home_html)
             self.assertIn("Ask a peer to confirm the tuple example is concrete.", home_html)
             self.assertIn("activities/tuple-overview.html?context=web", sprint_html)
             self.assertIn("activities/tuple-overview.html?context=web", course_index.read_text(encoding="utf-8"))
+            progress_data = json.loads(progress_map.read_text(encoding="utf-8"))
+            self.assertEqual(progress_data["items"][0]["artifactId"], "tuple-overview")
+            self.assertEqual(progress_data["items"][0]["canvasModuleItemId"], 9001)
 
     def test_homepage_indexes_add_and_remove_artifact_links(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

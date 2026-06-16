@@ -39,6 +39,10 @@
         "path_prefix": {
           "type": "string",
           "pattern": "^[a-z0-9][a-z0-9_/-]*$"
+        },
+        "progress_endpoint": {
+          "type": "string",
+          "format": "uri"
         }
       }
     },
@@ -86,6 +90,13 @@
           },
           "canvas_module_id": {
             "type": ["integer", "null"]
+          },
+          "canvas_module_item_id": {
+            "type": ["integer", "null"]
+          },
+          "completion_requirement": {
+            "type": "string",
+            "enum": ["must_view", "must_submit", "must_contribute", "must_mark_done", "min_score"]
           },
           "content_hash": {
             "type": "string",

@@ -189,11 +189,13 @@ def entry_for_push(
     canvas_module_id: int | None,
     hash_value: str,
     pushed_at: str,
+    canvas_module_item_id: int | None = None,
     source_commit: str | None = None,
     canvas_fingerprint: str | None = None,
     hosted_path: str | None = None,
     hosted_url: str | None = None,
     hosted_hash: str | None = None,
+    completion_requirement: str | None = None,
     source_type: str | None = None,
     delivery_mode: str | None = None,
     external_state: bool,
@@ -206,6 +208,10 @@ def entry_for_push(
         "content_hash": hash_value,
         "last_pushed": pushed_at,
     }
+    if canvas_module_item_id is not None:
+        entry["canvas_module_item_id"] = canvas_module_item_id
+    if completion_requirement:
+        entry["completion_requirement"] = completion_requirement
     if hosted_path:
         entry["hosted_path"] = hosted_path
     if hosted_url:

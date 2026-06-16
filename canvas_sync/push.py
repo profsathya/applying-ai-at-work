@@ -30,6 +30,10 @@ from dotenv import load_dotenv
 # Local imports
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient, CanvasError, resolve_or_create_module
+from canvas_sync.completion import (
+    completion_requirement_for,
+    completion_requirement_state_value,
+)
 from canvas_sync.hosted_html import (
     artifact_hosted_info,
     discover_artifact_files as discover_hosted_artifact_files,
@@ -253,6 +257,7 @@ def push_artifact(
     delivery_mode = delivery_mode_for(fm)
     canvas_artifact_type = canvas_type_for(fm)
     canvas_fm = frontmatter_for_canvas_push(fm)
+    completion_requirement = completion_requirement_for(fm, canvas_artifact_type)
 
     store = CanvasStateStore(manifest_path=manifest_path, repo_root=repo_root, state_dir=state_dir)
     with store.locked() as (manifest, deployment_state, state_path):
@@ -317,6 +322,7 @@ def push_artifact(
             publish=fm.get("publish", True),
         )
 
+        canvas_module_item_id = existing.get("canvas_module_item_id")
         if canvas_artifact_type != "module_header" and action == "created":
             content_type_map = {
                 "assignment": "Assignment",
@@ -324,13 +330,39 @@ def push_artifact(
                 "discussion": "Discussion",
                 "quiz": "Quiz",
             }
-            client.add_module_item(
+            module_item = client.add_module_item(
                 module_id,
                 title=fm["title"],
                 content_type=content_type_map[canvas_artifact_type],
                 content_id=canvas_id if canvas_artifact_type != "page" else None,
                 page_url=canvas_page_url if canvas_artifact_type == "page" else None,
                 position=fm.get("position"),
+                completion_requirement=completion_requirement,
+            )
+            canvas_module_item_id = module_item.get("id")
+        elif (
+            canvas_artifact_type != "module_header"
+            and canvas_module_item_id
+            and completion_requirement
+            and (
+                existing.get("completion_requirement") != completion_requirement_state_value(completion_requirement)
+                or completion_requirement.get("type") == "min_score"
+            )
+        ):
+            client.update_module_item(
+                module_id,
+                int(canvas_module_item_id),
+                {"completion_requirement": completion_requirement},
+            )
+        elif (
+            canvas_artifact_type != "module_header"
+            and canvas_module_item_id
+            and not completion_requirement
+            and existing.get("completion_requirement")
+        ):
+            raise ValueError(
+                f"{rel_path}: completion_requirement none cannot safely clear an existing Canvas "
+                "module completion requirement through the artifact push path"
             )
 
         pushed_at = utc_now()
@@ -341,11 +373,13 @@ def push_artifact(
             canvas_id=canvas_id,
             canvas_page_url=canvas_page_url,
             canvas_module_id=module_id,
+            canvas_module_item_id=canvas_module_item_id,
             hash_value=content_hash(md_path),
             pushed_at=pushed_at,
             source_commit=os.environ.get("GITHUB_SHA"),
             hosted_path=hosted_info["hosted_path"] if hosted_info["enabled"] else None,
             hosted_url=hosted_info["hosted_url"] if hosted_info["enabled"] else None,
+            completion_requirement=completion_requirement_state_value(completion_requirement),
             source_type=artifact_type,
             delivery_mode=delivery_mode,
             external_state=store.external,

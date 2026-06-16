@@ -564,7 +564,8 @@
   "hosted_html": {
     "base_url": "https://profsathya.github.io/Common-Curriculum/deanza",
     "enabled": true,
-    "path_prefix": "deanza"
+    "path_prefix": "deanza",
+    "progress_endpoint": "https://canvas-progress-lti.netlify.app/.netlify/functions/canvas-progress"
   },
   "instance": {
     "base_url": "https://cti-courses.instructure.com/",

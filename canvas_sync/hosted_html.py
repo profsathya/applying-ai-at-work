@@ -27,6 +27,7 @@ from canvas_sync.state import course_dir_for_manifest, derive_artifact_id, load_
 DEFAULT_BASE_URL = "https://profsathya.github.io/Common-Curriculum/deanza"
 DEFAULT_PATH_PREFIX = "deanza"
 DEFAULT_AI_ENDPOINT = "https://ai-assisted-pedagogy.netlify.app/.netlify/functions/ai-proxy"
+DEFAULT_PROGRESS_ENDPOINT = "https://canvas-progress-lti.netlify.app/.netlify/functions/canvas-progress"
 CTI_LOGO_URL = (
     "https://computingtalentinitiative.org/wp-content/uploads/2026/06/"
     "New._CTI_Logo_RGB-1.png"
@@ -38,6 +39,7 @@ class HostedConfig:
     enabled: bool
     base_url: str
     path_prefix: str
+    progress_endpoint: str
 
 
 def hosted_config_from_manifest(manifest: dict) -> HostedConfig:
@@ -46,6 +48,7 @@ def hosted_config_from_manifest(manifest: dict) -> HostedConfig:
         enabled=bool(config.get("enabled", False)),
         base_url=str(config.get("base_url") or DEFAULT_BASE_URL).rstrip("/"),
         path_prefix=str(config.get("path_prefix") or DEFAULT_PATH_PREFIX).strip("/"),
+        progress_endpoint=str(config.get("progress_endpoint") or DEFAULT_PROGRESS_ENDPOINT),
     )
 
 
@@ -197,6 +200,12 @@ def _state_entry_for_artifact(
     artifact_id = frontmatter.get("artifact_id") or derive_artifact_id(rel_path)
     artifacts = state.get("artifacts", {})
     return artifacts.get(rel_path) or artifacts.get(artifact_id) or {}
+
+
+def _artifact_progress_id(md_path: Path, manifest_path: Path, frontmatter: dict) -> str:
+    repo_root = course_dir_for_manifest(manifest_path).parent
+    rel_path = str(md_path.resolve().relative_to(repo_root.resolve()))
+    return str(frontmatter.get("artifact_id") or derive_artifact_id(rel_path))
 
 
 def _canvas_item_url(manifest: dict, frontmatter: dict, entry: dict) -> str | None:
@@ -891,7 +900,7 @@ def _course_metadata(course_dir: Path, course_key: str, homepage: dict | None) -
         "so you always know where you are and what you are building toward."
     )
     footer = homepage_course.get("footer") or "Computing Talent Initiative - De Anza College"
-    return {"title": str(title), "lead": str(lead), "footer": str(footer)}
+    return {"course_key": course_key, "title": str(title), "lead": str(lead), "footer": str(footer)}
 
 
 def _module_config_by_sprint(homepage: dict | None) -> dict[int, dict]:
@@ -997,6 +1006,17 @@ def _render_homepage_item(
     state_entry = _state_entry_for_artifact(md_path, manifest_path, frontmatter, state or manifest)
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry)
     canvas_attr = f' data-canvas-href="{html_lib.escape(canvas_url, quote=True)}"' if canvas_url else ""
+    progress_id = html_lib.escape(_artifact_progress_id(md_path, manifest_path, frontmatter), quote=True)
+    module_item_id = state_entry.get("canvas_module_item_id")
+    module_item_attr = (
+        f' data-canvas-module-item-id="{html_lib.escape(str(module_item_id), quote=True)}"'
+        if module_item_id is not None else ""
+    )
+    completion = state_entry.get("completion_requirement")
+    completion_attr = (
+        f' data-completion-requirement="{html_lib.escape(str(completion), quote=True)}"'
+        if completion else ""
+    )
     verify = item_config.get("verify")
     verify_html = ""
     if verify:
@@ -1008,13 +1028,17 @@ def _render_homepage_item(
             f"<span>{html_lib.escape(str(verify))}</span></div>"
         )
     return (
-        f'<div class="{item_class}">'
+        f'<div class="{item_class}" data-progress-id="{progress_id}"'
+        f'{module_item_attr}{completion_attr} data-progress-state="unavailable">'
         f'<span class="ico">{_homepage_icon_svg(frontmatter["type"], selfcheck=selfcheck)}</span>'
         '<div class="body">'
         f'<div class="title"><a target="_blank" rel="noopener" href="{html_lib.escape(href, quote=True)}"'
         f'{canvas_attr}>{title}</a>{badge_html}</div>'
         f'<div class="meta">{meta}</div>{verify_html}'
-        '</div></div>'
+        '</div>'
+        '<span class="progress-check" aria-label="Progress unavailable" title="Progress unavailable">'
+        '<span class="progress-box"></span><span class="progress-label">Progress unavailable</span>'
+        '</span></div>'
     )
 
 
@@ -1093,10 +1117,13 @@ def _career_homepage_document(
     *,
     title_suffix: str = "Home",
     back_href: str | None = None,
+    progress_endpoint: str | None = None,
 ) -> str:
     back = ""
     if back_href:
         back = f'<a class="back-link" href="{html_lib.escape(back_href, quote=True)}" data-keep-context>&larr; Back to course home</a>'
+    progress_endpoint_json = json.dumps(progress_endpoint or DEFAULT_PROGRESS_ENDPOINT)
+    course_key_json = json.dumps(str(course_meta.get("course_key") or ""))
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -1154,6 +1181,14 @@ def _career_homepage_document(
   .item .body{{flex:1;min-width:0;}}
   .item .title{{font-size:14.5px;font-weight:600;}}
   .item .meta{{color:var(--muted);font-size:12px;margin-top:2px;}}
+  .progress-status{{font-size:12px;color:var(--muted);margin:-10px 0 14px;}}
+  .progress-check{{margin-left:auto;display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:11.5px;white-space:nowrap;padding-left:10px;}}
+  .progress-box{{width:18px;height:18px;border:1.5px solid var(--border);border-radius:3px;background:#fff;display:inline-flex;align-items:center;justify-content:center;}}
+  .progress-label{{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}}
+  .item[data-progress-state="loading"] .progress-box{{background:linear-gradient(90deg,#fff,#F2F4F5,#fff);}}
+  .item[data-progress-state="complete"] .progress-box{{border-color:var(--check);background:var(--check);color:#fff;}}
+  .item[data-progress-state="complete"] .progress-box::after{{content:"";width:9px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg);margin-top:-2px;}}
+  .item[data-progress-state="complete"] .title a{{color:#24543A;}}
   .group-label{{padding:10px 14px 4px;font-size:10.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);background:#FAFBFC;border-bottom:1px solid var(--border-light);}}
   .item.selfcheck{{background:var(--check-bg);}}
   .item.selfcheck .ico{{color:var(--check);}}
@@ -1178,6 +1213,7 @@ def _career_homepage_document(
         <div class="cti-logo-fallback">Computing Talent<br>Initiative</div>
       </div>
     </div>
+    <div class="progress-status" id="progress-status" hidden></div>
     {modules_html}
     <footer class="page-footer">
       <img src="{CTI_LOGO_URL}" alt="" onerror="this.style.display='none'">
@@ -1206,6 +1242,90 @@ def _career_homepage_document(
           a.href = u.pathname + u.search + u.hash;
         }} catch (e) {{ }}
       }});
+
+      var progressEndpoint = {progress_endpoint_json};
+      var courseKey = {course_key_json};
+      var statusEl = document.getElementById('progress-status');
+      function setStatus(text, visible) {{
+        if (!statusEl) return;
+        statusEl.textContent = text || '';
+        statusEl.hidden = !visible;
+      }}
+      function setItemState(item, state, label) {{
+        item.setAttribute('data-progress-state', state);
+        var check = item.querySelector('.progress-check');
+        var labelEl = item.querySelector('.progress-label');
+        if (check) {{
+          check.setAttribute('aria-label', label);
+          check.setAttribute('title', label);
+        }}
+        if (labelEl) labelEl.textContent = label;
+      }}
+      function progressToken() {{
+        var params = new URLSearchParams(location.search);
+        var fromQuery = params.get('progress_token');
+        var hash = new URLSearchParams((location.hash || '').replace(/^#/, ''));
+        var fromHash = hash.get('progress_token');
+        var token = fromHash || fromQuery || sessionStorage.getItem('canvas_progress_token');
+        if (fromHash || fromQuery) {{
+          try {{
+            sessionStorage.setItem('canvas_progress_token', token);
+            params.delete('progress_token');
+            hash.delete('progress_token');
+            var next = location.pathname + (params.toString() ? '?' + params.toString() : '') + (hash.toString() ? '#' + hash.toString() : '');
+            history.replaceState(null, '', next);
+          }} catch (e) {{ }}
+        }}
+        return token;
+      }}
+      function loadProgress() {{
+        var items = Array.prototype.slice.call(document.querySelectorAll('.item[data-progress-id]'));
+        if (!items.length) return;
+        if (ctx !== 'canvas') {{
+          items.forEach(function(item) {{ setItemState(item, 'unavailable', 'Progress available in Canvas'); }});
+          return;
+        }}
+        var token = progressToken();
+        if (!token) {{
+          setStatus('Progress is unavailable until this page is opened through Canvas.', true);
+          items.forEach(function(item) {{ setItemState(item, 'unavailable', 'Progress unavailable'); }});
+          return;
+        }}
+        items.forEach(function(item) {{ setItemState(item, 'loading', 'Checking progress'); }});
+        setStatus('Checking Canvas progress...', true);
+        var url = new URL(progressEndpoint, location.href);
+        if (courseKey) url.searchParams.set('course', courseKey);
+        fetch(url.href, {{ headers: {{ Authorization: 'Bearer ' + token }} }})
+          .then(function(response) {{
+            if (!response.ok) throw new Error('Progress request failed');
+            return response.json();
+          }})
+          .then(function(data) {{
+            var byModuleItem = {{}};
+            (data.items || []).forEach(function(item) {{
+              if (item.moduleItemId != null) byModuleItem[String(item.moduleItemId)] = item;
+            }});
+            var completeCount = 0;
+            items.forEach(function(row) {{
+              var moduleItemId = row.getAttribute('data-canvas-module-item-id');
+              var progress = moduleItemId ? byModuleItem[String(moduleItemId)] : null;
+              if (progress && progress.completed) {{
+                completeCount += 1;
+                setItemState(row, 'complete', 'Completed in Canvas');
+              }} else if (progress) {{
+                setItemState(row, 'incomplete', 'Not completed in Canvas');
+              }} else {{
+                setItemState(row, 'unavailable', 'Progress unavailable for this item');
+              }}
+            }});
+            setStatus(completeCount + ' of ' + items.length + ' items completed in Canvas.', true);
+          }})
+          .catch(function() {{
+            setStatus('Canvas progress could not be loaded right now.', true);
+            items.forEach(function(item) {{ setItemState(item, 'unavailable', 'Progress unavailable'); }});
+          }});
+      }}
+      loadProgress();
     }})();
   </script>
 </body>
@@ -1241,6 +1361,7 @@ def _render_career_sprint_index(
         module_html,
         title_suffix=f"Sprint {sprint}",
         back_href="home.html?context=web",
+        progress_endpoint=hosted_config_from_manifest(manifest).progress_endpoint,
     )
     path = output_dir / hosted_config_from_manifest(manifest).path_prefix / course_key / f"sprint-{sprint}.html"
     changed, digest = _write_if_changed(path, document)
@@ -1272,7 +1393,11 @@ def _render_career_course_index(
                 first=index == 1,
             )
         )
-    document = _career_homepage_document(course_meta, "\n".join(modules))
+    document = _career_homepage_document(
+        course_meta,
+        "\n".join(modules),
+        progress_endpoint=hosted_config_from_manifest(manifest).progress_endpoint,
+    )
     course_dir_out = output_dir / hosted_config_from_manifest(manifest).path_prefix / course_key
     index_changed, index_digest = _write_if_changed(course_dir_out / "index.html", document)
     home_changed, home_digest = _write_if_changed(course_dir_out / "home.html", document)
@@ -1284,6 +1409,58 @@ def _render_career_course_index(
             {"path": str(course_dir_out / "home.html"), "changed": home_changed, "hash": home_digest}
         ],
     }
+
+
+def _progress_map_item(
+    md_path: Path,
+    manifest_path: Path,
+    manifest: dict,
+    frontmatter: dict,
+    state: dict | None,
+) -> dict:
+    repo_root = course_dir_for_manifest(manifest_path).parent
+    rel_path = str(md_path.resolve().relative_to(repo_root.resolve()))
+    state_entry = _state_entry_for_artifact(md_path, manifest_path, frontmatter, state or manifest)
+    return {
+        "artifactId": _artifact_progress_id(md_path, manifest_path, frontmatter),
+        "localPath": rel_path,
+        "slug": frontmatter.get("slug"),
+        "title": frontmatter.get("title"),
+        "type": frontmatter.get("type"),
+        "sprint": frontmatter.get("sprint"),
+        "canvasType": state_entry.get("canvas_type") or frontmatter.get("type"),
+        "canvasId": state_entry.get("canvas_id"),
+        "canvasPageUrl": state_entry.get("canvas_page_url"),
+        "canvasModuleId": state_entry.get("canvas_module_id"),
+        "canvasModuleItemId": state_entry.get("canvas_module_item_id"),
+        "completionRequirement": state_entry.get("completion_requirement"),
+    }
+
+
+def _render_progress_map(
+    output_dir: Path,
+    manifest_path: Path,
+    manifest: dict,
+    course_key: str,
+    items: list[tuple[Path, dict]],
+    state: dict | None,
+) -> dict:
+    config = hosted_config_from_manifest(manifest)
+    payload = {
+        "courseKey": course_key,
+        "canvasCourseId": manifest.get("instance", {}).get("course_id"),
+        "progressEndpoint": config.progress_endpoint,
+        "items": [
+            _progress_map_item(md_path, manifest_path, manifest, frontmatter, state)
+            for md_path, frontmatter in items
+        ],
+    }
+    path = output_dir / config.path_prefix / course_key / "progress-map.json"
+    changed, digest = _write_if_changed(
+        path,
+        json.dumps(payload, indent=2, sort_keys=True) + "\n",
+    )
+    return {"path": str(path), "changed": changed, "hash": digest}
 
 
 def _index_document(
@@ -1490,6 +1667,7 @@ def render_hosted_files(
         items_by_sprint.setdefault(sprint, []).append(item)
 
     indexes = []
+    progress_map = None
     if homepage is not None:
         for sprint, sprint_items in sorted(items_by_sprint.items()):
             indexes.append(
@@ -1516,13 +1694,24 @@ def render_hosted_files(
                     state or manifest_data,
                 )
             )
+            progress_map = _render_progress_map(
+                output_dir,
+                manifest_path,
+                manifest_data,
+                course_key,
+                items,
+                state or manifest_data,
+            )
     else:
         for sprint, sprint_items in sorted(items_by_sprint.items()):
             indexes.append(_render_sprint_index(output_dir, manifest_data, course_key, sprint, sprint_items))
         if items_by_sprint:
             indexes.append(_render_course_index(output_dir, manifest_data, course_key, items_by_sprint))
 
-    return {"rendered": results, "indexes": indexes}
+    result = {"rendered": results, "indexes": indexes}
+    if progress_map is not None:
+        result["progress_map"] = progress_map
+    return result
 
 
 def discover_artifact_files(manifest_path: Path, sprint: int | None = None) -> list[Path]:

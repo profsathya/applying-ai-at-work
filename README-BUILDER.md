@@ -161,6 +161,33 @@ Hosted Canvas content is still authored in Markdown under `<course>/sprints/`. T
 
 When `<course>/homepage.yaml` exists, it is the curated source for the generated hosted landing pages. The renderer combines that YAML with artifact frontmatter and deployment state to write `deanza/<course>/home.html`, `index.html`, and `sprint-<n>.html`.
 
+Hosted homepages can show learner-specific progress only when opened through the Canvas LTI progress launch. The generated static HTML never contains private learner data. It renders read-only progress indicators and `deanza/<course>/progress-map.json`; the browser fills them from the Common Curriculum progress function after a valid LTI launch.
+
+Canvas module requirements are the progress source of truth:
+
+- Default requirements are `must_view` for pages, `must_submit` for assignments and quizzes, `must_contribute` for native discussions, and `must_submit` for hosted AI activities that publish as Canvas assignments.
+- Artifact frontmatter may set `completion_requirement` to `auto`, `none`, `must_view`, `must_submit`, `must_contribute`, `must_mark_done`, or `min_score`.
+- `completion_requirement: none` omits a requirement for new module items. If Canvas already has a requirement, clear it in Canvas first; the backfill command reports that case as blocked instead of changing local state.
+- Deployment state records `canvas_module_item_id` and `completion_requirement` so hosted progress can map Canvas module items back to homepage rows.
+
+To inspect and backfill existing Canvas module items, run dry-run first:
+
+```bash
+python canvas_sync/completion.py \
+  --manifest course1/manifests/production.json \
+  --state-dir ../canvas-state \
+  --dry-run
+```
+
+Apply only after reviewing the dry run:
+
+```bash
+python canvas_sync/completion.py \
+  --manifest course1/manifests/production.json \
+  --state-dir ../canvas-state \
+  --apply
+```
+
 For a changed hosted module or artifact:
 
 1. Update the Markdown source.

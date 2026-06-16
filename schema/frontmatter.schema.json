@@ -50,6 +50,10 @@
       "type": "string",
       "enum": ["canvas_native", "ai_activity"]
     },
+    "completion_requirement": {
+      "type": "string",
+      "enum": ["auto", "none", "must_view", "must_submit", "must_contribute", "must_mark_done", "min_score"]
+    },
     "ai_activity": {
       "type": "object",
       "required": ["activity_id", "questions"],

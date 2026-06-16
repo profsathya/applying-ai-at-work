@@ -137,6 +137,8 @@ class CanvasStateTests(unittest.TestCase):
                 "course1/sprints/sprint-0/test-page.md",
             )
             self.assertEqual(state["artifacts"]["stable-page"]["canvas_module_id"], 55)
+            self.assertEqual(state["artifacts"]["stable-page"]["canvas_module_item_id"], 9001)
+            self.assertEqual(state["artifacts"]["stable-page"]["completion_requirement"], "must_view")
             self.assertIn("canvas_fingerprint", state["artifacts"]["stable-page"])
 
 

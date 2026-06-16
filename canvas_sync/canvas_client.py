@@ -200,8 +200,19 @@ class CanvasClient:
     def list_modules(self) -> list[dict]:
         return self._request_paginated("GET", "modules")
 
-    def list_module_items(self, module_id: int) -> list[dict]:
-        return self._request_paginated("GET", f"modules/{module_id}/items")
+    def list_module_items(
+        self,
+        module_id: int,
+        *,
+        student_id: int | str | None = None,
+        include: list[str] | None = None,
+    ) -> list[dict]:
+        params: dict[str, Any] = {}
+        if student_id is not None:
+            params["student_id"] = student_id
+        if include:
+            params["include[]"] = include
+        return self._request_paginated("GET", f"modules/{module_id}/items", params=params)
 
     def delete_module(self, module_id: int) -> dict:
         return self._request("DELETE", f"modules/{module_id}")
@@ -231,6 +242,7 @@ class CanvasClient:
         content_id: int | None = None,
         page_url: str | None = None,
         position: int | None = None,
+        completion_requirement: dict | None = None,
     ) -> dict:
         item: dict[str, Any] = {"type": content_type, "title": title}
         if content_id is not None:
@@ -239,7 +251,16 @@ class CanvasClient:
             item["page_url"] = page_url
         if position is not None:
             item["position"] = position
+        if completion_requirement:
+            item["completion_requirement"] = completion_requirement
         return self._request("POST", f"modules/{module_id}/items", {"module_item": item})
+
+    def update_module_item(self, module_id: int, module_item_id: int, payload: dict) -> dict:
+        return self._request(
+            "PUT",
+            f"modules/{module_id}/items/{module_item_id}",
+            {"module_item": payload},
+        )
 
     def delete_module_item(self, module_id: int, module_item_id: int) -> dict:
         return self._request("DELETE", f"modules/{module_id}/items/{module_item_id}")
