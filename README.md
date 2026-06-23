@@ -27,7 +27,7 @@ Draft course4 from context/course-specs/course4-context.md and stop before Canva
 ```
 
 ```text
-Configure a new four-module course called course5 for Canvas course ID 12345. Create an empty shell and stop before Canvas writes.
+Configure a new four-module course called `<course-key>` for Canvas course ID 12345. Create an empty shell and stop before Canvas writes.
 ```
 
 ```text
@@ -264,7 +264,7 @@ Use this when Canvas already has a course shell and the repo needs a matching lo
 
 ```bash
 python3 canvas_sync/init_course.py \
-  --course course5 \
+  --course <course-key> \
   --canvas-course-id 12345 \
   --base-url https://example.instructure.com \
   --title "Applying AI at Work, Cohort 5" \
@@ -275,19 +275,19 @@ python3 canvas_sync/init_course.py \
 Prompt example:
 
 ```text
-Configure a new four-module course called course5 for Canvas course ID 12345. Create an empty shell and stop before Canvas writes.
+Configure a new four-module course called <course-key> for Canvas course ID 12345. Create an empty shell and stop before Canvas writes.
 ```
 
 After setup:
 
 ```text
-Draft course5 from context/course-specs/course5-context.md and stop before Canvas.
+Draft <course-key> from context/course-specs/<course-key>-context.md and stop before Canvas.
 ```
 
 Publish after review:
 
 ```text
-Merge reviewed course5 Markdown to main for protected publish, or ask for an approved sandbox sync.
+Merge reviewed <course-key> Markdown to main for protected publish, or ask for an approved sandbox sync.
 ```
 
 ## Local Validation

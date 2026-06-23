@@ -194,7 +194,7 @@ This writes no Canvas content:
 
 ```bash
 python canvas_sync/map_existing.py \
-  --manifest course5/manifests/production.json \
+  --manifest <course>/manifests/production.json \
   --state-dir ../canvas-state \
   --dry-run
 ```
@@ -204,10 +204,10 @@ title mismatches:
 
 ```bash
 python canvas_sync/map_existing.py \
-  --manifest course5/manifests/production.json \
+  --manifest <course>/manifests/production.json \
   --state-dir ../canvas-state \
   --apply \
-  --map niche-doc-week-2-update=17668
+  --map example-artifact=12345
 ```
 
 Then regenerate the hosted homepage from Markdown plus the mapped state without
@@ -215,7 +215,7 @@ publishing any Canvas objects:
 
 ```bash
 python canvas_sync/publish_changed.py \
-  --manifest course5/manifests/production.json \
+  --manifest <course>/manifests/production.json \
   --state-dir ../canvas-state \
   --hosted-output-dir ../Common-Curriculum \
   --require-state \
