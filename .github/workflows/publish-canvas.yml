@@ -85,7 +85,9 @@ jobs:
               | awk -F/ '/^course[0-9]+\/(sprints\/|homepage.yaml|manifests\/production.json)/ { print $1 "/manifests/production.json" }' \
               | sort -u \
               | while IFS= read -r manifest; do
-                  [ -f "$manifest" ] && printf '%s\n' "$manifest"
+                  if [ -f "$manifest" ]; then
+                    printf '%s\n' "$manifest"
+                  fi
                 done > "$manifests_file"
           fi
 
