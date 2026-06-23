@@ -199,7 +199,7 @@ Important behavior:
 - `delivery_mode: ai_activity` is opt-in. Native Canvas quizzes and discussions still publish normally when this field is omitted.
 - AI activity quiz/discussion artifacts publish to Canvas as assignment shells, not native Canvas quizzes or discussion topics.
 - Generated hosted output uses Common Curriculum paths from each manifest's `hosted_html.path_prefix`; for example `deanza/<course>/assignments/<slug>.html`, `deanza/<course>/activities/<slug>.html`, and `activities/deanza/<course>/<slug>.json`.
-- Course landing pages are regenerated at render time from Markdown frontmatter and deployment state. Optional `<course>/homepage.yaml` files provide curated display overrides such as course lead text, module goals, grouping, item meta, badges, and verification notes.
+- Course landing pages are regenerated at render time from Markdown frontmatter and deployment state. Optional `<course>/homepage.yaml` files provide curated display overrides such as course lead text, module goals, grouping, item meta, item icons, web-context links, badges, and verification notes.
 - `submission_type: file_upload` is required because participants submit the exported JSON file to Canvas.
 - Do not include native Canvas `questions` on AI activity artifacts. Put interactive prompts under `ai_activity.questions`.
 - Existing native Canvas quiz/discussion items are not converted in place. Remove the old manifest-backed Canvas item through the dry-run `remove-canvas` flow first, then republish the AI activity assignment shell.
@@ -231,7 +231,7 @@ flowchart LR
 | Canvas course | Modules, pages, and assignment shells | Learner-facing LMS structure, grading, submissions, and publish visibility. |
 | `canvas-state` branch | Canvas IDs, module IDs, page URLs, content hashes, hosted hashes, and fingerprints | Deployment memory so future publishes update existing Canvas objects instead of guessing. |
 
-Hosted homepages do not require every item to be listed in `homepage.yaml`. New Markdown artifacts and new sprint folders appear in the generated homepage automatically using their frontmatter. Add or edit `homepage.yaml` only when the default module labels, grouping, or item meta need curated copy.
+Hosted homepages do not require every item to be listed in `homepage.yaml`. New Markdown artifacts and new sprint folders appear in the generated homepage automatically using their frontmatter. Add or edit `homepage.yaml` only when the default module labels, grouping, item meta, item icon, or web-context link need curated copy. Canvas-context links still come from deployment state.
 
 For the normal production path, maintainers edit Markdown in this repo, merge to `main`, and let the protected `Publish Canvas` workflow render Common Curriculum output, update Canvas, and write `canvas-state`.
 

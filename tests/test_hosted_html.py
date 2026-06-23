@@ -297,6 +297,34 @@ class HostedHtmlTests(unittest.TestCase):
             self.assertEqual(progress_data["items"][0]["artifactId"], "tuple-overview")
             self.assertEqual(progress_data["items"][0]["canvasModuleItemId"], 9001)
 
+    def test_homepage_yaml_can_override_item_icon_and_web_href(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-99" / "tuple-overview.md"
+            homepage_path = repo_root / "course1" / "homepage.yaml"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            output_dir = repo_root / "Common-Curriculum"
+            write_page(md_path)
+            write_manifest(manifest_path)
+            write_homepage(
+                homepage_path,
+                body="""modules:
+  - sprint: 99
+    groups:
+      - label: "Start here"
+        items:
+          - slug: "tuple-overview"
+            icon: "presentation"
+            href: "../legacy/tuple-overview.html"
+""",
+            )
+
+            render_hosted_files(manifest_path, output_dir, [md_path])
+
+            home_html = (output_dir / "deanza" / "course1" / "home.html").read_text(encoding="utf-8")
+            self.assertIn('href="../legacy/tuple-overview.html"', home_html)
+            self.assertIn('<rect x="3" y="4" width="18" height="14" rx="2"/>', home_html)
+
     def test_hosted_homepage_renders_from_frontmatter_without_homepage_yaml(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()
@@ -400,6 +428,7 @@ modules:
       - label: "Broken"
         items:
           - slug: "tuple-overview"
+            icon: "not-an-icon"
           - slug: "tuple-overview"
           - slug: "missing-page"
 """,
@@ -409,6 +438,7 @@ modules:
 
             self.assertTrue(any("duplicates slug 'tuple-overview'" in error for error in errors))
             self.assertTrue(any("references missing artifact slug 'missing-page'" in error for error in errors))
+            self.assertTrue(any("unsupported icon 'not-an-icon'" in error for error in errors))
 
     def test_ai_activity_renders_wrapper_shell_and_config(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

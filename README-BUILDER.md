@@ -159,7 +159,7 @@ Use direct Python commands for validation, inspect, push, pull, and remove.
 
 Hosted Canvas content is still authored in Markdown under `<course>/sprints/`. The Common Curriculum checkout receives generated HTML and JSON only when the publish layer renders it.
 
-Hosted course homepages are regenerated at render time from artifact frontmatter and deployment state. The renderer writes `<path_prefix>/<course>/home.html`, `index.html`, `sprint-<n>.html`, and `progress-map.json` for each hosted course. When `<course>/homepage.yaml` exists, it is curated display metadata only: course lead text, module goals, group labels, item meta, badges, and verification notes. New artifacts and new sprints still appear automatically from Markdown even when the YAML has not been curated yet.
+Hosted course homepages are regenerated at render time from artifact frontmatter and deployment state. The renderer writes `<path_prefix>/<course>/home.html`, `index.html`, `sprint-<n>.html`, and `progress-map.json` for each hosted course. When `<course>/homepage.yaml` exists, it is curated display metadata only: course lead text, module goals, group labels, item meta, item icons, web-context links, badges, and verification notes. New artifacts and new sprints still appear automatically from Markdown even when the YAML has not been curated yet. Canvas-context links still come from deployment state.
 
 Hosted homepages can show learner-specific progress only when opened through the Canvas LTI progress launch. The generated static HTML never contains private learner data. It renders read-only progress indicators and `<path_prefix>/<course>/progress-map.json`; the browser fills them from the Common Curriculum progress function after a valid LTI launch.
 

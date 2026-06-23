@@ -799,6 +799,21 @@ def _homepage_entry_slug(entry: object) -> str | None:
     return None
 
 
+HOMEPAGE_ICON_KEYS = {
+    "assignment",
+    "clock",
+    "discussion",
+    "page",
+    "presentation",
+    "quiz",
+    "refresh",
+    "search",
+    "self-check",
+    "trend",
+    "video",
+}
+
+
 def validate_homepage_metadata(course_dir: Path) -> list[str]:
     path = _homepage_path(course_dir)
     if not path.exists():
@@ -879,6 +894,13 @@ def validate_homepage_metadata(course_dir: Path) -> list[str]:
                 configured_slugs[slug] = item_label
                 if slug not in artifact_slugs:
                     errors.append(f"{item_label} references missing artifact slug {slug!r}")
+                if isinstance(entry, dict) and entry.get("icon") is not None:
+                    icon = str(entry.get("icon"))
+                    if icon not in HOMEPAGE_ICON_KEYS:
+                        errors.append(
+                            f"{item_label} has unsupported icon {icon!r}; "
+                            f"use one of {', '.join(sorted(HOMEPAGE_ICON_KEYS))}"
+                        )
 
     return errors
 
@@ -949,27 +971,56 @@ def _homepage_item_groups(
     return groups
 
 
-def _homepage_icon_svg(kind: str, *, selfcheck: bool = False) -> str:
-    if selfcheck:
+def _homepage_icon_svg(kind: str, *, selfcheck: bool = False, icon: str | None = None) -> str:
+    icon_key = icon or ("self-check" if selfcheck else kind)
+    if icon_key == "self-check":
         return (
             '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">'
             '<circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>'
         )
-    if kind == "assignment":
+    if icon_key == "assignment":
         return (
             '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">'
             '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>'
             '<path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>'
         )
-    if kind == "discussion":
+    if icon_key == "discussion":
         return (
             '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">'
             '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'
         )
-    if kind == "quiz":
+    if icon_key == "quiz" or icon_key == "trend":
         return (
             '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">'
             '<path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h6v6"/></svg>'
+        )
+    if icon_key == "presentation":
+        return (
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">'
+            '<rect x="3" y="4" width="18" height="14" rx="2"/>'
+            '<path d="M3 9h18M8 18v3M16 18v3"/></svg>'
+        )
+    if icon_key == "video":
+        return (
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">'
+            '<circle cx="12" cy="12" r="9"/>'
+            '<polygon points="10 8.5 16 12 10 15.5 10 8.5" fill="currentColor" stroke="none"/></svg>'
+        )
+    if icon_key == "refresh":
+        return (
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">'
+            '<path d="M21 12a9 9 0 1 1-9-9c2.5 0 4.74 1 6.4 2.6"/>'
+            '<path d="M21 4v6h-6"/></svg>'
+        )
+    if icon_key == "search":
+        return (
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">'
+            '<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>'
+        )
+    if icon_key == "clock":
+        return (
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">'
+            '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'
         )
     return (
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">'
@@ -1004,7 +1055,7 @@ def _render_homepage_item(
         badge_html = f'<span class="badge{badge_class}">{html_lib.escape(str(badge))}</span>'
     selfcheck = bool(item_config.get("selfcheck")) or bool(badge)
     item_class = "item selfcheck" if selfcheck else "item"
-    href = f"{_artifact_course_relative_path(frontmatter)}?context=web"
+    href = str(item_config.get("href") or f"{_artifact_course_relative_path(frontmatter)}?context=web")
     state_entry = _state_entry_for_artifact(md_path, manifest_path, frontmatter, state or manifest)
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry)
     canvas_attr = f' data-canvas-href="{html_lib.escape(canvas_url, quote=True)}"' if canvas_url else ""
@@ -1040,7 +1091,7 @@ def _render_homepage_item(
         )
     return (
         f'<div class="{item_class}"{progress_attrs}>'
-        f'<span class="ico">{_homepage_icon_svg(frontmatter["type"], selfcheck=selfcheck)}</span>'
+        f'<span class="ico">{_homepage_icon_svg(frontmatter["type"], selfcheck=selfcheck, icon=item_config.get("icon"))}</span>'
         '<div class="body">'
         f'<div class="title"><a target="_blank" rel="noopener" href="{html_lib.escape(href, quote=True)}"'
         f'{canvas_attr}>{title}</a>{badge_html}</div>'
