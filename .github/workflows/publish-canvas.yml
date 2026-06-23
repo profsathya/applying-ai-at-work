@@ -17,6 +17,11 @@ on:
         description: 'Course key to publish, for example course1'
         required: true
         type: string
+      hosted_only:
+        description: 'Render and commit hosted output without Canvas reads or writes'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -107,6 +112,8 @@ jobs:
     environment: canvas-production
     permissions:
       contents: write
+    env:
+      HOSTED_ONLY: ${{ github.event_name == 'workflow_dispatch' && inputs.hosted_only == true }}
     steps:
       - name: Check out content branch
         uses: actions/checkout@v4
@@ -160,6 +167,7 @@ jobs:
           fi
 
       - name: Bootstrap missing state files from legacy manifests
+        if: env.HOSTED_ONLY != 'true'
         working-directory: content
         env:
           TARGET_MANIFESTS: ${{ needs.validate.outputs.manifests }}
@@ -173,6 +181,7 @@ jobs:
 
       - name: Check Canvas credentials
         id: canvas_credentials
+        if: env.HOSTED_ONLY != 'true'
         env:
           CANVAS_API_URL: ${{ secrets.CANVAS_API_URL }}
           CANVAS_API_TOKEN: ${{ secrets.CANVAS_API_TOKEN }}
@@ -187,7 +196,7 @@ jobs:
           fi
 
       - name: Hydrate missing Canvas fingerprints
-        if: steps.canvas_credentials.outputs.available == 'true'
+        if: env.HOSTED_ONLY != 'true' && steps.canvas_credentials.outputs.available == 'true'
         working-directory: content
         env:
           CANVAS_API_URL: ${{ secrets.CANVAS_API_URL }}
@@ -203,7 +212,7 @@ jobs:
 
       - name: Publish changed artifacts
         id: publish
-        if: steps.canvas_credentials.outputs.available == 'true'
+        if: env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true'
         continue-on-error: true
         working-directory: content
         env:
@@ -216,16 +225,21 @@ jobs:
           while IFS= read -r manifest; do
             [ -n "$manifest" ] && args+=(--manifest "$manifest")
           done <<< "$TARGET_MANIFESTS"
+          hosted_args=()
+          if [ "$HOSTED_ONLY" = "true" ]; then
+            hosted_args+=(--hosted-only)
+          fi
           set -o pipefail
           python canvas_sync/publish_changed.py \
             "${args[@]}" \
             --state-dir ../canvas-state \
             --hosted-output-dir ../common-curriculum \
             --check-drift \
-            --require-state | tee ../publish-result.json
+            --require-state \
+            "${hosted_args[@]}" | tee ../publish-result.json
 
       - name: Commit Common Curriculum hosted changes
-        if: steps.canvas_credentials.outputs.available == 'true' && steps.publish.outcome == 'success'
+        if: (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true') && steps.publish.outcome == 'success'
         working-directory: common-curriculum
         env:
           COMMON_CURRICULUM_TOKEN: ${{ secrets.COMMON_CURRICULUM_TOKEN }}
@@ -233,7 +247,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add deanza activities
+          git add deanza career-intelligence activities
           if git diff --cached --quiet; then
             echo "No Common Curriculum hosted changes to commit."
             exit 0
@@ -242,7 +256,7 @@ jobs:
             echo "::error::COMMON_CURRICULUM_TOKEN is required to push hosted Common Curriculum files."
             exit 1
           fi
-          git commit -m "sync deanza hosted activities for ${GITHUB_SHA}"
+          git commit -m "sync hosted canvas output for ${GITHUB_SHA}"
           git remote set-url origin "https://x-access-token:${COMMON_CURRICULUM_TOKEN}@github.com/profsathya/Common-Curriculum.git"
           git push origin HEAD:main
 
@@ -272,7 +286,7 @@ jobs:
           fi
 
       - name: Fail if publish reported errors
-        if: steps.canvas_credentials.outputs.available == 'true' && steps.publish.outcome == 'failure'
+        if: (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true') && steps.publish.outcome == 'failure'
         run: |
           echo "Publish step failed. Result:"
           cat publish-result.json 2>/dev/null || true

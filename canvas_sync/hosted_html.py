@@ -822,7 +822,9 @@ def validate_homepage_metadata(course_dir: Path) -> list[str]:
         if "\u2014" in text:
             errors.append(f"{path}: contains em-dash; use hyphen, colon, or sentence break")
 
-    modules = payload.get("modules")
+    modules = payload.get("modules", [])
+    if modules is None:
+        modules = []
     if not isinstance(modules, list):
         errors.append(f"{path}: modules must be a list")
         return errors
@@ -1006,17 +1008,26 @@ def _render_homepage_item(
     state_entry = _state_entry_for_artifact(md_path, manifest_path, frontmatter, state or manifest)
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry)
     canvas_attr = f' data-canvas-href="{html_lib.escape(canvas_url, quote=True)}"' if canvas_url else ""
-    progress_id = html_lib.escape(_artifact_progress_id(md_path, manifest_path, frontmatter), quote=True)
     module_item_id = state_entry.get("canvas_module_item_id")
-    module_item_attr = (
-        f' data-canvas-module-item-id="{html_lib.escape(str(module_item_id), quote=True)}"'
-        if module_item_id is not None else ""
-    )
-    completion = state_entry.get("completion_requirement")
-    completion_attr = (
-        f' data-completion-requirement="{html_lib.escape(str(completion), quote=True)}"'
-        if completion else ""
-    )
+    progress_attrs = ""
+    progress_html = ""
+    if module_item_id is not None:
+        progress_id = html_lib.escape(_artifact_progress_id(md_path, manifest_path, frontmatter), quote=True)
+        completion = state_entry.get("completion_requirement")
+        completion_attr = (
+            f' data-completion-requirement="{html_lib.escape(str(completion), quote=True)}"'
+            if completion else ""
+        )
+        progress_attrs = (
+            f' data-progress-id="{progress_id}"'
+            f' data-canvas-module-item-id="{html_lib.escape(str(module_item_id), quote=True)}"'
+            f'{completion_attr} data-progress-state="unavailable"'
+        )
+        progress_html = (
+            '<span class="progress-check" aria-label="Progress unavailable" title="Progress unavailable">'
+            '<span class="progress-box"></span><span class="progress-label">Progress unavailable</span>'
+            '</span>'
+        )
     verify = item_config.get("verify")
     verify_html = ""
     if verify:
@@ -1028,17 +1039,14 @@ def _render_homepage_item(
             f"<span>{html_lib.escape(str(verify))}</span></div>"
         )
     return (
-        f'<div class="{item_class}" data-progress-id="{progress_id}"'
-        f'{module_item_attr}{completion_attr} data-progress-state="unavailable">'
+        f'<div class="{item_class}"{progress_attrs}>'
         f'<span class="ico">{_homepage_icon_svg(frontmatter["type"], selfcheck=selfcheck)}</span>'
         '<div class="body">'
         f'<div class="title"><a target="_blank" rel="noopener" href="{html_lib.escape(href, quote=True)}"'
         f'{canvas_attr}>{title}</a>{badge_html}</div>'
         f'<div class="meta">{meta}</div>{verify_html}'
         '</div>'
-        '<span class="progress-check" aria-label="Progress unavailable" title="Progress unavailable">'
-        '<span class="progress-box"></span><span class="progress-label">Progress unavailable</span>'
-        '</span></div>'
+        f'{progress_html}</div>'
     )
 
 
@@ -1340,7 +1348,7 @@ def _render_career_sprint_index(
     course_key: str,
     sprint: int,
     sprint_items: list[tuple[Path, dict]],
-    homepage: dict,
+    homepage: dict | None,
     state: dict | None,
 ) -> dict:
     course_dir = course_dir_for_manifest(manifest_path)
@@ -1374,7 +1382,7 @@ def _render_career_course_index(
     manifest: dict,
     course_key: str,
     items_by_sprint: dict[int, list[tuple[Path, dict]]],
-    homepage: dict,
+    homepage: dict | None,
     state: dict | None,
 ) -> dict:
     course_dir = course_dir_for_manifest(manifest_path)
@@ -1668,45 +1676,39 @@ def render_hosted_files(
 
     indexes = []
     progress_map = None
-    if homepage is not None:
-        for sprint, sprint_items in sorted(items_by_sprint.items()):
-            indexes.append(
-                _render_career_sprint_index(
-                    output_dir,
-                    manifest_path,
-                    manifest_data,
-                    course_key,
-                    sprint,
-                    sprint_items,
-                    homepage,
-                    state or manifest_data,
-                )
-            )
-        if items_by_sprint:
-            indexes.append(
-                _render_career_course_index(
-                    output_dir,
-                    manifest_path,
-                    manifest_data,
-                    course_key,
-                    items_by_sprint,
-                    homepage,
-                    state or manifest_data,
-                )
-            )
-            progress_map = _render_progress_map(
+    for sprint, sprint_items in sorted(items_by_sprint.items()):
+        indexes.append(
+            _render_career_sprint_index(
                 output_dir,
                 manifest_path,
                 manifest_data,
                 course_key,
-                items,
+                sprint,
+                sprint_items,
+                homepage,
                 state or manifest_data,
             )
-    else:
-        for sprint, sprint_items in sorted(items_by_sprint.items()):
-            indexes.append(_render_sprint_index(output_dir, manifest_data, course_key, sprint, sprint_items))
-        if items_by_sprint:
-            indexes.append(_render_course_index(output_dir, manifest_data, course_key, items_by_sprint))
+        )
+    if items_by_sprint:
+        indexes.append(
+            _render_career_course_index(
+                output_dir,
+                manifest_path,
+                manifest_data,
+                course_key,
+                items_by_sprint,
+                homepage,
+                state or manifest_data,
+            )
+        )
+        progress_map = _render_progress_map(
+            output_dir,
+            manifest_path,
+            manifest_data,
+            course_key,
+            items,
+            state or manifest_data,
+        )
 
     result = {"rendered": results, "indexes": indexes}
     if progress_map is not None:

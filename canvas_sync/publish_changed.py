@@ -129,7 +129,10 @@ def publish_manifest(
     check_drift: bool,
     require_state: bool,
     hosted_output_dir: Path | None = None,
+    hosted_only: bool = False,
 ) -> dict:
+    manifest = load_json(manifest_path)
+    hosted_only = hosted_only or manifest.get("canvas_publish") is False
     changed, state_info = changed_artifacts(
         manifest_path,
         state_dir,
@@ -147,6 +150,34 @@ def publish_manifest(
         "drifted": [],
         "hosted": None,
     }
+    if hosted_only:
+        if dry_run:
+            return result
+        if not hosted_output_dir:
+            result["failed"].append(
+                {
+                    "file": "<hosted_html>",
+                    "artifact_id": None,
+                    "error": "--hosted-only requires --hosted-output-dir",
+                }
+            )
+            return result
+        try:
+            result["hosted"] = render_hosted_files(
+                manifest_path,
+                hosted_output_dir,
+                discover_artifact_files(manifest_path),
+                state=state_info["state"],
+            )
+        except Exception as exc:  # noqa: BLE001 - surface hosted render failures in publish result
+            result["failed"].append(
+                {
+                    "file": "<hosted_html>",
+                    "artifact_id": None,
+                    "error": str(exc),
+                }
+            )
+        return result
     if dry_run:
         return result
     if not changed:
@@ -220,7 +251,14 @@ def main() -> int:
     parser.add_argument("--check-drift", action="store_true")
     parser.add_argument("--require-state", action="store_true")
     parser.add_argument("--hosted-output-dir", type=Path)
+    parser.add_argument(
+        "--hosted-only",
+        action="store_true",
+        help="Render hosted HTML from Markdown and state without Canvas reads or writes.",
+    )
     args = parser.parse_args()
+    if args.hosted_only and not args.hosted_output_dir:
+        parser.error("--hosted-only requires --hosted-output-dir")
 
     manifests = args.manifest if args.manifest else discover_manifests()
     results = []
@@ -234,6 +272,7 @@ def main() -> int:
                 check_drift=args.check_drift,
                 require_state=args.require_state,
                 hosted_output_dir=args.hosted_output_dir.resolve() if args.hosted_output_dir else None,
+                hosted_only=args.hosted_only,
             )
             results.append(result)
             if result["failed"] or result["drifted"]:

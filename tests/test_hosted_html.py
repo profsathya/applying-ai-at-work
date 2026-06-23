@@ -119,6 +119,30 @@ A second page for homepage index checks.
     )
 
 
+def write_third_page(path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        """---
+type: page
+title: "Third Overview"
+slug: third-overview
+artifact_id: third-overview
+sprint: 100
+module: "Second Hosted Module"
+position: 1
+points: null
+submission_type: none
+publish: false
+---
+
+# Third Overview
+
+A third page in a new sprint for homepage index checks.
+""",
+        encoding="utf-8",
+    )
+
+
 def write_homepage(path: Path, *, body: str | None = None) -> None:
     path.write_text(
         body
@@ -273,6 +297,45 @@ class HostedHtmlTests(unittest.TestCase):
             self.assertEqual(progress_data["items"][0]["artifactId"], "tuple-overview")
             self.assertEqual(progress_data["items"][0]["canvasModuleItemId"], 9001)
 
+    def test_hosted_homepage_renders_from_frontmatter_without_homepage_yaml(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            first_path = repo_root / "course1" / "sprints" / "sprint-99" / "tuple-overview.md"
+            second_path = repo_root / "course1" / "sprints" / "sprint-99" / "second-overview.md"
+            third_path = repo_root / "course1" / "sprints" / "sprint-100" / "third-overview.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            output_dir = repo_root / "Common-Curriculum"
+            write_page(first_path)
+            write_second_page(second_path)
+            write_third_page(third_path)
+            write_manifest(manifest_path)
+
+            result = render_hosted_files(manifest_path, output_dir, [first_path, second_path, third_path])
+
+            course_home = output_dir / "deanza" / "course1" / "home.html"
+            sprint_99 = output_dir / "deanza" / "course1" / "sprint-99.html"
+            sprint_100 = output_dir / "deanza" / "course1" / "sprint-100.html"
+            progress_map = output_dir / "deanza" / "course1" / "progress-map.json"
+            home_html = course_home.read_text(encoding="utf-8")
+            self.assertTrue(sprint_99.exists())
+            self.assertTrue(sprint_100.exists())
+            self.assertTrue(progress_map.exists())
+            self.assertIn("Hosted HTML Pilot", home_html)
+            self.assertIn("Second Hosted Module", home_html)
+            self.assertIn("Additional items", home_html)
+            self.assertIn("tuple-overview.html?context=web", home_html)
+            self.assertIn("second-overview.html?context=web", home_html)
+            self.assertIn("third-overview.html?context=web", home_html)
+            self.assertNotIn('data-progress-id="tuple-overview"', home_html)
+            self.assertNotIn('class="progress-check"', home_html)
+            self.assertIn("canvas-progress", home_html)
+            self.assertIn(str(sprint_100), [item["path"] for item in result["indexes"]])
+            progress_data = json.loads(progress_map.read_text(encoding="utf-8"))
+            self.assertEqual(
+                [item["artifactId"] for item in progress_data["items"]],
+                ["tuple-overview", "second-overview", "third-overview"],
+            )
+
     def test_homepage_indexes_add_and_remove_artifact_links(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()
@@ -287,11 +350,39 @@ class HostedHtmlTests(unittest.TestCase):
 
             render_hosted_files(manifest_path, output_dir, [first_path, second_path])
             home_path = output_dir / "deanza" / "course1" / "home.html"
-            self.assertIn("second-overview.html?context=web", home_path.read_text(encoding="utf-8"))
+            home_html = home_path.read_text(encoding="utf-8")
+            self.assertIn("second-overview.html?context=web", home_html)
+            self.assertIn("Additional items", home_html)
 
             second_path.unlink()
             render_hosted_files(manifest_path, output_dir, [first_path])
             self.assertNotIn("second-overview.html?context=web", home_path.read_text(encoding="utf-8"))
+
+    def test_homepage_yaml_can_override_course_only(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-99" / "tuple-overview.md"
+            homepage_path = repo_root / "course1" / "homepage.yaml"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            output_dir = repo_root / "Common-Curriculum"
+            write_page(md_path)
+            write_manifest(manifest_path)
+            write_homepage(
+                homepage_path,
+                body="""course:
+  title: "Custom Hosted Course"
+  lead: "Curated course copy without item-level grouping."
+""",
+            )
+
+            errors = validate_homepage_metadata(repo_root / "course1")
+            render_hosted_files(manifest_path, output_dir, [md_path])
+
+            home_html = (output_dir / "deanza" / "course1" / "home.html").read_text(encoding="utf-8")
+            self.assertEqual(errors, [])
+            self.assertIn("Custom Hosted Course", home_html)
+            self.assertIn("Curated course copy without item-level grouping.", home_html)
+            self.assertIn("tuple-overview.html?context=web", home_html)
 
     def test_homepage_validation_rejects_stale_and_duplicate_slugs(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

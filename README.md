@@ -198,8 +198,8 @@ Important behavior:
 
 - `delivery_mode: ai_activity` is opt-in. Native Canvas quizzes and discussions still publish normally when this field is omitted.
 - AI activity quiz/discussion artifacts publish to Canvas as assignment shells, not native Canvas quizzes or discussion topics.
-- Generated hosted output uses Common Curriculum paths: `deanza/<course>/assignments/<slug>.html`, `deanza/<course>/activities/<slug>.html`, and `activities/deanza/<course>/<slug>.json`.
-- Course landing pages use `<course>/homepage.yaml` when present. The publish layer combines that curated metadata with artifact frontmatter and deployment state to generate `deanza/<course>/home.html`, `index.html`, and `sprint-<n>.html`.
+- Generated hosted output uses Common Curriculum paths from each manifest's `hosted_html.path_prefix`; for example `deanza/<course>/assignments/<slug>.html`, `deanza/<course>/activities/<slug>.html`, and `activities/deanza/<course>/<slug>.json`.
+- Course landing pages are regenerated at render time from Markdown frontmatter and deployment state. Optional `<course>/homepage.yaml` files provide curated display overrides such as course lead text, module goals, grouping, item meta, badges, and verification notes.
 - `submission_type: file_upload` is required because participants submit the exported JSON file to Canvas.
 - Do not include native Canvas `questions` on AI activity artifacts. Put interactive prompts under `ai_activity.questions`.
 - Existing native Canvas quiz/discussion items are not converted in place. Remove the old manifest-backed Canvas item through the dry-run `remove-canvas` flow first, then republish the AI activity assignment shell.
@@ -231,7 +231,13 @@ flowchart LR
 | Canvas course | Modules, pages, and assignment shells | Learner-facing LMS structure, grading, submissions, and publish visibility. |
 | `canvas-state` branch | Canvas IDs, module IDs, page URLs, content hashes, hosted hashes, and fingerprints | Deployment memory so future publishes update existing Canvas objects instead of guessing. |
 
+Hosted homepages do not require every item to be listed in `homepage.yaml`. New Markdown artifacts and new sprint folders appear in the generated homepage automatically using their frontmatter. Add or edit `homepage.yaml` only when the default module labels, grouping, or item meta need curated copy.
+
 For the normal production path, maintainers edit Markdown in this repo, merge to `main`, and let the protected `Publish Canvas` workflow render Common Curriculum output, update Canvas, and write `canvas-state`.
+
+For checkbox-only hosted homepage changes in a course that already has Canvas items, use the workflow dispatch `hosted_only` option or `canvas_sync/publish_changed.py --hosted-only`. That path renders Common Curriculum output from existing `canvas-state` mappings and does not create or update Canvas items.
+
+For courses that should always stay checkbox-only in production, set `"canvas_publish": false` in the course manifest. That makes the normal publish workflow render hosted output without publishing Markdown artifacts to Canvas.
 
 For an approved local admin repair, `canvas_sync/push.py --hosted-output-dir ../common-curriculum` renders hosted files into the sibling Common Curriculum checkout before updating Canvas. If that local path is used, the generated Common Curriculum files and the updated deployment state must also be pushed so the three layers stay aligned.
 
@@ -311,7 +317,7 @@ instructor branch -> local validation and configured checks -> merge to main -> 
 - Markdown stays on `main` as the desired course content.
 - `artifact_id` in frontmatter is the stable deployment identity. Do not change it after creation.
 - Mutable Canvas IDs, module IDs, page URLs, publish hashes, and Canvas fingerprints live on the protected `canvas-state` branch.
-- `.github/workflows/publish-canvas.yml` triggers for `course*/sprints/**`, `course*/manifests/production.json`, `schema/**`, `canvas_sync/**`, and `tests/**`. It serializes Canvas writes and uses the protected `canvas-production` GitHub Environment.
+- `.github/workflows/publish-canvas.yml` triggers for `course*/sprints/**`, `course*/homepage.yaml`, `course*/manifests/production.json`, `schema/**`, `canvas_sync/**`, and `tests/**`. It serializes Canvas writes and uses the protected `canvas-production` GitHub Environment.
 - `.github/workflows/validate-schemas.yml` runs the schema and unit test checks for its configured path filters. Update those filters when a new course folder should receive PR validation.
 - Existing state is hydrated with live Canvas fingerprints before changed artifacts publish, so Canvas-side edits block overwrite instead of being silently replaced.
 - `.github/workflows/reconcile-check.yml` checks live Canvas against `main` plus `canvas-state` nightly.

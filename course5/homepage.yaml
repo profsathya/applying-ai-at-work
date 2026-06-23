@@ -1,0 +1,164 @@
+course:
+  title: "Career Intelligence"
+  lead: "Your path through the program. Each week shows what to build, what to test, and where the work carries forward."
+  footer: "Computing Talent Initiative - CSU Monterey Bay - Career Intelligence"
+modules:
+  - sprint: 0
+    title: "Week 1: Orientation and Know Your Niche"
+    tag: "Onboarding"
+    open: true
+    learning_goals:
+      - "Understand the program and the working rhythm."
+      - "Connect with peers in ways that make the search more concrete."
+      - "Start positioning yourself for a strategic job search."
+    prereq: "Start here."
+    groups:
+      - label: "Before the session"
+        items:
+          - slug: "career-intelligence-pre-evaluation-summer-2026"
+            meta: "Assignment - complete the baseline pre-evaluation"
+          - slug: "submit-your-current-resume"
+            meta: "Assignment - submit the resume you will keep revising"
+      - label: "Live session: missing it never blocks you"
+        items:
+          - slug: "week-1-session-slides"
+            meta: "Page - review the session deck"
+          - slug: "session-recording-monday"
+            meta: "Page - watch if you missed the session or want to revisit it"
+          - slug: "human-connections"
+            meta: "Discussion - work in trios and submit the shared notes link"
+          - slug: "human-ai-connections"
+            meta: "Discussion - work in pairs and submit the Dojo JSON"
+      - label: "This week's work"
+        items:
+          - slug: "handwritten-know-yourself-reflection"
+            meta: "Assignment - reflect by hand, then submit a photo and typed copy"
+          - slug: "update-your-know-yourself-dojo-json"
+            meta: "Assignment - fold the reflection back into your Dojo JSON"
+          - slug: "know-the-market-research-dojo-json"
+            meta: "Assignment - use real postings and real people to test the market"
+          - slug: "start-your-niche-doc"
+            meta: "Assignment - start the living document where self-knowledge meets the market"
+          - slug: "week-1-self-check"
+            meta: "Self-check - run the check on your own work before moving on"
+            badge: "Self-check"
+            selfcheck: true
+            verify: "Then check with a peer or TA, not only with AI. A second human read catches what the self-check misses."
+
+  - sprint: 1
+    title: "Week 2: Develop and Articulate Your Niche"
+    tag: "Know Your Niche"
+    open: true
+    learning_goals:
+      - "Test your resume against your current niche."
+      - "Find job postings that align with your niche and sort them into role types."
+      - "Strengthen both your resume and your niche based on what the work surfaces."
+    prereq: "Builds on your Niche Doc and the resume you submitted in Week 1."
+    groups:
+      - label: "Live session"
+        items:
+          - slug: "resume-story-swap"
+            meta: "Discussion - say the story your resume tells and mark where it drifts"
+          - slug: "curate-analyze-10-jobs-aligned-to-your-niche"
+            meta: "Assignment - sort 10 postings into 2-3 role types"
+      - label: "This week's work"
+        items:
+          - slug: "submit-your-resume-v2"
+            meta: "Assignment - revise the resume so it tells the niche story more clearly"
+          - slug: "niche-doc-week-2-update"
+            meta: "Assignment - name role types and fold the week into the Niche Doc"
+          - slug: "week-2-self-check"
+            meta: "Self-check - test whether the niche is sharper and the resume shows it"
+            badge: "Self-check"
+            selfcheck: true
+            verify: "Pressure-test your niche and resume story with a peer or TA, not only with AI."
+
+  - sprint: 2
+    title: "Week 3: Verify Your Niche and Begin Own Your Search"
+    tag: "Transition"
+    muted: true
+    learning_goals:
+      - "Defend the niche out loud and test it against evidence."
+      - "Identify where the evidence is strong, vague, or unsupported."
+      - "Write the first Search Strategy Hypothesis."
+    prereq: "Builds on your role-type hypotheses and posting analysis."
+    groups:
+      - label: "Verification and transition"
+        items:
+          - slug: "niche-verification-interview-each-other"
+            meta: "Discussion - interview each other and mark evidence quality"
+          - slug: "know-your-niche-artifact-v1"
+            meta: "Assignment - submit role types, rationale, evidence, and gaps"
+          - slug: "start-your-search-strategy-hypothesis"
+            meta: "Page - start the second living document for search strategy"
+          - slug: "niche-specificity-self-check"
+            meta: "Self-check - confirm the niche is more specific than the domain"
+            badge: "Self-check"
+            selfcheck: true
+            verify: "Have your verification partner confirm it before you submit."
+
+  - sprint: 3
+    title: "Week 4: Iteration 1"
+    tag: "Know Your Niche / Own Your Search"
+    muted: true
+    learning_goals:
+      - "Run the first full search cycle or sharpen the niche before searching."
+      - "Name a hypothesis, make real moves, and reflect on what changed."
+      - "Tailor one resume path without losing your own voice."
+    prereq: "Builds on a defensible niche and your Search Strategy Hypothesis."
+    groups:
+      - label: "Iteration studio"
+        items:
+          - slug: "iteration-studio-live-session-two-tracks"
+            meta: "Page - choose the sharpen-your-niche track or run-your-search track"
+          - slug: "weekly-cycle-monday-hypothesis-and-end-of-week-reflection"
+            meta: "Assignment - log the hypothesis, make moves, and reflect"
+          - slug: "tailored-resume-v1-one-role-type"
+            meta: "Assignment - tailor one resume path with AI for confirmation"
+          - slug: "week-4-reflection-self-check"
+            meta: "Optional self-check - name the real change in the week's reflection"
+            badge: "Optional"
+            selfcheck: true
+
+  - sprint: 4
+    title: "Week 5: Iteration 2 and Professional Interaction"
+    tag: "Own Your Search"
+    muted: true
+    learning_goals:
+      - "Move from private preparation to external signal."
+      - "Explain your human value concisely."
+      - "Initiate a real professional interaction aligned with your niche."
+    prereq: "Builds on your first search cycle and what it taught you."
+    groups:
+      - label: "External signal"
+        items:
+          - slug: "professional-interaction-lab-and-fireside-chat"
+            meta: "Page - practice your value statement and plan outreach"
+          - slug: "initiate-one-professional-interaction"
+            meta: "Assignment - initiate outreach, networking, or an industry conversation"
+          - slug: "week-5-signal-self-check"
+            meta: "Optional self-check - interpret silence or replies as signal"
+            badge: "Optional"
+            selfcheck: true
+
+  - sprint: 5
+    title: "Week 6: Iteration 3, External Signal, and Synthesis"
+    tag: "Own Your Search / Close"
+    muted: true
+    learning_goals:
+      - "Show how your thinking changed from where you started."
+      - "Name your strongest targets with evidence."
+      - "Say what you will keep developing next."
+    prereq: "Builds on two completed search cycles and your living documents."
+    groups:
+      - label: "Synthesis"
+        items:
+          - slug: "networking-event-and-closing-synthesis-live"
+            meta: "Page - compare your start to now after external conversation"
+          - slug: "final-tailored-resume-and-fit-explanation"
+            meta: "Assignment - submit the evidence-backed case and next development gaps"
+          - slug: "program-synthesis-self-check"
+            meta: "Self-check - compare assumptions then with evidence now"
+            badge: "Self-check"
+            selfcheck: true
+            verify: "Walk a peer or TA through your synthesis out loud before you submit."

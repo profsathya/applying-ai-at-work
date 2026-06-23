@@ -159,9 +159,9 @@ Use direct Python commands for validation, inspect, push, pull, and remove.
 
 Hosted Canvas content is still authored in Markdown under `<course>/sprints/`. The Common Curriculum checkout receives generated HTML and JSON only when the publish layer renders it.
 
-When `<course>/homepage.yaml` exists, it is the curated source for the generated hosted landing pages. The renderer combines that YAML with artifact frontmatter and deployment state to write `deanza/<course>/home.html`, `index.html`, and `sprint-<n>.html`.
+Hosted course homepages are regenerated at render time from artifact frontmatter and deployment state. The renderer writes `<path_prefix>/<course>/home.html`, `index.html`, `sprint-<n>.html`, and `progress-map.json` for each hosted course. When `<course>/homepage.yaml` exists, it is curated display metadata only: course lead text, module goals, group labels, item meta, badges, and verification notes. New artifacts and new sprints still appear automatically from Markdown even when the YAML has not been curated yet.
 
-Hosted homepages can show learner-specific progress only when opened through the Canvas LTI progress launch. The generated static HTML never contains private learner data. It renders read-only progress indicators and `deanza/<course>/progress-map.json`; the browser fills them from the Common Curriculum progress function after a valid LTI launch.
+Hosted homepages can show learner-specific progress only when opened through the Canvas LTI progress launch. The generated static HTML never contains private learner data. It renders read-only progress indicators and `<path_prefix>/<course>/progress-map.json`; the browser fills them from the Common Curriculum progress function after a valid LTI launch.
 
 Canvas module requirements are the progress source of truth:
 
@@ -188,6 +188,46 @@ python canvas_sync/completion.py \
   --apply
 ```
 
+If a live course already has Canvas module items and you only need hosted
+homepage progress checkboxes, map the existing items into external state first.
+This writes no Canvas content:
+
+```bash
+python canvas_sync/map_existing.py \
+  --manifest course5/manifests/production.json \
+  --state-dir ../canvas-state \
+  --dry-run
+```
+
+Apply only after reviewing the matches. Use explicit overrides for intentional
+title mismatches:
+
+```bash
+python canvas_sync/map_existing.py \
+  --manifest course5/manifests/production.json \
+  --state-dir ../canvas-state \
+  --apply \
+  --map niche-doc-week-2-update=17668
+```
+
+Then regenerate the hosted homepage from Markdown plus the mapped state without
+publishing any Canvas objects:
+
+```bash
+python canvas_sync/publish_changed.py \
+  --manifest course5/manifests/production.json \
+  --state-dir ../canvas-state \
+  --hosted-output-dir ../Common-Curriculum \
+  --require-state \
+  --hosted-only
+```
+
+For production workflows, set `"canvas_publish": false` in the course manifest
+when a live course should use generated hosted homepages but must not publish
+unmapped Markdown artifacts into Canvas. The protected publish workflow will
+still render hosted output with the external state map and commit Common
+Curriculum changes, but `published` will remain empty for that manifest.
+
 For a changed hosted module or artifact:
 
 1. Update the Markdown source.
@@ -195,7 +235,7 @@ For a changed hosted module or artifact:
 3. Use the protected `Publish Canvas` workflow for production.
 4. For approved local admin or sandbox pushes, pass `--hosted-output-dir ../common-curriculum` to `canvas_sync/push.py`.
 
-Do not patch generated files under `../common-curriculum/deanza/<course>/` as the source of a course change. Those files should be regenerated from Markdown.
+Do not patch generated files under `../common-curriculum/<path_prefix>/<course>/` as the source of a course change. Those files should be regenerated from Markdown.
 
 ## Schemas
 
@@ -230,7 +270,7 @@ main checkout + canvas-state checkout -> validate -> bootstrap missing state -> 
 ```
 
 - `canvas-state` stores `<course>/production.json` files keyed by `artifact_id`.
-- The workflow also checks out Common Curriculum, renders hosted De Anza HTML/activity JSON for changed hosted artifacts, and commits those files when publishing succeeds.
+- The workflow also checks out Common Curriculum, renders hosted HTML/activity JSON for changed hosted artifacts, and commits those files when publishing succeeds.
 - The workflow uses the protected `canvas-production` environment and a single concurrency group.
 - `canvas_sync/bootstrap_state.py` converts legacy manifest state into external state files.
 - `canvas_sync/hydrate_state.py` records live Canvas fingerprints only when Canvas still matches local Markdown.

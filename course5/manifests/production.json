@@ -1,0 +1,17 @@
+{
+  "instance": {
+    "name": "production",
+    "base_url": "https://cti-courses.instructure.com/",
+    "course_id": 183,
+    "term": "Summer 2026"
+  },
+  "hosted_html": {
+    "enabled": true,
+    "base_url": "https://profsathya.github.io/Common-Curriculum/career-intelligence",
+    "path_prefix": "career-intelligence",
+    "progress_endpoint": "https://canvas-progress-lti.netlify.app/.netlify/functions/canvas-progress"
+  },
+  "canvas_publish": false,
+  "last_sync": null,
+  "artifacts": {}
+}

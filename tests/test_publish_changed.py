@@ -34,7 +34,7 @@ publish: true
     )
 
 
-def write_manifest(path: Path, *, hosted: bool = False) -> None:
+def write_manifest(path: Path, *, hosted: bool = False, canvas_publish: bool | None = None) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     payload = {
         "instance": {
@@ -52,6 +52,8 @@ def write_manifest(path: Path, *, hosted: bool = False) -> None:
             "base_url": "https://profsathya.github.io/Common-Curriculum/deanza",
             "path_prefix": "deanza",
         }
+    if canvas_publish is not None:
+        payload["canvas_publish"] = canvas_publish
     path.write_text(json.dumps(payload), encoding="utf-8")
 
 
@@ -222,6 +224,77 @@ class PublishChangedTests(unittest.TestCase):
             self.assertEqual(result["published"], [])
             self.assertIsNotNone(result["hosted"])
             self.assertTrue((output_dir / "deanza" / "course1" / "home.html").exists())
+            push.assert_not_called()
+
+    def test_hosted_only_renders_changed_artifacts_without_canvas_push(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            state_path = state_dir / "course1" / "production.json"
+            output_dir = repo_root / "Common-Curriculum"
+            write_page(md_path, body="Changed body text.")
+            write_manifest(manifest_path, hosted=True)
+            write_state(state_path, hash_value="d" * 64)
+
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(publish_changed, "drift_for_changed") as drift:
+                    with patch.object(publish_changed, "push_artifact") as push:
+                        result = publish_changed.publish_manifest(
+                            manifest_path,
+                            state_dir,
+                            dry_run=False,
+                            check_drift=True,
+                            require_state=True,
+                            hosted_output_dir=output_dir,
+                            hosted_only=True,
+                        )
+
+            self.assertEqual(
+                result["changed"],
+                [{"file": "course1/sprints/sprint-0/stable-page.md", "artifact_id": "stable-page"}],
+            )
+            self.assertEqual(result["published"], [])
+            self.assertEqual(result["drifted"], [])
+            self.assertIsNotNone(result["hosted"])
+            self.assertTrue((output_dir / "deanza" / "course1" / "home.html").exists())
+            drift.assert_not_called()
+            push.assert_not_called()
+
+    def test_canvas_publish_false_renders_changed_artifacts_without_canvas_push(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            state_path = state_dir / "course1" / "production.json"
+            output_dir = repo_root / "Common-Curriculum"
+            write_page(md_path, body="Changed body text.")
+            write_manifest(manifest_path, hosted=True, canvas_publish=False)
+            write_state(state_path, hash_value="e" * 64)
+
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(publish_changed, "drift_for_changed") as drift:
+                    with patch.object(publish_changed, "push_artifact") as push:
+                        result = publish_changed.publish_manifest(
+                            manifest_path,
+                            state_dir,
+                            dry_run=False,
+                            check_drift=True,
+                            require_state=True,
+                            hosted_output_dir=output_dir,
+                        )
+
+            self.assertEqual(
+                result["changed"],
+                [{"file": "course1/sprints/sprint-0/stable-page.md", "artifact_id": "stable-page"}],
+            )
+            self.assertEqual(result["published"], [])
+            self.assertEqual(result["drifted"], [])
+            self.assertIsNotNone(result["hosted"])
+            self.assertTrue((output_dir / "deanza" / "course1" / "home.html").exists())
+            drift.assert_not_called()
             push.assert_not_called()
 
 

@@ -46,6 +46,10 @@
         }
       }
     },
+    "canvas_publish": {
+      "type": "boolean",
+      "description": "Set false for courses whose hosted output should render without publishing Markdown artifacts to Canvas."
+    },
     "ai_activity": {
       "type": "object",
       "properties": {
