@@ -7,9 +7,7 @@ sprint: 1
 week: 1
 module: 'Sprint 1: Frame What Is Worth Solving'
 position: 3
-points: null
-submission_type: none
-publish: false
+publish: true
 ---
 
 # Concept: From Goal To Problem
@@ -24,7 +22,7 @@ A surface request often starts as something like make a dashboard, write a polic
 
 ## Use The Abstraction Ladder
 
-Move down to concrete examples and incidents. Move across to patterns. Move up to causes and purposes. Then move back down to a narrower problem that can be worked on during this course. The best frame is not the broadest one. It is the one that is real, current, connected to actual people, and workable.
+An Abstraction Ladder is a way to examine a problem at different levels, from the specific situation in front of you to the larger purpose behind it. When you move up the ladder, you ask: What is this really about? Why does it matter? What bigger goal, need, or pattern is underneath the first version of the problem? When you move down the ladder, you turn that broader understanding back into a clearer and more specific problem you can actually work on. This matters when using AI because AI can quickly respond to the problem you give it, but it will not always know whether you gave it the right problem. The ladder helps you slow down, use your own context and judgment, and reframe the problem before you start generating solutions.
 
 ## The First Frame Is Provisional
 
