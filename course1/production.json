@@ -2,18 +2,19 @@
   "artifacts": {
     "course1-sprints-sprint-1-concept-from-goal-to-problem": {
       "artifact_id": "course1-sprints-sprint-1-concept-from-goal-to-problem",
+      "canvas_fingerprint": "9b7406c41d80fb1093c4b8c3c1fcf01dbc5f822e37e13b38a11c00d3055813e7",
       "canvas_id": 3469,
       "canvas_module_id": 1946,
       "canvas_module_item_id": 17711,
       "canvas_page_url": "concept-from-goal-to-problem-3",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "707eecedc216ee1946c4aa979bc78105ee7eda777285be01ebdd7a8880768572",
-      "hosted_hash": "3c58324aa593975417c71fde0df3285a81f72d351c9bfbfdb296088122d5506f",
-      "hosted_last_rendered": "2026-06-15T17:33:05+00:00",
+      "content_hash": "c0237e0e930c3e432c060e2ad6a4059e9d321cfab0d69f32dfdfea5dcb7c958c",
+      "hosted_hash": "4e7e31acf6675911140300db5f0affdfb2ad5cbae9c47b8ff158a0cd38769b3b",
+      "hosted_last_rendered": "2026-07-01T17:54:26+00:00",
       "hosted_path": "course1/activities/concept-from-goal-to-problem.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/concept-from-goal-to-problem.html",
-      "last_pushed": "2026-06-15T17:33:05+00:00",
+      "last_pushed": "2026-07-01T17:54:26+00:00",
       "local_path": "course1/sprints/sprint-1/concept-from-goal-to-problem.md"
     },
     "course1-sprints-sprint-1-dojo-lab-abstraction-ladder": {
@@ -737,5 +738,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-06-15T18:57:56+00:00"
+  "last_sync": "2026-07-01T17:54:26+00:00"
 }
