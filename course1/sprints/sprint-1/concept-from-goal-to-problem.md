@@ -35,6 +35,8 @@ You do not need to be certain in Sprint 1. You need a frame that is honest enoug
 - Name one concrete example that shows the problem.
 - Name one assumption that could be wrong.
 - Name one real person or role affected by the problem.
+- Pause as you work through this, review what you have written so far, and make any small changes that keep it honest. This is low stakes, so treat it as a moment to slow down and reflect rather than a test.
+- Move one step up the Abstraction Ladder and write what the problem is really about, then decide whether that broader view changes the problem statement you started with.
 
 ## Check Your Understanding
 
