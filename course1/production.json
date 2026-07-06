@@ -49,6 +49,23 @@
       "last_pushed": "2026-06-15T17:33:13+00:00",
       "local_path": "course1/sprints/sprint-1/goal-plan-and-problem-reframing-document.md"
     },
+    "course1-sprints-sprint-1-how-to-get-help-with-your-problem-frame": {
+      "artifact_id": "course1-sprints-sprint-1-how-to-get-help-with-your-problem-frame",
+      "canvas_fingerprint": "862d772c58b2332036dde939388389b6338e9d0b79bdc6f7bff39819719e986c",
+      "canvas_id": 3486,
+      "canvas_module_id": 1946,
+      "canvas_module_item_id": 17788,
+      "canvas_page_url": "how-to-get-help-with-your-problem-frame",
+      "canvas_type": "page",
+      "completion_requirement": "must_view",
+      "content_hash": "16c58d671cf4e9f10c2097b75c2a1f3800999c1cbb4a3d584e686b521003d55d",
+      "hosted_hash": "1234465b357cfbaa84f98bd2f5d13bd853fea36350395af4f83d592685d1c749",
+      "hosted_last_rendered": "2026-07-06T22:12:57+00:00",
+      "hosted_path": "course1/activities/how-to-get-help-with-your-problem-frame.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/how-to-get-help-with-your-problem-frame.html",
+      "last_pushed": "2026-07-06T22:12:57+00:00",
+      "local_path": "course1/sprints/sprint-1/how-to-get-help-with-your-problem-frame.md"
+    },
     "course1-sprints-sprint-1-peer-exchange-what-problem-sits-beneath-it": {
       "artifact_id": "course1-sprints-sprint-1-peer-exchange-what-problem-sits-beneath-it",
       "canvas_id": 6943,
@@ -738,5 +755,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-07-01T17:54:26+00:00"
+  "last_sync": "2026-07-06T22:12:57+00:00"
 }
