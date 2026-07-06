@@ -20,6 +20,8 @@ modules:
         items:
           - slug: "concept-from-goal-to-problem"
             meta: "Page - distinguish goals, surface requests, and underlying problems"
+          - slug: "how-to-get-help-with-your-problem-frame"
+            meta: "Page - use peers, stakeholders, instructors, and AI to sharpen a problem frame"
           - slug: "pre-dojo-goal-pause"
             meta: "Assignment - write your own first thoughts before asking AI"
           - slug: "dojo-lab-abstraction-ladder"
