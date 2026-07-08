@@ -150,18 +150,19 @@
     },
     "course1-sprints-sprint-1-start-here-frame-what-is-worth-solving": {
       "artifact_id": "course1-sprints-sprint-1-start-here-frame-what-is-worth-solving",
+      "canvas_fingerprint": "787cae02486d99010497ebb6753660b67251f413bbd55b794d5e5e3eebe425e2",
       "canvas_id": 3468,
       "canvas_module_id": 1946,
       "canvas_module_item_id": 17710,
       "canvas_page_url": "start-here-frame-what-is-worth-solving-3",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "10ee73dbbddcb0eac10b60ccddd4c3060030b010965a2027ad3987aadb154c28",
-      "hosted_hash": "3a3c37c30f8f5aadabc22234ce67b07127c1df104573efeda4747fecc4032855",
-      "hosted_last_rendered": "2026-06-15T18:57:38+00:00",
+      "content_hash": "9e4b1519886cb922404f1dd9035b17bd6347d142bcb0773cdc089ad729268ea2",
+      "hosted_hash": "2a76408276a3b1daf3f1366544334ec08d63110c705f2a14f014a2aa196a406e",
+      "hosted_last_rendered": "2026-07-08T16:56:10+00:00",
       "hosted_path": "course1/activities/start-here-frame-what-is-worth-solving.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/start-here-frame-what-is-worth-solving.html",
-      "last_pushed": "2026-06-15T18:57:38+00:00",
+      "last_pushed": "2026-07-08T16:56:10+00:00",
       "local_path": "course1/sprints/sprint-1/start-here-frame-what-is-worth-solving.md"
     },
     "course1-sprints-sprint-2-ai-exploration-log-and-3cs-application-log": {
@@ -755,5 +756,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-07-06T22:12:57+00:00"
+  "last_sync": "2026-07-08T16:56:10+00:00"
 }
