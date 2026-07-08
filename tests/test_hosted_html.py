@@ -11,6 +11,7 @@ from unittest.mock import patch
 
 from canvas_sync import push
 from canvas_sync.hosted_html import (
+    MERMAID_SCRIPT_URL,
     iframe_shell,
     render_hosted_artifact,
     render_hosted_files,
@@ -53,6 +54,39 @@ Tuples store ordered values that should travel together.
 
 - Tuples keep order.
 - Tuples are immutable.
+""",
+        encoding="utf-8",
+    )
+
+
+def write_mermaid_page(path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        """---
+type: page
+title: "Mermaid Overview"
+slug: mermaid-overview
+artifact_id: mermaid-overview
+sprint: 99
+module: "Hosted HTML Pilot"
+position: 1
+points: null
+submission_type: none
+publish: false
+---
+
+# Mermaid Overview
+
+## Diagram
+
+```mermaid
+flowchart TB
+  Purpose["Move up<br/>Bigger goal"]
+  Frame["Current frame<br/>Problem now"]
+  Evidence["Move down<br/>Next test"]
+  Evidence <--> Frame
+  Frame <--> Purpose
+```
 """,
         encoding="utf-8",
     )
@@ -245,6 +279,29 @@ class HostedHtmlTests(unittest.TestCase):
             self.assertIn("New._CTI_Logo_RGB-1.png", html)
             self.assertIn("Back to Module", html)
             self.assertIn('href="../sprint-99.html?context=web"', html)
+
+    def test_mermaid_blocks_render_as_conditional_diagrams(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            mermaid_path = repo_root / "course1" / "sprints" / "sprint-99" / "mermaid-overview.md"
+            plain_path = repo_root / "course1" / "sprints" / "sprint-99" / "tuple-overview.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            output_dir = repo_root / "Common-Curriculum"
+            write_mermaid_page(mermaid_path)
+            write_page(plain_path)
+            write_manifest(manifest_path)
+
+            mermaid_result = render_hosted_artifact(mermaid_path, manifest_path, output_dir)
+            plain_result = render_hosted_artifact(plain_path, manifest_path, output_dir)
+
+            mermaid_html = Path(mermaid_result["output_path"]).read_text(encoding="utf-8")
+            plain_html = Path(plain_result["output_path"]).read_text(encoding="utf-8")
+            self.assertIn('class="mermaid"', mermaid_html)
+            self.assertIn(MERMAID_SCRIPT_URL, mermaid_html)
+            self.assertIn("Move up&lt;br/&gt;Bigger goal", mermaid_html)
+            self.assertNotIn('<pre><code class="language-mermaid">', mermaid_html)
+            self.assertNotIn('class="mermaid"', plain_html)
+            self.assertNotIn(MERMAID_SCRIPT_URL, plain_html)
 
     def test_rendered_indexes_follow_common_curriculum_course_structure(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

@@ -32,6 +32,14 @@ CTI_LOGO_URL = (
     "https://computingtalentinitiative.org/wp-content/uploads/2026/06/"
     "New._CTI_Logo_RGB-1.png"
 )
+MERMAID_VERSION = "11.16.0"
+MERMAID_SCRIPT_URL = (
+    f"https://cdn.jsdelivr.net/npm/mermaid@{MERMAID_VERSION}/dist/mermaid.esm.min.mjs"
+)
+MERMAID_CODE_RE = re.compile(
+    r'<pre><code class="(?:language-)?mermaid">(.*?)</code></pre>',
+    re.DOTALL,
+)
 
 
 @dataclass(frozen=True)
@@ -60,6 +68,62 @@ def markdown_body_to_html(body: str) -> str:
         extensions=["extra", "sane_lists", "smarty", "toc"],
         output_format="html5",
     )
+
+
+def _render_mermaid_blocks(rendered: str) -> tuple[str, bool]:
+    has_mermaid = False
+
+    def replace(match: re.Match[str]) -> str:
+        nonlocal has_mermaid
+        has_mermaid = True
+        source = html_lib.unescape(match.group(1)).strip()
+        escaped_source = html_lib.escape(source)
+        return (
+            '<figure class="mermaid-figure" aria-label="Mermaid diagram">\n'
+            '  <div class="mermaid" role="img" aria-label="Mermaid diagram">\n'
+            f"{escaped_source}\n"
+            "  </div>\n"
+            "</figure>"
+        )
+
+    return MERMAID_CODE_RE.sub(replace, rendered), has_mermaid
+
+
+def _mermaid_styles() -> str:
+    return """
+    .mermaid-figure {
+      margin: 14px 0 18px;
+      padding: 14px;
+      border: 1px solid var(--border, #e2e8f0);
+      border-radius: var(--radius, 8px);
+      background: #f8fafc;
+      overflow-x: auto;
+    }
+    .mermaid {
+      min-width: 420px;
+      text-align: center;
+    }
+"""
+
+
+def _mermaid_script() -> str:
+    escaped_url = html_lib.escape(MERMAID_SCRIPT_URL, quote=True)
+    return f"""  <script type="module">
+    import mermaid from '{escaped_url}';
+    mermaid.initialize({{
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: 'base',
+      themeVariables: {{
+        primaryColor: '#ebf4ff',
+        primaryBorderColor: '#2c5282',
+        primaryTextColor: '#1a1a1a',
+        lineColor: '#2c5282',
+        fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, system-ui, sans-serif'
+      }}
+    }});
+  </script>
+"""
 
 
 def with_context(url: str, context: str) -> str:
@@ -283,6 +347,7 @@ def render_artifact_document(
     state_entry: dict | None = None,
 ) -> str:
     rendered = _strip_leading_h1(markdown_body_to_html(body))
+    rendered, has_mermaid = _render_mermaid_blocks(rendered)
     sections = _wrap_sections(rendered)
     title = html_lib.escape(frontmatter["title"])
     module = html_lib.escape(frontmatter["module"])
@@ -293,6 +358,8 @@ def render_artifact_document(
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {})
     submit_guidance = _submit_guidance(frontmatter, canvas_url)
     back_href = f"../sprint-{sprint}.html?context=web"
+    mermaid_styles = _mermaid_styles() if has_mermaid else ""
+    mermaid_script = _mermaid_script() if has_mermaid else ""
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -392,6 +459,7 @@ def render_artifact_document(
     }}
     .back-link:hover {{ text-decoration: underline; }}
     .ctx-web .back-link {{ display: inline-block; }}
+{mermaid_styles}\
   </style>
   <script>
     (function() {{
@@ -413,6 +481,7 @@ def render_artifact_document(
       }});
     }})();
   </script>
+{mermaid_script}\
 </head>
 <body>
   <div class="activity">
@@ -498,6 +567,7 @@ def _render_ai_activity_wrapper_document(
     state_entry: dict | None = None,
 ) -> str:
     rendered = _strip_leading_h1(markdown_body_to_html(body))
+    rendered, has_mermaid = _render_mermaid_blocks(rendered)
     sections = _wrap_sections(rendered)
     title = html_lib.escape(frontmatter["title"])
     module = html_lib.escape(frontmatter["module"])
@@ -515,6 +585,8 @@ def _render_ai_activity_wrapper_document(
     activity_href = f"../activities/{html_lib.escape(frontmatter['slug'], quote=True)}.html?context=web"
     back_href = f"../sprint-{sprint}.html?context=web"
     points_text = "Ungraded" if points is None else f"{points:g} points"
+    mermaid_styles = _mermaid_styles() if has_mermaid else ""
+    mermaid_script = _mermaid_script() if has_mermaid else ""
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -573,6 +645,7 @@ def _render_ai_activity_wrapper_document(
       margin: 0 0 12px;
     }}
     .ctx-web .back-link {{ display: inline-block; }}
+{mermaid_styles}\
   </style>
   <script>
     (function() {{
@@ -583,6 +656,7 @@ def _render_ai_activity_wrapper_document(
       }}
     }})();
   </script>
+{mermaid_script}\
 </head>
 <body>
   <div class="activity">

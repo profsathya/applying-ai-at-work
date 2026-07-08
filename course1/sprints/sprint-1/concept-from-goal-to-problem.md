@@ -42,6 +42,20 @@ A career-transition goal works the same way:
 
 An Abstraction Ladder is a way to move between the specific situation in front of you and the larger purpose behind it. Moving up helps you ask what the problem is really about. Moving down helps you turn that broader understanding back into a specific problem you can test.
 
+Use the visual first, then use the table below it as the text version.
+
+```mermaid
+flowchart TB
+  Purpose["Move up<br/>Bigger goal, need, or pattern"]
+  Frame["Current frame<br/>How you describe the problem now"]
+  Evidence["Move down<br/>Specific evidence, person, or next test"]
+  Revise["Revise<br/>Carry forward a stronger problem frame"]
+
+  Evidence <--> Frame
+  Frame <--> Purpose
+  Frame --> Revise
+```
+
 | Ladder move | Question to ask | Example |
 | --- | --- | --- |
 | Move up | What bigger goal, need, or pattern is behind this? | This is not just a dashboard issue. It may be an ownership and handoff issue. |
