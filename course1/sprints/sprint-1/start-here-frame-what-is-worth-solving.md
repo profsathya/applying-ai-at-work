@@ -14,16 +14,18 @@ publish: true
 
 # Start Here: Frame What Is Worth Solving
 
-Sprint 1 turns a real goal into a clearer problem frame. Start with your own thinking, test vague parts with AI and feedback, and save evidence for later sprints.
+Sprint 1 helps you turn a real work goal into a clearer problem you can investigate. Start with your own thinking, test vague parts with AI and feedback, and save evidence for later sprints.
 
 ## Key Terms
 
-- Problem frame: what is happening, who is affected, and what evidence is missing.
-- Abstraction ladder: moving among details, patterns, causes, and purpose.
-- Pre-Dojo Goal Pause: write before asking AI.
-- Dojo Lab: guided AI practice.
-- Problem Reframing Document: your revised frame, evidence, and next steps.
-- Final artifact: main deliverable. In Sprint 1, it is the Goal Plan and Problem Reframing Document.
+| Term | What it means in Sprint 1 |
+|---|---|
+| Problem frame | A short working explanation of the issue you will investigate: what is happening, who is affected, why it matters, and what evidence is still missing. |
+| Abstraction ladder | A way to move between specific details, visible patterns, possible causes, and the broader purpose so you do not solve the first surface request too quickly. |
+| Pre-Dojo Goal Pause | A short write-first activity where you capture your own goal, assumptions, and questions before asking AI for help. |
+| Dojo Lab | Guided AI practice where you use prompts and follow-up questions to pressure-test your first frame. |
+| Problem Reframing Document | The Sprint 1 document where you explain the revised problem frame, the evidence that shaped it, and the next steps you would take. |
+| Final artifact | The main deliverable that shows what you learned. In Sprint 1, it is the Goal Plan and Problem Reframing Document. |
 
 ## Sprint 1 At A Glance
 
