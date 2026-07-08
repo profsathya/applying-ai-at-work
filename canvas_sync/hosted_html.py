@@ -248,10 +248,17 @@ def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
             f"{link}\n"
             "    </div>"
         )
+    if artifact_type == "page":
+        guidance = "Read this page in full and continue to the next Canvas item. No Canvas submission is required for this information page."
+        return (
+            '<div class="submit">\n'
+            "      <h2>What counts as done</h2>\n"
+            f"      <p>{html_lib.escape(guidance)}</p>\n"
+            "    </div>"
+        )
     guidance = {
         "assignment": "Use the Canvas assignment to submit your work.",
         "discussion": "Use the Canvas discussion to post your response and reply to peers.",
-        "page": "Read this page in full. No Canvas submission is required.",
         "quiz": "Use the Canvas quiz to complete the check.",
     }.get(artifact_type, "Return to Canvas for the next step.")
     link = ""

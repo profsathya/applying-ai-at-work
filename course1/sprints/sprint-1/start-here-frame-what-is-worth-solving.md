@@ -9,39 +9,46 @@ module: 'Sprint 1: Frame What Is Worth Solving'
 position: 2
 points: null
 submission_type: none
-publish: false
+publish: true
 ---
 
 # Start Here: Frame What Is Worth Solving
 
-## Why This Sprint Matters
+Sprint 1 turns a real goal into a clearer problem frame. Start with your own thinking, test vague parts with AI and feedback, and save evidence for later sprints.
 
-A goal gives you direction, but it is not yet a problem. This sprint helps you slow down long enough to ask what is actually happening, who is affected, and what would make the problem worth solving now.
+## Key Terms
 
-You will use AI as a thinking partner, but you remain responsible for the goal, standards, choices, and final meaning of the work. Start with your own thinking, use AI to expand and test it, then decide what to keep, reject, revise, or verify.
+- Problem frame: what is happening, who is affected, and what evidence is missing.
+- Abstraction ladder: moving among details, patterns, causes, and purpose.
+- Pre-Dojo Goal Pause: write before asking AI.
+- Dojo Lab: guided AI practice.
+- Problem Reframing Document: your revised frame, evidence, and next steps.
+- Final artifact: main deliverable. In Sprint 1, it is the Goal Plan and Problem Reframing Document.
 
-## What You Will Do
+## Sprint 1 At A Glance
 
-1. Write your own first thoughts before using AI.
-2. Use the abstraction ladder to explore what sits beneath the surface request.
-3. Invite peer feedback on what still sounds vague or assumed.
-4. Submit a Goal Plan and Problem Reframing Document that you can carry forward.
+| When | Focus | What to complete |
+|---|---|---|
+| Sprint Week 1 | Start from your own thinking | Concept page, Pre-Dojo Goal Pause, Dojo Lab. |
+| Sprint Week 2 | Test and submit the frame | AI peer exchange, Goal Plan and Problem Reframing Document, check, reflection. |
 
-## Two-Week Sprint Map
+## Pacing
 
-This sprint spans two course weeks. Use these labels for pacing; Canvas keeps the work in one module.
+Plan for 2 to 3 focused hours each week:
 
-- Sprint Week 1: Start here, read the concept page, complete the Pre-Dojo Goal Pause, and run the Dojo Lab.
-- Sprint Week 2: Complete the AI peer exchange, submit the Goal Plan and Problem Reframing Document, complete the AI self-check, and refine the AI-guided reflection.
+- Day 1: read and choose the real goal.
+- Days 2-3: write first, then use AI.
+- Days 4-5: revise, save, and submit only when an activity asks.
 
-## Time Guidance
+Reserve at least two short calendar blocks each week.
 
-Plan for focused work across two weeks. Short concept reading, Dojo practice, peer exchange, and a final artifact should all serve the same real problem rather than becoming separate assignments.
+## Before You Move On
 
-## Working Standard
+- Read: this page and `Concept: From Goal To Problem`.
+- Do: choose a real goal and write before using AI.
+- Submit: nothing from this page. Later activities name what to upload.
+- Save: goal, surface request, ladder notes, AI pushback, feedback, and revised problem statement.
 
-Specific and honest work is better than polished generic work. Show what you tried, what changed, what evidence you have, and what remains uncertain.
+## Check Your Understanding
 
-## Carry Forward
-
-Keep the goal, original surface request, abstraction ladder notes, AI pushback, peer feedback, and revised problem statement. You will use them again when you direct AI and validate with stakeholders.
+No Canvas submission is required. In your notes, pick the stronger frame: a broad goal or a specific onboarding handoff issue. Then name what you will do before AI and what you will save.

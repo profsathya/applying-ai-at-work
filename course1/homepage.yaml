@@ -15,7 +15,7 @@ modules:
       - label: "Sprint Week 1: Start here"
         items:
           - slug: "start-here-frame-what-is-worth-solving"
-            meta: "Page - orient to the sprint, portfolio thread, and completion criteria"
+            meta: "Information page - orient to the sprint, portfolio thread, and completion criteria"
       - label: "Sprint Week 1: Build the frame"
         items:
           - slug: "concept-from-goal-to-problem"
