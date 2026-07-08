@@ -157,12 +157,12 @@
       "canvas_page_url": "start-here-frame-what-is-worth-solving-3",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "9e4b1519886cb922404f1dd9035b17bd6347d142bcb0773cdc089ad729268ea2",
-      "hosted_hash": "2a76408276a3b1daf3f1366544334ec08d63110c705f2a14f014a2aa196a406e",
-      "hosted_last_rendered": "2026-07-08T16:56:10+00:00",
+      "content_hash": "997a9fec2bff6b2faf32050bf5a648efdfeadf1f61111912c25a1391d336c5f7",
+      "hosted_hash": "1e8018002519fc850fb1768eaa042eed19fa0d1a54ff93814de11a4da7e1cb2f",
+      "hosted_last_rendered": "2026-07-08T17:11:08+00:00",
       "hosted_path": "course1/activities/start-here-frame-what-is-worth-solving.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/start-here-frame-what-is-worth-solving.html",
-      "last_pushed": "2026-07-08T16:56:10+00:00",
+      "last_pushed": "2026-07-08T17:11:08+00:00",
       "local_path": "course1/sprints/sprint-1/start-here-frame-what-is-worth-solving.md"
     },
     "course1-sprints-sprint-2-ai-exploration-log-and-3cs-application-log": {
@@ -756,5 +756,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-07-08T16:56:10+00:00"
+  "last_sync": "2026-07-08T17:11:08+00:00"
 }
