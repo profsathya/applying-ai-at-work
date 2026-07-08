@@ -9,12 +9,12 @@
       "canvas_page_url": "concept-from-goal-to-problem-3",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "c0237e0e930c3e432c060e2ad6a4059e9d321cfab0d69f32dfdfea5dcb7c958c",
-      "hosted_hash": "4e7e31acf6675911140300db5f0affdfb2ad5cbae9c47b8ff158a0cd38769b3b",
-      "hosted_last_rendered": "2026-07-01T17:54:26+00:00",
+      "content_hash": "40f903925fa5aed73bce8dc9fff95ccbb35b9b25471ee5c2d9e474e229f1dc8a",
+      "hosted_hash": "1659ae04b62a72e355fb9cf4d6fafb1be57dbbe814a1eeee4b1b9effec4e6bc2",
+      "hosted_last_rendered": "2026-07-08T20:29:36+00:00",
       "hosted_path": "course1/activities/concept-from-goal-to-problem.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/concept-from-goal-to-problem.html",
-      "last_pushed": "2026-07-01T17:54:26+00:00",
+      "last_pushed": "2026-07-08T20:29:36+00:00",
       "local_path": "course1/sprints/sprint-1/concept-from-goal-to-problem.md"
     },
     "course1-sprints-sprint-1-dojo-lab-abstraction-ladder": {
@@ -756,5 +756,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-07-08T17:11:08+00:00"
+  "last_sync": "2026-07-08T20:29:36+00:00"
 }
