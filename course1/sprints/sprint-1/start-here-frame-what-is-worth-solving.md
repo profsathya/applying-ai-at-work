@@ -14,7 +14,7 @@ publish: true
 
 # Start Here: Frame What Is Worth Solving
 
-Sprint 1 helps you turn a real work goal into a clearer problem you can investigate. Start with your own thinking, test vague parts with AI and feedback, and save evidence for later sprints.
+Sprint 1 helps you turn a real work goal into a clearer problem you can investigate: start with your own thinking, test vague parts with AI and feedback, and save evidence for later sprints.
 
 ## Key Terms
 
