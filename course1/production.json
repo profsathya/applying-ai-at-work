@@ -96,12 +96,12 @@
       "canvas_page_url": null,
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "92abc42c00896f0233665659ff3d3f4968ff51f1c12b2f0b94ec492daec98dcf",
-      "hosted_hash": "5b98dec07bcd68247f600e4d42a81936d01e4a3cfa05092d2d0716bad919dc31",
-      "hosted_last_rendered": "2026-06-15T17:33:07+00:00",
+      "content_hash": "1574917fc943fad6413d935c75fd655f9c1f00e6a3fcacbbfb336329c9fabc84",
+      "hosted_hash": "1924eefb5449b6b96300cc0679f239b7ca85db948c641a78c88a15ece2530391",
+      "hosted_last_rendered": "2026-07-10T21:45:22+00:00",
       "hosted_path": "course1/assignments/pre-dojo-goal-pause.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/pre-dojo-goal-pause.html",
-      "last_pushed": "2026-06-15T17:33:07+00:00",
+      "last_pushed": "2026-07-10T21:45:22+00:00",
       "local_path": "course1/sprints/sprint-1/pre-dojo-goal-pause.md"
     },
     "course1-sprints-sprint-1-problem-framing-check": {
@@ -793,5 +793,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-07-08T20:49:31+00:00"
+  "last_sync": "2026-07-10T21:45:22+00:00"
 }
