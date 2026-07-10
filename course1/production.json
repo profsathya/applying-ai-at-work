@@ -19,6 +19,7 @@
     },
     "course1-sprints-sprint-1-dojo-lab-abstraction-ladder": {
       "artifact_id": "course1-sprints-sprint-1-dojo-lab-abstraction-ladder",
+      "canvas_fingerprint": "0f44a037d2d0fe9373b21fbcd53d7c88ad2ed67acddbc32058c90b90c7329f61",
       "canvas_id": 6942,
       "canvas_module_id": 1946,
       "canvas_module_item_id": 17713,
@@ -35,6 +36,7 @@
     },
     "course1-sprints-sprint-1-goal-plan-and-problem-reframing-document": {
       "artifact_id": "course1-sprints-sprint-1-goal-plan-and-problem-reframing-document",
+      "canvas_fingerprint": "13265c44109dc153363ed8dc19468c52f69a754a58f1a7e7dd5226b67aa86c57",
       "canvas_id": 6944,
       "canvas_module_id": 1946,
       "canvas_module_item_id": 17715,
@@ -68,6 +70,7 @@
     },
     "course1-sprints-sprint-1-peer-exchange-what-problem-sits-beneath-it": {
       "artifact_id": "course1-sprints-sprint-1-peer-exchange-what-problem-sits-beneath-it",
+      "canvas_fingerprint": "5160408a76cf446b68eb9f832ecf2120ab63a24d353b579281cfa54df02ae54f",
       "canvas_id": 6943,
       "canvas_module_id": 1946,
       "canvas_module_item_id": 17714,
@@ -86,6 +89,7 @@
     },
     "course1-sprints-sprint-1-pre-dojo-goal-pause": {
       "artifact_id": "course1-sprints-sprint-1-pre-dojo-goal-pause",
+      "canvas_fingerprint": "5d1b6d577476767831cbd81b12ef2e995c2b7163d39fb606b4a3746efefa7d51",
       "canvas_id": 6941,
       "canvas_module_id": 1946,
       "canvas_module_item_id": 17712,
@@ -102,6 +106,7 @@
     },
     "course1-sprints-sprint-1-problem-framing-check": {
       "artifact_id": "course1-sprints-sprint-1-problem-framing-check",
+      "canvas_fingerprint": "09c67fd184338c0091105466d0b8a430268ca7e56e3154e8c165040bc7d00f8c",
       "canvas_id": 6945,
       "canvas_module_id": 1946,
       "canvas_module_item_id": 17716,
@@ -132,6 +137,7 @@
     },
     "course1-sprints-sprint-1-sprint-1-reflection-what-changed": {
       "artifact_id": "course1-sprints-sprint-1-sprint-1-reflection-what-changed",
+      "canvas_fingerprint": "07b45b415269d27c08f4f69b96ebf30dc578cf674a078cdd65efff47175e7b02",
       "canvas_id": 6946,
       "canvas_module_id": 1946,
       "canvas_module_item_id": 17717,
@@ -167,6 +173,7 @@
     },
     "course1-sprints-sprint-2-ai-exploration-log-and-3cs-application-log": {
       "artifact_id": "course1-sprints-sprint-2-ai-exploration-log-and-3cs-application-log",
+      "canvas_fingerprint": "2568e34de0ca13c8178461791f74a82b49852d63f45b0a01ecdb526b8869b33a",
       "canvas_id": 6950,
       "canvas_module_id": 1947,
       "canvas_module_item_id": 17723,
@@ -183,6 +190,7 @@
     },
     "course1-sprints-sprint-2-ai-output-assessment-and-pushback": {
       "artifact_id": "course1-sprints-sprint-2-ai-output-assessment-and-pushback",
+      "canvas_fingerprint": "aece6cc2ca7bc954d431da6eb933b4e002e763104fca68b8a5c8788f643a4c2f",
       "canvas_id": 6948,
       "canvas_module_id": 1947,
       "canvas_module_item_id": 17721,
@@ -199,6 +207,7 @@
     },
     "course1-sprints-sprint-2-concept-context-choices-confirmation": {
       "artifact_id": "course1-sprints-sprint-2-concept-context-choices-confirmation",
+      "canvas_fingerprint": "94d9e82fe6a9be63b8f68db30790d8779638a08ec47789b12b33310fce7c12d5",
       "canvas_id": 3471,
       "canvas_module_id": 1947,
       "canvas_module_item_id": 17719,
@@ -215,6 +224,7 @@
     },
     "course1-sprints-sprint-2-directing-ai-check": {
       "artifact_id": "course1-sprints-sprint-2-directing-ai-check",
+      "canvas_fingerprint": "5a96ed7b4af72c2e54432ff8a786a3e793461295e5d90567f3cc576f29ca6a2a",
       "canvas_id": 6951,
       "canvas_module_id": 1947,
       "canvas_module_item_id": 17724,
@@ -233,6 +243,7 @@
     },
     "course1-sprints-sprint-2-dojo-lab-3cs-exploration-round-1": {
       "artifact_id": "course1-sprints-sprint-2-dojo-lab-3cs-exploration-round-1",
+      "canvas_fingerprint": "87ac3f7c24480d359273afa575a1eb4dec0ffb83e4351b2d378485a2d8fd06d3",
       "canvas_id": 6947,
       "canvas_module_id": 1947,
       "canvas_module_item_id": 17720,
@@ -249,6 +260,7 @@
     },
     "course1-sprints-sprint-2-peer-exchange-which-ai-suggestion-would-you-not-trust-yet": {
       "artifact_id": "course1-sprints-sprint-2-peer-exchange-which-ai-suggestion-would-you-not-trust-yet",
+      "canvas_fingerprint": "ead03f3b8a60c64324bbc8251246c0dfc42a24e318ffbd6c7c7d34ea29b37882",
       "canvas_id": 6949,
       "canvas_module_id": 1947,
       "canvas_module_item_id": 17722,
@@ -279,6 +291,7 @@
     },
     "course1-sprints-sprint-2-sprint-2-reflection-my-judgment-improved-the-output": {
       "artifact_id": "course1-sprints-sprint-2-sprint-2-reflection-my-judgment-improved-the-output",
+      "canvas_fingerprint": "0ceb026d6433d3a760c27128714b904db8d5f303ce7edcefea16dfaedf2aa20f",
       "canvas_id": 6952,
       "canvas_module_id": 1947,
       "canvas_module_item_id": 17725,
@@ -313,6 +326,7 @@
     },
     "course1-sprints-sprint-3-concept-stakeholders-needs-constraints-and-validation": {
       "artifact_id": "course1-sprints-sprint-3-concept-stakeholders-needs-constraints-and-validation",
+      "canvas_fingerprint": "89b7cf1d56462bb10d24b036649802bfc031bc1cfd603d604f07377e0a47f34a",
       "canvas_id": 3473,
       "canvas_module_id": 1948,
       "canvas_module_item_id": 17727,
@@ -329,6 +343,7 @@
     },
     "course1-sprints-sprint-3-dojo-lab-stakeholder-lens-preparation": {
       "artifact_id": "course1-sprints-sprint-3-dojo-lab-stakeholder-lens-preparation",
+      "canvas_fingerprint": "82020a85575430f3f2ce573e5de4a125b118065b68dc2f249df9ae0796cde9d9",
       "canvas_id": 6953,
       "canvas_module_id": 1948,
       "canvas_module_item_id": 17728,
@@ -345,6 +360,7 @@
     },
     "course1-sprints-sprint-3-peer-exchange-validation-questions": {
       "artifact_id": "course1-sprints-sprint-3-peer-exchange-validation-questions",
+      "canvas_fingerprint": "f580980da99e26568b9f9b458a8bff7aa059b3a8674de99fff60fc5869bed99f",
       "canvas_id": 6955,
       "canvas_module_id": 1948,
       "canvas_module_item_id": 17730,
@@ -375,6 +391,7 @@
     },
     "course1-sprints-sprint-3-sprint-3-reflection-and-mid-course-goal-plan-revision": {
       "artifact_id": "course1-sprints-sprint-3-sprint-3-reflection-and-mid-course-goal-plan-revision",
+      "canvas_fingerprint": "4f8154ac711c268c584aefad0a67b0989fa0a5629e851fbaf38e7d84f4d87263",
       "canvas_id": 6958,
       "canvas_module_id": 1948,
       "canvas_module_item_id": 17733,
@@ -393,6 +410,7 @@
     },
     "course1-sprints-sprint-3-stakeholder-map-draft": {
       "artifact_id": "course1-sprints-sprint-3-stakeholder-map-draft",
+      "canvas_fingerprint": "427265b5d31c83a48131b38aec2dda1415f8ece75e2cd7427848177b9f0b28df",
       "canvas_id": 6954,
       "canvas_module_id": 1948,
       "canvas_module_item_id": 17729,
@@ -409,6 +427,7 @@
     },
     "course1-sprints-sprint-3-stakeholder-validation-check": {
       "artifact_id": "course1-sprints-sprint-3-stakeholder-validation-check",
+      "canvas_fingerprint": "f4a83ad00b437451ee6d92334b72432f417798d4785d7ad1aa9b67b26d4281cd",
       "canvas_id": 6957,
       "canvas_module_id": 1948,
       "canvas_module_item_id": 17732,
@@ -427,6 +446,7 @@
     },
     "course1-sprints-sprint-3-stakeholder-validation-report": {
       "artifact_id": "course1-sprints-sprint-3-stakeholder-validation-report",
+      "canvas_fingerprint": "c6eb0e55a5d83ae63f168ff8196555f278813db30b729d4bbd6f43d5797377fe",
       "canvas_id": 6956,
       "canvas_module_id": 1948,
       "canvas_module_item_id": 17731,
@@ -443,6 +463,7 @@
     },
     "course1-sprints-sprint-3-start-here-integrate-people-and-context": {
       "artifact_id": "course1-sprints-sprint-3-start-here-integrate-people-and-context",
+      "canvas_fingerprint": "d80714e0689ebaf2a566b8a253381bfb57bc248731a9c9c6fb502f757c828d6f",
       "canvas_id": 3472,
       "canvas_module_id": 1948,
       "canvas_module_item_id": 17726,
@@ -459,6 +480,7 @@
     },
     "course1-sprints-sprint-4-concept-self-directed-learning-with-ai": {
       "artifact_id": "course1-sprints-sprint-4-concept-self-directed-learning-with-ai",
+      "canvas_fingerprint": "9acb561d8758b0cb5e28b32cbf9b77b6368cdca60f17ee51c6f29228cd793b5e",
       "canvas_id": 3475,
       "canvas_module_id": 1949,
       "canvas_module_item_id": 17735,
@@ -475,6 +497,7 @@
     },
     "course1-sprints-sprint-4-dojo-lab-learning-path-design": {
       "artifact_id": "course1-sprints-sprint-4-dojo-lab-learning-path-design",
+      "canvas_fingerprint": "631aba3aa6cbf4da2ef4f2064369246df342fb186acffbab5dda0fb7b5155c33",
       "canvas_id": 6960,
       "canvas_module_id": 1949,
       "canvas_module_item_id": 17737,
@@ -491,6 +514,7 @@
     },
     "course1-sprints-sprint-4-knowledge-gap-inventory": {
       "artifact_id": "course1-sprints-sprint-4-knowledge-gap-inventory",
+      "canvas_fingerprint": "112eb622ac6bb68413bb8f8d8325453ae45384cc821005b530c340ff61144ba1",
       "canvas_id": 6959,
       "canvas_module_id": 1949,
       "canvas_module_item_id": 17736,
@@ -507,6 +531,7 @@
     },
     "course1-sprints-sprint-4-peer-exchange-what-are-you-choosing-not-to-learn": {
       "artifact_id": "course1-sprints-sprint-4-peer-exchange-what-are-you-choosing-not-to-learn",
+      "canvas_fingerprint": "a4e450e9c49a4dc39bd5781365f701fa2a95ae14c0ecba179d45bac7c0dfd1e9",
       "canvas_id": 6961,
       "canvas_module_id": 1949,
       "canvas_module_item_id": 17738,
@@ -525,6 +550,7 @@
     },
     "course1-sprints-sprint-4-self-directed-learning-check": {
       "artifact_id": "course1-sprints-sprint-4-self-directed-learning-check",
+      "canvas_fingerprint": "989912790181b2ac3d7008ddf1b8d2c21bc0093a14582f9f0cb1063aa298e633",
       "canvas_id": 6963,
       "canvas_module_id": 1949,
       "canvas_module_item_id": 17740,
@@ -543,6 +569,7 @@
     },
     "course1-sprints-sprint-4-self-learning-journey-and-learning-plan": {
       "artifact_id": "course1-sprints-sprint-4-self-learning-journey-and-learning-plan",
+      "canvas_fingerprint": "6e8acc7c6691da16a812a84970f3592604094627bd8dbaf15ad73588556ec0c4",
       "canvas_id": 6962,
       "canvas_module_id": 1949,
       "canvas_module_item_id": 17739,
@@ -571,6 +598,7 @@
     },
     "course1-sprints-sprint-4-sprint-4-reflection-what-i-learned-and-how-i-know": {
       "artifact_id": "course1-sprints-sprint-4-sprint-4-reflection-what-i-learned-and-how-i-know",
+      "canvas_fingerprint": "4af4c4e90674530220cd67600d93301b208b723a23dd18bf8b42e5bc012122f9",
       "canvas_id": 6964,
       "canvas_module_id": 1949,
       "canvas_module_item_id": 17741,
@@ -589,6 +617,7 @@
     },
     "course1-sprints-sprint-4-start-here-close-the-learning-gap": {
       "artifact_id": "course1-sprints-sprint-4-start-here-close-the-learning-gap",
+      "canvas_fingerprint": "b88be965c7b803b2a2488cefc525060bb1aa0fd567177f8b78b70c2d251d0b42",
       "canvas_id": 3474,
       "canvas_module_id": 1949,
       "canvas_module_item_id": 17734,
@@ -605,6 +634,7 @@
     },
     "course1-sprints-sprint-5-closing-reflection-and-final-goal-plan-check": {
       "artifact_id": "course1-sprints-sprint-5-closing-reflection-and-final-goal-plan-check",
+      "canvas_fingerprint": "861554b81313b19d4f0a090348fa6a0d896882baa692dbd427fed507d51715c3",
       "canvas_id": 6969,
       "canvas_module_id": 1950,
       "canvas_module_item_id": 17748,
@@ -623,6 +653,7 @@
     },
     "course1-sprints-sprint-5-concept-from-artifacts-to-argument": {
       "artifact_id": "course1-sprints-sprint-5-concept-from-artifacts-to-argument",
+      "canvas_fingerprint": "1109daad734628a0fc118d9f4aee03ced4c433ba02c68efb52c494bc7aa49586",
       "canvas_id": 3477,
       "canvas_module_id": 1950,
       "canvas_module_item_id": 17743,
@@ -639,6 +670,7 @@
     },
     "course1-sprints-sprint-5-dojo-lab-synthesis-gap-audit": {
       "artifact_id": "course1-sprints-sprint-5-dojo-lab-synthesis-gap-audit",
+      "canvas_fingerprint": "81c85a58d8b38ac3a3e4ba1c350f8e79e3488d7011be5da8f8f484e2dc1b5e5f",
       "canvas_id": 6965,
       "canvas_module_id": 1950,
       "canvas_module_item_id": 17744,
@@ -655,6 +687,7 @@
     },
     "course1-sprints-sprint-5-final-integrated-problem-document-and-readiness-report": {
       "artifact_id": "course1-sprints-sprint-5-final-integrated-problem-document-and-readiness-report",
+      "canvas_fingerprint": "77a08e995d552c40b91e77d56a1b797da84aea19e9785978e95525bb410cb394",
       "canvas_id": 6968,
       "canvas_module_id": 1950,
       "canvas_module_item_id": 17747,
@@ -671,6 +704,7 @@
     },
     "course1-sprints-sprint-5-integrated-problem-document-draft": {
       "artifact_id": "course1-sprints-sprint-5-integrated-problem-document-draft",
+      "canvas_fingerprint": "b98bddde9f252aa7705e1b7f219fadb1fd8d59fd45551ffa881878c1e5c03574",
       "canvas_id": 6966,
       "canvas_module_id": 1950,
       "canvas_module_item_id": 17745,
@@ -687,6 +721,7 @@
     },
     "course1-sprints-sprint-5-peer-review-can-a-reader-follow-the-argument": {
       "artifact_id": "course1-sprints-sprint-5-peer-review-can-a-reader-follow-the-argument",
+      "canvas_fingerprint": "2b242b4d7d35cf68b7ecf94fcd7caa921d1688fd8604e1b67c654a06cd8813a9",
       "canvas_id": 6967,
       "canvas_module_id": 1950,
       "canvas_module_item_id": 17746,
@@ -705,6 +740,7 @@
     },
     "course1-sprints-sprint-5-readiness-self-check": {
       "artifact_id": "course1-sprints-sprint-5-readiness-self-check",
+      "canvas_fingerprint": "834a0079de393e11e2b637da1d11a376a38b8b843ced5625aee15828303cc5c7",
       "canvas_id": 6970,
       "canvas_module_id": 1950,
       "canvas_module_item_id": 17749,
@@ -735,6 +771,7 @@
     },
     "course1-sprints-sprint-5-start-here-synthesize-and-show-readiness": {
       "artifact_id": "course1-sprints-sprint-5-start-here-synthesize-and-show-readiness",
+      "canvas_fingerprint": "a8750be8e2e8af4af08aaaabc490cb3821c47118fa9d0fe94d981ed2a79a4c41",
       "canvas_id": 3476,
       "canvas_module_id": 1950,
       "canvas_module_item_id": 17742,
