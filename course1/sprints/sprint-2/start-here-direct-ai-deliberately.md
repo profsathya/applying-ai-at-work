@@ -62,3 +62,9 @@ Specific and honest work is better than polished generic work. Show what you tri
 ## Carry Forward
 
 Keep your prompts, AI outputs, critiques, pushback, revised choices, and confirmation plan. They will support stakeholder validation in Sprint 3.
+
+## Test Section
+
+- Test bullet point 1
+- Test bullet point 2
+- Test bullet point 3
