@@ -114,11 +114,19 @@ clearly-marked placeholder, and it has no per-item Canvas IDs yet. To finish it
 2. Replace the placeholder `instance.course_id` in
    `course1/manifests/deanza.json` with the real De Anza course ID, and remove
    the `_setup_note`.
-3. Set your Codespaces secrets (or local `.env`) so `CANVAS_API_URL` is
+3. Add a `hosted_html` block to `course1/manifests/deanza.json` with its OWN
+   `path_prefix`, distinct from the CTI course (which uses `path_prefix:
+   deanza`), so De Anza hosted output does not collide. course1 has hosted
+   AI-activity artifacts (`delivery_mode: ai_activity`) that require
+   `hosted_html.enabled`; publishing course1 through this profile will fail
+   before any Canvas call until this block is set. Copy the shape from
+   `course1/manifests/production.json` and set your own De Anza hosted
+   `base_url`, `path_prefix`, and `progress_endpoint`.
+4. Set your Codespaces secrets (or local `.env`) so `CANVAS_API_URL` is
    `https://deanza.instructure.com` and `CANVAS_API_TOKEN` is your De Anza
    token.
-4. Validate: `python canvas_sync/schema.py --manifest course1/manifests/deanza.json`.
-5. Run the repo's normal bootstrap / inspect / publish flow against the De Anza
+5. Validate: `python canvas_sync/schema.py --manifest course1/manifests/deanza.json`.
+6. Run the repo's normal bootstrap / inspect / publish flow against the De Anza
    profile to populate the per-item Canvas IDs. Inspect first (read-only), then
    publish only after review and explicit approval. See `README.md` and
    `README-BUILDER.md` for the publish flow.

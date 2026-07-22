@@ -1,5 +1,5 @@
 {
-  "_setup_note": "SCAFFOLD ONLY. This De Anza instance profile is not finished. instance.course_id below is a PLACEHOLDER (999999999); replace it with the real De Anza Canvas course ID before any Canvas run. See docs/CLOUD_SETUP.md section 'Finish the De Anza profile'. Do not fabricate Canvas item IDs; run the repo's normal bootstrap/inspect/publish flow to populate them.",
+  "_setup_note": "SCAFFOLD ONLY. This De Anza instance profile is not finished. Before any Canvas run: (1) replace instance.course_id (PLACEHOLDER 999999999) with the real De Anza Canvas course ID, and (2) add a hosted_html block with its own path_prefix (course1 has delivery_mode ai_activity artifacts that require hosted_html.enabled, so publishing will fail without it). See docs/CLOUD_SETUP.md section 'Finish the De Anza profile'. Do not fabricate Canvas item IDs; run the repo's normal bootstrap/inspect/publish flow to populate them.",
   "instance": {
     "name": "deanza",
     "base_url": "https://deanza.instructure.com/",
