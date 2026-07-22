@@ -87,5 +87,32 @@ class InstanceGuardTest(unittest.TestCase):
         check_env_matches_instance({"artifacts": {}}, env_url="https://anything.example")
 
 
+class GuardWiredIntoManifestEntryPointsTest(unittest.TestCase):
+    """The guard is enforced by manifest-backed entry points, not only push.py.
+
+    Each check runs before the Canvas client is built, so a mismatch raises
+    without any network call. We use the De Anza profile (base_url deanza) with
+    a CTI CANVAS_API_URL to force the mismatch.
+    """
+
+    MISMATCH_ENV = {"CANVAS_API_URL": "https://cti-courses.instructure.com"}
+
+    def test_inspect_canvas_refuses_on_mismatch(self):
+        from canvas_sync import inspect_canvas
+
+        with mock.patch.dict(os.environ, self.MISMATCH_ENV):
+            with self.assertRaises(InstanceMismatchError):
+                inspect_canvas.build_report(
+                    DEANZA_MANIFEST, include_items=False, include_drift=False
+                )
+
+    def test_publish_changed_drift_refuses_on_mismatch(self):
+        from canvas_sync import publish_changed
+
+        with mock.patch.dict(os.environ, self.MISMATCH_ENV):
+            with self.assertRaises(InstanceMismatchError):
+                publish_changed.drift_for_changed(DEANZA_MANIFEST, [])
+
+
 if __name__ == "__main__":
     unittest.main()
