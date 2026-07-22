@@ -1,0 +1,56 @@
+// GitHub Codespaces / Dev Containers environment for "Applying AI at Work".
+//
+// This is an OPT-IN cloud setup. A plain local clone never reads this folder,
+// so the existing local install path (python -m venv .venv, etc.) is unchanged.
+// See docs/CLOUD_SETUP.md for the two setup paths (local install vs. Codespaces).
+//
+// Canvas credentials are NOT hardcoded here. They are supplied per-user as
+// Codespaces secrets and injected as environment variables at runtime:
+//
+//   CANVAS_API_URL     e.g. https://deanza.instructure.com
+//   CANVAS_API_TOKEN   a personal access token for that same Canvas instance
+//
+// Set them under your own GitHub account:
+//   Settings > Codespaces > Secrets  (scope them to this repository).
+// Each institution's instructor supplies their OWN url + token for their OWN
+// Canvas instance. Do not commit tokens or add them to this file.
+{
+  "name": "Applying AI at Work (Codespaces)",
+
+  // Python 3.11 base image (Debian, includes passwordless sudo for the
+  // "vscode" user). Node is added below via a dev container feature.
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "updateRemoteUserUID": true,
+
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+
+  // Persist each user's AI-tool login (their OWN account) across container
+  // REBUILDS, not just stop/start. Claude Code and Codex store their config
+  // and credentials under these home directories; mounting them as named
+  // Docker volumes keeps them when the container image is rebuilt.
+  "mounts": [
+    "source=aiwork-claude-config,target=/home/vscode/.claude,type=volume",
+    "source=aiwork-codex-config,target=/home/vscode/.codex,type=volume"
+  ],
+
+  // On create (including after a rebuild): take ownership of the mounted
+  // volumes (they can mount root-owned), install the Canvas sync Python
+  // dependencies, and pre-install BOTH AI CLIs globally so `claude` and
+  // `codex` are on PATH. Each instructor signs in with their own account;
+  // credentials land in the persisted ~/.claude and ~/.codex volumes above.
+  "postCreateCommand": "sudo chown -R vscode:vscode /home/vscode/.claude /home/vscode/.codex 2>/dev/null || true; python -m pip install --upgrade pip && python -m pip install -r canvas_sync/requirements.txt && npm i -g @anthropic-ai/claude-code @openai/codex",
+
+  "remoteUser": "vscode",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python"
+      ]
+    }
+  }
+}
