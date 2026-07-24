@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -392,6 +393,41 @@ class PublishChangedTests(unittest.TestCase):
             self.assertTrue((output_dir / "deanza" / "course1" / "home.html").exists())
             drift.assert_not_called()
             push.assert_not_called()
+
+
+class ReportFileTests(unittest.TestCase):
+    def test_report_file_written_alongside_stdout(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            report_path = repo_root / "out" / "publish-result.json"
+            write_page(md_path, body="Changed body.")
+            write_manifest(manifest_path)
+            write_state(state_dir / "course1" / "production.json", hash_value="1" * 64)
+
+            argv = [
+                "publish_changed.py",
+                "--manifest",
+                str(manifest_path),
+                "--state-dir",
+                str(state_dir),
+                "--dry-run",
+                "--report-file",
+                str(report_path),
+            ]
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(sys, "argv", argv):
+                    exit_code = publish_changed.main()
+
+            self.assertEqual(exit_code, 0)
+            report = json.loads(report_path.read_text(encoding="utf-8"))
+            self.assertEqual(len(report["results"]), 1)
+            self.assertEqual(
+                report["results"][0]["changed"],
+                [{"file": "course1/sprints/sprint-0/stable-page.md", "artifact_id": "stable-page"}],
+            )
 
 
 class DriftSelfHealTests(unittest.TestCase):

@@ -286,6 +286,11 @@ def main() -> int:
         action="store_true",
         help="Render hosted HTML from Markdown and state without Canvas reads or writes.",
     )
+    parser.add_argument(
+        "--report-file",
+        type=Path,
+        help="Also write the JSON results report to this file, even on failure.",
+    )
     args = parser.parse_args()
     if args.hosted_only and not args.hosted_output_dir:
         parser.error("--hosted-only requires --hosted-output-dir")
@@ -309,10 +314,21 @@ def main() -> int:
                 hard_failure = True
     except Exception as exc:  # noqa: BLE001 - CLI should return a compact failure
         print(f"ERROR: {exc}", file=sys.stderr)
+        write_report(args.report_file, results)
         return 1
 
+    write_report(args.report_file, results)
     print(json.dumps({"results": results}, indent=2))
     return 1 if hard_failure else 0
+
+
+def write_report(report_file: Path | None, results: list[dict]) -> None:
+    if not report_file:
+        return
+    report_file.parent.mkdir(parents=True, exist_ok=True)
+    report_file.write_text(
+        json.dumps({"results": results}, indent=2) + "\n", encoding="utf-8"
+    )
 
 
 if __name__ == "__main__":
