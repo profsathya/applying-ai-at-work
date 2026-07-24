@@ -201,13 +201,18 @@ def publish_manifest(
                 )
         return result
 
+    # A drift refusal blocks only the drifted artifact, never its neighbors.
+    # Healthy changed artifacts always publish; blocked ones are reported in
+    # "drifted" and the CLI still exits nonzero after the rest went through.
+    blocked_ids: set[str] = set()
     if check_drift:
         drifted = drift_for_changed(manifest_path, changed)
         result["drifted"] = drifted
-        if drifted:
-            return result
+        blocked_ids = {d["artifact_id"] for d in drifted}
 
     for item in changed:
+        if item["artifact_id"] in blocked_ids:
+            continue
         try:
             kwargs = {"state_dir": state_dir}
             if hosted_output_dir:

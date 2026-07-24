@@ -57,6 +57,64 @@ def write_manifest(path: Path, *, hosted: bool = False, canvas_publish: bool | N
     path.write_text(json.dumps(payload), encoding="utf-8")
 
 
+def write_page_with_id(path: Path, artifact_id: str, title: str, slug: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        f"""---
+type: page
+title: "{title}"
+slug: {slug}
+artifact_id: {artifact_id}
+sprint: 0
+module: "Test Module"
+position: 2
+points: null
+submission_type: none
+publish: true
+---
+
+# {title}
+
+Edited body text.
+""",
+        encoding="utf-8",
+    )
+
+
+def write_two_entry_state(path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    entries = {}
+    for artifact_id, slug, cid in (
+        ("stable-page", "stable-page", 1001),
+        ("healthy-page", "healthy-page", 1002),
+    ):
+        entries[artifact_id] = {
+            "artifact_id": artifact_id,
+            "local_path": f"course1/sprints/sprint-0/{slug}.md",
+            "canvas_type": "page",
+            "canvas_id": cid,
+            "canvas_page_url": slug,
+            "canvas_module_id": 55,
+            "content_hash": "f" * 64,
+            "canvas_fingerprint": "a" * 64,
+        }
+    path.write_text(
+        json.dumps(
+            {
+                "instance": {
+                    "name": "production",
+                    "base_url": "https://example.instructure.com/",
+                    "course_id": 12345,
+                    "term": "Test Term",
+                },
+                "last_sync": None,
+                "artifacts": entries,
+            }
+        ),
+        encoding="utf-8",
+    )
+
+
 def write_state(path: Path, *, hash_value: str, fingerprint: str = "a" * 64) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(
@@ -177,6 +235,44 @@ class PublishChangedTests(unittest.TestCase):
             self.assertEqual(result["drifted"], drifted)
             self.assertEqual(result["published"], [])
             push.assert_not_called()
+
+    def test_one_drifted_artifact_does_not_block_the_others(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            drifted_md = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            healthy_md = repo_root / "course1" / "sprints" / "sprint-0" / "healthy-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            state_path = state_dir / "course1" / "production.json"
+            write_page(drifted_md, body="Edited while canvas drifted.")
+            write_page_with_id(healthy_md, "healthy-page", "Healthy Page", "healthy-page")
+            write_manifest(manifest_path)
+            write_two_entry_state(state_path)
+            drifted = [
+                {
+                    "file": "course1/sprints/sprint-0/stable-page.md",
+                    "artifact_id": "stable-page",
+                    "reason": "canvas changed since last state-backed publish",
+                }
+            ]
+            pushed = {"artifact_id": "healthy-page", "action": "updated"}
+
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(publish_changed, "drift_for_changed", return_value=drifted):
+                    with patch.object(
+                        publish_changed, "push_artifact", return_value=pushed
+                    ) as push:
+                        result = publish_changed.publish_manifest(
+                            manifest_path,
+                            state_dir,
+                            dry_run=False,
+                            check_drift=True,
+                            require_state=True,
+                        )
+
+            self.assertEqual(result["drifted"], drifted)
+            self.assertEqual(result["published"], [pushed])
+            push.assert_called_once_with(healthy_md, manifest_path, state_dir=state_dir)
 
     def test_require_state_fails_when_state_file_is_missing(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
