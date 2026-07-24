@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Updating Course Content — Team Guide</title>
+<style>
+  :root{
+    --bg:#faf9f6; --card:#ffffff; --ink:#242933; --muted:#5f6774;
+    --line:#e3e0d8; --teal:#0f766e; --teal-soft:#e6f2f0;
+    --blue:#2563eb; --blue-soft:#e8effd;
+    --amber:#b45309; --amber-soft:#fdf3e3;
+    --green:#15803d; --green-soft:#e8f5ec;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:880px;margin:0 auto;padding:44px 26px 70px;}
+
+  /* hero */
+  .hero{text-align:center;margin-bottom:38px;}
+  .hero h1{font-size:30px;margin:0 0 8px;letter-spacing:-.01em;}
+  .hero .tag{font-size:17px;color:var(--teal);font-weight:600;margin:0 0 6px;}
+  .hero .aud{font-size:13.5px;color:var(--muted);margin:0;}
+
+  h2{font-size:19px;margin:0 0 4px;letter-spacing:-.01em;}
+  .sec{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:24px 26px;margin-bottom:26px;box-shadow:0 1px 2px rgba(30,35,50,.04);}
+  .sec .sub{color:var(--muted);font-size:14px;margin:0 0 18px;}
+
+  /* pipeline: how it works */
+  .pipe{display:flex;align-items:stretch;gap:0;justify-content:center;flex-wrap:wrap;}
+  .pipe .node{flex:1;min-width:150px;max-width:220px;text-align:center;padding:16px 12px;
+    border-radius:14px;border:1.5px solid;}
+  .pipe .node h3{font-size:14.5px;margin:10px 0 4px;}
+  .pipe .node p{font-size:12.5px;color:var(--muted);margin:0;}
+  .pipe .arrow{display:flex;align-items:center;padding:0 10px;color:#b8b2a4;font-size:26px;font-weight:300;}
+  .n-you{background:var(--blue-soft);border-color:#c7d7fb;}
+  .n-sys{background:#f4f2ec;border-color:var(--line);}
+  .n-canvas{background:var(--green-soft);border-color:#c4e3cd;}
+  .icon{width:44px;height:44px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;}
+  .icon svg{width:22px;height:22px;}
+  .i-blue{background:var(--blue);} .i-gray{background:#8a8574;} .i-green{background:var(--green);}
+  .pipe-note{text-align:center;font-size:13px;color:var(--muted);margin:16px 0 0;}
+  .pipe-note b{color:var(--ink);}
+
+  /* setup steps */
+  .steps{display:flex;gap:14px;flex-wrap:wrap;}
+  .step{flex:1;min-width:200px;background:#fcfbf8;border:1px solid var(--line);
+    border-radius:14px;padding:18px 16px 16px;position:relative;}
+  .step .num{width:30px;height:30px;border-radius:50%;background:var(--teal);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;margin-bottom:10px;}
+  .step h3{font-size:14.5px;margin:0 0 5px;}
+  .step p{font-size:13px;color:var(--muted);margin:0;}
+  .setup-done{margin:16px 0 0;text-align:center;font-size:14px;color:var(--teal);font-weight:600;}
+
+  /* making a change: vertical flow */
+  .flow{list-style:none;margin:0;padding:0;}
+  .flow li{display:flex;gap:16px;position:relative;padding-bottom:22px;}
+  .flow li:last-child{padding-bottom:0;}
+  .flow .dot{flex:none;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;
+    font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+  .flow li:not(:last-child) .dot::after{content:"";position:absolute;left:16px;top:36px;bottom:2px;
+    width:2px;background:#d8dce6;}
+  .flow .body{padding-top:5px;}
+  .flow .body h3{font-size:15px;margin:0 0 3px;}
+  .flow .body p{font-size:13.5px;color:var(--muted);margin:0;}
+  .flow .dot.done{background:var(--green);}
+  .say{background:var(--blue-soft);border-left:4px solid var(--blue);border-radius:0 10px 10px 0;
+    padding:10px 14px;margin:8px 0 0;font-size:13.5px;font-style:italic;color:#1e3a8a;}
+  .merge-btn{display:inline-block;background:var(--green);color:#fff;font-weight:700;font-size:13px;
+    padding:6px 18px;border-radius:7px;margin-top:6px;box-shadow:0 1px 2px rgba(0,0,0,.15);}
+  .tip{background:var(--teal-soft);border:1px solid #cfe5e1;border-radius:10px;
+    padding:10px 14px;font-size:13px;color:#0c5d56;margin-top:18px;}
+
+  /* alt door */
+  .alt{display:flex;gap:14px;align-items:flex-start;background:#fcfbf8;border:1px dashed #d8d3c6;
+    border-radius:12px;padding:14px 16px;}
+  .alt .pencil{flex:none;width:36px;height:36px;border-radius:9px;background:#efece4;
+    display:flex;align-items:center;justify-content:center;}
+  .alt p{margin:0;font-size:13.5px;color:var(--muted);}
+  .alt b{color:var(--ink);}
+
+  /* two columns you vs maintainer */
+  .cols{display:flex;gap:16px;flex-wrap:wrap;}
+  .col{flex:1;min-width:240px;border-radius:14px;padding:18px 18px 14px;border:1.5px solid;}
+  .col.you{background:var(--green-soft);border-color:#c4e3cd;}
+  .col.maint{background:var(--amber-soft);border-color:#f0dcbb;}
+  .col h3{font-size:14.5px;margin:0 0 4px;}
+  .col .who{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin:0 0 10px;}
+  .col.you .who{color:var(--green);} .col.maint .who{color:var(--amber);}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;}
+  .chip{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:999px;
+    padding:4px 12px;font-size:12.5px;}
+  .col p.note{font-size:12.5px;color:var(--muted);margin:12px 0 0;}
+
+  /* remember */
+  .rem{display:flex;gap:14px;flex-wrap:wrap;}
+  .rem .r{flex:1;min-width:200px;background:#fcfbf8;border:1px solid var(--line);border-radius:12px;
+    padding:14px 16px;font-size:13.5px;}
+  .rem .r b{display:block;margin-bottom:4px;font-size:13.5px;}
+  .rem .r{color:var(--muted);} .rem .r b{color:var(--ink);}
+
+  .closing{text-align:center;font-size:15px;color:var(--ink);margin:6px 0 0;}
+  .closing b{color:var(--teal);}
+  footer{text-align:center;font-size:12px;color:#a09a8c;margin-top:30px;}
+  @media print{body{background:#fff;} .sec{box-shadow:none;break-inside:avoid;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>Updating Course Content</h1>
+    <p class="tag">Describe the change. Click Merge. It's live.</p>
+    <p class="aud">For the Applying AI at Work content team · no coding tools needed</p>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="sec">
+    <h2>How it works, in 30 seconds</h2>
+    <p class="sub">All course text lives in simple text files in one shared home (GitHub). Canvas just <em>displays</em> it.</p>
+    <div class="pipe">
+      <div class="node n-you">
+        <span class="icon i-blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </span>
+        <h3>You change the text</h3>
+        <p>through the chat app<br>(or on the GitHub site)</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="node n-sys">
+        <span class="icon i-gray">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-2.64-6.36"/><polyline points="21 3 21 9 15 9"/></svg>
+        </span>
+        <h3>The system rebuilds the page</h3>
+        <p>automatically, after you approve</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="node n-canvas">
+        <span class="icon i-green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="18" x2="12" y2="21"/></svg>
+        </span>
+        <h3>Canvas shows the new version</h3>
+        <p>on its own, within ~10 minutes</p>
+      </div>
+    </div>
+    <p class="pipe-note">That's why we <b>never edit inside Canvas</b> — the system would overwrite it on the next rebuild.</p>
+  </div>
+
+  <!-- SETUP -->
+  <div class="sec">
+    <h2>One-time setup</h2>
+    <p class="sub">About 10 minutes, once. No Git, no Python, no terminal, no tokens.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Get added to the repo</h3>
+        <p>Send your GitHub username to Sathya. No account? Create a free one at github.com.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Install one app</h3>
+        <p><b>Claude desktop</b> or <b>ChatGPT desktop</b> — sign in with your own account.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Connect it to GitHub</h3>
+        <p>The first time you use it, the app asks once. Approve it and you're set.</p>
+      </div>
+    </div>
+    <p class="setup-done">✓ That's everything. You're ready to edit.</p>
+    <div class="tip" style="margin-top:12px;"><b>No Canvas token needed.</b> Canvas access is already configured centrally in the publishing system — you never handle Canvas credentials.</div>
+  </div>
+
+  <!-- MAKING A CHANGE -->
+  <div class="sec">
+    <h2>Making a change</h2>
+    <p class="sub">The everyday routine — three small steps.</p>
+    <ol class="flow">
+      <li>
+        <div class="dot">1</div>
+        <div class="body">
+          <h3>Describe the change in the app</h3>
+          <p>Name the course, sprint, page, and the exact text:</p>
+          <div class="say">"In course 1, Sprint 3, on the 'Stakeholder Map Draft' page, change 'Your submission' to 'Your Canvas submission'."</div>
+        </div>
+      </li>
+      <li>
+        <div class="dot">2</div>
+        <div class="body">
+          <h3>Review the before &amp; after, then click Merge</h3>
+          <p>The app gives you a link showing exactly what changed. Look it over — that Merge click is your approval, and nothing changes until you make it.</p>
+          <span class="merge-btn">Merge</span>
+        </div>
+      </li>
+      <li>
+        <div class="dot done">✓</div>
+        <div class="body">
+          <h3>It goes live on its own</h3>
+          <p>The page updates within about 10 minutes, and you get a plain confirmation that it worked — or a plain reason it didn't.</p>
+        </div>
+      </li>
+    </ol>
+    <div class="tip"><b>Tip:</b> the more specific you are — page title, current text, desired text — the better the first draft.</div>
+  </div>
+
+  <!-- YOU VS MAINTAINER -->
+  <div class="sec">
+    <h2>What you handle vs. what the maintainer handles</h2>
+    <div class="cols" style="margin-top:14px;">
+      <div class="col you">
+        <p class="who">Yours — anytime</p>
+        <h3>The words students read</h3>
+        <div class="chips">
+          <span class="chip">wording</span><span class="chip">instructions</span>
+          <span class="chip">examples</span><span class="chip">explanations</span>
+          <span class="chip">typos</span>
+        </div>
+      </div>
+      <div class="col maint">
+        <p class="who">Maintainer — send a request</p>
+        <h3>Course structure &amp; settings</h3>
+        <div class="chips">
+          <span class="chip">new pages</span><span class="chip">renaming</span>
+          <span class="chip">points</span><span class="chip">due dates</span>
+          <span class="chip">publish / unpublish</span><span class="chip">reordering</span>
+        </div>
+        <p class="note">Maintainer: ______</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- REMEMBER -->
+  <div class="sec">
+    <h2>Three things to remember</h2>
+    <div class="rem" style="margin-top:14px;">
+      <div class="r"><b>Edit the text files, not Canvas.</b> Changes made inside Canvas get overwritten by the system.</div>
+      <div class="r"><b>Content questions go to the team.</b> The tools faithfully publish whatever we decide a page should say.</div>
+      <div class="r"><b>Wondering if it's live?</b> Ask the app "did my change go live?" — or just open the course page and look.</div>
+    </div>
+    <p class="closing" style="margin-top:22px;">Your focus is the <b>content</b>. Everything else is plumbing — and the plumbing is our job.</p>
+  </div>
+
+  <footer>Applying AI at Work · content team guide · 2026</footer>
+</div>
+</body>
+</html>
