@@ -240,8 +240,46 @@ jobs:
             --require-state \
             "${hosted_args[@]}" | tee ../publish-result.json
 
+
+      - name: Determine publish outcome
+        id: outcome
+        if: env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true'
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+
+          published = failed = drifted = 0
+          hosted_ok = False
+          parsed = False
+          try:
+              with open("publish-result.json", encoding="utf-8") as fh:
+                  data = json.load(fh)
+              parsed = True
+              for result in data.get("results", []):
+                  published += len(result.get("published", []))
+                  failed += len(result.get("failed", []))
+                  drifted += len(result.get("drifted", []))
+                  hosted_ok = hosted_ok or bool(result.get("hosted"))
+          except (OSError, ValueError):
+              pass
+
+          clean = parsed and failed == 0 and drifted == 0
+          commit_state = published > 0 or clean
+          hosted_commit = published > 0 or hosted_ok or clean
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+              out.write(f"published_count={published}\n")
+              out.write(f"failed_count={failed + drifted}\n")
+              out.write(f"commit_state={str(commit_state).lower()}\n")
+              out.write(f"hosted_commit={str(hosted_commit).lower()}\n")
+          print(
+              f"published={published} failed={failed} drifted={drifted} "
+              f"commit_state={commit_state} hosted_commit={hosted_commit}"
+          )
+          PY
+
       - name: Commit Common Curriculum hosted changes
-        if: (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true') && steps.publish.outcome == 'success'
+        if: (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true') && steps.outcome.outputs.hosted_commit == 'true'
         working-directory: common-curriculum
         env:
           COMMON_CURRICULUM_TOKEN: ${{ secrets.COMMON_CURRICULUM_TOKEN }}
@@ -274,7 +312,7 @@ jobs:
           done
 
       - name: Commit canvas-state changes
-        if: always() && steps.validate_state.outcome == 'success'
+        if: always() && steps.validate_state.outcome == 'success' && steps.outcome.outputs.commit_state == 'true'
         working-directory: canvas-state
         run: |
           set -euo pipefail
@@ -290,6 +328,23 @@ jobs:
       - name: Fail if publish reported errors
         if: (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true') && steps.publish.outcome == 'failure'
         run: |
-          echo "Publish step failed. Result:"
-          cat publish-result.json 2>/dev/null || true
+          echo "Publish reported per-item problems:"
+          python3 - <<'PY'
+          import json
+
+          try:
+              with open("publish-result.json", encoding="utf-8") as fh:
+                  data = json.load(fh)
+          except (OSError, ValueError):
+              print("  (publish produced no readable result file)")
+              raise SystemExit(0)
+          for result in data.get("results", []):
+              for item in result.get("failed", []):
+                  reason = str(item.get("error", "unknown error")).splitlines()[0]
+                  print(f"  FAILED  {item.get('file')}: {reason}")
+              for item in result.get("drifted", []):
+                  print(f"  BLOCKED {item.get('file')}: {item.get('reason')}")
+              for item in result.get("published", []):
+                  print(f"  OK      {item.get('file') or item.get('artifact_id')}")
+          PY
           exit 1
