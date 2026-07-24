@@ -89,16 +89,13 @@ def drift_for_changed(manifest_path: Path, changed: list[dict]) -> list[dict]:
         entry = item.get("state_entry") or {}
         if not entry or entry.get("canvas_type") == "module_header":
             continue
-        expected = entry.get("canvas_fingerprint")
-        if not expected:
-            drifted.append(
-                {
-                    "file": item["file"],
-                    "artifact_id": item["artifact_id"],
-                    "reason": "state entry is missing canvas_fingerprint; run hydrate_state before publishing changes",
-                }
-            )
+        if not (entry.get("canvas_id") or entry.get("canvas_page_url")):
+            # The item was never created in Canvas (state entry has no Canvas
+            # identity). This is a first-time publish, not drift: let the
+            # create path run.
+            item["first_publish"] = True
             continue
+        expected = entry.get("canvas_fingerprint")
         live_state = fetch_canvas_state(client, entry)
         if live_state is None:
             drifted.append(
@@ -110,7 +107,15 @@ def drift_for_changed(manifest_path: Path, changed: list[dict]) -> list[dict]:
             )
             continue
         actual = canvas_fingerprint(live_state, entry["canvas_type"])
+        if not expected:
+            # Incomplete state, not drift: hydrate the fingerprint from live
+            # Canvas as part of publish instead of hard-stopping the run. The
+            # push records a fresh fingerprint after it lands.
+            item["healed_fingerprint"] = actual
+            continue
         if actual != expected:
+            # Real drift: a stored fingerprint exists and live Canvas does not
+            # match it. Refuse so Canvas-side edits are not silently replaced.
             drifted.append(
                 {
                     "file": item["file"],
@@ -150,6 +155,7 @@ def publish_manifest(
         "published": [],
         "failed": [],
         "drifted": [],
+        "healed": [],
         "hosted": None,
     }
     if hosted_only:
@@ -209,6 +215,23 @@ def publish_manifest(
         drifted = drift_for_changed(manifest_path, changed)
         result["drifted"] = drifted
         blocked_ids = {d["artifact_id"] for d in drifted}
+        for item in changed:
+            if item.get("healed_fingerprint"):
+                result["healed"].append(
+                    {
+                        "file": item["file"],
+                        "artifact_id": item["artifact_id"],
+                        "reason": "hydrated missing canvas_fingerprint from live canvas during publish",
+                    }
+                )
+            elif item.get("first_publish"):
+                result["healed"].append(
+                    {
+                        "file": item["file"],
+                        "artifact_id": item["artifact_id"],
+                        "reason": "no canvas identity in state; treated as first-time publish",
+                    }
+                )
 
     for item in changed:
         if item["artifact_id"] in blocked_ids:
