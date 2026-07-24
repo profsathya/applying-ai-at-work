@@ -18,6 +18,7 @@ from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient
+from canvas_sync.instance_guard import check_env_matches_instance
 from canvas_sync.schema import parse_frontmatter, validate_artifact, validate_canvas_state
 from canvas_sync.state import (
     CanvasStateStore,
@@ -153,6 +154,8 @@ def build_mapping_plan(
     course_id = int(manifest.get("instance", {}).get("course_id") or 0)
     if not course_id:
         raise ValueError(f"{manifest_path}: manifest instance.course_id is required")
+    if client is None:
+        check_env_matches_instance(manifest, manifest_label=str(manifest_path))
     canvas = client or CanvasClient.from_env(course_id=course_id)
     local_artifacts = discover_local_artifacts(manifest_path)
     live_items = discover_live_items(canvas)

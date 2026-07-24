@@ -2,6 +2,8 @@
 
 This repo builds Canvas course materials from Markdown.
 
+> Cloud setup (GitHub Codespaces) and multi-institution (per-Canvas) profiles: see [docs/CLOUD_SETUP.md](docs/CLOUD_SETUP.md).
+
 For most users, the workflow is simple:
 
 ```text
