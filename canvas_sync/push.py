@@ -141,7 +141,9 @@ def guard_canvas_type_migration(
 
 
 RUBRIC_WARNING = (
-    "rubric changes are not auto-published - apply the rubric in Canvas manually"
+    "rubric changes are not auto-published - apply the rubric in Canvas "
+    "manually, then acknowledge with canvas_sync/ack_rubric.py "
+    "(see README-BUILDER.md, Rubric changes)"
 )
 
 MODULE_MOVE_WARNING = (
@@ -422,7 +424,8 @@ def push_artifact(
             hosted_url=hosted_info["hosted_url"] if hosted_info["enabled"] else None,
         )
         new_rubric_hash = rubric_fingerprint(fm)
-        warnings = rubric_warnings(fm, existing)
+        rubric_changed = bool(rubric_warnings(fm, existing))
+        warnings = [RUBRIC_WARNING] if rubric_changed else []
 
         # Content-only fast path: when the hosted iframe design means the
         # Canvas-side payload is identical (only hosted body text changed),
@@ -460,7 +463,12 @@ def push_artifact(
                 entry["hosted_path"] = hosted_info["hosted_path"]
                 entry["hosted_url"] = hosted_info["hosted_url"]
                 entry["canvas_payload_hash"] = new_payload_hash
-                entry["rubric_hash"] = new_rubric_hash
+                if not rubric_changed:
+                    # An unpushed rubric change keeps the OLD stored hash (or
+                    # none), so the warning repeats every run until the
+                    # maintainer applies it in Canvas and acknowledges via
+                    # canvas_sync/ack_rubric.py.
+                    entry["rubric_hash"] = new_rubric_hash
                 if fm.get("position") is not None:
                     entry["position"] = fm["position"]
                 if store.external:
@@ -682,7 +690,13 @@ def push_artifact(
             external_state=store.external,
         )
         entry["canvas_payload_hash"] = new_payload_hash
-        entry["rubric_hash"] = new_rubric_hash
+        if rubric_changed:
+            # Keep the old stored hash (or none) so the warning repeats until
+            # the maintainer acknowledges via canvas_sync/ack_rubric.py.
+            if existing.get("rubric_hash") is not None:
+                entry["rubric_hash"] = existing["rubric_hash"]
+        else:
+            entry["rubric_hash"] = new_rubric_hash
         if fm.get("position") is not None:
             entry["position"] = fm["position"]
         artifacts[state_key] = entry
