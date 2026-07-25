@@ -340,7 +340,8 @@ jobs:
               state_file.write_text(
                   json.dumps(reverted, indent=2, sort_keys=True) + "\n", encoding="utf-8"
               )
-          report.write_text(json.dumps({"results": adjusted}, indent=2) + "\n", encoding="utf-8")
+          data["results"] = adjusted
+          report.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
           print(f"content-only state entries reverted: {sum(len(v) for v in demoted.values())}")
           PY
 

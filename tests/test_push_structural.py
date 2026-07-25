@@ -30,9 +30,17 @@ def chdir(path: Path):
         os.chdir(old_cwd)
 
 
-def write_assignment(path: Path, *, due: str | None = None, module: str = "Module A", position: int = 2) -> None:
+def write_assignment(
+    path: Path,
+    *,
+    due: str | None = None,
+    module: str = "Module A",
+    position: int = 2,
+    completion: str | None = None,
+) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     due_line = f"due: \"{due}\"\n" if due else ""
+    completion_line = f"completion_requirement: {completion}\n" if completion else ""
     path.write_text(
         f"""---
 type: assignment
@@ -45,7 +53,7 @@ position: {position}
 points: 10
 submission_type: text_entry
 publish: false
-{due_line}---
+{due_line}{completion_line}---
 
 # Tuple Lab
 
@@ -148,6 +156,7 @@ class StructuralChangeTests(unittest.TestCase):
         due: str | None = None,
         module: str = "Module A",
         position: int = 2,
+        completion: str | None = None,
         state_module_id: int = 55,
         state_module_item_id: int | None = 9001,
         state_position: int | None = 2,
@@ -158,7 +167,7 @@ class StructuralChangeTests(unittest.TestCase):
         md_path = repo_root / "course1" / "sprints" / "sprint-99" / "tuple-lab.md"
         manifest_path = repo_root / "course1" / "manifests" / "production.json"
         state_dir = repo_root / ".canvas-state"
-        write_assignment(md_path, due=due, module=module, position=position)
+        write_assignment(md_path, due=due, module=module, position=position, completion=completion)
         write_manifest(manifest_path)
         manifest = {"instance": {"name": "production"}}
         state_path = state_dir / "course1" / "production.json"
@@ -214,6 +223,22 @@ class StructuralChangeTests(unittest.TestCase):
             [(55, 9001, {"position": 5})],
         )
         self.assertEqual(entry["position"], 5)
+
+    def test_move_happens_before_completion_update_at_new_module(self) -> None:
+        """A module change plus a completion change: the item moves first, then
+        the completion update addresses the module the item now lives in."""
+        with tempfile.TemporaryDirectory() as tmp:
+            _result, client, entry, _sp = self._run(
+                tmp, module="Module B", resolved_module_id=66, completion="min_score"
+            )
+        self.assertEqual(
+            client.module_item_updates,
+            [
+                (55, 9001, {"module_id": 66, "position": 2}),
+                (66, 9001, {"completion_requirement": {"type": "min_score", "min_score": 10}}),
+            ],
+        )
+        self.assertEqual(entry["canvas_module_id"], 66)
 
     def test_unchanged_module_and_position_move_nothing(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

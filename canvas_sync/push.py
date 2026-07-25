@@ -571,6 +571,7 @@ def push_artifact(
             and existing.get("content_hash") == PROVISIONAL_CONTENT_HASH
             and not canvas_module_item_id
         )
+        module_move_blocked = False
         if canvas_artifact_type != "module_header" and (action == "created" or provisional_retry):
             content_type_map = {
                 "assignment": "Assignment",
@@ -588,41 +589,12 @@ def push_artifact(
                 completion_requirement=completion_requirement,
             )
             canvas_module_item_id = module_item.get("id")
-        elif (
-            canvas_artifact_type != "module_header"
-            and canvas_module_item_id
-            and completion_requirement
-            and (
-                existing.get("completion_requirement") != completion_requirement_state_value(completion_requirement)
-                or completion_requirement.get("type") == "min_score"
-            )
-        ):
-            client.update_module_item(
-                module_id,
-                int(canvas_module_item_id),
-                {"completion_requirement": completion_requirement},
-            )
-        elif (
-            canvas_artifact_type != "module_header"
-            and canvas_module_item_id
-            and not completion_requirement
-            and existing.get("completion_requirement")
-        ):
-            raise ValueError(
-                f"{rel_path}: completion_requirement none cannot safely clear an existing Canvas "
-                "module completion requirement through the artifact push path"
-            )
-
-        # Apply module and position changes to the EXISTING module item: a
-        # renamed module or a changed position must actually move/reposition
-        # the item, not just resolve a module id. A failure here propagates,
-        # so state keeps the old, true location and the item reports failed.
-        module_move_blocked = False
-        if (
-            canvas_artifact_type != "module_header"
-            and action == "updated"
-            and not provisional_retry
-        ):
+        elif canvas_artifact_type != "module_header":
+            # Apply module and position changes to the EXISTING module item
+            # FIRST: the completion update below addresses the module the item
+            # lives in, so the move must have happened before it. A failure
+            # here propagates, so state keeps the old, true location and the
+            # item reports failed.
             current_module_id = existing.get("canvas_module_id")
             needs_move = (
                 current_module_id is not None and int(module_id) != int(current_module_id)
@@ -650,6 +622,32 @@ def push_artifact(
                 # location and tell the maintainer.
                 module_move_blocked = True
                 warnings.append(MODULE_MOVE_WARNING)
+
+            # After any move, the item lives under module_id, so the
+            # completion update addresses the module it is actually in.
+            if (
+                canvas_module_item_id
+                and completion_requirement
+                and (
+                    existing.get("completion_requirement")
+                    != completion_requirement_state_value(completion_requirement)
+                    or completion_requirement.get("type") == "min_score"
+                )
+            ):
+                client.update_module_item(
+                    module_id,
+                    int(canvas_module_item_id),
+                    {"completion_requirement": completion_requirement},
+                )
+            elif (
+                canvas_module_item_id
+                and not completion_requirement
+                and existing.get("completion_requirement")
+            ):
+                raise ValueError(
+                    f"{rel_path}: completion_requirement none cannot safely clear an existing Canvas "
+                    "module completion requirement through the artifact push path"
+                )
 
         # Record successful module placement into the provisional entry right
         # away, so a failure in the remaining steps leaves a retry that knows
