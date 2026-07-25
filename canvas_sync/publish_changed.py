@@ -229,6 +229,7 @@ def publish_manifest(
         "healed": [],
         "hosted": None,
         "hosted_restored": [],
+        "provisional": [],
     }
     if hosted_only:
         if dry_run:
@@ -344,6 +345,36 @@ def publish_manifest(
                     "error": str(exc),
                 }
             )
+    # A push that failed AFTER creating its Canvas object saved a provisional
+    # identity into state. Surface those items so the workflow commits the
+    # state even when nothing else succeeded; discarding the identity would
+    # make the retry create a duplicate Canvas object.
+    failed_ids = {f["artifact_id"] for f in result["failed"] if f.get("artifact_id")}
+    if failed_ids:
+        try:
+            post_state, _post_path = load_state(manifest_path, state_dir, require_state=False)
+        except FileNotFoundError:
+            post_state = {"artifacts": {}}
+        pre_artifacts = state_info["state"].get("artifacts", {})
+        post_artifacts = post_state.get("artifacts", {})
+        for item in changed:
+            artifact_id = item["artifact_id"]
+            if artifact_id not in failed_ids:
+                continue
+            pre = pre_artifacts.get(artifact_id) or {}
+            post = post_artifacts.get(artifact_id) or {}
+            pre_identity = (pre.get("canvas_id"), pre.get("canvas_page_url"))
+            post_identity = (post.get("canvas_id"), post.get("canvas_page_url"))
+            if any(post_identity) and post_identity != pre_identity:
+                result["provisional"].append(
+                    {
+                        "file": item["file"],
+                        "artifact_id": artifact_id,
+                        "reason": "canvas identity recorded before the failure; "
+                        "state must be committed so the retry updates instead of duplicating",
+                    }
+                )
+
     if hosted_output_dir and result["published"]:
         try:
             latest_state, _state_path = load_state(manifest_path, state_dir, require_state=True)

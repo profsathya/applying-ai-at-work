@@ -508,6 +508,80 @@ class PerItemHardeningTests(unittest.TestCase):
             )
 
 
+class ProvisionalIdentityReportTests(unittest.TestCase):
+    def test_failed_push_with_recorded_identity_reports_provisional(self) -> None:
+        """A push that saved a Canvas identity before failing is surfaced so
+        the workflow commits state and the retry updates, not duplicates."""
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            state_path = state_dir / "course1" / "production.json"
+            write_page(md_path, body="First-time publish body.")
+            write_manifest(manifest_path)
+            write_state(state_path, hash_value="3" * 64)
+            state = json.loads(state_path.read_text(encoding="utf-8"))
+            entry = state["artifacts"]["stable-page"]
+            entry["canvas_id"] = None
+            entry["canvas_page_url"] = None
+            entry.pop("canvas_fingerprint", None)
+            state_path.write_text(json.dumps(state), encoding="utf-8")
+
+            def push_saves_identity_then_dies(_md_path, _manifest_path, **_kwargs):
+                current = json.loads(state_path.read_text(encoding="utf-8"))
+                current["artifacts"]["stable-page"]["canvas_id"] = 4242
+                current["artifacts"]["stable-page"]["canvas_page_url"] = "stable-page"
+                current["artifacts"]["stable-page"]["content_hash"] = "0" * 64
+                state_path.write_text(json.dumps(current), encoding="utf-8")
+                raise RuntimeError("hosted render exploded after create")
+
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(
+                    publish_changed, "push_artifact", side_effect=push_saves_identity_then_dies
+                ):
+                    result = publish_changed.publish_manifest(
+                        manifest_path,
+                        state_dir,
+                        dry_run=False,
+                        check_drift=False,
+                        require_state=True,
+                    )
+
+            self.assertEqual(result["published"], [])
+            self.assertEqual(len(result["failed"]), 1)
+            self.assertEqual(len(result["provisional"]), 1)
+            self.assertEqual(result["provisional"][0]["artifact_id"], "stable-page")
+            self.assertIn("retry updates instead of duplicating", result["provisional"][0]["reason"])
+
+    def test_failed_push_without_identity_reports_no_provisional(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            write_page(md_path, body="Changed body.")
+            write_manifest(manifest_path)
+            write_state(state_dir / "course1" / "production.json", hash_value="4" * 64)
+
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(
+                    publish_changed,
+                    "push_artifact",
+                    side_effect=RuntimeError("create itself failed"),
+                ):
+                    result = publish_changed.publish_manifest(
+                        manifest_path,
+                        state_dir,
+                        dry_run=False,
+                        check_drift=False,
+                        require_state=True,
+                    )
+
+            self.assertEqual(len(result["failed"]), 1)
+            self.assertEqual(result["provisional"], [])
+
+
 class HostedRestoreTests(unittest.TestCase):
     """Blocked artifacts' hosted output stays at baseline; healthy output goes live."""
 

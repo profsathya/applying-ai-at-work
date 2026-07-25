@@ -317,7 +317,7 @@ jobs:
           from pathlib import Path
 
           sys.path.insert(0, ".")
-          from canvas_sync.publish_outcome import demote_content_updates, revert_entries
+          from canvas_sync.publish_outcome import demote_hosted_publishes, revert_entries
 
           report = Path("../publish-result.json")
           try:
@@ -325,7 +325,7 @@ jobs:
           except (OSError, ValueError):
               raise SystemExit(0)
 
-          adjusted, demoted = demote_content_updates(data.get("results", []))
+          adjusted, demoted = demote_hosted_publishes(data.get("results", []))
           state_root = Path("../canvas-state").resolve()
           for state_path, artifact_ids in demoted.items():
               state_file = Path(state_path)
@@ -342,7 +342,7 @@ jobs:
                   json.dumps(reverted, indent=2, sort_keys=True) + "\n", encoding="utf-8"
               )
           report.write_text(json.dumps({"results": adjusted}, indent=2) + "\n", encoding="utf-8")
-          print(f"demoted content-only items: {sum(len(v) for v in demoted.values())}")
+          print(f"content-only state entries reverted: {sum(len(v) for v in demoted.values())}")
           PY
 
       - name: Determine final outcome
