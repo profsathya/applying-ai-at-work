@@ -454,6 +454,9 @@ jobs:
                 } else {
                   lines.push(`✅ ${label} - live (Canvas updated)`);
                 }
+                for (const warning of item.warnings || []) {
+                  lines.push(`⚠️ ${label} - ${warning}`);
+                }
               }
               for (const item of result.drifted || []) {
                 lines.push(`❌ ${item.file} - not published - ${item.reason}`);

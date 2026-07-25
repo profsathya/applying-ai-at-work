@@ -20,6 +20,7 @@ Exit codes:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import sys
@@ -137,6 +138,64 @@ def guard_canvas_type_migration(
         f"{delivery_mode!r}). Use the remove-canvas workflow to dry-run and confirm removal of "
         "the existing Canvas object, then publish again so Canvas can create the new assignment shell."
     )
+
+
+RUBRIC_WARNING = (
+    "rubric changes are not auto-published - apply the rubric in Canvas manually"
+)
+
+
+def canvas_payload_hash(
+    canvas_fm: dict,
+    canvas_artifact_type: str,
+    completion_requirement: dict | None,
+    *,
+    hosted_url: str | None = None,
+) -> str:
+    """Fingerprint of everything a publish would send to or place in Canvas.
+
+    Covers title, points, publish state, due date (a removed due changes the
+    hash), submission type (mapped, so ai_activity file_upload is included),
+    module name, position, completion requirement, and the hosted iframe URL
+    the body shell points at. The content-only fast path may skip a Canvas
+    write only when the stored hash from the previous publish matches exactly;
+    a missing stored hash always falls back to writing.
+    """
+    submission_type = canvas_fm.get("submission_type", "text_entry")
+    payload = {
+        "canvas_type": canvas_artifact_type,
+        "title": canvas_fm.get("title"),
+        "points": canvas_fm.get("points"),
+        "publish": canvas_fm.get("publish", True),
+        "due": canvas_fm.get("due"),
+        "submission_type": CANVAS_SUBMISSION_TYPE_MAP.get(submission_type, submission_type),
+        "module": canvas_fm.get("module"),
+        "position": canvas_fm.get("position"),
+        "completion_requirement": completion_requirement_state_value(completion_requirement),
+        "hosted_url": hosted_url,
+    }
+    canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
+def rubric_fingerprint(fm: dict) -> str:
+    """Fingerprint of the rubric frontmatter (hash of null when absent)."""
+    canonical = json.dumps(fm.get("rubric"), sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
+def rubric_warnings(fm: dict, existing: dict) -> list[str]:
+    """Warn when rubric frontmatter changed: push.py does not publish rubrics.
+
+    A stored rubric_hash that differs means the rubric changed since the last
+    publish; an artifact carrying a rubric with no stored hash cannot be
+    verified, so it warns once (the hash is recorded by this publish).
+    """
+    stored = existing.get("rubric_hash")
+    current = rubric_fingerprint(fm)
+    if stored is not None:
+        return [RUBRIC_WARNING] if stored != current else []
+    return [RUBRIC_WARNING] if fm.get("rubric") is not None else []
 
 
 def canvas_payload_matches_live(
@@ -346,18 +405,32 @@ def push_artifact(
 
         action = "updated" if (existing_id or existing_page_url) else "created"
 
+        new_payload_hash = canvas_payload_hash(
+            canvas_fm,
+            canvas_artifact_type,
+            completion_requirement,
+            hosted_url=hosted_info["hosted_url"] if hosted_info["enabled"] else None,
+        )
+        new_rubric_hash = rubric_fingerprint(fm)
+        warnings = rubric_warnings(fm, existing)
+
         # Content-only fast path: when the hosted iframe design means the
         # Canvas-side payload is identical (only hosted body text changed),
         # regenerate the hosted HTML and record state without any Canvas API
-        # write. Quizzes are excluded because their native questions are not
-        # covered by the hosted payload comparison. Requires hosted_output_dir
-        # so the change always lands somewhere.
+        # write. The stored canvas_payload_hash must match the newly computed
+        # one exactly, so ANY payload-affecting frontmatter change (title,
+        # points, publish, due including removal, submission type, module,
+        # position, completion requirement) falls back to a real Canvas write;
+        # a missing stored hash also falls back. Quizzes are excluded because
+        # their native questions are not covered by the comparison. Requires
+        # hosted_output_dir so the change always lands somewhere.
         if (
             action == "updated"
             and hosted_output_dir is not None
             and hosted_info["enabled"]
             and artifact_type != "module_header"
             and canvas_artifact_type != "quiz"
+            and existing.get("canvas_payload_hash") == new_payload_hash
         ):
             live_state = fetch_canvas_state(client, existing)
             if live_state is not None and canvas_payload_matches_live(
@@ -376,6 +449,8 @@ def push_artifact(
                 entry["last_pushed"] = pushed_at
                 entry["hosted_path"] = hosted_info["hosted_path"]
                 entry["hosted_url"] = hosted_info["hosted_url"]
+                entry["canvas_payload_hash"] = new_payload_hash
+                entry["rubric_hash"] = new_rubric_hash
                 if store.external:
                     fingerprint = canvas_fingerprint(live_state, canvas_artifact_type)
                     if fingerprint:
@@ -399,7 +474,7 @@ def push_artifact(
                 )
                 deployment_state["last_sync"] = pushed_at
                 store.save(deployment_state, state_path)
-                return {
+                fast_result = {
                     "action": "content_update",
                     "note": "content update - live via hosted page",
                     "file": rel_path,
@@ -409,6 +484,9 @@ def push_artifact(
                     "state_path": str(state_path),
                     "hosted_url": entry.get("hosted_url"),
                 }
+                if warnings:
+                    fast_result["warnings"] = warnings
+                return fast_result
 
         if canvas_artifact_type == "assignment":
             result = push_assignment(client, canvas_fm, html, existing_id)
@@ -526,6 +604,8 @@ def push_artifact(
             delivery_mode=delivery_mode,
             external_state=store.external,
         )
+        entry["canvas_payload_hash"] = new_payload_hash
+        entry["rubric_hash"] = new_rubric_hash
         artifacts[state_key] = entry
         if hosted_info["enabled"] and artifact_type != "module_header" and hosted_output_dir:
             hosted_result = render_hosted_artifact(
@@ -555,7 +635,7 @@ def push_artifact(
         deployment_state["last_sync"] = pushed_at
         store.save(deployment_state, state_path)
 
-        return {
+        push_result = {
             "action": action,
             "file": rel_path,
             "artifact_id": artifact_id,
@@ -564,6 +644,9 @@ def push_artifact(
             "state_path": str(state_path),
             "hosted_url": entry.get("hosted_url"),
         }
+        if warnings:
+            push_result["warnings"] = warnings
+        return push_result
 
 
 def main() -> int:
