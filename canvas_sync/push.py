@@ -433,6 +433,30 @@ def push_artifact(
         else:
             raise ValueError(f"Unknown artifact type: {canvas_artifact_type}")
 
+        # Persist the created object's Canvas identity immediately: if anything
+        # after this point fails (module placement, hosted rendering,
+        # fingerprinting, the final state save), a retry must find this object
+        # and update it, never create a second one. The sentinel content hash
+        # keeps the artifact detected as changed, so the retry republishes over
+        # this provisional entry through the update path.
+        if action == "created" and (canvas_id or canvas_page_url):
+            provisional = entry_for_push(
+                artifact_id=artifact_id,
+                rel_path=rel_path,
+                artifact_type=canvas_artifact_type,
+                canvas_id=canvas_id,
+                canvas_page_url=canvas_page_url,
+                canvas_module_id=existing.get("canvas_module_id"),
+                hash_value="0" * 64,
+                pushed_at=utc_now(),
+                source_commit=os.environ.get("GITHUB_SHA"),
+                source_type=artifact_type,
+                delivery_mode=delivery_mode,
+                external_state=store.external,
+            )
+            artifacts[state_key] = provisional
+            store.save(deployment_state, state_path)
+
         # Resolve module and add to it if not already present
         module_id = resolve_or_create_module(
             client,
