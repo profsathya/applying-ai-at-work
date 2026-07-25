@@ -856,6 +856,28 @@ def artifact_hosted_output_paths(
     return paths
 
 
+def course_shared_output_dir(
+    manifest_path: Path,
+    output_dir: Path,
+    *,
+    manifest: dict | None = None,
+) -> Path:
+    """The hosted directory holding the course's SHARED outputs.
+
+    Shared outputs (home.html, index.html, sprint-<n>.html, progress-map.json)
+    are regenerated from every artifact's current Markdown, so a blocked
+    artifact's new metadata could leak into them; callers snapshot and restore
+    this directory's index files around a publish run.
+    """
+    manifest_data = manifest or load_json(manifest_path)
+    config = hosted_config_from_manifest(manifest_data)
+    course_key = course_dir_for_manifest(manifest_path).name
+    return output_dir / config.path_prefix / course_key
+
+
+SHARED_OUTPUT_NAMES = ("home.html", "index.html", "progress-map.json")
+
+
 def _artifact_sort_key(item: tuple[Path, dict]) -> tuple[int, int, str]:
     _path, fm = item
     return (int(fm.get("sprint", 0)), int(fm.get("position", 9999)), fm.get("title", ""))

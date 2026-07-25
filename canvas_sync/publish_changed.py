@@ -12,7 +12,12 @@ from dotenv import load_dotenv
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient
 from canvas_sync.instance_guard import check_env_matches_instance, check_instance_enabled
-from canvas_sync.hosted_html import artifact_hosted_output_paths, render_hosted_files
+from canvas_sync.hosted_html import (
+    SHARED_OUTPUT_NAMES,
+    artifact_hosted_output_paths,
+    course_shared_output_dir,
+    render_hosted_files,
+)
 from canvas_sync.push import push_artifact
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.state import (
@@ -179,6 +184,51 @@ def snapshot_hosted_outputs(
     return snapshots
 
 
+def snapshot_shared_outputs(
+    manifest_path: Path,
+    manifest: dict,
+    hosted_output_dir: Path,
+) -> dict[Path, bytes | None]:
+    """Baseline of the course's shared hosted index files.
+
+    Homepages, sprint indexes, and the progress map are rebuilt from every
+    artifact's CURRENT Markdown, so a blocked artifact's new title, module,
+    position, or homepage metadata would otherwise leak into them while its
+    own page stays at baseline.
+    """
+    course_out = course_shared_output_dir(manifest_path, hosted_output_dir, manifest=manifest)
+    snapshots: dict[Path, bytes | None] = {}
+    for name in SHARED_OUTPUT_NAMES:
+        path = course_out / name
+        snapshots[path] = path.read_bytes() if path.exists() else None
+    for path in sorted(course_out.glob("sprint-*.html")):
+        snapshots[path] = path.read_bytes()
+    return snapshots
+
+
+def restore_shared_outputs(
+    snapshots: dict[Path, bytes | None],
+    course_out_dir: Path,
+) -> list[str]:
+    """Put the shared index files back to baseline, dropping new sprint pages."""
+    restored: list[str] = []
+    for path, baseline in snapshots.items():
+        current = path.read_bytes() if path.exists() else None
+        if current == baseline:
+            continue
+        if baseline is None:
+            path.unlink()
+        else:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(baseline)
+        restored.append(str(path))
+    for path in sorted(course_out_dir.glob("sprint-*.html")):
+        if path not in snapshots:
+            path.unlink()
+            restored.append(str(path))
+    return restored
+
+
 def restore_hosted_outputs(
     snapshots: dict[str, list[tuple[Path, bytes | None]]],
     artifact_ids: set[str],
@@ -283,9 +333,13 @@ def publish_manifest(
     # Baseline every changed artifact's hosted output before anything renders,
     # so files belonging to blocked or failed artifacts can be restored below.
     hosted_snapshots: dict[str, list[tuple[Path, bytes | None]]] = {}
+    shared_snapshots: dict[Path, bytes | None] = {}
     if hosted_output_dir and manifest.get("hosted_html", {}).get("enabled"):
         hosted_snapshots = snapshot_hosted_outputs(
             manifest_path, manifest, hosted_output_dir, changed
+        )
+        shared_snapshots = snapshot_shared_outputs(
+            manifest_path, manifest, hosted_output_dir
         )
 
     # A drift refusal blocks only the drifted artifact, never its neighbors.
@@ -403,6 +457,19 @@ def publish_manifest(
             if entry.get("artifact_id")
         }
         result["hosted_restored"] = restore_hosted_outputs(hosted_snapshots, unsuccessful)
+        if unsuccessful and shared_snapshots:
+            # Shared indexes are rebuilt from every artifact's current
+            # Markdown, so with any blocked artifact in the course they are
+            # held at baseline; healthy pages are live and the indexes catch
+            # up on the next clean run.
+            result["hosted_restored"].extend(
+                restore_shared_outputs(
+                    shared_snapshots,
+                    course_shared_output_dir(
+                        manifest_path, hosted_output_dir, manifest=manifest
+                    ),
+                )
+            )
     return result
 
 
