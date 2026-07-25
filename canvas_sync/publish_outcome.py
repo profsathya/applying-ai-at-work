@@ -45,6 +45,32 @@ def summarize(results: list[dict]) -> dict:
     }
 
 
+def summarize_report(report: dict | None, expected_manifests: int) -> dict:
+    """summarize() plus completeness: an empty report is NOT a clean report.
+
+    A run counts as complete only when the report parsed, carries
+    ``completed: true``, and holds a result for every expected manifest. An
+    incomplete run never counts as clean, always counts at least one failure,
+    and enables no hosted commit; canvas-state commits stay allowed ONLY when
+    a provisional Canvas identity was recorded, because discarding one would
+    cause a duplicate object on retry.
+    """
+    results = report.get("results", []) if isinstance(report, dict) else []
+    summary = summarize(results)
+    incomplete = (
+        not isinstance(report, dict)
+        or not report.get("completed")
+        or (expected_manifests > 0 and len(results) < expected_manifests)
+    )
+    summary["completed"] = not incomplete
+    if incomplete:
+        summary["clean"] = False
+        summary["failed"] = max(summary["failed"], 1)
+        summary["commit_state"] = summary["provisional"] > 0
+        summary["hosted_commit"] = False
+    return summary
+
+
 def demote_hosted_publishes(
     results: list[dict],
 ) -> tuple[list[dict], dict[str, list[str]]]:

@@ -35,7 +35,7 @@ from canvas_sync.completion import (
     completion_requirement_for,
     completion_requirement_state_value,
 )
-from canvas_sync.instance_guard import check_env_matches_instance, check_instance_enabled
+from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
 from canvas_sync.hosted_html import (
     artifact_hosted_info,
     discover_artifact_files as discover_hosted_artifact_files,
@@ -141,7 +141,14 @@ def guard_canvas_type_migration(
 
 
 RUBRIC_WARNING = (
-    "rubric changes are not auto-published - apply the rubric in Canvas manually"
+    "rubric changes are not auto-published - apply the rubric in Canvas "
+    "manually, then acknowledge with canvas_sync/ack_rubric.py "
+    "(see README-BUILDER.md, Rubric changes)"
+)
+
+MODULE_MOVE_WARNING = (
+    "module change detected but the canvas module item id is unknown - "
+    "move the item in Canvas manually"
 )
 
 # Sentinel content hash marking a provisional state entry: identity was saved
@@ -257,9 +264,10 @@ def push_assignment(client: CanvasClient, fm: dict, html: str, existing_id: int 
         "points_possible": fm.get("points"),
         "submission_types": [canvas_submission_type],
         "published": fm.get("publish", True),
+        # Always explicit: a removed frontmatter due must CLEAR the Canvas due
+        # date (due_at null), not silently keep the old one.
+        "due_at": fm.get("due"),
     }
-    if fm.get("due"):
-        payload["due_at"] = fm["due"]
 
     if existing_id:
         return client.update_assignment(existing_id, payload)
@@ -301,9 +309,8 @@ def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None
         "quiz_type": "assignment",
         "points_possible": fm.get("points"),
         "published": fm.get("publish", True),
+        "due_at": fm.get("due"),
     }
-    if fm.get("due"):
-        payload["due_at"] = fm["due"]
 
     if existing_id:
         result = client.update_quiz(existing_id, payload)
@@ -383,7 +390,7 @@ def push_artifact(
         # they match (the current CTI/production case), so behavior is
         # unchanged there. Prevents pointing one institution's token/URL at
         # another institution's profile (the silent 401).
-        check_instance_enabled(manifest, manifest_label=str(manifest_path))
+        check_instance_ready(manifest, manifest_label=str(manifest_path))
         check_env_matches_instance(manifest, manifest_label=str(manifest_path))
 
         client = CanvasClient.from_env(course_id=course_id)
@@ -417,7 +424,8 @@ def push_artifact(
             hosted_url=hosted_info["hosted_url"] if hosted_info["enabled"] else None,
         )
         new_rubric_hash = rubric_fingerprint(fm)
-        warnings = rubric_warnings(fm, existing)
+        rubric_changed = bool(rubric_warnings(fm, existing))
+        warnings = [RUBRIC_WARNING] if rubric_changed else []
 
         # Content-only fast path: when the hosted iframe design means the
         # Canvas-side payload is identical (only hosted body text changed),
@@ -455,7 +463,14 @@ def push_artifact(
                 entry["hosted_path"] = hosted_info["hosted_path"]
                 entry["hosted_url"] = hosted_info["hosted_url"]
                 entry["canvas_payload_hash"] = new_payload_hash
-                entry["rubric_hash"] = new_rubric_hash
+                if not rubric_changed:
+                    # An unpushed rubric change keeps the OLD stored hash (or
+                    # none), so the warning repeats every run until the
+                    # maintainer applies it in Canvas and acknowledges via
+                    # canvas_sync/ack_rubric.py.
+                    entry["rubric_hash"] = new_rubric_hash
+                if fm.get("position") is not None:
+                    entry["position"] = fm["position"]
                 if store.external:
                     fingerprint = canvas_fingerprint(live_state, canvas_artifact_type)
                     if fingerprint:
@@ -556,6 +571,7 @@ def push_artifact(
             and existing.get("content_hash") == PROVISIONAL_CONTENT_HASH
             and not canvas_module_item_id
         )
+        module_move_blocked = False
         if canvas_artifact_type != "module_header" and (action == "created" or provisional_retry):
             content_type_map = {
                 "assignment": "Assignment",
@@ -573,30 +589,65 @@ def push_artifact(
                 completion_requirement=completion_requirement,
             )
             canvas_module_item_id = module_item.get("id")
-        elif (
-            canvas_artifact_type != "module_header"
-            and canvas_module_item_id
-            and completion_requirement
-            and (
-                existing.get("completion_requirement") != completion_requirement_state_value(completion_requirement)
-                or completion_requirement.get("type") == "min_score"
+        elif canvas_artifact_type != "module_header":
+            # Apply module and position changes to the EXISTING module item
+            # FIRST: the completion update below addresses the module the item
+            # lives in, so the move must have happened before it. A failure
+            # here propagates, so state keeps the old, true location and the
+            # item reports failed.
+            current_module_id = existing.get("canvas_module_id")
+            needs_move = (
+                current_module_id is not None and int(module_id) != int(current_module_id)
             )
-        ):
-            client.update_module_item(
-                module_id,
-                int(canvas_module_item_id),
-                {"completion_requirement": completion_requirement},
-            )
-        elif (
-            canvas_artifact_type != "module_header"
-            and canvas_module_item_id
-            and not completion_requirement
-            and existing.get("completion_requirement")
-        ):
-            raise ValueError(
-                f"{rel_path}: completion_requirement none cannot safely clear an existing Canvas "
-                "module completion requirement through the artifact push path"
-            )
+            if canvas_module_item_id:
+                stored_position = existing.get("position")
+                needs_reposition = (
+                    fm.get("position") is not None
+                    and fm.get("position") != stored_position
+                )
+                if needs_move or needs_reposition:
+                    move_payload = {}
+                    if needs_move:
+                        move_payload["module_id"] = module_id
+                    if fm.get("position") is not None:
+                        move_payload["position"] = fm["position"]
+                    client.update_module_item(
+                        int(current_module_id) if current_module_id else int(module_id),
+                        int(canvas_module_item_id),
+                        move_payload,
+                    )
+            elif needs_move:
+                # The item's module item id is unknown (legacy state), so it
+                # cannot be moved through the API. Keep state at the old, true
+                # location and tell the maintainer.
+                module_move_blocked = True
+                warnings.append(MODULE_MOVE_WARNING)
+
+            # After any move, the item lives under module_id, so the
+            # completion update addresses the module it is actually in.
+            if (
+                canvas_module_item_id
+                and completion_requirement
+                and (
+                    existing.get("completion_requirement")
+                    != completion_requirement_state_value(completion_requirement)
+                    or completion_requirement.get("type") == "min_score"
+                )
+            ):
+                client.update_module_item(
+                    module_id,
+                    int(canvas_module_item_id),
+                    {"completion_requirement": completion_requirement},
+                )
+            elif (
+                canvas_module_item_id
+                and not completion_requirement
+                and existing.get("completion_requirement")
+            ):
+                raise ValueError(
+                    f"{rel_path}: completion_requirement none cannot safely clear an existing Canvas "
+                    "module completion requirement through the artifact push path"
+                )
 
         # Record successful module placement into the provisional entry right
         # away, so a failure in the remaining steps leaves a retry that knows
@@ -613,13 +664,18 @@ def push_artifact(
             store.save(deployment_state, state_path)
 
         pushed_at = utc_now()
+        # State records where the item ACTUALLY lives: when a module change
+        # could not be applied (unknown module item id), keep the old module.
+        recorded_module_id = (
+            existing.get("canvas_module_id") if module_move_blocked else module_id
+        )
         entry = entry_for_push(
             artifact_id=artifact_id,
             rel_path=rel_path,
             artifact_type=canvas_artifact_type,
             canvas_id=canvas_id,
             canvas_page_url=canvas_page_url,
-            canvas_module_id=module_id,
+            canvas_module_id=recorded_module_id,
             canvas_module_item_id=canvas_module_item_id,
             hash_value=content_hash(md_path),
             pushed_at=pushed_at,
@@ -632,7 +688,15 @@ def push_artifact(
             external_state=store.external,
         )
         entry["canvas_payload_hash"] = new_payload_hash
-        entry["rubric_hash"] = new_rubric_hash
+        if rubric_changed:
+            # Keep the old stored hash (or none) so the warning repeats until
+            # the maintainer acknowledges via canvas_sync/ack_rubric.py.
+            if existing.get("rubric_hash") is not None:
+                entry["rubric_hash"] = existing["rubric_hash"]
+        else:
+            entry["rubric_hash"] = new_rubric_hash
+        if fm.get("position") is not None:
+            entry["position"] = fm["position"]
         artifacts[state_key] = entry
         if hosted_info["enabled"] and artifact_type != "module_header" and hosted_output_dir:
             hosted_result = render_hosted_artifact(

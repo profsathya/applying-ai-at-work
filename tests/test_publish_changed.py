@@ -671,6 +671,95 @@ class HostedRestoreTests(unittest.TestCase):
             self.assertFalse(blocked_out.exists())
 
 
+class SharedIndexRestoreTests(unittest.TestCase):
+    def test_blocked_title_change_does_not_reach_hosted_index(self) -> None:
+        """Shared indexes stay at baseline when any artifact is blocked."""
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            blocked_md = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            healthy_md = repo_root / "course1" / "sprints" / "sprint-0" / "healthy-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            output_dir = repo_root / "Common-Curriculum"
+            # The blocked artifact was retitled locally.
+            write_page_with_id(blocked_md, "stable-page", "Sneaky New Title", "stable-page")
+            write_page_with_id(healthy_md, "healthy-page", "Healthy Page", "healthy-page")
+            write_manifest(manifest_path, hosted=True)
+            write_two_entry_state(state_dir / "course1" / "production.json")
+
+            course_out = output_dir / "deanza" / "course1"
+            course_out.mkdir(parents=True, exist_ok=True)
+            baseline_home = "<html>INDEX WITH Old Title</html>"
+            (course_out / "home.html").write_text(baseline_home, encoding="utf-8")
+
+            drifted = [
+                {
+                    "file": "course1/sprints/sprint-0/stable-page.md",
+                    "artifact_id": "stable-page",
+                    "reason": "canvas changed since last state-backed publish",
+                }
+            ]
+            pushed = {"artifact_id": "healthy-page", "action": "updated"}
+
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(publish_changed, "drift_for_changed", return_value=drifted):
+                    with patch.object(publish_changed, "push_artifact", return_value=pushed):
+                        result = publish_changed.publish_manifest(
+                            manifest_path,
+                            state_dir,
+                            dry_run=False,
+                            check_drift=True,
+                            require_state=True,
+                            hosted_output_dir=output_dir,
+                        )
+
+            # The course render rewrote home.html with the new title; restore
+            # must put the baseline back and drop the new sprint index.
+            self.assertEqual(
+                (course_out / "home.html").read_text(encoding="utf-8"), baseline_home
+            )
+            self.assertNotIn(
+                "Sneaky New Title",
+                (course_out / "home.html").read_text(encoding="utf-8"),
+            )
+            self.assertFalse((course_out / "sprint-0.html").exists())
+            restored = set(result["hosted_restored"])
+            self.assertIn(str(course_out / "home.html"), restored)
+
+    def test_clean_run_keeps_fresh_indexes(self) -> None:
+        """With no blocked artifacts the regenerated indexes stay in place."""
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            healthy_md = repo_root / "course1" / "sprints" / "sprint-0" / "healthy-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            output_dir = repo_root / "Common-Curriculum"
+            write_page_with_id(healthy_md, "healthy-page", "Healthy Page", "healthy-page")
+            write_manifest(manifest_path, hosted=True)
+            write_two_entry_state(state_dir / "course1" / "production.json")
+            course_out = output_dir / "deanza" / "course1"
+            course_out.mkdir(parents=True, exist_ok=True)
+            (course_out / "home.html").write_text("stale index", encoding="utf-8")
+
+            pushed = {"artifact_id": "healthy-page", "action": "updated"}
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(publish_changed, "drift_for_changed", return_value=[]):
+                    with patch.object(publish_changed, "push_artifact", return_value=pushed):
+                        result = publish_changed.publish_manifest(
+                            manifest_path,
+                            state_dir,
+                            dry_run=False,
+                            check_drift=True,
+                            require_state=True,
+                            hosted_output_dir=output_dir,
+                        )
+
+            self.assertNotEqual(
+                (course_out / "home.html").read_text(encoding="utf-8"), "stale index"
+            )
+            self.assertEqual(result["hosted_restored"], [])
+
+
 class ReportFileTests(unittest.TestCase):
     def test_report_file_written_alongside_stdout(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -699,11 +788,47 @@ class ReportFileTests(unittest.TestCase):
 
             self.assertEqual(exit_code, 0)
             report = json.loads(report_path.read_text(encoding="utf-8"))
+            self.assertTrue(report["completed"])
             self.assertEqual(len(report["results"]), 1)
             self.assertEqual(
                 report["results"][0]["changed"],
                 [{"file": "course1/sprints/sprint-0/stable-page.md", "artifact_id": "stable-page"}],
             )
+
+    def test_crash_mid_run_writes_incomplete_report(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            report_path = repo_root / "out" / "publish-result.json"
+            write_page(md_path)
+            write_manifest(manifest_path)
+            write_state(state_dir / "course1" / "production.json", hash_value=content_hash(md_path))
+
+            argv = [
+                "publish_changed.py",
+                "--manifest",
+                str(manifest_path),
+                "--state-dir",
+                str(state_dir),
+                "--report-file",
+                str(report_path),
+            ]
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(
+                    publish_changed,
+                    "publish_manifest",
+                    side_effect=RuntimeError("runner evicted mid-run"),
+                ):
+                    with patch.object(sys, "argv", argv):
+                        exit_code = publish_changed.main()
+
+            self.assertEqual(exit_code, 1)
+            report = json.loads(report_path.read_text(encoding="utf-8"))
+            self.assertFalse(report["completed"])
+            self.assertEqual(report["error"], "runner evicted mid-run")
+            self.assertEqual(report["results"], [])
 
 
 class DriftSelfHealTests(unittest.TestCase):

@@ -143,7 +143,10 @@ clearly-marked placeholder, and it has no per-item Canvas IDs yet. To finish it
    `base_url`, `path_prefix`, and `progress_endpoint`.
 4. Set `instance.enabled` to `true` in `course1/manifests/deanza.json`. While
    it is `false`, every Canvas-touching tool refuses to run against this
-   profile, so an unfinished scaffold can never be hit by accident.
+   profile, so an unfinished scaffold can never be hit by accident. This
+   guard is independent of the course id: the tools also refuse while
+   `instance.course_id` is still the placeholder `999999999`, even with
+   `enabled` set to `true`.
 5. Set your Codespaces secrets (or local `.env`) so `CANVAS_API_URL` is
    `https://deanza.instructure.com` and `CANVAS_API_TOKEN` is your De Anza
    token.

@@ -23,7 +23,11 @@ if str(REPO_ROOT) not in sys.path:
 
 from canvas_sync.instance_guard import (  # noqa: E402
     InstanceDisabledError,
+    PlaceholderCourseIdError,
+    SENTINEL_COURSE_ID,
+    check_course_id_is_real,
     check_instance_enabled,
+    check_instance_ready,
 )
 
 
@@ -37,11 +41,11 @@ def chdir(path: Path):
         os.chdir(old_cwd)
 
 
-def manifest_payload(*, enabled: bool | None) -> dict:
+def manifest_payload(*, enabled: bool | None, course_id: int = SENTINEL_COURSE_ID) -> dict:
     instance = {
         "name": "deanza",
         "base_url": "https://deanza.instructure.com/",
-        "course_id": 999999999,
+        "course_id": course_id,
         "term": "TBD",
     }
     if enabled is not None:
@@ -107,6 +111,75 @@ class CheckInstanceEnabledTests(unittest.TestCase):
         for path in sorted(REPO_ROOT.glob("course*/manifests/production.json")):
             manifest = json.loads(path.read_text(encoding="utf-8"))
             check_instance_enabled(manifest, manifest_label=str(path))
+
+
+class SentinelCourseIdTests(unittest.TestCase):
+    """The placeholder course id refuses independently of instance.enabled."""
+
+    def test_sentinel_refuses_even_when_enabled(self) -> None:
+        manifest = manifest_payload(enabled=True)
+        with self.assertRaises(PlaceholderCourseIdError) as ctx:
+            check_course_id_is_real(manifest, manifest_label="deanza.json")
+        self.assertIn("999999999", str(ctx.exception))
+        self.assertIn("deanza.json", str(ctx.exception))
+
+    def test_real_course_id_passes(self) -> None:
+        check_course_id_is_real(manifest_payload(enabled=True, course_id=180))
+
+    def test_ready_check_enforces_both_guards(self) -> None:
+        # enabled false fires first; enabled true still hits the sentinel.
+        with self.assertRaises(InstanceDisabledError):
+            check_instance_ready(manifest_payload(enabled=False))
+        with self.assertRaises(PlaceholderCourseIdError):
+            check_instance_ready(manifest_payload(enabled=True))
+        check_instance_ready(manifest_payload(enabled=True, course_id=180))
+
+    def test_repo_production_manifests_pass_ready_check(self) -> None:
+        for path in sorted(REPO_ROOT.glob("course*/manifests/production.json")):
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            check_instance_ready(manifest, manifest_label=str(path))
+
+    def test_entry_points_refuse_sentinel_with_enabled_true(self) -> None:
+        """Wiring check: flipping enabled without a real course id still refuses."""
+        from canvas_sync import inspect_canvas, publish_changed, push, update_artifact
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(
+                json.dumps(manifest_payload(enabled=True)), encoding="utf-8"
+            )
+
+            with patch.object(publish_changed.CanvasClient, "from_env", forbidden_client):
+                with self.assertRaises(PlaceholderCourseIdError):
+                    publish_changed.drift_for_changed(
+                        manifest_path,
+                        [{"file": "f", "artifact_id": "a", "state_entry": {"canvas_type": "page", "canvas_id": 1}}],
+                    )
+
+            with patch.object(inspect_canvas.CanvasClient, "from_env", forbidden_client):
+                with self.assertRaises(PlaceholderCourseIdError):
+                    inspect_canvas.build_report(
+                        manifest_path, include_items=False, include_drift=False
+                    )
+
+            md_path = repo_root / "course1" / "sprints" / "sprint-0" / "scaffold-page.md"
+            write_page(md_path)
+            with chdir(repo_root):
+                with patch.object(push.CanvasClient, "from_env", forbidden_client):
+                    with self.assertRaises(PlaceholderCourseIdError):
+                        push.push_artifact(
+                            md_path, manifest_path, state_dir=repo_root / ".canvas-state"
+                        )
+
+            with self.assertRaises(PlaceholderCourseIdError):
+                update_artifact.get_client(
+                    SENTINEL_COURSE_ID,
+                    None,
+                    manifest=manifest_payload(enabled=True),
+                    manifest_label="deanza.json",
+                )
 
 
 class EntryPointRefusalTests(unittest.TestCase):

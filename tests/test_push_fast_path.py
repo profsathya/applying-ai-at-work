@@ -508,14 +508,13 @@ class ContentOnlyFastPathTests(unittest.TestCase):
 
             self.assertEqual(result["action"], "content_update")
             self.assertEqual(result["warnings"], [push.RUBRIC_WARNING])
-            # Rubric hash recorded, so an unchanged rerun would not warn again.
+            # The rubric was NOT pushed, so the stored hash must stay at the
+            # old value: the warning repeats every run until acknowledged via
+            # canvas_sync/ack_rubric.py.
             state = json.loads(
                 (state_dir / "course1" / "production.json").read_text(encoding="utf-8")
             )
-            self.assertEqual(
-                state["artifacts"]["tuple-lab"]["rubric_hash"],
-                push.rubric_fingerprint({"rubric": [{"description": "Clear reasoning", "points": 5}]}),
-            )
+            self.assertEqual(state["artifacts"]["tuple-lab"]["rubric_hash"], old_rubric_hash)
 
     def test_without_hosted_output_dir_normal_push_runs(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

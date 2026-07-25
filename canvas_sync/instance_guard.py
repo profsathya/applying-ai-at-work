@@ -32,6 +32,39 @@ class InstanceDisabledError(ValueError):
     """Raised when the selected profile is a scaffold with instance.enabled false."""
 
 
+class PlaceholderCourseIdError(ValueError):
+    """Raised when the selected profile still carries the scaffold course id."""
+
+
+SENTINEL_COURSE_ID = 999999999
+
+
+def check_course_id_is_real(
+    manifest: dict, *, manifest_label: str = "the selected profile"
+) -> None:
+    """Refuse Canvas runs against the scaffold placeholder course id.
+
+    Independent of ``instance.enabled``: flipping a scaffold to enabled
+    without replacing the placeholder course id must still refuse.
+    """
+    instance = manifest.get("instance") or {}
+    if instance.get("course_id") == SENTINEL_COURSE_ID:
+        raise PlaceholderCourseIdError(
+            f"Refusing to run against Canvas: {manifest_label} still uses the "
+            f"scaffold placeholder course_id {SENTINEL_COURSE_ID}. Replace it "
+            "with the real Canvas course ID (see the manifest's _setup_note "
+            "and docs/CLOUD_SETUP.md) before any Canvas run."
+        )
+
+
+def check_instance_ready(
+    manifest: dict, *, manifest_label: str = "the selected profile"
+) -> None:
+    """All manifest-level readiness guards for a Canvas run."""
+    check_instance_enabled(manifest, manifest_label=manifest_label)
+    check_course_id_is_real(manifest, manifest_label=manifest_label)
+
+
 def check_instance_enabled(
     manifest: dict, *, manifest_label: str = "the selected profile"
 ) -> None:
