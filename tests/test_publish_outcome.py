@@ -16,6 +16,7 @@ from canvas_sync.publish_outcome import (  # noqa: E402
     demote_hosted_publishes,
     revert_entries,
     summarize,
+    summarize_report,
 )
 
 
@@ -87,6 +88,44 @@ class SummarizeTests(unittest.TestCase):
         """A fully-failed run still commits state when an identity was recorded."""
         s = summarize([result(failed=1, provisional=1)])
         self.assertFalse(s["clean"])
+        self.assertTrue(s["commit_state"])
+        self.assertFalse(s["hosted_commit"])
+
+
+class SummarizeReportTests(unittest.TestCase):
+    """An empty or incomplete report is never treated as a clean run."""
+
+    def test_unreadable_report_is_a_failure(self) -> None:
+        s = summarize_report(None, 1)
+        self.assertFalse(s["completed"])
+        self.assertFalse(s["clean"])
+        self.assertFalse(s["commit_state"])
+        self.assertFalse(s["hosted_commit"])
+        self.assertGreaterEqual(s["failed"], 1)
+
+    def test_report_without_completed_marker_is_a_failure(self) -> None:
+        s = summarize_report({"results": [result(published=2)]}, 1)
+        self.assertFalse(s["completed"])
+        self.assertFalse(s["hosted_commit"])
+
+    def test_missing_manifest_results_is_a_failure(self) -> None:
+        s = summarize_report({"results": [result(published=1)], "completed": True}, 2)
+        self.assertFalse(s["completed"])
+        self.assertGreaterEqual(s["failed"], 1)
+        self.assertFalse(s["hosted_commit"])
+
+    def test_complete_report_matches_summarize(self) -> None:
+        s = summarize_report({"results": [result(published=1)], "completed": True}, 1)
+        self.assertTrue(s["completed"])
+        self.assertTrue(s["commit_state"])
+        self.assertTrue(s["hosted_commit"])
+
+    def test_incomplete_report_still_commits_provisional_identities(self) -> None:
+        """The duplicate-prevention invariant survives a crashed run."""
+        s = summarize_report(
+            {"results": [result(failed=1, provisional=1)], "completed": False}, 1
+        )
+        self.assertFalse(s["completed"])
         self.assertTrue(s["commit_state"])
         self.assertFalse(s["hosted_commit"])
 

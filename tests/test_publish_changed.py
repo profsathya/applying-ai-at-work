@@ -788,11 +788,47 @@ class ReportFileTests(unittest.TestCase):
 
             self.assertEqual(exit_code, 0)
             report = json.loads(report_path.read_text(encoding="utf-8"))
+            self.assertTrue(report["completed"])
             self.assertEqual(len(report["results"]), 1)
             self.assertEqual(
                 report["results"][0]["changed"],
                 [{"file": "course1/sprints/sprint-0/stable-page.md", "artifact_id": "stable-page"}],
             )
+
+    def test_crash_mid_run_writes_incomplete_report(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            report_path = repo_root / "out" / "publish-result.json"
+            write_page(md_path)
+            write_manifest(manifest_path)
+            write_state(state_dir / "course1" / "production.json", hash_value=content_hash(md_path))
+
+            argv = [
+                "publish_changed.py",
+                "--manifest",
+                str(manifest_path),
+                "--state-dir",
+                str(state_dir),
+                "--report-file",
+                str(report_path),
+            ]
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(
+                    publish_changed,
+                    "publish_manifest",
+                    side_effect=RuntimeError("runner evicted mid-run"),
+                ):
+                    with patch.object(sys, "argv", argv):
+                        exit_code = publish_changed.main()
+
+            self.assertEqual(exit_code, 1)
+            report = json.loads(report_path.read_text(encoding="utf-8"))
+            self.assertFalse(report["completed"])
+            self.assertEqual(report["error"], "runner evicted mid-run")
+            self.assertEqual(report["results"], [])
 
 
 class DriftSelfHealTests(unittest.TestCase):

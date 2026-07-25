@@ -247,6 +247,8 @@ jobs:
         id: outcome
         if: env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true'
         working-directory: content
+        env:
+          TARGET_MANIFESTS: ${{ needs.validate.outputs.manifests }}
         run: |
           python3 - <<'PY'
           import json
@@ -254,20 +256,17 @@ jobs:
           import sys
 
           sys.path.insert(0, ".")
-          from canvas_sync.publish_outcome import summarize
+          from canvas_sync.publish_outcome import summarize_report
 
+          expected = len(
+              [line for line in os.environ.get("TARGET_MANIFESTS", "").splitlines() if line.strip()]
+          )
           try:
               with open("../publish-result.json", encoding="utf-8") as fh:
-                  summary = summarize(json.load(fh).get("results", []))
+                  report = json.load(fh)
           except (OSError, ValueError):
-              summary = {
-                  "published": 0,
-                  "failed": 1,
-                  "hosted_ok": False,
-                  "clean": False,
-                  "commit_state": False,
-                  "hosted_commit": False,
-              }
+              report = None
+          summary = summarize_report(report, expected)
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
               out.write(f"published_count={summary['published']}\n")
               out.write(f"failed_count={summary['failed']}\n")
@@ -307,7 +306,7 @@ jobs:
           fi
 
       - name: Reconcile content-only state with hosted deploy
-        if: always() && steps.hosted.outputs.cc_pushed == 'false'
+        if: always() && (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true') && steps.hosted.outputs.cc_pushed != 'true'
         working-directory: content
         run: |
           python3 - <<'PY'
@@ -349,6 +348,8 @@ jobs:
         id: outcome_final
         if: always() && (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true')
         working-directory: content
+        env:
+          TARGET_MANIFESTS: ${{ needs.validate.outputs.manifests }}
         run: |
           python3 - <<'PY'
           import json
@@ -356,20 +357,17 @@ jobs:
           import sys
 
           sys.path.insert(0, ".")
-          from canvas_sync.publish_outcome import summarize
+          from canvas_sync.publish_outcome import summarize_report
 
+          expected = len(
+              [line for line in os.environ.get("TARGET_MANIFESTS", "").splitlines() if line.strip()]
+          )
           try:
               with open("../publish-result.json", encoding="utf-8") as fh:
-                  summary = summarize(json.load(fh).get("results", []))
+                  report = json.load(fh)
           except (OSError, ValueError):
-              summary = {
-                  "published": 0,
-                  "failed": 1,
-                  "hosted_ok": False,
-                  "clean": False,
-                  "commit_state": False,
-                  "hosted_commit": False,
-              }
+              report = None
+          summary = summarize_report(report, expected)
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
               out.write(f"published_count={summary['published']}\n")
               out.write(f"failed_count={summary['failed']}\n")
@@ -443,6 +441,10 @@ jobs:
               data = JSON.parse(fs.readFileSync('publish-result.json', 'utf8'));
             } catch (error) {
               await post('**Canvas publish result**\n\n❌ The publish run failed before producing results. Check the Publish Canvas workflow logs.');
+              return;
+            }
+            if (!data.completed) {
+              await post('**Canvas publish result**\n\n❌ The publish run stopped before finishing. Check the Publish Canvas workflow logs.');
               return;
             }
             const lines = [];

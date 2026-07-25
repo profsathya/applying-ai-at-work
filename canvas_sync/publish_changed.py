@@ -517,21 +517,28 @@ def main() -> int:
                 hard_failure = True
     except Exception as exc:  # noqa: BLE001 - CLI should return a compact failure
         print(f"ERROR: {exc}", file=sys.stderr)
-        write_report(args.report_file, results)
+        write_report(args.report_file, results, completed=False, error=str(exc))
         return 1
 
-    write_report(args.report_file, results)
-    print(json.dumps({"results": results}, indent=2))
+    write_report(args.report_file, results, completed=True)
+    print(json.dumps({"results": results, "completed": True}, indent=2))
     return 1 if hard_failure else 0
 
 
-def write_report(report_file: Path | None, results: list[dict]) -> None:
+def write_report(
+    report_file: Path | None,
+    results: list[dict],
+    *,
+    completed: bool,
+    error: str | None = None,
+) -> None:
     if not report_file:
         return
+    payload: dict = {"results": results, "completed": completed}
+    if error:
+        payload["error"] = error.splitlines()[0]
     report_file.parent.mkdir(parents=True, exist_ok=True)
-    report_file.write_text(
-        json.dumps({"results": results}, indent=2) + "\n", encoding="utf-8"
-    )
+    report_file.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":
