@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient
 from canvas_sync.instance_guard import check_env_matches_instance, check_instance_enabled
-from canvas_sync.hosted_html import render_hosted_files
+from canvas_sync.hosted_html import artifact_hosted_output_paths, render_hosted_files
 from canvas_sync.push import push_artifact
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.state import (
@@ -129,6 +129,50 @@ def drift_for_changed(manifest_path: Path, changed: list[dict]) -> list[dict]:
     return drifted
 
 
+def snapshot_hosted_outputs(
+    manifest_path: Path,
+    manifest: dict,
+    hosted_output_dir: Path,
+    changed: list[dict],
+) -> dict[str, list[tuple[Path, bytes | None]]]:
+    """Baseline content of every changed artifact's hosted output files.
+
+    Captured before any push so a blocked or failed artifact's hosted files
+    can be restored afterward: renders regenerate the whole course, and a
+    refused publish must never change what that artifact's Canvas iframe
+    shows.
+    """
+    snapshots: dict[str, list[tuple[Path, bytes | None]]] = {}
+    for item in changed:
+        entries: list[tuple[Path, bytes | None]] = []
+        for path in artifact_hosted_output_paths(
+            item["path"], manifest_path, hosted_output_dir, manifest=manifest
+        ):
+            entries.append((path, path.read_bytes() if path.exists() else None))
+        snapshots[item["artifact_id"]] = entries
+    return snapshots
+
+
+def restore_hosted_outputs(
+    snapshots: dict[str, list[tuple[Path, bytes | None]]],
+    artifact_ids: set[str],
+) -> list[str]:
+    """Put unsuccessful artifacts' hosted files back to their baseline."""
+    restored: list[str] = []
+    for artifact_id in sorted(artifact_ids):
+        for path, baseline in snapshots.get(artifact_id, []):
+            current = path.read_bytes() if path.exists() else None
+            if current == baseline:
+                continue
+            if baseline is None:
+                path.unlink()
+            else:
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(baseline)
+            restored.append(str(path))
+    return restored
+
+
 def publish_manifest(
     manifest_path: Path,
     state_dir: Path,
@@ -158,6 +202,7 @@ def publish_manifest(
         "drifted": [],
         "healed": [],
         "hosted": None,
+        "hosted_restored": [],
     }
     if hosted_only:
         if dry_run:
@@ -207,6 +252,14 @@ def publish_manifest(
                     }
                 )
         return result
+
+    # Baseline every changed artifact's hosted output before anything renders,
+    # so files belonging to blocked or failed artifacts can be restored below.
+    hosted_snapshots: dict[str, list[tuple[Path, bytes | None]]] = {}
+    if hosted_output_dir and manifest.get("hosted_html", {}).get("enabled"):
+        hosted_snapshots = snapshot_hosted_outputs(
+            manifest_path, manifest, hosted_output_dir, changed
+        )
 
     # A drift refusal blocks only the drifted artifact, never its neighbors.
     # Healthy changed artifacts always publish; blocked ones are reported in
@@ -268,6 +321,17 @@ def publish_manifest(
                     "error": str(exc),
                 }
             )
+
+    # Renders regenerate the whole course, so put unsuccessful artifacts'
+    # hosted files back to their baseline: a refused or failed publish must
+    # never change what that artifact's Canvas iframe shows.
+    if hosted_snapshots:
+        unsuccessful = {
+            entry["artifact_id"]
+            for entry in [*result["failed"], *result["drifted"]]
+            if entry.get("artifact_id")
+        }
+        result["hosted_restored"] = restore_hosted_outputs(hosted_snapshots, unsuccessful)
     return result
 
 

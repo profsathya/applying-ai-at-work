@@ -395,6 +395,95 @@ class PublishChangedTests(unittest.TestCase):
             push.assert_not_called()
 
 
+class HostedRestoreTests(unittest.TestCase):
+    """Blocked artifacts' hosted output stays at baseline; healthy output goes live."""
+
+    def test_blocked_artifact_hosted_output_restored_to_baseline(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            blocked_md = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            healthy_md = repo_root / "course1" / "sprints" / "sprint-0" / "healthy-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            state_path = state_dir / "course1" / "production.json"
+            output_dir = repo_root / "Common-Curriculum"
+            write_page(blocked_md, body="Blocked new content that must not go live.")
+            write_page_with_id(healthy_md, "healthy-page", "Healthy Page", "healthy-page")
+            write_manifest(manifest_path, hosted=True)
+            write_two_entry_state(state_path)
+
+            baseline = "OLD BASELINE CONTENT"
+            blocked_out = output_dir / "deanza" / "course1" / "activities" / "stable-page.html"
+            blocked_out.parent.mkdir(parents=True, exist_ok=True)
+            blocked_out.write_text(baseline, encoding="utf-8")
+
+            drifted = [
+                {
+                    "file": "course1/sprints/sprint-0/stable-page.md",
+                    "artifact_id": "stable-page",
+                    "reason": "canvas changed since last state-backed publish",
+                }
+            ]
+            pushed = {"artifact_id": "healthy-page", "action": "updated"}
+
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(publish_changed, "drift_for_changed", return_value=drifted):
+                    with patch.object(publish_changed, "push_artifact", return_value=pushed):
+                        result = publish_changed.publish_manifest(
+                            manifest_path,
+                            state_dir,
+                            dry_run=False,
+                            check_drift=True,
+                            require_state=True,
+                            hosted_output_dir=output_dir,
+                        )
+
+            # The final course render rewrote every page; the blocked one must
+            # be back to baseline while the healthy one carries new content.
+            self.assertEqual(blocked_out.read_text(encoding="utf-8"), baseline)
+            healthy_out = output_dir / "deanza" / "course1" / "activities" / "healthy-page.html"
+            self.assertIn("Edited body text.", healthy_out.read_text(encoding="utf-8"))
+            self.assertIn(str(blocked_out), result["hosted_restored"])
+
+    def test_blocked_artifact_without_baseline_file_is_deleted(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            blocked_md = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            healthy_md = repo_root / "course1" / "sprints" / "sprint-0" / "healthy-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            state_path = state_dir / "course1" / "production.json"
+            output_dir = repo_root / "Common-Curriculum"
+            write_page(blocked_md, body="Blocked new content.")
+            write_page_with_id(healthy_md, "healthy-page", "Healthy Page", "healthy-page")
+            write_manifest(manifest_path, hosted=True)
+            write_two_entry_state(state_path)
+
+            drifted = [
+                {
+                    "file": "course1/sprints/sprint-0/stable-page.md",
+                    "artifact_id": "stable-page",
+                    "reason": "canvas changed since last state-backed publish",
+                }
+            ]
+            pushed = {"artifact_id": "healthy-page", "action": "updated"}
+
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(publish_changed, "drift_for_changed", return_value=drifted):
+                    with patch.object(publish_changed, "push_artifact", return_value=pushed):
+                        publish_changed.publish_manifest(
+                            manifest_path,
+                            state_dir,
+                            dry_run=False,
+                            check_drift=True,
+                            require_state=True,
+                            hosted_output_dir=output_dir,
+                        )
+
+            blocked_out = output_dir / "deanza" / "course1" / "activities" / "stable-page.html"
+            self.assertFalse(blocked_out.exists())
+
+
 class ReportFileTests(unittest.TestCase):
     def test_report_file_written_alongside_stdout(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

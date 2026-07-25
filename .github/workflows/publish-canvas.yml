@@ -268,7 +268,7 @@ jobs:
 
           clean = parsed and failed == 0 and drifted == 0
           commit_state = published > 0 or clean
-          hosted_commit = clean and (published > 0 or hosted_ok)
+          hosted_commit = published > 0 or hosted_ok or clean
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
               out.write(f"published_count={published}\n")
               out.write(f"failed_count={failed + drifted}\n")
@@ -343,21 +343,14 @@ jobs:
               return;
             }
             const results = data.results || [];
-            const clean = results.every(
-              (r) => !(r.failed || []).length && !(r.drifted || []).length
-            );
             const lines = [];
             for (const result of results) {
               for (const item of result.published || []) {
                 const label = item.file || item.artifact_id;
                 if (item.action === 'content_update') {
-                  lines.push(clean
-                    ? `✅ ${label} - live (hosted page updated)`
-                    : `⏸ ${label} - saved; goes live on the next clean publish run`);
+                  lines.push(`✅ ${label} - live (hosted page updated)`);
                 } else {
-                  lines.push(clean
-                    ? `✅ ${label} - live (Canvas updated)`
-                    : `✅ ${label} - live in Canvas (hosted page refresh follows the next clean run)`);
+                  lines.push(`✅ ${label} - live (Canvas updated)`);
                 }
               }
               for (const item of result.drifted || []) {
