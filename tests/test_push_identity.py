@@ -136,6 +136,53 @@ class CreateIdentityPersistenceTests(unittest.TestCase):
             entry = json.loads(state_path.read_text(encoding="utf-8"))["artifacts"]["tuple-overview"]
             self.assertNotEqual(entry["content_hash"], "0" * 64)
             self.assertEqual(entry["canvas_module_id"], 55)
+            # The retry also completed the module placement the first run
+            # never reached.
+            self.assertEqual(entry["canvas_module_item_id"], 9001)
+
+    def test_retry_places_object_in_module_after_add_item_failure(self) -> None:
+        """Creation succeeded, module-item add failed: the retry must place it."""
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-99" / "tuple-overview.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            write_page(md_path)
+            write_manifest(manifest_path)
+
+            client = CountingClient()
+            fail_once = {"remaining": 1}
+            original_add = client.add_module_item
+
+            def flaky_add(module_id: int, **kwargs: object) -> dict:
+                if fail_once["remaining"]:
+                    fail_once["remaining"] -= 1
+                    raise RuntimeError("add_module_item blew up")
+                return original_add(module_id, **kwargs)
+
+            client.add_module_item = flaky_add
+
+            with chdir(repo_root):
+                with patch.object(push.CanvasClient, "from_env", return_value=client):
+                    with patch.object(push, "resolve_or_create_module", return_value=55):
+                        with self.assertRaises(RuntimeError):
+                            push.push_artifact(md_path, manifest_path, state_dir=state_dir)
+
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            state_path = state_path_for_manifest(manifest_path, state_dir, manifest)
+            entry = json.loads(state_path.read_text(encoding="utf-8"))["artifacts"]["tuple-overview"]
+            self.assertEqual(entry["canvas_id"], 1001)
+            self.assertNotIn("canvas_module_item_id", entry)
+
+            with chdir(repo_root):
+                with patch.object(push.CanvasClient, "from_env", return_value=client):
+                    with patch.object(push, "resolve_or_create_module", return_value=55):
+                        result = push.push_artifact(md_path, manifest_path, state_dir=state_dir)
+
+            self.assertEqual(result["action"], "updated")
+            self.assertEqual(client.creates, 1)
+            entry = json.loads(state_path.read_text(encoding="utf-8"))["artifacts"]["tuple-overview"]
+            self.assertEqual(entry["canvas_module_item_id"], 9001)
 
 
 if __name__ == "__main__":

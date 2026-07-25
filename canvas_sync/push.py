@@ -144,6 +144,11 @@ RUBRIC_WARNING = (
     "rubric changes are not auto-published - apply the rubric in Canvas manually"
 )
 
+# Sentinel content hash marking a provisional state entry: identity was saved
+# right after Canvas creation, but the publish did not complete. Never matches
+# a real sha256 of file content, so the artifact stays detected as changed.
+PROVISIONAL_CONTENT_HASH = "0" * 64
+
 
 def canvas_payload_hash(
     canvas_fm: dict,
@@ -525,7 +530,7 @@ def push_artifact(
                 canvas_id=canvas_id,
                 canvas_page_url=canvas_page_url,
                 canvas_module_id=existing.get("canvas_module_id"),
-                hash_value="0" * 64,
+                hash_value=PROVISIONAL_CONTENT_HASH,
                 pushed_at=utc_now(),
                 source_commit=os.environ.get("GITHUB_SHA"),
                 source_type=artifact_type,
@@ -543,7 +548,15 @@ def push_artifact(
         )
 
         canvas_module_item_id = existing.get("canvas_module_item_id")
-        if canvas_artifact_type != "module_header" and action == "created":
+        # A provisional entry (identity saved right after creation, publish
+        # never completed) means module placement may not have happened: a
+        # retry runs as "updated" but must still add the object to its module.
+        provisional_retry = (
+            action == "updated"
+            and existing.get("content_hash") == PROVISIONAL_CONTENT_HASH
+            and not canvas_module_item_id
+        )
+        if canvas_artifact_type != "module_header" and (action == "created" or provisional_retry):
             content_type_map = {
                 "assignment": "Assignment",
                 "page": "Page",
@@ -584,6 +597,20 @@ def push_artifact(
                 f"{rel_path}: completion_requirement none cannot safely clear an existing Canvas "
                 "module completion requirement through the artifact push path"
             )
+
+        # Record successful module placement into the provisional entry right
+        # away, so a failure in the remaining steps leaves a retry that knows
+        # the object is already placed (no duplicate module item).
+        provisional_entry = artifacts.get(state_key) or {}
+        if (
+            provisional_entry.get("content_hash") == PROVISIONAL_CONTENT_HASH
+            and canvas_module_item_id is not None
+            and provisional_entry.get("canvas_module_item_id") != canvas_module_item_id
+        ):
+            provisional_entry["canvas_module_id"] = module_id
+            provisional_entry["canvas_module_item_id"] = canvas_module_item_id
+            artifacts[state_key] = provisional_entry
+            store.save(deployment_state, state_path)
 
         pushed_at = utc_now()
         entry = entry_for_push(
