@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -55,6 +56,64 @@ def write_manifest(path: Path, *, hosted: bool = False, canvas_publish: bool | N
     if canvas_publish is not None:
         payload["canvas_publish"] = canvas_publish
     path.write_text(json.dumps(payload), encoding="utf-8")
+
+
+def write_page_with_id(path: Path, artifact_id: str, title: str, slug: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        f"""---
+type: page
+title: "{title}"
+slug: {slug}
+artifact_id: {artifact_id}
+sprint: 0
+module: "Test Module"
+position: 2
+points: null
+submission_type: none
+publish: true
+---
+
+# {title}
+
+Edited body text.
+""",
+        encoding="utf-8",
+    )
+
+
+def write_two_entry_state(path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    entries = {}
+    for artifact_id, slug, cid in (
+        ("stable-page", "stable-page", 1001),
+        ("healthy-page", "healthy-page", 1002),
+    ):
+        entries[artifact_id] = {
+            "artifact_id": artifact_id,
+            "local_path": f"course1/sprints/sprint-0/{slug}.md",
+            "canvas_type": "page",
+            "canvas_id": cid,
+            "canvas_page_url": slug,
+            "canvas_module_id": 55,
+            "content_hash": "f" * 64,
+            "canvas_fingerprint": "a" * 64,
+        }
+    path.write_text(
+        json.dumps(
+            {
+                "instance": {
+                    "name": "production",
+                    "base_url": "https://example.instructure.com/",
+                    "course_id": 12345,
+                    "term": "Test Term",
+                },
+                "last_sync": None,
+                "artifacts": entries,
+            }
+        ),
+        encoding="utf-8",
+    )
 
 
 def write_state(path: Path, *, hash_value: str, fingerprint: str = "a" * 64) -> None:
@@ -178,6 +237,44 @@ class PublishChangedTests(unittest.TestCase):
             self.assertEqual(result["published"], [])
             push.assert_not_called()
 
+    def test_one_drifted_artifact_does_not_block_the_others(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            drifted_md = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            healthy_md = repo_root / "course1" / "sprints" / "sprint-0" / "healthy-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            state_path = state_dir / "course1" / "production.json"
+            write_page(drifted_md, body="Edited while canvas drifted.")
+            write_page_with_id(healthy_md, "healthy-page", "Healthy Page", "healthy-page")
+            write_manifest(manifest_path)
+            write_two_entry_state(state_path)
+            drifted = [
+                {
+                    "file": "course1/sprints/sprint-0/stable-page.md",
+                    "artifact_id": "stable-page",
+                    "reason": "canvas changed since last state-backed publish",
+                }
+            ]
+            pushed = {"artifact_id": "healthy-page", "action": "updated"}
+
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(publish_changed, "drift_for_changed", return_value=drifted):
+                    with patch.object(
+                        publish_changed, "push_artifact", return_value=pushed
+                    ) as push:
+                        result = publish_changed.publish_manifest(
+                            manifest_path,
+                            state_dir,
+                            dry_run=False,
+                            check_drift=True,
+                            require_state=True,
+                        )
+
+            self.assertEqual(result["drifted"], drifted)
+            self.assertEqual(result["published"], [pushed])
+            push.assert_called_once_with(healthy_md, manifest_path, state_dir=state_dir)
+
     def test_require_state_fails_when_state_file_is_missing(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()
@@ -296,6 +393,158 @@ class PublishChangedTests(unittest.TestCase):
             self.assertTrue((output_dir / "deanza" / "course1" / "home.html").exists())
             drift.assert_not_called()
             push.assert_not_called()
+
+
+class ReportFileTests(unittest.TestCase):
+    def test_report_file_written_alongside_stdout(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            report_path = repo_root / "out" / "publish-result.json"
+            write_page(md_path, body="Changed body.")
+            write_manifest(manifest_path)
+            write_state(state_dir / "course1" / "production.json", hash_value="1" * 64)
+
+            argv = [
+                "publish_changed.py",
+                "--manifest",
+                str(manifest_path),
+                "--state-dir",
+                str(state_dir),
+                "--dry-run",
+                "--report-file",
+                str(report_path),
+            ]
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(sys, "argv", argv):
+                    exit_code = publish_changed.main()
+
+            self.assertEqual(exit_code, 0)
+            report = json.loads(report_path.read_text(encoding="utf-8"))
+            self.assertEqual(len(report["results"]), 1)
+            self.assertEqual(
+                report["results"][0]["changed"],
+                [{"file": "course1/sprints/sprint-0/stable-page.md", "artifact_id": "stable-page"}],
+            )
+
+
+class DriftSelfHealTests(unittest.TestCase):
+    """Missing state is healed during publish; only real drift refuses."""
+
+    LIVE_PAGE = {"page_id": 1001, "url": "stable-page", "title": "Stable Page", "body": "x", "published": True}
+
+    def _drift(self, entry: dict | None, live: dict | None):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            write_manifest(manifest_path)
+            changed = [
+                {
+                    "file": "course1/sprints/sprint-0/stable-page.md",
+                    "artifact_id": "stable-page",
+                    "state_entry": entry,
+                }
+            ]
+            with patch.object(publish_changed.CanvasClient, "from_env", return_value=object()):
+                with patch.object(publish_changed, "fetch_canvas_state", return_value=live):
+                    drifted = publish_changed.drift_for_changed(manifest_path, changed)
+            return drifted, changed[0]
+
+    def test_missing_fingerprint_with_canvas_id_is_healed_not_drifted(self) -> None:
+        entry = {"canvas_type": "page", "canvas_id": 1001, "canvas_page_url": "stable-page"}
+        drifted, item = self._drift(entry, self.LIVE_PAGE)
+        self.assertEqual(drifted, [])
+        self.assertEqual(
+            item["healed_fingerprint"],
+            publish_changed.canvas_fingerprint(self.LIVE_PAGE, "page"),
+        )
+
+    def test_no_canvas_identity_is_first_time_publish(self) -> None:
+        entry = {"canvas_type": "page", "canvas_id": None, "canvas_page_url": None}
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            write_manifest(manifest_path)
+            changed = [
+                {
+                    "file": "course1/sprints/sprint-0/stable-page.md",
+                    "artifact_id": "stable-page",
+                    "state_entry": entry,
+                }
+            ]
+            with patch.object(publish_changed.CanvasClient, "from_env", return_value=object()):
+                with patch.object(publish_changed, "fetch_canvas_state") as fetch:
+                    drifted = publish_changed.drift_for_changed(manifest_path, changed)
+        self.assertEqual(drifted, [])
+        self.assertTrue(changed[0]["first_publish"])
+        fetch.assert_not_called()
+
+    def test_matching_fingerprint_is_not_drifted(self) -> None:
+        fingerprint = publish_changed.canvas_fingerprint(self.LIVE_PAGE, "page")
+        entry = {
+            "canvas_type": "page",
+            "canvas_id": 1001,
+            "canvas_page_url": "stable-page",
+            "canvas_fingerprint": fingerprint,
+        }
+        drifted, _ = self._drift(entry, self.LIVE_PAGE)
+        self.assertEqual(drifted, [])
+
+    def test_real_drift_still_refuses(self) -> None:
+        entry = {
+            "canvas_type": "page",
+            "canvas_id": 1001,
+            "canvas_page_url": "stable-page",
+            "canvas_fingerprint": "b" * 64,
+        }
+        drifted, _ = self._drift(entry, self.LIVE_PAGE)
+        self.assertEqual(len(drifted), 1)
+        self.assertEqual(drifted[0]["reason"], "canvas changed since last state-backed publish")
+
+    def test_missing_canvas_object_still_refuses(self) -> None:
+        entry = {"canvas_type": "page", "canvas_id": 1001, "canvas_page_url": "stable-page"}
+        drifted, _ = self._drift(entry, None)
+        self.assertEqual(len(drifted), 1)
+        self.assertEqual(drifted[0]["reason"], "canvas object is missing")
+
+    def test_publish_manifest_heals_and_publishes_missing_fingerprint_entry(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            state_path = state_dir / "course1" / "production.json"
+            write_page(md_path, body="Edited after fingerprint went missing.")
+            write_manifest(manifest_path)
+            write_state(state_path, hash_value="9" * 64)
+            state = json.loads(state_path.read_text(encoding="utf-8"))
+            del state["artifacts"]["stable-page"]["canvas_fingerprint"]
+            state_path.write_text(json.dumps(state), encoding="utf-8")
+
+            pushed = {"artifact_id": "stable-page", "action": "updated"}
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(publish_changed.CanvasClient, "from_env", return_value=object()):
+                    with patch.object(
+                        publish_changed, "fetch_canvas_state", return_value=self.LIVE_PAGE
+                    ):
+                        with patch.object(
+                            publish_changed, "push_artifact", return_value=pushed
+                        ) as push:
+                            result = publish_changed.publish_manifest(
+                                manifest_path,
+                                state_dir,
+                                dry_run=False,
+                                check_drift=True,
+                                require_state=True,
+                            )
+
+            self.assertEqual(result["drifted"], [])
+            self.assertEqual(result["published"], [pushed])
+            self.assertEqual(len(result["healed"]), 1)
+            self.assertIn("hydrated missing canvas_fingerprint", result["healed"][0]["reason"])
+            push.assert_called_once()
 
 
 if __name__ == "__main__":

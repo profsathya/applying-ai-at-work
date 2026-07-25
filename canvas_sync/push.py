@@ -139,6 +139,51 @@ def guard_canvas_type_migration(
     )
 
 
+def canvas_payload_matches_live(
+    *,
+    md_path: Path,
+    manifest_path: Path,
+    manifest: dict,
+    canvas_fm: dict,
+    canvas_artifact_type: str,
+    existing: dict,
+    live_state: dict,
+    completion_requirement: dict | None,
+) -> bool:
+    """True when publishing would leave the Canvas object unchanged.
+
+    For hosted courses the Canvas body is only the iframe shell, so a
+    body-text-only edit keeps the whole Canvas payload identical: same shell,
+    same title, same points, same published flag, same due date, same module
+    completion requirement. In that case the Canvas API write can be skipped
+    and the hosted page alone carries the change.
+    """
+    # Imported here, not at module level: hydrate_state pulls in
+    # inspect_canvas, which imports back from this module.
+    from canvas_sync.hydrate_state import hosted_canvas_drift
+
+    if hosted_canvas_drift(md_path, manifest_path, manifest, live_state, canvas_artifact_type):
+        return False
+    if live_state.get("published") != canvas_fm.get("publish", True):
+        return False
+    if canvas_fm.get("due"):
+        live_due = live_state.get("due_at")
+        if live_state.get("assignment"):
+            live_due = live_state["assignment"].get("due_at", live_due)
+        if live_due != canvas_fm["due"]:
+            return False
+    if completion_requirement_state_value(completion_requirement) != existing.get(
+        "completion_requirement"
+    ):
+        return False
+    if canvas_artifact_type == "assignment":
+        submission_type = canvas_fm.get("submission_type", "text_entry")
+        expected_submission = CANVAS_SUBMISSION_TYPE_MAP.get(submission_type, submission_type)
+        if list(live_state.get("submission_types") or []) != [expected_submission]:
+            return False
+    return True
+
+
 def push_assignment(client: CanvasClient, fm: dict, html: str, existing_id: int | None) -> dict:
     submission_type = fm.get("submission_type", "text_entry")
     canvas_submission_type = CANVAS_SUBMISSION_TYPE_MAP.get(submission_type, submission_type)
@@ -299,6 +344,70 @@ def push_artifact(
             html = iframe_shell(hosted_info["hosted_url"], fm["title"])
 
         action = "updated" if (existing_id or existing_page_url) else "created"
+
+        # Content-only fast path: when the hosted iframe design means the
+        # Canvas-side payload is identical (only hosted body text changed),
+        # regenerate the hosted HTML and record state without any Canvas API
+        # write. Quizzes are excluded because their native questions are not
+        # covered by the hosted payload comparison. Requires hosted_output_dir
+        # so the change always lands somewhere.
+        if (
+            action == "updated"
+            and hosted_output_dir is not None
+            and hosted_info["enabled"]
+            and artifact_type != "module_header"
+            and canvas_artifact_type != "quiz"
+        ):
+            live_state = fetch_canvas_state(client, existing)
+            if live_state is not None and canvas_payload_matches_live(
+                md_path=md_path,
+                manifest_path=manifest_path,
+                manifest=manifest,
+                canvas_fm=canvas_fm,
+                canvas_artifact_type=canvas_artifact_type,
+                existing=existing,
+                live_state=live_state,
+                completion_requirement=completion_requirement,
+            ):
+                pushed_at = utc_now()
+                entry = dict(existing)
+                entry["content_hash"] = content_hash(md_path)
+                entry["last_pushed"] = pushed_at
+                entry["hosted_path"] = hosted_info["hosted_path"]
+                entry["hosted_url"] = hosted_info["hosted_url"]
+                if store.external:
+                    fingerprint = canvas_fingerprint(live_state, canvas_artifact_type)
+                    if fingerprint:
+                        entry["canvas_fingerprint"] = fingerprint
+                artifacts[state_key] = entry
+                hosted_result = render_hosted_artifact(
+                    md_path,
+                    manifest_path,
+                    hosted_output_dir,
+                    manifest=manifest,
+                    state=deployment_state,
+                )
+                entry["hosted_hash"] = hosted_result["hosted_hash"]
+                entry["hosted_last_rendered"] = pushed_at
+                render_hosted_files(
+                    manifest_path,
+                    hosted_output_dir,
+                    discover_hosted_artifact_files(manifest_path),
+                    manifest=manifest,
+                    state=deployment_state,
+                )
+                deployment_state["last_sync"] = pushed_at
+                store.save(deployment_state, state_path)
+                return {
+                    "action": "content_update",
+                    "note": "content update - live via hosted page",
+                    "file": rel_path,
+                    "artifact_id": artifact_id,
+                    "canvas_id": existing.get("canvas_id"),
+                    "canvas_module_id": existing.get("canvas_module_id"),
+                    "state_path": str(state_path),
+                    "hosted_url": entry.get("hosted_url"),
+                }
 
         if canvas_artifact_type == "assignment":
             result = push_assignment(client, canvas_fm, html, existing_id)
