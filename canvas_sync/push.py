@@ -176,6 +176,11 @@ def canvas_payload_matches_live(
         "completion_requirement"
     ):
         return False
+    if canvas_artifact_type == "assignment":
+        submission_type = canvas_fm.get("submission_type", "text_entry")
+        expected_submission = CANVAS_SUBMISSION_TYPE_MAP.get(submission_type, submission_type)
+        if list(live_state.get("submission_types") or []) != [expected_submission]:
+            return False
     return True
 
 
