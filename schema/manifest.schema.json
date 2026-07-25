@@ -23,6 +23,10 @@
         },
         "term": {
           "type": "string"
+        },
+        "enabled": {
+          "type": "boolean",
+          "description": "Set false on scaffold profiles to make every Canvas-touching tool refuse to run against this instance. Absent means enabled."
         }
       }
     },

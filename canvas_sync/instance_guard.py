@@ -28,6 +28,32 @@ class InstanceMismatchError(ValueError):
     """
 
 
+class InstanceDisabledError(ValueError):
+    """Raised when the selected profile is a scaffold with instance.enabled false."""
+
+
+def check_instance_enabled(
+    manifest: dict, *, manifest_label: str = "the selected profile"
+) -> None:
+    """Refuse Canvas runs against an unfinished scaffold profile.
+
+    A manifest may mark its instance block with ``"enabled": false`` while the
+    profile is still a scaffold (placeholder course id, no hosted config).
+    Every Canvas-touching entry point calls this before building a client, so
+    a scaffold can never be hit by accident. An absent flag means enabled, so
+    existing production manifests behave exactly as before.
+    """
+    instance = manifest.get("instance") or {}
+    if instance.get("enabled") is False:
+        name = instance.get("name") or "this instance"
+        raise InstanceDisabledError(
+            f"Refusing to run against Canvas: {manifest_label} ({name!r}) is a "
+            "scaffold profile with instance.enabled set to false. Finish the "
+            "profile first (see the manifest's _setup_note and "
+            "docs/CLOUD_SETUP.md), then set instance.enabled to true."
+        )
+
+
 def _host(url: str) -> str:
     """Normalize a Canvas URL to a bare, lowercase host for comparison.
 

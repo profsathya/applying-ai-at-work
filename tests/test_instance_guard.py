@@ -91,27 +91,57 @@ class GuardWiredIntoManifestEntryPointsTest(unittest.TestCase):
     """The guard is enforced by manifest-backed entry points, not only push.py.
 
     Each check runs before the Canvas client is built, so a mismatch raises
-    without any network call. We use the De Anza profile (base_url deanza) with
-    a CTI CANVAS_API_URL to force the mismatch.
+    without any network call. We use a De Anza-style manifest (base_url deanza,
+    instance enabled) with a CTI CANVAS_API_URL to force the mismatch. The repo
+    deanza.json scaffold is not used here because its instance.enabled false
+    guard fires first.
     """
 
     MISMATCH_ENV = {"CANVAS_API_URL": "https://cti-courses.instructure.com"}
 
+    def _write_enabled_deanza_manifest(self, tmp: str) -> Path:
+        manifest_path = Path(tmp) / "course1" / "manifests" / "production.json"
+        manifest_path.parent.mkdir(parents=True, exist_ok=True)
+        manifest_path.write_text(
+            json.dumps(
+                {
+                    "instance": {
+                        "name": "deanza",
+                        "base_url": "https://deanza.instructure.com/",
+                        "course_id": 999999999,
+                        "term": "TBD",
+                    },
+                    "last_sync": None,
+                    "artifacts": {},
+                }
+            ),
+            encoding="utf-8",
+        )
+        return manifest_path
+
     def test_inspect_canvas_refuses_on_mismatch(self):
+        import tempfile
+
         from canvas_sync import inspect_canvas
 
-        with mock.patch.dict(os.environ, self.MISMATCH_ENV):
-            with self.assertRaises(InstanceMismatchError):
-                inspect_canvas.build_report(
-                    DEANZA_MANIFEST, include_items=False, include_drift=False
-                )
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest_path = self._write_enabled_deanza_manifest(tmp)
+            with mock.patch.dict(os.environ, self.MISMATCH_ENV):
+                with self.assertRaises(InstanceMismatchError):
+                    inspect_canvas.build_report(
+                        manifest_path, include_items=False, include_drift=False
+                    )
 
     def test_publish_changed_drift_refuses_on_mismatch(self):
+        import tempfile
+
         from canvas_sync import publish_changed
 
-        with mock.patch.dict(os.environ, self.MISMATCH_ENV):
-            with self.assertRaises(InstanceMismatchError):
-                publish_changed.drift_for_changed(DEANZA_MANIFEST, [])
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest_path = self._write_enabled_deanza_manifest(tmp)
+            with mock.patch.dict(os.environ, self.MISMATCH_ENV):
+                with self.assertRaises(InstanceMismatchError):
+                    publish_changed.drift_for_changed(manifest_path, [])
 
 
 if __name__ == "__main__":

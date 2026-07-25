@@ -17,8 +17,32 @@ from pathlib import Path
 from unittest.mock import patch
 
 from canvas_sync import push
+from canvas_sync.completion import completion_requirement_for
 from canvas_sync.hosted_html import artifact_hosted_info, iframe_shell
+from canvas_sync.schema import parse_frontmatter
 from canvas_sync.state import state_path_for_manifest
+
+
+def stored_payload_hash(md_path: Path, manifest_path: Path, *, override_fm: dict | None = None) -> str:
+    """The canvas_payload_hash a previous publish of this artifact recorded.
+
+    override_fm simulates the PREVIOUS frontmatter (e.g. with a due date or a
+    different module) so tests can prove a change falls back to a real write.
+    """
+    fm, _body = parse_frontmatter(md_path)
+    if override_fm:
+        fm = {**fm, **override_fm}
+    canvas_fm = push.frontmatter_for_canvas_push(fm)
+    canvas_type = push.canvas_type_for(fm)
+    completion = completion_requirement_for(fm, canvas_type)
+    hosted_url = artifact_hosted_info(md_path, manifest_path, None, fm)["hosted_url"]
+    return push.canvas_payload_hash(canvas_fm, canvas_type, completion, hosted_url=hosted_url)
+
+
+def set_state_entry_fields(state_path: Path, artifact_id: str, **fields) -> None:
+    state = json.loads(state_path.read_text(encoding="utf-8"))
+    state["artifacts"][artifact_id].update(fields)
+    state_path.write_text(json.dumps(state), encoding="utf-8")
 
 
 @contextmanager
@@ -144,8 +168,13 @@ class FakeClient:
         return {"id": 9001}
 
 
-def write_assignment(path: Path, *, submission_type: str = "text_entry") -> None:
+def write_assignment(
+    path: Path, *, submission_type: str = "text_entry", rubric: bool = False
+) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
+    rubric_block = (
+        "rubric:\n- description: Clear reasoning\n  points: 5\n" if rubric else ""
+    )
     path.write_text(
         f"""---
 type: assignment
@@ -158,7 +187,7 @@ position: 2
 points: 10
 submission_type: {submission_type}
 publish: false
----
+{rubric_block}---
 
 # Tuple Lab
 
@@ -208,6 +237,11 @@ class ContentOnlyFastPathTests(unittest.TestCase):
         write_page(md_path, body="Edited hosted body text only.")
         write_manifest(manifest_path)
         write_state(state_dir / "course1" / "production.json")
+        set_state_entry_fields(
+            state_dir / "course1" / "production.json",
+            "tuple-overview",
+            canvas_payload_hash=stored_payload_hash(md_path, manifest_path),
+        )
 
         hosted_url = artifact_hosted_info(md_path, manifest_path)["hosted_url"]
         live_page = {
@@ -276,6 +310,11 @@ class ContentOnlyFastPathTests(unittest.TestCase):
         write_assignment(md_path, submission_type=fm_submission_type)
         write_manifest(manifest_path)
         write_assignment_state(state_dir / "course1" / "production.json")
+        set_state_entry_fields(
+            state_dir / "course1" / "production.json",
+            "tuple-lab",
+            canvas_payload_hash=stored_payload_hash(md_path, manifest_path),
+        )
 
         hosted_url = artifact_hosted_info(md_path, manifest_path)["hosted_url"]
         live_assignment = {
@@ -334,6 +373,149 @@ class ContentOnlyFastPathTests(unittest.TestCase):
 
             self.assertEqual(result["action"], "updated")
             self.assertIn("update_assignment", client.writes)
+
+    def test_missing_stored_payload_hash_falls_back(self) -> None:
+        """Uncertain means write: entries from before the hash existed re-publish."""
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root, md_path, manifest_path, state_dir, client, output_dir = self._setup(tmp)
+            state_path = state_dir / "course1" / "production.json"
+            state = json.loads(state_path.read_text(encoding="utf-8"))
+            del state["artifacts"]["tuple-overview"]["canvas_payload_hash"]
+            state_path.write_text(json.dumps(state), encoding="utf-8")
+
+            with chdir(repo_root):
+                with patch.object(push.CanvasClient, "from_env", return_value=client):
+                    with patch.object(push, "resolve_or_create_module", return_value=55):
+                        result = push.push_artifact(
+                            md_path, manifest_path, state_dir=state_dir,
+                            hosted_output_dir=output_dir,
+                        )
+
+            self.assertEqual(result["action"], "updated")
+            self.assertIn("update_page", client.writes)
+
+    def test_due_removal_falls_back_to_canvas_write(self) -> None:
+        """State hash was recorded with a due date; local fm no longer has one."""
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root, md_path, manifest_path, state_dir, client, output_dir = (
+                self._setup_assignment(
+                    tmp,
+                    fm_submission_type="text_entry",
+                    live_submission_types=["online_text_entry"],
+                )
+            )
+            set_state_entry_fields(
+                state_dir / "course1" / "production.json",
+                "tuple-lab",
+                canvas_payload_hash=stored_payload_hash(
+                    md_path, manifest_path, override_fm={"due": "2026-10-15T23:59:00Z"}
+                ),
+            )
+
+            with chdir(repo_root):
+                with patch.object(push.CanvasClient, "from_env", return_value=client):
+                    with patch.object(push, "resolve_or_create_module", return_value=55):
+                        result = push.push_artifact(
+                            md_path, manifest_path, state_dir=state_dir,
+                            hosted_output_dir=output_dir,
+                        )
+
+            self.assertEqual(result["action"], "updated")
+            self.assertIn("update_assignment", client.writes)
+
+    def test_module_rename_falls_back_to_canvas_write(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root, md_path, manifest_path, state_dir, client, output_dir = self._setup(tmp)
+            set_state_entry_fields(
+                state_dir / "course1" / "production.json",
+                "tuple-overview",
+                canvas_payload_hash=stored_payload_hash(
+                    md_path, manifest_path, override_fm={"module": "Old Module Name"}
+                ),
+            )
+
+            with chdir(repo_root):
+                with patch.object(push.CanvasClient, "from_env", return_value=client):
+                    with patch.object(push, "resolve_or_create_module", return_value=55):
+                        result = push.push_artifact(
+                            md_path, manifest_path, state_dir=state_dir,
+                            hosted_output_dir=output_dir,
+                        )
+
+            self.assertEqual(result["action"], "updated")
+            self.assertIn("update_page", client.writes)
+
+    def test_position_change_falls_back_to_canvas_write(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root, md_path, manifest_path, state_dir, client, output_dir = self._setup(tmp)
+            set_state_entry_fields(
+                state_dir / "course1" / "production.json",
+                "tuple-overview",
+                canvas_payload_hash=stored_payload_hash(
+                    md_path, manifest_path, override_fm={"position": 9}
+                ),
+            )
+
+            with chdir(repo_root):
+                with patch.object(push.CanvasClient, "from_env", return_value=client):
+                    with patch.object(push, "resolve_or_create_module", return_value=55):
+                        result = push.push_artifact(
+                            md_path, manifest_path, state_dir=state_dir,
+                            hosted_output_dir=output_dir,
+                        )
+
+            self.assertEqual(result["action"], "updated")
+            self.assertIn("update_page", client.writes)
+
+    def test_rubric_change_warns_on_fast_path(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-99" / "tuple-lab.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            output_dir = repo_root / "Common-Curriculum"
+            write_assignment(md_path, rubric=True)
+            write_manifest(manifest_path)
+            write_assignment_state(state_dir / "course1" / "production.json")
+            old_rubric_hash = push.rubric_fingerprint(
+                {"rubric": [{"description": "Old criterion", "points": 3}]}
+            )
+            set_state_entry_fields(
+                state_dir / "course1" / "production.json",
+                "tuple-lab",
+                canvas_payload_hash=stored_payload_hash(md_path, manifest_path),
+                rubric_hash=old_rubric_hash,
+            )
+
+            hosted_url = artifact_hosted_info(md_path, manifest_path)["hosted_url"]
+            client = FakeClient(
+                live_assignment={
+                    "id": 2001,
+                    "name": "Tuple Lab",
+                    "description": iframe_shell(hosted_url, "Tuple Lab"),
+                    "points_possible": 10,
+                    "published": False,
+                    "submission_types": ["online_text_entry"],
+                }
+            )
+
+            with chdir(repo_root):
+                with patch.object(push.CanvasClient, "from_env", return_value=client):
+                    result = push.push_artifact(
+                        md_path, manifest_path, state_dir=state_dir,
+                        hosted_output_dir=output_dir,
+                    )
+
+            self.assertEqual(result["action"], "content_update")
+            self.assertEqual(result["warnings"], [push.RUBRIC_WARNING])
+            # Rubric hash recorded, so an unchanged rerun would not warn again.
+            state = json.loads(
+                (state_dir / "course1" / "production.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(
+                state["artifacts"]["tuple-lab"]["rubric_hash"],
+                push.rubric_fingerprint({"rubric": [{"description": "Clear reasoning", "points": 5}]}),
+            )
 
     def test_without_hosted_output_dir_normal_push_runs(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

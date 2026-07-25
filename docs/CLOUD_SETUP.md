@@ -73,6 +73,25 @@ your login survives a container REBUILD, not just stop/start. You sign in once
 and stay signed in across rebuilds. The volumes are per user and per Codespace;
 they are not shared and are never committed.
 
+## Two credential models
+
+Canvas credentials appear in two different places, for two different kinds of
+use. Do not mix them up:
+
+- **Per-user Codespaces secrets** (`CANVAS_API_URL`, `CANVAS_API_TOKEN` under
+  your own GitHub account) power interactive and local-style use: read-only
+  inspections, approved sandbox pushes, and admin repair from a Codespace or a
+  local clone. Each instructor supplies their own token for their own Canvas
+  instance, and the token never leaves their account.
+- **Centrally managed Action secrets** (the `canvas-production` GitHub
+  Environment on this repository) power the normal merge-publish flow: merge
+  to `main` and the protected `Publish Canvas` workflow uses the central
+  credentials to update Canvas. Only the repo maintainer manages these.
+
+Content editors need NEITHER. Editing happens in Markdown through a pull
+request; the merge triggers the centrally credentialed workflow. See
+`docs/CONTENT_TEAM_GUIDE.md`.
+
 ## Select an institution profile when you run (the instance selector)
 
 Each institution is a separate manifest under `course1/manifests/`:
@@ -122,11 +141,14 @@ clearly-marked placeholder, and it has no per-item Canvas IDs yet. To finish it
    before any Canvas call until this block is set. Copy the shape from
    `course1/manifests/production.json` and set your own De Anza hosted
    `base_url`, `path_prefix`, and `progress_endpoint`.
-4. Set your Codespaces secrets (or local `.env`) so `CANVAS_API_URL` is
+4. Set `instance.enabled` to `true` in `course1/manifests/deanza.json`. While
+   it is `false`, every Canvas-touching tool refuses to run against this
+   profile, so an unfinished scaffold can never be hit by accident.
+5. Set your Codespaces secrets (or local `.env`) so `CANVAS_API_URL` is
    `https://deanza.instructure.com` and `CANVAS_API_TOKEN` is your De Anza
    token.
-5. Validate: `python canvas_sync/schema.py --manifest course1/manifests/deanza.json`.
-6. Run the repo's normal bootstrap / inspect / publish flow against the De Anza
+6. Validate: `python canvas_sync/schema.py --manifest course1/manifests/deanza.json`.
+7. Run the repo's normal bootstrap / inspect / publish flow against the De Anza
    profile to populate the per-item Canvas IDs. Inspect first (read-only), then
    publish only after review and explicit approval. See `README.md` and
    `README-BUILDER.md` for the publish flow.
