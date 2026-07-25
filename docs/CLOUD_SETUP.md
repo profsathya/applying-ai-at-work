@@ -73,6 +73,25 @@ your login survives a container REBUILD, not just stop/start. You sign in once
 and stay signed in across rebuilds. The volumes are per user and per Codespace;
 they are not shared and are never committed.
 
+## Two credential models
+
+Canvas credentials appear in two different places, for two different kinds of
+use. Do not mix them up:
+
+- **Per-user Codespaces secrets** (`CANVAS_API_URL`, `CANVAS_API_TOKEN` under
+  your own GitHub account) power interactive and local-style use: read-only
+  inspections, approved sandbox pushes, and admin repair from a Codespace or a
+  local clone. Each instructor supplies their own token for their own Canvas
+  instance, and the token never leaves their account.
+- **Centrally managed Action secrets** (the `canvas-production` GitHub
+  Environment on this repository) power the normal merge-publish flow: merge
+  to `main` and the protected `Publish Canvas` workflow uses the central
+  credentials to update Canvas. Only the repo maintainer manages these.
+
+Content editors need NEITHER. Editing happens in Markdown through a pull
+request; the merge triggers the centrally credentialed workflow. See
+`docs/CONTENT_TEAM_GUIDE.md`.
+
 ## Select an institution profile when you run (the instance selector)
 
 Each institution is a separate manifest under `course1/manifests/`:

@@ -14,10 +14,12 @@ just *displays* it.
 
 1. **You change the text** — through the chat app (or on the GitHub site)
 2. **The system rebuilds the page** — automatically, after you approve
-3. **Canvas shows the new version** — on its own, within ~10 minutes
+3. **Canvas shows the new version** — usually within ~10 minutes; you'll get a
+   confirmation either way
 
-That's why we **never edit inside Canvas** — the system would overwrite it on
-the next rebuild.
+That's why we **never edit inside Canvas** — the system manages the Canvas
+pages, so edits made inside Canvas don't stick and will conflict with
+publishing. Always change the Markdown instead.
 
 ## One-time setup
 
@@ -49,8 +51,9 @@ The everyday routine — three small steps.
    showing exactly what changed. Look it over — that Merge click is your
    approval, and nothing changes until you make it.
 
-3. **It goes live on its own.** The page updates within about 10 minutes, and
-   you get a plain confirmation that it worked — or a plain reason it didn't.
+3. **It goes live on its own.** The page usually updates within about 10
+   minutes, and you get a plain confirmation that it worked — or a plain
+   reason it didn't, either way.
 
 > **Tip:** the more specific you are — page title, current text, desired
 > text — the better the first draft.
@@ -69,8 +72,9 @@ Maintainer: ______
 
 ## Three things to remember
 
-- **Edit the text files, not Canvas.** Changes made inside Canvas get
-  overwritten by the system.
+- **Edit the text files, not Canvas.** The system manages the Canvas pages, so
+  edits made inside Canvas don't stick and will conflict with publishing.
+  Always change the Markdown instead.
 - **Content questions go to the team.** The tools faithfully publish whatever
   we decide a page should say.
 - **Wondering if it's live?** Ask the app "did my change go live?" — or just
