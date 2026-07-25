@@ -144,6 +144,11 @@ RUBRIC_WARNING = (
     "rubric changes are not auto-published - apply the rubric in Canvas manually"
 )
 
+MODULE_MOVE_WARNING = (
+    "module change detected but the canvas module item id is unknown - "
+    "move the item in Canvas manually"
+)
+
 # Sentinel content hash marking a provisional state entry: identity was saved
 # right after Canvas creation, but the publish did not complete. Never matches
 # a real sha256 of file content, so the artifact stays detected as changed.
@@ -257,9 +262,10 @@ def push_assignment(client: CanvasClient, fm: dict, html: str, existing_id: int 
         "points_possible": fm.get("points"),
         "submission_types": [canvas_submission_type],
         "published": fm.get("publish", True),
+        # Always explicit: a removed frontmatter due must CLEAR the Canvas due
+        # date (due_at null), not silently keep the old one.
+        "due_at": fm.get("due"),
     }
-    if fm.get("due"):
-        payload["due_at"] = fm["due"]
 
     if existing_id:
         return client.update_assignment(existing_id, payload)
@@ -301,9 +307,8 @@ def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None
         "quiz_type": "assignment",
         "points_possible": fm.get("points"),
         "published": fm.get("publish", True),
+        "due_at": fm.get("due"),
     }
-    if fm.get("due"):
-        payload["due_at"] = fm["due"]
 
     if existing_id:
         result = client.update_quiz(existing_id, payload)
@@ -456,6 +461,8 @@ def push_artifact(
                 entry["hosted_url"] = hosted_info["hosted_url"]
                 entry["canvas_payload_hash"] = new_payload_hash
                 entry["rubric_hash"] = new_rubric_hash
+                if fm.get("position") is not None:
+                    entry["position"] = fm["position"]
                 if store.external:
                     fingerprint = canvas_fingerprint(live_state, canvas_artifact_type)
                     if fingerprint:
@@ -598,6 +605,44 @@ def push_artifact(
                 "module completion requirement through the artifact push path"
             )
 
+        # Apply module and position changes to the EXISTING module item: a
+        # renamed module or a changed position must actually move/reposition
+        # the item, not just resolve a module id. A failure here propagates,
+        # so state keeps the old, true location and the item reports failed.
+        module_move_blocked = False
+        if (
+            canvas_artifact_type != "module_header"
+            and action == "updated"
+            and not provisional_retry
+        ):
+            current_module_id = existing.get("canvas_module_id")
+            needs_move = (
+                current_module_id is not None and int(module_id) != int(current_module_id)
+            )
+            if canvas_module_item_id:
+                stored_position = existing.get("position")
+                needs_reposition = (
+                    fm.get("position") is not None
+                    and fm.get("position") != stored_position
+                )
+                if needs_move or needs_reposition:
+                    move_payload = {}
+                    if needs_move:
+                        move_payload["module_id"] = module_id
+                    if fm.get("position") is not None:
+                        move_payload["position"] = fm["position"]
+                    client.update_module_item(
+                        int(current_module_id) if current_module_id else int(module_id),
+                        int(canvas_module_item_id),
+                        move_payload,
+                    )
+            elif needs_move:
+                # The item's module item id is unknown (legacy state), so it
+                # cannot be moved through the API. Keep state at the old, true
+                # location and tell the maintainer.
+                module_move_blocked = True
+                warnings.append(MODULE_MOVE_WARNING)
+
         # Record successful module placement into the provisional entry right
         # away, so a failure in the remaining steps leaves a retry that knows
         # the object is already placed (no duplicate module item).
@@ -613,13 +658,18 @@ def push_artifact(
             store.save(deployment_state, state_path)
 
         pushed_at = utc_now()
+        # State records where the item ACTUALLY lives: when a module change
+        # could not be applied (unknown module item id), keep the old module.
+        recorded_module_id = (
+            existing.get("canvas_module_id") if module_move_blocked else module_id
+        )
         entry = entry_for_push(
             artifact_id=artifact_id,
             rel_path=rel_path,
             artifact_type=canvas_artifact_type,
             canvas_id=canvas_id,
             canvas_page_url=canvas_page_url,
-            canvas_module_id=module_id,
+            canvas_module_id=recorded_module_id,
             canvas_module_item_id=canvas_module_item_id,
             hash_value=content_hash(md_path),
             pushed_at=pushed_at,
@@ -633,6 +683,8 @@ def push_artifact(
         )
         entry["canvas_payload_hash"] = new_payload_hash
         entry["rubric_hash"] = new_rubric_hash
+        if fm.get("position") is not None:
+            entry["position"] = fm["position"]
         artifacts[state_key] = entry
         if hosted_info["enabled"] and artifact_type != "module_header" and hosted_output_dir:
             hosted_result = render_hosted_artifact(
