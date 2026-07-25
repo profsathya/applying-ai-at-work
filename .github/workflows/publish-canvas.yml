@@ -246,41 +246,38 @@ jobs:
       - name: Determine publish outcome
         id: outcome
         if: env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true'
+        working-directory: content
         run: |
           python3 - <<'PY'
           import json
           import os
+          import sys
 
-          published = failed = drifted = 0
-          hosted_ok = False
-          parsed = False
+          sys.path.insert(0, ".")
+          from canvas_sync.publish_outcome import summarize
+
           try:
-              with open("publish-result.json", encoding="utf-8") as fh:
-                  data = json.load(fh)
-              parsed = True
-              for result in data.get("results", []):
-                  published += len(result.get("published", []))
-                  failed += len(result.get("failed", []))
-                  drifted += len(result.get("drifted", []))
-                  hosted_ok = hosted_ok or bool(result.get("hosted"))
+              with open("../publish-result.json", encoding="utf-8") as fh:
+                  summary = summarize(json.load(fh).get("results", []))
           except (OSError, ValueError):
-              pass
-
-          clean = parsed and failed == 0 and drifted == 0
-          commit_state = published > 0 or clean
-          hosted_commit = published > 0 or hosted_ok or clean
+              summary = {
+                  "published": 0,
+                  "failed": 1,
+                  "hosted_ok": False,
+                  "clean": False,
+                  "commit_state": False,
+                  "hosted_commit": False,
+              }
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
-              out.write(f"published_count={published}\n")
-              out.write(f"failed_count={failed + drifted}\n")
-              out.write(f"commit_state={str(commit_state).lower()}\n")
-              out.write(f"hosted_commit={str(hosted_commit).lower()}\n")
-          print(
-              f"published={published} failed={failed} drifted={drifted} "
-              f"commit_state={commit_state} hosted_commit={hosted_commit}"
-          )
+              out.write(f"published_count={summary['published']}\n")
+              out.write(f"failed_count={summary['failed']}\n")
+              out.write(f"commit_state={str(summary['commit_state']).lower()}\n")
+              out.write(f"hosted_commit={str(summary['hosted_commit']).lower()}\n")
+          print(summary)
           PY
 
       - name: Commit Common Curriculum hosted changes
+        id: hosted
         if: (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true') && steps.outcome.outputs.hosted_commit == 'true'
         working-directory: common-curriculum
         env:
@@ -291,16 +288,95 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add deanza career-intelligence activities
           if git diff --cached --quiet; then
+            echo "cc_pushed=true" >> "$GITHUB_OUTPUT"
             echo "No Common Curriculum hosted changes to commit."
             exit 0
           fi
           if [ -z "${COMMON_CURRICULUM_TOKEN:-}" ]; then
+            echo "cc_pushed=false" >> "$GITHUB_OUTPUT"
             echo "::error::COMMON_CURRICULUM_TOKEN is required to push hosted Common Curriculum files."
-            exit 1
+            exit 0
           fi
           git commit -m "sync hosted canvas output for ${GITHUB_SHA}"
           git remote set-url origin "https://x-access-token:${COMMON_CURRICULUM_TOKEN}@github.com/profsathya/Common-Curriculum.git"
-          git push origin HEAD:main
+          if git push origin HEAD:main; then
+            echo "cc_pushed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "cc_pushed=false" >> "$GITHUB_OUTPUT"
+            echo "::error::Pushing hosted Common Curriculum files failed."
+          fi
+
+      - name: Reconcile content-only state with hosted deploy
+        if: always() && steps.hosted.outputs.cc_pushed == 'false'
+        working-directory: content
+        run: |
+          python3 - <<'PY'
+          import json
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          sys.path.insert(0, ".")
+          from canvas_sync.publish_outcome import demote_content_updates, revert_entries
+
+          report = Path("../publish-result.json")
+          try:
+              data = json.loads(report.read_text(encoding="utf-8"))
+          except (OSError, ValueError):
+              raise SystemExit(0)
+
+          adjusted, demoted = demote_content_updates(data.get("results", []))
+          state_root = Path("../canvas-state").resolve()
+          for state_path, artifact_ids in demoted.items():
+              state_file = Path(state_path)
+              rel = state_file.resolve().relative_to(state_root).as_posix()
+              show = subprocess.run(
+                  ["git", "-C", str(state_root), "show", f"HEAD:{rel}"],
+                  capture_output=True,
+                  text=True,
+              )
+              baseline = json.loads(show.stdout) if show.returncode == 0 else {"artifacts": {}}
+              current = json.loads(state_file.read_text(encoding="utf-8"))
+              reverted = revert_entries(current, baseline, artifact_ids)
+              state_file.write_text(
+                  json.dumps(reverted, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+              )
+          report.write_text(json.dumps({"results": adjusted}, indent=2) + "\n", encoding="utf-8")
+          print(f"demoted content-only items: {sum(len(v) for v in demoted.values())}")
+          PY
+
+      - name: Determine final outcome
+        id: outcome_final
+        if: always() && (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true')
+        working-directory: content
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import sys
+
+          sys.path.insert(0, ".")
+          from canvas_sync.publish_outcome import summarize
+
+          try:
+              with open("../publish-result.json", encoding="utf-8") as fh:
+                  summary = summarize(json.load(fh).get("results", []))
+          except (OSError, ValueError):
+              summary = {
+                  "published": 0,
+                  "failed": 1,
+                  "hosted_ok": False,
+                  "clean": False,
+                  "commit_state": False,
+                  "hosted_commit": False,
+              }
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+              out.write(f"published_count={summary['published']}\n")
+              out.write(f"failed_count={summary['failed']}\n")
+              out.write(f"commit_state={str(summary['commit_state']).lower()}\n")
+              out.write(f"hosted_commit={str(summary['hosted_commit']).lower()}\n")
+          print(summary)
+          PY
 
       - name: Validate state files
         id: validate_state
@@ -314,7 +390,7 @@ jobs:
           done
 
       - name: Commit canvas-state changes
-        if: always() && steps.validate_state.outcome == 'success' && steps.outcome.outputs.commit_state == 'true'
+        if: always() && steps.validate_state.outcome == 'success' && steps.outcome_final.outputs.commit_state == 'true'
         working-directory: canvas-state
         run: |
           set -euo pipefail
@@ -335,16 +411,42 @@ jobs:
         with:
           script: |
             const fs = require('fs');
+            const post = async (body) => {
+              try {
+                const prs = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  commit_sha: context.sha,
+                });
+                const merged = prs.data.find((pr) => pr.merge_commit_sha === context.sha) || prs.data[0];
+                if (merged) {
+                  await github.rest.issues.createComment({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: merged.number,
+                    body,
+                  });
+                  return;
+                }
+              } catch (error) {
+                core.info(`PR lookup failed, falling back to commit comment: ${error.message}`);
+              }
+              await github.rest.repos.createCommitComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                commit_sha: context.sha,
+                body,
+              });
+            };
             let data;
             try {
               data = JSON.parse(fs.readFileSync('publish-result.json', 'utf8'));
             } catch (error) {
-              core.info('No readable publish-result.json; skipping result comment.');
+              await post('**Canvas publish result**\n\n❌ The publish run failed before producing results. Check the Publish Canvas workflow logs.');
               return;
             }
-            const results = data.results || [];
             const lines = [];
-            for (const result of results) {
+            for (const result of data.results || []) {
               for (const item of result.published || []) {
                 const label = item.file || item.artifact_id;
                 if (item.action === 'content_update') {
@@ -365,35 +467,10 @@ jobs:
               core.info('No changed artifacts; skipping result comment.');
               return;
             }
-            const body = ['**Canvas publish result**', '', ...lines].join('\n');
-            try {
-              const prs = await github.rest.repos.listPullRequestsAssociatedWithCommit({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                commit_sha: context.sha,
-              });
-              const merged = prs.data.find((pr) => pr.merge_commit_sha === context.sha) || prs.data[0];
-              if (merged) {
-                await github.rest.issues.createComment({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  issue_number: merged.number,
-                  body,
-                });
-                return;
-              }
-            } catch (error) {
-              core.info(`PR lookup failed, falling back to commit comment: ${error.message}`);
-            }
-            await github.rest.repos.createCommitComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              commit_sha: context.sha,
-              body,
-            });
+            await post(['**Canvas publish result**', '', ...lines].join('\n'));
 
       - name: Fail if publish reported errors
-        if: (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true') && steps.publish.outcome == 'failure'
+        if: (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true') && (steps.publish.outcome == 'failure' || steps.outcome_final.outputs.failed_count != '0' || steps.hosted.outputs.cc_pushed == 'false')
         run: |
           echo "Publish reported per-item problems:"
           python3 - <<'PY'
