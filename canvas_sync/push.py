@@ -34,7 +34,7 @@ from canvas_sync.completion import (
     completion_requirement_for,
     completion_requirement_state_value,
 )
-from canvas_sync.instance_guard import check_env_matches_instance
+from canvas_sync.instance_guard import check_env_matches_instance, check_instance_enabled
 from canvas_sync.hosted_html import (
     artifact_hosted_info,
     discover_artifact_files as discover_hosted_artifact_files,
@@ -319,6 +319,7 @@ def push_artifact(
         # they match (the current CTI/production case), so behavior is
         # unchanged there. Prevents pointing one institution's token/URL at
         # another institution's profile (the silent 401).
+        check_instance_enabled(manifest, manifest_label=str(manifest_path))
         check_env_matches_instance(manifest, manifest_label=str(manifest_path))
 
         client = CanvasClient.from_env(course_id=course_id)

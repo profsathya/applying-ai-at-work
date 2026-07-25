@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient
-from canvas_sync.instance_guard import check_env_matches_instance
+from canvas_sync.instance_guard import check_env_matches_instance, check_instance_enabled
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.state import (
     CanvasStateStore,
@@ -135,6 +135,7 @@ def build_module_completion_plan(
         if not course_id:
             raise ValueError(f"{manifest_path}: manifest instance.course_id is required")
         if client is None:
+            check_instance_enabled(manifest, manifest_label=str(manifest_path))
             check_env_matches_instance(manifest, manifest_label=str(manifest_path))
         canvas = client or CanvasClient.from_env(course_id=course_id)
 

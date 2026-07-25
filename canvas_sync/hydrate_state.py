@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient
-from canvas_sync.instance_guard import check_env_matches_instance
+from canvas_sync.instance_guard import check_env_matches_instance, check_instance_enabled
 from canvas_sync.inspect_canvas import compute_inspection_drift
 from canvas_sync.hosted_html import artifact_hosted_info, iframe_shell
 from canvas_sync.pull import html_to_markdown
@@ -94,6 +94,7 @@ def hydrate_manifest(manifest_path: Path, state_dir: Path) -> dict:
         return result
 
     state = load_json(state_path)
+    check_instance_enabled(manifest, manifest_label=str(manifest_path))
     check_env_matches_instance(manifest, manifest_label=str(manifest_path))
     client = CanvasClient.from_env(course_id=int(manifest["instance"]["course_id"]))
     changed = False
