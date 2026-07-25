@@ -452,7 +452,9 @@ jobs:
               for (const item of result.published || []) {
                 const label = item.file || item.artifact_id;
                 if (item.action === 'content_update') {
-                  lines.push(`✅ ${label} - live (hosted page updated)`);
+                  lines.push(`✅ ${label} - deployment queued - usually live within a few minutes`);
+                } else if (item.hosted_url) {
+                  lines.push(`✅ ${label} - Canvas updated - hosted page deployment queued`);
                 } else {
                   lines.push(`✅ ${label} - live (Canvas updated)`);
                 }

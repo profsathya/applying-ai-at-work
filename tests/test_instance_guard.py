@@ -108,7 +108,7 @@ class GuardWiredIntoManifestEntryPointsTest(unittest.TestCase):
                     "instance": {
                         "name": "deanza",
                         "base_url": "https://deanza.instructure.com/",
-                        "course_id": 999999999,
+                        "course_id": 424242,
                         "term": "TBD",
                     },
                     "last_sync": None,

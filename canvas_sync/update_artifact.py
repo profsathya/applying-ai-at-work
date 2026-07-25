@@ -28,7 +28,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient, CanvasError
-from canvas_sync.instance_guard import check_env_matches_instance, check_instance_enabled
+from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
 from canvas_sync.pull import html_to_markdown
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 
@@ -238,7 +238,7 @@ def get_client(
     if client is not None:
         return client
     if manifest is not None:
-        check_instance_enabled(manifest, manifest_label=manifest_label)
+        check_instance_ready(manifest, manifest_label=manifest_label)
         check_env_matches_instance(manifest, manifest_label=manifest_label)
     return CanvasClient.from_env(course_id=course_id)
 

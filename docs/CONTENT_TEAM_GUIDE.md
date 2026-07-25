@@ -51,9 +51,9 @@ The everyday routine — three small steps.
    showing exactly what changed. Look it over — that Merge click is your
    approval, and nothing changes until you make it.
 
-3. **It goes live on its own.** The page usually updates within about 10
-   minutes, and you get a plain confirmation that it worked — or a plain
-   reason it didn't, either way.
+3. **It goes live on its own.** You get a plain confirmation for each change:
+   "deployment queued" means it is on its way and usually live within a few
+   minutes — or you get a plain reason it didn't go out, either way.
 
 > **Tip:** the more specific you are — page title, current text, desired
 > text — the better the first draft.

@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient
-from canvas_sync.instance_guard import check_env_matches_instance, check_instance_enabled
+from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
 from canvas_sync.hosted_html import (
     SHARED_OUTPUT_NAMES,
     artifact_hosted_output_paths,
@@ -102,7 +102,7 @@ def changed_artifacts(manifest_path: Path, state_dir: Path, *, require_state: bo
 def drift_for_changed(manifest_path: Path, changed: list[dict]) -> list[dict]:
     manifest = load_json(manifest_path)
     course_id = int(manifest["instance"]["course_id"])
-    check_instance_enabled(manifest, manifest_label=str(manifest_path))
+    check_instance_ready(manifest, manifest_label=str(manifest_path))
     check_env_matches_instance(manifest, manifest_label=str(manifest_path))
     client = CanvasClient.from_env(course_id=course_id)
     drifted: list[dict] = []
