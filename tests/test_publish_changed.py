@@ -395,6 +395,119 @@ class PublishChangedTests(unittest.TestCase):
             push.assert_not_called()
 
 
+class PerItemHardeningTests(unittest.TestCase):
+    """One bad artifact or one failed check never zeroes the batch."""
+
+    def test_invalid_artifact_fails_alone_and_others_publish(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            invalid_md = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            healthy_md = repo_root / "course1" / "sprints" / "sprint-0" / "healthy-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            write_page(invalid_md, body="Broken — em dash body.")
+            write_page_with_id(healthy_md, "healthy-page", "Healthy Page", "healthy-page")
+            write_manifest(manifest_path)
+            write_two_entry_state(state_dir / "course1" / "production.json")
+
+            pushed = {"artifact_id": "healthy-page", "action": "updated"}
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(
+                    publish_changed, "push_artifact", return_value=pushed
+                ) as push:
+                    result = publish_changed.publish_manifest(
+                        manifest_path,
+                        state_dir,
+                        dry_run=False,
+                        check_drift=False,
+                        require_state=True,
+                    )
+
+            self.assertEqual(result["published"], [pushed])
+            push.assert_called_once_with(healthy_md, manifest_path, state_dir=state_dir)
+            self.assertEqual(len(result["failed"]), 1)
+            self.assertEqual(
+                result["failed"][0]["file"], "course1/sprints/sprint-0/stable-page.md"
+            )
+            self.assertIn("em-dash", result["failed"][0]["error"])
+
+    def test_whole_drift_scan_failure_blocks_items_without_aborting(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            write_page(md_path, body="Changed body.")
+            write_manifest(manifest_path)
+            write_state(state_dir / "course1" / "production.json", hash_value="2" * 64)
+
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(
+                    publish_changed,
+                    "drift_for_changed",
+                    side_effect=RuntimeError("credentials exploded"),
+                ):
+                    with patch.object(publish_changed, "push_artifact") as push:
+                        result = publish_changed.publish_manifest(
+                            manifest_path,
+                            state_dir,
+                            dry_run=False,
+                            check_drift=True,
+                            require_state=True,
+                        )
+
+            self.assertEqual(result["published"], [])
+            self.assertEqual(len(result["drifted"]), 1)
+            self.assertIn("drift scan failed: credentials exploded", result["drifted"][0]["reason"])
+            push.assert_not_called()
+
+    def test_drift_check_exception_blocks_only_that_item(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            write_manifest(manifest_path)
+            changed = [
+                {
+                    "file": "course1/sprints/sprint-0/broken-fetch.md",
+                    "artifact_id": "broken-fetch",
+                    "state_entry": {
+                        "canvas_type": "page",
+                        "canvas_id": 1001,
+                        "canvas_page_url": "broken-fetch",
+                        "canvas_fingerprint": "a" * 64,
+                    },
+                },
+                {
+                    "file": "course1/sprints/sprint-0/still-checked.md",
+                    "artifact_id": "still-checked",
+                    "state_entry": {
+                        "canvas_type": "page",
+                        "canvas_id": 1002,
+                        "canvas_page_url": "still-checked",
+                        "canvas_fingerprint": "b" * 64,
+                    },
+                },
+            ]
+
+            live = {"page_id": 1002, "title": "x", "body": "y", "published": True}
+
+            def fake_fetch(client, entry):
+                if entry["canvas_id"] == 1001:
+                    raise RuntimeError("timeout talking to canvas")
+                return live
+
+            with patch.object(publish_changed.CanvasClient, "from_env", return_value=object()):
+                with patch.object(publish_changed, "fetch_canvas_state", side_effect=fake_fetch):
+                    drifted = publish_changed.drift_for_changed(manifest_path, changed)
+
+            reasons = {d["artifact_id"]: d["reason"] for d in drifted}
+            self.assertIn("drift check failed: timeout talking to canvas", reasons["broken-fetch"])
+            # The second item was still assessed (its real mismatch reported).
+            self.assertEqual(
+                reasons["still-checked"], "canvas changed since last state-backed publish"
+            )
+
+
 class HostedRestoreTests(unittest.TestCase):
     """Blocked artifacts' hosted output stays at baseline; healthy output goes live."""
 

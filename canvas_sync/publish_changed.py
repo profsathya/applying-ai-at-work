@@ -57,10 +57,26 @@ def load_state(manifest_path: Path, state_dir: Path, *, require_state: bool) -> 
 def changed_artifacts(manifest_path: Path, state_dir: Path, *, require_state: bool) -> tuple[list[dict], dict]:
     state, state_path = load_state(manifest_path, state_dir, require_state=require_state)
     changed: list[dict] = []
+    invalid: list[dict] = []
     for md_path in discover_artifact_files(manifest_path):
         errors = validate_artifact(md_path)
         if errors:
-            raise ValueError("; ".join(errors))
+            # A validation error in one artifact must not abort the others:
+            # record it as that item's failure and keep scanning.
+            artifact_id = None
+            try:
+                frontmatter, _ = parse_frontmatter(md_path)
+                artifact_id = frontmatter.get("artifact_id")
+            except Exception:  # noqa: BLE001 - unparseable frontmatter has no id
+                pass
+            invalid.append(
+                {
+                    "file": repo_relative(md_path),
+                    "artifact_id": artifact_id,
+                    "error": "; ".join(errors),
+                }
+            )
+            continue
         frontmatter, _ = parse_frontmatter(md_path)
         artifact_id = frontmatter["artifact_id"]
         state_entry = state.get("artifacts", {}).get(artifact_id)
@@ -75,7 +91,7 @@ def changed_artifacts(manifest_path: Path, state_dir: Path, *, require_state: bo
                     "content_hash": hash_value,
                 }
             )
-    return changed, {"state": state, "state_path": state_path}
+    return changed, {"state": state, "state_path": state_path, "invalid": invalid}
 
 
 def drift_for_changed(manifest_path: Path, changed: list[dict]) -> list[dict]:
@@ -97,7 +113,17 @@ def drift_for_changed(manifest_path: Path, changed: list[dict]) -> list[dict]:
             item["first_publish"] = True
             continue
         expected = entry.get("canvas_fingerprint")
-        live_state = fetch_canvas_state(client, entry)
+        try:
+            live_state = fetch_canvas_state(client, entry)
+        except Exception as exc:  # noqa: BLE001 - block only the item that could not be assessed
+            drifted.append(
+                {
+                    "file": item["file"],
+                    "artifact_id": item["artifact_id"],
+                    "reason": f"drift check failed: {str(exc).splitlines()[0]}",
+                }
+            )
+            continue
         if live_state is None:
             drifted.append(
                 {
@@ -198,7 +224,7 @@ def publish_manifest(
             for item in changed
         ],
         "published": [],
-        "failed": [],
+        "failed": list(state_info.get("invalid", [])),
         "drifted": [],
         "healed": [],
         "hosted": None,
@@ -266,7 +292,21 @@ def publish_manifest(
     # "drifted" and the CLI still exits nonzero after the rest went through.
     blocked_ids: set[str] = set()
     if check_drift:
-        drifted = drift_for_changed(manifest_path, changed)
+        try:
+            drifted = drift_for_changed(manifest_path, changed)
+        except Exception as exc:  # noqa: BLE001 - degrade to blocking, not aborting
+            # A manifest-wide scan failure (bad credentials, guard refusal,
+            # network) blocks the artifacts it could not assess instead of
+            # aborting the whole run; other manifests still process.
+            reason = f"drift scan failed: {str(exc).splitlines()[0]}"
+            drifted = [
+                {
+                    "file": item["file"],
+                    "artifact_id": item["artifact_id"],
+                    "reason": reason,
+                }
+                for item in changed
+            ]
         result["drifted"] = drifted
         blocked_ids = {d["artifact_id"] for d in drifted}
         for item in changed:
