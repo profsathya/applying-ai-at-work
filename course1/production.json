@@ -10,12 +10,12 @@
       "canvas_payload_hash": "e3005538d3d0bd8c4aa36fd009d7e00074fe2d711206e9f1293bdc42dd3ddca3",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "66b6ba795caee02e6106edda2a48ed2e20d23361aa7487e231a1923f88a97b72",
-      "hosted_hash": "78c52584dc9c13777ed7a4dc80a67a9bbdfa49ca1ab67efbd0346ef9e8cbfc02",
-      "hosted_last_rendered": "2026-07-27T16:02:26+00:00",
+      "content_hash": "63e184beda381f9adcdfe089a83ec052d7f734a5cc3e02b8a7a975c9a00397d5",
+      "hosted_hash": "026ce35d5701481005b3612c1a0d2477250fb62317dca90b7f8c6d354a650b5a",
+      "hosted_last_rendered": "2026-07-27T16:18:49+00:00",
       "hosted_path": "course1/activities/concept-from-goal-to-problem.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/concept-from-goal-to-problem.html",
-      "last_pushed": "2026-07-27T16:02:26+00:00",
+      "last_pushed": "2026-07-27T16:18:49+00:00",
       "local_path": "course1/sprints/sprint-1/concept-from-goal-to-problem.md",
       "position": 3,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
@@ -809,5 +809,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-07-27T16:02:32+00:00"
+  "last_sync": "2026-07-27T16:18:49+00:00"
 }
