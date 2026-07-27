@@ -100,6 +100,7 @@ Keep entries concise. One line per learning. Reference specific files or PRs whe
 
 ## Learnings
 
+- On Windows, run `.venv\Scripts\python.exe canvas_sync\schema_windows.py --all` (or the same command with `--artifact`, `--manifest`, `--state`, `--prd`, or `--homepage`) instead of `canvas_sync/schema.py`; the Windows entry point delegates to the canonical validator while safely handling its Unix-only `fcntl` import.
 - Canvas pushes are real side effects. Validate locally first, then call `canvas_sync/push.py` only after explicit human approval for the target artifact set.
 - Production Canvas publishes should run through `.github/workflows/publish-canvas.yml`, which writes mutable Canvas IDs and hashes to the protected `canvas-state` branch rather than to `main`.
 - Prefer the repo virtualenv for deterministic validation and pushes: `.venv/bin/python canvas_sync/schema.py --all` and `.venv/bin/python canvas_sync/push.py --file ...`.

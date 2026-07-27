@@ -79,8 +79,8 @@ modules:
     tag: "People and Context"
     open: false
     learning_goals:
-      - "Identify stakeholders, needs, constraints, and assumptions around the problem."
-      - "Design validation questions that produce real evidence rather than confirmation."
+      - "Identify stakeholders and their relationship to the problem."
+      - "Design validation questions for stakeholders that produce real evidence."
       - "Revise the problem frame using human input and context."
     prereq: "Builds on your Sprint 2 AI exploration. This sprint asks what actual people and settings confirm, complicate, or change."
     groups:
