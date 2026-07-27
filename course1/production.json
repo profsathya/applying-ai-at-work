@@ -7,15 +7,19 @@
       "canvas_module_id": 1946,
       "canvas_module_item_id": 17711,
       "canvas_page_url": "concept-from-goal-to-problem-3",
+      "canvas_payload_hash": "e3005538d3d0bd8c4aa36fd009d7e00074fe2d711206e9f1293bdc42dd3ddca3",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "61943823cb226a49286c2d32fa6d0aec471686f2e1ecff27b342557afddd8308",
-      "hosted_hash": "4847b3c217ae47bd2aab99331fdc45a71a004d4ffdb7523fff0b681c08509ce7",
-      "hosted_last_rendered": "2026-07-08T20:49:31+00:00",
+      "content_hash": "66b6ba795caee02e6106edda2a48ed2e20d23361aa7487e231a1923f88a97b72",
+      "hosted_hash": "78c52584dc9c13777ed7a4dc80a67a9bbdfa49ca1ab67efbd0346ef9e8cbfc02",
+      "hosted_last_rendered": "2026-07-27T16:02:26+00:00",
       "hosted_path": "course1/activities/concept-from-goal-to-problem.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/concept-from-goal-to-problem.html",
-      "last_pushed": "2026-07-08T20:49:31+00:00",
-      "local_path": "course1/sprints/sprint-1/concept-from-goal-to-problem.md"
+      "last_pushed": "2026-07-27T16:02:26+00:00",
+      "local_path": "course1/sprints/sprint-1/concept-from-goal-to-problem.md",
+      "position": 3,
+      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "source_commit": "b2e66df75d0597d07f2ea2788b62396d9dcbe977"
     },
     "course1-sprints-sprint-1-dojo-lab-abstraction-ladder": {
       "artifact_id": "course1-sprints-sprint-1-dojo-lab-abstraction-ladder",
@@ -161,15 +165,19 @@
       "canvas_module_id": 1946,
       "canvas_module_item_id": 17710,
       "canvas_page_url": "start-here-frame-what-is-worth-solving-3",
+      "canvas_payload_hash": "f57ff028e843a1276c9ba8432ad15c423a86c178e0b1f5733a31943104d8c5f6",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "997a9fec2bff6b2faf32050bf5a648efdfeadf1f61111912c25a1391d336c5f7",
-      "hosted_hash": "1e8018002519fc850fb1768eaa042eed19fa0d1a54ff93814de11a4da7e1cb2f",
-      "hosted_last_rendered": "2026-07-08T17:11:08+00:00",
+      "content_hash": "50e9fede3000d12aa147cbe2f42895e4ecd18ec3cd7cb05ded2a83b5ac336c52",
+      "hosted_hash": "901987ad1d5d27953ce3562b36b5cb23a04ed83ac0779aa835090ee2d3d4f82d",
+      "hosted_last_rendered": "2026-07-27T16:02:28+00:00",
       "hosted_path": "course1/activities/start-here-frame-what-is-worth-solving.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/start-here-frame-what-is-worth-solving.html",
-      "last_pushed": "2026-07-08T17:11:08+00:00",
-      "local_path": "course1/sprints/sprint-1/start-here-frame-what-is-worth-solving.md"
+      "last_pushed": "2026-07-27T16:02:28+00:00",
+      "local_path": "course1/sprints/sprint-1/start-here-frame-what-is-worth-solving.md",
+      "position": 2,
+      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "source_commit": "b2e66df75d0597d07f2ea2788b62396d9dcbe977"
     },
     "course1-sprints-sprint-2-ai-exploration-log-and-3cs-application-log": {
       "artifact_id": "course1-sprints-sprint-2-ai-exploration-log-and-3cs-application-log",
@@ -310,19 +318,24 @@
     },
     "course1-sprints-sprint-2-start-here-direct-ai-deliberately": {
       "artifact_id": "course1-sprints-sprint-2-start-here-direct-ai-deliberately",
+      "canvas_fingerprint": "e65e9bec01b25a5a38dad457aff847b5f10b20c0f0eb06ba1adac1b3ce4bcadf",
       "canvas_id": 3470,
       "canvas_module_id": 1947,
       "canvas_module_item_id": 17718,
       "canvas_page_url": "start-here-direct-ai-deliberately-3",
+      "canvas_payload_hash": "5a8bc5cc2c17b597bab5c3e9003d114e4e2c09f0b24673b357b55679cc05b9b3",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "cee3b3f4d3dd7174f3645fc3780a506a4fb144baeeec1b5e8868905590a53693",
-      "hosted_hash": "96b7d6a30fc0dc9b750ddc79c73bf0be50e76276cb16b1e8e71c9b7be00d46de",
-      "hosted_last_rendered": "2026-06-15T18:57:42+00:00",
+      "content_hash": "604cd692ce6c1e7f64df9f11dca7e8d4f00cc501dd2eeb90b1b5250cd16c74b4",
+      "hosted_hash": "e1e626ac4165e364bbd79f8ab3c805a7450f1938a33bb29e9eb46337d2d25bd3",
+      "hosted_last_rendered": "2026-07-27T16:02:30+00:00",
       "hosted_path": "course1/activities/start-here-direct-ai-deliberately.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/start-here-direct-ai-deliberately.html",
-      "last_pushed": "2026-06-15T18:57:42+00:00",
-      "local_path": "course1/sprints/sprint-2/start-here-direct-ai-deliberately.md"
+      "last_pushed": "2026-07-27T16:02:30+00:00",
+      "local_path": "course1/sprints/sprint-2/start-here-direct-ai-deliberately.md",
+      "position": 2,
+      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "source_commit": "b2e66df75d0597d07f2ea2788b62396d9dcbe977"
     },
     "course1-sprints-sprint-3-concept-stakeholders-needs-constraints-and-validation": {
       "artifact_id": "course1-sprints-sprint-3-concept-stakeholders-needs-constraints-and-validation",
@@ -410,20 +423,23 @@
     },
     "course1-sprints-sprint-3-stakeholder-map-draft": {
       "artifact_id": "course1-sprints-sprint-3-stakeholder-map-draft",
-      "canvas_fingerprint": "427265b5d31c83a48131b38aec2dda1415f8ece75e2cd7427848177b9f0b28df",
+      "canvas_fingerprint": "af5d7c302eaff85032ca03cdd62842969f504aaecc969371be5752b7092ee088",
       "canvas_id": 6954,
       "canvas_module_id": 1948,
       "canvas_module_item_id": 17729,
       "canvas_page_url": null,
+      "canvas_payload_hash": "ca7b27a6ebd1fa777474bb45b7836b04fdfa7833ed15374a434c28c9738674f2",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "bf2cbfc6c102583c435ec9d6cd9d504715d8c111122f90e996ce265f8d71d658",
-      "hosted_hash": "f50eb35a6f1a8ad1b311055ebfd3fe543181e8cdb63f3090a52686eb56efd476",
-      "hosted_last_rendered": "2026-06-15T17:33:44+00:00",
+      "content_hash": "88bf73499a85bf8d111feaa86eefae1950f172731b9a29356869f31c828b3ae6",
+      "hosted_hash": "3ae2bf0db2f6629ffb1745b23744dadbb0f1f3111709e3e5ffcddccce488ae61",
+      "hosted_last_rendered": "2026-07-27T16:02:32+00:00",
       "hosted_path": "course1/assignments/stakeholder-map-draft.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/stakeholder-map-draft.html",
-      "last_pushed": "2026-06-15T17:33:44+00:00",
-      "local_path": "course1/sprints/sprint-3/stakeholder-map-draft.md"
+      "last_pushed": "2026-07-27T16:02:32+00:00",
+      "local_path": "course1/sprints/sprint-3/stakeholder-map-draft.md",
+      "position": 5,
+      "source_commit": "b2e66df75d0597d07f2ea2788b62396d9dcbe977"
     },
     "course1-sprints-sprint-3-stakeholder-validation-check": {
       "artifact_id": "course1-sprints-sprint-3-stakeholder-validation-check",
@@ -793,5 +809,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-07-10T21:45:22+00:00"
+  "last_sync": "2026-07-27T16:02:32+00:00"
 }
