@@ -14,11 +14,9 @@ publish: true
 
 ## Start With Three Terms
 
-A goal names the direction you want to move: get promoted, reduce delays, improve onboarding, support a community, or build a stronger portfolio.
-
-A problem names the specific condition that makes the goal hard to reach.
-
-A frame is the way you describe what is happening, why it matters, who is affected, and what might need to change. Your first frame is provisional. It gives you a place to start, but you should expect to revise it as you learn more.
+- A goal names the direction you want to move: get promoted, reduce delays, improve onboarding, support a community, or build a stronger portfolio.
+- A problem names the specific condition that makes the goal hard to reach.
+- A frame is the way you describe what is happening, why it matters, who is affected, and what might need to change. Your first frame is provisional. It gives you a place to start, but you should expect to revise it as you learn more.
 
 The course begins by separating goals, problems, and frames because AI can quickly generate solutions for the problem you give it. Your job is to make sure the problem you give it is worth working on.
 
