@@ -9,7 +9,7 @@ module: 'Sprint 1: Frame What Is Worth Solving'
 position: 4
 points: 10
 submission_type: text_entry
-publish: false
+publish: true
 rubric:
 - description: Goal is real and personally meaningful
   points: 4
@@ -24,6 +24,22 @@ rubric:
 ## Purpose
 
 Write before AI enters the work. This pause protects your own context, judgment, and motivation before the Dojo expands or challenges your thinking.
+
+## Before AI And After The Dojo
+
+This assignment creates your "Before AI" baseline. The Dojo and later Sprint 1 activities will help you compare what changed without replacing your judgment.
+
+```mermaid
+flowchart LR
+  Before["Before AI<br/>Real goal and why it matters<br/>People and context<br/>Assumptions and uncertainty"]
+  Save["Save your baseline<br/>Keep the first version"]
+  Dojo["Open the Dojo<br/>Widen and challenge the frame"]
+  After["After the Dojo<br/>What changed?<br/>What will you keep, revise, or reject?<br/>What needs human evidence?"]
+
+  Before --> Save --> Dojo --> After
+```
+
+Complete the "Before AI" side now. Save this first version so you can later identify what changed, what you chose to keep, and what still needs evidence from a real person.
 
 ## Task Instructions
 

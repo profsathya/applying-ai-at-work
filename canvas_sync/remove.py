@@ -30,6 +30,7 @@ from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient, CanvasError
+from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -799,6 +800,8 @@ def main() -> int:
             raise RemovalPlanError("at least one --target is required unless --course-clear is used")
         if args.dry_run:
             manifest = load_manifest(manifest_path)
+            check_instance_ready(manifest, manifest_label=str(manifest_path))
+            check_env_matches_instance(manifest, manifest_label=str(manifest_path))
             client = CanvasClient.from_env(course_id=manifest["instance"]["course_id"])
             plan = build_removal_plan(
                 manifest,
@@ -812,6 +815,8 @@ def main() -> int:
             return 0
 
         manifest = load_manifest(manifest_path)
+        check_instance_ready(manifest, manifest_label=str(manifest_path))
+        check_env_matches_instance(manifest, manifest_label=str(manifest_path))
         client = CanvasClient.from_env(course_id=manifest["instance"]["course_id"])
         applied = apply_removal(
             manifest_path,

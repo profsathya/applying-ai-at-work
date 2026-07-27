@@ -828,6 +828,56 @@ def render_hosted_artifact(
     }
 
 
+def artifact_hosted_output_paths(
+    md_path: Path,
+    manifest_path: Path,
+    output_dir: Path,
+    *,
+    manifest: dict | None = None,
+) -> list[Path]:
+    """Every output file this artifact renders under ``output_dir``.
+
+    Regular artifacts produce one hosted page; AI activities also produce a
+    shell page and an activity config JSON. Module headers render nothing.
+    Used to snapshot and restore a blocked artifact's hosted output so a
+    refused publish never changes what its Canvas iframe shows.
+    """
+    manifest_data = manifest or load_json(manifest_path)
+    fm, _body = parse_frontmatter(md_path)
+    if fm["type"] == "module_header":
+        return []
+    course_key = course_dir_for_manifest(manifest_path).name
+    hosted_info = artifact_hosted_info(md_path, manifest_path, manifest_data, fm)
+    paths = [hosted_output_path(output_dir, manifest_data, hosted_info["hosted_path"])]
+    if is_ai_activity_delivery(fm):
+        shell_hosted_path = f"{course_key}/{_ai_activity_shell_course_relative_path(fm)}"
+        paths.append(hosted_output_path(output_dir, manifest_data, shell_hosted_path))
+        paths.append(output_dir / _ai_activity_config_site_path(course_key, fm, manifest_data))
+    return paths
+
+
+def course_shared_output_dir(
+    manifest_path: Path,
+    output_dir: Path,
+    *,
+    manifest: dict | None = None,
+) -> Path:
+    """The hosted directory holding the course's SHARED outputs.
+
+    Shared outputs (home.html, index.html, sprint-<n>.html, progress-map.json)
+    are regenerated from every artifact's current Markdown, so a blocked
+    artifact's new metadata could leak into them; callers snapshot and restore
+    this directory's index files around a publish run.
+    """
+    manifest_data = manifest or load_json(manifest_path)
+    config = hosted_config_from_manifest(manifest_data)
+    course_key = course_dir_for_manifest(manifest_path).name
+    return output_dir / config.path_prefix / course_key
+
+
+SHARED_OUTPUT_NAMES = ("home.html", "index.html", "progress-map.json")
+
+
 def _artifact_sort_key(item: tuple[Path, dict]) -> tuple[int, int, str]:
     _path, fm = item
     return (int(fm.get("sprint", 0)), int(fm.get("position", 9999)), fm.get("title", ""))

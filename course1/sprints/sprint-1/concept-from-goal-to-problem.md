@@ -14,11 +14,9 @@ publish: true
 
 ## Start With Three Terms
 
-A goal names the direction you want to move: get promoted, reduce delays, improve onboarding, support a community, or build a stronger portfolio.
-
-A problem names the specific condition that makes the goal hard to reach.
-
-A frame is the way you describe what is happening, why it matters, who is affected, and what might need to change. Your first frame is provisional. It gives you a place to start, but you should expect to revise it as you learn more.
+- A goal names the direction you want to move: get promoted, reduce delays, improve onboarding, support a community, or build a stronger portfolio.
+- A problem names the specific condition that makes the goal hard to reach.
+- A frame is the way you describe what is happening, why it matters, who is affected, and what might need to change. Your first frame is provisional. It gives you a place to start, but you should expect to revise it as you learn more.
 
 The course begins by separating goals, problems, and frames because AI can quickly generate solutions for the problem you give it. Your job is to make sure the problem you give it is worth working on.
 
@@ -28,15 +26,15 @@ A surface request often starts as something like make a dashboard, write a polic
 
 For example:
 
-- Workplace goal: "Reduce delays in onboarding."
-- Surface request: "Make a dashboard so everyone can see where each new hire is."
-- Stronger problem frame: "Managers, HR, and IT do not share one handoff process, so equipment and account setup happen late. The next thing to test is where the delay actually starts."
+- <span style="color: #9B6A00;"><strong>Workplace goal:</strong></span> "Reduce delays in onboarding."
+- <span style="color: #9B6A00;"><strong>Surface request:</strong></span> "Make a dashboard so everyone can see where each new hire is."
+- <span style="color: #9B6A00;"><strong>Stronger problem frame:</strong></span> "Managers, HR, and IT do not share one handoff process, so equipment and account setup happen late. The next thing to test is where the delay actually starts."
 
 A career-transition goal works the same way:
 
-- Career goal: "Get a better job."
-- Surface request: "Use AI to rewrite my resume."
-- Stronger problem frame: "My resume lists responsibilities, but it does not show evidence that I can solve the kinds of problems in the roles I want. The next thing to test is which role requirements I can prove with real examples."
+- <span style="color: #9B6A00;"><strong>Career goal:</strong></span> "Get a better job."
+- <span style="color: #9B6A00;"><strong>Surface request:</strong></span> "Use AI to rewrite my resume."
+- <span style="color: #9B6A00;"><strong>Stronger problem frame:</strong></span> "My resume lists responsibilities, but it does not show evidence that I can solve the kinds of problems in the roles I want. The next thing to test is which role requirements I can prove with real examples."
 
 ## Use The Abstraction Ladder
 

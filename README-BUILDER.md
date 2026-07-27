@@ -309,6 +309,32 @@ Canvas quirks:
 - Frontmatter `file_upload` maps to Canvas `online_upload`.
 - `due_at` requires full ISO 8601 with timezone, such as `2026-10-15T23:59:00Z`.
 
+## Rubric Changes
+
+`push.py` does not publish rubrics to Canvas. When an artifact's rubric
+frontmatter changes, every publish run repeats this warning until it is
+resolved:
+
+```text
+rubric changes are not auto-published - apply the rubric in Canvas manually,
+then acknowledge with canvas_sync/ack_rubric.py
+```
+
+Resolve it in two steps:
+
+1. Apply the rubric change in Canvas by hand.
+2. Acknowledge it so the stored fingerprint advances and the warning stops:
+
+```bash
+python canvas_sync/ack_rubric.py \
+  --artifact <artifact_id> \
+  --manifest <course>/manifests/production.json \
+  --state-dir <path-to-canvas-state-checkout>
+```
+
+The script edits local deployment state only; it makes no Canvas calls. Omit
+`--state-dir` for legacy manifest-backed state.
+
 ## Troubleshooting
 
 **Codex command not found.** Install with `npm i -g @openai/codex`.

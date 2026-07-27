@@ -23,6 +23,7 @@ from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient, CanvasError
+from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
 from canvas_sync.pull import fetch_canvas_state, html_to_markdown
 from canvas_sync.push import md_body_to_canvas_html
 from canvas_sync.schema import parse_frontmatter
@@ -209,6 +210,8 @@ def build_report(manifest_path: Path, *, include_items: bool, include_drift: boo
     if not course_id:
         raise ValueError(f"{manifest_path}: manifest instance.course_id is required")
 
+    check_instance_ready(manifest, manifest_label=str(manifest_path))
+    check_env_matches_instance(manifest, manifest_label=str(manifest_path))
     client = CanvasClient.from_env(course_id=course_id)
     live_modules = client.list_modules()
 

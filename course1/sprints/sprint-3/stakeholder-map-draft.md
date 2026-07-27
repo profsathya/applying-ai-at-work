@@ -53,7 +53,7 @@ Text entry in Canvas.
 
 ## Evidence Of Success
 
-Your submission should be specific enough that another person can understand your context, your reasoning, and what you are ready to do next. Do not submit a polished AI answer without showing your own judgment.
+Your canvas submission should be specific enough that another person can understand your context, your reasoning, and what you are ready to do next. Do not submit a polished AI answer without showing your own judgment.
 
 ## Portfolio Capture
 

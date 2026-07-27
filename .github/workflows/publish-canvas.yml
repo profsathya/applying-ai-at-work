@@ -114,6 +114,8 @@ jobs:
     environment: canvas-production
     permissions:
       contents: write
+      issues: write
+      pull-requests: write
     env:
       HOSTED_ONLY: ${{ github.event_name == 'workflow_dispatch' && inputs.hosted_only == true }}
     steps:
@@ -238,10 +240,44 @@ jobs:
             --hosted-output-dir ../common-curriculum \
             --check-drift \
             --require-state \
-            "${hosted_args[@]}" | tee ../publish-result.json
+            "${hosted_args[@]}" --report-file ../publish-result.json
+
+
+      - name: Determine publish outcome
+        id: outcome
+        if: env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true'
+        working-directory: content
+        env:
+          TARGET_MANIFESTS: ${{ needs.validate.outputs.manifests }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import sys
+
+          sys.path.insert(0, ".")
+          from canvas_sync.publish_outcome import summarize_report
+
+          expected = len(
+              [line for line in os.environ.get("TARGET_MANIFESTS", "").splitlines() if line.strip()]
+          )
+          try:
+              with open("../publish-result.json", encoding="utf-8") as fh:
+                  report = json.load(fh)
+          except (OSError, ValueError):
+              report = None
+          summary = summarize_report(report, expected)
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+              out.write(f"published_count={summary['published']}\n")
+              out.write(f"failed_count={summary['failed']}\n")
+              out.write(f"commit_state={str(summary['commit_state']).lower()}\n")
+              out.write(f"hosted_commit={str(summary['hosted_commit']).lower()}\n")
+          print(summary)
+          PY
 
       - name: Commit Common Curriculum hosted changes
-        if: (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true') && steps.publish.outcome == 'success'
+        id: hosted
+        if: (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true') && steps.outcome.outputs.hosted_commit == 'true'
         working-directory: common-curriculum
         env:
           COMMON_CURRICULUM_TOKEN: ${{ secrets.COMMON_CURRICULUM_TOKEN }}
@@ -251,16 +287,95 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add deanza career-intelligence activities
           if git diff --cached --quiet; then
+            echo "cc_pushed=true" >> "$GITHUB_OUTPUT"
             echo "No Common Curriculum hosted changes to commit."
             exit 0
           fi
           if [ -z "${COMMON_CURRICULUM_TOKEN:-}" ]; then
+            echo "cc_pushed=false" >> "$GITHUB_OUTPUT"
             echo "::error::COMMON_CURRICULUM_TOKEN is required to push hosted Common Curriculum files."
-            exit 1
+            exit 0
           fi
           git commit -m "sync hosted canvas output for ${GITHUB_SHA}"
           git remote set-url origin "https://x-access-token:${COMMON_CURRICULUM_TOKEN}@github.com/profsathya/Common-Curriculum.git"
-          git push origin HEAD:main
+          if git push origin HEAD:main; then
+            echo "cc_pushed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "cc_pushed=false" >> "$GITHUB_OUTPUT"
+            echo "::error::Pushing hosted Common Curriculum files failed."
+          fi
+
+      - name: Reconcile content-only state with hosted deploy
+        if: always() && (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true') && steps.hosted.outputs.cc_pushed != 'true'
+        working-directory: content
+        run: |
+          python3 - <<'PY'
+          import json
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          sys.path.insert(0, ".")
+          from canvas_sync.publish_outcome import demote_hosted_publishes, revert_entries
+
+          report = Path("../publish-result.json")
+          try:
+              data = json.loads(report.read_text(encoding="utf-8"))
+          except (OSError, ValueError):
+              raise SystemExit(0)
+
+          adjusted, demoted = demote_hosted_publishes(data.get("results", []))
+          state_root = Path("../canvas-state").resolve()
+          for state_path, artifact_ids in demoted.items():
+              state_file = Path(state_path)
+              rel = state_file.resolve().relative_to(state_root).as_posix()
+              show = subprocess.run(
+                  ["git", "-C", str(state_root), "show", f"HEAD:{rel}"],
+                  capture_output=True,
+                  text=True,
+              )
+              baseline = json.loads(show.stdout) if show.returncode == 0 else {"artifacts": {}}
+              current = json.loads(state_file.read_text(encoding="utf-8"))
+              reverted = revert_entries(current, baseline, artifact_ids)
+              state_file.write_text(
+                  json.dumps(reverted, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+              )
+          data["results"] = adjusted
+          report.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+          print(f"content-only state entries reverted: {sum(len(v) for v in demoted.values())}")
+          PY
+
+      - name: Determine final outcome
+        id: outcome_final
+        if: always() && (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true')
+        working-directory: content
+        env:
+          TARGET_MANIFESTS: ${{ needs.validate.outputs.manifests }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import sys
+
+          sys.path.insert(0, ".")
+          from canvas_sync.publish_outcome import summarize_report
+
+          expected = len(
+              [line for line in os.environ.get("TARGET_MANIFESTS", "").splitlines() if line.strip()]
+          )
+          try:
+              with open("../publish-result.json", encoding="utf-8") as fh:
+                  report = json.load(fh)
+          except (OSError, ValueError):
+              report = None
+          summary = summarize_report(report, expected)
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+              out.write(f"published_count={summary['published']}\n")
+              out.write(f"failed_count={summary['failed']}\n")
+              out.write(f"commit_state={str(summary['commit_state']).lower()}\n")
+              out.write(f"hosted_commit={str(summary['hosted_commit']).lower()}\n")
+          print(summary)
+          PY
 
       - name: Validate state files
         id: validate_state
@@ -274,7 +389,7 @@ jobs:
           done
 
       - name: Commit canvas-state changes
-        if: always() && steps.validate_state.outcome == 'success'
+        if: always() && steps.validate_state.outcome == 'success' && steps.outcome_final.outputs.commit_state == 'true'
         working-directory: canvas-state
         run: |
           set -euo pipefail
@@ -287,9 +402,101 @@ jobs:
             git push origin HEAD:canvas-state
           fi
 
+
+      - name: Post plain-language publish result
+        if: always() && (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true')
+        continue-on-error: true
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const post = async (body) => {
+              try {
+                const prs = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  commit_sha: context.sha,
+                });
+                const merged = prs.data.find((pr) => pr.merge_commit_sha === context.sha) || prs.data[0];
+                if (merged) {
+                  await github.rest.issues.createComment({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: merged.number,
+                    body,
+                  });
+                  return;
+                }
+              } catch (error) {
+                core.info(`PR lookup failed, falling back to commit comment: ${error.message}`);
+              }
+              await github.rest.repos.createCommitComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                commit_sha: context.sha,
+                body,
+              });
+            };
+            let data;
+            try {
+              data = JSON.parse(fs.readFileSync('publish-result.json', 'utf8'));
+            } catch (error) {
+              await post('**Canvas publish result**\n\n❌ The publish run failed before producing results. Check the Publish Canvas workflow logs.');
+              return;
+            }
+            if (!data.completed) {
+              await post('**Canvas publish result**\n\n❌ The publish run stopped before finishing. Check the Publish Canvas workflow logs.');
+              return;
+            }
+            const lines = [];
+            for (const result of data.results || []) {
+              for (const item of result.published || []) {
+                const label = item.file || item.artifact_id;
+                if (item.action === 'content_update') {
+                  lines.push(`✅ ${label} - deployment queued - usually live within a few minutes`);
+                } else if (item.hosted_url) {
+                  lines.push(`✅ ${label} - Canvas updated - hosted page deployment queued`);
+                } else {
+                  lines.push(`✅ ${label} - live (Canvas updated)`);
+                }
+                for (const warning of item.warnings || []) {
+                  lines.push(`⚠️ ${label} - ${warning}`);
+                }
+              }
+              for (const item of result.drifted || []) {
+                lines.push(`❌ ${item.file} - not published - ${item.reason}`);
+              }
+              for (const item of result.failed || []) {
+                const reason = String(item.error || 'unknown error').split('\n')[0].slice(0, 200);
+                lines.push(`❌ ${item.file} - not published - ${reason}`);
+              }
+            }
+            if (!lines.length) {
+              core.info('No changed artifacts; skipping result comment.');
+              return;
+            }
+            await post(['**Canvas publish result**', '', ...lines].join('\n'));
+
       - name: Fail if publish reported errors
-        if: (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true') && steps.publish.outcome == 'failure'
+        if: (env.HOSTED_ONLY == 'true' || steps.canvas_credentials.outputs.available == 'true') && (steps.publish.outcome == 'failure' || steps.outcome_final.outputs.failed_count != '0' || steps.hosted.outputs.cc_pushed == 'false')
         run: |
-          echo "Publish step failed. Result:"
-          cat publish-result.json 2>/dev/null || true
+          echo "Publish reported per-item problems:"
+          python3 - <<'PY'
+          import json
+
+          try:
+              with open("publish-result.json", encoding="utf-8") as fh:
+                  data = json.load(fh)
+          except (OSError, ValueError):
+              print("  (publish produced no readable result file)")
+              raise SystemExit(0)
+          for result in data.get("results", []):
+              for item in result.get("failed", []):
+                  reason = str(item.get("error", "unknown error")).splitlines()[0]
+                  print(f"  FAILED  {item.get('file')}: {reason}")
+              for item in result.get("drifted", []):
+                  print(f"  BLOCKED {item.get('file')}: {item.get('reason')}")
+              for item in result.get("published", []):
+                  print(f"  OK      {item.get('file') or item.get('artifact_id')}")
+          PY
           exit 1

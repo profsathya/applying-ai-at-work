@@ -28,6 +28,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient, CanvasError
+from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
 from canvas_sync.pull import html_to_markdown
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 
@@ -227,8 +228,19 @@ def find_module_item(items: list[dict], module_item_id: int) -> dict:
     return matches[0]
 
 
-def get_client(course_id: int, client: CanvasClient | None = None) -> CanvasClient:
-    return client or CanvasClient.from_env(course_id=course_id)
+def get_client(
+    course_id: int,
+    client: CanvasClient | None = None,
+    *,
+    manifest: dict | None = None,
+    manifest_label: str = "the selected profile",
+) -> CanvasClient:
+    if client is not None:
+        return client
+    if manifest is not None:
+        check_instance_ready(manifest, manifest_label=manifest_label)
+        check_env_matches_instance(manifest, manifest_label=manifest_label)
+    return CanvasClient.from_env(course_id=course_id)
 
 
 def list_artifacts(
@@ -239,7 +251,10 @@ def list_artifacts(
 ) -> dict:
     manifest_path = resolve_manifest_for_course_id(course_id, repo_root)
     manifest = load_json(manifest_path)
-    live_items = fetch_live_module_items(get_client(course_id, client), manifest)
+    live_items = fetch_live_module_items(
+        get_client(course_id, client, manifest=manifest, manifest_label=str(manifest_path)),
+        manifest,
+    )
     return {
         "course_id": course_id,
         "manifest": repo_relative(manifest_path, repo_root),
@@ -512,7 +527,7 @@ def prepare_artifact(
     manifest_path = resolve_manifest_for_course_id(course_id, repo_root)
     manifest = load_json(manifest_path)
     course_dir = manifest_path.parent.parent
-    client = get_client(course_id, client)
+    client = get_client(course_id, client, manifest=manifest, manifest_label=str(manifest_path))
     items = fetch_live_module_items(client, manifest)
     item = find_module_item(items, module_item_id)
     local_type = ARTIFACT_TYPE_BY_CANVAS_ITEM.get(item.get("type"))
@@ -615,7 +630,7 @@ def verify_artifact(
 ) -> dict:
     manifest_path = resolve_manifest_for_course_id(course_id, repo_root)
     manifest = load_json(manifest_path)
-    client = get_client(course_id, client)
+    client = get_client(course_id, client, manifest=manifest, manifest_label=str(manifest_path))
     items = fetch_live_module_items(client, manifest)
     item = find_module_item(items, module_item_id)
     rel_path = repo_relative((repo_root / file_path).resolve() if not file_path.is_absolute() else file_path, repo_root)
