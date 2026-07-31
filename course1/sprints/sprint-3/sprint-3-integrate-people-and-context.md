@@ -20,18 +20,16 @@ This sprint is part of Reframing Problems with AI. You will keep using the same 
 
 By the end of this sprint, you should be able to:
 
-1. Identify stakeholders with different relationships to the problem.
-2. Distinguish impact, influence, authority, needs, constraints, and evidence status.
-3. Conduct at least one real validation conversation.
-4. Revise your problem and Goal Plan based on stakeholder evidence.
+1. Identify stakeholders, needs, constraints, and assumptions around the problem.
+2. Design validation questions that produce real evidence rather than confirmation.
+3. Revise the problem frame using human input and context.
 
 ## Sprint Rhythm
 
-1. Bring forward your current problem statement and 3Cs confirmation plan.
-2. Read the concept page on stakeholders, needs, constraints, and validation.
-3. Use the Dojo to prepare for real stakeholder listening.
-4. Draft a stakeholder map and exchange validation questions with peers.
-5. Submit your Stakeholder Validation Report and mid-course Goal Plan revision.
+1. Read the Introduction and pass the concept check.
+2. Build your stakeholder map with the Dojo.
+3. Prepare, hold, and document your stakeholder conversation.
+4. Reflect and revise your Goal Plan.
 
 ## Portfolio Thread
 

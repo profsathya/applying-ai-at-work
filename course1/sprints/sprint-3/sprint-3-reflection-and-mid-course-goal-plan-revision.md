@@ -6,7 +6,7 @@ artifact_id: course1-sprints-sprint-3-sprint-3-reflection-and-mid-course-goal-pl
 sprint: 3
 week: 5
 module: 'Sprint 3: Integrate People And Context'
-position: 9
+position: 6
 points: 10
 submission_type: file_upload
 delivery_mode: ai_activity
@@ -25,9 +25,9 @@ ai_activity:
         you are carrying forward, and how your Goal Plan should change for the
         rest of the course.
       placeholder: >
-        Use your stakeholder map, validation notes, revised problem statement,
-        and current Goal Plan. Separate what a stakeholder actually said from what
-        you inferred.
+        Use your stakeholder map, your stakeholder conversation report, your
+        revised problem statement, and current Goal Plan. Separate what a
+        stakeholder actually said from what you inferred.
       minLength: 150
       numQuestions: 3
       aiContext: >
@@ -70,7 +70,7 @@ Pause at mid-course to name what stakeholder evidence changed and how your Goal 
 
 ## Task Instructions
 
-1. Review your stakeholder map, validation notes, and revised problem statement.
+1. Review your stakeholder map, your stakeholder conversation report, and your revised problem statement.
 2. Compare what AI anticipated with what a real person actually helped you see.
 3. Write an initial reflection and Goal Plan revision in the activity.
 4. Generate AI follow-up questions and use them to identify what is still vague, generic, or unsupported.

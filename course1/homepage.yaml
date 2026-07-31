@@ -84,29 +84,20 @@ modules:
       - "Revise the problem frame using human input and context."
     prereq: "Builds on your Sprint 2 AI exploration. This sprint asks what actual people and settings confirm, complicate, or change."
     groups:
-      - label: "Sprint Week 1: Start here"
+      - label: "Sprint Week 1: Understand and map"
         items:
-          - slug: "start-here-integrate-people-and-context"
-            meta: "Page - orient to stakeholder evidence and context"
-      - label: "Sprint Week 1: Map and prepare"
-        items:
-          - slug: "concept-stakeholders-needs-constraints-and-validation"
-            meta: "Page - distinguish stakeholder needs, constraints, and validation"
-          - slug: "dojo-lab-stakeholder-lens-preparation"
-            meta: "Dojo activity - use the Symbiotic Thinking Dojo to prepare better stakeholder questions"
-          - slug: "stakeholder-map-draft"
-            meta: "Assignment - draft who is affected, who can validate, and what matters to each group"
-      - label: "Sprint Week 2: Validate and revise"
-        items:
-          - slug: "peer-exchange-validation-questions"
-            meta: "AI activity - improve stakeholder questions before you ask them"
-          - slug: "stakeholder-validation-report"
-            meta: "Assignment - report what you learned from real stakeholder work"
-          - slug: "stakeholder-validation-check"
-            meta: "AI self-check - test whether your validation plan seeks evidence, not approval"
+          - slug: "introduction-integrate-people-and-context"
+            meta: "Page - how stakeholders, evidence, and validation work in this sprint"
+          - slug: "sprint-3-concept-check"
+            meta: "Quiz - check your understanding before you start"
             badge: "Self-check"
             selfcheck: true
-            verify: "Ask a real stakeholder or peer to identify one assumption your questions may still carry."
+          - slug: "dojo-lab-stakeholder-map"
+            meta: "Assignment - profile your stakeholders with the Dojo and mark what you know"
+      - label: "Sprint Week 2: Validate and revise"
+        items:
+          - slug: "stakeholder-conversation"
+            meta: "Assignment - prepare, hold, and document a real stakeholder conversation"
           - slug: "sprint-3-reflection-and-mid-course-goal-plan-revision"
             meta: "AI reflection activity - refine your goal plan revision based on evidence"
 
