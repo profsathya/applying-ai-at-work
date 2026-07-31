@@ -20,9 +20,9 @@ This sprint is part of Reframing Problems with AI. You will keep using the same 
 
 By the end of this sprint, you should be able to:
 
-1. Identify stakeholders, needs, constraints, and assumptions around the problem.
-2. Design validation questions that produce real evidence rather than confirmation.
-3. Revise the problem frame using human input and context.
+1. Identify stakeholders and their relationship to the problem.
+2. Design validation questions for stakeholders that produce real evidence.
+3. Revise the problem framing using human input and context.
 
 ## Sprint Rhythm
 

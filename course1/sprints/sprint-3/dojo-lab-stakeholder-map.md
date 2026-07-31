@@ -33,8 +33,6 @@ Prepare for a validation conversation with stakeholders by first partnering with
 
 Before bringing in the Dojo, write down the stakeholders you already believe are connected to your problem. Don't research exhaustively yet, just capture your current thinking as it stands. If you don't have a workplace stakeholder, reach out to a mentor, community member, customer, or anyone with a genuine relationship to the problem.
 
-This step isn't about being complete or correct. It's about making your starting assumptions visible to yourself, so you can tell later whether AI or real conversations actually changed your thinking, or just confirmed what you already believed.
-
 ## Use the Dojo
 
 Use the [Open the Symbiotic Thinking Dojo](https://dojo.symbioticthinking.ai/) link for this lab. First-time users should open Learn About -> Privacy & Setup and configure a Gemini API key in the browser before starting.
@@ -90,8 +88,6 @@ Mark each field's status honestly:
 > **Confirmed** - supported by evidence: a stakeholder conversation, an observation, or reliable documentation.
 >
 > **Inferred** - a reasoned hypothesis based on what you currently know, including ideas you developed with the Dojo, that should be validated later.
-
-Don't upgrade a guess to Confirmed just because it feels obvious. The whole point of this map is to see clearly what you actually know versus what you're assuming.
 
 > `[[DECISION-7: confirm the minimum profile count, proposed 3. Owner: Melisa + Clare ]]`
 >

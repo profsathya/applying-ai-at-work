@@ -81,7 +81,7 @@ modules:
     learning_goals:
       - "Identify stakeholders and their relationship to the problem."
       - "Design validation questions for stakeholders that produce real evidence."
-      - "Revise the problem frame using human input and context."
+      - "Revise the problem framing using human input and context."
     prereq: "Builds on your Sprint 2 AI exploration. This sprint asks what actual people and settings confirm, complicate, or change."
     groups:
       - label: "Sprint Week 1: Understand and map"
