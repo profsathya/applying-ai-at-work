@@ -21,10 +21,13 @@ ai_activity:
       type: ai-discussion
       prompt: >
         Share the three validation questions you plan to ask, the stakeholder role you
-        hope to ask, and what you need to learn from the conversation.
+        hope to ask, and what you need to learn from the conversation. Then name the
+        single riskiest assumption in your current frame, the stakeholder who can help
+        test it, and the evidence, not approval, that would change your mind.
       placeholder: >
         Include the stakeholder role, your three draft questions, and the
-        assumption or uncertainty each question is meant to test.
+        assumption or uncertainty each question is meant to test. Add your riskiest
+        assumption, who can test it, and what evidence would confirm or complicate it.
       minLength: 120
       numQuestions: 3
       aiContext: >
@@ -34,7 +37,9 @@ ai_activity:
         needs, constraints, tensions, and assumptions. Diagnose each question as
         leading, vague, or missing evidence. Challenge yes-or-no questions, leading
         questions, and questions that ask stakeholders to solve the participant's
-        assignment.
+        assignment. Also push the participant to distinguish real listening and
+        evidence from approval-seeking, to mark each need as confirmed or inferred,
+        and to resist replacing a real stakeholder conversation with AI prediction.
       generateButtonText: Get Follow-up Questions
       loadingText: Generating follow-up questions...
       discussionPrompt: >
@@ -44,7 +49,9 @@ ai_activity:
       summaryLabel: Your Refined Validation Questions
       summaryPlaceholder: >
         Rewrite your three validation questions. Include the stakeholder role, what
-        each question tests, and what would count as useful evidence.
+        each question tests, and what would count as useful evidence. Name your
+        riskiest assumption, who can test it, and what evidence would confirm or
+        complicate your frame.
       saveButtonText: Save Response
       updateButtonText: Update Response
       digDeeperText: Dig deeper with AI guidance
@@ -73,7 +80,7 @@ Now it's time to test your problem frame against an actual stakeholder, not AI. 
 
 Before you talk to a real stakeholder, use AI to sharpen the validation questions you plan to ask. The goal is to catch weak questions, such as ones that lead the stakeholder toward your idea or that are too vague to tell you anything, before you're in the actual conversation.
 
-1. **Write your starting draft.** For the stakeholder you'll contact, write down their role, three validation questions you'd ask them, and what you're hoping to learn from each question.
+1. **Write your starting draft.** For the stakeholder you'll contact, write down their role, three validation questions you'd ask them, and what you're hoping to learn from each question. Also name the single riskiest assumption in your frame and the evidence, not approval, that would change your mind.
 2. **Generate AI follow-up questions.** Start the AI activity below and ask AI to respond to your draft with follow-up questions. Use them to diagnose your draft. Look for places where AI's response reveals that your question is:
    - **Leading:** it nudges the stakeholder toward the answer you want.
    - **Vague:** it's unclear what you're really asking, so any answer would be hard to use.
