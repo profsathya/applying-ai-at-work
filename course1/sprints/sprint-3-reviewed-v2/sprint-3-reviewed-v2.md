@@ -1,18 +1,18 @@
 ---
 type: module_header
-title: 'Sprint 3: Integrate People And Context'
-slug: sprint-3-integrate-people-and-context
-artifact_id: course1-sprints-sprint-3-sprint-3-integrate-people-and-context
+title: 'Sprint 3 - Reviewed (V2)'
+slug: sprint-3-reviewed-v2
+artifact_id: course1-sprints-sprint-3-reviewed-v2-sprint-3-reviewed-v2
 sprint: 3
 week: 5
-module: 'Sprint 3: Integrate People And Context'
+module: 'Sprint 3 - Reviewed (V2)'
 position: 1
 points: null
 submission_type: none
 publish: false
 ---
 
-# Sprint 3: Integrate People And Context
+# Sprint 3 - Reviewed (V2)
 
 In this sprint, you move the problem outside your own head. You map stakeholders, prepare listening questions, conduct real validation, and revise your frame based on what a real person helps you see.
 
@@ -20,18 +20,16 @@ This sprint is part of Reframing Problems with AI. You will keep using the same 
 
 By the end of this sprint, you should be able to:
 
-1. Identify stakeholders with different relationships to the problem.
-2. Distinguish impact, influence, authority, needs, constraints, and evidence status.
-3. Conduct at least one real validation conversation.
-4. Revise your problem and Goal Plan based on stakeholder evidence.
+1. Identify stakeholders and their relationship to the problem.
+2. Design validation questions for stakeholders that produce real evidence.
+3. Revise the problem framing using human input and context.
 
 ## Sprint Rhythm
 
-1. Bring forward your current problem statement and 3Cs confirmation plan.
-2. Read the concept page on stakeholders, needs, constraints, and validation.
-3. Use the Dojo to prepare for real stakeholder listening.
-4. Draft a stakeholder map and exchange validation questions with peers.
-5. Submit your Stakeholder Validation Report and mid-course Goal Plan revision.
+1. Read the Introduction and pass the concept check.
+2. Build your stakeholder map with the Dojo.
+3. Prepare, hold, and document your stakeholder conversation.
+4. Reflect and revise your Goal Plan.
 
 ## Portfolio Thread
 

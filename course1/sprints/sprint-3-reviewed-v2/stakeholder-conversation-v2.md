@@ -1,18 +1,18 @@
 ---
 type: discussion
 title: Stakeholder Conversation
-slug: stakeholder-conversation
-artifact_id: course1-sprints-sprint-3-stakeholder-conversation
+slug: stakeholder-conversation-v2
+artifact_id: course1-sprints-sprint-3-reviewed-v2-stakeholder-conversation-v2
 sprint: 3
 week: 5
-module: 'Sprint 3: Integrate People And Context'
+module: 'Sprint 3 - Reviewed (V2)'
 position: 5
 points: 50
 submission_type: file_upload
 delivery_mode: ai_activity
 publish: false
 ai_activity:
-  activity_id: course1-stakeholder-conversation
+  activity_id: course1-stakeholder-conversation-v2
   version: "1.0"
   title: 'Stakeholder Conversation: Prepare Your Questions'
   description: Use AI follow-up questions to sharpen the validation questions you will ask a real stakeholder.

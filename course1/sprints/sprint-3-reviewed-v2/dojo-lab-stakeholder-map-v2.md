@@ -1,11 +1,11 @@
 ---
 type: assignment
 title: 'Dojo Lab: Stakeholder Map'
-slug: dojo-lab-stakeholder-map
-artifact_id: course1-sprints-sprint-3-dojo-lab-stakeholder-map
+slug: dojo-lab-stakeholder-map-v2
+artifact_id: course1-sprints-sprint-3-reviewed-v2-dojo-lab-stakeholder-map-v2
 sprint: 3
 week: 5
-module: 'Sprint 3: Integrate People And Context'
+module: 'Sprint 3 - Reviewed (V2)'
 position: 4
 points: 35
 submission_type: text_entry
