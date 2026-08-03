@@ -3,7 +3,7 @@ type: page
 title: 'Introduction: Integrate People and Context'
 slug: introduction-integrate-people-and-context-v2
 artifact_id: course1-sprints-sprint-3-reviewed-v2-introduction-integrate-people-and-context-v2
-sprint: 3
+sprint: 6
 week: 5
 module: 'Sprint 3 - Reviewed (V2)'
 position: 2
@@ -45,13 +45,9 @@ The same person can hold more than one of these relationships at once. An invest
 
 On the other hand, these relationships aren't interchangeable. A person can be highly affected by the problem and have almost no authority to change it. Another person can approve or kill a solution but rarely experience the problem firsthand. Good stakeholder work keeps these differences visible, because each perspective tells you something different.
 
-> `[[DECISION-3: Nicolas (comment 1) argues "positioned to challenge your frame" is not a distinct relationship type, since any stakeholder can challenge the frame. Keep four types, or reduce to three and handle challenge as a property of the conversation? Owner: Melisa + Clare ]]`
-
 ### Validation Conversation
 
 Validation means testing your problem frame, not selling your solution. A good validation conversation isn't about getting a stakeholder to agree; it's about giving them room to tell you what they actually experience, need, fear, value, or see differently than you do. Their perspective gives you the context you need to judge whether your problem frame is right, incomplete, or off entirely.
-
-> `[[DECISION-4: Nicolas (comment 4) asks for a worked example of what a validation conversation actually looks like, and suggests it could be its own activity. Decide (a) whether to include an annotated sample exchange, and (b) whether it sits inside this page or becomes a fifth artifact. Owner: Melisa + Clare ]]`
 
 ### Conflicts as Information
 
