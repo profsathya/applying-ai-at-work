@@ -79,5 +79,3 @@ questions:
 A short self-test to confirm you are set up for this sprint before you start mapping. It covers both what Sprint 3 asks you to do and the core concepts behind it: stakeholders, evidence status, validation questions, and conflicts as information.
 
 This is an anti-skim check, not a graded assessment. If a question surprises you, revisit the Introduction before moving on to the Dojo Lab.
-
-> `[[DECISION-5: number of attempts allowed, and whether a passing score gates the next item (Canvas supports min_score completion). Recommend unlimited attempts, no gate. Owner: Melisa + Jeremy ]]`

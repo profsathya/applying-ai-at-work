@@ -99,8 +99,6 @@ When you're done working with the AI, copy or download the JSON response file fr
 
 This is a real problem in your own work, and it is in both your interests to connect early. The sooner you talk, the more of this sprint you have left to act on what you hear.
 
-> `[[DECISION-10: confirm the 3-day / 5-day follow-up intervals. Owner: Melisa + Clare ]]`
-
 ## Part 3: Have the Conversation
 
 1. Note the conversation format and date: when you talk and how you talk (in person meeting, phone call, online meeting, and so on).
@@ -134,8 +132,6 @@ Use this prep sheet to run the conversation. Fill in each section at the time it
 - Your first read on whether the frame changes.
 - The next question you would ask.
 
-> `[[DECISION-11: prep sheet format. Google Doc template, Canvas text-entry template, or printable PDF? This determines whether Jeremy builds it or it ships as a linked document. Owner: Melisa + Jeremy ]]`
-
 ## Part 4: Document What You Learned
 
 After the conversation, write a report with the following sections.
@@ -164,5 +160,3 @@ After the conversation, write a report with the following sections.
 ## Submission
 
 Upload two files to this assignment: the JSON response file from the AI activity in Part 1, and your written report from Part 4.
-
-> `[[DECISION-1: Resolve the two-submission problem. This build implements option (a): one artifact, submission_type file_upload, student uploads both the JSON and the report. Alternatives: (b) keep two artifacts, which undoes this merge; (c) fold the report into a second ai_activity question so both land in one JSON. Owner: Melisa + Jeremy ]]`

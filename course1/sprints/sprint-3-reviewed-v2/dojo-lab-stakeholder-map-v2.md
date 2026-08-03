@@ -67,8 +67,6 @@ Review the Dojo output as preparation, not evidence. Do not treat the Dojo as a 
 
 A how-to video is available as review material if you need a refresher on how to use the Dojo:
 
-> `[[DECISION-6: URL for the Dojo how-to video. Owner: Jeremy ]]`
-
 ## Build Your Stakeholder Map, Part 1
 
 After working with the Dojo, turn your thought process into a written document. Profile a minimum of three stakeholders, covering at least one affected, one influential, and one authority-or-constraint stakeholder. For every stakeholder, record the following, and mark a Status for each field:
@@ -88,10 +86,6 @@ Mark each field's status honestly:
 > **Confirmed** - supported by evidence: a stakeholder conversation, an observation, or reliable documentation.
 >
 > **Inferred** - a reasoned hypothesis based on what you currently know, including ideas you developed with the Dojo, that should be validated later.
-
-> `[[DECISION-7: confirm the minimum profile count, proposed 3. Owner: Melisa + Clare ]]`
->
-> `[[DECISION-8: Nicolas (comment 9) finds "stakeholder map" confusing, since the artifact is a set of profiles rather than a map, and suggests renaming it "Stakeholder Profiles." Note this would also change the module learning goal wording, the homepage meta line, the slug, and every downstream reference in Sprints 4 and 5. Decide before publish. Owner: Melisa ]]`
 
 ## Build Your Stakeholder Map, Part 2
 
@@ -134,5 +128,3 @@ Submit both parts of your stakeholder map as a text entry in Canvas.
 ## Portfolio Capture
 
 Save this stakeholder map with your portfolio. This draft becomes the basis for your validation conversation and final stakeholder report.
-
-> `[[DECISION-9: Nicolas (comment 6) and Melisa (comment 16) both raise that the Dojo is functioning here as an AI tutor rather than a superagency tool, and ask what would make it more valuable. This is a design question larger than Sprint 3 and should route to a separate thread, not block this build. Owner: Melisa + Sathya ]]`
