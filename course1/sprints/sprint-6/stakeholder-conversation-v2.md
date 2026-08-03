@@ -3,7 +3,7 @@ type: discussion
 title: Stakeholder Conversation
 slug: stakeholder-conversation-v2
 artifact_id: course1-sprints-sprint-3-reviewed-v2-stakeholder-conversation-v2
-sprint: 3
+sprint: 6
 week: 5
 module: 'Sprint 3 - Reviewed (V2)'
 position: 5

@@ -3,7 +3,7 @@ type: quiz
 title: Sprint 3 Reflection and Mid-Course Goal Plan Revision
 slug: sprint-3-reflection-and-mid-course-goal-plan-revision-v2
 artifact_id: course1-sprints-sprint-3-reviewed-v2-sprint-3-reflection-and-mid-course-goal-plan-revision-v2
-sprint: 3
+sprint: 6
 week: 5
 module: 'Sprint 3 - Reviewed (V2)'
 position: 6
