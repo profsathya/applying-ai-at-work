@@ -52,7 +52,7 @@ Submit a text entry with:
 
 ## Submission Format
 
-Text entry in Canvas.
+Text entry in Canvas. New to submitting here? See **Submitting Your Work in Canvas** in the Welcome and Orientation module.
 
 ## Evidence Of Success
 

@@ -46,7 +46,7 @@ Reserve at least two short calendar blocks each week.
 
 ## Before You Move On
 
-- Read: this page and `Concept: From Goal To Problem`.
+- Read: this page and `Concept: From Goal To Problem`. New to the course? Start with **Welcome: Start Here** and the **Tutorials and Resources** hub in the Welcome and Orientation module.
 - Do: choose a real goal and write before using AI.
 - Submit: nothing from this page. Later activities name what to upload.
 - Save: goal, surface request, ladder notes, AI pushback, feedback, and revised problem statement.
