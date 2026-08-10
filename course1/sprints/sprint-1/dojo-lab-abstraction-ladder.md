@@ -33,7 +33,7 @@ Before opening AI, write your current goal and first problem statement in your o
 
 ## Open The Dojo
 
-Use the [Open the Symbiotic Thinking Dojo](https://dojo.symbioticthinking.ai/) link for this lab. First-time users should open Learn About -> Privacy & Setup and configure a Gemini API key in the browser before starting.
+Use the [Open the Symbiotic Thinking Dojo](https://dojo.symbioticthinking.ai/) link for this lab. First-time users should open Learn About -> Privacy & Setup and configure a Gemini API key in the browser before starting. For a fuller walkthrough, or if you hit an API rate limit, see **Dojo Setup and How-To** in the Welcome and Orientation module.
 
 Do not paste confidential workplace, client, education, patient, or personal data into the Dojo. De-identify details and keep sensitive information out of the prompt.
 
