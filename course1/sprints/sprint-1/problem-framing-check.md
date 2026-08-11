@@ -54,6 +54,16 @@ ai_activity:
 
 Check whether you can apply the goal-to-problem distinction to your own work. This is not a memorization quiz. It is a short AI-guided check on whether your frame is specific, testable, and grounded in evidence.
 
+## Frame to Check Against
+
+Check your problem frame against these three points:
+
+1. What is the initial problem as first described?
+2. What are the underlying root causes? Use the abstraction ladder to go deeper.
+3. State the problem as a specific, actionable problem statement.
+
+A workable problem is one you can meaningfully act on within this course's 10 weeks.
+
 ## How It Works
 
 1. Write an initial explanation using your real problem frame.
@@ -62,6 +72,12 @@ Check whether you can apply the goal-to-problem distinction to your own work. Th
 4. Use the deeper AI guidance button if the answer still sounds broad or generic.
 5. Save the refined response in the activity.
 
+## Outside-Reader Review (Placeholder)
+
+> ▢ FILLER: final checklist to be developed. Make the peer or outside-reader review concrete: a checklist of what to provide and what to evaluate (in both directions), examples of who can serve as the outside reader, and how review quality counts toward evidence of success.
+
 ## What To Submit
 
 Download the JSON response file from the activity and upload it to Canvas. Your final response should show that you can recognize the difference between AI plausibility and evidence you can trust.
+
+> ▢ FILLER: final steps to be developed. Add a simple "do this, then this" note for the JSON copy and upload flow.

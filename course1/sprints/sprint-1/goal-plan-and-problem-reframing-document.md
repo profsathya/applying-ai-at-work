@@ -58,6 +58,8 @@ Text entry in Canvas. New to submitting here? See **Submitting Your Work in Canv
 
 Your submission should be specific enough that another person can understand your context, your reasoning, and what you are ready to do next. Do not submit a polished AI answer without showing your own judgment.
 
-## Portfolio Capture
+## Submit to Canvas
 
-This document becomes the starting point for Sprint 2. Keep a copy where you can revise it later instead of treating it as finished forever.
+Submit this document in Canvas. It becomes the starting point for Sprint 2, so keep a copy where you can revise it later instead of treating it as finished forever.
+
+> ▢ TEAM DECISION: confirm removing the "Portfolio Capture" language in favor of "Submit to Canvas" (students submit via Canvas, not a portfolio).

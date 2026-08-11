@@ -23,19 +23,35 @@ rubric:
 
 # Dojo Lab: Abstraction Ladder
 
+## What the Dojo Is (Placeholder)
+
+> ▢ FILLER: final intro and media to be developed. Add a brief Dojo intro (what it is and its purpose) with a short video or screenshots before students enter.
+
 ## Purpose
 
 Use AI to widen and test your first problem frame, then use your own judgment to decide what changes.
 
-## Pre-Dojo Pause
+## The Abstraction Ladder (Placeholder)
 
-Before opening AI, write your current goal and first problem statement in your own words. Keep this version visible while you work.
+> ▢ FILLER: final explanation to be developed (low priority). Make the abstraction ladder clear here: link the diagram and expand the explanation of how to move up and down it.
+
+## Pre-Dojo Goal Pause
+
+Use the same goal and first problem statement you wrote in the Pre-Dojo Goal Pause: keep it or refine it here (this is the same pause step, continued). Keep this version visible while you work.
 
 ## Open The Dojo
 
 Use the [Open the Symbiotic Thinking Dojo](https://dojo.symbioticthinking.ai/) link for this lab. First-time users should open Learn About -> Privacy & Setup and configure a Gemini API key in the browser before starting. For a fuller walkthrough, or if you hit an API rate limit, see **Dojo Setup and How-To** in the Welcome and Orientation module.
 
 Do not paste confidential workplace, client, education, patient, or personal data into the Dojo. De-identify details and keep sensitive information out of the prompt.
+
+## Why the Dojo (Placeholder)
+
+> ▢ FILLER: final rationale to be developed. Add a short rationale explaining why students use the Dojo rather than mainstream AI chat engines.
+
+## Your Sparring Partners (Placeholder)
+
+> ▢ FILLER: final explanation to be developed. Add a short explanation of the "sparring partners," the Dojo personas you work with (for example, start with Framer, then bring in Challenger).
 
 ## Dojo Prompt
 

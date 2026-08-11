@@ -14,7 +14,14 @@ publish: true
 
 # Start Here: Frame What Is Worth Solving
 
-Sprint 1 helps you turn a real work goal into a clearer problem you can investigate: start with your own thinking, test vague parts with AI and feedback, and save evidence for later sprints.
+Sprint 1 turns a real goal you care about into a clearer problem you can investigate. You start with your own thinking, test the vague parts with AI and feedback, and save evidence to carry into later sprints.
+
+## What You Will Do This Sprint
+
+- Choose a real goal and write your own first thoughts in the Pre-Dojo Goal Pause.
+- Use the Dojo Lab to move up and down the abstraction ladder and pressure-test your frame.
+- Sharpen the problem beneath your goal in the AI Exchange, then run the Problem Framing Check.
+- Submit your Goal Plan and Problem Reframing Document, then reflect on what changed.
 
 ## Key Terms
 
@@ -27,30 +34,22 @@ Sprint 1 helps you turn a real work goal into a clearer problem you can investig
 | Problem Reframing Document | The Sprint 1 document where you explain the revised problem frame, the evidence that shaped it, and the next steps you would take. |
 | Final artifact | The main deliverable that shows what you learned. In Sprint 1, it is the Goal Plan and Problem Reframing Document. |
 
-## Sprint 1 At A Glance
+> ▢ FILLER: final definitions to be developed. Add brief definitions or a fuller terminology table covering the sprint terms and artifacts (abstraction ladder, Dojo Goal Pause, Dojo Lab, and the Problem Reframing Document, which becomes the Root Cause Analysis), plus a short reading that ties the terms and the process together. Align the abstraction-ladder framework with CIS395.
 
-| When | Focus | What to complete |
-|---|---|---|
-| Sprint Week 1 | Start from your own thinking | Concept page, Pre-Dojo Goal Pause, Dojo Lab. |
-| Sprint Week 2 | Test and submit the frame | AI peer exchange, Goal Plan and Problem Reframing Document, check, reflection. |
+## Time Guidance
 
-## Pacing
+Plan roughly ▢[X-Y] hours per week. Because the course is asynchronous, set a fixed weekly time to build a routine. This page is a no-grade reminder; you earn credit through the sprint's submitted work.
 
-Plan for 2 to 3 focused hours each week:
+> ▢ TEAM DECISION: set the X-Y hours.
 
-- Day 1: read and choose the real goal.
-- Days 2-3: write first, then use AI.
-- Days 4-5: revise, save, and submit only when an activity asks.
+## Sprint Map (Placeholder)
 
-Reserve at least two short calendar blocks each week.
+> ▢ FILLER: final diagram asset to be developed. Add a visual of the two-week sprint map.
 
-## Before You Move On
+## Your Sprint 1 Checklist (Placeholder)
 
-- Read: this page and `Concept: From Goal To Problem`. New to the course? Start with **Welcome: Start Here** and the **Tutorials and Resources** hub in the Welcome and Orientation module.
-- Do: choose a real goal and write before using AI.
-- Submit: nothing from this page. Later activities name what to upload.
-- Save: goal, surface request, ladder notes, AI pushback, feedback, and revised problem statement.
+> ▢ FILLER: final checklist items to be confirmed. Add a short student-facing checklist of what to read, do, submit, and save this sprint.
 
-## Check Your Understanding
+## Check You Read This Page (Placeholder)
 
-No Canvas submission is required. In your notes, pick the stronger frame: a broad goal or a specific onboarding handoff issue. Then name what you will do before AI and what you will save.
+> ▢ FILLER: final quiz items to be developed (see the read-confirmation decision). Add a short multiple-choice quiz confirming students read this page.

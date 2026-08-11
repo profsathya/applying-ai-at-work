@@ -1,6 +1,6 @@
 ---
 type: discussion
-title: 'Peer Exchange: What Problem Sits Beneath It?'
+title: 'AI Exchange: What Problem Sits Beneath It?'
 slug: peer-exchange-what-problem-sits-beneath-it
 artifact_id: course1-sprints-sprint-1-peer-exchange-what-problem-sits-beneath-it
 sprint: 1
@@ -14,7 +14,7 @@ publish: false
 ai_activity:
   activity_id: course1-peer-exchange-what-problem-sits-beneath-it
   version: "1.0"
-  title: 'Peer Exchange: What Problem Sits Beneath It?'
+  title: 'AI Exchange: What Problem Sits Beneath It?'
   description: Use AI follow-up questions to test whether your current frame names the real problem or only a surface request.
   questions:
     - id: q1-problem-beneath
@@ -48,19 +48,27 @@ ai_activity:
       digDeeperText: Dig deeper with AI guidance
 ---
 
-# Peer Exchange: What Problem Sits Beneath It?
+# AI Exchange: What Problem Sits Beneath It?
 
 ## Purpose
 
 Use AI as a careful listener. The goal is not to have AI solve the problem for you. The goal is to hear whether your current frame names a real underlying problem or still sounds like a surface request.
 
+You will pressure-test your problem with an AI partner that plays the role of a challenging peer. (You will do real stakeholder conversations later, in Sprint 3.)
+
 ## How It Works
 
 1. Write your revised problem statement, what changed from your starting goal, and one point where you are unsure.
-2. Generate AI follow-up questions.
+2. Generate follow-up questions using the AI activity linked below on this page, not a separate or outside AI chat.
 3. Use the questions to revise your thinking.
 4. Use the deeper AI guidance button for another round if your answer still feels generic or solution-first.
 5. Save the refined response in the activity.
+
+## Start the AI Activity
+
+Open the AI activity on this page and generate your follow-up questions there. Work through the rounds, then save your refined response before you download it.
+
+> ▢ FILLER: final walkthrough to be developed. Add JSON download and upload instructions (a short video and/or a linked resource page).
 
 ## What To Submit
 
