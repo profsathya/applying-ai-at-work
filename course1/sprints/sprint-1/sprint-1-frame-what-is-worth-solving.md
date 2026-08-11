@@ -14,6 +14,20 @@ publish: false
 
 # Sprint 1: Frame What Is Worth Solving
 
+## About This Course (Placeholder)
+
+`[TODO: replace with final course overview video]`
+
+Applying AI at Work: Reframing Problems with AI is a ten-week course about using AI to think better, not just faster. Working from one real goal you care about, you move from a vague goal to a clear, well-defined problem worth solving, then carry that problem through stakeholder and AI-assisted exploration across five two-week sprints.
+
+The frame of reference is your own real setting: a workplace, job search, role transition, community or campus work, caregiving, a small business, or anywhere actual people are affected. AI is your thinking partner and skeptic, not an answer machine. You push back on it and stay in charge.
+
+This matters because the hardest part of real work is rarely getting an answer. It is choosing the right problem to solve. Getting the problem right is the whole game, and it is the judgment this course is built to grow.
+
+A short welcome video will follow.
+
+## In This Sprint
+
 In this sprint, you move from a goal or surface request to a real problem that is specific enough to test. The first frame does not need to be final. It needs to be useful enough to carry into stakeholder and AI-assisted exploration.
 
 This sprint is part of Reframing Problems with AI. You will keep using the same real current problem throughout the course. A workplace problem is ideal, but the problem can also come from a job search, role transition, volunteer role, community work, caregiving or family system, campus work, professional portfolio, small business, or another real setting where actual people are affected.
