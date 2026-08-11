@@ -21,7 +21,7 @@ ai_activity:
       type: ai-discussion
       prompt: >
         Draft your Sprint 1 reflection. Explain what AI helped you see, what AI
-        missed because it lacked your context, what peer feedback changed, what
+        missed because it lacked your context, what peer or outside-reader feedback changed, what
         decision you are making now, and what still feels uncertain.
       placeholder: >
         Write in first person. Use your actual starting goal, Dojo notes, peer
@@ -43,7 +43,7 @@ ai_activity:
       summaryLabel: Your Refined Sprint 1 Reflection
       summaryPlaceholder: >
         Write the final version you want to submit. Include what AI revealed,
-        what it missed, how peer feedback affected the frame, your current
+        what it missed, how peer or outside-reader feedback affected the frame, your current
         decision, and your remaining uncertainty.
       saveButtonText: Save Reflection
       updateButtonText: Update Reflection
@@ -53,7 +53,7 @@ rubric:
   points: 2
 - description: Names what AI missed because it lacked context
   points: 3
-- description: Explains how peer feedback affected the frame
+- description: Explains how peer or outside-reader feedback affected the frame
   points: 2
 - description: States a decision and remaining uncertainty
   points: 3
@@ -80,9 +80,13 @@ Your refined reflection should answer:
 
 - What AI helped you see.
 - What AI missed because it does not know your context.
-- What peer feedback changed.
+- What peer or outside-reader feedback changed.
 - What decision you are making now.
 - What still feels uncertain.
+
+## Start the AI Activity
+
+Open the AI activity on this page. Draft your reflection there, generate the follow-up questions, revise, and save your refined response before you download it.
 
 ## Submission Format
 
@@ -91,6 +95,10 @@ Download the JSON response file from the activity and upload it to Canvas.
 ## Evidence Of Success
 
 Your final response should be specific enough that another person can understand your context, your reasoning, and what you are ready to do next. Do not submit a polished AI answer without showing your own judgment.
+
+## Confidence and Engagement Check (Placeholder)
+
+> ▢ FILLER: final survey items to be developed. Add a short survey or temperature check on self-reported confidence and engagement.
 
 ## Portfolio Capture
 

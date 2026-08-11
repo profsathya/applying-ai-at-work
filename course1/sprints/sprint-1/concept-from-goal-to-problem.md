@@ -12,11 +12,15 @@ publish: true
 
 # Concept: From Goal To Problem
 
+## What Problem Framing Is
+
+Problem framing is the work of deciding what problem is actually worth solving before you try to solve it. A goal points you in a direction, but a goal is not yet something you can act on. Framing turns that direction into a specific, testable problem so the effort you spend, with or without AI, goes toward the right thing.
+
 ## Start With Three Terms
 
-- A goal names the direction you want to move: get promoted, reduce delays, improve onboarding, support a community, or build a stronger portfolio.
-- A problem names the specific condition that makes the goal hard to reach.
-- A frame is the way you describe what is happening, why it matters, who is affected, and what might need to change. Your first frame is provisional. It gives you a place to start, but you should expect to revise it as you learn more.
+- Goal: what you want to achieve.
+- Problem: the specific obstacle between you and the goal.
+- Frame: the particular way you have defined that problem. A different frame points to different solutions, so your first frame is provisional and you should expect to revise it as you learn more.
 
 The course begins by separating goals, problems, and frames because AI can quickly generate solutions for the problem you give it. Your job is to make sure the problem you give it is worth working on.
 
@@ -24,13 +28,13 @@ The course begins by separating goals, problems, and frames because AI can quick
 
 A surface request often starts as something like make a dashboard, write a policy, automate the emails, or use AI for scheduling. The underlying problem may involve unclear handoffs, missing information, conflicting incentives, mistrust, or a process no one owns.
 
-For example:
+A workplace example:
 
 - <span style="color: #9B6A00;"><strong>Workplace goal:</strong></span> "Reduce delays in onboarding."
 - <span style="color: #9B6A00;"><strong>Surface request:</strong></span> "Make a dashboard so everyone can see where each new hire is."
 - <span style="color: #9B6A00;"><strong>Stronger problem frame:</strong></span> "Managers, HR, and IT do not share one handoff process, so equipment and account setup happen late. The next thing to test is where the delay actually starts."
 
-A career-transition goal works the same way:
+A job-search example works the same way:
 
 - <span style="color: #9B6A00;"><strong>Career goal:</strong></span> "Get a better job."
 - <span style="color: #9B6A00;"><strong>Surface request:</strong></span> "Use AI to rewrite my resume."
@@ -38,7 +42,7 @@ A career-transition goal works the same way:
 
 ## Use The Abstraction Ladder
 
-An Abstraction Ladder is a way to move between the specific situation in front of you and the larger purpose behind it. Moving up helps you ask what the problem is really about. Moving down helps you turn that broader understanding back into a specific problem you can test.
+An Abstraction Ladder is a way to move between the specific situation in front of you and the larger purpose behind it. Moving up helps you ask what the problem is really about. Moving down helps you turn that broader understanding back into a specific problem you can test. This is the move that connects a broad goal to a workable problem.
 
 Use the visual first, then use the table below it as the text version.
 
@@ -62,11 +66,13 @@ flowchart TB
 
 The ladder matters when using AI because AI can respond fluently to a weak frame. The ladder helps you slow down, use your own context, and improve the frame before you start asking for solutions.
 
+> ▢ FILLER: final abstraction-ladder asset and definition to be developed (low priority; scope lightly). Add a clearer ladder visual and a short worked example alongside the two above, and keep the line that connects the ladder move to the goal-to-problem shift.
+
 ## A Strong First Frame
 
 You do not need to be certain in Sprint 1. You need a frame that is honest enough to test. A strong first frame names what you know, what you assume, who is affected, and what evidence you need next.
 
-## Practice With Your Real Course Goal
+## Practice With The Problem You Chose
 
 Use the real goal you are carrying into this course. It may come from work, a job search, a career transition, community work, caregiving, learning, or a portfolio you want to build. The important thing is that actual people, constraints, and evidence are involved.
 
@@ -79,6 +85,21 @@ Use the real goal you are carrying into this course. It may come from work, a jo
 - Move one step down the ladder and name the next piece of evidence you need.
 - Revise the problem statement if the ladder changed your thinking.
 
+## Self-Check
+
+Ask yourself these questions about the frame you chose:
+
+- What decision does solving this help me make?
+- Am I describing a symptom or a cause?
+- Would someone else describe this the same way?
+
 ## Check Your Understanding
 
-Before you move to the next activity, choose the version of the problem frame you want to carry forward. Write one sentence in your notes that names the next decision you need to make about that frame. If the sentence could apply to anyone, add more of your own context.
+Before you move to the next activity, choose the version of the problem frame you want to carry forward. Write one sentence in your notes that names the concrete next choice this problem is blocking. If the sentence could apply to anyone, add more of your own context.
+
+## Before You Move On
+
+- Read: this page and `Start Here: Frame What Is Worth Solving`. New to the course? Start with **Welcome: Start Here** and the **Tutorials and Resources** hub in the Welcome and Orientation module.
+- Do: choose a real goal and write before using AI.
+- Submit: nothing from this page. Later activities name what to upload.
+- Save: goal, surface request, ladder notes, AI pushback, feedback, and revised problem statement.
