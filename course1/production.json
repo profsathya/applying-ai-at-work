@@ -343,12 +343,16 @@
       "canvas_id": null,
       "canvas_module_id": 1946,
       "canvas_page_url": null,
+      "canvas_payload_hash": "9e8022443b5e1d4551daad9b428032da08ad2e1d0bc1e42959e1232a99f1f5a9",
       "canvas_type": "module_header",
-      "content_hash": "2118f39ef1df55979e162759665e47137ce8c90e12fb3634bd44a9e8364d1abb",
+      "content_hash": "c45a75d80ccf0ae95f203ae739786fdbddf9f570b63b0c78b26ae2ef2151417c",
       "hosted_path": "course1/activities/sprint-1-frame-what-is-worth-solving.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/sprint-1-frame-what-is-worth-solving.html",
-      "last_pushed": "2026-06-15T17:33:02+00:00",
-      "local_path": "course1/sprints/sprint-1/sprint-1-frame-what-is-worth-solving.md"
+      "last_pushed": "2026-08-11T04:18:19+00:00",
+      "local_path": "course1/sprints/sprint-1/sprint-1-frame-what-is-worth-solving.md",
+      "position": 1,
+      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "source_commit": "cf843cace7d27acf146bae516b2c46d73d4e8ce1"
     },
     "course1-sprints-sprint-1-sprint-1-reflection-what-changed": {
       "artifact_id": "course1-sprints-sprint-1-sprint-1-reflection-what-changed",
@@ -1142,5 +1146,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-08-10T15:15:47+00:00"
+  "last_sync": "2026-08-11T04:18:19+00:00"
 }
