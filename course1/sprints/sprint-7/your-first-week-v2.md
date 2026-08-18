@@ -14,8 +14,6 @@ publish: false
 
 # Your First Week
 
-> **The short version**
->
 > Four things. The last one is the only thing you submit, and it is just an introduction.
 
 ## Your checklist

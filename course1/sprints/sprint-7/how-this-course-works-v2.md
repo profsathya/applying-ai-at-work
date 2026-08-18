@@ -14,8 +14,6 @@ publish: false
 
 # How This Course Works
 
-> **The short version**
->
 > Ten weeks, five sprints, two weeks each. Each sprint produces one document. Everything is online and on your own schedule, but the pace is real, so aim for about half a sprint each week. You turn everything in through Canvas. You are graded on how you got there as well as what you finished.
 
 ## What gets assessed
