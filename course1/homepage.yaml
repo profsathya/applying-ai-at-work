@@ -237,3 +237,35 @@ modules:
             meta: "Assignment - prepare, hold, and document a real stakeholder conversation"
           - slug: "sprint-3-reflection-and-mid-course-goal-plan-revision-v2"
             meta: "AI reflection activity - refine your goal plan revision based on evidence"
+
+  - sprint: 7
+    tag: "Orientation V2"
+    open: false
+    learning_goals:
+      - "Understand what the course is, how it is paced, and what a good goal looks like."
+      - "Choose the real goal you will carry through all five sprints."
+      - "Set up your Dojo access and know where to find how-to guides, the glossary, and troubleshooting."
+    prereq: "A second copy of the Welcome and Orientation module, kept separate from the original for revision and comparison. Nothing is submitted from this module."
+    groups:
+      - label: "Start here"
+        items:
+          - slug: "welcome-start-here-v2"
+            meta: "Page - what the course is, how it is paced, choosing your goal, and how you use AI"
+      - label: "Come back to these anytime"
+        items:
+          - slug: "tutorials-and-resources-v2"
+            meta: "Page - the hub of how-to guides, reference, and troubleshooting"
+          - slug: "dojo-setup-and-how-to-v2"
+            meta: "Page - get your Symbiotic Thinking Dojo access working"
+          - slug: "submitting-your-work-in-canvas-v2"
+            meta: "Page - where and how you turn work in"
+          - slug: "downloading-and-uploading-your-json-v2"
+            meta: "Page - export a Dojo session and upload it"
+          - slug: "key-terms-glossary-v2"
+            meta: "Page - definitions used across the course"
+          - slug: "the-five-artifact-map-v2"
+            meta: "Page - the full-course arc as a reference"
+          - slug: "how-ai-is-used-in-this-course-v2"
+            meta: "Page - the fuller AI-use statement and Symbiotic Thinking explainer"
+          - slug: "troubleshooting-v2"
+            meta: "Page - fixes for rate limits and browser-tab overload"
