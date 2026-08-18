@@ -14,45 +14,74 @@ publish: false
 
 # How This Course Works
 
-*Page 3 of 5 in Welcome and Orientation.*
+> **The short version**
+>
+> Ten weeks, five sprints, two weeks each. Each sprint produces one document. Everything is online and on your own schedule, but the pace is real, so aim for about half a sprint each week. You turn everything in through Canvas. You are graded on how you got there as well as what you finished.
 
-This page covers the mechanics: how the course is paced, how you turn work in, and how you are expected to use AI along the way.
+## What gets assessed
 
-## Pacing and rhythm
+You are assessed on how you got there as well as what you finished. That is deliberate.
 
-The course runs as five two-week sprints over ten weeks. It is self-paced, but plan on steady weekly progress. Each sprint spans two weeks, so aim to complete about half a sprint each week rather than saving it for the end. Because everything is asynchronous, set yourself a fixed weekly time to build a routine.
+The AI tools you use today will not be the ones you use in three years. What carries forward is your ability to frame a problem, judge what an AI gives you, and explain your reasoning to someone else. So the reflections, the logs, and the record of how your thinking changed are not extra work around the real assignment. They are the part that stays useful after the tools change.
 
-- Suggested weekly time: `[TEAM DECISION: X to Y hours per week]`.
-- Progress means measurable milestones toward your goal each week, not finishing the goal itself.
+## The five sprints
 
-Each sprint is one Canvas module. Inside a module you will see the sprint week labels used for pacing. They tell you what to do first and what can wait until the second week.
+Ten weeks. Two weeks per sprint. Each sprint produces one document, and each document feeds the next.
+
+| Sprint | Weeks | What you do | What you produce |
+| --- | --- | --- | --- |
+| **1. Frame what is worth solving** | 1-2 | Take a problem from your own work and move it from the request you were handed to the problem underneath it. | Problem reframing document |
+| **2. Direct AI deliberately** | 3-4 | Run the problem through context, choices, and confirmation. Explore directions, name the assumptions inside each, test which hold. | 3Cs application log |
+| **3. Integrate people and context** | 5-6 | Work out who has a stake, map what they need, then talk to real people. Reconcile what conflicts. | Stakeholder validation report |
+| **4. Close the learning gap** | 7-8 | Name what you do not know that is blocking you. Set a learning goal, close the gap, show what it changed. | Self-learning journey document |
+| **5. Synthesize and show readiness** | 9-10 | Pull all four together into one argument about the problem, and trace how your thinking moved. | Integrated problem document and readiness report |
+
+Notice the sprint names are verbs. Frame, direct, integrate, close, synthesize. Each one names a thinking move, and the thinking move is the thing being built. The document is the evidence.
+
+Sprint 3 is the one to look at now, because it involves other people and other people need notice. In week 5 you will talk to someone who has a real stake in your problem. If a workplace stakeholder is not available to you, a mentor, an advisor, a peer, a community member, or a professional contact all work. Nobody is asked to pretend a classmate is their VP of Operations.
+
+## This is course 1 of 2
+
+CIS 501 frames the problem. CIS 502, Designing Solutions with AI, is where you build and iterate a solution to it. You carry your integrated problem document into Course 2 as the starting input.
+
+You are not committing to Course 2 by taking this one.
+
+## Your weekly rhythm
+
+The course is asynchronous and self-paced. Nothing meets live. You fit it around work.
+
+Self-paced does not mean unpaced. Each sprint is two weeks, and the work is designed to be split across both of them. **Aim for about half a sprint per week.** The people who struggle in courses like this are almost always the ones who saved a sprint for its final weekend.
+
+`[TODO: add the expected weekly time commitment, for example a range of hours per week.]`
+
+Here is the single most useful thing you can do about this: pick your hours now and put them on your calendar as a recurring block. In self-paced courses, a fixed scheduled slot predicts finishing better than motivation does.
+
+## How you work with AI
+
+Think first, then bring AI in. You lead. AI helps you think, it does not think for you.
+
+There is a consistent pattern across all five sprints. AI generates range, prepares, explains, and acts as a sounding board. You judge which framing is real, decide what is credible, hold the conversations, and write the account of your own growth.
+
+Sprint 3 is the clearest example. AI helps you map perspectives and draft what to ask. The conversations are yours alone.
+
+## Your AI partners
+
+You will work with AI as a thinking partner throughout this course. You will be introduced to the specific tools in Sprint 1, at the point where you first use them. There is no cost to you for the tools this course uses.
 
 ## How you turn work in
 
-You submit in Canvas, either as text you paste in or as a file you upload. There is no separate portfolio to manage and nothing to keep in sync outside Canvas.
+Everything goes through Canvas, either typed straight into the submission box or uploaded as a file. There is no separate portfolio site and no other platform to learn.
 
-- Open the Canvas assignment page for the activity and submit there.
-- Paste text when the activity asks for writing. Upload a file when it asks for a document or an exported Dojo session.
-- After you submit, check the assignment page again to confirm it went through.
+Step-by-step instructions are on the **Help and Resources** page.
 
-`[TODO: confirm submission steps and add screenshots.]`
+## What happens if you fall behind
 
-## How you will use AI here
+You will not be the first. Assignments may not have set deadlines, but we encourage timely participation so you get the most out of the course. If you fall behind, do not worry: every day is an opportunity to catch up.
 
-AI is your thinking partner in this course, not a vending machine for answers. The habit to build: think first, then bring AI in. Write your own take before you prompt, then use AI to challenge and deepen it. You lead, and you decide what is credible and what to keep. Where an activity asks you to think without AI first, that is on purpose.
-
-That habit is what this course calls Symbiotic Thinking. It differs from using AI as an answer machine in one specific way: you keep the goal, the standards, and the final judgment. AI widens your thinking, surfaces what you missed, and argues with you. It does not decide for you.
-
-`[TEAM DECISION: confirm the official AI-use policy wording, then finalize this section.]`
-
-## The Dojo
-
-Some activities use the **Symbiotic Thinking Dojo**, a space to think with AI rather than get answers from it. It plays a guided role: it challenges your framing instead of solving things for you, which is why it is different from a normal chatbot. The guided personas each do a different job, and you start with the Framer.
-
-Set up your access before your first Dojo activity so you do not hit an API rate limit mid-activity. Setup steps are on **Help and Resources**.
-
-`[TEAM DECISION: confirm whether participants use the built Dojo or convert their own chatbot. This section is kept tool-agnostic until confirmed.]`
+> **Go further, optional**
+>
+> Curious where the structure comes from? The five sprints are not arbitrary. They follow a capability model used across every CTI program, and it is what sets the order of the ten weeks. Sprint 4 is where self-directed learning concentrates. Sprints 1, 3, and 5 build the ability to hold several domains at once: your expertise, your goal, and what the people around the problem actually experience. You are never asked to memorize any of this. It is here because it explains why the course is shaped the way it is.
 
 ## Next
 
-Continue to **Your First Week**: the short list of things to finish before Sprint 1 opens.
+Continue to **Your First Week**: a short checklist, ending in the one thing you submit.

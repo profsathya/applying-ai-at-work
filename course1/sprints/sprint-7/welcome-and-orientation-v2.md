@@ -14,6 +14,8 @@ publish: false
 
 # Welcome and Orientation (V2)
 
-Start here before Sprint 1. Five short pages orient you to what the course is, how it is paced, how to pick the goal you will carry for ten weeks, and how you will use AI as a thinking partner. The last page, Help and Resources, is the one you return to whenever you need a how-to guide, a definition, or troubleshooting.
+Start here before Sprint 1. Four short pages cover what the course is, how it is paced, how you will work with AI as a thinking partner, and where to go when you are stuck. Work through them in order.
 
-You do not submit anything from this module. Read the pages in order, choose your goal, and set up your Dojo access so you are ready when Sprint 1 begins.
+One thing is submitted from this module: a short introduction post, graded complete or incomplete. You do not need to choose your problem, set up any AI tool, or write down a goal yet. All of that is Sprint 1.
+
+The last page, Help and Resources, holds the how-tos, key terms, and troubleshooting. Skim it now and come back to it whenever you need it.

@@ -14,26 +14,26 @@ publish: false
 
 # Start Here
 
-*Page 1 of 5 in Welcome and Orientation.*
+Welcome to CIS 501. This module has four short pages, plus one short introduction post at the end.
 
-This is the landing page for the module. Read the five pages in order before Sprint 1 begins. Together they take about twenty minutes, and they set up everything you need for the next ten weeks.
+You do not need to do anything technical yet. You do not need to have chosen a problem yet. You do not need any experience with AI tools.
 
-You do not submit anything from this module. The work here is reading, one decision, and one setup task.
+## What you will be able to do after this module
 
-## What is in this module
+- Say what you will produce by the end of the course, and how the five sprints build toward it.
+- Know what the course asks of you each week, and decide how you will fit it in.
+- Recognize the two ideas this course rests on, Superagency and Human Value, and how you will work with AI as a thinking partner.
+- Know where to go when you are stuck.
 
-1. **Start Here** (this page): what the module covers and what to do first.
-2. **Welcome**: what the course is about, the two questions underneath it, and the arc of work you will build.
-3. **How This Course Works**: pacing, the sprint structure, how you turn work in, and how you use AI here.
-4. **Your First Week**: the short list of things to do before Sprint 1 opens.
-5. **Help and Resources**: how-to guides, key terms, and fixes for the problems people hit most often. Come back to this one whenever you need it.
+## The four pages
 
-## What to do first
+1. **Welcome.** Who is teaching this, what the course is, and what you walk out with.
+2. **How This Course Works.** The five sprints, the weekly rhythm, what it asks of you, and how you turn work in.
+3. **Your First Week.** A short checklist, ending in one thing you submit.
+4. **Help and Resources.** How-tos, key terms, and troubleshooting. This page is built to be come back to, not read once.
 
-Read **Welcome** next. Two things from that page carry into every sprint: the goal you choose, and the habit of thinking first and bringing AI in second.
-
-Then work through **Your First Week** and set up your Dojo access before your first Dojo activity. Setting up early is what keeps you from hitting an API rate limit in the middle of an activity.
+Work through them in order. Page 4 is the exception: skim it now so you know what is on it, then come back whenever you need it.
 
 ## Next
 
-Continue to **Welcome**: what this course asks of you, and what you will build across the five sprints.
+Continue to **Welcome**: who is teaching this course, what it is, and what you walk out with.

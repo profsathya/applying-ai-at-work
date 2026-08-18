@@ -242,22 +242,27 @@ modules:
     tag: "Orientation V2"
     open: false
     learning_goals:
-      - "Understand what the course is, how it is paced, and what a good goal looks like."
-      - "Choose the real goal you will carry through all five sprints."
-      - "Set up your Dojo access and know where to find how-to guides, key terms, and troubleshooting."
-    prereq: "A second version of the Welcome and Orientation module, kept separate from the original. Read the five pages in order before Sprint 1. Nothing is submitted from this module."
+      - "Say what you will produce by the end of the course, and how the five sprints build toward it."
+      - "Know what the course asks of you each week, and decide how you will fit it in."
+      - "Recognize the two ideas the course rests on, Superagency and Human Value, and how you work with AI as a thinking partner."
+      - "Know where to go when you are stuck."
+    prereq: "A second version of the Welcome and Orientation module, kept separate from the original. Read the four pages in order before Sprint 1. The introduction post is the only thing you submit."
     groups:
       - label: "Read these in order"
         items:
           - slug: "start-here-v2"
-            meta: "Page 1 of 5 - module landing page: what this module covers and what to do first"
+            meta: "Page - module landing page: what this module covers and what to do first"
           - slug: "welcome-v2"
-            meta: "Page 2 of 5 - what the course is about, the two questions under it, and what you will build"
+            meta: "Page - who is teaching this, what the course is, and what you walk out with"
           - slug: "how-this-course-works-v2"
-            meta: "Page 3 of 5 - pacing, sprint structure, how you turn work in, and how you use AI"
+            meta: "Page - the five sprints, the weekly rhythm, and how you turn work in"
           - slug: "your-first-week-v2"
-            meta: "Page 4 of 5 - choose your goal, set your weekly time, and set up Dojo access"
+            meta: "Page - a short checklist, ending in the one thing you submit"
+      - label: "The one submission"
+        items:
+          - slug: "introduction-post-v2"
+            meta: "Discussion - post a short introduction, graded complete or incomplete"
       - label: "Come back to this anytime"
         items:
           - slug: "help-and-resources-v2"
-            meta: "Page 5 of 5 - how-to guides, key terms, the five-artifact map, and troubleshooting"
+            meta: "Page - how-tos, key terms, troubleshooting, and how to reach your instructor"

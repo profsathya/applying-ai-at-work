@@ -6,7 +6,7 @@ artifact_id: course1-sprints-welcome-and-orientation-v2-help-and-resources-v2
 sprint: 7
 week: 1
 module: 'Welcome and Orientation (V2)'
-position: 6
+position: 7
 points: null
 submission_type: none
 publish: false
@@ -14,81 +14,66 @@ publish: false
 
 # Help and Resources
 
-*Page 5 of 5 in Welcome and Orientation.*
-
-Come back to this page whenever you need a how-to guide, a definition, or help getting unstuck. Everything the earlier pages point to lives here.
-
-## Dojo setup and how-to
-
-Get your Symbiotic Thinking Dojo access working before your first Dojo activity. Setting up early is what keeps you from hitting an API rate limit mid-activity.
-
-- How to get access and confirm it works. `[TEAM DECISION: API key via the built Dojo, or converting your own chatbot.]`
-- What each guided persona does and when to use it, starting with the Framer.
-- A two-minute first-run walkthrough.
-
-`[TODO: content pending]`
+> **The short version**
+>
+> Bookmark this page. It has how-tos, definitions of every term the course uses, and what to do when something breaks. You are not expected to read it now. You are expected to find it later.
 
 ## Submitting your work in Canvas
 
-You submit in Canvas as text or a file. There is no separate portfolio to manage.
+`[TODO: add where to find the assignment, the two submission types (text entry and file upload), how to check a submission went through, and how to resubmit before the deadline. Written for someone who has never used Canvas.]`
 
-- How to open the Canvas assignment page and what counts as submitted.
-- When to paste text versus upload a file.
-- How to confirm a submission went through.
+## Setting up and using the Dojo
 
-`[TODO: content pending]`
+`[TODO: link the Dojo's own "first time here" walkthrough. The most important piece is how to get back to it later, not the tour.]`
 
 ## Downloading and uploading your JSON
 
-Some activities ask you to export a Dojo session and upload it.
-
-- How to export a session as JSON. `[TODO: capture steps]`
-- How to upload it to the right Canvas activity. `[TODO: capture steps]`
-- How to check that the upload is the correct session.
+`[TODO: add the steps, plus one plain sentence on what a JSON file is and why the course uses one.]`
 
 ## Key terms
 
-Terms used across the course, defined in one place so you never meet a term without a definition: abstraction ladder, frame, goal versus problem, sprint, artifact, Dojo, and the Sprint 1 framing artifact.
+Every term in this course, in plain language. You will meet several of these before they are formally taught. That is normal, and this is where you look them up.
 
-The Sprint 1 **Start Here** page already defines several of these for that sprint. Reuse those definitions rather than writing new ones.
+**Sprint.** A two-week block of the course. There are five, plus this onboarding module. Each sprint produces one document.
 
-`[TODO: content pending]`
+**Artifact.** Anything you produce and turn in. The five sprint documents are the artifacts of this course. It is just a general word for "the thing you made."
 
-`[TEAM DECISION: confirm the Sprint 1 artifact name to define here. The brief uses "Root Cause Analysis"; the built artifact is the "Goal Plan and Problem Reframing Document."]`
+**Frame, framing.** Deciding what the problem actually is, before trying to solve it. Two people can look at the same situation and frame it completely differently, and the framing determines what solutions are even possible.
 
-## The five-artifact map
+**Reframing.** Changing that decision once you learn something new. Reframing is not failure. It is most of the work in this course.
 
-The full-course arc, for reference. Each sprint produces one artifact that builds on the last.
+**Root cause.** The underlying reason something happens, as opposed to the symptom you noticed. "The report is always late" is a symptom. Why it is always late is the root cause.
 
-1. Sprint 1: Frame the problem. Produces your first problem-framing artifact.
-2. Sprint 2: Direct AI deliberately. Produces an AI Exploration and 3Cs Application Log.
-3. Sprint 3: Integrate people and context. Produces a Stakeholder Validation Report.
-4. Sprint 4: Close the learning gap. Produces a Self-Learning Journey and Learning Plan.
-5. Sprint 5: Synthesize and show readiness. Produces a Final Integrated Problem Document.
+**The 3Cs: Context, Choices, Confirmation.** The pattern for directing AI well, used in Sprint 2. Context: give the AI enough real detail about your situation to be useful. Choices: ask for a range of options and the tradeoffs, not one recommendation. Confirmation: name what still needs to be checked by a person or a source before you would act on it.
 
-`[TODO: replace with final five-artifact diagram]`
+**Stakeholder.** Anyone affected by the problem or by any solution to it. Includes people who would have to change how they work, people who control resources, and people who can quietly block something.
 
-## How AI is used in this course
+**Stakeholder map.** A picture of who those people are and how they relate to the problem: what each one needs, what constrains them, and where their needs conflict with each other.
 
-The fuller statement of how you use AI here, grounded in Symbiotic Thinking: AI is a partner you push back on, not an oracle or a shortcut. You stay in the driver's seat.
+**Integrated problem document.** The final document, built across all five sprints. It lays out your problem as one argument and traces how your thinking changed from week 1 to week 10. This is what you walk out with.
 
-- The core habit: think first, then bring AI in.
-- What Symbiotic Thinking means, and how it differs from using AI as an answer machine.
-- Where activities ask you to work without AI first, and why.
+**Readiness report.** The short companion piece to the integrated problem document. It says what you are now equipped to do that you were not equipped to do in week 1.
 
-`[TODO: content pending]`
+**Superagency.** Taking on work you would not otherwise have taken on. The point is evidence, not confidence: being able to point at something and show it was out of reach before.
 
-`[TEAM DECISION: confirm the official AI-use policy wording, then finalize this section.]`
+**Human Value.** What you contribute that AI does not: the context, the relationships, the judgment calls.
+
+**Symbiotic Thinking.** Treating AI as a partner in thinking rather than as a faster way to do what you already do. The practice underneath Superagency and Human Value.
+
+**Dojo.** A structured AI coaching setup used in this course. It is built to make you think harder, not to do the work for you: it asks one question at a time, pushes back on vague answers, and hands decisions back to you. Introduced in Sprint 1.
+
+**UMPIRE.** A six-step problem-solving sequence: Understand, Map, Plan, Implement, Review, Evaluate. You may see the Dojo refer to it. CIS 501 lives in the first two steps, understanding the problem and mapping it, because those are the steps this course argues are usually skipped.
 
 ## Troubleshooting
 
-Quick fixes for the problems people hit most often.
+`[TODO: lead with the two most common failures, not an exhaustive list. A complete but unscannable page does not get used under stress.]`
 
-- **"API rate limit reached":** what it means and what to do. Setting up your Dojo access early helps you avoid it.
-- **Too many browser tabs:** open activities in a new tab and close duplicates so you do not lose your place moving between the course and the Dojo.
+## Getting help from your instructor
 
-`[TODO: content pending]`
+Your instructor for this course is Clare `[TODO: add last name]`.
 
-## Still stuck
+- **How to reach her:** `[TODO: add email address or preferred contact route]`
+- **When to expect a reply:** `[TODO: add stated turnaround, for example within one business day, Monday through Friday]`
+- **If a deadline is coming and you have not heard back:** `[TODO: add a real instruction, for example submit what you have by the deadline and note in the submission that you are waiting on a reply]`
 
-`[TEAM DECISION: confirm where participants go for human help, and add the contact route here.]`
+Reach out earlier than feels necessary. Asking a question in week 2 is normal. Asking the same question in week 7, after six weeks of being stuck, is a much harder position to recover from.

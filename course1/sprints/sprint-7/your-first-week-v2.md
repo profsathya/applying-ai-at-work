@@ -14,43 +14,62 @@ publish: false
 
 # Your First Week
 
-*Page 4 of 5 in Welcome and Orientation.*
-
-Nothing here is graded or submitted. These are the five things that make Sprint 1 go smoothly.
+> **The short version**
+>
+> Four things. The last one is the only thing you submit, and it is just an introduction.
 
 ## Your checklist
 
-- [ ] Read **Welcome** and **How This Course Works**.
-- [ ] Choose the goal you will work on for the next ten weeks.
-- [ ] Set your weekly time and put it on your calendar.
-- [ ] Set up your Dojo access and confirm it works.
-- [ ] Know what Sprint 1 produces: your first problem-framing artifact.
+**1. Watch the welcome video and read How This Course Works.**
 
-## Choosing your goal
+Done if you can say what you will produce by week 10 and roughly what the course asks of you each week.
 
-This is the one decision that shapes the whole course, so give it real thought rather than picking the first thing that comes to mind.
+**2. Block your weekly time on your calendar.** Now, before you close this tab.
 
-Test a candidate goal against three questions:
+Make it recurring for ten weeks. Give it a name you will recognize in week 6. Done when it exists on the calendar you actually look at.
 
-1. **Is it real?** Actual people are affected, and the outcome matters to you. A workplace problem is ideal, but a job search, role transition, volunteer role, community work, caregiving, campus work, a small business, or a professional portfolio all work.
-2. **Is it big enough?** You need ten weeks of exploration in it. If you could finish it in an afternoon, it is too small.
-3. **Would you have to learn something?** If the honest answer is "nothing," the goal is framed too shallow. Reframe it until the answer is yes.
+**3. Skim Help and Resources.**
 
-Write your goal down somewhere you will find it again. Sprint 1 starts from it.
+Do not read it. Scroll it. The goal is that in week 5, when something breaks, you remember the page exists. Done when you can name two things that are on it.
 
-## Setting your weekly time
+**4. Post your introduction.**
 
-Asynchronous does not mean unscheduled. Pick a fixed block each week and defend it. People who set a time finish; people who plan to find time do not.
+See below.
 
-- Suggested weekly time: `[TEAM DECISION: X to Y hours per week]`.
-- Aim for about half a sprint per week rather than a two-week push at the end.
+## What is not on this list
 
-## Setting up your Dojo access
+- You do not need to choose your problem yet. That is Sprint 1.
+- You do not need to set up any AI tool yet. That is Sprint 1.
+- You do not need to have a goal written down yet. That is Sprint 1.
 
-Do this before your first Dojo activity, not during it. Setup takes a few minutes, and an unset-up account is the most common way people lose momentum in Sprint 1. Steps are on **Help and Resources**.
+If you were expecting to do those now, you are not behind.
 
-`[TODO: confirm setup steps once the Dojo access method is decided.]`
+## The one submission: Introduction post
+
+- **Format:** Canvas discussion
+- **Graded:** complete or incomplete
+
+Post a short introduction. Four things:
+
+- Who you are.
+- What field you work in.
+- Why you decided to take this course.
+- What you are most excited to learn.
+
+A few sentences each is plenty. This is not assessed on writing quality. It is here so the rest of us know who is in the room.
+
+Then read a few of the other introductions. You will be working alongside these people for ten weeks, and in Sprint 3 some of you may end up being each other's stakeholder proxies.
+
+Open the **Introduction Post** discussion in this module to submit.
+
+> **Go further, optional**
+>
+> Two things you can do now that will make Sprint 1 easier, if you have the appetite.
+>
+> **Start a list of candidate problems.** Not a decision, a list. Three or four things at work that are frustrating, stuck, or that people keep complaining about. Write one line each. In Sprint 1 you will pick one, and having a list beats starting from a blank page.
+>
+> **Notice who you would need to talk to.** For each candidate, name one person who has a real stake in it. In Sprint 3 you will have that conversation. Knowing this early gives you five weeks of lead time instead of one.
 
 ## Next
 
-Continue to **Help and Resources**: how-to guides, key terms, and fixes for common problems. That page is the one you come back to.
+Post your introduction, skim **Help and Resources**, then begin Sprint 1.
