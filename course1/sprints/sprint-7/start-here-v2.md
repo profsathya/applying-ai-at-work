@@ -18,13 +18,6 @@ Welcome to CIS 501. This module has four short pages, plus one short introductio
 
 You do not need to do anything technical yet. You do not need to have chosen a problem yet. You do not need any experience with AI tools.
 
-## What you will be able to do after this module
-
-- Say what you will produce by the end of the course, and how the five sprints build toward it.
-- Know what the course asks of you each week, and decide how you will fit it in.
-- Recognize the two ideas this course rests on, Superagency and Human Value, and how you will work with AI as a thinking partner.
-- Know where to go when you are stuck.
-
 ## The four pages
 
 1. **Welcome.** Who is teaching this, what the course is, and what you walk out with.
