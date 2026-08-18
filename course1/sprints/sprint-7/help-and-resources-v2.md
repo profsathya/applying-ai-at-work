@@ -14,8 +14,6 @@ publish: false
 
 # Help and Resources
 
-> **The short version**
->
 > Bookmark this page. It has how-tos, definitions of every term the course uses, and what to do when something breaks. You are not expected to read it now. You are expected to find it later.
 
 ## Submitting your work in Canvas
