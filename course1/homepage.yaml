@@ -237,3 +237,32 @@ modules:
             meta: "Assignment - prepare, hold, and document a real stakeholder conversation"
           - slug: "sprint-3-reflection-and-mid-course-goal-plan-revision-v2"
             meta: "AI reflection activity - refine your goal plan revision based on evidence"
+
+  - sprint: 7
+    tag: "Orientation V2"
+    open: false
+    learning_goals:
+      - "Say what you will produce by the end of the course, and how the five sprints build toward it."
+      - "Know what the course asks of you each week, and decide how you will fit it in."
+      - "Recognize the two ideas the course rests on, Superagency and Human Value, and how you work with AI as a thinking partner."
+      - "Know where to go when you are stuck."
+    prereq: "A second version of the Welcome and Orientation module, kept separate from the original. Read the four pages in order before Sprint 1. The introduction post is the only thing you submit."
+    groups:
+      - label: "Read these in order"
+        items:
+          - slug: "start-here-v2"
+            meta: "Page - module landing page: what this module covers and what to do first"
+          - slug: "welcome-v2"
+            meta: "Page - who is teaching this, what the course is, and what you walk out with"
+          - slug: "how-this-course-works-v2"
+            meta: "Page - the five sprints, the weekly rhythm, and how you turn work in"
+          - slug: "your-first-week-v2"
+            meta: "Page - a short checklist, ending in the one thing you submit"
+      - label: "The one submission"
+        items:
+          - slug: "introduction-post-v2"
+            meta: "Discussion - post a short introduction, graded complete or incomplete"
+      - label: "Come back to this anytime"
+        items:
+          - slug: "help-and-resources-v2"
+            meta: "Page - how-tos, key terms, troubleshooting, and how to reach your instructor"
