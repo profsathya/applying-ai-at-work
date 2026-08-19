@@ -246,7 +246,6 @@ modules:
       - "Know what the course asks of you each week, and decide how you will fit it in."
       - "Recognize the two ideas the course rests on, Superagency and Human Value, and how you work with AI as a thinking partner."
       - "Know where to go when you are stuck."
-    prereq: "A second version of the Welcome and Orientation module, kept separate from the original. Read the four pages in order before Sprint 1. The introduction post is the only thing you submit."
     groups:
       - label: "Read these in order"
         items:
