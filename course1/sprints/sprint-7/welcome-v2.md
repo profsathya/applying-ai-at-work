@@ -14,7 +14,7 @@ publish: false
 
 # Welcome
 
-> This course helps you take a real problem from your work and turn it into a problem clear enough to actually solve. You bring the problem. AI helps you think it through. You make every call. In ten weeks you will have one document that shows the problem, the thinking behind it, and how your own thinking changed.
+> This course helps you take a real problem from your work or your personal life and turn it into a problem clear enough to actually solve. You bring the problem. AI helps you think it through. You make every call. In ten weeks you will have one document that shows the problem, the thinking behind it, and how your own thinking changed.
 
 `[TODO: add the instructor welcome video here, 2 to 3 minutes, with captions or a transcript. Video cannot be embedded from Markdown, so add it on the Canvas page after publish.]`
 
@@ -26,8 +26,6 @@ publish: false
 
 You pick one real problem, something from your job, your job search, or something you are genuinely trying to change, and you spend ten weeks turning it into a problem that is clearly defined and actually actionable.
 
-That sounds small. It is not. Most work that fails, fails because the wrong problem got solved very well.
-
 The problem has to be real. Real people affected, real consequences. Most people bring something from their current work. A job search counts. Community work counts. Caregiving counts. What does not work is a made-up case study, because you will not stay with it for ten weeks.
 
 You choose it in Sprint 1. You do not need to know what it is yet.
@@ -38,13 +36,13 @@ You choose it in Sprint 1. You do not need to know what it is yet.
 
 It does two things. It lays out your problem: what it really is, who it affects, what the constraints are, and what would count as solving it. And it traces how your thinking moved from week 1 to week 10.
 
-That second part matters more than it sounds. Everything you produce in sprints 1 through 4 feeds this document. Nothing you do is thrown away.
+Your movement in thinking is very important. Everything you produce in sprints 1 through 4 feeds this document. Nothing you do is thrown away.
 
 ## Who this is for
 
 Working professionals, and people in the middle of a career change.
 
-You are not undergraduates, and this course is not built like an undergraduate course. You already know how your organization actually works: the official process and the real one, the stated priority and the real one. That knowledge is the thing this course builds on. It is also exactly the thing AI cannot supply.
+You may or may not be an undergraduate. Either way, this course is not built like a traditional undergraduate course. You already know how your organization actually works: the official process and the real one, the stated priority and the real one. That knowledge is the thing this course builds on. It is also exactly the thing AI cannot supply.
 
 You do not need a technical background. Directing AI well is not a technical skill.
 
@@ -52,7 +50,7 @@ You do not need a technical background. Directing AI well is not a technical ski
 
 Everything in this course comes back to two ideas. You will see them again in every sprint.
 
-**Superagency:** taking on work you would not otherwise have taken on. Not confidence. Evidence. By week 10 you should be able to point at something and say: I could not have done that in week 1.
+**Superagency:** taking on work you would not otherwise have taken on. By week 10 you should be able to point at something and say: I could not have done that in week 1.
 
 **Human Value:** what you contribute that AI does not. The context. The relationships. The judgment calls. AI can generate ten possible framings of your problem in four seconds. It cannot know which one your director will actually fund, or which colleague will quietly block it, or what happened the last time someone tried.
 
@@ -63,10 +61,6 @@ Underneath both sits a practice we call **Symbiotic Thinking**: treating AI as a
 The AI tools you use today will not be the ones you use in three years. Anything built around a specific tool goes stale.
 
 So this course is not a tour of AI tools. What we are building is a way of working: how to frame a problem, how to judge what an AI hands you, how to explain your reasoning to another person. That survives the tools changing.
-
-> **Go further, optional**
->
-> If you want the fuller picture before you start: this is Course 1 of a two-course certificate. Course 2, CIS 502, is where you design and build a solution to the problem you framed here. You do not need to decide about Course 2 now.
 
 ## Next
 

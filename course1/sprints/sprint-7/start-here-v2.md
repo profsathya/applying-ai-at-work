@@ -23,7 +23,7 @@ You do not need to do anything technical yet. You do not need to have chosen a p
 1. **Welcome.** Who is teaching this, what the course is, and what you walk out with.
 2. **How This Course Works.** The five sprints, the weekly rhythm, what it asks of you, and how you turn work in.
 3. **Your First Week.** A short checklist, ending in one thing you submit.
-4. **Help and Resources.** How-tos, key terms, and troubleshooting. This page is built to be come back to, not read once.
+4. **Help and Resources.** How-tos and key terms. This page is built to be come back to, not read once.
 
 Work through them in order. Page 4 is the exception: skim it now so you know what is on it, then come back whenever you need it.
 

@@ -264,4 +264,4 @@ modules:
       - label: "Come back to this anytime"
         items:
           - slug: "help-and-resources-v2"
-            meta: "Page - how-tos, key terms, troubleshooting, and how to reach your instructor"
+            meta: "Page - how-tos, key terms, and how to reach your instructor"

@@ -18,4 +18,4 @@ Start here before Sprint 1. Four short pages cover what the course is, how it is
 
 One thing is submitted from this module: a short introduction post, graded complete or incomplete. You do not need to choose your problem, set up any AI tool, or write down a goal yet. All of that is Sprint 1.
 
-The last page, Help and Resources, holds the how-tos, key terms, and troubleshooting. Skim it now and come back to it whenever you need it.
+The last page, Help and Resources, holds the how-tos and key terms. Skim it now and come back to it whenever you need it.

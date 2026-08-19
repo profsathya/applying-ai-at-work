@@ -74,11 +74,7 @@ Step-by-step instructions are on the **Help and Resources** page.
 
 ## What happens if you fall behind
 
-You will not be the first. Assignments may not have set deadlines, but we encourage timely participation so you get the most out of the course. If you fall behind, do not worry: every day is an opportunity to catch up.
-
-> **Go further, optional**
->
-> Curious where the structure comes from? The five sprints are not arbitrary. They follow a capability model used across every CTI program, and it is what sets the order of the ten weeks. Sprint 4 is where self-directed learning concentrates. Sprints 1, 3, and 5 build the ability to hold several domains at once: your expertise, your goal, and what the people around the problem actually experience. You are never asked to memorize any of this. It is here because it explains why the course is shaped the way it is.
+Assignments may not have set deadlines, but we encourage timely participation so you get the most out of the course. If you fall behind, do not worry: every day is an opportunity to catch up.
 
 ## Next
 
