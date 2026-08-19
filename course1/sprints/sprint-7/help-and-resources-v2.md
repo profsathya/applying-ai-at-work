@@ -14,7 +14,7 @@ publish: false
 
 # Help and Resources
 
-> Bookmark this page. It has how-tos, definitions of every term the course uses, and what to do when something breaks. You are not expected to read it now. You are expected to find it later.
+> Bookmark this page. It has how-tos, definitions of every term the course uses, and how to reach your instructor. You are not expected to read it now. You are expected to find it later.
 
 ## Submitting your work in Canvas
 
@@ -52,7 +52,7 @@ Every term in this course, in plain language. You will meet several of these bef
 
 **Readiness report.** The short companion piece to the integrated problem document. It says what you are now equipped to do that you were not equipped to do in week 1.
 
-**Superagency.** Taking on work you would not otherwise have taken on. The point is evidence, not confidence: being able to point at something and show it was out of reach before.
+**Superagency.** Taking on work you would not otherwise have taken on. Being able to point at something and show it was out of reach before.
 
 **Human Value.** What you contribute that AI does not: the context, the relationships, the judgment calls.
 
@@ -61,10 +61,6 @@ Every term in this course, in plain language. You will meet several of these bef
 **Dojo.** A structured AI coaching setup used in this course. It is built to make you think harder, not to do the work for you: it asks one question at a time, pushes back on vague answers, and hands decisions back to you. Introduced in Sprint 1.
 
 **UMPIRE.** A six-step problem-solving sequence: Understand, Map, Plan, Implement, Review, Evaluate. You may see the Dojo refer to it. CIS 501 lives in the first two steps, understanding the problem and mapping it, because those are the steps this course argues are usually skipped.
-
-## Troubleshooting
-
-`[TODO: lead with the two most common failures, not an exhaustive list. A complete but unscannable page does not get used under stress.]`
 
 ## Getting help from your instructor
 
