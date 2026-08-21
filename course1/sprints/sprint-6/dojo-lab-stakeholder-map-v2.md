@@ -5,7 +5,7 @@ slug: dojo-lab-stakeholder-map-v2
 artifact_id: course1-sprints-sprint-3-reviewed-v2-dojo-lab-stakeholder-map-v2
 sprint: 6
 week: 5
-module: 'Sprint 3 - Reviewed (V2)'
+module: 'Sprint 3: Integrate People and Context (V2)'
 position: 4
 points: 35
 submission_type: text_entry
@@ -31,7 +31,7 @@ Prepare for a validation conversation with stakeholders by first partnering with
 
 ## Start with What You Already Think
 
-Before bringing in the Dojo, write down the stakeholders you already believe are connected to your problem. Don't research exhaustively yet, just capture your current thinking as it stands. If you don't have a workplace stakeholder, reach out to a mentor, community member, customer, or anyone with a genuine relationship to the problem.
+Before bringing in the Dojo, write down the stakeholders you already believe are connected to your problem. You should have at least three. Don't research exhaustively yet, just capture your current thinking as it stands. If you don't have a workplace stakeholder, reach out to a mentor, community member, customer, or anyone with a genuine relationship to the problem.
 
 ## Use the Dojo
 
@@ -65,7 +65,7 @@ Then use @challenger:
 
 Review the Dojo output as preparation, not evidence. Do not treat the Dojo as a stakeholder.
 
-A how-to video is available as review material if you need a refresher on how to use the Dojo:
+A how-to video is available as review material if you need a refresher on how to use the Dojo.
 
 ## Build Your Stakeholder Map, Part 1
 
@@ -86,6 +86,8 @@ Mark each field's status honestly:
 > **Confirmed** - supported by evidence: a stakeholder conversation, an observation, or reliable documentation.
 >
 > **Inferred** - a reasoned hypothesis based on what you currently know, including ideas you developed with the Dojo, that should be validated later.
+
+For each field, also identify where the information came from: the conversation, observation, document, or Dojo session it traces back to.
 
 ## Build Your Stakeholder Map, Part 2
 

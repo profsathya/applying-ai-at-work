@@ -1,18 +1,18 @@
 ---
 type: module_header
-title: 'Sprint 3 - Reviewed (V2)'
+title: 'Sprint 3: Integrate People and Context (V2)'
 slug: sprint-3-reviewed-v2
 artifact_id: course1-sprints-sprint-3-reviewed-v2-sprint-3-reviewed-v2
 sprint: 6
 week: 5
-module: 'Sprint 3 - Reviewed (V2)'
+module: 'Sprint 3: Integrate People and Context (V2)'
 position: 1
 points: null
 submission_type: none
 publish: false
 ---
 
-# Sprint 3 - Reviewed (V2)
+# Sprint 3: Integrate People and Context (V2)
 
 In this sprint, you move the problem outside your own head. You map stakeholders, prepare listening questions, conduct real validation, and revise your frame based on what a real person helps you see.
 
