@@ -5,7 +5,7 @@ slug: stakeholder-conversation-v2
 artifact_id: course1-sprints-sprint-3-reviewed-v2-stakeholder-conversation-v2
 sprint: 6
 week: 5
-module: 'Sprint 3 - Reviewed (V2)'
+module: 'Sprint 3: Integrate People and Context (V2)'
 position: 5
 points: 50
 submission_type: file_upload
@@ -79,6 +79,20 @@ Now it's time to test your problem frame against an actual stakeholder, not AI. 
 ## Part 1: Prepare for the Conversation
 
 Before you talk to a real stakeholder, use AI to sharpen the validation questions you plan to ask. The goal is to catch weak questions, such as ones that lead the stakeholder toward your idea or that are too vague to tell you anything, before you're in the actual conversation.
+
+### What a Weak Question Costs You
+
+Say your problem frame assumes: "New employees struggle because onboarding materials are outdated."
+
+**Question A (weak):** "Do you think the onboarding materials need to be updated?"
+
+This invites a simple yes/no, and most people will just agree to be agreeable. It doesn't test your assumption, it just asks for approval of it.
+
+**Question B (strong):** "Walk me through your first two weeks on the job. What was confusing or hard to figure out?"
+
+This asks for a real, specific account. The stakeholder might confirm your assumption (the materials really were the problem), or they might reveal something you didn't expect: maybe the materials were fine, but they didn't have time in the schedule to go over them.
+
+Check your own three questions against this pattern before you ask them.
 
 1. **Write your starting draft.** For the stakeholder you'll contact, write down their role, three validation questions you'd ask them, and what you're hoping to learn from each question. Also name the single riskiest assumption in your frame and the evidence, not approval, that would change your mind.
 2. **Generate AI follow-up questions.** Start the AI activity below and ask AI to respond to your draft with follow-up questions. Use them to diagnose your draft. Look for places where AI's response reveals that your question is:
