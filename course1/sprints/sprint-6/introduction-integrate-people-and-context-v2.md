@@ -12,8 +12,6 @@ submission_type: none
 publish: false
 ---
 
-# Introduction: Integrate People and Context
-
 A problem frame gets stronger when it meets real people and real constraints. In this sprint, you'll identify the stakeholders affected by, who have influence over, or who hold authority over your problem. Next, using the Dojo, you prepare for real conversations with them by drafting a stakeholder map that shows what you actually know versus what you're assuming about the stakeholders. Then you have at least one real validation conversation with a stakeholder to test your problem frame. Based on what you learn, you revise your problem statement and Goal Plan.
 
 AI is your thinking partner throughout, but you own the goal, the standards, and the final judgment calls. Start with your own thinking first. Then use the Dojo to challenge it, identify blind spots, or prepare for conversations that AI can't replace. Your job is to decide what to keep, reject, revise, or verify. The thinking is yours.
@@ -36,42 +34,38 @@ A stakeholder is not just a category like "users" or "management." In your probl
 
 ### Stakeholder Relationship to the Problem
 
+Any stakeholder can have one or more of these relationships to the problem.
+
 - **Affected:** they experience the problem directly, or feel the effects of any solution (a customer, a frontline employee, someone downstream of the process).
 - **Influential:** they can shape how the problem gets addressed, even if they aren't personally affected (a manager, a partner team, an expert whose opinion carries weight).
 - **Responsible for a constraint:** they control a resource, rule, budget, or approval that limits what solutions are possible (legal, finance, a system owner).
 - **Positioned to challenge your frame:** they have a different vantage point that might reveal you're solving the wrong problem, or solving it for the wrong reason (someone who tried this before, someone outside the obvious group).
 
-The same person can hold more than one of these relationships at once. An investor may also be a frequent user, and both needs have to be met.
-
-On the other hand, these relationships aren't interchangeable. A person can be highly affected by the problem and have almost no authority to change it. Another person can approve or kill a solution but rarely experience the problem firsthand. Good stakeholder work keeps these differences visible, because each perspective tells you something different.
+The same person can hold more than one of these relationships at the same time. And if they do, the stakeholder relationships to the problem don't always go hand in hand. A person can be highly affected by the problem and have almost no authority to change it. Another person can approve or kill a solution but rarely experience the problem firsthand. Good stakeholder work keeps these differences visible, because each perspective tells you something different.
 
 ### Validation Conversation
 
 Validation means testing your problem frame, not selling your solution. A good validation conversation isn't about getting a stakeholder to agree; it's about giving them room to tell you what they actually experience, need, fear, value, or see differently than you do. Their perspective gives you the context you need to judge whether your problem frame is right, incomplete, or off entirely.
 
+**Example.** Say your problem frame assumes: "New employees struggle because onboarding materials are outdated."
+
+**Question A (weak):** "Do you think the onboarding materials need to be updated?"
+
+This invites a simple yes/no, and most people will just agree to be agreeable. It doesn't test your assumption, it just asks for approval of it.
+
+**Question B (strong):** "Walk me through your first two weeks on the job. What was confusing or hard to figure out?"
+
+This asks for a real, specific account. The stakeholder might confirm your assumption (the materials really were the problem), or they might reveal something you didn't expect, such as: maybe the materials were fine, but they didn't have time in the schedule to go over them.
+
 ### Conflicts as Information
 
 Expect stakeholder perspectives to be in conflict. This is normal, not a sign you did something wrong. When they do, resist the urge to smooth over the tension just to make your report look cleaner or more resolved. That tension is data. It can point to scope you missed, risk you underestimated, unclear authority, misaligned incentives, or evidence your original frame overlooked entirely.
 
-## Two-Week Sprint Map
+## Submit
 
-This sprint spans two course weeks. Use these labels for pacing; Canvas keeps the work in one module.
+A short self-test quiz to check that you have read and understood:
 
-- **Sprint Week 1:** Read this Introduction and pass the concept check, then build your stakeholder map with the Dojo.
-- **Sprint Week 2:** Prepare, hold, and document your stakeholder conversation, then reflect and revise your Goal Plan.
+- The tasks that need to be done in Sprint 3.
+- The concepts in Sprint 3.
 
-## Time Guidance
-
-Plan for focused work across two weeks. Short concept reading, Dojo practice, the stakeholder conversation, and the final reflection should all serve the same real problem rather than becoming separate assignments.
-
-## Working Standard
-
-Specific and honest work is better than polished generic work. Show what you tried, what changed, what evidence you have, and what remains uncertain.
-
-## Carry Forward
-
-Keep your stakeholder map versions, validation questions, notes from the real conversation, revisions, and remaining validation needs.
-
-## Next
-
-When you're ready, continue to the **Sprint 3 Concept Check**: a short self-test that confirms you're set up for the sprint's tasks and concepts before you start mapping.
+Return to the **Sprint 3** module home page to continue.
