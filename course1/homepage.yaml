@@ -265,3 +265,29 @@ modules:
         items:
           - slug: "help-and-resources-v2"
             meta: "Page - how-tos, key terms, and how to reach your instructor"
+
+  - sprint: 8
+    tag: "Learning Gap V2"
+    open: false
+    learning_goals:
+      - "Name the gap in what you know that is blocking your next move, and tell it apart from what you are curious about."
+      - "Design a focused learning path with AI and sources that are not AI."
+      - "Check an important claim against evidence and say what the check returned."
+    prereq: "A rebuild of Sprint 4, kept separate from the original Sprint 4. Builds on the validated frame from Sprint 3: learn only what the problem now proves you need."
+    groups:
+      - label: "Sprint Week 1: Understand and plan"
+        items:
+          - slug: "introduction-close-the-learning-gap-v2"
+            meta: "Page - what a learning gap is, and the difference between an explanation and evidence"
+          - slug: "sprint-4-concept-check-v2"
+            meta: "Quiz - check your understanding before you start"
+            badge: "Self-check"
+            selfcheck: true
+          - slug: "dojo-lab-design-the-learning-path-v2"
+            meta: "Assignment - name your gap, design the path with the Dojo, and decide what you will not learn"
+      - label: "Sprint Week 2: Learn, verify, and reflect"
+        items:
+          - slug: "learn-and-verify-v2"
+            meta: "Assignment - run the path and check two claims against something that is not AI"
+          - slug: "sprint-4-reflection-what-i-learned-and-how-i-know-v2"
+            meta: "AI reflection activity - name the capability you gained and what you checked"
