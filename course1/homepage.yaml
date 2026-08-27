@@ -291,3 +291,33 @@ modules:
             meta: "Assignment - run the path and check two claims against something that is not AI"
           - slug: "sprint-4-reflection-what-i-learned-and-how-i-know-v2"
             meta: "AI reflection activity - name the capability you gained and what you checked"
+
+  - sprint: 9
+    tag: "Learning Gap V3"
+    open: false
+    learning_goals:
+      - "Name the gap that is blocking your next move, and tell it apart from something you are simply curious about."
+      - "Design a focused learning path that has an end point you can point at."
+      - "Check an important claim against evidence, and say what the check returned."
+    prereq: "A third build of Sprint 4, kept separate from the original Sprint 4 and from the V2 rebuild. Starts from the gap your Sprint 3 conversation opened up."
+    groups:
+      - label: "Sprint Week 1: Name the gap"
+        items:
+          - slug: "introduction-close-the-learning-gap-v3"
+            meta: "Page - what separates a gap from a topic, and an explanation from evidence"
+          - slug: "sprint-4-concept-check-v3"
+            meta: "Quiz - check your understanding before you start"
+            badge: "Self-check"
+            selfcheck: true
+          - slug: "name-the-gap-v3"
+            meta: "Assignment - write your own gap list and commit to one, before any AI"
+          - slug: "ai-exchange-is-this-a-gap-v3"
+            meta: "AI exchange activity - test whether your committed gap is really a gap"
+      - label: "Sprint Week 2: Plan, learn, and check"
+        items:
+          - slug: "dojo-lab-design-the-learning-path-v3"
+            meta: "Assignment - sequence the learning with the Dojo and design the two checks"
+          - slug: "learn-and-check-v3"
+            meta: "Assignment - run the path and check two claims against something that is not AI"
+          - slug: "sprint-4-reflection-what-i-learned-and-how-i-know-v3"
+            meta: "AI reflection activity - name the capability you gained and what you checked"
