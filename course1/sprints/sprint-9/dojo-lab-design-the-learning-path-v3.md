@@ -48,9 +48,26 @@ Work through three personas in order. Each one has a different job.
 - Is this path too broad, too vague, or disconnected from the decision I said was waiting?
 - Where am I planning to learn something I do not actually need?
 
+**Three Ways a Check Fails**
+
+Before you take your checks to @auditor, know what you are looking for. A check fails in one of three ways:
+
+- **Circular.** The check traces back to the same source as the claim. Asking one AI to verify another AI's explanation is one source, twice.
+- **Unfalsifiable.** No result would change your mind.
+- **Vague.** No named source you could actually go to on a Tuesday afternoon.
+
+Say your frame assumes: "New hires wait nine days for system access."
+
+> **Check A, weak.** "I'll verify the nine day figure with documentation." There is no way for this to come back negative. Product documentation describes how the product measures things in general, which will match what you already believe, and you will finish more confident and no better informed. It confirms rather than tests. It is vague as well, because "documentation" is not a place you can go.
+>
+> **Check B, strong.** "I'll look at our own admin console to see how ticket age is calculated, and ask the service desk lead what happens to a ticket that gets reassigned. If reassigned tickets are closed and reopened as new ones, the nine days is undercounting and I have to re-measure before I take this anywhere."
+
+Check B names a source independent of the claim, names the result that would make it wrong, and leaves room to come back complicated rather than only yes or no.
+
 **@auditor** - pressure the checks.
 
 - Here are the two claims my frame rests on. Would these checks actually catch me being wrong?
+- Which of my two checks is circular, unfalsifiable, or vague?
 - Where am I about to verify an AI explanation with another AI explanation?
 
 ## Your Judgment Step
@@ -88,7 +105,15 @@ What you took from the Dojo, what you turned down and what turning it down cost 
 
 ## Start Any Request Today
 
-If either of your checks depends on another person, send that request now, on the first day of week 2. Do not wait until you need the answer. If you have not heard back in three days, follow up once. If you have nothing by day five, use your other check and say in your write-up what the silence told you.
+If either of your checks depends on another person, send that request now, on the first day of week 2. Do not wait until you need the answer.
+
+Keep the ask small. This is not a validation conversation like Sprint 3. You need one fact.
+
+- **Pick by proximity to the answer, not seniority.** Whoever runs the queue usually knows more about how it behaves than whoever owns it.
+- **Ask one question, and ask what happens rather than what should happen.** "What happens to a ticket when it gets reassigned to the hardware queue?" not "Does our system measure ticket age correctly?"
+- **Say in one sentence what you will do with the answer.** People reply faster when the question is not open-ended.
+
+If you have not heard back in three days, follow up once. If you have nothing by day five, use your other check and say in your write-up what the silence told you.
 
 ## Next
 
