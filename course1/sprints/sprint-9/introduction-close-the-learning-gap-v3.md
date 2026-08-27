@@ -74,7 +74,7 @@ Before you go look, write down what result would tell you that you were wrong. D
 
 The best checks come from your real setting: your own admin console, your team's policy document, watching the thing happen, asking the person who would know. Those are also the checks a general purpose AI cannot do for you, because it does not know how your instance is configured or what your policy says.
 
-You will design your two checks in the Dojo Lab, which is where you will learn the three ways a check quietly fails.
+You will design your two checks in the Dojo Lab, and @auditor will tell you where they are weak.
 
 ### Most Results Come Back "Yes, But"
 
