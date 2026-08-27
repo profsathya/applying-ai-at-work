@@ -44,22 +44,15 @@ Gap: "I don't know how our ticket system counts the age of a reassigned ticket, 
 
 ### Blocking, Useful, Interesting
 
-Not everything you do not know is in your way. Three categories:
-
-- **Blocking.** A decision or a next step is waiting on this.
-- **Useful.** It would improve the work, but nothing is stopped.
-- **Interesting.** You want to know it.
+Not everything you do not know is in your way. Some of it has a decision waiting on it. Some of it would improve the work without stopping anything. And some of it you simply want to know.
 
 Interesting is the one that quietly eats the sprint. Curiosity has no stopping point, and it is very easy to mistake for necessity. Naming it as its own category is what keeps it from hiding inside "essential."
 
-You will pick a blocking gap. If more than one of your gaps is blocking, which is common, choose the one you actually want to spend a week on. Wanting to know it is what gets the work done. It is just not what makes something a gap.
+You will sort your own gaps into those three in Name the Gap, and you will commit to a blocking one. If more than one is blocking, which is common, choose the one you actually want to spend a week on. Wanting to know it is what gets the work done. It is just not what makes something a gap.
 
 ### Knowing What "Closed" Looks Like
 
-Before you plan how to learn something, write down how you will know you are finished. Something you could point at, not a feeling.
-
-- **Weak:** "I'll understand how our ticketing system works." No end point. You will stop when you get tired.
-- **Strong:** "I can say whether ticket age restarts on reassignment, and point at where in the console that is configured." Has an end.
+Before you plan how to learn something, write down how you will know you are finished. It has to be something you could point at rather than a feeling, or you will stop when you get tired instead of when you are done.
 
 You are not becoming an expert. The standard is that you know enough to make the next decision and to defend it if someone pushed back.
 
@@ -79,26 +72,28 @@ A clear, confident AI explanation is inferred. So is something a colleague said 
 
 Before you go look, write down what result would tell you that you were wrong. Do it in that order. If you write it afterward, you will find a version that matches whatever you discovered.
 
-Three ways a check fails:
-
-- **Circular.** The check traces back to the same source as the claim. Asking one AI to verify another AI's explanation is one source, twice.
-- **Unfalsifiable.** No result would change your mind.
-- **Vague.** No named source you could actually go to on a Tuesday afternoon.
-
 The best checks come from your real setting: your own admin console, your team's policy document, watching the thing happen, asking the person who would know. Those are also the checks a general purpose AI cannot do for you, because it does not know how your instance is configured or what your policy says.
+
+You will design your two checks in the Dojo Lab, which is where you will learn the three ways a check quietly fails.
+
+### Most Results Come Back "Yes, But"
+
+A check has three possible outcomes, and only two of them are the ones people expect. It can confirm your claim, contradict it, or complicate it.
+
+Complicated is the most common and the most useful. It is the result where the honest answer is "yes, but," and the "but" is usually the finding. It is also the one people round off to confirmed, because "yes, but" takes more work to write down than "yes." Do not round it off.
+
+And a check that comes back confirmed is still a real result. Report it, and say what would have changed your mind.
 
 ### What You Are Choosing Not to Learn
 
 Deciding what to set aside is scope control, not laziness. But an exclusion is only legitimate if you can say what it costs you.
 
-For each gap you are not closing, name the risk of not knowing it, and name the smallest thing that would tell you the risk has become real. One line each.
+You will write that down for each gap you are not closing, in Name the Gap.
 
 ## Two-Week Sprint Map
 
 - **Week 1.** Read this page. Pass the Concept Check. Write Name the Gap. Take it through the AI Exchange.
 - **Week 2.** Design the path in the Dojo, at the start of the week. Do the learning. Run your checks. Write up Learn and Check and finish with the reflection.
-
-If one of your checks needs another person, send that request on the first day of week 2. Do not leave it until you need the answer.
 
 ## Carry Forward
 

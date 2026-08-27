@@ -40,7 +40,7 @@ For each check, fill in five fields.
 
 - **Confirmed.** The check held.
 - **Contradicted.** The claim was wrong.
-- **Complicated.** Yes, but. This is the most common result and the one people round off to confirmed. If the answer was "yes, but," the "but" is usually the finding.
+- **Complicated.** Yes, but. Write the "but" down rather than rounding it to confirmed. It is usually the finding.
 
 Worked example:
 
@@ -64,7 +64,7 @@ Cover:
 - The path as you actually ran it, not as you planned it, with the sources you used by name.
 - Two or three prompts that moved your understanding, and what you did with what came back.
 - Time against estimate. What you guessed, what it took.
-- What you now know, with every item marked confirmed or inferred.
+- What you now know, with every item marked **confirmed** (you checked it against something independent of the claim, and it held) or **inferred** (you believe it and you have not checked it). A clear AI explanation you never verified is inferred.
 - What is still uncertain.
 - What AI did not decide for you. Where your own judgment made the call.
 

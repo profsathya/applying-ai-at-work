@@ -44,15 +44,25 @@ Keep this short. It is here so the sprint does not turn into an audit of everyth
 
 ## Part 2. What You Do Not Know Yet
 
-Four gaps. One line each, and a mark:
+Write four gaps. One line each, and mark each one:
 
-- **Blocking.** A decision or next step is waiting on this.
-- **Useful.** It would improve the work, but nothing is stopped.
-- **Interesting.** You want to know it.
+- **Blocking.** A decision or a next step is waiting on this. If you cannot name the decision, it is not blocking.
+- **Useful.** It would improve the work, but nothing is stopped while you do not know it.
+- **Interesting.** You want to know it, and nothing you do next depends on it.
 
-Be honest about which is which. There is no right distribution. Four blocking and one blocking are both true answers to different situations.
+Run the sentence test on each one: "Until I know this, I can't ___." If the blank will not fill, you have written a topic rather than a gap. Rewrite it or replace it.
 
-Run the sentence test on each one: "Until I know this, I can't ___." If the blank will not fill, you have written a topic.
+A finished list looks like this:
+
+> 1. I don't know whether ticket age restarts when a ticket is reassigned. **Blocking.** I can't take the nine day figure to the IT lead until I know.
+>
+> 2. I don't know how our HRIS provisions accounts. **Useful.** It would sharpen the picture, but I can make my case without it.
+>
+> 3. I don't know what the service desk lead thinks the real bottleneck is. **Blocking.** If she says it starts upstream, I have framed the wrong step.
+>
+> 4. I don't know how other organizations this size handle onboarding. **Interesting.** Nothing I do next depends on it.
+
+Be honest about the marks. There is no right distribution. Four blocking and one blocking are both true answers to different situations.
 
 If none of your four are blocking, you do not have your gap yet. That is not a failing grade. It means the list needs another pass. Go back to the three places above, particularly the vagueness one. Lists that come back with nothing blocking are usually too polite: they name gaps that sound reasonable rather than the ones your frame is actually standing on.
 
@@ -74,11 +84,23 @@ That last question is the real test. If the answer changes nothing in your frame
 
 ## Part 4. What "Closed" Looks Like
 
-One or two sentences. Something you could point at, not a feeling. Reread the Introduction if the weak and strong versions are not fresh.
+One or two sentences describing the state you are trying to reach. It has to be something you could point at, not a feeling.
+
+- **Weak:** "I'll understand how our ticketing system works." No end point. You will stop when you get tired.
+- **Strong:** "I can say whether ticket age restarts on reassignment, and point at where in the console that is configured." Has an end.
+
+The same test works outside a workplace:
+
+- **Weak:** "I'll get a better handle on what these roles are looking for."
+- **Strong:** "I can name the three requirements that appear in every posting I am targeting, and say which two I already meet."
+
+Write yours so that someone else could read it and tell you whether you were finished.
 
 ## Part 5. What You Are Not Learning
 
-Your other three gaps are your exclusions. For each one, one line:
+Your other three gaps are your exclusions. Naming them is not enough on its own. What makes an exclusion legitimate is that you can say what it costs you, and how you would find out that it had cost you.
+
+For each one, one line:
 
 - What you are not learning.
 - The risk that creates.

@@ -76,7 +76,7 @@ Say what you can now do that you could not do two weeks ago, and be honest about
 - One thing you can now do or decide that you could not at the start. A capability, not a topic. "I can tell whether our nine day figure holds for a given type of request" is a capability. "I learned about ticket systems" is a topic.
 - What AI explained well, and whether you ever checked it.
 - What came back different from what you expected. If nothing did, say what that tells you about the checks you designed.
-- Something you half know and would be tempted to state confidently in a meeting.
+- Something you half know and would be tempted to state confidently in a meeting. This is the hardest of the five and the point of the exercise. For example: "I would probably tell someone the handoff is the bottleneck. What I actually checked was how ticket age gets counted. I have not looked at what happens before the ticket is opened at all."
 - Whether either of the things you set aside now looks like a mistake.
 
 ## Carry Forward
