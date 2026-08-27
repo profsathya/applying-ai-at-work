@@ -40,7 +40,7 @@ For each check, fill in five fields.
 
 - **Confirmed.** The check held.
 - **Contradicted.** The claim was wrong.
-- **Complicated.** Yes, but. This is the most common result and the one people round off to confirmed. If the answer was "yes, but," the "but" is usually the finding.
+- **Complicated.** Yes, but. Write the "but" down rather than rounding it to confirmed. It is usually the finding.
 
 Worked example:
 
