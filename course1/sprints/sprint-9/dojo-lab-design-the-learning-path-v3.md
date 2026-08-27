@@ -22,11 +22,11 @@ The Dojo is not here to tell you what your gap is. You settled that last week, a
 
 ## Before You Open the Dojo
 
-Have three things in front of you: your committed gap, your definition of "closed," and anything the AI Exchange made you change.
+Have four things in front of you: your committed gap, your definition of "closed," anything the AI Exchange made you change, and the two claims your frame rests on that you have not verified.
 
 ## Open the Dojo
 
-[TEAM DECISION: Dojo access and API key. Blocked on the Dojo Setup page in the Welcome module.]
+Use the [Open the Symbiotic Thinking Dojo](https://dojo.symbioticthinking.ai/) link for this lab. First-time users should open Learn About -> Privacy & Setup and configure a Gemini API key in the browser before starting.
 
 [TODO: 3 to 5 minute walkthrough video.]
 
@@ -34,45 +34,41 @@ Do not paste confidential information, names, or anything your organization woul
 
 ## The Dojo Session
 
-Work through three personas in order. Each one has a different job.
+Three personas, in order. @framer sequences the learning, @reflector pressures the shape of it, @auditor pressures your checks.
 
-**@framer** - sequence it.
+Paste this in, then keep going. The follow-up questions are where the Dojo earns its keep.
 
-- What is the smallest set of things I need to know to answer this, and in what order?
-- What can I skip entirely and still be able to make the decision?
-- What sources besides AI should I be using for this?
-- Now cut this sequence in half. What is lost?
+```text
+I am working on this problem:
+[paste your revised problem statement]
 
-**@reflector** - pressure the shape of it.
+This is the gap I committed to, the decision waiting on it,
+and what "closed" looks like:
+[paste from Name the Gap]
 
-- Is this path too broad, too vague, or disconnected from the decision I said was waiting?
-- Where am I planning to learn something I do not actually need?
+These are the two claims my frame rests on that I have not verified:
+[paste both]
 
-**Three Ways a Check Fails**
+Use Learn + Solve mode.
 
-Before you take your checks to @auditor, know what you are looking for. A check fails in one of three ways:
+@framer, help me sequence the learning:
+1. What is the smallest set of things I need to know, and in what order?
+2. What can I skip entirely and still make the decision?
+3. What sources besides AI should I be using?
+4. Now cut that sequence in half. What is lost?
 
-- **Circular.** The check traces back to the same source as the claim. Asking one AI to verify another AI's explanation is one source, twice.
-- **Unfalsifiable.** No result would change your mind.
-- **Vague.** No named source you could actually go to on a Tuesday afternoon.
+@reflector, pressure the shape. Is this path too broad, too vague, or
+disconnected from the decision I said was waiting? Where am I planning
+to learn something I do not actually need?
 
-Say your frame assumes: "New hires wait nine days for system access."
-
-> **Check A, weak.** "I'll verify the nine day figure with documentation." There is no way for this to come back negative. Product documentation describes how the product measures things in general, which will match what you already believe, and you will finish more confident and no better informed. It confirms rather than tests. It is vague as well, because "documentation" is not a place you can go.
->
-> **Check B, strong.** "I'll look at our own admin console to see how ticket age is calculated, and ask the service desk lead what happens to a ticket that gets reassigned. If reassigned tickets are closed and reopened as new ones, the nine days is undercounting and I have to re-measure before I take this anywhere."
-
-Check B names a source independent of the claim, names the result that would make it wrong, and leaves room to come back complicated rather than only yes or no.
-
-**@auditor** - pressure the checks.
-
-- Here are the two claims my frame rests on. Would these checks actually catch me being wrong?
-- Which of my two checks is circular, unfalsifiable, or vague?
-- Where am I about to verify an AI explanation with another AI explanation?
+@auditor, pressure the checks. Would these catch me being wrong? Which
+one is circular, unfalsifiable, or vague? Where am I about to verify an
+AI explanation with another AI explanation?
+```
 
 ## Your Judgment Step
 
-The Dojo will suggest more than you should take. Decide what to keep, what to reject, and what you are still unsure about. Rejecting a good suggestion because it does not fit your two weeks is a legitimate call, as long as you say what it cost you.
+The Dojo will suggest more than you should take. Decide what to keep, what to reject, and what you are still unsure about. Rejecting a good suggestion because it does not fit your two weeks is a legitimate call, as long as you say what it cost you. If the Dojo agreed with everything you brought it, you did not ask it enough.
 
 ## What to Submit
 
@@ -98,6 +94,12 @@ Your frame rests on things you have not verified. Name two, and for each one:
 - What you will check it against, and whether that source is independent of what gave you the claim.
 
 At least one of your two checks must be non-AI, independent of whatever produced the claim, and from your real setting: a document, a system, an observation, or a person. When the answer is not written down anywhere, a person is often the fastest route.
+
+A check is weak if it is circular (it traces back to the same source as the claim), unfalsifiable (no result would change your mind), or vague (no named source you could actually go to on a Tuesday afternoon).
+
+> Weak: "I'll verify the nine day figure with documentation."
+>
+> Strong: "I'll check our own admin console for how ticket age is calculated, and ask the service desk lead what happens when a ticket gets reassigned. If reassigned tickets are closed and reopened as new ones, nine days is undercounting."
 
 ### 3. Kept, rejected, still open
 
