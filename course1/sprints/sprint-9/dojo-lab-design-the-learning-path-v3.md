@@ -88,10 +88,10 @@ If your gap will not fit in five steps, it was a topic. Go back and narrow it. T
 
 Your frame rests on things you have not verified. Name two, and for each one:
 
-- The claim, stated so that it could turn out to be false.
-- Where the belief came from.
-- What result would tell you it is wrong. Write this now, before you check.
-- What you will check it against, and whether that source is independent of what gave you the claim.
+- **The claim.** Stated so that it could turn out to be false.
+- **What told you it.** Where the belief came from.
+- **What would make it wrong.** Write this now, before you check. You will copy this into Learn and Check unchanged.
+- **What you will check it against.** The actual source, and whether it is independent of what gave you the claim.
 
 At least one of your two checks must be non-AI, independent of whatever produced the claim, and from your real setting: a document, a system, an observation, or a person. When the answer is not written down anywhere, a person is often the fastest route.
 

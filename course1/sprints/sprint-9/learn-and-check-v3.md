@@ -35,7 +35,7 @@ For each check, fill in five fields.
 | The claim | Stated so that it could be false. |
 | What told you it | Where the belief came from. |
 | What would make it wrong | Copied from your Dojo Lab, written before you looked. |
-| What you checked it against | The actual source, and when. |
+| What you checked it against | The actual source, and when. Note if it changed from your plan. |
 | What came back | Confirmed, contradicted, or complicated. |
 
 - **Confirmed.** The check held.
