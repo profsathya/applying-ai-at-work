@@ -5,7 +5,7 @@ slug: sprint-4-concept-check-v3
 artifact_id: course1-sprints-sprint-9-sprint-4-concept-check-v3
 sprint: 9
 week: 7
-module: 'Sprint 4: Close The Learning Gap (V3)'
+module: 'Sprint 4: Close The Learning Gap (V2)'
 position: 3
 points: 5
 submission_type: online_quiz

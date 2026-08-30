@@ -1,18 +1,18 @@
 ---
 type: module_header
-title: 'Sprint 4: Close The Learning Gap (V3)'
+title: 'Sprint 4: Close The Learning Gap (V2)'
 slug: sprint-4-close-the-learning-gap-v3
 artifact_id: course1-sprints-sprint-9-sprint-4-close-the-learning-gap-v3
 sprint: 9
 week: 7
-module: 'Sprint 4: Close The Learning Gap (V3)'
+module: 'Sprint 4: Close The Learning Gap (V2)'
 position: 1
 points: null
 submission_type: none
 publish: false
 ---
 
-# Sprint 4: Close The Learning Gap (V3)
+# Sprint 4: Close The Learning Gap (V2)
 
 In Sprint 3 you took your problem to a real person. Whatever they told you, you probably came out of that conversation knowing less than you thought you did going in. Something did not fit.
 

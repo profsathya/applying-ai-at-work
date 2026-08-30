@@ -5,7 +5,7 @@ slug: name-the-gap-v3
 artifact_id: course1-sprints-sprint-9-name-the-gap-v3
 sprint: 9
 week: 7
-module: 'Sprint 4: Close The Learning Gap (V3)'
+module: 'Sprint 4: Close The Learning Gap (V2)'
 position: 4
 points: 15
 submission_type: text_entry
