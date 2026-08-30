@@ -5,7 +5,7 @@ slug: introduction-close-the-learning-gap-v3
 artifact_id: course1-sprints-sprint-9-introduction-close-the-learning-gap-v3
 sprint: 9
 week: 7
-module: 'Sprint 4: Close The Learning Gap (V3)'
+module: 'Sprint 4: Close The Learning Gap (V2)'
 position: 2
 points: null
 submission_type: none
