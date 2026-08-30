@@ -3,7 +3,7 @@ type: assignment
 title: 'Dojo Lab: Stakeholder Map'
 slug: dojo-lab-stakeholder-map-v2
 artifact_id: course1-sprints-sprint-3-reviewed-v2-dojo-lab-stakeholder-map-v2
-sprint: 6
+sprint: 7
 week: 5
 module: 'Sprint 3: Integrate People and Context (V2)'
 position: 4

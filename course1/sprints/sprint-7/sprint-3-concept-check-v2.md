@@ -3,7 +3,7 @@ type: quiz
 title: Sprint 3 Concept Check
 slug: sprint-3-concept-check-v2
 artifact_id: course1-sprints-sprint-3-reviewed-v2-sprint-3-concept-check-v2
-sprint: 6
+sprint: 7
 week: 5
 module: 'Sprint 3: Integrate People and Context (V2)'
 position: 3

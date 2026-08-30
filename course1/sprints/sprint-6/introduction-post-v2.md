@@ -3,9 +3,9 @@ type: discussion
 title: 'Introduction Post'
 slug: introduction-post-v2
 artifact_id: course1-sprints-welcome-and-orientation-v2-introduction-post-v2
-sprint: 7
+sprint: 6
 week: 1
-module: 'Welcome and Orientation (V2)'
+module: 'Sprint 0: Welcome and Orientation (V2)'
 position: 6
 points: 0
 submission_type: discussion_topic

@@ -213,32 +213,6 @@ modules:
             verify: "Walk a peer or stakeholder through the argument before final submission and note where they get lost."
 
   - sprint: 6
-    tag: "Reviewed V2"
-    open: false
-    learning_goals:
-      - "Identify stakeholders and their relationship to the problem."
-      - "Design validation questions for stakeholders that produce real evidence."
-      - "Revise the problem framing using human input and context."
-    prereq: "A reviewed, consolidated rebuild of Sprint 3, kept separate from the original Sprint 3 for comparison."
-    groups:
-      - label: "Sprint Week 1: Understand and map"
-        items:
-          - slug: "introduction-integrate-people-and-context-v2"
-            meta: "Page - how stakeholders, evidence, and validation work in this sprint"
-          - slug: "sprint-3-concept-check-v2"
-            meta: "Quiz - check your understanding before you start"
-            badge: "Self-check"
-            selfcheck: true
-          - slug: "dojo-lab-stakeholder-map-v2"
-            meta: "Assignment - profile your stakeholders with the Dojo and mark what you know"
-      - label: "Sprint Week 2: Validate and revise"
-        items:
-          - slug: "stakeholder-conversation-v2"
-            meta: "Assignment - prepare, hold, and document a real stakeholder conversation"
-          - slug: "sprint-3-reflection-and-mid-course-goal-plan-revision-v2"
-            meta: "AI reflection activity - refine your goal plan revision based on evidence"
-
-  - sprint: 7
     tag: "Orientation V2"
     open: false
     learning_goals:
@@ -266,7 +240,33 @@ modules:
           - slug: "help-and-resources-v2"
             meta: "Page - how-tos, key terms, and how to reach your instructor"
 
-  - sprint: 9
+  - sprint: 7
+    tag: "Reviewed V2"
+    open: false
+    learning_goals:
+      - "Identify stakeholders and their relationship to the problem."
+      - "Design validation questions for stakeholders that produce real evidence."
+      - "Revise the problem framing using human input and context."
+    prereq: "A reviewed, consolidated rebuild of Sprint 3, kept separate from the original Sprint 3 for comparison."
+    groups:
+      - label: "Sprint Week 1: Understand and map"
+        items:
+          - slug: "introduction-integrate-people-and-context-v2"
+            meta: "Page - how stakeholders, evidence, and validation work in this sprint"
+          - slug: "sprint-3-concept-check-v2"
+            meta: "Quiz - check your understanding before you start"
+            badge: "Self-check"
+            selfcheck: true
+          - slug: "dojo-lab-stakeholder-map-v2"
+            meta: "Assignment - profile your stakeholders with the Dojo and mark what you know"
+      - label: "Sprint Week 2: Validate and revise"
+        items:
+          - slug: "stakeholder-conversation-v2"
+            meta: "Assignment - prepare, hold, and document a real stakeholder conversation"
+          - slug: "sprint-3-reflection-and-mid-course-goal-plan-revision-v2"
+            meta: "AI reflection activity - refine your goal plan revision based on evidence"
+
+  - sprint: 8
     tag: "Learning Gap V2"
     open: false
     learning_goals:
@@ -295,3 +295,17 @@ modules:
             meta: "Assignment - run the path and check two claims against something that is not AI"
           - slug: "sprint-4-reflection-what-i-learned-and-how-i-know-v3"
             meta: "AI reflection activity - name the capability you gained and what you checked"
+
+  - sprint: 9
+    tag: "Synthesis V2"
+    open: false
+    learning_goals:
+      - "Turn course artifacts into a coherent argument about the problem and your readiness."
+      - "Identify gaps in evidence, logic, and stakeholder grounding before final submission."
+      - "Submit a final integrated problem document that a reader can follow."
+    prereq: "A rebuild of Sprint 5, kept separate from the original Sprint 5. Placeholder module: the activities are still being written."
+    groups:
+      - label: "Sprint Week 1: Start here"
+        items:
+          - slug: "introduction-synthesize-and-show-readiness-v2"
+            meta: "Page - placeholder stub for the Sprint 5 rebuild"
