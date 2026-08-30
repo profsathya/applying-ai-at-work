@@ -3,9 +3,9 @@ type: page
 title: 'Start Here'
 slug: start-here-v2
 artifact_id: course1-sprints-welcome-and-orientation-v2-start-here-v2
-sprint: 7
+sprint: 6
 week: 1
-module: 'Welcome and Orientation (V2)'
+module: 'Sprint 0: Welcome and Orientation (V2)'
 position: 2
 points: null
 submission_type: none

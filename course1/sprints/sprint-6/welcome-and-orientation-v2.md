@@ -1,18 +1,18 @@
 ---
 type: module_header
-title: 'Welcome and Orientation (V2)'
+title: 'Sprint 0: Welcome and Orientation (V2)'
 slug: welcome-and-orientation-v2
 artifact_id: course1-sprints-welcome-and-orientation-v2-welcome-and-orientation-v2
-sprint: 7
+sprint: 6
 week: 1
-module: 'Welcome and Orientation (V2)'
+module: 'Sprint 0: Welcome and Orientation (V2)'
 position: 1
 points: null
 submission_type: none
 publish: false
 ---
 
-# Welcome and Orientation (V2)
+# Sprint 0: Welcome and Orientation (V2)
 
 Start here before Sprint 1. Four short pages cover what the course is, how it is paced, how you will work with AI as a thinking partner, and where to go when you are stuck. Work through them in order.
 

@@ -3,7 +3,7 @@ type: quiz
 title: 'AI Exchange: Is This a Gap?'
 slug: ai-exchange-is-this-a-gap-v3
 artifact_id: course1-sprints-sprint-9-ai-exchange-is-this-a-gap-v3
-sprint: 9
+sprint: 8
 week: 7
 module: 'Sprint 4: Close The Learning Gap (V2)'
 position: 5
