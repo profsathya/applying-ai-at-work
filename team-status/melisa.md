@@ -1,5 +1,38 @@
 # Melisa — Weekly Stand-up
 
+## 2026-08-28 — Weekly stand-up
+
+### What moved since my last update   [required]
+- **[De Anza · Course 1 / CIS 501]** Now showing on the Canvas: Sprint 0 (V2)
+  — the Welcome and Orientation page from last week — Sprint 3 (V2), and
+  Sprint 4 (V2). These are now ready for feedback. Not yet — Sprint 5 (V2) is
+  pending further development, as I would like to review Sprint 1 and Sprint 2
+  to understand more on how they will be landing for the students. Since it is
+  a synthesis and final report of the entire 10-week course, I am deciding to
+  hold off on this.
+- **[De Anza · partners]** Feedback has been coming in from Callista and
+  Sandhya Simhan on the content two-pager being shared (CIS 501 — Design
+  Proposal for Partner Review). Gaurav still has not provided feedback.
+- **[De Anza · next]** Up next: decide as a team what is the most efficient
+  way to collect the feedback and make the changes. Currently we have the
+  Canvas as well as documents that hold the content.
+
+### Threads I clicked into (pick ~2; drill as deep as you like)
+- **Level 1 · My learning [De Anza · repo].** A repo disruption I'm still
+  untangling. There used to be a Sprint 4 (V2) and a Sprint 4 (V3). To keep
+  things clean I deleted the old V2 and made V3 the new V2. But when I try to
+  reference items in the new V2, Claude still pulls from the old one. My best
+  guess is naming: the way it was added left lines referencing V2, and the
+  current V2 still carries V3 in its titles and names. I'm not certain that's
+  the cause. Either way the lesson holds — naming runs deeper than I thought,
+  and renaming a version is not the same as replacing it. Worth being cautious
+  before anyone else does the same cleanup.
+- **Level 3 · The team [De Anza · partners].** A question I'm chewing on:
+  how should the partner feedback on the two-pager be taken, and how should
+  it impact the course development that's currently in flight? I'd like the
+  team to land this rather than absorb it edit by edit — including who makes
+  the call when partner input would change the design.
+
 ## 2026-07-13
 
 ### Accomplished
