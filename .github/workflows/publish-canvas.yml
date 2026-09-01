@@ -40,7 +40,7 @@ jobs:
       manifests: ${{ steps.target_manifests.outputs.manifests }}
     steps:
       - name: Check out content branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           path: content
           fetch-depth: 0
@@ -120,13 +120,13 @@ jobs:
       HOSTED_ONLY: ${{ github.event_name == 'workflow_dispatch' && inputs.hosted_only == true }}
     steps:
       - name: Check out content branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           path: content
           fetch-depth: 0
 
       - name: Check out Common Curriculum
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: profsathya/Common-Curriculum
           path: common-curriculum
