@@ -312,7 +312,7 @@ modules:
 
   - sprint: 10
     tag: "Optional Technical Review"
-    open: false
+    open: true
     learning_goals:
       - "Inspect a short page, a text-entry assignment, and a three-question quiz in Canvas."
       - "Use the definitions of goal, problem, and stakeholder in two brief optional activities."
