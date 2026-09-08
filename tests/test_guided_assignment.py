@@ -5,9 +5,13 @@ import subprocess
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 import yaml
-from canvas_sync.schema import validate_artifact
+from canvas_sync import push
+from canvas_sync.schema import validate_artifact, validate_canvas_state, validate_manifest
 from canvas_sync.guided_assignment import render_guided_body
+from canvas_sync.maintenance_state import MaintenanceState
+from tests.test_canvas_state import chdir, write_manifest
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -23,6 +27,39 @@ def frontmatter():
 
 
 class GuidedAssignmentTests(unittest.TestCase):
+    def test_publish_persists_guided_delivery_in_valid_maintenance_state(self):
+        class Client:
+            def create_assignment(self, payload):
+                self.assignment = {'id': 17, **payload}
+                return self.assignment
+
+            def get_assignment(self, assignment_id):
+                return self.assignment
+
+            def add_module_item(self, module_id, **kwargs):
+                return {'id': 29, 'module_id': module_id, **kwargs}
+
+        for external in (False, True):
+            with self.subTest(external=external), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp).resolve()
+                md = root / 'course1/sprints/sprint-11/decide.md'
+                manifest = root / 'course1/manifests/production.json'
+                state_dir = root / 'canvas-state' if external else None
+                md.parent.mkdir(parents=True)
+                md.write_text('---\n' + yaml.safe_dump(frontmatter()) + '---\n\nInstructions.\n')
+                write_manifest(manifest)
+                with chdir(root), patch.object(push.CanvasClient, 'from_env', return_value=Client()), patch.object(push, 'resolve_or_create_module', return_value=8):
+                    result = push.push_artifact(md, manifest, state_dir=state_dir)
+                state_path = Path(result['state_path'])
+                validator = validate_canvas_state if external else validate_manifest
+                self.assertEqual(validator(state_path), [])
+                persisted = json.loads(state_path.read_text())['artifacts']
+                entry = next(iter(persisted.values()))
+                self.assertEqual(entry['delivery_mode'], 'guided_assignment')
+                self.assertEqual(entry['canvas_type'], 'assignment')
+                self.assertEqual(entry['canvas_id'], 17)
+                MaintenanceState(manifest, root, state_dir).load()
+
     def validate(self, fm):
         with tempfile.TemporaryDirectory() as tmp:
             p = Path(tmp) / 'page.md'; p.write_text('---\n' + yaml.safe_dump(fm) + '---\n\nSource instructions.\n')

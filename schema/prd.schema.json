@@ -56,7 +56,7 @@
           },
           "delivery_mode": {
             "type": "string",
-            "enum": ["canvas_native", "ai_activity"]
+            "enum": ["canvas_native", "ai_activity", "guided_assignment"]
           },
           "ai_activity": {
             "type": "object",
