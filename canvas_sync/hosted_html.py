@@ -502,7 +502,7 @@ def render_artifact_document(
     <p class="meta">{meta}</p>
     <h1>{title}</h1>
 
-    {goal_block}
+{('    ' + goal_block) if goal_block else ''}
 
     {sections}
 
