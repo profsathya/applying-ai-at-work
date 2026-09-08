@@ -181,3 +181,7 @@ Preview output is at `/tmp/applying-ai-audit-preview`. It is generated review ma
 6. **Continue documentation alignment where it is instructional.** Course 3's participant-facing command references can lag the updated maintenance interface. They were preserved as course content; update them through the course editing and homepage workflow when requested. Historical design/archive assertions also need contextual reading rather than automatic cleanup.
 
 No package was declared deprecated or upgraded based solely on age. The audit does not establish remote Canvas state, protected-environment configuration, current hosted availability, or the full Alan workflow. All requested local audit, implementation and verification work is complete; deployment and instructional decisions remain separate reviewed actions.
+
+## Subsequent authorized live test
+
+After this audit snapshot, the user authorized pushing the audit branch and a small additive test in Course 180. Native Page, text-entry Assignment, and Classic Quiz publication, repeat publication, and a hosted page edit passed live API checks. The test found a new-module publication issue and prompted quiet, post-question quiz publication; the resulting suite has 174 tests. See the separate [live smoke-test report](2026-09-08-live-canvas-smoke-test.md) for exact scope, deployment records, review links, and the features that remain untested. The original audit results above remain the record of the earlier offline phase.

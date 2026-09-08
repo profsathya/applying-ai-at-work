@@ -100,6 +100,8 @@ Keep entries concise. One line per learning. Reference specific files or PRs whe
 
 ## Learnings
 
+- 2026-09-08: Course 180 live smoke test confirmed Canvas can ignore `published` on module creation; `resolve_or_create_module` now publishes explicitly when the create response remains unpublished. Native quizzes are created as drafts, populated, then published with `notify_of_update: false`. See `docs/audits/2026-09-08-live-canvas-smoke-test.md`.
+
 - On Windows, run `.venv\Scripts\python.exe canvas_sync\schema_windows.py --all` (or the same command with `--artifact`, `--manifest`, `--state`, `--prd`, or `--homepage`) instead of `canvas_sync/schema.py`; the Windows entry point delegates to the canonical validator while safely handling its Unix-only `fcntl` import.
 - Canvas pushes are real side effects. Validate locally first, then call `canvas_sync/push.py` only after explicit human approval for the target artifact set.
 - Production Canvas publishes should run through `.github/workflows/publish-canvas.yml`, which writes mutable Canvas IDs and hashes to the protected `canvas-state` branch rather than to `main`.
