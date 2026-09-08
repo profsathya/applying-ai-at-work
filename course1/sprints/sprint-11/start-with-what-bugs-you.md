@@ -4,9 +4,9 @@ title: Start with what bugs you
 slug: start-with-what-bugs-you
 artifact_id: course1-sprint-one-v2-start-with-what-bugs-you
 sprint: 11
-module: 'Sprint One: Find a Problem Worth Working On (First Half)'
+module: Working Draft
 position: 2
-publish: false
+publish: true
 source_provenance: start-with-what-bugs-you.sources.json
 ---
 

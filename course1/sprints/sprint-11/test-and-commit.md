@@ -4,9 +4,9 @@ title: Test and Commit
 slug: test-and-commit
 artifact_id: course1-sprint-one-v2-test-and-commit
 sprint: 11
-module: 'Sprint One: Find a Problem Worth Working On (First Half)'
+module: Working Draft
 position: 7
-publish: false
+publish: true
 points: 20
 submission_type: text_entry
 delivery_mode: guided_assignment

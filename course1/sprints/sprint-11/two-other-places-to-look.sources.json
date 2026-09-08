@@ -2,9 +2,9 @@
   "evidence_version": 1,
   "artifact_id": "course1-sprint-one-v2-two-other-places-to-look",
   "packet_sha256": "f1aeb92eb892d9513b9e291dfa2723dd2ff5122073cb424005ba8a4671791233",
-  "map_sha256": "35369d4bf5deae5871999793e6473b312e85afd6a2911400e48a2d6bcffec89f",
+  "map_sha256": "545505478823ea3bc8e5ed5ffcc615519df532f68e4c1d9b56eac612daa0afa0",
   "body_sha256": "d03693ac1c0fe88fea329cdbd705154602da9b480158244197616a7ac645c276",
-  "frontmatter_sha256": "f2d0695015f32bd6457a8fe4e570d116efca7700b247a499924a9fce73b1b353",
+  "frontmatter_sha256": "3ccdcd6651f3915767c3c5ac8181740af5ee4274a1e200b9f218b2b18004a3ec",
   "parts": [
     {
       "kind": "new",
@@ -1566,7 +1566,8 @@
   ],
   "metadata_decisions": [
     "New safe draft identity and storage sprint 11. Semantic course sequence remains Sprint One.",
-    "Unpublished local content only."
+    "Unpublished local content only.",
+    "User authorized publication to Course 180 under module name Working Draft on 2026-09-08."
   ],
   "source_roles": {
     "d-8c47807332cb7151": {

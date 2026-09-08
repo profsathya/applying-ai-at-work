@@ -2,9 +2,9 @@
   "evidence_version": 1,
   "artifact_id": "course1-sprint-one-v2-start-with-what-bugs-you",
   "packet_sha256": "f1aeb92eb892d9513b9e291dfa2723dd2ff5122073cb424005ba8a4671791233",
-  "map_sha256": "35369d4bf5deae5871999793e6473b312e85afd6a2911400e48a2d6bcffec89f",
+  "map_sha256": "545505478823ea3bc8e5ed5ffcc615519df532f68e4c1d9b56eac612daa0afa0",
   "body_sha256": "c7a781922e1e191bf9060ae39606e7cdf908d45d9d4b07c9b6785d9b77adb1fa",
-  "frontmatter_sha256": "2ca9d937bb95e5e6ab0a1d60a7b1f110816b0c3f62afe64dddaccfd23a499857",
+  "frontmatter_sha256": "ab6d6a36411bb3b5fe072c8f09006ba0b306596c67d97df61c4964bee7a86dac",
   "parts": [
     {
       "kind": "new",
@@ -1916,7 +1916,8 @@
   ],
   "metadata_decisions": [
     "New safe draft identity and storage sprint 11. Semantic course sequence remains Sprint One.",
-    "Unpublished local content only."
+    "Unpublished local content only.",
+    "User authorized publication to Course 180 under module name Working Draft on 2026-09-08."
   ],
   "source_roles": {
     "d-8c47807332cb7151": {

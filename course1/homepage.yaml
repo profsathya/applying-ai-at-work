@@ -329,8 +329,8 @@ modules:
 
   - sprint: 11
     tag: "First half"
-    open: false
-    muted: true
+    open: true
+    muted: false
     learning_goals:
       - "Turn things you notice, work-arounds, and surface requests into candidate problems grounded in your own context."
       - "Describe three to five candidates as gaps and mark where your claims are uncertain."

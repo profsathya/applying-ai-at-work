@@ -2,9 +2,9 @@
   "evidence_version": 1,
   "artifact_id": "course1-sprint-one-v2-problem-finding-concept-check",
   "packet_sha256": "f1aeb92eb892d9513b9e291dfa2723dd2ff5122073cb424005ba8a4671791233",
-  "map_sha256": "35369d4bf5deae5871999793e6473b312e85afd6a2911400e48a2d6bcffec89f",
+  "map_sha256": "545505478823ea3bc8e5ed5ffcc615519df532f68e4c1d9b56eac612daa0afa0",
   "body_sha256": "756a7141d930ef3e36cd4bfa878be8e989e7046e385fed058724775787666351",
-  "frontmatter_sha256": "d8564730632e3917e99b0418c49fe42da5a73ccd1ff14295b29582d766515cac",
+  "frontmatter_sha256": "0a83e843afa51925300e68a44783859c2ca6d41d30013bf43a19bc6f7c7d777d",
   "parts": [
     {
       "kind": "new",
@@ -27,7 +27,8 @@
     "Question trace-a-surface-request source references: d-8c47807332cb7151:word/document.xml/109, d-8c47807332cb7151:word/document.xml/113, d-8c47807332cb7151:word/document.xml/115, d-8c47807332cb7151:word/document.xml/117, d-8c47807332cb7151:word/document.xml/118, d-8c47807332cb7151:word/document.xml/120, d-8c47807332cb7151:word/document.xml/122, d-8c47807332cb7151:word/document.xml/124, d-8c47807332cb7151:word/document.xml/125, d-8c47807332cb7151:word/document.xml/126, d-8c47807332cb7151:word/document.xml/128, d-8c47807332cb7151:word/document.xml/164. Prompt/options/key/explanation are newly authored applications.",
     "Question keep-several-candidates-live source references: d-8c47807332cb7151:word/document.xml/12, d-8c47807332cb7151:word/document.xml/16, d-8c47807332cb7151:word/document.xml/43, d-8c47807332cb7151:word/document.xml/52, d-8c47807332cb7151:word/document.xml/200, d-8c47807332cb7151:word/document.xml/202, d-8c47807332cb7151:word/document.xml/224, d-8c47807332cb7151:word/document.xml/227, d-8c47807332cb7151:word/document.xml/235, d-8c47807332cb7151:word/document.xml/241, d-8c47807332cb7151:word/document.xml/243. Prompt/options/key/explanation are newly authored applications.",
     "Question show-what-you-do-not-know source references: d-8c47807332cb7151:word/document.xml/227, d-8c47807332cb7151:word/document.xml/231, d-8c47807332cb7151:word/document.xml/233, d-8c47807332cb7151:word/document.xml/237, d-8c47807332cb7151:word/document.xml/239, d-8c47807332cb7151:word/document.xml/241. Prompt/options/key/explanation are newly authored applications.",
-    "Browser review replaced internal source references in two question prompts with the names of the worked examples."
+    "Browser review replaced internal source references in two question prompts with the names of the worked examples.",
+    "User authorized publication to Course 180 under module name Working Draft on 2026-09-08."
   ],
   "source_roles": {
     "d-8c47807332cb7151": {

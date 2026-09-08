@@ -4,9 +4,9 @@ title: Problem-Finding Concept Check
 slug: problem-finding-concept-check
 artifact_id: course1-sprint-one-v2-problem-finding-concept-check
 sprint: 11
-module: 'Sprint One: Find a Problem Worth Working On (First Half)'
+module: Working Draft
 position: 5
-publish: false
+publish: true
 points: 5
 submission_type: text_entry
 delivery_mode: guided_assignment

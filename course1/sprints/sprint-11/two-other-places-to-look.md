@@ -4,9 +4,9 @@ title: Two other places to look
 slug: two-other-places-to-look
 artifact_id: course1-sprint-one-v2-two-other-places-to-look
 sprint: 11
-module: 'Sprint One: Find a Problem Worth Working On (First Half)'
+module: Working Draft
 position: 3
-publish: false
+publish: true
 source_provenance: two-other-places-to-look.sources.json
 ---
 

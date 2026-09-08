@@ -4,9 +4,9 @@ title: Candidate List
 slug: candidate-list
 artifact_id: course1-sprint-one-v2-candidate-list
 sprint: 11
-module: 'Sprint One: Find a Problem Worth Working On (First Half)'
+module: Working Draft
 position: 4
-publish: false
+publish: true
 points: 15
 submission_type: text_entry
 delivery_mode: guided_assignment

@@ -4,9 +4,9 @@ title: Four checks for a workable problem
 slug: four-checks-for-a-workable-problem
 artifact_id: course1-sprint-one-v2-four-checks-for-a-workable-problem
 sprint: 11
-module: 'Sprint One: Find a Problem Worth Working On (First Half)'
+module: Working Draft
 position: 6
-publish: false
+publish: true
 source_provenance: four-checks-for-a-workable-problem.sources.json
 ---
 

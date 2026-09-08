@@ -1,12 +1,12 @@
 ---
 type: module_header
-title: 'Sprint One: Find a Problem Worth Working On (First Half)'
+title: Working Draft
 slug: sprint-one-first-half
 artifact_id: course1-sprint-one-v2-sprint-one-first-half
 sprint: 11
-module: 'Sprint One: Find a Problem Worth Working On (First Half)'
+module: Working Draft
 position: 1
-publish: false
+publish: true
 source_provenance: sprint-one-first-half.sources.json
 ---
 

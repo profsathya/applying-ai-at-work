@@ -2,9 +2,9 @@
   "evidence_version": 1,
   "artifact_id": "course1-sprint-one-v2-test-and-commit",
   "packet_sha256": "f1aeb92eb892d9513b9e291dfa2723dd2ff5122073cb424005ba8a4671791233",
-  "map_sha256": "35369d4bf5deae5871999793e6473b312e85afd6a2911400e48a2d6bcffec89f",
+  "map_sha256": "545505478823ea3bc8e5ed5ffcc615519df532f68e4c1d9b56eac612daa0afa0",
   "body_sha256": "a87b2bf33cc07ddf54c6d1381a697065aa4098f846652b992d0ba597109e5697",
-  "frontmatter_sha256": "6db8a6e424c7d9b04d2386641240ebf9210d7142907a7322cca6977019552720",
+  "frontmatter_sha256": "9c10de94f5ff0d644e9739ed752bb7cab60da9cf4d0befcf224296f17bc9378e",
   "parts": [
     {
       "kind": "new",
@@ -1710,7 +1710,8 @@
     "Eight response tasks implement the existing submission: four checks, AI challenges, committed gap, decision reasons, and runner-up. Uncertainty is a standing instruction across fields, not an extra task. Sources: d-8c47807332cb7151:word/document.xml/260, d-8c47807332cb7151:word/document.xml/268, d-8c47807332cb7151:word/document.xml/278, d-8c47807332cb7151:word/document.xml/286, d-8c47807332cb7151:word/document.xml/306, d-8c47807332cb7151:word/document.xml/307, d-8c47807332cb7151:word/document.xml/309, d-8c47807332cb7151:word/document.xml/310, d-8c47807332cb7151:word/document.xml/313, d-8c47807332cb7151:word/document.xml/314, d-8c47807332cb7151:word/document.xml/315, d-8c47807332cb7151:word/document.xml/316, d-8c47807332cb7151:word/document.xml/317, d-8c47807332cb7151:word/document.xml/318, d-8c47807332cb7151:word/document.xml/320, d-8c47807332cb7151:word/document.xml/322, d-8c47807332cb7151:word/document.xml/326, d-8c47807332cb7151:word/document.xml/334, d-8c47807332cb7151:word/document.xml/337, d-8c47807332cb7151:word/document.xml/351, d-8c47807332cb7151:word/document.xml/353, d-8c47807332cb7151:word/document.xml/354, d-8c47807332cb7151:word/document.xml/355, d-8c47807332cb7151:word/document.xml/356, d-8c47807332cb7151:word/document.xml/357, d-8c47807332cb7151:word/document.xml/363, d-8c47807332cb7151:word/document.xml/365, d-8c47807332cb7151:word/document.xml/369, d-8c47807332cb7151:word/document.xml/370, d-8c47807332cb7151:word/document.xml/371, d-8c47807332cb7151:word/document.xml/372, d-8c47807332cb7151:word/document.xml/373, d-8c47807332cb7151:word/document.xml/374.",
     "The four check prompts preserve source heading wording after stripping internal E labels. The AI task prompt adapts d-8c47807332cb7151:word/document.xml/326 and d-8c47807332cb7151:word/document.xml/370 to name the AI exchange explicitly when copied on its own. Runner-up prompt preserves the heading words of d-8c47807332cb7151:word/document.xml/356. Committed-gap and decision-reasons prompts are explicitly adapted from d-8c47807332cb7151:word/document.xml/353, d-8c47807332cb7151:word/document.xml/354, d-8c47807332cb7151:word/document.xml/355, d-8c47807332cb7151:word/document.xml/371. Criteria/reflections and framing are newly authored scaffolding grounded in those references.",
     "The confirmed reference supplies the optional formative feedback endpoint. No feedback calls were made during authoring. The standing instruction puts all four human checks before optional AI feedback; the learner still interprets the feedback and chooses the problem.",
-    "Feedback availability is not promised. The new task criteria distinguish unavailable service/access from completed AI work and prohibit fabricated exchange evidence. The existing 20-point manual review guide remains; optional feedback and filled-field counts do not assign a grade."
+    "Feedback availability is not promised. The new task criteria distinguish unavailable service/access from completed AI work and prohibit fabricated exchange evidence. The existing 20-point manual review guide remains; optional feedback and filled-field counts do not assign a grade.",
+    "User authorized publication to Course 180 under module name Working Draft on 2026-09-08."
   ],
   "source_roles": {
     "d-8c47807332cb7151": {
