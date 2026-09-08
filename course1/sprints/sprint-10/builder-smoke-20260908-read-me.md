@@ -24,3 +24,5 @@ For the activities, use these three definitions:
 Your assignment asks for one sentence about a real work task. Your quiz checks the definitions above. Keep names, customer information, and other sensitive details out of any response.
 
 Open the assignment next to inspect its text-entry instructions, then open the quiz to review its three questions.
+
+You may inspect all three items without submitting a response.

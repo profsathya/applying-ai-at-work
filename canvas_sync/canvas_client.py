@@ -304,6 +304,10 @@ def resolve_or_create_module(
                 client.update_module(m["id"], {"published": True})
             return m["id"]
     result = client.create_module(module_name, published=publish)
+    # Canvas can ignore published on module creation. Honor the requested
+    # visibility immediately, including single-artifact module pushes.
+    if publish and not result.get("published"):
+        client.update_module(result["id"], {"published": True})
     return result["id"]
 
 
