@@ -357,3 +357,7 @@ The script edits local deployment state only; it makes no Canvas calls. Omit
 - `AGENTS.md` - root agent guide and build learnings.
 - `docs/codex-migration/` - migration audit and plan.
 - `context/build-notes/` - historical build notes.
+
+## Build from authored documents
+
+Give Codex one Google Doc file link, a downloaded DOCX, or an exported ZIP and ask it to build a sprint. The [document intake workflow](docs/DOCUMENT_INTAKE.md) preserves source prose, tables, comments, and tracked-edit alternatives, then assembles a local draft with source evidence and labelled new writing. Authors do not write YAML or Markdown.

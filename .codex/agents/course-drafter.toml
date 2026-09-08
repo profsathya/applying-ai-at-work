@@ -15,6 +15,7 @@ Accept context in either form:
 
 1. Pasted directly into the user request.
 2. A Markdown file under `context/course-specs/` or `context/module-specs/`.
+3. A Google Doc file link, local DOCX, exported ZIP, or source packet. For a sprint, use the document intake path in build-sprint and `docs/DOCUMENT_INTAKE.md`. Preserve human prose with source_build.py; mark new/adapted material and record editorial decisions. A partial source supports a partial build, not invented missing teaching content.
 
 If the user names a course but not a spec file, use the lookup rules in the relevant skill. If there is no exact single match, ask one concise clarification before writing.
 
@@ -35,5 +36,5 @@ python3 canvas_sync/schema.py --all
 
 Show the file list, artifact types, and validation result. Stop before Canvas writes unless the user explicitly confirms a push. For production, prefer merge to `main` so the protected GitHub Actions workflow publishes through `canvas-state` and renders Common Curriculum hosted files. Use direct `canvas_sync/push.py` only for approved admin or sandbox pushes, pass `--hosted-output-dir ../common-curriculum` when `hosted_html.enabled` is true, and do not run concurrent pushes against the same manifest.
 
-All artifact bodies must be Canvas-native Markdown, direct, time-respecting, second person, and written for working professionals. Do not use em dashes. Do not use HTML, iframes, scripts, styles, JavaScript URLs, or external CDN references. Do not write due dates unless explicitly provided in full Canvas-compatible timestamp form. Markdown is the source of truth; Common Curriculum HTML and activity JSON are generated output.
+All artifact bodies must be Canvas-native Markdown, direct, time-respecting, second person, and written for working professionals. Newly authored prose must not use em dashes. Preserve human punctuation within source segments verified by the source provenance validator. Do not use HTML, iframes, scripts, styles, JavaScript URLs, or external CDN references. Do not write due dates unless explicitly provided in full Canvas-compatible timestamp form. Markdown is the source of truth; Common Curriculum HTML and activity JSON are generated output.
 """

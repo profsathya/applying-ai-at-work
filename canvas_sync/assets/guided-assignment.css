@@ -1,0 +1,14 @@
+.guided-workspace { margin-top: 20px; }
+.guided-workspace details { margin: 14px 0; padding: 12px; border: 1px solid #ccd5df; border-radius: 6px; }
+.guided-workspace summary { cursor: pointer; font-weight: 650; }
+.guided-workspace button { font: inherit; padding: 10px 15px; background: #204b76; color: white; border: 0; border-radius: 6px; cursor: pointer; margin: 8px 6px 8px 0; }
+.guided-workspace button:disabled { opacity: .55; cursor: wait; }
+.guided-workspace textarea { display: block; width: 100%; box-sizing: border-box; font: inherit; padding: 12px; border: 1px solid #8294a7; border-radius: 5px; resize: vertical; margin: 7px 0; }
+.guided-workspace .choice { display: flex; align-items: baseline; gap: 9px; margin: 12px 0; }
+.guided-workspace input[type=radio] { flex: 0 0 auto; }
+.guided-workspace .response-task { overflow-wrap: anywhere; }
+.guided-workspace [data-feedback-result] { white-space: pre-wrap; }
+.guided-workspace :focus-visible { outline: 3px solid #bf6b00; outline-offset: 3px; }
+.guided-workspace table { width: 100%; border-collapse: collapse; font-size: .94em; }
+.guided-workspace th, .guided-workspace td { padding: 8px; border: 1px solid #ccd5df; vertical-align: top; overflow-wrap: anywhere; }
+@media (max-width: 600px) { .guided-workspace .response-task { padding: 14px; } }

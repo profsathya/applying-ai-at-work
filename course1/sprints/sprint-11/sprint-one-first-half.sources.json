@@ -1,0 +1,53 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprint-one-v2-sprint-one-first-half",
+  "packet_sha256": "f1aeb92eb892d9513b9e291dfa2723dd2ff5122073cb424005ba8a4671791233",
+  "map_sha256": "35369d4bf5deae5871999793e6473b312e85afd6a2911400e48a2d6bcffec89f",
+  "body_sha256": "6cb214039238257f46d52bd43b137611b1f8303e4bce7a281728ff350357055c",
+  "frontmatter_sha256": "bc0234a122fb935fc48ac004b51fdf470c9604e1b00b4a81826cea0f898df8af",
+  "parts": [
+    {
+      "kind": "new",
+      "markdown": "This is the first half of Sprint One. You will turn things you notice in your own life into candidate problems, examine which ones are workable, and choose one with reasons you can defend.\n\nStart with your own observations. Use AI after you have written and checked your candidates, then decide which challenges fit the evidence you actually have. Your choice will carry forward into framing the problem, talking with real people who have a stake in it, and identifying what you still need to learn.\n\nKeep one working document as you go. Save your initial list, candidate gaps, uncertainty marks, check answers, AI challenges and responses, and final choice with a runner-up. You will submit the Candidate List first and Test and Commit after the four checks. The concept check helps you examine the ideas between those submissions.\n\nBy the end of this half, you should have a defensible starting problem. You do not need to have proved every claim or completed stakeholder inquiry yet.",
+      "reason": "New module orientation accurately bounds the supplied first half and makes the source learning arc explicit.",
+      "based_on": [
+        "d-8c47807332cb7151:word/document.xml/12",
+        "d-8c47807332cb7151:word/document.xml/26",
+        "d-8c47807332cb7151:word/document.xml/241",
+        "d-8c47807332cb7151:word/document.xml/318",
+        "d-8c47807332cb7151:word/document.xml/326",
+        "d-8c47807332cb7151:word/document.xml/369",
+        "d-8c47807332cb7151:word/document.xml/370",
+        "d-8c47807332cb7151:word/document.xml/371",
+        "d-8c47807332cb7151:word/document.xml/372",
+        "d-8c47807332cb7151:word/document.xml/373",
+        "d-8c47807332cb7151:word/document.xml/374",
+        "d-8c47807332cb7151:word/document.xml/376"
+      ]
+    }
+  ],
+  "metadata_decisions": [
+    "New safe draft identity and storage sprint 11. Semantic course sequence remains Sprint One.",
+    "Unpublished local content only."
+  ],
+  "source_roles": {
+    "d-8c47807332cb7151": {
+      "role": "primary_authoring",
+      "reason": "User selected this exact exported DOCX as the first integration source and authorized a local first-half Sprint One content build."
+    }
+  },
+  "decisions": [
+    "Use proposed text only for explicitly reviewed source blocks 200 and 202; preserve coherent wording across tracked changes.",
+    "Remove internal section labels from headings and adapt five cross-references; record new/adapted prose separately.",
+    "Retain all substantive learner prose and three learner tables, excluding only recorded editorial, placeholder, and duplicate diagram blocks.",
+    "Build the supplied first half only; later-half outline is context.",
+    "Suggested 15 and 20 point assignments and 5 point concept check total 40; new review bands require human review before publishing.",
+    "No Canvas writes, source edits, or publishing approval implied.",
+    "Confirmed user-selected reference: https://profsathya.github.io/Common-Curriculum/deanza-trial/test-and-commit.html. Use guided_assignment for the three graded artifacts with Canvas text_entry, optional local response boxes, copy/export, and expandable full source instructions. Do not create native Canvas quiz questions or ai_activity JSON.",
+    "Candidate List has one response task and no AI endpoint, preserving own-thinking-first. Test and Commit has eight response tasks and optional per-response formative AI feedback through the endpoint from the confirmed reference. Complete four human checks before using AI feedback; feedback cannot choose the problem or grade it.",
+    "Concept Check has five newly authored choice tasks grounded only in A-D; answer keys and explanations are formative client-side feedback. Five points are manual completion review, not automatic correctness scoring. Source outline at d-8c47807332cb7151:word/document.xml/386 provides the proposed point total only.",
+    "Newly authored upload instructions are changed to copy/paste into Canvas text entry. Preserved source wording asking for one document remains compatible with drafting externally before pasting. All selected source passages and three learner tables remain unchanged.",
+    "Optional guidance/reflection fields support the named tasks and do not create duplicate required submissions. All full Markdown source instructions remain available in expandable guidance.",
+    "This build completes only the supplied first half. No Canvas publication, external feedback invocation, Common Curriculum deployment, source-document edit, or later-half build has occurred."
+  ]
+}

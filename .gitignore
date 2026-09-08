@@ -45,3 +45,6 @@ course*/reports/smoke-*/
 # Runtime locks for manifest writes
 course*/manifests/*.lock
 course*/manifests/*.json.lock
+
+# Private document snapshots, editorial packets, and local previews
+.source-intake/
