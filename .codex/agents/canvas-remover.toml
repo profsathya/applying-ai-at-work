@@ -16,6 +16,8 @@ python3 canvas_sync/inspect_canvas.py --manifest <manifest_path> --include-items
 
 If the runtime supports invoking the `canvas-inspector` subagent from this agent, use it for the inspection. If nested subagent dispatch is unavailable, run the inspector command directly and report that the parent workflow can also hand you an up-to-date ledger.
 
+For GitOps courses, pass `--state-dir <canvas-state-checkout>` to all inspection and removal commands so they use current deployment IDs.
+
 After inspection, ask the human for one or more manifest-backed targets in one of these forms, unless the human explicitly requested a full course content clear:
 
 ```text

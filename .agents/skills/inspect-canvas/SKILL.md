@@ -1,6 +1,6 @@
 ---
 name: inspect-canvas
-description: Inspect a live Canvas course in one read-only pass, list modules and module items, compare them with the local production manifest and local Markdown files, optionally report reconcile drift, and write an up-to-date local Canvas ledger under <course>/reports/.
+description: Inspect a live Canvas course in one read-only pass, list modules and module items, compare them with the local production manifest and local Markdown files, optionally report reconcile drift, and write an up-to-date local Canvas ledger in the course reports directory.
 ---
 
 # Inspect Canvas Skill
@@ -8,6 +8,8 @@ description: Inspect a live Canvas course in one read-only pass, list modules an
 Use this when a human asks what is currently on Canvas, wants a module or item inventory, wants to know whether Canvas and the local manifest line up, or wants a pre-reconcile report.
 
 This workflow reads Canvas and may write local ledger files. It must not write to Canvas.
+
+For a GitOps-managed course, use a current checkout of `canvas-state` and pass `--state-dir <path-to-canvas-state-checkout>` to every inspection, maintenance, and push command. The legacy manifest artifact map may be stale. Omit this flag only for an explicitly legacy local deployment; do not fall back when the external state file is missing.
 
 ## Workflow
 

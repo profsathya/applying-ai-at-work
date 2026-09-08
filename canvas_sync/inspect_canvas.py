@@ -24,8 +24,10 @@ from dotenv import load_dotenv
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient, CanvasError
 from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
-from canvas_sync.pull import fetch_canvas_state, html_to_markdown
-from canvas_sync.push import md_body_to_canvas_html
+from canvas_sync.drift import compute_drift, html_to_markdown
+from canvas_sync.hosted_html import markdown_body_to_html
+from canvas_sync.maintenance_state import MaintenanceState
+from canvas_sync.state import fetch_canvas_state
 from canvas_sync.schema import parse_frontmatter
 
 
@@ -131,45 +133,13 @@ def discover_unmanifested_local_files(course_dir: Path, artifacts: dict) -> list
 
 def rendered_local_body_to_markdown(body: str) -> str:
     """Normalize local Markdown through the same render path used by Canvas push."""
-    return html_to_markdown(md_body_to_canvas_html(body)).strip()
+    return html_to_markdown(markdown_body_to_html(body)).strip()
 
 
-def compute_inspection_drift(md_path: Path, canvas_state: dict, atype: str) -> dict:
-    fm, body = parse_frontmatter(md_path)
-
-    canvas_title = canvas_state.get("name") or canvas_state.get("title")
-    canvas_body_html = (
-        canvas_state.get("description")
-        or canvas_state.get("body")
-        or canvas_state.get("message")
-        or ""
-    )
-    canvas_body_md = html_to_markdown(canvas_body_html).strip()
-    local_body_md = rendered_local_body_to_markdown(body)
-
-    drift: dict[str, Any] = {}
-    if canvas_title != fm.get("title"):
-        drift["title"] = {"local": fm.get("title"), "canvas": canvas_title}
-
-    if local_body_md != canvas_body_md:
-        drift["body"] = {
-            "local_chars": len(local_body_md),
-            "canvas_chars": len(canvas_body_md),
-            "local_preview": local_body_md[:200],
-            "canvas_preview": canvas_body_md[:200],
-        }
-
-    if atype in ("assignment", "quiz", "discussion"):
-        canvas_points = canvas_state.get("points_possible")
-        if canvas_state.get("assignment"):
-            canvas_points = canvas_state["assignment"].get("points_possible", canvas_points)
-        if canvas_points != fm.get("points"):
-            drift["points"] = {"local": fm.get("points"), "canvas": canvas_points}
-
-    return drift
+compute_inspection_drift = compute_drift
 
 
-def compute_drift_report(client: CanvasClient, artifacts: dict) -> tuple[list[dict], list[dict], list[dict]]:
+def compute_drift_report(client: CanvasClient, artifacts: dict, manifest_path=None, manifest=None) -> tuple[list[dict], list[dict], list[dict]]:
     drifted: list[dict] = []
     orphans: list[dict] = []
     errors: list[dict] = []
@@ -187,7 +157,7 @@ def compute_drift_report(client: CanvasClient, artifacts: dict) -> tuple[list[di
             if canvas_state is None:
                 orphans.append({"file": rel_path, "canvas_type": atype})
                 continue
-            drift = compute_inspection_drift(md_path, canvas_state, atype)
+            drift = compute_drift(md_path, canvas_state, atype, manifest_path=manifest_path, manifest=manifest)
         except Exception as exc:  # noqa: BLE001 - report, do not hide remaining checks
             errors.append({"file": rel_path, "error": str(exc)})
             continue
@@ -198,11 +168,12 @@ def compute_drift_report(client: CanvasClient, artifacts: dict) -> tuple[list[di
     return drifted, orphans, errors
 
 
-def build_report(manifest_path: Path, *, include_items: bool, include_drift: bool) -> dict:
+def build_report(manifest_path: Path, *, include_items: bool, include_drift: bool, state_dir: Path | None = None) -> dict:
     load_dotenv(REPO_ROOT / ".env")
 
     manifest_path = manifest_path.resolve()
-    manifest = load_manifest(manifest_path)
+    store = MaintenanceState(manifest_path, REPO_ROOT, state_dir)
+    manifest = store.load()
     course_dir = course_dir_for_manifest(manifest_path)
     artifacts = manifest.get("artifacts", {})
     instance = manifest.get("instance", {})
@@ -297,7 +268,7 @@ def build_report(manifest_path: Path, *, include_items: bool, include_drift: boo
     canvas_orphans: list[dict] = []
     drift_errors: list[dict] = []
     if include_drift:
-        drifted, canvas_orphans, drift_errors = compute_drift_report(client, artifacts)
+        drifted, canvas_orphans, drift_errors = compute_drift_report(client, artifacts, manifest_path, manifest)
 
     canvas_modules_not_in_manifest = [
         {
@@ -373,6 +344,7 @@ def build_report(manifest_path: Path, *, include_items: bool, include_drift: boo
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "manifest": {
             "path": repo_relative(manifest_path),
+            "state_path": str(store.path),
             "last_sync": manifest.get("last_sync"),
             "instance": instance,
         },
@@ -492,6 +464,7 @@ def write_ledger_files(report: dict, manifest_path: Path, ledger_dir: Path | Non
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", type=Path, required=True)
+    parser.add_argument("--state-dir", type=Path, help="Authoritative canvas-state checkout; omit only for legacy state.")
     parser.add_argument("--include-items", action="store_true")
     parser.add_argument("--drift", action="store_true", help="Fetch known artifacts and report title/body/points drift.")
     parser.add_argument("--write-ledger", action="store_true", help="Write JSON and Markdown ledgers under <course>/reports/.")
@@ -500,7 +473,7 @@ def main() -> int:
     args = parser.parse_args()
 
     try:
-        report = build_report(args.manifest, include_items=args.include_items, include_drift=args.drift)
+        report = build_report(args.manifest, include_items=args.include_items, include_drift=args.drift, state_dir=args.state_dir)
         if args.write_ledger:
             report["ledger_paths"] = write_ledger_files(report, args.manifest, args.ledger_dir)
 

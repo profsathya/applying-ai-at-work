@@ -114,6 +114,12 @@ class SummarizeReportTests(unittest.TestCase):
         self.assertGreaterEqual(s["failed"], 1)
         self.assertFalse(s["hosted_commit"])
 
+    def test_later_interruption_preserves_completed_canvas_writes(self) -> None:
+        s = summarize_report({"results": [result(published=1)], "completed": False}, 2)
+        self.assertTrue(s["commit_state"])
+        self.assertFalse(s["hosted_commit"])
+        self.assertFalse(s["clean"])
+
     def test_complete_report_matches_summarize(self) -> None:
         s = summarize_report({"results": [result(published=1)], "completed": True}, 1)
         self.assertTrue(s["completed"])
@@ -152,10 +158,16 @@ class DemoteHostedPublishesTests(unittest.TestCase):
         self.assertEqual(errors, [HOSTED_DEPLOY_FAILED_CANVAS] * 2)
         # No state revert for real Canvas writes.
         self.assertEqual(demoted, {})
-        # The created item's identity is preserved through commit gating.
+        # Both new IDs and fingerprints of updated Canvas objects must survive.
         provisional_ids = [p["artifact_id"] for p in adjusted[0]["provisional"]]
-        self.assertEqual(provisional_ids, ["n0"])
+        self.assertEqual(provisional_ids, ["h0", "n0"])
         self.assertTrue(summarize(adjusted)["commit_state"])
+
+    def test_hosted_update_only_failure_still_preserves_canvas_fingerprint(self) -> None:
+        adjusted, demoted = demote_hosted_publishes([result(hosted_updates=1)])
+        self.assertEqual(demoted, {})
+        self.assertTrue(summarize(adjusted)["commit_state"])
+        self.assertEqual(adjusted[0]["published"], [])
 
     def test_non_hosted_items_stay_published(self) -> None:
         results = [result(published=2)]

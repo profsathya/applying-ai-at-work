@@ -16,7 +16,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def discover_manifests() -> list[Path]:
-    return sorted(REPO_ROOT.glob("course*/manifests/production.json"))
+    return sorted(REPO_ROOT.glob("*/manifests/production.json"))
 
 
 def bootstrap_manifest(manifest_path: Path, state_dir: Path, *, skip_existing: bool) -> dict:

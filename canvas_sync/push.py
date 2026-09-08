@@ -42,6 +42,7 @@ from canvas_sync.hosted_html import (
     iframe_shell,
     render_hosted_artifact,
     render_hosted_files,
+    markdown_body_to_html,
 )
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.state import (
@@ -57,21 +58,7 @@ from canvas_sync.state import (
 )
 
 
-def md_body_to_canvas_html(body: str) -> str:
-    """
-    Convert canvas-agnostic markdown to canvas-compatible HTML.
-
-    Canvas accepts HTML in assignment descriptions, page bodies, discussion
-    messages, and quiz descriptions. We use the 'markdown' library with safe
-    defaults.
-    """
-    import markdown
-
-    return markdown.markdown(
-        body,
-        extensions=["extra", "sane_lists", "smarty", "toc"],
-        output_format="html5",
-    )
+md_body_to_canvas_html = markdown_body_to_html
 
 
 def validate_artifact_manifest_pair(md_path: Path, manifest_path: Path) -> None:
@@ -302,7 +289,7 @@ def push_discussion(client: CanvasClient, fm: dict, html: str, existing_id: int 
     return client.create_discussion(payload)
 
 
-def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None) -> dict:
+def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None, *, on_created=None) -> dict:
     payload = {
         "title": fm["title"],
         "description": html,
@@ -316,6 +303,8 @@ def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None
         result = client.update_quiz(existing_id, payload)
     else:
         result = client.create_quiz(payload)
+        if on_created:
+            on_created(result["id"], None)
 
     quiz_id = result["id"]
 
@@ -340,7 +329,7 @@ def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None
             "question_type": canvas_q_type,
             "points_possible": q.get("points", 1),
         }
-        if q_type in ("multiple_choice", "true_false"):
+        if q_type in ("multiple_choice", "true_false", "short_answer"):
             question_payload["answers"] = [
                 {"answer_text": a["text"], "answer_weight": 100 if a.get("correct") else 0}
                 for a in q.get("answers", [])
@@ -355,6 +344,8 @@ def push_artifact(
     manifest_path: Path,
     state_dir: Path | None = None,
     hosted_output_dir: Path | None = None,
+    *,
+    render_course: bool = True,
 ) -> dict:
     repo_root = Path.cwd().resolve()
     md_path = md_path.resolve()
@@ -392,6 +383,9 @@ def push_artifact(
         # another institution's profile (the silent 401).
         check_instance_ready(manifest, manifest_label=str(manifest_path))
         check_env_matches_instance(manifest, manifest_label=str(manifest_path))
+
+        if store.external and not state_path.exists() and manifest.get("artifacts"):
+            raise ValueError("External state is missing for a legacy-mapped course; bootstrap its state before pushing")
 
         client = CanvasClient.from_env(course_id=course_id)
 
@@ -472,6 +466,10 @@ def push_artifact(
                 if fm.get("position") is not None:
                     entry["position"] = fm["position"]
                 if store.external:
+                    entry["artifact_id"] = artifact_id
+                    entry["local_path"] = rel_path
+                    if os.environ.get("GITHUB_SHA"):
+                        entry["source_commit"] = os.environ["GITHUB_SHA"]
                     fingerprint = canvas_fingerprint(live_state, canvas_artifact_type)
                     if fingerprint:
                         entry["canvas_fingerprint"] = fingerprint
@@ -485,13 +483,14 @@ def push_artifact(
                 )
                 entry["hosted_hash"] = hosted_result["hosted_hash"]
                 entry["hosted_last_rendered"] = pushed_at
-                render_hosted_files(
-                    manifest_path,
-                    hosted_output_dir,
-                    discover_hosted_artifact_files(manifest_path),
-                    manifest=manifest,
-                    state=deployment_state,
-                )
+                if render_course:
+                    render_hosted_files(
+                        manifest_path,
+                        hosted_output_dir,
+                        discover_hosted_artifact_files(manifest_path),
+                        manifest=manifest,
+                        state=deployment_state,
+                    )
                 deployment_state["last_sync"] = pushed_at
                 store.save(deployment_state, state_path)
                 fast_result = {
@@ -508,36 +507,8 @@ def push_artifact(
                     fast_result["warnings"] = warnings
                 return fast_result
 
-        if canvas_artifact_type == "assignment":
-            result = push_assignment(client, canvas_fm, html, existing_id)
-            canvas_id = result["id"]
-            canvas_page_url = None
-        elif canvas_artifact_type == "page":
-            result = push_page(client, canvas_fm, html, existing_page_url)
-            canvas_id = result.get("page_id")
-            canvas_page_url = result.get("url")
-        elif canvas_artifact_type == "discussion":
-            result = push_discussion(client, canvas_fm, html, existing_id)
-            canvas_id = result["id"]
-            canvas_page_url = None
-        elif canvas_artifact_type == "quiz":
-            result = push_quiz(client, canvas_fm, html, existing_id)
-            canvas_id = result["id"]
-            canvas_page_url = None
-        elif canvas_artifact_type == "module_header":
-            canvas_id = None
-            canvas_page_url = None
-            result = {}
-        else:
-            raise ValueError(f"Unknown artifact type: {canvas_artifact_type}")
-
-        # Persist the created object's Canvas identity immediately: if anything
-        # after this point fails (module placement, hosted rendering,
-        # fingerprinting, the final state save), a retry must find this object
-        # and update it, never create a second one. The sentinel content hash
-        # keeps the artifact detected as changed, so the retry republishes over
-        # this provisional entry through the update path.
-        if action == "created" and (canvas_id or canvas_page_url):
+        def save_created_identity(canvas_id, canvas_page_url):
+            # Checkpoint identity before module placement, rendering, or quiz questions.
             provisional = entry_for_push(
                 artifact_id=artifact_id,
                 rel_path=rel_path,
@@ -554,6 +525,32 @@ def push_artifact(
             )
             artifacts[state_key] = provisional
             store.save(deployment_state, state_path)
+
+        if canvas_artifact_type == "assignment":
+            result = push_assignment(client, canvas_fm, html, existing_id)
+            canvas_id = result["id"]
+            canvas_page_url = None
+        elif canvas_artifact_type == "page":
+            result = push_page(client, canvas_fm, html, existing_page_url)
+            canvas_id = result.get("page_id")
+            canvas_page_url = result.get("url")
+        elif canvas_artifact_type == "discussion":
+            result = push_discussion(client, canvas_fm, html, existing_id)
+            canvas_id = result["id"]
+            canvas_page_url = None
+        elif canvas_artifact_type == "quiz":
+            result = push_quiz(client, canvas_fm, html, existing_id, on_created=save_created_identity)
+            canvas_id = result["id"]
+            canvas_page_url = None
+        elif canvas_artifact_type == "module_header":
+            canvas_id = None
+            canvas_page_url = None
+            result = {}
+        else:
+            raise ValueError(f"Unknown artifact type: {canvas_artifact_type}")
+
+        if action == "created" and (canvas_id or canvas_page_url) and canvas_artifact_type != "quiz":
+            save_created_identity(canvas_id, canvas_page_url)
 
         # Resolve module and add to it if not already present
         module_id = resolve_or_create_module(
@@ -708,13 +705,14 @@ def push_artifact(
             )
             entry["hosted_hash"] = hosted_result["hosted_hash"]
             entry["hosted_last_rendered"] = pushed_at
-            render_hosted_files(
-                manifest_path,
-                hosted_output_dir,
-                discover_hosted_artifact_files(manifest_path),
-                manifest=manifest,
-                state=deployment_state,
-            )
+            if render_course:
+                render_hosted_files(
+                    manifest_path,
+                    hosted_output_dir,
+                    discover_hosted_artifact_files(manifest_path),
+                    manifest=manifest,
+                    state=deployment_state,
+                )
 
         if store.external:
             live_state = fetch_canvas_state(client, entry)

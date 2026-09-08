@@ -15,6 +15,8 @@ python3 canvas_sync/inspect_canvas.py --manifest <manifest_path> --include-items
 python3 canvas_sync/inspect_canvas.py --manifest <manifest_path> --include-items --drift --write-ledger --format markdown
 ```
 
+For GitOps courses, pass `--state-dir <canvas-state-checkout>` to both commands; the legacy manifest map may be stale.
+
 Use `--drift` when the human asks about reconciliation, Canvas-side changes, or whether local Markdown matches live Canvas.
 
 Never push to Canvas. Never apply a pull/reconcile. Never edit manifests manually. If the human wants drift applied after the inspection, hand off to the repo's `reconcile` workflow and require explicit approval before apply.

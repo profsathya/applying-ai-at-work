@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient
+from canvas_sync.drift import hosted_canvas_drift
 from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
 from canvas_sync.hosted_html import (
     SHARED_OUTPUT_NAMES,
@@ -21,6 +22,7 @@ from canvas_sync.hosted_html import (
 from canvas_sync.push import push_artifact
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.state import (
+    check_state_instance,
     content_hash,
     empty_state_from_manifest,
     fetch_canvas_state,
@@ -34,7 +36,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def discover_manifests() -> list[Path]:
-    return sorted(REPO_ROOT.glob("course*/manifests/production.json"))
+    return sorted(REPO_ROOT.glob("*/manifests/production.json"))
 
 
 def discover_artifact_files(manifest_path: Path) -> list[Path]:
@@ -50,7 +52,9 @@ def load_state(manifest_path: Path, state_dir: Path, *, require_state: bool) -> 
     manifest = load_json(manifest_path)
     state_path = state_path_for_manifest(manifest_path, state_dir, manifest)
     if state_path.exists():
-        return load_json(state_path), state_path
+        state = load_json(state_path)
+        check_state_instance(state, manifest, state_path)
+        return state, state_path
     if require_state:
         raise FileNotFoundError(
             f"State file not found for {repo_relative(manifest_path)}: {state_path}. "
@@ -86,7 +90,8 @@ def changed_artifacts(manifest_path: Path, state_dir: Path, *, require_state: bo
         artifact_id = frontmatter["artifact_id"]
         state_entry = state.get("artifacts", {}).get(artifact_id)
         hash_value = content_hash(md_path)
-        if not state_entry or state_entry.get("content_hash") != hash_value:
+        if (not state_entry or state_entry.get("content_hash") != hash_value
+                or state_entry.get("local_path") != repo_relative(md_path)):
             changed.append(
                 {
                     "file": repo_relative(md_path),
@@ -140,10 +145,22 @@ def drift_for_changed(manifest_path: Path, changed: list[dict]) -> list[dict]:
             continue
         actual = canvas_fingerprint(live_state, entry["canvas_type"])
         if not expected:
-            # Incomplete state, not drift: hydrate the fingerprint from live
-            # Canvas as part of publish instead of hard-stopping the run. The
-            # push records a fresh fingerprint after it lands.
-            item["healed_fingerprint"] = actual
+            # No baseline is not evidence that Canvas is safe to overwrite.
+            # Recover only if the current source already matches live Canvas.
+            # Other healthy artifacts in the batch continue normally.
+            path = item.get("path") or REPO_ROOT / item["file"]
+            try:
+                differences = hosted_canvas_drift(path, manifest_path, manifest, live_state, entry["canvas_type"])
+            except (ValueError, OSError) as exc:
+                differences = {"source": str(exc)}
+            if differences:
+                drifted.append({
+                    "file": item["file"], "artifact_id": item["artifact_id"],
+                    "reason": "missing canvas_fingerprint and live Canvas differs from source; reconcile before publishing",
+                    "drift": differences,
+                })
+            else:
+                item["healed_fingerprint"] = actual
             continue
         if actual != expected:
             # Real drift: a stored fingerprint exists and live Canvas does not
@@ -389,6 +406,7 @@ def publish_manifest(
             kwargs = {"state_dir": state_dir}
             if hosted_output_dir:
                 kwargs["hosted_output_dir"] = hosted_output_dir
+                kwargs["render_course"] = False
             pushed = push_artifact(item["path"], manifest_path, **kwargs)
             result["published"].append(pushed)
         except Exception as exc:  # noqa: BLE001 - continue so partial success is visible
@@ -417,9 +435,8 @@ def publish_manifest(
                 continue
             pre = pre_artifacts.get(artifact_id) or {}
             post = post_artifacts.get(artifact_id) or {}
-            pre_identity = (pre.get("canvas_id"), pre.get("canvas_page_url"))
             post_identity = (post.get("canvas_id"), post.get("canvas_page_url"))
-            if any(post_identity) and post_identity != pre_identity:
+            if any(post_identity) and post != pre:
                 result["provisional"].append(
                     {
                         "file": item["file"],

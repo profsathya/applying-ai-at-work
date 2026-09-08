@@ -30,6 +30,7 @@ from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient, CanvasError
+from canvas_sync.maintenance_state import MaintenanceState
 from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
 
 
@@ -745,13 +746,15 @@ def apply_removal(
     client: CanvasClient,
     *,
     course_clear: bool = False,
+    state_dir: Path | None = None,
 ) -> dict:
     if not confirm_token:
         raise RemovalPlanError("apply requires --confirm-token from a fresh dry run")
 
     manifest_path = manifest_path.resolve()
-    with manifest_lock(manifest_path):
-        manifest = load_manifest(manifest_path)
+    store = MaintenanceState(manifest_path, manifest_path.parent.parent.parent, state_dir) if state_dir else None
+    with manifest_lock(store.path if store else manifest_path):
+        manifest = store.load() if store else load_manifest(manifest_path)
         plan = build_removal_plan(
             manifest,
             targets,
@@ -768,7 +771,10 @@ def apply_removal(
             execute_operation(client, operation)
 
         apply_plan_to_manifest(manifest, plan)
-        save_manifest(manifest_path, manifest)
+        if store:
+            store.save(manifest)
+        else:
+            save_manifest(manifest_path, manifest)
 
     applied = dict(plan)
     applied["mode"] = "apply"
@@ -780,6 +786,7 @@ def main() -> int:
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", type=Path, required=True)
+    parser.add_argument("--state-dir", type=Path, help="Authoritative canvas-state checkout.")
     parser.add_argument("--target", action="append", default=[])
     parser.add_argument(
         "--course-clear",
@@ -799,7 +806,7 @@ def main() -> int:
         if not args.course_clear and not args.target:
             raise RemovalPlanError("at least one --target is required unless --course-clear is used")
         if args.dry_run:
-            manifest = load_manifest(manifest_path)
+            manifest = MaintenanceState(manifest_path, REPO_ROOT, args.state_dir).load()
             check_instance_ready(manifest, manifest_label=str(manifest_path))
             check_env_matches_instance(manifest, manifest_label=str(manifest_path))
             client = CanvasClient.from_env(course_id=manifest["instance"]["course_id"])
@@ -824,6 +831,7 @@ def main() -> int:
             args.confirm_token,
             client,
             course_clear=args.course_clear,
+            state_dir=args.state_dir,
         )
         print(json.dumps(applied, indent=2, sort_keys=True))
         return 0

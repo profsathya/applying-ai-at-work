@@ -286,6 +286,8 @@ Recommended repository controls:
 - Keep `canvas-production` as a protected GitHub Environment for Canvas secrets.
 - Do not add a mandatory staging Canvas environment unless course volume or reviewer count grows enough to justify it.
 
+Maintenance after GitOps publishing uses the same external state checkout. See [Canvas maintenance](docs/CANVAS_MAINTENANCE.md) for inspection, reviewed reconcile tokens, backups, and recovery. Shared-code-only changes run validation but do not automatically select every course for publishing; use a reviewed course dispatch to deploy shared changes. Named course keys are supported throughout target resolution and state validation.
+
 ## Canvas Sync Layer
 
 `canvas_sync/` is hand-authored Python:

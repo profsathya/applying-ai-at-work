@@ -2,9 +2,9 @@
 
 The historical run found 3 changed course1 artifacts, published none, and
 exited 1 because ONE state entry was missing canvas_fingerprint. These tests
-pin the fixed behavior: the same three-artifact batch publishes everything,
-healing the incomplete entry, and a push exception in one artifact never
-blocks its neighbors.
+pin per-artifact isolation: proven healthy entries publish even when another
+entry cannot establish a safe baseline or a push raises an exception. A missing
+fingerprint does not authorize replacing different live content.
 """
 
 from __future__ import annotations
@@ -129,7 +129,7 @@ class HistoricalIncidentTests(unittest.TestCase):
         write_incident_state(state_dir / "course1" / "production.json")
         return repo_root, manifest_path, state_dir
 
-    def test_three_artifact_incident_batch_all_publish_one_heals(self) -> None:
+    def test_three_artifact_incident_batch_publishes_neighbors_blocks_unproven_item(self) -> None:
         """The exact historical shape: 2 healthy + 1 missing fingerprint."""
         with tempfile.TemporaryDirectory() as tmp:
             repo_root, manifest_path, state_dir = self._repo(tmp)
@@ -153,14 +153,11 @@ class HistoricalIncidentTests(unittest.TestCase):
                                 require_state=True,
                             )
 
-            self.assertEqual(result["drifted"], [])
+            self.assertEqual(len(result["drifted"]), 1)
             self.assertEqual(result["failed"], [])
-            self.assertEqual(len(result["published"]), 3)
-            self.assertEqual(len(result["healed"]), 1)
-            self.assertEqual(
-                result["healed"][0]["artifact_id"], "start-here-direct-ai-deliberately"
-            )
-            self.assertIn("hydrated missing canvas_fingerprint", result["healed"][0]["reason"])
+            self.assertEqual(len(result["published"]), 2)
+            self.assertEqual(result["healed"], [])
+            self.assertEqual(result["drifted"][0]["artifact_id"], "start-here-direct-ai-deliberately")
 
     def test_push_exception_in_one_artifact_does_not_block_neighbors(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -189,7 +186,7 @@ class HistoricalIncidentTests(unittest.TestCase):
 
             published_ids = {p["artifact_id"] for p in result["published"]}
             self.assertEqual(
-                published_ids, {"edit-one", "start-here-direct-ai-deliberately"}
+                published_ids, {"edit-one"}
             )
             self.assertEqual(len(result["failed"]), 1)
             self.assertEqual(result["failed"][0]["artifact_id"], "edit-two")

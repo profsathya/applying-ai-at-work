@@ -7,6 +7,8 @@ description: Push one or more existing course artifact Markdown files to Canvas 
 
 Push specified artifact Markdown files to Canvas using the active production manifest. For production courses, prefer the GitOps path: merge reviewed Markdown to `main` and let the protected `Publish Canvas` workflow update Canvas and the `canvas-state` branch. Use direct local pushes only for admin repair, sandbox pilots, or a human-approved emergency.
 
+For a GitOps-managed course, use a current checkout of `canvas-state` and pass `--state-dir <path-to-canvas-state-checkout>` to every inspection, maintenance, and push command. The legacy manifest artifact map may be stale. Omit this flag only for an explicitly legacy local deployment; do not fall back when the external state file is missing.
+
 ## Workflow
 
 1. Resolve each requested file path. It must live under `<course>/sprints/sprint-<n>/`.

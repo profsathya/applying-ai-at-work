@@ -142,6 +142,8 @@ Confirmation token: abc123
 No Canvas changes were made.
 ```
 
+For an existing GitOps course, inspection and maintenance must pass `--state-dir` for the current `canvas-state` checkout. The older artifact mappings in `production.json` may be stale. See [Canvas maintenance and recovery](docs/CANVAS_MAINTENANCE.md).
+
 ## Context Specs
 
 Codex can work from either pasted context or a Markdown spec file.

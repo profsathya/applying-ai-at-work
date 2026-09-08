@@ -22,7 +22,7 @@ Adult learners and working professionals whose roles, goals, or communities are 
 - **Sprint 4, Weeks 7-8:** Close The Learning Gap
 - **Sprint 5, Weeks 9-10:** Synthesize And Show Readiness
 
-Each sprint uses local Markdown artifacts under `course1/sprints/sprint-<n>/`. The Canvas production manifest remains the source for Canvas course identity and deployment state.
+Each sprint uses local Markdown artifacts under `course1/sprints/sprint-<n>/`. The production manifest defines the Canvas course identity and static configuration. GitOps deployment IDs and fingerprints live on the `canvas-state` branch; the manifest also retains legacy mappings.
 
 ## Outcome Focus
 
