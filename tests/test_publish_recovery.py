@@ -4,7 +4,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 import yaml
 
@@ -69,6 +69,46 @@ class MemoryCanvas:
 
 
 class PublishRecoveryTests(unittest.TestCase):
+    def test_native_quiz_publishes_complete_questions_without_notifications(self):
+        client = Mock()
+        client.create_quiz.return_value = {"id": 701, "published": False}
+        client.update_quiz.return_value = {"id": 701, "published": True}
+        fm = {
+            "title": "Test quiz", "publish": True, "points": 1,
+            "questions": [{"type": "essay", "prompt": "Explain.", "points": 1}],
+        }
+        result = push.push_quiz(client, fm, "Instructions", None)
+        calls = client.mock_calls
+        self.assertFalse(client.create_quiz.call_args.args[0]["published"])
+        self.assertEqual([c[0] for c in calls], ["create_quiz", "add_quiz_question", "update_quiz"])
+        self.assertEqual(client.update_quiz.call_args.args[1], {
+            "published": True, "notify_of_update": False,
+        })
+        self.assertTrue(result["published"])
+
+    def test_question_failure_does_not_publish_partial_quiz(self):
+        client = Mock()
+        client.create_quiz.return_value = {"id": 701, "published": False}
+        client.add_quiz_question.side_effect = RuntimeError("question rejected")
+        fm = {"title": "Test quiz", "publish": True, "questions": [{"prompt": "Explain.", "type": "essay"}]}
+        with self.assertRaisesRegex(RuntimeError, "question rejected"):
+            push.push_quiz(client, fm, "Instructions", None)
+        client.update_quiz.assert_not_called()
+
+    def test_quiz_update_suppresses_notification_and_publishes_after_replacement(self):
+        client = Mock()
+        client.update_quiz.return_value = {"id": 701}
+        client.list_quiz_questions.return_value = [{"id": 1}]
+        fm = {"title": "Test quiz", "publish": True, "questions": [{"prompt": "New?", "type": "essay"}]}
+        push.push_quiz(client, fm, "Instructions", 701)
+        self.assertEqual([c[0] for c in client.mock_calls], [
+            "update_quiz", "list_quiz_questions", "delete_quiz_question",
+            "add_quiz_question", "update_quiz",
+        ])
+        for call in client.update_quiz.call_args_list:
+            self.assertFalse(call.args[1]["notify_of_update"])
+        self.assertNotIn("published", client.update_quiz.call_args_list[0].args[1])
+
     def test_batch_renders_course_once_and_repeat_or_body_edit_does_not_duplicate(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp).resolve()

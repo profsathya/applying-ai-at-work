@@ -587,7 +587,12 @@ modules:
                 return {"id": 2, **payload}
 
             def create_quiz(self, payload: dict) -> dict:
-                return {"id": 3, **payload}
+                self.quiz = {"id": 3, **payload}
+                return dict(self.quiz)
+
+            def update_quiz(self, quiz_id: int, payload: dict) -> dict:
+                self.quiz.update(payload)
+                return dict(self.quiz)
 
             def add_quiz_question(self, quiz_id: int, payload: dict) -> dict:
                 self.quiz_questions.append({"quiz_id": quiz_id, **payload})

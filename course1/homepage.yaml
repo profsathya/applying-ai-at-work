@@ -309,3 +309,20 @@ modules:
         items:
           - slug: "introduction-synthesize-and-show-readiness-v2"
             meta: "Page - placeholder stub for the Sprint 5 rebuild"
+
+  - sprint: 10
+    tag: "Optional Technical Review"
+    open: false
+    learning_goals:
+      - "Inspect a short page, a text-entry assignment, and a three-question quiz in Canvas."
+      - "Use the definitions of goal, problem, and stakeholder in two brief optional activities."
+    prereq: "Optional technical review only. This smoke test is not required for your course work. Allow about three minutes if you choose to try it."
+    groups:
+      - label: "Course Builder Smoke Test - 2026-09-08"
+        items:
+          - slug: "builder-smoke-20260908-read-me"
+            meta: "Page - read the test instructions and three definitions"
+          - slug: "builder-smoke-20260908-work-task"
+            meta: "Assignment - try a one-sentence text entry about a real work task"
+          - slug: "builder-smoke-20260908-definition-check"
+            meta: "Quiz - check three definitions with multiple choice, true or false, and a one-word answer"

@@ -295,14 +295,16 @@ def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None
         "description": html,
         "quiz_type": "assignment",
         "points_possible": fm.get("points"),
-        "published": fm.get("publish", True),
         "due_at": fm.get("due"),
+        "notify_of_update": False,
     }
 
     if existing_id:
         result = client.update_quiz(existing_id, payload)
     else:
-        result = client.create_quiz(payload)
+        # A published quiz is a snapshot of its questions. Build the draft
+        # first, then publish only after every question was accepted.
+        result = client.create_quiz({**payload, "published": False})
         if on_created:
             on_created(result["id"], None)
 
@@ -336,7 +338,10 @@ def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None
             ]
         client.add_quiz_question(quiz_id, question_payload)
 
-    return result
+    return client.update_quiz(
+        quiz_id,
+        {"published": fm.get("publish", True), "notify_of_update": False},
+    )
 
 
 def push_artifact(
