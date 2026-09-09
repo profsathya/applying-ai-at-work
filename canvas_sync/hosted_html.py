@@ -1201,6 +1201,10 @@ def _render_homepage_item(
     state_entry = _state_entry_for_artifact(md_path, manifest_path, frontmatter, state or manifest)
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry)
     canvas_attr = f' data-canvas-href="{html_lib.escape(canvas_url, quote=True)}"' if canvas_url else ""
+    # Source-built modules should stay in the current Canvas window. Embedded
+    # browsers may block a new tab even when the native destination is valid.
+    if canvas_url and frontmatter.get("source_provenance"):
+        canvas_attr += ' data-canvas-target="_top"'
     module_item_id = state_entry.get("canvas_module_item_id")
     progress_attrs = ""
     progress_html = ""
@@ -1428,6 +1432,9 @@ def _career_homepage_document(
       document.querySelectorAll('a[data-canvas-href]').forEach(function(a) {{
         if (ctx === 'canvas') {{
           a.href = a.getAttribute('data-canvas-href');
+          if (a.hasAttribute('data-canvas-target')) {{
+            a.target = a.getAttribute('data-canvas-target');
+          }}
         }} else {{
           try {{
             var u = new URL(a.getAttribute('href'), location.href);

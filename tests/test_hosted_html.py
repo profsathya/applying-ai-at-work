@@ -12,6 +12,7 @@ from unittest.mock import patch
 from canvas_sync import push
 from canvas_sync.hosted_html import (
     MERMAID_SCRIPT_URL,
+    _render_homepage_item,
     iframe_shell,
     render_hosted_artifact,
     render_hosted_files,
@@ -251,6 +252,28 @@ class RecordingCanvasClient:
 
 
 class HostedHtmlTests(unittest.TestCase):
+    def test_source_built_canvas_links_use_current_window_without_changing_legacy_links(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            md = root / "course1/sprints/sprint-99/tuple-overview.md"
+            manifest_path = root / "course1/manifests/production.json"
+            write_page(md)
+            write_manifest(manifest_path)
+            from canvas_sync.schema import parse_frontmatter
+            fm, _ = parse_frontmatter(md)
+            manifest = json.loads(manifest_path.read_text())
+            state = {"artifacts": {"tuple-overview": {
+                "artifact_id": "tuple-overview", "canvas_type": "page",
+                "canvas_id": 1001, "canvas_page_url": "tuple-overview",
+                "canvas_module_item_id": 9001,
+            }}}
+            legacy = _render_homepage_item(md, fm, {}, manifest_path, manifest, state)
+            sourced = _render_homepage_item(md, {**fm, "source_provenance": "tuple-overview.sources.json"}, {}, manifest_path, manifest, state)
+            self.assertNotIn('data-canvas-target=', legacy)
+            self.assertIn('data-canvas-target="_top"', sourced)
+            self.assertIn('target="_blank"', sourced)  # Web context keeps its existing behavior.
+            self.assertIn('/courses/12345/pages/tuple-overview', sourced)
+
     def test_rendered_page_uses_career_intelligence_structure_and_skips_unchanged(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()
