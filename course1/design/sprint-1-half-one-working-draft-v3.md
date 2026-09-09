@@ -4,7 +4,7 @@ The whole move, from arriving with nothing to committing to one problem. Written
 
 Design notes appear inline as [NOTE] blocks and are not part of the page text. Break points are marked [BREAK?]. Open questions are marked [OPEN].
 
-[NOTE] Version 2. Leslie's front-half review has been applied change by change, plus the four structural moves agreed after it: the A header renamed, the deleted enumeration moved into the A1 prompt, A3 relocated to the end of B as the transition into C, and a worked multi-pass example added to B4. B5 is rewritten; see the note there. D through F are new.
+> **[NOTE] Version 2.** Leslie's front-half review has been applied change by change, plus the four structural moves agreed after it: the A header renamed, the deleted enumeration moved into the A1 prompt, A3 relocated to the end of B as the transition into C, and a worked multi-pass example added to B4. B5 is rewritten; see the note there. D through F are new.
 
 ## A. Start with what bugs you
 
@@ -18,13 +18,13 @@ Things that irritate you, that you complain about, that you keep meaning to deal
 
 Rough is the point. A phrase each is fine. Do not filter, and do not decide yet whether any of them is worth anything.
 
-Nobody tells me when a client account changes hands. New volunteers sign up, come twice, and we never see them again. Every month I rebuild the same report by hand. I should be better at using AI at work.
+> Nobody tells me when a client account changes hands. New volunteers sign up, come twice, and we never see them again. Every month I rebuild the same report by hand. I should be better at using AI at work.
 
 One nudge before you start. Try to include at least one thing that other people are involved in, not only things you do alone. It does not have to be at work, but it should touch somebody besides you.
 
 If nothing comes to mind, read on anyway. This page will give you other places to look.
 
-[NOTE] The nudge is Check 1 arriving early. Still unresolved: it asks for filtering one line after telling people not to filter. The alternative is dropping it here and letting D2 catch it.
+> **[NOTE]** The nudge is Check 1 arriving early. Still unresolved: it asks for filtering one line after telling people not to filter. The alternative is dropping it here and letting D2 catch it.
 
 ### A2. Notice what I did not ask for
 
@@ -42,6 +42,12 @@ Remember, a problem is a gap between how something works now and how it could wo
 
 That is the next move. Not describing why it bothers you. Not saying what would fix it. Describe how it currently works.
 
+| **What bugs you** | **How it actually works now** | **The gap starting to show** |
+|---|---|---|
+| Nobody tells me when a client account changes hands | Handovers happen in a conversation between two people. Nothing is written down and nobody owns telling anyone else | People act on stale ownership for days, and the client repeats themselves to someone who should already know |
+| New volunteers sign up, come twice, and stop | Signups are collected centrally. When a new volunteer comes they do whatever the person running that day improvises | A new volunteer's first month depends entirely on who happened to be there, so most of them never find something that needs them |
+| Every month I rebuild the same report by hand | The source system exports tables in a format that doesn't quite match the way we use them. Everyone who needs the report fixes it themselves | Every reporting team spends the same twenty minutes solving the same problem, and nobody has ever counted how much time it's costing us |
+
 Notice what the middle column does. It does not diagnose and it does not solve. It describes the current state carefully enough that the gap starts to become visible on its own.
 
 ### B2. Try it now
@@ -52,13 +58,13 @@ Take whichever of your indicators you have the most to say about. Write two or t
 
 Sometimes "how does it work now" comes back thin. Usually that means what you wrote is too broad or too vague to describe yet. These can restart it:
 
-- What would this look like if you had never adapted to it?
+  - What would this look like if you had never adapted to it?
 
-- What specifically happened the last time this went wrong?
+  - What specifically happened the last time this went wrong?
 
-- Which part of this could actually move, and which part is fixed?
+  - Which part of this could actually move, and which part is fixed?
 
-- What is it about this that you cannot tell?
+  - What is it about this that you cannot tell?
 
 Use whichever gets your thinking going. They are prompts, not a procedure. If you continue to struggle with one indicator, try another one.
 
@@ -68,11 +74,11 @@ What you get first is often still too vague, or too small, or turns out to be a 
 
 Here is the volunteer example going down three passes:
 
-Pass 1. New volunteers sign up, come twice, and stop. How does that work now? Signups go to a central inbox. What happens on a first shift is whatever the person running that day improvises.
+> **Pass 1.** New volunteers sign up, come twice, and stop. **How does that work now?** Signups go to a central inbox. What happens on a first shift is whatever the person running that day improvises.
 
-Pass 2. First shifts are improvised. How does that work now? Nobody owns deciding what a new volunteer should do on day one, so the shift lead invents something on the spot, usually the easiest thing to hand off.
+> **Pass 2.** First shifts are improvised. **How does that work now?** Nobody owns deciding what a new volunteer should do on day one, so the shift lead invents something on the spot, usually the easiest thing to hand off.
 
-Pass 3. Nobody owns a new volunteer's first day. How does that work now? We measure signups because signups are what the board asks about. Nobody has ever been responsible for what happens after someone arrives, so no one built it.
+> **Pass 3.** Nobody owns a new volunteer's first day. **How does that work now?** We measure signups because signups are what the board asks about. Nobody has ever been responsible for what happens after someone arrives, so no one built it.
 
 Notice that pass 1 could not tell you who was paying or what it cost them. Pass 3 can.
 
@@ -84,21 +90,21 @@ Sometimes you run the move and get nothing back. Not thin, nothing.
 
 Look at the fourth example from the list above: "I should be better at using AI at work."
 
-Ask how that works now and there is no answer, because "use AI" is not something that is happening. It is something you have decided to do. That is the tell: you have written down a solution, not an indicator. The move in this section only works on things that are already going on.
+Ask how that works now and there is no answer, because "use AI" is not something that is happening. It is something you have decided to do. That is the tell: **you have written down a solution, not an indicator.** The move in this section only works on things that are already going on.
 
 The way out is not to push harder. It is to ask what made you want that solution in the first place. Someone who wrote that line might find, underneath it, that information arrives in email, Slack, and meeting notes and gets re-entered by hand into calendars, to-do lists, and reports, because nothing connects those systems. That is a current state, and this move works on it normally.
 
 Solutions you have handed yourself are common enough that they get their own treatment in section C2. If an item on your list resists this move completely, that is where to take it.
 
-[NOTE] Rewritten from your run. My original claim, that some things have no current state, was wrong. Yours had one; the phrasing was a self-issued request in a wish's clothes. This version is truer and it strengthens C2 rather than inventing a dead-end category.
+> **[NOTE]** Rewritten from your run. My original claim, that some things have no current state, was wrong. Yours had one; the phrasing was a self-issued request in a wish's clothes. This version is truer and it strengthens C2 rather than inventing a dead-end category.
 
 ### B6. If your list is thin
 
 Things that bug you are a good first place to look, because you can feel them. There are at least two other places to look, and you cannot feel either one of those.
 
-Things you stopped noticing. You stopped noticing them because you figured out a work-around, so they stopped registering as friction. These do not bug you any more, but they are places where a problem, a gap that costs someone something real, might exist. They have to be hunted rather than recalled.
+**Things you stopped noticing.** You stopped noticing them because you figured out a work-around, so they stopped registering as friction. These do not bug you any more, but they are places where a problem, a gap that costs someone something real, might exist. They have to be hunted rather than recalled.
 
-Things somebody handed you. A request, from a manager, a client, or even from yourself. These arrive already looking like the answer, but there is a reasonable chance that they are a solution someone decided on before they carefully considered the actual problem.
+**Things somebody handed you.** A request, from a manager, a client, or even from yourself. These arrive already looking like the answer, but there is a reasonable chance that they are a solution someone decided on before they carefully considered the actual problem.
 
 Section C takes both in turn. Read it whether or not your list is thin, because the second one comes up constantly at work and it is the hardest of the three to spot.
 
@@ -122,7 +128,7 @@ For the next day or two, notice the moments where you route around something. Th
 
 This one is a little tricky, but if you look for it, odds are you'll find some examples in your own experience. The idea here is that sometimes, maybe especially at work, we are handed solutions that don't match the problem they are trying to solve.
 
-"We need an app to track where new hires are in their onboarding process."
+> "We need an app to track where new hires are in their onboarding process."
 
 This person has expressed that they want an app to track where new hires are in the onboarding process. Maybe they have sufficiently analyzed what's happening to know this is the right solution. However, very often, they haven't. Instead, maybe they decided to build an app because they like new apps, or because their colleague at another organization just built one, or maybe they do know that the onboarding process isn't smooth and they assume an app will make it better. In this situation, someone is naming what should be built rather than what should be different. They are assuming an answer before anyone has determined what the question is.
 
@@ -132,13 +138,13 @@ We'll call this type of indicator a surface request. We handle surface requests 
 
 Ask until you reach something nobody would argue with.
 
-We need an app to track where new hires are. Why? So managers can see who is stuck. Why does that matter? Because people sit for days waiting on something and nobody notices. Why does that matter? Because new hires should be contributing to their teams as quickly as possible, and right now they are not.
+> *We need an app to track where new hires are.* **Why?** So managers can see who is stuck. **Why does that matter?** Because people sit for days waiting on something and nobody notices. **Why does that matter?** Because new hires should be contributing to their teams as quickly as possible, and right now they are not.
 
 That last answer is the goal. Two things tell you that you have arrived:
 
-- Nobody in the organization would dispute it.
+  - Nobody in the organization would dispute it.
 
-- It says nothing about what to build.
+  - It says nothing about what to build.
 
 If your answer still contains a solution, you have not gone far enough. "So we have better visibility" is not a goal. It is the original request wearing a different coat.
 
@@ -146,15 +152,15 @@ If your answer still contains a solution, you have not gone far enough. "So we h
 
 Now that you have the actual goal stated plainly, let's take another look at the request. Tracking visibility of where new hires are in the onboarding process is only one of several things that could be going wrong:
 
-- Maybe nobody owns the handoffs from HR to IT to their department, so setup steps fall through and the first week is lost.
+  - Maybe nobody owns the handoffs from HR to IT to their department, so setup steps fall through and the first week is lost.
 
-- Maybe managers cannot tell what a new hire should be capable of at week two, so they under-assign and wait.
+  - Maybe managers cannot tell what a new hire should be capable of at week two, so they under-assign and wait.
 
-- Maybe training covers the tools but not the actual work, so people finish it and still cannot start.
+  - Maybe training covers the tools but not the actual work, so people finish it and still cannot start.
 
 All three are plausible. All three are real in some organizations. Each one would send you down a different path, and only the first is a visibility problem that an app might touch.
 
-[NOTE] This is the one edit of yours I did not take, flagged earlier. You had "each one requires a different solution." The paragraph is separating problems from solutions, so ending it by sorting problems by their solutions works against it. Overrule me if you disagree.
+> **[NOTE]** This is the one edit of yours I did not take, flagged earlier. You had "each one requires a different solution." The paragraph is separating problems from solutions, so ending it by sorting problems by their solutions works against it. Overrule me if you disagree.
 
 ```mermaid
 flowchart TD
@@ -181,19 +187,19 @@ The chain did not hand you a problem. It handed you a goal and three candidates 
 
 It's important to note that requests do not only come from other people. It is well worth looking at the requests we give ourselves.
 
-"I need to fix my resume."
+> "I need to fix my resume."
 
 Nobody assigned that. It still hands you a solution before anyone has named the problem, and the same chain applies:
 
-I need to fix my resume. Why? Because I am not getting interviews. Why does that matter? Because I have been applying for five months and I am running out of runway. Why does that matter? Because I need to be in a role that uses what I am good at and pays what the work is worth.
+> *I need to fix my resume.* **Why?** Because I am not getting interviews. **Why does that matter?** Because I have been applying for five months and I am running out of runway. **Why does that matter?** Because I need to be in a role that uses what I am good at and pays what the work is worth.
 
 That is the goal. And once it is stated, the resume is only one of the things that might be in the way:
 
-- The roles you are applying to do not want what you are strongest at, so the resume is fine and the targeting is wrong.
+  - The roles you are applying to do not want what you are strongest at, so the resume is fine and the targeting is wrong.
 
-- Your resume lists responsibilities rather than evidence of solving the problems these roles have.
+  - Your resume lists responsibilities rather than evidence of solving the problems these roles have.
 
-- You are applying cold to postings where these roles get filled through referrals.
+  - You are applying cold to postings where these roles get filled through referrals.
 
 Only the second is a resume problem. The first is a targeting problem and the third is a channel problem. Fixing the resume would consume weeks and change nothing in two of the three cases.
 
@@ -205,7 +211,7 @@ Check your list. Anything phrased as "I need to" or "we should" is usually a req
 
 Whatever is in front of you, ask this:
 
-Does it name what should be different, or does it name what should be built?
+**Does it name what should be different, or does it name what should be built?**
 
 If it names what should be built, you have a request, and there is a problem underneath it you have not seen yet. If it names something that should be different but you cannot yet say who it costs and what it costs them, you have an indicator and you are not finished going down.
 
@@ -215,23 +221,23 @@ Find the gap, and you have a candidate problem.
 
 ## D. Build your list out
 
-Submission 1 of 2 in this half. About 30 minutes of writing.
+**Submission 1 of 2 in this half. About 30 minutes of writing.**
 
-It's best to do this part without AI.
+> **It's best to do this part without AI.**
 
-This is not a rule about AI being unhelpful. You will use it frequently in this course. The reason is narrower: the raw material here has to come from your own life, and AI does not have access to what you have stopped noticing, what you keep putting off, or what your team works around. It can produce a plausible list of problems for someone in your role, and every item will be generic, because generic is all it can see from where it sits.
+> This is not a rule about AI being unhelpful. You will use it frequently in this course. The reason is narrower: the raw material here has to come from your own life, and AI does not have access to what you have stopped noticing, what you keep putting off, or what your team works around. It can produce a plausible list of problems for someone in your role, and every item will be generic, because generic is all it can see from where it sits.
 
 ### D1. Does it count?
 
 Most people set aside things that would have worked fine. Four things people wrongly rule out:
 
-- It is not an accusation. Naming a problem is not naming someone's failure. Problems usually live in a process, a gap between roles, or an absence of ownership rather than in a person.
+  - **It is not an accusation.** Naming a problem is not naming someone's failure. Problems usually live in a process, a gap between roles, or an absence of ownership rather than in a person.
 
-- It can be something nobody has gotten to, not only something going wrong. An opportunity that keeps losing to more urgent work counts.
+  - **It can be something nobody has gotten to**, not only something going wrong. An opportunity that keeps losing to more urgent work counts.
 
-- You do not have to be able to fix it alone. You almost certainly cannot. Sprint 3 exists because other people hold information you need.
+  - **You do not have to be able to fix it alone.** You almost certainly cannot. Sprint 3 exists because other people hold information you need.
 
-- It does not have to be at work. Caregiving, a volunteer role, a job search, a team you coach. What matters is that it is real and current, not where it happens.
+  - **It does not have to be at work.** Caregiving, a volunteer role, a job search, a team you coach. What matters is that it is real and current, not where it happens.
 
 The useful question is not "is this a real problem?" It is "does this cost someone something, and could it be different?"
 
@@ -239,11 +245,11 @@ The useful question is not "is this a real problem?" It is "does this cost someo
 
 Three is the floor. If you have fewer, go back to C1 and C2 first, and then watch for these over a couple of days:
 
-- You brace before a recurring meeting, task, or conversation.
+  - You brace before a recurring meeting, task, or conversation.
 
-- You explain the same thing over and over to different people.
+  - You explain the same thing over and over to different people.
 
-- Something small irritates you more than it warrants.
+  - Something small irritates you more than it warrants.
 
 That last one is the most reliable. When your reaction does not match the visible cause, the extra intensity is usually coming from something that has not been named yet.
 
@@ -253,11 +259,11 @@ One more thing to watch for. If everything on your list is something only you to
 
 Take each one underneath using the move from section B, then write it in this shape:
 
-Right now, how it works today. It could, the state you think is possible. The gap costs, who is paying, and what it costs them. This has been going on, roughly how long. It has not been fixed because, your best current guess.
+> **Right now,** how it works today. **It could,** the state you think is possible. **The gap costs,** who is paying, and what it costs them. **This has been going on,** roughly how long. **It has not been fixed because,** your best current guess.
 
 Worked example:
 
-Right now, account handovers happen in a conversation between the outgoing and incoming owner, and nothing is recorded or announced. It could be that the rest of the team knows within a day of a change. The gap costs clients, who repeat context to someone who should already have it, and the four other people on the team who act on stale ownership for days at a time. This has been going on as long as I have been here, at least two years. It has not been fixed because each individual handover feels small enough to handle informally.
+> **Right now,** account handovers happen in a conversation between the outgoing and incoming owner, and nothing is recorded or announced. **It could** be that the rest of the team knows within a day of a change. **The gap costs** clients, who repeat context to someone who should already have it, and the four other people on the team who act on stale ownership for days at a time. **This has been going on** as long as I have been here, at least two years. **It has not been fixed because** each individual handover feels small enough to handle informally.
 
 Rough is fine. Nobody is grading the prose.
 
@@ -277,9 +283,9 @@ Three to five candidate problems, each written in the five-line gap shape, with 
 
 That is the whole submission. Do not pick a favourite yet, and do not start defending one. The next activity is built to change your mind, and it works better if there is nothing to defend.
 
-Before you go on: put this down and come back to it later. Not because of a deadline, but because the checks work better on a list you did not write ten minutes ago. If you are using the two-week guideline, this is a good place for the gap to fall.
+**Before you go on:** put this down and come back to it later. Not because of a deadline, but because the checks work better on a list you did not write ten minutes ago. If you are using the two-week guideline, this is a good place for the gap to fall.
 
-[NOTE] Submission 1. Suggested 15 points. Skim-graded against the four bullets in D3's shape plus honest uncertainty marks. Generous banding per Move 4.
+> **[NOTE]** Submission 1. Suggested 15 points. Skim-graded against the four bullets in D3's shape plus honest uncertainty marks. Generous banding per Move 4.
 
 [BREAK?] Strongest break in the arc.
 
@@ -305,15 +311,13 @@ Your gap statement already names who is paying. This check asks whether that ans
 
 Here is why it matters. A cost is only real if it lands on someone. "This wastes everyone's time" sounds like a cost, but if you cannot say whose time, you cannot say how much, whether it matters, or whether they would agree with you. And in Sprint 3 you will sit down with someone who knows this problem from the inside and ask them how it actually works. A category cannot have that conversation. A person can.
 
-So the test is this: could you go find these people? Not in principle. Could you name them, or name their role in a place you can point to?
+So the test is this: could you go find these people? Not in principle. Could you name them, or name their role in a place you can point to? Name people or roles, not categories. The difference:
 
-There is a scale here, and you want to be at the bottom of it:
-
-- "Employees" is a category. It has no edges and no faces.
-
-- "New hires in their first two weeks" is a role. Better. It has edges, and you could figure out who fits it.
-
-- "The three people who started since June, and Dana, who fields their access requests" is specific. You could talk to any of them this week.
+| **Does not pass** | **Passes** |
+|---|---|
+| The team | The four account managers who cover renewals |
+| Everyone gets frustrated | The shift lead, who improvises a job for every new arrival |
+| Our clients | The two clients who have asked twice this quarter who owns their account |
 
 To run the check, take your "who is paying" line and keep asking one question: who, specifically? Stop when you reach people you could actually get to.
 
@@ -381,13 +385,20 @@ These three are not arbitrary, and it is worth seeing why. Each one is a preview
 
 If your problem is personal or family territory, the second test has a plainer version: can you name at least one person outside your household you could talk to about this, and would it be normal to ask them? A caregiving logistics problem passes, because coordinators, pharmacists, and other caregivers exist and are normal to ask. A problem that lives entirely between you and your own teenager does not, because interviewing your child with prepared questions is not the conversation Sprint 3 asks for.
 
-Too small looks like: only you touch it, one decision or one conversation would resolve it, and there is nothing you would have to find out. "My calendar tool does not sync with my phone" is a real annoyance and a too-small problem. One special case of too small is worth naming: you know exactly what to do and have not done it. That is not a framing problem, and neither AI nor this course will help much with it. The fix for too small: go up. Ask what this is an instance of. Maybe it is one instance of tools that do not talk to each other costing the team real time.
+**Too small looks like:** only you touch it, one decision or one conversation would resolve it, and there is nothing you would have to find out. One special case of too small is worth naming: you know exactly what to do and have not done it. That is not a framing problem, and neither AI nor this course will help much with it.
 
-Too big looks like: you cannot describe the current state in one paragraph, nobody owns it, and everyone is affected, which usually means you can name no one. "Our culture resists change" is probably true and has nowhere to grab. The fix: go down. Pick one instance you can see people in. Maybe the last specific change that died, and where it died.
+**Too big looks like:** you cannot describe the current state in one paragraph, nobody owns it, and everyone is affected, which usually means you can name no one.
 
-After you move a candidate up or down, run all four checks again on the moved version. Moving changes the answers. The people, the handling, and the liveness of "tools that do not talk to each other" are not the people, handling, and liveness of a calendar sync.
+Neither is a reason to drop a candidate problem. Both are reasons to move it. Here is each move, worked:
 
-[OPEN] This recasts "testable at this size" from the Introduction's four-check list. The Introduction needs the matching change.
+| **Problem** | **Diagnosis** | **The move** | **Result** |
+|---|---|---|---|
+| The export format for my monthly report is wrong | Too small. Only I touch it, and one ticket would fix it | Go up. What is this an instance of? | Nobody owns export definitions when the source system changes, so every reporting team patches by hand |
+| Our culture resists change | Too big. Cannot describe the current state, cannot name who pays | Go down. Pick one instance you have actually seen | Decisions made in the Tuesday leadership meeting do not reach the people who execute them until the following week |
+
+After you move a candidate up or down, run all four checks again on the moved version. Moving changes the answers. The people, the handling, and the liveness of "nobody owns export definitions" are not the people, handling, and liveness of one wrong report format.
+
+> **[OPEN]** This recasts "testable at this size" from the Introduction's four-check list. The Introduction needs the matching change.
 
 ### E6. Run all four on each candidate
 
@@ -413,15 +424,15 @@ Now bring AI in, and notice what you are using it for. Not to find problems, and
 
 Give it your two or three strongest candidate problems and your check answers, and ask something like:
 
-Here are candidate problems I am considering and my answers to four checks. For each one, tell me which claims I am asserting rather than actually knowing, and where someone who works in this area would likely disagree with me. Do not tell me which to pick.
+> Here are candidate problems I am considering and my answers to four checks. For each one, tell me which claims I am asserting rather than actually knowing, and where someone who works in this area would likely disagree with me. Do not tell me which to pick.
 
 Then read what comes back critically. Some of it will be generic and worth ignoring, because it cannot see your situation. Some of it will land, and the ones that land are usually the places you wrote quickly.
 
-Record two or three challenges it raised and your response to each. Your response can be "fair, I do not actually know that," or "no, I have seen this directly and here is how." Both are good answers. Only agreeing with everything is a bad answer, and so is dismissing all of it.
+**Record two or three challenges it raised and your response to each.** Your response can be "fair, I do not actually know that," or "no, I have seen this directly and here is how." Both are good answers. Only agreeing with everything is a bad answer, and so is dismissing all of it.
 
-[NOTE] This is the AI exchange, placed after the checks rather than inside them. Follows Melisa's Sprint 4 V3 pattern, but folded into this submission rather than standing alone, to avoid a third deadline around one afternoon's work.
+> **[NOTE]** This is the AI exchange, placed after the checks rather than inside them. Follows Melisa's Sprint 4 V3 pattern, but folded into this submission rather than standing alone, to avoid a third deadline around one afternoon's work.
 
-[OPEN] Depends on the unresolved Dojo and API key decision. If the Dojo is not ready, this can run in any chatbot, but the instructions differ.
+> **[OPEN]** Depends on the unresolved Dojo and API key decision. If the Dojo is not ready, this can run in any chatbot, but the instructions differ.
 
 ## F. Commit
 
@@ -435,27 +446,27 @@ Pick the candidate problem that came through the checks in the best shape. Not t
 
 Real choices are rarely clean. Here is what one looks like when two candidates both mostly passed:
 
-I am going with the account handovers over the volunteer onboarding.
+> I am going with the account handovers over the volunteer onboarding.
 
-Both passed Checks 1 through 3. Handovers won on Check 4. For the volunteer problem I could only name one person other than me with a stake, our board chair, and she is hard to reach and would mostly tell me what she wants to be true. For handovers I can name four account managers and two clients, and I sit next to three of them.
+> Both passed Checks 1 through 3. Handovers won on Check 4. For the volunteer problem I could only name one person other than me with a stake, our board chair, and she is hard to reach and would mostly tell me what she wants to be true. For handovers I can name four account managers and two clients, and I sit next to three of them.
 
-The volunteer problem is arguably more important. I picked handovers because I can actually find things out about it in ten weeks, and I could not say the same for the other one.
+> The volunteer problem is arguably more important. I picked handovers because I can actually find things out about it in ten weeks, and I could not say the same for the other one.
 
-What would make me switch: if the handover problem turns out to be one person's habit rather than a missing process, there is much less to find out than I think, and it becomes too small.
+> What would make me switch: if the handover problem turns out to be one person's habit rather than a missing process, there is much less to find out than I think, and it becomes too small.
 
-And this one is mine to work: I run handovers for my own accounts, so I feel this weekly, and I would want it fixed whether or not a course asked me to pick a problem.
+> And this one is mine to work: I run handovers for my own accounts, so I feel this weekly, and I would want it fixed whether or not a course asked me to pick a problem.
 
 Notice what that does. It names the deciding check, it admits the choice was not obvious, it says out loud what the runner-up had going for it, it names the condition that would reverse the decision, and it says why this problem is the writer's to work. The switch line is the one people skip and the one worth most in week five.
 
 Write your own version:
 
-- Why this one. Which checks it passed cleanly, and what makes it worth nine weeks.
+  - **Why this one.** Which checks it passed cleanly, and what makes it worth nine weeks.
 
-- Why not the others. One or two sentences per candidate problem, naming the check that ruled it out.
+  - **Why not the others.** One or two sentences per candidate problem, naming the check that ruled it out.
 
-- What would make you switch. One line.
+  - **What would make you switch.** One line.
 
-- Why you. One or two sentences on what makes this problem yours to work, and what will keep you at it in week six when it gets tedious. It will get tedious.
+  - **Why you.** One or two sentences on what makes this problem yours to work, and what will keep you at it in week six when it gets tedious. It will get tedious.
 
 ### F3. Name your runner-up
 
@@ -477,27 +488,36 @@ If you get here, say so in your submission rather than forcing a choice. Committ
 
 One document containing:
 
-- Your four checks, run against each candidate problem, with unanswerable checks noted rather than guessed
+  - **Your four checks**, run against each candidate problem, with unanswerable checks noted rather than guessed
 
-- Two or three challenges from your AI exchange, and your response to each
+  - **Two or three challenges from your AI exchange**, and your response to each
 
-- Your committed problem, written as a gap
+  - **Your committed problem**, written as a gap
 
-- Your reasons: why this one, why not the others, what would make you switch, and why you
+  - **Your reasons**: why this one, why not the others, what would make you switch, and why you
 
-- Your runner-up, one line
+  - **Your runner-up**, one line
 
-- Your uncertainty marks, still marked
+  - **Your uncertainty marks**, still marked
 
 Next week you take this one problem, find the goal underneath it, and build your first frame.
 
-[NOTE] Submission 2. Suggested 20 points. Most of the weight on the reasons in F2, since that is what a defensible commitment actually looks like.
+> **[NOTE]** Submission 2. Suggested 20 points. Most of the weight on the reasons in F2, since that is what a defensible commitment actually looks like.
 
 [BREAK?] End of half one.
 
 ### Where this leaves the sprint
 
 Six graded items, roughly 100 points:
+
+| **Item** | **Suggested points** | **Half** |
+|---|---|---|
+| Concept Check | 5 | One |
+| Candidate List (section D) | 15 | One |
+| Test and Commit (sections E and F) | 20 | One |
+| Your First Frame | 15 | Two |
+| Goal Plan and Problem Frame | 35 | Two |
+| Reflection | 10 | Two |
 
 ### Open items
 
