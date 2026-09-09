@@ -1,6 +1,6 @@
 # Working Draft publication and live test
 
-**Working Draft is published in Canvas Course 180.** Its hosted pages, homepage links, native resource settings, source fidelity, and idempotent publication passed verification. The authenticated Canvas walkthrough and a real test-student submission remain blocked because the Mac is locked. Optional AI feedback failed on the tested new-page request; the response and self-check remained usable. This is not a claim of complete end-to-end learner validation.
+**Working Draft is published in Canvas Course 180, and the authenticated follow-up passed on September 9.** All six items were walked in Student View, a synthetic Candidate List submission was confirmed, and the disposable Test Student was reset. A homepage navigation defect was fixed, deployed, and verified through six actual Canvas homepage link clicks. Optional AI feedback remained unavailable on one bounded retry; the response and self-check remained usable. The external feedback service is the remaining unresolved limitation.
 
 ## Open the module
 
@@ -32,7 +32,7 @@ All 15 pre-existing modules, their 77 full module-item responses, all course set
 
 Only ten generated paths were deployed: six instruction pages, `sprint-11.html`, `home.html`, its `index.html` alias, and `progress-map.json`. Other course output was rendered only into isolated staging. The homepage addition preserves the preceding module blocks, and previous progress-map entries are unchanged. After object creation, a second scoped deployment added actual Canvas destinations and completion mappings. Canonical URLs for all ten files returned HTTP 200 and matched generated SHA-256 bytes.
 
-## Browser and API evidence
+## September 8 browser and API evidence
 
 | Check | Result and scope |
 | --- | --- |
@@ -48,13 +48,13 @@ Only ten generated paths were deployed: six instruction pages, `sprint-11.html`,
 | Test and Commit | Eight response fields, explicit feedback request, preserved response on service failure, clear/cancel controls passed |
 | Copy fallback | Live published Candidate List inside a local replica of the observed Canvas iframe triggered browser clipboard denial and displayed selectable text plus honest non-submission status |
 | JavaScript runtime errors | None in the main live hosted-page suite |
-| Authenticated Canvas homepage/LTI, native Next/Previous, student view and submission | **Pending Mac unlock**; not inferred from API or public-page tests |
+| Authenticated Canvas homepage/LTI, native Next/Previous, student view and submission | Blocked on September 8 by the locked Mac; completed in the September 9 follow-up below |
 
-Public browser tests used an isolated Chrome context and generic synthetic responses. No participant data was used, and no Canvas submission, enrollment, grade, or message was created. Browser drafts were cleared where exercised; all test contexts were closed. The local iframe replica is explicitly a permissions test, not a substitute for an authenticated Canvas walkthrough.
+September 8 public browser tests used an isolated Chrome context and generic synthetic responses. No participant data was used, and no Canvas submission, enrollment, grade, or message was created that day. Browser drafts were cleared where exercised; all test contexts were closed. The local iframe replica is explicitly a permissions test, not a substitute for an authenticated Canvas walkthrough.
 
 The native CUA tool twice reported that the Mac was locked and automatic unlock was unavailable. An unlock request was sent in this task and relayed to the originating task. No alternate access to the locked authenticated session was attempted. The module and homepage were queued in the Codex browser panel for review.
 
-## Optional AI feedback investigation
+## September 8 optional AI feedback investigation
 
 A real browser click on the published Test and Commit page made one synthetic request to the existing `ai-assisted-pedagogy.netlify.app/.netlify/functions/ai-proxy`. The response was **HTTP 502**, JSON `{"error":"Empty response from AI service"}`. The page displayed its unavailable-feedback message and retained the typed response. The self-check remained available. No new account, provider credential, model, or service was configured.
 
@@ -78,6 +78,39 @@ The live state check exposed that `guided_assignment` was allowed in artifact fr
 | Hosted Canvas destinations and progress mappings | [6309735](https://github.com/profsathya/Common-Curriculum/commit/6309735f0f95c4ce771ad592234c336e84fe3242), [Pages run 34290382796](https://github.com/profsathya/Common-Curriculum/actions/runs/34290382796), succeeded |
 | Authoritative `canvas-state` | [5d5a1ee](https://github.com/profsathya/applying-ai-at-work/commit/5d5a1ee0772a408f70726d0dc4cdee63f0916a82), committed and pushed |
 
-Both accompanying Common Curriculum context-doc workflows succeeded. Source commits remain local on `codex/audit-canvas-maintenance`; they were not pushed or merged into main. Applying AI at Work main remains `a078404d358125045b85422e89e76e4ae49ffc14`. The isolated hosted and state checkouts are clean and their remote branches match the listed commits. Maintain this module from the feature branch until its source/schema changes are reviewed and integrated; do not use the older main schema to validate its new guided state.
+Both accompanying Common Curriculum context-doc workflows succeeded. Source commits remain local on `codex/audit-canvas-maintenance`; they were not pushed or merged into main. Applying AI at Work main was `a078404d358125045b85422e89e76e4ae49ffc14` at the September 8 verification. The isolated hosted and state checkouts were clean and their remote branches matched the listed commits. Maintain this module from the feature branch until its source/schema changes are reviewed and integrated; do not use the older main schema to validate its new guided state.
 
-Local raw evidence and reproducible attended scripts are under `course1/reports/working-draft-20260908/` (ignored diagnostics). Key files: `final-verified.json`, `final-ledger.json`, `final-hosted-http.json`, `live-hosted-browser.json`, `final-navigation.json`, `iframe-browser.json`, `feedback-contract-comparison.json`, `feedback-service-check.json`, `tests-final.log`, baseline/final API snapshots, and desktop/mobile PNGs. These records distinguish actual live results from simulated iframe permissions and pending authenticated checks.
+Local raw evidence and reproducible attended scripts are under `course1/reports/working-draft-20260908/` (ignored diagnostics). September 8 files include `final-verified.json`, `final-ledger.json`, `final-hosted-http.json`, `live-hosted-browser.json`, `final-navigation.json`, `iframe-browser.json`, `feedback-contract-comparison.json`, `feedback-service-check.json`, `tests-final.log`, baseline/final API snapshots, and desktop/mobile PNGs. These records distinguish actual live results from simulated iframe permissions and the authenticated checks that were still pending that day.
+
+## September 9 authenticated follow-up
+
+The authenticated Codex in-app browser was available. The existing course tab was used through CUA, including Canvas's supported **View as Student**, **Reset Student**, and **Leave Student View** controls. No power or lock settings were changed. Generic, explicitly synthetic examples were used throughout; no real learner submission, grade, message, or enrollment was changed.
+
+| Check | Observed result |
+| --- | --- |
+| Canvas homepage and LTI | Working Draft displayed all six items in the authenticated homepage and Student View |
+| Native module flow | Next followed all six items in order; Previous returned from the second reading to the first; the final item had Previous and no Next |
+| Candidate List in the actual Canvas iframe | Saved response survived reload; Copy my answers showed selectable copy text and an explicit non-submission message when clipboard access was denied |
+| Actual Canvas submission | Exported guided response exactly matched the text entered into Canvas; Submit Assignment produced Submitted confirmation and visible submission preview |
+| Homepage completion | Candidate List changed to Completed in Canvas after submission; the three viewed reading pages showed Completed; unsubmitted guided assignments remained Not completed |
+| Concept check in the actual iframe | Unanswered guidance, wrong-answer explanation, corrected answer, and retained selection after reload passed; choices were cleared afterward |
+| Test and Commit in the actual iframe | Eight response fields; saved response survived reload; Copy questions excluded the response; cancel-clear retained the response and clear removed it |
+| Mobile reading | At 390 by 844, the Canvas document width was 390 and iframe document width 309, without horizontal document overflow; narrow table columns wrapped heavily and nested scrolling reduced reading space |
+| Cleanup | Reset Student restored a clean disposable test account; all exercised browser drafts were cleared and Student View was exited |
+| Final homepage navigation | After the fix below, all six actual homepage links opened the correct native Canvas item in the same tab; course breadcrumbs returned to the LTI homepage |
+
+Candidate List assignment **7139** received synthetic Test Student **5707** submission **1619045** at **2026-09-09T16:37:37Z**. UI confirmation, submission preview, and API readback agreed: `online_text_entry`, attempt 1, submitted, and ungraded. The pre-test account had zero prior submission attempts or grades. Canvas Reset Student replaced it with Test Student **5813**; readback showed zero active submission attempts or grades. Candidate List's new record **1619111** was `unsubmitted`, with null body and attempt. This records supported account reset, not a claim that Canvas physically purged all historical records.
+
+Exactly one live AI feedback click was made on September 9, inside the actual Test and Commit iframe in Canvas Student View. It first displayed Reading your response, then **Feedback is unavailable. Use the self-check criteria; your response is still here.** The synthetic response remained intact. CUA exposed the visible result and console logs but no raw network response, so the retry's HTTP status and body are unknown. The September 8 captured 502 must not be attributed to this retry. No additional paid comparison request or external service change was made; total attempted live feedback requests across both days is three. Backend identity and logs remain unavailable, leaving the service failure unresolved.
+
+### Homepage navigation fix and final validation
+
+The actual in-app Canvas homepage exposed a navigation defect: clicking a Working Draft link with `target="_blank"` did not open a page or new tab. Source-built homepage items now carry `data-canvas-target="_top"`, and the existing context handler applies that target when embedded in Canvas. Standalone web navigation retains its original target; legacy course links receive no override. A regression test covers both source-built and legacy behavior.
+
+Source fix **`c410052`** changes only `canvas_sync/hosted_html.py` and its tests. All **204 tests passed**, along with repository schema validation and diff checks. No course Markdown, source evidence, Canvas artifact, or deployment-state change was needed for this fix.
+
+The isolated Common Curriculum checkout first fast-forwarded over unrelated upstream updates, then deployed only `deanza/course1/home.html`, `index.html`, and `sprint-11.html` in [commit 5cdbb9d](https://github.com/profsathya/Common-Curriculum/commit/5cdbb9d5c97cbf40d21e50b739232ae0db4f0861). [Pages run 34378683954](https://github.com/profsathya/Common-Curriculum/actions/runs/34378683954) and [context-doc run 34378683851](https://github.com/profsathya/Common-Curriculum/actions/runs/34378683851) succeeded. All three canonical URLs returned HTTP 200 and matched the generated bytes. Six subsequent actual homepage link clicks confirmed the native destinations in the authenticated Canvas tab.
+
+Before/after API checks again confirmed unchanged course settings, all **15** prior modules, **77** prior module items, and **88** prior deployment entries. Working Draft retained its published module and six item IDs. Authoritative `canvas-state` remains **`5d5a1ee0772a408f70726d0dc4cdee63f0916a82`**. Source fixes and this report remain committed locally on the feature branch; no source branch push or main merge was performed.
+
+September 9 diagnostic evidence includes `september9-authenticated-browser.json`, `september9-test-submission.json`, `september9-test-student-after-reset.json`, `september9-before-verified.json`, `september9-after-verified.json`, `september9-navigation-http.json`, `september9-navigation-render.json`, and `september9-tests.log`. Actual browser screenshots were displayed during the attended CUA walkthrough. The course homepage was left available for review in the existing task browser.
