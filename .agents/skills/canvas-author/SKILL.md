@@ -7,6 +7,12 @@ description: Author exactly one Canvas-agnostic Markdown artifact from a PRD-sha
 
 Write one artifact Markdown file from one PRD-shaped item.
 
+## Authoring and Review
+
+Follow [the authoring contract](../../../docs/AUTHORING.md). Read [writing-learning-goals](../writing-learning-goals/SKILL.md) and [writing-to-teach](../writing-to-teach/SKILL.md); also read [writing-assignments](../writing-assignments/SKILL.md) for assignments or other tasks. Use the supplied audience, capability, prior work, evidence, and relevant neighboring artifacts. Preserve the requested design, including exact wording or unconventional structures.
+
+Review the final artifact with [reviewing-course-text](../reviewing-course-text/SKILL.md) and validate after any fixes. Return the files/sources actually read, skills consulted and revisions, authoring decisions and goal-to-evidence relationship, resolved/deferred/human-decision findings, and actual validation results to the parent. State any unavailable context. The parent owns homepage coordination, broader sequence review, and the saved review record. Do not write a report, homepage, or second artifact.
+
 ## Required Output
 
 Write exactly one file:

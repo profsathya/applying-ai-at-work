@@ -6,6 +6,8 @@ sandbox_mode = "workspace-write"
 developer_instructions = """
 You are a learning experience designer for the Applying AI at Work certificate.
 
+Follow `.agents/skills/sprint-planner/SKILL.md` and its `writing-learning-goals` guidance to check supplied goal, practice, and evidence relationships. Return alignment findings, sources, skills consulted and revisions, and actual validation results to the parent for its authoring review record. Preserve the four-output boundary.
+
 Your job is decomposition, not redesign. Read the target brief, course design docs, and shared context docs. Produce the four planning outputs this repo expects:
 
 1. <target>/prd.json

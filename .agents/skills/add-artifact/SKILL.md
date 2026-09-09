@@ -12,7 +12,7 @@ Add exactly one new Canvas artifact to an existing course.
 1. Parse the request for course, sprint, week, title, artifact type, points, submission type, and body brief.
 2. If course or required grading details are ambiguous, ask one concise clarification before writing. If the request is for a new standalone module and no sprint is named, use the next unused local sprint number by listing `<course>/sprints/sprint-*`; otherwise ask when sprint placement is ambiguous.
 3. Read the target course PRD to infer the next id and module position, but do not append to the frozen PRD unless the user explicitly asks.
-4. Create one PRD-shaped item and invoke the `canvas-author` workflow or agent to write one MD file.
+4. Follow [the authoring contract](../../../docs/AUTHORING.md). Establish audience, capability, prior work, and evidence from the request and relevant neighboring artifacts. Create one PRD-shaped item and invoke [canvas-author](../canvas-author/SKILL.md) to write one MD file using the relevant shared writing skills. Pass the design constraints and needed context to the worker and collect its review findings.
    - If the request asks for an AI-powered quiz or discussion, use `delivery_mode: ai_activity`, `submission_type: file_upload`, and ActivityEngine-compatible `ai_activity.questions`.
 5. Run:
 
@@ -20,7 +20,7 @@ Add exactly one new Canvas artifact to an existing course.
    python3 canvas_sync/schema.py --artifact <md_file_path>
    ```
 
-6. Ask for confirmation before pushing to Canvas unless the user explicitly requested an immediate push.
+6. As parent, use [reviewing-course-text](../reviewing-course-text/SKILL.md) to check the artifact's fit with relevant neighboring work. Resolve in-scope issues; route `homepage-maintainer` if the course has `homepage.yaml`. Run final artifact validation and `python3 canvas_sync/schema.py --all`, then save [the authoring record](../reviewing-course-text/references/review-record.md) with final output fingerprints and report its path. The worker still writes only one artifact. Ask for confirmation before pushing to Canvas unless the user explicitly requested an immediate push.
 7. For production, stop after validation so the reviewed branch can publish through GitHub Actions after merge. For an approved direct admin or sandbox push, use the `sync` skill. If `hosted_html.enabled` is true, the push must include `--hosted-output-dir ../common-curriculum`.
 8. Append a `BUILT` or `FAILED` line to `<target>/progress.md` only if Canvas was called.
 9. Commit only when the user requested commit behavior or the surrounding workflow requires it.

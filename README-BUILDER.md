@@ -137,6 +137,13 @@ Codex skills live in `.agents/skills/`.
 - `remove-canvas` - inspect Canvas, dry-run manifest-backed removals or an explicit full-course content clear, then delete only after confirmation token approval.
 - `canvas-author` - write exactly one artifact from a PRD-shaped item.
 - `sprint-planner` - decompose course design into PRD, metadata, progress log, and manifest.
+- `maintain-homepage` - keep curated homepage YAML aligned with affected course artifacts.
+- `writing-to-teach` - explain from prior knowledge with useful examples and application.
+- `writing-learning-goals` - connect credible capabilities and value to practice and evidence.
+- `writing-assignments` - align purpose, prior work, actions, success criteria, and submission expectations.
+- `reviewing-course-text` - review substantive content in sequence and return evidence for the parent record.
+
+The four shared teaching skills are instruction-only local adaptations of Common Curriculum revision `81a0513`. They activate through ordinary authoring requests and require no sibling checkout. Each owns its principles and records its upstream source and local revision. Follow [Authoring and Review](docs/AUTHORING.md) for the integration and upstream review policy, and [the record contract](.agents/skills/reviewing-course-text/references/review-record.md) for the parent task's saved review trail. Keep restricted worker outputs unchanged; workers return findings and the parent saves final file fingerprints. Date-only updates and read-only or publishing mechanics do not trigger editorial rewrites.
 
 `build-course` accepts course context in two forms: pasted directly into chat or saved as a Markdown file under `context/course-specs/`. If exactly one file matches `context/course-specs/<course>-*.md`, the skill can use it without a full path. Use `context/course-specs/README.md` for the recommended spec structure.
 
@@ -150,6 +157,7 @@ Codex custom agents live in `.codex/agents/`.
 - `course-configurator.toml` - local course shell setup through `configure-course` and `init_course.py`.
 - `sprint-planner.toml` - high-context course decomposition.
 - `canvas-author.toml` - artifact authoring.
+- `homepage-maintainer.toml` - curated homepage copy only, with findings returned to the parent.
 - `canvas-inspector.toml` - read-only Canvas inventory and reconcile-readiness reporting through `inspect-canvas`.
 - `canvas-remover.toml` - destructive manifest-backed removals or explicit full-course content clears through `remove-canvas`.
 

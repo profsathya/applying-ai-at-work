@@ -32,12 +32,12 @@ If the user pastes context directly into chat, use it as the course context. Do 
 
 ## Workflow
 
-1. Confirm the target course and course context source.
+1. Establish the target course and course context source from the request; clarify only missing or ambiguous information.
 2. Read the course context if it is a file. If it is pasted inline, treat the pasted text as the source.
 3. Read `context/course-specs/README.md`, `context/module-specs/README.md`, `AGENTS.md`, relevant course design docs, shared context docs, schemas, and existing built sprints.
 4. Treat explicit course context instructions as higher priority than inferred sprint patterns, unless they violate repo rules or schema constraints.
    - If the context asks for AI-powered quiz or discussion activities, author them as `delivery_mode: ai_activity` with `submission_type: file_upload` and ActivityEngine-compatible `ai_activity.questions`; do not create native Canvas quiz `questions` for those items.
-5. Generate or update Markdown files under `<target>/sprints/sprint-<n>/` only.
+5. Follow [the authoring contract](../../../docs/AUTHORING.md). Establish audience, intended capability, prior work, and evidence; read [writing-learning-goals](../writing-learning-goals/SKILL.md), [writing-to-teach](../writing-to-teach/SKILL.md), and [writing-assignments](../writing-assignments/SKILL.md) when tasks are involved. Generate or update artifact Markdown only under `<target>/sprints/sprint-<n>/`. Preserve the supplied design and useful unconventional structures.
 6. Use any non-negative sprint number that matches the human-provided course structure.
 7. Validate every written file:
 
@@ -45,13 +45,13 @@ If the user pastes context directly into chat, use it as the course context. Do 
    python3 canvas_sync/schema.py --artifact <file>
    ```
 
-8. Run the full repo validator:
+8. Review the assembled course with [reviewing-course-text](../reviewing-course-text/SKILL.md), including connections across sprints. Resolve in-scope issues and validate affected files again after edits. Return findings to the parent, which routes `homepage-maintainer` if the course has `homepage.yaml`, then runs the full repo validator:
 
    ```bash
    python3 canvas_sync/schema.py --all
    ```
 
-9. Show the file list, artifact types, and validation result. Ask the user to review before pushing.
+9. The parent completes the review and saves [the authoring record](../reviewing-course-text/references/review-record.md) with final output fingerprints. A delegated drafter returns findings and does not write the record or homepage itself. Show the file list, artifact types, validation result, record path, and consequential open decisions. Ask the user to review before pushing.
 10. For production, stop after validation and review so merge to `main` can publish through the protected GitHub Actions workflow. That workflow renders Common Curriculum hosted files before Canvas is updated.
 11. Use direct `canvas_sync/push.py` only for an approved admin or sandbox push. If `hosted_html.enabled` is true, route through the `sync` skill so the push includes `--hosted-output-dir ../common-curriculum`.
 12. Append a post-build section to `<target>/progress.md` only if Canvas was called.

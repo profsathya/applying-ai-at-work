@@ -31,6 +31,10 @@ Use this when a target course has no PRD or a human explicitly requests a re-pla
 3. `<target>/progress.md`
 4. `<target>/manifests/production.json`
 
+## Goal Alignment Review
+
+Follow [the authoring contract](../../../docs/AUTHORING.md) and read [writing-learning-goals](../writing-learning-goals/SKILL.md). Check the supplied goals against planned practice, prior work, and evidence. Surface missing or conflicting relationships without inventing a replacement course, assessments, or grading policy. Preserve the four-output boundary. Return alignment decisions, source references, skills consulted and revisions, unresolved gaps, and actual validation results; the parent saves [the authoring record](../reviewing-course-text/references/review-record.md) when completing substantive planning work.
+
 ## Rules
 
 - Decompose the existing design. Do not invent course structure.

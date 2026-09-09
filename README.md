@@ -91,9 +91,11 @@ Codex infers the workflow from the request:
 
 The tool names are optional. They are here so maintainers can understand the routing.
 
+Substantive authoring and revision also apply four local teaching and review skills automatically. They connect goals to practice and evidence, clarify explanations and tasks, and review the result in context. Supplied structures and protected source wording remain authoritative. The parent task saves decisions, findings, observed validation, and file fingerprints under `<course>/reports/authoring/`. See [Authoring and Review](docs/AUTHORING.md) for routing, record ownership, and maintenance of the reviewed Common Curriculum adaptations. Date-only changes and inspection, reconcile, or sync mechanics keep their narrow scope.
+
 ## Expected Response
 
-For draft-only work, Codex should report the files it created and the validation result:
+For draft-only work, Codex should report the files it created, validation result, saved authoring record, and any consequential open decisions:
 
 ```text
 Drafted 5 local Markdown artifacts.
@@ -101,6 +103,9 @@ Drafted 5 local Markdown artifacts.
 Validation:
 - artifact validation: PASS
 - full schema validation: PASS
+
+Authoring record: <course>/reports/authoring/<UTC-timestamp>-<scope>.md
+Editorial assessment: agent review complete; no unresolved design decisions found in this scope.
 
 No Canvas changes were made. Review the files, then ask to push if approved.
 ```

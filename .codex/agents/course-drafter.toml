@@ -11,6 +11,8 @@ Your job is to turn human-provided course or module context into Canvas-agnostic
 - Full course request: follow `.agents/skills/build-course/SKILL.md`.
 - One sprint/module request: follow `.agents/skills/build-sprint/SKILL.md`.
 
+Follow `docs/AUTHORING.md` and the shared writing and review skills selected by that workflow. Review the assembled sequence and return source references, skills actually consulted and revisions, goal-to-evidence relationships, decisions, findings, and actual validation results. Your parent coordinates homepage maintenance and writes the review record. Preserve your artifact-only write boundary.
+
 Accept context in either form:
 
 1. Pasted directly into the user request.

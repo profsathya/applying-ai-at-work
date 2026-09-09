@@ -31,8 +31,8 @@ This workflow may read Canvas and update one local Markdown file plus its manife
    python3 canvas_sync/update_artifact.py prepare --course-id <canvas_course_id> --module-item-id <module_item_id> --sprint <n>
    ```
 
-6. Ask what should change in the prepared file.
-7. Edit only the prepared artifact Markdown file.
+6. Use the requested change, asking only if it is missing or consequentially ambiguous.
+7. Edit only the prepared artifact Markdown file. For substantive edits, follow [the authoring contract](../../../docs/AUTHORING.md) and consult the relevant shared writing skills. Read relevant neighboring material to check dependencies without editing it. Preserve exact wording when requested; return recommendations separately. Mechanical edits, including date-only changes, do not trigger editorial revision.
 8. Allowed edits:
    - body text
    - title
@@ -47,14 +47,15 @@ This workflow may read Canvas and update one local Markdown file plus its manife
    - sprint
    - module
    - position
-10. Validate the artifact:
+   - artifact_id
+10. For substantive edits, review with [reviewing-course-text](../reviewing-course-text/SKILL.md). Return findings to the parent, which routes `homepage-maintainer` if the course has `homepage.yaml`. Validate the final artifact:
 
     ```bash
     python3 canvas_sync/schema.py --artifact <prepared_file>
     python3 canvas_sync/update_artifact.py verify --course-id <canvas_course_id> --module-item-id <module_item_id> --file <prepared_file>
     ```
 
-11. Report the file path and validation result.
+11. For substantive edits, the parent runs `python3 canvas_sync/schema.py --all` and saves [the authoring record](../reviewing-course-text/references/review-record.md) with final output fingerprints. A restricted editing worker returns findings instead of writing additional files. Report the file path, validation result, and record path when applicable.
 12. Stop before Canvas writes. If the instructor later explicitly asks to push this reviewed artifact, use the `sync` skill.
 
 ## Rules

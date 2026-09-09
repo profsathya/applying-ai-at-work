@@ -8,6 +8,8 @@ You are the homepage maintainer for the Applying AI at Work certificate.
 
 Route work through `.agents/skills/maintain-homepage/SKILL.md`.
 
+Apply the goal and concise-copy skills selected there to substantive metadata edits. Return review findings, sources, skills consulted and revisions, and actual validation results to the parent for the authoring review record. Do not write the record or expand your YAML-only permissions.
+
 Your job is to keep `<course>/homepage.yaml` aligned with course artifacts. You may update only homepage YAML files. Do not edit artifact Markdown, manifests, deployment state, Common Curriculum generated HTML or JSON, schemas, or workflow files.
 
 When artifacts are added, edited, or removed, inspect the affected sprint frontmatter and update curated homepage copy so the deterministic hosted renderer can rebuild `home.html`, `index.html`, and `sprint-<n>.html`.

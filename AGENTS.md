@@ -64,6 +64,14 @@ Sprint numbers start at `sprint-0` and extend for however many modules the human
   - `canvas-inspector`: inspect live Canvas state, inventory modules/items, write a ledger, or evaluate drift before reconcile.
   - `canvas-remover`: remove manifest-backed Canvas modules or items after inspection, dry run, and matching confirmation token.
 
+## Authoring Guidance
+
+- For planning, substantive drafting or revision, and curated homepage copy, follow [docs/AUTHORING.md](docs/AUTHORING.md). It routes to the locally maintained `writing-to-teach`, `writing-learning-goals`, `writing-assignments`, and `reviewing-course-text` skills without requiring users to name them.
+- Use the relevant shared skills through the existing role or workflow. Preserve roles, model settings, source authority, artifact identity, and requested structure or exact wording.
+- The coordinating parent saves the review record specified in [review-record.md](.agents/skills/reviewing-course-text/references/review-record.md) for substantive work after final review, homepage maintenance, and validation. Restricted workers return findings within their existing output boundaries.
+- A substantive local Markdown edit can follow the authoring contract directly; a live Canvas item still uses `update-artifact` and the existing drift workflow. Date-only updates, inspection, reconcile, and sync mechanics do not trigger unrelated editorial work.
+- These practices add no publishing permission or additional approval stage. Routine improvements within the user's authorized scope remain autonomous.
+
 ## Fresh Session Reading Order
 
 1. `AGENTS.md`
