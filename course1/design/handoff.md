@@ -149,6 +149,16 @@ reversed; older sections of the decisions log say `sprint-8`, which is wrong.
 
 **Claude's filesystem resets between sessions, but the repo does not.** Anything not committed is lost; commit rather than download.
 
+**Docx conversion loses more than paragraphs.** Word stores tables outside the paragraph
+stream and formatting inside run properties, so a paragraph walk silently drops every
+table, all bold and italic, and the indentation that marks blockquotes. This happened on
+9 September and cost a rebuild. Extract `w:tbl` elements, run formatting, and indents
+explicitly, and diff the round trip before trusting it.
+
+**Google Docs round trips drop the mermaid fence.** The v3 draft arrived twice with the
+`flowchart TD` block as bare text. Restore the fence before the file goes anywhere near
+`sprints/`, or the diagram renders as prose.
+
 **Regex over already-rewritten text doubles.** A term-expansion pass once produced "candidate
 problem problems" in eleven places.
 

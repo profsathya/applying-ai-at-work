@@ -1204,3 +1204,32 @@ comment on D3-D5 asking what the learner actually produces and whether a templat
 whether D needs to exclude AI at all. V3 keeps the narrow version (raw material must come
 from the participant's own life) because the learner-output map supports it, but the
 ruling is Leslie's and has not been made. The text stands as drafted pending her call.
+
+## Error caught by Leslie, 9 September: the docx conversion dropped every table
+
+The v2 docx-to-markdown conversion walked only top-level paragraphs, so all four tables
+were silently lost: B1's what-bugs-you worked table, old E2's pass/fail table, old E5's
+diagnosis-and-move table, and the graded-items table at the foot. Leslie caught B1's.
+V3 was rebuilt from a corrected conversion, verified by diff: tables were the only loss.
+
+Placement calls on the two tables inside the replaced E section, made by Claude since
+Leslie approved the new treatments without either party able to see these tables:
+
+- **Old E2's pass/fail table restored into new Check 1**, replacing Claude's scale bullets,
+  which did the same job worse. The blockquote pass/fail pair stays; it works at a
+  different grain (full gap-cost lines vs naming phrases).
+- **Old E5's diagnosis table restored into new Check 4**, replacing Claude's invented
+  too-small example (calendar sync) with the table's export-report case. The culture
+  example, which Claude had duplicated in prose, now lives only in the table.
+- Tables 1 and 4 (B1, graded items) restored verbatim.
+
+Also corrected for the record: Claude's earlier audit claim that old E2 "had almost
+nothing" was wrong. It had this table.
+
+**Second conversion defect, also caught by Leslie:** the same paragraph walk dropped all
+run formatting (84 bold runs, 2 italic) and the indentation marking blockquotes. Rebuilt
+again from a formatting-aware conversion, verified by stripping the formatting back out
+and diffing against the plain conversion: identical content. New material matched to house
+style: bold lead-ins on the too-small and too-big paragraphs and the F2 bullets, [OPEN]
+markers as bold blockquotes, worked examples as blockquotes. A trap entry went into the
+handoff so the next conversion does not repeat either loss.
