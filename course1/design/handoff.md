@@ -71,7 +71,7 @@ on, which is what makes the join real.
 | Concept check | Self-check, 5 points | Placement defaulted after OYP 3; questions need re-verification against v4 |
 | Graded item, Parts 1-2 | Choose rows, write as candidate problems | Reviewed once; edits applied 10 Sept. Part 2's shape is now a titled list |
 | Graded item, Part 3 opening | What the checks are for | Reviewed once; edits applied |
-| Graded item, Checks 1-4 and after | Checks, reading results, AI exchange, commit | v3's E and F, **unreviewed**. Check 2 carries an open flag |
+| Graded item, Checks 1-4 and after | Checks, reading results, commit | Checks 1 and 4 and "Pick one" reviewed; trimmed 11 Sept per Leslie's rulings. Check 2, Check 3, the rest of Commit **unreviewed**. AI exchange parked for half two |
 | Half two | Everything | **Not started** |
 | 01 module header | Summarizes the rest | Written last, by design |
 
@@ -105,12 +105,11 @@ should match that mechanism.** Item count varies with the learning; the skeleton
 
 ## What to do next
 
-1. **Leslie rules on the four cuts** proposed 11 September (decisions log, "Is half one
-   doing too much?") and on Part 4, keep or cut, where her edit and Claude's assessment
-   disagree. Then Claude applies the cuts in one round. Still unreviewed by her: Check 2,
-   Check 3, "Reading the results," Part 5 beyond "Pick one," OYP 2, OYP 3, and the
-   rewritten three-pass example. Older rulings still riding along: the no-AI note in OYP 1,
-   the "different path" line in OYP 3, the concept check placement, the Check 2 overlap.
+1. **Leslie finishes her review of v4.2.** Still unread by her: Check 2, Check 3, "Reading
+   the results," Part 4 (Commit) beyond "Pick one," OYP 2, OYP 3, the rewritten three-pass
+   example, the per-candidate check block, and the 11 September trims. Older rulings still
+   riding along: the no-AI note in OYP 1, the "different path" line in OYP 3, the concept
+   check placement, the Check 2 overlap.
 2. **Cut v4 into `sprint-10/` artifacts** per the cut plan at the foot of v4. Mechanical
    once the review lands. Strip the [NOTE] and [OPEN] blocks; keep the participant text.
 3. **Re-verify the concept check** against the v4 pages, both content coverage and answer

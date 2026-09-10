@@ -8,6 +8,8 @@ Design notes appear inline as [NOTE] blocks and are not part of the page text. O
 
 > **[NOTE] Version 4.1, 10 September.** Leslie's second review round applied: OYP 1 and the graded item through "What the checks are for." The three-pass example is rewritten with human answers and the move between passes made explicit; Part 2's candidate problem shape is now a titled list with a quantified cost line; Check 2 carries an open flag about overlap with the "Right now" line. Checks 1 through 4, "Run all four," "Reading the results," Part 4, and Part 5 remain unreviewed.
 
+> **[NOTE] Version 4.2, 11 September.** Leslie's four rulings applied after the "is half one doing too much" assessment: the AI exchange parked for half two (the graded item is now four parts); Checks 3 and 4 trimmed to the honest-looking bar, with the cut material parked at the foot with suggested destinations; Part 2 down to four lines, title, right now, it could, cost; the "what would make you switch" line out of Part 4. Her third review round is also in.
+
 > **[NOTE] Rhythm.** Own-your-progress items are Canvas assignments at zero points with a must-submit completion mark, in an ungraded grade group, per Sathya's Fall 2026 mechanic. Encouraged, not required: skipping one never blocks the next. Whether other sprints adopt this is a course-level call, logged and deferred.
 
 ## OYP 1. Start your list and get underneath it
@@ -291,9 +293,9 @@ Your table, with any rows added from requests and the move run on each.
 
 ## Graded item. Test and commit
 
-> **[NOTE]** The week's one graded item. Suggested 35 points, absorbing the 15 that v3 put on a separate Candidate List submission. Five parts, one submission. Parts 3 through 5 are v3's sections E and F, unreviewed.
+> **[NOTE]** The week's one graded item. Suggested 35 points, absorbing the 15 that v3 put on a separate Candidate List submission. Four parts, one submission. Parts 3 and 4 are v3's sections E and F, reviewed in part.
 
-With the work you have done in the own-your-progress activities, you now have a table with, hopefully, more than three to five potential problems to look into. We are now going to move from the gathering and brainstorming phase of week 1 into narrowing down so that we can choose one problem. This graded item has five parts. You work through them in order and submit one document at the end.
+With the work you have done in the own-your-progress activities, you now have a table with, hopefully, more than three to five potential problems to look into. We are now going to move from the gathering and brainstorming phase of week 1 into narrowing down so that we can choose one problem. This graded item has four parts. You work through them in order and submit one document at the end.
 
 ### Part 1. Choose which rows go forward
 
@@ -315,11 +317,11 @@ That last one is the most reliable. When your reaction does not match the visibl
 
 One more thing to watch for. If everything on your list is something only you touch, go find at least one that involves other people. In Sprint 3 you will need someone who is not you to talk about your problem, and a problem nobody else has any stake in cannot supply that.
 
-Everything you set aside stays in the table. You may want it in Part 5.
+Everything you set aside stays in the table. You may want it in Part 4.
 
 ### Part 2. Write each one as a gap
 
-Each row you kept already has a current state and a gap starting to show. Now write it up as a candidate problem, one per row you kept, in this shape. The first two lines come straight from your table; the last three are new.
+Each row you kept already has a current state and a gap starting to show. Now write it up as a candidate problem, one per row you kept, in this shape. The first two lines come straight from your table; the last two are new.
 
   - **Title.** The emerging gap, in one line, from the third column of your table.
 
@@ -329,23 +331,15 @@ Each row you kept already has a current state and a gap starting to show. Now wr
 
   - **The gap costs.** Who is paying, and what it costs them. Put a number on it when you can.
 
-  - **This has been going on.** Roughly how long.
-
-  - **It has not been fixed because.** Your best current guess.
-
 Worked example:
 
 > **Title.** Every analyst spends thirty minutes solving the same formatting problem every month.
 >
 > **Right now.** The source system exports tables in a format that does not quite match the way we use them. Everyone who needs the report fixes it themselves, by hand, before they can use it.
 >
-> **It could.** The export matches the way the report is used, or one person fixes it once and everyone else works from that copy.
+> **It could.** The export matches the way the report is used, or one person fixes it once and everyone else works from that copy. (?)
 >
 > **The gap costs.** Fifteen analysts, thirty minutes each, every month. At about forty dollars of an analyst's time per fix, that is roughly seven thousand dollars a year, and nobody has ever counted it.
->
-> **This has been going on.** Since the source system was upgraded, about two years.
->
-> **It has not been fixed because.** Thirty minutes a month does not feel like enough to raise with anyone. (?)
 
 Rough is fine. Nobody is grading the prose.
 
@@ -353,7 +347,7 @@ Once an item is written in this shape, it has earned a name. These are your cand
 
 Three is the floor for a reason: if you only find one, the risk is that you commit to the first thing that came to mind because it was the only thing that came to mind.
 
-**Mark what you are not sure about.** Read back through what you wrote and put a (?) at the end of any line you are not certain of. The "costs" and "has not been fixed because" lines are usually the guesses.
+**Mark what you are not sure about.** Read back through what you wrote and put a (?) at the end of any line you are not certain of. The "it could" and "costs" lines are usually the guesses.
 
 Do not go back and make those lines sound more confident. Marked uncertainty is worth more here than confidence you have not earned. Problems are messy, and it is better to mark what you don't know so that you can fill it in later than to proceed on assumptions. We'll spend time working through the unknowns later.
 
@@ -429,7 +423,7 @@ The test: could you go watch this happen, or see fresh evidence of it, within th
 
 The first is observable this week. The second may have been completely true, but you cannot go look at it, and there is no one you can ask about how it works today, because it is not working anywhere you can reach.
 
-A failure here comes in three shapes, and each tells you something different. A problem from a job you left is a memory; check whether the same pattern is running where you are now, because it often is, and that version is live. A problem that would appear if the team doubled is a hypothetical; ask what its early version looks like today, and if there is no early version, put it down. A problem that was fixed six months ago is a memory even if it still annoys you; the annoyance is real and the problem is gone.
+If it fails, it is a memory or a hypothetical. Check whether the same pattern is running somewhere you can reach now. If it is, that version is the candidate problem. If it is not, set this one aside.
 
 #### Check 4. Is it the right size?
 
@@ -447,7 +441,7 @@ The problem is the right size when all three of these are true:
 
 - There is at least one thing you would have to find out to move on it.
 
-These three are not arbitrary, and it is worth seeing why. Each one is a preview of a demand the course is about to make. The paragraph is your frame, which you write next week. The person is your Sprint 3 conversation, and notice that they do not have to be affected by the problem. Someone who knows how it works from the inside counts. The thing to find out is your Sprint 4 gap. A problem that fails one of the three will stall in a specific week, and you can see which week from here.
+The person in the second test does not have to be affected by the problem. Someone who knows how it works from the inside counts.
 
 If your problem is personal or family territory, the second test has a plainer version: can you name at least one person outside your household you could talk to about this, and would it be normal to ask them? A caregiving logistics problem passes, because coordinators, pharmacists, and other caregivers exist and are normal to ask. A problem that lives entirely between you and your own teenager does not, because interviewing your child with prepared questions is not the conversation Sprint 3 asks for.
 
@@ -455,14 +449,7 @@ If your problem is personal or family territory, the second test has a plainer v
 
 **Too big looks like:** you cannot describe the current state in one paragraph, nobody owns it, and everyone is affected, which usually means you can name no one.
 
-Neither is a reason to drop a candidate problem. Both are reasons to move it. Here is each move, worked:
-
-| **Problem** | **Diagnosis** | **The move** | **Result** |
-|---|---|---|---|
-| The export format for my monthly report is wrong | Too small. Only I touch it, and one ticket would fix it | Go up. What is this an instance of? | Nobody owns export definitions when the source system changes, so every reporting team patches by hand |
-| Our culture resists change | Too big. Cannot describe the current state, cannot name who pays | Go down. Pick one instance you have actually seen | Decisions made in the Tuesday leadership meeting do not reach the people who execute them until the following week |
-
-After you move a candidate up or down, run all four checks again on the moved version. Moving changes the answers. The people, the handling, and the liveness of "nobody owns export definitions" are not the people, handling, and liveness of one wrong report format.
+Neither is a reason to drop a candidate problem. Both are reasons to change its scope. If it is too small, ask what it is an instance of, and write that down as the candidate problem instead. If it is too big, pick one instance you have actually seen. Make a note of the change in your table. You will look at size again when you write your frame.
 
 > **[NOTE]** Resolved 9 September: the Introduction's four-check list now carries the right-size wording (PR #46).
 
@@ -496,25 +483,7 @@ Not every failure means dropping something.
 
 - Passes cleanly. Rarer than you expect. If more than two do this, look again, because you may be answering from assumption rather than knowledge.
 
-### Part 4. Take your checks to AI
-
-> **[OPEN]** Keep or cut, Leslie's call. Her 11 September edit below keeps this part and frames it in Welcome V2's Human Value terms. Claude's assessment the same morning: this is the clearest candidate to cut from half one, because its job (asserting versus knowing) is Sprint 2's capacity and half two's Dojo Lab already gives Sprint 1 its AI touch, and it is the part blocked on the Dojo decision. Both positions stand until she rules.
-
-Now let's bring AI in. You have brought a lot of your human value and insights to the first stage of finding the problems and running the checks. Now, you are going to work with AI to explore where you might have answered from assumption instead of knowledge, which is difficult to see in your own writing.
-
-Give it your two or three strongest candidate problems and your check answers, and ask something like:
-
-> Here are candidate problems I am considering and my answers to four checks. For each one, tell me which claims I am asserting rather than actually knowing, and where someone who works in this area would likely disagree with me. Do not tell me which to pick.
-
-Then read what comes back critically. Some of it will be generic and worth ignoring, because it cannot see your situation. Some of it will land, and the ones that land are usually the places you wrote quickly.
-
-**Record two or three challenges it raised and your response to each.** Your response can be "fair, I do not actually know that," or "no, I have seen this directly and here is how." Both are good answers. Only agreeing with everything is a bad answer, and so is dismissing all of it.
-
-> **[NOTE]** This is the AI exchange, placed after the checks rather than inside them. Follows Melisa's Sprint 4 V3 pattern, but folded into this submission rather than standing alone, to avoid a third deadline around one afternoon's work.
-
-> **[OPEN]** Depends on the unresolved Dojo and API key decision. If the Dojo is not ready, this can run in any chatbot, but the instructions differ.
-
-### Part 5. Commit
+### Part 4. Commit
 
 #### Pick one
 
@@ -532,19 +501,15 @@ Real choices are rarely clean. Here is what one looks like when two candidates b
 
 > The volunteer problem is arguably more important. I picked handovers because I can actually find things out about it in ten weeks, and I could not say the same for the other one.
 
-> What would make me switch: if the handover problem turns out to be one person's habit rather than a missing process, there is much less to find out than I think, and it becomes too small.
-
 > And this one is mine to work: I run handovers for my own accounts, so I feel this weekly, and I would want it fixed whether or not a course asked me to pick a problem.
 
-Notice what that does. It names the deciding check, it admits the choice was not obvious, it says out loud what the runner-up had going for it, it names the condition that would reverse the decision, and it says why this problem is the writer's to work. The switch line is the one people skip and the one worth most in week five.
+Notice what that does. It names the deciding check, it admits the choice was not obvious, it says out loud what the runner-up had going for it, and it says why this problem is the writer's to work.
 
 Write your own version:
 
   - **Why this one.** Which checks it passed cleanly, and what makes it worth nine weeks.
 
   - **Why not the others.** One or two sentences per candidate problem, naming the check that ruled it out.
-
-  - **What would make you switch.** One line.
 
   - **Why you.** One or two sentences on what makes this problem yours to work, and what will keep you at it in week six when it gets tedious. It will get tedious.
 
@@ -572,15 +537,50 @@ One document containing:
 
   - **Your four checks**, run against each candidate problem, with unanswerable checks noted rather than guessed
 
-  - **Two or three challenges from your AI exchange**, and your response to each
-
   - **Your committed problem**, written as a gap
 
-  - **Your reasons**: why this one, why not the others, what would make you switch, and why you
+  - **Your reasons**: why this one, why not the others, and why you
 
   - **Your runner-up**, one line
 
 Next week you take this one problem, find the goal underneath it, and build your first frame.
+
+## Parked for half two
+
+> **[NOTE]** Leslie's ruling, 11 September: the AI exchange moves out of half one. Half two's Dojo Lab is Sprint 1's AI touch, and this can come back if the Dojo Lab turns out to need it. Text kept here so nothing is lost; her 11 September opening is in place.
+
+### Parked: Take your checks to AI (was Part 4)
+
+Now let's bring AI in. You have brought a lot of your human value and insights to the first stage of finding the problems and running the checks. Now, you are going to work with AI to explore where you might have answered from assumption instead of knowledge, which is difficult to see in your own writing.
+
+Give it your two or three strongest candidate problems and your check answers, and ask something like:
+
+> Here are candidate problems I am considering and my answers to four checks. For each one, tell me which claims I am asserting rather than actually knowing, and where someone who works in this area would likely disagree with me. Do not tell me which to pick.
+
+Then read what comes back critically. Some of it will be generic and worth ignoring, because it cannot see your situation. Some of it will land, and the ones that land are usually the places you wrote quickly.
+
+**Record two or three challenges it raised and your response to each.** Your response can be "fair, I do not actually know that," or "no, I have seen this directly and here is how." Both are good answers. Only agreeing with everything is a bad answer, and so is dismissing all of it.
+
+> **[NOTE]** This is the AI exchange, placed after the checks rather than inside them. Follows Melisa's Sprint 4 V3 pattern, but folded into this submission rather than standing alone, to avoid a third deadline around one afternoon's work.
+
+> **[OPEN]** Depends on the unresolved Dojo and API key decision. If the Dojo is not ready, this can run in any chatbot, but the instructions differ.
+
+### Parked: the deeper check material
+
+> **[NOTE]** Cut from Checks 3 and 4 on 11 September to bring the checks down to the honest-looking bar the spine sets. Destinations are suggestions, not decisions.
+
+**Check 3's three failure shapes.** Destination: Sprint 3, where liveness is tested by whether anyone will talk. A problem from a job you left is a memory; check whether the same pattern is running where you are now, because it often is, and that version is live. A problem that would appear if the team doubled is a hypothetical; ask what its early version looks like today, and if there is no early version, put it down. A problem that was fixed six months ago is a memory even if it still annoys you; the annoyance is real and the problem is gone.
+
+**Check 4's diagnosis table and the re-run rule.** Destination: half two, at the point where the learner writes the one-paragraph current state and discovers the size is wrong, or Sprint 2's widening.
+
+| **Problem** | **Diagnosis** | **The move** | **Result** |
+|---|---|---|---|
+| The export format for my monthly report is wrong | Too small. Only I touch it, and one ticket would fix it | Go up. What is this an instance of? | Nobody owns export definitions when the source system changes, so every reporting team patches by hand |
+| Our culture resists change | Too big. Cannot describe the current state, cannot name who pays | Go down. Pick one instance you have actually seen | Decisions made in the Tuesday leadership meeting do not reach the people who execute them until the following week |
+
+After you move a candidate up or down, run all four checks again on the moved version. Moving changes the answers. The people, the handling, and the liveness of "nobody owns export definitions" are not the people, handling, and liveness of one wrong report format.
+
+**Check 4's map to later sprints.** Destination: nowhere participant-facing; it is the design rationale and belongs in the spine, section 9. The paragraph is your frame, which you write next week. The person is your Sprint 3 conversation, and they do not have to be affected by the problem. The thing to find out is your Sprint 4 gap.
 
 ## Where this leaves the sprint
 
@@ -617,13 +617,13 @@ Half two follows from position 8. The mermaid diagram lives on position 5 and re
 
 ### Open items
 
-- **E and F are unreviewed.** Parts 3 through 5 of the graded item are v3's text. Leslie reads them here, in place, now that what they receive is settled.
+- **Still unreviewed by Leslie:** Check 2, Check 3, "Reading the results," Part 4 beyond "Pick one," OYP 2, OYP 3, the rewritten three-pass example, the per-candidate check block, and the 11 September trims.
 - **The no-AI instruction in the first activity.** Kept in the narrow form. Leslie's call.
 - **The "different path" line** in the third activity's fan-out paragraph. Leslie changed it to "requires a different solution"; Claude declined and flagged. Still Leslie's to settle.
 - **Concept check placement** defaulted to after the third activity. Its six questions need re-verification against the v4 pages.
-- **The AI exchange in Part 4** still depends on the Dojo and API key decision.
+- **The AI exchange is parked for half two** (Leslie, 11 September). It can come back if the Dojo Lab needs it. The Dojo and API key decision still governs it wherever it lands.
 - **The table as the Candidate Log.** Decided 9 September, now structural. Whether learners get a downloadable template or build their own table is an activities-pass call. The template must ask visibly for roughness.
 - **Whether other sprints adopt the OYP rhythm.** Course-level. Sprint 1 goes first; Melisa's sprints and the grading document are untouched until that call is made.
 - **The ungraded grade group in Canvas** needs a manifest change, which is a maintainer task, not a content edit.
 - **Introduction edits owed after v4 settles:** the road map's step 1 now spans three activities; the Week 1 bullet and Time Guidance should name the activities rather than "start with what bugs you"; Carry Forward should name the table.
-- **Test edition for Melisa and Clare:** this file, markers stripped, once E and F survive review.
+- **Test edition for Melisa and Clare:** this file, markers and the parked section stripped, once the remaining review lands.
