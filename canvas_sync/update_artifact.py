@@ -28,8 +28,12 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient, CanvasError
+from canvas_sync.drift import compute_drift, html_to_markdown
+from canvas_sync.hosted_html import artifact_hosted_info
+from canvas_sync.maintenance_state import MaintenanceState
+from canvas_sync.pull import validate_candidate
+from canvas_sync.state import canvas_fingerprint
 from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
-from canvas_sync.pull import html_to_markdown
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 
 
@@ -248,9 +252,11 @@ def list_artifacts(
     *,
     client: CanvasClient | None = None,
     repo_root: Path = REPO_ROOT,
+    state_dir: Path | None = None,
 ) -> dict:
     manifest_path = resolve_manifest_for_course_id(course_id, repo_root)
-    manifest = load_json(manifest_path)
+    store = MaintenanceState(manifest_path, repo_root, state_dir)
+    manifest = store.load()
     live_items = fetch_live_module_items(
         get_client(course_id, client, manifest=manifest, manifest_label=str(manifest_path)),
         manifest,
@@ -292,7 +298,9 @@ def fetch_canvas_state(client: CanvasClient, item: dict) -> dict:
     if item_type == "Discussion":
         return client.get_discussion(int(item["content_id"]))
     if item_type == "Quiz":
-        return client.get_quiz(int(item["content_id"]))
+        state = client.get_quiz(int(item["content_id"]))
+        state["questions"] = client.list_quiz_questions(int(item["content_id"]))
+        return state
     raise UpdateArtifactError(f"module_item_id:{item['module_item_id']} has unsupported type {item_type}")
 
 
@@ -331,7 +339,9 @@ def assignment_submission_type(state: dict) -> str:
 def import_quiz_questions(client: CanvasClient, quiz_id: int) -> list[dict]:
     questions: list[dict] = []
     for question in client.list_quiz_questions(quiz_id):
-        q_type = QUESTION_TYPE_TO_LOCAL.get(question.get("question_type"), "short_answer")
+        q_type = QUESTION_TYPE_TO_LOCAL.get(question.get("question_type"))
+        if q_type is None:
+            raise UpdateArtifactError(f"Unsupported native quiz question type: {question.get('question_type')}")
         imported: dict[str, Any] = {
             "type": q_type,
             "prompt": markdown_from_html(
@@ -339,7 +349,7 @@ def import_quiz_questions(client: CanvasClient, quiz_id: int) -> list[dict]:
             ),
             "points": clean_number(question.get("points_possible")),
         }
-        if q_type in {"multiple_choice", "true_false"}:
+        if q_type in {"multiple_choice", "true_false", "short_answer"}:
             answers = []
             for answer in question.get("answers") or []:
                 text = answer.get("answer_text") or answer.get("text") or ""
@@ -523,9 +533,27 @@ def prepare_artifact(
     sprint: int | None = None,
     client: CanvasClient | None = None,
     repo_root: Path = REPO_ROOT,
+    state_dir: Path | None = None,
 ) -> dict:
     manifest_path = resolve_manifest_for_course_id(course_id, repo_root)
-    manifest = load_json(manifest_path)
+    store = MaintenanceState(manifest_path, repo_root, state_dir)
+    with store.locked() as manifest:
+        return _prepare_artifact(course_id, module_item_id, sprint=sprint, client=client, repo_root=repo_root,
+                                 state_dir=state_dir, manifest_path=manifest_path, store=store, manifest=manifest)
+
+
+def _prepare_artifact(
+    course_id: int,
+    module_item_id: int,
+    *,
+    sprint: int | None = None,
+    client: CanvasClient | None = None,
+    repo_root: Path = REPO_ROOT,
+    state_dir: Path | None = None,
+    manifest_path: Path,
+    store: MaintenanceState,
+    manifest: dict,
+) -> dict:
     course_dir = manifest_path.parent.parent
     client = get_client(course_id, client, manifest=manifest, manifest_label=str(manifest_path))
     items = fetch_live_module_items(client, manifest)
@@ -563,6 +591,26 @@ def prepare_artifact(
         slug = md_path.stem
 
     state = fetch_canvas_state(client, item)
+    if existing_fm:
+        differences = compute_drift(md_path, state, local_type, manifest_path=manifest_path, manifest=manifest)
+        hosted = artifact_hosted_info(md_path, manifest_path, manifest, existing_fm)["enabled"]
+        if (state_dir is not None or hosted) and differences:
+            raise UpdateArtifactError("Canvas differs from source; run pull.py --state-dir with a --file dry run before editing")
+        if hosted:
+            if "body" in differences:
+                raise UpdateArtifactError("Hosted wrapper differs; preserve the Markdown source and reconcile the shell explicitly")
+            errors = validate_artifact(md_path)
+            if errors:
+                raise UpdateArtifactError("; ".join(errors))
+            return {
+                "status": "prepared", "action": "source_ready", "course_id": course_id,
+                "manifest": repo_relative(manifest_path, repo_root), "state_path": str(store.path),
+                "module_item_id": module_item_id, "file": rel_path,
+                "type": existing_fm["type"], "title": existing_fm["title"], "added_module_header": None,
+                "note": "Hosted content is edited in its existing Markdown source",
+            }
+    elif manifest.get("hosted_html", {}).get("enabled"):
+        raise UpdateArtifactError("Hosted item has no mapped Markdown source; map its existing artifact_id before editing")
     pulled_at = now_utc()
     fm = build_frontmatter(
         client=client,
@@ -574,6 +622,10 @@ def prepare_artifact(
         existing_frontmatter=existing_fm,
     )
     body = body_from_state(state)
+    candidate = "---\n" + yaml.safe_dump(fm, sort_keys=False, allow_unicode=True) + "---\n\n" + body.rstrip() + "\n"
+    errors = validate_candidate(md_path, candidate)
+    if errors:
+        raise UpdateArtifactError("; ".join(errors))
     content_hash = write_artifact(md_path, fm, body)
 
     if not item.get("manifest_file"):
@@ -604,8 +656,12 @@ def prepare_artifact(
         )
         action = "refreshed"
 
+    entry = manifest["artifacts"][rel_path]
+    entry["canvas_module_item_id"] = int(module_item_id)
+    entry["canvas_fingerprint"] = canvas_fingerprint(state, local_type)
+    entry.pop("canvas_payload_hash", None)
     manifest["last_sync"] = pulled_at
-    save_json(manifest_path, manifest)
+    store.save(manifest)
 
     return {
         "status": "prepared",
@@ -627,9 +683,11 @@ def verify_artifact(
     *,
     client: CanvasClient | None = None,
     repo_root: Path = REPO_ROOT,
+    state_dir: Path | None = None,
 ) -> dict:
     manifest_path = resolve_manifest_for_course_id(course_id, repo_root)
-    manifest = load_json(manifest_path)
+    store = MaintenanceState(manifest_path, repo_root, state_dir)
+    manifest = store.load()
     client = get_client(course_id, client, manifest=manifest, manifest_label=str(manifest_path))
     items = fetch_live_module_items(client, manifest)
     item = find_module_item(items, module_item_id)
@@ -649,7 +707,7 @@ def verify_artifact(
         raise UpdateArtifactError("; ".join(errors))
     fm, _body = parse_frontmatter(md_path)
 
-    expected_type = ARTIFACT_TYPE_BY_CANVAS_ITEM.get(item.get("type"))
+    expected_type = entry.get("source_type") or ARTIFACT_TYPE_BY_CANVAS_ITEM.get(item.get("type"))
     expected = {
         "type": expected_type,
         "slug": md_path.stem,
@@ -703,18 +761,22 @@ def main() -> int:
     prepare_parser = subparsers.add_parser("prepare")
     prepare_parser.add_argument("--course-id", type=int, required=True)
     prepare_parser.add_argument("--module-item-id", type=int, required=True)
-    prepare_parser.add_argument("--sprint", type=int, choices=range(0, 6))
+    prepare_parser.add_argument("--sprint", type=int)
 
     verify_parser = subparsers.add_parser("verify")
     verify_parser.add_argument("--course-id", type=int, required=True)
     verify_parser.add_argument("--module-item-id", type=int, required=True)
     verify_parser.add_argument("--file", type=Path, required=True)
 
+    for command_parser in (list_parser, prepare_parser, verify_parser):
+        command_parser.add_argument("--state-dir", type=Path)
     args = parser.parse_args()
+    if getattr(args, "sprint", None) is not None and args.sprint < 0:
+        parser.error("--sprint must be non-negative")
 
     try:
         if args.command == "list":
-            report = list_artifacts(args.course_id)
+            report = list_artifacts(args.course_id, state_dir=args.state_dir)
             if args.format == "json":
                 print_json(report)
             else:
@@ -726,11 +788,12 @@ def main() -> int:
                     args.course_id,
                     args.module_item_id,
                     sprint=args.sprint,
+                    state_dir=args.state_dir,
                 )
             )
             return 0
         if args.command == "verify":
-            print_json(verify_artifact(args.course_id, args.module_item_id, args.file))
+            print_json(verify_artifact(args.course_id, args.module_item_id, args.file, state_dir=args.state_dir))
             return 0
     except SprintRequiredError as exc:
         print_json(

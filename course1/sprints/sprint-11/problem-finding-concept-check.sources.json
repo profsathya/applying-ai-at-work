@@ -1,0 +1,53 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprint-one-v2-problem-finding-concept-check",
+  "packet_sha256": "f1aeb92eb892d9513b9e291dfa2723dd2ff5122073cb424005ba8a4671791233",
+  "map_sha256": "545505478823ea3bc8e5ed5ffcc615519df532f68e4c1d9b56eac612daa0afa0",
+  "body_sha256": "756a7141d930ef3e36cd4bfa878be8e989e7046e385fed058724775787666351",
+  "frontmatter_sha256": "0a83e843afa51925300e68a44783859c2ca6d41d30013bf43a19bc6f7c7d777d",
+  "parts": [
+    {
+      "kind": "new",
+      "markdown": "Use the ideas from your reading and Candidate List to answer these five questions. Choose the strongest answer for each. These questions ask you to interpret examples and decide what to do next.\n\nYou can check each answer, read its explanation, and revise your choice. The feedback helps you examine your thinking; it does not calculate a grade.\n\nWhen you have answered all five, copy your final answers into the Canvas assignment text-entry box and submit there. Your instructor reviews completion for the five points. Keep your Candidate List for the four checks that follow.",
+      "reason": "New learner guidance for formative checks and manual completion-based grading, grounded in the source’s outline and confirmed delivery mechanism.",
+      "based_on": [
+        "d-8c47807332cb7151:word/document.xml/194",
+        "d-8c47807332cb7151:word/document.xml/241",
+        "d-8c47807332cb7151:word/document.xml/243",
+        "d-8c47807332cb7151:word/document.xml/386"
+      ]
+    }
+  ],
+  "metadata_decisions": [
+    "New five-question formative guided assignment replaces the reserved position 5. All question prompts, options, keys, explanations, and self-check criteria are newly authored, not extracted source quiz questions. Content sources and authoring distinctions are recorded in private concept-check-content.json.",
+    "The selected document supplies a suggested 5-point concept check at d-8c47807332cb7151:word/document.xml/386 but no questions. Five completion points are manually reviewed. Correct-index feedback is formative, client-side, and revisable, not an automatic Canvas quiz score.",
+    "No feedback_endpoint, native quiz questions, or ai_activity configuration is present. The confirmed Common Curriculum task/copy/text-entry pattern supplies the delivery approach.",
+    "Question recognize-a-candidate-gap source references: d-8c47807332cb7151:word/document.xml/18, d-8c47807332cb7151:word/document.xml/26, d-8c47807332cb7151:word/document.xml/28, d-8c47807332cb7151:word/document.xml/39, d-8c47807332cb7151:word/document.xml/227, d-8c47807332cb7151:word/document.xml/231. Prompt/options/key/explanation are newly authored applications.",
+    "Question describe-how-it-works-now source references: d-8c47807332cb7151:word/document.xml/35, d-8c47807332cb7151:word/document.xml/37, d-8c47807332cb7151:word/document.xml/39, d-8c47807332cb7151:word/document.xml/43, d-8c47807332cb7151:word/document.xml/54, d-8c47807332cb7151:word/document.xml/58, d-8c47807332cb7151:word/document.xml/60, d-8c47807332cb7151:word/document.xml/62. Prompt/options/key/explanation are newly authored applications.",
+    "Question trace-a-surface-request source references: d-8c47807332cb7151:word/document.xml/109, d-8c47807332cb7151:word/document.xml/113, d-8c47807332cb7151:word/document.xml/115, d-8c47807332cb7151:word/document.xml/117, d-8c47807332cb7151:word/document.xml/118, d-8c47807332cb7151:word/document.xml/120, d-8c47807332cb7151:word/document.xml/122, d-8c47807332cb7151:word/document.xml/124, d-8c47807332cb7151:word/document.xml/125, d-8c47807332cb7151:word/document.xml/126, d-8c47807332cb7151:word/document.xml/128, d-8c47807332cb7151:word/document.xml/164. Prompt/options/key/explanation are newly authored applications.",
+    "Question keep-several-candidates-live source references: d-8c47807332cb7151:word/document.xml/12, d-8c47807332cb7151:word/document.xml/16, d-8c47807332cb7151:word/document.xml/43, d-8c47807332cb7151:word/document.xml/52, d-8c47807332cb7151:word/document.xml/200, d-8c47807332cb7151:word/document.xml/202, d-8c47807332cb7151:word/document.xml/224, d-8c47807332cb7151:word/document.xml/227, d-8c47807332cb7151:word/document.xml/235, d-8c47807332cb7151:word/document.xml/241, d-8c47807332cb7151:word/document.xml/243. Prompt/options/key/explanation are newly authored applications.",
+    "Question show-what-you-do-not-know source references: d-8c47807332cb7151:word/document.xml/227, d-8c47807332cb7151:word/document.xml/231, d-8c47807332cb7151:word/document.xml/233, d-8c47807332cb7151:word/document.xml/237, d-8c47807332cb7151:word/document.xml/239, d-8c47807332cb7151:word/document.xml/241. Prompt/options/key/explanation are newly authored applications.",
+    "Browser review replaced internal source references in two question prompts with the names of the worked examples.",
+    "User authorized publication to Course 180 under module name Working Draft on 2026-09-08."
+  ],
+  "source_roles": {
+    "d-8c47807332cb7151": {
+      "role": "primary_authoring",
+      "reason": "User selected this exact exported DOCX as the first integration source and authorized a local first-half Sprint One content build."
+    }
+  },
+  "decisions": [
+    "Use proposed text only for explicitly reviewed source blocks 200 and 202; preserve coherent wording across tracked changes.",
+    "Remove internal section labels from headings and adapt five cross-references; record new/adapted prose separately.",
+    "Retain all substantive learner prose and three learner tables, excluding only recorded editorial, placeholder, and duplicate diagram blocks.",
+    "Build the supplied first half only; later-half outline is context.",
+    "Suggested 15 and 20 point assignments and 5 point concept check total 40; new review bands require human review before publishing.",
+    "No Canvas writes, source edits, or publishing approval implied.",
+    "Confirmed user-selected reference: https://profsathya.github.io/Common-Curriculum/deanza-trial/test-and-commit.html. Use guided_assignment for the three graded artifacts with Canvas text_entry, optional local response boxes, copy/export, and expandable full source instructions. Do not create native Canvas quiz questions or ai_activity JSON.",
+    "Candidate List has one response task and no AI endpoint, preserving own-thinking-first. Test and Commit has eight response tasks and optional per-response formative AI feedback through the endpoint from the confirmed reference. Complete four human checks before using AI feedback; feedback cannot choose the problem or grade it.",
+    "Concept Check has five newly authored choice tasks grounded only in A-D; answer keys and explanations are formative client-side feedback. Five points are manual completion review, not automatic correctness scoring. Source outline at d-8c47807332cb7151:word/document.xml/386 provides the proposed point total only.",
+    "Newly authored upload instructions are changed to copy/paste into Canvas text entry. Preserved source wording asking for one document remains compatible with drafting externally before pasting. All selected source passages and three learner tables remain unchanged.",
+    "Optional guidance/reflection fields support the named tasks and do not create duplicate required submissions. All full Markdown source instructions remain available in expandable guidance.",
+    "This build completes only the supplied first half. No Canvas publication, external feedback invocation, Common Curriculum deployment, source-document edit, or later-half build has occurred."
+  ]
+}

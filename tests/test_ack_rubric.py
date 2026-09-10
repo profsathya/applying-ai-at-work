@@ -189,7 +189,7 @@ class AckRubricCycleTests(unittest.TestCase):
             state_dir = repo_root / ".canvas-state"
             (state_dir / "course1").mkdir(parents=True, exist_ok=True)
             (state_dir / "course1" / "production.json").write_text(
-                json.dumps({"instance": {"name": "production"}, "artifacts": {}}),
+                json.dumps({"instance": json.loads(manifest_path.read_text())["instance"], "artifacts": {}}),
                 encoding="utf-8",
             )
 

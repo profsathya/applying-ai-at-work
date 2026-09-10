@@ -94,7 +94,7 @@ def main() -> int:
 
     try:
         summary = ack_rubric(args.artifact, args.manifest, state_dir=args.state_dir)
-    except AckRubricError as exc:
+    except (ValueError, OSError) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1
 

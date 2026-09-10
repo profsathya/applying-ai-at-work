@@ -19,7 +19,7 @@ import os
 import time
 from dataclasses import dataclass
 from typing import Any
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit
 
 import requests
 
@@ -59,10 +59,20 @@ class CanvasClient:
             "Accept": "application/json",
         }
 
-    def _request(
-        self, method: str, path: str, json_body: dict | None = None, params: dict | None = None
-    ) -> dict | list:
-        url = urljoin(self.base_url + "/", f"api/v1/courses/{self.course_id}/{path.lstrip('/')}")
+    def _url(self, path: str) -> str:
+        if urlsplit(path).scheme:
+            url = path
+        else:
+            url = urljoin(self.base_url + "/", f"api/v1/courses/{self.course_id}/{path.lstrip('/')}")
+        base = urlsplit(self.base_url)
+        target = urlsplit(url)
+        if (base.scheme, base.netloc) != (target.scheme, target.netloc):
+            raise CanvasError("Refusing to send Canvas credentials to a different pagination origin")
+        return url
+
+    def _request_response(self, method: str, path: str, json_body=None, params=None):
+        url = self._url(path)
+        retryable = method.upper() in {"GET", "HEAD", "PUT", "DELETE", "OPTIONS"}
         last_error: Exception | None = None
 
         for attempt in range(self.max_retries):
@@ -77,11 +87,15 @@ class CanvasClient:
                 )
 
                 if resp.status_code == 429:
-                    retry_after = int(resp.headers.get("Retry-After", "10"))
-                    time.sleep(retry_after)
-                    continue
+                    if attempt < self.max_retries - 1:
+                        try:
+                            retry_after = max(0, float(resp.headers.get("Retry-After", "10")))
+                        except ValueError:
+                            retry_after = 10
+                        time.sleep(retry_after)
+                        continue
 
-                if resp.status_code >= 500 and attempt < self.max_retries - 1:
+                if retryable and resp.status_code >= 500 and attempt < self.max_retries - 1:
                     time.sleep(2 ** attempt)
                     continue
 
@@ -92,36 +106,41 @@ class CanvasClient:
                         payload=resp.text,
                     )
 
-                if resp.status_code == 204 or not resp.content:
-                    return {}
-                return resp.json()
+                return resp
 
             except requests.RequestException as e:
                 last_error = e
-                if attempt < self.max_retries - 1:
+                if retryable and attempt < self.max_retries - 1:
                     time.sleep(2 ** attempt)
                     continue
                 raise CanvasError(f"Network error: {e}") from e
 
         raise CanvasError(f"Exhausted retries: {last_error}")
 
+    def _request(self, method: str, path: str, json_body=None, params=None) -> dict | list:
+        response = self._request_response(method, path, json_body=json_body, params=params)
+        if response.status_code == 204 or not response.content:
+            return {}
+        return response.json()
+
     def _request_paginated(self, method: str, path: str, params: dict | None = None) -> list[dict]:
-        """Fetch all pages for Canvas list endpoints."""
-        merged_params = dict(params or {})
-        merged_params.setdefault("per_page", 100)
-        page = 1
-        results: list[dict] = []
-
-        while True:
-            page_params = {**merged_params, "page": page}
-            result = self._request(method, path, params=page_params)
+        """Follow Canvas's opaque next links, including server-capped short pages."""
+        page_params = {"per_page": 100, **(params or {})}
+        results = []
+        seen = set()
+        while path:
+            url = self._url(path)
+            if url in seen:
+                raise CanvasError("Canvas returned a repeated pagination URL")
+            seen.add(url)
+            response = self._request_response(method, path, params=page_params)
+            result = response.json()
             if not isinstance(result, list):
-                return results
-
+                raise CanvasError("Canvas list endpoint returned a non-list response")
             results.extend(result)
-            if len(result) < int(merged_params["per_page"]):
-                return results
-            page += 1
+            path = response.links.get("next", {}).get("url")
+            page_params = None  # A next URL already contains all of its parameters.
+        return results
 
     # ---- Assignments ----
 
@@ -285,6 +304,10 @@ def resolve_or_create_module(
                 client.update_module(m["id"], {"published": True})
             return m["id"]
     result = client.create_module(module_name, published=publish)
+    # Canvas can ignore published on module creation. Honor the requested
+    # visibility immediately, including single-artifact module pushes.
+    if publish and not result.get("published"):
+        client.update_module(result["id"], {"published": True})
     return result["id"]
 
 

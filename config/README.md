@@ -1,5 +1,5 @@
 # Configuration
 
-Configuration for delivery infrastructure will live here once platform decisions are made. The delivery platform (Canvas, custom, or other) is an open question — see `context/open-questions.md`.
+Canvas delivery is configured in `<course>/manifests/production.json`. These manifests hold the target instance and hosted-output settings. Mutable IDs and fingerprints for GitOps deployments live on the `canvas-state` branch. Credentials come from environment variables or the protected GitHub environment.
 
-The current CTI rendering system uses a JavaScript config file per course (e.g., `course1-config.js`) that defines weekly briefings, dates, and sprint metadata. The team can adopt that pattern or design something different for this certificate.
+This folder is reserved for future shared configuration. It is not a second runtime configuration source. See [README-BUILDER.md](../README-BUILDER.md) and [cloud setup](../docs/CLOUD_SETUP.md).

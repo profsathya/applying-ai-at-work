@@ -1,0 +1,1942 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprint-one-v2-start-with-what-bugs-you",
+  "packet_sha256": "f1aeb92eb892d9513b9e291dfa2723dd2ff5122073cb424005ba8a4671791233",
+  "map_sha256": "545505478823ea3bc8e5ed5ffcc615519df532f68e4c1d9b56eac612daa0afa0",
+  "body_sha256": "c7a781922e1e191bf9060ae39606e7cdf908d45d9d4b07c9b6785d9b77adb1fa",
+  "frontmatter_sha256": "ab6d6a36411bb3b5fe072c8f09006ba0b306596c67d97df61c4964bee7a86dac",
+  "parts": [
+    {
+      "kind": "new",
+      "markdown": "## Take five minutes",
+      "reason": "Remove internal section scaffolding and set accessible Markdown heading hierarchy; retain heading words.",
+      "based_on": [
+        "d-8c47807332cb7151:word/document.xml/9"
+      ]
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/10",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/10",
+        "kind": "paragraph",
+        "location": "word/document.xml/10",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "We are going to move into the problem identification process.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "We are going to move into the problem identification process.",
+          "proposed": "We are going to move into the problem identification process."
+        }
+      },
+      "block_sha256": "3dd672a988f7ff99784b84a7e36c68328f72131a6116b0b658e36f16e35c075f",
+      "markdown": "We are going to move into the problem identification process."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/12",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/12",
+        "kind": "paragraph",
+        "location": "word/document.xml/12",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Let's start somewhere relatively simple. Take five minutes. Write down three or four things that bug you.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Let's start somewhere relatively simple. Take five minutes. Write down three or four things that bug you.",
+          "proposed": "Let's start somewhere relatively simple. Take five minutes. Write down three or four things that bug you."
+        }
+      },
+      "block_sha256": "d77a48a5ca731d696626fd5f770c413d5de0d9df094ef147562f4495be90f3d5",
+      "markdown": "Let's start somewhere relatively simple. Take five minutes. Write down three or four things that bug you."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/14",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/14",
+        "kind": "paragraph",
+        "location": "word/document.xml/14",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Things that irritate you, that you complain about, that you keep meaning to deal with, or that take longer than they should. A decision you keep postponing. Something you have been putting off for months. A condition you have decided you cannot change. Work, a job search, a volunteer role, caregiving, a side project. Anything.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Things that irritate you, that you complain about, that you keep meaning to deal with, or that take longer than they should. A decision you keep postponing. Something you have been putting off for months. A condition you have decided you cannot change. Work, a job search, a volunteer role, caregiving, a side project. Anything.",
+          "proposed": "Things that irritate you, that you complain about, that you keep meaning to deal with, or that take longer than they should. A decision you keep postponing. Something you have been putting off for months. A condition you have decided you cannot change. Work, a job search, a volunteer role, caregiving, a side project. Anything."
+        }
+      },
+      "block_sha256": "a8d842a8a41c9ab8f5562ab3d46fbf8502356b6135258176cfb61b627568b36c",
+      "markdown": "Things that irritate you, that you complain about, that you keep meaning to deal with, or that take longer than they should. A decision you keep postponing. Something you have been putting off for months. A condition you have decided you cannot change. Work, a job search, a volunteer role, caregiving, a side project. Anything."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/16",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/16",
+        "kind": "paragraph",
+        "location": "word/document.xml/16",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Rough is the point. A phrase each is fine. Do not filter, and do not decide yet whether any of them is worth anything.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Rough is the point. A phrase each is fine. Do not filter, and do not decide yet whether any of them is worth anything.",
+          "proposed": "Rough is the point. A phrase each is fine. Do not filter, and do not decide yet whether any of them is worth anything."
+        }
+      },
+      "block_sha256": "48f3940569ba11dc1207a22323b60dc6682149b219b7e65f3baf3acff906807b",
+      "markdown": "Rough is the point. A phrase each is fine. Do not filter, and do not decide yet whether any of them is worth anything."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/18",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/18",
+        "kind": "paragraph",
+        "location": "word/document.xml/18",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Nobody tells me when a client account changes hands. New volunteers sign up, come twice, and we never see them again. Every month I rebuild the same report by hand. I should be better at using AI at work.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Nobody tells me when a client account changes hands. New volunteers sign up, come twice, and we never see them again. Every month I rebuild the same report by hand. I should be better at using AI at work.",
+          "proposed": "Nobody tells me when a client account changes hands. New volunteers sign up, come twice, and we never see them again. Every month I rebuild the same report by hand. I should be better at using AI at work."
+        }
+      },
+      "block_sha256": "ee95758095c0d89bb6200748afd4ae082c3e57c0af7a2456d175026d107875ac",
+      "markdown": "Nobody tells me when a client account changes hands. New volunteers sign up, come twice, and we never see them again. Every month I rebuild the same report by hand. I should be better at using AI at work."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/20",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/20",
+        "kind": "paragraph",
+        "location": "word/document.xml/20",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "One nudge before you start. Try to include at least one thing that other people are involved in, not only things you do alone. It does not have to be at work, but it should touch somebody besides you.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "One nudge before you start. Try to include at least one thing that other people are involved in, not only things you do alone. It does not have to be at work, but it should touch somebody besides you.",
+          "proposed": "One nudge before you start. Try to include at least one thing that other people are involved in, not only things you do alone. It does not have to be at work, but it should touch somebody besides you."
+        }
+      },
+      "block_sha256": "257712126e274ca3565180d72f8cc9f8ee40f8fe8a98ffd5ee54bd0903363558",
+      "markdown": "One nudge before you start. Try to include at least one thing that other people are involved in, not only things you do alone. It does not have to be at work, but it should touch somebody besides you."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/22",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/22",
+        "kind": "paragraph",
+        "location": "word/document.xml/22",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "If nothing comes to mind, read on anyway. This page will give you other places to look.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "If nothing comes to mind, read on anyway. This page will give you other places to look.",
+          "proposed": "If nothing comes to mind, read on anyway. This page will give you other places to look."
+        }
+      },
+      "block_sha256": "0609d57516ade9318afe5699beac7da244130bea99b050eecb0569cb182cff62",
+      "markdown": "If nothing comes to mind, read on anyway. This page will give you other places to look."
+    },
+    {
+      "kind": "new",
+      "markdown": "## Notice what I did not ask for",
+      "reason": "Remove internal section scaffolding and set accessible Markdown heading hierarchy; retain heading words.",
+      "based_on": [
+        "d-8c47807332cb7151:word/document.xml/25"
+      ]
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/26",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/26",
+        "kind": "paragraph",
+        "location": "word/document.xml/26",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "We started with things that bug you, because problems rarely arrive as well-defined problems. Almost nothing shows up already matching the definition this course uses for a problem: a gap between how something works now and how it could work, where the gap costs someone something real. What shows up instead is the feeling that something is off.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "We started with things that bug you, because problems rarely arrive as well-defined problems. Almost nothing shows up already matching the definition this course uses for a problem: a gap between how something works now and how it could work, where the gap costs someone something real. What shows up instead is the feeling that something is off.",
+          "proposed": "We started with things that bug you, because problems rarely arrive as well-defined problems. Almost nothing shows up already matching the definition this course uses for a problem: a gap between how something works now and how it could work, where the gap costs someone something real. What shows up instead is the feeling that something is off."
+        }
+      },
+      "block_sha256": "12af0cbfa5319754843a9875d1ba57aca3ef60f79c31991b04efbc3b7292d850",
+      "markdown": "We started with things that bug you, because problems rarely arrive as well-defined problems. Almost nothing shows up already matching the definition this course uses for a problem: a gap between how something works now and how it could work, where the gap costs someone something real. What shows up instead is the feeling that something is off."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/28",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/28",
+        "kind": "paragraph",
+        "location": "word/document.xml/28",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "That feeling is an indicator, something that points at a problem without being one. Your list is a list of indicators, and at this stage that is exactly what it should be.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "That feeling is an indicator, something that points at a problem without being one. Your list is a list of indicators, and at this stage that is exactly what it should be.",
+          "proposed": "That feeling is an indicator, something that points at a problem without being one. Your list is a list of indicators, and at this stage that is exactly what it should be."
+        }
+      },
+      "block_sha256": "e0ec732b034fc7e039c63c86b3276481fc4a52ac726963f2126e7eaacd97fad2",
+      "markdown": "That feeling is an indicator, something that points at a problem without being one. Your list is a list of indicators, and at this stage that is exactly what it should be."
+    },
+    {
+      "kind": "new",
+      "markdown": "## Getting underneath",
+      "reason": "Remove internal section scaffolding and set accessible Markdown heading hierarchy; retain heading words.",
+      "based_on": [
+        "d-8c47807332cb7151:word/document.xml/31"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "### Moving from indicator to problem",
+      "reason": "Remove internal section scaffolding and set accessible Markdown heading hierarchy; retain heading words.",
+      "based_on": [
+        "d-8c47807332cb7151:word/document.xml/32"
+      ]
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/33",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/33",
+        "kind": "paragraph",
+        "location": "word/document.xml/33",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Now you have a starting list of indicators. We are going to do some pushing on this list to see if any of them can be moved toward problems.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Now you have a starting list of indicators. We are going to do some pushing on this list to see if any of them can be moved toward problems.",
+          "proposed": "Now you have a starting list of indicators. We are going to do some pushing on this list to see if any of them can be moved toward problems."
+        }
+      },
+      "block_sha256": "9f69ed272f6da79d7a23f60adf8be34fd45a7732cefce76289bf5d6db99b0fa9",
+      "markdown": "Now you have a starting list of indicators. We are going to do some pushing on this list to see if any of them can be moved toward problems."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/35",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/35",
+        "kind": "paragraph",
+        "location": "word/document.xml/35",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Remember, a problem is a gap between how something works now and how it could work. So getting underneath something that bugs you means describing how it actually works now, in enough detail that you can see why it produces the thing that bugs you.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Remember, a problem is a gap between how something works now and how it could work. So getting underneath something that bugs you means describing how it actually works now, in enough detail that you can see why it produces the thing that bugs you.",
+          "proposed": "Remember, a problem is a gap between how something works now and how it could work. So getting underneath something that bugs you means describing how it actually works now, in enough detail that you can see why it produces the thing that bugs you."
+        }
+      },
+      "block_sha256": "0dcce62efb4c3aa2c90af43bd30c8e1639241ea0e8813203c6a73af5a73a68b1",
+      "markdown": "Remember, a problem is a gap between how something works now and how it could work. So getting underneath something that bugs you means describing how it actually works now, in enough detail that you can see why it produces the thing that bugs you."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/37",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/37",
+        "kind": "paragraph",
+        "location": "word/document.xml/37",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "That is the next move. Not describing why it bothers you. Not saying what would fix it. Describe how it currently works.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "That is the next move. Not describing why it bothers you. Not saying what would fix it. Describe how it currently works.",
+          "proposed": "That is the next move. Not describing why it bothers you. Not saying what would fix it. Describe how it currently works."
+        }
+      },
+      "block_sha256": "ab95654da622155dadc1aba53c056ec933ba3db1e0523bb443de47a9aa72ffe5",
+      "markdown": "That is the next move. Not describing why it bothers you. Not saying what would fix it. Describe how it currently works."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/39",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve exported rectangular learner table and cell wording; base and proposed text agree. Formatting history is retained in private source.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/39",
+        "kind": "table",
+        "location": "word/document.xml/39",
+        "rows": [
+          [
+            {
+              "blocks": [
+                {
+                  "id": "d-8c47807332cb7151:word/document.xml/39/r0/c0/1",
+                  "kind": "paragraph",
+                  "location": "word/document.xml/39/r0/c0/1",
+                  "style": null,
+                  "heading_level": null,
+                  "segments": [
+                    {
+                      "text": "What bugs you",
+                      "changes": [],
+                      "link": null,
+                      "format": {
+                        "bold": true,
+                        "italic": false
+                      },
+                      "comment_ids": []
+                    }
+                  ],
+                  "flags": [],
+                  "comment_ids": [],
+                  "text": {
+                    "base": "What bugs you",
+                    "proposed": "What bugs you"
+                  }
+                }
+              ],
+              "properties_xml": "<ns0:tcPr xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:tcMar><ns0:top ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:left ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:bottom ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:right ns0:w=\"100.0\" ns0:type=\"dxa\" /></ns0:tcMar><ns0:vAlign ns0:val=\"top\" /></ns0:tcPr>"
+            },
+            {
+              "blocks": [
+                {
+                  "id": "d-8c47807332cb7151:word/document.xml/39/r0/c1/1",
+                  "kind": "paragraph",
+                  "location": "word/document.xml/39/r0/c1/1",
+                  "style": null,
+                  "heading_level": null,
+                  "segments": [
+                    {
+                      "text": "How it actually works now",
+                      "changes": [],
+                      "link": null,
+                      "format": {
+                        "bold": true,
+                        "italic": false
+                      },
+                      "comment_ids": []
+                    }
+                  ],
+                  "flags": [],
+                  "comment_ids": [],
+                  "text": {
+                    "base": "How it actually works now",
+                    "proposed": "How it actually works now"
+                  }
+                }
+              ],
+              "properties_xml": "<ns0:tcPr xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:tcMar><ns0:top ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:left ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:bottom ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:right ns0:w=\"100.0\" ns0:type=\"dxa\" /></ns0:tcMar><ns0:vAlign ns0:val=\"top\" /></ns0:tcPr>"
+            },
+            {
+              "blocks": [
+                {
+                  "id": "d-8c47807332cb7151:word/document.xml/39/r0/c2/1",
+                  "kind": "paragraph",
+                  "location": "word/document.xml/39/r0/c2/1",
+                  "style": null,
+                  "heading_level": null,
+                  "segments": [
+                    {
+                      "text": "The gap starting to show",
+                      "changes": [],
+                      "link": null,
+                      "format": {
+                        "bold": true,
+                        "italic": false
+                      },
+                      "comment_ids": []
+                    }
+                  ],
+                  "flags": [],
+                  "comment_ids": [],
+                  "text": {
+                    "base": "The gap starting to show",
+                    "proposed": "The gap starting to show"
+                  }
+                }
+              ],
+              "properties_xml": "<ns0:tcPr xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:tcMar><ns0:top ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:left ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:bottom ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:right ns0:w=\"100.0\" ns0:type=\"dxa\" /></ns0:tcMar><ns0:vAlign ns0:val=\"top\" /></ns0:tcPr>"
+            }
+          ],
+          [
+            {
+              "blocks": [
+                {
+                  "id": "d-8c47807332cb7151:word/document.xml/39/r1/c0/1",
+                  "kind": "paragraph",
+                  "location": "word/document.xml/39/r1/c0/1",
+                  "style": null,
+                  "heading_level": null,
+                  "segments": [
+                    {
+                      "text": "Nobody tells me when a client account changes hands",
+                      "changes": [],
+                      "link": null,
+                      "format": {
+                        "bold": false,
+                        "italic": false
+                      },
+                      "comment_ids": []
+                    }
+                  ],
+                  "flags": [],
+                  "comment_ids": [],
+                  "text": {
+                    "base": "Nobody tells me when a client account changes hands",
+                    "proposed": "Nobody tells me when a client account changes hands"
+                  }
+                }
+              ],
+              "properties_xml": "<ns0:tcPr xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:tcMar><ns0:top ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:left ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:bottom ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:right ns0:w=\"100.0\" ns0:type=\"dxa\" /></ns0:tcMar><ns0:vAlign ns0:val=\"top\" /></ns0:tcPr>"
+            },
+            {
+              "blocks": [
+                {
+                  "id": "d-8c47807332cb7151:word/document.xml/39/r1/c1/1",
+                  "kind": "paragraph",
+                  "location": "word/document.xml/39/r1/c1/1",
+                  "style": null,
+                  "heading_level": null,
+                  "segments": [
+                    {
+                      "text": "Handovers happen in a conversation between two people. Nothing is written down and nobody owns telling anyone else",
+                      "changes": [],
+                      "link": null,
+                      "format": {
+                        "bold": false,
+                        "italic": false
+                      },
+                      "comment_ids": []
+                    }
+                  ],
+                  "flags": [],
+                  "comment_ids": [],
+                  "text": {
+                    "base": "Handovers happen in a conversation between two people. Nothing is written down and nobody owns telling anyone else",
+                    "proposed": "Handovers happen in a conversation between two people. Nothing is written down and nobody owns telling anyone else"
+                  }
+                }
+              ],
+              "properties_xml": "<ns0:tcPr xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:tcMar><ns0:top ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:left ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:bottom ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:right ns0:w=\"100.0\" ns0:type=\"dxa\" /></ns0:tcMar><ns0:vAlign ns0:val=\"top\" /></ns0:tcPr>"
+            },
+            {
+              "blocks": [
+                {
+                  "id": "d-8c47807332cb7151:word/document.xml/39/r1/c2/1",
+                  "kind": "paragraph",
+                  "location": "word/document.xml/39/r1/c2/1",
+                  "style": null,
+                  "heading_level": null,
+                  "segments": [
+                    {
+                      "text": "People act on stale ownership for days, and the client repeats themselves to someone who should already know",
+                      "changes": [],
+                      "link": null,
+                      "format": {
+                        "bold": false,
+                        "italic": false
+                      },
+                      "comment_ids": []
+                    }
+                  ],
+                  "flags": [],
+                  "comment_ids": [],
+                  "text": {
+                    "base": "People act on stale ownership for days, and the client repeats themselves to someone who should already know",
+                    "proposed": "People act on stale ownership for days, and the client repeats themselves to someone who should already know"
+                  }
+                }
+              ],
+              "properties_xml": "<ns0:tcPr xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:tcMar><ns0:top ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:left ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:bottom ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:right ns0:w=\"100.0\" ns0:type=\"dxa\" /></ns0:tcMar><ns0:vAlign ns0:val=\"top\" /></ns0:tcPr>"
+            }
+          ],
+          [
+            {
+              "blocks": [
+                {
+                  "id": "d-8c47807332cb7151:word/document.xml/39/r2/c0/1",
+                  "kind": "paragraph",
+                  "location": "word/document.xml/39/r2/c0/1",
+                  "style": null,
+                  "heading_level": null,
+                  "segments": [
+                    {
+                      "text": "New volunteers sign up, come twice, and stop",
+                      "changes": [],
+                      "link": null,
+                      "format": {
+                        "bold": false,
+                        "italic": false
+                      },
+                      "comment_ids": []
+                    }
+                  ],
+                  "flags": [],
+                  "comment_ids": [],
+                  "text": {
+                    "base": "New volunteers sign up, come twice, and stop",
+                    "proposed": "New volunteers sign up, come twice, and stop"
+                  }
+                }
+              ],
+              "properties_xml": "<ns0:tcPr xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:tcMar><ns0:top ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:left ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:bottom ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:right ns0:w=\"100.0\" ns0:type=\"dxa\" /></ns0:tcMar><ns0:vAlign ns0:val=\"top\" /></ns0:tcPr>"
+            },
+            {
+              "blocks": [
+                {
+                  "id": "d-8c47807332cb7151:word/document.xml/39/r2/c1/1",
+                  "kind": "paragraph",
+                  "location": "word/document.xml/39/r2/c1/1",
+                  "style": null,
+                  "heading_level": null,
+                  "segments": [
+                    {
+                      "text": "Signups are collected centrally. When a new volunteer comes they do whatever the person running that day improvises",
+                      "changes": [],
+                      "link": null,
+                      "format": {
+                        "bold": false,
+                        "italic": false
+                      },
+                      "comment_ids": []
+                    }
+                  ],
+                  "flags": [],
+                  "comment_ids": [],
+                  "text": {
+                    "base": "Signups are collected centrally. When a new volunteer comes they do whatever the person running that day improvises",
+                    "proposed": "Signups are collected centrally. When a new volunteer comes they do whatever the person running that day improvises"
+                  }
+                }
+              ],
+              "properties_xml": "<ns0:tcPr xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:tcMar><ns0:top ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:left ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:bottom ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:right ns0:w=\"100.0\" ns0:type=\"dxa\" /></ns0:tcMar><ns0:vAlign ns0:val=\"top\" /></ns0:tcPr>"
+            },
+            {
+              "blocks": [
+                {
+                  "id": "d-8c47807332cb7151:word/document.xml/39/r2/c2/1",
+                  "kind": "paragraph",
+                  "location": "word/document.xml/39/r2/c2/1",
+                  "style": null,
+                  "heading_level": null,
+                  "segments": [
+                    {
+                      "text": "A new volunteer's first month depends entirely on who happened to be there, so most of them never find something that needs them",
+                      "changes": [],
+                      "link": null,
+                      "format": {
+                        "bold": false,
+                        "italic": false
+                      },
+                      "comment_ids": []
+                    }
+                  ],
+                  "flags": [],
+                  "comment_ids": [],
+                  "text": {
+                    "base": "A new volunteer's first month depends entirely on who happened to be there, so most of them never find something that needs them",
+                    "proposed": "A new volunteer's first month depends entirely on who happened to be there, so most of them never find something that needs them"
+                  }
+                }
+              ],
+              "properties_xml": "<ns0:tcPr xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:tcMar><ns0:top ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:left ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:bottom ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:right ns0:w=\"100.0\" ns0:type=\"dxa\" /></ns0:tcMar><ns0:vAlign ns0:val=\"top\" /></ns0:tcPr>"
+            }
+          ],
+          [
+            {
+              "blocks": [
+                {
+                  "id": "d-8c47807332cb7151:word/document.xml/39/r3/c0/1",
+                  "kind": "paragraph",
+                  "location": "word/document.xml/39/r3/c0/1",
+                  "style": null,
+                  "heading_level": null,
+                  "segments": [
+                    {
+                      "text": "Every month I rebuild the same report by hand",
+                      "changes": [],
+                      "link": null,
+                      "format": {
+                        "bold": false,
+                        "italic": false
+                      },
+                      "comment_ids": []
+                    }
+                  ],
+                  "flags": [],
+                  "comment_ids": [],
+                  "text": {
+                    "base": "Every month I rebuild the same report by hand",
+                    "proposed": "Every month I rebuild the same report by hand"
+                  }
+                }
+              ],
+              "properties_xml": "<ns0:tcPr xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:tcMar><ns0:top ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:left ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:bottom ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:right ns0:w=\"100.0\" ns0:type=\"dxa\" /></ns0:tcMar><ns0:vAlign ns0:val=\"top\" /></ns0:tcPr>"
+            },
+            {
+              "blocks": [
+                {
+                  "id": "d-8c47807332cb7151:word/document.xml/39/r3/c1/1",
+                  "kind": "paragraph",
+                  "location": "word/document.xml/39/r3/c1/1",
+                  "style": null,
+                  "heading_level": null,
+                  "segments": [
+                    {
+                      "text": "The source system exports tables in a format that doesn't quite match the way we use them. Everyone who needs the report fixes it themselves",
+                      "changes": [],
+                      "link": null,
+                      "format": {
+                        "bold": false,
+                        "italic": false
+                      },
+                      "comment_ids": []
+                    }
+                  ],
+                  "flags": [],
+                  "comment_ids": [],
+                  "text": {
+                    "base": "The source system exports tables in a format that doesn't quite match the way we use them. Everyone who needs the report fixes it themselves",
+                    "proposed": "The source system exports tables in a format that doesn't quite match the way we use them. Everyone who needs the report fixes it themselves"
+                  }
+                }
+              ],
+              "properties_xml": "<ns0:tcPr xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:tcMar><ns0:top ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:left ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:bottom ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:right ns0:w=\"100.0\" ns0:type=\"dxa\" /></ns0:tcMar><ns0:vAlign ns0:val=\"top\" /></ns0:tcPr>"
+            },
+            {
+              "blocks": [
+                {
+                  "id": "d-8c47807332cb7151:word/document.xml/39/r3/c2/1",
+                  "kind": "paragraph",
+                  "location": "word/document.xml/39/r3/c2/1",
+                  "style": null,
+                  "heading_level": null,
+                  "segments": [
+                    {
+                      "text": "Every reporting team spends the same twenty minutes solving the same problem, and nobody has ever counted how much time it's costing us",
+                      "changes": [],
+                      "link": null,
+                      "format": {
+                        "bold": false,
+                        "italic": false
+                      },
+                      "comment_ids": []
+                    }
+                  ],
+                  "flags": [],
+                  "comment_ids": [],
+                  "text": {
+                    "base": "Every reporting team spends the same twenty minutes solving the same problem, and nobody has ever counted how much time it's costing us",
+                    "proposed": "Every reporting team spends the same twenty minutes solving the same problem, and nobody has ever counted how much time it's costing us"
+                  }
+                }
+              ],
+              "properties_xml": "<ns0:tcPr xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:tcMar><ns0:top ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:left ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:bottom ns0:w=\"100.0\" ns0:type=\"dxa\" /><ns0:right ns0:w=\"100.0\" ns0:type=\"dxa\" /></ns0:tcMar><ns0:vAlign ns0:val=\"top\" /></ns0:tcPr>"
+            }
+          ]
+        ],
+        "flags": [
+          "structural_revision"
+        ]
+      },
+      "block_sha256": "acada7c4ce288537658b007d4744e79068e62484499e9900bc9e58e55af1885e",
+      "markdown": "| **What bugs you** | **How it actually works now** | **The gap starting to show** |\n| --- | --- | --- |\n| Nobody tells me when a client account changes hands | Handovers happen in a conversation between two people. Nothing is written down and nobody owns telling anyone else | People act on stale ownership for days, and the client repeats themselves to someone who should already know |\n| New volunteers sign up, come twice, and stop | Signups are collected centrally. When a new volunteer comes they do whatever the person running that day improvises | A new volunteer's first month depends entirely on who happened to be there, so most of them never find something that needs them |\n| Every month I rebuild the same report by hand | The source system exports tables in a format that doesn't quite match the way we use them. Everyone who needs the report fixes it themselves | Every reporting team spends the same twenty minutes solving the same problem, and nobody has ever counted how much time it's costing us |"
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/41",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/41",
+        "kind": "paragraph",
+        "location": "word/document.xml/41",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Notice what the middle column does. It does not diagnose and it does not solve. It describes the current state carefully enough that the gap starts to become visible on its own.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Notice what the middle column does. It does not diagnose and it does not solve. It describes the current state carefully enough that the gap starts to become visible on its own.",
+          "proposed": "Notice what the middle column does. It does not diagnose and it does not solve. It describes the current state carefully enough that the gap starts to become visible on its own."
+        }
+      },
+      "block_sha256": "ecdf54fe75a80ab91628205efc865d39953736402b104f34f514acc1833225d9",
+      "markdown": "Notice what the middle column does. It does not diagnose and it does not solve. It describes the current state carefully enough that the gap starts to become visible on its own."
+    },
+    {
+      "kind": "new",
+      "markdown": "### Try it now",
+      "reason": "Remove internal section scaffolding and set accessible Markdown heading hierarchy; retain heading words.",
+      "based_on": [
+        "d-8c47807332cb7151:word/document.xml/42"
+      ]
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/43",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/43",
+        "kind": "paragraph",
+        "location": "word/document.xml/43",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Take whichever of your indicators you have the most to say about. Write two or three sentences on how it actually works today. Not how it feels. What happens, in what order, and who does what.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Take whichever of your indicators you have the most to say about. Write two or three sentences on how it actually works today. Not how it feels. What happens, in what order, and who does what.",
+          "proposed": "Take whichever of your indicators you have the most to say about. Write two or three sentences on how it actually works today. Not how it feels. What happens, in what order, and who does what."
+        }
+      },
+      "block_sha256": "8ba0a74f0c0dcf64f00636b4a9067aa9c7671dda0febe176fe7460baed39a032",
+      "markdown": "Take whichever of your indicators you have the most to say about. Write two or three sentences on how it actually works today. Not how it feels. What happens, in what order, and who does what."
+    },
+    {
+      "kind": "new",
+      "markdown": "### If the move stalls",
+      "reason": "Remove internal section scaffolding and set accessible Markdown heading hierarchy; retain heading words.",
+      "based_on": [
+        "d-8c47807332cb7151:word/document.xml/44"
+      ]
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/45",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/45",
+        "kind": "paragraph",
+        "location": "word/document.xml/45",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Sometimes \"how does it work now\" comes back thin. Usually that means what you wrote is too broad or too vague to describe yet. These can restart it:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Sometimes \"how does it work now\" comes back thin. Usually that means what you wrote is too broad or too vague to describe yet. These can restart it:",
+          "proposed": "Sometimes \"how does it work now\" comes back thin. Usually that means what you wrote is too broad or too vague to describe yet. These can restart it:"
+        }
+      },
+      "block_sha256": "76743373d1de167c4adf9e05cc210c695d16ddc5590a15571828b0853baeb7fd",
+      "markdown": "Sometimes \"how does it work now\" comes back thin. Usually that means what you wrote is too broad or too vague to describe yet. These can restart it:"
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/47",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/47",
+        "kind": "paragraph",
+        "location": "word/document.xml/47",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "What would this look like if you had never adapted to it?",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" ns0:ilvl=\"0\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"-\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr><ns0:rPr><ns0:rFonts ns0:ascii=\"Arial\" ns0:cs=\"Arial\" ns0:eastAsia=\"Arial\" ns0:hAnsi=\"Arial\" /><ns0:b ns0:val=\"0\" /><ns0:bCs ns0:val=\"0\" /><ns0:i ns0:val=\"0\" /><ns0:iCs ns0:val=\"0\" /><ns0:smallCaps ns0:val=\"0\" /><ns0:strike ns0:val=\"0\" /><ns0:color ns0:val=\"000000\" /><ns0:sz ns0:val=\"22\" /><ns0:szCs ns0:val=\"22\" /><ns0:u ns0:val=\"none\" /><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:vertAlign ns0:val=\"baseline\" /></ns0:rPr></ns0:lvl>",
+          "num_id": "2",
+          "level": 0,
+          "ordinal": 1
+        },
+        "text": {
+          "base": "What would this look like if you had never adapted to it?",
+          "proposed": "What would this look like if you had never adapted to it?"
+        }
+      },
+      "block_sha256": "f092140111eef353a2d4f68e6daa4a0aaa90a0042a3610b53e59d58cc0b83990",
+      "markdown": "- What would this look like if you had never adapted to it?"
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/48",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/48",
+        "kind": "paragraph",
+        "location": "word/document.xml/48",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "What specifically happened the last time this went wrong?",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" ns0:ilvl=\"0\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"-\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr><ns0:rPr><ns0:rFonts ns0:ascii=\"Arial\" ns0:cs=\"Arial\" ns0:eastAsia=\"Arial\" ns0:hAnsi=\"Arial\" /><ns0:b ns0:val=\"0\" /><ns0:bCs ns0:val=\"0\" /><ns0:i ns0:val=\"0\" /><ns0:iCs ns0:val=\"0\" /><ns0:smallCaps ns0:val=\"0\" /><ns0:strike ns0:val=\"0\" /><ns0:color ns0:val=\"000000\" /><ns0:sz ns0:val=\"22\" /><ns0:szCs ns0:val=\"22\" /><ns0:u ns0:val=\"none\" /><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:vertAlign ns0:val=\"baseline\" /></ns0:rPr></ns0:lvl>",
+          "num_id": "2",
+          "level": 0,
+          "ordinal": 2
+        },
+        "text": {
+          "base": "What specifically happened the last time this went wrong?",
+          "proposed": "What specifically happened the last time this went wrong?"
+        }
+      },
+      "block_sha256": "d82be669052796850b5833614e962355514642f2b29d23a002c74c89fdaf23d7",
+      "markdown": "- What specifically happened the last time this went wrong?"
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/49",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/49",
+        "kind": "paragraph",
+        "location": "word/document.xml/49",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Which part of this could actually move, and which part is fixed?",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" ns0:ilvl=\"0\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"-\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr><ns0:rPr><ns0:rFonts ns0:ascii=\"Arial\" ns0:cs=\"Arial\" ns0:eastAsia=\"Arial\" ns0:hAnsi=\"Arial\" /><ns0:b ns0:val=\"0\" /><ns0:bCs ns0:val=\"0\" /><ns0:i ns0:val=\"0\" /><ns0:iCs ns0:val=\"0\" /><ns0:smallCaps ns0:val=\"0\" /><ns0:strike ns0:val=\"0\" /><ns0:color ns0:val=\"000000\" /><ns0:sz ns0:val=\"22\" /><ns0:szCs ns0:val=\"22\" /><ns0:u ns0:val=\"none\" /><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:vertAlign ns0:val=\"baseline\" /></ns0:rPr></ns0:lvl>",
+          "num_id": "2",
+          "level": 0,
+          "ordinal": 3
+        },
+        "text": {
+          "base": "Which part of this could actually move, and which part is fixed?",
+          "proposed": "Which part of this could actually move, and which part is fixed?"
+        }
+      },
+      "block_sha256": "f9e6db7960ddf43ae74cf7fe3a0589f26df64a47fa152f05cc19be4831108dab",
+      "markdown": "- Which part of this could actually move, and which part is fixed?"
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/50",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/50",
+        "kind": "paragraph",
+        "location": "word/document.xml/50",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "What is it about this that you cannot tell?",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" ns0:ilvl=\"0\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"-\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr><ns0:rPr><ns0:rFonts ns0:ascii=\"Arial\" ns0:cs=\"Arial\" ns0:eastAsia=\"Arial\" ns0:hAnsi=\"Arial\" /><ns0:b ns0:val=\"0\" /><ns0:bCs ns0:val=\"0\" /><ns0:i ns0:val=\"0\" /><ns0:iCs ns0:val=\"0\" /><ns0:smallCaps ns0:val=\"0\" /><ns0:strike ns0:val=\"0\" /><ns0:color ns0:val=\"000000\" /><ns0:sz ns0:val=\"22\" /><ns0:szCs ns0:val=\"22\" /><ns0:u ns0:val=\"none\" /><ns0:shd ns0:fill=\"auto\" ns0:val=\"clear\" /><ns0:vertAlign ns0:val=\"baseline\" /></ns0:rPr></ns0:lvl>",
+          "num_id": "2",
+          "level": 0,
+          "ordinal": 4
+        },
+        "text": {
+          "base": "What is it about this that you cannot tell?",
+          "proposed": "What is it about this that you cannot tell?"
+        }
+      },
+      "block_sha256": "059496420e7a95a50cf7ac56ca454ed2ed6662ff0a1d024806659c35f5e9c6b3",
+      "markdown": "- What is it about this that you cannot tell?"
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/52",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/52",
+        "kind": "paragraph",
+        "location": "word/document.xml/52",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Use whichever gets your thinking going. They are prompts, not a procedure. If you continue to struggle with one indicator, try another one.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Use whichever gets your thinking going. They are prompts, not a procedure. If you continue to struggle with one indicator, try another one.",
+          "proposed": "Use whichever gets your thinking going. They are prompts, not a procedure. If you continue to struggle with one indicator, try another one."
+        }
+      },
+      "block_sha256": "aaef2802845d3ef9d68e398ff4faa224f1be6d4ab07397a81258d6bcb002d0fd",
+      "markdown": "Use whichever gets your thinking going. They are prompts, not a procedure. If you continue to struggle with one indicator, try another one."
+    },
+    {
+      "kind": "new",
+      "markdown": "### One pass is usually not enough",
+      "reason": "Remove internal section scaffolding and set accessible Markdown heading hierarchy; retain heading words.",
+      "based_on": [
+        "d-8c47807332cb7151:word/document.xml/53"
+      ]
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/54",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/54",
+        "kind": "paragraph",
+        "location": "word/document.xml/54",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "What you get first is often still too vague, or too small, or turns out to be a symptom of something else. Run the move again on what you just wrote: how does that work now?",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "What you get first is often still too vague, or too small, or turns out to be a symptom of something else. Run the move again on what you just wrote: how does that work now?",
+          "proposed": "What you get first is often still too vague, or too small, or turns out to be a symptom of something else. Run the move again on what you just wrote: how does that work now?"
+        }
+      },
+      "block_sha256": "d9856e7aa7a0097a546ce70cf91dccb0636452dfff78d095962c16fb9e165945",
+      "markdown": "What you get first is often still too vague, or too small, or turns out to be a symptom of something else. Run the move again on what you just wrote: how does that work now?"
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/56",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/56",
+        "kind": "paragraph",
+        "location": "word/document.xml/56",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Here is the volunteer example going down three passes:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Here is the volunteer example going down three passes:",
+          "proposed": "Here is the volunteer example going down three passes:"
+        }
+      },
+      "block_sha256": "2de180f187f5c325caa06138f71a85e92a1830f87f1822e2fbecff2e28df3908",
+      "markdown": "Here is the volunteer example going down three passes:"
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/58",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/58",
+        "kind": "paragraph",
+        "location": "word/document.xml/58",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Pass 1.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " New volunteers sign up, come twice, and stop. ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "How does that work now?",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " Signups go to a central inbox. What happens on a first shift is whatever the person running that day improvises.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Pass 1. New volunteers sign up, come twice, and stop. How does that work now? Signups go to a central inbox. What happens on a first shift is whatever the person running that day improvises.",
+          "proposed": "Pass 1. New volunteers sign up, come twice, and stop. How does that work now? Signups go to a central inbox. What happens on a first shift is whatever the person running that day improvises."
+        }
+      },
+      "block_sha256": "94f3aadfc02fc316b9deb11bf95c6ecd3a13c7c973ec4d21136a1a94b1ea5757",
+      "markdown": "**Pass 1.** New volunteers sign up, come twice, and stop. **How does that work now?** Signups go to a central inbox. What happens on a first shift is whatever the person running that day improvises."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/60",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/60",
+        "kind": "paragraph",
+        "location": "word/document.xml/60",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Pass 2.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " First shifts are improvised. ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "How does that work now?",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " Nobody owns deciding what a new volunteer should do on day one, so the shift lead invents something on the spot, usually the easiest thing to hand off.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Pass 2. First shifts are improvised. How does that work now? Nobody owns deciding what a new volunteer should do on day one, so the shift lead invents something on the spot, usually the easiest thing to hand off.",
+          "proposed": "Pass 2. First shifts are improvised. How does that work now? Nobody owns deciding what a new volunteer should do on day one, so the shift lead invents something on the spot, usually the easiest thing to hand off."
+        }
+      },
+      "block_sha256": "21692ecb16b66f1beb8be7da9f8a4d31046665281ecbfb3baba01fbb2f42035d",
+      "markdown": "**Pass 2.** First shifts are improvised. **How does that work now?** Nobody owns deciding what a new volunteer should do on day one, so the shift lead invents something on the spot, usually the easiest thing to hand off."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/62",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/62",
+        "kind": "paragraph",
+        "location": "word/document.xml/62",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Pass 3.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " Nobody owns a new volunteer's first day. ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "How does that work now?",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " We measure signups because signups are what the board asks about. Nobody has ever been responsible for what happens after someone arrives, so no one built it.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Pass 3. Nobody owns a new volunteer's first day. How does that work now? We measure signups because signups are what the board asks about. Nobody has ever been responsible for what happens after someone arrives, so no one built it.",
+          "proposed": "Pass 3. Nobody owns a new volunteer's first day. How does that work now? We measure signups because signups are what the board asks about. Nobody has ever been responsible for what happens after someone arrives, so no one built it."
+        }
+      },
+      "block_sha256": "62473e11245fbeec8c6a97f012667700c5d5886b80d1d8944830c1b100bc4dce",
+      "markdown": "**Pass 3.** Nobody owns a new volunteer's first day. **How does that work now?** We measure signups because signups are what the board asks about. Nobody has ever been responsible for what happens after someone arrives, so no one built it."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/64",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/64",
+        "kind": "paragraph",
+        "location": "word/document.xml/64",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Notice that pass 1 could not tell you who was paying or what it cost them. Pass 3 can.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Notice that pass 1 could not tell you who was paying or what it cost them. Pass 3 can.",
+          "proposed": "Notice that pass 1 could not tell you who was paying or what it cost them. Pass 3 can."
+        }
+      },
+      "block_sha256": "0c093b3ff09bf8e4026546290c4be571b7e361a2608f956b366ac2b28e003021",
+      "markdown": "Notice that pass 1 could not tell you who was paying or what it cost them. Pass 3 can."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/66",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/66",
+        "kind": "paragraph",
+        "location": "word/document.xml/66",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Three or four passes is normal. You stop when you reach something specific enough that you could say who it is costing and what it costs them.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Three or four passes is normal. You stop when you reach something specific enough that you could say who it is costing and what it costs them.",
+          "proposed": "Three or four passes is normal. You stop when you reach something specific enough that you could say who it is costing and what it costs them."
+        }
+      },
+      "block_sha256": "374c7a28ae34b79f1be85d14ab8690cc22162b20dcc6ad958df7d04cfb3ad5a9",
+      "markdown": "Three or four passes is normal. You stop when you reach something specific enough that you could say who it is costing and what it costs them."
+    },
+    {
+      "kind": "new",
+      "markdown": "### If the move does nothing at all",
+      "reason": "Remove internal section scaffolding and set accessible Markdown heading hierarchy; retain heading words.",
+      "based_on": [
+        "d-8c47807332cb7151:word/document.xml/67"
+      ]
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/68",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/68",
+        "kind": "paragraph",
+        "location": "word/document.xml/68",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Sometimes you run the move and get nothing back. Not thin, nothing.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Sometimes you run the move and get nothing back. Not thin, nothing.",
+          "proposed": "Sometimes you run the move and get nothing back. Not thin, nothing."
+        }
+      },
+      "block_sha256": "5be1f1b42e73ecb3a6a5cd3a4c39f55b036d7d4206e976c19d4f928b7c7043e8",
+      "markdown": "Sometimes you run the move and get nothing back. Not thin, nothing."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/70",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/70",
+        "kind": "paragraph",
+        "location": "word/document.xml/70",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Look at the fourth example from the list above: \"I should be better at using AI at work.\"",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Look at the fourth example from the list above: \"I should be better at using AI at work.\"",
+          "proposed": "Look at the fourth example from the list above: \"I should be better at using AI at work.\""
+        }
+      },
+      "block_sha256": "a279535d375f1dfd9a191db27330fd1ed273efb08abb20357c2e679a6c0b9ff6",
+      "markdown": "Look at the fourth example from the list above: \"I should be better at using AI at work.\""
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/72",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/72",
+        "kind": "paragraph",
+        "location": "word/document.xml/72",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Ask how that works now and there is no answer, because \"use AI\" is not something that is happening. It is something you have decided to do. That is the tell: ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "you have written down a solution, not an indicator.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " The move in this section only works on things that are already going on.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Ask how that works now and there is no answer, because \"use AI\" is not something that is happening. It is something you have decided to do. That is the tell: you have written down a solution, not an indicator. The move in this section only works on things that are already going on.",
+          "proposed": "Ask how that works now and there is no answer, because \"use AI\" is not something that is happening. It is something you have decided to do. That is the tell: you have written down a solution, not an indicator. The move in this section only works on things that are already going on."
+        }
+      },
+      "block_sha256": "9e20a0e2aba07a21a2c50266b6d63b978c48994056413828c10f4736e85bf492",
+      "markdown": "Ask how that works now and there is no answer, because \"use AI\" is not something that is happening. It is something you have decided to do. That is the tell: **you have written down a solution, not an indicator.** The move in this section only works on things that are already going on."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/74",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/74",
+        "kind": "paragraph",
+        "location": "word/document.xml/74",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "The way out is not to push harder. It is to ask what made you want that solution in the first place. Someone who wrote that line might find, underneath it, that information arrives in email, Slack, and meeting notes and gets re-entered by hand into calendars, to-do lists, and reports, because nothing connects those systems. That is a current state, and this move works on it normally.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "The way out is not to push harder. It is to ask what made you want that solution in the first place. Someone who wrote that line might find, underneath it, that information arrives in email, Slack, and meeting notes and gets re-entered by hand into calendars, to-do lists, and reports, because nothing connects those systems. That is a current state, and this move works on it normally.",
+          "proposed": "The way out is not to push harder. It is to ask what made you want that solution in the first place. Someone who wrote that line might find, underneath it, that information arrives in email, Slack, and meeting notes and gets re-entered by hand into calendars, to-do lists, and reports, because nothing connects those systems. That is a current state, and this move works on it normally."
+        }
+      },
+      "block_sha256": "f456f2b5e2844f80213491c00a6d0e06a6e2d959e219068a4131fcd901381543",
+      "markdown": "The way out is not to push harder. It is to ask what made you want that solution in the first place. Someone who wrote that line might find, underneath it, that information arrives in email, Slack, and meeting notes and gets re-entered by hand into calendars, to-do lists, and reports, because nothing connects those systems. That is a current state, and this move works on it normally."
+    },
+    {
+      "kind": "new",
+      "markdown": "Solutions you have handed yourself are common enough that they get their own treatment in “Things somebody handed you” on the next page, Two other places to look. If an item on your list resists this move completely, that is where to take it.",
+      "reason": "Replace internal section-letter references with participant-facing headings; otherwise retain source wording.",
+      "based_on": [
+        "d-8c47807332cb7151:word/document.xml/76"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "### If your list is thin",
+      "reason": "Remove internal section scaffolding and set accessible Markdown heading hierarchy; retain heading words.",
+      "based_on": [
+        "d-8c47807332cb7151:word/document.xml/79"
+      ]
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/80",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/80",
+        "kind": "paragraph",
+        "location": "word/document.xml/80",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Things that bug you are a good first place to look, because you can feel them. There are at least two other places to look, and you cannot feel either one of those.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Things that bug you are a good first place to look, because you can feel them. There are at least two other places to look, and you cannot feel either one of those.",
+          "proposed": "Things that bug you are a good first place to look, because you can feel them. There are at least two other places to look, and you cannot feel either one of those."
+        }
+      },
+      "block_sha256": "b3d5703f163b5722d08f8f37327209dec1dce94a476417907ae289f29610849e",
+      "markdown": "Things that bug you are a good first place to look, because you can feel them. There are at least two other places to look, and you cannot feel either one of those."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/82",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/82",
+        "kind": "paragraph",
+        "location": "word/document.xml/82",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Things you stopped noticing.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " You stopped noticing them because you figured out a work-around, so they stopped registering as friction. These do not bug you any more, but they are places where a problem, a gap that costs someone something real, might exist. They have to be hunted rather than recalled.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Things you stopped noticing. You stopped noticing them because you figured out a work-around, so they stopped registering as friction. These do not bug you any more, but they are places where a problem, a gap that costs someone something real, might exist. They have to be hunted rather than recalled.",
+          "proposed": "Things you stopped noticing. You stopped noticing them because you figured out a work-around, so they stopped registering as friction. These do not bug you any more, but they are places where a problem, a gap that costs someone something real, might exist. They have to be hunted rather than recalled."
+        }
+      },
+      "block_sha256": "81d5a81564622690a61392bfb43936da56760f3a97e97b06493bb135d462c3a3",
+      "markdown": "**Things you stopped noticing.** You stopped noticing them because you figured out a work-around, so they stopped registering as friction. These do not bug you any more, but they are places where a problem, a gap that costs someone something real, might exist. They have to be hunted rather than recalled."
+    },
+    {
+      "ref": "d-8c47807332cb7151:word/document.xml/84",
+      "view": "proposed",
+      "role": "learner",
+      "decision": "Preserve authored learner instruction in source sequence.",
+      "allow_flags": [],
+      "kind": "source",
+      "source_name": "S-half-one-working-draft-v2.md.docx",
+      "source_sha256": "8c47807332cb71516b2c256be8522768598171d28bb2c42e9d7e7f1ecdbf1419",
+      "block": {
+        "id": "d-8c47807332cb7151:word/document.xml/84",
+        "kind": "paragraph",
+        "location": "word/document.xml/84",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Things somebody handed you.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " A request, from a manager, a client, or even from yourself. These arrive already looking like the answer, but there is a reasonable chance that they are a solution someone decided on before they carefully considered the actual problem.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Things somebody handed you. A request, from a manager, a client, or even from yourself. These arrive already looking like the answer, but there is a reasonable chance that they are a solution someone decided on before they carefully considered the actual problem.",
+          "proposed": "Things somebody handed you. A request, from a manager, a client, or even from yourself. These arrive already looking like the answer, but there is a reasonable chance that they are a solution someone decided on before they carefully considered the actual problem."
+        }
+      },
+      "block_sha256": "ec0127b339e3ad1ebff5bace71e6d45d592c9948b0956e02f61a31f8b12b07ef",
+      "markdown": "**Things somebody handed you.** A request, from a manager, a client, or even from yourself. These arrive already looking like the answer, but there is a reasonable chance that they are a solution someone decided on before they carefully considered the actual problem."
+    },
+    {
+      "kind": "new",
+      "markdown": "Two other places to look takes both in turn. Read it whether or not your list is thin, because the second one comes up constantly at work and it is the hardest of the three to spot.",
+      "reason": "Replace internal section-letter references with participant-facing headings; otherwise retain source wording.",
+      "based_on": [
+        "d-8c47807332cb7151:word/document.xml/86"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "Keep your list and the current-state description you tried. Continue to Two other places to look before you settle on candidates.",
+      "reason": "New continuity instruction between split source pages.",
+      "based_on": [
+        "d-8c47807332cb7151:word/document.xml/43",
+        "d-8c47807332cb7151:word/document.xml/86"
+      ]
+    }
+  ],
+  "metadata_decisions": [
+    "New safe draft identity and storage sprint 11. Semantic course sequence remains Sprint One.",
+    "Unpublished local content only.",
+    "User authorized publication to Course 180 under module name Working Draft on 2026-09-08."
+  ],
+  "source_roles": {
+    "d-8c47807332cb7151": {
+      "role": "primary_authoring",
+      "reason": "User selected this exact exported DOCX as the first integration source and authorized a local first-half Sprint One content build."
+    }
+  },
+  "decisions": [
+    "Use proposed text only for explicitly reviewed source blocks 200 and 202; preserve coherent wording across tracked changes.",
+    "Remove internal section labels from headings and adapt five cross-references; record new/adapted prose separately.",
+    "Retain all substantive learner prose and three learner tables, excluding only recorded editorial, placeholder, and duplicate diagram blocks.",
+    "Build the supplied first half only; later-half outline is context.",
+    "Suggested 15 and 20 point assignments and 5 point concept check total 40; new review bands require human review before publishing.",
+    "No Canvas writes, source edits, or publishing approval implied.",
+    "Confirmed user-selected reference: https://profsathya.github.io/Common-Curriculum/deanza-trial/test-and-commit.html. Use guided_assignment for the three graded artifacts with Canvas text_entry, optional local response boxes, copy/export, and expandable full source instructions. Do not create native Canvas quiz questions or ai_activity JSON.",
+    "Candidate List has one response task and no AI endpoint, preserving own-thinking-first. Test and Commit has eight response tasks and optional per-response formative AI feedback through the endpoint from the confirmed reference. Complete four human checks before using AI feedback; feedback cannot choose the problem or grade it.",
+    "Concept Check has five newly authored choice tasks grounded only in A-D; answer keys and explanations are formative client-side feedback. Five points are manual completion review, not automatic correctness scoring. Source outline at d-8c47807332cb7151:word/document.xml/386 provides the proposed point total only.",
+    "Newly authored upload instructions are changed to copy/paste into Canvas text entry. Preserved source wording asking for one document remains compatible with drafting externally before pasting. All selected source passages and three learner tables remain unchanged.",
+    "Optional guidance/reflection fields support the named tasks and do not create duplicate required submissions. All full Markdown source instructions remain available in expandable guidance.",
+    "This build completes only the supplied first half. No Canvas publication, external feedback invocation, Common Curriculum deployment, source-document edit, or later-half build has occurred."
+  ]
+}

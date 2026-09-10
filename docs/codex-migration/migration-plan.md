@@ -4,6 +4,8 @@
 
 The scaffold from this plan has been implemented and the legacy Claude Code orchestration files have been removed from the active runtime. Remaining work is validation against a sandbox Canvas course.
 
+This is the historical migration plan. Its removal references describe that migration, not every present-day Claude integration: `CLAUDE.md` is now an intentional content-editor guide, and the opt-in devcontainer supports both CLIs. Current operator behavior is documented in `README.md` and `README-BUILDER.md`.
+
 ## Target-State Architecture
 
 **Repo facts**

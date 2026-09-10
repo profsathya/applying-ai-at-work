@@ -53,7 +53,7 @@
           },
           "local_path": {
             "type": "string",
-            "pattern": "^course[a-z0-9-]*/sprints/sprint-[0-9]+/.+\\.md$"
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*/sprints/sprint-[0-9]+/.+\\.md$"
           },
           "canvas_type": {
             "type": "string",
@@ -65,7 +65,7 @@
           },
           "delivery_mode": {
             "type": "string",
-            "enum": ["canvas_native", "ai_activity"]
+            "enum": ["canvas_native", "ai_activity", "guided_assignment"]
           },
           "canvas_id": {"type": ["integer", "null"]},
           "canvas_page_url": {"type": ["string", "null"]},

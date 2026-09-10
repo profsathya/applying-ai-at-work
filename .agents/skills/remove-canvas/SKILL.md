@@ -9,6 +9,8 @@ Use this when a human wants to remove modules, module items, pages, assignments,
 
 This workflow writes to Canvas only after a fresh inspection, a dry-run plan, and explicit token confirmation.
 
+For a GitOps-managed course, use a current checkout of `canvas-state` and pass `--state-dir <path-to-canvas-state-checkout>` to every inspection, maintenance, and push command. The legacy manifest artifact map may be stale. Omit this flag only for an explicitly legacy local deployment; do not fall back when the external state file is missing.
+
 ## Workflow
 
 1. Resolve the target course and manifest:
@@ -56,7 +58,7 @@ This workflow writes to Canvas only after a fresh inspection, a dry-run plan, an
    python3 canvas_sync/remove.py --manifest <manifest_path> --course-clear --apply --confirm-token <token>
    ```
 
-7. Run schema validation after a successful apply:
+7. Validate the selected external state with `schema.py --state <state-file>` after apply, or use the manifest validator for legacy state:
 
    ```bash
    python3 canvas_sync/schema.py --manifest <manifest_path>
@@ -68,6 +70,6 @@ This workflow writes to Canvas only after a fresh inspection, a dry-run plan, an
 - Never apply without a fresh dry-run confirmation token.
 - Targeted removals only remove manifest-backed targets.
 - Full course clear is destructive and includes Canvas-only module items and modules. Use it only when the human explicitly asks to clear the course contents.
-- Keep local Markdown files. The remover only updates the manifest after successful Canvas deletes.
+- Keep local Markdown files. The remover updates the selected deployment state after successful Canvas deletes. Kept Markdown can be selected for a future publish; decide whether it remains active before publishing the course again.
 - Do not edit manifests manually; `canvas_sync/remove.py` owns manifest updates during removal.
 - Do not run this against a production Canvas course as a test. Use dry-run or a known sandbox course for pilot validation.

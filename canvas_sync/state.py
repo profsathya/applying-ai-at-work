@@ -106,6 +106,15 @@ def empty_state_from_manifest(manifest: dict) -> dict:
     }
 
 
+def check_state_instance(state: dict, manifest: dict, state_path: Path) -> None:
+    """Do not reuse IDs after a manifest is pointed at a different course."""
+    for key in ("course_id", "base_url", "name"):
+        actual = str(state.get("instance", {}).get(key, "")).rstrip("/")
+        expected = str(manifest.get("instance", {}).get(key, "")).rstrip("/")
+        if actual != expected:
+            raise ValueError(f"{state_path}: state instance.{key} does not match manifest")
+
+
 def state_from_manifest(manifest_path: Path, repo_root: Path) -> dict:
     manifest = load_json(manifest_path)
     state = {
@@ -163,6 +172,7 @@ class CanvasStateStore:
             if self.external:
                 if state_path.exists():
                     state = load_json(state_path)
+                    check_state_instance(state, manifest, state_path)
                 else:
                     state = empty_state_from_manifest(manifest)
             else:

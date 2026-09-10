@@ -4,9 +4,9 @@ on:
   push:
     branches: [main]
     paths:
-      - 'course*/sprints/**'
-      - 'course*/homepage.yaml'
-      - 'course*/manifests/production.json'
+      - '*/sprints/**'
+      - '*/homepage.yaml'
+      - '*/manifests/production.json'
       - '.github/workflows/publish-canvas.yml'
       - 'schema/**'
       - 'canvas_sync/**'
@@ -71,41 +71,8 @@ jobs:
           INPUT_COURSE: ${{ inputs.course }}
         run: |
           set -euo pipefail
-          manifests_file="$(mktemp)"
+          python canvas_sync/publish_targets.py
 
-          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
-            manifest="${INPUT_COURSE}/manifests/production.json"
-            if [ ! -f "$manifest" ]; then
-              echo "::error::Manifest not found: $manifest"
-              exit 1
-            fi
-            printf '%s\n' "$manifest" > "$manifests_file"
-          elif [ -n "${BEFORE_SHA:-}" ] && [ "$BEFORE_SHA" != "0000000000000000000000000000000000000000" ]; then
-            git diff --name-only "$BEFORE_SHA" "$GITHUB_SHA" \
-              | awk -F/ '/^course[0-9]+\/(sprints\/|homepage.yaml|manifests\/production.json)/ { print $1 "/manifests/production.json" }' \
-              | sort -u \
-              | while IFS= read -r manifest; do
-                  if [ -f "$manifest" ]; then
-                    printf '%s\n' "$manifest"
-                  fi
-                done > "$manifests_file"
-          fi
-
-          if [ ! -s "$manifests_file" ]; then
-            echo "has_targets=false" >> "$GITHUB_OUTPUT"
-            echo "manifests=" >> "$GITHUB_OUTPUT"
-            echo "::notice::No course content changes detected; skipping Canvas publish."
-            exit 0
-          fi
-
-          echo "has_targets=true" >> "$GITHUB_OUTPUT"
-          {
-            echo "manifests<<EOF"
-            cat "$manifests_file"
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
-          echo "Target manifests:"
-          cat "$manifests_file"
 
   publish:
     needs: validate
@@ -384,7 +351,7 @@ jobs:
         run: |
           set -euo pipefail
           shopt -s nullglob
-          for state_file in ../canvas-state/course*/production.json; do
+          for state_file in ../canvas-state/*/production.json; do
             python canvas_sync/schema.py --state "$state_file"
           done
 

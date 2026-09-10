@@ -5,6 +5,11 @@
   "type": "object",
   "required": ["type", "title", "slug", "artifact_id", "sprint", "module", "position", "publish"],
   "properties": {
+    "source_provenance": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+\\.sources\\.json$",
+      "description": "Adjacent selected-source evidence produced by source_build.py; validated for exact source fidelity."
+    },
     "type": {
       "type": "string",
       "enum": ["assignment", "page", "discussion", "quiz", "module_header"]
@@ -48,11 +53,116 @@
     },
     "delivery_mode": {
       "type": "string",
-      "enum": ["canvas_native", "ai_activity"]
+      "enum": ["canvas_native", "ai_activity", "guided_assignment"]
     },
     "completion_requirement": {
       "type": "string",
       "enum": ["auto", "none", "must_view", "must_submit", "must_contribute", "must_mark_done", "min_score"]
+    },
+    "guided_assignment": {
+      "type": "object",
+      "required": [
+        "version",
+        "tasks"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*$"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "builds_on": {
+          "type": "string"
+        },
+        "standing_instruction": {
+          "type": "string"
+        },
+        "feedback_endpoint": {
+          "type": "string",
+          "pattern": "^https://[^\\s]+$"
+        },
+        "tasks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "prompt",
+              "criteria"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]*$"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "response",
+                  "choice"
+                ]
+              },
+              "prompt": {
+                "type": "string",
+                "minLength": 1
+              },
+              "criteria": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "reflection": {
+                "type": "string"
+              },
+              "options": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "correct_index": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "explanation": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "kind": {
+                      "const": "choice"
+                    }
+                  },
+                  "required": [
+                    "kind"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "options",
+                    "correct_index",
+                    "explanation"
+                  ]
+                }
+              }
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
     },
     "ai_activity": {
       "type": "object",

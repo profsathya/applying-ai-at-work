@@ -9,6 +9,8 @@ Use this when an instructor wants to update one existing Canvas artifact by Canv
 
 This workflow may read Canvas and update one local Markdown file plus its manifest mapping. It must not push to Canvas.
 
+For a GitOps-managed course, use a current checkout of `canvas-state` and pass `--state-dir <path-to-canvas-state-checkout>` to every inspection, maintenance, and push command. The legacy manifest artifact map may be stale. Omit this flag only for an explicitly legacy local deployment; do not fall back when the external state file is missing.
+
 ## Workflow
 
 1. Resolve the Canvas course ID from the request.
@@ -25,7 +27,7 @@ This workflow may read Canvas and update one local Markdown file plus its manife
    python3 canvas_sync/update_artifact.py prepare --course-id <canvas_course_id> --module-item-id <module_item_id>
    ```
 
-5. If prepare returns `status: sprint_required`, ask for sprint `0` through `5`, then rerun:
+5. If prepare returns `status: sprint_required`, ask for the intended non-negative sprint number, then rerun:
 
    ```bash
    python3 canvas_sync/update_artifact.py prepare --course-id <canvas_course_id> --module-item-id <module_item_id> --sprint <n>
@@ -62,7 +64,8 @@ This workflow may read Canvas and update one local Markdown file plus its manife
 
 - The instructor-facing selector is `module_item_id`.
 - The Canvas course ID must match exactly one local production manifest.
-- If the selected item is Canvas-only, import it before editing.
+- For native Canvas-only items, import supported content before editing. For hosted items, map the existing Markdown source first; a Canvas wrapper is not instructional source.
+- If an external-state prepare reports drift, run the `reconcile` dry run for that file before editing. Hosted prepare preserves the existing Markdown and semantic type.
 - For hosted HTML or AI activity artifacts, edit the Markdown source only. Do not edit generated Common Curriculum HTML or activity JSON by hand.
 - After a hosted artifact is reviewed, production publish should happen through merge to `main`; an approved local push must use the `sync` skill so hosted output is rendered before Canvas is updated.
 - Never edit Canvas directly from this workflow.

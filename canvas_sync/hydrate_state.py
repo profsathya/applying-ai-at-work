@@ -12,11 +12,10 @@ from dotenv import load_dotenv
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient
 from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
-from canvas_sync.inspect_canvas import compute_inspection_drift
-from canvas_sync.hosted_html import artifact_hosted_info, iframe_shell
-from canvas_sync.pull import html_to_markdown
+from canvas_sync.drift import hosted_canvas_drift
 from canvas_sync.schema import parse_frontmatter, validate_canvas_state
 from canvas_sync.state import (
+    check_state_instance,
     canvas_fingerprint,
     content_hash,
     fetch_canvas_state,
@@ -30,53 +29,11 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def discover_manifests() -> list[Path]:
-    return sorted(REPO_ROOT.glob("course*/manifests/production.json"))
+    return sorted(REPO_ROOT.glob("*/manifests/production.json"))
 
 
 def repo_relative(path: Path) -> str:
     return str(path.resolve().relative_to(REPO_ROOT))
-
-
-def hosted_canvas_drift(
-    md_path: Path,
-    manifest_path: Path,
-    manifest: dict,
-    canvas_state: dict,
-    atype: str,
-) -> dict:
-    """Compare live Canvas state with the hosted iframe shell expected for this artifact."""
-    fm, _body = parse_frontmatter(md_path)
-    hosted_info = artifact_hosted_info(md_path, manifest_path, manifest, fm)
-    if not hosted_info["enabled"]:
-        return compute_inspection_drift(md_path, canvas_state, atype)
-
-    canvas_title = canvas_state.get("name") or canvas_state.get("title")
-    canvas_body_html = (
-        canvas_state.get("description")
-        or canvas_state.get("body")
-        or canvas_state.get("message")
-        or ""
-    )
-    canvas_body_md = html_to_markdown(canvas_body_html).strip()
-    expected_body_md = html_to_markdown(iframe_shell(hosted_info["hosted_url"], fm["title"])).strip()
-
-    drift: dict[str, object] = {}
-    if canvas_title != fm.get("title"):
-        drift["title"] = {"local": fm.get("title"), "canvas": canvas_title}
-    if expected_body_md != canvas_body_md:
-        drift["body"] = {
-            "expected_chars": len(expected_body_md),
-            "canvas_chars": len(canvas_body_md),
-            "expected_preview": expected_body_md[:200],
-            "canvas_preview": canvas_body_md[:200],
-        }
-    if atype in ("assignment", "quiz", "discussion"):
-        canvas_points = canvas_state.get("points_possible")
-        if canvas_state.get("assignment"):
-            canvas_points = canvas_state["assignment"].get("points_possible", canvas_points)
-        if canvas_points != fm.get("points"):
-            drift["points"] = {"local": fm.get("points"), "canvas": canvas_points}
-    return drift
 
 
 def hydrate_manifest(manifest_path: Path, state_dir: Path) -> dict:
@@ -94,6 +51,7 @@ def hydrate_manifest(manifest_path: Path, state_dir: Path) -> dict:
         return result
 
     state = load_json(state_path)
+    check_state_instance(state, manifest, state_path)
     check_instance_ready(manifest, manifest_label=str(manifest_path))
     check_env_matches_instance(manifest, manifest_label=str(manifest_path))
     client = CanvasClient.from_env(course_id=int(manifest["instance"]["course_id"]))

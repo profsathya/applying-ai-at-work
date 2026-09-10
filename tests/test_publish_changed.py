@@ -554,6 +554,26 @@ class ProvisionalIdentityReportTests(unittest.TestCase):
             self.assertEqual(result["provisional"][0]["artifact_id"], "stable-page")
             self.assertIn("retry updates instead of duplicating", result["provisional"][0]["reason"])
 
+    def test_failed_retry_preserves_new_module_item_with_existing_content_identity(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            manifest = root / "course1/manifests/production.json"
+            path = root / "course1/sprints/sprint-0/stable-page.md"
+            state_dir = root / ".canvas-state"
+            state_path = state_dir / "course1/production.json"
+            write_manifest(manifest)
+            write_page(path)
+            write_state(state_path, hash_value="0" * 64)
+            def fail_after_placement(*args, **kwargs):
+                state = json.loads(state_path.read_text())
+                state["artifacts"]["stable-page"]["canvas_module_item_id"] = 9001
+                state_path.write_text(json.dumps(state))
+                raise RuntimeError("render failed after placing existing object")
+            with patch.object(publish_changed, "REPO_ROOT", root), patch.object(publish_changed, "push_artifact", side_effect=fail_after_placement):
+                result = publish_changed.publish_manifest(manifest, state_dir, dry_run=False, check_drift=False, require_state=True)
+            self.assertEqual(len(result["provisional"]), 1)
+            self.assertEqual(len(result["failed"]), 1)
+
     def test_failed_push_without_identity_reports_no_provisional(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()
@@ -832,20 +852,23 @@ class ReportFileTests(unittest.TestCase):
 
 
 class DriftSelfHealTests(unittest.TestCase):
-    """Missing state is healed during publish; only real drift refuses."""
+    """Missing fingerprints heal only when live content already matches source."""
 
-    LIVE_PAGE = {"page_id": 1001, "url": "stable-page", "title": "Stable Page", "body": "x", "published": True}
+    LIVE_PAGE = {"page_id": 1001, "url": "stable-page", "title": "Stable Page", "body": "<h1>Stable Page</h1><p>Body text.</p>", "published": True}
 
     def _drift(self, entry: dict | None, live: dict | None):
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()
             manifest_path = repo_root / "course1" / "manifests" / "production.json"
             write_manifest(manifest_path)
+            md_path = repo_root / "course1/sprints/sprint-0/stable-page.md"
+            write_page(md_path)
             changed = [
                 {
                     "file": "course1/sprints/sprint-0/stable-page.md",
                     "artifact_id": "stable-page",
                     "state_entry": entry,
+                    "path": md_path,
                 }
             ]
             with patch.object(publish_changed.CanvasClient, "from_env", return_value=object()):
@@ -910,7 +933,7 @@ class DriftSelfHealTests(unittest.TestCase):
         self.assertEqual(len(drifted), 1)
         self.assertEqual(drifted[0]["reason"], "canvas object is missing")
 
-    def test_publish_manifest_heals_and_publishes_missing_fingerprint_entry(self) -> None:
+    def test_publish_manifest_blocks_unproven_missing_fingerprint_entry(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()
             md_path = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
@@ -941,11 +964,10 @@ class DriftSelfHealTests(unittest.TestCase):
                                 require_state=True,
                             )
 
-            self.assertEqual(result["drifted"], [])
-            self.assertEqual(result["published"], [pushed])
-            self.assertEqual(len(result["healed"]), 1)
-            self.assertIn("hydrated missing canvas_fingerprint", result["healed"][0]["reason"])
-            push.assert_called_once()
+            self.assertEqual(len(result["drifted"]), 1)
+            self.assertEqual(result["published"], [])
+            self.assertEqual(result["healed"], [])
+            push.assert_not_called()
 
 
 if __name__ == "__main__":

@@ -3,7 +3,11 @@ name: Validate schemas
 on:
   pull_request:
     paths:
-      - 'course*/**'
+      - '*/sprints/**'
+      - '*/manifests/**'
+      - '*/homepage.yaml'
+      - '*/course.yaml'
+      - '*/prd.json'
       - '.github/workflows/**'
       - 'schema/**'
       - 'canvas_sync/**'
@@ -11,7 +15,11 @@ on:
   push:
     branches: [main]
     paths:
-      - 'course*/**'
+      - '*/sprints/**'
+      - '*/manifests/**'
+      - '*/homepage.yaml'
+      - '*/course.yaml'
+      - '*/prd.json'
       - '.github/workflows/**'
       - 'schema/**'
       - 'canvas_sync/**'
@@ -51,7 +59,7 @@ jobs:
           from canvas_sync.hosted_html import discover_artifact_files, render_hosted_files
 
           output_dir = Path("/tmp/aiaw-homepage-preview")
-          for manifest in sorted(Path(".").glob("course*/manifests/production.json")):
+          for manifest in sorted(Path(".").glob("*/manifests/production.json")):
               data = json.loads(manifest.read_text(encoding="utf-8"))
               if (data.get("hosted_html") or {}).get("enabled"):
                   render_hosted_files(manifest, output_dir, discover_artifact_files(manifest))

@@ -309,3 +309,50 @@ modules:
         items:
           - slug: "introduction-synthesize-and-show-readiness-v2"
             meta: "Page - placeholder stub for the Sprint 5 rebuild"
+
+  - sprint: 10
+    tag: "Optional Technical Review"
+    open: true
+    learning_goals:
+      - "Inspect a short page, a text-entry assignment, and a three-question quiz in Canvas."
+      - "Use the definitions of goal, problem, and stakeholder in two brief optional activities."
+    prereq: "Optional technical review only. This smoke test is not required for your course work. Allow about three minutes if you choose to try it."
+    groups:
+      - label: "Course Builder Smoke Test - 2026-09-08"
+        items:
+          - slug: "builder-smoke-20260908-read-me"
+            meta: "Page - read the test instructions and three definitions"
+          - slug: "builder-smoke-20260908-work-task"
+            meta: "Assignment - try a one-sentence text entry about a real work task"
+          - slug: "builder-smoke-20260908-definition-check"
+            meta: "Quiz - check three definitions with multiple choice, true or false, and a one-word answer"
+
+  - sprint: 11
+    tag: "First half"
+    open: true
+    muted: false
+    learning_goals:
+      - "Turn things you notice, work-arounds, and surface requests into candidate problems grounded in your own context."
+      - "Describe three to five candidates as gaps and mark where your claims are uncertain."
+      - "Check who is affected, what handles the problem now, whether it is current, and whether its size supports further inquiry."
+      - "Judge AI challenges to your reasoning and choose one problem with a runner-up and reasons you can defend."
+    prereq: "Start with observations from your own work or life. Keep one working document, write your candidates before using AI, and save your choice for later problem framing and stakeholder inquiry. This covers the first half of Sprint One."
+    groups:
+      - label: "Notice and describe"
+        items:
+          - slug: "start-with-what-bugs-you"
+            meta: "Page - move from an indicator to a concrete description of how things work now"
+          - slug: "two-other-places-to-look"
+            meta: "Page - uncover work-arounds and the problems beneath surface requests"
+          - slug: "candidate-list"
+            meta: "Guided assignment - write three to five candidate gaps with uncertainty marks and copy your text into Canvas; 15 points"
+      - label: "Check and choose"
+        items:
+          - slug: "problem-finding-concept-check"
+            meta: "Guided concept check - examine five ideas with answer feedback and copy your final answers into Canvas; 5 completion points reviewed by your instructor"
+            badge: "Self-check"
+            selfcheck: true
+          - slug: "four-checks-for-a-workable-problem"
+            meta: "Page - examine people, current handling, current occurrence, and problem size"
+          - slug: "test-and-commit"
+            meta: "Guided assignment - record your checks, judgment of AI challenges, chosen problem, reasons, and runner-up, then copy your answers into Canvas; 20 points"

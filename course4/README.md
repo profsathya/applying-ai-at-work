@@ -2,7 +2,7 @@
 
 This directory contains the local shell for course4, mapped to Canvas course ID `182` through `course4/manifests/production.json`.
 
-This course currently has context and design files only. No module artifacts have been drafted.
+The course has 37 local Markdown artifacts across three modules. Validate and review these sources before publishing. The empty legacy manifest artifact map does not establish whether content exists in Canvas; inspect the current deployment state and live course before a first publish.
 
 ## Course Shape
 

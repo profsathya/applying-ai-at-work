@@ -13,6 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient
 from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
 from canvas_sync.state import (
+    check_state_instance,
     canvas_fingerprint,
     content_hash,
     fetch_canvas_state,
@@ -25,7 +26,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def discover_manifests() -> list[Path]:
-    return sorted(REPO_ROOT.glob("course*/manifests/production.json"))
+    return sorted(REPO_ROOT.glob("*/manifests/production.json"))
 
 
 def repo_relative(path: Path) -> str:
@@ -51,6 +52,7 @@ def check_manifest(manifest_path: Path, state_dir: Path) -> dict:
         return result
 
     state = load_json(state_path)
+    check_state_instance(state, manifest, state_path)
     check_instance_ready(manifest, manifest_label=str(manifest_path))
     check_env_matches_instance(manifest, manifest_label=str(manifest_path))
     client = CanvasClient.from_env(course_id=int(manifest["instance"]["course_id"]))

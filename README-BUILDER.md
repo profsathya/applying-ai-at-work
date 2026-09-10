@@ -294,6 +294,8 @@ Recommended repository controls:
 - Keep `canvas-production` as a protected GitHub Environment for Canvas secrets.
 - Do not add a mandatory staging Canvas environment unless course volume or reviewer count grows enough to justify it.
 
+Maintenance after GitOps publishing uses the same external state checkout. See [Canvas maintenance](docs/CANVAS_MAINTENANCE.md) for inspection, reviewed reconcile tokens, backups, and recovery. Shared-code-only changes run validation but do not automatically select every course for publishing; use a reviewed course dispatch to deploy shared changes. Named course keys are supported throughout target resolution and state validation.
+
 ## Canvas Sync Layer
 
 `canvas_sync/` is hand-authored Python:
@@ -363,3 +365,7 @@ The script edits local deployment state only; it makes no Canvas calls. Omit
 - `AGENTS.md` - root agent guide and build learnings.
 - `docs/codex-migration/` - migration audit and plan.
 - `context/build-notes/` - historical build notes.
+
+## Build from authored documents
+
+Give Codex one Google Doc file link, a downloaded DOCX, or an exported ZIP and ask it to build a sprint. The [document intake workflow](docs/DOCUMENT_INTAKE.md) preserves source prose, tables, comments, and tracked-edit alternatives, then assembles a local draft with source evidence and labelled new writing. Authors do not write YAML or Markdown.

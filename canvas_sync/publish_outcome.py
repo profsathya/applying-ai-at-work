@@ -51,9 +51,9 @@ def summarize_report(report: dict | None, expected_manifests: int) -> dict:
     A run counts as complete only when the report parsed, carries
     ``completed: true``, and holds a result for every expected manifest. An
     incomplete run never counts as clean, always counts at least one failure,
-    and enables no hosted commit; canvas-state commits stay allowed ONLY when
-    a provisional Canvas identity was recorded, because discarding one would
-    cause a duplicate object on retry.
+    and enables no hosted commit. Canvas-state commits still preserve known
+    successful writes and provisional identities: an interrupted later course
+    does not undo an earlier course's remote side effects.
     """
     results = report.get("results", []) if isinstance(report, dict) else []
     summary = summarize(results)
@@ -66,7 +66,7 @@ def summarize_report(report: dict | None, expected_manifests: int) -> dict:
     if incomplete:
         summary["clean"] = False
         summary["failed"] = max(summary["failed"], 1)
-        summary["commit_state"] = summary["provisional"] > 0
+        summary["commit_state"] = summary["provisional"] > 0 or summary["published"] > 0
         summary["hosted_commit"] = False
     return summary
 
@@ -83,10 +83,9 @@ def demote_hosted_publishes(
       revert (returned map of state-file path -> artifact ids); nothing
       touched Canvas, so the pre-run baseline is the whole truth.
     - created/updated hosted items are demoted in the REPORT only: their
-      Canvas write really happened, so state is kept. A created item is also
-      annotated under "provisional" so commit gating preserves its new Canvas
-      identity for a safe retry. The next clean run re-renders and deploys the
-      hosted pages.
+      Canvas write really happened, so state is kept. Both are annotated under
+      "provisional" so commit gating preserves their identities and current
+      fingerprints. The next clean run re-renders and deploys the hosted pages.
     - items with no hosted output stay published untouched.
     """
     demoted: dict[str, list[str]] = {}
@@ -113,7 +112,7 @@ def demote_hosted_publishes(
                         "error": HOSTED_DEPLOY_FAILED_CANVAS,
                     }
                 )
-                if action == "created":
+                if action in {"created", "updated"}:
                     result.setdefault("provisional", []).append(
                         {
                             "file": item.get("file"),

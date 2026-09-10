@@ -296,6 +296,9 @@ def _canvas_item_url(manifest: dict, frontmatter: dict, entry: dict) -> str | No
 
 def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
     artifact_type = frontmatter["type"]
+    if frontmatter.get("delivery_mode") == "guided_assignment":
+        link = f'<p><a href="{html_lib.escape(canvas_url, quote=True)}" target="_blank" rel="noopener">Open the Canvas assignment</a></p>' if canvas_url else ""
+        return '<div class="submit"><h2>Submit to Canvas</h2><p>Paste your final response text into the Canvas assignment. A document link or a saved browser draft is not a submission.</p>' + link + '</div>'
     if is_ai_activity_delivery(frontmatter):
         guidance = (
             "Complete the interactive activity, copy or download the JSON response file, "
@@ -349,12 +352,20 @@ def render_artifact_document(
     rendered = _strip_leading_h1(markdown_body_to_html(body))
     rendered, has_mermaid = _render_mermaid_blocks(rendered)
     sections = _wrap_sections(rendered)
+    if frontmatter.get("delivery_mode") == "guided_assignment":
+        from canvas_sync.guided_assignment import render_guided_body
+        sections = render_guided_body(frontmatter, sections)
     title = html_lib.escape(frontmatter["title"])
     module = html_lib.escape(frontmatter["module"])
     course_key = html_lib.escape(str(hosted_info["hosted_path"]).split("/", 1)[0])
     artifact_type = html_lib.escape(_type_label(frontmatter["type"]))
     sprint = int(frontmatter["sprint"])
     goal = html_lib.escape(_learning_goal(frontmatter))
+    # Authored document builds already contain their instructional framing. Keep
+    # storage/version identifiers and generated generic goals out of that prose.
+    meta = f"{module} &middot; {artifact_type}" if frontmatter.get("source_provenance") else f"{course_key} &middot; Sprint {sprint} &middot; {module} &middot; {artifact_type}"
+    goal_block = "" if frontmatter.get("source_provenance") else f'<div class="goal"><h2>Learning goal</h2><p>{goal}</p></div>'
+    source_class = " source-derived" if frontmatter.get("source_provenance") else ""
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {})
     submit_guidance = _submit_guidance(frontmatter, canvas_url)
     back_href = f"../sprint-{sprint}.html?context=web"
@@ -387,6 +398,8 @@ def render_artifact_document(
       background: var(--bg);
     }}
     .activity {{ max-width: 760px; margin: 0 auto; }}
+    .source-derived table {{ width: 100%; border-collapse: collapse; }}
+    .source-derived th, .source-derived td {{ border: 1px solid #ccd5df; padding: 8px; vertical-align: top; overflow-wrap: anywhere; }}
     .meta {{
       font-size: 12px;
       color: var(--muted);
@@ -484,15 +497,12 @@ def render_artifact_document(
 {mermaid_script}\
 </head>
 <body>
-  <div class="activity">
+  <div class="activity{source_class}">
     <a class="back-link" href="{back_href}" data-keep-context>&larr; Back to Module</a>
-    <p class="meta">{course_key} &middot; Sprint {sprint} &middot; {module} &middot; {artifact_type}</p>
+    <p class="meta">{meta}</p>
     <h1>{title}</h1>
 
-    <div class="goal">
-      <h2>Learning goal</h2>
-      <p>{goal}</p>
-    </div>
+{('    ' + goal_block) if goal_block else ''}
 
     {sections}
 
@@ -585,6 +595,7 @@ def _render_ai_activity_wrapper_document(
     activity_href = f"../activities/{html_lib.escape(frontmatter['slug'], quote=True)}.html?context=web"
     back_href = f"../sprint-{sprint}.html?context=web"
     points_text = "Ungraded" if points is None else f"{points:g} points"
+    meta = f"{module} &middot; {artifact_type}" if frontmatter.get("source_provenance") else f"{course_key} &middot; Sprint {sprint} &middot; {module} &middot; {artifact_type}"
     mermaid_styles = _mermaid_styles() if has_mermaid else ""
     mermaid_script = _mermaid_script() if has_mermaid else ""
 
@@ -661,7 +672,7 @@ def _render_ai_activity_wrapper_document(
 <body>
   <div class="activity">
     <a class="back-link" href="{back_href}">&larr; Back to Module</a>
-    <p class="meta">{course_key} &middot; Sprint {sprint} &middot; {module} &middot; {artifact_type} &middot; {html_lib.escape(points_text)}</p>
+    <p class="meta">{meta} &middot; {html_lib.escape(points_text)}</p>
     <h1>{title}</h1>
 
     {sections}
@@ -1190,6 +1201,10 @@ def _render_homepage_item(
     state_entry = _state_entry_for_artifact(md_path, manifest_path, frontmatter, state or manifest)
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry)
     canvas_attr = f' data-canvas-href="{html_lib.escape(canvas_url, quote=True)}"' if canvas_url else ""
+    # Source-built modules should stay in the current Canvas window. Embedded
+    # browsers may block a new tab even when the native destination is valid.
+    if canvas_url and frontmatter.get("source_provenance"):
+        canvas_attr += ' data-canvas-target="_top"'
     module_item_id = state_entry.get("canvas_module_item_id")
     progress_attrs = ""
     progress_html = ""
@@ -1417,6 +1432,9 @@ def _career_homepage_document(
       document.querySelectorAll('a[data-canvas-href]').forEach(function(a) {{
         if (ctx === 'canvas') {{
           a.href = a.getAttribute('data-canvas-href');
+          if (a.hasAttribute('data-canvas-target')) {{
+            a.target = a.getAttribute('data-canvas-target');
+          }}
         }} else {{
           try {{
             var u = new URL(a.getAttribute('href'), location.href);
@@ -1549,7 +1567,7 @@ def _render_career_sprint_index(
     document = _career_homepage_document(
         course_meta,
         module_html,
-        title_suffix=f"Sprint {sprint}",
+        title_suffix=str(module_config.get("title") or sprint_items[0][1]["module"]) if all(fm.get("source_provenance") for _, fm in sprint_items) else f"Sprint {sprint}",
         back_href="home.html?context=web",
         progress_endpoint=hosted_config_from_manifest(manifest).progress_endpoint,
     )

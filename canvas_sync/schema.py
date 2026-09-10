@@ -41,13 +41,16 @@ def load_schema(name: str) -> dict:
 def parse_frontmatter(md_path: Path) -> tuple[dict, str]:
     """Split an MD file into (frontmatter_dict, body_str)."""
     content = md_path.read_text(encoding="utf-8")
-    if not content.startswith("---"):
+    lines = content.splitlines(keepends=True)
+    if not lines or lines[0].strip() != "---":
         raise ValueError(f"{md_path}: missing YAML frontmatter")
-    parts = content.split("---", 2)
-    if len(parts) < 3:
+    closing = next((i for i, line in enumerate(lines[1:], 1) if line.strip() == "---"), None)
+    if closing is None:
         raise ValueError(f"{md_path}: malformed frontmatter (no closing ---)")
-    frontmatter = yaml.safe_load(parts[1]) or {}
-    body = parts[2].lstrip("\n")
+    frontmatter = yaml.safe_load("".join(lines[1:closing]))
+    if not isinstance(frontmatter, dict):
+        raise ValueError(f"{md_path}: frontmatter must be a YAML mapping")
+    body = "".join(lines[closing + 1:]).lstrip("\n")
     return frontmatter, body
 
 
@@ -65,6 +68,7 @@ def validate_artifact(md_path: Path) -> list[str]:
         errors.append(f"{md_path}: {e.message} (at {'/'.join(str(p) for p in e.path)})")
 
     errors.extend(validate_ai_activity_delivery(md_path, frontmatter))
+    errors.extend(validate_guided_assignment(md_path, frontmatter))
 
     # Soft checks that aren't easily expressed in JSON Schema
     if frontmatter.get("type") in ("assignment", "quiz", "discussion"):
@@ -80,10 +84,38 @@ def validate_artifact(md_path: Path) -> list[str]:
         if pattern in body.lower():
             errors.append(f"{md_path}: body contains forbidden pattern '{pattern}'")
 
-    # Em-dash check (Jeremy's stylistic preference enforced as hard rule)
-    if "\u2014" in body or "\u2014" in str(frontmatter.get("title", "")):
+    # Human-authored source punctuation is preserved only inside verified source segments.
+    from canvas_sync.source_build import validate_source_evidence
+    fidelity_errors, newly_authored = validate_source_evidence(md_path, frontmatter, body)
+    errors.extend(fidelity_errors)
+    if "\u2014" in newly_authored:
         errors.append(f"{md_path}: contains em-dash; use hyphen, colon, or sentence break")
 
+    return errors
+
+
+def validate_guided_assignment(label: object, payload: dict) -> list[str]:
+    errors = []
+    mode = payload.get("delivery_mode")
+    config = payload.get("guided_assignment")
+    if mode != "guided_assignment":
+        return [f"{label}: guided_assignment requires its delivery mode"] if config is not None else []
+    if payload.get("type") != "assignment" or payload.get("submission_type") != "text_entry":
+        errors.append(f"{label}: guided_assignment requires an assignment with text_entry submission")
+    if not isinstance(config, dict):
+        return errors + [f"{label}: guided_assignment requires configuration"]
+    if payload.get("questions") or payload.get("ai_activity"):
+        errors.append(f"{label}: guided_assignment cannot include native quiz or ai_activity questions")
+    ids = []
+    for task in config.get("tasks", []) if isinstance(config.get("tasks"), list) else []:
+        if not isinstance(task, dict):
+            continue  # JSON Schema reports malformed task shapes.
+        ids.append(task.get("id"))
+        options, index = task.get("options"), task.get("correct_index")
+        if task.get("kind") == "choice" and isinstance(options, list) and isinstance(index, int) and index >= len(options):
+            errors.append(f"{label}: choice correct_index is outside options")
+    if len(set(str(i) for i in ids)) != len(ids):
+        errors.append(f"{label}: guided task IDs must be unique")
     return errors
 
 

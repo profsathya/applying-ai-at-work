@@ -17,7 +17,7 @@ This repo builds the "Applying AI at Work" certificate for CTI and De Anza. It h
 
 ## Style Conventions
 
-- No em dashes. Use hyphens, colons, or sentence breaks.
+- No em dashes in newly authored prose. Use hyphens, colons, or sentence breaks. Preserve human-authored punctuation in document-sourced passages verified by `source_provenance`; see `docs/DOCUMENT_INTAKE.md`.
 - Use lowercase kebab-case slugs.
 - Write for working professionals, not undergraduates. Never address participants as "students."
 - Keep CTI framework names internal unless a design doc explicitly says otherwise. Exercise the behavior without naming the framework.
@@ -108,6 +108,8 @@ Keep entries concise. One line per learning. Reference specific files or PRs whe
 
 ## Learnings
 
+- 2026-09-08: Course 180 live smoke test confirmed Canvas can ignore `published` on module creation; `resolve_or_create_module` now publishes explicitly when the create response remains unpublished. Native quizzes are created as drafts, populated, then published with `notify_of_update: false`. See `docs/audits/2026-09-08-live-canvas-smoke-test.md`.
+
 - On Windows, run `.venv\Scripts\python.exe canvas_sync\schema_windows.py --all` (or the same command with `--artifact`, `--manifest`, `--state`, `--prd`, or `--homepage`) instead of `canvas_sync/schema.py`; the Windows entry point delegates to the canonical validator while safely handling its Unix-only `fcntl` import.
 - Canvas pushes are real side effects. Validate locally first, then call `canvas_sync/push.py` only after explicit human approval for the target artifact set.
 - Production Canvas publishes should run through `.github/workflows/publish-canvas.yml`, which writes mutable Canvas IDs and hashes to the protected `canvas-state` branch rather than to `main`.
@@ -121,3 +123,5 @@ Keep entries concise. One line per learning. Reference specific files or PRs whe
 - Canvas's `due_at` requires full ISO 8601 with timezone (e.g. `2026-10-15T23:59:00Z`). A bare local datetime like `2026-10-15T23:59` will 400. Course1 assignments to date omit `due` entirely; canvas-author should not invent a `due` field unless the PRD item specifies one. (Synthesize What You Heard id=17 and AI-Fit Analysis id=21 both failed on first push for this reason.)
 - 2026-04-22: Added sprint/module builder workflow and `/build-sprint`. It fills the gap between `/add-artifact` (one artifact) and a full course build: given a context doc + target course + sprint number, the agent reads every built sprint in the target course, infers the scaffolding (artifact count, type mix, rubric pattern, voice), and produces 4-6 coherent MD files. High-reasoning authoring is load-bearing here: authoring a coherent 6-artifact set with aligned rubrics and pacing is design work, not mechanical composition. Smoke tests confirmed three behaviors: matches course1's 1/1/3/1 skeleton when context doc is silent; falls back to course1 inference with an explicit caveat when course2/sprints/ is empty; follows the context doc over the inferred pattern when they disagree (4-artifact, no-peer-discussion shape).
 - 2026-04-22: Orientation Check (canvas_id 2912) showed "This question was imported from an external source. It was a 'true_false' question, which is not supported in this quiz tool." banners on every question when viewed in New Quizzes. Three compounding bugs in `canvas_sync/push.py`: (1) `question_type` was sent as our short names (`multiple_choice`, `true_false`, `short_answer`), but Canvas Classic Quiz API requires the `_question` suffix (`multiple_choice_question`, etc.). Unrecognized values got stored and NQ's display layer flagged them as unsupported. (2) Answers payload was only built for `multiple_choice`; `true_false` never got its answer structure. (3) On update, questions were appended rather than replaced, so earlier broken pushes accumulated. Fixed by adding `list_quiz_questions` + `delete_quiz_question` to `canvas_client.py`, and updating `push_quiz` to wipe existing questions on update and map all four schema types to full Canvas names. If the error reappears, check whether the institution is using New Quizzes as the backend (not just display) - that would require `/api/quiz/v1/...` endpoints, not the Classic API we use.
+- 2026-09-08: Document builds use `source_intake.py` and `source_build.py`; keep each artifact's `.sources.json` beside its MD so normal validation can check source fidelity. Read tracked DOCX text at run level, including inserted/deleted word fragments.
+- 2026-09-08: Common Curriculum's Test and Commit pattern is `guided_assignment` with Canvas `text_entry`, browser-local responses, and copying. It is distinct from native quizzes and `ai_activity` JSON uploads; formative feedback does not submit or grade work.

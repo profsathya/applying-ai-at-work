@@ -37,6 +37,8 @@ canvas-state/
 # Generated Canvas inspection ledgers
 course*/reports/*.json
 course*/reports/*.md
+course*/reports/smoke-*/
+course*/reports/working-draft-*/
 
 # Manifests that are marked private (optional per-project)
 # courses/*/manifests/*.local.json
@@ -44,3 +46,6 @@ course*/reports/*.md
 # Runtime locks for manifest writes
 course*/manifests/*.lock
 course*/manifests/*.json.lock
+
+# Private document snapshots, editorial packets, and local previews
+.source-intake/
