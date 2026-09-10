@@ -105,10 +105,12 @@ should match that mechanism.** Item count varies with the learning; the skeleton
 
 ## What to do next
 
-1. **Leslie finishes reviewing v4** from Check 1 onward, plus the rewritten three-pass
-   example in OYP 1 and OYP 2 and 3, which she has not commented on yet. Rulings riding
-   along: the no-AI note in OYP 1, the "different path" line in OYP 3, the concept check
-   placement, and the Check 2 overlap flag.
+1. **Leslie rules on the four cuts** proposed 11 September (decisions log, "Is half one
+   doing too much?") and on Part 4, keep or cut, where her edit and Claude's assessment
+   disagree. Then Claude applies the cuts in one round. Still unreviewed by her: Check 2,
+   Check 3, "Reading the results," Part 5 beyond "Pick one," OYP 2, OYP 3, and the
+   rewritten three-pass example. Older rulings still riding along: the no-AI note in OYP 1,
+   the "different path" line in OYP 3, the concept check placement, the Check 2 overlap.
 2. **Cut v4 into `sprint-10/` artifacts** per the cut plan at the foot of v4. Mechanical
    once the review lands. Strip the [NOTE] and [OPEN] blocks; keep the participant text.
 3. **Re-verify the concept check** against the v4 pages, both content coverage and answer
