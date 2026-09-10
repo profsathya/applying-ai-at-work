@@ -114,8 +114,9 @@ should match that mechanism.** Item count varies with the learning; the skeleton
    once the review lands. Strip the [NOTE] and [OPEN] blocks; keep the participant text.
 3. **Re-verify the concept check** against the v4 pages, both content coverage and answer
    integrity, then rebuild the quiz artifact.
-4. **Build the test edition for Melisa and Clare**: the cut artifacts, plus the ask. Do it,
-   do not critique it, time yourself, note where you stall.
+4. **Test edition sent 11 September** (six docx files, one per Canvas item, from v4.2).
+   Next: collect Melisa's and Clare's timings, stalls, and outputs, and read them against
+   the draft before the next revision round.
 5. **Apply the small Introduction edits** listed in v4's Open items.
 6. **Draft half two.** Must open with the first guess and the assumptions.
 7. **Rebuild Sprint 2.** Urgent by week three. Must receive the riskiest assumption, carry
