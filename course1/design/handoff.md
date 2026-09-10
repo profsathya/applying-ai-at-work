@@ -128,6 +128,12 @@ Leslie thinks conversationally before building, wants pushback, works one thing 
 and wants an outline or a diagram before prose when deciding structure. She reviews in Word
 or Google Docs and returns a `.docx`.
 
+**Merging (Leslie's ruling, 10 September).** Claude merges design-doc PRs itself as soon as
+the validate check passes: anything under `course1/design/`, the decisions log, this file.
+The review of that work happens in the document, not in the PR. Claude stops and asks before
+merging anything under `course1/sprints/`, because those merges run the Canvas publish and
+put an unpublished module in the course shell.
+
 **Reading her reviews.** Export must be `.docx`, not markdown; Google's markdown export
 drops comments and flattens suggestions. Walk the XML tree rather than using regex, because
 Word nests insertions inside deletions. `word/comments.xml` holds comment threads with
