@@ -1490,3 +1490,44 @@ instruction, all untouched by her pass and all still on the cut list.
 **Provenance.** Human (Leslie): the too-much worry; every edit above. AI (Claude): the
 arc-versus-depth diagnosis, the time estimate, the four cuts and their destinations, the
 check block, the Part 4 flag.
+
+## 11 September, later: the four rulings, applied as v4.2
+
+**Leslie's rulings.** (1) The AI exchange moves to half two, with "we can always add it
+back." (2) Cut the check depth. (3) Part 2 down to four lines. (4) Drop "what would make
+you switch."
+
+**Applied.**
+
+- **Part 4 is gone from the graded item**, which now has four parts. Its text, with
+  Leslie's 11 September opening, sits in a "Parked for half two" section at the foot of the
+  draft. The submission list loses the AI-exchange bullet. The Dojo and API key decision
+  still governs it wherever it lands.
+- **Check 3** keeps question, why it matters, the test, and the pass/fail pair, and closes
+  with one sentence on what failing tells you. The three failure shapes are parked, with
+  Sprint 3 as the suggested destination.
+- **Check 4** keeps Leslie's edited opening and why-it-matters, the three tests, the
+  household version, and the too-small and too-big descriptions. Cut: the paragraph
+  mapping the three tests to later sprints (parked, suggested destination the spine),
+  the diagnosis table and the re-run-all-four rule (parked, suggested destination half two
+  or Sprint 2). In their place, one paragraph: too small, ask what it is an instance of;
+  too big, pick one instance; note the change; size gets looked at again in the frame.
+- **Part 2** is title, right now, it could, the gap costs. The worked example loses its
+  last two lines and the (?) moves to the "it could" line. The guess line now names "it
+  could" and "costs."
+- **Part 4 (Commit)** loses the switch line from the worked example, the bullet, the
+  "notice what that does" clause, and the submission list entry.
+
+**Not cut.** Check 1's pass/fail table and blockquote pair, since Leslie restored the table
+herself on 9 September and edited the section on 11 September. Check 2, since she has not
+read it and it carries the overlap flag. "Reading the results" (murky, wrong size, passes
+cleanly), which is short and is the reading guide for the check block.
+
+**Time estimate after the cuts**, same rough method as the morning's: the graded item
+drops from about three hours to about two, and half one from five to six hours to about
+four to four and a half. Still over the Introduction's budget for the whole sprint once
+half two is added. The Introduction's four-to-six-hour line is now on the owed-edits list
+as a number to revisit, not a target to hit.
+
+**Provenance.** Human (Leslie): all four rulings. AI (Claude): the trims, the parking
+section and its suggested destinations, the replacement sentences.
