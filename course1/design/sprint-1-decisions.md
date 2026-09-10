@@ -1426,3 +1426,67 @@ not here. Logged, not restored.
 titled-list shape and the quantified cost example. AI (Claude): the passes 2 and 3 text
 and the between-pass paragraphs; the general rule for moving between passes; the C3
 tightening; the Check 2 escalation idea, offered not applied.
+
+---
+
+# Session of 11 September 2026
+
+## Is half one doing too much? Leslie's worry, Claude's read
+
+**Leslie's concern.** That practically the whole course is covered in the first half of
+Sprint 1.
+
+**Claude's read, accepted as the frame for the next round.** The arc holds: half one does
+Sprint 1's work and none of Sprints 2 through 5's. What it does is teach every later
+sprint's criterion at verification depth when the spine sets the bar at honest looking.
+Each check runs three to six hundred words with a failure taxonomy and a recovery move.
+The time estimate for half one as written, five to six hours, already exceeds the
+Introduction's four-to-six-hour budget for the whole sprint. Proposed cuts, each with a
+destination:
+
+1. **Part 4, the AI exchange.** Its job is Sprint 2's capacity and Sprint 3's
+   confirmed/inferred; Sprint 1's AI capacity is widen, which half two's Dojo Lab does.
+2. **Two of Part 2's six lines.** "This has been going on" is Check 3 in other words;
+   "It has not been fixed because" is a cause hypothesis, Sprint 2's work. Title, right
+   now, it could, cost are the course's own definition of a problem.
+3. **Each check cut to the stated bar**: question, one pass, one fail, what failing tells
+   you. Scale tables, failure shapes, the diagnosis table, and the re-run instruction move
+   to the sprints that test those checks.
+4. **"What would make you switch" in Part 5.** The spine puts the switching message in
+   Sprints 2 and 3 where it is actionable.
+
+Leave alone: the three OYPs, the four check names, commitment with reasons and why-you.
+
+**Not yet ruled on.** Leslie had already made a third review pass before this exchange
+and asked Claude to sort her edits against it rather than redo them herself.
+
+## Third review round: twelve tracked changes and one comment, sorted against the cuts
+
+Eleven of twelve are compatible with the cuts, and most trim in the same direction. All
+eleven applied individually as written: the "What the checks are for" rewrite in her
+words, with the "hour now" sentence moved up and the "course, arriving early" residue
+gone; "one thing to keep in mind" for "one warning"; Check 1 losing the "cannot be
+unreachable" hand-off and gaining "a result to make note of"; Check 4's "doesn't
+necessarily kill anything, but it makes you think about how the scope may need to change"
+and "the trickiest check"; "Pick one" in her softer register, dropping "disposable on
+purpose."
+
+**C0, "Run all four on each candidate": where, and what does it look like?** Answered
+with a per-candidate block, drafted by Claude: title, four checks each with an answer and
+a verdict, Check 4's verdict being right size / too small, go up / too big, go down. Same
+document as Parts 2 and 5, so one submission. Unreviewed.
+
+**The one conflict: Part 4.** Leslie's edit keeps the AI exchange and reframes its opening
+in Welcome V2's Human Value terms ("you have brought a lot of your human value and insights
+to the first stage"). Claude's assessment the same morning named it the clearest cut.
+Her wording is applied and an [OPEN] block at Part 4 records both positions. Her call.
+
+**Consequence worth noting.** Her Check 4 edit ("doesn't necessarily kill anything") and
+the C0 template's verdict line ("too small, go up / too big, go down") already move the
+check toward a two-line calibration, which is what cut 3 asks for. The remaining depth in
+Checks 1 through 4 is the diagnosis table, the three failure shapes, and the re-run
+instruction, all untouched by her pass and all still on the cut list.
+
+**Provenance.** Human (Leslie): the too-much worry; every edit above. AI (Claude): the
+arc-versus-depth diagnosis, the time estimate, the four cuts and their destinations, the
+check block, the Part 4 flag.

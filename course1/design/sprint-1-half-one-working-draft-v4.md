@@ -361,15 +361,13 @@ Do not go back and make those lines sound more confident. Marked uncertainty is 
 
 #### What the checks are for
 
-You now have three to five candidate problems. In order to help you narrow down which ones might be best for committing nine weeks to in this course, you are going to run each through four checks. It is perfectly okay if some or most of your list doesn't survive the checks. That is the intended outcome, not a sign you gathered badly.
+You now have three to five candidate problems. In order to help you narrow down which ones might be best for committing nine weeks to, you are going to run each through four checks. It is perfectly okay if some or most of your list doesn't survive the checks. That is the point: to eliminate ones that aren't likely to be workable in this course. You are going to take an hour now to evaluate the workability of your problems, instead of finding out in week five that the problem you selected isn't actually a problem at all.
 
-Here is what the checks actually are. Each one is borrowed from a demand this course will make on your problem later. Check 1 asks you to identify specific people impacted by your problem, because in Sprint 3 you will talk to one of them. Check 2 asks how it is handled today, because your frame has to describe that next week. Check 3 asks whether it is a live problem today, because everything you do from here works on the current state of a problem, and a problem that is not running has no current state. Check 4 asks whether it is the right size, because the next nine weeks need somewhere to go.
-
-So the checks are not a quiz about your problem. They are you taking an hour now to evaluate the workability of your problems, instead of finding out in week five that the problem you selected isn't actually a problem at all.
+Each check is related to a demand this course will make on your problem later. Check 1 asks you to identify specific people impacted by your problem, because in Sprint 3 you will talk to one of them. Check 2 asks how it is handled today, because your frame has to describe that in detail next week. Check 3 asks whether it is a live problem today, because everything you do from here works on the current state of a problem, and a problem that is not running has no current state. Check 4 asks whether it is the right size for the next nine weeks.
 
 Two things about how to run them. First, the bar is honest looking, not verification. You are not proving anything. You are answering each question as truthfully as you can from what you already know, and noticing where you cannot answer at all. Second, where you cannot answer, write that down instead of guessing. "I do not know who else this costs" is a result, and a more useful one than an invented answer, because it tells you what you would need to find out.
 
-One warning before you start. If a check never rules anything out, it is not doing anything. If your whole list passes all four checks cleanly, do not congratulate yourself yet. Look again, because you are probably answering from assumption rather than knowledge.
+One thing to keep in mind before you start. If a check never rules anything out, it is not doing anything. If your whole list passes all four checks cleanly, you may want to run through them again. There is a good chance you are answering from assumption rather than knowledge.
 
 #### Check 1. Are the people real and specific?
 
@@ -395,9 +393,9 @@ Two candidate problems, one passing and one failing:
 
 The first names two groups, counts them, and knows where they sit. The second names everyone, which is the same as naming no one. If someone asked "which meetings, whose focus," there is no answer yet.
 
-One thing this check does not require: the person paying does not have to be someone else. "Me, and here is what it costs me" is a specific answer. A problem can be entirely yours: a job search, a skill you need, a workload only you carry. What a problem cannot be is unreachable, and that is Check 4's business, not this one's.
+One thing this check does not require: the person paying does not have to be someone else. "Me, and here is what it costs me" is a specific answer. A problem can be entirely yours: a job search, a skill you need, a workload only you carry.
 
-If you cannot get more specific than a category, that is a result, and it usually means the problem is bigger than you can see from where you sit. The fix is Check 4's move: come down to the piece of it you can see people in.
+If you cannot get more specific than a category, that is a result to make note of. It might be that the problem is still too general or is bigger than you can see from where you sit. If that is the case, you will look at it more closely in Check 4.
 
 #### Check 2. Is something already handling it, and falling short?
 
@@ -435,11 +433,11 @@ A failure here comes in three shapes, and each tells you something different. A 
 
 #### Check 4. Is it the right size?
 
-This check works differently from the other three, and you should know that going in. The first three can kill a candidate problem. This one never kills anything. It tells you to move.
+This check works differently from the other three, and you should know that going in. The first three can kill a candidate problem. This one doesn't necessarily kill anything, but it makes you think about how the scope may need to change.
 
 The question: does this problem give the next nine weeks somewhere to go?
 
-Here is why it matters. Wrong size is the failure that shows up late and quietly. A too-small problem sails through the early weeks and then stalls, because you already know everything about it and there is nothing left to find out. A too-big problem stalls immediately but vaguely, because you cannot even describe how it works now, so nothing you write feels solid. Neither failure announces itself in week one. This check is how you catch it in week one anyway.
+Here is why it matters. Wrong size is the failure that shows up late and quietly. A too-small problem sails through the early weeks and then stalls, because you already know everything about it and there is nothing left to find out. A too-big problem stalls immediately but vaguely, because you cannot even describe how it works now, so nothing you write feels solid. This is the trickiest check, because it's hard to project the depth of a problem before you get into it. It is still worth a consideration now, before you get too far in.
 
 The problem is the right size when all three of these are true:
 
@@ -470,7 +468,19 @@ After you move a candidate up or down, run all four checks again on the moved ve
 
 #### Run all four on each candidate
 
-Go through your list one at a time. A few sentences per check. Rough is fine.
+Go through your list one at a time. For each candidate problem, copy this block and fill it in. A sentence or two per check is enough, and rough is fine.
+
+> **Candidate:** the title from Part 2
+>
+> **Check 1, real and specific people.** Your answer. **Verdict:** passes / does not pass / cannot answer yet
+>
+> **Check 2, handled today and falling short.** Your answer. **Verdict:** passes / does not pass / cannot answer yet
+>
+> **Check 3, live now.** Your answer. **Verdict:** passes / does not pass / cannot answer yet
+>
+> **Check 4, right size.** Your answer. **Verdict:** right size / too small, go up / too big, go down
+
+> **[NOTE]** Leslie's comment, 11 September: where are they doing this and what does it look like? This block is the answer, drafted by Claude. It is the same document as Parts 2 and 5, so the graded item stays one submission.
 
 Where you cannot answer a check, write that instead of guessing. "I do not know who else this costs" is a result, and a more useful one than an invented answer.
 
@@ -488,7 +498,9 @@ Not every failure means dropping something.
 
 ### Part 4. Take your checks to AI
 
-Now bring AI in, and notice what you are using it for. Not to find problems, and not to run the checks. You have already done both. You are using it to find out where you answered from assumption instead of knowledge, which is difficult to see in your own writing.
+> **[OPEN]** Keep or cut, Leslie's call. Her 11 September edit below keeps this part and frames it in Welcome V2's Human Value terms. Claude's assessment the same morning: this is the clearest candidate to cut from half one, because its job (asserting versus knowing) is Sprint 2's capacity and half two's Dojo Lab already gives Sprint 1 its AI touch, and it is the part blocked on the Dojo decision. Both positions stand until she rules.
+
+Now let's bring AI in. You have brought a lot of your human value and insights to the first stage of finding the problems and running the checks. Now, you are going to work with AI to explore where you might have answered from assumption instead of knowledge, which is difficult to see in your own writing.
 
 Give it your two or three strongest candidate problems and your check answers, and ask something like:
 
@@ -506,9 +518,9 @@ Then read what comes back critically. Some of it will be generic and worth ignor
 
 #### Pick one
 
-This is the turn of the sprint. Everything up to here was disposable on purpose. From this point on, one problem gets the rest of your attention for nine weeks.
+This is the turn of the sprint. You've done a lot of thinking to get to this point. Now it's time to select your problem.
 
-Pick the candidate problem that came through the checks in the best shape. Not the one you like most, and not the one that would be most impressive if you solved it.
+Pick the candidate problem that came through the checks in the best shape, the one that emerged as a solid problem. It won't necessarily be the one you like most, or the one that appears the most impressive. It's about it being a good problem to work on.
 
 #### Say why it, and why not the others
 
