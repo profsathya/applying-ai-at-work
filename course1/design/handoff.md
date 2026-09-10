@@ -1,13 +1,13 @@
 ---
 purpose: Everything needed to continue the Sprint 1 V2 rebuild in a new conversation
-last_updated: 2026-09-09
+last_updated: 2026-09-10
 read_first: true
 ---
 
 # Handoff
 
-New chat? Read this, then `S-problem-spine.md`, then `S-DECISIONS.md`. Start at the session
-of 9 September in the decisions log; it supersedes anything above it that conflicts.
+New chat? Read this, then `problem-spine.md`, then `sprint-1-decisions.md`. Start at the session
+of 10 September in the decisions log; it supersedes anything above it that conflicts.
 
 ---
 
@@ -34,7 +34,8 @@ with reviewers as `.docx`; the repo is the record.
 ```
 course1/design/problem-spine.md                    course-level design
 course1/design/sprint-1-decisions.md               every judgment call
-course1/design/sprint-1-half-one-working-draft-v3.md   sections A-F, the whole of half one
+course1/design/sprint-1-half-one-working-draft-v4.md   half one, restructured 10 Sept; the live draft
+course1/design/sprint-1-half-one-working-draft-v3.md   superseded by v4; kept for the diff
 course1/design/handoff.md                          this file
 course1/sprints/sprint-10/introduction-find-the-problem-worth-solving-v2.md
                                                    02 Introduction, five owed edits applied
@@ -61,15 +62,15 @@ on, which is what makes the join real.
 
 ## Current state
 
-| Section | What it is | State |
+| Section of v4 | What it is | State |
 |---|---|---|
-| 02 Introduction | Separate file | Solid. Two edits owed, see below |
-| A | Start with what bugs you | Drafted, Leslie reviewed |
-| B | Getting underneath | Drafted, Leslie reviewed |
-| C | Two other places to look | Drafted, Leslie reviewed |
-| D | Build your list out | Rebuilt 9 Sept from Leslie's review: D1 compressed, promotion sentence in D3, assumptions link in D4 |
-| E | Find out which survive | Substantially new 9 Sept: E1 teaches what the checks are for, Checks 1-4 rebuilt to the question / why / how-to-run / pass-fail / what-failing-tells-you pattern. Household test restored into Check 4. Needs Leslie's review |
-| F | Commit | Updated 9 Sept: why-you line in F2, bored-survivor exit in F4. Needs Leslie's review |
+| 02 Introduction | Separate artifact in sprint-10 | Solid. Small edits owed once v4 settles, listed in v4's Open items |
+| OYP 1 | Start your list and get underneath it | Rebuilt 10 Sept from A and B plus a new activity. Leslie's A-D comments applied |
+| OYP 2 | Things you stopped noticing | Rebuilt 10 Sept from C1 plus a new activity |
+| OYP 3 | Things somebody handed you | Rebuilt 10 Sept from C2, C3, and B5 plus a new activity |
+| Concept check | Self-check, 5 points | Placement defaulted after OYP 3; questions need re-verification against v4 |
+| Graded item, Parts 1-2 | Choose rows, write as gaps | New selection step plus D3 and D4 folded in |
+| Graded item, Parts 3-5 | Checks, AI exchange, commit | v3's E and F, **unreviewed**. Leslie reads them here |
 | Half two | Everything | **Not started** |
 | 01 module header | Summarizes the rest | Written last, by design |
 
@@ -80,16 +81,21 @@ a name that stopped existing when section A was renamed. And "you own the goal, 
 standards, and the final judgment calls" gets rewritten toward Welcome V2's Human Value
 term, dropping "standards" (Leslie: never understood what standards meant).
 
-## Graded outputs: six items, roughly 100 points
+## Week 1 on the own-your-progress rhythm, roughly 100 points across the sprint
 
-| Item | Points | Half |
-|---|---|---|
-| Concept Check | 5 | One |
-| Candidate List (section D) | 15 | One |
-| Test and Commit (sections E and F) | 20 | One |
-| Your First Frame | 15 | Two |
-| Goal Plan and Problem Frame | 35 | Two |
-| Reflection | 10 | Two |
+| Item | Kind | Points | Week |
+|---|---|---|---|
+| Start your list and get underneath it | Own your progress | 0 | One |
+| Things you stopped noticing | Own your progress | 0 | One |
+| Things somebody handed you | Own your progress | 0 | One |
+| Concept check | Self-check | 5 | One |
+| Test and commit | Graded item | 35 | One |
+| Your First Frame | Graded item | 15 | Two |
+| Goal Plan and Problem Frame | Graded item | 35 | Two |
+| Reflection | Graded item | 10 | Two |
+
+Week 1 matches Sathya's rhythm exactly. Week 2 is the 4 September lineup and still carries
+three graded items; whether that changes is the deferred course-level call.
 
 House style from the repo: Sprint 3 V2 runs five items, Sprint 4 V3 runs seven, both near 100
 points, both badge the concept check as a self-check, both run reflections as
@@ -98,22 +104,21 @@ should match that mechanism.** Item count varies with the learning; the skeleton
 
 ## What to do next
 
-1. **Leslie reviews v3's D through F**, especially the new E. Two rulings ride along: the
-   no-AI instruction for D (her review comment questions it; v3 keeps the narrow version
-   pending her call) and the para 133 wording in C2.
-2. **Build the test edition for Melisa and Clare** once E survives review: v3 with markers
-   and scaffolding stripped, plus the ask. Framing per the 9 Sept ruling: do it, do not
-   critique it, time yourself, note where you stall. This supersedes "send them the arc."
-3. **The activities pass**: build the Candidate Log (decided 9 Sept, unbuilt), one
-   collecting document started in A with D5 and F5 as snapshots, template visibly asking
-   for roughness. Then the page and submission cuts; strongest break after D5.
-4. **Apply the five edits to 02.**
-5. **Draft half two.** Must open with the first guess and the assumptions (moved there
-   deliberately; 02's Carry Forward points at them).
-6. **Rebuild Sprint 2.** Urgent by week three. Must receive the riskiest assumption, carry
-   check 2's widening (the literature-review layer, per the frameability ruling), and gain
-   its own think-first artifact.
-7. Done 9 September: spine, decisions, handoff, and working draft in `course1/design/`; the Introduction in `course1/sprints/sprint-10/`.
+1. **Leslie reviews v4**, paying extra attention to Parts 3 through 5 of the graded item
+   (old E and F). Three rulings ride along: the no-AI note in OYP 1, the "different path"
+   line in OYP 3, and the concept check placement.
+2. **Cut v4 into `sprint-10/` artifacts** per the cut plan at the foot of v4. Mechanical
+   once the review lands. Strip the [NOTE] and [OPEN] blocks; keep the participant text.
+3. **Re-verify the concept check** against the v4 pages, both content coverage and answer
+   integrity, then rebuild the quiz artifact.
+4. **Build the test edition for Melisa and Clare**: the cut artifacts, plus the ask. Do it,
+   do not critique it, time yourself, note where you stall.
+5. **Apply the small Introduction edits** listed in v4's Open items.
+6. **Draft half two.** Must open with the first guess and the assumptions.
+7. **Rebuild Sprint 2.** Urgent by week three. Must receive the riskiest assumption, carry
+   check 2's widening, and gain its own think-first artifact.
+8. **Log the course-level call** on whether other sprints adopt the OYP rhythm, when it is
+   made. Also a maintainer task: the ungraded grade group in the course1 manifest.
 
 ## How we work
 
@@ -165,9 +170,8 @@ problem problems" in eleven places.
 **Editing the decisions log with `str_replace` can eat a header.** Append instead, and read
 the file back rather than trusting the tool's success message.
 
-**The concept check gates whatever it draws on.** The six-row table it drew on is gone. As
-of 9 Sept the D-to-E hinge placement has something real to gate: E1's what-the-checks-are-for
-teaching. Placement still open.
+**The concept check gates whatever it draws on.** Its six questions were verified against v3
+pages that no longer exist in that shape. Re-verify against v4 before rebuilding the quiz.
 
 ## Repo facts
 
@@ -185,9 +189,9 @@ teaching. Placement still open.
 
 ## Open questions inside the draft
 
-Listed at the foot of `S-half-one-working-draft-v3.md`. The four needing Leslie: the
-other-people nudge in A1, the declined-and-flagged "requires a different solution" line in
-C2, the no-AI rule for section D, and her review of the new E section itself.
+Listed at the foot of `sprint-1-half-one-working-draft-v4.md`. The three needing Leslie: the
+no-AI note in OYP 1, the declined-and-flagged "requires a different solution" line in OYP 3,
+and her review of Parts 3 through 5 of the graded item. The A1 nudge is settled: kept, reworded.
 
 ## The test fixture
 

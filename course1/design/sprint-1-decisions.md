@@ -1233,3 +1233,113 @@ and diffing against the plain conversion: identical content. New material matche
 style: bold lead-ins on the too-small and too-big paragraphs and the F2 bullets, [OPEN]
 markers as bold blockquotes, worked examples as blockquotes. A trap entry went into the
 handoff so the next conversion does not repeat either loss.
+
+---
+
+# Session of 10 September 2026: v4, the own-your-progress restructure
+
+Leslie's first review of v3 covered A through D, nine comments and two sets of tracked
+changes, returned as a `.docx` after a Markdown export dropped the comments. E and F were
+not reviewed and are carried into v4 unchanged, to be read there in place.
+
+## Week 1 runs on Sathya's rhythm
+
+**Leslie's ruling.** Week 1 of Sprint 1 adopts the Fall 2026 own-your-progress mechanic:
+one to three ungraded activities and at most one graded item per week. Own-your-progress
+items are Canvas assignments at zero points with a must-submit completion mark, in an
+ungraded grade group. Encouraged, not required.
+
+Sprint 1 goes first. Whether Melisa's sprints and the grading document follow, or Sprint 1
+comes back into line with them, is a course-level call deferred on purpose.
+
+Context: Claude's first outline had four OYPs and two graded items in week 1, against his
+ceiling of three and one. Merging the first list with getting underneath it gave three OYPs.
+Folding the separate Candidate List submission into the graded item gave one graded item.
+That reverses the 4 September choice to grade the gathering step outright, which had been
+made to match Sprint 4 V3 rather than on pedagogy. Six graded items across the two weeks was
+already triple his rate before v4; v4 leaves week 2 as it was.
+
+## Each activity teaches a move and then runs it
+
+**Leslie's direction, from comments C1, C2, C4, C6.** The prose-then-one-big-submission
+shape is gone. Each OYP teaches one move and immediately has the learner run it on their
+own list, with guidance, guardrails, and the three-column table as the template. The stall
+prompts sit inside the activity. The table is the Candidate Log ruled on 9 September, now
+structural rather than a template to build later.
+
+**Depth rule (Claude, on Leslie's question).** No row leaves an activity with an empty
+middle column. OYP 1 runs the move on every item at least once and goes multiple passes
+on the one with the most to say; Leslie asked whether learners should get under more than
+one item, and the answer is yes, because one rep does not build the skill and items that
+respond differently teach the range. OYP 2 and 3 run the move on each new row as it is
+added. The table's three columns define the depth: enough to describe the current state
+and see the gap, not yet who specifically pays or why it is unfixed. The graded item adds
+that layer, which is exactly what Check 1 tests.
+
+**A selection step, new (Leslie's question).** v3 said "write three to five of them as
+gaps" and never said how to get there from a longer list. Part 1 of the graded item now
+does it: keep every row where the move worked, set aside the rest without deleting, take
+the five where the gap is clearest if there are more, go looking if fewer than three.
+Clearest, not most important: the four checks stay the only screening criteria, so "four
+checks" stays true. It sits on the judging side of the submission boundary so it benefits
+from the gap in time. F4's "go back to your list" now has a real list.
+
+## Comment dispositions
+
+- **C0, "Is 'I' anywhere else?"** No. The heading was the only first-person singular on
+  the page; body text says "we." Heading is now "What we did not ask for."
+- **C1, guidance and guardrails for the practice.** Built as "Your turn: build your table"
+  with three guardrails for the middle column and one line for the third.
+- **C2, where the stall prompts go.** Inside the activity, after the instruction, before
+  the no-AI note.
+- **C3, move B5 to C2.** Done. It sits in OYP 3 as "When the move gave nothing back,"
+  immediately before "The requests you hand yourself," and picks up any row the learner
+  marked in OYP 1.
+- **C4, C gets its own activities.** OYP 2 (watch for a day or two, add rows, run the move)
+  and OYP 3 (go up the chain, fan out, add rows, run the move). "Where you are now" makes
+  the three-source result explicit.
+- **C5, remove the time estimate.** Removed.
+- **C6, C7, C8, fold D3 through D5.** D3 is Part 2 of the graded item with D4 as guidance
+  inside it; D5's submission list merged into the graded item's "What to submit."
+- **D1 deleted (tracked change).** Leslie: it half-matches criteria already given. Agreed.
+- **A1 tracked changes** applied as written: "nudge" to "thing to consider," "thing" to
+  "item," design note deleted.
+
+## Calls made building v4 (Claude)
+
+- Concept check defaulted to after OYP 3, where the teaching ends. Its six questions need
+  re-verification against the v4 pages on both counts.
+- Points: graded item at 35, absorbing the 15 from the Candidate List. Total still 100.
+- The no-AI note kept in its narrow form inside OYP 1, marked open. Leslie's call.
+- The "different path" line in the fan-out paragraph still open. Leslie's call.
+- E and F carried verbatim except: the "Submission 2 of 2" line removed, cross-references
+  to old section letters reworded, the resolved Introduction note under Check 4, and F5's
+  list gaining the five-line candidate problems as its first item.
+
+## Process
+
+- **Review E and F in v4, not v3.** Check 1 reads off the "who is paying" line, and v4
+  changes when that line gets written. Reviewing E against v3's D would be reviewing against
+  a superseded input.
+- **One working document, then a mechanical cut.** v4 stays in `course1/design/` with `##`
+  headings as artifact boundaries, because one document reviews more easily than seven.
+  The cut into `sprint-10/` artifacts follows the review; the cut plan is at the foot of v4.
+- **Docx round trip, confirmed working.** Comments and tracked changes extracted by
+  walking the document tree; every change applied individually and audited. The Markdown
+  export Leslie tried first carried one flattened suggestion and no comments.
+
+## Provenance for this session
+
+Human (Leslie): the own-your-progress direction and every comment above; the ruling that
+week 1 adopts Sathya's rhythm and other sprints decide later; cutting D1; asking whether
+the OYPs build on each other, whether the process is the same in all three, and how far
+under the items go, which exposed the uneven depth in v3; asking whether learners should
+get under more than one item; asking where the longer list narrows to three to five, which
+exposed the missing selection step.
+
+AI (Claude): the comparison against Sathya's rhythm and the graded-item count as the real
+divergence; the depth rule; the selection step and its "clearest, not most important"
+criterion; the guardrails text; the placement of B5; the concept check default; the
+drafting.
+
+Still not validated with participants.
