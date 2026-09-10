@@ -356,3 +356,35 @@ modules:
             meta: "Page - examine people, current handling, current occurrence, and problem size"
           - slug: "test-and-commit"
             meta: "Guided assignment - record your checks, judgment of AI challenges, chosen problem, reasons, and runner-up, then copy your answers into Canvas; 20 points"
+
+  - sprint: 12
+    tag: "First half V2"
+    open: true
+    muted: false
+    learning_goals:
+      - "Use observations, work-arounds, and requests from your own work or life to uncover gaps worth investigating."
+      - "Describe three to five candidate problems from your working table, naming who pays the cost and marking what you do not yet know."
+      - "Compare candidates using four checks: real people, current handling, current occurrence, and a size that supports further inquiry."
+      - "Explain your choice of a problem with reasons and a runner-up, or identify where to look next if nothing survives."
+    prereq: "Start with your own observations; you do not need a chosen problem. Keep one table across the first-half activities and carry your choice into later framing. Work without AI in this half. The three own-your-progress activities are encouraged, carry zero points, and do not block later activities if skipped."
+    groups:
+      - label: "Introduction"
+        items:
+          - slug: "introduction-find-the-problem-worth-solving-v2"
+            meta: "Page - orient to candidate problems, the four checks, and the first-half sequence"
+      - label: "Build your table"
+        items:
+          - slug: "start-your-list-and-get-underneath-it-v2"
+            meta: "Guided assignment - build your three-column table from your own observations, then copy and submit in Canvas; 0 points, encouraged"
+          - slug: "things-you-stopped-noticing-v2"
+            meta: "Guided assignment - watch for work-arounds over a day or two, then copy and submit your updated table or report no new observations in Canvas; 0 points, encouraged"
+          - slug: "things-somebody-handed-you-v2"
+            meta: "Guided assignment - trace requests to goals and add possible problems to the same table, then copy and submit in Canvas; 0 points, encouraged"
+      - label: "Check and commit"
+        items:
+          - slug: "sprint-1-concept-check-v2"
+            meta: "Guided concept check - answer six questions, review explanations, then copy and submit final answers in Canvas; 5 completion points reviewed by your instructor, no automatic grading"
+            badge: "Self-check"
+            selfcheck: true
+          - slug: "test-and-commit-v2"
+            meta: "Guided assignment - select three to five candidate gaps, run four checks, and explain your choice with reasons and a runner-up or recovery plan; copy and submit once in Canvas, 35 points reviewed by your instructor"

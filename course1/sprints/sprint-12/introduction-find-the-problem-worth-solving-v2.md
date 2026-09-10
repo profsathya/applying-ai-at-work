@@ -3,13 +3,14 @@ type: page
 title: 'Introduction: Find the Problem Worth Solving'
 slug: introduction-find-the-problem-worth-solving-v2
 artifact_id: course1-sprints-sprint-1-reviewed-v2-introduction-find-the-problem-worth-solving-v2
-sprint: 10
+sprint: 12
 week: 1
 module: 'Sprint 1: Find the Problem Worth Solving (V2)'
 position: 2
 points: null
 submission_type: none
-publish: false
+publish: true
+source_provenance: introduction-find-the-problem-worth-solving-v2.sources.json
 ---
 
 # Introduction: Find the Problem Worth Solving
@@ -26,7 +27,7 @@ AI is your thinking partner for much of this work, but the context, the relation
 
 What you will do:
 
-1. **Gather possible problems**, which we'll call your candidate problems. You'll consider three to five real problems you face, from wherever they come from.
+1. **Build one working table through three own-your-progress activities.** Start with things that bug you, notice work-arounds, and look underneath requests. Describe how each situation works now and what gap is starting to show.
 2. **Test each candidate problem against four checks.** Find out which are real, current, and the right size. Expect most of them not to survive.
 3. **Commit to one problem.** Choose the candidate problem that survived, and be able to say why it did and the others did not.
 4. **Use the Dojo to widen your frame.** Generate framings you would not have reached alone, then decide which to keep.
@@ -72,18 +73,20 @@ The bar is honest looking, not verification. If as you explore a problem you rea
 
 The fourth check works differently from the other three. It never rules a candidate problem out. It tells you to move it: up, to what it is an instance of, if it is too small, or down, to one instance you can see people in, if it is too big.
 
-You will work through these in detail in Test Your Candidates.
+You will work through these in detail in Test and commit.
 
 ## Two-Week Sprint Map
 
 This sprint runs across two weeks. Everything sits in one Canvas module, so use this as a pacing guide rather than looking for two separate sections.
 
-- **Sprint Week 1:** Read this Introduction, then start with what bugs you and get underneath it, pass the concept check, gather your candidate problems, run them through the four checks, and commit to one.
+- **Sprint Week 1:** Read this Introduction, then work through Start your list and get underneath it, Things you stopped noticing, and Things somebody handed you. Keep adding to the same table. Complete the concept check, then use Test and commit to select three to five candidates, run the four checks, and choose one problem with reasons and a runner-up.
 - **Sprint Week 2:** Widen your frame with the Dojo, write your Goal Plan and Problem Frame, then reflect on what changed.
+
+The three own-your-progress activities are encouraged and worth zero points. Submitting one records its completion, but skipping one does not block the next activity. You can read the teaching and examples even when you choose not to submit an activity. The concept check carries five points for completion reviewed by your instructor. Test and commit is one submission worth 35 points. You do not use AI in the first-half guided activities; the AI work comes in the second half.
 
 ## Time Guidance
 
-Plan for focused work across two weeks, roughly four to six hours in total. The first step, writing down what bugs you and getting underneath it, is the one people rush and should not. It works better spread across several days than done in one sitting.
+Spread the first-half activities across several days. Start your list and get underneath it gives you the first version of your table. Things you stopped noticing asks you to watch for work-arounds over a day or two before adding rows. Keep the table somewhere you can return to as you notice more.
 
 ## Working Standard
 
@@ -93,10 +96,10 @@ This sprint asks for rough writing in places and means it. Marked uncertainty is
 
 ## Carry Forward
 
-Keep your candidate problem list, your first-guess paragraph, your assumptions, your Dojo session notes, and your Goal Plan.
+Keep your working table, including rows you set aside, and your Test and commit submission. That submission holds your three to five candidate problems, uncertainty marks, four checks for each candidate, committed problem, reasons, and runner-up.
 
-Two of these come back sooner than you expect. Your first-guess paragraph is what you compare against in the Dojo Lab and again in the Reflection, and it only works if it stays the unedited original. Your assumptions become the starting point for Sprint 2 and for the stakeholder work in Sprint 3.
+The problem you choose becomes the starting point for framing in the second half. Keep what you do not know visible so later AI exploration and conversations with real people can help you investigate it.
 
 ## Next
 
-When you're ready, continue to Start with What Bugs You, the first activity of the sprint. The concept check comes later in the first half, once you have something to check it against.
+When you're ready, continue to Start your list and get underneath it. You do not need to arrive with a problem already chosen. The concept check follows the third own-your-progress activity, once you have worked with the ideas it asks about.

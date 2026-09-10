@@ -1,0 +1,107 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-sprint-12-sprint-1-concept-check-v2",
+  "packet_sha256": "fc6c14632f07e9ea3e5956bc3e56f2083997fe8d9be7452e46a3b5acb6eaa62f",
+  "map_sha256": "748348ea07259683ec042f987987f5a96d8cdf52036c8511bbf875ec6aee1602",
+  "body_sha256": "3693267588fd77e626fa6833063a9b49aeecb167db6c66f008a801818de06f6c",
+  "frontmatter_sha256": "2762d621d05e53738669d62e0b79ddccaeb3ee96b5e0e13860f870a8dfbbe567",
+  "parts": [
+    {
+      "kind": "new",
+      "markdown": "# Sprint 1 Concept check\n\nUse these six questions to check the ideas from the three own-your-progress activities before Test and commit. If an explanation surprises you, return to that activity and try the question again.\n\nAnswer all six questions and review the feedback. Copy your answers into a Canvas text entry. Your instructor reviews completion for 5 points; the feedback on this page does not assign a Canvas grade. Saving or copying here does not submit your work.",
+      "reason": "New concept-check directions and completion policy implement the user-approved guided mode.",
+      "based_on": [
+        "d-680926b47b42877d:word/document.xml/253"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "### You write, \"I dread the weekly handover.\" What does that give you at this stage?\n\n- A confirmed cause of the problem\n- An indicator to investigate by describing what happens\n- A solution to implement immediately",
+      "reason": "New formative question for the preceding source teaching; answer and feedback are authored metadata.",
+      "based_on": [
+        "d-680926b47b42877d:word/document.xml/29",
+        "d-680926b47b42877d:word/document.xml/31",
+        "d-680926b47b42877d:word/document.xml/35"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "### Which sentence belongs in the table's current-state column?\n\n- We should buy a handover app.\n- Nobody cares about communicating.\n- The outgoing owner tells the incoming owner; the rest of the team hears about the change later.",
+      "reason": "New formative question for the preceding source teaching; answer and feedback are authored metadata.",
+      "based_on": [
+        "d-680926b47b42877d:word/document.xml/67",
+        "d-680926b47b42877d:word/document.xml/71",
+        "d-680926b47b42877d:word/document.xml/73",
+        "d-680926b47b42877d:word/document.xml/75"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "### You correct the same exported report by hand every month and no longer think of it as a problem. What is the useful next move?\n\n- Notice the routine and describe how it works and what gap it hides.\n- Discard it because familiar routines cannot be problems.\n- Assume everyone needs the same new software.",
+      "reason": "New formative question for the preceding source teaching; answer and feedback are authored metadata.",
+      "based_on": [
+        "d-680926b47b42877d:word/document.xml/113",
+        "d-680926b47b42877d:word/document.xml/115",
+        "d-680926b47b42877d:word/document.xml/119",
+        "d-680926b47b42877d:word/document.xml/123"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "### Someone says, \"We need an app to track onboarding.\" Where do you begin?\n\n- Choose features for the app.\n- Ask why the request matters until the goal becomes clear.\n- Treat the request itself as proof of the problem.",
+      "reason": "New formative question for the preceding source teaching; answer and feedback are authored metadata.",
+      "based_on": [
+        "d-680926b47b42877d:word/document.xml/135",
+        "d-680926b47b42877d:word/document.xml/137",
+        "d-680926b47b42877d:word/document.xml/139",
+        "d-680926b47b42877d:word/document.xml/141"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "### In the onboarding example, which answer has reached the goal?\n\n- Build a dashboard.\n- Give managers a more visible tracker.\n- New hires should contribute to their teams as quickly as possible.",
+      "reason": "New formative question for the preceding source teaching; answer and feedback are authored metadata.",
+      "based_on": [
+        "d-680926b47b42877d:word/document.xml/141",
+        "d-680926b47b42877d:word/document.xml/143",
+        "d-680926b47b42877d:word/document.xml/145",
+        "d-680926b47b42877d:word/document.xml/147",
+        "d-680926b47b42877d:word/document.xml/149"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "### After finding the goal behind a request, what do you do next?\n\n- List possible obstacles, then describe the ones you can observe as candidate problems.\n- Assume the original requested solution is the only path.\n- Ask AI to choose the problem for you.",
+      "reason": "New formative question for the preceding source teaching; answer and feedback are authored metadata.",
+      "based_on": [
+        "d-680926b47b42877d:word/document.xml/195",
+        "d-680926b47b42877d:word/document.xml/239",
+        "d-680926b47b42877d:word/document.xml/241",
+        "d-680926b47b42877d:word/document.xml/243",
+        "d-680926b47b42877d:word/document.xml/245"
+      ]
+    }
+  ],
+  "metadata_decisions": [
+    "Authored guided-task configuration and delivery metadata follow the approved implementation plan; task criteria are drawn from the selected source, with no new rubric weights.",
+    "Browser QA showed task prompts render as bold headings. Shortened response prompts to self-contained actions and outputs; moved detailed tests and exceptions into criteria. OYP3 submits only the updated table, with chains and alternatives kept as working notes."
+  ],
+  "source_roles": {
+    "d-680926b47b42877d": {
+      "role": "primary_authoring",
+      "reason": "User selected this DOCX export for the approved first-half Sprint 1 V2 build."
+    }
+  },
+  "decisions": [
+    "Use the exported DOCX proposed view. Text is identical in base and proposed views; the five table structural revisions do not contain competing wording. Preserve the exported rectangular table representation, without claiming historic layout reconstruction.",
+    "User approved all five activities as guided text-entry assignments with must_submit completion and 0/0/0/5/35 points. No AI endpoint or automated Canvas grading. Six concept questions and their keys/feedback are newly authored from preceding teaching, not recovered historical questions.",
+    "Keep every participant teaching block in the five source sections, except adapt wrapper headings and reconstruct the diagram. Exclude document introduction and notes (0-11), flagged NOTE/OPEN/TODO blocks, empty separators, and all parked/planning/cut-plan/open-items material (472 onward). Do not build half two.",
+    "Keep OYP1 own-observation prose, including the explicit exception allowing an empty middle column marked when the move produces nothing. Keep OYP2 day-or-two observation and no-new-results outcome. Existing source open issues are preserved as wording decisions, not resolved author review.",
+    "Reconstruct source diagram paragraphs163-193 as one Mermaid fence, replacing HTML line breaks with plain-space labels while preserving nodes and edges. This is an adaptation, not verbatim source.",
+    "Use storage sprint12 to isolate this V2 module from sprint10 smoke-test artifacts; preserve semantic module title. Parent owns existing Introduction and homepage.",
+    "Add brief authored submission instructions distinguishing browser saving/copying from actual Canvas submission. OYPs remain encouraged, not prerequisite gates. New task metadata gives source-based prompts, templates and self-check criteria; no weighted rubric is invented.",
+    "Browser-verified presentation revision: compact response prompts avoid bold walls and raw pipe-table text; source teaching and tables remain intact. Corrected the exact instructions-control label and removed internal draft wording from module summary.",
+    "Include the retained Introduction in the same reproducible assembly. Its body is explicitly labelled a reuse/adaptation of the fingerprinted repository source, not selected DOCX text. Browser QA found the generic renderer added a redundant learning-goal label and exposed the storage sprint; the existing source-provenance presentation avoids both without runtime changes.",
+    "2026-09-10: User explicitly authorized pushing to main, publishing Canvas, and opening V2 on the homepage. Set all seven artifacts publish true; no participant wording changed."
+  ]
+}

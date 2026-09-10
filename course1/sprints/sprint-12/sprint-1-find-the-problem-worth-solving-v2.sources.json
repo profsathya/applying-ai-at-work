@@ -1,0 +1,46 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-sprint-12-sprint-1-find-the-problem-worth-solving-v2",
+  "packet_sha256": "fc6c14632f07e9ea3e5956bc3e56f2083997fe8d9be7452e46a3b5acb6eaa62f",
+  "map_sha256": "748348ea07259683ec042f987987f5a96d8cdf52036c8511bbf875ec6aee1602",
+  "body_sha256": "61c0f9be1ed6cd7b6af23eb36683d1159b6f09383939177a147a133b19f97275",
+  "frontmatter_sha256": "3f9f0f9ef3a67ececa4d455a07a640378cf45eb46c29e368c33308f69a0a1b13",
+  "parts": [
+    {
+      "kind": "new",
+      "markdown": "# Sprint 1: Find the Problem Worth Solving (V2)\n\nStart with situations from your own life, work, or community. You do not need to arrive with a chosen problem. In this first half, you build a list, find the gaps underneath it, and choose one problem to carry into framing.\n\nYou will practice three things:\n\n- Describe what actually happens so you can see a gap worth investigating.\n- Recognize when a request already contains a solution, then identify the goal and possible problems underneath it.\n- Compare candidate problems and explain a choice using what you know, with uncertainty still visible.\n\n## Your route\n\nRead the Introduction, then work through Start your list and get underneath it, Things you stopped noticing, and Things somebody handed you. These three own-your-progress activities build one table. They are encouraged, carry zero points, and do not block the next item if you skip them.\n\nComplete the six-question Concept check, then use Test and commit to turn your table into candidate problems, run the four checks, and explain your choice. The self-check carries 5 completion points reviewed in Canvas. Test and commit is one 35-point submission.\n\n## What you carry forward\n\nKeep your table, candidate problems, check answers, uncertainty marks, and commitment reasons. If no candidate survives, record what you tried and the next place you will look. This first half ends with your choice; the second half will use the problem you choose to develop a first frame.",
+      "reason": "New module summary bounded to supplied first-half scope and approved grading.",
+      "based_on": [
+        "d-680926b47b42877d:word/document.xml/11",
+        "d-680926b47b42877d:word/document.xml/29",
+        "d-680926b47b42877d:word/document.xml/65",
+        "d-680926b47b42877d:word/document.xml/235",
+        "d-680926b47b42877d:word/document.xml/253",
+        "d-680926b47b42877d:word/document.xml/255",
+        "d-680926b47b42877d:word/document.xml/457",
+        "d-680926b47b42877d:word/document.xml/471"
+      ]
+    }
+  ],
+  "metadata_decisions": [
+    "Authored guided-task configuration and delivery metadata follow the approved implementation plan; task criteria are drawn from the selected source, with no new rubric weights."
+  ],
+  "source_roles": {
+    "d-680926b47b42877d": {
+      "role": "primary_authoring",
+      "reason": "User selected this DOCX export for the approved first-half Sprint 1 V2 build."
+    }
+  },
+  "decisions": [
+    "Use the exported DOCX proposed view. Text is identical in base and proposed views; the five table structural revisions do not contain competing wording. Preserve the exported rectangular table representation, without claiming historic layout reconstruction.",
+    "User approved all five activities as guided text-entry assignments with must_submit completion and 0/0/0/5/35 points. No AI endpoint or automated Canvas grading. Six concept questions and their keys/feedback are newly authored from preceding teaching, not recovered historical questions.",
+    "Keep every participant teaching block in the five source sections, except adapt wrapper headings and reconstruct the diagram. Exclude document introduction and notes (0-11), flagged NOTE/OPEN/TODO blocks, empty separators, and all parked/planning/cut-plan/open-items material (472 onward). Do not build half two.",
+    "Keep OYP1 own-observation prose, including the explicit exception allowing an empty middle column marked when the move produces nothing. Keep OYP2 day-or-two observation and no-new-results outcome. Existing source open issues are preserved as wording decisions, not resolved author review.",
+    "Reconstruct source diagram paragraphs163-193 as one Mermaid fence, replacing HTML line breaks with plain-space labels while preserving nodes and edges. This is an adaptation, not verbatim source.",
+    "Use storage sprint12 to isolate this V2 module from sprint10 smoke-test artifacts; preserve semantic module title. Parent owns existing Introduction and homepage.",
+    "Add brief authored submission instructions distinguishing browser saving/copying from actual Canvas submission. OYPs remain encouraged, not prerequisite gates. New task metadata gives source-based prompts, templates and self-check criteria; no weighted rubric is invented.",
+    "Browser-verified presentation revision: compact response prompts avoid bold walls and raw pipe-table text; source teaching and tables remain intact. Corrected the exact instructions-control label and removed internal draft wording from module summary.",
+    "Include the retained Introduction in the same reproducible assembly. Its body is explicitly labelled a reuse/adaptation of the fingerprinted repository source, not selected DOCX text. Browser QA found the generic renderer added a redundant learning-goal label and exposed the storage sprint; the existing source-provenance presentation avoids both without runtime changes.",
+    "2026-09-10: User explicitly authorized pushing to main, publishing Canvas, and opening V2 on the homepage. Set all seven artifacts publish true; no participant wording changed."
+  ]
+}
