@@ -1531,3 +1531,29 @@ as a number to revisit, not a target to hit.
 
 **Provenance.** Human (Leslie): all four rulings. AI (Claude): the trims, the parking
 section and its suggested destinations, the replacement sentences.
+
+## 11 September, later still: the test edition went to Leslie for Melisa and Clare
+
+**Leslie's ruling.** Send now, before her own pass over the remaining sections, on the
+argument that participant-mode failures will say more about Check 2 than rereading it.
+
+**What was built.** Six Word files from v4.2 as merged (commit a1c9161), one per Canvas
+item plus a read-me-first: the Introduction (from its sprint-10 artifact, with the Next
+line pointed at the first activity), the three own-your-progress activities, and Test and
+Commit. Each `##` section became one file; design notes, open flags, and the parked
+section were stripped; the mermaid diagram became a one-paragraph description with a note
+that a diagram replaces it on Canvas; the video TODO became an italic placeholder. The
+module header and the concept check appear as placeholder rows in the read-me-first
+rather than as empty files.
+
+**The ask, as written on the cover.** Do it, do not review it, on your own real situation.
+Record time per page, every stall, and everything you produced. Do not fix the text. If a
+page says submit, keep it in your own document. Send it all to Leslie untidied.
+
+**Not in the repo.** The packet is a generated review artifact, not course content, so it
+lives with Leslie. Rebuilding it is mechanical from the draft's `##` boundaries.
+
+**Known rough edges shipped on purpose.** Check 2 still carries the overlap question in
+the design notes (stripped from the packet) and Leslie has not read it; the trims from
+earlier today are unreviewed; the Introduction's Week 1 bullet and Time Guidance still
+describe the sprint in pre-v4 terms.
