@@ -65,12 +65,13 @@ on, which is what makes the join real.
 | Section of v4 | What it is | State |
 |---|---|---|
 | 02 Introduction | Separate artifact in sprint-10 | Solid. Small edits owed once v4 settles, listed in v4's Open items |
-| OYP 1 | Start your list and get underneath it | Rebuilt 10 Sept from A and B plus a new activity. Leslie's A-D comments applied |
+| OYP 1 | Start your list and get underneath it | Reviewed twice. Second-round edits applied 10 Sept; the rewritten three-pass example is unreviewed |
 | OYP 2 | Things you stopped noticing | Rebuilt 10 Sept from C1 plus a new activity |
 | OYP 3 | Things somebody handed you | Rebuilt 10 Sept from C2, C3, and B5 plus a new activity |
 | Concept check | Self-check, 5 points | Placement defaulted after OYP 3; questions need re-verification against v4 |
-| Graded item, Parts 1-2 | Choose rows, write as gaps | New selection step plus D3 and D4 folded in |
-| Graded item, Parts 3-5 | Checks, AI exchange, commit | v3's E and F, **unreviewed**. Leslie reads them here |
+| Graded item, Parts 1-2 | Choose rows, write as candidate problems | Reviewed once; edits applied 10 Sept. Part 2's shape is now a titled list |
+| Graded item, Part 3 opening | What the checks are for | Reviewed once; edits applied |
+| Graded item, Checks 1-4 and after | Checks, reading results, AI exchange, commit | v3's E and F, **unreviewed**. Check 2 carries an open flag |
 | Half two | Everything | **Not started** |
 | 01 module header | Summarizes the rest | Written last, by design |
 
@@ -104,9 +105,10 @@ should match that mechanism.** Item count varies with the learning; the skeleton
 
 ## What to do next
 
-1. **Leslie reviews v4**, paying extra attention to Parts 3 through 5 of the graded item
-   (old E and F). Three rulings ride along: the no-AI note in OYP 1, the "different path"
-   line in OYP 3, and the concept check placement.
+1. **Leslie finishes reviewing v4** from Check 1 onward, plus the rewritten three-pass
+   example in OYP 1 and OYP 2 and 3, which she has not commented on yet. Rulings riding
+   along: the no-AI note in OYP 1, the "different path" line in OYP 3, the concept check
+   placement, and the Check 2 overlap flag.
 2. **Cut v4 into `sprint-10/` artifacts** per the cut plan at the foot of v4. Mechanical
    once the review lands. Strip the [NOTE] and [OPEN] blocks; keep the participant text.
 3. **Re-verify the concept check** against the v4 pages, both content coverage and answer
