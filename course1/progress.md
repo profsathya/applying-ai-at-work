@@ -26,3 +26,7 @@ Canvas writes have now been made for this build. See the publish log below.
 ## Post-build: 2026-09-08 additive smoke test
 
 Published the explicitly approved three-artifact test in the live `cti-de-anza-test-course` (180), using `course1/sprints/sprint-10/`. Module 2077 contains Page 3616, text-entry Assignment 7137, and native Classic Quiz 3100. The existing 14 modules and 74 items were preserved. API verification, an unchanged repeat push, and a harmless hosted page edit passed; 174 local tests passed. Sources remain on `codex/audit-canvas-maintenance`, state on `canvas-state` at `f88db58`, and four scoped generated files on Common Curriculum at `e4a8afb`. See [the live smoke-test report](../docs/audits/2026-09-08-live-canvas-smoke-test.md) for review links, evidence, and limits.
+
+## Post-build: 2026-09-10 Sprint 1 V2 first half
+
+Published the reviewed seven-artifact source set from `course1/sprints/sprint-12/` through protected Publish Canvas run 34517237291 after content commit `ff82750` reached main. Module 2079 now contains the tracked Introduction and five guided text-entry assignments totaling 40 points. Homepage V2 is open; Common Curriculum deployment `73eb41f` is live. OYP group 429 has explicit final-grade exclusions for its three zero-point assignments. All five submission markers and nonsequential access were verified. Working Draft remains intact; the duplicate Introduction is preserved unpublished. See [publication verification](reports/sprint-1-v2-publication-20260910.md) for IDs, checks, and deployment boundaries.
