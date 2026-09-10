@@ -6,6 +6,8 @@ Design notes appear inline as [NOTE] blocks and are not part of the page text. O
 
 > **[NOTE] Version 4, 10 September.** Restructured from v3 on Leslie's review of A through D. Week 1 now runs on the own-your-progress rhythm: three ungraded activities that build one table, a concept check, and one graded item. Each activity teaches a move and then has the learner run it on their own list, so no row leaves an activity with an empty middle column. The old section D is gone: D1 deleted (Leslie), D2 through D5 folded into the graded item as its opening parts, and a new step, choosing which rows go forward, sits in front of them. B5 moved into the third activity. E and F are carried over as drafted in v3 and are unreviewed; the only changes there are the removed "Submission 2 of 2" line, cross-references that named old section letters, and the resolved Introduction note under Check 4.
 
+> **[NOTE] Version 4.1, 10 September.** Leslie's second review round applied: OYP 1 and the graded item through "What the checks are for." The three-pass example is rewritten with human answers and the move between passes made explicit; Part 2's candidate problem shape is now a titled list with a quantified cost line; Check 2 carries an open flag about overlap with the "Right now" line. Checks 1 through 4, "Run all four," "Reading the results," Part 4, and Part 5 remain unreviewed.
+
 > **[NOTE] Rhythm.** Own-your-progress items are Canvas assignments at zero points with a must-submit completion mark, in an ungraded grade group, per Sathya's Fall 2026 mechanic. Encouraged, not required: skipping one never blocks the next. Whether other sprints adopt this is a course-level call, logged and deferred.
 
 ## OYP 1. Start your list and get underneath it
@@ -36,7 +38,7 @@ That feeling is an indicator, something that points at a problem without being o
 
 ### Moving from indicator to problem
 
-Now you have a starting list of indicators. We are going to do some pushing on this list to see if any of them can be moved toward problems.
+Now you have a starting list of indicators. You are going to do some pushing on this list to see if any of them can be moved toward problems.
 
 Remember, a problem is a gap between how something works now and how it could work. So getting underneath something that bugs you means describing how it actually works now, in enough detail that you can see why it produces the thing that bugs you.
 
@@ -46,25 +48,31 @@ That is the next move. Not describing why it bothers you. Not saying what would 
 |---|---|---|
 | Nobody tells me when a client account changes hands | Handovers happen in a conversation between two people. Nothing is written down and nobody owns telling anyone else | People act on stale ownership for days, and the client repeats themselves to someone who should already know |
 | New volunteers sign up, come twice, and stop | Signups are collected centrally. When a new volunteer comes they do whatever the person running that day improvises | A new volunteer's first month depends entirely on who happened to be there, so most of them never find something that needs them |
-| Every month I rebuild the same report by hand | The source system exports tables in a format that doesn't quite match the way we use them. Everyone who needs the report fixes it themselves | Every reporting team spends the same twenty minutes solving the same problem, and nobody has ever counted how much time it's costing us |
+| Every month I rebuild the same report by hand | The source system exports tables in a format that doesn't quite match the way we use them. Everyone who needs the report fixes it themselves | Every analyst spends thirty minutes solving the same formatting problem every month |
 
-Notice what the middle column does. It does not diagnose and it does not solve. It describes the current state carefully enough that the gap starts to become visible on its own.
+Notice what the middle column does. It does not diagnose and it does not solve. It describes the current state carefully enough that the gap in column 3 starts to become visible on its own.
 
 ### One pass is usually not enough
 
-What you get first is often still too vague, or too small, or turns out to be a symptom of something else. Run the move again on what you just wrote: how does that work now?
+If what you get on your first pass is still too vague, or too small, or turns out to be a symptom of something else, run the move again on what you just wrote: how does that work now?
 
-Here is the volunteer example going down three passes:
+Here is the volunteer example going down three passes. Each pass asks the same question of a different part of the previous answer.
 
-> **Pass 1.** New volunteers sign up, come twice, and stop. **How does that work now?** Signups go to a central inbox. What happens on a first shift is whatever the person running that day improvises.
+> **Pass 1.** New volunteers sign up, come twice, and stop. **How does that work now?** They sign up by sending us an email. We invite them to come on certain dates and times. They show up and help with whatever is going on that day. Then they maybe come a second time, but we often never see them again.
 
-> **Pass 2.** First shifts are improvised. **How does that work now?** Nobody owns deciding what a new volunteer should do on day one, so the shift lead invents something on the spot, usually the easiest thing to hand off.
+That is a real answer, and it is the kind most people give first: it describes what a volunteer sees. What it does not say is who decides what a new person does on that first day. That is the part to ask about next.
 
-> **Pass 3.** Nobody owns a new volunteer's first day. **How does that work now?** We measure signups because signups are what the board asks about. Nobody has ever been responsible for what happens after someone arrives, so no one built it.
+> **Pass 2.** A new volunteer shows up and helps with whatever is going on. **How does that work now?** Whoever is running the shift that day figures out something for them to do. Usually it is whatever is easiest to hand off, like sorting donations. Nobody plans it ahead of time, because we do not always know who is coming.
 
-Notice that pass 1 could not tell you who was paying or what it cost them. Pass 3 can.
+Now there is a person, the shift lead, and a habit, improvising. What is still missing is why nobody plans it. Ask about that.
 
-Three or four passes is normal. You stop when you reach something specific enough that you could say who it is costing and what it costs them.
+> **Pass 3.** Nobody plans a new volunteer's first day. **How does that work now?** It is not anybody's job. The coordinator handles signups, because signups are what the board asks about. Nobody has ever been responsible for what happens after someone arrives, so nobody built anything for it.
+
+Notice that pass 1 could not tell you who was paying or what it cost them. Pass 3 can: new volunteers, who get handed the dullest job and do not come back, and the eight regulars who keep doing everything.
+
+The way between passes is the same each time. Find the part of your answer that says something happens without saying who does it or why, and ask how that part works now.
+
+Three or four passes is normal. You stop when the gap is specific enough to write in the third column: what is different from how it could be, and who feels it.
 
 ### Your turn: build your table
 
@@ -82,7 +90,7 @@ Three guardrails for the middle column:
 
   - **Name who does what.** "The report gets fixed" hides a person. "I fix the report" does not.
 
-For the third column, one sentence is enough: what gap is starting to show, who it seems to touch, and what it seems to cost them. Rough is fine. A question mark at the end of a sentence you are not sure of is worth more than a confident guess.
+For the third column, one sentence is enough: what is different from how it could be, and who feels it. Rough is fine. A question mark at the end of a sentence you are not sure of is worth more than a confident guess.
 
 **Take one item further.** Pick the row you have the most to say about and run the move again on what you just wrote, the way the volunteer example does: how does that work now? Two or three passes. Stop when you could say who it is costing and what it costs them.
 
@@ -126,7 +134,7 @@ Your table, with every row carrying something in the middle column or a mark whe
 
 ### Where habits hide problems
 
-Say you pull a report every month. The system exports it in the wrong format, so you paste it into a spreadsheet and fix the columns by hand. Twenty minutes, every month, for two years. You probably don't even think about that as a problem anymore. You just think of it as "how I do the report."
+Say you pull a report every month. The system exports it in the wrong format, so you paste it into a spreadsheet and fix the columns by hand. Thirty minutes, every month, for two years. You probably don't even think about that as a problem anymore. You just think of it as "how I do the report."
 
 That is how work-arounds go. They accumulate gradually enough that they just become the normal way you do things, and if someone asked whether anything was wrong, you would say no. The problem stops being stored in your memory as a problem. It gets stored as a habit.
 
@@ -285,17 +293,17 @@ Your table, with any rows added from requests and the move run on each.
 
 > **[NOTE]** The week's one graded item. Suggested 35 points, absorbing the 15 that v3 put on a separate Candidate List submission. Five parts, one submission. Parts 3 through 5 are v3's sections E and F, unreviewed.
 
-You have a table with more rows than you need and a few days between you and the day you wrote most of them. This is where the first half of the sprint turns: from gathering and holding loosely to choosing one problem and standing behind the choice. Five parts, one document at the end.
+With the work you have done in the own-your-progress activities, you now have a table with, hopefully, more than three to five potential problems to look into. We are now going to move from the gathering and brainstorming phase of week 1 into narrowing down so that we can choose one problem. This graded item has five parts. You work through them in order and submit one document at the end.
 
 ### Part 1. Choose which rows go forward
 
-Start by rereading your table with fresh eyes. The checks work better on a list you did not write ten minutes ago, which is why this part sits on the other side of a submission from the gathering.
+Start by rereading your table with fresh eyes.
 
-Keep every row where the move worked: the middle column describes a current state, and the third column shows a gap. Set aside, without deleting, any row where it did not.
+Make a mental note of every row where you were able to get underneath successfully: the middle column describes a current state, and the third column shows a gap. Set aside, but don't delete, any row where it did not.
 
-If that leaves more than five, take the five where the gap is clearest. Not the most important, and not the most interesting. The checks in Part 3 decide that, and this step should not get ahead of them.
+If that leaves more than five, take the five where the gap is clearest. Not necessarily the most important, and not necessarily the most interesting. Right now, we're looking for clear, meaningful gaps between what is and what could be.
 
-If you have fewer than three, go looking. Go back through the second and third activities first, and then watch for these over a couple of days:
+If you have fewer than three, go looking. Go back through Things You Stopped Noticing and Things Somebody Handed You first, and then watch for these over a couple of days:
 
   - You brace before a recurring meeting, task, or conversation.
 
@@ -311,13 +319,33 @@ Everything you set aside stays in the table. You may want it in Part 5.
 
 ### Part 2. Write each one as a gap
 
-Each row you kept already has a current state and a gap starting to show. Now write it in this shape, which adds the three things the checks will need:
+Each row you kept already has a current state and a gap starting to show. Now write it up as a candidate problem, one per row you kept, in this shape. The first two lines come straight from your table; the last three are new.
 
-> **Right now,** how it works today. **It could,** the state you think is possible. **The gap costs,** who is paying, and what it costs them. **This has been going on,** roughly how long. **It has not been fixed because,** your best current guess.
+  - **Title.** The emerging gap, in one line, from the third column of your table.
+
+  - **Right now.** How it works today, from the middle column of your table.
+
+  - **It could.** The state you think is possible.
+
+  - **The gap costs.** Who is paying, and what it costs them. Put a number on it when you can.
+
+  - **This has been going on.** Roughly how long.
+
+  - **It has not been fixed because.** Your best current guess.
 
 Worked example:
 
-> **Right now,** account handovers happen in a conversation between the outgoing and incoming owner, and nothing is recorded or announced. **It could** be that the rest of the team knows within a day of a change. **The gap costs** clients, who repeat context to someone who should already have it, and the four other people on the team who act on stale ownership for days at a time. **This has been going on** as long as I have been here, at least two years. **It has not been fixed because** each individual handover feels small enough to handle informally.
+> **Title.** Every analyst spends thirty minutes solving the same formatting problem every month.
+>
+> **Right now.** The source system exports tables in a format that does not quite match the way we use them. Everyone who needs the report fixes it themselves, by hand, before they can use it.
+>
+> **It could.** The export matches the way the report is used, or one person fixes it once and everyone else works from that copy.
+>
+> **The gap costs.** Fifteen analysts, thirty minutes each, every month. At about forty dollars of an analyst's time per fix, that is roughly seven thousand dollars a year, and nobody has ever counted it.
+>
+> **This has been going on.** Since the source system was upgraded, about two years.
+>
+> **It has not been fixed because.** Thirty minutes a month does not feel like enough to raise with anyone. (?)
 
 Rough is fine. Nobody is grading the prose.
 
@@ -325,19 +353,19 @@ Once an item is written in this shape, it has earned a name. These are your cand
 
 Three is the floor for a reason: if you only find one, the risk is that you commit to the first thing that came to mind because it was the only thing that came to mind.
 
-**Mark what you are not sure about.** Read back through what you wrote and put a question mark at the end of any sentence you are not certain of. The "costs" and "has not been fixed because" lines are usually the guesses.
+**Mark what you are not sure about.** Read back through what you wrote and put a (?) at the end of any line you are not certain of. The "costs" and "has not been fixed because" lines are usually the guesses.
 
-Do not go back and make those sentences sound more confident. Marked uncertainty is worth more here than confidence you have not earned, and in Sprint 3 you will be marking every claim as confirmed or inferred. This is that habit, early and cheap. These marks also have a nearer future: in the second half of this sprint you will name your assumptions in your frame, and your question marks are where most of them will come from.
+Do not go back and make those lines sound more confident. Marked uncertainty is worth more here than confidence you have not earned. Problems are messy, and it is better to mark what you don't know so that you can fill it in later than to proceed on assumptions. We'll spend time working through the unknowns later.
 
 ### Part 3. Run the four checks
 
 #### What the checks are for
 
-You have three to five candidate problems. Before you commit nine weeks to one of them, you are going to run each through four checks, and most of your list will not survive. That is the intended outcome, not a sign you gathered badly.
+You now have three to five candidate problems. In order to help you narrow down which ones might be best for committing nine weeks to in this course, you are going to run each through four checks. It is perfectly okay if some or most of your list doesn't survive the checks. That is the intended outcome, not a sign you gathered badly.
 
-Here is what the checks actually are. Each one is borrowed from a demand this course will make on your problem later. Check 1 asks whether there are specific people, because in Sprint 3 you will talk to one of them. Check 2 asks how it is handled today, because your frame has to describe that next week. Check 3 asks whether it is live, because everything you do from here works on the current state of a problem, and a problem that is not running has no current state. Check 4 asks whether it is the right size, because the next nine weeks need somewhere to go.
+Here is what the checks actually are. Each one is borrowed from a demand this course will make on your problem later. Check 1 asks you to identify specific people impacted by your problem, because in Sprint 3 you will talk to one of them. Check 2 asks how it is handled today, because your frame has to describe that next week. Check 3 asks whether it is a live problem today, because everything you do from here works on the current state of a problem, and a problem that is not running has no current state. Check 4 asks whether it is the right size, because the next nine weeks need somewhere to go.
 
-So the checks are not a quiz about your problem. They are the course, arriving early. A candidate that fails a check was going to fail anyway; the check just moves the failure to now, when it costs you twenty minutes, instead of week five, when it costs you half the course. This is the cheapest place in the next ten weeks to find out.
+So the checks are not a quiz about your problem. They are you taking an hour now to evaluate the workability of your problems, instead of finding out in week five that the problem you selected isn't actually a problem at all.
 
 Two things about how to run them. First, the bar is honest looking, not verification. You are not proving anything. You are answering each question as truthfully as you can from what you already know, and noticing where you cannot answer at all. Second, where you cannot answer, write that down instead of guessing. "I do not know who else this costs" is a result, and a more useful one than an invented answer, because it tells you what you would need to find out.
 
@@ -372,6 +400,8 @@ One thing this check does not require: the person paying does not have to be som
 If you cannot get more specific than a category, that is a result, and it usually means the problem is bigger than you can see from where you sit. The fix is Check 4's move: come down to the piece of it you can see people in.
 
 #### Check 2. Is something already handling it, and falling short?
+
+> **[OPEN]** Leslie, 10 September, before reading this check: it sounds like what the "Right now" line and the table's middle column already ask. Fair. One way through, not yet applied: make Check 2 an escalation of that line the way Check 1 escalates the cost line. The test would become whether "Right now" names the mechanism and the exact place it stops working, with "HR handles onboarding, but not very well" as the fail. Her call after she reads it.
 
 Complete this sentence: "X handles this today, but it does not ___."
 
@@ -526,7 +556,7 @@ If you get here, say so in your submission rather than forcing a choice. Committ
 
 One document containing:
 
-  - **Your three to five candidate problems** in the five-line gap shape, uncertainty marks included
+  - **Your three to five candidate problems** in the shape from Part 2, (?) marks included
 
   - **Your four checks**, run against each candidate problem, with unanswerable checks noted rather than guessed
 

@@ -1343,3 +1343,86 @@ criterion; the guardrails text; the placement of B5; the concept check default; 
 drafting.
 
 Still not validated with participants.
+
+---
+
+## 10 September, later: second review round, OYP 1 and the graded item through E1
+
+Ten comments and tracked changes in seventeen paragraphs, returned as a `.docx` late in the
+evening. Leslie got through OYP 1 and the graded item as far as "What the checks are for."
+Everything from Check 1 onward is still unreviewed. All tracked changes applied
+individually; four needed a punctuation repair where a suggestion left a fragment, noted
+below. No structural rewrite this round, so nothing was lost to one.
+
+**Tracked changes applied as written.** "We are going to do some pushing" is now "You are
+going"; the table's report row became "Every analyst spends thirty minutes solving the same
+formatting problem every month"; "the gap in column 3"; the graded item's opening paragraph
+in Leslie's words; the "checks work better on a list you did not write ten minutes ago"
+sentence cut from Part 1; "make a mental note of" and "set aside, but don't delete"; "not
+necessarily the most important"; "we're looking for clear, meaningful gaps"; the
+uncertainty paragraph in her words, which drops the forward links to Sprint 3's
+confirmed/inferred marking and to half two's assumptions; the three E1 edits, including
+"it is perfectly okay if some or most of your list doesn't survive"; and her replacement for
+the "course, arriving early" paragraph.
+
+**Repairs made while applying.** "If what you get on your first pass is still too vague ...
+else. Run the move again" joined into one sentence. "Make a mental note of every row where
+you were able to get underneath successfully. Where the middle column ..." joined with a
+colon. "Not the necessarily the" de-doubled. "OYPs" in participant text written out as
+"the own-your-progress activities," since the abbreviation is ours. "3-5" written as
+"three to five."
+
+**Consequential fix.** The OYP 2 teaching example said the report took twenty minutes;
+the table now says thirty. Harmonised to thirty. Check 4's diagnosis table still says "the
+export format for my monthly report is wrong," which is the same case and still reads.
+
+**C0 and C1, the three-pass example.** Leslie: the answers did not sound like a human, and
+the moves between passes skipped logical steps. Rewritten. Pass 1 uses her sentence nearly
+verbatim. Between each pass there is now a short paragraph naming what the answer did and
+did not say, and which part to ask about next. A closing rule states the move between
+passes generally: find the part of your answer that says something happens without saying
+who does it or why, and ask how that part works now. Claude's drafting, unreviewed.
+
+**C2, the stopping rule referenced cost before it was introduced.** Fair. The rule now
+points at the table's third column, which the learner has already seen: stop when the gap
+is specific enough to write there, what is different from how it could be and who feels it.
+
+**C3, do the table's gaps cover all three things the instruction asked for.** Honestly, no.
+The rows name who and roughly what it costs, and leave the gap implicit. Rather than
+rewrite three rows Leslie has already edited, the instruction was tightened to the two
+things the rows do show: what is different from how it could be, and who feels it. Cost
+arrives in Part 2, where it gets its own line.
+
+**C4, "Five parts, one document at the end."** Rewritten as two plain sentences.
+
+**C5, "second and third activities."** Named: Things You Stopped Noticing and Things
+Somebody Handed You.
+
+**C6 and C7, the candidate problem shape.** Leslie: not a paragraph; each problem needs a
+title, which is the emerging gap from the table, then how it works now pulled from the
+table, then a cost that can often be quantified, then the last two lines. Rebuilt as a
+six-line labeled list. The worked example is now her report case with her arithmetic:
+fifteen analysts, thirty minutes each, monthly, about forty dollars of time per fix, roughly
+seven thousand a year. The handover example is gone from Part 2; Check 1's pass example
+still uses it, and the handover row is still in the OYP 1 table, so nothing dangles. (?) at
+the end of a line replaces the question mark at the end of a sentence, per C7, and the
+worked example shows one.
+
+**C8, Check 2 overlaps the "Right now" line.** Leslie flagged this before reading Check 2.
+Not changed. An [OPEN] block at Check 2 records the overlap and one way through: make Check
+2 an escalation of the Right-now line, the way Check 1 escalates the cost line, so the test
+becomes whether the line names the mechanism and the exact place it stops working. Her call
+once she reads the check.
+
+**C9, "They are the course, arriving early."** Her replacement sentence drops it. Applied.
+
+**Lost in this round, worth knowing.** The uncertainty paragraph no longer points forward
+to Sprint 3's confirmed/inferred marking or to the assumptions in half two. The spine's
+section 11 treats the (?) marks as the soft ancestor of confirmed/inferred. If that
+continuity still matters, the pointer belongs in half two where the assumptions get named,
+not here. Logged, not restored.
+
+**Provenance.** Human (Leslie): every ruling above; the human-sounding pass 1 answer; the
+titled-list shape and the quantified cost example. AI (Claude): the passes 2 and 3 text
+and the between-pass paragraphs; the general rule for moving between passes; the C3
+tightening; the Check 2 escalation idea, offered not applied.
