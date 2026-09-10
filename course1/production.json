@@ -494,6 +494,27 @@
       "source_commit": "2cc095900f3283856ebdeb79d8f4e811c89610c4",
       "source_type": "quiz"
     },
+    "course1-sprints-sprint-1-reviewed-v2-introduction-find-the-problem-worth-solving-v2": {
+      "artifact_id": "course1-sprints-sprint-1-reviewed-v2-introduction-find-the-problem-worth-solving-v2",
+      "canvas_fingerprint": "21b99e47026f88fb342f7f1e6577132677076354633012e6cb1203fc5ddaef9e",
+      "canvas_id": 3621,
+      "canvas_module_id": 2079,
+      "canvas_module_item_id": 17969,
+      "canvas_page_url": "introduction-find-the-problem-worth-solving-2",
+      "canvas_payload_hash": "86c590f9065ec601d6984475c58edae40463414a74773023e89b2470b4fc086c",
+      "canvas_type": "page",
+      "completion_requirement": "must_view",
+      "content_hash": "f7fb1cf7268795d63e4442ebd725798ba82183d66e6b98331a16767c1c9780ae",
+      "hosted_hash": "5bb87a0df44ba8e8715b48bde23fa90774568cb8c6500227f9909b41f9f8f4b6",
+      "hosted_last_rendered": "2026-09-10T18:05:14+00:00",
+      "hosted_path": "course1/activities/introduction-find-the-problem-worth-solving-v2.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-find-the-problem-worth-solving-v2.html",
+      "last_pushed": "2026-09-10T18:05:14+00:00",
+      "local_path": "course1/sprints/sprint-10/introduction-find-the-problem-worth-solving-v2.md",
+      "position": 2,
+      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "source_commit": "4d51bacecf4995fe8ca4943066a96303e7a8de6b"
+    },
     "course1-sprints-sprint-1-sprint-1-frame-what-is-worth-solving": {
       "artifact_id": "course1-sprints-sprint-1-sprint-1-frame-what-is-worth-solving",
       "canvas_id": null,
@@ -838,14 +859,14 @@
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
       "content_hash": "9abfa0d6ec17c2ea6152166bee803b5a0b95e9a423ea993313c7ebe5b74a68b4",
-      "hosted_hash": "77c78cc4e5a51c354ed0276c5fc410937905ed034fea19d23236f1a58c7beb97",
-      "hosted_last_rendered": "2026-08-30T23:23:15+00:00",
+      "hosted_hash": "5c35eb1bda7455288bea461101f4c87dfd5fd8fa5174f9a4bc27493dfab7e374",
+      "hosted_last_rendered": "2026-09-10T18:05:15+00:00",
       "hosted_path": "course1/assignments/dojo-lab-stakeholder-map-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-stakeholder-map-v2.html",
-      "last_pushed": "2026-08-30T23:23:15+00:00",
-      "local_path": "course1/sprints/sprint-6/dojo-lab-stakeholder-map-v2.md",
+      "last_pushed": "2026-09-10T18:05:15+00:00",
+      "local_path": "course1/sprints/sprint-7/dojo-lab-stakeholder-map-v2.md",
       "position": 4,
-      "source_commit": "b01565884f99fde90a959011b649551e956105de"
+      "source_commit": "4d51bacecf4995fe8ca4943066a96303e7a8de6b"
     },
     "course1-sprints-sprint-3-reviewed-v2-introduction-integrate-people-and-context-v2": {
       "artifact_id": "course1-sprints-sprint-3-reviewed-v2-introduction-integrate-people-and-context-v2",
@@ -858,15 +879,15 @@
       "canvas_type": "page",
       "completion_requirement": "must_view",
       "content_hash": "3b5eda0849d7deca153d1b68ce919d569e16ef4f03a8d5cb4e40461d13cc2e39",
-      "hosted_hash": "ae4b52dc040db75940c5d9b61a2cb17d80775cefd31985ac8e561dff5d893c6b",
-      "hosted_last_rendered": "2026-08-30T23:23:16+00:00",
+      "hosted_hash": "de55437b5c8cb583e1e380d9eec695bd8495c1c853469aca59f5122e8bce4a58",
+      "hosted_last_rendered": "2026-09-10T18:05:15+00:00",
       "hosted_path": "course1/activities/introduction-integrate-people-and-context-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-integrate-people-and-context-v2.html",
-      "last_pushed": "2026-08-30T23:23:16+00:00",
-      "local_path": "course1/sprints/sprint-6/introduction-integrate-people-and-context-v2.md",
+      "last_pushed": "2026-09-10T18:05:15+00:00",
+      "local_path": "course1/sprints/sprint-7/introduction-integrate-people-and-context-v2.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "b01565884f99fde90a959011b649551e956105de"
+      "source_commit": "4d51bacecf4995fe8ca4943066a96303e7a8de6b"
     },
     "course1-sprints-sprint-3-reviewed-v2-sprint-3-concept-check-v2": {
       "artifact_id": "course1-sprints-sprint-3-reviewed-v2-sprint-3-concept-check-v2",
@@ -902,13 +923,13 @@
       "content_hash": "527b7d4efd0cebb3902225fed39d6746c429672d7f52816e39af142e68bce9ea",
       "delivery_mode": "ai_activity",
       "hosted_hash": "af61e1b0096f47b686ab47ea0c22be2957d0cd1f78f09376e00d84b7c2ad0733",
-      "hosted_last_rendered": "2026-08-30T23:23:28+00:00",
+      "hosted_last_rendered": "2026-09-10T18:05:15+00:00",
       "hosted_path": "course1/assignments/sprint-3-reflection-and-mid-course-goal-plan-revision-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-3-reflection-and-mid-course-goal-plan-revision-v2.html",
-      "last_pushed": "2026-08-30T23:23:28+00:00",
-      "local_path": "course1/sprints/sprint-6/sprint-3-reflection-and-mid-course-goal-plan-revision-v2.md",
+      "last_pushed": "2026-09-10T18:05:15+00:00",
+      "local_path": "course1/sprints/sprint-7/sprint-3-reflection-and-mid-course-goal-plan-revision-v2.md",
       "position": 6,
-      "source_commit": "b01565884f99fde90a959011b649551e956105de",
+      "source_commit": "4d51bacecf4995fe8ca4943066a96303e7a8de6b",
       "source_type": "quiz"
     },
     "course1-sprints-sprint-3-reviewed-v2-sprint-3-reviewed-v2": {
@@ -940,13 +961,13 @@
       "content_hash": "7ed36fc0046eed8487d223d79165a262b099742a086fce0d4cae224592f78eea",
       "delivery_mode": "ai_activity",
       "hosted_hash": "54c4aa27335f3515c3b4b5d6e824e64bce29fe5350c9a43ae335627f5433c3de",
-      "hosted_last_rendered": "2026-08-30T23:23:31+00:00",
+      "hosted_last_rendered": "2026-09-10T18:05:16+00:00",
       "hosted_path": "course1/assignments/stakeholder-conversation-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/stakeholder-conversation-v2.html",
-      "last_pushed": "2026-08-30T23:23:31+00:00",
-      "local_path": "course1/sprints/sprint-6/stakeholder-conversation-v2.md",
+      "last_pushed": "2026-09-10T18:05:16+00:00",
+      "local_path": "course1/sprints/sprint-7/stakeholder-conversation-v2.md",
       "position": 5,
-      "source_commit": "b01565884f99fde90a959011b649551e956105de",
+      "source_commit": "4d51bacecf4995fe8ca4943066a96303e7a8de6b",
       "source_type": "discussion"
     },
     "course1-sprints-sprint-3-sprint-3-integrate-people-and-context": {
@@ -1496,14 +1517,14 @@
       "content_hash": "5edc6e7596518410da3046da2e199d4e420407c06c6439afde8c3537344b3bd0",
       "delivery_mode": "ai_activity",
       "hosted_hash": "414e54d441e424afb2ed7c06b35f9b72b1950e51729ce820607f9216b09caebb",
-      "hosted_last_rendered": "2026-08-30T23:23:33+00:00",
+      "hosted_last_rendered": "2026-09-10T18:05:16+00:00",
       "hosted_path": "course1/assignments/ai-exchange-is-this-a-gap-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/ai-exchange-is-this-a-gap-v3.html",
-      "last_pushed": "2026-08-30T23:23:33+00:00",
-      "local_path": "course1/sprints/sprint-9/ai-exchange-is-this-a-gap-v3.md",
+      "last_pushed": "2026-09-10T18:05:16+00:00",
+      "local_path": "course1/sprints/sprint-8/ai-exchange-is-this-a-gap-v3.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "976c50d2010fd647df1eb1fce9a3c33962b2a3a5",
+      "source_commit": "4d51bacecf4995fe8ca4943066a96303e7a8de6b",
       "source_type": "quiz"
     },
     "course1-sprints-sprint-9-dojo-lab-design-the-learning-path-v3": {
@@ -1517,15 +1538,15 @@
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
       "content_hash": "d474c912ef61d2658b990a5c0df51e007687e7d8ce3fab96f04ddbda2907f7ea",
-      "hosted_hash": "0ef432a2a019daa1ebb0bf781e60644e7790820bb8906b2e76fc78acd6d85832",
-      "hosted_last_rendered": "2026-08-30T23:23:35+00:00",
+      "hosted_hash": "7a21149a936dd90acf71e3e51cd1d47d6d38d8c66c8b8e3a0742a78daf64b483",
+      "hosted_last_rendered": "2026-09-10T18:05:16+00:00",
       "hosted_path": "course1/assignments/dojo-lab-design-the-learning-path-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-design-the-learning-path-v3.html",
-      "last_pushed": "2026-08-30T23:23:35+00:00",
-      "local_path": "course1/sprints/sprint-9/dojo-lab-design-the-learning-path-v3.md",
+      "last_pushed": "2026-09-10T18:05:16+00:00",
+      "local_path": "course1/sprints/sprint-8/dojo-lab-design-the-learning-path-v3.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "976c50d2010fd647df1eb1fce9a3c33962b2a3a5"
+      "source_commit": "4d51bacecf4995fe8ca4943066a96303e7a8de6b"
     },
     "course1-sprints-sprint-9-introduction-close-the-learning-gap-v3": {
       "artifact_id": "course1-sprints-sprint-9-introduction-close-the-learning-gap-v3",
@@ -1538,15 +1559,15 @@
       "canvas_type": "page",
       "completion_requirement": "must_view",
       "content_hash": "35ff323794796025fb55d99d9144f8e5aaa3997f616f7f4bc95ac3587b691372",
-      "hosted_hash": "d52460b12b936a5b0d7ed232b79bf19838cc88f09871306762272b558eb68a4d",
-      "hosted_last_rendered": "2026-08-30T23:23:36+00:00",
+      "hosted_hash": "6b6df2a3a1985c08b0ff288ba87c9eb7a12eec2b8ccf8d97041d8d01fcd9eb5d",
+      "hosted_last_rendered": "2026-09-10T18:05:17+00:00",
       "hosted_path": "course1/activities/introduction-close-the-learning-gap-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-close-the-learning-gap-v3.html",
-      "last_pushed": "2026-08-30T23:23:36+00:00",
-      "local_path": "course1/sprints/sprint-9/introduction-close-the-learning-gap-v3.md",
+      "last_pushed": "2026-09-10T18:05:17+00:00",
+      "local_path": "course1/sprints/sprint-8/introduction-close-the-learning-gap-v3.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "976c50d2010fd647df1eb1fce9a3c33962b2a3a5"
+      "source_commit": "4d51bacecf4995fe8ca4943066a96303e7a8de6b"
     },
     "course1-sprints-sprint-9-introduction-synthesize-and-show-readiness-v2": {
       "artifact_id": "course1-sprints-sprint-9-introduction-synthesize-and-show-readiness-v2",
@@ -1580,15 +1601,15 @@
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
       "content_hash": "d4bdf6a0701b84ae77703001e646cf23c3cbc7862255b9377520fe16289bfcfd",
-      "hosted_hash": "1c42e373e506928b2607d9a81b4066e3cbe918fc83fd4f5d63a5058adc27a0dd",
-      "hosted_last_rendered": "2026-08-30T23:23:38+00:00",
+      "hosted_hash": "4d80261b467de3555aa9420e8dfe8a2bf75a7ee7781d449a8a82634c078351e5",
+      "hosted_last_rendered": "2026-09-10T18:05:17+00:00",
       "hosted_path": "course1/assignments/learn-and-check-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/learn-and-check-v3.html",
-      "last_pushed": "2026-08-30T23:23:38+00:00",
-      "local_path": "course1/sprints/sprint-9/learn-and-check-v3.md",
+      "last_pushed": "2026-09-10T18:05:17+00:00",
+      "local_path": "course1/sprints/sprint-8/learn-and-check-v3.md",
       "position": 7,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "976c50d2010fd647df1eb1fce9a3c33962b2a3a5"
+      "source_commit": "4d51bacecf4995fe8ca4943066a96303e7a8de6b"
     },
     "course1-sprints-sprint-9-name-the-gap-v3": {
       "artifact_id": "course1-sprints-sprint-9-name-the-gap-v3",
@@ -1601,15 +1622,15 @@
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
       "content_hash": "31bba03847d73b849e65c398e52c62ad40ebdc269dcf188864b429adc56bcac7",
-      "hosted_hash": "8c406ffa90d1d12b1275d2d6df0394babba905123fea67260d6331956ff19a27",
-      "hosted_last_rendered": "2026-08-30T23:23:40+00:00",
+      "hosted_hash": "925dcf3c3e151acf66392b0eaa23b45cb4d843695101791dfcceb3916286a1d4",
+      "hosted_last_rendered": "2026-09-10T18:05:18+00:00",
       "hosted_path": "course1/assignments/name-the-gap-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/name-the-gap-v3.html",
-      "last_pushed": "2026-08-30T23:23:40+00:00",
-      "local_path": "course1/sprints/sprint-9/name-the-gap-v3.md",
+      "last_pushed": "2026-09-10T18:05:18+00:00",
+      "local_path": "course1/sprints/sprint-8/name-the-gap-v3.md",
       "position": 4,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "976c50d2010fd647df1eb1fce9a3c33962b2a3a5"
+      "source_commit": "4d51bacecf4995fe8ca4943066a96303e7a8de6b"
     },
     "course1-sprints-sprint-9-sprint-4-close-the-learning-gap-v3": {
       "artifact_id": "course1-sprints-sprint-9-sprint-4-close-the-learning-gap-v3",
@@ -1661,14 +1682,14 @@
       "content_hash": "364b57a2adbfaa45b0d6e88428bf17866a03ed88f5b14e87fdc970fded893435",
       "delivery_mode": "ai_activity",
       "hosted_hash": "aeafa72325f2495f95f05586527f806c20a0cc16f471fce8fd679d8da50f10c8",
-      "hosted_last_rendered": "2026-08-30T23:23:52+00:00",
+      "hosted_last_rendered": "2026-09-10T18:05:18+00:00",
       "hosted_path": "course1/assignments/sprint-4-reflection-what-i-learned-and-how-i-know-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-4-reflection-what-i-learned-and-how-i-know-v3.html",
-      "last_pushed": "2026-08-30T23:23:52+00:00",
-      "local_path": "course1/sprints/sprint-9/sprint-4-reflection-what-i-learned-and-how-i-know-v3.md",
+      "last_pushed": "2026-09-10T18:05:18+00:00",
+      "local_path": "course1/sprints/sprint-8/sprint-4-reflection-what-i-learned-and-how-i-know-v3.md",
       "position": 8,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "976c50d2010fd647df1eb1fce9a3c33962b2a3a5",
+      "source_commit": "4d51bacecf4995fe8ca4943066a96303e7a8de6b",
       "source_type": "quiz"
     },
     "course1-sprints-sprint-9-sprint-5-synthesize-and-show-readiness-v2": {
@@ -1836,5 +1857,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-08T23:23:05+00:00"
+  "last_sync": "2026-09-10T18:05:18+00:00"
 }
