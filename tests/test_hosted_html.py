@@ -380,6 +380,56 @@ class HostedHtmlTests(unittest.TestCase):
             self.assertEqual(progress_data["items"][0]["artifactId"], "tuple-overview")
             self.assertEqual(progress_data["items"][0]["canvasModuleItemId"], 9001)
 
+    def test_homepage_can_hide_legacy_modules_and_order_replacements(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            course = root / "course1"
+            manifest = course / "manifests" / "production.json"
+            output = root / "output"
+            legacy = course / "sprints" / "sprint-99" / "tuple-overview.md"
+            later = course / "sprints" / "sprint-100" / "third-overview.md"
+            first = course / "sprints" / "sprint-101" / "second-overview.md"
+            write_page(legacy)
+            write_third_page(later)
+            write_second_page(first)
+            first.write_text(first.read_text().replace("sprint: 99", "sprint: 101").replace(
+                'module: "Hosted HTML Pilot"', 'module: "First Replacement"'
+            ))
+            write_manifest(manifest)
+            write_homepage(course / "homepage.yaml", body="""modules:
+  - sprint: 99
+    hidden: true
+  - sprint: 100
+    order: 2
+  - sprint: 101
+    order: 1
+""")
+            self.assertEqual(validate_homepage_metadata(course), [])
+            render_hosted_files(manifest, output, [legacy, later, first])
+            hosted = output / "deanza" / "course1"
+            for name in ("home.html", "index.html"):
+                page = (hosted / name).read_text()
+                self.assertNotIn("Tuple Overview", page)
+                self.assertNotIn("Hosted HTML Pilot", page)
+                self.assertLess(page.index("First Replacement"), page.index("Second Hosted Module"))
+            self.assertIn("Tuple Overview", (hosted / "sprint-99.html").read_text())
+            self.assertTrue((hosted / "activities" / "tuple-overview.html").exists())
+            progress = json.loads((hosted / "progress-map.json").read_text())
+            self.assertIn("tuple-overview", {item["slug"] for item in progress["items"]})
+
+    def test_homepage_validation_rejects_invalid_visibility_and_order(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            course = Path(tmp) / "course1"
+            course.mkdir()
+            for field, value, error in (
+                ("hidden", '"false"', "hidden must be a boolean"),
+                ("order", "true", "order must be a non-negative integer"),
+                ("order", "-1", "order must be a non-negative integer"),
+            ):
+                with self.subTest(field=field, value=value):
+                    write_homepage(course / "homepage.yaml", body=f"modules:\n  - sprint: 99\n    {field}: {value}\n")
+                    self.assertTrue(any(error in item for item in validate_homepage_metadata(course)))
+
     def test_homepage_yaml_can_override_item_icon_and_web_href(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()

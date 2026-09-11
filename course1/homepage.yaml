@@ -4,6 +4,7 @@ course:
   footer: "Computing Talent Initiative - De Anza College - Reframing Problems with AI"
 modules:
   - sprint: 0
+    hidden: true
     tag: "Orientation"
     open: true
     learning_goals:
@@ -36,6 +37,7 @@ modules:
             meta: "Page - fixes for rate limits and browser-tab overload"
 
   - sprint: 1
+    hidden: true
     tag: "Framing"
     open: true
     learning_goals:
@@ -73,6 +75,7 @@ modules:
             meta: "AI reflection activity - refine what changed between your starting goal and your current problem frame"
 
   - sprint: 2
+    hidden: true
     tag: "AI Direction"
     open: false
     learning_goals:
@@ -108,6 +111,7 @@ modules:
             meta: "AI reflection activity - refine where your judgment changed the result"
 
   - sprint: 3
+    hidden: true
     tag: "People and Context"
     open: false
     learning_goals:
@@ -143,6 +147,7 @@ modules:
             meta: "AI reflection activity - refine your goal plan revision based on evidence"
 
   - sprint: 4
+    hidden: true
     tag: "Learning Gap"
     open: false
     learning_goals:
@@ -178,6 +183,7 @@ modules:
             meta: "AI reflection activity - refine what you learned and what evidence proves it"
 
   - sprint: 5
+    hidden: true
     tag: "Synthesis"
     open: false
     learning_goals:
@@ -213,6 +219,7 @@ modules:
             verify: "Walk a peer or stakeholder through the argument before final submission and note where they get lost."
 
   - sprint: 6
+    order: 0
     tag: "Orientation V2"
     open: false
     learning_goals:
@@ -241,6 +248,7 @@ modules:
             meta: "Page - how-tos, key terms, and how to reach your instructor"
 
   - sprint: 7
+    order: 3
     tag: "Reviewed V2"
     open: false
     learning_goals:
@@ -267,6 +275,7 @@ modules:
             meta: "AI reflection activity - refine your goal plan revision based on evidence"
 
   - sprint: 8
+    order: 4
     tag: "Learning Gap V2"
     open: false
     learning_goals:
@@ -297,6 +306,7 @@ modules:
             meta: "AI reflection activity - name the capability you gained and what you checked"
 
   - sprint: 9
+    order: 5
     tag: "Synthesis V2"
     open: false
     learning_goals:
@@ -311,6 +321,7 @@ modules:
             meta: "Page - placeholder stub for the Sprint 5 rebuild"
 
   - sprint: 12
+    order: 1
     tag: "First half V2"
     open: true
     muted: false

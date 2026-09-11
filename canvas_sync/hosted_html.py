@@ -1010,6 +1010,10 @@ def validate_homepage_metadata(course_dir: Path) -> list[str]:
             continue
         if not isinstance(module.get("sprint"), int):
             errors.append(f"{label} requires integer sprint")
+        if "hidden" in module and not isinstance(module["hidden"], bool):
+            errors.append(f"{label} hidden must be a boolean")
+        if "order" in module and (type(module["order"]) is not int or module["order"] < 0):
+            errors.append(f"{label} order must be a non-negative integer")
         groups = module.get("groups", [])
         if not isinstance(groups, list):
             errors.append(f"{label} groups must be a list")
@@ -1589,7 +1593,11 @@ def _render_career_course_index(
     course_meta = _course_metadata(course_dir, course_key, homepage)
     configs = _module_config_by_sprint(homepage)
     modules = []
-    for index, sprint in enumerate(sorted(items_by_sprint), start=1):
+    visible_sprints = [
+        sprint for sprint in items_by_sprint if not configs.get(sprint, {}).get("hidden", False)
+    ]
+    visible_sprints.sort(key=lambda sprint: (configs.get(sprint, {}).get("order", sprint), sprint))
+    for index, sprint in enumerate(visible_sprints, start=1):
         modules.append(
             _render_career_module(
                 sprint,

@@ -169,6 +169,8 @@ Hosted Canvas content is still authored in Markdown under `<course>/sprints/`. T
 
 Hosted course homepages are regenerated at render time from artifact frontmatter and deployment state. The renderer writes `<path_prefix>/<course>/home.html`, `index.html`, `sprint-<n>.html`, and `progress-map.json` for each hosted course. When `<course>/homepage.yaml` exists, it is curated display metadata only: course lead text, module goals, group labels, item meta, item icons, web-context links, badges, and verification notes. New artifacts and new sprints still appear automatically from Markdown even when the YAML has not been curated yet. Canvas-context links still come from deployment state.
 
+Each module entry in `homepage.yaml` may set `hidden: true` to omit that module from `home.html` and `index.html`, and `order: <non-negative integer>` to control its homepage position independently of its storage sprint number. Modules default to visible and numeric sprint order. These display settings preserve artifact pages, standalone sprint pages, progress mappings, and Canvas content; Canvas module ordering and publication are managed separately.
+
 Hosted homepages can show learner-specific progress only when opened through the Canvas LTI progress launch. The generated static HTML never contains private learner data. It renders read-only progress indicators and `<path_prefix>/<course>/progress-map.json`; the browser fills them from the Common Curriculum progress function after a valid LTI launch.
 
 Canvas module requirements are the progress source of truth:
