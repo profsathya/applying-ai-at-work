@@ -784,6 +784,7 @@
       "last_pushed": "2026-09-11T16:49:10+00:00",
       "local_path": "course1/sprints/sprint-7/dojo-lab-stakeholder-map-v2.md",
       "position": 4,
+      "rubric_hash": "5701fcd5646cb649d45487b6460a75b92cbbe4d5476762f6abad27fe82034ca1",
       "source_commit": "21e6b383b6e4423ebf1a5444c5e9f4fdd24884ff"
     },
     "course1-sprints-sprint-3-reviewed-v2-introduction-integrate-people-and-context-v2": {
@@ -847,6 +848,7 @@
       "last_pushed": "2026-09-11T17:08:41+00:00",
       "local_path": "course1/sprints/sprint-7/sprint-3-reflection-and-mid-course-goal-plan-revision-v2.md",
       "position": 6,
+      "rubric_hash": "9e87f87c4ce41b59a934300883d123c38927e5194797814473791c0d4039e7e6",
       "source_commit": "8c1f1649d7008c63199c0129e6fdc8ced04081c4",
       "source_type": "quiz"
     },
@@ -885,6 +887,7 @@
       "last_pushed": "2026-09-11T17:08:41+00:00",
       "local_path": "course1/sprints/sprint-7/stakeholder-conversation-v2.md",
       "position": 5,
+      "rubric_hash": "a7d7d814e72a9d9e07e863ec79cf67a71c9851f7358cfec2f7ff9535a1968a5f",
       "source_commit": "8c1f1649d7008c63199c0129e6fdc8ced04081c4",
       "source_type": "discussion"
     },
