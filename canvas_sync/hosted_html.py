@@ -711,6 +711,7 @@ def _render_ai_activity_shell_document(
     config_url = f"../../../activities/{config.path_prefix}/{course_key}/{frontmatter['slug']}.json"
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {}) or ""
     course_theme = _ai_activity_course_theme(frontmatter, manifest)
+    runtime_version = "?v=v2-consistency-20260911" if frontmatter.get("learner_labels") else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -729,8 +730,8 @@ def _render_ai_activity_shell_document(
 <body>
   <div id="activity-container"></div>
 
-  <script src="../../../js/activity-components.js"></script>
-  <script src="../../../js/activity-engine.js"></script>
+  <script src="../../../js/activity-components.js{runtime_version}"></script>
+  <script src="../../../js/activity-engine.js{runtime_version}"></script>
   <script>
     ActivityEngine.init({{
       containerId: 'activity-container',
