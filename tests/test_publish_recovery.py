@@ -15,6 +15,9 @@ from tests.test_publish_changed import write_manifest, write_page_with_id
 
 
 class MemoryCanvas:
+    def _request(self, method, path):
+        return {"position": 1, "quiz_submissions": []}
+
     def __init__(self):
         self.pages = {}
         self.quiz = {}
@@ -99,10 +102,11 @@ class PublishRecoveryTests(unittest.TestCase):
         client = Mock()
         client.update_quiz.return_value = {"id": 701}
         client.list_quiz_questions.return_value = [{"id": 1}]
+        client._request.return_value = {"quiz_submissions": []}
         fm = {"title": "Test quiz", "publish": True, "questions": [{"prompt": "New?", "type": "essay"}]}
         push.push_quiz(client, fm, "Instructions", 701)
         self.assertEqual([c[0] for c in client.mock_calls], [
-            "update_quiz", "list_quiz_questions", "delete_quiz_question",
+            "list_quiz_questions", "_request", "update_quiz", "delete_quiz_question",
             "add_quiz_question", "update_quiz",
         ])
         for call in client.update_quiz.call_args_list:

@@ -172,6 +172,7 @@ def canvas_payload_hash(
         "position": canvas_fm.get("position"),
         "completion_requirement": completion_requirement_state_value(completion_requirement),
         "hosted_url": hosted_url,
+        **{key: canvas_fm[key] for key in ("quiz_type", "allowed_attempts", "grading_type", "omit_from_final_grade") if key in canvas_fm},
     }
     canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
@@ -283,6 +284,7 @@ def push_discussion(client: CanvasClient, fm: dict, html: str, existing_id: int 
         payload["assignment"] = {
             "points_possible": fm["points"],
             "due_at": fm.get("due"),
+            **{key: fm[key] for key in ("grading_type", "omit_from_final_grade") if key in fm},
         }
     if existing_id:
         return client.update_discussion(existing_id, payload)
@@ -293,12 +295,22 @@ def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None
     payload = {
         "title": fm["title"],
         "description": html,
-        "quiz_type": "assignment",
+        "quiz_type": fm.get("quiz_type", "assignment"),
+        **({"allowed_attempts": fm["allowed_attempts"]} if "allowed_attempts" in fm else {}),
         "points_possible": fm.get("points"),
         "due_at": fm.get("due"),
         "notify_of_update": False,
     }
 
+    existing_questions = client.list_quiz_questions(existing_id) if existing_id else []
+    from canvas_sync.drift import comparable_questions
+    questions_unchanged = bool(existing_id) and comparable_questions(
+        fm.get("questions", []), canvas=False
+    ) == comparable_questions(existing_questions, canvas=True)
+    if existing_id and not questions_unchanged:
+        attempts = client._request("GET", f"quizzes/{existing_id}/submissions")
+        if attempts.get("quiz_submissions"):
+            raise ValueError("Quiz has attempts; refusing to replace questions and disturb history")
     if existing_id:
         result = client.update_quiz(existing_id, payload)
     else:
@@ -310,9 +322,12 @@ def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None
 
     quiz_id = result["id"]
 
-    # Wipe existing questions so an update replaces rather than appends.
+    if questions_unchanged:
+        return client.update_quiz(quiz_id, {"published": fm.get("publish", True), "notify_of_update": False})
+
+    # Wipe existing questions only when content changed and no attempts exist.
     if existing_id:
-        for q in client.list_quiz_questions(quiz_id):
+        for q in existing_questions:
             client.delete_quiz_question(quiz_id, q["id"])
 
     question_type_map = {
@@ -342,6 +357,34 @@ def push_quiz(client: CanvasClient, fm: dict, html: str, existing_id: int | None
         quiz_id,
         {"published": fm.get("publish", True), "notify_of_update": False},
     )
+
+
+def enforce_module_order(client, desired):
+    """Order selected existing items in their current slots; preserve other items."""
+    by_module = {}
+    for entry, position in desired:
+        if entry.get("canvas_module_item_id") and entry.get("canvas_module_id"):
+            by_module.setdefault(int(entry["canvas_module_id"]), []).append((position, int(entry["canvas_module_item_id"])))
+    verified = {}
+    for module_id, rows in by_module.items():
+        wanted = [item_id for _, item_id in sorted(rows)]
+        live = sorted(client.list_module_items(module_id), key=lambda x: x["position"])
+        ids = [x["id"] for x in live]
+        if not set(wanted).issubset(ids):
+            raise ValueError(f"Module {module_id}: expected item missing; no items recreated")
+        selected = set(wanted)
+        iterator = iter(wanted)
+        target = [next(iterator) if item_id in selected else item_id for item_id in ids]
+        for index, item_id in enumerate(target):
+            if ids[index] != item_id:
+                client.update_module_item(module_id, item_id, {"position": index + 1})
+                ids.remove(item_id)
+                ids.insert(index, item_id)
+        readback = [x["id"] for x in sorted(client.list_module_items(module_id), key=lambda x: x["position"])]
+        if readback != target:
+            raise ValueError(f"Module {module_id}: order verification failed")
+        verified[str(module_id)] = readback
+    return verified
 
 
 def push_artifact(
@@ -602,7 +645,8 @@ def push_artifact(
                 current_module_id is not None and int(module_id) != int(current_module_id)
             )
             if canvas_module_item_id:
-                stored_position = existing.get("position")
+                live_item = client._request("GET", f"modules/{current_module_id or module_id}/items/{canvas_module_item_id}")
+                stored_position = live_item.get("position")
                 needs_reposition = (
                     fm.get("position") is not None
                     and fm.get("position") != stored_position

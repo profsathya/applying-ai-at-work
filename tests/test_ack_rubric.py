@@ -109,6 +109,9 @@ def write_state(state_path: Path, *, rubric_hash: str) -> None:
 
 
 class QuietClient:
+    def _request(self, method, path):
+        return {"position": 1, "quiz_submissions": []}
+
     def update_assignment(self, assignment_id: int, payload: dict) -> dict:
         return {"id": assignment_id, **payload}
 

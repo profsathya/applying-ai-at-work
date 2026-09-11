@@ -11,6 +11,7 @@ points: 0
 submission_type: file_upload
 delivery_mode: ai_activity
 publish: true
+learner_labels: true
 ai_activity:
   activity_id: course1-ai-exchange-is-this-a-gap-v3
   version: "1.0"
@@ -87,9 +88,8 @@ It has also been instructed to give you a verdict rather than general feedback. 
 
 ## What to Submit
 
-The saved conversation, plus your two or three sentences on what changed.
+Open the interactive activity and enter your committed gap. Generate the follow-up questions, then write your revised gap and two or three sentences on what changed in **Your Revised Gap and What Changed**. Select **Save Response**, then use the activity export control to download your JSON file. Upload that file to this Canvas assignment and check the submission confirmation.
 
-[TODO: confirm the built-in AI activity mechanics and how the conversation is saved and uploaded. Should match the pattern used in Sprint 1 and Sprint 3.]
 
 ## Next
 

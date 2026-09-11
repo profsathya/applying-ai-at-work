@@ -19,7 +19,7 @@ from canvas_sync.hosted_html import (
     course_shared_output_dir,
     render_hosted_files,
 )
-from canvas_sync.push import push_artifact
+from canvas_sync.push import push_artifact, enforce_module_order
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.state import (
     check_state_instance,
@@ -445,6 +445,21 @@ def publish_manifest(
                         "state must be committed so the retry updates instead of duplicating",
                     }
                 )
+
+    if result["published"] and not result["failed"] and not result["drifted"]:
+        latest_state, _ = load_state(manifest_path, state_dir, require_state=True)
+        # Only explicitly selected source modules opt into final ordering.
+        desired = []
+        for path in discover_artifact_files(manifest_path):
+            fm, _ = parse_frontmatter(path)
+            if fm.get("learner_labels") and fm["type"] != "module_header":
+                desired.append((latest_state["artifacts"].get(fm["artifact_id"], {}), fm["position"]))
+        if desired:
+            try:
+                client = CanvasClient.from_env(course_id=int(manifest["instance"]["course_id"]))
+                result["verified_order"] = enforce_module_order(client, desired)
+            except Exception as exc:
+                result["failed"].append({"file": "<module_order>", "artifact_id": None, "error": str(exc)})
 
     if hosted_output_dir and result["published"]:
         try:

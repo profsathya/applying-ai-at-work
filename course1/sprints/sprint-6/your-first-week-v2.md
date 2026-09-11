@@ -10,6 +10,7 @@ position: 5
 points: null
 submission_type: none
 publish: true
+learner_labels: true
 ---
 
 # Your First Week

@@ -233,7 +233,7 @@ modules:
           - slug: "start-here-v2"
             meta: "Page - module landing page: what this module covers and what to do first"
           - slug: "welcome-v2"
-            meta: "Page - who is teaching this, what the course is, and what you walk out with"
+            meta: "Page - what the course is, who it is for, and what you walk out with"
           - slug: "how-this-course-works-v2"
             meta: "Page - the five sprints, the weekly rhythm, and how you turn work in"
           - slug: "your-first-week-v2"
@@ -241,7 +241,7 @@ modules:
       - label: "The one submission"
         items:
           - slug: "introduction-post-v2"
-            meta: "Discussion - post a short introduction, graded complete or incomplete"
+            meta: "Discussion - post a short introduction and read a few others; complete or incomplete, 0 points, peer replies optional"
       - label: "Come back to this anytime"
         items:
           - slug: "help-and-resources-v2"
@@ -262,7 +262,7 @@ modules:
           - slug: "introduction-integrate-people-and-context-v2"
             meta: "Page - how stakeholders, evidence, and validation work in this sprint"
           - slug: "sprint-3-concept-check-v2"
-            meta: "Quiz - check your understanding before you start"
+            meta: "Practice quiz - check your understanding before you start; ungraded, unlimited attempts"
             badge: "Self-check"
             selfcheck: true
           - slug: "dojo-lab-stakeholder-map-v2"
@@ -289,7 +289,7 @@ modules:
           - slug: "introduction-close-the-learning-gap-v3"
             meta: "Page - what separates a gap from a topic, and an explanation from evidence"
           - slug: "sprint-4-concept-check-v3"
-            meta: "Quiz - check your understanding before you start"
+            meta: "Practice quiz - check your understanding before you start; ungraded, unlimited attempts"
             badge: "Self-check"
             selfcheck: true
           - slug: "name-the-gap-v3"
@@ -330,7 +330,7 @@ modules:
       - "Describe three to five candidate problems from your working table, naming who pays the cost and marking what you do not yet know."
       - "Compare candidates using four checks: real people, current handling, current occurrence, and a size that supports further inquiry."
       - "Explain your choice of a problem with reasons and a runner-up, or identify where to look next if nothing survives."
-    prereq: "Start with your own observations; you do not need a chosen problem. Keep one table across the first-half activities and carry your choice into later framing. Work without AI in this half. The three own-your-progress activities are encouraged, carry zero points, and do not block later activities if skipped."
+    prereq: "Only the first half of Sprint 1 is available here, ending with Test and commit. The Introduction also describes second-half work that is not yet available. Start with your own observations; you do not need a chosen problem. Keep one table across these activities and carry your choice into later framing. Work without AI in this half. The three own-your-progress activities are encouraged, carry zero points, and do not block later activities if skipped."
     groups:
       - label: "Introduction"
         items:

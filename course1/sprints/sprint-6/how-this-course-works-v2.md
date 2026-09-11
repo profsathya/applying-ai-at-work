@@ -10,6 +10,7 @@ position: 4
 points: null
 submission_type: none
 publish: true
+learner_labels: true
 ---
 
 # How This Course Works
@@ -50,7 +51,6 @@ The course is asynchronous and self-paced. Nothing meets live. You fit it around
 
 Self-paced does not mean unpaced. Each sprint is two weeks, and the work is designed to be split across both of them. **Aim for about half a sprint per week.** The people who struggle in courses like this are almost always the ones who saved a sprint for its final weekend.
 
-`[TODO: add the expected weekly time commitment, for example a range of hours per week.]`
 
 Here is the single most useful thing you can do about this: pick your hours now and put them on your calendar as a recurring block. In self-paced courses, a fixed scheduled slot predicts finishing better than motivation does.
 

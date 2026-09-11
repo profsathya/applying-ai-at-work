@@ -10,17 +10,13 @@ position: 3
 points: null
 submission_type: none
 publish: true
+learner_labels: true
 ---
 
 # Welcome
 
 > This course helps you take a real problem from your work or your personal life and turn it into a problem clear enough to actually solve. You bring the problem. AI helps you think it through. You make every call. In ten weeks you will have one document that shows the problem, the thinking behind it, and how your own thinking changed.
 
-`[TODO: add the instructor welcome video here, 2 to 3 minutes, with captions or a transcript. Video cannot be embedded from Markdown, so add it on the Canvas page after publish.]`
-
-## Who is teaching this
-
-`[TODO: add 3 to 4 sentences from Clare, in her own words: who she is, what she does, why she cares about this course.]`
 
 ## What this course is
 

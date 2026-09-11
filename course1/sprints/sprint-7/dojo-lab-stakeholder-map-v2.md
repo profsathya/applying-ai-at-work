@@ -10,6 +10,7 @@ position: 4
 points: 35
 submission_type: text_entry
 publish: true
+learner_labels: true
 rubric:
   - description: Stakeholder profiles are specific to the problem context
     points: 6

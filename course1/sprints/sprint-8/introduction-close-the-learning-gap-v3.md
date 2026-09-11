@@ -10,6 +10,7 @@ position: 2
 points: null
 submission_type: none
 publish: true
+learner_labels: true
 ---
 
 By the end of Sprint 3 you had a problem frame that had survived contact with a real person. You also had something that did not fit: a thing they said that you had no answer to, or a number you have been quoting that you cannot actually back up.

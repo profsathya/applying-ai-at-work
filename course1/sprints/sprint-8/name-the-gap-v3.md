@@ -10,6 +10,7 @@ position: 4
 points: 15
 submission_type: text_entry
 publish: true
+learner_labels: true
 ---
 
 # Name the Gap

@@ -11,6 +11,7 @@ points: 10
 submission_type: file_upload
 delivery_mode: ai_activity
 publish: true
+learner_labels: true
 ai_activity:
   activity_id: course1-sprint-4-reflection-what-i-learned-and-how-i-know-v3
   version: "1.0"

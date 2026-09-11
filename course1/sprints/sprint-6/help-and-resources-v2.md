@@ -10,6 +10,7 @@ position: 7
 points: null
 submission_type: none
 publish: true
+learner_labels: true
 ---
 
 # Help and Resources
@@ -18,15 +19,18 @@ publish: true
 
 ## Submitting your work in Canvas
 
-`[TODO: add where to find the assignment, the two submission types (text entry and file upload), how to check a submission went through, and how to resubmit before the deadline. Written for someone who has never used Canvas.]`
+Open the assignment from the course homepage or Modules, then select **Start Assignment**. Follow the submission type shown: paste your response for text entry, or choose your saved file for a file upload. Select **Submit Assignment**, then check that Canvas shows a submitted status and submission details. Saving a response inside an activity does not submit it to Canvas. If Canvas offers **New Attempt**, use it to submit a revision and check the new submission details.
+
 
 ## Setting up and using the Dojo
 
-`[TODO: link the Dojo's own "first time here" walkthrough. The most important piece is how to get back to it later, not the tour.]`
+Open the Dojo from the link in the relevant lab and follow that lab's instructions. Keep the lab page available so you can return to its prompts and submission directions. Sprint 1's currently available first half is completed without AI.
+
 
 ## Downloading and uploading your JSON
 
-`[TODO: add the steps, plus one plain sentence on what a JSON file is and why the course uses one.]`
+A JSON file stores your activity responses in a structured text format so they can be reviewed together. In an interactive activity, save your responses and use its download/export control to save the JSON file. Return to the Canvas assignment, choose file upload, select that file, and submit it. Check the Canvas submission details; downloading the file alone does not turn it in.
+
 
 ## Key terms
 
@@ -64,10 +68,6 @@ Every term in this course, in plain language. You will meet several of these bef
 
 ## Getting help from your instructor
 
-Your instructor for this course is Clare `[TODO: add last name]`.
-
-- **How to reach her:** `[TODO: add email address or preferred contact route]`
-- **When to expect a reply:** `[TODO: add stated turnaround, for example within one business day, Monday through Friday]`
-- **If a deadline is coming and you have not heard back:** `[TODO: add a real instruction, for example submit what you have by the deadline and note in the submission that you are waiting on a reply]`
+Use the Canvas **Inbox** to select this course and your instructor as the recipient. Include the activity title, your question, and what you have tried.
 
 Reach out earlier than feels necessary. Asking a question in week 2 is normal. Asking the same question in week 7, after six weeks of being stuck, is a much harder position to recover from.

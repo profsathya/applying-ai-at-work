@@ -8,15 +8,19 @@ week: 1
 module: 'Sprint 0: Welcome and Orientation (V2)'
 position: 6
 points: 0
+grading_type: pass_fail
+omit_from_final_grade: true
+completion_requirement: must_contribute
+learning_goal: Introduce your professional context and learning interests to the people you will work alongside.
 submission_type: discussion_topic
 publish: true
+learner_labels: true
 ---
 
 # Introduction Post
 
 This is the one thing you submit in this module. It is an introduction, not an assignment, and it is graded complete or incomplete.
 
-`[TODO: confirm this discussion is set to complete or incomplete grading in Canvas after publish. Grading type is not set from Markdown.]`
 
 ## Post
 

@@ -5,6 +5,41 @@
   "type": "object",
   "required": ["type", "title", "slug", "artifact_id", "sprint", "module", "position", "publish"],
   "properties": {
+    "quiz_type": {
+      "type": "string",
+      "enum": [
+        "assignment",
+        "practice_quiz"
+      ]
+    },
+    "allowed_attempts": {
+      "type": "integer",
+      "anyOf": [
+        {
+          "const": -1
+        },
+        {
+          "minimum": 1
+        }
+      ]
+    },
+    "grading_type": {
+      "type": "string",
+      "enum": [
+        "points",
+        "pass_fail"
+      ]
+    },
+    "learner_labels": {
+      "type": "boolean"
+    },
+    "learning_goal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "omit_from_final_grade": {
+      "type": "boolean"
+    },
     "source_provenance": {
       "type": "string",
       "pattern": "^[a-z0-9-]+\\.sources\\.json$",

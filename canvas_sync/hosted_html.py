@@ -230,6 +230,8 @@ def _wrap_sections(rendered: str) -> str:
 
 
 def _learning_goal(frontmatter: dict) -> str:
+    if frontmatter.get("learning_goal"):
+        return frontmatter["learning_goal"]
     title = frontmatter["title"]
     artifact_type = frontmatter["type"]
     if artifact_type == "assignment":
@@ -328,6 +330,8 @@ def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
         "discussion": "Use the Canvas discussion to post your response and reply to peers.",
         "quiz": "Use the Canvas quiz to complete the check.",
     }.get(artifact_type, "Return to Canvas for the next step.")
+    if frontmatter.get("learner_labels") and artifact_type == "discussion":
+        guidance = "Post your introduction in Canvas, then read a few other introductions. Peer replies are optional."
     link = ""
     if canvas_url:
         escaped = html_lib.escape(canvas_url, quote=True)
@@ -358,12 +362,12 @@ def render_artifact_document(
     title = html_lib.escape(frontmatter["title"])
     module = html_lib.escape(frontmatter["module"])
     course_key = html_lib.escape(str(hosted_info["hosted_path"]).split("/", 1)[0])
-    artifact_type = html_lib.escape(_type_label(frontmatter["type"]))
+    artifact_type = html_lib.escape("Assignment" if frontmatter.get("learner_labels") and frontmatter.get("delivery_mode") == "ai_activity" else _type_label(frontmatter["type"]))
     sprint = int(frontmatter["sprint"])
     goal = html_lib.escape(_learning_goal(frontmatter))
     # Authored document builds already contain their instructional framing. Keep
     # storage/version identifiers and generated generic goals out of that prose.
-    meta = f"{module} &middot; {artifact_type}" if frontmatter.get("source_provenance") else f"{course_key} &middot; Sprint {sprint} &middot; {module} &middot; {artifact_type}"
+    meta = f"{module} &middot; {artifact_type}" if frontmatter.get("source_provenance") or frontmatter.get("learner_labels") else f"{course_key} &middot; Sprint {sprint} &middot; {module} &middot; {artifact_type}"
     goal_block = "" if frontmatter.get("source_provenance") else f'<div class="goal"><h2>Learning goal</h2><p>{goal}</p></div>'
     source_class = " source-derived" if frontmatter.get("source_provenance") else ""
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {})
@@ -582,7 +586,7 @@ def _render_ai_activity_wrapper_document(
     title = html_lib.escape(frontmatter["title"])
     module = html_lib.escape(frontmatter["module"])
     course_key = html_lib.escape(str(hosted_info["hosted_path"]).split("/", 1)[0])
-    artifact_type = html_lib.escape(_type_label(frontmatter["type"]))
+    artifact_type = html_lib.escape("Assignment" if frontmatter.get("learner_labels") and frontmatter.get("delivery_mode") == "ai_activity" else _type_label(frontmatter["type"]))
     sprint = int(frontmatter["sprint"])
     points = frontmatter.get("points")
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {})
@@ -595,7 +599,7 @@ def _render_ai_activity_wrapper_document(
     activity_href = f"../activities/{html_lib.escape(frontmatter['slug'], quote=True)}.html?context=web"
     back_href = f"../sprint-{sprint}.html?context=web"
     points_text = "Ungraded" if points is None else f"{points:g} points"
-    meta = f"{module} &middot; {artifact_type}" if frontmatter.get("source_provenance") else f"{course_key} &middot; Sprint {sprint} &middot; {module} &middot; {artifact_type}"
+    meta = f"{module} &middot; {artifact_type}" if frontmatter.get("source_provenance") or frontmatter.get("learner_labels") else f"{course_key} &middot; Sprint {sprint} &middot; {module} &middot; {artifact_type}"
     mermaid_styles = _mermaid_styles() if has_mermaid else ""
     mermaid_script = _mermaid_script() if has_mermaid else ""
 

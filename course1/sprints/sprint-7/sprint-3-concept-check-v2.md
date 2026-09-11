@@ -8,9 +8,12 @@ week: 5
 module: 'Sprint 3: Integrate People and Context (V2)'
 position: 3
 points: 5
+quiz_type: practice_quiz
+allowed_attempts: -1
 submission_type: online_quiz
 delivery_mode: canvas_native
 publish: true
+learner_labels: true
 questions:
   - type: true_false
     prompt: >
@@ -78,4 +81,4 @@ questions:
 
 A short self-test to confirm you are set up for this sprint before you start mapping. It covers both what Sprint 3 asks you to do and the core concepts behind it: stakeholders, evidence status, validation questions, and conflicts as information.
 
-This is an anti-skim check, not a graded assessment. If a question surprises you, revisit the Introduction before moving on to the Dojo Lab.
+This is an anti-skim check, not a graded assessment. You can retry it as often as needed; the score is feedback and does not count toward your course grade. If a question surprises you, revisit the Introduction before moving on to the Dojo Lab.

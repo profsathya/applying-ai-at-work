@@ -8,9 +8,12 @@ week: 7
 module: 'Sprint 4: Close The Learning Gap (V2)'
 position: 3
 points: 5
+quiz_type: practice_quiz
+allowed_attempts: -1
 submission_type: online_quiz
 delivery_mode: canvas_native
 publish: true
+learner_labels: true
 questions:
   - type: multiple_choice
     prompt: "Which of these is a learning gap as this sprint defines one?"
@@ -78,4 +81,4 @@ questions:
 
 # Sprint 4 Concept Check
 
-Five questions on the Introduction. This is an anti-skim check, not a graded assessment. If a question surprises you, go back and read that section before you start Name the Gap. You are about to spend two weeks on a plan, and it is worth two minutes to make sure the plan is built on the right idea.
+Five questions on the Introduction. This is an anti-skim check, not a graded assessment. You can retry it as often as needed; the score is feedback and does not count toward your course grade. If a question surprises you, go back and read that section before you start Name the Gap. You are about to spend two weeks on a plan, and it is worth two minutes to make sure the plan is built on the right idea.

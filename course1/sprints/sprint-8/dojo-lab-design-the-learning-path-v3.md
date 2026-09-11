@@ -10,6 +10,7 @@ position: 6
 points: 20
 submission_type: text_entry
 publish: true
+learner_labels: true
 ---
 
 # Dojo Lab: Design the Learning Path
@@ -28,7 +29,6 @@ Have four things in front of you: your committed gap, your definition of "closed
 
 Use the [Open the Symbiotic Thinking Dojo](https://dojo.symbioticthinking.ai/) link for this lab. First-time users should open Learn About -> Privacy & Setup and configure a Gemini API key in the browser before starting.
 
-[TODO: 3 to 5 minute walkthrough video.]
 
 Do not paste confidential information, names, or anything your organization would not want outside its systems.
 

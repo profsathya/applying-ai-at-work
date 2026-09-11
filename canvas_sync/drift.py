@@ -123,6 +123,12 @@ def compute_drift(
     if atype in ("assignment", "quiz", "discussion") and "due_at" in due_state:
         if due_state["due_at"] != fm.get("due"):
             result["due"] = {"local": fm.get("due"), "canvas": due_state["due_at"]}
+    setting_state = live.get("assignment") or live
+    for key in ("quiz_type", "allowed_attempts", "grading_type", "omit_from_final_grade"):
+        if key in fm:
+            actual = live.get(key) if key in ("quiz_type", "allowed_attempts") else setting_state.get(key)
+            if actual != fm[key]:
+                result[key] = {"local": fm[key], "canvas": actual}
     if atype == "quiz" and "questions" in live:
         if comparable_questions(
             fm.get("questions", []), canvas=False

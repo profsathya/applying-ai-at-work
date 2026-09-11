@@ -11,6 +11,7 @@ points: 50
 submission_type: file_upload
 delivery_mode: ai_activity
 publish: true
+learner_labels: true
 ai_activity:
   activity_id: course1-stakeholder-conversation-v2
   version: "1.0"

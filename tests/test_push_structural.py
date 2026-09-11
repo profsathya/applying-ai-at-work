@@ -122,6 +122,9 @@ def write_state(
 
 
 class StructuralClient:
+    def _request(self, method, path):
+        return {"position": 2, "quiz_submissions": []}
+
     def __init__(self, *, fail_module_item_update: bool = False) -> None:
         self.assignment_payloads: list[dict] = []
         self.module_item_updates: list[tuple[int, int, dict]] = []

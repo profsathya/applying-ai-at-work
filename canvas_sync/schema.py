@@ -70,6 +70,12 @@ def validate_artifact(md_path: Path) -> list[str]:
     errors.extend(validate_ai_activity_delivery(md_path, frontmatter))
     errors.extend(validate_guided_assignment(md_path, frontmatter))
 
+    for key in ("quiz_type", "allowed_attempts"):
+        if key in frontmatter and (frontmatter.get("type") != "quiz" or frontmatter.get("delivery_mode") == "ai_activity"):
+            errors.append(f"{md_path}: {key} requires a native quiz")
+    if "grading_type" in frontmatter and frontmatter.get("type") != "discussion":
+        errors.append(f"{md_path}: grading_type requires a discussion")
+
     # Soft checks that aren't easily expressed in JSON Schema
     if frontmatter.get("type") in ("assignment", "quiz", "discussion"):
         if frontmatter.get("points") is None:

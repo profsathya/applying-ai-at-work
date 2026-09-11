@@ -10,6 +10,7 @@ position: 7
 points: 50
 submission_type: text_entry
 publish: true
+learner_labels: true
 ---
 
 # Learn and Check
