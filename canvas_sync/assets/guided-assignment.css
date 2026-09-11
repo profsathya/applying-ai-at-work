@@ -11,4 +11,6 @@
 .guided-workspace :focus-visible { outline: 3px solid #bf6b00; outline-offset: 3px; }
 .guided-workspace table { width: 100%; border-collapse: collapse; font-size: .94em; }
 .guided-workspace th, .guided-workspace td { padding: 8px; border: 1px solid #ccd5df; vertical-align: top; overflow-wrap: anywhere; }
+.guided-workspace .teaching-table { overflow-x: auto; max-width: 100%; }
+.guided-workspace .teaching-table th, .guided-workspace .teaching-table td { min-width: 140px; }
 @media (max-width: 600px) { .guided-workspace .response-task { padding: 14px; } }

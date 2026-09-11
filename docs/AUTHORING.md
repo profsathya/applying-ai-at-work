@@ -21,6 +21,22 @@ Before substantive authoring, establish the audience, intended capability and va
 
 Preserve a supplied structure when it serves the design. No skill mandates headings, reflection sections, word counts, or artifact counts. If the request protects exact source wording, preserve it and provide recommendations separately. Flag a conflict with validation requirements rather than silently "correcting" protected text. Preserve existing artifact identity and requested edit scope. Read neighboring material to check dependencies, but do not expand writes into it without authorization.
 
+## Source conversion and instructional adaptation
+
+Determine the mode from the request. Faithful conversion preserves selected source wording and documents mechanical changes. An authorized instructional adaptation may shorten, reorganize, or rewrite source prose while preserving the requested learning and assessment design. Label revised passages as adaptations with reasons and source references; do not claim they are verbatim. Explicit exact-wording constraints still apply. Source design files remain read-only unless separately authorized.
+
+For page structure, visuals, and supported renderer choices, use [the presentation implementation reference](AUTHORING_PRESENTATION.md). It documents an example and current capabilities; the owning skills retain the teaching and review principles.
+
+The asynchronous review evaluates the assembled participant experience, including rendered teaching, prompts, criteria, and navigation. Follow the writing and review skills for this assessment; successful schema or browser checks are not an editorial pass.
+
+## Repeatable module production
+
+For substantive module builds and revisions, the coordinator carries the work through authoring, illustration where useful, rendering, inspection, and revision. Use the [Sprint 1 reference set, illustration brief, and preview commands](AUTHORING_PRESENTATION.md) within the supplied design. For a revision, save a rendered baseline before editing; for new content, begin with the current preview. If a baseline was not saved, state that limitation rather than reconstructing an alleged before version.
+
+The author chooses a suitable presentation and returns any visual needs with the instructional purpose, subject, and placement. Restricted authors keep their existing file boundaries. The coordinator reuses or produces authorized assets, records generation or reuse evidence, integrates Markdown references and provenance, and runs the module preview checks. Image generation follows the available image-generation skill; no specific plugin, external provider, or paid service is required by this contract. Missing generation capability does not justify broken image placeholders or a claim that visuals were completed.
+
+The coordinator inspects the full desktop/mobile sequence using the adult-learner questions in reviewing-course-text, fixes in-scope issues, maintains homepage alignment, completes applicable validation, and saves the existing authoring review record. Deliver the local preview/comparison, actual automated results, manual findings, and unresolved limitations. Publishing remains a separate authorized operation. Exact-wording and mechanical requests retain their existing boundaries.
+
 ## Routing and record ownership
 
 | Work | Guidance and handoff |

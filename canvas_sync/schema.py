@@ -68,7 +68,7 @@ def validate_artifact(md_path: Path) -> list[str]:
         errors.append(f"{md_path}: {e.message} (at {'/'.join(str(p) for p in e.path)})")
 
     errors.extend(validate_ai_activity_delivery(md_path, frontmatter))
-    errors.extend(validate_guided_assignment(md_path, frontmatter))
+    errors.extend(validate_guided_assignment(md_path, frontmatter, body))
 
     for key in ("quiz_type", "allowed_attempts"):
         if key in frontmatter and (frontmatter.get("type") != "quiz" or frontmatter.get("delivery_mode") == "ai_activity"):
@@ -90,6 +90,13 @@ def validate_artifact(md_path: Path) -> list[str]:
         if pattern in body.lower():
             errors.append(f"{md_path}: body contains forbidden pattern '{pattern}'")
 
+    from canvas_sync.local_images import local_image_assets
+    from canvas_sync.hosted_html import markdown_body_to_html
+    try:
+        local_image_assets(md_path, markdown_body_to_html(body))
+    except ValueError as exc:
+        errors.append(str(exc))
+
     # Human-authored source punctuation is preserved only inside verified source segments.
     from canvas_sync.source_build import validate_source_evidence
     fidelity_errors, newly_authored = validate_source_evidence(md_path, frontmatter, body)
@@ -100,12 +107,14 @@ def validate_artifact(md_path: Path) -> list[str]:
     return errors
 
 
-def validate_guided_assignment(label: object, payload: dict) -> list[str]:
+def validate_guided_assignment(label: object, payload: dict, body: str | None = None) -> list[str]:
     errors = []
+    if payload.get("page_presentation") and payload.get("type") != "page":
+        errors.append(f"{label}: page_presentation requires a page")
     mode = payload.get("delivery_mode")
     config = payload.get("guided_assignment")
     if mode != "guided_assignment":
-        return [f"{label}: guided_assignment requires its delivery mode"] if config is not None else []
+        return errors + ([f"{label}: guided_assignment requires its delivery mode"] if config is not None else [])
     if payload.get("type") != "assignment" or payload.get("submission_type") != "text_entry":
         errors.append(f"{label}: guided_assignment requires an assignment with text_entry submission")
     if not isinstance(config, dict):
@@ -122,6 +131,24 @@ def validate_guided_assignment(label: object, payload: dict) -> list[str]:
             errors.append(f"{label}: choice correct_index is outside options")
     if len(set(str(i) for i in ids)) != len(ids):
         errors.append(f"{label}: guided task IDs must be unique")
+    tasks = config.get('tasks', [])
+    if config.get('presentation') == 'reading' and config.get('feedback_endpoint'):
+        errors.append(f'{label}: reading presentation does not support an AI feedback endpoint')
+    if config.get('presentation') == 'compact':
+        if (not isinstance(tasks, list) or len(tasks) != 1 or not isinstance(tasks[0], dict)
+                or tasks[0].get('kind', 'response') != 'response' or not tasks[0].get('instruction_section')):
+            errors.append(f'{label}: compact presentation requires one response task with instruction_section')
+        if config.get('feedback_endpoint'):
+            errors.append(f'{label}: compact presentation does not support an AI feedback endpoint')
+    if (body is not None and isinstance(tasks, list)
+            and all(isinstance(task, dict) and isinstance(task.get('id'), str) for task in tasks)
+            and any('instruction_section' in task for task in tasks)):
+        from canvas_sync.instruction_sections import partition_instruction_sections
+        from canvas_sync.hosted_html import markdown_body_to_html
+        try:
+            partition_instruction_sections(markdown_body_to_html(body), tasks)
+        except ValueError as exc:
+            errors.append(f'{label}: {exc}')
     return errors
 
 

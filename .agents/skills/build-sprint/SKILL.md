@@ -1,6 +1,6 @@
 ---
 name: build-sprint
-description: Build a sprint/module from human context, a Google Doc file link, DOCX, ZIP, or module spec; preserve source wording, validate local artifacts, and prepare a reviewed Canvas handoff.
+description: Build a sprint/module from human context, a Google Doc file link, DOCX, ZIP, or module spec; preserve or adapt source wording as requested, validate local artifacts, and prepare a reviewed Canvas handoff.
 ---
 
 # Build Sprint Skill
@@ -43,7 +43,7 @@ If the user pastes context directly into chat, use it as the module context. Do 
    - If the context asks for AI-powered quiz or discussion activities, author them as `delivery_mode: ai_activity` with `submission_type: file_upload` and `ai_activity.questions`; do not create native Canvas quiz `questions` for those items.
 5. If the target course has no built sprints, infer scaffolding from a comparable built course such as `course1` and say so.
 6. Follow [the authoring contract](../../../docs/AUTHORING.md). Establish audience, intended capability, prior work, and evidence; read [writing-learning-goals](../writing-learning-goals/SKILL.md), [writing-to-teach](../writing-to-teach/SKILL.md), and [writing-assignments](../writing-assignments/SKILL.md) when tasks are involved. Write artifact MD only under `<target>/sprints/sprint-<n>/`. The supplied structure takes precedence over inferred scaffolding; do not enforce a fixed artifact count or heading pattern.
-   For document inputs, build a source map and use `canvas_sync/source_build.py` to preserve selected blocks with adjacent source evidence. Mark newly authored prose, question/configuration metadata, heading changes, and cross-reference adaptations. Source sequence and scope override inferred artifact counts; do not invent a missing half of a sprint. Write authorized course builds under `<target>/sprints/sprint-<n>/`, or use an ignored preview directory when the user requests a demonstration. Never overwrite an existing live sprint as a side effect of intake.
+   For document inputs, distinguish faithful conversion from authorized instructional adaptation using the authoring contract. Build a source map and use `canvas_sync/source_build.py` to preserve selected blocks with adjacent source evidence; classify shortened or rewritten passages as adaptations, not verbatim selections. Mark newly authored prose, question/configuration metadata, heading changes, and cross-reference adaptations. Source sequence and scope override inferred artifact counts; do not invent a missing half of a sprint. Write authorized course builds under `<target>/sprints/sprint-<n>/`, or use an ignored preview directory when the user requests a demonstration. Never overwrite an existing live sprint as a side effect of intake.
    - Record exact tracked-edit/version choices and local comment resolutions; do not mutate source comments. Source review notes, raw configuration, keys, and draft banners stay out of learner prose.
    - Preserve human punctuation in verified source segments. Newly written text follows repository style. Do not paraphrase to pass validation.
    - Read current Common Curriculum mechanisms when the user provides an assessment reference; do not assume a native Canvas quiz or an AI activity is the intended mechanism.

@@ -97,14 +97,21 @@
   async function copy(withAnswers) {
     const text = payload(withAnswers); byId('copy-output').value = text;
     try { await navigator.clipboard.writeText(text); byId('copy-status').textContent = 'Copied. Paste into your document or Canvas text-entry box. This has not submitted your work.'; }
-    catch (_) { byId('copy-output').focus(); byId('copy-output').select(); byId('copy-status').textContent = 'Select and copy the text below. This has not submitted your work.'; }
+    catch (_) {
+      if (['compact', 'reading'].includes(config.presentation)) byId('more-options').open = true;
+      byId('copy-output').focus(); byId('copy-output').select(); byId('copy-status').textContent = 'Select and copy the text below. This has not submitted your work.';
+    }
   }
   byId('copy-tasks').addEventListener('click', () => copy(false));
   byId('copy-answers').addEventListener('click', () => copy(true));
   byId('clear-draft').addEventListener('click', () => {
     byId('clear-confirmation').hidden = false;
+    if (['compact', 'reading'].includes(config.presentation)) byId('cancel-clear').focus();
   });
-  byId('cancel-clear').addEventListener('click', () => { byId('clear-confirmation').hidden = true; });
+  byId('cancel-clear').addEventListener('click', () => {
+    byId('clear-confirmation').hidden = true;
+    if (['compact', 'reading'].includes(config.presentation)) byId('clear-draft').focus();
+  });
   byId('confirm-clear').addEventListener('click', () => {
     try { localStorage.removeItem(key); }
     catch (_) { byId('save-status').textContent = 'Could not clear the saved draft. Your current responses are still here.'; return; }
@@ -117,6 +124,7 @@
       } else { find('data-answer', task.id).value = ''; showFeedback(task); }
     }
     update(); byId('clear-confirmation').hidden = true; byId('copy-status').textContent = ''; byId('save-status').textContent = 'This browser draft was cleared.';
+    if (['compact', 'reading'].includes(config.presentation)) byId('clear-draft').focus();
   });
   update();
   if (!storageOK) byId('save-status').textContent = 'This browser could not load saved responses. Copy your work before leaving.';

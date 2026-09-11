@@ -1,0 +1,31 @@
+.guided-compact { max-width: 68ch; margin: 20px auto; }
+.guided-compact section { background: none; border: 0; border-radius: 0; padding: 0; margin: 0 0 28px; }
+.guided-compact section h2 { font-size: 1.2rem; line-height: 1.35; margin: 0 0 12px; }
+.guided-compact section p { margin: 10px 0; }
+.guided-compact blockquote { margin: 16px 0; padding: 2px 0 2px 18px; border-left: 3px solid #8ba2b8; }
+.guided-compact .response-task { padding: 0; }
+.guided-compact label { font-weight: 650; }
+.guided-compact #save-status { font-size: .875rem; color: #455568; }
+.guided-compact .compact-submit { margin-top: 22px; }
+.guided-compact details { border: 0; border-top: 1px solid #ccd5df; border-radius: 0; padding: 12px 0; }
+.guided-compact #more-options button { background: transparent; color: #204b76; border: 1px solid #8294a7; }
+/* Textbook-style worked example: connected stages, readable without graphics. */
+.guided-compact blockquote { margin: 18px 0; padding: 20px; border: 1px solid #cbd8e4; border-radius: 12px; background: #f0f5fa; }
+.guided-compact blockquote > p:first-child { margin-top: 0; color: #344e68; font-size: .875rem; }
+.guided-compact blockquote ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 16px 0 0; padding: 0; list-style-position: inside; }
+.guided-compact blockquote li { position: relative; margin: 0; padding: 14px; border: 1px solid #c3d2df; border-top: 4px solid #477b9b; border-radius: 8px; background: #fff; }
+.guided-compact blockquote li::marker { color: #315d7b; font-weight: 700; }
+.guided-compact blockquote li > p { margin: 8px 0 0; }
+.guided-compact blockquote li:not(:last-child)::after { content: ''; position: absolute; right: -18px; top: 28px; width: 9px; height: 9px; border-top: 2px solid #477b9b; border-right: 2px solid #477b9b; transform: rotate(45deg); }
+.guided-compact blockquote li:last-child { border-top-color: #367663; background: #f4faf7; }
+.guided-compact .response-task { padding: 20px; border: 1px solid #cbd8e4; border-radius: 12px; background: #fff; }
+.guided-compact .task-teaching > ul { padding: 16px 20px 16px 36px; border-left: 3px solid #477b9b; background: #f0f5fa; border-radius: 0 8px 8px 0; }
+@media (max-width: 640px) {
+  .guided-compact blockquote { padding: 16px; }
+  .guided-compact blockquote ol { grid-template-columns: 1fr; gap: 22px; }
+  .guided-compact blockquote li:not(:last-child)::after { top: auto; right: auto; left: 24px; bottom: -16px; transform: rotate(135deg); }
+  .guided-compact .response-task { padding: 16px; }
+}
+/* Optional raster illustrations; existing text-only activities retain their layout. */
+.guided-compact section img { display: block; max-width: 100%; height: auto; border-radius: 10px; }
+.guided-compact p:has(> img) + p { color: #455568; font-size: .875rem; }
