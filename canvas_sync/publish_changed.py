@@ -329,6 +329,19 @@ def publish_manifest(
     if dry_run:
         return result
     if not changed:
+        desired = []
+        for path in discover_artifact_files(manifest_path):
+            fm, _ = parse_frontmatter(path)
+            if fm.get("learner_labels") and fm["type"] != "module_header":
+                desired.append((state_info["state"]["artifacts"].get(fm["artifact_id"], {}), fm["position"]))
+        if desired:
+            check_instance_ready(manifest, manifest_label=str(manifest_path))
+            check_env_matches_instance(manifest, manifest_label=str(manifest_path))
+            try:
+                client = CanvasClient.from_env(course_id=int(manifest["instance"]["course_id"]))
+                result["verified_order"] = enforce_module_order(client, desired)
+            except Exception as exc:
+                result["failed"].append({"file": "<module_order>", "artifact_id": None, "error": str(exc)})
         if hosted_output_dir:
             try:
                 result["hosted"] = render_hosted_files(

@@ -375,11 +375,11 @@ def enforce_module_order(client, desired):
         selected = set(wanted)
         iterator = iter(wanted)
         target = [next(iterator) if item_id in selected else item_id for item_id in ids]
-        for index, item_id in enumerate(target):
-            if ids[index] != item_id:
-                client.update_module_item(module_id, item_id, {"position": index + 1})
-                ids.remove(item_id)
-                ids.insert(index, item_id)
+        if ids != target:
+            # Canvas may return sparse positions. Prepending in reverse order
+            # avoids assuming positions are dense array offsets.
+            for item_id in reversed(target):
+                client.update_module_item(module_id, item_id, {"position": 1})
         readback = [x["id"] for x in sorted(client.list_module_items(module_id), key=lambda x: x["position"])]
         if readback != target:
             raise ValueError(f"Module {module_id}: order verification failed")
