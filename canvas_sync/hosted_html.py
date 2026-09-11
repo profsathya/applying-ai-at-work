@@ -1628,28 +1628,62 @@ def _render_career_course_index(
     )
     if homepage and homepage.get("schedule"):
         schedule = homepage["schedule"]
+        module_groups = {}
+        instance = manifest.get("instance", {})
+        canvas_base = str(instance.get("base_url") or "").rstrip("/")
+        course_id = instance.get("course_id")
+        canvas_modules = f"{canvas_base}/courses/{course_id}/modules" if canvas_base and course_id else None
+        scheduled_sprints = {schedule["orientation_sprint"]} | {
+            entry["sprint"] for entry in schedule["sprints"] if entry["ready"]
+        }
+        for sprint in scheduled_sprints:
+            groups = []
+            for label, items in _homepage_item_groups(items_by_sprint.get(sprint, []), configs.get(sprint, {})):
+                links = []
+                for path, fm, item_config in items:
+                    entry = _state_entry_for_artifact(path, manifest_path, fm, state or manifest)
+                    module_item_id = entry.get("canvas_module_item_id")
+                    canvas_link = (
+                        f"{canvas_modules}/items/{module_item_id}"
+                        if canvas_modules and module_item_id else _canvas_item_url(manifest, fm, entry)
+                    )
+                    links.append({
+                        "title": str(item_config.get("title") or fm["title"]),
+                        "meta": str(item_config.get("nav_meta") or _type_label(fm["type"])),
+                        "web": f"{_artifact_course_relative_path(fm)}?context=web",
+                        "canvas": canvas_link,
+                    })
+                groups.append({"label": label, "items": links})
+            module_groups[sprint] = groups
         help_path, help_fm = next(
             item for items in items_by_sprint.values() for item in items
             if item[1]["slug"] == schedule["help_slug"]
         )
         help_state = _state_entry_for_artifact(help_path, manifest_path, help_fm, state or manifest)
-        document = render_scheduled_homepage(
-            course_meta, schedule, logo_url=CTI_LOGO_URL,
-            help_link={
+        scheduled_options = {
+            "logo_url": CTI_LOGO_URL,
+            "module_groups": module_groups,
+            "help_link": {
                 "web": f"{_artifact_course_relative_path(help_fm)}?context=web",
                 "canvas": _canvas_item_url(manifest, help_fm, help_state),
             },
+        }
+        document = render_scheduled_homepage(course_meta, schedule, **scheduled_options)
+        directory = render_scheduled_homepage(
+            course_meta, schedule, directory=True, **scheduled_options,
         )
     course_dir_out = output_dir / hosted_config_from_manifest(manifest).path_prefix / course_key
     index_changed, index_digest = _write_if_changed(course_dir_out / "index.html", document)
     home_changed, home_digest = _write_if_changed(course_dir_out / "home.html", document)
+    aliases = [{"path": str(course_dir_out / "home.html"), "changed": home_changed, "hash": home_digest}]
+    if homepage and homepage.get("schedule"):
+        directory_changed, directory_digest = _write_if_changed(course_dir_out / "modules.html", directory)
+        aliases.append({"path": str(course_dir_out / "modules.html"), "changed": directory_changed, "hash": directory_digest})
     return {
         "path": str(course_dir_out / "index.html"),
         "changed": index_changed or home_changed,
         "hash": index_digest,
-        "aliases": [
-            {"path": str(course_dir_out / "home.html"), "changed": home_changed, "hash": home_digest}
-        ],
+        "aliases": aliases,
     }
 
 

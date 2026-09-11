@@ -49,6 +49,16 @@
     return url.href;
   }
   doc.querySelectorAll("[data-module-link]").forEach(link => { link.href = moduleHref(link.getAttribute("href")); });
+  doc.querySelectorAll("[data-activity-link]").forEach(link => {
+    if (context === "canvas" && link.dataset.canvasHref) {
+      link.href = link.dataset.canvasHref;
+      link.target = "_top";
+    } else {
+      link.href = moduleHref(link.getAttribute("href"));
+    }
+  });
+  const modules = doc.getElementById("course-modules");
+  if (modules) modules.href = moduleHref(modules.getAttribute("href"));
   const help = doc.getElementById("course-help");
   if (context === "canvas" && schedule.help.canvas) {
     help.href = schedule.help.canvas;
@@ -58,8 +68,12 @@
   }
   for (const entry of schedule.sprints) {
     const row = doc.querySelector(`[data-sprint="${entry.number}"]`);
-    row.querySelector(".module-dates").textContent = `${formatDate(entry.start)} - ${formatDate(entry.end)}`;
+    if (row) row.querySelector(".module-dates").textContent = `${formatDate(entry.start)} - ${formatDate(entry.end)}`;
   }
+  const orientationDates = doc.getElementById("orientation-dates");
+  if (orientationDates) orientationDates.textContent = `Before ${formatDate(schedule.start)}`;
+  // The standalone Modules directory shares navigation behavior, not the current card.
+  if (!doc.getElementById("sprint-title")) return;
   let previousKey = null;
   function refresh() {
     const selected = selectSprint(schedule, new Date());
@@ -71,20 +85,21 @@
     doc.getElementById("sprint-title").textContent = entry.title;
     doc.getElementById("sprint-summary").textContent = entry.summary;
     doc.getElementById("sprint-dates").textContent = orientation ? `Sprint 1 begins ${formatDate(schedule.start)} · ${timezoneLabel}` : `${formatDate(entry.start)} - ${formatDate(entry.end)} · ${timezoneLabel}`;
-    const action = doc.getElementById("sprint-action");
-    action.hidden = !entry.href;
-    if (entry.href) {
-      action.href = moduleHref(entry.href);
-      action.textContent = orientation ? "Open orientation" : selected.phase === "review" ? `Review Sprint ${entry.number}` : `Open Sprint ${entry.number}`;
-    } else {
-      action.removeAttribute("href");
+    const activities = doc.getElementById("sprint-activities");
+    const panel = entry.href ? doc.querySelector(`[data-activities="${entry.sprint}"]`) : null;
+    const count = Number(panel?.dataset.count || 0);
+    if (previousKey !== null && activities.contains(doc.activeElement)) {
+      (count ? activities.querySelector("summary") : modules).focus();
     }
+    doc.querySelectorAll("[data-activities]").forEach(candidate => { candidate.hidden = candidate !== panel; });
+    activities.hidden = !count;
+    if (previousKey !== null) activities.open = true;
+    doc.getElementById("activities-label").textContent = orientation ? "Orientation activities" : `Sprint ${entry.number} activities`;
+    doc.getElementById("activity-count").textContent = `${count} ${count === 1 ? "item" : "items"}`;
     const note = doc.getElementById("sprint-note");
     note.textContent = entry.note || "";
     note.hidden = !entry.note;
-    doc.getElementById("sprint-unavailable").hidden = Boolean(entry.href);
-    doc.querySelectorAll(".module-list a").forEach(link => link.removeAttribute("aria-current"));
-    if (!orientation && entry.href) doc.querySelector(`[data-sprint="${entry.number}"] a`)?.setAttribute("aria-current", "step");
+    doc.getElementById("sprint-unavailable").hidden = Boolean(count);
     if (previousKey !== null) doc.getElementById("schedule-announcement").textContent = `The featured module is now ${orientation ? "orientation" : "Sprint " + entry.number}.`;
     previousKey = key;
   }

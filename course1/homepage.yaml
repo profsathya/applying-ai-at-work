@@ -265,20 +265,26 @@ modules:
       - label: "Read these in order"
         items:
           - slug: "start-here-v2"
+            nav_meta: "Read"
             meta: "Page - module landing page: what this module covers and what to do first"
           - slug: "welcome-v2"
+            nav_meta: "Read"
             meta: "Page - what the course is, who it is for, and what you walk out with"
           - slug: "how-this-course-works-v2"
+            nav_meta: "Read"
             meta: "Page - the five sprints, the weekly rhythm, and how you turn work in"
           - slug: "your-first-week-v2"
+            nav_meta: "Read"
             meta: "Page - a short checklist, ending in the one thing you submit"
       - label: "The one submission"
         items:
           - slug: "introduction-post-v2"
+            nav_meta: "Post · Complete or incomplete"
             meta: "Discussion - post a short introduction and read a few others; complete or incomplete, 0 points, peer replies optional"
       - label: "Come back to this anytime"
         items:
           - slug: "help-and-resources-v2"
+            nav_meta: "Read"
             meta: "Page - how-tos, key terms, and how to reach your instructor"
 
   - sprint: 7
@@ -295,18 +301,23 @@ modules:
       - label: "Sprint Week 1: Understand and map"
         items:
           - slug: "introduction-integrate-people-and-context-v2"
+            nav_meta: "Read"
             meta: "Page - how stakeholders, evidence, and validation work in this sprint"
           - slug: "sprint-3-concept-check-v2"
+            nav_meta: "Practice · Ungraded"
             meta: "Practice quiz - check your understanding before you start; ungraded, unlimited attempts"
             badge: "Self-check"
             selfcheck: true
           - slug: "dojo-lab-stakeholder-map-v2"
+            nav_meta: "35 points"
             meta: "Assignment - profile your stakeholders with the Dojo and mark what you know"
       - label: "Sprint Week 2: Validate and revise"
         items:
           - slug: "stakeholder-conversation-v2"
+            nav_meta: "50 points"
             meta: "Assignment - prepare, hold, and document a real stakeholder conversation"
           - slug: "sprint-3-reflection-and-mid-course-goal-plan-revision-v2"
+            nav_meta: "10 points"
             meta: "AI reflection activity - refine your goal plan revision based on evidence"
 
   - sprint: 8
@@ -323,22 +334,29 @@ modules:
       - label: "Sprint Week 1: Name the gap"
         items:
           - slug: "introduction-close-the-learning-gap-v3"
+            nav_meta: "Read"
             meta: "Page - what separates a gap from a topic, and an explanation from evidence"
           - slug: "sprint-4-concept-check-v3"
+            nav_meta: "Practice · Ungraded"
             meta: "Practice quiz - check your understanding before you start; ungraded, unlimited attempts"
             badge: "Self-check"
             selfcheck: true
           - slug: "name-the-gap-v3"
+            nav_meta: "15 points"
             meta: "Assignment - write your own gap list and commit to one, before any AI"
           - slug: "ai-exchange-is-this-a-gap-v3"
+            nav_meta: "AI exchange · 0 points"
             meta: "AI exchange activity - test whether your committed gap is really a gap"
       - label: "Sprint Week 2: Plan, learn, and check"
         items:
           - slug: "dojo-lab-design-the-learning-path-v3"
+            nav_meta: "20 points"
             meta: "Assignment - sequence the learning with the Dojo and design the two checks"
           - slug: "learn-and-check-v3"
+            nav_meta: "50 points"
             meta: "Assignment - run the path and check two claims against something that is not AI"
           - slug: "sprint-4-reflection-what-i-learned-and-how-i-know-v3"
+            nav_meta: "10 points"
             meta: "AI reflection activity - name the capability you gained and what you checked"
 
   - sprint: 9
@@ -373,20 +391,26 @@ modules:
       - label: "Introduction"
         items:
           - slug: "introduction-find-the-problem-worth-solving-v2"
+            nav_meta: "Read"
             meta: "Page - orient to candidate problems, the four checks, and the first-half sequence"
       - label: "Build your table"
         items:
           - slug: "start-your-list-and-get-underneath-it-v2"
+            nav_meta: "Practice · Encouraged"
             meta: "Guided assignment - build your three-column table from your own observations, then copy and submit in Canvas; 0 points, encouraged"
           - slug: "things-you-stopped-noticing-v2"
+            nav_meta: "Practice · Encouraged"
             meta: "Guided assignment - watch for work-arounds over a day or two, then copy and submit your updated table or report no new observations in Canvas; 0 points, encouraged"
           - slug: "things-somebody-handed-you-v2"
+            nav_meta: "Practice · Encouraged"
             meta: "Guided assignment - trace requests to goals and add possible problems to the same table, then copy and submit in Canvas; 0 points, encouraged"
       - label: "Check and commit"
         items:
           - slug: "sprint-1-concept-check-v2"
+            nav_meta: "5 points"
             meta: "Guided concept check - answer six questions, review explanations, then copy and submit final answers in Canvas; 5 completion points reviewed by your instructor, no automatic grading"
             badge: "Self-check"
             selfcheck: true
           - slug: "test-and-commit-v2"
+            nav_meta: "35 points"
             meta: "Guided assignment - select three to five candidate gaps, run four checks, and explain your choice with reasons and a runner-up or recovery plan; copy and submit once in Canvas, 35 points reviewed by your instructor"

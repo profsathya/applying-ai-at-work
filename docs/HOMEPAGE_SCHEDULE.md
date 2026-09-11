@@ -1,6 +1,10 @@
 # Scheduled course homepage
 
-An optional top-level `schedule` in `<course>/homepage.yaml` selects the focused current-sprint homepage. Courses without it retain the existing module-list homepage. CTI identity remains in the header and footer; detailed goals and activities remain on the generated module pages.
+An optional top-level `schedule` in `<course>/homepage.yaml` selects the focused current-sprint homepage. Courses without it retain the existing module-list homepage. CTI identity remains in the header and footer. The current module has an activity dropdown, expanded by default for one-click entry. Detailed instructions remain on the activity pages.
+
+`Go to Modules` opens the generated `modules.html` directory, which has a dropdown of direct activities for each available scheduled module. It deliberately uses the curated course inventory: the native Canvas Modules page still contains published legacy versions. No legacy publication settings are changed by homepage generation. The directory includes orientation, dates, and preparation status, with a return-home link. Help stays visible on both pages.
+
+Activity titles and order come from the artifact source and existing homepage groups. Item-level `nav_meta` in homepage YAML holds only concise navigation labels such as `Read`, `Practice · Encouraged`, or `35 points`; full `meta` descriptions remain on the detailed module pages. Zero points alone does not imply optional work. In Canvas, direct links use deployment-state module-item URLs and open in the existing Canvas window, retaining the native activity sequence. Outside Canvas, they open the hosted activity. No personal progress is fabricated on the homepage.
 
 Course 1 starts October 5, 2026, which is two weeks after September 21. Its five 14-day windows are October 5-18, October 19-November 1, November 2-15, November 16-29, and November 30-December 13. Before October 5, the homepage features orientation. After December 13, it shows course review with the final sprint.
 
@@ -38,4 +42,14 @@ For the full fake-API test suite on a machine with a production `.env`, exclude 
 env -u CANVAS_API_URL -u CANVAS_API_TOKEN -u DEFAULT_COURSE_ID PYTHON_DOTENV_DISABLED=1 .venv/bin/python -m unittest discover
 ```
 
-Render through `canvas_sync.hosted_html.render_hosted_files` with authoritative deployment state. Never hand-edit the generated homepage. Verify desktop/mobile layout, navigation in Canvas, before-start behavior, each date boundary, and unavailable material. Static no-JavaScript fallback keeps the calendar visible for manual navigation.
+Render through `canvas_sync.hosted_html.render_hosted_files` with authoritative deployment state. Publish `home.html`, its `index.html` alias, and `modules.html` together. Never hand-edit generated pages. Verify desktop/mobile layout, keyboard disclosure behavior, direct navigation in Canvas, before-start behavior, each date boundary, and unavailable material. Static no-JavaScript fallback keeps orientation activities and the Modules directory available for manual navigation.
+
+## Design references
+
+- [University of Minnesota: Canvas Hall of Fame, Organize](https://teachingsupport.umn.edu/canvas-course-site-hall-fame-awards-2026/canvas-hall-fame-organize): focus the homepage on current work and provide direct activity links.
+- [Johns Hopkins: Canvas Home Page](https://canvas.jhu.edu/faculty-resources/home-page/): simple, uncluttered layout and consistent navigation.
+- [Quality Matters: Bill of Rights for Online Learners](https://www.qualitymatters.org/qa-resources/resource-center/articles-resources/bill-of-rights-for-online-learners): readable screens, efficient navigation, and sufficient instructions at the point of use.
+- [Instructure: How to Use Modules](https://www.instructure.com/resources/blog/how-use-modules-build-courses-canvas): organize activities into a coherent sequence.
+- [W3C: Disclosure Navigation](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/): ordinary disclosure controls and links suit website navigation. This implementation uses native HTML details/summary, not a custom ARIA menu widget or copied example code.
+
+These principles informed the design. An open-by-default current activity list is a design judgment for this course, not a universal accessibility requirement or evidence of improved learning.

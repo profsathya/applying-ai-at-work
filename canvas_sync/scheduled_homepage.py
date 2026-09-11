@@ -94,6 +94,7 @@ def calendar_data(schedule: dict) -> dict:
         "start": start.isoformat(),
         "override": schedule.get("override"),
         "orientation": {
+            "sprint": schedule["orientation_sprint"],
             "title": "Welcome and orientation",
             "summary": "Get familiar with the course and prepare for your first sprint.",
             "href": f"sprint-{schedule['orientation_sprint']}.html",
@@ -102,50 +103,92 @@ def calendar_data(schedule: dict) -> dict:
     }
 
 
-def render_scheduled_homepage(course: dict, schedule: dict, *, logo_url: str, help_link: dict) -> str:
+def _activity_groups_html(groups: list[dict]) -> str:
+    sections = []
+    for group in groups:
+        rows = []
+        for item in group["items"]:
+            canvas = f' data-canvas-href="{html.escape(item["canvas"], quote=True)}"' if item.get("canvas") else ""
+            rows.append(
+                f'<li><a href="{html.escape(item["web"], quote=True)}" data-activity-link{canvas}>'
+                f'<span class="activity-title">{html.escape(item["title"])}</span> '
+                f'<span class="activity-meta">{html.escape(item["meta"])}</span></a></li>'
+            )
+        if rows:
+            sections.append(f'<section class="activity-group"><h3>{html.escape(group["label"])}</h3><ul class="activity-list">{"".join(rows)}</ul></section>')
+    return "".join(sections)
+
+
+def render_scheduled_homepage(
+    course: dict, schedule: dict, *, logo_url: str, help_link: dict,
+    module_groups: dict | None = None, directory: bool = False,
+) -> str:
     esc = html.escape
     data = calendar_data(schedule)
     data["help"] = help_link
+    module_groups = module_groups or {}
     # Escape HTML-significant bytes even in non-executable JSON script elements.
     payload = json.dumps(data, ensure_ascii=True).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
     assets = Path(__file__).parent / "assets"
     style = (assets / "scheduled-homepage.css").read_text()
     script = (assets / "scheduled-homepage.js").read_text()
-    rows = []
+    orientation = schedule["orientation_sprint"]
+    panels = []
+    allowed = {orientation} | {entry["sprint"] for entry in schedule["sprints"] if entry["ready"]}
+    for sprint, groups in module_groups.items():
+        if sprint not in allowed:
+            continue
+        count = sum(len(group["items"]) for group in groups)
+        hidden = "" if sprint == orientation else " hidden"
+        panels.append(f'<div data-activities="{sprint}" data-count="{count}"{hidden}>{_activity_groups_html(groups)}</div>')
+    count = sum(len(group["items"]) for group in module_groups.get(orientation, []))
+    rows = [f'<li><details class="directory-module"><summary>Welcome and orientation<span class="module-dates" id="orientation-dates">Before {esc(data["start"])}</span></summary>{_activity_groups_html(module_groups.get(orientation, []))}</details></li>']
     for entry in data["sprints"]:
         title = esc(f"Sprint {entry['number']}: {entry['title']}")
-        link = f'<a href="{entry["href"]}?context=web" data-module-link>{title}</a>' if entry["ready"] else f'<span>{title}</span>'
-        availability = "Available" if entry["ready"] else "Materials in preparation"
-        rows.append(f'<li data-sprint="{entry["number"]}">{link}<span class="module-dates">{entry["start"]} to {entry["end"]}</span><span class="availability">{availability}</span></li>')
+        dates = f'<span class="module-dates">{entry["start"]} to {entry["end"]}</span>'
+        if entry["ready"]:
+            row = f'<details class="directory-module"><summary>{title}{dates}</summary>{_activity_groups_html(module_groups.get(entry["sprint"], []))}</details>'
+        else:
+            row = f'<span>{title}</span>{dates}<span class="availability">Materials in preparation</span>'
+        rows.append(f'<li data-sprint="{entry["number"]}">{row}</li>')
+    if directory:
+        content = f'''<a href="home.html?context=web" data-module-link>Back to home</a>
+  <h2>Modules and dates</h2>
+  <ul class="module-list">{"".join(rows)}</ul>
+  <nav class="quick-links" aria-label="Course support"><a href="{esc(help_link['web'])}" id="course-help">Help and resources</a></nav>'''
+    else:
+        content = f'''<section class="current-sprint" aria-labelledby="sprint-title">
+    <p class="eyebrow" id="sprint-label">Getting started</p>
+    <h2 id="sprint-title">Welcome and orientation</h2>
+    <p id="sprint-summary">Get familiar with the course and prepare for your first sprint.</p>
+    <p class="dates" id="sprint-dates">Sprint 1 begins {data['start']}</p>
+    <p class="note" id="sprint-note" hidden></p>
+    <details class="activities" id="sprint-activities" open>
+      <summary><span id="activities-label">Orientation activities</span><span class="item-count" id="activity-count">{count} items</span></summary>
+      {"".join(panels)}
+    </details>
+    <p class="availability" id="sprint-unavailable" hidden>Materials are in preparation. Visit Modules for available work.</p>
+  </section>
+  <p class="sr-only" id="schedule-announcement" aria-live="polite"></p>
+  <nav class="quick-links" aria-label="Course navigation">
+    <a class="modules-link" href="modules.html?context=web" id="course-modules">Go to Modules <span aria-hidden="true">→</span></a>
+    <a href="{esc(help_link['web'])}" id="course-help">Help and resources</a>
+  </nav>
+  <noscript><p>Use Modules and its dates to find your current sprint.</p></noscript>'''
     title = esc(course["title"])
     return f'''<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{title} - Home</title>
+<title>{title} - {"Modules" if directory else "Home"}</title>
 <style>{style}</style>
 </head>
 <body>
 <main class="course-home">
   <header class="brand"><img src="{esc(logo_url)}" alt="Computing Talent Initiative"><span>De Anza College</span></header>
   <h1>{title}</h1>
-  <section class="current-sprint" aria-labelledby="sprint-title">
-    <p class="eyebrow" id="sprint-label">Getting started</p>
-    <h2 id="sprint-title">Welcome and orientation</h2>
-    <p id="sprint-summary">Get familiar with the course and prepare for your first sprint.</p>
-    <p class="dates" id="sprint-dates">Sprint 1 begins {data['start']} · Pacific time</p>
-    <a class="primary" id="sprint-action" href="{data['orientation']['href']}?context=web">Open orientation</a>
-    <p class="note" id="sprint-note" hidden></p>
-    <p class="availability" id="sprint-unavailable" hidden>Materials are in preparation. You can revisit available modules below.</p>
-  </section>
-  <p class="sr-only" id="schedule-announcement" aria-live="polite"></p>
-  <nav class="quick-links" aria-label="Course support">
-    <a href="{data['orientation']['href']}?context=web" data-module-link>Welcome and orientation</a>
-    <a href="{esc(help_link['web'])}" id="course-help">Help and resources</a>
-  </nav>
-  <details id="all-modules"><summary>Browse modules and dates</summary><ul class="module-list">{''.join(rows)}</ul></details>
-  <noscript><p>The automatic sprint selection needs JavaScript. Use the module dates above to find your sprint.</p></noscript>
+  {content}
   <footer><img src="{esc(logo_url)}" alt=""><span>{esc(course['footer'])}</span></footer>
 </main>
 <script id="course-schedule" type="application/json">{payload}</script>

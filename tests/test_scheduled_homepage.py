@@ -73,9 +73,48 @@ class ScheduledHomepageTests(unittest.TestCase):
             self.assertIn('id="course-schedule"', home)
             self.assertNotIn("Module Learning Goals", home)
             self.assertIn("Module Learning Goals", (directory / "sprint-99.html").read_text())
-            self.assertIn('href="sprint-99.html?context=web"', home)
+            self.assertIn('href="modules.html?context=web"', home)
             self.assertEqual(home.count('alt="Computing Talent Initiative"'), 1)
             self.assertEqual(home.count("New._CTI_Logo_RGB-1.png"), 2)
+            self.assertIn('id="sprint-activities" open', home)
+            self.assertIn('class="activity-title">Tuple Overview</span>', home)
+            self.assertNotIn('id="sprint-action"', home)
+            self.assertNotIn('id="all-modules"', home)
+            self.assertIn('id="course-modules"', home)
+            directory_html = (directory / "modules.html").read_text()
+            self.assertIn("Modules and dates", directory_html)
+            self.assertIn("Materials in preparation", directory_html)
+            self.assertNotIn('id="sprint-activities"', directory_html)
+
+    def test_direct_canvas_activity_links_use_deployment_state_and_curated_labels(self):
+        import yaml
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            md = root / "course1/sprints/sprint-99/tuple-overview.md"
+            manifest = root / "course1/manifests/production.json"
+            write_page(md)
+            write_manifest(manifest)
+            data = homepage()
+            data["modules"][0]["groups"] = [{"label": "Begin", "items": [{"slug": "tuple-overview", "nav_meta": "Read", "meta": "Long instructions stay on the module page."}]}]
+            (root / "course1/homepage.yaml").write_text(yaml.safe_dump(data))
+            state = {"artifacts": {"tuple-overview": {"canvas_module_item_id": 731, "canvas_page_url": "tuple-overview", "canvas_type": "page"}}}
+            render_hosted_files(manifest, root / "out", [], state=state)
+            home = (root / "out/deanza/course1/home.html").read_text()
+            instance = json.loads(manifest.read_text())["instance"]
+            self.assertIn(f'data-canvas-href="{instance["base_url"].rstrip("/")}/courses/{instance["course_id"]}/modules/items/731"', home)
+            self.assertIn('class="activity-meta">Read</span>', home)
+            self.assertNotIn("Long instructions stay", home)
+
+    def test_unready_panels_are_excluded_and_activity_labels_are_escaped(self):
+        data = homepage()["schedule"]
+        data["sprints"][1]["sprint"] = 100
+        groups = {99: [{"label": "Start", "items": [{"title": "A < B", "meta": "Read & think", "web": "item.html?x=1&y=2", "canvas": None}]}],
+                  100: [{"label": "Draft", "items": [{"title": "Unpublished material", "meta": "Draft", "web": "draft.html", "canvas": None}]}]}
+        home = render_scheduled_homepage({"title": "Course", "footer": "CTI"}, data, logo_url="logo.png", help_link={"web": "help.html", "canvas": None}, module_groups=groups)
+        self.assertIn("A &lt; B", home)
+        self.assertIn("Read &amp; think", home)
+        self.assertNotIn("Unpublished material", home)
+        self.assertNotIn('data-activities="100"', home)
 
     def test_json_payload_and_copy_are_html_safe(self):
         data = homepage()["schedule"]
