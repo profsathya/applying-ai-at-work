@@ -9,7 +9,7 @@ module: 'Sprint 0: Welcome and Orientation (V2)'
 position: 5
 points: null
 submission_type: none
-publish: false
+publish: true
 ---
 
 # Your First Week

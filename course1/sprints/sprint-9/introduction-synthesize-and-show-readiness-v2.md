@@ -9,7 +9,7 @@ module: 'Sprint 5: Synthesize And Show Readiness (V2)'
 position: 2
 points: null
 submission_type: none
-publish: false
+publish: true
 ---
 
 This module is a placeholder. The Sprint 5 rebuild has not been written yet, and this page is a stub that holds the module's place in the course order.

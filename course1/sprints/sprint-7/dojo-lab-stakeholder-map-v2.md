@@ -9,7 +9,7 @@ module: 'Sprint 3: Integrate People and Context (V2)'
 position: 4
 points: 35
 submission_type: text_entry
-publish: false
+publish: true
 rubric:
   - description: Stakeholder profiles are specific to the problem context
     points: 6

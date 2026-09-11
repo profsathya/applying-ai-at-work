@@ -9,7 +9,7 @@ module: 'Sprint 4: Close The Learning Gap (V2)'
 position: 7
 points: 50
 submission_type: text_entry
-publish: false
+publish: true
 ---
 
 # Learn and Check

@@ -10,7 +10,7 @@ position: 3
 points: 5
 submission_type: online_quiz
 delivery_mode: canvas_native
-publish: false
+publish: true
 questions:
   - type: true_false
     prompt: >

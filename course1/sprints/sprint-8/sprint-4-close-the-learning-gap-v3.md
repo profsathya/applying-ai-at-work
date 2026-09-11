@@ -9,7 +9,7 @@ module: 'Sprint 4: Close The Learning Gap (V2)'
 position: 1
 points: null
 submission_type: none
-publish: false
+publish: true
 ---
 
 # Sprint 4: Close The Learning Gap (V2)

@@ -9,7 +9,7 @@ module: 'Sprint 3: Integrate People and Context (V2)'
 position: 2
 points: null
 submission_type: none
-publish: false
+publish: true
 ---
 
 A problem frame gets stronger when it meets real people and real constraints. In this sprint, you'll identify the stakeholders affected by, have influence over, or hold authority over your problem. Next, using the Dojo, you prepare for real conversations with them by drafting a stakeholder map that shows what you actually know versus what you're assuming about the stakeholders. Then you have at least one real validation conversation with a stakeholder to test your problem frame. Based on what you learn, you revise your problem statement and Goal Plan.

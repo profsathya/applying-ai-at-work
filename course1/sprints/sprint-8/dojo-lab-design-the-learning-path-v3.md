@@ -9,7 +9,7 @@ module: 'Sprint 4: Close The Learning Gap (V2)'
 position: 6
 points: 20
 submission_type: text_entry
-publish: false
+publish: true
 ---
 
 # Dojo Lab: Design the Learning Path

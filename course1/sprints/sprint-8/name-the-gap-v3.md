@@ -9,7 +9,7 @@ module: 'Sprint 4: Close The Learning Gap (V2)'
 position: 4
 points: 15
 submission_type: text_entry
-publish: false
+publish: true
 ---
 
 # Name the Gap

@@ -9,7 +9,7 @@ module: 'Sprint 0: Welcome and Orientation (V2)'
 position: 6
 points: 0
 submission_type: discussion_topic
-publish: false
+publish: true
 ---
 
 # Introduction Post

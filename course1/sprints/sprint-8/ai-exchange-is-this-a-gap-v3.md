@@ -10,7 +10,7 @@ position: 5
 points: 0
 submission_type: file_upload
 delivery_mode: ai_activity
-publish: false
+publish: true
 ai_activity:
   activity_id: course1-ai-exchange-is-this-a-gap-v3
   version: "1.0"

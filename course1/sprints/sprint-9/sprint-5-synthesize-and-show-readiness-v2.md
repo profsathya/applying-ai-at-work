@@ -9,7 +9,7 @@ module: 'Sprint 5: Synthesize And Show Readiness (V2)'
 position: 1
 points: null
 submission_type: none
-publish: false
+publish: true
 ---
 
 # Sprint 5: Synthesize And Show Readiness (V2)
