@@ -22,6 +22,7 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.state import course_dir_for_manifest, derive_artifact_id, load_json
+from canvas_sync.scheduled_homepage import render_scheduled_homepage, validate_schedule
 
 
 DEFAULT_BASE_URL = "https://profsathya.github.io/Common-Curriculum/deanza"
@@ -994,6 +995,7 @@ def validate_homepage_metadata(course_dir: Path) -> list[str]:
         return errors
 
     artifact_slugs: set[str] = set()
+    artifact_sprints: set[int] = set()
     for md_path in sorted((course_dir / "sprints").glob("sprint-*/*.md")):
         try:
             fm, _body = parse_frontmatter(md_path)
@@ -1008,6 +1010,8 @@ def validate_homepage_metadata(course_dir: Path) -> list[str]:
         if slug in artifact_slugs:
             errors.append(f"{md_path}: duplicate artifact slug {slug!r}")
         artifact_slugs.add(slug)
+        if type(fm.get("sprint")) is int:
+            artifact_sprints.add(fm["sprint"])
 
     configured_slugs: dict[str, str] = {}
     for module_index, module in enumerate(modules, start=1):
@@ -1055,6 +1059,7 @@ def validate_homepage_metadata(course_dir: Path) -> list[str]:
                             f"use one of {', '.join(sorted(HOMEPAGE_ICON_KEYS))}"
                         )
 
+    errors.extend(f"{path}: {error}" for error in validate_schedule(payload, artifact_slugs, artifact_sprints))
     return errors
 
 
@@ -1621,6 +1626,20 @@ def _render_career_course_index(
         "\n".join(modules),
         progress_endpoint=hosted_config_from_manifest(manifest).progress_endpoint,
     )
+    if homepage and homepage.get("schedule"):
+        schedule = homepage["schedule"]
+        help_path, help_fm = next(
+            item for items in items_by_sprint.values() for item in items
+            if item[1]["slug"] == schedule["help_slug"]
+        )
+        help_state = _state_entry_for_artifact(help_path, manifest_path, help_fm, state or manifest)
+        document = render_scheduled_homepage(
+            course_meta, schedule, logo_url=CTI_LOGO_URL,
+            help_link={
+                "web": f"{_artifact_course_relative_path(help_fm)}?context=web",
+                "canvas": _canvas_item_url(manifest, help_fm, help_state),
+            },
+        )
     course_dir_out = output_dir / hosted_config_from_manifest(manifest).path_prefix / course_key
     index_changed, index_digest = _write_if_changed(course_dir_out / "index.html", document)
     home_changed, home_digest = _write_if_changed(course_dir_out / "home.html", document)
