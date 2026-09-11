@@ -776,16 +776,16 @@
       "canvas_payload_hash": "74943120427186d94f9f131c0b2a72e99432f63cf1f8e0008c55fd445cc44a81",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "b496fb4d1a4b4deba0ec85cfffc00030ae108920f44f0dfe41cf1cef29ca2fa8",
-      "hosted_hash": "5c35eb1bda7455288bea461101f4c87dfd5fd8fa5174f9a4bc27493dfab7e374",
-      "hosted_last_rendered": "2026-09-11T16:49:10+00:00",
+      "content_hash": "7c78b792fe0c2d12fec6a51397a9fcef1149ba4104833f4cc01b2b327fdb3e9d",
+      "hosted_hash": "27ed922ee54a13fedad7044e1f4b434d8cd94edd9970418067c3d8ca1f5abca4",
+      "hosted_last_rendered": "2026-09-11T17:10:43+00:00",
       "hosted_path": "course1/assignments/dojo-lab-stakeholder-map-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-stakeholder-map-v2.html",
-      "last_pushed": "2026-09-11T16:49:10+00:00",
+      "last_pushed": "2026-09-11T17:10:43+00:00",
       "local_path": "course1/sprints/sprint-7/dojo-lab-stakeholder-map-v2.md",
       "position": 4,
       "rubric_hash": "5701fcd5646cb649d45487b6460a75b92cbbe4d5476762f6abad27fe82034ca1",
-      "source_commit": "21e6b383b6e4423ebf1a5444c5e9f4fdd24884ff"
+      "source_commit": "8c1f1649d7008c63199c0129e6fdc8ced04081c4"
     },
     "course1-sprints-sprint-3-reviewed-v2-introduction-integrate-people-and-context-v2": {
       "artifact_id": "course1-sprints-sprint-3-reviewed-v2-introduction-integrate-people-and-context-v2",
@@ -1778,5 +1778,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-11T17:08:48+00:00"
+  "last_sync": "2026-09-11T17:10:43+00:00"
 }
