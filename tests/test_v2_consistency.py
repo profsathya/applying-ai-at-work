@@ -9,10 +9,12 @@ class V2ConsistencyTests(unittest.TestCase):
             ids = [10, 30, 20, 99]
             writes = 0
             def list_module_items(self, module):
-                return [{'id': x, 'position': i+1} for i,x in enumerate(self.ids)]
+                return [{'id': x, 'position': 3*i+2} for i,x in enumerate(self.ids)]
             def update_module_item(self, module, item, payload):
                 self.writes += 1
-                self.ids.remove(item); self.ids.insert(payload['position']-1,item)
+                self.ids.remove(item)
+                index = next((i for i in range(len(self.ids)) if 3*i+2 >= payload['position']), len(self.ids))
+                self.ids.insert(index,item)
         client=Client()
         desired=[({'canvas_module_id':1,'canvas_module_item_id':i,'position':p},p) for p,i in enumerate([10,20,30],1)]
         enforce_module_order(client, desired)

@@ -597,6 +597,8 @@ def _render_ai_activity_wrapper_document(
             'target="_blank" rel="noopener">Submit on Canvas</a>'
         )
     activity_href = f"../activities/{html_lib.escape(frontmatter['slug'], quote=True)}.html?context=web"
+    if frontmatter.get("learner_labels"):
+        activity_href += "&v=v2-consistency-20260911"
     back_href = f"../sprint-{sprint}.html?context=web"
     points_text = "Ungraded" if points is None else f"{points:g} points"
     meta = f"{module} &middot; {artifact_type}" if frontmatter.get("source_provenance") or frontmatter.get("learner_labels") else f"{course_key} &middot; Sprint {sprint} &middot; {module} &middot; {artifact_type}"
