@@ -1,7 +1,7 @@
 course:
-  title: "Reframing Problems with AI"
+  title: "CIS 501: Reframing Problems with AI"
   lead: "Your path through the course. Each sprint shows what you will learn, what you will build, and where the work carries forward."
-  footer: "Computing Talent Initiative - De Anza College - Reframing Problems with AI"
+  footer: "Computing Talent Initiative - De Anza College - CIS 501: Reframing Problems with AI"
 modules:
   - sprint: 0
     hidden: true
