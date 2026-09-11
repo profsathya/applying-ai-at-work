@@ -99,7 +99,13 @@
     doc.getElementById("sprint-unavailable").hidden = Boolean(entry.href);
     const action = doc.getElementById("sprint-action");
     action.hidden = !entry.href;
-    if (entry.href) action.href = moduleHref(entry.href);
+    if (entry.canvas_href) {
+      action.href = entry.canvas_href;
+      action.target = "_top";
+    } else if (entry.href) {
+      action.href = moduleHref(entry.href);
+      action.removeAttribute("target");
+    }
     else action.removeAttribute("href");
     doc.getElementById("sprint-action-label").textContent = orientation ? "Open orientation" : `Open Sprint ${entry.number}`;
     doc.querySelectorAll("[data-module-key]").forEach(row => {

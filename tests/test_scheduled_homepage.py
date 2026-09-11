@@ -78,7 +78,7 @@ class ScheduledHomepageTests(unittest.TestCase):
             self.assertEqual(home.count("New._CTI_Logo_RGB-1.png"), 2)
             self.assertNotIn('id="sprint-activities"', home)
             self.assertIn('class="activity-title">Tuple Overview</span>', home)
-            self.assertIn('<h2 id="other-modules-title">Other modules</h2>', home)
+            self.assertIn('<h2 id="other-modules-title">Course modules</h2>', home)
             self.assertIn('<a class="module-title" href="sprint-99.html" data-module-link>Sprint 1: Find the problem</a>', home)
             self.assertIn('aria-controls="module-items-1" aria-label="Show activities for Sprint 1: Find the problem"', home)
             self.assertIn('<div class="module-items" id="module-items-1" hidden>', home)
@@ -101,13 +101,20 @@ class ScheduledHomepageTests(unittest.TestCase):
             data = homepage()
             data["modules"][0]["groups"] = [{"label": "Begin", "items": [{"slug": "tuple-overview", "nav_meta": "Read", "meta": "Long instructions stay on the module page."}]}]
             (root / "course1/homepage.yaml").write_text(yaml.safe_dump(data))
-            state = {"artifacts": {"tuple-overview": {"canvas_module_item_id": 731, "canvas_page_url": "tuple-overview", "canvas_type": "page"}}}
+            state = {"artifacts": {"tuple-overview": {"canvas_module_id": 730, "canvas_module_item_id": 731, "canvas_page_url": "tuple-overview", "canvas_type": "page"}}}
             render_hosted_files(manifest, root / "out", [], state=state)
             home = (root / "out/deanza/course1/modules.html").read_text()
             instance = json.loads(manifest.read_text())["instance"]
             self.assertIn(f'data-canvas-href="{instance["base_url"].rstrip("/")}/courses/{instance["course_id"]}/modules/items/731"', home)
             self.assertIn('class="activity-meta">Read</span>', home)
             self.assertNotIn("Long instructions stay", home)
+            native_module = f'{instance["base_url"].rstrip("/")}/courses/{instance["course_id"]}/modules/730'
+            self.assertIn(f'href="{native_module}" target="_top" data-canvas-module-link', home)
+            landing = (root / "out/deanza/course1/home.html").read_text()
+            self.assertIn(f'class="primary" href="{native_module}" id="sprint-action" target="_top"', landing)
+            payload = json.loads(re.search(r'<script id="course-schedule" type="application/json">(.*?)</script>', landing, re.S)[1])
+            self.assertEqual(payload["sprints"][0]["canvas_href"], native_module)
+            self.assertIsNone(payload["sprints"][1]["canvas_href"])
 
     def test_unready_panels_are_excluded_and_activity_labels_are_escaped(self):
         data = homepage()["schedule"]

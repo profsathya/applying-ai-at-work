@@ -119,11 +119,13 @@ def _activity_groups_html(groups: list[dict]) -> str:
     return "".join(sections)
 
 
-def _module_row_html(key: str, title: str, dates: str, href: str | None, groups: list[dict]) -> str:
+def _module_row_html(key: str, title: str, dates: str, href: str | None, groups: list[dict], canvas_href: str | None = None) -> str:
     """Keep module navigation and the activity disclosure as separate controls."""
     esc = html.escape
     name = esc(title)
-    label = f'<a class="module-title" href="{esc(href, quote=True)}" data-module-link>{name}</a>' if href else f'<span class="module-title">{name}</span>'
+    destination = canvas_href or href
+    navigation = 'target="_top" data-canvas-module-link' if canvas_href else 'data-module-link'
+    label = f'<a class="module-title" href="{esc(destination, quote=True)}" {navigation}>{name}</a>' if destination else f'<span class="module-title">{name}</span>'
     panel_id = f"module-items-{key}"
     activities = _activity_groups_html(groups) if href else ""
     toggle = (
@@ -139,10 +141,14 @@ def _module_row_html(key: str, title: str, dates: str, href: str | None, groups:
 
 def render_scheduled_homepage(
     course: dict, schedule: dict, *, logo_url: str, help_link: dict,
-    module_groups: dict | None = None, directory: bool = False,
+    module_groups: dict | None = None, module_links: dict | None = None, directory: bool = False,
 ) -> str:
     esc = html.escape
     data = calendar_data(schedule)
+    module_links = module_links or {}
+    data["orientation"]["canvas_href"] = module_links.get(schedule["orientation_sprint"])
+    for entry in data["sprints"]:
+        entry["canvas_href"] = module_links.get(entry["sprint"]) if entry["ready"] else None
     data["help"] = help_link
     module_groups = module_groups or {}
     # Escape HTML-significant bytes even in non-executable JSON script elements.
@@ -153,11 +159,11 @@ def render_scheduled_homepage(
     orientation = schedule["orientation_sprint"]
     rows = [_module_row_html("orientation", "Welcome and orientation",
         f'<span class="module-dates" id="orientation-dates">Before {esc(data["start"])}</span>',
-        data["orientation"]["href"], module_groups.get(orientation, []))]
+        data["orientation"]["href"], module_groups.get(orientation, []), data["orientation"]["canvas_href"])]
     for entry in data["sprints"]:
         title = f"Sprint {entry['number']}: {entry['title']}"
         dates = f'<span class="module-dates">{entry["start"]} to {entry["end"]}</span>'
-        rows.append(_module_row_html(str(entry["number"]), title, dates, entry["href"], module_groups.get(entry["sprint"], [])))
+        rows.append(_module_row_html(str(entry["number"]), title, dates, entry["href"], module_groups.get(entry["sprint"], []), entry["canvas_href"]))
     if directory:
         content = f'''<a href="home.html?context=web" data-module-link>Back to home</a>
   <h2>Modules and dates</h2>
@@ -171,11 +177,11 @@ def render_scheduled_homepage(
     <p class="dates" id="sprint-dates">Sprint 1 begins {data['start']}</p>
     <p class="note" id="sprint-note" hidden></p>
     <p class="availability" id="sprint-unavailable" hidden>Materials are in preparation. Available modules are below.</p>
-    <a class="primary" href="{esc(data['orientation']['href'])}" id="sprint-action"><span id="sprint-action-label">Open orientation</span><span aria-hidden="true">→</span></a>
+    <a class="primary" href="{esc(data['orientation']['canvas_href'] or data['orientation']['href'])}" id="sprint-action"{' target="_top"' if data['orientation']['canvas_href'] else ''}><span id="sprint-action-label">Open orientation</span><span aria-hidden="true">→</span></a>
   </section>
   <p class="sr-only" id="schedule-announcement" aria-live="polite"></p>
   <section class="other-modules" aria-labelledby="other-modules-title">
-    <h2 id="other-modules-title">Other modules</h2>
+    <h2 id="other-modules-title">Course modules</h2>
     <ul class="module-list">{"".join(rows)}</ul>
   </section>
   <nav class="quick-links" aria-label="Course navigation">

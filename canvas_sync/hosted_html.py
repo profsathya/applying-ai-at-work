@@ -1629,6 +1629,7 @@ def _render_career_course_index(
     if homepage and homepage.get("schedule"):
         schedule = homepage["schedule"]
         module_groups = {}
+        module_links = {}
         instance = manifest.get("instance", {})
         canvas_base = str(instance.get("base_url") or "").rstrip("/")
         course_id = instance.get("course_id")
@@ -1638,10 +1639,13 @@ def _render_career_course_index(
         }
         for sprint in scheduled_sprints:
             groups = []
+            module_ids = set()
             for label, items in _homepage_item_groups(items_by_sprint.get(sprint, []), configs.get(sprint, {})):
                 links = []
                 for path, fm, item_config in items:
                     entry = _state_entry_for_artifact(path, manifest_path, fm, state or manifest)
+                    if entry.get("canvas_module_id"):
+                        module_ids.add(entry["canvas_module_id"])
                     module_item_id = entry.get("canvas_module_item_id")
                     canvas_link = (
                         f"{canvas_modules}/items/{module_item_id}"
@@ -1655,6 +1659,10 @@ def _render_career_course_index(
                     })
                 groups.append({"label": label, "items": links})
             module_groups[sprint] = groups
+            if len(module_ids) > 1:
+                raise ValueError(f"Scheduled sprint {sprint} has activities in multiple Canvas modules")
+            if canvas_modules and module_ids:
+                module_links[sprint] = f"{canvas_modules}/{next(iter(module_ids))}"
         help_path, help_fm = next(
             item for items in items_by_sprint.values() for item in items
             if item[1]["slug"] == schedule["help_slug"]
@@ -1663,6 +1671,7 @@ def _render_career_course_index(
         scheduled_options = {
             "logo_url": CTI_LOGO_URL,
             "module_groups": module_groups,
+            "module_links": module_links,
             "help_link": {
                 "web": f"{_artifact_course_relative_path(help_fm)}?context=web",
                 "canvas": _canvas_item_url(manifest, help_fm, help_state),
