@@ -49,6 +49,16 @@
     return url.href;
   }
   doc.querySelectorAll("[data-module-link]").forEach(link => { link.href = moduleHref(link.getAttribute("href")); });
+  doc.querySelectorAll("[data-module-toggle]").forEach(button => {
+    const panel = doc.getElementById(button.getAttribute("aria-controls"));
+    button.hidden = false;
+    button.addEventListener("click", () => {
+      const expanded = button.getAttribute("aria-expanded") !== "true";
+      button.setAttribute("aria-expanded", String(expanded));
+      button.setAttribute("aria-label", `${expanded ? "Hide" : "Show"} activities for ${button.dataset.moduleTitle}`);
+      panel.hidden = !expanded;
+    });
+  });
   doc.querySelectorAll("[data-activity-link]").forEach(link => {
     if (context === "canvas" && link.dataset.canvasHref) {
       link.href = link.dataset.canvasHref;
@@ -57,8 +67,6 @@
       link.href = moduleHref(link.getAttribute("href"));
     }
   });
-  const modules = doc.getElementById("course-modules");
-  if (modules) modules.href = moduleHref(modules.getAttribute("href"));
   const help = doc.getElementById("course-help");
   if (context === "canvas" && schedule.help.canvas) {
     help.href = schedule.help.canvas;
@@ -89,6 +97,16 @@
     note.textContent = entry.note || "";
     note.hidden = !entry.note;
     doc.getElementById("sprint-unavailable").hidden = Boolean(entry.href);
+    const action = doc.getElementById("sprint-action");
+    action.hidden = !entry.href;
+    if (entry.href) action.href = moduleHref(entry.href);
+    else action.removeAttribute("href");
+    doc.getElementById("sprint-action-label").textContent = orientation ? "Open orientation" : `Open Sprint ${entry.number}`;
+    doc.querySelectorAll("[data-module-key]").forEach(row => {
+      const featured = row.dataset.moduleKey === (orientation ? "orientation" : String(entry.number));
+      // Preserve focus if the calendar rolls over while someone is using a row.
+      row.hidden = featured && !row.contains(doc.activeElement);
+    });
     if (previousKey !== null) doc.getElementById("schedule-announcement").textContent = `The featured module is now ${orientation ? "orientation" : "Sprint " + entry.number}.`;
     previousKey = key;
   }

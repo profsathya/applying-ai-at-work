@@ -119,6 +119,24 @@ def _activity_groups_html(groups: list[dict]) -> str:
     return "".join(sections)
 
 
+def _module_row_html(key: str, title: str, dates: str, href: str | None, groups: list[dict]) -> str:
+    """Keep module navigation and the activity disclosure as separate controls."""
+    esc = html.escape
+    name = esc(title)
+    label = f'<a class="module-title" href="{esc(href, quote=True)}" data-module-link>{name}</a>' if href else f'<span class="module-title">{name}</span>'
+    panel_id = f"module-items-{key}"
+    activities = _activity_groups_html(groups) if href else ""
+    toggle = (
+        f'<button class="module-toggle" type="button" aria-expanded="false" aria-controls="{panel_id}" '
+        f'aria-label="Show activities for {esc(title, quote=True)}" data-module-toggle data-module-title="{esc(title, quote=True)}" hidden>'
+        '<span class="chevron" aria-hidden="true"></span></button>'
+    ) if activities else ""
+    panel = f'<div class="module-items" id="{panel_id}" hidden>{activities}</div>' if activities else ""
+    status = '<span class="availability">Materials in preparation</span>' if not href else ""
+    sprint_attr = f' data-sprint="{key}"' if key != "orientation" else ""
+    return f'<li data-module-key="{key}"{sprint_attr}><div class="module-heading"><div>{label}{dates}{status}</div>{toggle}</div>{panel}</li>'
+
+
 def render_scheduled_homepage(
     course: dict, schedule: dict, *, logo_url: str, help_link: dict,
     module_groups: dict | None = None, directory: bool = False,
@@ -133,15 +151,13 @@ def render_scheduled_homepage(
     style = (assets / "scheduled-homepage.css").read_text()
     script = (assets / "scheduled-homepage.js").read_text()
     orientation = schedule["orientation_sprint"]
-    rows = [f'<li><details class="directory-module"><summary>Welcome and orientation<span class="module-dates" id="orientation-dates">Before {esc(data["start"])}</span></summary>{_activity_groups_html(module_groups.get(orientation, []))}</details></li>']
+    rows = [_module_row_html("orientation", "Welcome and orientation",
+        f'<span class="module-dates" id="orientation-dates">Before {esc(data["start"])}</span>',
+        data["orientation"]["href"], module_groups.get(orientation, []))]
     for entry in data["sprints"]:
-        title = esc(f"Sprint {entry['number']}: {entry['title']}")
+        title = f"Sprint {entry['number']}: {entry['title']}"
         dates = f'<span class="module-dates">{entry["start"]} to {entry["end"]}</span>'
-        if entry["ready"]:
-            row = f'<details class="directory-module"><summary>{title}{dates}</summary>{_activity_groups_html(module_groups.get(entry["sprint"], []))}</details>'
-        else:
-            row = f'<span>{title}</span>{dates}<span class="availability">Materials in preparation</span>'
-        rows.append(f'<li data-sprint="{entry["number"]}">{row}</li>')
+        rows.append(_module_row_html(str(entry["number"]), title, dates, entry["href"], module_groups.get(entry["sprint"], [])))
     if directory:
         content = f'''<a href="home.html?context=web" data-module-link>Back to home</a>
   <h2>Modules and dates</h2>
@@ -154,14 +170,18 @@ def render_scheduled_homepage(
     <p id="sprint-summary">Get familiar with the course and prepare for your first sprint.</p>
     <p class="dates" id="sprint-dates">Sprint 1 begins {data['start']}</p>
     <p class="note" id="sprint-note" hidden></p>
-    <p class="availability" id="sprint-unavailable" hidden>Materials are in preparation. Visit Modules for available work.</p>
-    <a class="primary" href="modules.html?context=web" id="course-modules">Go to Modules <span aria-hidden="true">→</span></a>
+    <p class="availability" id="sprint-unavailable" hidden>Materials are in preparation. Available modules are below.</p>
+    <a class="primary" href="{esc(data['orientation']['href'])}" id="sprint-action"><span id="sprint-action-label">Open orientation</span><span aria-hidden="true">→</span></a>
   </section>
   <p class="sr-only" id="schedule-announcement" aria-live="polite"></p>
+  <section class="other-modules" aria-labelledby="other-modules-title">
+    <h2 id="other-modules-title">Other modules</h2>
+    <ul class="module-list">{"".join(rows)}</ul>
+  </section>
   <nav class="quick-links" aria-label="Course navigation">
     <a href="{esc(help_link['web'])}" id="course-help">Help and resources</a>
   </nav>
-  <noscript><p>Use Modules and its dates to find your current sprint.</p></noscript>'''
+  <noscript><p>Use the module dates above to find your current sprint.</p></noscript>'''
     title = esc(course["title"])
     return f'''<!doctype html>
 <html lang="en">
