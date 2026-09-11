@@ -133,15 +133,6 @@ def render_scheduled_homepage(
     style = (assets / "scheduled-homepage.css").read_text()
     script = (assets / "scheduled-homepage.js").read_text()
     orientation = schedule["orientation_sprint"]
-    panels = []
-    allowed = {orientation} | {entry["sprint"] for entry in schedule["sprints"] if entry["ready"]}
-    for sprint, groups in module_groups.items():
-        if sprint not in allowed:
-            continue
-        count = sum(len(group["items"]) for group in groups)
-        hidden = "" if sprint == orientation else " hidden"
-        panels.append(f'<div data-activities="{sprint}" data-count="{count}"{hidden}>{_activity_groups_html(groups)}</div>')
-    count = sum(len(group["items"]) for group in module_groups.get(orientation, []))
     rows = [f'<li><details class="directory-module"><summary>Welcome and orientation<span class="module-dates" id="orientation-dates">Before {esc(data["start"])}</span></summary>{_activity_groups_html(module_groups.get(orientation, []))}</details></li>']
     for entry in data["sprints"]:
         title = esc(f"Sprint {entry['number']}: {entry['title']}")
@@ -163,15 +154,11 @@ def render_scheduled_homepage(
     <p id="sprint-summary">Get familiar with the course and prepare for your first sprint.</p>
     <p class="dates" id="sprint-dates">Sprint 1 begins {data['start']}</p>
     <p class="note" id="sprint-note" hidden></p>
-    <details class="activities" id="sprint-activities" open>
-      <summary><span id="activities-label">Orientation activities</span><span class="item-count" id="activity-count">{count} items</span></summary>
-      {"".join(panels)}
-    </details>
     <p class="availability" id="sprint-unavailable" hidden>Materials are in preparation. Visit Modules for available work.</p>
+    <a class="primary" href="modules.html?context=web" id="course-modules">Go to Modules <span aria-hidden="true">→</span></a>
   </section>
   <p class="sr-only" id="schedule-announcement" aria-live="polite"></p>
   <nav class="quick-links" aria-label="Course navigation">
-    <a class="modules-link" href="modules.html?context=web" id="course-modules">Go to Modules <span aria-hidden="true">→</span></a>
     <a href="{esc(help_link['web'])}" id="course-help">Help and resources</a>
   </nav>
   <noscript><p>Use Modules and its dates to find your current sprint.</p></noscript>'''

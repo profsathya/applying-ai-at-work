@@ -16,13 +16,12 @@ a:focus-visible, summary:focus-visible { outline:3px solid var(--blue); outline-
 .eyebrow,.dates,.note { color:var(--secondary); font-size:15px; }
 .eyebrow { margin-bottom:0; }
 .note { margin:10px 0 0; }
+.primary { display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:48px; padding:12px 24px; margin:18px 0 0; border-radius:5px; background:var(--blue); color:#fff; text-decoration:none; font-weight:600; }
+.primary:hover { background:#194a6c; }
 .quick-links { display:flex; gap:8px 26px; flex-wrap:wrap; margin-top:20px; }
 .quick-links a { display:inline-flex; align-items:center; min-height:44px; }
 details { border-top:1px solid var(--rule); margin-top:20px; padding-top:12px; }
 summary { cursor:pointer; min-height:44px; padding:8px 0; font-weight:600; }
-.activities { margin-top:18px; padding-top:8px; }
-.activities summary { color:var(--blue); }
-.item-count { float:right; margin-left:12px; color:var(--secondary); font-size:15px; font-weight:400; }
 .activity-group h3 { margin:15px 0 4px; font-size:15px; font-weight:600; color:var(--secondary); }
 .activity-list { list-style:none; padding:0; margin:0; }
 .activity-list li + li { border-top:1px solid var(--rule); }
@@ -30,7 +29,6 @@ summary { cursor:pointer; min-height:44px; padding:8px 0; font-weight:600; }
 .activity-title { text-decoration:underline; text-underline-offset:3px; }
 .activity-meta { flex-shrink:0; color:var(--secondary); font-size:15px; }
 .activity-list a:hover .activity-title { text-decoration-thickness:2px; }
-.quick-links .modules-link { font-weight:600; gap:8px; margin-right:auto; }
 .module-list { list-style:none; padding:0; margin:0; }
 .module-list > li { padding:12px 0; border-bottom:1px solid var(--rule); }
 .module-list > li > span:first-child { display:block; font-weight:600; padding:8px 0; }
@@ -44,4 +42,4 @@ footer img { width:62px; height:auto; }
 footer span { flex:1 1 220px; }
 .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 @media(max-width:620px) { .activity-list a { flex-direction:column; gap:2px; } }
-@media(max-width:520px) { .course-home { padding:18px; } .current-sprint { padding:18px; } h1 { font-size:24px; } h2 { font-size:22px; } .item-count { float:none; display:block; margin:0 0 0 18px; } }
+@media(max-width:520px) { .course-home { padding:18px; } .current-sprint { padding:18px; } h1 { font-size:24px; } h2 { font-size:22px; } }

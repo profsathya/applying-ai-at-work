@@ -76,14 +76,16 @@ class ScheduledHomepageTests(unittest.TestCase):
             self.assertIn('href="modules.html?context=web"', home)
             self.assertEqual(home.count('alt="Computing Talent Initiative"'), 1)
             self.assertEqual(home.count("New._CTI_Logo_RGB-1.png"), 2)
-            self.assertIn('id="sprint-activities" open', home)
-            self.assertIn('class="activity-title">Tuple Overview</span>', home)
+            self.assertNotIn('id="sprint-activities"', home)
+            self.assertNotIn('class="activity-title"', home)
+            self.assertIn('class="primary" href="modules.html?context=web" id="course-modules"', home)
             self.assertNotIn('id="sprint-action"', home)
             self.assertNotIn('id="all-modules"', home)
             self.assertIn('id="course-modules"', home)
             directory_html = (directory / "modules.html").read_text()
             self.assertIn("Modules and dates", directory_html)
             self.assertIn("Materials in preparation", directory_html)
+            self.assertIn('class="activity-title">Tuple Overview</span>', directory_html)
             self.assertNotIn('id="sprint-activities"', directory_html)
 
     def test_direct_canvas_activity_links_use_deployment_state_and_curated_labels(self):
@@ -99,7 +101,7 @@ class ScheduledHomepageTests(unittest.TestCase):
             (root / "course1/homepage.yaml").write_text(yaml.safe_dump(data))
             state = {"artifacts": {"tuple-overview": {"canvas_module_item_id": 731, "canvas_page_url": "tuple-overview", "canvas_type": "page"}}}
             render_hosted_files(manifest, root / "out", [], state=state)
-            home = (root / "out/deanza/course1/home.html").read_text()
+            home = (root / "out/deanza/course1/modules.html").read_text()
             instance = json.loads(manifest.read_text())["instance"]
             self.assertIn(f'data-canvas-href="{instance["base_url"].rstrip("/")}/courses/{instance["course_id"]}/modules/items/731"', home)
             self.assertIn('class="activity-meta">Read</span>', home)
@@ -110,7 +112,7 @@ class ScheduledHomepageTests(unittest.TestCase):
         data["sprints"][1]["sprint"] = 100
         groups = {99: [{"label": "Start", "items": [{"title": "A < B", "meta": "Read & think", "web": "item.html?x=1&y=2", "canvas": None}]}],
                   100: [{"label": "Draft", "items": [{"title": "Unpublished material", "meta": "Draft", "web": "draft.html", "canvas": None}]}]}
-        home = render_scheduled_homepage({"title": "Course", "footer": "CTI"}, data, logo_url="logo.png", help_link={"web": "help.html", "canvas": None}, module_groups=groups)
+        home = render_scheduled_homepage({"title": "Course", "footer": "CTI"}, data, logo_url="logo.png", help_link={"web": "help.html", "canvas": None}, module_groups=groups, directory=True)
         self.assertIn("A &lt; B", home)
         self.assertIn("Read &amp; think", home)
         self.assertNotIn("Unpublished material", home)

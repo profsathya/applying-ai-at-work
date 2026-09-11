@@ -85,21 +85,10 @@
     doc.getElementById("sprint-title").textContent = entry.title;
     doc.getElementById("sprint-summary").textContent = entry.summary;
     doc.getElementById("sprint-dates").textContent = orientation ? `Sprint 1 begins ${formatDate(schedule.start)} · ${timezoneLabel}` : `${formatDate(entry.start)} - ${formatDate(entry.end)} · ${timezoneLabel}`;
-    const activities = doc.getElementById("sprint-activities");
-    const panel = entry.href ? doc.querySelector(`[data-activities="${entry.sprint}"]`) : null;
-    const count = Number(panel?.dataset.count || 0);
-    if (previousKey !== null && activities.contains(doc.activeElement)) {
-      (count ? activities.querySelector("summary") : modules).focus();
-    }
-    doc.querySelectorAll("[data-activities]").forEach(candidate => { candidate.hidden = candidate !== panel; });
-    activities.hidden = !count;
-    if (previousKey !== null) activities.open = true;
-    doc.getElementById("activities-label").textContent = orientation ? "Orientation activities" : `Sprint ${entry.number} activities`;
-    doc.getElementById("activity-count").textContent = `${count} ${count === 1 ? "item" : "items"}`;
     const note = doc.getElementById("sprint-note");
     note.textContent = entry.note || "";
     note.hidden = !entry.note;
-    doc.getElementById("sprint-unavailable").hidden = Boolean(count);
+    doc.getElementById("sprint-unavailable").hidden = Boolean(entry.href);
     if (previousKey !== null) doc.getElementById("schedule-announcement").textContent = `The featured module is now ${orientation ? "orientation" : "Sprint " + entry.number}.`;
     previousKey = key;
   }
