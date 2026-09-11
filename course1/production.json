@@ -359,16 +359,16 @@
       "canvas_payload_hash": "a2f1d587f5699e81490d93d7b1460c4f6f8190dee928bd3f12c6a8d3125be10a",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "fbb65674dd943cd25495c3647946d2ed12e3461d212728e6b0cf5bd07a7eb79d",
-      "hosted_hash": "d4754b522734c1e45583051aa73cac9e2fb3c77a66387edb6ca60f523c8b55c3",
-      "hosted_last_rendered": "2026-09-10T18:55:44+00:00",
+      "content_hash": "2aaefbb523c5c43cec9434f17398229ceda7d34a24e1569b02d1eae0e6124d7b",
+      "hosted_hash": "98a16307e82c8c8cc9cc24dddb4665d19a62c8241189eafc129b15c47c3e0117",
+      "hosted_last_rendered": "2026-09-11T23:08:47+00:00",
       "hosted_path": "course1/activities/introduction-find-the-problem-worth-solving-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-find-the-problem-worth-solving-v2.html",
-      "last_pushed": "2026-09-10T18:55:44+00:00",
+      "last_pushed": "2026-09-11T23:08:47+00:00",
       "local_path": "course1/sprints/sprint-12/introduction-find-the-problem-worth-solving-v2.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "ff82750d4e7652a752f31257807ba24bfd47bfda"
+      "source_commit": "4a9ba5643aca9328e36e2c47237cb91c4661b64a"
     },
     "course1-sprints-sprint-1-sprint-1-frame-what-is-worth-solving": {
       "artifact_id": "course1-sprints-sprint-1-sprint-1-frame-what-is-worth-solving",
@@ -439,17 +439,17 @@
       "canvas_payload_hash": "6db7b9e64117495ea872d02d920e8411836931dc00946cb54afe8d6cb515d613",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "a824597b9012fa7f03743fadcc30cca2b880b2906d89662e810b4e71c3eccd2a",
+      "content_hash": "11642f31b10c5e385271238c982f280e96fc049efa9697e2fa32ccb062cac441",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "5ced002ed9932f0aaa17226575897b9f0f3f2419d745ac32d8187b2ff18bd1b0",
-      "hosted_last_rendered": "2026-09-10T18:55:47+00:00",
+      "hosted_hash": "2317f2bbd4aab3b2de3fe1ef482eaf4d854105443b454cc48b2a5cb63c7b3428",
+      "hosted_last_rendered": "2026-09-11T23:08:47+00:00",
       "hosted_path": "course1/assignments/sprint-1-concept-check-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-1-concept-check-v2.html",
-      "last_pushed": "2026-09-10T18:55:47+00:00",
+      "last_pushed": "2026-09-11T23:08:47+00:00",
       "local_path": "course1/sprints/sprint-12/sprint-1-concept-check-v2.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "ff82750d4e7652a752f31257807ba24bfd47bfda"
+      "source_commit": "4a9ba5643aca9328e36e2c47237cb91c4661b64a"
     },
     "course1-sprints-sprint-12-sprint-1-find-the-problem-worth-solving-v2": {
       "artifact_id": "course1-sprints-sprint-12-sprint-1-find-the-problem-worth-solving-v2",
@@ -477,17 +477,17 @@
       "canvas_payload_hash": "6130e35dc2bd5a0df73b962832e6c49fb48be1a345bb53525a9c87f6d3ac65c5",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "d0ca24b11cbc508ceef32beffcd6b21ceea69b254fbc88bc129980172e9df2b6",
+      "content_hash": "d39be7f1083a68efee67c7d56bf616cea64f69436f96930b056c5dadb24badb2",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "ade547131933de03a6bc6ae3edc5c93edaa7230f81c1a9e1998b6be4d5947ac4",
-      "hosted_last_rendered": "2026-09-10T18:55:50+00:00",
+      "hosted_hash": "c94b44ba39df315566806bfaa6408a960b98edd3a5db89b6aeb17b14d10a03f0",
+      "hosted_last_rendered": "2026-09-11T23:08:48+00:00",
       "hosted_path": "course1/assignments/start-your-list-and-get-underneath-it-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/start-your-list-and-get-underneath-it-v2.html",
-      "last_pushed": "2026-09-10T18:55:50+00:00",
+      "last_pushed": "2026-09-11T23:08:48+00:00",
       "local_path": "course1/sprints/sprint-12/start-your-list-and-get-underneath-it-v2.md",
       "position": 3,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "ff82750d4e7652a752f31257807ba24bfd47bfda"
+      "source_commit": "4a9ba5643aca9328e36e2c47237cb91c4661b64a"
     },
     "course1-sprints-sprint-12-test-and-commit-v2": {
       "artifact_id": "course1-sprints-sprint-12-test-and-commit-v2",
@@ -499,17 +499,17 @@
       "canvas_payload_hash": "3b16ae5771732144d01a89ddd4d1ef39596e8e09a45c85b130b7b54a0138e181",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "ae5a8c6b11047518866b7017d263fa16cd00af8ed17d3261dbb9b93e432e290c",
+      "content_hash": "7688765b551a996f1536a7ebb0aea3c4c680b7c2ce9da8d4b4249a8ac756a919",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "ce43c3d16be703be730422946cc009b76fbbb2d1d34b0da383fa3376b26fa837",
-      "hosted_last_rendered": "2026-09-10T18:55:53+00:00",
+      "hosted_hash": "cf9390f1495d483dea9e586d395b635900793debba4f840bc8984c431db284ba",
+      "hosted_last_rendered": "2026-09-11T23:08:48+00:00",
       "hosted_path": "course1/assignments/test-and-commit-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/test-and-commit-v2.html",
-      "last_pushed": "2026-09-10T18:55:53+00:00",
+      "last_pushed": "2026-09-11T23:08:48+00:00",
       "local_path": "course1/sprints/sprint-12/test-and-commit-v2.md",
       "position": 7,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "ff82750d4e7652a752f31257807ba24bfd47bfda"
+      "source_commit": "4a9ba5643aca9328e36e2c47237cb91c4661b64a"
     },
     "course1-sprints-sprint-12-things-somebody-handed-you-v2": {
       "artifact_id": "course1-sprints-sprint-12-things-somebody-handed-you-v2",
@@ -521,17 +521,17 @@
       "canvas_payload_hash": "1b09f62347c15a350132257fb7b37d8518295a35f621f7d40c190307ef87ea37",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "03f066963ed3e96e3d5bc55aeb39887759e83c29ff2bdc1d9a8a9ddeb1ebb847",
+      "content_hash": "a0dabd8d989046ab9c88e0b40b8e0a35387589eab07e7a88e548fcd3086c71d0",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "c8abfaaf4c7efb70beb48186ab5e7da58461d21791025c3eb3d5f4fcf2601355",
-      "hosted_last_rendered": "2026-09-10T18:55:55+00:00",
+      "hosted_hash": "a82efe2b3d65b4b65777bdf8532add1463494b6fbac83ffaedc6ab3a2a2db2de",
+      "hosted_last_rendered": "2026-09-11T23:08:49+00:00",
       "hosted_path": "course1/assignments/things-somebody-handed-you-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/things-somebody-handed-you-v2.html",
-      "last_pushed": "2026-09-10T18:55:55+00:00",
+      "last_pushed": "2026-09-11T23:08:49+00:00",
       "local_path": "course1/sprints/sprint-12/things-somebody-handed-you-v2.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "ff82750d4e7652a752f31257807ba24bfd47bfda"
+      "source_commit": "4a9ba5643aca9328e36e2c47237cb91c4661b64a"
     },
     "course1-sprints-sprint-12-things-you-stopped-noticing-v2": {
       "artifact_id": "course1-sprints-sprint-12-things-you-stopped-noticing-v2",
@@ -543,17 +543,17 @@
       "canvas_payload_hash": "633fd891538c08e55e88cbb2282911effb806a2f93b82c1a26df865f2e875df6",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "2f7f55d13962779eaf549d6fe1aec11d817fef23b311e2c2d97afcfd6043b596",
+      "content_hash": "ec18c172e4761a9bfcebb3154cb5bd5c005a9ce5f68c40c94637aefee7c6aa07",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "d33ea3fec2cd29bc4684db3858cebf5315a890c54ad75698be1541817cb5c8db",
-      "hosted_last_rendered": "2026-09-10T18:55:58+00:00",
+      "hosted_hash": "3ab71fa6216d280ea2f197aa5442a09bbafd7932d8bc685288fea447f57e4604",
+      "hosted_last_rendered": "2026-09-11T23:08:49+00:00",
       "hosted_path": "course1/assignments/things-you-stopped-noticing-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/things-you-stopped-noticing-v2.html",
-      "last_pushed": "2026-09-10T18:55:58+00:00",
+      "last_pushed": "2026-09-11T23:08:49+00:00",
       "local_path": "course1/sprints/sprint-12/things-you-stopped-noticing-v2.md",
       "position": 4,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "ff82750d4e7652a752f31257807ba24bfd47bfda"
+      "source_commit": "4a9ba5643aca9328e36e2c47237cb91c4661b64a"
     },
     "course1-sprints-sprint-2-ai-exploration-log-and-3cs-application-log": {
       "artifact_id": "course1-sprints-sprint-2-ai-exploration-log-and-3cs-application-log",
@@ -1778,5 +1778,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-11T17:10:43+00:00"
+  "last_sync": "2026-09-11T23:08:49+00:00"
 }
