@@ -3,10 +3,12 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 const code = fs.readFileSync('canvas_sync/assets/guided-assignment.js', 'utf8');
-function boot({saved = null, storageFails = false, clipboardFails = false, feedbackFails = false} = {}) {
+function boot({saved = null, storageFails = false, clipboardFails = false, feedbackFails = false, compact = false, reading = false} = {}) {
   const config = {artifactId:'test', version:'1', title:'Decide', module:'Sprint One', feedback_endpoint:'https://example.invalid/feedback',
     tasks:[{id:'reason',prompt:'Why this one?',criteria:['Name the deciding check.']},
            {id:'choice',kind:'choice',prompt:'Choose the gap',criteria:['Compare states.'],options:['Complaint','Gap'],correct_index:1,explanation:'Compare current and possible.'}]};
+  if (compact) config.presentation = 'compact';
+  if (reading) config.presentation = 'reading';
   const nodes = new Map();
   function node(name) {
     if (!nodes.has(name)) nodes.set(name, {textContent:'',value:'',checked:false,disabled:false,listeners:{},
@@ -59,5 +61,23 @@ function boot({saved = null, storageFails = false, clipboardFails = false, feedb
   assert.match(failure.node('copy-output').value,/My own answer/);
   await failure.node('[data-feedback="reason"]').listeners.click();assert.match(failure.node('[data-feedback-result="reason"]').textContent,/unavailable/);
   assert.equal(box.value,'My own answer');assert.equal(failure.node('[data-feedback="reason"]').disabled,false);
+  const reading = boot({reading:true,clipboardFails:true,saved:app.writes.at(-1)[1]});
+  reading.radios[1].listeners.change(); reading.node('[data-check="choice"]').listeners.click();
+  assert.match(reading.node('[data-result="choice"]').textContent,/That fits/);
+  await reading.node('copy-answers').listeners.click();
+  assert.equal(reading.node('more-options').open,true);
+  assert.equal(reading.node('copy-output').focused,true);
+  reading.node('clear-draft').listeners.click();
+  assert.equal(reading.node('cancel-clear').focused,true);
+  reading.node('cancel-clear').listeners.click();
+  assert.equal(reading.node('clear-draft').focused,true);
+  const compact = boot({compact:true,clipboardFails:true});
+  compact.node('[data-answer="reason"]').value='Preserve this response';
+  compact.node('[data-answer="reason"]').listeners.input();
+  await compact.node('copy-answers').listeners.click();
+  assert.equal(compact.node('more-options').open,true);
+  assert.equal(compact.node('copy-output').focused,true);
+  assert.equal(compact.node('copy-output').selected,true);
+  assert.match(compact.node('copy-output').value,/Preserve this response/);
   console.log('guided runtime passed: save/restore, copy/fallback, choice feedback, optional requests, stale feedback, failure retention');
 })().catch(e=>{console.error(e);process.exitCode=1;});

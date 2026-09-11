@@ -17,7 +17,7 @@ Accept context in either form:
 
 1. Pasted directly into the user request.
 2. A Markdown file under `context/course-specs/` or `context/module-specs/`.
-3. A Google Doc file link, local DOCX, exported ZIP, or source packet. For a sprint, use the document intake path in build-sprint and `docs/DOCUMENT_INTAKE.md`. Preserve human prose with source_build.py; mark new/adapted material and record editorial decisions. A partial source supports a partial build, not invented missing teaching content.
+3. A Google Doc file link, local DOCX, exported ZIP, or source packet. For a sprint, use the document intake path in build-sprint and `docs/DOCUMENT_INTAKE.md`. Use the authoring contract to distinguish faithful conversion from authorized instructional adaptation. Preserve exact source selections with source_build.py; label shortened or rewritten material as adaptations with reasons and source references. A partial source supports a partial build, not invented missing teaching content.
 
 If the user names a course but not a spec file, use the lookup rules in the relevant skill. If there is no exact single match, ask one concise clarification before writing.
 

@@ -392,7 +392,7 @@ modules:
         items:
           - slug: "introduction-find-the-problem-worth-solving-v2"
             nav_meta: "Read"
-            meta: "Page - orient to candidate problems, the four checks, and the first-half sequence"
+            meta: "Page - orient to candidate problems, the first-half sequence, and what to submit"
       - label: "Build your table"
         items:
           - slug: "start-your-list-and-get-underneath-it-v2"

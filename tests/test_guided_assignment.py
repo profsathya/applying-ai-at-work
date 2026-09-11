@@ -10,6 +10,8 @@ import yaml
 from canvas_sync import push
 from canvas_sync.schema import validate_artifact, validate_canvas_state, validate_manifest
 from canvas_sync.guided_assignment import render_guided_body
+from canvas_sync.hosted_html import markdown_body_to_html, render_artifact_document
+from canvas_sync.instruction_sections import partition_instruction_sections
 from canvas_sync.maintenance_state import MaintenanceState
 from tests.test_canvas_state import chdir, write_manifest
 
@@ -27,6 +29,73 @@ def frontmatter():
 
 
 class GuidedAssignmentTests(unittest.TestCase):
+    def test_compact_presentation_is_opt_in_single_response_and_keeps_tools(self):
+        fm = frontmatter()
+        g = fm['guided_assignment']
+        g['presentation'] = 'compact'
+        g['tasks'] = g['tasks'][:1]
+        g['tasks'][0]['instruction_section'] = 'Build'
+        body = '## Start\n\nStart here.\n\n## Build\n\nBuild from your observations.\n'
+        self.assertEqual(self.validate(fm, body), [])
+        result = render_artifact_document(fm, body,
+            {'canvas_base_url': 'https://example.invalid', 'canvas_course_id': 180},
+            {'hosted_path': 'deanza/course1/pages/decide.html'}, {})
+        self.assertIn('guided-workspace guided-compact', result)
+        self.assertEqual(result.count('data-answer="reasons"'), 1)
+        self.assertEqual(result.count('id="copy-answers"'), 1)
+        self.assertIn('<details id="more-options"><summary>More options</summary>', result)
+        self.assertLess(result.index('id="more-options"'), result.index('id="copy-tasks"'))
+        self.assertLess(result.index('id="more-options"'), result.index('id="copy-output"'))
+        self.assertNotIn('<div class="submit">', result)
+        self.assertNotIn('class="full-instructions"', result)
+        g['tasks'].append({'id': 'other', 'prompt': 'Other', 'criteria': ['Other']})
+        self.assertTrue(any('one response' in e for e in self.validate(fm, body)))
+        g['tasks'] = g['tasks'][:1]
+        g['tasks'][0].pop('instruction_section')
+        self.assertTrue(any('one response' in e for e in self.validate(fm, body)))
+        g['tasks'][0]['instruction_section'] = 'Build'
+        g['feedback_endpoint'] = 'https://example.invalid/feedback'
+        self.assertTrue(any('AI feedback' in e for e in self.validate(fm, body)))
+
+    def test_reading_preserves_mixed_tasks_and_uses_one_export_area(self):
+        fm = frontmatter()
+        fm['guided_assignment']['presentation'] = 'reading'
+        fm['guided_assignment']['tasks'][0]['instruction_section'] = 'Reasons'
+        body = 'Opening.\n\n## Reasons\n\nUse your evidence.\n'
+        self.assertEqual(self.validate(fm, body), [])
+        result = render_artifact_document(fm, body,
+            {'canvas_base_url': 'https://example.invalid', 'canvas_course_id': 180},
+            {'hosted_path': 'deanza/course1/pages/decide.html'}, {})
+        self.assertIn('guided-workspace guided-reading', result)
+        self.assertEqual(result.count('data-answer="reasons"'), 1)
+        self.assertIn('fieldset aria-labelledby="question-check"', result)
+        self.assertEqual(result.count('name="check"'), 2)
+        self.assertEqual(result.count('Use your evidence.'), 1)
+        self.assertLess(result.index('Use your evidence.'), result.index('data-answer="reasons"'))
+        self.assertEqual(result.count('<summary>Self-check</summary>'), 1)
+        self.assertEqual(result.count('id="copy-answers"'), 1)
+        self.assertLess(result.index('id="more-options"'), result.index('id="copy-output"'))
+        self.assertNotIn('<div class="submit">', result)
+        self.assertIn('question 2</span>', result)
+        fm['guided_assignment']['feedback_endpoint'] = 'https://example.invalid/feedback'
+        self.assertTrue(any('AI feedback' in e for e in self.validate(fm, body)))
+
+    def test_reading_page_is_opt_in_and_restricted_to_pages(self):
+        fm = frontmatter()
+        fm.pop('guided_assignment'); fm.pop('delivery_mode')
+        fm['page_presentation'] = 'reading'
+        self.assertTrue(any('requires a page' in e for e in self.validate(fm)))
+        fm['type'] = 'page'; fm['submission_type'] = 'none'; fm['points'] = None
+        self.assertEqual(self.validate(fm), [])
+        result = render_artifact_document(fm, '## Route\n\nRead here.', {}, {'hosted_path':'course1/pages/test.html'})
+        self.assertIn('class="activity reading-page"', result)
+        self.assertNotIn('What counts as done', result)
+        self.assertNotIn('<h2>Learning goal</h2>', result)
+        fm.pop('page_presentation')
+        legacy = render_artifact_document(fm, '## Route\n\nRead here.', {}, {'hosted_path':'course1/pages/test.html'})
+        self.assertNotIn('class="activity reading-page"', legacy)
+        self.assertNotIn('Opt-in reading layouts', legacy)
+
     def test_publish_persists_guided_delivery_in_valid_maintenance_state(self):
         class Client:
             def create_assignment(self, payload):
@@ -60,10 +129,62 @@ class GuidedAssignmentTests(unittest.TestCase):
                 self.assertEqual(entry['canvas_id'], 17)
                 MaintenanceState(manifest, root, state_dir).load()
 
-    def validate(self, fm):
+    def validate(self, fm, body='Source instructions.\n'):
         with tempfile.TemporaryDirectory() as tmp:
-            p = Path(tmp) / 'page.md'; p.write_text('---\n' + yaml.safe_dump(fm) + '---\n\nSource instructions.\n')
+            p = Path(tmp) / 'page.md'; p.write_text('---\n' + yaml.safe_dump(fm) + '---\n\n' + body)
             return validate_artifact(p)
+
+    def test_instruction_references_require_one_unique_top_level_heading(self):
+        fm = frontmatter()
+        task = fm['guided_assignment']['tasks'][0]
+        task['instruction_section'] = 'Find & compare'
+        body = '## Find & compare\n\nA worked example.\n\n### A detail\n\nUse this detail.\n'
+        self.assertEqual(self.validate(fm, body), [])
+        for bad in ['', '## Something else\n', body + '\n## Find & compare\nAgain.',
+                    '> ## Find & compare\n> Nested in a quote.\n',
+                    '```\n## Find & compare\n```\n']:
+            with self.subTest(body=bad):
+                self.assertTrue(any('exactly one' in error for error in self.validate(fm, bad)))
+        fm['guided_assignment']['tasks'][1]['instruction_section'] = 'Find & compare'
+        self.assertTrue(any('only one task' in error for error in self.validate(fm, body)))
+        task['instruction_section'] = '   '
+        self.assertTrue(any('nonempty' in error for error in self.validate(fm, body)))
+
+    def test_section_order_and_remaining_teaching(self):
+        tasks = [{'id': 'b', 'instruction_section': 'Second'}, {'id': 'a', 'instruction_section': 'First & foremost'}]
+        rendered = markdown_body_to_html('Opening.\n\n## First & **foremost**\n\nFirst example.\n\n'
+                                         '### Detail\n\nFirst detail.\n\n## Extra\n\nShared context.\n\n'
+                                         '## Second\n\nSecond example.\n')
+        remainder, sections = partition_instruction_sections(rendered, tasks)
+        self.assertIn('Shared context.', remainder)
+        self.assertNotIn('First example.', remainder)
+        self.assertEqual(list(sections), ['b', 'a'])
+        self.assertIn('First detail.', sections['a'])
+        self.assertNotIn('Shared context.', sections['a'])
+        self.assertEqual(partition_instruction_sections(rendered, []), (rendered, {}))
+
+    def test_hosted_teaching_precedes_each_task_once_and_legacy_is_unchanged(self):
+        fm = frontmatter()
+        fm['guided_assignment']['tasks'][0]['instruction_section'] = 'Reasons'
+        fm['guided_assignment']['tasks'][1]['instruction_section'] = 'Distinguish'
+        body = '# Decide\n\nShared prerequisite.\n\n## Distinguish\n\nChoice example.\n\n## Reasons\n\nReason example.\n'
+        kwargs = {'manifest': {'canvas_base_url': 'https://example.invalid', 'canvas_course_id': 180},
+                  'hosted_info': {'hosted_path': 'deanza/course1/pages/decide.html'}, 'state_entry': {}}
+        result = render_artifact_document(fm, body, **kwargs)
+        self.assertNotIn('class="full-instructions"', result)
+        for text in ('Shared prerequisite.', 'Choice example.', 'Reason example.'):
+            self.assertEqual(result.count(text), 1)
+        self.assertLess(result.index('Reason example.'), result.index('data-task="reasons"'))
+        self.assertLess(result.index('data-task="reasons"'), result.index('Choice example.'))
+        self.assertLess(result.index('Choice example.'), result.index('data-task="check"'))
+        self.assertLess(result.index('data-task="check"'), result.index('id="copy-tasks"'))
+        self.assertIn('<details><summary>Self-check</summary>', result)
+        legacy = render_artifact_document(frontmatter(), body, **kwargs)
+        self.assertIn('class="full-instructions"', legacy)
+        self.assertEqual(legacy.count('Reason example.'), 1)
+        self.assertNotIn('class="task-teaching"', legacy)
+        self.assertIn('<details><summary>Guidance and self-check</summary>', legacy)
+        self.assertLess(legacy.index('id="copy-tasks"'), legacy.index('data-task="reasons"'))
 
     def test_plain_text_canvas_delivery_and_question_shape(self):
         fm = frontmatter(); self.assertEqual(self.validate(fm), [])

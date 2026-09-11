@@ -14,59 +14,50 @@ delivery_mode: guided_assignment
 completion_requirement: must_submit
 guided_assignment:
   version: '1.0'
-  purpose: Notice routines that have stopped registering as problems because you work
-    around them.
+  purpose: Notice routines that have stopped registering as problems because you work around
+    them.
   builds_on: Bring the table from Start your list and get underneath it.
-  standing_instruction: Open "Read the full instructions and examples" and read the
-    teaching before you answer the tasks. Work in your own words. Saving keeps a draft
-    in this browser; copying does not submit. When ready, copy your answers and submit
-    them as a text entry in Canvas. This own-your-progress activity is encouraged
-    and carries zero points. Submitting marks it complete; skipping it does not block
-    the next activity.
+  standing_instruction: Optional practice · 0 points. Submit to mark it complete,
+    or continue without submitting.
   tasks:
   - id: notice-workarounds
     kind: response
-    prompt: 'For the next day or two, watch your routine for workarounds you have
-      stopped noticing. Add them to your existing table using the same columns: what
-      bugs you; how it actually works now; the gap starting to show. Describe each
-      new row and keep uncertainty marked. Submit the updated table, or say you watched
-      and found nothing. Keep your earlier rows either way.'
+    prompt: Your updated table (or what you observed)
     criteria:
-    - Look for a step you redo, someone you chase, or a private copy you maintain
-      because a shared version does not work for you.
-    - Two new rows is a good haul, not a minimum requirement. Preserve the day-or-two
-      observation period and report no new observations honestly.
-    - You watched your actual routine over a day or two rather than inventing a workaround.
-    - Any new row includes how it works now and the gap beginning to show.
-    - Earlier rows are kept, and uncertainty remains visible.
-    - A report that you watched and found nothing is an acceptable result.
+    - New rows reflect your actual routine observed over a day or two.
+    - Each addition describes current handling and an emerging gap, with uncertainty visible.
+    - Earlier rows are retained; finding nothing new is an acceptable, honestly reported result.
+    instruction_section: 2. Add what you notice
+  presentation: compact
 source_provenance: things-you-stopped-noticing-v2.sources.json
 ---
 
 # Things you stopped noticing
 
-### Where habits hide problems
+## 1. Watch your routine
 
-Say you pull a report every month. The system exports it in the wrong format, so you paste it into a spreadsheet and fix the columns by hand. Thirty minutes, every month, for two years. You probably don't even think about that as a problem anymore. You just think of it as "how I do the report."
+Over the next **day or two**, notice a step you redo, a person you chase, or a private file you keep because the shared version does not work for you. Keep the table from **Start your list and get underneath it** nearby. Work without AI.
 
-That is how work-arounds go. They accumulate gradually enough that they just become the normal way you do things, and if someone asked whether anything was wrong, you would say no. The problem stops being stored in your memory as a problem. It gets stored as a habit.
+A **workaround** is something you do to get around a difficulty. Repeating it can make its cost feel like an ordinary part of the job.
 
-This is not a flaw. Getting through hard things without stopping to examine every friction is a skill, and it is how many of us function. It is also why some things worth fixing start to become invisible.
+> **Illustrative worked example · Monthly report**
+>
+> ![An export orders its columns Date, Team, Total. The monthly report needs Team, Total, Date. An arrow labeled Reorder by hand connects them.](assets/report-column-workaround.webp)
+>
+> *Illustrative column mismatch. Image created with AI for this course.*
+>
+> **Notice:** Every month, you fix the exported report columns by hand.
+>
+> **Current work:** Each analyst rearranges the same columns in a separate copy.
+>
+> **Possible gap:** The repeated fixes may cost the team time that one shared correction could save. (?)
 
-### Your turn: watch for a day or two
+## 2. Add what you notice
 
-For the next day or two, notice the moments where you route around something. The step you always redo. The person you always have to chase. The file you keep a private copy of because the shared one is wrong. Add them to your table as they happen.
+Add observations as they happen. Keep your earlier rows and use the same three columns:
 
-Then run the same move on each new row: how does it actually work now, and what gap is starting to show. Work-arounds are often easier to get under than complaints, because you already know the mechanics. You have been performing them by hand.
+- **What bugs you:** the routine you noticed.
+- **How it actually works now:** the workaround and who performs it.
+- **The gap starting to show:** the cost or shortfall it reveals. Mark uncertainty with **(?)**.
 
-Two new rows is a good haul. None is also a result. If a couple of days of watching turn up nothing, say so when you submit and move on. Your list from the first activity is still there.
-
-### What to submit
-
-Your table with the new rows added and the move run on each, or a line saying you watched and found nothing.
-
-
-
-## Submit in Canvas
-
-Copy your response and submit it as a text entry in Canvas. Saving in this activity keeps a browser draft; it does not submit your work. Keep your table in your own document so you can add to it in the next activity.
+Two new rows is a useful result, not a minimum. If you watched and found nothing new, say so. Keep your cumulative table for **Things somebody handed you**.

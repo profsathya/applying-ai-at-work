@@ -33,6 +33,11 @@
     "learner_labels": {
       "type": "boolean"
     },
+    "page_presentation": {
+      "type": "string",
+      "enum": ["reading"],
+      "description": "Opt-in reading layout for informational pages."
+    },
     "learning_goal": {
       "type": "string",
       "minLength": 1
@@ -105,6 +110,11 @@
           "type": "string",
           "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*$"
         },
+        "presentation": {
+          "type": "string",
+          "enum": ["standard", "compact", "reading"],
+          "description": "Compact is an opt-in continuous page for one response task with an instruction_section."
+        },
         "purpose": {
           "type": "string"
         },
@@ -143,6 +153,11 @@
               "prompt": {
                 "type": "string",
                 "minLength": 1
+              },
+              "instruction_section": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Exact visible title of one unique level-two Markdown section, shown before this task instead of in the full instructions panel."
               },
               "criteria": {
                 "type": "array",

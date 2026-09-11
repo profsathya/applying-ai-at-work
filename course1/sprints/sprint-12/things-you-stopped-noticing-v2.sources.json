@@ -1,398 +1,59 @@
 {
   "evidence_version": 1,
   "artifact_id": "course1-sprints-sprint-12-things-you-stopped-noticing-v2",
-  "packet_sha256": "fc6c14632f07e9ea3e5956bc3e56f2083997fe8d9be7452e46a3b5acb6eaa62f",
-  "map_sha256": "748348ea07259683ec042f987987f5a96d8cdf52036c8511bbf875ec6aee1602",
-  "body_sha256": "cd8f64540caf572e1c25b6507610fb503653dffa1537b9074f4aa61480f474bd",
-  "frontmatter_sha256": "a7dccecce004dc0cf9a39c75392915bd5540c1098249a713e62ed7bf84fcee62",
+  "map_kind": "illustrated_sprint1_adaptation",
+  "map_sha256": "c634d139584256d936b8ff6671ffa7597569164b564e0dc99b35fe0981b3520c",
+  "body_sha256": "698006ac7380325586e08e97845eec505092cc5b51edd4ea540fe812880be455",
+  "frontmatter_sha256": "97535ac6366cd5ca37b28e7edd79fb2ca18fc7f6afe0c06e4107ceb5d31841e1",
   "parts": [
     {
       "kind": "new",
-      "markdown": "# Things you stopped noticing",
-      "reason": "Replace editorial section wrapper with participant artifact heading.",
+      "markdown": "# Things you stopped noticing\n\n## 1. Watch your routine\n\nOver the next **day or two**, notice a step you redo, a person you chase, or a private file you keep because the shared version does not work for you. Keep the table from **Start your list and get underneath it** nearby. Work without AI.\n\nA **workaround** is something you do to get around a difficulty. Repeating it can make its cost feel like an ordinary part of the job.\n\n> **Illustrative worked example · Monthly report**\n>\n> ![An export orders its columns Date, Team, Total. The monthly report needs Team, Total, Date. An arrow labeled Reorder by hand connects them.](assets/report-column-workaround.webp)\n>\n> *Illustrative column mismatch. Image created with AI for this course.*\n>\n> **Notice:** Every month, you fix the exported report columns by hand.\n>\n> **Current work:** Each analyst rearranges the same columns in a separate copy.\n>\n> **Possible gap:** The repeated fixes may cost the team time that one shared correction could save. (?)\n\n## 2. Add what you notice\n\nAdd observations as they happen. Keep your earlier rows and use the same three columns:\n\n- **What bugs you:** the routine you noticed.\n- **How it actually works now:** the workaround and who performs it.\n- **The gap starting to show:** the cost or shortfall it reveals. Mark uncertainty with **(?)**.\n\nTwo new rows is a useful result, not a minimum. If you watched and found nothing new, say so. Keep your cumulative table for **Things somebody handed you**.",
+      "reason": "Authorized addition of original AI-generated textbook illustrations, descriptive alternatives and captions; report example retains its notice/current-work/gap teaching while consolidating the previous stage cards.",
       "based_on": [
-        "d-680926b47b42877d:word/document.xml/110"
-      ]
-    },
-    {
-      "ref": "d-680926b47b42877d:word/document.xml/112",
-      "view": "proposed",
-      "role": "learner",
-      "kind": "source",
-      "source_name": "sprint1halfoneworkingdraftv4.md.docx",
-      "source_sha256": "680926b47b42877d7471ae9adb2b6c02929bd2b8d8f19d4d87459a068c13529f",
-      "block": {
-        "id": "d-680926b47b42877d:word/document.xml/112",
-        "kind": "paragraph",
-        "location": "word/document.xml/112",
-        "style": "Heading3",
-        "heading_level": 3,
-        "segments": [
-          {
-            "text": "Where habits hide problems",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          }
-        ],
-        "flags": [],
-        "comment_ids": [],
-        "text": {
-          "base": "Where habits hide problems",
-          "proposed": "Where habits hide problems"
-        }
-      },
-      "block_sha256": "5e2bafc8b357ceb9b108fbb79307102fb4dc7a6323bb8083602a95426fba5bd5",
-      "markdown": "### Where habits hide problems"
-    },
-    {
-      "ref": "d-680926b47b42877d:word/document.xml/113",
-      "view": "proposed",
-      "role": "learner",
-      "kind": "source",
-      "source_name": "sprint1halfoneworkingdraftv4.md.docx",
-      "source_sha256": "680926b47b42877d7471ae9adb2b6c02929bd2b8d8f19d4d87459a068c13529f",
-      "block": {
-        "id": "d-680926b47b42877d:word/document.xml/113",
-        "kind": "paragraph",
-        "location": "word/document.xml/113",
-        "style": null,
-        "heading_level": null,
-        "segments": [
-          {
-            "text": "Say you pull a report every month. The system exports it in the wrong format, so you paste it into a spreadsheet and fix the columns by hand. Thirty minutes, every month, for two years. You probably don't even think about that as a problem anymore. You just think of it as \"how I do the report.\"",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          }
-        ],
-        "flags": [],
-        "comment_ids": [],
-        "text": {
-          "base": "Say you pull a report every month. The system exports it in the wrong format, so you paste it into a spreadsheet and fix the columns by hand. Thirty minutes, every month, for two years. You probably don't even think about that as a problem anymore. You just think of it as \"how I do the report.\"",
-          "proposed": "Say you pull a report every month. The system exports it in the wrong format, so you paste it into a spreadsheet and fix the columns by hand. Thirty minutes, every month, for two years. You probably don't even think about that as a problem anymore. You just think of it as \"how I do the report.\""
-        }
-      },
-      "block_sha256": "8cf2ecd35ac2b9f216fd35c6bd25b7b6e2036df8c883687272f50b57a8d1c3b1",
-      "markdown": "Say you pull a report every month. The system exports it in the wrong format, so you paste it into a spreadsheet and fix the columns by hand. Thirty minutes, every month, for two years. You probably don't even think about that as a problem anymore. You just think of it as \"how I do the report.\""
-    },
-    {
-      "ref": "d-680926b47b42877d:word/document.xml/115",
-      "view": "proposed",
-      "role": "learner",
-      "kind": "source",
-      "source_name": "sprint1halfoneworkingdraftv4.md.docx",
-      "source_sha256": "680926b47b42877d7471ae9adb2b6c02929bd2b8d8f19d4d87459a068c13529f",
-      "block": {
-        "id": "d-680926b47b42877d:word/document.xml/115",
-        "kind": "paragraph",
-        "location": "word/document.xml/115",
-        "style": null,
-        "heading_level": null,
-        "segments": [
-          {
-            "text": "That is how work-arounds go. They accumulate gradually enough that they just become the normal way you do things, and if someone asked whether anything was wrong, you would say no. The problem stops being stored in your memory as a problem. It gets stored as a habit.",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          }
-        ],
-        "flags": [],
-        "comment_ids": [],
-        "text": {
-          "base": "That is how work-arounds go. They accumulate gradually enough that they just become the normal way you do things, and if someone asked whether anything was wrong, you would say no. The problem stops being stored in your memory as a problem. It gets stored as a habit.",
-          "proposed": "That is how work-arounds go. They accumulate gradually enough that they just become the normal way you do things, and if someone asked whether anything was wrong, you would say no. The problem stops being stored in your memory as a problem. It gets stored as a habit."
-        }
-      },
-      "block_sha256": "a1ec0daabee4a69b8cb27d73432b8cc9580ad34b09da970fe4ebb927fa02be37",
-      "markdown": "That is how work-arounds go. They accumulate gradually enough that they just become the normal way you do things, and if someone asked whether anything was wrong, you would say no. The problem stops being stored in your memory as a problem. It gets stored as a habit."
-    },
-    {
-      "ref": "d-680926b47b42877d:word/document.xml/117",
-      "view": "proposed",
-      "role": "learner",
-      "kind": "source",
-      "source_name": "sprint1halfoneworkingdraftv4.md.docx",
-      "source_sha256": "680926b47b42877d7471ae9adb2b6c02929bd2b8d8f19d4d87459a068c13529f",
-      "block": {
-        "id": "d-680926b47b42877d:word/document.xml/117",
-        "kind": "paragraph",
-        "location": "word/document.xml/117",
-        "style": null,
-        "heading_level": null,
-        "segments": [
-          {
-            "text": "This is not a flaw. Getting through hard things without stopping to examine every friction is a skill, and it is how many of us function. It is also why some things worth fixing start to become invisible.",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          }
-        ],
-        "flags": [],
-        "comment_ids": [],
-        "text": {
-          "base": "This is not a flaw. Getting through hard things without stopping to examine every friction is a skill, and it is how many of us function. It is also why some things worth fixing start to become invisible.",
-          "proposed": "This is not a flaw. Getting through hard things without stopping to examine every friction is a skill, and it is how many of us function. It is also why some things worth fixing start to become invisible."
-        }
-      },
-      "block_sha256": "9310259dba55c9d18f9f1a58a1670680b58ac2dc03bc85230e63ac5a481c1532",
-      "markdown": "This is not a flaw. Getting through hard things without stopping to examine every friction is a skill, and it is how many of us function. It is also why some things worth fixing start to become invisible."
-    },
-    {
-      "ref": "d-680926b47b42877d:word/document.xml/118",
-      "view": "proposed",
-      "role": "learner",
-      "kind": "source",
-      "source_name": "sprint1halfoneworkingdraftv4.md.docx",
-      "source_sha256": "680926b47b42877d7471ae9adb2b6c02929bd2b8d8f19d4d87459a068c13529f",
-      "block": {
-        "id": "d-680926b47b42877d:word/document.xml/118",
-        "kind": "paragraph",
-        "location": "word/document.xml/118",
-        "style": "Heading3",
-        "heading_level": 3,
-        "segments": [
-          {
-            "text": "Your turn: watch for a day or two",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          }
-        ],
-        "flags": [],
-        "comment_ids": [],
-        "text": {
-          "base": "Your turn: watch for a day or two",
-          "proposed": "Your turn: watch for a day or two"
-        }
-      },
-      "block_sha256": "01d58e4b779a3105abb33bb13a612181b1cacc6568509a2fe674f0d9d2020932",
-      "markdown": "### Your turn: watch for a day or two"
-    },
-    {
-      "ref": "d-680926b47b42877d:word/document.xml/119",
-      "view": "proposed",
-      "role": "learner",
-      "kind": "source",
-      "source_name": "sprint1halfoneworkingdraftv4.md.docx",
-      "source_sha256": "680926b47b42877d7471ae9adb2b6c02929bd2b8d8f19d4d87459a068c13529f",
-      "block": {
-        "id": "d-680926b47b42877d:word/document.xml/119",
-        "kind": "paragraph",
-        "location": "word/document.xml/119",
-        "style": null,
-        "heading_level": null,
-        "segments": [
-          {
-            "text": "For the next day or two, notice the moments where you route around something. The step you always redo. The person you always have to chase. The file you keep a private copy of because the shared one is wrong. Add them to your table as they happen.",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          }
-        ],
-        "flags": [],
-        "comment_ids": [],
-        "text": {
-          "base": "For the next day or two, notice the moments where you route around something. The step you always redo. The person you always have to chase. The file you keep a private copy of because the shared one is wrong. Add them to your table as they happen.",
-          "proposed": "For the next day or two, notice the moments where you route around something. The step you always redo. The person you always have to chase. The file you keep a private copy of because the shared one is wrong. Add them to your table as they happen."
-        }
-      },
-      "block_sha256": "5f0230f90acb785bccb83df1c0c5e0f2b5fb5c96a1937f249a076589187c0986",
-      "markdown": "For the next day or two, notice the moments where you route around something. The step you always redo. The person you always have to chase. The file you keep a private copy of because the shared one is wrong. Add them to your table as they happen."
-    },
-    {
-      "ref": "d-680926b47b42877d:word/document.xml/123",
-      "view": "proposed",
-      "role": "learner",
-      "kind": "source",
-      "source_name": "sprint1halfoneworkingdraftv4.md.docx",
-      "source_sha256": "680926b47b42877d7471ae9adb2b6c02929bd2b8d8f19d4d87459a068c13529f",
-      "block": {
-        "id": "d-680926b47b42877d:word/document.xml/123",
-        "kind": "paragraph",
-        "location": "word/document.xml/123",
-        "style": null,
-        "heading_level": null,
-        "segments": [
-          {
-            "text": "Then run the same move on each new row: how does it actually work now, and what gap is starting to show. Work-arounds are often easier to get under than complaints, because you already know the mechanics. You have been performing them by hand.",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          }
-        ],
-        "flags": [],
-        "comment_ids": [],
-        "text": {
-          "base": "Then run the same move on each new row: how does it actually work now, and what gap is starting to show. Work-arounds are often easier to get under than complaints, because you already know the mechanics. You have been performing them by hand.",
-          "proposed": "Then run the same move on each new row: how does it actually work now, and what gap is starting to show. Work-arounds are often easier to get under than complaints, because you already know the mechanics. You have been performing them by hand."
-        }
-      },
-      "block_sha256": "05669877dda2a1f0d3279ff9104da141c1bbc70c9caf9f8077e1f0e5545d05c0",
-      "markdown": "Then run the same move on each new row: how does it actually work now, and what gap is starting to show. Work-arounds are often easier to get under than complaints, because you already know the mechanics. You have been performing them by hand."
-    },
-    {
-      "ref": "d-680926b47b42877d:word/document.xml/125",
-      "view": "proposed",
-      "role": "learner",
-      "kind": "source",
-      "source_name": "sprint1halfoneworkingdraftv4.md.docx",
-      "source_sha256": "680926b47b42877d7471ae9adb2b6c02929bd2b8d8f19d4d87459a068c13529f",
-      "block": {
-        "id": "d-680926b47b42877d:word/document.xml/125",
-        "kind": "paragraph",
-        "location": "word/document.xml/125",
-        "style": null,
-        "heading_level": null,
-        "segments": [
-          {
-            "text": "Two new rows is a good haul. None is also a result. If a couple of days of watching turn up nothing, say so when you submit and move on. Your list from the first activity is still there.",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          }
-        ],
-        "flags": [],
-        "comment_ids": [],
-        "text": {
-          "base": "Two new rows is a good haul. None is also a result. If a couple of days of watching turn up nothing, say so when you submit and move on. Your list from the first activity is still there.",
-          "proposed": "Two new rows is a good haul. None is also a result. If a couple of days of watching turn up nothing, say so when you submit and move on. Your list from the first activity is still there."
-        }
-      },
-      "block_sha256": "5db936762cb6c27029bfbef31adadd11c4aba605f64153620e90df64f5bdc59e",
-      "markdown": "Two new rows is a good haul. None is also a result. If a couple of days of watching turn up nothing, say so when you submit and move on. Your list from the first activity is still there."
-    },
-    {
-      "ref": "d-680926b47b42877d:word/document.xml/126",
-      "view": "proposed",
-      "role": "learner",
-      "kind": "source",
-      "source_name": "sprint1halfoneworkingdraftv4.md.docx",
-      "source_sha256": "680926b47b42877d7471ae9adb2b6c02929bd2b8d8f19d4d87459a068c13529f",
-      "block": {
-        "id": "d-680926b47b42877d:word/document.xml/126",
-        "kind": "paragraph",
-        "location": "word/document.xml/126",
-        "style": "Heading3",
-        "heading_level": 3,
-        "segments": [
-          {
-            "text": "What to submit",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          }
-        ],
-        "flags": [],
-        "comment_ids": [],
-        "text": {
-          "base": "What to submit",
-          "proposed": "What to submit"
-        }
-      },
-      "block_sha256": "c354cc396257559cff07ed203329db76df0c0f4fa302e63e8690a08d0b1c9f1c",
-      "markdown": "### What to submit"
-    },
-    {
-      "ref": "d-680926b47b42877d:word/document.xml/127",
-      "view": "proposed",
-      "role": "learner",
-      "kind": "source",
-      "source_name": "sprint1halfoneworkingdraftv4.md.docx",
-      "source_sha256": "680926b47b42877d7471ae9adb2b6c02929bd2b8d8f19d4d87459a068c13529f",
-      "block": {
-        "id": "d-680926b47b42877d:word/document.xml/127",
-        "kind": "paragraph",
-        "location": "word/document.xml/127",
-        "style": null,
-        "heading_level": null,
-        "segments": [
-          {
-            "text": "Your table with the new rows added and the move run on each, or a line saying you watched and found nothing.",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          }
-        ],
-        "flags": [],
-        "comment_ids": [],
-        "text": {
-          "base": "Your table with the new rows added and the move run on each, or a line saying you watched and found nothing.",
-          "proposed": "Your table with the new rows added and the move run on each, or a line saying you watched and found nothing."
-        }
-      },
-      "block_sha256": "567c20b73688989cd6e293f60cef3217d787a241e86ce6c46a8de6bbc49ada80",
-      "markdown": "Your table with the new rows added and the move run on each, or a line saying you watched and found nothing."
-    },
-    {
-      "kind": "new",
-      "markdown": "\n\n## Submit in Canvas\n\nCopy your response and submit it as a text entry in Canvas. Saving in this activity keeps a browser draft; it does not submit your work. Keep your table in your own document so you can add to it in the next activity.",
-      "reason": "Make the approved guided text-entry submission route explicit.",
-      "based_on": [
+        "git:c2182cc007b3f47f18ed633b0ca2de16610a2f55:course1/sprints/sprint-12/things-you-stopped-noticing-v2.md",
+        "d-680926b47b42877d:word/document.xml/110",
+        "d-680926b47b42877d:word/document.xml/112",
+        "d-680926b47b42877d:word/document.xml/113",
+        "d-680926b47b42877d:word/document.xml/115",
+        "d-680926b47b42877d:word/document.xml/117",
+        "d-680926b47b42877d:word/document.xml/118",
+        "d-680926b47b42877d:word/document.xml/119",
+        "d-680926b47b42877d:word/document.xml/123",
+        "d-680926b47b42877d:word/document.xml/125",
+        "d-680926b47b42877d:word/document.xml/126",
         "d-680926b47b42877d:word/document.xml/127"
       ]
     }
   ],
   "metadata_decisions": [
-    "Authored guided-task configuration and delivery metadata follow the approved implementation plan; task criteria are drawn from the selected source, with no new rubric weights.",
-    "Browser QA showed task prompts render as bold headings. Shortened response prompts to self-contained actions and outputs; moved detailed tests and exceptions into criteria. OYP3 submits only the updated table, with chains and alternatives kept as working notes."
+    "All frontmatter, task configuration, identities, storage version and grading unchanged. Original illustrations, no external stock assets."
   ],
-  "source_roles": {
-    "d-680926b47b42877d": {
-      "role": "primary_authoring",
-      "reason": "User selected this DOCX export for the approved first-half Sprint 1 V2 build."
+  "revision_lineage": {
+    "previous_md_sha256": "6cf4def5e163d5a4fc0a2acc9c1824e5b31f874fe0b3997b6db3d7394c03731e",
+    "previous_evidence_sha256": "60a0d6a8ee0cecd215ae88bf5ce73c311a29b9d880c12fa0767187ec6c149b15",
+    "previous_map_sha256": "0bc1092de0725bc29b2fbc1eca199341199a8567ce204da60f55dd6aa1b0d245",
+    "previous_revision_lineage": {
+      "previous_md_sha256": "64a9d87f6a8020a09c681a351f650b040c2c95e9466d846bf49b916d479d601b",
+      "previous_evidence_sha256": "2f942047126d06c2c27841c8882cc5fa1e49a6b0df8f32abcd991017bc0a1138",
+      "previous_map_sha256": "215ccc3d409f3376398971500b6261f8962af3b15b7d5ab3355ef38925e8ce2d",
+      "previous_revision_lineage": {
+        "baseline_git_revision": "c2182cc007b3f47f18ed633b0ca2de16610a2f55",
+        "baseline_artifact_path": "course1/sprints/sprint-12/things-you-stopped-noticing-v2.md",
+        "baseline_md_sha256": "2f7f55d13962779eaf549d6fe1aec11d817fef23b311e2c2d97afcfd6043b596",
+        "baseline_evidence_sha256": "36da74302fc06b22015b456b32865d368a9763cbe52e9bdf0e02db29de9ea8f4",
+        "previous_packet_sha256": "fc6c14632f07e9ea3e5956bc3e56f2083997fe8d9be7452e46a3b5acb6eaa62f",
+        "previous_map_sha256": "748348ea07259683ec042f987987f5a96d8cdf52036c8511bbf875ec6aee1602",
+        "previous_source_roles": {
+          "d-680926b47b42877d": {
+            "role": "primary_authoring",
+            "reason": "User selected this DOCX export for the approved first-half Sprint 1 V2 build."
+          }
+        },
+        "source_limitations": [
+          "Original DOCX and raw intake packet are unavailable in this checkout. No native source capture, fresh raw-source reparse, or author approval is claimed."
+        ]
+      }
     }
-  },
-  "decisions": [
-    "Use the exported DOCX proposed view. Text is identical in base and proposed views; the five table structural revisions do not contain competing wording. Preserve the exported rectangular table representation, without claiming historic layout reconstruction.",
-    "User approved all five activities as guided text-entry assignments with must_submit completion and 0/0/0/5/35 points. No AI endpoint or automated Canvas grading. Six concept questions and their keys/feedback are newly authored from preceding teaching, not recovered historical questions.",
-    "Keep every participant teaching block in the five source sections, except adapt wrapper headings and reconstruct the diagram. Exclude document introduction and notes (0-11), flagged NOTE/OPEN/TODO blocks, empty separators, and all parked/planning/cut-plan/open-items material (472 onward). Do not build half two.",
-    "Keep OYP1 own-observation prose, including the explicit exception allowing an empty middle column marked when the move produces nothing. Keep OYP2 day-or-two observation and no-new-results outcome. Existing source open issues are preserved as wording decisions, not resolved author review.",
-    "Reconstruct source diagram paragraphs163-193 as one Mermaid fence, replacing HTML line breaks with plain-space labels while preserving nodes and edges. This is an adaptation, not verbatim source.",
-    "Use storage sprint12 to isolate this V2 module from sprint10 smoke-test artifacts; preserve semantic module title. Parent owns existing Introduction and homepage.",
-    "Add brief authored submission instructions distinguishing browser saving/copying from actual Canvas submission. OYPs remain encouraged, not prerequisite gates. New task metadata gives source-based prompts, templates and self-check criteria; no weighted rubric is invented.",
-    "Browser-verified presentation revision: compact response prompts avoid bold walls and raw pipe-table text; source teaching and tables remain intact. Corrected the exact instructions-control label and removed internal draft wording from module summary.",
-    "Include the retained Introduction in the same reproducible assembly. Its body is explicitly labelled a reuse/adaptation of the fingerprinted repository source, not selected DOCX text. Browser QA found the generic renderer added a redundant learning-goal label and exposed the storage sprint; the existing source-provenance presentation avoids both without runtime changes.",
-    "2026-09-10: User explicitly authorized pushing to main, publishing Canvas, and opening V2 on the homepage. Set all seven artifacts publish true; no participant wording changed."
-  ]
+  }
 }

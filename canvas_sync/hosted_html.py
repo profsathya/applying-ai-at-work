@@ -21,6 +21,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.schema import parse_frontmatter, validate_artifact
+from canvas_sync.local_images import local_image_assets
 from canvas_sync.state import course_dir_for_manifest, derive_artifact_id, load_json
 from canvas_sync.scheduled_homepage import render_scheduled_homepage, validate_schedule
 
@@ -211,7 +212,7 @@ def _strip_leading_h1(rendered: str) -> str:
     )
 
 
-def _wrap_sections(rendered: str) -> str:
+def _wrap_sections(rendered: str, *, overview: bool = True) -> str:
     rendered = rendered.strip()
     if not rendered:
         return "<section><p>No page content was provided.</p></section>"
@@ -222,7 +223,8 @@ def _wrap_sections(rendered: str) -> str:
     sections: list[str] = []
     prelude = pieces[0].strip()
     if prelude:
-        sections.append(f"<section>\n<h2>Overview</h2>\n{prelude}\n</section>")
+        heading = "<h2>Overview</h2>\n" if overview else ""
+        sections.append(f"<section>\n{heading}{prelude}\n</section>")
     for index in range(1, len(pieces), 2):
         heading = pieces[index].strip()
         content = pieces[index + 1].strip() if index + 1 < len(pieces) else ""
@@ -299,7 +301,11 @@ def _canvas_item_url(manifest: dict, frontmatter: dict, entry: dict) -> str | No
 
 def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
     artifact_type = frontmatter["type"]
+    if artifact_type == "page" and frontmatter.get("page_presentation") == "reading":
+        return ""
     if frontmatter.get("delivery_mode") == "guided_assignment":
+        if frontmatter.get('guided_assignment', {}).get('presentation') in ('compact', 'reading'):
+            return ''  # The compact workspace owns its single submission instruction/link.
         link = f'<p><a href="{html_lib.escape(canvas_url, quote=True)}" target="_blank" rel="noopener">Open the Canvas assignment</a></p>' if canvas_url else ""
         return '<div class="submit"><h2>Submit to Canvas</h2><p>Paste your final response text into the Canvas assignment. A document link or a saved browser draft is not a submission.</p>' + link + '</div>'
     if is_ai_activity_delivery(frontmatter):
@@ -356,10 +362,16 @@ def render_artifact_document(
 ) -> str:
     rendered = _strip_leading_h1(markdown_body_to_html(body))
     rendered, has_mermaid = _render_mermaid_blocks(rendered)
-    sections = _wrap_sections(rendered)
+    reading_mode = frontmatter.get("page_presentation") == "reading" or frontmatter.get("guided_assignment", {}).get("presentation") == "reading"
+    sections = _wrap_sections(rendered, overview=not reading_mode)
     if frontmatter.get("delivery_mode") == "guided_assignment":
         from canvas_sync.guided_assignment import render_guided_body
-        sections = render_guided_body(frontmatter, sections)
+        from canvas_sync.instruction_sections import partition_instruction_sections
+        remaining, task_sections = partition_instruction_sections(rendered, frontmatter['guided_assignment']['tasks'])
+        sections = render_guided_body(
+            frontmatter, _wrap_sections(remaining, overview=not reading_mode) if remaining else '', task_sections=task_sections,
+            canvas_url=_canvas_item_url(manifest, frontmatter, state_entry or {}),
+        ) if task_sections else render_guided_body(frontmatter, sections, canvas_url=_canvas_item_url(manifest, frontmatter, state_entry or {}))
     title = html_lib.escape(frontmatter["title"])
     module = html_lib.escape(frontmatter["module"])
     course_key = html_lib.escape(str(hosted_info["hosted_path"]).split("/", 1)[0])
@@ -369,8 +381,12 @@ def render_artifact_document(
     # Authored document builds already contain their instructional framing. Keep
     # storage/version identifiers and generated generic goals out of that prose.
     meta = f"{module} &middot; {artifact_type}" if frontmatter.get("source_provenance") or frontmatter.get("learner_labels") else f"{course_key} &middot; Sprint {sprint} &middot; {module} &middot; {artifact_type}"
-    goal_block = "" if frontmatter.get("source_provenance") else f'<div class="goal"><h2>Learning goal</h2><p>{goal}</p></div>'
+    goal_block = "" if frontmatter.get("source_provenance") or reading_mode else f'<div class="goal"><h2>Learning goal</h2><p>{goal}</p></div>'
     source_class = " source-derived" if frontmatter.get("source_provenance") else ""
+    reading_style = ""
+    if frontmatter.get("page_presentation") == "reading":
+        source_class += " reading-page"
+        reading_style = (Path(__file__).parent / "assets" / "guided-reading.css").read_text()
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {})
     submit_guidance = _submit_guidance(frontmatter, canvas_url)
     back_href = f"../sprint-{sprint}.html?context=web"
@@ -478,6 +494,7 @@ def render_artifact_document(
     .back-link:hover {{ text-decoration: underline; }}
     .ctx-web .back-link {{ display: inline-block; }}
 {mermaid_styles}\
+    {reading_style}
   </style>
   <script>
     (function() {{
@@ -836,6 +853,16 @@ def render_hosted_artifact(
     state_entry = _state_entry_for_artifact(md_path, manifest_path, fm, state or manifest_data)
     document = render_artifact_document(fm, body, manifest_data, hosted_info, state_entry)
     output_path = hosted_output_path(output_dir, manifest_data, hosted_info["hosted_path"])
+    assets = local_image_assets(md_path, markdown_body_to_html(body))
+    asset_outputs = []
+    for asset in assets:
+        document = document.replace('src="' + html_lib.escape(asset['source'], quote=True) + '"', 'src="' + asset['url'] + '"')
+        asset_path = output_path.parent / asset['url']
+        asset_changed = not asset_path.exists() or asset_path.read_bytes() != asset['payload']
+        if asset_changed:
+            asset_path.parent.mkdir(parents=True, exist_ok=True)
+            asset_path.write_bytes(asset['payload'])
+        asset_outputs.append({'path': str(asset_path), 'hash': asset['hash'], 'changed': asset_changed})
     changed, hosted_hash = _write_if_changed(output_path, document)
     return {
         "file": str(md_path),
@@ -843,7 +870,8 @@ def render_hosted_artifact(
         "hosted_url": hosted_info["hosted_url"],
         "output_path": str(output_path),
         "hosted_hash": hosted_hash,
-        "changed": changed,
+        "changed": changed or any(a["changed"] for a in asset_outputs),
+        **({"outputs": [{"path": str(output_path), "hash": hosted_hash, "changed": changed}, *asset_outputs]} if assets else {}),
     }
 
 
@@ -872,6 +900,8 @@ def artifact_hosted_output_paths(
         shell_hosted_path = f"{course_key}/{_ai_activity_shell_course_relative_path(fm)}"
         paths.append(hosted_output_path(output_dir, manifest_data, shell_hosted_path))
         paths.append(output_dir / _ai_activity_config_site_path(course_key, fm, manifest_data))
+    if not is_ai_activity_delivery(fm):
+        paths.extend(paths[0].parent / asset["url"] for asset in local_image_assets(md_path, markdown_body_to_html(_body)))
     return paths
 
 
