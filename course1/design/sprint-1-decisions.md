@@ -1611,3 +1611,42 @@ chatbot, because of the proxy outage.
 
 **Provenance.** Human (Leslie): the team plan and dates, the canonical-artifact ruling. AI
 (Claude): the review of Jeremy's work, the flagged questions, both outlines.
+
+## 12 September, later: Jeremy's rewrite is canonical; half two drafted to its register
+
+**What happened.** On 11 September, with Leslie's go-ahead that length was the major
+concern, Jeremy and his agent rewrote all six first-half artifacts in sprint-12: body text
+from about 9,100 words to about 2,700, a compact single-column layout with the response
+box directly under the teaching, and three AI-generated illustrations. Merged as PR #54 and
+published to Canvas module 2079 the same evening. Only one line per page survives verbatim
+from v4.2.
+
+**Leslie's ruling, 12 September.** Accept it as the canonical text and take a pass at it;
+the direction is right and it likely needs tweaks. The arc was checked element by element
+against the live text and is intact: one table across three sources, the move with a second
+pass, indicators, self-issued requests, the why-chain and fan-out, the day-or-two watch, the
+three-to-five selection, the four-line shape, (?) marks, all four checks with verdicts
+including "cannot answer yet," knowledge-holder and household conditions, Check 4 as a scope
+change, commit with why-you, runner-up, and recovery. Concept check at position 6.
+
+**Meaning-level changes for Leslie's pass**, as distinct from wording:
+
+1. "Work without AI" now appears on the Introduction, the concept check, and Test and
+   Commit. The ruling was the narrow version, first activity only, still open.
+2. The bored-sole-survivor exit in commit is gone; his text has "or the only survivor does
+   not matter to you," which covers it more briefly. Probably fine.
+3. The "try on" register is gone. Nothing says candidates are expected to be dropped
+   except "set clear failures aside."
+4. No explicit carry-forward line beyond "keep your full table and final answers for the
+   framing work that follows." Adequate.
+5. Curly quotes appear in his text, against house style.
+
+**Half two drafted** as `sprint-1-half-two-working-draft-v1.md`, in his register and at his
+length, on the outline's recommended defaults: OYP rhythm in week 2, First Frame and Dojo
+Lab ungraded, Goal Plan 50, Reflection 10, AI exchange folded into the Dojo Lab. Each
+activity carries its response tasks with criteria so the cut is mechanical. Roughly three
+hours of participant time.
+
+**Process line added to the rule.** An artifact rewrite that changes participant prose goes
+to the content owner before it merges, with the publish held until they have read it. Not
+yet agreed with Jeremy.

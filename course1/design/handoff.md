@@ -66,9 +66,9 @@ on, which is what makes the join real.
 
 | Piece | State |
 |---|---|
-| Sprint 1 first half | Cut, published, canonical in sprint-12. Leslie's own read of Check 2, Check 3, Reading the results, and Commit is still owed, now against the artifacts. Jeremy reviewing. Melisa running it |
+| Sprint 1 first half | Rewritten by Jeremy 11 September to about 30% of its length, published, canonical in sprint-12. Leslie's pass owed. Melisa running it in Canvas sees this version; the docx packet is v4.2 |
 | Sprint 1 concept check | Six questions written by Jeremy's agent, live, unreviewed by Leslie |
-| Sprint 1 half two | Outline written 12 September, decisions pending |
+| Sprint 1 half two | Draft v1 written 12 September in `course1/design/`, for Leslie's review |
 | Sprint 2 | Outline written 12 September, decisions pending. V1 only in the repo |
 | Sprint 0, 3, 4 | V2 published; Jeremy reviewing |
 | Sprint 5 | One placeholder page. No owner |
@@ -96,8 +96,11 @@ should match that mechanism.** Item count varies with the learning; the skeleton
 
 ## What to do next
 
-1. **Leslie rules on the half-two outline's four decisions**, then Claude drafts half two
-   as one working document in `course1/design/`, same loop as half one.
+1. **Leslie reviews `sprint-1-half-two-working-draft-v1.md`**, drafted 12 September on the
+   outline's defaults and in the register of the live first half. Then Jeremy cuts it into
+   sprint-12 positions 8 to 12.
+1a. **Leslie takes her pass at the live first half** (Jeremy's 11 September rewrite, now
+   canonical). The five meaning-level changes to check are in the decisions log.
 2. **Leslie rules on the Sprint 2 outline's four decisions**, then the same for Sprint 2.
 3. **Jeremy cuts each into artifacts** through his intake once it survives review. Half two
    continues sprint-12 at positions 8 to 12; Sprint 2 takes the next storage number.
