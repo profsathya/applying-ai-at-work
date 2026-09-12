@@ -1682,3 +1682,39 @@ first frame's seven parts for half two. Rough-is-the-point and (?) conventions i
 the three table activities and from Test and Commit, with the response box instruction
 becoming "paste the section this activity names, or a link to your Candidate Log." Option 2,
 boxes that assemble into a table, stays as the medium-term ask.
+
+## 12 September, late: the five open items, and a finding that changes two of them
+
+**Finding.** A new artifact written directly into `course1/sprints/sprint-12/` with a full
+`guided_assignment` configuration (two labeled response boxes, `presentation: reading`,
+criteria, instruction sections) and no source-evidence sidecar passes validation. So does a
+plain page. The source-fidelity lock applies only to files that carry `source_provenance`,
+which today means the six first-half artifacts Jeremy built through his intake. New content
+does not need his intake to reach Canvas: write the artifact, open a PR, Leslie approves the
+merge, the protected workflow publishes it as an unpublished Canvas item.
+
+**The five items on the table, as Leslie listed them, with their status.**
+
+1. **Workflow so that not everything routes through Jeremy.** Narrowed. Only the six
+   first-half files are locked. Ask him to unlock them (accept-edit command, or the fidelity
+   check as a warning), or to drop the sidecars once the content is stable.
+2. **Assignments more guided than a blank box.** The Candidate Log covers the table work
+   for the four first-half assignments and the first frame. Prose-shaped parts, Test and
+   Commit's four parts and everything in half two, belong in short labeled boxes, which the
+   `reading` presentation supports and which Claude can write directly for new pages. The
+   live first-half pages still need Jeremy to link the Log and relabel the box.
+3. **Too much guidance stripped from the first half.** Sathya's answer is not a separate
+   instructional page. His activity pages keep a short visible backbone and put worked
+   examples, reference, and method one click away in collapsed sections on the same page:
+   backbone visible, detours behind clicks. Jeremy's layout has the same mechanism ("Read the
+   full instructions and examples") and his compact pass hid it. The fix is to restore the
+   v4.2 teaching, frozen in the repo, as collapsed sections inside each activity. A
+   presentation change on locked files, so Jeremy's, and the most useful single ask.
+4. **Half two.** Not a docx. Claude converts `sprint-1-half-two-working-draft-v1.md` into
+   five sprint-12 artifacts with boxes, criteria, and collapsed teaching, `publish: false`.
+   Leslie reviews the real pages. Merge needs her go, per the rule.
+5. **Sprint 2.** Same path, in the next storage folder. The only Jeremy dependency is an
+   AI feedback button on the pushback box, if wanted, which needs the proxy restored.
+
+**Jeremy's list shrinks to three:** unlock the first half, restore its teaching as collapsed
+sections, link the Candidate Log from the four first-half activities.

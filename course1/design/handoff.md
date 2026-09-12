@@ -6,8 +6,10 @@ read_first: true
 
 # Handoff
 
-New chat? Read this, then `problem-spine.md`, then `sprint-1-decisions.md`. Start at the session
-of 10 September in the decisions log; it supersedes anything above it that conflicts.
+New chat? Read this, then `problem-spine.md`, then `sprint-1-decisions.md` from the session of
+12 September onward; those entries supersede anything above them that conflicts. The live
+first half is in `course1/sprints/sprint-12/`; the half-two draft and the Sprint 2 outline are
+in `course1/design/`.
 
 ---
 
@@ -68,8 +70,8 @@ on, which is what makes the join real.
 |---|---|
 | Sprint 1 first half | Rewritten by Jeremy 11 September to about 30% of its length, published, canonical in sprint-12. Leslie's pass owed. Melisa running it in Canvas sees this version; the docx packet is v4.2 |
 | Sprint 1 concept check | Six questions written by Jeremy's agent, live, unreviewed by Leslie |
-| Sprint 1 half two | Draft v1 written 12 September in `course1/design/`, for Leslie's review |
-| Sprint 2 | Outline written 12 September, decisions pending. V1 only in the repo |
+| Sprint 1 half two | Draft v1 in `course1/design/`; next step is the conversion to sprint-12 artifacts with boxes |
+| Sprint 2 | Outline written 12 September. Claude can build it directly as artifacts; no intake needed |
 | Sprint 0, 3, 4 | V2 published; Jeremy reviewing |
 | Sprint 5 | One placeholder page. No owner |
 
@@ -96,21 +98,31 @@ should match that mechanism.** Item count varies with the learning; the skeleton
 
 ## What to do next
 
-1. **Leslie reviews `sprint-1-half-two-working-draft-v1.md`**, drafted 12 September on the
-   outline's defaults and in the register of the live first half. Then Jeremy cuts it into
-   sprint-12 positions 8 to 12.
-1a. **Leslie takes her pass at the live first half** (Jeremy's 11 September rewrite, now
-   canonical). The five meaning-level changes to check are in the decisions log.
-2. **Leslie rules on the Sprint 2 outline's four decisions**, then the same for Sprint 2.
-3. **Jeremy cuts each into artifacts** through his intake once it survives review. Half two
-   continues sprint-12 at positions 8 to 12; Sprint 2 takes the next storage number.
-4. **Points and rubrics proposal** across all five sprints, for the team decision. Claude
-   can draft it from what exists.
-5. **Collect Melisa's and Clare's run results** and read them against sprint-12.
-6. **Ask Jeremy** the four open questions in the 12 September decisions entry, plus the
-   response-box asks from the evening entry: an accept-edit path for content owners, a
-   placeholder field, a multi-box presentation, the how-this-works line above the box, and
-   the Candidate Log link on the four first-half activities.
+1. **Claude converts half two into sprint-12 artifacts** (positions 8 to 12) from
+   `sprint-1-half-two-working-draft-v1.md`: labeled response boxes with criteria, teaching
+   as collapsed sections, `publish: false`. Opens a PR and stops for Leslie's merge, since
+   merging publishes unpublished items to Canvas.
+2. **Leslie reviews half two as rendered pages**, not as a document.
+3. **Claude builds Sprint 2 the same way**, in the next storage folder, on
+   `sprint-2-outline.md`'s defaults unless Leslie rules otherwise.
+4. **Leslie takes her pass at the live first half.** The five meaning-level changes are in
+   the 12 September decisions entry. Edits to those six files go to Jeremy until unlocked.
+5. **Leslie's three asks to Jeremy:** unlock the first half (accept-edit command or
+   warning-level fidelity check); restore the v4.2 teaching as collapsed sections inside
+   each activity; link the Candidate Log from the four first-half activities and relabel
+   the box. Longer list in the 12 September decisions entries.
+6. **Points and rubrics proposal** across all five sprints, for the team decision.
+7. **Collect Melisa's and Clare's run results.** Melisa in Canvas sees Jeremy's text; the
+   docx packet is v4.2.
+
+## Things that only exist outside the repo
+
+- **Candidate Log template**, Google Doc in Leslie's Drive, id
+  `1aTgaDgf1ugkQujJkgvo-EHXUqm9ztN1jMA5SDy3lTjI`. Needs sharing set to anyone-with-link,
+  view only. A Word copy was sent to Leslie on 12 September.
+- **The test edition** (six docx files, v4.2 text) and the live-first-half readback docx are
+  with Leslie. Both are regenerable from the repo.
+- **Jeremy's intake packets and build maps** are in his private `.source-intake/`.
 
 ## How we work
 
