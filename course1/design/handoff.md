@@ -102,7 +102,7 @@ should match that mechanism.** Item count varies with the learning; the skeleton
    `sprint-1-half-two-working-draft-v1.md`: labeled response boxes with criteria, teaching
    as collapsed sections, `publish: false`. Opens a PR and stops for Leslie's merge, since
    merging publishes unpublished items to Canvas.
-2. **Leslie reviews half two as rendered pages**, not as a document.
+2. **Leslie reviews half two.** Pages 8 and 9 reviewed 13 September and revised (v1.1); pages 10 to 12 still unread. Rendered pages once step 1 is done.
 3. **Claude builds Sprint 2 the same way**, in the next storage folder, on
    `sprint-2-outline.md`'s defaults unless Leslie rules otherwise.
 4. **Leslie takes her pass at the live first half.** The five meaning-level changes are in

@@ -1718,3 +1718,48 @@ merge, the protected workflow publishes it as an unpublished Canvas item.
 
 **Jeremy's list shrinks to three:** unlock the first half, restore its teaching as collapsed
 sections, link the Candidate Log from the four first-half activities.
+
+# Session of 13 September 2026
+
+## Half two, first review round: the frame page and Your first frame
+
+Eight comments and one tracked change from Leslie, all on pages 8 and 9. They share one
+cause: the frame page taught seven parts, then Your first frame opened with "Find the goal
+underneath," the part the previous page had just said comes last, and nowhere did a learner
+see a finished first frame. Fixed structurally; dispositions below.
+
+- **C0, is "look widely, hold loosely" in the first half?** No. It was our design language
+  from the 4 September session and never reached participant text, in v4.2 or in Jeremy's
+  rewrite. Cut, replaced with a plain sentence about gathering several and keeping one.
+- **Tracked change** on the frame definition applied as written: "It is as important to
+  mark clearly what you do not yet know as it is to detail what you do know. You will spend
+  the next eight weeks filling in the gaps of what you do not know. That is the point."
+- **C1, "starting to sketch out."** Yes, more accurate for version one. Adopted.
+- **C2, why lean on "disagree with it."** The intent was testability: a frame nobody could
+  disagree with is too vague to check. The word read as argumentative. Now "specific enough
+  that someone who knows the situation could tell you where you are wrong."
+- **C3, is the report example big enough to carry through?** Better question than it
+  looks. The live first half runs three cases: volunteer onboarding (first activity), the
+  report (second activity and Test and commit's Part 2 example), and account handovers
+  (the check examples and the commit example). The commit example chooses handovers. So
+  the frame that follows must be the handover frame or the story breaks at the hinge.
+  Switched, on both the frame page and the Goal Plan's example. Handovers also carry the
+  people Sprint 3 needs: four managers, two clients, an account lead.
+- **C4, should they start building it somewhere; the transition is abrupt.** Yes. The frame
+  page now says which three parts the learner already holds and where, and the worked
+  example shows a complete rough first frame with "I do not know yet" in it. Your first
+  frame points at Part D of the Candidate Log as the place to build.
+- **C5, "you have not gone far enough."** Judgment where an action was needed. Now: if
+  your line names a tool or a process, ask what would be different once it existed, and
+  write that. The frame page names the two solution-shaped traps (parts 5 and 7) once.
+- **C6, are these instructions; what is the final output; would optional guidance help.**
+  The prose was a draft of instructions with the output implied. Now the output is shown
+  first (the worked frame), the steps follow the order people fill, and a NOTE specifies
+  the collapsed "more help" content per step for the cut: the candidate beside the frame
+  parts it feeds, two solution lines rewritten as states, a why-chain on the handover case.
+- **C7, does "find the goal first" conflict with "the goal comes last"?** It did. Your first
+  frame is reordered: carry over parts 2 to 4, write assumptions, say what fixed looks
+  like, find the goal, name what to find out next. Step 4 says why the goal comes late.
+
+Pages 10 to 12 unreviewed. Provenance: Leslie, every comment and the tracked change;
+Claude, the restructure, the handover frame, the step order.

@@ -10,45 +10,47 @@ Each `##` heading below is one Canvas item. The **Response tasks** block under e
 
 > **[NOTE] Assumptions this draft is built on** (the outline's recommended defaults, 12 September): week 2 runs on the own-your-progress rhythm; Your First Frame and the Dojo Lab are ungraded at zero points with must-submit; the Goal Plan is the graded item at 50; the Reflection is 10 and uses the course's ai_activity mechanism; the parked AI exchange is folded into the Dojo Lab; the terminal artifact keeps the name Goal Plan and Problem Frame. Sprint total stays 100. Leslie can overturn any of these.
 
+> **[NOTE] Version 1.1, 13 September.** Leslie's review of the first two pages applied: the design language "look widely, hold loosely" cut, since it never reached participant text; "starting to sketch out"; "tell you where you are wrong" for "disagree with it"; the worked example switched from the report case to account handovers, because Test and commit's commit example chooses handovers and the frame continues that story; a full worked first frame added to the frame page; Your first frame reordered to the order people actually fill (carry over, assumptions, fixed, goal last, find out next) so it no longer contradicts "part 1 comes last"; collapsed guidance per step noted for the cut; the Goal Plan's example switched to match. Pages 10 to 12 unreviewed.
+
 > **[NOTE] Register.** Matched to Jeremy's 11 September first half: short, action first, one example per move, teaching directly above the response box, three to eight hundred words a page. Time estimate for the half: about three hours.
 
 ## The problem frame
 
 *Page. Position 8.*
 
-You have committed to one problem. The first half of this sprint asked you to look widely and hold loosely. The second half asks the opposite: go deep on the one you chose, and take it seriously.
+You have committed to one problem. In the first half of this sprint you gathered several and let most of them go. In the second half you stay with the one you chose and go deep on it.
 
-Going deep means writing a **problem frame**: your account of the problem, specific enough that someone who knows the situation could disagree with it, with what you do not yet know marked as clearly as what you do.
+Going deep means starting to sketch out a **problem frame**: your account of the problem, specific enough that someone who knows the situation could tell you where you are wrong. It is as important to mark clearly what you do not yet know as it is to detail what you do know. You will spend the next eight weeks filling in the gaps of what you do not know. That is the point.
 
 A full frame has seven parts:
 
 1. **The goal it serves.** What should be different, stated so nobody involved would dispute it.
-2. **The problem.** The gap standing between now and that goal, specific enough to argue with.
+2. **The problem.** The gap standing between now and that goal.
 3. **Who is affected, and what it costs them.** Named people or roles, and the cost in time, money, errors, or strain.
 4. **How it is handled today, and where that falls short.** The system, process, habit, or person coping with it now, and the exact place it stops working.
 5. **What fixed would look like.** A changed state, not a solution. "New hires have working access on day one" is a changed state. "Build an onboarding app" is a solution.
 6. **What you are assuming.** Each claim in parts 1 to 5 that you have not confirmed, marked **unverified**.
 7. **What you would need to find out next, and who could tell you.** The first two or three questions, and a person or role for each.
 
-> **Illustrative worked example · Report formatting**
->
-> **Goal:** Analysts spend their time on analysis, not on reformatting the same export every month.
->
-> **Problem:** The export's column order does not match the report, and every analyst fixes it separately.
->
-> **Affected, and the cost:** Fifteen analysts, about thirty minutes each per month. (?) Nobody has counted it.
->
-> **Handled today:** Each analyst reorders columns by hand. It does not reach anyone who could change the export.
->
-> **Fixed looks like:** One corrected copy, or an export that matches the report.
->
-> **Assuming:** That all fifteen do the same fix. (unverified) That nobody has asked for the export to change. (unverified)
->
-> **Find out next:** Whether the export can be changed, and who owns it. Ask the reporting team lead.
+You already hold three of the seven. Parts 2, 3, and 4 are the four-line candidate you committed to in **Test and commit**: its title and current state, who pays, and how it is handled today. Part 5 is your "It could" line, rewritten as a state. Part 6 is your (?) marks, written out. Only parts 1 and 7 are new, and part 1, the goal, usually comes last, even though it is listed first. That is the order the next activity walks you through.
 
-Almost nobody fills this in from the top down. You will start with the parts your table already holds, parts 2, 3, and 4, and work outward. Part 1 usually comes last, even though it is listed first.
+> **Worked example · Account handovers, first frame**
+>
+> **1. Goal:** Clients are handled by someone who knows their history, from the first day an account changes hands.
+>
+> **2. Problem:** Handovers happen in a conversation between the outgoing and incoming owner, and nothing reaches the rest of the team.
+>
+> **3. Affected, and the cost:** The two clients who changed hands this month, who repeated their history to someone who should have known it. The four other account managers, who act on stale ownership for days at a time. (?) on the days.
+>
+> **4. Handled today:** The outgoing owner tells the incoming owner directly. It does not reach anyone else.
+>
+> **5. Fixed looks like:** Everyone on the team knows within a day when an account changes hands.
+>
+> **6. Assuming:** That all four managers act on stale ownership, not just the one I sat next to. (unverified) That clients notice. (unverified) That nobody has tried to fix this before. (unverified)
+>
+> **7. Find out next:** Whether the other three managers have the same experience. Ask them. Whether a client has ever complained about it. Ask the account lead. I do not know yet who owns the handover process, if anyone.
 
-A frame never contains a solution. If part 5 names something to build, you have not gone far enough.
+Two things to notice. Part 5 says what would be different, not what to build; a shared spreadsheet, an alert, a checklist are all solutions, and none of them belongs in the frame. And part 7 ends with "I do not know yet," which is a complete answer at this stage.
 
 Continue to **Your first frame**.
 
@@ -56,27 +58,37 @@ Continue to **Your first frame**.
 
 *Own your progress. Position 9. 0 points. Submit to mark it complete.*
 
-Write version one of your frame from what you already have. Rough is right. A part you cannot fill gets the words "I do not know yet," and that line is part of the deliverable, not a failure of it.
+Write version one of your frame. Rough is right. A part you cannot fill gets "I do not know yet," and that line is part of the deliverable, not a failure of it. Use Part D of your Candidate Log, or the box at the end of this page.
 
 Work without AI on this one. Version one is your own read of the problem. The next activity uses AI to widen it, and widening only works if there is an independent view to widen from.
 
-### 1. Find the goal underneath
+### 1. Carry over what you already have
 
-Take your committed problem from **Test and commit** and ask **why**, then **why does that matter**, until you reach something nobody involved would dispute and that says nothing about what to build. That is part 1 of your frame. You did this move on requests in **Things somebody handed you**; now run it on your own problem.
+From your committed candidate in **Test and commit**, copy across: the problem (part 2), who is affected and the cost (part 3), and how it is handled today (part 4). Your Check 2 answer is part 4 almost word for word. Tidy nothing.
 
-### 2. Write out your assumptions
+### 2. Turn your (?) marks into assumptions
 
-Go back to your four-line candidate and your check answers. Every **(?)** is an assumption. Write each one as a plain sentence: "I am assuming that ___." Three to six is normal. These become part 6 of your frame.
+Every (?) in your candidate and your check answers is an assumption. Write each one as a plain sentence: "I am assuming that ___." Three to six is normal. That is part 6. Mark each one **unverified**.
 
-### 3. Fill the seven parts
+### 3. Say what fixed would look like
 
-Write your frame using the seven labels from the previous page. Parts 2, 3, and 4 come from your table and your candidate. Part 5 is a changed state, not a fix. Part 7 is your best guess at the first two questions and who could answer them. Mark anything unverified.
+Take your "It could" line and rewrite it as a state of affairs, the way part 5 reads in the example: what is true once the problem is gone, with no mention of what was built to get there. If your line names a tool or a process, ask what would be different once it existed, and write that instead.
+
+### 4. Find the goal underneath
+
+Now part 1. Ask **why** the problem matters, then **why does that matter**, until you reach something nobody involved would dispute and that says nothing about what to build. This is the move from **Things somebody handed you**, run on your own problem. It comes last because it is easier to see the goal once the problem, the cost, and the fix are written down in front of you.
+
+### 5. Name what you would need to find out next
+
+Part 7. Two or three questions your assumptions raise, and for each one a person or role who could answer it. If you cannot name anyone yet, write that.
 
 Keep this version exactly as you wrote it. The reflection at the end of the sprint compares it with your final frame, and that only works if version one stays unedited.
 
+> **[NOTE] Collapsed guidance for the cut.** Each step above gets a "more help" disclosure in the rendered page: step 1 shows the four-line candidate beside the frame parts it feeds; step 3 shows two solution-shaped lines rewritten as states; step 4 shows a why-chain run on the handover case (why does it matter that nothing reaches the team; because people act on stale ownership; why does that matter; because clients repeat themselves to people who should know them; so: clients are handled by someone who knows their history). Backbone visible, help one click away, per Sathya's rule.
+
 ### Response tasks
 
-- **first-frame** (response). Prompt: *Your first frame: seven labeled parts, with "I do not know yet" where that is true.* Criteria: all seven labels present; part 5 describes a changed state rather than a solution; part 6 lists at least two assumptions as plain sentences; unknowns are stated rather than filled with guesses.
+- **first-frame** (response). Prompt: *Your first frame: the seven parts, labeled 1 to 7, with "I do not know yet" wherever that is true.* Criteria: all seven labels present; part 5 describes a changed state rather than a solution; part 6 lists at least two assumptions as plain sentences, each marked unverified; unknowns are stated rather than filled with guesses.
 
 ## Dojo Lab: widen the frame
 
@@ -137,11 +149,11 @@ Pick the one assumption in your frame that, if it turned out to be wrong, would 
 
 Name two or three people or roles who could confirm or complicate your frame, and for each: what they know that you do not, and why you could reach them. They do not have to be affected by the problem. Someone who knows how it works from the inside counts. If your problem is personal, name someone outside your household whom it would be normal to ask.
 
-> **Illustrative worked example · Report formatting, parts 3 and 4**
+> **Worked example · Account handovers, parts 3 and 4**
 >
-> **Riskiest assumption:** That all fifteen analysts do the same fix. If most have already automated it, the cost is a fraction of what I think and the problem is too small. To hold, at least ten would have to be doing it by hand. I could find out by asking three of them this week.
+> **Riskiest assumption:** That all four account managers act on stale ownership, not just the one I sat next to. If it is only one person's habit, this is one conversation, not a problem worth nine weeks. To hold, at least two of the other three would have to describe the same thing. I could find out by asking them this week.
 >
-> **Who could tell you:** The reporting team lead, who knows whether the export can change. Two analysts on other teams, who know whether they do the same fix. Both are reachable; I sit near one.
+> **Who could tell you:** The three other account managers, who know whether they have the same experience. The account lead, who would know whether a client has ever complained and whether anyone owns the handover process. All four sit near me; two are reachable this week.
 
 In Sprint 2 you test this frame against alternatives and against what already exists elsewhere. If it does not survive that, Sprint 2 says what to do. Your runner-up from **Test and commit** is still in your table.
 
