@@ -1557,3 +1557,57 @@ lives with Leslie. Rebuilding it is mechanical from the draft's `##` boundaries.
 the design notes (stripped from the packet) and Leslie has not read it; the trims from
 earlier today are unreviewed; the Introduction's Week 1 bullet and Time Guidance still
 describe the sprint in pre-v4 terms.
+
+---
+
+# Session of 12 September 2026: Jeremy's return, the team plan, and the next two outlines
+
+## What changed while we worked
+
+Jeremy returned on 8 September after six weeks away and, between 8 and 11 September, built
+a document-intake pipeline (docx to artifact, with a `.sources.json` evidence file beside
+each artifact), ported Sathya's four writing skills, cut the v4.2 half-one draft into seven
+artifacts in `course1/sprints/sprint-12/`, wrote a six-question concept check, built a
+`guided_assignment` delivery mode with browser-saved response boxes and a copy-into-Canvas
+step, and published the whole first half to Canvas course 180 as module 2079 with an
+ungraded assignment group. He then published every V2 module, retired the Working Draft and
+smoke test, and ran a Student View audit. The participant prose in sprint-12 is v4.2's,
+unchanged; his additions are submission guidance, the diagram redrawn for mobile, and the
+Introduction's owed edits. `sprint-10` no longer exists.
+
+Open items from that review, for Jeremy: whether his source-evidence validation permits
+direct edits to artifact bodies; the homepage line "Work without AI in this half," which
+states a rule Leslie has not made; whether course 180 is test or production; and the AI
+proxy outage that blocks the Sprint 4 AI Exchange and will block half two's Dojo Lab.
+
+## The team plan (Leslie, 11 September)
+
+Leslie: Sprint 1 half two and Sprint 2. Jeremy: review and edit Sprint 1 first half, then
+Sprints 0, 3, and 4. Melisa: run the first half as a participant. Rubrics and point values
+decided soon. Target: a solid whole course in four days (15 September), six days of edits
+with Clare, share with the instructor on 21 September, later move to the De Anza Canvas.
+
+Flagged, not resolved: Sprint 5 has no owner; Sprint 2 is the largest unbuilt piece and its
+subject is directing AI while the AI proxy is down.
+
+## Rule: the artifact is canonical once cut
+
+**Leslie's ruling, 12 September.** The moment content is cut into artifacts, the artifact is
+the source of truth and the design draft is frozen as record. `sprint-1-half-one-working-
+draft-v4.md` is frozen at v4.2. Half two and Sprint 2 are drafted in `course1/design/`
+until they are cut, then the same rule applies. The decisions log remains the record for
+design rulings; Jeremy's authoring and publication records remain the record for builds.
+
+## Two outlines written, prose not started
+
+`sprint-1-half-two-outline.md` and `sprint-2-outline.md`, both in `course1/design/`, both
+for Leslie's review before any prose. Each ends with its decisions. The half-two outline
+recommends extending the week-1 own-your-progress rhythm into week 2 and folding the parked
+AI exchange into the Dojo Lab. The Sprint 2 outline gives Sprint 2 the think-first artifact
+the spine says it lacks, makes Check 2's widening its first Dojo Lab, states the switching
+rule where it is actionable, and names the Confirmation Plan as the hand-off Sprint 3 V2's
+stakeholder map already asks for. Every AI activity in both is written to run in any
+chatbot, because of the proxy outage.
+
+**Provenance.** Human (Leslie): the team plan and dates, the canonical-artifact ruling. AI
+(Claude): the review of Jeremy's work, the flagged questions, both outlines.
