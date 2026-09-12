@@ -1,6 +1,6 @@
 ---
 purpose: Everything needed to continue the Sprint 1 V2 rebuild in a new conversation
-last_updated: 2026-09-10
+last_updated: 2026-09-12
 read_first: true
 ---
 
@@ -23,33 +23,35 @@ rebuilding it because it does not work as written. Everything is on the table. L
 Sprints 1 and 2; Melisa owns 3 and 4 and can adjust them to fit.
 
 Leslie makes the judgment calls and the team reacts. Clare is the instructor and final
-reviewer.
+reviewer. Jeremy (back 8 September) owns the build pipeline: document intake, the
+`guided_assignment` delivery mode, Canvas publication, and the review of Sprints 0, 3, and 4.
+
+**The plan as of 11 September.** Solid whole course by 15 September; six days of edits with
+Clare; share with the instructor 21 September; later move to the De Anza Canvas. Leslie:
+Sprint 1 half two and Sprint 2. Jeremy: first half review, then Sprints 0, 3, 4. Melisa:
+run the first half as a participant. Rubrics and points decided soon. Sprint 5 has no owner.
 
 ## Where things live
 
-Everything is in the `applying-ai-at-work` repo, committed 9 September 2026 on the
-`claude/eloquent-goodall-qvfhpn` branch. Leslie still holds the review copies she exchanges
-with reviewers as `.docx`; the repo is the record.
-
 ```
+course1/sprints/sprint-12/                         Sprint 1 first half, seven artifacts, CANONICAL,
+                                                   published to Canvas module 2079 on 10 September
+course1/design/sprint-1-half-two-outline.md        half two, outline for Leslie's review
+course1/design/sprint-2-outline.md                 Sprint 2, outline for Leslie's review
 course1/design/problem-spine.md                    course-level design
 course1/design/sprint-1-decisions.md               every judgment call
-course1/design/sprint-1-half-one-working-draft-v4.md   half one, restructured 10 Sept; the live draft
-course1/design/sprint-1-half-one-working-draft-v3.md   superseded by v4; kept for the diff
+course1/design/sprint-1-half-one-working-draft-v4.md   FROZEN at v4.2; record only, the artifacts win
+course1/design/sprint-1-half-one-working-draft-v3.md   superseded
 course1/design/handoff.md                          this file
-course1/sprints/sprint-10/introduction-find-the-problem-worth-solving-v2.md
-                                                   02 Introduction, five owed edits applied
 ```
 
-The working draft sits in `course1/design/` rather than `sprint-10/` because the schema
-validator checks every Markdown file under `sprints/` for artifact frontmatter. It moves into
-`sprint-10/` as artifacts once the page and submission cuts are made.
+**The rule (Leslie, 12 September): once content is cut into artifacts, the artifact is the
+source of truth and the design draft is frozen.** Edits to the first half go to sprint-12,
+not to v4. Jeremy's `.sources.json` files sit beside each artifact; whether they permit
+direct body edits is an open question for him. Half two and Sprint 2 are drafted in
+`course1/design/` until cut.
 
-Five earlier files are **superseded and should be deleted** if they are still around:
-`03-concept-finding-the-problem-underneath-v2.md`, `S-half-one-outline.md`,
-`03-section-B-rebuild.md`, `S-half-one-working-draft.md` (v1), and
-`S-half-one-working-draft-v2.md`, superseded by v3 on 9 September. Three fragments drifted out of
-alignment within a day, which is why half one is now one file.
+`sprint-10` no longer exists. `sprint-11` (Working Draft) is retired under `course1/retired/`.
 
 ## The design, in one paragraph
 
@@ -62,25 +64,14 @@ on, which is what makes the join real.
 
 ## Current state
 
-| Section of v4 | What it is | State |
-|---|---|---|
-| 02 Introduction | Separate artifact in sprint-10 | Solid. Small edits owed once v4 settles, listed in v4's Open items |
-| OYP 1 | Start your list and get underneath it | Reviewed twice. Second-round edits applied 10 Sept; the rewritten three-pass example is unreviewed |
-| OYP 2 | Things you stopped noticing | Rebuilt 10 Sept from C1 plus a new activity |
-| OYP 3 | Things somebody handed you | Rebuilt 10 Sept from C2, C3, and B5 plus a new activity |
-| Concept check | Self-check, 5 points | Placement defaulted after OYP 3; questions need re-verification against v4 |
-| Graded item, Parts 1-2 | Choose rows, write as candidate problems | Reviewed once; edits applied 10 Sept. Part 2's shape is now a titled list |
-| Graded item, Part 3 opening | What the checks are for | Reviewed once; edits applied |
-| Graded item, Checks 1-4 and after | Checks, reading results, commit | Checks 1 and 4 and "Pick one" reviewed; trimmed 11 Sept per Leslie's rulings. Check 2, Check 3, the rest of Commit **unreviewed**. AI exchange parked for half two |
-| Half two | Everything | **Not started** |
-| 01 module header | Summarizes the rest | Written last, by design |
-
-**Five edits owed to 02, applied 9 September in the repo copy.** The four-check list said "testable at this size" and
-contradicted E5. The problem frame (Term 2) moves out into half two. The Next section and
-Week 1 bullet point to the superseded concept page. Time Guidance says "the noticing step,"
-a name that stopped existing when section A was renamed. And "you own the goal, the
-standards, and the final judgment calls" gets rewritten toward Welcome V2's Human Value
-term, dropping "standards" (Leslie: never understood what standards meant).
+| Piece | State |
+|---|---|
+| Sprint 1 first half | Cut, published, canonical in sprint-12. Leslie's own read of Check 2, Check 3, Reading the results, and Commit is still owed, now against the artifacts. Jeremy reviewing. Melisa running it |
+| Sprint 1 concept check | Six questions written by Jeremy's agent, live, unreviewed by Leslie |
+| Sprint 1 half two | Outline written 12 September, decisions pending |
+| Sprint 2 | Outline written 12 September, decisions pending. V1 only in the repo |
+| Sprint 0, 3, 4 | V2 published; Jeremy reviewing |
+| Sprint 5 | One placeholder page. No owner |
 
 ## Week 1 on the own-your-progress rhythm, roughly 100 points across the sprint
 
@@ -105,24 +96,15 @@ should match that mechanism.** Item count varies with the learning; the skeleton
 
 ## What to do next
 
-1. **Leslie finishes her review of v4.2.** Still unread by her: Check 2, Check 3, "Reading
-   the results," Part 4 (Commit) beyond "Pick one," OYP 2, OYP 3, the rewritten three-pass
-   example, the per-candidate check block, and the 11 September trims. Older rulings still
-   riding along: the no-AI note in OYP 1, the "different path" line in OYP 3, the concept
-   check placement, the Check 2 overlap.
-2. **Cut v4 into `sprint-10/` artifacts** per the cut plan at the foot of v4. Mechanical
-   once the review lands. Strip the [NOTE] and [OPEN] blocks; keep the participant text.
-3. **Re-verify the concept check** against the v4 pages, both content coverage and answer
-   integrity, then rebuild the quiz artifact.
-4. **Test edition sent 11 September** (six docx files, one per Canvas item, from v4.2).
-   Next: collect Melisa's and Clare's timings, stalls, and outputs, and read them against
-   the draft before the next revision round.
-5. **Apply the small Introduction edits** listed in v4's Open items.
-6. **Draft half two.** Must open with the first guess and the assumptions.
-7. **Rebuild Sprint 2.** Urgent by week three. Must receive the riskiest assumption, carry
-   check 2's widening, and gain its own think-first artifact.
-8. **Log the course-level call** on whether other sprints adopt the OYP rhythm, when it is
-   made. Also a maintainer task: the ungraded grade group in the course1 manifest.
+1. **Leslie rules on the half-two outline's four decisions**, then Claude drafts half two
+   as one working document in `course1/design/`, same loop as half one.
+2. **Leslie rules on the Sprint 2 outline's four decisions**, then the same for Sprint 2.
+3. **Jeremy cuts each into artifacts** through his intake once it survives review. Half two
+   continues sprint-12 at positions 8 to 12; Sprint 2 takes the next storage number.
+4. **Points and rubrics proposal** across all five sprints, for the team decision. Claude
+   can draft it from what exists.
+5. **Collect Melisa's and Clare's run results** and read them against sprint-12.
+6. **Ask Jeremy** the four open questions in the 12 September decisions entry.
 
 ## How we work
 
@@ -191,7 +173,8 @@ pages that no longer exist in that shape. Re-verify against v4 before rebuilding
 
 ## Blocked, and on whom
 
-- **API key / Dojo setup.** Unresolved since Sprint 0. Blocks the E8 AI exchange and the half-two Dojo Lab. Team decision.
+- **API key / Dojo setup.** Unresolved since Sprint 0. Blocks the half-two Dojo Lab and all of Sprint 2 unless those activities are written to run in any chatbot, which both outlines do. Team decision.
+- **The AI proxy is down** (`ai-assisted-pedagogy` Netlify site, per Jeremy's 11 September audit). Blocks the Sprint 4 AI Exchange and every ai_activity reflection. Sathya's to deploy.
 - **Root Cause Analysis naming.** Three names for one artifact. Team decision.
 - **Cohort or self-paced** governs whether any peer mechanic is possible.
 - **Sathya's AI-assisted grading tooling**, whether our instructor will have it. Nothing is blocked on it; the design was made insensitive to the answer.
