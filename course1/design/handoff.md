@@ -107,7 +107,10 @@ should match that mechanism.** Item count varies with the learning; the skeleton
 4. **Points and rubrics proposal** across all five sprints, for the team decision. Claude
    can draft it from what exists.
 5. **Collect Melisa's and Clare's run results** and read them against sprint-12.
-6. **Ask Jeremy** the four open questions in the 12 September decisions entry.
+6. **Ask Jeremy** the four open questions in the 12 September decisions entry, plus the
+   response-box asks from the evening entry: an accept-edit path for content owners, a
+   placeholder field, a multi-box presentation, the how-this-works line above the box, and
+   the Candidate Log link on the four first-half activities.
 
 ## How we work
 
