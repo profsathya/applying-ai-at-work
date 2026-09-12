@@ -1650,3 +1650,35 @@ hours of participant time.
 **Process line added to the rule.** An artifact rewrite that changes participant prose goes
 to the content owner before it merges, with the publish held until they have read it. Not
 yet agreed with Jeremy.
+
+## 12 September, evening: the response box problem and the Candidate Log template
+
+**The finding.** Jeremy's guided assignments render each first-half activity as one large,
+unlabeled, placeholder-less text box, with the mechanics (drafts save in the browser, copy
+does not submit, paste into Canvas) explained below it. The three table activities ask for a
+three-column table in a plain text field. Test and Commit has four boxes, one per part, and
+is better, but Part 2 asks for three to five four-line candidates in one box. Sathya's pages
+use one small box per question with the question as its label.
+
+**Direct edits are not possible.** Tested: a one-sentence prose change and a task-config
+change to a sprint-12 artifact both fail validation with "edit the build map and rebuild."
+The build map and source packet are in Jeremy's private, git-ignored intake directory.
+Placeholder text is not a feature of the task schema or the renderer. The compact layout
+allows exactly one box. Every first-half change therefore routes through Jeremy until he
+changes the fidelity check or provides an accept-edit command. Asks recorded for him: that
+command or a warning-level check; a placeholder field; a multi-box presentation; the
+how-this-works line above the first box.
+
+**Leslie's ruling: the Candidate Log as a Google Doc template.** Of five options (template
+document, boxes that assemble into a table, fixed row boxes, Canvas's own table editor, a
+spreadsheet), the template needs no code and is the Candidate Log ruled on 9 September.
+Built 12 September and placed in Leslie's Drive as "Candidate Log (Sprint 1) - TEMPLATE,
+make a copy," Google Doc id `1aTgaDgf1ugkQujJkgvo-EHXUqm9ztN1jMA5SDy3lTjI`. Parts: A, the
+three-column table with one example row and the set-aside rule; B, the request chain;
+C, Test and Commit's four parts with three candidate blocks and three check tables; D, the
+first frame's seven parts for half two. Rough-is-the-point and (?) conventions in the header.
+
+**Still to do.** Leslie sets the sharing to anyone-with-link, view only. Jeremy links it from
+the three table activities and from Test and Commit, with the response box instruction
+becoming "paste the section this activity names, or a link to your Candidate Log." Option 2,
+boxes that assemble into a table, stays as the medium-term ask.
