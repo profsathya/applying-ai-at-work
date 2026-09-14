@@ -136,19 +136,19 @@ Team decisions, because they touch the pipeline, points, or Melisa's time.
 3. Whether Melisa finishes the old first half or waits.
 4. Who cuts items 5 to 9.
 
-## Leslie's calls
+## Leslie's calls, settled 14 September
 
-Content decisions inside pages Leslie owns. Claude's recommendation after each.
+Content decisions inside pages Leslie owns. Ruled the same evening.
 
-5. Whether Check 4 is dropped or lives in the Dojo Lab. Recommendation: the Dojo Lab. Its
-   three questions are unanswerable before a frame exists and nearly automatic after one,
-   since parts 4a, 3a, and 6 of the frame are those three answers.
-6. The word for the first column of the table. Recommendation: "the situation." Not yet a
-   problem, more than an item, and wide enough for the wishes and hand-me-downs that
-   appeared on the fixture list. The frame page already uses the word.
-7. Whether the select step states its criteria or leaves them to instinct. Recommendation:
-   state them, as rough. They worked unnamed for someone who had the four checks in her
-   head; a participant does not.
+5. **Check 4 lives in the Dojo Lab.** Its three questions are unanswerable before a frame
+   exists and nearly automatic after one, since parts 4a, 3a, and 6 of the frame are those
+   three answers. The Dojo asks them of each frame as part of choosing.
+6. **The first column is "the situation."** Not yet a problem, more than an item, and wide
+   enough for the wishes and hand-me-downs that appeared on the fixture list. The frame
+   page already uses the word.
+7. **The select step states its criteria, as rough.** Would make a real difference, not
+   something you could fix this week, no solution you already know of. Framed as instinct
+   being named, not a test to pass.
 
 ## Provenance
 

@@ -1850,3 +1850,18 @@ the item list, the correction that goal ordering is settled and that the audit w
 AI (Claude): the pattern reading, the points proposal, the list of what is touched
 elsewhere, the outline. The frame page's structural changes came from an exchange Leslie
 ran in another chat; the wording is hers.
+
+## 14 September, later: the three content calls, ruled
+
+The outline's seven decisions split into four team decisions for the 15 September meeting
+(the resequence, points, Melisa's run, who cuts items 5 to 9) and three content calls
+inside pages Leslie owns. She ruled the three the same evening, on Claude's
+recommendations:
+
+- **Check 4 lives in the Dojo Lab**, asked of each frame as part of choosing. Its three
+  questions are the frame's parts 4a, 3a, and 6 read back.
+- **The first column of the get-underneath table is "the situation."**
+- **The select step states its criteria, as rough:** would make a real difference, not
+  fixable this week, no known solution.
+
+Provenance: rulings Leslie's; recommendations and wording Claude's.
