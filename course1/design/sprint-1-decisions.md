@@ -1865,3 +1865,104 @@ recommendations:
   fixable this week, no known solution.
 
 Provenance: rulings Leslie's; recommendations and wording Claude's.
+
+## 14 September, later still: Leslie's first pass on v5, applied as v5.1
+
+Leslie returned `Sprint-1-working-draft-v5_1.docx` with 23 comments and tracked changes,
+reviewed from the module header through the Dojo Lab's Choose step ("a first pass ... I
+need to push through the last few pages with more energy"). Every tracked change was
+applied individually and audited afterward (41 insertions checked present, 13 deletions
+checked gone); curly quotes and "you'd"/"you'll" contractions straightened; her hyphens
+used as dashes became colons or sentence breaks. The Goal Plan and Reflection are
+unreviewed; only consequential edits were made there. Dispositions by comment:
+
+- **C0, "you do not need to arrive with a chosen problem" is assumed by "find the problem
+  worth solving."** Her deletion stands. The module header now opens with her sentence
+  about brainstorming potential problems from your own life.
+- **C1, own-your-progress and graded item need introducing in Welcome.** Logged as owed to
+  Sprint 0 / Welcome, in the draft's "Owed elsewhere" list and as a NOTE on the
+  Introduction. Nothing in Sprint 1 changes.
+- **C2, could a sprint run more than one Dojo Lab?** One per sprint, by design: the spine
+  gives each sprint one AI capacity, and Sprints 3 and 4 each run one "Dojo Lab: ..." item.
+  Sprint 1's is test-and-widen. If a second AI move is ever needed it is a second Dojo Lab
+  item, not a longer one. Stated in the draft's summary table paragraph.
+- **C3, "specific enough that someone who knows the situation could tell you where you are
+  wrong" keeps popping up; is that the threshold?** It was Claude's 13 September answer to
+  her earlier objection to "disagree with it" (C2 of that round), and it carried the same
+  problem: it defines a frame by one use. Replaced everywhere with a plain definition: what
+  is happening, who it costs and what it costs them, how it is handled today, and what you
+  do not yet know. Her tracked rewrite of the module header bullet ("describes the problem
+  as best you can, clearly marking what you do not know yet") is the same idea, applied.
+- **C4, the route appears in the module header and the Introduction.** One route now, in
+  the Introduction, in her week-by-week form with her edits (points and kinds on each
+  line). The module header keeps the opening, the three things, and what you carry
+  forward, plus one line pointing at the Introduction. Reason: the module header is a
+  short text item in the module list; the Introduction is the page people read.
+- **C5, the rough-notes paragraph is not about AI.** Moved, with the keep-everything
+  paragraph, into a new "How to work" section between "About AI" and "Where to write."
+- **C6, is the Candidate Log only used through the table?** No; it runs the whole sprint.
+  The Introduction now says so: Part A brainstorm, Part B table, Part C first frames (one
+  per candidate), Part D Goal Plan. The Log template is owed a rebuild to that shape.
+- **C7 and C8, show a full example list across categories.** Done: work (her six, with her
+  wording), home (three), other (three, including the community garden, which is where
+  worked example B now has its roots). Twelve items, matching the "twelve to twenty" line.
+- **C9 and C12, "the account handover thing, again" references nothing introduced.** Her
+  replacement, "Account handovers always get dropped," is used in both places.
+- **C10 and C11, the three sources should be short and collapsible.** Now three separate
+  *More help* blocks, two to four sentences each, one per source; the cut puts each behind
+  its own disclosure. Kept: the workaround and surface-request definitions, the report and
+  onboarding illustrations in one sentence each.
+- **C13, does everyone need to rewrite the gap?** No. The second-pass guidance is folded
+  into the gap column's instruction (name who does not know, cannot do, or has to redo
+  what; a process description is not finished), the "Rewrite the gap once" step is gone,
+  the "How does that part work now?" move survives as *More help* under the table, and the
+  worked example shows only the finished gap. Concept check question 3 reworded to match
+  ("Is it finished?" rather than "What is the next move?"). The your-table criteria no
+  longer ask for "(?)" marks, since her deletion removed that instruction from the column;
+  the (?) habit stays in the Introduction's "How to work."
+- **C14, the concept check draws on the frame page, so it must come later.** Moved after
+  The problem frame. Positions now: Problem frame 5, Concept check 6, First frames 7.
+  The check draws on the frame page's template, which carries the one-line tests it needs
+  (changed state not solution; claim kinds; the two goal tests).
+- **C15, insert the template right after the definition.** Done: a seven-part template
+  with a one-line description per part, followed by the reuse sentence and the writing
+  order.
+- **C16, what is the value of the [carried] tags; are they used later?** They were a guard
+  against a part that was all reuse and no new work, and nothing downstream reads them.
+  Cut everywhere (page, examples, First frames, criteria). The walk-through now asks for
+  the new element of each part explicitly, which does the same job. Replaced with one
+  line: reuse freely, no need to mark or tidy it. Reason recorded in the designer NOTE.
+- **C17, fold the frame teaching into a walk-through, one part at a time, for one
+  problem, then let them do the others.** Yes, and this is the largest change in v5.1.
+  First frames is now that walk-through: for each part in writing order (2, 3, 4, 5, 6,
+  7, 1) the guidance for the part, the handover example line, and a response box. Then
+  section 8 sends them to Part C of the Candidate Log for their other candidates, pasted
+  into a last box. The part-by-part teaching moved off the frame page into First frames,
+  so it is read directly above the box it applies to; the frame page is now a reference
+  (definition, template, order, two worked examples). Eight boxes; the seam if Jeremy's
+  mode strains is noted on the page. Also noted: `reading` presentation does not support
+  the AI feedback endpoint, so no multi-box page gets AI feedback in the current mode.
+- **C18, "attack" is not the word.** "Test" throughout: the item is "Dojo Lab: test, widen,
+  choose," step 1 is "Test each frame," and every "attack" in the Dojo Lab, the Goal Plan,
+  the illustrative choice, and the reflection's aiContext is now "test" or "testing."
+- **C19 and C20, test the prompts and adjust the language.** Marked [OPEN] on both prompts.
+  The CTI proxy now works (Jeremy, 14 September), so Claude can run both prompts against
+  worked example A and hand her the transcript for the language pass.
+- **C21, the selection criteria are not verified; she needs to think them through.** Marked
+  [OPEN] with the v5 three size questions held as a draft, plus three candidates to add or
+  replace (why you; whether the frame moved or held under testing; whether the 3a people
+  are reachable in Sprint 3). The your-choice criteria follow her ruling.
+- **C22, why write the choice down; should there be an OYP for it?** The Dojo Lab is that
+  own-your-progress item and its third box collects the choice. The reason to write it is
+  now stated in the text: the Goal Plan's Part 2 starts from "why this one," and the
+  runner-up is where Sprint 2 sends them if the choice fails. Goal Plan Part 2 and the
+  what-changed prompt now name that handoff.
+
+Two edits of Claude's beyond her comments, both consequential: the Reflection's proxy note
+now records that the CTI-owned proxy is live rather than waiting on Sathya; the Goal Plan's
+NOTE and the Reflection carry a "not yet reviewed by Leslie" flag so the next pass knows
+where to start.
+
+Provenance: Leslie, every comment and tracked change; Claude, the dispositions, the
+walk-through restructure, the reference-page cut, the example list's home and other
+headings, the concept check reword.
