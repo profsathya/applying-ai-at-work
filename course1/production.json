@@ -9,17 +9,17 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "26d34a43bfac73e8b08703d359242cd6a51b9170796919727803f60ffeab0863",
       "canvas_type": "assignment",
-      "content_hash": "daac191bc5074fcb0c59c90a50970d10f1a638772f02c6474baa2f2f731d82ac",
+      "content_hash": "774e4052debf52a689ac8e59230a698c7cc824706ab451d55488cf7a87a3141d",
       "delivery_mode": "ai_activity",
-      "hosted_hash": "6b1f1faa62e56d838400059e81fda1204bb163c739931095af5aa8661946a57d",
-      "hosted_last_rendered": "2026-09-14T19:36:00+00:00",
+      "hosted_hash": "8ae1df3885b07a9cc17c183152e3c95da18c7cd9f2ca0e3b762f11dbed31fd49",
+      "hosted_last_rendered": "2026-09-14T19:38:18+00:00",
       "hosted_path": "course1/assignments/ai-feedback-check.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/ai-feedback-check.html",
-      "last_pushed": "2026-09-14T19:36:00+00:00",
+      "last_pushed": "2026-09-14T19:38:18+00:00",
       "local_path": "course1/sprints/sprint-13/ai-feedback-check.md",
       "position": 1,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "3a011a421f48320d8d24c2e261eebe43ad293df9",
+      "source_commit": "eaa470c2345e380388d63ae543273b9fe8d666b4",
       "source_type": "quiz"
     },
     "course1-sprints-sprint-0-dojo-setup-and-how-to": {
@@ -1800,5 +1800,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-14T19:36:00+00:00"
+  "last_sync": "2026-09-14T19:38:18+00:00"
 }
