@@ -573,5 +573,8 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-06-15T18:57:56+00:00"
+  "last_sync": "2026-06-15T18:57:56+00:00",
+  "ai_activity": {
+    "default_ai_endpoint": "https://cti-course-ai.netlify.app/.netlify/functions/ai-proxy"
+  }
 }

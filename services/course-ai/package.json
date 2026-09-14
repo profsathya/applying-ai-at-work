@@ -1,0 +1,7 @@
+{
+  "name": "cti-course-ai",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --experimental-strip-types --test tests/*.test.mjs" },
+  "engines": { "node": ">=22.18" }
+}
