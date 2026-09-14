@@ -30,3 +30,7 @@ Published the explicitly approved three-artifact test in the live `cti-de-anza-t
 ## Post-build: 2026-09-10 Sprint 1 V2 first half
 
 Published the reviewed seven-artifact source set from `course1/sprints/sprint-12/` through protected Publish Canvas run 34517237291 after content commit `ff82750` reached main. Module 2079 now contains the tracked Introduction and five guided text-entry assignments totaling 40 points. Homepage V2 is open; Common Curriculum deployment `73eb41f` is live. OYP group 429 has explicit final-grade exclusions for its three zero-point assignments. All five submission markers and nonsequential access were verified. Working Draft remains intact; the duplicate Introduction is preserved unpublished. See [publication verification](reports/publication/sprint-1-v2-publication-20260910.md) for IDs, checks, and deployment boundaries.
+
+## Post-build: 2026-09-14 AI Feedback Check
+
+BUILT: Optional AI Feedback: What Changed and Try It, sprint-13/ai-feedback-check.md, published through protected workflow to Course 180 module 2080, assignment 7148. Zero points, excluded from final grade, no completion requirement. Live Canvas iframe generation and save passed; embedded clipboard export remains unverified. See final authoring review for evidence and limits.
