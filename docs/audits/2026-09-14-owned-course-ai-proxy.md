@@ -33,3 +33,17 @@ Code declares a Netlify rate limit of 120 requests/minute/IP/domain. Production 
 Prepared `course1/manifests/production.json` with `ai_activity.default_ai_endpoint` set to the new endpoint. The existing renderer honors this setting. The manifest was committed and pushed as `f27f76e`. Publish Canvas run `34884667971` succeeded, generated Common Curriculum commit `d848797`, and changed exactly 19 activity endpoint values. GitHub Pages run `34884770335` succeeded. HTTP readback verified all 19 published configurations use the new endpoint. No participant content, grading, submission mechanics, provenance sidecars, or homepage metadata changed.
 
 Backend deployment and hosted-output publication are complete. The publishing workflow reported zero failed or drifted artifacts, zero artifact content pushes, and a successful hosted render. All 231 repository unit tests and four proxy test groups pass. Browser interaction verification is recorded below.
+
+## Published browser verification
+
+An already-open browser initially retained the old unversioned configuration and reproduced the old service's error despite all 19 configurations reading back correctly over HTTP. Fixed the renderer to add a deterministic settings hash to each configuration URL. Added a regression assertion that changing the endpoint changes the rendered shell. All 231 unit tests passed again.
+
+- Cache fix commit: `29972bd`.
+- Hosted-only publish: run `34885133217`, success, no Canvas access.
+- Generated shell commit: Common Curriculum `87e4a80`, 19 shell URL changes.
+- GitHub Pages deployment: run `34885220459`, success.
+- Live Sprint 4 shell: configuration URL contains `?v=210d3ec6ee957875`.
+- Actual browser test after reload: generation displayed three questions; saving the revised response changed completion to 1 of 1; Copy JSON displayed a success modal with the original response, three AI questions, observation, revised response, and correct activity identity.
+- Reload preserved the completed response. Cleared only the synthetic QA identity/responses through the activity's own reset confirmation and verified blank fields and 0 of 1 complete afterward.
+
+This test used a fictional example on the hosted activity, not a real participant's work. No test submission was sent to Canvas. The existing Submit on Canvas link still targets assignment 7131. The generation, save, persistence, and JSON export path is verified; a new Canvas upload was not performed.
