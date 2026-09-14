@@ -67,7 +67,7 @@ ai_activity:
 
 # AI Feedback: What Changed and Try It
 
-Try the repaired AI connection with the sample below. This optional, ungraded check needs no prior coursework or Canvas submission.
+Try the repaired AI connection with the sample below. This optional, ungraded check needs no prior coursework or Canvas submission. It is excluded from the final grade.
 
 ## What Was Broken
 

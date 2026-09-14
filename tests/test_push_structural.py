@@ -152,6 +152,18 @@ class StructuralClient:
 
 
 class StructuralChangeTests(unittest.TestCase):
+    def test_assignment_payload_preserves_grade_exclusion(self):
+        from unittest.mock import Mock
+        client = Mock()
+        fm = {"title": "Optional check", "points": 0, "grading_type": "points",
+              "omit_from_final_grade": True}
+        push.push_assignment(client, fm, "<p>Check</p>", None)
+        created = client.create_assignment.call_args.args[0]
+        self.assertIs(created["omit_from_final_grade"], True)
+        self.assertEqual(created["grading_type"], "points")
+        push.push_assignment(client, fm, "<p>Check</p>", 7148)
+        self.assertIs(client.update_assignment.call_args.args[1]["omit_from_final_grade"], True)
+
     def _run(
         self,
         tmp: str,

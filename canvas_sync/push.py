@@ -255,6 +255,7 @@ def push_assignment(client: CanvasClient, fm: dict, html: str, existing_id: int 
         # Always explicit: a removed frontmatter due must CLEAR the Canvas due
         # date (due_at null), not silently keep the old one.
         "due_at": fm.get("due"),
+        **{key: fm[key] for key in ("grading_type", "omit_from_final_grade") if key in fm},
     }
 
     if existing_id:
