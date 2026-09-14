@@ -1,5 +1,5 @@
 ---
-purpose: Outline of Sprint 1 resequenced on Leslie's 14 September run, for the 15 September meeting with Jeremy and Melisa, before any prose is drafted
+purpose: Outline of Sprint 1 resequenced on Leslie's 14 September run, for the 14 September meeting with Jeremy and Melisa, before any prose is drafted
 status: outline, 14 September 2026, for team review
 depends_on: problem-spine.md; sprint-1-decisions.md, session of 14 September; Leslie's run, held as a fixture outside the repo
 supersedes: the sequence in sprint-1-half-two-outline.md and the week 2 table in handoff.md
@@ -127,7 +127,7 @@ text exists: the frame page is written, the current activities supply the source
 worked cases, and the half-two draft v1.1 supplies the Dojo Lab, Goal Plan, and Reflection
 skeletons.
 
-## Decisions for the 15 September meeting
+## Decisions for the 14 September meeting
 
 Team decisions, because they touch the pipeline, points, or Melisa's time.
 

@@ -1803,7 +1803,7 @@ run. Six findings, in the order they happened.
   become one brainstorm by category, with the three sources as collapsed help for a short
   list, and one get-underneath table for three to five items.
 - **Check 3 leaves Sprint 1.** Check 4 is dropped or lives in the Dojo Lab; decided
-  15 September. Checks 1 and 2 are parts 3 and 4 of the frame.
+  14 September. Checks 1 and 2 are parts 3 and 4 of the frame.
 - **Goal ordering is settled.** Presented first, written last, after parts 6 and 7. This
   is the 13 September order with 6 and 7 moved ahead of 1.
 - **The frame page is Leslie's 14 September draft**, replacing the frame page in the
@@ -1814,7 +1814,7 @@ run. Six findings, in the order they happened.
 - **Part 4a asks for what was tried and abandoned.** The exchange moved "which ones have I
   tried that did not work" out as a solution question. It is current handling, and the best
   evidence of where it falls short.
-- **Items and points, proposed for the 15 September meeting.** Brainstorm 0, Get underneath
+- **Items and points, proposed for the 14 September meeting, approved by Leslie the same day.** Brainstorm 0, Get underneath
   0, Concept check 5, First frames 35, Dojo Lab 0, Goal Plan 50, Reflection 10. The 35 is
   Test and Commit's, which no longer exists as an item.
 - **The build path.** One working draft v5 for the whole sprint; Jeremy cuts the first half
@@ -1853,7 +1853,7 @@ ran in another chat; the wording is hers.
 
 ## 14 September, later: the three content calls, ruled
 
-The outline's seven decisions split into four team decisions for the 15 September meeting
+The outline's seven decisions split into four team decisions for the 14 September meeting
 (the resequence, points, Melisa's run, who cuts items 5 to 9) and three content calls
 inside pages Leslie owns. She ruled the three the same evening, on Claude's
 recommendations:
