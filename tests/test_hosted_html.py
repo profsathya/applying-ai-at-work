@@ -611,6 +611,13 @@ modules:
             render_hosted_artifact(md_path, manifest_path, output_dir)
             self.assertNotEqual(original_shell, shell.read_text(encoding="utf-8"))
             self.assertEqual(json.loads(config.read_text())["settings"]["aiEndpoint"], "https://new.example/ai")
+            optional_text = md_path.read_text().replace("---\n", "---\ncompletion_requirement: none\nomit_from_final_grade: true\n", 1)
+            import re
+            optional_text = re.sub(r"(?m)^points: .*", "points: 0", optional_text)
+            md_path.write_text(optional_text)
+            render_hosted_artifact(md_path, manifest_path, output_dir)
+            self.assertIn("No Canvas submission is required", wrapper.read_text())
+            self.assertNotIn("<h2>Submit to Canvas</h2>", wrapper.read_text())
 
     def test_iframe_shell_contains_hosted_url_and_fallback_link(self) -> None:
         shell = iframe_shell("https://example.test/deanza/course1/activities/tuple.html", "Tuple Page")

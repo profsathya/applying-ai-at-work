@@ -414,3 +414,19 @@ modules:
           - slug: "test-and-commit-v2"
             nav_meta: "35 points"
             meta: "Guided assignment - select three to five candidate gaps, run four checks, and explain your choice with reasons and a runner-up or recovery plan; copy and submit once in Canvas, 35 points reviewed by your instructor"
+
+  - sprint: 13
+    order: 6
+    title: "AI Feedback Check"
+    tag: "Optional"
+    open: false
+    learning_goals:
+      - "Check that AI follow-up questions, a saved response, and an exported file are available before using the feedback workflow."
+    prereq: "No prior coursework is needed. This optional, ungraded check uses a supplied sample and requires no Canvas submission."
+    groups:
+      - label: "Try the repaired connection"
+        items:
+          - slug: "ai-feedback-check"
+            nav_meta: "Optional · Ungraded"
+            meta: "AI activity - see what changed, generate three questions, save a response, and inspect the exported JSON; no Canvas submission required"
+            badge: "Optional"

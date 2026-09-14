@@ -620,6 +620,19 @@ def _render_ai_activity_wrapper_document(
     back_href = f"../sprint-{sprint}.html?context=web"
     points_text = "Ungraded" if points is None else f"{points:g} points"
     meta = f"{module} &middot; {artifact_type}" if frontmatter.get("source_provenance") or frontmatter.get("learner_labels") else f"{course_key} &middot; Sprint {sprint} &middot; {module} &middot; {artifact_type}"
+    optional_check = (
+        frontmatter.get("completion_requirement") == "none"
+        and frontmatter.get("omit_from_final_grade") is True
+        and points == 0
+    )
+    submit_heading = "Optional export check" if optional_check else "Submit to Canvas"
+    submit_description = (
+        "Copy or download your JSON to check the saved response. No Canvas submission is required for this optional activity."
+        if optional_check else
+        "When you finish, copy or download the JSON response file from the activity and upload it to the Canvas assignment."
+    )
+    if optional_check:
+        canvas_link = ""
     mermaid_styles = _mermaid_styles() if has_mermaid else ""
     mermaid_script = _mermaid_script() if has_mermaid else ""
 
@@ -710,8 +723,8 @@ def _render_ai_activity_wrapper_document(
     </div>
 
     <div class="submit">
-      <h2>Submit to Canvas</h2>
-      <p>When you finish, copy or download the JSON response file from the activity and upload it to the Canvas assignment.</p>
+      <h2>{submit_heading}</h2>
+      <p>{submit_description}</p>
       <div class="actions">{canvas_link}</div>
     </div>
   </div>
