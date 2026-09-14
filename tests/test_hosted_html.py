@@ -604,6 +604,13 @@ modules:
                 "https://ai-assisted-pedagogy.netlify.app/.netlify/functions/ai-proxy",
             )
             self.assertEqual(config_data["questions"][0]["type"], "ai-discussion")
+            original_shell = shell.read_text(encoding="utf-8")
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["ai_activity"] = {"default_ai_endpoint": "https://new.example/ai"}
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            render_hosted_artifact(md_path, manifest_path, output_dir)
+            self.assertNotEqual(original_shell, shell.read_text(encoding="utf-8"))
+            self.assertEqual(json.loads(config.read_text())["settings"]["aiEndpoint"], "https://new.example/ai")
 
     def test_iframe_shell_contains_hosted_url_and_fallback_link(self) -> None:
         shell = iframe_shell("https://example.test/deanza/course1/activities/tuple.html", "Tuple Page")

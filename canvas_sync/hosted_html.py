@@ -728,7 +728,10 @@ def _render_ai_activity_shell_document(
 ) -> str:
     title = html_lib.escape(frontmatter["title"])
     config = hosted_config_from_manifest(manifest)
-    config_url = f"../../../activities/{config.path_prefix}/{course_key}/{frontmatter['slug']}.json"
+    settings_version = hashlib.sha256(
+        json.dumps(_ai_activity_settings(frontmatter, manifest), sort_keys=True).encode("utf-8")
+    ).hexdigest()[:16]
+    config_url = f"../../../activities/{config.path_prefix}/{course_key}/{frontmatter['slug']}.json?v={settings_version}"
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {}) or ""
     course_theme = _ai_activity_course_theme(frontmatter, manifest)
     runtime_version = "?v=v2-consistency-20260911" if frontmatter.get("learner_labels") else ""

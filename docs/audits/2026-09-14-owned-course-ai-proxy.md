@@ -30,6 +30,6 @@ Code declares a Netlify rate limit of 120 requests/minute/IP/domain. Production 
 
 ## Course connection and boundaries
 
-Prepared `course1/manifests/production.json` with `ai_activity.default_ai_endpoint` set to the new endpoint. The existing renderer honors this setting. The manifest change is local and uncommitted; hosted course configs have not yet been regenerated/published, so existing Canvas activity links still use Sathya's endpoint. No participant content, grading, submission mechanics, provenance sidecars, or homepage metadata changed.
+Prepared `course1/manifests/production.json` with `ai_activity.default_ai_endpoint` set to the new endpoint. The existing renderer honors this setting. The manifest was committed and pushed as `f27f76e`. Publish Canvas run `34884667971` succeeded, generated Common Curriculum commit `d848797`, and changed exactly 19 activity endpoint values. GitHub Pages run `34884770335` succeeded. HTTP readback verified all 19 published configurations use the new endpoint. No participant content, grading, submission mechanics, provenance sidecars, or homepage metadata changed.
 
-The backend build/deployment is complete. Hosted-output publication and the browser generation/save/export/Canvas-submission flow remain to be completed before claiming the learner-facing course is switched and verified.
+Backend deployment and hosted-output publication are complete. The publishing workflow reported zero failed or drifted artifacts, zero artifact content pushes, and a successful hosted render. All 231 repository unit tests and four proxy test groups pass. Browser interaction verification is recorded below.
