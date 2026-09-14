@@ -10,13 +10,13 @@ A standalone Netlify service owned by CTI. It does not deploy or modify the Canv
 
 ## Provider
 
-Uses Netlify AI Gateway's injected `ANTHROPIC_API_KEY` and `ANTHROPIC_BASE_URL`. Both must be present; the service returns 503 without them. Gateway availability depends on the team's plan and AI settings. AI usage consumes the team's Netlify credits.
+Production uses a project-specific Anthropic API key stored as a secret, production-context Netlify Functions environment variable (`ANTHROPIC_API_KEY`). `ANTHROPIC_BASE_URL` is set to `https://api.anthropic.com`, so requests go directly to Anthropic and provider usage is billed to the key's Anthropic account. Both variables must be present; the service returns 503 without them. Netlify still hosts the function.
 
 The default model is `claude-sonnet-4-5-20250929`. `COURSE_AI_MODEL` is a server-side override. Callers cannot choose models, enable tools, or turn on streaming. Do not add credentials to source or browser code.
 
 ## Limits
 
-Only configured browser origins are accepted (`AI_ALLOWED_ORIGINS`, comma-separated; defaults to the course GitHub Pages origin and this project's production origin). Origin checking is not authentication: scripts can spoof Origin. Netlify's function rate limit is 120 requests per minute per IP/domain, including preflights; a shared campus network shares this allowance. It is not a team-wide spending cap. Monitor AI Gateway usage in the Netlify team dashboard.
+Only configured browser origins are accepted (`AI_ALLOWED_ORIGINS`, comma-separated; defaults to the course GitHub Pages origin and this project's production origin). Origin checking is not authentication: scripts can spoof Origin. Netlify's function rate limit is 120 requests per minute per IP/domain, including preflights; a shared campus network shares this allowance. It is not a team-wide spending cap. Monitor provider usage in the Anthropic console and function usage in Netlify.
 
 Text-only requests: 40 messages, 60,000 content characters, 80,000 serialized characters, and 2,500 output tokens maximum. Provider timeout: 45 seconds. Empty or truncated responses are reported as failures, never valid feedback. The function does not log prompts, responses, or provider secrets.
 
