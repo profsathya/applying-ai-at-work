@@ -1763,3 +1763,90 @@ see a finished first frame. Fixed structurally; dispositions below.
 
 Pages 10 to 12 unreviewed. Provenance: Leslie, every comment and the tracked change;
 Claude, the restructure, the handover frame, the step order.
+
+# Session of 14 September 2026: Leslie's run, and the resequence
+
+## What Leslie did
+
+Ran the live first half and the half-two frame page on herself, start to finish, then had
+an exchange in another AI chat about the frames. Her items are held as a fixture outside
+the repo and stay out of the teaching material; what enters the course is the shape of the
+run. Six findings, in the order they happened.
+
+1. **The list wants to be wide and by category.** About fourteen items in ten minutes,
+   organized by work, home, and other, triggered by walking the week. The live activity
+   asks for three or four things that bug you and goes underneath at once. All four kinds
+   of indicator appeared on the list without prompting for them.
+2. **A select step exists.** Three of fourteen, on criteria used without naming them:
+   would make a big difference, not quickly solvable, no known solution.
+3. **Four columns, and a second pass on the gap.** Item, how it works now, cost, then a gap
+   sentence. First-pass gaps described the process ("manual-heavy"); the revisions named
+   who does not know what. The second pass is the teachable move.
+4. **Checks 1 and 2 worked; 3 and 4 did not.** Real people produced named lists; current
+   handling produced the honest state. Live now was answered yes without thought, because
+   a list built from the actual week screens for it on entry. Right size drew "how to
+   determine this" on a page that states the three tests a few lines above.
+5. **She framed all three before choosing.** The frame turned out to be how you find out
+   which candidate to commit to. Three frames in one sitting, handwritten.
+6. **The AI exchange changed structure, not wording.** It split parts 3 and 4 into a and b,
+   turned part 6 into a claims table with status and kind, added a specificity test for the
+   goal, moved solution questions out of part 7 and a solution out of part 5. Every sentence
+   in the revised frames traces to the handwritten page. The part 6 audit was Leslie's own
+   work; the exchange supplied the method (part by part, not a free scan).
+
+## Rulings (Leslie, 14 September)
+
+- **Frame several before choosing.** Three to five candidates each get a first frame.
+  Commitment moves to the end of the Dojo Lab. The two dispositions of the sprint survive;
+  the hinge moves.
+- **The first half is one brainstorm, one table.** The three own-your-progress activities
+  become one brainstorm by category, with the three sources as collapsed help for a short
+  list, and one get-underneath table for three to five items.
+- **Check 3 leaves Sprint 1.** Check 4 is dropped or lives in the Dojo Lab; decided
+  15 September. Checks 1 and 2 are parts 3 and 4 of the frame.
+- **Goal ordering is settled.** Presented first, written last, after parts 6 and 7. This
+  is the 13 September order with 6 and 7 moved ahead of 1.
+- **The frame page is Leslie's 14 September draft**, replacing the frame page in the
+  half-two working draft. Seven parts, a and b splits on 3 and 4, part 6 as an audited
+  claims table (checkable, prediction, causal bet), part 7 as residual, two goal tests,
+  part 5 capped at one sentence, two worked examples (handovers, and a garden plot for a
+  qualitative problem). Needs a house-style pass: em dashes, curly apostrophes, "students."
+- **Part 4a asks for what was tried and abandoned.** The exchange moved "which ones have I
+  tried that did not work" out as a solution question. It is current handling, and the best
+  evidence of where it falls short.
+- **Items and points, proposed for the 15 September meeting.** Brainstorm 0, Get underneath
+  0, Concept check 5, First frames 35, Dojo Lab 0, Goal Plan 50, Reflection 10. The 35 is
+  Test and Commit's, which no longer exists as an item.
+- **The build path.** One working draft v5 for the whole sprint; Jeremy cuts the first half
+  through his intake, which is the same day-long path that produced the 11 September cut.
+  No unlock is needed, because the fix is a new source, not an edit to the locked pages.
+
+## Claude's reading, for the record
+
+The pattern behind the six findings: every step that asked Leslie to write something not
+yet written worked; every step that asked a question her week had already answered felt
+useless. Checks 3 and 4 and commit-before-frame are all on the second side.
+
+Two cautions raised and answered. The 15 September target: drafting v5 is the long part,
+not the cut, and most of v5's text exists. Part 6 unaided: Leslie did it unaided, so it has
+been run cold once; what remains untested is whether cost claims from 3b reach the table
+without a chat to nudge them. Watch for that in Melisa's run.
+
+## Touched outside the sprint pages
+
+The concept check (rewrite against the new pages, Jeremy's). The Introduction (new arc;
+the no-AI rule narrows to the brainstorm and the table, which is the narrow ruling already
+made). The Candidate Log template (rebuild to the new sequence). The Sprint 2 outline (must
+receive the claims table, not a single riskiest assumption). The spine, sections 7 and 9.
+The handoff's week 2 table. Melisa's run, which is on the version about to change.
+
+The outline is `sprint-1-resequence-outline.md`, with the diagram and the seven decisions
+for the meeting.
+
+## Provenance for this session
+
+Human (Leslie): the run, all six findings, the rulings, the frame page and its examples,
+the item list, the correction that goal ordering is settled and that the audit was hers.
+AI (Claude): the pattern reading, the points proposal, the list of what is touched
+elsewhere, the outline. The frame page's structural changes came from an exchange Leslie
+ran in another chat; the wording is hers.
