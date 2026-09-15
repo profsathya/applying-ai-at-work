@@ -80,7 +80,7 @@ claims are what Sprint 2 works on.
 
 | Piece | State |
 |---|---|
-| Sprint 1, whole | Draft v5.1 in `course1/design/`. Leslie's first pass (module header through the Dojo Lab's Choose step) applied 14 September. Goal Plan and Reflection unreviewed by her. Two [OPEN] items are hers: the Dojo Lab's selection criteria and a live test of its two prompts |
+| Sprint 1, whole | Draft v5.2 in `course1/design/`. Every page reviewed by Leslie at least once (14 and 15 September). Her [OPEN] items: the First frames by-parts shape, two or three statuses for assumptions, the Dojo Lab's selection criteria, whether Goal Plan Part 3 moves to Sprint 2. Jeremy's: a copy-all action for First frames |
 | Sprint 1 first half, live | Jeremy's 11 September cut, published in sprint-12. Melisa is running this version. It is superseded by v5 and will be replaced at the cut |
 | Sprint 1 concept check | Six questions redrafted in v5.1 against the new pages; Jeremy's call on format. Now sits after The problem frame |
 | Sprint 2 | Outline written 12 September. Must receive the claims table (not a single riskiest assumption), the runner-up, and the set-aside list. Claude can build it directly as artifacts |
@@ -108,7 +108,7 @@ self-check, reflection as `delivery_mode: ai_activity` like Sprints 3 and 4.
 
 ## What to do next
 
-1. **Leslie finishes her pass on v5.1**: the Goal Plan and the Reflection, plus the
+1. **Leslie rules the v5.2 [OPEN] items** (listed at the foot of the draft), then the
    selection criteria for the Dojo Lab's Choose step. The Dojo prompts are PARKED: the
    activity is drafted as a module for Sathya's Dojo (`dojo-module-problem-frame.md`) and
    waits on the course-wide Dojo doc (`dojo-setup-note.md`, with Jeremy) and on a second
@@ -166,6 +166,10 @@ levels do not survive; use the in-repo markdown as the base and apply her change
 
 - **No em dashes.** No "student"; write for working professionals, use "you" or "participants."
 - No curly quotes or apostrophes.
+- **No colons standing in for dashes** in participant text (Leslie, 15 September: tell-tale
+  AI). Colons survive only as labels. Write the second half as its own sentence.
+- **Two core examples per sprint**, named in a NOTE at the head of the draft, with extras
+  only for colour. Nothing from Leslie's own run enters the material.
 - Markdown only. No HTML, iframes, or scripts in artifact bodies.
 - Filenames match slugs; `artifact_id` ends with the slug.
 - Working drafts live in `course1/design/`, never under `sprints/`: the validator scans every

@@ -1,15 +1,19 @@
 ---
 purpose: Sprint 1 whole-sprint working draft on the 14 September resequence, for Leslie's review and then the cut
-status: draft v5.1, 14 September 2026, with Leslie's 15 September follow-ups. Leslie's first-pass review (23 comments, tracked changes through the Dojo Lab's Choose step) applied. Goal Plan and Reflection not yet reviewed by her.
+status: draft v5.2, 15 September 2026. Leslie's second pass (17 comments and tracked changes on First frames, the Goal Plan, and the Reflection, plus two general notes) applied. Every page now reviewed by her at least once.
 supersedes: sprint-1-half-one-working-draft-v4.md (frozen at v4.2) and sprint-1-half-two-working-draft-v1.md (v1.1), for the whole of Sprint 1
 storage: replaces the sprint-12 first half and continues it; positions 1 to 10
 ---
 
-# Sprint 1: working draft v5.1
+# Sprint 1: working draft v5.2
 
 Each `##` heading below is one Canvas item. The **Response tasks** block under each activity is the guided-assignment configuration for the cut: one prompt and its criteria per response box. Design notes are marked [NOTE] and are not participant text. Items marked [OPEN] are Leslie's to settle. Section numbers inside pages are participant-facing.
 
 > **[NOTE] What this draft is built on.** The 14 September resequence (`sprint-1-resequence-outline.md`), the rulings in the decisions log of the same day, and Leslie's first-pass review of v5 (dispositions in the decisions log, 14 September, later still). Points approved by Leslie 14 September: Brainstorm 0, Get underneath 0, Concept check 5, First frames 35, Dojo Lab 0, Goal Plan 50, Reflection 10. Check 3 is gone from Sprint 1. Check 4's three questions live in the Dojo Lab. Goal is presented first, written last.
+
+> **[NOTE] What changed in v5.2.** First frames walks through the seven parts once, and each box holds that part for every candidate, so all three to five frames are written on one page. Part 6 is "find your assumptions": list them part by part, then mark each confirmed or unverified and say who could tell you. The claim kinds (checkable, prediction, causal bet) leave Sprint 1 for Sprint 2. Part openers are full sentences. The incidental examples drawn from Leslie's own run (budgets, agendas, financial peace) are replaced by the two core examples. The Goal Plan opens on the one chosen problem, says why Part 2 exists, and Part 3 is "which assumptions should you investigate first." The Reflection no longer repeats what the Goal Plan asked. Colons used as dashes are cut throughout.
+
+> **[NOTE] Examples.** Two core examples run the whole sprint. **Account handovers** appears on the brainstorm list, in the four-column table, as worked example A, in every part of First frames, as the Dojo Lab's illustrative choice, and in the Goal Plan's part 3 example. **The neighbourhood garden plot** appears on the brainstorm list under "other," as worked example B, in the part 5 help, and as the Dojo Lab's runner-up. Colour only: the rest of the brainstorm list, the report columns and onboarding lines in the brainstorm's help, and onboarding again in the part 5 example (which Leslie edited). Nothing from Leslie's own run appears any more.
 
 > **[NOTE] What changed in v5.1.** The Concept check moves after The problem frame, since half its questions draw on that page. The problem frame is now a reference page (definition, template, writing order, two worked examples) and First frames is a part-by-part walk-through of one frame, with the guidance, the handover example, and a response box for each part, then one box for the other frames. The [carried] tags are gone. The gap is taught once, in the table's gap column, instead of as a rewrite step. The three brainstorm sources are three short collapsed blocks. "Attack" is gone from the Dojo Lab. The definition of a problem frame no longer leans on "tell you where you are wrong." The route lives only in the Introduction.
 
@@ -31,7 +35,7 @@ You will start by brainstorming potential problems from your own life that you w
 - Write a problem frame that describes the problem as best you can, clearly marking what you do not know yet so you can look into it later.
 - Use AI to test and widen your own thinking.
 
-**What you carry forward.** One selected problem frame, version two, with every claim in it marked confirmed or unverified. Sprint 2 works on the unverified ones.
+**What you carry forward.** One selected problem frame, version two, with every assumption in it marked confirmed or unverified. Sprint 2 works on the unverified ones.
 
 The Introduction lays out the route through the sprint, week by week.
 
@@ -49,7 +53,7 @@ A **problem** is a gap between how something works now and how it could work, wh
 
 You are going to come up with a list of problems you might be interested in exploring. We call them **candidate problems**.
 
-A **problem frame** is your written account of a problem: what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know.
+A **problem frame** is your written account of a problem. It says what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know.
 
 > **[NOTE]** Keep the existing illustration (workplace handoff) and caption.
 
@@ -79,13 +83,13 @@ Spread week 1 across several days. The brainstorm's help asks you to watch your 
 
 - **Brainstorm your list, Get underneath, Dojo Lab: own your progress, 0 points.** Submit to record completion, or continue without submitting.
 - **Concept check: 5 points.** Your instructor reviews completion.
-- **First frames: 35 points.** One submission: one frame part by part, then your other frames.
+- **First frames: 35 points.** One submission, all your frames, written part by part.
 - **Goal Plan and Problem Frame: 50 points.** One submission.
 - **Reflection: 10 points.**
 
 ### About AI in this sprint
 
-Two activities ask you to work without AI: the brainstorm and the table underneath it. The reason is narrow. AI has no access to what you have stopped noticing, what you keep putting off, or what you work around, and those are where problems hide. Once your own read is written down, AI can be your partner. The Dojo Lab uses it to test and widen your frames, and it will do that well only because you wrote them first.
+Two activities ask you to work without AI, the brainstorm and the table underneath it. The reason is narrow. AI has no access to what you have stopped noticing, what you keep putting off, or what you work around, and those are where problems hide. Once your own read is written down, AI can be your partner. The Dojo Lab uses it to test and widen your frames, and it will do that well only because you wrote them first.
 
 ### How to work
 
@@ -95,7 +99,7 @@ Keep everything you write, including items you set aside. The Reflection compare
 
 ### Where to write
 
-Use the **Candidate Log**, a document template you copy once and keep for the whole sprint. It runs the whole sprint: Part A holds your brainstorm, Part B your table, Part C your first frames (one per candidate), and Part D your Goal Plan. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box.
+Use the **Candidate Log**, a document template you copy once and keep for the whole sprint. It runs the whole sprint. Part A holds your brainstorm, Part B your table, Part C your first frames, one per candidate, and Part D your Goal Plan. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box.
 
 > **[NOTE]** The Candidate Log link goes here once the template is rebuilt to this sequence.
 
@@ -109,7 +113,7 @@ Begin with **Brainstorm your list**.
 
 ### 1. Set up your categories
 
-Take a page. Write three or four headings for the areas of your life where things happen: **work**, **home**, **other** is enough. Add **job search**, **volunteering**, **caregiving**, or **side business** if those are part of your week. Work without AI here. AI cannot see your week.
+Take a page. Write three or four headings for the areas of your life where things happen. **Work**, **home**, and **other** is enough. Add **job search**, **volunteering**, **caregiving**, or **side business** if those are part of your week. Work without AI here. AI cannot see your week.
 
 ### 2. Walk your week and write everything down
 
@@ -155,7 +159,7 @@ Three places to look. Each is a collapsed block; open the ones you need.
 
 *More help: what somebody handed you.* A **surface request** names a solution before the problem is clear: "we need an app to track onboarding" says what to build, not what needs to change. Ask why, then why does that matter, until you reach a goal nobody would dispute (new hires contribute as quickly as possible), then list what could be in the way of that goal (an unowned handoff from HR to IT; managers not knowing what a new hire can take on). Each obstacle goes on your list. Requests you make of yourself count too: "I need to fix my resume" has a goal underneath it.
 
-Keep the list in Part A of your Candidate Log. Next: **Get underneath three to five**.
+Keep the list in Part A of your Candidate Log. Next, **Get underneath three to five**.
 
 ### Response tasks
 
@@ -175,7 +179,7 @@ From your list, choose three to five situations to look at more closely. There i
 - You could not fix this week.
 - You do not already know a solution for.
 
-Do not pick the one you already care most about and stop. Three is the minimum because the next activities compare them. Work without AI here, for the same reason as before.
+These are your **candidate problems**, or candidates for short. Do not pick the one you already care most about and stop. Three is the minimum because the next activities compare them. Work without AI here, for the same reason as before.
 
 ### 2. Fill four columns for each
 
@@ -183,8 +187,8 @@ The fact that you came up with each of these problems is an **indicator** that s
 
 - **The situation:** restate the item from your list, a phrase.
 - **How it works now:** describe in two or three sentences. Who does what, in what order. Describe the actions that happen now, not how they should be and not possible solutions.
-- **What it costs, and whom:** name who is impacted (you very likely have several people or roles) and, for each of them, what the cost is: time, money, errors, or strain.
-- **The gap:** combine the other two columns into one sentence: what could be different, and who feels the cost. Name who does not know, cannot do, or has to redo what. If your sentence describes a process (manual, informal, inconsistent, slow), it is not finished yet: say who pays for that.
+- **What it costs, and whom:** name who is impacted (you very likely have several people or roles) and, for each of them, what the cost is in time, money, errors, or strain.
+- **The gap:** combine the other two columns into one sentence that says what could be different, and who feels the cost. Name who does not know, cannot do, or has to redo what. If your sentence describes a process (manual, informal, inconsistent, slow), it is not finished yet, so say who pays for that.
 
 *More help: if the gap will not come.* Ask **"How does that part work now?"** two or three times about the step where the cost appears. In the example below, asking it about "nobody else is told" is what produced the gap.
 
@@ -198,7 +202,7 @@ The fact that you came up with each of these problems is an **indicator** that s
 >
 > **The gap:** The rest of the team does not know when an account changes hands, so they act on stale ownership and clients repeat themselves.
 
-Keep the table in Part B of your Candidate Log. Next: **The problem frame**.
+Keep the table in Part B of your Candidate Log. Next, **The problem frame**.
 
 ### Response tasks
 
@@ -210,25 +214,25 @@ Keep the table in Part B of your Candidate Log. Next: **The problem frame**.
 
 *Page. Position 5.*
 
-> **[NOTE]** Leslie's 14 September page, house-styled and, in v5.1, cut down to a reference page. The part-by-part teaching (the tests for each part, the claim kinds, the two traps) now lives in First frames, directly above the box for that part. This page holds the definition, the template, the writing order, and the two worked examples. Wording of the examples and the template is hers.
+> **[NOTE]** Leslie's 14 September page, house-styled and, in v5.1, cut down to a reference page. The part-by-part teaching now lives in First frames, directly above the box for that part. This page holds the definition, the template, the writing order, and the two worked examples. Wording of the examples and the template is hers.
 
 You have three to five candidate problems in your table, each with a described gap. Now you write up a draft problem frame for each of them, so you can tell which one is worth the next nine weeks.
 
-A **problem frame** is your account of a problem: what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know. A frame is not a proposal. You are not thinking about what potential solutions you would build. It is your description of the problem. It is as important to mark clearly what you do not yet know as it is to detail what you do know. You will spend time later in the course filling in those gaps.
+A **problem frame** is your account of a problem. It says what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know. A frame is not a proposal. You are not thinking about what potential solutions you would build. It is your description of the problem. It is as important to mark clearly what you do not yet know as it is to detail what you do know. You will spend time later in the course filling in those gaps.
 
 ### The template
 
-A frame has seven parts. This is the whole of it; Part C of your Candidate Log repeats it once per candidate.
+A frame has seven parts. This is the whole of it, and Part C of your Candidate Log repeats it once per candidate.
 
 1. **The goal it serves.** One sentence. Nobody involved would dispute it, and it points at this problem rather than its neighbours.
 2. **The problem.** The gap between now and that goal, as a condition someone is living in. One or two sentences.
-3. **Who is affected, and what it costs them.** 3a: named people or specific roles. 3b: what it costs each of them, in time, money, errors, or strain.
-4. **How it is handled today, and where that falls short.** 4a: the system, process, habit, or person coping with it now, and anything tried and abandoned. 4b: the moment it stops working.
+3. **Who is affected, and what it costs them.** 3a names the people or specific roles. 3b says what it costs each of them, in time, money, errors, or strain.
+4. **How it is handled today, and where that falls short.** 4a describes the system, process, habit, or person coping with it now, and anything tried and abandoned. 4b names the moment it stops working.
 5. **What fixed would look like.** A changed state, not a solution. One sentence.
-6. **Audit your claims.** Every statement of fact from parts 1 to 5, each marked **confirmed** or **unverified**, and each a **checkable** claim, a **prediction**, or a **causal bet**.
-7. **What you do not know yet, and who could tell you.** What is left after the audit.
+6. **Find your assumptions.** Everything in parts 2 to 5 that you wrote as if it were true without having seen it yourself or heard it from someone who would know. Each one marked **confirmed** or **unverified**, and for each unverified one, who could tell you.
+7. **What you do not know yet.** What is left after part 6.
 
-As you can see, the problem frame includes some information that you already wrote in your table. You will reuse your gap, the people you listed, and your description of how things work now. Reuse it freely; you do not need to mark or tidy it.
+As you can see, the problem frame includes some information that you already wrote in your table. You will reuse your gap, the people you listed, and your description of how things work now. Reuse it freely. You do not need to mark or tidy it.
 
 ### Write in this order
 
@@ -254,16 +258,16 @@ Part 1 is presented first because that is how the finished frame reads, but you 
 
 **5. Fixed looks like:** Everyone on the team knows within a day when an account changes hands.
 
-**6. Claims:**
+**6. Assumptions:**
 
-| From | Claim | Status | Kind |
+| From | Assumption | Status | Who could tell me |
 |---|---|---|---|
-| 2 | Nothing reaches the rest of the team | unverified | checkable |
-| 3a | All four managers are affected, not just the one I sat next to | unverified | checkable |
-| 3b | Clients notice and it costs them something | unverified | checkable |
-| 3b | Managers act on stale ownership for *days* | unverified | checkable |
-| 4a | Nobody has tried to fix this before | unverified | checkable |
-| 5 | One day is fast enough to matter | unverified | prediction |
+| 2 | Nothing reaches the rest of the team | unverified | the other managers |
+| 3a | All four managers are affected, not just the one I sat next to | unverified | the other three managers |
+| 3b | Clients notice and it costs them something | unverified | the account lead |
+| 3b | Managers act on stale ownership for *days* | unverified | the other managers |
+| 4a | Nobody has tried to fix this before | unverified | the account lead |
+| 5 | One day is fast enough to matter | unverified | nobody has said what fast enough is |
 
 **7. Left over:** I do not know who owns the handover process, if anyone. Nobody obvious to ask. Start with the account lead.
 
@@ -285,18 +289,18 @@ Shorter, and nothing in it is countable. That is fine.
 
 **5. Fixed looks like:** A first-year plot-holder has someone to ask by the time their first thing goes wrong.
 
-**6. Claims:**
+**6. Assumptions:**
 
-| From | Claim | Status | Kind |
+| From | Assumption | Status | Who could tell me |
 |---|---|---|---|
-| 2 | Most new plot-holders quit by midsummer | unverified | checkable: Ramona would know |
-| 2 | They quit because they had no one to ask | unverified | causal bet |
-| 3b | Ramona finds this burdensome | confirmed: she said so | checkable |
-| 5 | Having someone to ask would keep them going | unverified | prediction |
+| 2 | Most new plot-holders quit by midsummer | unverified | Ramona |
+| 2 | They quit because they had no one to ask | unverified | the people who quit, if I can find them |
+| 3b | Ramona finds this burdensome | confirmed, she said so | |
+| 5 | Having someone to ask would keep them going | unverified | nobody can say yet |
 
 **7. Left over:** Whether this happens every year or was unusual this year. Whether anyone tried pairing new people with returning gardeners before. Ramona has been here longest, but there may be nobody who remembers.
 
-> **[NOTE] Why the frame is built this way**, from Leslie's designer notes. Two-part fields are split (3a/3b, 4a/4b) because in testing every compound field lost its second half, and the second half was always the harder and more valuable one; empty slots should look wrong. Example A is in labeled parts, not prose, so the structure is visible and participants do not reproduce the voice instead. Example B exists because A's countable units set a bar a qualitative problem cannot clear. Part 6 is an audit, not generation, because free generation reliably misses cost claims. Confirmed/unverified replaces a blanket tag, since a label on every entry carries no information; B has one confirmed row on purpose. Claim kinds exist so an unresolvable causal bet reads as a correct result. Part 7 is residual; most of its old work is absorbed by 6. Writing order is explicit because part 1 can only be written after 5. Part 1 gained the specificity test because consensus alone lets "financial peace" through. Part 5 is capped at one sentence because solutions leaked in the second sentence in two of three test frames. "Find out next" was retitled because "next" pulled toward build steps even with a warning. The [carried] tags of v5 are gone (Leslie, 14 September: what is the value; is it used later). They were a guard against a part that was all reuse and no new work; First frames now asks for the new element of each part explicitly, which does the same job without a tag.
+> **[NOTE] Why the frame is built this way**, from Leslie's designer notes. Two-part fields are split (3a/3b, 4a/4b) because in testing every compound field lost its second half, and the second half was always the harder and more valuable one; empty slots should look wrong. Example A is in labeled parts, not prose, so the structure is visible and participants do not reproduce the voice instead. Example B exists because A's countable units set a bar a qualitative problem cannot clear. Part 6 is done part by part, not by free listing, because free listing reliably misses cost assumptions. Confirmed/unverified replaces a blanket tag, since a label on every entry carries no information; B has one confirmed row on purpose. The claim kinds of v5 (checkable, prediction, causal bet) left for Sprint 2 in v5.2, where the checking happens (Leslie, 15 September: not needed at this stage, and only what bubbled up in her run). Part 7 is residual; most of its old work is absorbed by 6. Writing order is explicit because part 1 can only be written after 5. Part 1 gained the specificity test because consensus alone lets "financial peace" through. Part 5 is capped at one sentence because solutions leaked in the second sentence in two of three test frames. "Find out next" was retitled because "next" pulled toward build steps even with a warning. The [carried] tags of v5 are gone (Leslie, 14 September: what is the value; is it used later). They were a guard against a part that was all reuse and no new work; First frames now asks for the new element of each part explicitly, which does the same job without a tag.
 
 Take the **Concept check**, then continue to **First frames**.
 
@@ -312,10 +316,10 @@ Answer all six from your own thinking, without AI. Review each explanation; if i
 
 1. **You write "I dread the weekly handover" on your list. What is that, at this stage?** A confirmed cause / **An indicator, to get underneath by describing how it works now** / A solution. *Feedback: a feeling that something is off points toward a problem. Describing how it works now is what shows the gap.*
 2. **Which sentence belongs in "How it works now"?** We should buy a handover app / Nobody cares about communicating / **The outgoing owner tells the incoming owner; the rest of the team hears later.** *Feedback: that column describes what happens and who does what. It does not prescribe a fix or replace observation with blame.*
-3. **Your gap reads "The process is manual and inconsistent." Is it finished?** Yes, submit it / **No: it names a process, not who does not know, cannot do, or has to redo what** / No: it needs a solution. *Feedback: a process description is not a gap yet. The gap shows when it names who pays.*
+3. **Your gap reads "The process is manual and inconsistent." Is it finished?** Yes, submit it / **No. It names a process, not who does not know, cannot do, or has to redo what** / No. It needs a solution. *Feedback: a process description is not a gap yet. The gap shows when it names who pays.*
 4. **Which of these is a changed state rather than a solution?** Build a shared handover checklist / Set up an alert / **Everyone on the team knows within a day when an account changes hands.** *Feedback: part 5 of a frame says what is true once the problem is gone, not what was built. Solutions come later in the course.*
-5. **"Agendas will make our meetings more efficient." What kind of claim is that?** Checkable / Prediction / **Causal bet.** *Feedback: nobody can confirm a causal bet by being asked. Ending up with one you cannot resolve is a correct result, and it usually splits into a checkable claim about the present and a bet about the cause.*
-6. **"Financial peace" as the goal a problem serves fails which test?** Nobody involved would dispute it / **It would serve any money problem anywhere** / It names a solution. *Feedback: a goal has to be specific enough to point at your problem and not its neighbours.*
+5. **Which of these is the moment current handling stops working, rather than its consequence?** Which means clients repeat their history / Handovers are informal / **The instant a third person needs to know who owns the account.** *Feedback: 4b names the condition under which the current handling breaks. The consequence is what follows from it.*
+6. **"Better client communication" as the goal a problem serves fails which test?** Nobody involved would dispute it / **It would serve any client problem anywhere** / It names a solution. *Feedback: a goal has to be specific enough to point at your problem and not its neighbours.*
 
 ---
 
@@ -323,114 +327,115 @@ Answer all six from your own thinking, without AI. Review each explanation; if i
 
 *Graded item. Position 7. 35 points. One submission.*
 
-Write version one of a frame for each of your three to five candidates. This page walks you through one frame, one part at a time, in the order you write them: the guidance for the part, the handover example, then a box for your own. Do your first candidate here. Then repeat the template for your other candidates in Part C of your Candidate Log and paste them into the last box.
+Now you are going to write version one of a frame for each of your three to five candidates. This page walks you through the seven parts in the order you write them. Remember, for each part you will see the guidance, then the example, then a box for your own work. Write that part for every candidate before you move on to the next part, and label each entry with the candidate's name. By the last box you will have all of your frames.
 
-Pick any of your candidates to start with. Rough is right. A part you cannot fill gets "I do not know yet," and that line is part of the deliverable, not a failure of it.
+> **[NOTE, OPEN]** Leslie, 15 September: walk them through all their candidates, and give them an output where they can see it all together. This page does that by parts rather than by candidate. Each box holds one part for every candidate, so three to five frames are written on one page with seven boxes, instead of one page per frame or thirty-five boxes. The "see it all together" output needs a copy-all action at the foot of the page that assembles the boxes into whole frames, one per candidate (Sathya's pages call it "Copy my summary"). Whether Jeremy's mode has it, or can add it, is his question; if not, Part C of the Log is where the frames are assembled by hand. Leslie to confirm the by-parts shape. The "remember" sentence belongs in Sprint 0 as how assignments work, and is owed there.
+
+Rough is right. A part you cannot fill gets "I do not know yet," and that line is part of the deliverable, not a failure of it.
 
 Work without AI on this one. Version one is your own read. The Dojo Lab uses AI to test and widen these frames, and that only works if there is an independent view to test.
 
-Expect the first frame to take longest and the others to go faster. Three frames in a sitting is normal.
+Expect your first candidate to take longest in each part and the others to go faster. All of your frames in one sitting is normal.
 
 ### 1. Part 2: the problem
 
-The gap between now and the goal, one or two sentences. This is your gap from the table. Write it as a condition someone is living in, not as a task that annoys you. "The team does not know how much money is left" is a condition. "Running budgets is tedious" is a task.
+Part 2 is the gap between now and the goal, in one or two sentences, and you already have it. It is the gap column from your table. Write it as a condition someone is living in rather than as a task that annoys you. "The rest of the team does not know when an account changes hands" is a condition. "Handovers are a hassle" is a task.
 
 > **Example.** *2. Problem:* Handovers happen in a conversation between the outgoing and incoming owner, and nothing reaches the rest of the team.
 
-*Box: part 2 for your first candidate.*
+*Box: part 2, for each candidate.*
 
 ### 2. Part 3: who is affected, and what it costs them
 
-**3a. Who.** Named people or specific roles. Not "the team": which people. If you cannot name them, say who you would have to ask to find out.
+This part has two halves, and both are required.
 
-**3b. What it costs each of them.** In time, money, errors, or strain. Different people usually pay different costs. Say which cost belongs to whom. Both halves are required. A cost with nobody attached to it is not a cost yet.
+**3a. Who.** Name the people or the specific roles. Not "the team," but actual people. If you cannot name them yet, acknowledge that, but say who you would have to ask to find out.
 
-Your table's cost column feeds both halves: the people go in 3a, and 3b says which cost is whose.
+**3b. What it costs each of them.** Time, money, errors, or strain. Different people usually pay different costs, so say which cost belongs to whom. A cost with nobody attached to it is not a cost yet.
 
-> **Example.** *3a. Who:* The two clients who changed hands this month. The four other account managers. *3b. Cost:* Clients: repeated their history to someone who should have known it. Account managers: act on stale ownership for several days (number of days unconfirmed).
+Your table's cost column feeds both halves. The people go in 3a, and 3b says which cost is whose.
 
-*Box: parts 3a and 3b.*
+> **Example.** *3a. Who:* The two clients who changed hands this month. The four other account managers. *3b. Cost:* Clients repeated their history to someone who should have known it. Account managers act on stale ownership for several days (number of days unconfirmed).
+
+*Box: parts 3a and 3b, for each candidate.*
 
 ### 3. Part 4: how it is handled today, and where that falls short
 
-**4a. How it is handled.** The system, process, habit, or person coping with this now. Your "how it works now" column goes here. "Nobody handles it" is rarely true: look again for the informal version, and for anything that was tried and abandoned. An abandoned attempt is the best evidence you have of where the current handling falls short.
+Two halves again.
 
-**4b. At what moment it stops working.** Not the consequence: the moment. Current handling usually works fine under some conditions and fails under others. Name the condition where it breaks. *Consequence:* "which means nobody can prepare." *Moment:* "which stops working the instant anyone other than the leader needs to know what is coming."
+**4a. How it is handled.** Describe the system, process, habit, or person coping with this now. Your "how it works now" column goes here. "Nobody handles it" is rarely true, and "handling it" can sometimes mean it is an item on someone's to-do list that just does not get done, or does not get done well. Also look for anything that was tried and abandoned. An abandoned attempt is the best evidence you have of where the current handling falls short.
+
+**4b. At what moment it stops working.** Not the consequence but the moment. Current handling usually works fine under some conditions and fails under others, so name the condition where it breaks. In the handover case, "which means clients repeat their history" is a consequence. "The instant a third person needs to know who owns the account" is the moment.
 
 *More help.* If 4b is blank, look at your cost column. The moment it stops working is usually the moment the cost appears.
 
 > **Example.** *4a. Handled today:* The outgoing owner tells the incoming owner directly. Nobody remembers anyone trying anything else. *4b. Stops working:* At the moment a third person needs to know. The conversation works for the two people in it and reaches nobody else.
 
-*Box: parts 4a and 4b.*
+*Box: parts 4a and 4b, for each candidate.*
 
 ### 4. Part 5: what fixed would look like
 
-A changed state, not a solution. One sentence. Stop there. "New hires have working access on day one" is a changed state. "Build an onboarding app" is a solution. The second sentence is where solutions leak in; if you have written "maybe we could," you have left the frame. If your sentence names a tool or a process, ask what would be different once it existed, and write that instead.
+Answer the question "what would fixed look like?" in one sentence, and stop there. It describes a changed state, not a solution. "New hires would have working access on day one" is a changed state. "Building an onboarding app to track new hires" is a solution.
 
 *More help.* Two solution-shaped lines rewritten as states. "A shared handover checklist" becomes "everyone on the team knows within a day when an account changes hands." "Pair new gardeners with returning ones" becomes "a first-year plot-holder has someone to ask by the time their first thing goes wrong."
 
 > **Example.** *5. Fixed looks like:* Everyone on the team knows within a day when an account changes hands.
 
-*Box: part 5.*
+*Box: part 5, for each candidate.*
 
-### 5. Part 6: audit your claims
+### 5. Part 6: find your assumptions
 
-Go back through parts 2 to 5 **one part at a time, in order**. In each part, underline every statement you asserted as fact, and list them in a table. Cost claims first: they are the ones that feel settled because you already wrote them down, and the settled-feeling ones are what a skeptic goes for first.
+Odds are that in framing your problem, you are making some assumptions about how things work now, who is impacted, what the cost is, and so on. Go back through parts 2 to 5 one part at a time, in order. In each part, look for what you assumed and write it down. Make the whole list first. Then go back through the list and mark each one.
 
-Do not generate a fresh list of things you are unsure about. You would find the claims that already feel shaky and miss the ones that feel settled.
+**Finding them.** An assumption is anything you wrote as if it were true without having seen it yourself or heard it from someone who would know. They hide in plain sight, and the ones that feel most obvious are usually the ones worth writing down. Part by part, in the handover case:
 
-For each claim, mark two things.
+- Part 2 says nothing reaches the rest of the team. Assumed. I have seen it happen twice, not every time.
+- Part 3a says all four managers are affected. Assumed. I sat next to one of them.
+- Part 3b says clients notice and it costs them something. Assumed. Two clients repeated their history, and whether they minded is a guess.
+- Part 4a says nobody has tried to fix this before. Assumed. The two people I asked do not remember anything.
+- Part 5 says one day is fast enough to matter. Assumed. Nobody has said what fast enough is.
 
-**Status:** **confirmed** (someone told you, or you have evidence) or **unverified**. If everything comes out unverified, you have not looked hard enough at what you actually do know.
+**Marking them.** For each one, write **confirmed** if you have seen it yourself or someone who knows told you, or **unverified** if not. Then, for each unverified one, name who could tell you. If everything comes out unverified, you have not looked hard enough at what you actually do know. If everything comes out confirmed, you have not looked hard enough at what you assumed.
 
-**Kind:** which of these it is.
+> **[NOTE, OPEN]** Leslie, 15 September: "confirmed or unverified (or maybe somewhere in between?)." This draft keeps two statuses. A three-status version would be **seen** (you saw it yourself), **told** (someone who would know said so), and **assumed** (nobody yet); told is the in-between. Leslie's call. It changes the table heading and nothing else.
 
-- **Checkable.** Someone can tell you whether it is true right now. *"Team leaders have an agenda in their head."*
-- **Prediction.** A claim about how people would behave under conditions that do not exist yet. *"Team members would prepare in advance if they had an agenda."* Asking someone whether they would do something is weak evidence about whether they would.
-- **Causal bet.** Your hypothesis that A causes B. *"Agendas will make meetings more efficient."* Nobody can confirm this by being asked. It usually splits into a checkable claim about the present and a bet about the cause. Split it when it does.
+> **Example.** The handover assumptions table on The problem frame page. Notice that the cost assumption in 3b about clients is its own row, and that part 5 produced one.
 
-Ending up with a causal bet you cannot resolve is a correct result, not a failed entry.
+*Box: part 6, your assumptions, for each candidate.*
 
-> **Example.** The handover claims table on The problem frame page. Notice that the cost claim in 3b about clients appears as its own row, and that part 5 produced a prediction.
+### 6. Part 7: what you do not know yet
 
-*Box: part 6, the claims table.*
-
-### 6. Part 7: what you do not know yet, and who could tell you
-
-Most of your questions came out of part 6: for each checkable claim, who could confirm it. Those live there. This part is for what is left over: questions that do not attach to any single claim; claims where you could not name anyone who could answer; things you realized you do not know about the situation itself, such as who owns a process or whether anyone has tried this before. This part is small. That is expected.
+Most of what you do not know is now a row in part 6 with a name beside it. This part is for what is left over. Questions that do not attach to any single assumption. Assumptions where you could not name anyone who could answer. Things you realized you do not know about the situation itself, such as who owns a process or whether anyone has tried this before. This part is small. That is expected.
 
 **Nothing here is a step toward building.** If you have written "research what tools exist" or "see if this can be automated," you have jumped to solutions. The question is what you do not know about the *problem*.
 
 > **Example.** *7. Left over:* I do not know who owns the handover process, if anyone. Nobody obvious to ask. Start with the account lead.
 
-*Box: part 7.*
+*Box: part 7, for each candidate.*
 
 ### 7. Part 1: the goal it serves, last
 
-What should be different. One sentence. Ask **why** the fixed state matters, then **why does that matter**, until you reach something nobody involved would dispute and that says nothing about what to build. Then run the second test: would this goal serve any problem of this type anywhere? "Financial peace" passes the first test and fails this one. Narrow it until it points at your problem specifically. Part 5 is the changed state; part 1 is why that state is worth having.
+Part 1 says what should be different, in one sentence, and you write it last because it comes out of part 5. Take your part 5 sentence and ask why that would matter. Then ask why again, and keep going until you reach something nobody involved would dispute and that says nothing about what to build. Then run one more test. Would this goal serve any problem of this type anywhere? "Better client communication" passes the first test and fails this one. Narrow it until it points at your problem specifically. Part 5 is the changed state, and part 1 is why that state is worth having.
 
-*More help.* A why-chain on the handover case: why does it matter that everyone knows within a day; because people act on stale ownership; why does that matter; because clients repeat themselves to people who should know them; so: clients are handled by someone who knows their history from the first day an account changes hands.
+*More help.* The why-chain on the handover case. Why does it matter that everyone knows within a day? Because people act on stale ownership. Why does that matter? Because clients repeat themselves to people who should know them. So the goal is that clients are handled by someone who knows their history from the first day an account changes hands.
 
 > **Example.** *1. Goal:* Clients are handled by someone who knows their history, from the first day an account changes hands.
 
-*Box: part 1.*
+*Box: part 1, for each candidate.*
 
-### 8. Your other frames
-
-Now do the same for each of your other candidates in Part C of your Candidate Log. Part C repeats the seven parts in writing order (2, 3, 4, 5, 6, 7, then 1) with the one-line guidance for each part beside its slot, so the other frames get the same scaffold this page gave the first. Paste them into the last box. Keep every frame exactly as you wrote it. The Reflection compares them with your final frame, and that only works if version one stays unedited.
+Keep every frame exactly as you wrote it. The Reflection compares them with your final frame, and that only works if version one stays unedited. Copy all of your frames into Part C of your Candidate Log.
 
 ### Response tasks
 
-> **[NOTE]** Eight boxes, `presentation: reading`. This is the most boxes any page in the course carries. If Jeremy's mode strains at it, the seam is one box per part for frame 1 (seven) plus one box for the rest, or a single box for frame 1 with the walk-through as collapsed sections above it. Note that `reading` presentation does not support the AI feedback endpoint (`canvas_sync/schema.py`), so AI feedback on this page is not available in the current mode either way.
+> **[NOTE]** Seven boxes, `presentation: reading`, each holding one part for every candidate, labeled. Needs a copy-all action at the foot of the page that assembles the boxes into whole frames per candidate; see the OPEN note above. `reading` presentation does not support the AI feedback endpoint (`canvas_sync/schema.py`), so AI feedback on this page is not available in the current mode.
 
-- **part-2** (response). Prompt: *Part 2, the problem, for your first candidate.* Criteria: one or two sentences; a condition someone is living in, not a task; names who feels the cost.
-- **part-3** (response). Prompt: *Parts 3a and 3b: who is affected, and what it costs each of them.* Criteria: 3a names people or specific roles, or who to ask; 3b assigns a cost to each; both halves present.
-- **part-4** (response). Prompt: *Parts 4a and 4b: how it is handled today, and the moment it stops working.* Criteria: 4a describes current handling, formal or informal, and says whether anything was tried and abandoned; 4b names a moment or condition, not a consequence.
-- **part-5** (response). Prompt: *Part 5: what fixed would look like.* Criteria: one sentence; describes a state, not a tool or process.
-- **part-6** (response). Prompt: *Part 6: your claims table, with a status and a kind for each claim.* Criteria: at least four rows; each row has a status and a kind; at least one row comes from 3b; a causal bet, if present, is either split or left as a bet rather than forced.
-- **part-7** (response). Prompt: *Part 7: what you do not know yet, and who could tell you.* Criteria: what is listed is about the problem, not about tools or building; may be short; may say "nothing left over" if the audit absorbed it.
-- **part-1** (response). Prompt: *Part 1: the goal it serves.* Criteria: one sentence; nobody involved would dispute it; it would not serve any problem of this type anywhere; names no solution.
-- **other-frames** (response). Prompt: *Your other frames, two to four of them, all seven parts labeled, pasted from Part C of your Candidate Log.* Criteria: at least two further frames; all seven parts present in each, 3 and 4 in their a and b halves; part 5 one sentence describing a state; each claims table has a status and kind per row; unknowns written as "I do not know yet" rather than filled with guesses.
+- **part-2** (response). Prompt: *Part 2, the problem, for each of your candidates. Label each with the candidate's name.* Criteria: one entry per candidate, three to five; each is one or two sentences; each is a condition someone is living in, not a task; each names who feels the cost.
+- **part-3** (response). Prompt: *Parts 3a and 3b for each candidate: who is affected, and what it costs each of them.* Criteria: one entry per candidate; 3a names people or specific roles, or who to ask; 3b assigns a cost to each; both halves present in every entry.
+- **part-4** (response). Prompt: *Parts 4a and 4b for each candidate: how it is handled today, and the moment it stops working.* Criteria: one entry per candidate; 4a describes current handling, formal or informal, and says whether anything was tried and abandoned; 4b names a moment or condition, not a consequence.
+- **part-5** (response). Prompt: *Part 5 for each candidate: what fixed would look like.* Criteria: one entry per candidate; each is one sentence; each describes a state, not a tool or process.
+- **part-6** (response). Prompt: *Part 6 for each candidate: your assumptions, each marked confirmed or unverified, with who could tell you.* Criteria: one list per candidate; at least four assumptions across parts 2 to 5, at least one from 3b; each marked confirmed or unverified; each unverified one names who could tell you, or says nobody yet.
+- **part-7** (response). Prompt: *Part 7 for each candidate: what you do not know yet.* Criteria: one entry per candidate; what is listed is about the problem, not about tools or building; may be short; may say "nothing left over."
+- **part-1** (response). Prompt: *Part 1 for each candidate: the goal it serves.* Criteria: one entry per candidate; each is one sentence; nobody involved would dispute it; it would not serve any problem of this type anywhere; it names no solution.
 
 ---
 
@@ -438,23 +443,23 @@ Now do the same for each of your other candidates in Part C of your Candidate Lo
 
 *Own your progress. Position 8. 0 points. Submit to mark it complete.*
 
-Bring your frames. This activity uses AI in the one way Sprint 1 asks for: to test a frame you are too close to see around, and to widen it. AI can find the claim you asserted without noticing in four seconds. It cannot know which of your situations your director would care about or which colleague would quietly block it. You can. That is the division of labor here.
+Bring your frames. This activity uses AI in the one way Sprint 1 asks for, which is to test a frame you are too close to see around, and to widen it. AI can find the assumption you made without noticing in four seconds. It cannot know which of your situations your director would care about or which colleague would quietly block it. You can. That is the division of labor here.
 
 Use the Symbiotic Thinking Dojo if you have it set up, or any AI chat. Do not paste confidential workplace, client, or personal details. Change names and drop anything sensitive before you start.
 
 > **[NOTE]** Tool wording depends on the Dojo and API key decision. The prompts below run unchanged in any chatbot.
 
-One rule for the whole activity: **your frames stay in your words.** AI may point at a part; you rewrite it. If you find yourself pasting its sentences into your frame, stop and write the sentence yourself.
+One rule holds for the whole activity. **Your frames stay in your words.** AI may point at a part, and you rewrite it. If you find yourself pasting its sentences into your frame, stop and write the sentence yourself.
 
 ### 1. Test each frame
 
 Paste one frame at a time and use this prompt:
 
-> Here is a problem frame. Do not rewrite it. Tell me: which claims am I asserting rather than knowing? Which costs have nobody attached to them? Where has a solution leaked into part 5 or part 7? Which of my claims is a causal bet that nobody could confirm by being asked? Where would someone who works in this situation say I am wrong?
+> Here is a problem frame. Do not rewrite it. Tell me which things I am asserting rather than knowing, which costs have nobody attached to them, where a solution has leaked into part 5 or part 7, and where someone who works in this situation would push back, and why.
 
 > **[OPEN, PARKED 15 September]** Tested three times on Leslie's frame. The one-shot prompt over-delivers; the activity is now drafted as a Dojo module in Sathya's format (`dojo-module-problem-frame.md`, v0.3), which replaces both prompts on this page once the course-wide Dojo doc exists. Parked until then; see `dojo-setup-note.md`.
 
-Take what lands and fix the frame yourself. Add rows to your claims table where it found a claim you missed. Move a solution out. Attach a cost to a person. Do this for every frame.
+Take what lands and fix the frame yourself. Add rows to your assumptions where it found one you missed. Move a solution out. Attach a cost to a person. Do this for every frame.
 
 ### 2. Widen each frame
 
@@ -478,9 +483,9 @@ Three questions decide whether a frame is the right size, and they are answerabl
 - Is there at least one person other than you, with a stake in it or knowledge of it, who would talk to you about it? (Part 3a, or part 7.) For a household problem, someone **outside the household** whom it would be normal to ask.
 - Is there at least one thing you would have to find out to move on it? (Part 6.)
 
-A frame that fails the first is too big: pick one instance you have seen. A frame that fails the second or third is too small, or too private: ask what it is an instance of, and go up.
+A frame that fails the first is too big, so pick one instance you have seen. A frame that fails the second or third is too small, or too private, so ask what it is an instance of, and go up.
 
-Then choose the one that passes and that you want to stay with. Write your reasoning down, because the Goal Plan asks for it: its Part 2 reuses why you chose this one and what testing changed, and your runner-up is where you go if the choice does not survive Sprint 2. The box below collects it.
+Then choose the one that passes and that you want to stay with. Write your reasoning down, because the Goal Plan asks for it. Its Part 2 reuses why you chose this one and what testing changed, and your runner-up is where you go if the choice does not survive Sprint 2. The box below collects it.
 
 - **Why this one:** what in the frame and the testing makes it workable.
 - **Why not the others:** one or two sentences each, including those that mostly held up.
@@ -505,35 +510,39 @@ If nothing holds up, or the only survivor does not matter to you, go back to you
 
 *Graded item. Position 9. 50 points. One submission.*
 
-> **[NOTE]** Not yet reviewed by Leslie (her 14 September pass stopped at the Dojo Lab's Choose step). Name still open: Goal Plan and Problem Frame, Root Cause Analysis, or another. This draft keeps the name the Introduction's road map already uses.
+> **[NOTE]** Name still open: Goal Plan and Problem Frame, Root Cause Analysis, or another. This draft keeps the name the Introduction's road map already uses.
 
-This is the document the rest of the course builds on. Three parts, one submission. Your instructor reads for a frame that is specific, honestly marked, and moving: what changed since version one and why.
+You chose one problem at the end of the Dojo Lab. From here on, everything in the course works on that one. This is where you write it up properly, in three parts and one submission. Your frame, version two, is what the rest of the course builds on. Parts 2 and 3 tell your instructor how you got there and what you will check first.
 
 ### Part 1. Frame version two
 
-Rewrite the frame you chose with everything the Dojo Lab changed. All seven parts, in your words. The claims table is complete: every claim from parts 1 to 5 with a status and a kind, and for each checkable claim, who could tell you. Confirmed means you have seen it yourself or someone who knows told you. Everything else is unverified, and at this point most rows should be.
+Rewrite the frame you chose with everything that changed as a result of the Dojo Lab. All seven parts, in your words. Bring part 6 up to date, so that it lists every assumption you still hold, each marked confirmed or unverified, and for each unverified one, who could tell you.
 
 ### Part 2. What changed, and why
 
-One short paragraph. Start from what you wrote down in the Dojo Lab: why this one. Then name what moved between version one and version two, and what argument or evidence moved it. Include one thing the Dojo Lab suggested that you rejected, and why. A frame that did not change is a legitimate result if you can say what you tested it against.
+Your instructor cannot see your Dojo Lab session. This paragraph is where they see that the frame was tested and that you, not the AI, made the changes. Start from the recap your Dojo session gave you and check it against your Log. Then, in one short paragraph and in your words, say what moved between version one and version two, what argument or evidence moved it, and one thing the Dojo suggested that you rejected, and why. A frame that did not change is a legitimate result if you can say what you tested it against.
 
-### Part 3. Which claims first
+> **[NOTE]** Leslie, 15 September: could the Dojo generate this and the learner verify it? Yes, and that is now how the paragraph is framed. The parked module's Round 4 recap (what changed, what was left unverified on purpose, what to check first) is the raw material; the learner corrects it and puts it in their own words. See `dojo-module-problem-frame.md`, the v0.4 read-back note.
 
-From your claims table, pick the two or three whose failure would break the frame rather than adjust it. For each: the claim; what would have to be true for it to hold; and who could tell you or what you could observe. These are what Sprint 2 works on first, and one of them is what your Sprint 3 conversation is for.
+### Part 3. Which assumptions should you investigate first
+
+Look at part 6 of your frame. Pick the two or three assumptions whose failure would break the frame rather than adjust it. For each one, write what would have to be true for it to hold, and who could tell you or what you could observe. These are what you check first in Sprint 2, and one of them is what your Sprint 3 conversation is for.
+
+> **[NOTE, OPEN]** Leslie, 15 September: does Part 3 belong here, or is it Sprint 2's first step? Kept here for now because it is the hand-off: Sprint 2's outline receives "the two or three assumptions first" from this document. When Sprint 2 is drafted, this part can move to its opening activity, and the Goal Plan drops to two parts. Language reworked to hers.
 
 > **Worked example: account handovers, part 3**
 >
-> **All four managers are affected, not just the one I sat next to.** If it is one person's habit, this is one conversation, not a problem worth nine weeks. To hold, at least two of the other three would have to describe the same thing. The three other managers could tell me; I could ask them this week.
+> **All four managers are affected, not just the one I sat next to.** If it is one person's habit, this is one conversation, not a problem worth nine weeks. To hold, at least two of the other three would have to describe the same thing. The three other managers could tell me, and I could ask them this week.
 >
 > **Clients notice and it costs them something.** If clients do not notice, the cost is internal only and the goal in part 1 is wrong. The account lead would know whether a client has ever raised it.
 
-In Sprint 2 you test this frame against alternatives and against what already handles this problem elsewhere. If it does not survive that, Sprint 2 says what to do. Your runner-up and your set-aside list are still in your Candidate Log.
+Your runner-up and your set-aside list are still in your Candidate Log, in case this frame does not survive Sprint 2.
 
 ### Response tasks
 
-- **frame-v2** (response). Prompt: *Your frame, version two: seven parts and the complete claims table.* Criteria: all seven parts present, in the participant's words; part 5 is one sentence describing a state; every claim carries a status and a kind, and every checkable claim names who could tell you; at least one unverified claim remains, since a frame with none at this stage is a warning sign; part 1 passes both goal tests.
-- **what-changed** (response). Prompt: *Why this one, what changed from version one, what moved it, and one suggestion you rejected.* Criteria: names a specific change or a specific reason for no change; names the evidence or argument; includes one rejected suggestion with a reason.
-- **which-claims-first** (response). Prompt: *The two or three claims whose failure would break the frame, what would have to be true, and who could tell you or what you could observe.* Criteria: two or three claims, not a list of all of them; a clear condition for each to hold; a named person, role, or observation for each; at least one is reachable within two weeks.
+- **frame-v2** (response). Prompt: *Your frame, version two, all seven parts, with part 6 up to date.* Criteria: all seven parts present, in the participant's words; part 5 is one sentence describing a state; every assumption carries a status, and every unverified one names who could tell you; at least one unverified assumption remains, since a frame with none at this stage is a warning sign; part 1 passes both goal tests.
+- **what-changed** (response). Prompt: *What changed from version one, what moved it, and one suggestion you rejected.* Criteria: names a specific change or a specific reason for no change; names the evidence or argument; includes one rejected suggestion with a reason; in the participant's words rather than the Dojo's.
+- **which-assumptions-first** (response). Prompt: *The two or three assumptions whose failure would break the frame, what would have to be true, and who could tell you or what you could observe.* Criteria: two or three assumptions, not a list of all of them; a clear condition for each to hold; a named person, role, or observation for each; at least one is reachable within two weeks.
 
 ---
 
@@ -541,13 +550,9 @@ In Sprint 2 you test this frame against alternatives and against what already ha
 
 *Graded item. Position 10. 10 points. ai_activity, JSON upload, same mechanism as Sprints 3 and 4.*
 
-> **[NOTE]** Not yet reviewed by Leslie.
+Put your first frames beside your Goal Plan and write about the distance between them. You have already written what changed. Here, write about how it changed. What did AI find that you would not have reached alone? What did you contribute that AI could not, because it depends on what you know about the people and the place? How did you decide what to accept and what to reject? And what is the one thing you are still unsure of and are carrying forward on purpose?
 
-Put your first frames beside your Goal Plan and write about the distance between them.
-
-Cover: which situation you chose and what in the frames decided it; what changed between the first frame and the final one, and what did not; what AI found that you would not have reached alone; what you contributed that AI could not, because it depends on what you know about the people and the place; and one thing you are still unsure of and are carrying forward on purpose.
-
-> **[NOTE] ai_activity configuration.** One `ai-discussion` question. Prompt as above, minLength 150, numQuestions 3. aiContext: *This is the Sprint 1 reflection for Reframing Problems with AI. The participant wrote first frames for three to five situations, had AI test and widen them, chose one, and wrote a second version. Ask follow-up questions that catch a change attributed to AI that the participant actually made, a claim that the frame did not change when the claims table moved, a choice explained without the why-you line, and a contribution described as "judgment" without saying what was judged. Push them to name one thing they are still unsure of. Do not rewrite the reflection.* summaryLabel: Your Sprint 1 Reflection. The CTI-owned AI proxy is live as of 14 September (`docs/audits/2026-09-14-owned-course-ai-proxy.md`), so this no longer waits on Sathya's deployment; falls back to text entry if it goes down.
+> **[NOTE] ai_activity configuration.** One `ai-discussion` question. Prompt as above, minLength 150, numQuestions 3. aiContext: *This is the Sprint 1 reflection for Reframing Problems with AI. The participant wrote first frames for three to five situations, had AI test and widen them, chose one, and wrote a second version. Ask follow-up questions that catch a change attributed to AI that the participant actually made, a contribution described as "judgment" without saying what was judged, an accept-or-reject decision with no reason behind it, and a carried-forward uncertainty that is really a to-do. Push them to name one thing they are still unsure of. Do not rewrite the reflection.* summaryLabel: Your Sprint 1 Reflection. The CTI-owned AI proxy is live as of 14 September (`docs/audits/2026-09-14-owned-course-ai-proxy.md`), so this no longer waits on Sathya's deployment; falls back to text entry if it goes down.
 
 ---
 
@@ -570,10 +575,10 @@ Sprint total 100. One graded item per week, concept check as self-check, week 1 
 
 ## Owed elsewhere once this is cut
 
-- **Sprint 0 / Welcome** introduces "own your progress" and "graded item" before Sprint 1 uses them (Leslie, 14 September).
+- **Sprint 0 / Welcome** introduces "own your progress" and "graded item" before Sprint 1 uses them (Leslie, 14 September), and says how assignments work: for each part, guidance, then an example, then a box (Leslie, 15 September).
 - **The Candidate Log template** rebuilt to Parts A to D as named above. Part C repeats the seven parts per candidate in writing order, each slot carrying the one-line guidance from the frame page's template and nothing more (Leslie, 15 September: the other frames need the same scaffold as the walked-through one, without becoming cumbersome). Linked from the Introduction and each activity.
 - **The homepage entry** for the sprint and the `verify` line: "ask another person to read your frame and name what they think you are actually trying to solve" now fits the Dojo Lab's choose step as a non-AI alternative, and could be surfaced there.
-- **Sprint 2's outline** receives: frame version two with the complete claims table, the two or three claims first, the framings considered, the runner-up, and the set-aside list. The single riskiest assumption is gone; the claims table replaces it.
+- **Sprint 2's outline** receives: frame version two with the assumptions list, the two or three assumptions first (possibly as its own opening activity, see the Goal Plan's OPEN note), the framings considered, the runner-up, and the set-aside list. It also receives the **claim kinds** (checkable, prediction, causal bet), which left Sprint 1 in v5.2: they decide how each assumption gets checked, which is Sprint 2's work.
 - **The spine**, sections 7 and 9: Sprint 1's think-first artifact is now First frames; Checks 3 and 4 are no longer introduced in Sprint 1 as checks.
 - **The handoff**: week tables and what-to-do-next.
 - **The retired pages**: Things you stopped noticing and Things somebody handed you no longer exist as items. Their illustrations (report columns, onboarding) live on in the brainstorm's collapsed help.
@@ -582,13 +587,14 @@ Sprint total 100. One graded item per week, concept check as self-check, week 1 
 
 - **[OPEN] The Dojo Lab's selection criteria** (Leslie). The three size questions are a placeholder until she rules; the your-choice criteria follow.
 - **[OPEN] The two Dojo Lab prompts** need a live test and a language pass. Claude can run them against worked example A through the CTI proxy on request.
-- **Goal Plan and Reflection** are unreviewed by Leslie; only consequential edits (test for attack, the Dojo Lab handoff into Part 2, the proxy status) were made there.
+- **[OPEN] First frames by parts** (each box holds one part for every candidate) and the copy-all action it needs. Leslie to confirm the shape; Jeremy on the mechanics.
+- **[OPEN] Two or three statuses** for assumptions (confirmed/unverified, or seen/told/assumed). Leslie.
+- **[OPEN] Goal Plan Part 3** stays here or opens Sprint 2. Decided when Sprint 2 is drafted.
 - Whether the concept check's six questions are the right six. Drafted here so the rebuild has something to start from; Jeremy's call on format.
-- Whether First frames should require three frames or accept two with a reason. This draft requires three (one walked through, at least two more).
-- First frames carries eight response boxes. See the NOTE on that page for the seam if the mode strains.
+- Whether First frames should require three frames or accept two with a reason. This draft requires three.
 - The Dojo Lab is the longest page in the sprint at about eight hundred words. If it needs to split, test-and-widen and choose are the seam.
-- Whether the Goal Plan keeps a "who could tell you" part separate from the claims table. This draft folds it into the table and part 3, on the finding that part 7 went thin once the table carried names.
+- Whether the Goal Plan keeps a "who could tell you" part separate from the assumptions list. This draft folds it into the list and part 3, on the finding that part 7 went thin once the table carried names.
 
 ## Provenance
 
-Human (Leslie): the resequence and every finding behind it; the frame page, its two examples, and its designer notes; the points; the three content rulings; the v5.1 review (every tracked change and comment, applied individually; dispositions in the decisions log). AI (Claude): the prose of every other page, the handover case carried through the table and the Dojo Lab's choice, the concept check questions, the response tasks and criteria, the collapsed help blocks, the reflection's aiContext, the v5.1 restructures (First frames as a walk-through, the frame page as reference, the example list's home and other headings). The frame page's structural moves came from an exchange Leslie ran in another chat; its wording is hers.
+Human (Leslie): the resequence and every finding behind it; the frame page, its two examples, and its designer notes; the points; the three content rulings; the v5.1 and v5.2 reviews (every tracked change and comment, applied individually; dispositions in the decisions log). AI (Claude): the prose of every other page, the handover case carried through the table and the Dojo Lab's choice, the concept check questions, the response tasks and criteria, the collapsed help blocks, the reflection's aiContext, the v5.1 and v5.2 restructures (First frames as a walk-through, then by parts across candidates; the frame page as reference; the example list's home and other headings; the assumptions rewrite of part 6). The frame page's structural moves came from an exchange Leslie ran in another chat; its wording is hers.
