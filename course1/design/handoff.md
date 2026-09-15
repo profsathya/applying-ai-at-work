@@ -40,7 +40,8 @@ first half as a participant. Rubrics and points decided soon. Sprint 5 has no ow
 course1/design/sprint-1-working-draft-v5.md       THE LIVE DRAFT (v5.1): the whole sprint, ten items,
                                                    on the 14 September resequence. Leslie reviewing.
 course1/design/sprint-1-resequence-outline.md     why the sequence changed (14 September)
-course1/design/sprint-2-outline.md                 Sprint 2, outline; must receive the claims table
+course1/design/sprint-2-outline.md                 Sprint 2, outline; must receive the assumptions list and the claim kinds
+course1/design/candidate-log-template-v2.md        the Log template, v2 (15 September), source for the Google Doc
 course1/design/dojo-setup-note.md                  the course-wide Dojo tool, for Jeremy (15 September)
 course1/design/dojo-module-problem-frame.md        Sprint 1 Dojo Lab as a Dojo module, v0.3, PARKED
 course1/design/problem-spine.md                    course-level design
@@ -80,7 +81,7 @@ claims are what Sprint 2 works on.
 
 | Piece | State |
 |---|---|
-| Sprint 1, whole | Draft v5.2 in `course1/design/`. Every page reviewed by Leslie at least once (14 and 15 September). Her [OPEN] items: the First frames by-parts shape, two or three statuses for assumptions, the Dojo Lab's selection criteria, whether Goal Plan Part 3 moves to Sprint 2. Jeremy's: a copy-all action for First frames |
+| Sprint 1, whole | Draft v5.2 in `course1/design/`. Every page reviewed by Leslie at least once (14 and 15 September). Now v5.3 after her rulings on Claude's concerns. Her [OPEN] items: two or three statuses for assumptions, the Dojo Lab's selection criteria, whether Goal Plan Part 3 moves to Sprint 2, where the Concept check sits |
 | Sprint 1 first half, live | Jeremy's 11 September cut, published in sprint-12. Melisa is running this version. It is superseded by v5 and will be replaced at the cut |
 | Sprint 1 concept check | Six questions redrafted in v5.1 against the new pages; Jeremy's call on format. Now sits after The problem frame |
 | Sprint 2 | Outline written 12 September. Must receive the claims table (not a single riskiest assumption), the runner-up, and the set-aside list. Claude can build it directly as artifacts |
@@ -119,9 +120,11 @@ self-check, reflection as `delivery_mode: ai_activity` like Sprints 3 and 4.
    frames carries eight boxes; the seam if the mode strains is noted on the page. Every
    cut artifact stays `publish: false`; Claude opens the PR and stops for Leslie's merge,
    since merging publishes to Canvas.
-3. **Rebuild the Candidate Log template** (Google Doc, id below) to v5's sections: A
-   brainstorm by category, B four-column table, C the seven-part frame repeated per
-   candidate, D Goal Plan. Then link it from the Introduction and each activity.
+3. **Put the Candidate Log template v2 into the Google Doc** (id below). The v2 content
+   is `course1/design/candidate-log-template-v2.md` (A brainstorm by category, B four-column
+   table, C the seven-part frame repeated five times in writing order with a line of
+   guidance per slot, D Goal Plan). A docx went to Leslie 15 September. Then link it from
+   the Introduction and each activity.
 4. **Sprint 2 prose** on `sprint-2-outline.md`, adjusted for the claims table.
 5. **Points and rubrics proposal** across all five sprints, for the team decision.
 6. **Collect Melisa's and Clare's run results.** Melisa is on the old first half; what

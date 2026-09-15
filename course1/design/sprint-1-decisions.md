@@ -2110,3 +2110,28 @@ assumptions should you investigate first"). Dispositions:
 
 Provenance: Leslie, every comment and tracked change; Claude, the by-parts shape, the
 assumptions walk-through, the example replacements, the colon pass, the kinds move.
+
+## 15 September, late: Leslie's rulings on the v5.2 concerns, applied as v5.3
+
+Claude raised four concerns and one small fix after v5.2; her answers:
+
+1. **First frames by parts, or one frame written whole?** One frame written whole. So the
+   page teaches (guidance and the handover example per part, in writing order), the
+   Candidate Log's Part C is the working surface (seven parts in writing order, one line
+   of guidance beside each slot), and one box per frame collects the finished frames.
+   The by-parts shape of v5.2 is withdrawn. Yes, we generate the Log template: rebuilt
+   as v2 this session (docx; Google Doc to follow).
+2. **"Find your assumptions" dropped the audit-not-generation guard.** Her read: the
+   part-by-part instruction forces the audit; nobody will go the other way. Stands as
+   written in v5.2.
+3. **Moving the claim kinds loses what today's Dojo test found.** Her read: it was new,
+   but she does not know what it means to her at this stage or why she should care which
+   kind an item is. Stays out of Sprint 1. The answer to "why care" belongs in Sprint 2,
+   where the kind decides how you check.
+4. **Part 5 lost its operational line.** Her read: one sentence is not enough to mean
+   something, so it was extra words. Stays cut.
+5. **Concept check question 5 tests a distinction taught after the check.** The 4b
+   template line now says "not the consequence that follows." Where the check sits in
+   the sequence is reconsidered once the content is done; [OPEN] at the foot of the draft.
+
+Provenance: Leslie, all five rulings; Claude, the edits and the Log template rebuild.
