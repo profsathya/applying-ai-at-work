@@ -2,12 +2,14 @@
 name: reviewing-course-text
 description: Review substantive course drafts, revisions, and curated homepage copy for teachability and alignment, including relevant neighboring material. Return scoped findings and evidence for a parent review record. For exact-wording requests, recommend without rewriting; skip date-only, inspection, reconcile, and sync mechanics.
 metadata:
-  local_revision: "5"
+  local_revision: "6"
 ---
 
 # Reviewing Course Text
 
 Follow [the authoring contract](../../../docs/AUTHORING.md). Review the experience the supplied design intends. Use the relevant writing skills for their principles rather than inventing another style system.
+
+For new participant-facing content and substantive revisions, review against **the approved Sprint 1 authoring workflow and presentation**. Read [the presentation reference](../../../docs/AUTHORING_PRESENTATION.md) and the matching approved examples. Assess concise connected prose, direct openings, consolidated directions, descriptive sections, selective cards, purposeful visuals, and adjacent responses. Fix unnecessary reading burden or competing presentation before marking the editorial review complete; preserve necessary teaching and the supplied learning design. Protected wording and mechanical updates retain their boundaries.
 
 ## Read in context
 
@@ -36,6 +38,8 @@ Check heading order, keyboard operation of interactive controls, visible focus, 
 
 Use the reference's module-preview command to save a baseline before revision and generate the current pages, comparison, and browser evidence afterward. For new modules, omit the baseline. Read the actual results: skipped or failed checks are not passes. Automation supports the editorial review; the reviewer still inspects the complete rendered module and records concrete answers to these adult-learner questions: Can I see the next meaningful action? Does each section help me act or understand? Am I rereading directions? Does the visual help, with its essential meaning available as text? Can I leave and resume with my work and place clear? Resolve in-scope issues and regenerate affected evidence after changes. Report unobserved participant engagement separately.
 
+In the existing review record, identify the approved examples actually inspected and the main visual/layout decisions, including why text alone was sufficient where applicable. Review finished visuals and the assembled page, not just proposed image briefs. Restricted workers hand unresolved production checks to the coordinator; missing assets or unperformed browser review remain explicit limitations rather than completed work.
+
 For a verbosity revision, record before/after body, prompt, and criteria counts separately, alongside concrete examples of removed duplication and retained support. Counts reveal burden; they do not establish learning quality or screen visibility. Consider reading, practice, observation over elapsed days, and submission effort together; do not invent a time budget or cut required practice to meet a word target. Report participant testing separately from editorial judgment and software checks.
 
 ## Resolve and report within scope
@@ -57,7 +61,7 @@ Verify participant and stakeholder quotations against their original source and 
 ## Provenance and local adaptation
 
 - Origin: Common Curriculum [`skills/reviewing-course-text/SKILL.md`](https://github.com/profsathya/Common-Curriculum/blob/81a051324df61c41af464a0220f8085627729ad9/skills/reviewing-course-text/SKILL.md).
-- Reviewed upstream commit: `81a051324df61c41af464a0220f8085627729ad9` (`81a0513`). Local revision: `5`.
+- Reviewed upstream commit: `81a051324df61c41af464a0220f8085627729ad9` (`81a0513`). Local revision: `6`.
 - Adaptation: qualitative, scoped review of local Markdown and curated metadata with a parent-owned evidence record. Exclude HTML/slide workflows, course-specific policies, Canvas IDs, private dependencies, and `scripts/review_student_page.py`, whose visibility and first-action heuristics do not establish instructional quality.
 - This skill is self-contained in this repo. Future upstream changes require explicit review before local adoption; increment `metadata.local_revision` for instruction changes.
 
@@ -65,3 +69,4 @@ Verify participant and stakeholder quotations against their original source and 
 
 - Local revision 4: inspect rendered hierarchy, visual usefulness, mobile reading order, accessibility behaviors, and image attribution; retain scoped worker handoffs and truthful validation limits.
 - Local revision 5: reusable module previews and baseline comparison, explicit adult-learner review, and honest interpretation of automated, skipped, and manual checks; upstream pin unchanged.
+- Local revision 6: make approved Sprint 1 alignment an explicit editorial check, with inspected references and actual visual-production outcomes recorded; upstream pin unchanged.

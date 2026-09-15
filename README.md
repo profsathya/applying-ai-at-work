@@ -93,6 +93,8 @@ The tool names are optional. They are here so maintainers can understand the rou
 
 Substantive authoring and revision also apply four local teaching and review skills automatically. They connect goals to practice and evidence, clarify explanations and tasks, and review the result in context. Supplied structures and protected source wording remain authoritative. The parent task saves decisions, findings, observed validation, and file fingerprints under `<course>/reports/authoring/`. See [Authoring and Review](docs/AUTHORING.md) for routing, record ownership, and maintenance of the reviewed Common Curriculum adaptations. Date-only changes and inspection, reconcile, or sync mechanics keep their narrow scope.
 
+New participant pages and substantive revisions default to **the approved Sprint 1 authoring workflow and presentation**: concise connected prose, direct openings, consolidated directions, selective visual grouping, purposeful imagery, and adjacent responses. Authors inspect the [approved examples and production sequence](docs/AUTHORING_PRESENTATION.md) before drafting, then render and review desktop/mobile results. Learning and assessment requirements determine each page's structure.
+
 ## Expected Response
 
 For draft-only work, Codex should report the files it created, validation result, saved authoring record, and any consequential open decisions:

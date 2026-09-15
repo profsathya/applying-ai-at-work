@@ -2,12 +2,14 @@
 name: writing-assignments
 description: Draft or substantively revise assignments, practice tasks, discussions, and quiz directions so purpose, prerequisites, actions, evidence, and submission expectations agree. Use supplied grading rules; skip mechanical date and publishing updates.
 metadata:
-  local_revision: "3"
+  local_revision: "4"
 ---
 
 # Writing Assignments
 
 Follow [the authoring contract](../../../docs/AUTHORING.md). Use [writing-learning-goals](../writing-learning-goals/SKILL.md) for the capability and value, and [writing-to-teach](../writing-to-teach/SKILL.md) where explanations or examples are needed.
+
+Default to **the approved Sprint 1 authoring workflow and presentation** for new tasks and substantive revisions. Read [the presentation reference](../../../docs/AUTHORING_PRESENTATION.md) and inspect the matching short-practice, concept-check, or longer-assignment example before drafting. Consolidate directions at their point of use, keep prompts brief, and place each response immediately after its instructions using supported layout. Preserve distinct tasks, identities, grading, and submission requirements; do not force them into the reference page's step or response count. Exact-wording and mechanical requests keep their narrow boundaries.
 
 ## Make the work executable
 
@@ -53,10 +55,11 @@ Use [reviewing-course-text](../reviewing-course-text/SKILL.md) to check the fini
 ## Provenance and local adaptation
 
 - Origin: Common Curriculum [`skills/writing-assignments/SKILL.md`](https://github.com/profsathya/Common-Curriculum/blob/81a051324df61c41af464a0220f8085627729ad9/skills/writing-assignments/SKILL.md).
-- Reviewed upstream commit: `81a051324df61c41af464a0220f8085627729ad9` (`81a0513`). Local revision: `3`.
+- Reviewed upstream commit: `81a051324df61c41af464a0220f8085627729ad9` (`81a0513`). Local revision: `4`.
 - Adaptation: preserve purpose, prerequisites, tasks, criteria, submission clarity, and useful reflection while allowing unconventional structures. Use local Markdown/frontmatter and real professional work. Exclude course-specific points and late-work policies, assignment naming prefixes, Canvas IDs, HTML pipelines, slides, and private dependencies.
 - No runtime Common Curriculum checkout is needed. Explicitly review future upstream changes before adoption and increment `metadata.local_revision` when local instructions change.
 
 - Local revision 2: distinguish teaching, action prompts, and evidence criteria in asynchronous activities; remove repeated procedures without removing assessment requirements.
 
 - Local revision 3: consolidated directions and adjacent responses, visible teaching, restrained controls, and supported presentation selection without changing the assessment contract.
+- Local revision 4: explicitly default ordinary task authoring to the approved Sprint 1 workflow and reference inspection while retaining each task's assessment and source boundaries.

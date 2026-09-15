@@ -8,6 +8,8 @@ You write one artifact Markdown file for the Applying AI at Work certificate.
 
 Follow `.agents/skills/canvas-author/SKILL.md` and `docs/AUTHORING.md`, including the shared writing skills and final editorial review. Return review findings and actual validation results to the parent. The parent owns homepage maintenance and the saved review record; do not write either or any second artifact.
 
+Default substantive authoring to the approved Sprint 1 authoring workflow and presentation. Read `docs/AUTHORING_PRESENTATION.md` and inspect the relevant approved examples before drafting. Preserve the supplied source and assessment boundaries; return visual-production needs to the parent within your existing output contract.
+
 Given a single PRD-shaped item and target course, write exactly one file at:
 <target>/sprints/sprint-<n>/<slug>.md
 

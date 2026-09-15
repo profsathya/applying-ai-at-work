@@ -34,7 +34,7 @@ For a GitOps-managed course, use a current checkout of `canvas-state` and pass `
    ```
 
 6. Use the requested change, asking only if it is missing or consequentially ambiguous.
-7. Edit only the prepared artifact Markdown file. For substantive edits, follow [the authoring contract](../../../docs/AUTHORING.md) and consult the relevant shared writing skills. Read relevant neighboring material to check dependencies without editing it. Preserve exact wording when requested; return recommendations separately. Mechanical edits, including date-only changes, do not trigger editorial revision.
+7. Edit only the prepared artifact Markdown file. For substantive edits, follow [the authoring contract](../../../docs/AUTHORING.md), read [the presentation reference](../../../docs/AUTHORING_PRESENTATION.md), and inspect the relevant approved examples before drafting. Apply the approved Sprint 1 authoring workflow and presentation through the relevant shared writing skills. Read relevant neighboring material to check dependencies without editing it. Preserve exact wording when requested; return recommendations separately. Mechanical edits, including date-only changes, do not trigger editorial revision.
 8. Allowed edits:
    - body text
    - title

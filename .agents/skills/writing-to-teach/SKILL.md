@@ -2,12 +2,14 @@
 name: writing-to-teach
 description: Draft or substantively revise participant-facing explanations, concept pages, and instructional sequences. Use for teaching prose and concise homepage copy; skip date-only changes and inspection or publishing mechanics.
 metadata:
-  local_revision: "4"
+  local_revision: "5"
 ---
 
 # Writing to Teach
 
 Apply this guidance within the source authority and edit scope in [the authoring contract](../../../docs/AUTHORING.md). Use it to make the intended learning easier, not to impose a page template.
+
+For new participant-facing content and substantive revisions, use **the approved Sprint 1 authoring workflow and presentation** by default. Read [the presentation reference](../../../docs/AUTHORING_PRESENTATION.md) and inspect the relevant approved examples before drafting. This applies even when the request does not mention brevity, layout, or imagery. Exact-wording and mechanical requests retain their boundaries.
 
 ## Begin where the participant is
 
@@ -29,6 +31,8 @@ For example, before asking someone to identify a workflow bottleneck, connect it
 
 Use complete, connected prose when it explains cause or meaning. Use lists for steps and parallel choices. Concise copy removes avoidable work for the reader; it does not necessarily have the fewest words.
 
+Make concise content the initial draft's default. Open at the action or essential concept, consolidate repeated explanations, and use descriptive sections that reveal the next move. Do not defer this work to a later request to shorten the page. Retain necessary reasoning, useful examples, practice, and feedback; do not cut to a word-count target.
+
 Remove duplicated framing, unsupported promises, unnecessary warnings, and generic reassurance. Retain a useful return to an idea when it adds a different example, application, or retrieval opportunity. A short page that only says "Analyze the workflow" may need more explanation, not a shorter sentence.
 
 For asynchronous delivery, teach enough for the next meaningful action. Keep each explanation or example only when it supports that action or resolves a consequential distinction. Place required teaching where it is used; do not hide prerequisites in optional help. Defer detail about later work until participants need it. Returning to a concept should add practice, retrieval, or a new decision, rather than another explanation of the same point.
@@ -39,7 +43,7 @@ Preserve a supplied dialogue, worked case, question sequence, or other unconvent
 
 Use a clear reading column and group related content by its instructional job. A restrained card can distinguish a worked example, comparison, or response area; a border around every paragraph creates competing units. Choose section and example counts from the learning sequence, not a fixed template.
 
-Consider a diagram for a process or relationship, a table for a comparison, or a worked example for a consequential judgment. Include the visual when it makes the explanation easier to follow; do not add decoration merely to break up text. Prefer semantic text diagrams when they communicate the idea. Keep the needed reasoning in or next to the visual without repeating its entire explanation below it.
+Make a visual-organization decision for each substantive page. Use a diagram for a process or relationship, a table for a comparison, a worked example for a consequential judgment, or a matching illustration for useful workplace context. Integrate a visual when it makes the explanation easier to follow; a short text-only page is appropriate when it adds no value. Prefer semantic text diagrams for dense labels and relationships. Keep the needed reasoning in or next to the visual without repeating its entire explanation below it.
 
 Essential information must remain available as text, in a meaningful mobile reading order, without relying on color alone. Give images appropriate alternative text and explain complex relationships in adjacent text. For outside images, verify permission or license for the intended reuse and provide creator, source link, and license or permission credit. Attribution alone is not reuse permission. Label invented examples as illustrative; do not present generated imagery as documentary evidence.
 
@@ -60,7 +64,7 @@ For the final editorial pass, use [reviewing-course-text](../reviewing-course-te
 ## Provenance and local adaptation
 
 - Origin: Common Curriculum [`skills/writing-to-teach/SKILL.md`](https://github.com/profsathya/Common-Curriculum/blob/81a051324df61c41af464a0220f8085627729ad9/skills/writing-to-teach/SKILL.md).
-- Reviewed upstream commit: `81a051324df61c41af464a0220f8085627729ad9` (`81a0513`). Local revision: `4`.
+- Reviewed upstream commit: `81a051324df61c41af464a0220f8085627729ad9` (`81a0513`). Local revision: `5`.
 - Adaptation: working-professional audience, real stakeholder work, Canvas-native Markdown, contextual structures, and this repository's source authority. Omit upstream course layouts, learner labels, HTML, slides, and private workspace dependencies.
 - This is a locally maintained adaptation, not an upstream endorsement. Use only this checkout at runtime. Review upstream changes explicitly before adoption, and increment `metadata.local_revision` when these instructions change.
 
@@ -68,3 +72,4 @@ For the final editorial pass, use [reviewing-course-text](../reviewing-course-te
 
 - Local revision 3: direct openings, purposeful visual grouping, accessible instructional visuals, and image attribution; derived from the user-approved first-activity design, not participant validation.
 - Local revision 4: module reference selection, consistent purposeful imagery, asset reuse, and a visual-brief handoff that preserves author file boundaries; based on the approved illustrated Sprint 1 pilot.
+- Local revision 5: make the approved Sprint 1 workflow, concise initial drafting, reference inspection, and purposeful visual decisions explicit defaults for ordinary authoring; retain source and task boundaries.

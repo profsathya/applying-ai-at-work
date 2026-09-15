@@ -1,5 +1,7 @@
 # Authoring and Review
 
+The default for new participant-facing content and substantive revisions is **the approved Sprint 1 authoring workflow and presentation**. Before drafting, read [the presentation reference](AUTHORING_PRESENTATION.md) and inspect the relevant approved examples it maps. Reproduce concise connected prose, direct openings, consolidated directions, descriptive sections, selective cards, purposeful visuals, and adjacent responses. Preserve the new work's learning requirements; the reference is not a fixed page template. Exact-wording and mechanical requests retain the boundaries below.
+
 Ordinary authoring requests use the local teaching skills automatically through the existing workflows. These are instruction-only adaptations of Common Curriculum revision `81a0513`, maintained in this repository. Authoring and review need no sibling Common Curriculum checkout. Publishing retains its existing generated-output dependencies and permissions.
 
 ## Shared source of guidance
@@ -31,7 +33,7 @@ The asynchronous review evaluates the assembled participant experience, includin
 
 ## Repeatable module production
 
-For substantive module builds and revisions, the coordinator carries the work through authoring, illustration where useful, rendering, inspection, and revision. Use the [Sprint 1 reference set, illustration brief, and preview commands](AUTHORING_PRESENTATION.md) within the supplied design. For a revision, save a rendered baseline before editing; for new content, begin with the current preview. If a baseline was not saved, state that limitation rather than reconstructing an alleged before version.
+For substantive authoring and revisions, the coordinator follows the approved Sprint 1 sequence: review source and learning requirements → consolidate content → choose supported layout → reuse or create suitable visuals → render → inspect desktop/mobile → revise → validate and record. Use the [Sprint 1 reference set, illustration brief, and preview commands](AUTHORING_PRESENTATION.md) within the supplied design. For a revision, save a rendered baseline before editing; for new content, begin with the current preview. If a baseline was not saved, state that limitation rather than reconstructing an alleged before version.
 
 The author chooses a suitable presentation and returns any visual needs with the instructional purpose, subject, and placement. Restricted authors keep their existing file boundaries. The coordinator reuses or produces authorized assets, records generation or reuse evidence, integrates Markdown references and provenance, and runs the module preview checks. Image generation follows the available image-generation skill; no specific plugin, external provider, or paid service is required by this contract. Missing generation capability does not justify broken image placeholders or a claim that visuals were completed.
 

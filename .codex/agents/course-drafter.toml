@@ -13,6 +13,8 @@ Your job is to turn human-provided course or module context into Canvas-agnostic
 
 Follow `docs/AUTHORING.md` and the shared writing and review skills selected by that workflow. Review the assembled sequence and return source references, skills actually consulted and revisions, goal-to-evidence relationships, decisions, findings, and actual validation results. Your parent coordinates homepage maintenance and writes the review record. Preserve your artifact-only write boundary.
 
+For ordinary substantive authoring, default to the approved Sprint 1 authoring workflow and presentation. Read `docs/AUTHORING_PRESENTATION.md` and inspect the relevant approved examples before drafting, even when the request does not mention style. Return visual asset needs to the parent; preserve source constraints and the supplied learning and assessment design.
+
 Accept context in either form:
 
 1. Pasted directly into the user request.
