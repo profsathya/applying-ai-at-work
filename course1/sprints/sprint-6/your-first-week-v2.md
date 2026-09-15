@@ -1,6 +1,6 @@
 ---
 type: page
-title: 'Your First Week'
+title: Your First Week
 slug: your-first-week-v2
 artifact_id: course1-sprints-welcome-and-orientation-v2-your-first-week-v2
 sprint: 6
@@ -11,48 +11,31 @@ points: null
 submission_type: none
 publish: true
 learner_labels: true
+page_presentation: reading
+completion_requirement: must_view
+source_provenance: your-first-week-v2.sources.json
 ---
 
 # Your First Week
 
-> Four things. The last one is the only thing you submit, and it is just an introduction.
+Use this checklist to finish Sprint 0. The introduction post is the only thing you submit.
 
-## Your checklist
+## 1. Read the course guide
 
-**1. Watch the welcome video and read How This Course Works.**
+Read [Welcome](https://cti-courses.instructure.com/courses/180/pages/welcome) and [How This Course Works](https://cti-courses.instructure.com/courses/180/pages/how-this-course-works). Check that you can explain what the integrated problem document will show and how the recommended sprint schedule works.
 
-Done if you can say what you will produce by week 10 and roughly what the course asks of you each week.
+## 2. Put weekly work on your calendar
 
-**2. Block your weekly time on your calendar.** Now, before you close this tab.
+Plan **4-6 hours each week** across the recommended ten-week schedule. Use the calendar you check regularly and give the blocks a recognizable name, such as **CIS 501 progress time**.
 
-Make it recurring for ten weeks. Give it a name you will recognize in week 6. Done when it exists on the calendar you actually look at.
+> For example, reserve Tuesday and Thursday from 6-8 p.m., with up to two additional hours when needed. Choose times that fit your responsibilities and use the two-week sprints as a guide.
 
-**3. Skim Help and Resources.**
+## 3. Locate help
 
-Do not read it. Scroll it. The goal is that in week 5, when you need it, you remember the page exists. Done when you can name two things that are on it.
+Find **Canvas Inbox** in the course navigation so you know where to contact your instructor. After you post your introduction, **Help and Resources** provides detailed submission instructions and guidance you can return to throughout the course.
 
-**4. Post your introduction.**
+## 4. Post your introduction
 
-See below.
+Open [Introduction Post](https://cti-courses.instructure.com/courses/180/discussion_topics/1533) and follow its prompts. This zero-point discussion is graded complete or incomplete. Read a few introductions when they are available; replies are optional.
 
-## The one submission: Introduction post
-
-- **Format:** Canvas discussion
-- **Graded:** complete or incomplete
-
-Post a short introduction. Four things:
-
-- Who you are.
-- What field you work in.
-- Why you decided to take this course.
-- What you are most excited to learn.
-
-A few sentences each is plenty. This is not assessed on writing quality. It is here so the rest of us know who is in the room.
-
-Then read a few of the other introductions. You will be working alongside these people for ten weeks, and in Sprint 3 some of you may end up being each other's stakeholder proxies.
-
-Open the **Introduction Post** discussion in this module to submit.
-
-## Next
-
-Post your introduction, skim **Help and Resources**, then begin Sprint 1.
+After posting, continue to [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources) for any guidance you need, then begin [Sprint 1: Find the Problem Worth Solving](https://cti-courses.instructure.com/courses/180/pages/introduction-find-the-problem-worth-solving-2).

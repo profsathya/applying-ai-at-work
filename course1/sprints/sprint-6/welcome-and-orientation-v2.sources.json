@@ -1,0 +1,174 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-welcome-and-orientation-v2-welcome-and-orientation-v2",
+  "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
+  "map_sha256": "6f63926ccabc0997d147041f102475b5770c172ff78f6a6a319dba92f7534249",
+  "body_sha256": "fff234026399ee67e76017dd9bf6cc8c54cc634a459f37caab21c63f8ee099bb",
+  "frontmatter_sha256": "21b9e20c4167a688eb6feb851e5e96738986e75dd8ee3d1e5c93da3346306445",
+  "parts": [
+    {
+      "kind": "new",
+      "markdown": "# Sprint 0: Welcome and Orientation (V2)",
+      "reason": "Apply the existing Markdown title heading to the verified source title.",
+      "based_on": [
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/4"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "Start here before Sprint 1. Learn what you will build, plan your weekly work, and find the help you can return to throughout the course.",
+      "reason": "Consolidate the supplied orientation goals into the existing module header.",
+      "based_on": [
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/8",
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/9",
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/11"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "The route has five pages and one discussion. The Introduction Post is the only submission in Sprint 0: zero points, graded complete or incomplete. Plan for 4-6 hours of course work each week, following the recommended ten-week schedule.",
+      "reason": "Correct the page count and incorporate user-confirmed workload and pacing; preserve the single-submission design.",
+      "based_on": [
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/14",
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/17",
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/20",
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/23",
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/27",
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/31",
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/36"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "Begin with [Start Here](https://cti-courses.instructure.com/courses/180/pages/start-here). Keep [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources) available for submission steps and instructor contact.",
+      "reason": "Link the established entry and help pages using verified deployment identities.",
+      "based_on": [
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/14",
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/31"
+      ]
+    }
+  ],
+  "metadata_decisions": [
+    "Preserve existing type, title, slug, artifact_id, storage sprint, module, position, publication intent, points, submission and completion settings.",
+    "Use reading presentation for informational pages only. This local build makes no Canvas writes.",
+    "No new assessment or response control.",
+    "User authorized sequential progression for Sprint 0; apply it through the protected publisher on the existing module."
+  ],
+  "source_roles": {
+    "d-a5a526bfcb8ecc4c": {
+      "role": "primary_authoring",
+      "reason": "User-supplied seven-tab Sprint 0 document, supplemented by approved plan and verified existing course behavior.",
+      "coverage_decision": "Connector returns PREVIEW_WITHOUT_SUGGESTIONS and an empty comments array despite browser-visible comments. Browser review supplement records open feedback and confirms the only outstanding suggestion is blank lines. Accepted substantive edits are present in captured text. This is sufficient for the user-authorized adaptation; no claim of complete native revision history."
+    }
+  },
+  "decisions": [
+    "User approved instructional adaptation to the latest Sprint 1 tone and presentation, preserving six participant items plus the module header and all Canvas identities.",
+    "User confirmed 4-6 hours weekly and a recommended ten-week schedule with suggested two-week sprints. No due dates are authored.",
+    "User chose omission of pending instructor bio/video. Remove absent-video dependencies; preserve Canvas Inbox support. No office-hour or response-time claims.",
+    "Browser supplement reviewed all open feedback across all tabs. Accepted edits remain in captured prose; the sole unaccepted suggestion adds blank lines. Google source, suggestions, and comments are untouched.",
+    "Capture labels, dated capture notes, raw URLs, TODOs, and reviewer discussion are operator context, not learner content. Implement source notes only where consistent with user-approved plan and current verified behavior.",
+    "Use current live Sprint 1 first-half scope and authoritative September problem-spine guidance over superseded legacy course scheduling assumptions. No neighboring sprint is changed.",
+    "Preserve meaningful exact source selections; all reorganized prose, added transitions, headings, links, and presentation are explicitly labeled adaptations with based_on references.",
+    "Current Canvas wrappers/settings show no target drift. Retain existing source submission and Inbox fixes rather than restoring outdated Google Doc placeholders.",
+    "2026-09-15 visual follow-up: replace the reused Sprint 1 image with a new original illustration in the same art style; add selective blue callouts on Welcome, How This Course Works, Your First Week, and Help. Existing Start Here goals accent remains the reference. No instructional or assessment redesign.",
+    "User authorized live publication, five must_view pages and sequential item progression; preserve must_contribute discussion and existing identities. Clarify early help guidance to avoid a locked later-page dependency."
+  ],
+  "title_source": {
+    "ref": "d-a5a526bfcb8ecc4c:tab/t.0/body/4",
+    "view": "base",
+    "role": "learner",
+    "kind": "source",
+    "source_name": "capture.json",
+    "source_sha256": "a5a526bfcb8ecc4c75868a3ba18e8a71d3252779d2fe1262b000c241cd23e4be",
+    "block": {
+      "id": "d-a5a526bfcb8ecc4c:tab/t.0/body/4",
+      "location": "tab/t.0/body/4",
+      "flags": [],
+      "raw": {
+        "startIndex": 112,
+        "endIndex": 151,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 112,
+              "endIndex": 150,
+              "textRun": {
+                "content": "Sprint 0: Welcome and Orientation (V2)",
+                "textStyle": {
+                  "bold": true,
+                  "foregroundColor": {
+                    "color": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.22745098,
+                        "blue": 0.37254903
+                      }
+                    }
+                  },
+                  "fontSize": {
+                    "magnitude": 17,
+                    "unit": "PT"
+                  },
+                  "weightedFontFamily": {
+                    "fontFamily": "Georgia",
+                    "weight": 400
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 150,
+              "endIndex": 151,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {}
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "HEADING_1",
+            "direction": "LEFT_TO_RIGHT",
+            "spaceAbove": {
+              "magnitude": 10,
+              "unit": "PT"
+            },
+            "spaceBelow": {
+              "magnitude": 2,
+              "unit": "PT"
+            }
+          }
+        }
+      },
+      "kind": "paragraph",
+      "heading_level": 1,
+      "segments": [
+        {
+          "text": "Sprint 0: Welcome and Orientation (V2)",
+          "changes": [],
+          "link": null,
+          "native_link": null,
+          "format": {
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "",
+          "changes": [],
+          "link": null,
+          "native_link": null,
+          "format": {
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "text": {
+        "base": "Sprint 0: Welcome and Orientation (V2)",
+        "proposed": "Sprint 0: Welcome and Orientation (V2)"
+      }
+    },
+    "block_sha256": "6777ba4cb4e5c820a7dada8a1ac9262393932726d8423308b7eeddcd29446560",
+    "markdown": "# **Sprint 0: Welcome and Orientation (V2)**"
+  }
+}

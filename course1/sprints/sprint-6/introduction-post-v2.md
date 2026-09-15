@@ -1,6 +1,6 @@
 ---
 type: discussion
-title: 'Introduction Post'
+title: Introduction Post
 slug: introduction-post-v2
 artifact_id: course1-sprints-welcome-and-orientation-v2-introduction-post-v2
 sprint: 6
@@ -11,32 +11,35 @@ points: 0
 grading_type: pass_fail
 omit_from_final_grade: true
 completion_requirement: must_contribute
-learning_goal: Introduce your professional context and learning interests to the people you will work alongside.
+learning_goal: Introduce your professional context and learning interests to the people
+  you will work alongside.
 submission_type: discussion_topic
 publish: true
 learner_labels: true
+page_presentation: reading
+source_provenance: introduction-post-v2.sources.json
 ---
 
 # Introduction Post
 
-This is the one thing you submit in this module. It is an introduction, not an assignment, and it is graded complete or incomplete.
+This is the one thing you submit in this module. It is an introduction, and it is graded complete or incomplete.
 
+## Introduce yourself
 
-## Post
+Share a few sentences about each of these:
 
-Tell us four things:
-
-- Who you are.
-- What field you work in.
+- Your name and something interesting about yourself.
+- The field you work in, have worked in, or hope to enter.
 - Why you decided to take this course.
 - What you are most excited to learn.
+- Something that is bringing you joy.
 
-A few sentences each is plenty. This is not assessed on writing quality. It is here so the rest of us know who is in the room.
+Share only as much personal detail as you feel comfortable sharing.
 
-## Then read a few others
+Your post introduces you to the group; writing quality is not assessed. Post your introduction in this Canvas discussion to record your contribution. It is worth **zero points** and is excluded from the final grade.
 
-Read a few of the other introductions before you move on. You will be working alongside these people for ten weeks, and in Sprint 3 some of you may end up being each other's stakeholder proxies.
+## Read a few introductions
 
-## Next
+Read a few other posts when they are available. You will be learning alongside these people. Replies are welcome and optional.
 
-Skim **Help and Resources** so you know what is on it, then begin Sprint 1.
+Continue to [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources), then begin [Sprint 1: Find the Problem Worth Solving](https://cti-courses.instructure.com/courses/180/pages/introduction-find-the-problem-worth-solving-2).

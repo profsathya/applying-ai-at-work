@@ -80,7 +80,7 @@ class GuidedAssignmentTests(unittest.TestCase):
         fm['guided_assignment']['feedback_endpoint'] = 'https://example.invalid/feedback'
         self.assertTrue(any('AI feedback' in e for e in self.validate(fm, body)))
 
-    def test_reading_page_is_opt_in_and_restricted_to_pages(self):
+    def test_reading_page_is_opt_in_and_rejects_assignments(self):
         fm = frontmatter()
         fm.pop('guided_assignment'); fm.pop('delivery_mode')
         fm['page_presentation'] = 'reading'
@@ -95,6 +95,33 @@ class GuidedAssignmentTests(unittest.TestCase):
         legacy = render_artifact_document(fm, '## Route\n\nRead here.', {}, {'hosted_path':'course1/pages/test.html'})
         self.assertNotIn('class="activity reading-page"', legacy)
         self.assertNotIn('Opt-in reading layouts', legacy)
+
+    def test_reading_discussion_keeps_native_submission_and_settings(self):
+        fm = frontmatter()
+        fm.pop('guided_assignment'); fm.pop('delivery_mode')
+        fm.update(type='discussion', submission_type='discussion_topic', points=0,
+                  grading_type='pass_fail', omit_from_final_grade=True,
+                  completion_requirement='must_contribute', learner_labels=True,
+                  page_presentation='reading')
+        self.assertEqual(self.validate(fm), [])
+        original = dict(fm)
+        manifest = {'instance': {'base_url': 'https://example.invalid', 'course_id': 180}}
+        body = 'Introduce yourself.\n\n## Share\n\n- Your interests.\n'
+        result = render_artifact_document(fm, body, manifest,
+            {'hosted_path': 'course1/activities/intro.html'},
+            {'canvas_type': 'discussion', 'canvas_id': 1533})
+        self.assertEqual(fm, original)
+        self.assertIn('class="activity reading-page"', result)
+        self.assertNotIn('<h2>Overview</h2>', result)
+        self.assertEqual(result.count('<div class="submit">'), 1)
+        self.assertIn('https://example.invalid/courses/180/discussion_topics/1533', result)
+        self.assertIn('Peer replies are optional.', result)
+        self.assertNotIn('id="copy-answers"', result)
+        fm.pop('page_presentation')
+        legacy = render_artifact_document(fm, body, manifest,
+            {'hosted_path': 'course1/activities/intro.html'}, {'canvas_id': 1533})
+        self.assertNotIn('class="activity reading-page"', legacy)
+        self.assertIn('<h2>Overview</h2>', legacy)
 
     def test_publish_persists_guided_delivery_in_valid_maintenance_state(self):
         class Client:

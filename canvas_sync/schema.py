@@ -109,8 +109,10 @@ def validate_artifact(md_path: Path) -> list[str]:
 
 def validate_guided_assignment(label: object, payload: dict, body: str | None = None) -> list[str]:
     errors = []
-    if payload.get("page_presentation") and payload.get("type") != "page":
-        errors.append(f"{label}: page_presentation requires a page")
+    if "require_sequential_progress" in payload and payload.get("type") != "module_header":
+        errors.append(f"{label}: require_sequential_progress requires a module_header")
+    if payload.get("page_presentation") and payload.get("type") not in {"page", "discussion"}:
+        errors.append(f"{label}: page_presentation requires a page or discussion")
     mode = payload.get("delivery_mode")
     config = payload.get("guided_assignment")
     if mode != "guided_assignment":

@@ -1,6 +1,6 @@
 ---
 type: page
-title: 'Help and Resources'
+title: Help and Resources
 slug: help-and-resources-v2
 artifact_id: course1-sprints-welcome-and-orientation-v2-help-and-resources-v2
 sprint: 6
@@ -11,63 +11,78 @@ points: null
 submission_type: none
 publish: true
 learner_labels: true
+page_presentation: reading
+completion_requirement: must_view
+source_provenance: help-and-resources-v2.sources.json
 ---
 
 # Help and Resources
 
-> Bookmark this page. It has how-tos, definitions of every term the course uses, and how to reach your instructor. You are not expected to read it now. You are expected to find it later.
+Bookmark this page for submission steps, instructor contact, and key terms. Skim it during orientation, then return to the section you need.
 
-## Submitting your work in Canvas
+## Contact your instructor
 
-Open the assignment from the course homepage or Modules, then select **Start Assignment**. Follow the submission type shown: paste your response for text entry, or choose your saved file for a file upload. Select **Submit Assignment**, then check that Canvas shows a submitted status and submission details. Saving a response inside an activity does not submit it to Canvas. If Canvas offers **New Attempt**, use it to submit a revision and check the new submission details.
+Open **Canvas Inbox**, select this course, and choose your instructor as the recipient. Include the activity title, your question, and what you have tried. If you are falling behind, explain where you stopped so you can discuss a next step.
 
+## Submit and check your work
 
-## Setting up and using the Dojo
+Open the activity from the course homepage or **Modules** and follow its submission directions.
 
-Open the Dojo from the link in the relevant lab and follow that lab's instructions. Keep the lab page available so you can return to its prompts and submission directions. Sprint 1's currently available first half is completed without AI.
+- **Discussion:** post in the Canvas discussion and check that your post appears. Sprint 0 uses this method.
+- **Text entry:** select **Start Assignment**, paste or type your response, then select **Submit Assignment**. If an activity has a **Copy my answers** control, use it to copy your work into Canvas. If copying fails, select and copy the response text manually.
+- **File upload:** select **Start Assignment**, choose the requested file, and select **Submit Assignment**.
 
+For assignments, check the submitted status and submission details. Saving in an activity, copying answers, or downloading a file is preparation; the Canvas submission step turns it in. If Canvas offers **New Attempt**, use it to submit a revision and check the updated details.
 
-## Downloading and uploading your JSON
+## Save and return to activity work
 
-A JSON file stores your activity responses in a structured text format so they can be reviewed together. In an interactive activity, save your responses and use its download/export control to save the JSON file. Return to the Canvas assignment, choose file upload, select that file, and submit it. Check the Canvas submission details; downloading the file alone does not turn it in.
+Sprint 1 guided activities save drafts in the browser you use. Keep a copy of important work in your own document before switching browsers or devices. Return to the same activity to continue, then submit through Canvas when the activity asks you to.
 
+## Use AI tools when an activity introduces them
+
+> The available first half of Sprint 1 is completed **without AI**. When a later activity calls for the Dojo or another AI partner, open it from that activity and follow its setup directions. Keep the activity page available so you can return to the prompts and submission instructions.
+
+## Download a JSON file only when requested
+
+A **JSON file** stores responses in a structured text format so they can be reviewed together. If an activity asks for a JSON upload:
+
+1. Save your responses in the activity and use its download or export control.
+2. Keep the downloaded `.json` file where you can find it.
+3. Open the Canvas assignment, choose file upload, select that file, and submit.
+4. Check the submission details.
+
+The available Sprint 1 guided activities use Canvas text entry instead. Follow each activity's instructions for the required format.
 
 ## Key terms
 
-Every term in this course, in plain language. You will meet several of these before they are formally taught. That is normal, and this is where you look them up.
+**Sprint.** A stage of course work, recommended to take two weeks. There are five, plus this orientation.
 
-**Sprint.** A two-week block of the course. There are five, plus this onboarding module. Each sprint produces one document.
+**Artifact.** Something you create as evidence of your thinking, such as a table, log, problem frame, or report. An activity tells you which work to submit.
 
-**Artifact.** Anything you produce and turn in. The five sprint documents are the artifacts of this course. It is just a general word for "the thing you made."
+**Frame, framing.** Defining the problem you are investigating before deciding how to solve it.
 
-**Frame, framing.** Deciding what the problem actually is, before trying to solve it. Two people can look at the same situation and frame it completely differently, and the framing determines what solutions are even possible.
+**Reframing.** Revising that definition as you learn more.
 
-**Reframing.** Changing that decision once you learn something new. Reframing is not failure. It is most of the work in this course.
+**Root cause.** An underlying reason something happens. A symptom, such as a late report, points to something to investigate; it does not establish the cause.
 
-**Root cause.** The underlying reason something happens, as opposed to the symptom you noticed. "The report is always late" is a symptom. Why it is always late is the root cause.
+**The 3Cs: Context, Choices, Confirmation.** Give AI useful context, compare options and tradeoffs, and identify what a person or source must confirm before you act.
 
-**The 3Cs: Context, Choices, Confirmation.** The pattern for directing AI well, used in Sprint 2. Context: give the AI enough real detail about your situation to be useful. Choices: ask for a range of options and the tradeoffs, not one recommendation. Confirmation: name what still needs to be checked by a person or a source before you would act on it.
+**Stakeholder.** Someone affected by the problem or a possible solution, including people who do the work or influence decisions.
 
-**Stakeholder.** Anyone affected by the problem or by any solution to it. Includes people who would have to change how they work, people who control resources, and people who can quietly block something.
+**Stakeholder map.** A record of those people, their needs, constraints, and relationships.
 
-**Stakeholder map.** A picture of who those people are and how they relate to the problem: what each one needs, what constrains them, and where their needs conflict with each other.
+**Integrated problem document.** The final argument about your problem, drawing on work across the five sprints and showing how your thinking changed.
 
-**Integrated problem document.** The final document, built across all five sprints. It lays out your problem as one argument and traces how your thinking changed from week 1 to week 10. This is what you walk out with.
+**Readiness report.** A short account of what you are now equipped to do, supported by evidence of your progress.
 
-**Readiness report.** The short companion piece to the integrated problem document. It says what you are now equipped to do that you were not equipped to do in week 1.
+**Superagency.** Taking on work that was previously beyond your reach.
 
-**Superagency.** Taking on work you would not otherwise have taken on. Being able to point at something and show it was out of reach before.
+**Human Value.** The context, relationships, judgment, and responsibility you bring to the work.
 
-**Human Value.** What you contribute that AI does not: the context, the relationships, the judgment calls.
+**Symbiotic Thinking.** Working with AI as a thinking partner while contributing your own knowledge and judgment.
 
-**Symbiotic Thinking.** Treating AI as a partner in thinking rather than as a faster way to do what you already do. The practice underneath Superagency and Human Value.
+**Dojo.** A structured AI coaching environment that uses questions to help you examine your thinking. Open it when an activity asks you to.
 
-**Dojo.** A structured AI coaching setup used in this course. It is built to make you think harder, not to do the work for you: it asks one question at a time, pushes back on vague answers, and hands decisions back to you. Introduced in Sprint 1.
+**UMPIRE.** Understand, Map, Plan, Implement, Review, Evaluate. You may encounter this sequence in the Dojo; CIS 501 focuses on understanding and mapping the problem.
 
-**UMPIRE.** A six-step problem-solving sequence: Understand, Map, Plan, Implement, Review, Evaluate. You may see the Dojo refer to it. CIS 501 lives in the first two steps, understanding the problem and mapping it, because those are the steps this course argues are usually skipped.
-
-## Getting help from your instructor
-
-Use the Canvas **Inbox** to select this course and your instructor as the recipient. Include the activity title, your question, and what you have tried.
-
-Reach out earlier than feels necessary. Asking a question in week 2 is normal. Asking the same question in week 7, after six weeks of being stuck, is a much harder position to recover from.
+When you have finished orientation, begin [Sprint 1: Find the Problem Worth Solving](https://cti-courses.instructure.com/courses/180/pages/introduction-find-the-problem-worth-solving-2). Keep this page available for later questions.

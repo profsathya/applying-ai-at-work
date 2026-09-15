@@ -1,0 +1,179 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-welcome-and-orientation-v2-start-here-v2",
+  "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
+  "map_sha256": "6f63926ccabc0997d147041f102475b5770c172ff78f6a6a319dba92f7534249",
+  "body_sha256": "b279e51d8c0b2ed271c6042aea42150dd656a1d8de8023b4644b80f1f30ce8f9",
+  "frontmatter_sha256": "4cd8f80cf990b4fed70158d7ec15d1405b371df3d0c9ac58b75b235da6ccbf49",
+  "parts": [
+    {
+      "kind": "new",
+      "markdown": "# Start Here",
+      "reason": "Apply the existing Markdown title heading to the verified source title. Sequential-progression follow-up: do not require access to the final Help page before the introduction contribution.",
+      "based_on": [
+        "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/4"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "Welcome to CIS 501: Reframing Problems with AI. Use this orientation to understand the course, plan time for your work, and meet the people learning alongside you.",
+      "reason": "Replace the ambiguous page count with a direct purpose; respect the accepted removal of the broad no-AI-experience promise. Sequential-progression follow-up: do not require access to the final Help page before the introduction contribution.",
+      "based_on": [
+        "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/8",
+        "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/10",
+        "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/11",
+        "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/12"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "## By the end of orientation\n\nYou will be ready to:\n\n- Explain what the integrated problem document will show and how the five sprints contribute to it.\n- Plan 4-6 hours of weekly work within the recommended ten-week schedule.\n- Recognize how AI partnership and your own context and judgment support the work.\n- Find submission guidance and contact your instructor when you need help.",
+      "reason": "Place the supplied goals at the official entry point, as suggested in review, using observable and plain-language outcomes. Sequential-progression follow-up: do not require access to the final Help page before the introduction contribution.",
+      "based_on": [
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/8",
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/9",
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/10",
+        "d-a5a526bfcb8ecc4c:tab/t.0/body/11"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "## Your route through Sprint 0\n\nThis module has **five pages and one discussion**, including this page:\n\n1. **Start Here:** the route and goals you are reading now.\n2. **[Welcome](https://cti-courses.instructure.com/courses/180/pages/welcome):** what the course helps you do and what you will have by the end.\n3. **[How This Course Works](https://cti-courses.instructure.com/courses/180/pages/how-this-course-works):** the sprint roadmap, weekly rhythm, and submissions.\n4. **[Your First Week](https://cti-courses.instructure.com/courses/180/pages/your-first-week):** a checklist for getting ready.\n5. **[Introduction Post](https://cti-courses.instructure.com/courses/180/discussion_topics/1533):** your one orientation submission, graded complete or incomplete, worth zero points.\n6. **[Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources):** submission steps, key terms, and instructor contact. Read it after posting your introduction, then return when needed.",
+      "reason": "Map all six existing items in Canvas order; make the reusable help page and single submission explicit without duplicating the discussion prompts. Sequential-progression follow-up: do not require access to the final Help page before the introduction contribution.",
+      "based_on": [
+        "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/8",
+        "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/10",
+        "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/11",
+        "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/12",
+        "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/13",
+        "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/14"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "Continue to [Welcome](https://cti-courses.instructure.com/courses/180/pages/welcome).",
+      "reason": "Provide a working next-page link instead of a repeated description. Sequential-progression follow-up: do not require access to the final Help page before the introduction contribution.",
+      "based_on": [
+        "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/16"
+      ]
+    }
+  ],
+  "metadata_decisions": [
+    "Preserve existing type, title, slug, artifact_id, storage sprint, module, position, publication intent, points, submission and completion settings.",
+    "Use reading presentation for informational pages only. This local build makes no Canvas writes.",
+    "No new assessment or response control."
+  ],
+  "source_roles": {
+    "d-a5a526bfcb8ecc4c": {
+      "role": "primary_authoring",
+      "reason": "User-supplied seven-tab Sprint 0 document, supplemented by approved plan and verified existing course behavior.",
+      "coverage_decision": "Connector returns PREVIEW_WITHOUT_SUGGESTIONS and an empty comments array despite browser-visible comments. Browser review supplement records open feedback and confirms the only outstanding suggestion is blank lines. Accepted substantive edits are present in captured text. This is sufficient for the user-authorized adaptation; no claim of complete native revision history."
+    }
+  },
+  "decisions": [
+    "User approved instructional adaptation to the latest Sprint 1 tone and presentation, preserving six participant items plus the module header and all Canvas identities.",
+    "User confirmed 4-6 hours weekly and a recommended ten-week schedule with suggested two-week sprints. No due dates are authored.",
+    "User chose omission of pending instructor bio/video. Remove absent-video dependencies; preserve Canvas Inbox support. No office-hour or response-time claims.",
+    "Browser supplement reviewed all open feedback across all tabs. Accepted edits remain in captured prose; the sole unaccepted suggestion adds blank lines. Google source, suggestions, and comments are untouched.",
+    "Capture labels, dated capture notes, raw URLs, TODOs, and reviewer discussion are operator context, not learner content. Implement source notes only where consistent with user-approved plan and current verified behavior.",
+    "Use current live Sprint 1 first-half scope and authoritative September problem-spine guidance over superseded legacy course scheduling assumptions. No neighboring sprint is changed.",
+    "Preserve meaningful exact source selections; all reorganized prose, added transitions, headings, links, and presentation are explicitly labeled adaptations with based_on references.",
+    "Current Canvas wrappers/settings show no target drift. Retain existing source submission and Inbox fixes rather than restoring outdated Google Doc placeholders.",
+    "2026-09-15 visual follow-up: replace the reused Sprint 1 image with a new original illustration in the same art style; add selective blue callouts on Welcome, How This Course Works, Your First Week, and Help. Existing Start Here goals accent remains the reference. No instructional or assessment redesign.",
+    "User authorized live publication, five must_view pages and sequential item progression; preserve must_contribute discussion and existing identities. Clarify early help guidance to avoid a locked later-page dependency."
+  ],
+  "title_source": {
+    "ref": "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/4",
+    "view": "base",
+    "role": "learner",
+    "kind": "source",
+    "source_name": "capture.json",
+    "source_sha256": "a5a526bfcb8ecc4c75868a3ba18e8a71d3252779d2fe1262b000c241cd23e4be",
+    "block": {
+      "id": "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/4",
+      "location": "tab/t.xz447vcms4wv/body/4",
+      "flags": [],
+      "raw": {
+        "startIndex": 96,
+        "endIndex": 107,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 96,
+              "endIndex": 106,
+              "textRun": {
+                "content": "Start Here",
+                "textStyle": {
+                  "bold": true,
+                  "foregroundColor": {
+                    "color": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.22745098,
+                        "blue": 0.37254903
+                      }
+                    }
+                  },
+                  "weightedFontFamily": {
+                    "fontFamily": "Georgia",
+                    "weight": 400
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 106,
+              "endIndex": 107,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {}
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "HEADING_1",
+            "direction": "LEFT_TO_RIGHT",
+            "spaceAbove": {
+              "magnitude": 10,
+              "unit": "PT"
+            },
+            "spaceBelow": {
+              "magnitude": 2,
+              "unit": "PT"
+            }
+          }
+        }
+      },
+      "kind": "paragraph",
+      "heading_level": 1,
+      "segments": [
+        {
+          "text": "Start Here",
+          "changes": [],
+          "link": null,
+          "native_link": null,
+          "format": {
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "",
+          "changes": [],
+          "link": null,
+          "native_link": null,
+          "format": {
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "text": {
+        "base": "Start Here",
+        "proposed": "Start Here"
+      }
+    },
+    "block_sha256": "1c6c290e1baf7e611e2fa5d0e0c5816faba7b896507c4306f5cda6cee94265af",
+    "markdown": "# **Start Here**"
+  }
+}

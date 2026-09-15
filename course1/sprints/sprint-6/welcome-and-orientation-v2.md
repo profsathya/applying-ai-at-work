@@ -10,12 +10,14 @@ position: 1
 points: null
 submission_type: none
 publish: true
+require_sequential_progress: true
+source_provenance: welcome-and-orientation-v2.sources.json
 ---
 
 # Sprint 0: Welcome and Orientation (V2)
 
-Start here before Sprint 1. Four short pages cover what the course is, how it is paced, how you will work with AI as a thinking partner, and where to go when you are stuck. Work through them in order.
+Start here before Sprint 1. Learn what you will build, plan your weekly work, and find the help you can return to throughout the course.
 
-One thing is submitted from this module: a short introduction post, graded complete or incomplete. You do not need to choose your problem, set up any AI tool, or write down a goal yet. All of that is Sprint 1.
+The route has five pages and one discussion. The Introduction Post is the only submission in Sprint 0: zero points, graded complete or incomplete. Plan for 4-6 hours of course work each week, following the recommended ten-week schedule.
 
-The last page, Help and Resources, holds the how-tos and key terms. Skim it now and come back to it whenever you need it.
+Begin with [Start Here](https://cti-courses.instructure.com/courses/180/pages/start-here). Keep [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources) available for submission steps and instructor contact.

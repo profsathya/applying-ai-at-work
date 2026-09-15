@@ -152,6 +152,51 @@ class StructuralClient:
 
 
 class StructuralChangeTests(unittest.TestCase):
+    def test_header_applies_and_confirms_explicit_sequential_progression(self):
+        from unittest.mock import Mock
+        import yaml
+        for desired in (True, False):
+            with self.subTest(desired=desired), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp).resolve()
+                md = root / 'course1/sprints/sprint-0/header.md'
+                manifest = root / 'course1/manifests/production.json'
+                write_manifest(manifest)
+                md.parent.mkdir(parents=True)
+                fm = dict(type='module_header', title='Orientation', slug='orientation',
+                          artifact_id='orientation', sprint=0, module='Orientation', position=1,
+                          points=None, submission_type='none', publish=False,
+                          require_sequential_progress=desired)
+                md.write_text('---\n' + yaml.safe_dump(fm) + '---\n\nOrientation.\n')
+                client = Mock()
+                client.update_module.return_value = {'id': 55, 'require_sequential_progress': desired}
+                with chdir(root), patch.object(push.CanvasClient, 'from_env', return_value=client), patch.object(push, 'resolve_or_create_module', return_value=55):
+                    result = push.push_artifact(md, manifest, state_dir=root/'state')
+                client.update_module.assert_called_once_with(55, {'require_sequential_progress': desired})
+                self.assertEqual(result['canvas_module_id'], 55)
+                client.add_module_item.assert_not_called()
+
+    def test_unconfirmed_module_progression_does_not_record_success(self):
+        from unittest.mock import Mock
+        import yaml
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            md = root / 'course1/sprints/sprint-0/header.md'
+            manifest = root / 'course1/manifests/production.json'
+            write_manifest(manifest)
+            md.parent.mkdir(parents=True)
+            fm = dict(type='module_header', title='Orientation', slug='orientation',
+                      artifact_id='orientation', sprint=0, module='Orientation', position=1,
+                      points=None, submission_type='none', publish=False,
+                      require_sequential_progress=True)
+            md.write_text('---\n' + yaml.safe_dump(fm) + '---\n\nOrientation.\n')
+            client = Mock()
+            client.update_module.return_value = {'id': 55, 'require_sequential_progress': False}
+            with chdir(root), patch.object(push.CanvasClient, 'from_env', return_value=client), patch.object(push, 'resolve_or_create_module', return_value=55):
+                with self.assertRaisesRegex(ValueError, 'did not confirm'):
+                    push.push_artifact(md, manifest, state_dir=root/'state')
+            state = root/'state/course1/production.json'
+            self.assertTrue(not state.exists() or not json.loads(state.read_text())['artifacts'])
+
     def test_assignment_payload_preserves_grade_exclusion(self):
         from unittest.mock import Mock
         client = Mock()
