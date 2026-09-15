@@ -2043,3 +2043,70 @@ prompts on the v5.1 Dojo Lab page marked parked. Resume conditions: the course d
 exists, and a frame from someone other than Leslie, with its audit done, is available.
 
 Provenance: Leslie, the pause and its reasons; Claude, the record.
+
+## 15 September, night: Leslie's second pass, applied as v5.2
+
+`Sprint-1-working-draft-v5.1_1.docx`: 17 comments and tracked changes on First frames,
+the Goal Plan, and the Reflection, plus two general notes. Every page has now had at least
+one pass from her. Tracked changes applied as written (the 3a, 4a, 4b, and part 5
+rewordings; "find your assumptions" as the part 6 title and its opening paragraph; the
+Goal Plan's "everything that changed as a result of the Dojo Lab"; Part 3 retitled "which
+assumptions should you investigate first"). Dispositions:
+
+- **C0, general.** (a) Colons standing in for em dashes: a pass over every
+  participant-facing sentence; colons now survive only as labels (Prompt, Criteria, the
+  table column names, "3a. Who:"). Added to the conventions. (b) Example consistency: two
+  core examples now run the sprint, account handovers and the garden plot, and a NOTE at
+  the head of the draft says where each appears. The incidental examples that had crept
+  in from Leslie's own run (the budget condition in part 2, the agenda claims in part 6,
+  "financial peace" in part 1 and the concept check) are gone, replaced with handover or
+  garden versions. This was the fixture leaking into the material.
+- **C1, does "guidance, then example, then a box" belong in Welcome?** Yes. Reduced to one
+  "remember" sentence here and owed to Sprint 0 as how assignments work.
+- **C2 and C10, walk them through all their candidates, and let them see it all
+  together.** First frames now goes by parts rather than by candidate: each of the seven
+  boxes holds that part for every candidate, labeled, so three to five frames are written
+  on one page. Section 8 is gone. The see-it-together output needs a copy-all action at
+  the foot of the page (Sathya's "Copy my summary"); Jeremy's question. Marked [OPEN] for
+  Leslie to confirm the shape, since 15 September's earlier answer was "scaffold in the
+  Log" and this supersedes it.
+- **C3, do we call them candidates earlier?** The Introduction's key terms define
+  candidate problems. Get underneath now also names them at the pick step.
+- **C4, the part openers read machine-like.** Every part in First frames now opens with a
+  full sentence in the cadence of the reviewed pages ("Part 2 is the gap between now and
+  the goal, in one or two sentences, and you already have it").
+- **C5, the consequence/moment example needs context.** Now the handover case: "which
+  means clients repeat their history" is a consequence; "the instant a third person needs
+  to know who owns the account" is the moment.
+- **C6, guidance and an example per line for finding assumptions; list first, then mark.**
+  Done. "Finding them" defines an assumption and walks the handover frame part by part,
+  one assumed line each; "Marking them" follows. Her "somewhere in between" is an [OPEN]
+  with a three-status proposal (seen, told, assumed).
+- **C7, are the claim kinds comprehensive, and are they needed now?** They came from the
+  exchange in her run and nothing in Sprint 1 uses them after part 6. Moved to Sprint 2,
+  where they decide how each assumption gets checked. Removed from the template, both
+  worked examples (the tables are now From, Assumption, Status, Who could tell me), the
+  Dojo prompt, the Goal Plan, and concept check question 5, which is now moment versus
+  consequence.
+- **C8, part 7's first sentence and whether part 7 is needed now.** Rewritten without the
+  kinds. Kept, since it is her 14 September design and it is small by design.
+- **C9, "ask why" to what; financial peace.** Now starts from the part 5 sentence,
+  which is what she did in her run. "Better client communication" replaces financial
+  peace here and in concept check question 6.
+- **C11, everything from the Goal Plan on is one problem.** The page now opens by saying
+  so.
+- **C12, does the course build on all three parts?** No. Version two is what it builds
+  on; Parts 2 and 3 are for the instructor and the hand-off. Said in the opening.
+- **C13, why stress the complete table here?** Reduced to "bring part 6 up to date."
+- **C14, why Part 2, and could the Dojo generate it?** Why: the instructor cannot see the
+  Dojo session, and this is the evidence the frame was tested and that the participant
+  made the changes. How: the parked module's Round 4 recap is the raw material and the
+  participant verifies it, which is the v0.4 read-back plan. Both now in the text.
+- **C15, does Part 3 belong in Sprint 2?** Kept as the hand-off with her language, and
+  [OPEN] to move to Sprint 2's opening activity once Sprint 2 is drafted.
+- **C16, the Reflection repeats what they already did.** The choice and what-changed
+  prompts are cut; the Reflection now asks how it changed (what AI found, what you
+  contributed, how you decided what to accept) and what you carry forward unsure.
+
+Provenance: Leslie, every comment and tracked change; Claude, the by-parts shape, the
+assumptions walk-through, the example replacements, the colon pass, the kinds move.
