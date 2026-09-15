@@ -1989,3 +1989,41 @@ Claude raised five concerns after applying her first pass; her answers, and what
   redundant with the sentence before it.
 
 Provenance: Leslie, all five answers and the wording; Claude, the concerns and the edits.
+
+## 15 September, later: the Dojo Lab prompts tested, and the tool question reopened
+
+Leslie ran the Sprint 1 test prompt on her own (revised) problem frame in ChatGPT.
+Findings, in order:
+
+1. **The bare prompt produces an exhaustive audit**, about 1,400 words, because it asks
+   five open questions and each invites a list of every claim. It found what it should:
+   the empty 4b as the central weakness, "knowing on demand will help make better
+   decisions" reclassified from prediction to causal bet, "people we owe reports to" as an
+   affected party with no cost, and her own time in 4a as an uncounted cost. The 3b cost
+   claims reached the audit, which was the untested part. But at first-draft stage an
+   exhaustive audit is the wrong ask; most claims are unverified by design.
+2. **A capped prompt works.** Readiness verdict (yes or not yet, one reason), three
+   ranked findings one or two lines each, one question a person in the situation would
+   ask. About 150 words, and correct.
+3. **One at a time needs two more instructions**: name the finding at the top of each
+   question, and move on only when the fix is written or the claim is deliberately left
+   unverified. Without the second, it acknowledged what was still missing and moved on
+   anyway, because the prompt told it to.
+4. **All of that is already in Sathya's Dojo core method** (one question at a time, under
+   120 words, make the learner say the specific change, never rewrite). So the
+   conversational discipline belongs in the core and only the frame-specific standard
+   belongs in a module. Claude drafted a Problem Frame Dojo module in his format: Round 1
+   readiness (Auditor), Round 2 fix one at a time (Challenger), Round 3 widen (Framer),
+   Round 4 move on and recap (Sensei). The widen prompt is capped the same way: three
+   framings, two lines each.
+5. **The tool question is now course-wide**, not Sprint 1's. Sathya's current Dojo is the
+   learner's own chatbot project plus one linked Google Doc (Dojo, Course, Syllabus
+   tabs). No API key. That doc does not exist for course1 and has to be created and
+   maintained; see `dojo-setup-note.md`, written for Jeremy at Leslie's request.
+
+Not yet answered: which of the findings on Leslie's frame were new to her (the top one,
+the empty 4b, she had marked herself), which decides how much the test step earns. The
+Dojo Lab page in v5.1 stays as is until the module has been run once under the core.
+
+Provenance: Leslie, the test and both findings; Claude, the capped prompt, the module,
+the reading of the Dojo material, the note.
