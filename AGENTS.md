@@ -17,6 +17,9 @@ This repo builds the "Applying AI at Work" certificate for CTI and De Anza. It h
 
 ## Style Conventions
 
+- For new participant-facing content and substantive revisions, default to **the approved Sprint 1 authoring workflow and presentation** in [docs/AUTHORING_PRESENTATION.md](docs/AUTHORING_PRESENTATION.md). Inspect the relevant examples from course 180's six `course1/sprints/sprint-12/` participant pages before drafting. They establish presentation quality, not the learning design of a new sprint.
+- Write concise, connected prose with direct openings, consolidated directions, descriptive sections, selective cards, purposeful visuals, and responses immediately after their instructions. Remove repeated framing and procedures while preserving the reasoning needed for independent work. Use the approved illustration family where useful, with text alternatives and credits; neither images on every page nor a fixed three-step structure are required.
+- Use the same production sequence: review source and learning requirements, consolidate content, choose supported layout, reuse or create suitable visuals, render, inspect desktop/mobile, revise, validate, and record. Exact-wording and mechanical requests keep their narrow boundaries; this default adds no publishing permission.
 - No em dashes in newly authored prose. Use hyphens, colons, or sentence breaks. Preserve human-authored punctuation in document-sourced passages verified by `source_provenance`; see `docs/DOCUMENT_INTAKE.md`.
 - Use lowercase kebab-case slugs.
 - Write for working professionals, not undergraduates. Never address participants as "students."

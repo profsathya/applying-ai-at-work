@@ -7,6 +7,8 @@ description: Build a complete course from pasted context or a course context spe
 
 Build a full course worth of Canvas artifact Markdown for an existing target course.
 
+Before substantive drafting, read [the presentation reference](../../../docs/AUTHORING_PRESENTATION.md) and inspect the relevant approved examples. Apply **the approved Sprint 1 authoring workflow and presentation** through the authoring contract below; the new course's supplied design determines learning and assessment requirements.
+
 This workflow is intentionally single-pass at the local file layer: generate the course files first, validate them, show the human what changed, and only then consider Canvas writes.
 
 ## Required Inputs

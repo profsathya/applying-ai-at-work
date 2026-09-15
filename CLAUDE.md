@@ -32,6 +32,12 @@ Canvas directly during editing.
    styles, or external embeds. No em dashes anywhere; use hyphens, colons, or
    sentence breaks.
 
+## Authoring default
+
+For new participant-facing prose and substantive revisions, use **the approved Sprint 1 authoring workflow and presentation**. Read [the authoring contract](docs/AUTHORING.md), [the presentation reference](docs/AUTHORING_PRESENTATION.md), and the relevant approved examples before drafting. Reproduce their concise connected prose, direct openings, consolidated directions, clear sections, selective cards, useful visuals, and adjacent responses. Preserve the requested learning and assessment requirements; do not impose an image quota or a three-step template. Exact-wording and mechanical edits keep their narrow scope.
+
+Follow the reference's render, desktop/mobile inspection, revision, and validation sequence within your role. A content editor restricted to existing Markdown returns asset or renderer needs to the maintainer; it does not expand that role's permissions. Do not claim visual verification when no rendered review was performed.
+
 ## Validate before opening a PR
 
 When a Python environment is available, validate the edited file:

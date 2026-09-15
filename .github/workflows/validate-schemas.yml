@@ -3,6 +3,12 @@ name: Validate schemas
 on:
   pull_request:
     paths:
+      - 'AGENTS.md'
+      - 'CLAUDE.md'
+      - 'README*.md'
+      - 'docs/**'
+      - '.agents/**'
+      - '.codex/**'
       - '*/sprints/**'
       - '*/manifests/**'
       - '*/homepage.yaml'
@@ -15,6 +21,12 @@ on:
   push:
     branches: [main]
     paths:
+      - 'AGENTS.md'
+      - 'CLAUDE.md'
+      - 'README*.md'
+      - 'docs/**'
+      - '.agents/**'
+      - '.codex/**'
       - '*/sprints/**'
       - '*/manifests/**'
       - '*/homepage.yaml'

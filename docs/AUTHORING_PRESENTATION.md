@@ -1,12 +1,14 @@
 # Supported page presentation
 
-Use this reference when arranging a participant page or adding an instructional visual. Teaching and review principles live in the shared skills linked from [AUTHORING.md](AUTHORING.md).
+**The approved Sprint 1 authoring workflow and presentation is the default for new participant-facing pages and substantive revisions.** Read this reference and inspect the relevant examples below before drafting, even when the request does not mention style or visuals. Teaching and review principles live in the shared skills linked from [AUTHORING.md](AUTHORING.md).
+
+Match the approved pages' reading experience: concise connected prose, direct openings, consolidated directions, descriptive sections, selective cards, purposeful visuals, and responses immediately after instructions. Use the same production sequence: review source and learning requirements → consolidate content → choose supported layout → reuse or create suitable visuals → render → inspect desktop/mobile → revise → validate and record. Protected wording and mechanical changes retain their existing boundaries.
 
 ## Reference page and delivery boundary
 
 [Start your list and get underneath it](../course1/sprints/sprint-12/start-your-list-and-get-underneath-it-v2.md) demonstrates a direct opening, grouped instructions, an illustrative process diagram, and an adjacent response. The user approved this visual direction; participant learning has not been measured. Its three steps and one example fit that activity, not every page.
 
-Use the approved Sprint 1 V2 set as examples of different instructional jobs:
+The reference is the six participant-facing pages in course 180's `course1/sprints/sprint-12/`, approved in the September 11 visual pilot and identified below. These examples establish presentation quality; later course-design decisions and the supplied requirements determine the content of a new sprint. Inspect the examples matching the instructional jobs you are authoring:
 
 | Page pattern | Reference | What to carry forward |
 | --- | --- | --- |
@@ -81,7 +83,7 @@ Before choosing an image, state its instructional purpose, subject or relationsh
 
 For the approved visual family, adapt this brief to the actual subject:
 
-> Create a professional editorial textbook illustration for working adults. Show [specific scene or comparison] to help the reader [understand or do something specific]. Use restrained navy outlines, muted slate blue and teal, a warm cream background, light paper texture, natural adult proportions, and uncluttered composition. Keep a consistent style with the supplied course reference. Use a wide composition for a context scene; choose the aspect ratio for the information. Omit logos, decorative interface elements, and unreadable small text. Keep labels short and large only when they clarify the comparison. This is an illustrative example, not documentary evidence.
+> Create an editorial illustration matching the approved Sprint 1 visual family for working adults. Show [specific scene or comparison] to help the reader [understand or do something specific]. Use restrained navy outlines, muted slate blue and teal, a warm cream background, light paper texture, natural adult proportions, and uncluttered composition. Inspect and use the relevant existing course illustration as a reference when the tool supports it. Use a wide composition for a context scene; choose the aspect ratio for the information. Omit logos, decorative interface elements, and unreadable small text. Keep labels short and large only when they clarify the comparison. This is an illustrative example, not documentary evidence.
 
 Inspect the actual result for misleading details, incorrect labels, and mobile legibility before integration. Prefer semantic text for dense labels or relationships. Save the final prompt, tool/source, creation date, asset filename, and any delivery conversion in a local provenance file. Include visible AI disclosure for generated scenes or verified creator/source/license credit for outside images. No fixed image quota applies.
 

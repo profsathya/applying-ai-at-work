@@ -7,6 +7,8 @@ description: Build a sprint/module from human context, a Google Doc file link, D
 
 Build one sprint worth of artifacts for an existing course.
 
+Before substantive drafting, read [the presentation reference](../../../docs/AUTHORING_PRESENTATION.md) and inspect the relevant approved examples. Apply **the approved Sprint 1 authoring workflow and presentation** through the authoring contract below; the new sprint's supplied design determines learning and assessment requirements.
+
 ## Required Inputs
 
 - Target course: any existing local course directory, for example `course1`, `course2`, `course3`, or a named course key
