@@ -1966,3 +1966,26 @@ where to start.
 Provenance: Leslie, every comment and tracked change; Claude, the dispositions, the
 walk-through restructure, the reference-page cut, the example list's home and other
 headings, the concept check reword.
+
+## 15 September: Leslie's answers to Claude's five concerns on v5.1
+
+Claude raised five concerns after applying her first pass; her answers, and what changed:
+
+- **The walk-through tilts the choice toward frame 1.** Agreed; fix by giving the other
+  frames the same scaffold. Part C of the Candidate Log will repeat the seven parts in
+  writing order with the one-line guidance per slot, and nothing more, so it does not
+  become cumbersome. First frames section 8 now says so; "start with the candidate whose
+  gap you are surest of" is gone ("pick any of your candidates").
+- **Dropping the gap rewrite bets against her 14 September finding.** Her answer: the
+  instructions she followed were not specific about how to write the gap, and the rewrite
+  felt unnatural. The bet stands; watch the first real submissions for process-shaped gaps.
+- **The size questions in Choose.** She will test the Dojo activities today; decided then.
+- **A split of the Dojo Lab into test-and-widen and choose.** Same: after her test.
+- **The route** stays in the Introduction. **The (?) convention is dropped** from the
+  sprint: it was not translating, and marking uncertainty belongs to the frame's claims
+  table, not to every activity. The Introduction's "How to work" no longer asks for it.
+  **The Introduction opens "This sprint is about choosing a problem you can investigate
+  through this course,"** and "you do not need a problem picked out yet" is cut as
+  redundant with the sentence before it.
+
+Provenance: Leslie, all five answers and the wording; Claude, the concerns and the edits.

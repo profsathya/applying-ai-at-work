@@ -1,6 +1,6 @@
 ---
 purpose: Sprint 1 whole-sprint working draft on the 14 September resequence, for Leslie's review and then the cut
-status: draft v5.1, 14 September 2026. Leslie's first-pass review (23 comments, tracked changes through the Dojo Lab's Choose step) applied. Goal Plan and Reflection not yet reviewed by her.
+status: draft v5.1, 14 September 2026, with Leslie's 15 September follow-ups. Leslie's first-pass review (23 comments, tracked changes through the Dojo Lab's Choose step) applied. Goal Plan and Reflection not yet reviewed by her.
 supersedes: sprint-1-half-one-working-draft-v4.md (frozen at v4.2) and sprint-1-half-two-working-draft-v1.md (v1.1), for the whole of Sprint 1
 storage: replaces the sprint-12 first half and continues it; positions 1 to 10
 ---
@@ -41,7 +41,7 @@ The Introduction lays out the route through the sprint, week by week.
 
 *Page. Position 2.*
 
-You will start by choosing a problem you can investigate through this course. You will begin with your own experience; you do not need a problem picked out yet.
+This sprint is about choosing a problem you can investigate through this course. You will begin with your own experience.
 
 ### Sprint 1 key terms
 
@@ -89,7 +89,7 @@ Two activities ask you to work without AI: the brainstorm and the table undernea
 
 ### How to work
 
-Use rough, specific notes. Mark uncertainty with **(?)** and say so honestly when a search produces nothing. You are choosing something to investigate, not proving its cause.
+Use rough, specific notes, and say so honestly when a search produces nothing. You are choosing something to investigate, not proving its cause. The frame has its own way of marking what you are unsure of; until then, a guess written as a guess is fine.
 
 Keep everything you write, including items you set aside. The Reflection compares your first frames with your final one, and your set-aside list is where you go if your choice does not survive.
 
@@ -325,7 +325,7 @@ Answer all six from your own thinking, without AI. Review each explanation; if i
 
 Write version one of a frame for each of your three to five candidates. This page walks you through one frame, one part at a time, in the order you write them: the guidance for the part, the handover example, then a box for your own. Do your first candidate here. Then repeat the template for your other candidates in Part C of your Candidate Log and paste them into the last box.
 
-Start with the candidate whose gap you are surest of. Rough is right. A part you cannot fill gets "I do not know yet," and that line is part of the deliverable, not a failure of it.
+Pick any of your candidates to start with. Rough is right. A part you cannot fill gets "I do not know yet," and that line is part of the deliverable, not a failure of it.
 
 Work without AI on this one. Version one is your own read. The Dojo Lab uses AI to test and widen these frames, and that only works if there is an independent view to test.
 
@@ -417,7 +417,7 @@ What should be different. One sentence. Ask **why** the fixed state matters, the
 
 ### 8. Your other frames
 
-Now repeat the template for each of your other candidates in Part C of your Candidate Log, in the same order: 2, 3, 4, 5, 6, 7, then 1. Paste them into the last box. Keep every frame exactly as you wrote it. The Reflection compares them with your final frame, and that only works if version one stays unedited.
+Now do the same for each of your other candidates in Part C of your Candidate Log. Part C repeats the seven parts in writing order (2, 3, 4, 5, 6, 7, then 1) with the one-line guidance for each part beside its slot, so the other frames get the same scaffold this page gave the first. Paste them into the last box. Keep every frame exactly as you wrote it. The Reflection compares them with your final frame, and that only works if version one stays unedited.
 
 ### Response tasks
 
@@ -571,7 +571,7 @@ Sprint total 100. One graded item per week, concept check as self-check, week 1 
 ## Owed elsewhere once this is cut
 
 - **Sprint 0 / Welcome** introduces "own your progress" and "graded item" before Sprint 1 uses them (Leslie, 14 September).
-- **The Candidate Log template** rebuilt to Parts A to D as named above, with Part C repeating the seven-part template, and linked from the Introduction and each activity.
+- **The Candidate Log template** rebuilt to Parts A to D as named above. Part C repeats the seven parts per candidate in writing order, each slot carrying the one-line guidance from the frame page's template and nothing more (Leslie, 15 September: the other frames need the same scaffold as the walked-through one, without becoming cumbersome). Linked from the Introduction and each activity.
 - **The homepage entry** for the sprint and the `verify` line: "ask another person to read your frame and name what they think you are actually trying to solve" now fits the Dojo Lab's choose step as a non-AI alternative, and could be surfaced there.
 - **Sprint 2's outline** receives: frame version two with the complete claims table, the two or three claims first, the framings considered, the runner-up, and the set-aside list. The single riskiest assumption is gone; the claims table replaces it.
 - **The spine**, sections 7 and 9: Sprint 1's think-first artifact is now First frames; Checks 3 and 4 are no longer introduced in Sprint 1 as checks.
