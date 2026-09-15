@@ -1,17 +1,19 @@
 ---
 purpose: Sprint 1 whole-sprint working draft on the 14 September resequence, for Leslie's review and then the cut
-status: draft v5.2, 15 September 2026. Leslie's second pass (17 comments and tracked changes on First frames, the Goal Plan, and the Reflection, plus two general notes) applied. Every page now reviewed by her at least once.
+status: draft v5.3, 15 September 2026, with Leslie's rulings on Claude's v5.2 concerns. Leslie's second pass (17 comments and tracked changes on First frames, the Goal Plan, and the Reflection, plus two general notes) applied. Every page now reviewed by her at least once.
 supersedes: sprint-1-half-one-working-draft-v4.md (frozen at v4.2) and sprint-1-half-two-working-draft-v1.md (v1.1), for the whole of Sprint 1
 storage: replaces the sprint-12 first half and continues it; positions 1 to 10
 ---
 
-# Sprint 1: working draft v5.2
+# Sprint 1: working draft v5.3
 
 Each `##` heading below is one Canvas item. The **Response tasks** block under each activity is the guided-assignment configuration for the cut: one prompt and its criteria per response box. Design notes are marked [NOTE] and are not participant text. Items marked [OPEN] are Leslie's to settle. Section numbers inside pages are participant-facing.
 
 > **[NOTE] What this draft is built on.** The 14 September resequence (`sprint-1-resequence-outline.md`), the rulings in the decisions log of the same day, and Leslie's first-pass review of v5 (dispositions in the decisions log, 14 September, later still). Points approved by Leslie 14 September: Brainstorm 0, Get underneath 0, Concept check 5, First frames 35, Dojo Lab 0, Goal Plan 50, Reflection 10. Check 3 is gone from Sprint 1. Check 4's three questions live in the Dojo Lab. Goal is presented first, written last.
 
-> **[NOTE] What changed in v5.2.** First frames walks through the seven parts once, and each box holds that part for every candidate, so all three to five frames are written on one page. Part 6 is "find your assumptions": list them part by part, then mark each confirmed or unverified and say who could tell you. The claim kinds (checkable, prediction, causal bet) leave Sprint 1 for Sprint 2. Part openers are full sentences. The incidental examples drawn from Leslie's own run (budgets, agendas, financial peace) are replaced by the two core examples. The Goal Plan opens on the one chosen problem, says why Part 2 exists, and Part 3 is "which assumptions should you investigate first." The Reflection no longer repeats what the Goal Plan asked. Colons used as dashes are cut throughout.
+> **[NOTE] What changed in v5.3.** Leslie's ruling on First frames: one frame written whole. The page teaches each part with guidance and the handover example; the frames are written in Part C of the Candidate Log, which repeats the seven parts in writing order with the one-line guidance beside each slot; one box per frame collects them. The by-parts shape of v5.2 is withdrawn. The 4b template line now says "not the consequence that follows," so concept check question 5 has something to draw on; where the check sits in the sequence is reconsidered once the content is done.
+
+> **[NOTE] What changed in v5.2.** First frames walked through the seven parts once, each box holding that part for every candidate (withdrawn in v5.3). Part 6 is "find your assumptions": list them part by part, then mark each confirmed or unverified and say who could tell you. The claim kinds (checkable, prediction, causal bet) leave Sprint 1 for Sprint 2. Part openers are full sentences. The incidental examples drawn from Leslie's own run (budgets, agendas, financial peace) are replaced by the two core examples. The Goal Plan opens on the one chosen problem, says why Part 2 exists, and Part 3 is "which assumptions should you investigate first." The Reflection no longer repeats what the Goal Plan asked. Colons used as dashes are cut throughout.
 
 > **[NOTE] Examples.** Two core examples run the whole sprint. **Account handovers** appears on the brainstorm list, in the four-column table, as worked example A, in every part of First frames, as the Dojo Lab's illustrative choice, and in the Goal Plan's part 3 example. **The neighbourhood garden plot** appears on the brainstorm list under "other," as worked example B, in the part 5 help, and as the Dojo Lab's runner-up. Colour only: the rest of the brainstorm list, the report columns and onboarding lines in the brainstorm's help, and onboarding again in the part 5 example (which Leslie edited). Nothing from Leslie's own run appears any more.
 
@@ -227,7 +229,7 @@ A frame has seven parts. This is the whole of it, and Part C of your Candidate L
 1. **The goal it serves.** One sentence. Nobody involved would dispute it, and it points at this problem rather than its neighbours.
 2. **The problem.** The gap between now and that goal, as a condition someone is living in. One or two sentences.
 3. **Who is affected, and what it costs them.** 3a names the people or specific roles. 3b says what it costs each of them, in time, money, errors, or strain.
-4. **How it is handled today, and where that falls short.** 4a describes the system, process, habit, or person coping with it now, and anything tried and abandoned. 4b names the moment it stops working.
+4. **How it is handled today, and where that falls short.** 4a describes the system, process, habit, or person coping with it now, and anything tried and abandoned. 4b names the moment it stops working, not the consequence that follows.
 5. **What fixed would look like.** A changed state, not a solution. One sentence.
 6. **Find your assumptions.** Everything in parts 2 to 5 that you wrote as if it were true without having seen it yourself or heard it from someone who would know. Each one marked **confirmed** or **unverified**, and for each unverified one, who could tell you.
 7. **What you do not know yet.** What is left after part 6.
@@ -327,23 +329,21 @@ Answer all six from your own thinking, without AI. Review each explanation; if i
 
 *Graded item. Position 7. 35 points. One submission.*
 
-Now you are going to write version one of a frame for each of your three to five candidates. This page walks you through the seven parts in the order you write them. Remember, for each part you will see the guidance, then the example, then a box for your own work. Write that part for every candidate before you move on to the next part, and label each entry with the candidate's name. By the last box you will have all of your frames.
+Now you are going to write version one of a frame for each of your three to five candidates. This page walks you through the seven parts in the order you write them. Remember, for each part you will see the guidance, then the example. Write each frame whole, one candidate at a time, in Part C of your Candidate Log, which repeats the seven parts in this order with a line of guidance beside each slot. When a frame is done, paste it into its box below, and start the next.
 
-> **[NOTE, OPEN]** Leslie, 15 September: walk them through all their candidates, and give them an output where they can see it all together. This page does that by parts rather than by candidate. Each box holds one part for every candidate, so three to five frames are written on one page with seven boxes, instead of one page per frame or thirty-five boxes. The "see it all together" output needs a copy-all action at the foot of the page that assembles the boxes into whole frames, one per candidate (Sathya's pages call it "Copy my summary"). Whether Jeremy's mode has it, or can add it, is his question; if not, Part C of the Log is where the frames are assembled by hand. Leslie to confirm the by-parts shape. The "remember" sentence belongs in Sprint 0 as how assignments work, and is owed there.
+> **[NOTE]** Leslie, 15 September: one frame written whole. So the page teaches, the Log is the working surface, and the boxes collect finished frames. The Log template is being rebuilt to carry Part C in this shape (`candidate-log-template`, v2). The "remember" sentence belongs in Sprint 0 as how assignments work, and is owed there.
 
 Rough is right. A part you cannot fill gets "I do not know yet," and that line is part of the deliverable, not a failure of it.
 
 Work without AI on this one. Version one is your own read. The Dojo Lab uses AI to test and widen these frames, and that only works if there is an independent view to test.
 
-Expect your first candidate to take longest in each part and the others to go faster. All of your frames in one sitting is normal.
+Expect the first frame to take longest and the others to go faster. Three frames in a sitting is normal.
 
 ### 1. Part 2: the problem
 
 Part 2 is the gap between now and the goal, in one or two sentences, and you already have it. It is the gap column from your table. Write it as a condition someone is living in rather than as a task that annoys you. "The rest of the team does not know when an account changes hands" is a condition. "Handovers are a hassle" is a task.
 
 > **Example.** *2. Problem:* Handovers happen in a conversation between the outgoing and incoming owner, and nothing reaches the rest of the team.
-
-*Box: part 2, for each candidate.*
 
 ### 2. Part 3: who is affected, and what it costs them
 
@@ -357,8 +357,6 @@ Your table's cost column feeds both halves. The people go in 3a, and 3b says whi
 
 > **Example.** *3a. Who:* The two clients who changed hands this month. The four other account managers. *3b. Cost:* Clients repeated their history to someone who should have known it. Account managers act on stale ownership for several days (number of days unconfirmed).
 
-*Box: parts 3a and 3b, for each candidate.*
-
 ### 3. Part 4: how it is handled today, and where that falls short
 
 Two halves again.
@@ -371,8 +369,6 @@ Two halves again.
 
 > **Example.** *4a. Handled today:* The outgoing owner tells the incoming owner directly. Nobody remembers anyone trying anything else. *4b. Stops working:* At the moment a third person needs to know. The conversation works for the two people in it and reaches nobody else.
 
-*Box: parts 4a and 4b, for each candidate.*
-
 ### 4. Part 5: what fixed would look like
 
 Answer the question "what would fixed look like?" in one sentence, and stop there. It describes a changed state, not a solution. "New hires would have working access on day one" is a changed state. "Building an onboarding app to track new hires" is a solution.
@@ -380,8 +376,6 @@ Answer the question "what would fixed look like?" in one sentence, and stop ther
 *More help.* Two solution-shaped lines rewritten as states. "A shared handover checklist" becomes "everyone on the team knows within a day when an account changes hands." "Pair new gardeners with returning ones" becomes "a first-year plot-holder has someone to ask by the time their first thing goes wrong."
 
 > **Example.** *5. Fixed looks like:* Everyone on the team knows within a day when an account changes hands.
-
-*Box: part 5, for each candidate.*
 
 ### 5. Part 6: find your assumptions
 
@@ -401,8 +395,6 @@ Odds are that in framing your problem, you are making some assumptions about how
 
 > **Example.** The handover assumptions table on The problem frame page. Notice that the cost assumption in 3b about clients is its own row, and that part 5 produced one.
 
-*Box: part 6, your assumptions, for each candidate.*
-
 ### 6. Part 7: what you do not know yet
 
 Most of what you do not know is now a row in part 6 with a name beside it. This part is for what is left over. Questions that do not attach to any single assumption. Assumptions where you could not name anyone who could answer. Things you realized you do not know about the situation itself, such as who owns a process or whether anyone has tried this before. This part is small. That is expected.
@@ -410,8 +402,6 @@ Most of what you do not know is now a row in part 6 with a name beside it. This 
 **Nothing here is a step toward building.** If you have written "research what tools exist" or "see if this can be automated," you have jumped to solutions. The question is what you do not know about the *problem*.
 
 > **Example.** *7. Left over:* I do not know who owns the handover process, if anyone. Nobody obvious to ask. Start with the account lead.
-
-*Box: part 7, for each candidate.*
 
 ### 7. Part 1: the goal it serves, last
 
@@ -421,21 +411,17 @@ Part 1 says what should be different, in one sentence, and you write it last bec
 
 > **Example.** *1. Goal:* Clients are handled by someone who knows their history, from the first day an account changes hands.
 
-*Box: part 1, for each candidate.*
-
-Keep every frame exactly as you wrote it. The Reflection compares them with your final frame, and that only works if version one stays unedited. Copy all of your frames into Part C of your Candidate Log.
+Keep every frame exactly as you wrote it. The Reflection compares them with your final frame, and that only works if version one stays unedited.
 
 ### Response tasks
 
-> **[NOTE]** Seven boxes, `presentation: reading`, each holding one part for every candidate, labeled. Needs a copy-all action at the foot of the page that assembles the boxes into whole frames per candidate; see the OPEN note above. `reading` presentation does not support the AI feedback endpoint (`canvas_sync/schema.py`), so AI feedback on this page is not available in the current mode.
+> **[NOTE]** One box per frame, `presentation: reading`. Boxes 4 and 5 optional. The criteria repeat. `reading` presentation does not support the AI feedback endpoint (`canvas_sync/schema.py`), so AI feedback on this page is not available in the current mode.
 
-- **part-2** (response). Prompt: *Part 2, the problem, for each of your candidates. Label each with the candidate's name.* Criteria: one entry per candidate, three to five; each is one or two sentences; each is a condition someone is living in, not a task; each names who feels the cost.
-- **part-3** (response). Prompt: *Parts 3a and 3b for each candidate: who is affected, and what it costs each of them.* Criteria: one entry per candidate; 3a names people or specific roles, or who to ask; 3b assigns a cost to each; both halves present in every entry.
-- **part-4** (response). Prompt: *Parts 4a and 4b for each candidate: how it is handled today, and the moment it stops working.* Criteria: one entry per candidate; 4a describes current handling, formal or informal, and says whether anything was tried and abandoned; 4b names a moment or condition, not a consequence.
-- **part-5** (response). Prompt: *Part 5 for each candidate: what fixed would look like.* Criteria: one entry per candidate; each is one sentence; each describes a state, not a tool or process.
-- **part-6** (response). Prompt: *Part 6 for each candidate: your assumptions, each marked confirmed or unverified, with who could tell you.* Criteria: one list per candidate; at least four assumptions across parts 2 to 5, at least one from 3b; each marked confirmed or unverified; each unverified one names who could tell you, or says nobody yet.
-- **part-7** (response). Prompt: *Part 7 for each candidate: what you do not know yet.* Criteria: one entry per candidate; what is listed is about the problem, not about tools or building; may be short; may say "nothing left over."
-- **part-1** (response). Prompt: *Part 1 for each candidate: the goal it serves.* Criteria: one entry per candidate; each is one sentence; nobody involved would dispute it; it would not serve any problem of this type anywhere; it names no solution.
+- **frame-1** (response). Prompt: *Frame 1, the seven parts labeled, pasted from Part C of your Candidate Log.* Criteria: all seven parts present, 3 and 4 in their a and b halves; part 2 is a condition someone is living in, not a task; 3b assigns a cost to each person or role; 4b names a moment, not a consequence; part 5 is one sentence describing a state, not a solution; part 6 lists at least four assumptions across parts 2 to 5, at least one from 3b, each marked confirmed or unverified, with who could tell you for each unverified one; part 1 passes both goal tests; unknowns are written as "I do not know yet" rather than filled with guesses.
+- **frame-2** (response). Same prompt and criteria for frame 2.
+- **frame-3** (response). Same for frame 3.
+- **frame-4** (response, optional). Same for frame 4, if you have one.
+- **frame-5** (response, optional). Same for frame 5, if you have one.
 
 ---
 
@@ -576,7 +562,7 @@ Sprint total 100. One graded item per week, concept check as self-check, week 1 
 ## Owed elsewhere once this is cut
 
 - **Sprint 0 / Welcome** introduces "own your progress" and "graded item" before Sprint 1 uses them (Leslie, 14 September), and says how assignments work: for each part, guidance, then an example, then a box (Leslie, 15 September).
-- **The Candidate Log template** rebuilt to Parts A to D as named above. Part C repeats the seven parts per candidate in writing order, each slot carrying the one-line guidance from the frame page's template and nothing more (Leslie, 15 September: the other frames need the same scaffold as the walked-through one, without becoming cumbersome). Linked from the Introduction and each activity.
+- **The Candidate Log template** rebuilt to Parts A to D as named above (v2 built 15 September as a docx; Google Doc to follow). Part C repeats the seven parts per candidate in writing order, each slot carrying one line of guidance and nothing more. Linked from the Introduction and each activity.
 - **The homepage entry** for the sprint and the `verify` line: "ask another person to read your frame and name what they think you are actually trying to solve" now fits the Dojo Lab's choose step as a non-AI alternative, and could be surfaced there.
 - **Sprint 2's outline** receives: frame version two with the assumptions list, the two or three assumptions first (possibly as its own opening activity, see the Goal Plan's OPEN note), the framings considered, the runner-up, and the set-aside list. It also receives the **claim kinds** (checkable, prediction, causal bet), which left Sprint 1 in v5.2: they decide how each assumption gets checked, which is Sprint 2's work.
 - **The spine**, sections 7 and 9: Sprint 1's think-first artifact is now First frames; Checks 3 and 4 are no longer introduced in Sprint 1 as checks.
@@ -587,7 +573,7 @@ Sprint total 100. One graded item per week, concept check as self-check, week 1 
 
 - **[OPEN] The Dojo Lab's selection criteria** (Leslie). The three size questions are a placeholder until she rules; the your-choice criteria follow.
 - **[OPEN] The two Dojo Lab prompts** need a live test and a language pass. Claude can run them against worked example A through the CTI proxy on request.
-- **[OPEN] First frames by parts** (each box holds one part for every candidate) and the copy-all action it needs. Leslie to confirm the shape; Jeremy on the mechanics.
+- **[OPEN] Where the Concept check sits** in the sequence. Leslie, 15 September: reconsider once the content is done.
 - **[OPEN] Two or three statuses** for assumptions (confirmed/unverified, or seen/told/assumed). Leslie.
 - **[OPEN] Goal Plan Part 3** stays here or opens Sprint 2. Decided when Sprint 2 is drafted.
 - Whether the concept check's six questions are the right six. Drafted here so the rebuild has something to start from; Jeremy's call on format.
@@ -597,4 +583,4 @@ Sprint total 100. One graded item per week, concept check as self-check, week 1 
 
 ## Provenance
 
-Human (Leslie): the resequence and every finding behind it; the frame page, its two examples, and its designer notes; the points; the three content rulings; the v5.1 and v5.2 reviews (every tracked change and comment, applied individually; dispositions in the decisions log). AI (Claude): the prose of every other page, the handover case carried through the table and the Dojo Lab's choice, the concept check questions, the response tasks and criteria, the collapsed help blocks, the reflection's aiContext, the v5.1 and v5.2 restructures (First frames as a walk-through, then by parts across candidates; the frame page as reference; the example list's home and other headings; the assumptions rewrite of part 6). The frame page's structural moves came from an exchange Leslie ran in another chat; its wording is hers.
+Human (Leslie): the resequence and every finding behind it; the frame page, its two examples, and its designer notes; the points; the three content rulings; the v5.1 and v5.2 reviews (every tracked change and comment, applied individually; dispositions in the decisions log). AI (Claude): the prose of every other page, the handover case carried through the table and the Dojo Lab's choice, the concept check questions, the response tasks and criteria, the collapsed help blocks, the reflection's aiContext, the v5.1 and v5.2 restructures (First frames as a walk-through, the by-parts shape tried in v5.2 and withdrawn in v5.3; the frame page as reference; the example list's home and other headings; the assumptions rewrite of part 6). The frame page's structural moves came from an exchange Leslie ran in another chat; its wording is hers.
