@@ -452,7 +452,7 @@ Paste one frame at a time and use this prompt:
 
 > Here is a problem frame. Do not rewrite it. Tell me: which claims am I asserting rather than knowing? Which costs have nobody attached to them? Where has a solution leaked into part 5 or part 7? Which of my claims is a causal bet that nobody could confirm by being asked? Where would someone who works in this situation say I am wrong?
 
-> **[OPEN]** Leslie, 14 September: test this prompt and adjust the language. The CTI proxy now works, so it can be run against worked example A before the cut.
+> **[OPEN, PARKED 15 September]** Tested three times on Leslie's frame. The one-shot prompt over-delivers; the activity is now drafted as a Dojo module in Sathya's format (`dojo-module-problem-frame.md`, v0.3), which replaces both prompts on this page once the course-wide Dojo doc exists. Parked until then; see `dojo-setup-note.md`.
 
 Take what lands and fix the frame yourself. Add rows to your claims table where it found a claim you missed. Move a solution out. Attach a cost to a person. Do this for every frame.
 
@@ -462,7 +462,7 @@ Follow up with:
 
 > Now give me three other ways to see the same situation. For each one: what it makes visible that my frame does not, what it would make me miss, and who would have to be involved. Then tell me whether any of them suggests this problem is already handled somewhere I have not looked.
 
-> **[OPEN]** Same: test and adjust.
+> **[OPEN, PARKED]** Same; capped to three framings of two lines each in the module's Round 3.
 
 Read the three framings against your own situation. One will usually be generic and worth ignoring. One will usually land. If one lands, decide what it changes in your frame, and write that change yourself.
 

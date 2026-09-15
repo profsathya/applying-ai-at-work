@@ -2027,3 +2027,19 @@ Dojo Lab page in v5.1 stays as is until the module has been run once under the c
 
 Provenance: Leslie, the test and both findings; Claude, the capped prompt, the module,
 the reading of the Dojo material, the note.
+
+## 15 September, evening: Dojo work parked
+
+Three runs on Leslie's frame in one afternoon (one-shot capped prompt, then the module
+under the core twice). Leslie's call: pause. Her reasons: the Dojo activities across the
+course should be tackled together; tuning against a plain-chat paste optimizes for a
+setup that changes once the project-plus-linked-doc arrangement exists; the rest of the
+course needs checking. Claude's added reason: all three runs used one frame at one
+unfinished stage, so further runs would tune to a fixture.
+
+Parked state: module v0.3 in `dojo-module-problem-frame.md` with what the runs taught
+and what is untested; the course-wide ask with Jeremy in `dojo-setup-note.md`; the two
+prompts on the v5.1 Dojo Lab page marked parked. Resume conditions: the course doc
+exists, and a frame from someone other than Leslie, with its audit done, is available.
+
+Provenance: Leslie, the pause and its reasons; Claude, the record.
