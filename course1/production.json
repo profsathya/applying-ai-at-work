@@ -1661,16 +1661,16 @@
       "canvas_payload_hash": "91bbd5a3bf34455c36d090ef93ae359923b02059d39f829a280155082bd3d5ce",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "65a30a37475d47d3c3ec6de5aed166274f2917c5aa9d42182c8cde0ac9de7d5e",
-      "hosted_hash": "97d2f05dd99531783989f6380f59c17cd7e48243d6254ea0a358435b244f5232",
-      "hosted_last_rendered": "2026-09-11T17:08:32+00:00",
+      "content_hash": "a85f1f7eff2a98d400e41c9040b42de3ab4b4f06c0a940e258962da74850bbc1",
+      "hosted_hash": "95366b0cd9b132ac19dbb3263320dfb0d24e2503fd9d5d98d271329723d679c4",
+      "hosted_last_rendered": "2026-09-15T23:44:02+00:00",
       "hosted_path": "course1/activities/help-and-resources-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/help-and-resources-v2.html",
-      "last_pushed": "2026-09-11T17:08:32+00:00",
+      "last_pushed": "2026-09-15T23:44:02+00:00",
       "local_path": "course1/sprints/sprint-6/help-and-resources-v2.md",
       "position": 7,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "8c1f1649d7008c63199c0129e6fdc8ced04081c4"
+      "source_commit": "153dbeb06a740a2a41b52bf4482ae2cd0e9eb11a"
     },
     "course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2": {
       "artifact_id": "course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2",
@@ -1682,16 +1682,16 @@
       "canvas_payload_hash": "5045a5d7b3503d9606041d643a01f99c6fb8242681090bcac4bf52e4d54fefd9",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "7ae78a5c63d69f770814124c72d7cb3521cf454cfdf726bc0fb30f0707290e9f",
-      "hosted_hash": "f5ad76089fdc0cab3522bb76107766ea3b9cf8167e4df471154b16dee4aff7ce",
-      "hosted_last_rendered": "2026-09-11T17:08:33+00:00",
+      "content_hash": "24995de4f7468a399b6cea09b387022d8bdb008450f60b7568b24f9577fe8212",
+      "hosted_hash": "775cded6717be454d9af36de68d2f4112f373346f0bbc326b44ac84cdebe7c6c",
+      "hosted_last_rendered": "2026-09-15T23:44:02+00:00",
       "hosted_path": "course1/activities/how-this-course-works-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/how-this-course-works-v2.html",
-      "last_pushed": "2026-09-11T17:08:33+00:00",
+      "last_pushed": "2026-09-15T23:44:02+00:00",
       "local_path": "course1/sprints/sprint-6/how-this-course-works-v2.md",
       "position": 4,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "8c1f1649d7008c63199c0129e6fdc8ced04081c4"
+      "source_commit": "153dbeb06a740a2a41b52bf4482ae2cd0e9eb11a"
     },
     "course1-sprints-welcome-and-orientation-v2-introduction-post-v2": {
       "artifact_id": "course1-sprints-welcome-and-orientation-v2-introduction-post-v2",
@@ -1703,16 +1703,16 @@
       "canvas_payload_hash": "f117e2e12fcc08bd234def8765cde5e2c1145e74ece347b90da721a573e3bf34",
       "canvas_type": "discussion",
       "completion_requirement": "must_contribute",
-      "content_hash": "50096b74eca4809393f08a019f32586996119ec6ea78d876605e0aee39b2219c",
-      "hosted_hash": "8cd069f1408dd6782a7c9dcf38e2c24001cf7633181b2fe7776da2e943a75c77",
-      "hosted_last_rendered": "2026-09-11T17:08:35+00:00",
+      "content_hash": "f1db79a74f9fd0752a61c55f531b39e8f4bfa451e0bc0e00aca01440d4ae7374",
+      "hosted_hash": "d75970e3485c95593ce9a01f050ea7c506345d158ee787b3ae98a8fc6c707312",
+      "hosted_last_rendered": "2026-09-15T23:44:03+00:00",
       "hosted_path": "course1/activities/introduction-post-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-post-v2.html",
-      "last_pushed": "2026-09-11T17:08:35+00:00",
+      "last_pushed": "2026-09-15T23:44:03+00:00",
       "local_path": "course1/sprints/sprint-6/introduction-post-v2.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "8c1f1649d7008c63199c0129e6fdc8ced04081c4"
+      "source_commit": "153dbeb06a740a2a41b52bf4482ae2cd0e9eb11a"
     },
     "course1-sprints-welcome-and-orientation-v2-start-here-v2": {
       "artifact_id": "course1-sprints-welcome-and-orientation-v2-start-here-v2",
@@ -1724,16 +1724,16 @@
       "canvas_payload_hash": "1f05ba1f4b22fa4405e74e23d693209c794f8403710244d687b9f3498beb3d00",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "5703380d820dfa29ab050b9bea15a173891fb0caba031ade0abee1b64516d259",
-      "hosted_hash": "ed7f0984b6bb89f11d5c110286e93f2c3608dc8faa8f47b5f3947621b04c2937",
-      "hosted_last_rendered": "2026-09-11T17:08:35+00:00",
+      "content_hash": "11d3d18b127dcbe865a33a248f715c083d8d8a9a98110942d24fa812cd1aee95",
+      "hosted_hash": "0919113e57c2175d717b500bd5d839fd3c826492580c1d7832411feb9a446e2d",
+      "hosted_last_rendered": "2026-09-15T23:44:03+00:00",
       "hosted_path": "course1/activities/start-here-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/start-here-v2.html",
-      "last_pushed": "2026-09-11T17:08:35+00:00",
+      "last_pushed": "2026-09-15T23:44:03+00:00",
       "local_path": "course1/sprints/sprint-6/start-here-v2.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "8c1f1649d7008c63199c0129e6fdc8ced04081c4"
+      "source_commit": "153dbeb06a740a2a41b52bf4482ae2cd0e9eb11a"
     },
     "course1-sprints-welcome-and-orientation-v2-welcome-and-orientation-v2": {
       "artifact_id": "course1-sprints-welcome-and-orientation-v2-welcome-and-orientation-v2",
@@ -1742,14 +1742,14 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "6ab051234c4e31f1d6565069d8a530a704520b38e9524e56565a3cc60d88974e",
       "canvas_type": "module_header",
-      "content_hash": "666ea0e4f29b25d03c4e073a59c6a11444bd496d31d468d2c1e990b829c7911e",
+      "content_hash": "95130eb25af2a7256caf8cece6bc4a4071dc0bf2e1ca79096b72fdca27c385db",
       "hosted_path": "course1/activities/welcome-and-orientation-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/welcome-and-orientation-v2.html",
-      "last_pushed": "2026-09-11T16:49:03+00:00",
+      "last_pushed": "2026-09-15T23:44:04+00:00",
       "local_path": "course1/sprints/sprint-6/welcome-and-orientation-v2.md",
       "position": 1,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "21e6b383b6e4423ebf1a5444c5e9f4fdd24884ff"
+      "source_commit": "153dbeb06a740a2a41b52bf4482ae2cd0e9eb11a"
     },
     "course1-sprints-welcome-and-orientation-v2-welcome-v2": {
       "artifact_id": "course1-sprints-welcome-and-orientation-v2-welcome-v2",
@@ -1761,16 +1761,16 @@
       "canvas_payload_hash": "c9d2f8ecbef0f84e0544d5f368d591bca178198fd720b02a1361d7c75f346fa1",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "6fcfd74b8937cbf2d0df4bda434438cd8c98e12109a8930eceb0484ab867390f",
-      "hosted_hash": "137fbf1313b5d7e9302a1708886a7756454a7b7e6f7dc08b717fbb141389a017",
-      "hosted_last_rendered": "2026-09-11T17:08:36+00:00",
+      "content_hash": "d6453eb070cf76e4d5002f940bba3ff1e23605ea87b8b12000bd1b46e1ad757f",
+      "hosted_hash": "3fb71262e8078bbdd42e471d8d71f1c84b04e3340997f599f16c2c38b8e2889b",
+      "hosted_last_rendered": "2026-09-15T23:44:04+00:00",
       "hosted_path": "course1/activities/welcome-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/welcome-v2.html",
-      "last_pushed": "2026-09-11T17:08:36+00:00",
+      "last_pushed": "2026-09-15T23:44:04+00:00",
       "local_path": "course1/sprints/sprint-6/welcome-v2.md",
       "position": 3,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "8c1f1649d7008c63199c0129e6fdc8ced04081c4"
+      "source_commit": "153dbeb06a740a2a41b52bf4482ae2cd0e9eb11a"
     },
     "course1-sprints-welcome-and-orientation-v2-your-first-week-v2": {
       "artifact_id": "course1-sprints-welcome-and-orientation-v2-your-first-week-v2",
@@ -1782,16 +1782,16 @@
       "canvas_payload_hash": "519e8058d0592b5db93f4a23fe7023ea6b4b1f4225249ee4fd9eb2b8a99df1a0",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "85c3ed5df57b8bd753d90144c3b1265abf4ef4c24094d92a46c0612888b86ee6",
-      "hosted_hash": "772d5239b302a7d909417bbccdcc7803678159b7ddbbb285aab87b4324667958",
-      "hosted_last_rendered": "2026-09-11T17:08:36+00:00",
+      "content_hash": "9a46c47d5ebec5dcd41c0af817e50b63a00fa2befaa059c6158bbb47d43529c0",
+      "hosted_hash": "890043a2b5f7398b98a736b0419411d162eb85aca1f72f2157d31b65c6bd8263",
+      "hosted_last_rendered": "2026-09-15T23:44:05+00:00",
       "hosted_path": "course1/activities/your-first-week-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/your-first-week-v2.html",
-      "last_pushed": "2026-09-11T17:08:36+00:00",
+      "last_pushed": "2026-09-15T23:44:05+00:00",
       "local_path": "course1/sprints/sprint-6/your-first-week-v2.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "8c1f1649d7008c63199c0129e6fdc8ced04081c4"
+      "source_commit": "153dbeb06a740a2a41b52bf4482ae2cd0e9eb11a"
     }
   },
   "instance": {
@@ -1800,5 +1800,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-14T19:38:18+00:00"
+  "last_sync": "2026-09-15T23:44:05+00:00"
 }
