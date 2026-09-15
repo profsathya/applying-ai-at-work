@@ -77,3 +77,26 @@ Leslie's. The real project setup with a linked doc instead of a paste. Claude an
 
 Human (Leslie): the three runs, the two findings about length and about holding on a
 finding, the pause. AI (Claude): the module and its revisions, the packet, this record.
+
+## For v0.4, when the work resumes (Leslie's question, 15 September)
+
+Leslie asked whether the Dojo could track the changes as they happen, or hand back the
+updated parts, so that people update the Log themselves (which forces the work) but AI
+helps once wording is agreed. That is the core's Writer rule applied to the frame. Three
+options were considered; the middle one is the recommendation:
+
+1. Manual only (v0.3 as written).
+2. **Read-back.** In Round 2, once the participant has said the change, the Dojo hands
+   back the exact line or row to paste, in the participant's words, and nothing else;
+   where no words were given for a slot it leaves [your words here] rather than filling
+   it. In Round 4 it hands back the whole frame with only the agreed changes, each changed
+   part tagged [changed], to paste into Part D of the Log as version two. The tags are
+   the diff, and they feed Goal Plan Part 2 and the Reflection. Works in any chatbot.
+   Reflector's "that is my read you are echoing" guards against rewording.
+3. A live side document (ChatGPT Canvas, Claude Artifacts, Gemini Canvas). Best to use,
+   worst fit: differs by tool, moves the frame out of the Log, and does not protect
+   version one, which the Reflection needs unedited. Allowed as an extra, not the default.
+
+Consequence for the draft: the participant leaves the Dojo Lab with version two already
+drafted and marked. The Goal Plan page should say "rewrite the frame with every change
+you made in the Log during the Dojo Lab," not "with everything the Dojo Lab changed."
