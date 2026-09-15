@@ -41,6 +41,8 @@ course1/design/sprint-1-working-draft-v5.md       THE LIVE DRAFT (v5.1): the who
                                                    on the 14 September resequence. Leslie reviewing.
 course1/design/sprint-1-resequence-outline.md     why the sequence changed (14 September)
 course1/design/sprint-2-outline.md                 Sprint 2, outline; must receive the claims table
+course1/design/dojo-setup-note.md                  the course-wide Dojo tool, for Jeremy (15 September)
+course1/design/dojo-module-problem-frame.md        Sprint 1 Dojo Lab as a Dojo module, v0.3, PARKED
 course1/design/problem-spine.md                    course-level design
 course1/design/sprint-1-decisions.md               every judgment call, dated
 course1/design/handoff.md                          this file
@@ -106,9 +108,11 @@ self-check, reflection as `delivery_mode: ai_activity` like Sprints 3 and 4.
 
 ## What to do next
 
-1. **Leslie finishes her pass on v5.1**: the Goal Plan and the Reflection, plus the two
-   [OPEN] items (selection criteria for the Dojo Lab's Choose step; the two prompts). Claude
-   can run the prompts against worked example A through the proxy on request.
+1. **Leslie finishes her pass on v5.1**: the Goal Plan and the Reflection, plus the
+   selection criteria for the Dojo Lab's Choose step. The Dojo prompts are PARKED: the
+   activity is drafted as a module for Sathya's Dojo (`dojo-module-problem-frame.md`) and
+   waits on the course-wide Dojo doc (`dojo-setup-note.md`, with Jeremy) and on a second
+   person's frame to test against. Do not re-tune it on Leslie's frame.
 2. **The cut.** The 14 September build path: Jeremy cuts items 1 to 4 through his intake;
    items 5 to 10 can be written directly as artifacts by Claude (a guided_assignment
    artifact with several boxes and no sidecar validates PASS, tested 12 September). First
@@ -210,7 +214,7 @@ Multi-box pages get no AI feedback in the current mode.
 
 ## Blocked, and on whom
 
-- **Dojo setup.** Whether participants get the Symbiotic Thinking Dojo or run the prompts in any chatbot. Both work as written. Team decision.
+- **Dojo setup.** Sathya's current model is the learner's own chatbot project plus one linked Google Doc (Dojo, Course, Syllabus tabs); no API key. That doc does not exist for course1. With Jeremy since 15 September (`dojo-setup-note.md`).
 - **Root Cause Analysis naming.** Three names for one artifact. Team decision.
 - **Cohort or self-paced** governs whether any peer mechanic is possible.
 - **Sathya's AI-assisted grading tooling**, whether our instructor will have it. Nothing is blocked on it; the design was made insensitive to the answer.
