@@ -8,7 +8,9 @@ import hashlib
 import json
 import os
 import re
+import time
 from pathlib import Path
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 
@@ -103,6 +105,41 @@ def verify_response(payload, response, document_id):
             raise ValueError('Document endpoint did not confirm expected section version')
 
 
+def send_update(url, request_payload, attempts=3):
+    """Send one idempotent document update, retrying transient receiver failures."""
+    body = json.dumps(request_payload).encode()
+    last_error = None
+    for attempt in range(attempts):
+        try:
+            request = urllib.request.Request(
+                url,
+                data=body,
+                headers={'Content-Type': 'application/json'},
+            )
+            with urllib.request.urlopen(request, timeout=180) as response:
+                raw = response.read()
+            if not raw.strip():
+                raise ValueError('empty response')
+            result = json.loads(raw.decode('utf-8'))
+            if not isinstance(result, dict):
+                raise ValueError('response is not a JSON object')
+            return result
+        except urllib.error.HTTPError as error:
+            if error.code not in (408, 429) and error.code < 500:
+                raise
+            last_error = error
+        except (urllib.error.URLError, TimeoutError, UnicodeDecodeError,
+                json.JSONDecodeError, ValueError) as error:
+            last_error = error
+        if attempt + 1 < attempts:
+            # The receiver applies generations idempotently, so resending this
+            # exact payload is safe even if the prior response was lost.
+            time.sleep(2 ** attempt)
+    raise RuntimeError(
+        f'Document endpoint did not return a valid receipt after {attempts} attempts'
+    ) from last_error
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--release', type=Path)
@@ -131,10 +168,7 @@ def main():
         if not config.get('document_id'):
             raise ValueError('Configure the expected document ID before sending')
         request_payload = dict(payload, token=os.environ['COURSE_DOC_SYNC_TOKEN'], document_id=config['document_id'])
-        request = urllib.request.Request(url, data=json.dumps(request_payload).encode(),
-                                         headers={'Content-Type': 'application/json'})
-        with urllib.request.urlopen(request, timeout=180) as response:
-            result = json.load(response)
+        result = send_update(url, request_payload)
         verify_response(payload, result, config['document_id'])
         print('Confirmed document sections: ' + ', '.join(s['tab'] for s in payload['sections']))
 

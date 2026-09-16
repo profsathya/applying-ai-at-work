@@ -1,5 +1,5 @@
 import unittest
-from canvas_sync.course_docs.sync import build, verify_response
+from canvas_sync.course_docs.sync import build, send_update, verify_response
 
 
 class CourseDocsTests(unittest.TestCase):
@@ -70,6 +70,28 @@ class PreparedReleaseTests(unittest.TestCase):
                 prepare_release.main()
 
 class ReceiptAndRedirectTests(unittest.TestCase):
+    def test_empty_receiver_response_retries_same_update(self):
+        import json
+        from unittest.mock import MagicMock, patch
+
+        empty = MagicMock()
+        empty.__enter__.return_value.read.return_value = b''
+        receipt = MagicMock()
+        receipt.__enter__.return_value.read.return_value = json.dumps({'ok': True}).encode()
+        request_payload = {'metadata': {'generation': 7}, 'token': 'test-only'}
+
+        with patch('canvas_sync.course_docs.sync.urllib.request.urlopen',
+                   side_effect=[empty, receipt]) as urlopen, \
+                patch('canvas_sync.course_docs.sync.time.sleep') as sleep:
+            self.assertEqual(send_update('https://script.google.com/test', request_payload),
+                             {'ok': True})
+
+        self.assertEqual(urlopen.call_count, 2)
+        first_body = urlopen.call_args_list[0].args[0].data
+        second_body = urlopen.call_args_list[1].args[0].data
+        self.assertEqual(first_body, second_body)
+        sleep.assert_called_once_with(1)
+
     def test_wrong_document_rejected(self):
         payload = build(None, 'DOJO CORE\nAsk first.', 3, 'owner/repo', 'sha')
         with self.assertRaisesRegex(ValueError, 'unexpected document'):
