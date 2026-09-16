@@ -2187,3 +2187,36 @@ one/two" was bookkeeping language from the design notes that had leaked into the
 The First frames item keeps its name.
 
 Provenance: Leslie, the ruling; Claude, the pass.
+
+# Session of 16 September 2026, evening: Sprint 2 begins
+
+## Sprint 2 outline revised against the handoff's five points
+
+`sprint-2-outline.md` is now outline v2, superseding the 12 September outline in place. It
+was revised against the five points in the handoff's "Starting Sprint 2" and sent to Leslie
+as a docx for her ruling on structure before any prose. What changed:
+
+1. **What it receives** is the Problem Frame, its part 6 assumptions list, Part 3 of the
+   Problem Frame item (home still a team decision), the three framings, the runner-up, and
+   the set-aside list. "Frame version 2" and "the riskiest assumption" are gone; the plan's
+   ordering rule points at the break-the-frame assumptions instead.
+2. **The claim kinds** get a reference page (Three kinds of claim), a concept check, and a
+   column in the Confirmation Plan. The kind decides the check: ask or look, gather signal,
+   or split a causal bet into a present-tense claim and a bet.
+3. **The second Dojo Lab changes purpose.** "Test the Frame" would repeat Sprint 1's Dojo
+   Lab on the same frame, so it becomes "Dojo Lab: plan the checks." Both labs are to be
+   written as Dojo modules in the `dojo-module-problem-frame.md` format, with interim
+   any-chatbot prompts under [INTERIM]. Claude's recommendation, listed as decision 2.
+4. **The proxy risk is closed**; the Reflection is `ai_activity`.
+5. **Register and conventions** are Sprint 1's, stated at the foot of the outline, with the
+   handover and garden examples carried over.
+
+Eleven positions, 100 points held as a proposal. Seven decisions for Leslie, of which
+Part 3's home is the one the draft waits on. A [NOTE] proposes extending the Candidate Log
+with Parts E to G rather than starting a second document.
+
+No rendered check of the docx was possible in this session (LibreOffice Writer is not
+installed in the container); the file passed the XML validator and its structure (one
+table, all lists, all headings) was checked in the XML.
+
+Provenance: Leslie, the five points; Claude, the revised outline and the decisions list.
