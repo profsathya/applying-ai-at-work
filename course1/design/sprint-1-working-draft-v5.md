@@ -1,6 +1,6 @@
 ---
 purpose: Sprint 1, cut-ready source for Jeremy's rebuild, with a cover note for him and one build block per item
-status: v5.4.1 (cut-ready), 16 September 2026, cover note aligned to docs/AUTHORING.md. Content is v5.3, reviewed by Leslie on every page, with the Problem Frame name, the Candidate Log link, interim Dojo Lab text, and reviewer markers in place. History and rationale for every choice are in sprint-1-decisions.md.
+status: v5.4.2 (cut-ready), 16 September 2026. The final artifact is "Problem Frame"; the First frames are draft frames; no "version one/two" in participant text. Content is v5.3, reviewed by Leslie on every page, with the Problem Frame name, the Candidate Log link, interim Dojo Lab text, and reviewer markers in place. History and rationale for every choice are in sprint-1-decisions.md.
 supersedes: sprint-1-half-one-working-draft-v4.md (frozen at v4.2) and sprint-1-half-two-working-draft-v1.md (v1.1), for the whole of Sprint 1
 storage: replaces the sprint-12 first half; positions 1 to 10
 ---
@@ -17,14 +17,14 @@ This file is the source for the Sprint 1 rebuild. Everything below the line afte
 2. **Bracketed markers are reviewer notes.** `[TEAM DECISION: ...]` and `[INTERIM: ...]` carry into the pages verbatim, highlighted in the review export the way Sprints 3 and 4 did it, and are stripped at publish. There are five of them.
 3. **`[BUILD]` blocks and the italic line under each item title are configuration**, not page text: kind, position, points, submit or not, and the box prompts and criteria under each **Response tasks** heading (one response box per bullet, `presentation: reading` wherever there is more than one box). They do not appear in the pages.
 4. **"More help" blocks.** Wherever a page has a paragraph beginning *More help*, the design intent is a disclosure on the same page: backbone visible, help one click away. The renderer does not appear to offer an authored disclosure (its `<details>` elements are its own self-check and More options), so if none exists, render each *More help* paragraph inline as an indented aside in the position it sits, and say so in the readback. Do not drop them. There are seven.
-5. **Section-to-box mapping** for the pages with more than one box, since `instruction_section` wants a unique top-level heading per task: on **Dojo Lab**, section 1 feeds the challenges box, section 2 the framings box, section 3 the your-choice box. On **Problem Frame, version two**, Part 1 feeds frame-v2, Part 2 what-changed, Part 3 which-assumptions-first. On **First frames**, all seven teaching sections come before the five frame boxes, which sit together at the end; nothing maps one to one. Single-box pages (Brainstorm, Get underneath) put the box after all the teaching.
+5. **Section-to-box mapping** for the pages with more than one box, since `instruction_section` wants a unique top-level heading per task: on **Dojo Lab**, section 1 feeds the challenges box, section 2 the framings box, section 3 the your-choice box. On **Problem Frame**, Part 1 feeds problem-frame, Part 2 what-changed, Part 3 which-assumptions-first. On **First frames**, all seven teaching sections come before the five frame boxes, which sit together at the end; nothing maps one to one. Single-box pages (Brainstorm, Get underneath) put the box after all the teaching.
 6. **Send back the readback** (your authoring report or a rendered docx) before the pages go to Clare.
 
 **Before you run**
 
 - The old first half in `sprint-12` (Canvas module 2079) is superseded by this whole sprint. Retire or replace it as you see fit; Melisa has been running it, so keep her submissions reachable.
 - The Candidate Log link is already in the Introduction, in the form that makes the participant's copy on click. Nothing to do.
-- The name changed: the sprint's final artifact is **Problem Frame, version two**, not Goal Plan and Problem Frame. That ripples to the Welcome page's five-artifact map, `course1/homepage.yaml` (the Sprint 1 entries, and "goal plan" in the Sprint 3 and 4 reflection lines), and Sprint 3's "mid-course goal plan revision." Those are outside this file.
+- The name changed: the sprint's final artifact is **Problem Frame**, not Goal Plan and Problem Frame. The frames written on the First frames page are draft frames. That ripples to the Welcome page's five-artifact map, `course1/homepage.yaml` (the Sprint 1 entries, and "goal plan" in the Sprint 3 and 4 reflection lines), and Sprint 3's "mid-course goal plan revision." Those are outside this file.
 - Your 15 September Sprint 0 says "Available now: the first half of Sprint 1, through Test and commit." Test and commit no longer exists once this sprint is built; the first-week items are Brainstorm your list and Get underneath three to five.
 - Sprint 0 owes two lines before this sprint uses them: what "own your progress" and "graded item" mean, and that in assignments each part shows guidance, then an example, then a box.
 
@@ -40,7 +40,7 @@ This file is the source for the Sprint 1 rebuild. Everything below the line afte
 | 6 | Sprint 1 Concept check | Self-check | 5 | completion | 6 questions | One |
 | 7 | First frames | Graded item | 35 | one submission | 5 (2 optional) | One |
 | 8 | Dojo Lab: test, widen, choose | Own your progress | 0 | must submit | 3 | Two |
-| 9 | Problem Frame, version two | Graded item | 50 | one submission | 3 | Two |
+| 9 | Problem Frame | Graded item | 50 | one submission | 3 | Two |
 | 10 | Sprint 1 Reflection: what changed | Graded item | 10 | ai_activity, JSON upload | 1 | Two |
 
 Sprint total 100. The Reflection uses the CTI-owned AI proxy that went live 14 September; its configuration is in the `[BUILD]` block on that item.
@@ -59,7 +59,7 @@ You will start by brainstorming potential problems from your own life that you w
 - Write a problem frame that describes the problem as best you can, clearly marking what you do not know yet so you can look into it later.
 - Use AI to test and widen your own thinking.
 
-**What you carry forward.** One selected problem frame, version two, with every assumption in it marked confirmed or unverified. Sprint 2 works on the unverified ones.
+**What you carry forward.** One Problem Frame, for the problem you chose, with every assumption in it marked confirmed or unverified. Sprint 2 works on the unverified ones.
 
 The Introduction lays out the route through the sprint, week by week.
 
@@ -96,7 +96,7 @@ The goal is to move from a wide list to one framed problem, following these step
 **Week 2**
 
 6. **Run the Dojo Lab.** Tap into AI to widen your frames and help select one problem. (Own your progress, 0 points.)
-7. **Select one problem and submit your Problem Frame, version two.** Write a version two frame of the problem you chose, and identify what changed (50 points).
+7. **Select one problem and submit your Problem Frame.** Rewrite the frame of the problem you chose, and identify what changed from your draft (50 points).
 8. **Write the Reflection** (10 points).
 
 Spread week 1 across several days. The brainstorm's help asks you to watch your routine for a day or two if your list comes up short.
@@ -106,7 +106,7 @@ Spread week 1 across several days. The brainstorm's help asks you to watch your 
 - **Brainstorm your list, Get underneath, Dojo Lab: own your progress, 0 points.** Submit to record completion, or continue without submitting.
 - **Concept check: 5 points.** Your instructor reviews completion.
 - **First frames: 35 points.** One submission, all your frames, written part by part.
-- **Problem Frame, version two: 50 points.** One submission.
+- **Problem Frame: 50 points.** One submission.
 - **Reflection: 10 points.**
 
 ### About AI in this sprint
@@ -121,7 +121,7 @@ Keep everything you write, including items you set aside. The Reflection compare
 
 ### Where to write
 
-Use the **Candidate Log**, a document template you copy once and keep for the whole sprint. [Make your copy of the Candidate Log](https://docs.google.com/document/d/1aTgaDgf1ugkQujJkgvo-EHXUqm9ztN1jMA5SDy3lTjI/copy). It runs the whole sprint. Part A holds your brainstorm, Part B your table, Part C your first frames, one per candidate, and Part D your Problem Frame, version two. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box.
+Use the **Candidate Log**, a document template you copy once and keep for the whole sprint. [Make your copy of the Candidate Log](https://docs.google.com/document/d/1aTgaDgf1ugkQujJkgvo-EHXUqm9ztN1jMA5SDy3lTjI/copy). It runs the whole sprint. Part A holds your brainstorm, Part B your table, Part C your draft frames, one per candidate, and Part D your Problem Frame. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box.
 
 Begin with **Brainstorm your list**.
 
@@ -345,11 +345,11 @@ Answer all six from your own thinking, without AI. Review each explanation; if i
 
 *Graded item. Position 7. 35 points. One submission.*
 
-Now you are going to write version one of a frame for each of your three to five candidates. This page walks you through the seven parts in the order you write them. Remember, for each part you will see the guidance, then the example. Write each frame whole, one candidate at a time, in Part C of your Candidate Log, which repeats the seven parts in this order with a line of guidance beside each slot. When a frame is done, paste it into its box below, and start the next.
+Now you are going to write a draft frame for each of your three to five candidates. This page walks you through the seven parts in the order you write them. Remember, for each part you will see the guidance, then the example. Write each frame whole, one candidate at a time, in Part C of your Candidate Log, which repeats the seven parts in this order with a line of guidance beside each slot. When a frame is done, paste it into its box below, and start the next.
 
 Rough is right. A part you cannot fill gets "I do not know yet," and that line is part of the deliverable, not a failure of it.
 
-Work without AI on this one. Version one is your own read. The Dojo Lab uses AI to test and widen these frames, and that only works if there is an independent view to test.
+Work without AI on this one. The draft is your own read. The Dojo Lab uses AI to test and widen these frames, and that only works if there is an independent view to test.
 
 Expect the first frame to take longest and the others to go faster. Three frames in a sitting is normal.
 
@@ -425,7 +425,7 @@ Part 1 says what should be different, in one sentence, and you write it last bec
 
 > **Example.** *1. Goal:* Clients are handled by someone who knows their history, from the first day an account changes hands.
 
-Keep every frame exactly as you wrote it. The Reflection compares them with your final frame, and that only works if version one stays unedited.
+Keep every draft exactly as you wrote it. The Reflection compares your drafts with your Problem Frame, and that only works if the drafts stay unedited.
 
 ### Response tasks
 
@@ -508,19 +508,19 @@ If nothing holds up, or the only survivor does not matter to you, go back to you
 
 ---
 
-## Problem Frame, version two
+## Problem Frame
 
 *Graded item. Position 9. 50 points. One submission.*
 
-You chose one problem at the end of the Dojo Lab. From here on, everything in the course works on that one. This is where you write it up properly, in three parts and one submission. Your frame, version two, is what the rest of the course builds on. Parts 2 and 3 tell your instructor how you got there and what you will check first.
+You chose one problem at the end of the Dojo Lab. From here on, everything in the course works on that one. This is where you write it up properly, in three parts and one submission. Your Problem Frame is what the rest of the course builds on. Parts 2 and 3 tell your instructor how you got there and what you will check first.
 
-### Part 1. Frame version two
+### Part 1. Your Problem Frame
 
-Rewrite the frame you chose with everything that changed as a result of the Dojo Lab. All seven parts, in your words. Bring part 6 up to date, so that it lists every assumption you still hold, each marked confirmed or unverified, and for each unverified one, who could tell you.
+Rewrite the draft frame you chose with everything that changed as a result of the Dojo Lab. All seven parts, in your words. Bring part 6 up to date, so that it lists every assumption you still hold, each marked confirmed or unverified, and for each unverified one, who could tell you.
 
 ### Part 2. What changed, and why
 
-Your instructor cannot see your Dojo Lab session. This paragraph is where they see that the frame was tested and that you, not the AI, made the changes. Start from the recap your Dojo session gave you and check it against your Log. Then, in one short paragraph and in your words, say what moved between version one and version two, what argument or evidence moved it, and one thing the Dojo suggested that you rejected, and why. A frame that did not change is a legitimate result if you can say what you tested it against.
+Your instructor cannot see your Dojo Lab session. This paragraph is where they see that the frame was tested and that you, not the AI, made the changes. Start from the recap your Dojo session gave you and check it against your Log. Then, in one short paragraph and in your words, say what moved between your draft and your Problem Frame, what argument or evidence moved it, and one thing the Dojo suggested that you rejected, and why. A frame that did not change is a legitimate result if you can say what you tested it against.
 
 ### Part 3. Which assumptions should you investigate first
 
@@ -538,8 +538,8 @@ Your runner-up and your set-aside list are still in your Candidate Log, in case 
 
 ### Response tasks
 
-- **frame-v2** (response). Prompt: *Your frame, version two, all seven parts, with part 6 up to date.* Criteria: all seven parts present, in the participant's words; part 5 is one sentence describing a state; every assumption carries a status, and every unverified one names who could tell you; at least one unverified assumption remains, since a frame with none at this stage is a warning sign; part 1 passes both goal tests.
-- **what-changed** (response). Prompt: *What changed from version one, what moved it, and one suggestion you rejected.* Criteria: names a specific change or a specific reason for no change; names the evidence or argument; includes one rejected suggestion with a reason; in the participant's words rather than the Dojo's.
+- **problem-frame** (response). Prompt: *Your Problem Frame, all seven parts, with part 6 up to date.* Criteria: all seven parts present, in the participant's words; part 5 is one sentence describing a state; every assumption carries a status, and every unverified one names who could tell you; at least one unverified assumption remains, since a frame with none at this stage is a warning sign; part 1 passes both goal tests.
+- **what-changed** (response). Prompt: *What changed from your draft, what moved it, and one suggestion you rejected.* Criteria: names a specific change or a specific reason for no change; names the evidence or argument; includes one rejected suggestion with a reason; in the participant's words rather than the Dojo's.
 - **which-assumptions-first** (response). Prompt: *The two or three assumptions whose failure would break the frame, what would have to be true, and who could tell you or what you could observe.* Criteria: two or three assumptions, not a list of all of them; a clear condition for each to hold; a named person, role, or observation for each; at least one is reachable within two weeks.
 
 ---
@@ -548,9 +548,9 @@ Your runner-up and your set-aside list are still in your Candidate Log, in case 
 
 *Graded item. Position 10. 10 points. ai_activity, JSON upload, same mechanism as Sprints 3 and 4.*
 
-Put your first frames beside your Problem Frame, version two, and write about the distance between them. You have already written what changed. Here, write about how it changed. What did AI find that you would not have reached alone? What did you contribute that AI could not, because it depends on what you know about the people and the place? How did you decide what to accept and what to reject? And what is the one thing you are still unsure of and are carrying forward on purpose?
+Put your draft frames beside your Problem Frame and write about the distance between them. You have already written what changed. Here, write about how it changed. What did AI find that you would not have reached alone? What did you contribute that AI could not, because it depends on what you know about the people and the place? How did you decide what to accept and what to reject? And what is the one thing you are still unsure of and are carrying forward on purpose?
 
-> **[BUILD] ai_activity configuration.** One `ai-discussion` question. Prompt as above, minLength 150, numQuestions 3. aiContext: *This is the Sprint 1 reflection for Reframing Problems with AI. The participant wrote first frames for three to five situations, had AI test and widen them, chose one, and wrote a second version. Ask follow-up questions that catch a change attributed to AI that the participant actually made, a contribution described as "judgment" without saying what was judged, an accept-or-reject decision with no reason behind it, and a carried-forward uncertainty that is really a to-do. Push them to name one thing they are still unsure of. Do not rewrite the reflection.* summaryLabel: Your Sprint 1 Reflection. The CTI-owned AI proxy is live as of 14 September (`docs/audits/2026-09-14-owned-course-ai-proxy.md`), so this no longer waits on Sathya's deployment; falls back to text entry if it goes down.
+> **[BUILD] ai_activity configuration.** One `ai-discussion` question. Prompt as above, minLength 150, numQuestions 3. aiContext: *This is the Sprint 1 reflection for Reframing Problems with AI. The participant wrote draft frames for three to five situations, had AI test and widen them, chose one, and wrote their Problem Frame. Ask follow-up questions that catch a change attributed to AI that the participant actually made, a contribution described as "judgment" without saying what was judged, an accept-or-reject decision with no reason behind it, and a carried-forward uncertainty that is really a to-do. Push them to name one thing they are still unsure of. Do not rewrite the reflection.* summaryLabel: Your Sprint 1 Reflection. The CTI-owned AI proxy is live as of 14 September (`docs/audits/2026-09-14-owned-course-ai-proxy.md`), so this no longer waits on Sathya's deployment; falls back to text entry if it goes down.
 
 ---
 

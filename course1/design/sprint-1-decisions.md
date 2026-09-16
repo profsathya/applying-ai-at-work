@@ -2175,3 +2175,15 @@ in v5.3 before the notes were stripped:
 
 Provenance: Leslie, the name, the Log doc, the go; Claude, the pass, the interim prompts,
 the cover note.
+
+## 16 September, later: "Problem Frame," not "version two"; the First frames are drafts
+
+Leslie: the final artifact is just Problem Frame; if the earlier ones need a label, they
+are drafts; "version two" is weird. Applied everywhere in participant text: the item is
+"Problem Frame," its Part 1 is "Your Problem Frame," the box is `problem-frame`, the
+frames on the First frames page are "draft frames," and "version one/two" is gone from
+the module header, the route, the Log (v2.2), the Reflection, and its aiContext. "Version
+one/two" was bookkeeping language from the design notes that had leaked into the pages.
+The First frames item keeps its name.
+
+Provenance: Leslie, the ruling; Claude, the pass.
