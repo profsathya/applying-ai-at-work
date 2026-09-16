@@ -1,6 +1,6 @@
 ---
 purpose: Source text for the Candidate Log template, the document each participant copies once and keeps for Sprint 1
-status: v2, 15 September 2026, rebuilt to working draft v5.3 (Parts A to D); replaces the 12 September template built to the old first half
+status: v2.2, 16 September 2026, rebuilt to working draft v5.3 (Parts A to D) with the Problem Frame name and draft frames; replaces the 12 September template built to the old first half
 storage: this file is the source; the participant-facing copy is a Google Doc in Leslie's Drive (id in handoff.md), shared anyone-with-link, view only
 ---
 
@@ -54,7 +54,7 @@ Activity: Get underneath three to five. Pick three to five items from Part A. Th
 
 ## Part C. First frames
 
-Activity: First frames. Write one frame for each candidate, whole, in the order the slots appear (2, 3, 4, 5, 6, 7, then 1). Rough is right. A slot you cannot fill gets "I do not know yet." When a frame is done, paste it into its box on the First frames page. Do not edit these frames afterward; the Reflection compares them with your final one.
+Activity: First frames. Write one draft frame for each candidate, whole, in the order the slots appear (2, 3, 4, 5, 6, 7, then 1). Rough is right. A slot you cannot fill gets "I do not know yet." When a frame is done, paste it into its box on the First frames page. Do not edit these drafts afterward; the Reflection compares them with your Problem Frame.
 
 Candidate name:
 
@@ -198,15 +198,15 @@ Candidate name:
 
 ---
 
-## Part D. Goal Plan and Problem Frame
+## Part D. Problem Frame
 
-Activity: Goal Plan and Problem Frame. You chose one problem at the end of the Dojo Lab. Everything here is about that one.
+Activity: Problem Frame. You chose one problem at the end of the Dojo Lab. Everything here is about that one.
 
 **Before you start.** Paste the recap your Dojo Lab session gave you (what changed, what you left unverified on purpose, what to check first), and your choice: why this one, why not the others, why you, and your runner-up.
 
 
 
-**D1. Frame, version two.** All seven parts, with everything that changed as a result of the Dojo Lab, in your words. Use the same slots as Part C, in the same order, and bring part 6 up to date.
+**D1. Your Problem Frame.** All seven parts, with everything that changed as a result of the Dojo Lab, in your words. Use the same slots as Part C, in the same order, and bring part 6 up to date.
 
 Candidate name:
 
@@ -252,7 +252,7 @@ Candidate name:
 
 
 
-**D2. What changed, and why.** One short paragraph, in your words. What moved between version one and version two, what argument or evidence moved it, and one thing the Dojo suggested that you rejected, and why.
+**D2. What changed, and why.** One short paragraph, in your words. What moved between your draft and your Problem Frame, what argument or evidence moved it, and one thing the Dojo suggested that you rejected, and why.
 
 
 

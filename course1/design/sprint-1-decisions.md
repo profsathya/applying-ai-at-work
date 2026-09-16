@@ -2135,3 +2135,131 @@ Claude raised four concerns and one small fix after v5.2; her answers:
    the sequence is reconsidered once the content is done; [OPEN] at the foot of the draft.
 
 Provenance: Leslie, all five rulings; Claude, the edits and the Log template rebuild.
+
+## 16 September: the cut-ready pass (v5.4), the name, and the Log link
+
+Leslie's go for Jeremy's rebuild. Rulings and what changed:
+
+- **The name is Problem Frame, version two.** Leslie: it is what the sprint produces, and
+  "Goal Plan" referred to nothing. Applied to the item title, the route, the submit list,
+  the Log's Part D, the Dojo Lab's cross-reference, the Reflection, and the item table.
+  Ripple, owed outside this file: the Welcome page's five-artifact map, the course home
+  page, and Sprint 3 V2's "mid-course goal plan revision." Jeremy's and Melisa's.
+- **The Candidate Log link** is in the Introduction in copy-on-click form. The Google Doc
+  keeps its 12 September id, is in a CTI shared drive, and is shared anyone-with-link as
+  viewer. Contents are template v2.1 (v2 with the Problem Frame name); the docx went to
+  Leslie to re-paste because the first paste lost bold table headers and the empty
+  bullet lines.
+- **Interim Dojo Lab text.** The parked one-shot prompts are replaced by the capped
+  versions from the 15 September test (readiness verdict, three ranked findings, one
+  question; three framings of two lines each), with an [INTERIM] marker saying the Dojo
+  setup will replace them and the activity and submission do not change. The page now
+  says "any AI chat you already have" rather than naming the Symbiotic Thinking Dojo.
+- **Markers.** The four open design items are one-line [TEAM DECISION] markers at the
+  spot in the page where they bite (statuses, Part 3's home, the Concept check's
+  position, the Choose criteria). Reviewer-visible, participant-invisible, stripped at
+  publish. Jeremy to confirm his export highlights them.
+- **Notes sorted.** Rationale and history notes are out of the draft (they live here);
+  build instructions stay as [BUILD] blocks and the italic line per item. A one-page
+  cover note for Jeremy opens the file: the fidelity rule (carry the text as written, no
+  shortening), the marker rule, what is configuration, collapsed help, the readback ask,
+  what to do before the run, and the item table.
+- **Rubrics wait.** The pipeline does not publish rubrics (`canvas_sync/ack_rubric.py`);
+  points and per-box criteria are enough for the cut; rubrics get written across all
+  five sprints in one pass after Clare's review.
+
+Preserved from the draft, Leslie's designer note on the frame page, verbatim as it stood
+in v5.3 before the notes were stripped:
+
+    > **[NOTE] Why the frame is built this way**, from Leslie's designer notes. Two-part fields are split (3a/3b, 4a/4b) because in testing every compound field lost its second half, and the second half was always the harder and more valuable one; empty slots should look wrong. Example A is in labeled parts, not prose, so the structure is visible and participants do not reproduce the voice instead. Example B exists because A's countable units set a bar a qualitative problem cannot clear. Part 6 is done part by part, not by free listing, because free listing reliably misses cost assumptions. Confirmed/unverified replaces a blanket tag, since a label on every entry carries no information; B has one confirmed row on purpose. The claim kinds of v5 (checkable, prediction, causal bet) left for Sprint 2 in v5.2, where the checking happens (Leslie, 15 September: not needed at this stage, and only what bubbled up in her run). Part 7 is residual; most of its old work is absorbed by 6. Writing order is explicit because part 1 can only be written after 5. Part 1 gained the specificity test because consensus alone lets "financial peace" through. Part 5 is capped at one sentence because solutions leaked in the second sentence in two of three test frames. "Find out next" was retitled because "next" pulled toward build steps even with a warning. The [carried] tags of v5 are gone (Leslie, 14 September: what is the value; is it used later). They were a guard against a part that was all reuse and no new work; First frames now asks for the new element of each part explicitly, which does the same job without a tag.
+
+Provenance: Leslie, the name, the Log doc, the go; Claude, the pass, the interim prompts,
+the cover note.
+
+## 16 September, later: "Problem Frame," not "version two"; the First frames are drafts
+
+Leslie: the final artifact is just Problem Frame; if the earlier ones need a label, they
+are drafts; "version two" is weird. Applied everywhere in participant text: the item is
+"Problem Frame," its Part 1 is "Your Problem Frame," the box is `problem-frame`, the
+frames on the First frames page are "draft frames," and "version one/two" is gone from
+the module header, the route, the Log (v2.2), the Reflection, and its aiContext. "Version
+one/two" was bookkeeping language from the design notes that had leaked into the pages.
+The First frames item keeps its name.
+
+Provenance: Leslie, the ruling; Claude, the pass.
+
+# Session of 16 September 2026, evening: Sprint 2 begins
+
+## Sprint 2 outline revised against the handoff's five points
+
+`sprint-2-outline.md` is now outline v2, superseding the 12 September outline in place. It
+was revised against the five points in the handoff's "Starting Sprint 2" and sent to Leslie
+as a docx for her ruling on structure before any prose. What changed:
+
+1. **What it receives** is the Problem Frame, its part 6 assumptions list, Part 3 of the
+   Problem Frame item (home still a team decision), the three framings, the runner-up, and
+   the set-aside list. "Frame version 2" and "the riskiest assumption" are gone; the plan's
+   ordering rule points at the break-the-frame assumptions instead.
+2. **The claim kinds** get a reference page (Three kinds of claim), a concept check, and a
+   column in the Confirmation Plan. The kind decides the check: ask or look, gather signal,
+   or split a causal bet into a present-tense claim and a bet.
+3. **The second Dojo Lab changes purpose.** "Test the Frame" would repeat Sprint 1's Dojo
+   Lab on the same frame, so it becomes "Dojo Lab: plan the checks." Both labs are to be
+   written as Dojo modules in the `dojo-module-problem-frame.md` format, with interim
+   any-chatbot prompts under [INTERIM]. Claude's recommendation, listed as decision 2.
+4. **The proxy risk is closed**; the Reflection is `ai_activity`.
+5. **Register and conventions** are Sprint 1's, stated at the foot of the outline, with the
+   handover and garden examples carried over.
+
+Eleven positions, 100 points held as a proposal. Seven decisions for Leslie, of which
+Part 3's home is the one the draft waits on. A [NOTE] proposes extending the Candidate Log
+with Parts E to G rather than starting a second document.
+
+No rendered check of the docx was possible in this session (LibreOffice Writer is not
+installed in the container); the file passed the XML validator and its structure (one
+table, all lists, all headings) was checked in the XML.
+
+Provenance: Leslie, the five points; Claude, the revised outline and the decisions list.
+
+## 16 September, evening, later: the Sprint 2 arc, and outline v3
+
+Leslie read outline v2 against the course before reviewing it and reset the arc. Her
+findings, in conversation: Sprint 1 already tests the frame against alternatives, so
+Sprint 2 needs its own subject; research into what already exists and the cost of solving
+are covered nowhere in the course; the Goal Plan was never defined (one bullet in V1,
+revised by three later sprints); the goal of the course is a workable problem, not
+completing the activities. Claude's seam reading of Sprints 3 V2 and 4 V3: the risk with
+Sprint 3 is duplication, not contradiction, since its Stakeholder Map already pulls
+high-stakes assumptions, drafts validation questions, and picks a first contact; Sprint 4
+touches neither research nor cost, and its check form is worth borrowing.
+
+Rulings and answers (Leslie):
+
+- **The arc**: is this problem worth pursuing, and what would have to be true. Three
+  moves: which assumptions would break it (Part 3, moved from Sprint 1, opens the sprint),
+  what already exists, what a change would cost. A verdict closes the Confirmation Plan.
+- **Part 3 moves to Sprint 2**, not to the start of Sprint 3, where it would duplicate the
+  Stakeholder Map's own version.
+- **The research method**, in her words: brainstorm what exists yourself; give AI the
+  frame, context, goal, and brainstorm and ask for more items, which are truly viable,
+  which fall short and how; look at a few of the viable ones for real; decide whether any
+  kills the problem. An existing solution does not kill a problem by existing; adopting it
+  can be the problem worth solving.
+- **The one check** is fine; "required" means a criterion of the graded item, since the
+  OYP and graded-item structure enforces nothing else.
+- **A verdict of no** does not rerun the sprint. The runner-up's draft frame from First
+  frames takes a shortened pass. The course must say, from Sprint 1 on, that the goal is a
+  workable problem, not the checkbox work.
+- **Week 1's graded item**: she wants to see the options. Outline v3 lists three (the
+  research write-up, recommended; the pushback alone; the assumptions and the check).
+- **The Goal Plan** is replaced by the Confirmation Plan as the living document the later
+  sprints revise. Not folded back into Sprint 1.
+
+Outline v3 is in `sprint-2-outline.md`, superseding v2 the same day, and went to Leslie
+as a docx. Twelve positions, 100 points held as a proposal, eight decisions, an "owed
+elsewhere" list for Sprints 1, 3, 4, 5, the spine, and the confirmed/unverified against
+confirmed/inferred mismatch. Sprint 2 stops before writing validation questions; Sprint 3
+keeps that.
+
+Provenance: Leslie, the arc, the three moves, the research method, every ruling above;
+Claude, the seam map, the sequence, the decisions list, the record.

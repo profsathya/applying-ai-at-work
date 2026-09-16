@@ -1,0 +1,15 @@
+{
+  "creation_mode": "Built-in image_gen tool",
+  "created_date": "2026-09-15",
+  "source_note": "Original AI-generated illustrative scene, not documentary evidence.",
+  "external_image_sources": [],
+  "style_reference": "course1/sprints/sprint-12/assets/workplace-handoff.webp inspected for visual family only; new scene generated from textual brief.",
+  "delivery_processing": "Unmodified generated PNG copied into course assets.",
+  "assets": [
+    {
+      "path": "problem-investigation.png",
+      "prompt": "Create a NEW editorial textbook illustration for the Welcome page of a professional course about investigating real problems before choosing AI solutions. Match the approved visual family: restrained navy ink outlines, muted slate blue and teal, warm cream background, light paper texture, realistic adult proportions, sophisticated calm 2D editorial illustration. Wide landscape composition approximately 3:1. NEW scene, not a folder handoff or people seated around a table: two diverse working adults stand beside a large pinboard, thoughtfully examining a small arrangement of observation cards connected by simple lines. One points to a relationship on the board while the other holds an open notebook and listens. A modest workspace with a plant, uncluttered airy composition, all people comfortably framed. The board conveys making sense of observations, not a finished solution. No readable words, no tiny text, no logos, no watermark, no robots, no sci-fi interface, no floating icons. Slate blue is the principal accent. Natural hands and expressions. This is an illustrative scene, not documentary evidence. Output the finished illustration.",
+      "sha256": "6aefac80f3a56e7e5b90e2cf8215743f2c967fa56c2c66078e69a7e7e6979d02"
+    }
+  ]
+}

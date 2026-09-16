@@ -257,35 +257,39 @@ modules:
     tag: "Orientation"
     open: false
     learning_goals:
-      - "Say what you will produce by the end of the course, and how the five sprints build toward it."
-      - "Know what the course asks of you each week, and decide how you will fit it in."
-      - "Recognize the two ideas the course rests on, Superagency and Human Value, and how you work with AI as a thinking partner."
-      - "Know where to go when you are stuck."
+      - "Explain what the integrated problem document will show and how the five sprints contribute to it."
+      - "Plan 4-6 hours of weekly work within the recommended ten-week schedule."
+      - "Set up an AI coach and check that it supports your thinking while leaving decisions with you."
+      - "Find submission guidance and contact your instructor when you need help."
+    prereq: "Start here before Sprint 1. Follow six pages and one discussion in order; the Introduction Post is your only submission. The first half of Sprint 1 is completed without AI."
     groups:
       - label: "Read these in order"
         items:
           - slug: "start-here-v2"
             nav_meta: "Read"
-            meta: "Page - module landing page: what this module covers and what to do first"
+            meta: "Page - orientation goals and your route through six pages and one discussion"
           - slug: "welcome-v2"
             nav_meta: "Read"
-            meta: "Page - what the course is, who it is for, and what you walk out with"
+            meta: "Page - investigate a real problem, use your judgment with AI, and build an integrated problem document"
           - slug: "how-this-course-works-v2"
             nav_meta: "Read"
-            meta: "Page - the five sprints, the weekly rhythm, and how you turn work in"
+            meta: "Page - the recommended two-week sprints, 4-6 hours of weekly work, and Canvas submissions"
           - slug: "your-first-week-v2"
             nav_meta: "Read"
-            meta: "Page - a short checklist, ending in the one thing you submit"
+            meta: "Page - plan weekly work, find Canvas Inbox, set up your coach, and post your introduction"
+          - slug: "set-up-your-ai-dojo-v2"
+            nav_meta: "Set up · No submission"
+            meta: "Page - configure your chosen AI tool with the shared Dojo method and check its coaching behavior; no submission"
       - label: "The one submission"
         items:
           - slug: "introduction-post-v2"
             nav_meta: "Post · Complete or incomplete"
             meta: "Discussion - post a short introduction and read a few others; complete or incomplete, 0 points, peer replies optional"
-      - label: "Come back to this anytime"
+      - label: "Read after your introduction, then return anytime"
         items:
           - slug: "help-and-resources-v2"
             nav_meta: "Read"
-            meta: "Page - how-tos, key terms, and how to reach your instructor"
+            meta: "Page - submission steps, saved drafts, key terms, and instructor contact through Canvas Inbox"
 
   - sprint: 7
     order: 3

@@ -1,6 +1,6 @@
 ---
 type: page
-title: 'How This Course Works'
+title: How This Course Works
 slug: how-this-course-works-v2
 artifact_id: course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2
 sprint: 6
@@ -11,71 +11,63 @@ points: null
 submission_type: none
 publish: true
 learner_labels: true
+page_presentation: reading
+completion_requirement: must_view
+source_provenance: how-this-course-works-v2.sources.json
 ---
 
 # How This Course Works
 
-> Ten weeks, five sprints, two weeks each. Each sprint produces one document. Everything is online and on your own schedule, but the pace is real, so aim for about half a sprint each week. You turn everything in through Canvas. You are graded on how you got there as well as what you finished.
-
-## What gets assessed
-
-You are assessed on how you got there as well as what you finished. That is deliberate.
-
-The AI tools you use today will not be the ones you use in three years. What carries forward is your ability to frame a problem, judge what an AI gives you, and explain your reasoning to someone else. So the reflections, the logs, and the record of how your thinking changed are not extra work around the real assignment. They are the part that stays useful after the tools change.
-
-## The five sprints
-
-Ten weeks. Two weeks per sprint. Each sprint produces one document, and each document feeds the next.
-
-| Sprint | Weeks | What you do | What you produce |
-| --- | --- | --- | --- |
-| **1. Frame what is worth solving** | 1-2 | Take a problem from your own work and move it from the request you were handed to the problem underneath it. | Problem reframing document |
-| **2. Direct AI deliberately** | 3-4 | Run the problem through context, choices, and confirmation. Explore directions, name the assumptions inside each, test which hold. | 3Cs application log |
-| **3. Integrate people and context** | 5-6 | Work out who has a stake, map what they need, then talk to real people. Reconcile what conflicts. | Stakeholder validation report |
-| **4. Close the learning gap** | 7-8 | Name what you do not know that is blocking you. Set a learning goal, close the gap, show what it changed. | Self-learning journey document |
-| **5. Synthesize and show readiness** | 9-10 | Pull all four together into one argument about the problem, and trace how your thinking moved. | Integrated problem document and readiness report |
-
-Notice the sprint names are verbs. Frame, direct, integrate, close, synthesize. Each one names a thinking move, and the thinking move is the thing being built. The document is the evidence.
-
-Sprint 3 is the one to look at now, because it involves other people and other people need notice. In week 5 you will talk to someone who has a real stake in your problem. If a workplace stakeholder is not available to you, a mentor, an advisor, a peer, a community member, or a professional contact all work. Nobody is asked to pretend a classmate is their VP of Operations.
-
-## This is course 1 of 2
-
-CIS 501 frames the problem. CIS 502, Designing Solutions with AI, is where you build and iterate a solution to it. You carry your integrated problem document into Course 2 as the starting input.
-
-You are not committing to Course 2 by taking this one.
+Plan for **4-6 hours each week**. The recommended route is **ten weeks, with two weeks per sprint**. You work online at times that fit your responsibilities. The sprint schedule is a pacing guide, with suggested deadlines.
 
 ## Your weekly rhythm
 
-The course is asynchronous and self-paced. Nothing meets live. You fit it around work.
+> Aim to work through about half a sprint each week. Put recurring time on your calendar and adjust the blocks around your responsibilities. If you fall behind or a question stops your progress, contact your instructor through Canvas Inbox to discuss a next step.
 
-Self-paced does not mean unpaced. Each sprint is two weeks, and the work is designed to be split across both of them. **Aim for about half a sprint per week.** The people who struggle in courses like this are almost always the ones who saved a sprint for its final weekend.
+## The five-sprint roadmap
 
+Each sprint develops your thinking and contributes evidence to the final integrated problem document. You may submit several activities within a sprint; follow the directions on each activity.
 
-Here is the single most useful thing you can do about this: pick your hours now and put them on your calendar as a recurring block. In self-paced courses, a fixed scheduled slot predicts finishing better than motivation does.
+### 1. Find the problem worth solving · Weeks 1-2
 
-## How you work with AI
+Use observations from work or life to compare candidate problems and explain which is worth investigating. Keep your table and your **Test and commit** answers. The planned later work develops a **Goal Plan and Problem Frame**.
 
-Think first, then bring AI in. You lead. AI helps you think, it does not think for you.
+**Available now:** the first half of Sprint 1, through Test and commit. Work without AI in this half. The later Dojo activity, Goal Plan and Problem Frame, and reflection are not available yet.
 
-There is a consistent pattern across all five sprints. AI generates range, prepares, explains, and acts as a sounding board. You judge which framing is real, decide what is credible, hold the conversations, and write the account of your own growth.
+### 2. Direct AI deliberately · Weeks 3-4
 
-Sprint 3 is the clearest example. AI helps you map perspectives and draft what to ask. The conversations are yours alone.
+Give AI useful context, compare choices, and identify what needs confirmation. Your application log records suggestions, assumptions, and the judgment behind your decisions.
 
-## Your AI partners
+### 3. Integrate people and context · Weeks 5-6
 
-You will work with AI as a thinking partner throughout this course. You will be introduced to the specific tools in Sprint 1, at the point where you first use them. There is no cost to you for the tools this course uses.
+Map who has a stake, speak with real people, and use their input to revise your problem frame. Your stakeholder evidence records what you heard and what changed.
 
-## How you turn work in
+Plan ahead for these conversations. A mentor, advisor, peer, community member, or professional contact can contribute if they have a real stake or relevant knowledge. Ask them about their actual experience.
 
-Everything goes through Canvas, either typed straight into the submission box or uploaded as a file. There is no separate portfolio site and no other platform to learn.
+### 4. Close the learning gap · Weeks 7-8
 
-Step-by-step instructions are on the **Help and Resources** page.
+Identify knowledge that is blocking your next move. Follow a focused learning path and check important claims against evidence. Keep a record of what you learned, how you checked it, and what it changed.
 
-## What happens if you fall behind
+### 5. Synthesize and show readiness · Weeks 9-10
 
-Assignments may not have set deadlines, but we encourage timely participation so you get the most out of the course. If you fall behind, do not worry: every day is an opportunity to catch up.
+Bring your problem frame, stakeholder input, and learning evidence together in the integrated problem document and readiness report. Show both your argument and how your thinking developed.
 
-## Next
+This is the course roadmap. The course homepage identifies which activities are currently available.
 
-Continue to **Your First Week**: a short checklist, ending in the one thing you submit.
+## What gets assessed
+
+Your reasoning matters alongside the work you finish: the evidence you use, the assumptions you check, and how you revise your thinking. Activities state their points and completion expectations. Keep your working notes so you can show why a decision changed.
+
+## Working with AI
+
+Begin with your own observations and judgment. When an activity introduces AI, use it to explore possibilities, prepare questions, or examine your thinking. You remain responsible for checking claims and making decisions. Tool instructions appear where you first need them; the course tools have no cost to you.
+
+## Turning in your work
+
+Submit through Canvas using the type specified by the activity: discussion, text entry, or file upload. Saving, copying, or downloading work inside an activity does not submit it to Canvas. Use [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources) for the steps and for checking that a submission went through.
+
+## Continuing into Course 2
+
+CIS 501 develops your problem frame and goals. In **CIS 502: Designing Solutions with AI**, you use the integrated problem document to begin building and refining a solution. Continuing into CIS 502 is recommended to complete the certificate sequence.
+
+Continue to [Your First Week](https://cti-courses.instructure.com/courses/180/pages/your-first-week) for your orientation checklist.

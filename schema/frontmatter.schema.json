@@ -33,10 +33,14 @@
     "learner_labels": {
       "type": "boolean"
     },
+    "require_sequential_progress": {
+      "type": "boolean",
+      "description": "Module-header setting: require completion requirements in item order."
+    },
     "page_presentation": {
       "type": "string",
       "enum": ["reading"],
-      "description": "Opt-in reading layout for informational pages."
+      "description": "Opt-in reading layout for informational pages and native discussions."
     },
     "learning_goal": {
       "type": "string",

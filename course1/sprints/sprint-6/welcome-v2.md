@@ -1,6 +1,6 @@
 ---
 type: page
-title: 'Welcome'
+title: Welcome
 slug: welcome-v2
 artifact_id: course1-sprints-welcome-and-orientation-v2-welcome-v2
 sprint: 6
@@ -11,53 +11,39 @@ points: null
 submission_type: none
 publish: true
 learner_labels: true
+page_presentation: reading
+completion_requirement: must_view
+source_provenance: welcome-v2.sources.json
 ---
 
 # Welcome
 
-> This course helps you take a real problem from your work or your personal life and turn it into a problem clear enough to actually solve. You bring the problem. AI helps you think it through. You make every call. In ten weeks you will have one document that shows the problem, the thinking behind it, and how your own thinking changed.
+Take a real problem from your work or personal life and investigate what would make a meaningful difference. This course helps you clarify the problem and your goals before committing to a solution. AI supports your thinking; you make the decisions at every step.
 
+![Two professionals examine connections among observations on a pinboard while one holds an open notebook.](assets/problem-investigation.png)
 
-## What this course is
+*Investigating a problem starts with observations, questions, and people who know the context. Illustration created with AI for this course.*
 
-You pick one real problem, something from your job, your job search, or something you are genuinely trying to change, and you spend ten weeks turning it into a problem that is clearly defined and actually actionable.
+## Start with your own experience
 
-The problem has to be real. Real people affected, real consequences. Most people bring something from their current work. A job search counts. Community work counts. Caregiving counts. What does not work is a made-up case study, because you will not stay with it for ten weeks.
+Your work, job search, community responsibilities, or caregiving can provide a problem to investigate. It needs to involve real people and consequences, so you can learn from what happens and from people who know the situation.
 
-You choose it in Sprint 1. You do not need to know what it is yet.
+You will investigate and choose in Sprint 1. You do not need to know what it is yet.
 
-## What you walk out with
+This course is for working professionals and people changing careers. Your knowledge of how things happen, who is involved, and what has been tried is the starting point. You do not need a technical background to develop the valuable skill of directing AI with judgment.
 
-**The integrated problem document.** One document, built across all five sprints.
+## What you will have by the end of the course
 
-It does two things. It lays out your problem: what it really is, who it affects, what the constraints are, and what would count as solving it. And it traces how your thinking moved from week 1 to week 10.
+> The **integrated problem document** brings together your work across the five sprints. It explains the problem, possible causes, people affected, constraints, and what improvement would look like. It also traces how your thinking changed as you gathered evidence. A short readiness report explains what you are now equipped to do.
 
-Your movement in thinking is very important. Everything you produce in sprints 1 through 4 feeds this document. Nothing you do is thrown away.
+Keep your notes, alternatives, and revised ideas. Even a candidate you set aside can show what you learned and why you changed direction. Individual activities have their own submissions; those pieces support the final document.
 
-## Who this is for
+## What you and AI each contribute
 
-Working professionals, and people in the middle of a career change.
+**Superagency** means taking on work that was previously beyond your reach. **Human Value** is what you contribute: context, relationships, judgment, and responsibility for decisions. The two belong together. AI can offer different ways to view a problem; you judge which fit the people and circumstances involved.
 
-You may or may not be an undergraduate. Either way, this course is not built like a traditional undergraduate course. You already know how your organization actually works: the official process and the real one, the stated priority and the real one. That knowledge is the thing this course builds on. It is also exactly the thing AI cannot supply.
+The course calls this partnership **Symbiotic Thinking**. You bring your own thinking first, use AI to examine possibilities, and check important claims against people and evidence.
 
-You do not need a technical background. Directing AI well is not a technical skill.
+AI tools will change. The habits you practice here, framing a problem, judging suggestions, and explaining your reasoning, remain useful as the tools change.
 
-## The two ideas underneath all of this
-
-Everything in this course comes back to two ideas. You will see them again in every sprint.
-
-**Superagency:** taking on work you would not otherwise have taken on. By week 10 you should be able to point at something and say: I could not have done that in week 1.
-
-**Human Value:** what you contribute that AI does not. The context. The relationships. The judgment calls. AI can generate ten possible framings of your problem in four seconds. It cannot know which one your director will actually fund, or which colleague will quietly block it, or what happened the last time someone tried.
-
-Underneath both sits a practice we call **Symbiotic Thinking**: treating AI as a partner in thinking, not as a faster way to do what you already do.
-
-## Why this, and why now
-
-The AI tools you use today will not be the ones you use in three years. Anything built around a specific tool goes stale.
-
-So this course is not a tour of AI tools. What we are building is a way of working: how to frame a problem, how to judge what an AI hands you, how to explain your reasoning to another person. That survives the tools changing.
-
-## Next
-
-Continue to **How This Course Works**: the five sprints, the weekly rhythm, and how you turn work in.
+Continue to [How This Course Works](https://cti-courses.instructure.com/courses/180/pages/how-this-course-works) to plan your weekly work.

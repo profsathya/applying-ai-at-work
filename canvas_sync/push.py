@@ -608,6 +608,15 @@ def push_artifact(
             publish=fm.get("publish", True),
         )
 
+        # Module-level progression is owned by the header, not repeated by items.
+        if canvas_artifact_type == "module_header" and "require_sequential_progress" in fm:
+            desired_sequential = fm["require_sequential_progress"]
+            updated_module = client.update_module(
+                module_id, {"require_sequential_progress": desired_sequential}
+            )
+            if updated_module.get("require_sequential_progress") is not desired_sequential:
+                raise ValueError(f"Module {module_id}: Canvas did not confirm sequential progression")
+
         canvas_module_item_id = existing.get("canvas_module_item_id")
         # A provisional entry (identity saved right after creation, publish
         # never completed) means module placement may not have happened: a

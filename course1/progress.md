@@ -34,3 +34,7 @@ Published the reviewed seven-artifact source set from `course1/sprints/sprint-12
 ## Post-build: 2026-09-14 AI Feedback Check
 
 BUILT: Optional AI Feedback: What Changed and Try It, sprint-13/ai-feedback-check.md, published through protected workflow to Course 180 module 2080, assignment 7148. Zero points, excluded from final grade, no completion requirement. Live Canvas iframe generation and save passed; embedded clipboard export remains unverified. See final authoring review for evidence and limits.
+
+## Post-build: 2026-09-15 Sprint 0 revision
+
+Published the seven-tab Google Doc adaptation from `course1/sprints/sprint-6/` through protected workflow 35036913818, source `153dbeb`, Canvas state `1ff4e14`, hosted `e38ef80`. Module 2075 retains six original items: five required views and one required introduction contribution, now sequential. New Welcome art, blue accents, consistent discussion presentation, revised orientation route, and homepage copy are live. Full schema, 235 unit tests, and final responsive preview passed; API and hosted readback verified publication. See [publication and source-alignment analysis](reports/publication/sprint-0-publication-20260915.md) for evidence and limits.

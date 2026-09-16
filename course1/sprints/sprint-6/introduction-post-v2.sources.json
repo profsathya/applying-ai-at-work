@@ -1,0 +1,271 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-welcome-and-orientation-v2-introduction-post-v2",
+  "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
+  "map_sha256": "6f63926ccabc0997d147041f102475b5770c172ff78f6a6a319dba92f7534249",
+  "body_sha256": "072877ad11938d01827d82df6b6bdbe5b4882b05420b4d87d74c1a772f8c3d3d",
+  "frontmatter_sha256": "617eb6cbd0b757282b97ed4cdfefc896e422949c537fa35a852790d0ef3d1303",
+  "parts": [
+    {
+      "kind": "new",
+      "markdown": "# Introduction Post",
+      "reason": "Apply the existing Markdown title heading to the verified source title.",
+      "based_on": [
+        "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/4"
+      ]
+    },
+    {
+      "ref": "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/8",
+      "view": "base",
+      "role": "learner",
+      "decision": "Retain the captured current wording, which includes previously accepted edits; browser review supplement records outstanding review context.",
+      "kind": "source",
+      "source_name": "capture.json",
+      "source_sha256": "a5a526bfcb8ecc4c75868a3ba18e8a71d3252779d2fe1262b000c241cd23e4be",
+      "block": {
+        "id": "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/8",
+        "location": "tab/t.t7zlel2grtq6/body/8",
+        "flags": [],
+        "raw": {
+          "startIndex": 231,
+          "endIndex": 344,
+          "paragraph": {
+            "elements": [
+              {
+                "startIndex": 231,
+                "endIndex": 343,
+                "textRun": {
+                  "content": "This is the one thing you submit in this module. It is an introduction, and it is graded complete or incomplete.",
+                  "textStyle": {
+                    "foregroundColor": {
+                      "color": {
+                        "rgbColor": {
+                          "red": 0.101960786,
+                          "green": 0.101960786,
+                          "blue": 0.101960786
+                        }
+                      }
+                    },
+                    "fontSize": {
+                      "magnitude": 10.5,
+                      "unit": "PT"
+                    },
+                    "weightedFontFamily": {
+                      "fontFamily": "Calibri",
+                      "weight": 400
+                    }
+                  }
+                }
+              },
+              {
+                "startIndex": 343,
+                "endIndex": 344,
+                "textRun": {
+                  "content": "\n",
+                  "textStyle": {}
+                }
+              }
+            ],
+            "paragraphStyle": {
+              "namedStyleType": "NORMAL_TEXT",
+              "direction": "LEFT_TO_RIGHT",
+              "spaceBelow": {
+                "magnitude": 5.5,
+                "unit": "PT"
+              }
+            }
+          }
+        },
+        "kind": "paragraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "This is the one thing you submit in this module. It is an introduction, and it is graded complete or incomplete.",
+            "changes": [],
+            "link": null,
+            "native_link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            }
+          },
+          {
+            "text": "",
+            "changes": [],
+            "link": null,
+            "native_link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            }
+          }
+        ],
+        "text": {
+          "base": "This is the one thing you submit in this module. It is an introduction, and it is graded complete or incomplete.",
+          "proposed": "This is the one thing you submit in this module. It is an introduction, and it is graded complete or incomplete."
+        }
+      },
+      "block_sha256": "8ffeee8f042f61a159bb481dbe6a33bfa69f47defebc1c3a26d244e1692b6d9e",
+      "markdown": "This is the one thing you submit in this module. It is an introduction, and it is graded complete or incomplete."
+    },
+    {
+      "kind": "new",
+      "markdown": "## Introduce yourself\n\nShare a few sentences about each of these:\n\n- Your name and something interesting about yourself.\n- The field you work in, have worked in, or hope to enter.\n- Why you decided to take this course.\n- What you are most excited to learn.\n- Something that is bringing you joy.\n\nShare only as much personal detail as you feel comfortable sharing.",
+      "reason": "Preserve all five revised prompts and comfortable disclosure while correcting source grammar and consolidating directions.",
+      "based_on": [
+        "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/10",
+        "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/11",
+        "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/12",
+        "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/13",
+        "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/14",
+        "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/15"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "Your post introduces you to the group; writing quality is not assessed. Post your introduction in this Canvas discussion to record your contribution. It is worth **zero points** and is excluded from the final grade.",
+      "reason": "Clarify purpose, native discussion submission, and verified grading settings without creating a response box or new requirement.",
+      "based_on": [
+        "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/8",
+        "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/16",
+        "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/24"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "## Read a few introductions\n\nRead a few other posts when they are available. You will be learning alongside these people. Replies are welcome and optional.",
+      "reason": "Retain the peer-reading invitation, remove stakeholder-proxy language, and handle the first participant with no posts yet.",
+      "based_on": [
+        "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/17",
+        "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/18"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "Continue to [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources), then begin [Sprint 1: Find the Problem Worth Solving](https://cti-courses.instructure.com/courses/180/pages/introduction-find-the-problem-worth-solving-2).",
+      "reason": "Link the help page and verified current Sprint 1 Introduction, not its unpublished duplicate.",
+      "based_on": [
+        "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/20"
+      ]
+    }
+  ],
+  "metadata_decisions": [
+    "Preserve existing type, title, slug, artifact_id, storage sprint, module, position, publication intent, points, submission and completion settings.",
+    "Use reading presentation for informational pages only. This local build makes no Canvas writes.",
+    "Keep the native discussion with zero points, pass_fail grading, omit_from_final_grade true, and must_contribute completion.",
+    "User requested consistent discussion styling. Opt into reading presentation while retaining native discussion type, grading, completion, and Canvas identity."
+  ],
+  "source_roles": {
+    "d-a5a526bfcb8ecc4c": {
+      "role": "primary_authoring",
+      "reason": "User-supplied seven-tab Sprint 0 document, supplemented by approved plan and verified existing course behavior.",
+      "coverage_decision": "Connector returns PREVIEW_WITHOUT_SUGGESTIONS and an empty comments array despite browser-visible comments. Browser review supplement records open feedback and confirms the only outstanding suggestion is blank lines. Accepted substantive edits are present in captured text. This is sufficient for the user-authorized adaptation; no claim of complete native revision history."
+    }
+  },
+  "decisions": [
+    "User approved instructional adaptation to the latest Sprint 1 tone and presentation, preserving six participant items plus the module header and all Canvas identities.",
+    "User confirmed 4-6 hours weekly and a recommended ten-week schedule with suggested two-week sprints. No due dates are authored.",
+    "User chose omission of pending instructor bio/video. Remove absent-video dependencies; preserve Canvas Inbox support. No office-hour or response-time claims.",
+    "Browser supplement reviewed all open feedback across all tabs. Accepted edits remain in captured prose; the sole unaccepted suggestion adds blank lines. Google source, suggestions, and comments are untouched.",
+    "Capture labels, dated capture notes, raw URLs, TODOs, and reviewer discussion are operator context, not learner content. Implement source notes only where consistent with user-approved plan and current verified behavior.",
+    "Use current live Sprint 1 first-half scope and authoritative September problem-spine guidance over superseded legacy course scheduling assumptions. No neighboring sprint is changed.",
+    "Preserve meaningful exact source selections; all reorganized prose, added transitions, headings, links, and presentation are explicitly labeled adaptations with based_on references.",
+    "Current Canvas wrappers/settings show no target drift. Retain existing source submission and Inbox fixes rather than restoring outdated Google Doc placeholders.",
+    "2026-09-15 visual follow-up: replace the reused Sprint 1 image with a new original illustration in the same art style; add selective blue callouts on Welcome, How This Course Works, Your First Week, and Help. Existing Start Here goals accent remains the reference. No instructional or assessment redesign.",
+    "User authorized live publication, five must_view pages and sequential item progression; preserve must_contribute discussion and existing identities. Clarify early help guidance to avoid a locked later-page dependency."
+  ],
+  "title_source": {
+    "ref": "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/4",
+    "view": "base",
+    "role": "learner",
+    "kind": "source",
+    "source_name": "capture.json",
+    "source_sha256": "a5a526bfcb8ecc4c75868a3ba18e8a71d3252779d2fe1262b000c241cd23e4be",
+    "block": {
+      "id": "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/4",
+      "location": "tab/t.t7zlel2grtq6/body/4",
+      "flags": [],
+      "raw": {
+        "startIndex": 102,
+        "endIndex": 120,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 102,
+              "endIndex": 119,
+              "textRun": {
+                "content": "Introduction Post",
+                "textStyle": {
+                  "bold": true,
+                  "foregroundColor": {
+                    "color": {
+                      "rgbColor": {
+                        "red": 0.12156863,
+                        "green": 0.22745098,
+                        "blue": 0.37254903
+                      }
+                    }
+                  },
+                  "weightedFontFamily": {
+                    "fontFamily": "Georgia",
+                    "weight": 400
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 119,
+              "endIndex": 120,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {}
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "HEADING_1",
+            "direction": "LEFT_TO_RIGHT",
+            "spaceAbove": {
+              "magnitude": 10,
+              "unit": "PT"
+            },
+            "spaceBelow": {
+              "magnitude": 2,
+              "unit": "PT"
+            }
+          }
+        }
+      },
+      "kind": "paragraph",
+      "heading_level": 1,
+      "segments": [
+        {
+          "text": "Introduction Post",
+          "changes": [],
+          "link": null,
+          "native_link": null,
+          "format": {
+            "bold": true,
+            "italic": false
+          }
+        },
+        {
+          "text": "",
+          "changes": [],
+          "link": null,
+          "native_link": null,
+          "format": {
+            "bold": false,
+            "italic": false
+          }
+        }
+      ],
+      "text": {
+        "base": "Introduction Post",
+        "proposed": "Introduction Post"
+      }
+    },
+    "block_sha256": "5bd127fde3fa23f11314028d0a9db6b49825a26ea85e8ef422f7ee595ab13b06",
+    "markdown": "# **Introduction Post**"
+  }
+}
