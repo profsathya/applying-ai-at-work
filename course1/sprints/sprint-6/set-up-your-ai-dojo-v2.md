@@ -35,7 +35,7 @@ Use a model available in your account. If your account does not offer projects o
 
 Open the [shared Dojo Core](https://profsathya.github.io/Common-Curriculum/common/dojo/dojo-core.txt). This is the reusable coaching method; it does not contain this course's activities or policies.
 
-Open the [Dojo and Course Context document](https://docs.google.com/document/d/1V8L_oJVFwYVtaJmJoVBj4QSSGQXERdjRfhm4NlryAjE/edit). Its **Dojo** tab contains the shared method; its **Course** tab contains released course material with source links and a generation date. The initial course snapshot is dated September 16, 2026. Automatic refresh is not enabled yet, so check current activity directions in Canvas.
+Open the [Dojo and Course Context document](https://docs.google.com/document/d/1q4Dpbzr1quGMw-_i5mn99EO4bi-xj-VK-DoAJG13r38/edit). Its **Dojo** tab contains the shared method; its **Course** tab contains released course material with source links and a generation date. The initial course snapshot is dated September 16, 2026. Automatic refresh is not enabled yet, so check current activity directions in Canvas.
 
 Add that document as a source: in ChatGPT, use **Add source** in your project and paste the Drive link; in Claude, add it from **Google Drive** to project knowledge; in Gemini, select it from **Drive** under the Gem's **Knowledge**. Availability depends on your account. If the tool cannot access both tabs, supply dated copies of their text and replace those copies when the document changes.
 
