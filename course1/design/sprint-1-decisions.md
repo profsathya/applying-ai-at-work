@@ -2220,3 +2220,46 @@ installed in the container); the file passed the XML validator and its structure
 table, all lists, all headings) was checked in the XML.
 
 Provenance: Leslie, the five points; Claude, the revised outline and the decisions list.
+
+## 16 September, evening, later: the Sprint 2 arc, and outline v3
+
+Leslie read outline v2 against the course before reviewing it and reset the arc. Her
+findings, in conversation: Sprint 1 already tests the frame against alternatives, so
+Sprint 2 needs its own subject; research into what already exists and the cost of solving
+are covered nowhere in the course; the Goal Plan was never defined (one bullet in V1,
+revised by three later sprints); the goal of the course is a workable problem, not
+completing the activities. Claude's seam reading of Sprints 3 V2 and 4 V3: the risk with
+Sprint 3 is duplication, not contradiction, since its Stakeholder Map already pulls
+high-stakes assumptions, drafts validation questions, and picks a first contact; Sprint 4
+touches neither research nor cost, and its check form is worth borrowing.
+
+Rulings and answers (Leslie):
+
+- **The arc**: is this problem worth pursuing, and what would have to be true. Three
+  moves: which assumptions would break it (Part 3, moved from Sprint 1, opens the sprint),
+  what already exists, what a change would cost. A verdict closes the Confirmation Plan.
+- **Part 3 moves to Sprint 2**, not to the start of Sprint 3, where it would duplicate the
+  Stakeholder Map's own version.
+- **The research method**, in her words: brainstorm what exists yourself; give AI the
+  frame, context, goal, and brainstorm and ask for more items, which are truly viable,
+  which fall short and how; look at a few of the viable ones for real; decide whether any
+  kills the problem. An existing solution does not kill a problem by existing; adopting it
+  can be the problem worth solving.
+- **The one check** is fine; "required" means a criterion of the graded item, since the
+  OYP and graded-item structure enforces nothing else.
+- **A verdict of no** does not rerun the sprint. The runner-up's draft frame from First
+  frames takes a shortened pass. The course must say, from Sprint 1 on, that the goal is a
+  workable problem, not the checkbox work.
+- **Week 1's graded item**: she wants to see the options. Outline v3 lists three (the
+  research write-up, recommended; the pushback alone; the assumptions and the check).
+- **The Goal Plan** is replaced by the Confirmation Plan as the living document the later
+  sprints revise. Not folded back into Sprint 1.
+
+Outline v3 is in `sprint-2-outline.md`, superseding v2 the same day, and went to Leslie
+as a docx. Twelve positions, 100 points held as a proposal, eight decisions, an "owed
+elsewhere" list for Sprints 1, 3, 4, 5, the spine, and the confirmed/unverified against
+confirmed/inferred mismatch. Sprint 2 stops before writing validation questions; Sprint 3
+keeps that.
+
+Provenance: Leslie, the arc, the three moves, the research method, every ruling above;
+Claude, the seam map, the sequence, the decisions list, the record.

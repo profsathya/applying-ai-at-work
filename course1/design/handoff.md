@@ -40,7 +40,7 @@ first half as a participant. Rubrics and points decided soon. Sprint 5 has no ow
 course1/design/sprint-1-working-draft-v5.md       THE LIVE DRAFT (v5.1): the whole sprint, ten items,
                                                    on the 14 September resequence. Leslie reviewing.
 course1/design/sprint-1-resequence-outline.md     why the sequence changed (14 September)
-course1/design/sprint-2-outline.md                 Sprint 2, outline v2 (16 September), with Leslie for a ruling on structure
+course1/design/sprint-2-outline.md                 Sprint 2, outline v3 (16 September), with Leslie for a ruling on structure
 course1/design/candidate-log-template-v2.md        the Log template, v2 (15 September), source for the Google Doc
 course1/design/dojo-setup-note.md                  the course-wide Dojo tool, for Jeremy (15 September)
 course1/design/dojo-module-problem-frame.md        Sprint 1 Dojo Lab as a Dojo module, v0.3, PARKED
@@ -84,7 +84,7 @@ claims are what Sprint 2 works on.
 | Sprint 1, whole | **v5.4, cut-ready**, in `course1/design/sprint-1-working-draft-v5.md`, with a cover note for Jeremy at the top. Content is v5.3, reviewed by Leslie on every page. Four [TEAM DECISION] markers and one [INTERIM] marker carry the open items into the pages for reviewers. Jeremy rebuilds the whole sprint from this file (docx or repo path) |
 | Sprint 1 first half, live | Jeremy's 11 September cut, published in sprint-12. Melisa is running this version. It is superseded by v5 and will be replaced at the cut |
 | Sprint 1 concept check | Six questions redrafted in v5.1 against the new pages; Jeremy's call on format. Now sits after The problem frame |
-| Sprint 2 | Outline v2 written 16 September against the five points below, sent to Leslie as a docx. Waits on her ruling on structure, and on Part 3's home, before prose |
+| Sprint 2 | Outline v3, 16 September, on the arc Leslie set that evening (is this worth pursuing: break-the-frame assumptions and one check, what exists, what a change costs, a verdict). Sent as a docx. Waits on her ruling on structure before prose. Part 3 moves here |
 | Sprint 0, 3, 4 | V2 published; Jeremy reviewing. Sprint 0 owes an introduction of "own your progress" and "graded item" |
 | Sprint 5 | One placeholder page. No owner |
 | AI proxy | Working. CTI-owned, on Jeremy's Netlify, Anthropic direct, since 14 September (`docs/audits/2026-09-14-owned-course-ai-proxy.md`). Unblocks ai_activity reflections and the Sprint 4 AI Exchange |
@@ -134,9 +134,10 @@ self-check, reflection as `delivery_mode: ai_activity` like Sprints 3 and 4.
 
 ## Starting Sprint 2
 
-Sprint 2 is Leslie's. The outline is `sprint-2-outline.md`. Its 12 September version was out
-of date in five ways; outline v2 (16 September) was revised against them and is with Leslie
-for a ruling on structure. The five, for the record:
+Sprint 2 is Leslie's. The outline is `sprint-2-outline.md`, v3 as of 16 September evening, on
+the arc she set in conversation (see the decisions log, 16 September evening, later). It is
+with her for a ruling on structure. Its 12 September version was out of date in five ways,
+recorded here because the conventions in point 5 still govern the draft:
 
 1. **What it receives.** It says "frame version 2, the riskiest assumption, the list of
    unverified claims." What Sprint 1 now hands on is the **Problem Frame** (no version
