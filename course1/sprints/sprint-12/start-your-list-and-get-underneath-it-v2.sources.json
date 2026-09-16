@@ -4,7 +4,7 @@
   "map_kind": "original_textbook_diagram_adaptation",
   "map_sha256": "2707ec73dcee0d91f13a6b13ddf6623f213b46495c31345ef8bd60251f7da083",
   "body_sha256": "d7c23b5e00ff8dae1c7b804916db115feaec74e5a0a55b0143f312a459c80cd9",
-  "frontmatter_sha256": "378e4be3c417acec07bb8f1f161c7a04a49617ee2dd4a437d108afe8e1e48502",
+  "frontmatter_sha256": "eb4acafec12e8752af6e097c3520686e264aac0f3bc844640c6e7ecb46cc0474",
   "parts": [
     {
       "kind": "new",
@@ -71,7 +71,8 @@
     }
   ],
   "metadata_decisions": [
-    "No frontmatter, identity, grading, or task configuration changes. Original diagram: no external artwork or image license."
+    "No frontmatter, identity, grading, or task configuration changes. Original diagram: no external artwork or image license.",
+    "Publication state changed to false when the v5.4 replacement was released; participant body and assessment contract are unchanged."
   ],
   "revision_lineage": {
     "previous_md_sha256": "214a0a592c58236d290677a1c9d01873c04869fdde0066e4b8568cf8b17bd4a6",

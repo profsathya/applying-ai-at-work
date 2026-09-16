@@ -4,7 +4,7 @@
   "map_kind": "sprint1_visual_adaptation",
   "map_sha256": "4a54cf1803e63c773f7a48ba70db1111fa22fa517993243207655553940fe748",
   "body_sha256": "b126a5c032ab19691af7908634fd74857fb3cee62edeb8b4303cb45e2abda0be",
-  "frontmatter_sha256": "874866823ddceac764433f93db100fd4efde0868e451f31aedec30f36642a6a2",
+  "frontmatter_sha256": "013783bc9580a111293baa79d9bd52629cd69e09d4b9d73a201d8bccb7d1bdbe",
   "parts": [
     {
       "kind": "new",
@@ -41,7 +41,8 @@
     }
   ],
   "metadata_decisions": [
-    "Identity, grading, task IDs, version, choice prompts/options/answers and submission contract preserved; directions and presentation adapted as authorized; success criteria retained."
+    "Identity, grading, task IDs, version, choice prompts/options/answers and submission contract preserved; directions and presentation adapted as authorized; success criteria retained.",
+    "Publication state changed to false when the v5.4 replacement was released; participant body and assessment contract are unchanged."
   ],
   "revision_lineage": {
     "previous_md_sha256": "7c1d0b0e5e593748a178c6cd4c355fce832ccfa5cc13253c67bf8c77cff56e3b",

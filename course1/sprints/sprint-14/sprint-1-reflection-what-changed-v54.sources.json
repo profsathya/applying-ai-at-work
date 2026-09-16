@@ -1,0 +1,143 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-sprint-14-sprint-1-reflection-what-changed",
+  "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
+  "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
+  "body_sha256": "5a4ed589a722ea8592824d32b4bd2b60f4848afb5f72cfd47f1f3ff813751df5",
+  "frontmatter_sha256": "be9b99d246d42880f07eddcef3cf6ed7a5ef8240fe979c42dde8594ef04ad115",
+  "parts": [
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/285",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/285",
+        "kind": "paragraph",
+        "location": "word/document.xml/285",
+        "style": "Heading1",
+        "heading_level": 1,
+        "segments": [
+          {
+            "text": "Sprint 1 Reflection: what changed",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Sprint 1 Reflection: what changed",
+          "proposed": "Sprint 1 Reflection: what changed"
+        }
+      },
+      "block_sha256": "b8be467c37720fdcfb68fdc8e5d41446b502b7e7e85e40d270546f12ffd7c785",
+      "markdown": "# Sprint 1 Reflection: what changed"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/287",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/287",
+        "kind": "paragraph",
+        "location": "word/document.xml/287",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Put your draft frames beside your Problem Frame and write about the distance between them. You have already written what changed. Here, write about how it changed. What did AI find that you would not have reached alone? What did you contribute that AI could not, because it depends on what you know about the people and the place? How did you decide what to accept and what to reject? And what is the one thing you are still unsure of and are carrying forward on purpose?",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Put your draft frames beside your Problem Frame and write about the distance between them. You have already written what changed. Here, write about how it changed. What did AI find that you would not have reached alone? What did you contribute that AI could not, because it depends on what you know about the people and the place? How did you decide what to accept and what to reject? And what is the one thing you are still unsure of and are carrying forward on purpose?",
+          "proposed": "Put your draft frames beside your Problem Frame and write about the distance between them. You have already written what changed. Here, write about how it changed. What did AI find that you would not have reached alone? What did you contribute that AI could not, because it depends on what you know about the people and the place? How did you decide what to accept and what to reject? And what is the one thing you are still unsure of and are carrying forward on purpose?"
+        }
+      },
+      "block_sha256": "dc576a42c3cbbfb04e236ba4158a72de0e0f384d54fef869975379a7c57138e4",
+      "markdown": "Put your draft frames beside your Problem Frame and write about the distance between them. You have already written what changed. Here, write about how it changed. What did AI find that you would not have reached alone? What did you contribute that AI could not, because it depends on what you know about the people and the place? How did you decide what to accept and what to reject? And what is the one thing you are still unsure of and are carrying forward on purpose?"
+    }
+  ],
+  "metadata_decisions": [
+    "Add the v54 slug suffix to avoid colliding with the legacy Sprint 1 artifact while keeping the participant-facing title unchanged.",
+    "Use the supported AI activity route with a JSON file upload and learner-facing assignment labels.",
+    "Preserve the source's prompt, minimum length, three follow-up questions, AI context, and summary label while supplying the standard activity control labels used elsewhere in course1."
+  ],
+  "source_roles": {
+    "d-bb7cd50440dd3015": {
+      "role": "primary_authoring",
+      "reason": "The user supplied Sprint-1-cut-ready-v5.4.docx as the source for the Sprint 1 rebuild."
+    }
+  },
+  "decisions": [
+    "Use the reviewed v5.4 participant prose as the primary source, with mechanical Markdown and delivery adaptations only where the DOCX presentation or current schema requires them.",
+    "Exclude the cover note, item inventory, build blocks, answer-key flags, reviewer markers, provenance note, blank separators, and internal team decisions from learner prose.",
+    "Use storage sprint 14 for the unpublished alternative while retaining the semantic module title Sprint 1: Find the Problem Worth Solving.",
+    "Convert response tasks to guided assignments with Canvas text entry, and convert the concept check to six formative choice tasks worth 5 completion points.",
+    "Convert the Reflection to the supported AI activity and JSON upload delivery used elsewhere in course1.",
+    "Normalize DOCX list continuations to the intended local numbering and use Markdown blockquotes for source-authored help and example asides.",
+    "Reuse the approved workplace-handoff illustration and caption from sprint-12 in the Introduction, with the original generation provenance retained beside the copied asset.",
+    "Keep the Concept check after The problem frame because the final v5.4 sequence and questions 4 through 6 depend on that teaching; exclude the associated team-decision marker from learner prose.",
+    "Keep the two source statuses, confirmed and unverified, in Sprint 1; exclude the associated team-decision marker from learner prose and leave any cross-course status reconciliation to the later design workflow.",
+    "Retain the three v5.4 size questions as the operative cut-ready choice criteria and exclude their team-decision marker from learner prose.",
+    "Retain the tested any-chatbot Dojo prompts while excluding the interim production marker from learner prose.",
+    "Apply the later 16 September human design ruling in course1/design/sprint-1-decisions.md and sprint-2-outline.md: defer Problem Frame Part 3 and its response task to Sprint 2. Source blocks 273 through 279 and task block 283 are deliberately excluded from Sprint 1; blocks 280 through 282 remain configuration evidence for the two retained response tasks.",
+    "Keep Problem Frame at 50 points after moving Part 3, as directed by the latest design ruling.",
+    "Render each More help passage inline as a quoted aside because the current artifact schema has no authored disclosure field.",
+    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab."
+  ],
+  "title_source": {
+    "ref": "d-bb7cd50440dd3015:word/document.xml/285",
+    "view": "base",
+    "role": "learner",
+    "kind": "source",
+    "source_name": "Sprint-1-cut-ready-v5.4.docx",
+    "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+    "block": {
+      "id": "d-bb7cd50440dd3015:word/document.xml/285",
+      "kind": "paragraph",
+      "location": "word/document.xml/285",
+      "style": "Heading1",
+      "heading_level": 1,
+      "segments": [
+        {
+          "text": "Sprint 1 Reflection: what changed",
+          "changes": [],
+          "link": null,
+          "format": {
+            "bold": false,
+            "italic": false
+          },
+          "comment_ids": []
+        }
+      ],
+      "flags": [],
+      "comment_ids": [],
+      "text": {
+        "base": "Sprint 1 Reflection: what changed",
+        "proposed": "Sprint 1 Reflection: what changed"
+      }
+    },
+    "block_sha256": "b8be467c37720fdcfb68fdc8e5d41446b502b7e7e85e40d270546f12ffd7c785",
+    "markdown": "# Sprint 1 Reflection: what changed"
+  }
+}

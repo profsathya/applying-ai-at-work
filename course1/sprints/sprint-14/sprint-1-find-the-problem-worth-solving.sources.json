@@ -1,0 +1,351 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-sprint-14-sprint-1-find-the-problem-worth-solving",
+  "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
+  "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
+  "body_sha256": "d971ecb219acac4f21efc3ae70728f38816aba9108122d5222452dd5dce490bf",
+  "frontmatter_sha256": "5654326c79e4bca47c71d96a6f941e1d2fa3823908fbf507cbae8f2e2a791b88",
+  "parts": [
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/23",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/23",
+        "kind": "paragraph",
+        "location": "word/document.xml/23",
+        "style": "Heading1",
+        "heading_level": 1,
+        "segments": [
+          {
+            "text": "Sprint 1: Find the Problem Worth Solving",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Sprint 1: Find the Problem Worth Solving",
+          "proposed": "Sprint 1: Find the Problem Worth Solving"
+        }
+      },
+      "block_sha256": "4ce0baad51196927086f2050f2408b408f97c6aa5402029dcfcdd7b0449a3360",
+      "markdown": "# Sprint 1: Find the Problem Worth Solving"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/25",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/25",
+        "kind": "paragraph",
+        "location": "word/document.xml/25",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "You will start by brainstorming potential problems from your own life that you would be interested in solving. Over the course of this sprint, you will practice three things:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "You will start by brainstorming potential problems from your own life that you would be interested in solving. Over the course of this sprint, you will practice three things:",
+          "proposed": "You will start by brainstorming potential problems from your own life that you would be interested in solving. Over the course of this sprint, you will practice three things:"
+        }
+      },
+      "block_sha256": "41b6ec5823bc98b2095af25b520bc469d404327245f9f3a83a6a3e15f68eec1b",
+      "markdown": "You will start by brainstorming potential problems from your own life that you would be interested in solving. Over the course of this sprint, you will practice three things:"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/26",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/26",
+        "kind": "paragraph",
+        "location": "word/document.xml/26",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Describe what actually happens in your potential problems, so you can see if there is a gap worth investigating.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 6
+        },
+        "text": {
+          "base": "Describe what actually happens in your potential problems, so you can see if there is a gap worth investigating.",
+          "proposed": "Describe what actually happens in your potential problems, so you can see if there is a gap worth investigating."
+        }
+      },
+      "block_sha256": "36e9c2b63ced0451540b766c1db2657d464165a00761ac85750f89410cd928ae",
+      "markdown": "- Describe what actually happens in your potential problems, so you can see if there is a gap worth investigating."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/27",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/27",
+        "kind": "paragraph",
+        "location": "word/document.xml/27",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Write a problem frame that describes the problem as best you can, clearly marking what you do not know yet so you can look into it later.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 7
+        },
+        "text": {
+          "base": "Write a problem frame that describes the problem as best you can, clearly marking what you do not know yet so you can look into it later.",
+          "proposed": "Write a problem frame that describes the problem as best you can, clearly marking what you do not know yet so you can look into it later."
+        }
+      },
+      "block_sha256": "c37fa38ad2cf8e44babf15e70b222d1c4a28b46f7a55963523ed061e947b15c4",
+      "markdown": "- Write a problem frame that describes the problem as best you can, clearly marking what you do not know yet so you can look into it later."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/28",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/28",
+        "kind": "paragraph",
+        "location": "word/document.xml/28",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Use AI to test and widen your own thinking.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 8
+        },
+        "text": {
+          "base": "Use AI to test and widen your own thinking.",
+          "proposed": "Use AI to test and widen your own thinking."
+        }
+      },
+      "block_sha256": "8689f2f0e76b01fc40342196d867b424203b061e0206a26ab9308f81e4a0c7c7",
+      "markdown": "- Use AI to test and widen your own thinking."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/29",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/29",
+        "kind": "paragraph",
+        "location": "word/document.xml/29",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "What you carry forward.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " One Problem Frame, for the problem you chose, with every assumption in it marked confirmed or unverified. Sprint 2 works on the unverified ones.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "What you carry forward. One Problem Frame, for the problem you chose, with every assumption in it marked confirmed or unverified. Sprint 2 works on the unverified ones.",
+          "proposed": "What you carry forward. One Problem Frame, for the problem you chose, with every assumption in it marked confirmed or unverified. Sprint 2 works on the unverified ones."
+        }
+      },
+      "block_sha256": "79674f9a87b41ae0c1795b948de6650b2b0e5b4337bab98050689adfef45d6cc",
+      "markdown": "**What you carry forward.** One Problem Frame, for the problem you chose, with every assumption in it marked confirmed or unverified. Sprint 2 works on the unverified ones."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/30",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/30",
+        "kind": "paragraph",
+        "location": "word/document.xml/30",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "The Introduction lays out the route through the sprint, week by week.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "The Introduction lays out the route through the sprint, week by week.",
+          "proposed": "The Introduction lays out the route through the sprint, week by week."
+        }
+      },
+      "block_sha256": "c365b6ea59e7cf4c08182cc7bab59dd5062f8d5f32dbfe563acaa8214223351a",
+      "markdown": "The Introduction lays out the route through the sprint, week by week."
+    }
+  ],
+  "metadata_decisions": [
+    "The storage sprint is 14, while the learner-facing title remains Sprint 1.",
+    "The source module header is informational and unpublished."
+  ],
+  "source_roles": {
+    "d-bb7cd50440dd3015": {
+      "role": "primary_authoring",
+      "reason": "The user supplied Sprint-1-cut-ready-v5.4.docx as the source for the Sprint 1 rebuild."
+    }
+  },
+  "decisions": [
+    "Use the reviewed v5.4 participant prose as the primary source, with mechanical Markdown and delivery adaptations only where the DOCX presentation or current schema requires them.",
+    "Exclude the cover note, item inventory, build blocks, answer-key flags, reviewer markers, provenance note, blank separators, and internal team decisions from learner prose.",
+    "Use storage sprint 14 for the unpublished alternative while retaining the semantic module title Sprint 1: Find the Problem Worth Solving.",
+    "Convert response tasks to guided assignments with Canvas text entry, and convert the concept check to six formative choice tasks worth 5 completion points.",
+    "Convert the Reflection to the supported AI activity and JSON upload delivery used elsewhere in course1.",
+    "Normalize DOCX list continuations to the intended local numbering and use Markdown blockquotes for source-authored help and example asides.",
+    "Reuse the approved workplace-handoff illustration and caption from sprint-12 in the Introduction, with the original generation provenance retained beside the copied asset.",
+    "Keep the Concept check after The problem frame because the final v5.4 sequence and questions 4 through 6 depend on that teaching; exclude the associated team-decision marker from learner prose.",
+    "Keep the two source statuses, confirmed and unverified, in Sprint 1; exclude the associated team-decision marker from learner prose and leave any cross-course status reconciliation to the later design workflow.",
+    "Retain the three v5.4 size questions as the operative cut-ready choice criteria and exclude their team-decision marker from learner prose.",
+    "Retain the tested any-chatbot Dojo prompts while excluding the interim production marker from learner prose.",
+    "Apply the later 16 September human design ruling in course1/design/sprint-1-decisions.md and sprint-2-outline.md: defer Problem Frame Part 3 and its response task to Sprint 2. Source blocks 273 through 279 and task block 283 are deliberately excluded from Sprint 1; blocks 280 through 282 remain configuration evidence for the two retained response tasks.",
+    "Keep Problem Frame at 50 points after moving Part 3, as directed by the latest design ruling.",
+    "Render each More help passage inline as a quoted aside because the current artifact schema has no authored disclosure field.",
+    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab."
+  ],
+  "title_source": {
+    "ref": "d-bb7cd50440dd3015:word/document.xml/23",
+    "view": "base",
+    "role": "learner",
+    "kind": "source",
+    "source_name": "Sprint-1-cut-ready-v5.4.docx",
+    "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+    "block": {
+      "id": "d-bb7cd50440dd3015:word/document.xml/23",
+      "kind": "paragraph",
+      "location": "word/document.xml/23",
+      "style": "Heading1",
+      "heading_level": 1,
+      "segments": [
+        {
+          "text": "Sprint 1: Find the Problem Worth Solving",
+          "changes": [],
+          "link": null,
+          "format": {
+            "bold": false,
+            "italic": false
+          },
+          "comment_ids": []
+        }
+      ],
+      "flags": [],
+      "comment_ids": [],
+      "text": {
+        "base": "Sprint 1: Find the Problem Worth Solving",
+        "proposed": "Sprint 1: Find the Problem Worth Solving"
+      }
+    },
+    "block_sha256": "4ce0baad51196927086f2050f2408b408f97c6aa5402029dcfcdd7b0449a3360",
+    "markdown": "# Sprint 1: Find the Problem Worth Solving"
+  }
+}
