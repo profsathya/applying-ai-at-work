@@ -1,0 +1,1574 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-sprint-14-the-problem-frame",
+  "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
+  "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
+  "body_sha256": "03827c84c820b38a6cb6f6e6f4dedd4818bfe216da673ce268665858e8a98da9",
+  "frontmatter_sha256": "9b518eb6e30879d81bd35d2c8080bbbcc9f6037b0258154f74e0f752ff14d92a",
+  "parts": [
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/118",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/118",
+        "kind": "paragraph",
+        "location": "word/document.xml/118",
+        "style": "Heading1",
+        "heading_level": 1,
+        "segments": [
+          {
+            "text": "The problem frame",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "The problem frame",
+          "proposed": "The problem frame"
+        }
+      },
+      "block_sha256": "a1216294c5ccf1fec0c8ab56cf50e144fd88887c6f20b0a4d1e75fcbbf933a50",
+      "markdown": "# The problem frame"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/120",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/120",
+        "kind": "paragraph",
+        "location": "word/document.xml/120",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "You have three to five candidate problems in your table, each with a described gap. Now you write up a draft problem frame for each of them, so you can tell which one is worth the next nine weeks.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "You have three to five candidate problems in your table, each with a described gap. Now you write up a draft problem frame for each of them, so you can tell which one is worth the next nine weeks.",
+          "proposed": "You have three to five candidate problems in your table, each with a described gap. Now you write up a draft problem frame for each of them, so you can tell which one is worth the next nine weeks."
+        }
+      },
+      "block_sha256": "294b9082daf0e7286349918702cc14c892c19701832b315db5d3f50b6797c8ae",
+      "markdown": "You have three to five candidate problems in your table, each with a described gap. Now you write up a draft problem frame for each of them, so you can tell which one is worth the next nine weeks."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/121",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/121",
+        "kind": "paragraph",
+        "location": "word/document.xml/121",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "A ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "problem frame",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " is your account of a problem. It says what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know. A frame is not a proposal. You are not thinking about what potential solutions you would build. It is your description of the problem. It is as important to mark clearly what you do not yet know as it is to detail what you do know. You will spend time later in the course filling in those gaps.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "A problem frame is your account of a problem. It says what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know. A frame is not a proposal. You are not thinking about what potential solutions you would build. It is your description of the problem. It is as important to mark clearly what you do not yet know as it is to detail what you do know. You will spend time later in the course filling in those gaps.",
+          "proposed": "A problem frame is your account of a problem. It says what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know. A frame is not a proposal. You are not thinking about what potential solutions you would build. It is your description of the problem. It is as important to mark clearly what you do not yet know as it is to detail what you do know. You will spend time later in the course filling in those gaps."
+        }
+      },
+      "block_sha256": "8deaa613a5541216682419fa11b027d3bc8181a33354aa12041cb9a396860bc3",
+      "markdown": "A **problem frame** is your account of a problem. It says what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know. A frame is not a proposal. You are not thinking about what potential solutions you would build. It is your description of the problem. It is as important to mark clearly what you do not yet know as it is to detail what you do know. You will spend time later in the course filling in those gaps."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/122",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/122",
+        "kind": "paragraph",
+        "location": "word/document.xml/122",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "The template",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "The template",
+          "proposed": "The template"
+        }
+      },
+      "block_sha256": "6458b5ada1941af985a59d3545c21514d42e1afd757f13621dc3fc8e39ad1853",
+      "markdown": "## The template"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/123",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/123",
+        "kind": "paragraph",
+        "location": "word/document.xml/123",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "A frame has seven parts. This is the whole of it, and Part C of your Candidate Log repeats it once per candidate.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "A frame has seven parts. This is the whole of it, and Part C of your Candidate Log repeats it once per candidate.",
+          "proposed": "A frame has seven parts. This is the whole of it, and Part C of your Candidate Log repeats it once per candidate."
+        }
+      },
+      "block_sha256": "f218e0f0d5fa501e81f8cbd7f2873746ca22fd2bd93ec6ee63ac7ea387c4d094",
+      "markdown": "A frame has seven parts. This is the whole of it, and Part C of your Candidate Log repeats it once per candidate."
+    },
+    {
+      "kind": "new",
+      "markdown": "1. **The goal it serves.** One sentence. Nobody involved would dispute it, and it points at this problem rather than its neighbours.\n2. **The problem.** The gap between now and that goal, as a condition someone is living in. One or two sentences.\n3. **Who is affected, and what it costs them.** 3a names the people or specific roles. 3b says what it costs each of them, in time, money, errors, or strain.\n4. **How it is handled today, and where that falls short.** 4a describes the system, process, habit, or person coping with it now, and anything tried and abandoned. 4b names the moment it stops working, not the consequence that follows.\n5. **What fixed would look like.** A changed state, not a solution. One sentence.\n6. **Find your assumptions.** Everything in parts 2 to 5 that you wrote as if it were true without having seen it yourself or heard it from someone who would know. Each one marked **confirmed** or **unverified**, and for each unverified one, who could tell you.\n7. **What you do not know yet.** What is left after part 6.",
+      "reason": "Restore the intended seven-part numbering after the DOCX export continued an earlier list.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/124",
+        "d-bb7cd50440dd3015:word/document.xml/125",
+        "d-bb7cd50440dd3015:word/document.xml/126",
+        "d-bb7cd50440dd3015:word/document.xml/127",
+        "d-bb7cd50440dd3015:word/document.xml/128",
+        "d-bb7cd50440dd3015:word/document.xml/129",
+        "d-bb7cd50440dd3015:word/document.xml/130"
+      ]
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/131",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/131",
+        "kind": "paragraph",
+        "location": "word/document.xml/131",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "As you can see, the problem frame includes some information that you already wrote in your table. You will reuse your gap, the people you listed, and your description of how things work now. Reuse it freely. You do not need to mark or tidy it.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "As you can see, the problem frame includes some information that you already wrote in your table. You will reuse your gap, the people you listed, and your description of how things work now. Reuse it freely. You do not need to mark or tidy it.",
+          "proposed": "As you can see, the problem frame includes some information that you already wrote in your table. You will reuse your gap, the people you listed, and your description of how things work now. Reuse it freely. You do not need to mark or tidy it."
+        }
+      },
+      "block_sha256": "ebc1fc947e97a72029cea41644e50f8672ef60a065758b64a26c297fcc5f9327",
+      "markdown": "As you can see, the problem frame includes some information that you already wrote in your table. You will reuse your gap, the people you listed, and your description of how things work now. Reuse it freely. You do not need to mark or tidy it."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/132",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/132",
+        "kind": "paragraph",
+        "location": "word/document.xml/132",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "Write in this order",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Write in this order",
+          "proposed": "Write in this order"
+        }
+      },
+      "block_sha256": "8a0872f31f706ce2c91cc19fd4365c80527ff535bdc9de446b511d40f1af4fc7",
+      "markdown": "## Write in this order"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/133",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/133",
+        "kind": "paragraph",
+        "location": "word/document.xml/133",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Write ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "2, 3, 4",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " first. Then ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "5",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ". Then ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "6 and 7",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ". Then ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "1",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " last.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Write 2, 3, 4 first. Then 5. Then 6 and 7. Then 1 last.",
+          "proposed": "Write 2, 3, 4 first. Then 5. Then 6 and 7. Then 1 last."
+        }
+      },
+      "block_sha256": "5598a3f0842f5b0f784297f9011eb4b9f9ac50f9d4b29c35ec362af0f2897368",
+      "markdown": "Write **2, 3, 4** first. Then **5**. Then **6 and 7**. Then **1** last."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/134",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/134",
+        "kind": "paragraph",
+        "location": "word/document.xml/134",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Part 1 is presented first because that is how the finished frame reads, but you cannot write it until you know what fixed looks like. Expect to write it at the end.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Part 1 is presented first because that is how the finished frame reads, but you cannot write it until you know what fixed looks like. Expect to write it at the end.",
+          "proposed": "Part 1 is presented first because that is how the finished frame reads, but you cannot write it until you know what fixed looks like. Expect to write it at the end."
+        }
+      },
+      "block_sha256": "3ca48adbf0dd381f044b23a15b197ea3e77703e3e5d72b9495e0d6d4137be201",
+      "markdown": "Part 1 is presented first because that is how the finished frame reads, but you cannot write it until you know what fixed looks like. Expect to write it at the end."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/135",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/135",
+        "kind": "paragraph",
+        "location": "word/document.xml/135",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "Worked example A: account handovers",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Worked example A: account handovers",
+          "proposed": "Worked example A: account handovers"
+        }
+      },
+      "block_sha256": "cd945dcbf42c9f875a2591c9f86598c092252d418dd2e58eff57a290e18fda03",
+      "markdown": "## Worked example A: account handovers"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/136",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/136",
+        "kind": "paragraph",
+        "location": "word/document.xml/136",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "1. Goal:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " Clients are handled by someone who knows their history, from the first day an account changes hands.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "1. Goal: Clients are handled by someone who knows their history, from the first day an account changes hands.",
+          "proposed": "1. Goal: Clients are handled by someone who knows their history, from the first day an account changes hands."
+        }
+      },
+      "block_sha256": "19eb1a15b0167155bc7007714e7c164d42036a9045ee6e5712f4b9f443d5d498",
+      "markdown": "**1. Goal:** Clients are handled by someone who knows their history, from the first day an account changes hands."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/137",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/137",
+        "kind": "paragraph",
+        "location": "word/document.xml/137",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "2. Problem:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " Handovers happen in a conversation between the outgoing and incoming owner, and nothing reaches the rest of the team.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "2. Problem: Handovers happen in a conversation between the outgoing and incoming owner, and nothing reaches the rest of the team.",
+          "proposed": "2. Problem: Handovers happen in a conversation between the outgoing and incoming owner, and nothing reaches the rest of the team."
+        }
+      },
+      "block_sha256": "4bcf85483f28f9fac1087272be7e9525d1cd2b203a8d5f4292fb0c81949948d3",
+      "markdown": "**2. Problem:** Handovers happen in a conversation between the outgoing and incoming owner, and nothing reaches the rest of the team."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/138",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/138",
+        "kind": "paragraph",
+        "location": "word/document.xml/138",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "3a. Who:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " The two clients who changed hands this month. The four other account managers.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "3a. Who: The two clients who changed hands this month. The four other account managers.",
+          "proposed": "3a. Who: The two clients who changed hands this month. The four other account managers."
+        }
+      },
+      "block_sha256": "705741eb30f59992f856f0c96fd4889c169dad84bbf3f3f9a9dd2781f5a8c94b",
+      "markdown": "**3a. Who:** The two clients who changed hands this month. The four other account managers."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/139",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/139",
+        "kind": "paragraph",
+        "location": "word/document.xml/139",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "3b. Cost:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "3b. Cost:",
+          "proposed": "3b. Cost:"
+        }
+      },
+      "block_sha256": "23403783d3fc12e11501c5ac3ff777c8b77290ef23ba2c8d86ff3b0aa0b21312",
+      "markdown": "**3b. Cost:**"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/140",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/140",
+        "kind": "paragraph",
+        "location": "word/document.xml/140",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Clients: repeated their history to someone who should have known it.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 28
+        },
+        "text": {
+          "base": "Clients: repeated their history to someone who should have known it.",
+          "proposed": "Clients: repeated their history to someone who should have known it."
+        }
+      },
+      "block_sha256": "5a5b5c5df9641f5ed5767c6e15f0e546f30a9e51e062412489af4072cfe205bd",
+      "markdown": "- Clients: repeated their history to someone who should have known it."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/141",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/141",
+        "kind": "paragraph",
+        "location": "word/document.xml/141",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Account managers: act on stale ownership for several days. ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "(number of days unconfirmed)",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": true
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 29
+        },
+        "text": {
+          "base": "Account managers: act on stale ownership for several days. (number of days unconfirmed)",
+          "proposed": "Account managers: act on stale ownership for several days. (number of days unconfirmed)"
+        }
+      },
+      "block_sha256": "0e25b444bb73d343fcbd31b3a77fc7e549a5c6c1e8e350063891a89919f5bc2a",
+      "markdown": "- Account managers: act on stale ownership for several days. *(number of days unconfirmed)*"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/142",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/142",
+        "kind": "paragraph",
+        "location": "word/document.xml/142",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "4a. Handled today:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " The outgoing owner tells the incoming owner directly. Nobody remembers anyone trying anything else.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "4a. Handled today: The outgoing owner tells the incoming owner directly. Nobody remembers anyone trying anything else.",
+          "proposed": "4a. Handled today: The outgoing owner tells the incoming owner directly. Nobody remembers anyone trying anything else."
+        }
+      },
+      "block_sha256": "31ea6ca853dfb4cfd02b05fadde629032b97532863f9f85befd6e5f4985127c6",
+      "markdown": "**4a. Handled today:** The outgoing owner tells the incoming owner directly. Nobody remembers anyone trying anything else."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/143",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/143",
+        "kind": "paragraph",
+        "location": "word/document.xml/143",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "4b. Stops working:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " At the moment a third person needs to know. The conversation works for the two people in it and reaches nobody else.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "4b. Stops working: At the moment a third person needs to know. The conversation works for the two people in it and reaches nobody else.",
+          "proposed": "4b. Stops working: At the moment a third person needs to know. The conversation works for the two people in it and reaches nobody else."
+        }
+      },
+      "block_sha256": "ca738551e5686da16e6d55192c9ba1d4576b958f2ae4599dc911cedb3a24008b",
+      "markdown": "**4b. Stops working:** At the moment a third person needs to know. The conversation works for the two people in it and reaches nobody else."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/144",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/144",
+        "kind": "paragraph",
+        "location": "word/document.xml/144",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "5. Fixed looks like:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " Everyone on the team knows within a day when an account changes hands.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "5. Fixed looks like: Everyone on the team knows within a day when an account changes hands.",
+          "proposed": "5. Fixed looks like: Everyone on the team knows within a day when an account changes hands."
+        }
+      },
+      "block_sha256": "0cbfcf353679c9749ee92954d1e89fe9f17e7f0d7b003e2c3e3314f5d6a056ab",
+      "markdown": "**5. Fixed looks like:** Everyone on the team knows within a day when an account changes hands."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/145",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/145",
+        "kind": "paragraph",
+        "location": "word/document.xml/145",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "6. Assumptions:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "6. Assumptions:",
+          "proposed": "6. Assumptions:"
+        }
+      },
+      "block_sha256": "a6d12705742630af938fd9ad33fb82da97da44798336bba5e6399c5edb540eea",
+      "markdown": "**6. Assumptions:**"
+    },
+    {
+      "kind": "new",
+      "markdown": "> **Assumptions**\n>\n> - **From Part 2:** Nothing reaches the rest of the team. **Status:** unverified. **Who could tell me:** the other managers.\n> - **From Part 3a:** All four managers are affected, not just the one I sat next to. **Status:** unverified. **Who could tell me:** the other three managers.\n> - **From Part 3b:** Clients notice and it costs them something. **Status:** unverified. **Who could tell me:** the account lead.\n> - **From Part 3b:** Managers act on stale ownership for *days*. **Status:** unverified. **Who could tell me:** the other managers.\n> - **From Part 4a:** Nobody has tried to fix this before. **Status:** unverified. **Who could tell me:** the account lead.\n> - **From Part 5:** One day is fast enough to matter. **Status:** unverified. **Who could tell me:** nobody has said what fast enough is.",
+      "reason": "Convert the four-column source table to a labelled list so every assumption remains readable at mobile width.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/146"
+      ]
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/148",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/148",
+        "kind": "paragraph",
+        "location": "word/document.xml/148",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "7. Left over:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " I do not know who owns the handover process, if anyone. Nobody obvious to ask. Start with the account lead.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "7. Left over: I do not know who owns the handover process, if anyone. Nobody obvious to ask. Start with the account lead.",
+          "proposed": "7. Left over: I do not know who owns the handover process, if anyone. Nobody obvious to ask. Start with the account lead."
+        }
+      },
+      "block_sha256": "bccf4a6ed3d65ca34a826f982750fe3aee7a75df8aa6f59cb39226351e58c2e3",
+      "markdown": "**7. Left over:** I do not know who owns the handover process, if anyone. Nobody obvious to ask. Start with the account lead."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/149",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/149",
+        "kind": "paragraph",
+        "location": "word/document.xml/149",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "Worked example B: a neighbourhood garden plot",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Worked example B: a neighbourhood garden plot",
+          "proposed": "Worked example B: a neighbourhood garden plot"
+        }
+      },
+      "block_sha256": "df3e1985df9c045e6c7a9d6ca87f808733257c4c8993f23f17d87184b7640fb8",
+      "markdown": "## Worked example B: a neighbourhood garden plot"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/150",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/150",
+        "kind": "paragraph",
+        "location": "word/document.xml/150",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Shorter, and nothing in it is countable. That is fine.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Shorter, and nothing in it is countable. That is fine.",
+          "proposed": "Shorter, and nothing in it is countable. That is fine."
+        }
+      },
+      "block_sha256": "a1bf9e6c10856742f45c914502e7801ad88da35f353b3b6b91d3e08601bf614e",
+      "markdown": "Shorter, and nothing in it is countable. That is fine."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/151",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/151",
+        "kind": "paragraph",
+        "location": "word/document.xml/151",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "1. Goal:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " People who sign up for a plot are still gardening it in August.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "1. Goal: People who sign up for a plot are still gardening it in August.",
+          "proposed": "1. Goal: People who sign up for a plot are still gardening it in August."
+        }
+      },
+      "block_sha256": "f8eb027e9210ef45dea468d0dc87275bf527554d69277e8f8ccba33faf951c8d",
+      "markdown": "**1. Goal:** People who sign up for a plot are still gardening it in August."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/152",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/152",
+        "kind": "paragraph",
+        "location": "word/document.xml/152",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "2. Problem:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " New plot-holders start alone in April and have no one to ask when something goes wrong, so most of them stop coming by midsummer.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "2. Problem: New plot-holders start alone in April and have no one to ask when something goes wrong, so most of them stop coming by midsummer.",
+          "proposed": "2. Problem: New plot-holders start alone in April and have no one to ask when something goes wrong, so most of them stop coming by midsummer."
+        }
+      },
+      "block_sha256": "52133ac6b0c03f99888cf3dfd55296d926f29f91dae3dbc11685d28402c9b5fd",
+      "markdown": "**2. Problem:** New plot-holders start alone in April and have no one to ask when something goes wrong, so most of them stop coming by midsummer."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/153",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/153",
+        "kind": "paragraph",
+        "location": "word/document.xml/153",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "3a. Who:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " The six people who took plots this spring. Ramona, who runs the sign-ups and ends up fielding every question herself.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "3a. Who: The six people who took plots this spring. Ramona, who runs the sign-ups and ends up fielding every question herself.",
+          "proposed": "3a. Who: The six people who took plots this spring. Ramona, who runs the sign-ups and ends up fielding every question herself."
+        }
+      },
+      "block_sha256": "a79abe12dcdcf0d1839e7a6f0c72c78805b6e67420c004ca5b77ccafe4775e57",
+      "markdown": "**3a. Who:** The six people who took plots this spring. Ramona, who runs the sign-ups and ends up fielding every question herself."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/154",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/154",
+        "kind": "paragraph",
+        "location": "word/document.xml/154",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "3b. Cost:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " New plot-holders: frustration, then quitting. Ramona: a stream of questions she did not sign up for, and the awkwardness of watching plots go to weeds.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "3b. Cost: New plot-holders: frustration, then quitting. Ramona: a stream of questions she did not sign up for, and the awkwardness of watching plots go to weeds.",
+          "proposed": "3b. Cost: New plot-holders: frustration, then quitting. Ramona: a stream of questions she did not sign up for, and the awkwardness of watching plots go to weeds."
+        }
+      },
+      "block_sha256": "82378ef9bdde1c25ebf206c8b3a0511b4c6ee21bea34e50c782688f6db8bd17f",
+      "markdown": "**3b. Cost:** New plot-holders: frustration, then quitting. Ramona: a stream of questions she did not sign up for, and the awkwardness of watching plots go to weeds."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/155",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/155",
+        "kind": "paragraph",
+        "location": "word/document.xml/155",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "4a. Handled today:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " Ramona answers questions when people find her, which is by chance at the water spigot.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "4a. Handled today: Ramona answers questions when people find her, which is by chance at the water spigot.",
+          "proposed": "4a. Handled today: Ramona answers questions when people find her, which is by chance at the water spigot."
+        }
+      },
+      "block_sha256": "1404862361ffaa81f743e7c1f82d08c182dd0fc447eafbb2660948b97e444063",
+      "markdown": "**4a. Handled today:** Ramona answers questions when people find her, which is by chance at the water spigot."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/156",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/156",
+        "kind": "paragraph",
+        "location": "word/document.xml/156",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "4b. Stops working:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " When someone's problem shows up on a day Ramona is not there. Most people do not follow up later.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "4b. Stops working: When someone's problem shows up on a day Ramona is not there. Most people do not follow up later.",
+          "proposed": "4b. Stops working: When someone's problem shows up on a day Ramona is not there. Most people do not follow up later."
+        }
+      },
+      "block_sha256": "d5d8c6207721f05955ba820a31f29858709ec7df1f2fda3c8ee48656dfe12b01",
+      "markdown": "**4b. Stops working:** When someone's problem shows up on a day Ramona is not there. Most people do not follow up later."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/157",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/157",
+        "kind": "paragraph",
+        "location": "word/document.xml/157",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "5. Fixed looks like:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " A first-year plot-holder has someone to ask by the time their first thing goes wrong.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "5. Fixed looks like: A first-year plot-holder has someone to ask by the time their first thing goes wrong.",
+          "proposed": "5. Fixed looks like: A first-year plot-holder has someone to ask by the time their first thing goes wrong."
+        }
+      },
+      "block_sha256": "be47fbab332bee84a454373367f09a49f8b48bf06cb050c92df29b8d8984ca27",
+      "markdown": "**5. Fixed looks like:** A first-year plot-holder has someone to ask by the time their first thing goes wrong."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/158",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/158",
+        "kind": "paragraph",
+        "location": "word/document.xml/158",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "6. Assumptions:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "6. Assumptions:",
+          "proposed": "6. Assumptions:"
+        }
+      },
+      "block_sha256": "f18f80e3bb925e689db198a9754d610324bad29fe13755e86c852fc1993c7d99",
+      "markdown": "**6. Assumptions:**"
+    },
+    {
+      "kind": "new",
+      "markdown": "> **Assumptions**\n>\n> - **From Part 2:** Most new plot-holders quit by midsummer. **Status:** unverified. **Who could tell me:** Ramona.\n> - **From Part 2:** They quit because they had no one to ask. **Status:** unverified. **Who could tell me:** the people who quit, if I can find them.\n> - **From Part 3b:** Ramona finds this burdensome. **Status:** confirmed, she said so.\n> - **From Part 5:** Having someone to ask would keep them going. **Status:** unverified. **Who could tell me:** nobody can say yet.",
+      "reason": "Convert the four-column source table to a labelled list so every assumption remains readable at mobile width.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/159"
+      ]
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/161",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/161",
+        "kind": "paragraph",
+        "location": "word/document.xml/161",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "7. Left over:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " Whether this happens every year or was unusual this year. Whether anyone tried pairing new people with returning gardeners before. Ramona has been here longest, but there may be nobody who remembers.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "7. Left over: Whether this happens every year or was unusual this year. Whether anyone tried pairing new people with returning gardeners before. Ramona has been here longest, but there may be nobody who remembers.",
+          "proposed": "7. Left over: Whether this happens every year or was unusual this year. Whether anyone tried pairing new people with returning gardeners before. Ramona has been here longest, but there may be nobody who remembers."
+        }
+      },
+      "block_sha256": "beb4ae6050cf7100a8047445548139f0283e71ca3525c12160f328c3eddfe3a2",
+      "markdown": "**7. Left over:** Whether this happens every year or was unusual this year. Whether anyone tried pairing new people with returning gardeners before. Ramona has been here longest, but there may be nobody who remembers."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/162",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/162",
+        "kind": "paragraph",
+        "location": "word/document.xml/162",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Take the ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "Concept check",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ", then continue to ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "First frames",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ".",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Take the Concept check, then continue to First frames.",
+          "proposed": "Take the Concept check, then continue to First frames."
+        }
+      },
+      "block_sha256": "e13d163595583fa459ea0f593e7d1d457f72d5b26d8fecf4e6d49633cd68fdbb",
+      "markdown": "Take the **Concept check**, then continue to **First frames**."
+    }
+  ],
+  "metadata_decisions": [
+    "Use the reading presentation for the concept and worked-example page.",
+    "Restore the intended problem-frame template numbering from 1 through 7 because the DOCX export continued an earlier list.",
+    "Convert both four-column assumptions tables to labelled lists because the full tables become difficult to read at mobile width."
+  ],
+  "source_roles": {
+    "d-bb7cd50440dd3015": {
+      "role": "primary_authoring",
+      "reason": "The user supplied Sprint-1-cut-ready-v5.4.docx as the source for the Sprint 1 rebuild."
+    }
+  },
+  "decisions": [
+    "Use the reviewed v5.4 participant prose as the primary source, with mechanical Markdown and delivery adaptations only where the DOCX presentation or current schema requires them.",
+    "Exclude the cover note, item inventory, build blocks, answer-key flags, reviewer markers, provenance note, blank separators, and internal team decisions from learner prose.",
+    "Use storage sprint 14 for the unpublished alternative while retaining the semantic module title Sprint 1: Find the Problem Worth Solving.",
+    "Convert response tasks to guided assignments with Canvas text entry, and convert the concept check to six formative choice tasks worth 5 completion points.",
+    "Convert the Reflection to the supported AI activity and JSON upload delivery used elsewhere in course1.",
+    "Normalize DOCX list continuations to the intended local numbering and use Markdown blockquotes for source-authored help and example asides.",
+    "Reuse the approved workplace-handoff illustration and caption from sprint-12 in the Introduction, with the original generation provenance retained beside the copied asset.",
+    "Keep the Concept check after The problem frame because the final v5.4 sequence and questions 4 through 6 depend on that teaching; exclude the associated team-decision marker from learner prose.",
+    "Keep the two source statuses, confirmed and unverified, in Sprint 1; exclude the associated team-decision marker from learner prose and leave any cross-course status reconciliation to the later design workflow.",
+    "Retain the three v5.4 size questions as the operative cut-ready choice criteria and exclude their team-decision marker from learner prose.",
+    "Retain the tested any-chatbot Dojo prompts while excluding the interim production marker from learner prose.",
+    "Apply the later 16 September human design ruling in course1/design/sprint-1-decisions.md and sprint-2-outline.md: defer Problem Frame Part 3 and its response task to Sprint 2. Source blocks 273 through 279 and task block 283 are deliberately excluded from Sprint 1; blocks 280 through 282 remain configuration evidence for the two retained response tasks.",
+    "Keep Problem Frame at 50 points after moving Part 3, as directed by the latest design ruling.",
+    "Render each More help passage inline as a quoted aside because the current artifact schema has no authored disclosure field.",
+    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab."
+  ],
+  "title_source": {
+    "ref": "d-bb7cd50440dd3015:word/document.xml/118",
+    "view": "base",
+    "role": "learner",
+    "kind": "source",
+    "source_name": "Sprint-1-cut-ready-v5.4.docx",
+    "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+    "block": {
+      "id": "d-bb7cd50440dd3015:word/document.xml/118",
+      "kind": "paragraph",
+      "location": "word/document.xml/118",
+      "style": "Heading1",
+      "heading_level": 1,
+      "segments": [
+        {
+          "text": "The problem frame",
+          "changes": [],
+          "link": null,
+          "format": {
+            "bold": false,
+            "italic": false
+          },
+          "comment_ids": []
+        }
+      ],
+      "flags": [],
+      "comment_ids": [],
+      "text": {
+        "base": "The problem frame",
+        "proposed": "The problem frame"
+      }
+    },
+    "block_sha256": "a1216294c5ccf1fec0c8ab56cf50e144fd88887c6f20b0a4d1e75fcbbf933a50",
+    "markdown": "# The problem frame"
+  }
+}

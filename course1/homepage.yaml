@@ -10,11 +10,11 @@ schedule:
   help_slug: help-and-resources-v2
   sprints:
     - number: 1
-      sprint: 12
+      sprint: 14
       ready: true
       title: "Find the problem worth solving"
       summary: "Use your own observations to compare candidate problems and explain which one is worth investigating."
-      note: "First half available. Work without AI in this half."
+      note: "Both weeks available. Start without AI, then use it to test and widen your frames."
     - number: 2
       sprint: null
       ready: false
@@ -380,11 +380,11 @@ modules:
             meta: "Page - placeholder stub for the Sprint 5 rebuild"
 
   - sprint: 12
-    order: 1
+    hidden: true
     title: "Sprint 1: Find the problem worth solving"
     tag: "First half"
-    open: true
-    muted: false
+    open: false
+    muted: true
     learning_goals:
       - "Use observations, work-arounds, and requests from your own work or life to uncover gaps worth investigating."
       - "Describe three to five candidate problems from your working table, naming who pays the cost and marking what you do not yet know."
@@ -434,3 +434,51 @@ modules:
             nav_meta: "Optional · Ungraded"
             meta: "AI activity - see what changed, generate three questions, save a response, and inspect the exported JSON; no Canvas submission required"
             badge: "Optional"
+
+  - sprint: 14
+    hidden: false
+    order: 1
+    title: "Sprint 1: Find the problem worth solving"
+    tag: "Framing"
+    open: true
+    muted: false
+    learning_goals:
+      - "Build a broad list from your own week, then describe three to five candidate gaps and who bears each cost."
+      - "Write complete draft problem frames that separate current conditions, a changed state, assumptions, and remaining unknowns."
+      - "Use AI to test and widen your frames while deciding what to accept or reject, then choose a problem that is workable for further inquiry."
+      - "Submit one problem frame that shows how your judgment changed, and explain what AI contributed, what only you could contribute, and what remains uncertain."
+    prereq: "Bring observations from your real work or life and use one Candidate Log throughout. Complete the brainstorm, table, and first frames without AI before using AI in the Dojo Lab."
+    groups:
+      - label: "Sprint Week 1: Build candidate frames"
+        items:
+          - slug: "introduction-find-the-problem-worth-solving"
+            nav_meta: "Read"
+            meta: "Page - learn the two-week route, point structure, AI boundaries, and how to use the Candidate Log"
+          - slug: "brainstorm-your-list"
+            nav_meta: "Practice · Own your progress"
+            meta: "Guided assignment - build a broad list from your own week without AI; 0 points, submission optional for progress"
+          - slug: "get-underneath-three-to-five"
+            nav_meta: "Practice · Own your progress"
+            meta: "Guided assignment - describe three to five situations, their current handling, costs, and gaps without AI; 0 points, submission optional for progress"
+          - slug: "the-problem-frame"
+            nav_meta: "Read"
+            meta: "Page - learn the seven-part problem frame through two worked examples"
+          - slug: "sprint-1-concept-check"
+            nav_meta: "5 points"
+            meta: "Guided concept check - answer six questions about indicators, gaps, changed states, failure moments, and goals; 5 completion points"
+            badge: "Self-check"
+            selfcheck: true
+          - slug: "first-frames"
+            nav_meta: "35 points"
+            meta: "Guided assignment - write at least three complete draft problem frames without AI and submit them together; 35 points"
+      - label: "Sprint Week 2: Test, choose, and reflect"
+        items:
+          - slug: "dojo-lab-test-widen-choose"
+            nav_meta: "Practice · Own your progress"
+            meta: "Guided assignment - use AI to test and widen every frame, then choose one with your own judgment; 0 points, submission optional for progress"
+          - slug: "problem-frame"
+            nav_meta: "50 points"
+            meta: "Guided assignment - submit the chosen seven-part Problem Frame and explain what changed, what moved your judgment, and what you rejected; 50 points"
+          - slug: "sprint-1-reflection-what-changed-v54"
+            nav_meta: "10 points"
+            meta: "AI reflection activity - make your judgment, AI's contribution, and one remaining uncertainty specific; 10 points"

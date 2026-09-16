@@ -1,0 +1,1152 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-sprint-14-introduction-find-the-problem-worth-solving",
+  "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
+  "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
+  "body_sha256": "0393d49917ac346b59dda30640a8d420cd569c3568f73eb67504bea82aa6d4f8",
+  "frontmatter_sha256": "15155a9a96fbfd76c453da8df47dad91988b119db59cc72d35c09ccb7413827f",
+  "parts": [
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/32",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/32",
+        "kind": "paragraph",
+        "location": "word/document.xml/32",
+        "style": "Heading1",
+        "heading_level": 1,
+        "segments": [
+          {
+            "text": "Introduction: Find the Problem Worth Solving",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Introduction: Find the Problem Worth Solving",
+          "proposed": "Introduction: Find the Problem Worth Solving"
+        }
+      },
+      "block_sha256": "55067b74611c328b8a29583c48b213cff20237a2e9560a23c0ca133cde75cbbd",
+      "markdown": "# Introduction: Find the Problem Worth Solving"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/34",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/34",
+        "kind": "paragraph",
+        "location": "word/document.xml/34",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "This sprint is about choosing a problem you can investigate through this course. You will begin with your own experience.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "This sprint is about choosing a problem you can investigate through this course. You will begin with your own experience.",
+          "proposed": "This sprint is about choosing a problem you can investigate through this course. You will begin with your own experience."
+        }
+      },
+      "block_sha256": "3b847cec4990f7157ba54dd72feff325af5cbdfd6882f29067e4648fbd83e025",
+      "markdown": "This sprint is about choosing a problem you can investigate through this course. You will begin with your own experience."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/35",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/35",
+        "kind": "paragraph",
+        "location": "word/document.xml/35",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "Sprint 1 key terms",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Sprint 1 key terms",
+          "proposed": "Sprint 1 key terms"
+        }
+      },
+      "block_sha256": "a775f66986248c5e019dc473e5c8b16a96ebe205e00173f7d090472ea557c70e",
+      "markdown": "## Sprint 1 key terms"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/36",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/36",
+        "kind": "paragraph",
+        "location": "word/document.xml/36",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "A ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "problem",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " is a gap between how something works now and how it could work, where the gap costs someone something real.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "A problem is a gap between how something works now and how it could work, where the gap costs someone something real.",
+          "proposed": "A problem is a gap between how something works now and how it could work, where the gap costs someone something real."
+        }
+      },
+      "block_sha256": "cb384ca7fc5998ea8e752070ec6644430bc2a782e08f20348aca625290fa4d9b",
+      "markdown": "A **problem** is a gap between how something works now and how it could work, where the gap costs someone something real."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/37",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/37",
+        "kind": "paragraph",
+        "location": "word/document.xml/37",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "You are going to come up with a list of problems you might be interested in exploring. We call them ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "candidate problems",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ".",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "You are going to come up with a list of problems you might be interested in exploring. We call them candidate problems.",
+          "proposed": "You are going to come up with a list of problems you might be interested in exploring. We call them candidate problems."
+        }
+      },
+      "block_sha256": "e24281dd54cadc42b511ab9adfb8fb48be63afb7f2dbfdfcafb73851f6de1f73",
+      "markdown": "You are going to come up with a list of problems you might be interested in exploring. We call them **candidate problems**."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/38",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/38",
+        "kind": "paragraph",
+        "location": "word/document.xml/38",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "A ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "problem frame",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " is your written account of a problem. It says what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "A problem frame is your written account of a problem. It says what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know.",
+          "proposed": "A problem frame is your written account of a problem. It says what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know."
+        }
+      },
+      "block_sha256": "fb42ea4e5a65dc95144bd2ebb34965f47b2af2698b766cf078191a492dcd5867",
+      "markdown": "A **problem frame** is your written account of a problem. It says what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know."
+    },
+    {
+      "kind": "new",
+      "markdown": "![Three colleagues review a workflow and pass a folder across a worktable.](assets/workplace-handoff.webp)\n\n*Work moves between people. Illustration created with AI for this course.*",
+      "reason": "Implement the source's build marker by reusing the approved Sprint 1 workplace-handoff illustration and its existing caption.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/39"
+      ]
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/40",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/40",
+        "kind": "paragraph",
+        "location": "word/document.xml/40",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "Your route through this sprint",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Your route through this sprint",
+          "proposed": "Your route through this sprint"
+        }
+      },
+      "block_sha256": "10b163acd3025275794a3dd7d56d9c5773b3d26f89b19bb17870ec2690c2a5c3",
+      "markdown": "## Your route through this sprint"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/41",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/41",
+        "kind": "paragraph",
+        "location": "word/document.xml/41",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "The goal is to move from a wide list to one framed problem, following these steps over the course of two weeks.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "The goal is to move from a wide list to one framed problem, following these steps over the course of two weeks.",
+          "proposed": "The goal is to move from a wide list to one framed problem, following these steps over the course of two weeks."
+        }
+      },
+      "block_sha256": "776616f8bee10907cf64dd7e8257d10f9ce6a219040aa1fb537ddf9f59e9fd37",
+      "markdown": "The goal is to move from a wide list to one framed problem, following these steps over the course of two weeks."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/42",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/42",
+        "kind": "paragraph",
+        "location": "word/document.xml/42",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Week 1",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Week 1",
+          "proposed": "Week 1"
+        }
+      },
+      "block_sha256": "11a9e5a471c3381f7f2f29f6391e65401c411fbe2516991816e822595b3e4985",
+      "markdown": "**Week 1**"
+    },
+    {
+      "kind": "new",
+      "markdown": "1. Read the Introduction.\n2. **Brainstorm your list.** Ten minutes. Everything in your week that could hold a problem, by area of your life. (Own your progress, 0 points.)\n3. **Get underneath three to five** of them. Describe how each works now and what it costs, and write the gap. (Own your progress, 0 points.)\n4. **Read about problem frames**, then take the **Concept check** (5 points).\n5. **Write your First frames**, one for each of your three to five candidates (35 points).",
+      "reason": "Restore the intended Week 1 numbering after the DOCX export continued an earlier list.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/43",
+        "d-bb7cd50440dd3015:word/document.xml/44",
+        "d-bb7cd50440dd3015:word/document.xml/45",
+        "d-bb7cd50440dd3015:word/document.xml/46",
+        "d-bb7cd50440dd3015:word/document.xml/47"
+      ]
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/48",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/48",
+        "kind": "paragraph",
+        "location": "word/document.xml/48",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Week 2",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Week 2",
+          "proposed": "Week 2"
+        }
+      },
+      "block_sha256": "4316fd86a0cc37f14537298efbeec4f40f9bbf0490d7cc049a1f837dc660fe78",
+      "markdown": "**Week 2**"
+    },
+    {
+      "kind": "new",
+      "markdown": "6. **Run the Dojo Lab.** Tap into AI to widen your frames and help select one problem. (Own your progress, 0 points.)\n7. **Select one problem and submit your Problem Frame.** Rewrite the frame of the problem you chose, and identify what changed from your draft (50 points).\n8. **Write the Reflection** (10 points).",
+      "reason": "Restore the intended Week 2 numbering after the DOCX export continued an earlier list.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/49",
+        "d-bb7cd50440dd3015:word/document.xml/50",
+        "d-bb7cd50440dd3015:word/document.xml/51"
+      ]
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/52",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/52",
+        "kind": "paragraph",
+        "location": "word/document.xml/52",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Spread week 1 across several days. The brainstorm's help asks you to watch your routine for a day or two if your list comes up short.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Spread week 1 across several days. The brainstorm's help asks you to watch your routine for a day or two if your list comes up short.",
+          "proposed": "Spread week 1 across several days. The brainstorm's help asks you to watch your routine for a day or two if your list comes up short."
+        }
+      },
+      "block_sha256": "719f97b2737fa9f2ed89b12c061de49c50d4681393697a35e8891e2c21030993",
+      "markdown": "Spread week 1 across several days. The brainstorm's help asks you to watch your routine for a day or two if your list comes up short."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/53",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/53",
+        "kind": "paragraph",
+        "location": "word/document.xml/53",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "What to keep and submit",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "What to keep and submit",
+          "proposed": "What to keep and submit"
+        }
+      },
+      "block_sha256": "a9c40699c5da197f133df71ac9a12345edf12d2eb350021eaab78bdbc656962c",
+      "markdown": "## What to keep and submit"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/54",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/54",
+        "kind": "paragraph",
+        "location": "word/document.xml/54",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Brainstorm your list, Get underneath, Dojo Lab: own your progress, 0 points.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " Submit to record completion, or continue without submitting.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 9
+        },
+        "text": {
+          "base": "Brainstorm your list, Get underneath, Dojo Lab: own your progress, 0 points. Submit to record completion, or continue without submitting.",
+          "proposed": "Brainstorm your list, Get underneath, Dojo Lab: own your progress, 0 points. Submit to record completion, or continue without submitting."
+        }
+      },
+      "block_sha256": "5342ca4ab2a02fb10735e13115c5853d38b6f874def5c7683806a146e4283a2f",
+      "markdown": "- **Brainstorm your list, Get underneath, Dojo Lab: own your progress, 0 points.** Submit to record completion, or continue without submitting."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/55",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/55",
+        "kind": "paragraph",
+        "location": "word/document.xml/55",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Concept check: 5 points.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " Your instructor reviews completion.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 10
+        },
+        "text": {
+          "base": "Concept check: 5 points. Your instructor reviews completion.",
+          "proposed": "Concept check: 5 points. Your instructor reviews completion."
+        }
+      },
+      "block_sha256": "a58533cb885ee2b46a11b9783c4f96721cf614465dc1c2d89c61e48be8d61793",
+      "markdown": "- **Concept check: 5 points.** Your instructor reviews completion."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/56",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/56",
+        "kind": "paragraph",
+        "location": "word/document.xml/56",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "First frames: 35 points.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " One submission, all your frames, written part by part.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 11
+        },
+        "text": {
+          "base": "First frames: 35 points. One submission, all your frames, written part by part.",
+          "proposed": "First frames: 35 points. One submission, all your frames, written part by part."
+        }
+      },
+      "block_sha256": "67bd41dfdf3ec5bc2c621d6dfcd79c833d93bd279aceacfc58d483152e1aff65",
+      "markdown": "- **First frames: 35 points.** One submission, all your frames, written part by part."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/57",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/57",
+        "kind": "paragraph",
+        "location": "word/document.xml/57",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Problem Frame: 50 points.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " One submission.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 12
+        },
+        "text": {
+          "base": "Problem Frame: 50 points. One submission.",
+          "proposed": "Problem Frame: 50 points. One submission."
+        }
+      },
+      "block_sha256": "cc11309b5c5d14437f14dcfe71b5bffefcbe8436a70c7024a4e8b648f84e3b1d",
+      "markdown": "- **Problem Frame: 50 points.** One submission."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/58",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/58",
+        "kind": "paragraph",
+        "location": "word/document.xml/58",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Reflection: 10 points.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 13
+        },
+        "text": {
+          "base": "Reflection: 10 points.",
+          "proposed": "Reflection: 10 points."
+        }
+      },
+      "block_sha256": "2ca6977fc3df48163b81ecc58ec3ccc5273e2f3999e52af90d1123bded7517ae",
+      "markdown": "- **Reflection: 10 points.**"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/59",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/59",
+        "kind": "paragraph",
+        "location": "word/document.xml/59",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "About AI in this sprint",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "About AI in this sprint",
+          "proposed": "About AI in this sprint"
+        }
+      },
+      "block_sha256": "03072b0aba7ef77da3e370d2bbe7884cbb395c05c57d408e39b689c4263f4ad0",
+      "markdown": "## About AI in this sprint"
+    },
+    {
+      "kind": "new",
+      "markdown": "Three activities ask you to work without AI: the brainstorm, the table underneath it, and First frames. The reason is narrow. AI has no access to what you have stopped noticing, what you keep putting off, or what you work around, and those are where problems hide. Once your own read is written down, AI can be your partner. The Dojo Lab uses it to test and widen your frames, and it will do that well only because you wrote them first.",
+      "reason": "Resolve the source's internal inconsistency: First frames explicitly requires work without AI, so the Introduction must name all three no-AI activities.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/60",
+        "d-bb7cd50440dd3015:word/document.xml/180"
+      ]
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/61",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/61",
+        "kind": "paragraph",
+        "location": "word/document.xml/61",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "How to work",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "How to work",
+          "proposed": "How to work"
+        }
+      },
+      "block_sha256": "a54653c91b67b05f9eae0f954e1429dd61302560fa1dc3a80e50ccb46207f778",
+      "markdown": "## How to work"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/62",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/62",
+        "kind": "paragraph",
+        "location": "word/document.xml/62",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Use rough, specific notes, and say so honestly when a search produces nothing. You are choosing something to investigate, not proving its cause. The frame has its own way of marking what you are unsure of; until then, a guess written as a guess is fine.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Use rough, specific notes, and say so honestly when a search produces nothing. You are choosing something to investigate, not proving its cause. The frame has its own way of marking what you are unsure of; until then, a guess written as a guess is fine.",
+          "proposed": "Use rough, specific notes, and say so honestly when a search produces nothing. You are choosing something to investigate, not proving its cause. The frame has its own way of marking what you are unsure of; until then, a guess written as a guess is fine."
+        }
+      },
+      "block_sha256": "b8e1644d13568f9db34e3a8ef537cb56a136964f113998b1f3553a15b0ea87e9",
+      "markdown": "Use rough, specific notes, and say so honestly when a search produces nothing. You are choosing something to investigate, not proving its cause. The frame has its own way of marking what you are unsure of; until then, a guess written as a guess is fine."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/63",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/63",
+        "kind": "paragraph",
+        "location": "word/document.xml/63",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Keep everything you write, including items you set aside. The Reflection compares your first frames with your final one, and your set-aside list is where you go if your choice does not survive.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Keep everything you write, including items you set aside. The Reflection compares your first frames with your final one, and your set-aside list is where you go if your choice does not survive.",
+          "proposed": "Keep everything you write, including items you set aside. The Reflection compares your first frames with your final one, and your set-aside list is where you go if your choice does not survive."
+        }
+      },
+      "block_sha256": "983663bedee53b98aedb603d350de89f4d791f577fab59a5328839363335e242",
+      "markdown": "Keep everything you write, including items you set aside. The Reflection compares your first frames with your final one, and your set-aside list is where you go if your choice does not survive."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/64",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/64",
+        "kind": "paragraph",
+        "location": "word/document.xml/64",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "Where to write",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Where to write",
+          "proposed": "Where to write"
+        }
+      },
+      "block_sha256": "1e1ed628762da79d13d5a7a319b0a847d23194341ee115d3eaff388325dc4ca6",
+      "markdown": "## Where to write"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/65",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/65",
+        "kind": "paragraph",
+        "location": "word/document.xml/65",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Use the ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "Candidate Log",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ", a document template you copy once and keep for the whole sprint. ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "Make your copy of the Candidate Log",
+            "changes": [],
+            "link": "https://docs.google.com/document/d/1aTgaDgf1ugkQujJkgvo-EHXUqm9ztN1jMA5SDy3lTjI/copy",
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ". It runs the whole sprint. Part A holds your brainstorm, Part B your table, Part C your draft frames, one per candidate, and Part D your Problem Frame. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Use the Candidate Log, a document template you copy once and keep for the whole sprint. Make your copy of the Candidate Log. It runs the whole sprint. Part A holds your brainstorm, Part B your table, Part C your draft frames, one per candidate, and Part D your Problem Frame. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box.",
+          "proposed": "Use the Candidate Log, a document template you copy once and keep for the whole sprint. Make your copy of the Candidate Log. It runs the whole sprint. Part A holds your brainstorm, Part B your table, Part C your draft frames, one per candidate, and Part D your Problem Frame. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box."
+        }
+      },
+      "block_sha256": "b2ccdfa867e18bf3355486106b234feeedae849cef880927fd751675f8e53138",
+      "markdown": "Use the **Candidate Log**, a document template you copy once and keep for the whole sprint. [Make your copy of the Candidate Log](https://docs.google.com/document/d/1aTgaDgf1ugkQujJkgvo-EHXUqm9ztN1jMA5SDy3lTjI/copy). It runs the whole sprint. Part A holds your brainstorm, Part B your table, Part C your draft frames, one per candidate, and Part D your Problem Frame. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/66",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/66",
+        "kind": "paragraph",
+        "location": "word/document.xml/66",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Begin with ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "Brainstorm your list",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ".",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Begin with Brainstorm your list.",
+          "proposed": "Begin with Brainstorm your list."
+        }
+      },
+      "block_sha256": "f90621dd114a0abb90d56dfdfef6a5535c7dfd9b6b4be4330093ffc105cd341b",
+      "markdown": "Begin with **Brainstorm your list**."
+    }
+  ],
+  "metadata_decisions": [
+    "Use the reading presentation for the sprint orientation page.",
+    "Translate the build-only illustration marker into the existing approved workplace-handoff image and caption, with the asset copied by the coordinating parent.",
+    "Restore the intended route numbering from 1 through 8 because the DOCX export continued numbering from its cover note."
+  ],
+  "source_roles": {
+    "d-bb7cd50440dd3015": {
+      "role": "primary_authoring",
+      "reason": "The user supplied Sprint-1-cut-ready-v5.4.docx as the source for the Sprint 1 rebuild."
+    }
+  },
+  "decisions": [
+    "Use the reviewed v5.4 participant prose as the primary source, with mechanical Markdown and delivery adaptations only where the DOCX presentation or current schema requires them.",
+    "Exclude the cover note, item inventory, build blocks, answer-key flags, reviewer markers, provenance note, blank separators, and internal team decisions from learner prose.",
+    "Use storage sprint 14 for the unpublished alternative while retaining the semantic module title Sprint 1: Find the Problem Worth Solving.",
+    "Convert response tasks to guided assignments with Canvas text entry, and convert the concept check to six formative choice tasks worth 5 completion points.",
+    "Convert the Reflection to the supported AI activity and JSON upload delivery used elsewhere in course1.",
+    "Normalize DOCX list continuations to the intended local numbering and use Markdown blockquotes for source-authored help and example asides.",
+    "Reuse the approved workplace-handoff illustration and caption from sprint-12 in the Introduction, with the original generation provenance retained beside the copied asset.",
+    "Keep the Concept check after The problem frame because the final v5.4 sequence and questions 4 through 6 depend on that teaching; exclude the associated team-decision marker from learner prose.",
+    "Keep the two source statuses, confirmed and unverified, in Sprint 1; exclude the associated team-decision marker from learner prose and leave any cross-course status reconciliation to the later design workflow.",
+    "Retain the three v5.4 size questions as the operative cut-ready choice criteria and exclude their team-decision marker from learner prose.",
+    "Retain the tested any-chatbot Dojo prompts while excluding the interim production marker from learner prose.",
+    "Apply the later 16 September human design ruling in course1/design/sprint-1-decisions.md and sprint-2-outline.md: defer Problem Frame Part 3 and its response task to Sprint 2. Source blocks 273 through 279 and task block 283 are deliberately excluded from Sprint 1; blocks 280 through 282 remain configuration evidence for the two retained response tasks.",
+    "Keep Problem Frame at 50 points after moving Part 3, as directed by the latest design ruling.",
+    "Render each More help passage inline as a quoted aside because the current artifact schema has no authored disclosure field.",
+    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab."
+  ],
+  "title_source": {
+    "ref": "d-bb7cd50440dd3015:word/document.xml/32",
+    "view": "base",
+    "role": "learner",
+    "kind": "source",
+    "source_name": "Sprint-1-cut-ready-v5.4.docx",
+    "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+    "block": {
+      "id": "d-bb7cd50440dd3015:word/document.xml/32",
+      "kind": "paragraph",
+      "location": "word/document.xml/32",
+      "style": "Heading1",
+      "heading_level": 1,
+      "segments": [
+        {
+          "text": "Introduction: Find the Problem Worth Solving",
+          "changes": [],
+          "link": null,
+          "format": {
+            "bold": false,
+            "italic": false
+          },
+          "comment_ids": []
+        }
+      ],
+      "flags": [],
+      "comment_ids": [],
+      "text": {
+        "base": "Introduction: Find the Problem Worth Solving",
+        "proposed": "Introduction: Find the Problem Worth Solving"
+      }
+    },
+    "block_sha256": "55067b74611c328b8a29583c48b213cff20237a2e9560a23c0ca133cde75cbbd",
+    "markdown": "# Introduction: Find the Problem Worth Solving"
+  }
+}

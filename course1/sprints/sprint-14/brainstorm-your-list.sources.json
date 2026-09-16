@@ -1,0 +1,806 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-sprint-14-brainstorm-your-list",
+  "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
+  "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
+  "body_sha256": "ce50a308b625ca934536ecd5ccf65bc7146730c08d77d2af46d4f4a0b2790fc6",
+  "frontmatter_sha256": "3a4995580e5c04a315234c54a7f3187b224ad5f134c28f40ab64c2b21fbec976",
+  "parts": [
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/68",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/68",
+        "kind": "paragraph",
+        "location": "word/document.xml/68",
+        "style": "Heading1",
+        "heading_level": 1,
+        "segments": [
+          {
+            "text": "Brainstorm your list",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Brainstorm your list",
+          "proposed": "Brainstorm your list"
+        }
+      },
+      "block_sha256": "36f1970e5018643ef029d79ab330233f5c48ecdfcd4c3ee854ed28d636ec5f0b",
+      "markdown": "# Brainstorm your list"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/70",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/70",
+        "kind": "paragraph",
+        "location": "word/document.xml/70",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "1. Set up your categories",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "1. Set up your categories",
+          "proposed": "1. Set up your categories"
+        }
+      },
+      "block_sha256": "6960fa9e50e29238288096713967aba826eccb5edbbb391c78dc428f18ffca1f",
+      "markdown": "## 1. Set up your categories"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/71",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/71",
+        "kind": "paragraph",
+        "location": "word/document.xml/71",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Take a page. Write three or four headings for the areas of your life where things happen. ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "Work",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ", ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "home",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ", and ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "other",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " is enough. Add ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "job search",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ", ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "volunteering",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ", ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "caregiving",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ", or ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "side business",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " if those are part of your week. Work without AI here. AI cannot see your week.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Take a page. Write three or four headings for the areas of your life where things happen. Work, home, and other is enough. Add job search, volunteering, caregiving, or side business if those are part of your week. Work without AI here. AI cannot see your week.",
+          "proposed": "Take a page. Write three or four headings for the areas of your life where things happen. Work, home, and other is enough. Add job search, volunteering, caregiving, or side business if those are part of your week. Work without AI here. AI cannot see your week."
+        }
+      },
+      "block_sha256": "129e5b73417184c9be7198470db2ee857f7c18b51b1c50bd7837d5ba145c8c26",
+      "markdown": "Take a page. Write three or four headings for the areas of your life where things happen. **Work**, **home**, and **other** is enough. Add **job search**, **volunteering**, **caregiving**, or **side business** if those are part of your week. Work without AI here. AI cannot see your week."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/72",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/72",
+        "kind": "paragraph",
+        "location": "word/document.xml/72",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "2. Walk your week and write everything down",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "2. Walk your week and write everything down",
+          "proposed": "2. Walk your week and write everything down"
+        }
+      },
+      "block_sha256": "b1bb380afa8b1053bce5002c0f33f9c4b1da39c5a6ad8665dc891cdcefebeaf3",
+      "markdown": "## 2. Walk your week and write everything down"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/73",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/73",
+        "kind": "paragraph",
+        "location": "word/document.xml/73",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Ten minutes. Under each heading, list situations that could hold problems. A phrase per item. Do not examine anything yet, and do not decide whether it counts.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Ten minutes. Under each heading, list situations that could hold problems. A phrase per item. Do not examine anything yet, and do not decide whether it counts.",
+          "proposed": "Ten minutes. Under each heading, list situations that could hold problems. A phrase per item. Do not examine anything yet, and do not decide whether it counts."
+        }
+      },
+      "block_sha256": "a6a4a911043b467fff1a53dff6220b6e99601c8e36b6f370e295b63bf250bb5b",
+      "markdown": "Ten minutes. Under each heading, list situations that could hold problems. A phrase per item. Do not examine anything yet, and do not decide whether it counts."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/74",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/74",
+        "kind": "paragraph",
+        "location": "word/document.xml/74",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Walk through your typical week in order. You may want to open your to-do list, your calendar, and your inbox, and look for:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Walk through your typical week in order. You may want to open your to-do list, your calendar, and your inbox, and look for:",
+          "proposed": "Walk through your typical week in order. You may want to open your to-do list, your calendar, and your inbox, and look for:"
+        }
+      },
+      "block_sha256": "bd927e0c345ebbbe7e3e36584af45d66c4fd5bdc4c6974a0eea6c0ed516da9cb",
+      "markdown": "Walk through your typical week in order. You may want to open your to-do list, your calendar, and your inbox, and look for:"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/75",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/75",
+        "kind": "paragraph",
+        "location": "word/document.xml/75",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Things you do over and over.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 14
+        },
+        "text": {
+          "base": "Things you do over and over.",
+          "proposed": "Things you do over and over."
+        }
+      },
+      "block_sha256": "84444fa76f0a8927e230b60aea20c738efc3bf4f3207e48d74fc3d2cbd6d76e8",
+      "markdown": "- Things you do over and over."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/76",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/76",
+        "kind": "paragraph",
+        "location": "word/document.xml/76",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Things you dread or that bug you.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 15
+        },
+        "text": {
+          "base": "Things you dread or that bug you.",
+          "proposed": "Things you dread or that bug you."
+        }
+      },
+      "block_sha256": "b3672ea75772d306884718da6c7f89dae44abb306e35ce93db6358b1a186d0bd",
+      "markdown": "- Things you dread or that bug you."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/77",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/77",
+        "kind": "paragraph",
+        "location": "word/document.xml/77",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Things you wish worked differently.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 16
+        },
+        "text": {
+          "base": "Things you wish worked differently.",
+          "proposed": "Things you wish worked differently."
+        }
+      },
+      "block_sha256": "2b3c6717a2f9957cbf9d2017d1e9ddacdeaca7fcc0b009bfd9abdeb02098adeb",
+      "markdown": "- Things you wish worked differently."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/78",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/78",
+        "kind": "paragraph",
+        "location": "word/document.xml/78",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Things somebody asked you for that do not feel quite right.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 17
+        },
+        "text": {
+          "base": "Things somebody asked you for that do not feel quite right.",
+          "proposed": "Things somebody asked you for that do not feel quite right."
+        }
+      },
+      "block_sha256": "020aabf7dd296d0f7757b805509e07b0e2d114c87bf5e84975d94e3b178829b0",
+      "markdown": "- Things somebody asked you for that do not feel quite right."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/79",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/79",
+        "kind": "paragraph",
+        "location": "word/document.xml/79",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Things you have been putting off.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 18
+        },
+        "text": {
+          "base": "Things you have been putting off.",
+          "proposed": "Things you have been putting off."
+        }
+      },
+      "block_sha256": "ed982c22f48019d49eeeb27380cad3400d12aff9f71fd5d95dadda4abb41da48",
+      "markdown": "- Things you have been putting off."
+    },
+    {
+      "kind": "new",
+      "markdown": "> **Here is an example list**\n>\n> **Work**\n>\n> - Account handovers always get dropped\n> - Monthly report columns have to be reformatted to fit the tracking spreadsheet\n> - Reminding people about compliance training\n> - Nobody reads the meeting notes\n> - Two clients who called about the same question\n> - Onboarding: new people sit idle for days\n>\n> **Home**\n>\n> - Groceries run out midweek and somebody makes a second trip\n> - The shared family calendar is wrong about half the time\n> - Insurance paperwork that has sat on the counter since spring\n>\n> **Other**\n>\n> - Volunteer shift sign-ups happen across three group texts\n> - Half the new plots at the community garden went to weeds by August\n> - My resume has not been touched in two years",
+      "reason": "Restore the source example's category and list structure, which the DOCX intake flattened into three dash-separated paragraphs.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/80",
+        "d-bb7cd50440dd3015:word/document.xml/81",
+        "d-bb7cd50440dd3015:word/document.xml/82",
+        "d-bb7cd50440dd3015:word/document.xml/83"
+      ]
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/84",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/84",
+        "kind": "paragraph",
+        "location": "word/document.xml/84",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "A long list is the goal. Twelve to twenty items across all headings is normal. Nothing on it is a problem yet, and most of it will not become one.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "A long list is the goal. Twelve to twenty items across all headings is normal. Nothing on it is a problem yet, and most of it will not become one.",
+          "proposed": "A long list is the goal. Twelve to twenty items across all headings is normal. Nothing on it is a problem yet, and most of it will not become one."
+        }
+      },
+      "block_sha256": "bd3e50e884993dfb52e66b6cad7e69a47209fac26dcd9817e2e40ca5aecd8726",
+      "markdown": "A long list is the goal. Twelve to twenty items across all headings is normal. Nothing on it is a problem yet, and most of it will not become one."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/85",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/85",
+        "kind": "paragraph",
+        "location": "word/document.xml/85",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "3. If your list is short",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "3. If your list is short",
+          "proposed": "3. If your list is short"
+        }
+      },
+      "block_sha256": "47c7d4a17e8b19112ebd8eac5ad2265fba1d350ca8496beb10293e22fc9e5ac1",
+      "markdown": "## 3. If your list is short"
+    },
+    {
+      "kind": "new",
+      "markdown": "Three places to look. Use the ones you need.",
+      "reason": "The current artifact format renders the help inline rather than as authored disclosures, so remove the inaccurate instruction to open collapsed blocks.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/86"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "> *More help: what bugs you.* Something you dread or complain about. Describe the last time it happened, step by step, who did what. Each step that made you sigh goes on your list.",
+      "reason": "Present the source-authored help inline as a quoted aside because authored disclosures are not supported.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/87"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "> *More help: what you stopped noticing.* A **workaround** is something you do to get around a difficulty, and repeating it makes its cost feel like an ordinary part of the job. Over the next day or two, notice a step you redo, a person you chase, or a private file you keep because the shared version does not work for you. Every month, one team fixed the exported report columns by hand, each analyst in a separate copy, and nobody called it a problem.",
+      "reason": "Present the source-authored help inline as a quoted aside because authored disclosures are not supported.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/88"
+      ]
+    },
+    {
+      "kind": "new",
+      "markdown": "> *More help: what somebody handed you.* A **surface request** names a solution before the problem is clear: \"we need an app to track onboarding\" says what to build, not what needs to change. Ask why, then why does that matter, until you reach a goal nobody would dispute (new hires contribute as quickly as possible), then list what could be in the way of that goal (an unowned handoff from HR to IT; managers not knowing what a new hire can take on). Each obstacle goes on your list. Requests you make of yourself count too: \"I need to fix my resume\" has a goal underneath it.",
+      "reason": "Present the source-authored help inline as a quoted aside because authored disclosures are not supported.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/89"
+      ]
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/90",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/90",
+        "kind": "paragraph",
+        "location": "word/document.xml/90",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Keep the list in Part A of your Candidate Log. Next, ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "Get underneath three to five",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ".",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Keep the list in Part A of your Candidate Log. Next, Get underneath three to five.",
+          "proposed": "Keep the list in Part A of your Candidate Log. Next, Get underneath three to five."
+        }
+      },
+      "block_sha256": "72d58310e8be250a7bd5c28c8e05513723af0ff076fc01539f586cf3905a8ae9",
+      "markdown": "Keep the list in Part A of your Candidate Log. Next, **Get underneath three to five**."
+    }
+  ],
+  "metadata_decisions": [
+    "Convert the source response task to a guided text-entry assignment.",
+    "Use reading presentation because all teaching precedes a single response and the source includes several help asides.",
+    "Split the source criteria sentence into four scannable criteria without changing the evidence requested."
+  ],
+  "source_roles": {
+    "d-bb7cd50440dd3015": {
+      "role": "primary_authoring",
+      "reason": "The user supplied Sprint-1-cut-ready-v5.4.docx as the source for the Sprint 1 rebuild."
+    }
+  },
+  "decisions": [
+    "Use the reviewed v5.4 participant prose as the primary source, with mechanical Markdown and delivery adaptations only where the DOCX presentation or current schema requires them.",
+    "Exclude the cover note, item inventory, build blocks, answer-key flags, reviewer markers, provenance note, blank separators, and internal team decisions from learner prose.",
+    "Use storage sprint 14 for the unpublished alternative while retaining the semantic module title Sprint 1: Find the Problem Worth Solving.",
+    "Convert response tasks to guided assignments with Canvas text entry, and convert the concept check to six formative choice tasks worth 5 completion points.",
+    "Convert the Reflection to the supported AI activity and JSON upload delivery used elsewhere in course1.",
+    "Normalize DOCX list continuations to the intended local numbering and use Markdown blockquotes for source-authored help and example asides.",
+    "Reuse the approved workplace-handoff illustration and caption from sprint-12 in the Introduction, with the original generation provenance retained beside the copied asset.",
+    "Keep the Concept check after The problem frame because the final v5.4 sequence and questions 4 through 6 depend on that teaching; exclude the associated team-decision marker from learner prose.",
+    "Keep the two source statuses, confirmed and unverified, in Sprint 1; exclude the associated team-decision marker from learner prose and leave any cross-course status reconciliation to the later design workflow.",
+    "Retain the three v5.4 size questions as the operative cut-ready choice criteria and exclude their team-decision marker from learner prose.",
+    "Retain the tested any-chatbot Dojo prompts while excluding the interim production marker from learner prose.",
+    "Apply the later 16 September human design ruling in course1/design/sprint-1-decisions.md and sprint-2-outline.md: defer Problem Frame Part 3 and its response task to Sprint 2. Source blocks 273 through 279 and task block 283 are deliberately excluded from Sprint 1; blocks 280 through 282 remain configuration evidence for the two retained response tasks.",
+    "Keep Problem Frame at 50 points after moving Part 3, as directed by the latest design ruling.",
+    "Render each More help passage inline as a quoted aside because the current artifact schema has no authored disclosure field.",
+    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab."
+  ],
+  "title_source": {
+    "ref": "d-bb7cd50440dd3015:word/document.xml/68",
+    "view": "base",
+    "role": "learner",
+    "kind": "source",
+    "source_name": "Sprint-1-cut-ready-v5.4.docx",
+    "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+    "block": {
+      "id": "d-bb7cd50440dd3015:word/document.xml/68",
+      "kind": "paragraph",
+      "location": "word/document.xml/68",
+      "style": "Heading1",
+      "heading_level": 1,
+      "segments": [
+        {
+          "text": "Brainstorm your list",
+          "changes": [],
+          "link": null,
+          "format": {
+            "bold": false,
+            "italic": false
+          },
+          "comment_ids": []
+        }
+      ],
+      "flags": [],
+      "comment_ids": [],
+      "text": {
+        "base": "Brainstorm your list",
+        "proposed": "Brainstorm your list"
+      }
+    },
+    "block_sha256": "36f1970e5018643ef029d79ab330233f5c48ecdfcd4c3ee854ed28d636ec5f0b",
+    "markdown": "# Brainstorm your list"
+  }
+}

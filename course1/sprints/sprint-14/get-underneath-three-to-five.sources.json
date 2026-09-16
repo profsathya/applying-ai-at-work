@@ -1,0 +1,941 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-sprint-14-get-underneath-three-to-five",
+  "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
+  "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
+  "body_sha256": "3ab0057e09680d654faaec432faccf4b9e8ed9c9fa581f7711c1054ccee39bef",
+  "frontmatter_sha256": "8881947073479b32d316c4592b00cc07307f2c378946fa49faab99bd53624473",
+  "parts": [
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/94",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/94",
+        "kind": "paragraph",
+        "location": "word/document.xml/94",
+        "style": "Heading1",
+        "heading_level": 1,
+        "segments": [
+          {
+            "text": "Get underneath three to five",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Get underneath three to five",
+          "proposed": "Get underneath three to five"
+        }
+      },
+      "block_sha256": "b8ba3433b15e76920da7881b9889c4b3b73f312bd23de83524f1a554414c387c",
+      "markdown": "# Get underneath three to five"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/96",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/96",
+        "kind": "paragraph",
+        "location": "word/document.xml/96",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "1. Pick three to five",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "1. Pick three to five",
+          "proposed": "1. Pick three to five"
+        }
+      },
+      "block_sha256": "40aaf47422acccf46d78eeaeabdcb814f02e8a46700956433ca654d15f4be6c5",
+      "markdown": "## 1. Pick three to five"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/97",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/97",
+        "kind": "paragraph",
+        "location": "word/document.xml/97",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "From your list, choose three to five situations to look at more closely. There is no perfect way to pick which three to five, but think about items that:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "From your list, choose three to five situations to look at more closely. There is no perfect way to pick which three to five, but think about items that:",
+          "proposed": "From your list, choose three to five situations to look at more closely. There is no perfect way to pick which three to five, but think about items that:"
+        }
+      },
+      "block_sha256": "43ffab3d21b7a4004c0064abde01ae8ff78ec223cf4670f39ea2dbce9201aa70",
+      "markdown": "From your list, choose three to five situations to look at more closely. There is no perfect way to pick which three to five, but think about items that:"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/98",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/98",
+        "kind": "paragraph",
+        "location": "word/document.xml/98",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Would make a real difference if they were different.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 20
+        },
+        "text": {
+          "base": "Would make a real difference if they were different.",
+          "proposed": "Would make a real difference if they were different."
+        }
+      },
+      "block_sha256": "2856e8a8a2ea6831960b2be5dd377f06bf0f879e57653f95138b765b0f2ad83f",
+      "markdown": "- Would make a real difference if they were different."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/99",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/99",
+        "kind": "paragraph",
+        "location": "word/document.xml/99",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "You could not fix this week.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 21
+        },
+        "text": {
+          "base": "You could not fix this week.",
+          "proposed": "You could not fix this week."
+        }
+      },
+      "block_sha256": "e3b1e3e6e59090a26cd6b640246ac3db7d346565c029d2e1a7c82e743f80adcc",
+      "markdown": "- You could not fix this week."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/100",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/100",
+        "kind": "paragraph",
+        "location": "word/document.xml/100",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "You do not already know a solution for.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 22
+        },
+        "text": {
+          "base": "You do not already know a solution for.",
+          "proposed": "You do not already know a solution for."
+        }
+      },
+      "block_sha256": "4f9e1b1f930f98daaf704b75b6144f5c38473f786abfc16c00c60013a0a08171",
+      "markdown": "- You do not already know a solution for."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/101",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/101",
+        "kind": "paragraph",
+        "location": "word/document.xml/101",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "These are your ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "candidate problems",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ", or candidates for short. Do not pick the one you already care most about and stop. Three is the minimum because the next activities compare them. Work without AI here, for the same reason as before.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "These are your candidate problems, or candidates for short. Do not pick the one you already care most about and stop. Three is the minimum because the next activities compare them. Work without AI here, for the same reason as before.",
+          "proposed": "These are your candidate problems, or candidates for short. Do not pick the one you already care most about and stop. Three is the minimum because the next activities compare them. Work without AI here, for the same reason as before."
+        }
+      },
+      "block_sha256": "694ecdbaa329e3723d2c6332ec0bb50778607ba095455e87ca5c44bb3707a96c",
+      "markdown": "These are your **candidate problems**, or candidates for short. Do not pick the one you already care most about and stop. Three is the minimum because the next activities compare them. Work without AI here, for the same reason as before."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/102",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/102",
+        "kind": "paragraph",
+        "location": "word/document.xml/102",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "2. Fill four columns for each",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "2. Fill four columns for each",
+          "proposed": "2. Fill four columns for each"
+        }
+      },
+      "block_sha256": "f0a03261c32f1daef6cba72c5e8ec46043a75104f17cead4c8414224152f5f1c",
+      "markdown": "## 2. Fill four columns for each"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/103",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/103",
+        "kind": "paragraph",
+        "location": "word/document.xml/103",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "The fact that you came up with each of these problems is an ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "indicator",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " that something may be wrong. Getting underneath it means describing how it works now, closely enough that a gap starts to show. For each of your three to five items, complete a table with four columns:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "The fact that you came up with each of these problems is an indicator that something may be wrong. Getting underneath it means describing how it works now, closely enough that a gap starts to show. For each of your three to five items, complete a table with four columns:",
+          "proposed": "The fact that you came up with each of these problems is an indicator that something may be wrong. Getting underneath it means describing how it works now, closely enough that a gap starts to show. For each of your three to five items, complete a table with four columns:"
+        }
+      },
+      "block_sha256": "e8d132ad95238da37980a0d9d7f36453e135397ea06c1184ab98999aca67f801",
+      "markdown": "The fact that you came up with each of these problems is an **indicator** that something may be wrong. Getting underneath it means describing how it works now, closely enough that a gap starts to show. For each of your three to five items, complete a table with four columns:"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/104",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/104",
+        "kind": "paragraph",
+        "location": "word/document.xml/104",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "The situation:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " restate the item from your list, a phrase.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 23
+        },
+        "text": {
+          "base": "The situation: restate the item from your list, a phrase.",
+          "proposed": "The situation: restate the item from your list, a phrase."
+        }
+      },
+      "block_sha256": "e3d612e373dd985ab9cc4884845f52c2a0fbabc3a3cb2a16b6be5bbdfc1c1bd5",
+      "markdown": "- **The situation:** restate the item from your list, a phrase."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/105",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/105",
+        "kind": "paragraph",
+        "location": "word/document.xml/105",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "How it works now:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " describe in two or three sentences. Who does what, in what order. Describe the actions that happen now, not how they should be and not possible solutions.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 24
+        },
+        "text": {
+          "base": "How it works now: describe in two or three sentences. Who does what, in what order. Describe the actions that happen now, not how they should be and not possible solutions.",
+          "proposed": "How it works now: describe in two or three sentences. Who does what, in what order. Describe the actions that happen now, not how they should be and not possible solutions."
+        }
+      },
+      "block_sha256": "faf263d3ab5bb712ae2f80d03a8f14f9268799072a7c61fb8e0251277259cb2d",
+      "markdown": "- **How it works now:** describe in two or three sentences. Who does what, in what order. Describe the actions that happen now, not how they should be and not possible solutions."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/106",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/106",
+        "kind": "paragraph",
+        "location": "word/document.xml/106",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "What it costs, and whom:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " name who is impacted (you very likely have several people or roles) and, for each of them, what the cost is in time, money, errors, or strain.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 25
+        },
+        "text": {
+          "base": "What it costs, and whom: name who is impacted (you very likely have several people or roles) and, for each of them, what the cost is in time, money, errors, or strain.",
+          "proposed": "What it costs, and whom: name who is impacted (you very likely have several people or roles) and, for each of them, what the cost is in time, money, errors, or strain."
+        }
+      },
+      "block_sha256": "0f3129dbfe9eeabd1e2ab600d5bf95df89d966197602b27539b103894781601f",
+      "markdown": "- **What it costs, and whom:** name who is impacted (you very likely have several people or roles) and, for each of them, what the cost is in time, money, errors, or strain."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/107",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/107",
+        "kind": "paragraph",
+        "location": "word/document.xml/107",
+        "style": "ListParagraph",
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "The gap:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " combine the other two columns into one sentence that says what could be different, and who feels the cost. Name who does not know, cannot do, or has to redo what. If your sentence describes a process (manual, informal, inconsistent, slow), it is not finished yet, so say who pays for that.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "list": {
+          "format": "bullet",
+          "start": 1,
+          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
+          "num_id": "3",
+          "level": 0,
+          "ordinal": 26
+        },
+        "text": {
+          "base": "The gap: combine the other two columns into one sentence that says what could be different, and who feels the cost. Name who does not know, cannot do, or has to redo what. If your sentence describes a process (manual, informal, inconsistent, slow), it is not finished yet, so say who pays for that.",
+          "proposed": "The gap: combine the other two columns into one sentence that says what could be different, and who feels the cost. Name who does not know, cannot do, or has to redo what. If your sentence describes a process (manual, informal, inconsistent, slow), it is not finished yet, so say who pays for that."
+        }
+      },
+      "block_sha256": "2cc11d0f82e1feb219837ece4c72a7ec384d137a0b4a6d010e6f9b6b718cdd15",
+      "markdown": "- **The gap:** combine the other two columns into one sentence that says what could be different, and who feels the cost. Name who does not know, cannot do, or has to redo what. If your sentence describes a process (manual, informal, inconsistent, slow), it is not finished yet, so say who pays for that."
+    },
+    {
+      "kind": "new",
+      "markdown": "> *More help: if the gap will not come.* Ask **\"How does that part work now?\"** two or three times about the step where the cost appears. In the example below, asking it about \"nobody else is told\" is what produced the gap.",
+      "reason": "Present the source-authored help inline as a quoted aside because authored disclosures are not supported.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/108"
+      ]
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/109",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/109",
+        "kind": "paragraph",
+        "location": "word/document.xml/109",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Worked example: account handovers",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Worked example: account handovers",
+          "proposed": "Worked example: account handovers"
+        }
+      },
+      "block_sha256": "eb1d60e8b8c2b334391f6612c95c1a54aaa954fb67d5cdf01f0fe508e5f8d2ea",
+      "markdown": "**Worked example: account handovers**"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/110",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/110",
+        "kind": "paragraph",
+        "location": "word/document.xml/110",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "The situation:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " Account handovers always get dropped.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "The situation: Account handovers always get dropped.",
+          "proposed": "The situation: Account handovers always get dropped."
+        }
+      },
+      "block_sha256": "b2ca579235c5c97c96cd6a341c67b06f564b4d22e15dee94b1446115325a15d7",
+      "markdown": "**The situation:** Account handovers always get dropped."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/111",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/111",
+        "kind": "paragraph",
+        "location": "word/document.xml/111",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "How it works now:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " When an account changes hands, the outgoing manager tells the incoming manager in a conversation or a short email. Nobody else is told. The rest of the team finds out when a client mentions it or when something goes wrong.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "How it works now: When an account changes hands, the outgoing manager tells the incoming manager in a conversation or a short email. Nobody else is told. The rest of the team finds out when a client mentions it or when something goes wrong.",
+          "proposed": "How it works now: When an account changes hands, the outgoing manager tells the incoming manager in a conversation or a short email. Nobody else is told. The rest of the team finds out when a client mentions it or when something goes wrong."
+        }
+      },
+      "block_sha256": "1e703071a56f25b6d7aef4e4a577a4bfe3d958f2bf465e9daf024d46a9b82c03",
+      "markdown": "**How it works now:** When an account changes hands, the outgoing manager tells the incoming manager in a conversation or a short email. Nobody else is told. The rest of the team finds out when a client mentions it or when something goes wrong."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/112",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/112",
+        "kind": "paragraph",
+        "location": "word/document.xml/112",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "What it costs, and whom:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " Clients: at least two this month repeated their history to someone who should have known it. The four other account managers: they act on stale ownership for days at a time.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "What it costs, and whom: Clients: at least two this month repeated their history to someone who should have known it. The four other account managers: they act on stale ownership for days at a time.",
+          "proposed": "What it costs, and whom: Clients: at least two this month repeated their history to someone who should have known it. The four other account managers: they act on stale ownership for days at a time."
+        }
+      },
+      "block_sha256": "da98b8fda7da0e8968610097068343ea617701d1cf8d5ecc2fcaa5f0053418b3",
+      "markdown": "**What it costs, and whom:** Clients: at least two this month repeated their history to someone who should have known it. The four other account managers: they act on stale ownership for days at a time."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/113",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/113",
+        "kind": "paragraph",
+        "location": "word/document.xml/113",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "The gap:",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": " The rest of the team does not know when an account changes hands, so they act on stale ownership and clients repeat themselves.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "The gap: The rest of the team does not know when an account changes hands, so they act on stale ownership and clients repeat themselves.",
+          "proposed": "The gap: The rest of the team does not know when an account changes hands, so they act on stale ownership and clients repeat themselves."
+        }
+      },
+      "block_sha256": "593927b61f29f7ec3873b3b35dc31108bc66aa2e7d5a1b8952193de0a18f77b7",
+      "markdown": "**The gap:** The rest of the team does not know when an account changes hands, so they act on stale ownership and clients repeat themselves."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/114",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/114",
+        "kind": "paragraph",
+        "location": "word/document.xml/114",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Keep the table in Part B of your Candidate Log. Next, ",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": "The problem frame",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": true,
+              "italic": false
+            },
+            "comment_ids": []
+          },
+          {
+            "text": ".",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Keep the table in Part B of your Candidate Log. Next, The problem frame.",
+          "proposed": "Keep the table in Part B of your Candidate Log. Next, The problem frame."
+        }
+      },
+      "block_sha256": "a419de3a304911b718bf5f37d5bb162c11fbe844c2306aa2e392c4b5e68bd9b4",
+      "markdown": "Keep the table in Part B of your Candidate Log. Next, **The problem frame**."
+    }
+  ],
+  "metadata_decisions": [
+    "Convert the source response task to a guided text-entry assignment.",
+    "Split the source criteria sentence into four scannable criteria without changing the evidence requested."
+  ],
+  "source_roles": {
+    "d-bb7cd50440dd3015": {
+      "role": "primary_authoring",
+      "reason": "The user supplied Sprint-1-cut-ready-v5.4.docx as the source for the Sprint 1 rebuild."
+    }
+  },
+  "decisions": [
+    "Use the reviewed v5.4 participant prose as the primary source, with mechanical Markdown and delivery adaptations only where the DOCX presentation or current schema requires them.",
+    "Exclude the cover note, item inventory, build blocks, answer-key flags, reviewer markers, provenance note, blank separators, and internal team decisions from learner prose.",
+    "Use storage sprint 14 for the unpublished alternative while retaining the semantic module title Sprint 1: Find the Problem Worth Solving.",
+    "Convert response tasks to guided assignments with Canvas text entry, and convert the concept check to six formative choice tasks worth 5 completion points.",
+    "Convert the Reflection to the supported AI activity and JSON upload delivery used elsewhere in course1.",
+    "Normalize DOCX list continuations to the intended local numbering and use Markdown blockquotes for source-authored help and example asides.",
+    "Reuse the approved workplace-handoff illustration and caption from sprint-12 in the Introduction, with the original generation provenance retained beside the copied asset.",
+    "Keep the Concept check after The problem frame because the final v5.4 sequence and questions 4 through 6 depend on that teaching; exclude the associated team-decision marker from learner prose.",
+    "Keep the two source statuses, confirmed and unverified, in Sprint 1; exclude the associated team-decision marker from learner prose and leave any cross-course status reconciliation to the later design workflow.",
+    "Retain the three v5.4 size questions as the operative cut-ready choice criteria and exclude their team-decision marker from learner prose.",
+    "Retain the tested any-chatbot Dojo prompts while excluding the interim production marker from learner prose.",
+    "Apply the later 16 September human design ruling in course1/design/sprint-1-decisions.md and sprint-2-outline.md: defer Problem Frame Part 3 and its response task to Sprint 2. Source blocks 273 through 279 and task block 283 are deliberately excluded from Sprint 1; blocks 280 through 282 remain configuration evidence for the two retained response tasks.",
+    "Keep Problem Frame at 50 points after moving Part 3, as directed by the latest design ruling.",
+    "Render each More help passage inline as a quoted aside because the current artifact schema has no authored disclosure field.",
+    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab."
+  ],
+  "title_source": {
+    "ref": "d-bb7cd50440dd3015:word/document.xml/94",
+    "view": "base",
+    "role": "learner",
+    "kind": "source",
+    "source_name": "Sprint-1-cut-ready-v5.4.docx",
+    "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+    "block": {
+      "id": "d-bb7cd50440dd3015:word/document.xml/94",
+      "kind": "paragraph",
+      "location": "word/document.xml/94",
+      "style": "Heading1",
+      "heading_level": 1,
+      "segments": [
+        {
+          "text": "Get underneath three to five",
+          "changes": [],
+          "link": null,
+          "format": {
+            "bold": false,
+            "italic": false
+          },
+          "comment_ids": []
+        }
+      ],
+      "flags": [],
+      "comment_ids": [],
+      "text": {
+        "base": "Get underneath three to five",
+        "proposed": "Get underneath three to five"
+      }
+    },
+    "block_sha256": "b8ba3433b15e76920da7881b9889c4b3b73f312bd23de83524f1a554414c387c",
+    "markdown": "# Get underneath three to five"
+  }
+}

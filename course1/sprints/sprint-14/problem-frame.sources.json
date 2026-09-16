@@ -1,0 +1,258 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-sprint-14-problem-frame",
+  "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
+  "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
+  "body_sha256": "0e02fbdb4f7dee47123fec536a81e2b11099453b18c9c1a81d5885d5f1737041",
+  "frontmatter_sha256": "18f73d0916724874d369133e5ffa5443813bf799ced51d6b326479737f0bb9bc",
+  "parts": [
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/266",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/266",
+        "kind": "paragraph",
+        "location": "word/document.xml/266",
+        "style": "Heading1",
+        "heading_level": 1,
+        "segments": [
+          {
+            "text": "Problem Frame",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Problem Frame",
+          "proposed": "Problem Frame"
+        }
+      },
+      "block_sha256": "eca3cf731eae7d61e925df879f75fc9959de348d86e1bbfaf47925efc619c4ff",
+      "markdown": "# Problem Frame"
+    },
+    {
+      "kind": "new",
+      "markdown": "You chose one problem at the end of the Dojo Lab. From here on, everything in the course works on that one. This is where you write it up properly, in two parts and one submission. Your Problem Frame is what the rest of the course builds on. Part 2 tells your instructor how you got there.",
+      "reason": "Adapt the opening from three parts to two after the later human ruling moved Part 3 to Sprint 2.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/268",
+        "d-bb7cd50440dd3015:word/document.xml/273",
+        "d-bb7cd50440dd3015:word/document.xml/274"
+      ]
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/269",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/269",
+        "kind": "paragraph",
+        "location": "word/document.xml/269",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "Part 1. Your Problem Frame",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Part 1. Your Problem Frame",
+          "proposed": "Part 1. Your Problem Frame"
+        }
+      },
+      "block_sha256": "0bc2c43620864c20199f02498ea57e864d29a6b4d016dd12e7610ed572a1a465",
+      "markdown": "## Part 1. Your Problem Frame"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/270",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/270",
+        "kind": "paragraph",
+        "location": "word/document.xml/270",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Rewrite the draft frame you chose with everything that changed as a result of the Dojo Lab. All seven parts, in your words. Bring part 6 up to date, so that it lists every assumption you still hold, each marked confirmed or unverified, and for each unverified one, who could tell you.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Rewrite the draft frame you chose with everything that changed as a result of the Dojo Lab. All seven parts, in your words. Bring part 6 up to date, so that it lists every assumption you still hold, each marked confirmed or unverified, and for each unverified one, who could tell you.",
+          "proposed": "Rewrite the draft frame you chose with everything that changed as a result of the Dojo Lab. All seven parts, in your words. Bring part 6 up to date, so that it lists every assumption you still hold, each marked confirmed or unverified, and for each unverified one, who could tell you."
+        }
+      },
+      "block_sha256": "b248ef171b0a9448c03e675329d1b066ab14d1520888dd17adfa1b69c300f6b2",
+      "markdown": "Rewrite the draft frame you chose with everything that changed as a result of the Dojo Lab. All seven parts, in your words. Bring part 6 up to date, so that it lists every assumption you still hold, each marked confirmed or unverified, and for each unverified one, who could tell you."
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/271",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/271",
+        "kind": "paragraph",
+        "location": "word/document.xml/271",
+        "style": "Heading2",
+        "heading_level": 2,
+        "segments": [
+          {
+            "text": "Part 2. What changed, and why",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Part 2. What changed, and why",
+          "proposed": "Part 2. What changed, and why"
+        }
+      },
+      "block_sha256": "5bb46088f1681eb5dfa2b4e2f5de8c9c1684468b16a5df432a2ac8d365051152",
+      "markdown": "## Part 2. What changed, and why"
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/272",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/272",
+        "kind": "paragraph",
+        "location": "word/document.xml/272",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Your instructor cannot see your Dojo Lab session. This paragraph is where they see that the frame was tested and that you, not the AI, made the changes. Start from the recap your Dojo session gave you and check it against your Log. Then, in one short paragraph and in your words, say what moved between your draft and your Problem Frame, what argument or evidence moved it, and one thing the Dojo suggested that you rejected, and why. A frame that did not change is a legitimate result if you can say what you tested it against.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Your instructor cannot see your Dojo Lab session. This paragraph is where they see that the frame was tested and that you, not the AI, made the changes. Start from the recap your Dojo session gave you and check it against your Log. Then, in one short paragraph and in your words, say what moved between your draft and your Problem Frame, what argument or evidence moved it, and one thing the Dojo suggested that you rejected, and why. A frame that did not change is a legitimate result if you can say what you tested it against.",
+          "proposed": "Your instructor cannot see your Dojo Lab session. This paragraph is where they see that the frame was tested and that you, not the AI, made the changes. Start from the recap your Dojo session gave you and check it against your Log. Then, in one short paragraph and in your words, say what moved between your draft and your Problem Frame, what argument or evidence moved it, and one thing the Dojo suggested that you rejected, and why. A frame that did not change is a legitimate result if you can say what you tested it against."
+        }
+      },
+      "block_sha256": "19cbbf1da91be22af3ab769151f13a96aab350740724650855f21d4c6753fb4a",
+      "markdown": "Your instructor cannot see your Dojo Lab session. This paragraph is where they see that the frame was tested and that you, not the AI, made the changes. Start from the recap your Dojo session gave you and check it against your Log. Then, in one short paragraph and in your words, say what moved between your draft and your Problem Frame, what argument or evidence moved it, and one thing the Dojo suggested that you rejected, and why. A frame that did not change is a legitimate result if you can say what you tested it against."
+    }
+  ],
+  "metadata_decisions": [
+    "Apply the 16 September evening ruling by moving Part 3 and its response task to Sprint 2.",
+    "Retain the source's 50-point value for the two-part submission.",
+    "Map each retained section to its adjacent response task."
+  ],
+  "source_roles": {
+    "d-bb7cd50440dd3015": {
+      "role": "primary_authoring",
+      "reason": "The user supplied Sprint-1-cut-ready-v5.4.docx as the source for the Sprint 1 rebuild."
+    }
+  },
+  "decisions": [
+    "Use the reviewed v5.4 participant prose as the primary source, with mechanical Markdown and delivery adaptations only where the DOCX presentation or current schema requires them.",
+    "Exclude the cover note, item inventory, build blocks, answer-key flags, reviewer markers, provenance note, blank separators, and internal team decisions from learner prose.",
+    "Use storage sprint 14 for the unpublished alternative while retaining the semantic module title Sprint 1: Find the Problem Worth Solving.",
+    "Convert response tasks to guided assignments with Canvas text entry, and convert the concept check to six formative choice tasks worth 5 completion points.",
+    "Convert the Reflection to the supported AI activity and JSON upload delivery used elsewhere in course1.",
+    "Normalize DOCX list continuations to the intended local numbering and use Markdown blockquotes for source-authored help and example asides.",
+    "Reuse the approved workplace-handoff illustration and caption from sprint-12 in the Introduction, with the original generation provenance retained beside the copied asset.",
+    "Keep the Concept check after The problem frame because the final v5.4 sequence and questions 4 through 6 depend on that teaching; exclude the associated team-decision marker from learner prose.",
+    "Keep the two source statuses, confirmed and unverified, in Sprint 1; exclude the associated team-decision marker from learner prose and leave any cross-course status reconciliation to the later design workflow.",
+    "Retain the three v5.4 size questions as the operative cut-ready choice criteria and exclude their team-decision marker from learner prose.",
+    "Retain the tested any-chatbot Dojo prompts while excluding the interim production marker from learner prose.",
+    "Apply the later 16 September human design ruling in course1/design/sprint-1-decisions.md and sprint-2-outline.md: defer Problem Frame Part 3 and its response task to Sprint 2. Source blocks 273 through 279 and task block 283 are deliberately excluded from Sprint 1; blocks 280 through 282 remain configuration evidence for the two retained response tasks.",
+    "Keep Problem Frame at 50 points after moving Part 3, as directed by the latest design ruling.",
+    "Render each More help passage inline as a quoted aside because the current artifact schema has no authored disclosure field.",
+    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab."
+  ],
+  "title_source": {
+    "ref": "d-bb7cd50440dd3015:word/document.xml/266",
+    "view": "base",
+    "role": "learner",
+    "kind": "source",
+    "source_name": "Sprint-1-cut-ready-v5.4.docx",
+    "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+    "block": {
+      "id": "d-bb7cd50440dd3015:word/document.xml/266",
+      "kind": "paragraph",
+      "location": "word/document.xml/266",
+      "style": "Heading1",
+      "heading_level": 1,
+      "segments": [
+        {
+          "text": "Problem Frame",
+          "changes": [],
+          "link": null,
+          "format": {
+            "bold": false,
+            "italic": false
+          },
+          "comment_ids": []
+        }
+      ],
+      "flags": [],
+      "comment_ids": [],
+      "text": {
+        "base": "Problem Frame",
+        "proposed": "Problem Frame"
+      }
+    },
+    "block_sha256": "eca3cf731eae7d61e925df879f75fc9959de348d86e1bbfaf47925efc619c4ff",
+    "markdown": "# Problem Frame"
+  }
+}

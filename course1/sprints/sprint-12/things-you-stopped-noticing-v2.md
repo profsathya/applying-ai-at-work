@@ -9,7 +9,7 @@ module: 'Sprint 1: Find the Problem Worth Solving (V2)'
 position: 4
 points: 0
 submission_type: text_entry
-publish: true
+publish: false
 delivery_mode: guided_assignment
 completion_requirement: must_submit
 guided_assignment:

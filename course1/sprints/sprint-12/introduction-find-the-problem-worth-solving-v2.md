@@ -9,7 +9,7 @@ module: 'Sprint 1: Find the Problem Worth Solving (V2)'
 position: 2
 points: null
 submission_type: none
-publish: true
+publish: false
 source_provenance: introduction-find-the-problem-worth-solving-v2.sources.json
 page_presentation: reading
 ---

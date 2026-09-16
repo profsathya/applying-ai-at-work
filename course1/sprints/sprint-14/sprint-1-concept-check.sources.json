@@ -1,0 +1,152 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-sprint-14-sprint-1-concept-check",
+  "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
+  "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
+  "body_sha256": "3a64fc69132a7e1730f86de6a87361d2e6f8c291f9329517592e3f819b493c1b",
+  "frontmatter_sha256": "11a61250d3b0e559a0e4d54a0b75432977917712a718bc0f3af58650a92311f3",
+  "parts": [
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/164",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/164",
+        "kind": "paragraph",
+        "location": "word/document.xml/164",
+        "style": "Heading1",
+        "heading_level": 1,
+        "segments": [
+          {
+            "text": "Sprint 1 Concept check",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Sprint 1 Concept check",
+          "proposed": "Sprint 1 Concept check"
+        }
+      },
+      "block_sha256": "6154df37fa68bed55a7e250a9e29ae5f9df3a87dd39302edb9ea5bec0caa4120",
+      "markdown": "# Sprint 1 Concept check"
+    },
+    {
+      "kind": "new",
+      "markdown": "## Check the ideas before writing draft frames",
+      "reason": "Add a descriptive level-two heading so the hosted choice-task headings follow a valid hierarchy.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/166"
+      ]
+    },
+    {
+      "ref": "d-bb7cd50440dd3015:word/document.xml/166",
+      "view": "base",
+      "role": "learner",
+      "kind": "source",
+      "source_name": "Sprint-1-cut-ready-v5.4.docx",
+      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+      "block": {
+        "id": "d-bb7cd50440dd3015:word/document.xml/166",
+        "kind": "paragraph",
+        "location": "word/document.xml/166",
+        "style": null,
+        "heading_level": null,
+        "segments": [
+          {
+            "text": "Answer all six from your own thinking, without AI. Review each explanation; if it surprises you, revisit the page it points to and try again. Your instructor reviews completion in Canvas; the on-page checks do not assign your grade.",
+            "changes": [],
+            "link": null,
+            "format": {
+              "bold": false,
+              "italic": false
+            },
+            "comment_ids": []
+          }
+        ],
+        "flags": [],
+        "comment_ids": [],
+        "text": {
+          "base": "Answer all six from your own thinking, without AI. Review each explanation; if it surprises you, revisit the page it points to and try again. Your instructor reviews completion in Canvas; the on-page checks do not assign your grade.",
+          "proposed": "Answer all six from your own thinking, without AI. Review each explanation; if it surprises you, revisit the page it points to and try again. Your instructor reviews completion in Canvas; the on-page checks do not assign your grade."
+        }
+      },
+      "block_sha256": "0714f4115b69b54c90cce0c1a18de3c059e1a5fe0312a2c2472b34569660f951",
+      "markdown": "Answer all six from your own thinking, without AI. Review each explanation; if it surprises you, revisit the page it points to and try again. Your instructor reviews completion in Canvas; the on-page checks do not assign your grade."
+    }
+  ],
+  "metadata_decisions": [
+    "Use the Common Curriculum formative guided-assignment mechanism rather than a native quiz.",
+    "Translate the six source questions, options, answer keys, and explanations into guided-assignment task metadata.",
+    "Add one descriptive level-two heading for the source introduction so the rendered task headings have a valid hierarchy.",
+    "Keep the concept check after The problem frame because questions 4 through 6 depend on that page."
+  ],
+  "source_roles": {
+    "d-bb7cd50440dd3015": {
+      "role": "primary_authoring",
+      "reason": "The user supplied Sprint-1-cut-ready-v5.4.docx as the source for the Sprint 1 rebuild."
+    }
+  },
+  "decisions": [
+    "Use the reviewed v5.4 participant prose as the primary source, with mechanical Markdown and delivery adaptations only where the DOCX presentation or current schema requires them.",
+    "Exclude the cover note, item inventory, build blocks, answer-key flags, reviewer markers, provenance note, blank separators, and internal team decisions from learner prose.",
+    "Use storage sprint 14 for the unpublished alternative while retaining the semantic module title Sprint 1: Find the Problem Worth Solving.",
+    "Convert response tasks to guided assignments with Canvas text entry, and convert the concept check to six formative choice tasks worth 5 completion points.",
+    "Convert the Reflection to the supported AI activity and JSON upload delivery used elsewhere in course1.",
+    "Normalize DOCX list continuations to the intended local numbering and use Markdown blockquotes for source-authored help and example asides.",
+    "Reuse the approved workplace-handoff illustration and caption from sprint-12 in the Introduction, with the original generation provenance retained beside the copied asset.",
+    "Keep the Concept check after The problem frame because the final v5.4 sequence and questions 4 through 6 depend on that teaching; exclude the associated team-decision marker from learner prose.",
+    "Keep the two source statuses, confirmed and unverified, in Sprint 1; exclude the associated team-decision marker from learner prose and leave any cross-course status reconciliation to the later design workflow.",
+    "Retain the three v5.4 size questions as the operative cut-ready choice criteria and exclude their team-decision marker from learner prose.",
+    "Retain the tested any-chatbot Dojo prompts while excluding the interim production marker from learner prose.",
+    "Apply the later 16 September human design ruling in course1/design/sprint-1-decisions.md and sprint-2-outline.md: defer Problem Frame Part 3 and its response task to Sprint 2. Source blocks 273 through 279 and task block 283 are deliberately excluded from Sprint 1; blocks 280 through 282 remain configuration evidence for the two retained response tasks.",
+    "Keep Problem Frame at 50 points after moving Part 3, as directed by the latest design ruling.",
+    "Render each More help passage inline as a quoted aside because the current artifact schema has no authored disclosure field.",
+    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab."
+  ],
+  "title_source": {
+    "ref": "d-bb7cd50440dd3015:word/document.xml/164",
+    "view": "base",
+    "role": "learner",
+    "kind": "source",
+    "source_name": "Sprint-1-cut-ready-v5.4.docx",
+    "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+    "block": {
+      "id": "d-bb7cd50440dd3015:word/document.xml/164",
+      "kind": "paragraph",
+      "location": "word/document.xml/164",
+      "style": "Heading1",
+      "heading_level": 1,
+      "segments": [
+        {
+          "text": "Sprint 1 Concept check",
+          "changes": [],
+          "link": null,
+          "format": {
+            "bold": false,
+            "italic": false
+          },
+          "comment_ids": []
+        }
+      ],
+      "flags": [],
+      "comment_ids": [],
+      "text": {
+        "base": "Sprint 1 Concept check",
+        "proposed": "Sprint 1 Concept check"
+      }
+    },
+    "block_sha256": "6154df37fa68bed55a7e250a9e29ae5f9df3a87dd39302edb9ea5bec0caa4120",
+    "markdown": "# Sprint 1 Concept check"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-sprint-14-first-frames",
+  "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
+  "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
+  "body_sha256": "668e23703aabe176ee90ef171e216f13eb45681616fc5a1828c27a23f5b35112",
+  "frontmatter_sha256": "4b42b99771135fb603889d5345138f4ca6707684ffb243fa8d529f3e9a2dff5f",
+  "parts": [
+    {
+      "kind": "new",
+      "markdown": "# First frames\n\nWrite one complete draft frame for each of your three to five candidates. Work one candidate at a time in Part C of your Candidate Log, then paste the finished frame into its box below. Submit at least three frames; Frames 4 and 5 are optional.\n\nWork without AI. These drafts need to capture your own read before the Dojo Lab tests and widens it. Keep them rough and specific. If you cannot fill a part, write **I do not know yet** instead of guessing.\n\nUse the seven-part template and worked examples on **The problem frame** as your reference. Write each frame in this order: **2, 3, 4, 5, 6, 7, then 1**.\n\n## 1. Part 2: the problem\n\nStart with the gap from your table. Write it as a condition someone is living in, not a task or annoyance. One or two sentences is enough.\n\n## 2. Part 3: who is affected, and what it costs them\n\nIn **3a**, name people or specific roles. In **3b**, attach a cost to each one: time, money, errors, or strain. If you do not know who is affected, say who you would ask.\n\n## 3. Part 4: how it is handled today, and where that falls short\n\nIn **4a**, describe the current process, habit, workaround, or person handling it, including anything tried and abandoned. In **4b**, name the moment that handling stops working, not the consequence that follows. If 4b is blank, look for the moment the cost in Part 3b first appears.\n\n## 4. Part 5: what fixed would look like\n\nWrite one sentence describing the changed state, not a solution. For example, change \"a shared handover checklist\" into \"everyone on the team knows within a day when an account changes hands.\"\n\n## 5. Part 6: find your assumptions\n\nReview Parts 2 through 5 line by line. List anything written as true that you have not seen yourself or heard from someone who would know. Include at least four assumptions and at least one about a cost in Part 3b. Mark each **confirmed** or **unverified**. For every unverified assumption, name who could tell you.\n\n## 6. Part 7: what you do not know yet\n\nAdd the questions left after Part 6, such as who owns the process or whether something was tried before. Keep the focus on the problem. Tool research and automation ideas belong later.\n\n## 7. Part 1: the goal it serves, last\n\nStart from Part 5 and ask why the changed state matters until you reach a goal nobody involved would dispute. Then make it specific enough to point to this problem rather than any similar problem. Say nothing about what to build.\n\nKeep every draft exactly as submitted. The Reflection compares these drafts with your final Problem Frame.",
+      "reason": "Reduce immediate repetition of the preceding seven-part lesson while preserving every required part, the source writing order, the assessment evidence, and the no-AI boundary.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/176",
+        "d-bb7cd50440dd3015:word/document.xml/178",
+        "d-bb7cd50440dd3015:word/document.xml/179",
+        "d-bb7cd50440dd3015:word/document.xml/180",
+        "d-bb7cd50440dd3015:word/document.xml/181",
+        "d-bb7cd50440dd3015:word/document.xml/182",
+        "d-bb7cd50440dd3015:word/document.xml/183",
+        "d-bb7cd50440dd3015:word/document.xml/184",
+        "d-bb7cd50440dd3015:word/document.xml/185",
+        "d-bb7cd50440dd3015:word/document.xml/186",
+        "d-bb7cd50440dd3015:word/document.xml/187",
+        "d-bb7cd50440dd3015:word/document.xml/188",
+        "d-bb7cd50440dd3015:word/document.xml/189",
+        "d-bb7cd50440dd3015:word/document.xml/190",
+        "d-bb7cd50440dd3015:word/document.xml/191",
+        "d-bb7cd50440dd3015:word/document.xml/192",
+        "d-bb7cd50440dd3015:word/document.xml/193",
+        "d-bb7cd50440dd3015:word/document.xml/194",
+        "d-bb7cd50440dd3015:word/document.xml/195",
+        "d-bb7cd50440dd3015:word/document.xml/196",
+        "d-bb7cd50440dd3015:word/document.xml/197",
+        "d-bb7cd50440dd3015:word/document.xml/198",
+        "d-bb7cd50440dd3015:word/document.xml/199",
+        "d-bb7cd50440dd3015:word/document.xml/200",
+        "d-bb7cd50440dd3015:word/document.xml/201",
+        "d-bb7cd50440dd3015:word/document.xml/202",
+        "d-bb7cd50440dd3015:word/document.xml/203",
+        "d-bb7cd50440dd3015:word/document.xml/204",
+        "d-bb7cd50440dd3015:word/document.xml/205",
+        "d-bb7cd50440dd3015:word/document.xml/206",
+        "d-bb7cd50440dd3015:word/document.xml/207",
+        "d-bb7cd50440dd3015:word/document.xml/208",
+        "d-bb7cd50440dd3015:word/document.xml/209",
+        "d-bb7cd50440dd3015:word/document.xml/211",
+        "d-bb7cd50440dd3015:word/document.xml/212",
+        "d-bb7cd50440dd3015:word/document.xml/213",
+        "d-bb7cd50440dd3015:word/document.xml/214",
+        "d-bb7cd50440dd3015:word/document.xml/215",
+        "d-bb7cd50440dd3015:word/document.xml/216",
+        "d-bb7cd50440dd3015:word/document.xml/217",
+        "d-bb7cd50440dd3015:word/document.xml/218",
+        "d-bb7cd50440dd3015:word/document.xml/219",
+        "d-bb7cd50440dd3015:word/document.xml/220"
+      ]
+    }
+  ],
+  "metadata_decisions": [
+    "Keep all seven required parts and the source's writing order, but consolidate explanations already taught on the immediately preceding The problem frame page.",
+    "Mark Frames 4 and 5 optional in task prompts because the current schema has no task-level optional field.",
+    "Use the full criteria on Frame 1 and explicit same-standard criteria on later frames to preserve the source's repeated standard without duplicating a long list four times.",
+    "This verbosity adaptation preserves the activity, evidence, examples available on the preceding page, and no-AI boundary while reducing repeated body copy."
+  ],
+  "source_roles": {
+    "d-bb7cd50440dd3015": {
+      "role": "primary_authoring",
+      "reason": "The user supplied Sprint-1-cut-ready-v5.4.docx as the source for the Sprint 1 rebuild."
+    }
+  },
+  "decisions": [
+    "Use the reviewed v5.4 participant prose as the primary source, with mechanical Markdown and delivery adaptations only where the DOCX presentation or current schema requires them.",
+    "Exclude the cover note, item inventory, build blocks, answer-key flags, reviewer markers, provenance note, blank separators, and internal team decisions from learner prose.",
+    "Use storage sprint 14 for the unpublished alternative while retaining the semantic module title Sprint 1: Find the Problem Worth Solving.",
+    "Convert response tasks to guided assignments with Canvas text entry, and convert the concept check to six formative choice tasks worth 5 completion points.",
+    "Convert the Reflection to the supported AI activity and JSON upload delivery used elsewhere in course1.",
+    "Normalize DOCX list continuations to the intended local numbering and use Markdown blockquotes for source-authored help and example asides.",
+    "Reuse the approved workplace-handoff illustration and caption from sprint-12 in the Introduction, with the original generation provenance retained beside the copied asset.",
+    "Keep the Concept check after The problem frame because the final v5.4 sequence and questions 4 through 6 depend on that teaching; exclude the associated team-decision marker from learner prose.",
+    "Keep the two source statuses, confirmed and unverified, in Sprint 1; exclude the associated team-decision marker from learner prose and leave any cross-course status reconciliation to the later design workflow.",
+    "Retain the three v5.4 size questions as the operative cut-ready choice criteria and exclude their team-decision marker from learner prose.",
+    "Retain the tested any-chatbot Dojo prompts while excluding the interim production marker from learner prose.",
+    "Apply the later 16 September human design ruling in course1/design/sprint-1-decisions.md and sprint-2-outline.md: defer Problem Frame Part 3 and its response task to Sprint 2. Source blocks 273 through 279 and task block 283 are deliberately excluded from Sprint 1; blocks 280 through 282 remain configuration evidence for the two retained response tasks.",
+    "Keep Problem Frame at 50 points after moving Part 3, as directed by the latest design ruling.",
+    "Render each More help passage inline as a quoted aside because the current artifact schema has no authored disclosure field.",
+    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab."
+  ],
+  "title_source": {
+    "ref": "d-bb7cd50440dd3015:word/document.xml/176",
+    "view": "base",
+    "role": "learner",
+    "kind": "source",
+    "source_name": "Sprint-1-cut-ready-v5.4.docx",
+    "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
+    "block": {
+      "id": "d-bb7cd50440dd3015:word/document.xml/176",
+      "kind": "paragraph",
+      "location": "word/document.xml/176",
+      "style": "Heading1",
+      "heading_level": 1,
+      "segments": [
+        {
+          "text": "First frames",
+          "changes": [],
+          "link": null,
+          "format": {
+            "bold": false,
+            "italic": false
+          },
+          "comment_ids": []
+        }
+      ],
+      "flags": [],
+      "comment_ids": [],
+      "text": {
+        "base": "First frames",
+        "proposed": "First frames"
+      }
+    },
+    "block_sha256": "7c6d2e21a8f744af1af46a0fd855f42f4902bf494cd5c71db9f802f0e9885104",
+    "markdown": "# First frames"
+  }
+}
