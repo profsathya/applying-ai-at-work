@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-welcome-and-orientation-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "6f63926ccabc0997d147041f102475b5770c172ff78f6a6a319dba92f7534249",
-  "body_sha256": "fff234026399ee67e76017dd9bf6cc8c54cc634a459f37caab21c63f8ee099bb",
+  "body_sha256": "8a1f8f1a0a4ec68f62eb948247ecf174bbe59cc95341dc44cbe02d09727a0f5b",
   "frontmatter_sha256": "21b9e20c4167a688eb6feb851e5e96738986e75dd8ee3d1e5c93da3346306445",
   "parts": [
     {
@@ -26,8 +26,8 @@
     },
     {
       "kind": "new",
-      "markdown": "The route has five pages and one discussion. The Introduction Post is the only submission in Sprint 0: zero points, graded complete or incomplete. Plan for 4-6 hours of course work each week, following the recommended ten-week schedule.",
-      "reason": "Correct the page count and incorporate user-confirmed workload and pacing; preserve the single-submission design.",
+      "markdown": "The route has six pages and one discussion. The Introduction Post is the only submission in Sprint 0: zero points, graded complete or incomplete. Plan for 4-6 hours of course work each week, following the recommended ten-week schedule.",
+      "reason": "Correct the page count and incorporate user-confirmed workload and pacing; preserve the single-submission design. Update orientation count for the new informational Dojo setup page.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.0/body/14",
         "d-a5a526bfcb8ecc4c:tab/t.0/body/17",

@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-your-first-week-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "6f63926ccabc0997d147041f102475b5770c172ff78f6a6a319dba92f7534249",
-  "body_sha256": "cdc41468a372e744f0f68c51861c49d481bf4675e2f2b7e715f3cc1433a19f8f",
+  "body_sha256": "4dcdeee9ec983243f2c77bba716a3998b40d5b468fee699ca506b348f0da20e0",
   "frontmatter_sha256": "05dd1a2411ec75f0e1d1f4753813a854cd7632c2164a659aa512a5c88ba6416a",
   "parts": [
     {
@@ -55,8 +55,8 @@
     },
     {
       "kind": "new",
-      "markdown": "## 4. Post your introduction\n\nOpen [Introduction Post](https://cti-courses.instructure.com/courses/180/discussion_topics/1533) and follow its prompts. This zero-point discussion is graded complete or incomplete. Read a few introductions when they are available; replies are optional.",
-      "reason": "Link to the sole authoritative prompt set; preserve confirmed grading and optional peer replies without repeating personal prompts. Sequential-progression follow-up: do not require access to the final Help page before the introduction contribution.",
+      "markdown": "## 4. Set up your AI coach\n\nContinue to [Set up your AI Dojo](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html). Configure one tool and try its short coaching check. There is no setup submission, and the first half of Sprint 1 remains work you do without AI.\n\n## 5. Post your introduction\n\nOpen [Introduction Post](https://cti-courses.instructure.com/courses/180/discussion_topics/1533) and follow its prompts. This zero-point discussion is graded complete or incomplete. Read a few introductions when they are available; replies are optional.",
+      "reason": "Link to the sole authoritative prompt set; preserve confirmed grading and optional peer replies without repeating personal prompts. Sequential-progression follow-up: do not require access to the final Help page before the introduction contribution. Dojo setup integration: update orientation route while preserving the sole discussion submission and no-AI Sprint 1 boundary.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.oc50ud5j09tu/body/19",
         "d-a5a526bfcb8ecc4c:tab/t.oc50ud5j09tu/body/20"
@@ -64,8 +64,8 @@
     },
     {
       "kind": "new",
-      "markdown": "After posting, continue to [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources) for any guidance you need, then begin [Sprint 1: Find the Problem Worth Solving](https://cti-courses.instructure.com/courses/180/pages/introduction-find-the-problem-worth-solving-2).",
-      "reason": "Provide a clear handoff through existing Canvas identities. Sequential-progression follow-up: do not require access to the final Help page before the introduction contribution.",
+      "markdown": "After the Dojo setup and your introduction, continue to [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources) for any guidance you need, then begin [Sprint 1: Find the Problem Worth Solving](https://cti-courses.instructure.com/courses/180/pages/introduction-find-the-problem-worth-solving-2).",
+      "reason": "Provide a clear handoff through existing Canvas identities. Sequential-progression follow-up: do not require access to the final Help page before the introduction contribution. Dojo setup integration: update orientation route while preserving the sole discussion submission and no-AI Sprint 1 boundary.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.oc50ud5j09tu/body/22"
       ]

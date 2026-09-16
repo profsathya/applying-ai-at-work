@@ -467,3 +467,31 @@ jobs:
                   print(f"  OK      {item.get('file') or item.get('artifact_id')}")
           PY
           exit 1
+
+      - name: Export verified published course context
+        id: course_context
+        if: success() && env.HOSTED_ONLY != 'true' && steps.canvas_credentials.outputs.available == 'true' && contains(needs.validate.outputs.manifests, 'course1/manifests/production.json')
+        working-directory: content
+        env:
+          CANVAS_API_URL: ${{ secrets.CANVAS_API_URL }}
+          CANVAS_API_TOKEN: ${{ secrets.CANVAS_API_TOKEN }}
+        run: |
+          python canvas_sync/course_context.py --manifest course1/manifests/production.json --state-dir ../canvas-state --output ../course-context-release.json
+          python - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          path = Path('../course-context-release.json')
+          data = json.loads(path.read_text())
+          data['source_commit'] = os.environ['GITHUB_SHA']
+          data['hosted_commit'] = subprocess.check_output(['git', '-C', '../common-curriculum', 'rev-parse', 'HEAD'], text=True).strip()
+          path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
+          PY
+
+      - name: Retain course context for automatic document refresh
+        if: success() && steps.course_context.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: course-context-release
+          path: course-context-release.json
+          if-no-files-found: error
+          retention-days: 90

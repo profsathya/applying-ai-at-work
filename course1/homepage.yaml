@@ -259,15 +259,15 @@ modules:
     learning_goals:
       - "Explain what the integrated problem document will show and how the five sprints contribute to it."
       - "Plan 4-6 hours of weekly work within the recommended ten-week schedule."
-      - "Recognize how AI partnership and your own context and judgment support the work."
+      - "Set up an AI coach and check that it supports your thinking while leaving decisions with you."
       - "Find submission guidance and contact your instructor when you need help."
-    prereq: "Start here before Sprint 1. Follow five pages and one discussion in order; the Introduction Post is your only submission."
+    prereq: "Start here before Sprint 1. Follow six pages and one discussion in order; the Introduction Post is your only submission. The first half of Sprint 1 is completed without AI."
     groups:
       - label: "Read these in order"
         items:
           - slug: "start-here-v2"
             nav_meta: "Read"
-            meta: "Page - orientation goals and your route through five pages and one discussion"
+            meta: "Page - orientation goals and your route through six pages and one discussion"
           - slug: "welcome-v2"
             nav_meta: "Read"
             meta: "Page - investigate a real problem, use your judgment with AI, and build an integrated problem document"
@@ -276,7 +276,10 @@ modules:
             meta: "Page - the recommended two-week sprints, 4-6 hours of weekly work, and Canvas submissions"
           - slug: "your-first-week-v2"
             nav_meta: "Read"
-            meta: "Page - read the course guide, schedule weekly work, find Canvas Inbox, and post your introduction"
+            meta: "Page - plan weekly work, find Canvas Inbox, set up your coach, and post your introduction"
+          - slug: "set-up-your-ai-dojo-v2"
+            nav_meta: "Set up · No submission"
+            meta: "Page - configure your chosen AI tool with the shared Dojo method and check its coaching behavior; no submission"
       - label: "The one submission"
         items:
           - slug: "introduction-post-v2"

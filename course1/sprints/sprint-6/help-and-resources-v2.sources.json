@@ -3,8 +3,8 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-help-and-resources-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "6f63926ccabc0997d147041f102475b5770c172ff78f6a6a319dba92f7534249",
-  "body_sha256": "e81321edb42f73b39ceb3d25d4d13e0d660908d56d510ee1bfaf731336c81fdf",
-  "frontmatter_sha256": "0faa66ed05e7c674c293376cbab3863f40212fe7eb84fae8ede87d3ed9ef9ee1",
+  "body_sha256": "3094cc37d41c34fe526313b44bb5ed846278fc622c66d7df11de39e5f4950547",
+  "frontmatter_sha256": "73f575daf6972f795044ff1b0012c6e51ff09217e6172f47d22ac73e10b5d37c",
   "parts": [
     {
       "kind": "new",
@@ -56,8 +56,8 @@
     },
     {
       "kind": "new",
-      "markdown": "## Use AI tools when an activity introduces them\n\n> The available first half of Sprint 1 is completed **without AI**. When a later activity calls for the Dojo or another AI partner, open it from that activity and follow its setup directions. Keep the activity page available so you can return to the prompts and submission instructions.",
-      "reason": "Preserve working current-course guidance and defer tool setup to its point of use instead of linking an unverified walkthrough. User requested more blue accents: use supported Markdown callout styling to emphasize this key takeaway/action without changing its wording.",
+      "markdown": "## Use AI tools when an activity introduces them\n\n> The available first half of Sprint 1 is completed **without AI**. Use [Set up your AI Dojo](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html) to prepare your coach. When a later activity invites AI use, return to your project or Gem and supply that activity's directions. Keep the activity page available so you can return to the prompts and submission instructions.",
+      "reason": "Preserve working current-course guidance and defer tool setup to its point of use instead of linking an unverified walkthrough. User requested more blue accents: use supported Markdown callout styling to emphasize this key takeaway/action without changing its wording. Dojo setup integration: update orientation route while preserving the sole discussion submission and no-AI Sprint 1 boundary.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.r7f4tyvql3ki/body/11",
         "d-a5a526bfcb8ecc4c:tab/t.r7f4tyvql3ki/body/12",
