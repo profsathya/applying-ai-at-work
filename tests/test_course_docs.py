@@ -48,8 +48,8 @@ class PreparedReleaseTests(unittest.TestCase):
         with zipfile.ZipFile(buffer, 'w') as archive:
             archive.writestr('course-context-release.json', json.dumps({'source_commit': 'wrong'}))
         run = {'id': 7, 'head_sha': 'right', 'head_branch': 'main', 'head_repository': {'full_name': 'owner/repo'}}
-        responses = [{'workflow_runs': [run]}, {'artifacts': [{'id': 8, 'name': 'course-context-release', 'expired': False}]}, buffer.getvalue()]
-        with patch.dict('os.environ', {'GITHUB_REPOSITORY': 'owner/repo'}), patch.object(prepare_release, 'api', side_effect=responses), patch.object(prepare_release.subprocess, 'run'), patch.object(prepare_release.Path, 'read_text', return_value=json.dumps({'release_artifact': 'course-context-release'})), patch.object(prepare_release.Path, 'write_bytes') as write:
+        responses = [{'workflow_runs': [run]}, {'artifacts': [{'id': 8, 'name': 'course-context-release', 'expired': False}]}]
+        with patch.dict('os.environ', {'GITHUB_REPOSITORY': 'owner/repo'}), patch.object(prepare_release, 'api', side_effect=responses), patch.object(prepare_release, 'download_artifact', return_value=buffer.getvalue()), patch.object(prepare_release.subprocess, 'run'), patch.object(prepare_release.Path, 'read_text', return_value=json.dumps({'release_artifact': 'course-context-release'})), patch.object(prepare_release.Path, 'write_bytes') as write:
             with self.assertRaisesRegex(ValueError, 'source differs'):
                 prepare_release.main()
             write.assert_not_called()
@@ -64,8 +64,8 @@ class PreparedReleaseTests(unittest.TestCase):
         with zipfile.ZipFile(buffer, 'w') as archive:
             archive.writestr('../course-context-release.json', '{}')
         run = {'id': 7, 'head_sha': 'right', 'head_branch': 'main', 'head_repository': {'full_name': 'owner/repo'}}
-        responses = [{'workflow_runs': [run]}, {'artifacts': [{'id': 8, 'name': 'course-context-release', 'expired': False}]}, buffer.getvalue()]
-        with patch.dict('os.environ', {'GITHUB_REPOSITORY': 'owner/repo'}), patch.object(prepare_release, 'api', side_effect=responses), patch.object(prepare_release.subprocess, 'run'), patch.object(prepare_release.Path, 'read_text', return_value=json.dumps({'release_artifact': 'course-context-release'})):
+        responses = [{'workflow_runs': [run]}, {'artifacts': [{'id': 8, 'name': 'course-context-release', 'expired': False}]}]
+        with patch.dict('os.environ', {'GITHUB_REPOSITORY': 'owner/repo'}), patch.object(prepare_release, 'api', side_effect=responses), patch.object(prepare_release, 'download_artifact', return_value=buffer.getvalue()), patch.object(prepare_release.subprocess, 'run'), patch.object(prepare_release.Path, 'read_text', return_value=json.dumps({'release_artifact': 'course-context-release'})):
             with self.assertRaisesRegex(ValueError, 'root release'):
                 prepare_release.main()
 
