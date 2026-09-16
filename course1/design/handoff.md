@@ -67,12 +67,12 @@ new source rather than editing them.
 
 ## The design, in one paragraph
 
-Sprint 1 ends with one chosen problem plus an honest frame, version two, with every claim
+Sprint 1 ends with one chosen problem plus an honest Problem Frame, with every assumption
 marked confirmed or unverified. The sequence (Leslie's own run, 14 September): brainstorm a
 wide list by category; get underneath three to five of them in a four-column table (the
 situation, how it works now, what it costs and whom, the gap); read the seven-part problem
 frame and take the concept check; write a first frame for every candidate; have AI test and
-widen the frames in the Dojo Lab and choose one; submit the Goal Plan (frame version two,
+widen the frames in the Dojo Lab and choose one; submit the Problem Frame (the frame rewritten,
 what changed, which claims first); reflect. The hinge moved: commitment now comes after
 framing, because the frame is how you find out which candidate to commit to. The marked
 claims are what Sprint 2 works on.
@@ -116,7 +116,7 @@ self-check, reflection as `delivery_mode: ai_activity` like Sprints 3 and 4.
 2. **Leslie re-pastes the Candidate Log v2.1 docx** into the Google Doc (same id), so the
    table headers are bold and the bullets are on separate lines. The link is already in
    the draft.
-3. **Name ripple.** "Problem Frame, version two" replaces "Goal Plan and Problem Frame"
+3. **Name ripple.** "Problem Frame" replaces "Goal Plan and Problem Frame"
    in the Welcome five-artifact map, the home page, and Sprint 3 V2's mid-course goal
    plan revision. Jeremy and Melisa.
 4. **Clare's review** of the rendered pages, with the markers visible. Reviewer comments
