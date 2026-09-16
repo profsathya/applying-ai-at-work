@@ -1,6 +1,6 @@
 ---
 purpose: Source text for the Candidate Log template, the document each participant copies once and keeps for Sprint 1
-status: v2, 15 September 2026, rebuilt to working draft v5.3 (Parts A to D); replaces the 12 September template built to the old first half
+status: v2.1, 16 September 2026, rebuilt to working draft v5.3 (Parts A to D) with the Problem Frame name; replaces the 12 September template built to the old first half
 storage: this file is the source; the participant-facing copy is a Google Doc in Leslie's Drive (id in handoff.md), shared anyone-with-link, view only
 ---
 
@@ -198,9 +198,9 @@ Candidate name:
 
 ---
 
-## Part D. Goal Plan and Problem Frame
+## Part D. Problem Frame, version two
 
-Activity: Goal Plan and Problem Frame. You chose one problem at the end of the Dojo Lab. Everything here is about that one.
+Activity: Problem Frame, version two. You chose one problem at the end of the Dojo Lab. Everything here is about that one.
 
 **Before you start.** Paste the recap your Dojo Lab session gave you (what changed, what you left unverified on purpose, what to check first), and your choice: why this one, why not the others, why you, and your runner-up.
 

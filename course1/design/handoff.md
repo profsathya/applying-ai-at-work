@@ -1,6 +1,6 @@
 ---
 purpose: Everything needed to continue the Sprint 1 V2 rebuild in a new conversation
-last_updated: 2026-09-14
+last_updated: 2026-09-16
 read_first: true
 ---
 
@@ -81,7 +81,7 @@ claims are what Sprint 2 works on.
 
 | Piece | State |
 |---|---|
-| Sprint 1, whole | Draft v5.2 in `course1/design/`. Every page reviewed by Leslie at least once (14 and 15 September). Now v5.3 after her rulings on Claude's concerns. Her [OPEN] items: two or three statuses for assumptions, the Dojo Lab's selection criteria, whether Goal Plan Part 3 moves to Sprint 2, where the Concept check sits |
+| Sprint 1, whole | **v5.4, cut-ready**, in `course1/design/sprint-1-working-draft-v5.md`, with a cover note for Jeremy at the top. Content is v5.3, reviewed by Leslie on every page. Four [TEAM DECISION] markers and one [INTERIM] marker carry the open items into the pages for reviewers. Jeremy rebuilds the whole sprint from this file (docx or repo path) |
 | Sprint 1 first half, live | Jeremy's 11 September cut, published in sprint-12. Melisa is running this version. It is superseded by v5 and will be replaced at the cut |
 | Sprint 1 concept check | Six questions redrafted in v5.1 against the new pages; Jeremy's call on format. Now sits after The problem frame |
 | Sprint 2 | Outline written 12 September. Must receive the claims table (not a single riskiest assumption), the runner-up, and the set-aside list. Claude can build it directly as artifacts |
@@ -109,33 +109,35 @@ self-check, reflection as `delivery_mode: ai_activity` like Sprints 3 and 4.
 
 ## What to do next
 
-1. **Leslie rules the v5.2 [OPEN] items** (listed at the foot of the draft), then the
-   selection criteria for the Dojo Lab's Choose step. The Dojo prompts are PARKED: the
-   activity is drafted as a module for Sathya's Dojo (`dojo-module-problem-frame.md`) and
-   waits on the course-wide Dojo doc (`dojo-setup-note.md`, with Jeremy) and on a second
-   person's frame to test against. Do not re-tune it on Leslie's frame.
-2. **The cut.** The 14 September build path: Jeremy cuts items 1 to 4 through his intake;
-   items 5 to 10 can be written directly as artifacts by Claude (a guided_assignment
-   artifact with several boxes and no sidecar validates PASS, tested 12 September). First
-   frames carries eight boxes; the seam if the mode strains is noted on the page. Every
-   cut artifact stays `publish: false`; Claude opens the PR and stops for Leslie's merge,
-   since merging publishes to Canvas.
-3. **Put the Candidate Log template v2 into the Google Doc** (id below). The v2 content
-   is `course1/design/candidate-log-template-v2.md` (A brainstorm by category, B four-column
-   table, C the seven-part frame repeated five times in writing order with a line of
-   guidance per slot, D Goal Plan). A docx went to Leslie 15 September. Then link it from
-   the Introduction and each activity.
-4. **Sprint 2 prose** on `sprint-2-outline.md`, adjusted for the claims table.
-5. **Points and rubrics proposal** across all five sprints, for the team decision.
-6. **Collect Melisa's and Clare's run results.** Melisa is on the old first half; what
-   transfers is anything about the brainstorm, the table, and the concept check.
-7. **Spine and Sprint 0 updates** listed under "Owed elsewhere" at the foot of v5.1.
+1. **Jeremy rebuilds Sprint 1 from v5.4.** The cover note at the top of the draft is
+   his instruction set: carry the text as written, markers into the pages, [BUILD] blocks
+   are configuration. He sends back the readback before the pages go to Clare. The old
+   sprint-12 module is his to retire.
+2. **Leslie re-pastes the Candidate Log v2.1 docx** into the Google Doc (same id), so the
+   table headers are bold and the bullets are on separate lines. The link is already in
+   the draft.
+3. **Name ripple.** "Problem Frame, version two" replaces "Goal Plan and Problem Frame"
+   in the Welcome five-artifact map, the home page, and Sprint 3 V2's mid-course goal
+   plan revision. Jeremy and Melisa.
+4. **Clare's review** of the rendered pages, with the markers visible. Reviewer comments
+   come back to this draft, then to Jeremy's build map, not to the pages directly.
+5. **The four team decisions** in the markers, plus the Concept check's position, when
+   the content has been seen whole.
+6. **Sprint 2 prose** on `sprint-2-outline.md`, receiving the assumptions list, the claim
+   kinds, and possibly the Problem Frame's Part 3 as its opening activity.
+7. **Points and rubrics proposal** across all five sprints, after Clare's review. The
+   pipeline does not publish rubrics; they are applied in Canvas by hand and acknowledged.
+8. **The Dojo work**, parked: `dojo-setup-note.md` (with Jeremy) and
+   `dojo-module-problem-frame.md` (resume when the course doc exists and a second
+   person's frame is available).
+9. **Collect Melisa's and Clare's run results.**
 
 ## Things that only exist outside the repo
 
-- **Candidate Log template**, Google Doc in Leslie's Drive, id
-  `1aTgaDgf1ugkQujJkgvo-EHXUqm9ztN1jMA5SDy3lTjI`. Built to the old first-half sequence;
-  needs the rebuild above. A Word copy was sent to Leslie on 12 September.
+- **Candidate Log template**, Google Doc in a CTI shared drive, id
+  `1aTgaDgf1ugkQujJkgvo-EHXUqm9ztN1jMA5SDy3lTjI`, shared anyone-with-link as viewer. Holds
+  template v2.1 (source: `candidate-log-template-v2.md`). The copy-on-click link is in the
+  Introduction of the draft.
 - **The test edition** (six docx files, v4.2 text) and the live-first-half readback docx are
   with Leslie. Both are regenerable from the repo.
 - **Jeremy's intake packets and build maps** are in his private `.source-intake/`.

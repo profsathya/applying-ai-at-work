@@ -2135,3 +2135,43 @@ Claude raised four concerns and one small fix after v5.2; her answers:
    the sequence is reconsidered once the content is done; [OPEN] at the foot of the draft.
 
 Provenance: Leslie, all five rulings; Claude, the edits and the Log template rebuild.
+
+## 16 September: the cut-ready pass (v5.4), the name, and the Log link
+
+Leslie's go for Jeremy's rebuild. Rulings and what changed:
+
+- **The name is Problem Frame, version two.** Leslie: it is what the sprint produces, and
+  "Goal Plan" referred to nothing. Applied to the item title, the route, the submit list,
+  the Log's Part D, the Dojo Lab's cross-reference, the Reflection, and the item table.
+  Ripple, owed outside this file: the Welcome page's five-artifact map, the course home
+  page, and Sprint 3 V2's "mid-course goal plan revision." Jeremy's and Melisa's.
+- **The Candidate Log link** is in the Introduction in copy-on-click form. The Google Doc
+  keeps its 12 September id, is in a CTI shared drive, and is shared anyone-with-link as
+  viewer. Contents are template v2.1 (v2 with the Problem Frame name); the docx went to
+  Leslie to re-paste because the first paste lost bold table headers and the empty
+  bullet lines.
+- **Interim Dojo Lab text.** The parked one-shot prompts are replaced by the capped
+  versions from the 15 September test (readiness verdict, three ranked findings, one
+  question; three framings of two lines each), with an [INTERIM] marker saying the Dojo
+  setup will replace them and the activity and submission do not change. The page now
+  says "any AI chat you already have" rather than naming the Symbiotic Thinking Dojo.
+- **Markers.** The four open design items are one-line [TEAM DECISION] markers at the
+  spot in the page where they bite (statuses, Part 3's home, the Concept check's
+  position, the Choose criteria). Reviewer-visible, participant-invisible, stripped at
+  publish. Jeremy to confirm his export highlights them.
+- **Notes sorted.** Rationale and history notes are out of the draft (they live here);
+  build instructions stay as [BUILD] blocks and the italic line per item. A one-page
+  cover note for Jeremy opens the file: the fidelity rule (carry the text as written, no
+  shortening), the marker rule, what is configuration, collapsed help, the readback ask,
+  what to do before the run, and the item table.
+- **Rubrics wait.** The pipeline does not publish rubrics (`canvas_sync/ack_rubric.py`);
+  points and per-box criteria are enough for the cut; rubrics get written across all
+  five sprints in one pass after Clare's review.
+
+Preserved from the draft, Leslie's designer note on the frame page, verbatim as it stood
+in v5.3 before the notes were stripped:
+
+    > **[NOTE] Why the frame is built this way**, from Leslie's designer notes. Two-part fields are split (3a/3b, 4a/4b) because in testing every compound field lost its second half, and the second half was always the harder and more valuable one; empty slots should look wrong. Example A is in labeled parts, not prose, so the structure is visible and participants do not reproduce the voice instead. Example B exists because A's countable units set a bar a qualitative problem cannot clear. Part 6 is done part by part, not by free listing, because free listing reliably misses cost assumptions. Confirmed/unverified replaces a blanket tag, since a label on every entry carries no information; B has one confirmed row on purpose. The claim kinds of v5 (checkable, prediction, causal bet) left for Sprint 2 in v5.2, where the checking happens (Leslie, 15 September: not needed at this stage, and only what bubbled up in her run). Part 7 is residual; most of its old work is absorbed by 6. Writing order is explicit because part 1 can only be written after 5. Part 1 gained the specificity test because consensus alone lets "financial peace" through. Part 5 is capped at one sentence because solutions leaked in the second sentence in two of three test frames. "Find out next" was retitled because "next" pulled toward build steps even with a warning. The [carried] tags of v5 are gone (Leslie, 14 September: what is the value; is it used later). They were a guard against a part that was all reuse and no new work; First frames now asks for the new element of each part explicitly, which does the same job without a tag.
+
+Provenance: Leslie, the name, the Log doc, the go; Claude, the pass, the interim prompts,
+the cover note.
