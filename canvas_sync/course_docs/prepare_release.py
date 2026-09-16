@@ -16,6 +16,18 @@ def api(repo, path, token=None, raw=False):
         return response.read() if raw else json.load(response)
 
 
+def download_artifact(repo, artifact_id):
+    # GitHub's artifact endpoint redirects to signed blob storage. urllib can
+    # lose or misapply authentication across that redirect; gh handles the
+    # authenticated API request and signed download correctly.
+    result = subprocess.run(
+        ['gh', 'api', f'/repos/{repo}/actions/artifacts/{artifact_id}/zip'],
+        check=True,
+        stdout=subprocess.PIPE,
+    )
+    return result.stdout
+
+
 def deployment_succeeded(statuses):
     # GitHub marks older successful Pages deployments inactive once superseded.
     # That does not erase evidence that this exact release was deployed.
@@ -44,7 +56,7 @@ def main():
     if not run:
         raise ValueError('No trusted successful main publication with a release inventory exists')
     subprocess.run(['git', 'merge-base', '--is-ancestor', run['head_sha'], 'HEAD'], check=True)
-    archive = zipfile.ZipFile(io.BytesIO(api(repo, '/actions/artifacts/' + str(artifact['id']) + '/zip', raw=True)))
+    archive = zipfile.ZipFile(io.BytesIO(download_artifact(repo, artifact['id'])))
     candidates = [n for n in archive.namelist() if n == 'course-context-release.json']
     if len(candidates) != 1:
         raise ValueError('Expected exactly one root release inventory')
