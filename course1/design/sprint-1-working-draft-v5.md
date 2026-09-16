@@ -1,6 +1,6 @@
 ---
 purpose: Sprint 1, cut-ready source for Jeremy's rebuild, with a cover note for him and one build block per item
-status: v5.4 (cut-ready), 16 September 2026. Content is v5.3, reviewed by Leslie on every page, with the Problem Frame name, the Candidate Log link, interim Dojo Lab text, and reviewer markers in place. History and rationale for every choice are in sprint-1-decisions.md.
+status: v5.4.1 (cut-ready), 16 September 2026, cover note aligned to docs/AUTHORING.md. Content is v5.3, reviewed by Leslie on every page, with the Problem Frame name, the Candidate Log link, interim Dojo Lab text, and reviewer markers in place. History and rationale for every choice are in sprint-1-decisions.md.
 supersedes: sprint-1-half-one-working-draft-v4.md (frozen at v4.2) and sprint-1-half-two-working-draft-v1.md (v1.1), for the whole of Sprint 1
 storage: replaces the sprint-12 first half; positions 1 to 10
 ---
@@ -13,17 +13,19 @@ This file is the source for the Sprint 1 rebuild. Everything below the line afte
 
 **Rules for the run**
 
-1. **Carry the text as written.** Do not shorten, rewrite, or restyle. The draft is already at the length and register of the September cut (three to eight hundred words a page). Where Canvas mechanics force a change (a box label, a heading level), keep the meaning and list the change in the authoring report so we can see it.
+1. **Mode: faithful conversion, not instructional adaptation** (in the terms of `docs/AUTHORING.md`). Carry the text as written. Do not shorten, rewrite, or restyle. The draft is already at the length and register of the September cut (three to eight hundred words a page) and has had two full review passes from Leslie. Where Canvas mechanics force a change (a box label, a heading level), keep the meaning and list the change in the authoring report so we can see it.
 2. **Bracketed markers are reviewer notes.** `[TEAM DECISION: ...]` and `[INTERIM: ...]` carry into the pages verbatim, highlighted in the review export the way Sprints 3 and 4 did it, and are stripped at publish. There are five of them.
 3. **`[BUILD]` blocks and the italic line under each item title are configuration**, not page text: kind, position, points, submit or not, and the box prompts and criteria under each **Response tasks** heading (one response box per bullet, `presentation: reading` wherever there is more than one box). They do not appear in the pages.
-4. **Collapsed help.** Wherever a page says *More help*, that paragraph goes behind a disclosure on the same page. Backbone visible, help one click away.
-5. **Send back the readback** (your authoring report or a rendered docx) before the pages go to Clare.
+4. **"More help" blocks.** Wherever a page has a paragraph beginning *More help*, the design intent is a disclosure on the same page: backbone visible, help one click away. The renderer does not appear to offer an authored disclosure (its `<details>` elements are its own self-check and More options), so if none exists, render each *More help* paragraph inline as an indented aside in the position it sits, and say so in the readback. Do not drop them. There are seven.
+5. **Section-to-box mapping** for the pages with more than one box, since `instruction_section` wants a unique top-level heading per task: on **Dojo Lab**, section 1 feeds the challenges box, section 2 the framings box, section 3 the your-choice box. On **Problem Frame, version two**, Part 1 feeds frame-v2, Part 2 what-changed, Part 3 which-assumptions-first. On **First frames**, all seven teaching sections come before the five frame boxes, which sit together at the end; nothing maps one to one. Single-box pages (Brainstorm, Get underneath) put the box after all the teaching.
+6. **Send back the readback** (your authoring report or a rendered docx) before the pages go to Clare.
 
 **Before you run**
 
 - The old first half in `sprint-12` (Canvas module 2079) is superseded by this whole sprint. Retire or replace it as you see fit; Melisa has been running it, so keep her submissions reachable.
 - The Candidate Log link is already in the Introduction, in the form that makes the participant's copy on click. Nothing to do.
-- The name changed: the sprint's final artifact is **Problem Frame, version two**, not Goal Plan and Problem Frame. That ripples to the Welcome page's five-artifact map, the course home page, and Sprint 3's "mid-course goal plan revision." Those are outside this file.
+- The name changed: the sprint's final artifact is **Problem Frame, version two**, not Goal Plan and Problem Frame. That ripples to the Welcome page's five-artifact map, `course1/homepage.yaml` (the Sprint 1 entries, and "goal plan" in the Sprint 3 and 4 reflection lines), and Sprint 3's "mid-course goal plan revision." Those are outside this file.
+- Your 15 September Sprint 0 says "Available now: the first half of Sprint 1, through Test and commit." Test and commit no longer exists once this sprint is built; the first-week items are Brainstorm your list and Get underneath three to five.
 - Sprint 0 owes two lines before this sprint uses them: what "own your progress" and "graded item" mean, and that in assignments each part shows guidance, then an example, then a box.
 
 **Items**
