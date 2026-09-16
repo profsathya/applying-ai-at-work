@@ -18,6 +18,6 @@ source_provenance: welcome-and-orientation-v2.sources.json
 
 Start here before Sprint 1. Learn what you will build, plan your weekly work, and find the help you can return to throughout the course.
 
-The route has five pages and one discussion. The Introduction Post is the only submission in Sprint 0: zero points, graded complete or incomplete. Plan for 4-6 hours of course work each week, following the recommended ten-week schedule.
+The route has six pages and one discussion. The Introduction Post is the only submission in Sprint 0: zero points, graded complete or incomplete. Plan for 4-6 hours of course work each week, following the recommended ten-week schedule.
 
 Begin with [Start Here](https://cti-courses.instructure.com/courses/180/pages/start-here). Keep [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources) available for submission steps and instructor contact.

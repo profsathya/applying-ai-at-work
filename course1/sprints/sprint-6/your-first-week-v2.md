@@ -34,8 +34,12 @@ Plan **4-6 hours each week** across the recommended ten-week schedule. Use the c
 
 Find **Canvas Inbox** in the course navigation so you know where to contact your instructor. After you post your introduction, **Help and Resources** provides detailed submission instructions and guidance you can return to throughout the course.
 
-## 4. Post your introduction
+## 4. Set up your AI coach
+
+Continue to [Set up your AI Dojo](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html). Configure one tool and try its short coaching check. There is no setup submission, and the first half of Sprint 1 remains work you do without AI.
+
+## 5. Post your introduction
 
 Open [Introduction Post](https://cti-courses.instructure.com/courses/180/discussion_topics/1533) and follow its prompts. This zero-point discussion is graded complete or incomplete. Read a few introductions when they are available; replies are optional.
 
-After posting, continue to [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources) for any guidance you need, then begin [Sprint 1: Find the Problem Worth Solving](https://cti-courses.instructure.com/courses/180/pages/introduction-find-the-problem-worth-solving-2).
+After the Dojo setup and your introduction, continue to [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources) for any guidance you need, then begin [Sprint 1: Find the Problem Worth Solving](https://cti-courses.instructure.com/courses/180/pages/introduction-find-the-problem-worth-solving-2).

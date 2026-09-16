@@ -4,7 +4,7 @@
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "6f63926ccabc0997d147041f102475b5770c172ff78f6a6a319dba92f7534249",
   "body_sha256": "072877ad11938d01827d82df6b6bdbe5b4882b05420b4d87d74c1a772f8c3d3d",
-  "frontmatter_sha256": "fa69f085fb6d334acee922583dd94052d8d5b2b8ddc9580c547d8279bbeab4da",
+  "frontmatter_sha256": "617eb6cbd0b757282b97ed4cdfefc896e422949c537fa35a852790d0ef3d1303",
   "parts": [
     {
       "kind": "new",

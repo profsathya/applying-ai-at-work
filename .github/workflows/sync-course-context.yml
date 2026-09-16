@@ -1,0 +1,66 @@
+name: Sync course context document
+
+on:
+  workflow_run:
+    workflows: [Publish Canvas]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 10 * * *'
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: course-context-document
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.ref == 'refs/heads/main' && (github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == 'main'))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check native document configuration
+        id: config
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          with open('config/course-docs.json') as fh:
+              config = json.load(fh)
+          print('enabled=' + str(config.get('enabled') is True).lower())
+          PY
+      - name: Report pending provisioning
+        if: steps.config.outputs.enabled != 'true'
+        run: echo 'Document sync is disabled pending receiver and document provisioning.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Select successful publication and verify hosted deployment
+        if: steps.config.outputs.enabled == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HOSTED_READ_TOKEN: ${{ secrets.COMMON_CURRICULUM_TOKEN }}
+          TRIGGER_RUN: ${{ github.event.workflow_run.id }}
+        run: python -m canvas_sync.course_docs.prepare_release
+      - name: Sync selected sections
+        if: steps.config.outputs.enabled == 'true'
+        env:
+          COURSE_DOC_SYNC_URL: ${{ secrets.COURSE_DOC_SYNC_URL }}
+          COURSE_DOC_SYNC_TOKEN: ${{ secrets.COURSE_DOC_SYNC_TOKEN }}
+        run: |
+          section=dojo
+          if [ "$GITHUB_EVENT_NAME" = workflow_run ]; then section=course; fi
+          if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then section=all; fi
+          python -m canvas_sync.course_docs.sync --release course-context-release.json --section "$section" --generation "$GITHUB_RUN_ID" --repository "$GITHUB_REPOSITORY" --commit-sha "$(git rev-parse HEAD)" --output course-doc-payload.json --send
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.config.outputs.enabled == 'true'
+        with:
+          name: course-doc-sync-evidence
+          path: course-doc-payload.json
+          if-no-files-found: ignore

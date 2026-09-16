@@ -6,7 +6,7 @@ artifact_id: course1-sprints-welcome-and-orientation-v2-help-and-resources-v2
 sprint: 6
 week: 1
 module: 'Sprint 0: Welcome and Orientation (V2)'
-position: 7
+position: 8
 points: null
 submission_type: none
 publish: true
@@ -40,7 +40,7 @@ Sprint 1 guided activities save drafts in the browser you use. Keep a copy of im
 
 ## Use AI tools when an activity introduces them
 
-> The available first half of Sprint 1 is completed **without AI**. When a later activity calls for the Dojo or another AI partner, open it from that activity and follow its setup directions. Keep the activity page available so you can return to the prompts and submission instructions.
+> The available first half of Sprint 1 is completed **without AI**. Use [Set up your AI Dojo](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html) to prepare your coach. When a later activity invites AI use, return to your project or Gem and supply that activity's directions. Keep the activity page available so you can return to the prompts and submission instructions.
 
 ## Download a JSON file only when requested
 
