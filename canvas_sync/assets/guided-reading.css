@@ -7,6 +7,7 @@
 :is(.guided-reading, .reading-page) p { margin: 10px 0; }
 :is(.guided-reading, .reading-page) blockquote { margin: 20px 0; padding: 20px; border: 1px solid #cbd8e4; border-radius: 12px; background: #f0f5fa; overflow-wrap: anywhere; }
 :is(.guided-reading, .reading-page) blockquote > p:first-child { margin-top: 0; color: #344e68; font-size: .9rem; }
+.reading-page section:has(> h2#2-add-the-method-and-course-context) blockquote > p:first-child { color: #1f2933; font: inherit; }
 :is(.guided-reading, .reading-page) blockquote ol { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; padding: 0; list-style-position: inside; }
 :is(.guided-reading, .reading-page) blockquote li { margin: 0; padding: 12px; border: 1px solid #c3d2df; border-top: 3px solid #477b9b; border-radius: 8px; background: #fff; }
 :is(.guided-reading, .reading-page) blockquote li::marker { color: #315d7b; font-weight: 700; }

@@ -33,9 +33,8 @@ If projects or Gems are unavailable, use a regular chat and provide the instruct
 
 ## 2. Add the method and course context
 
-Add the [Dojo and Course Context document](https://docs.google.com/document/d/1q4Dpbzr1quGMw-_i5mn99EO4bi-xj-VK-DoAJG13r38/edit) from Google Drive to your project's or Gem's knowledge. It combines the [shared Dojo Core](https://profsathya.github.io/Common-Curriculum/common/dojo/dojo-core.txt) with released course material.
-
-If your tool cannot read it, paste or upload a dated copy of both tabs and replace that copy when the document changes.
+- **Add the source:** add the [Dojo and Course Context document](https://docs.google.com/document/d/1q4Dpbzr1quGMw-_i5mn99EO4bi-xj-VK-DoAJG13r38/edit) from Google Drive to your project's or Gem's knowledge. It combines the [shared Dojo Core](https://profsathya.github.io/Common-Curriculum/common/dojo/dojo-core.txt) with released course material.
+- **If the source cannot be read:** paste or upload a dated copy of both tabs. Replace that copy when the document changes.
 
 Copy this instruction into your project or Gem:
 
