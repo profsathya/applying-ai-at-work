@@ -1,15 +1,15 @@
 ---
 purpose: Everything needed to continue the Sprint 1 V2 rebuild in a new conversation
-last_updated: 2026-09-16
+last_updated: 2026-09-16, evening
 read_first: true
 ---
 
 # Handoff
 
 New chat? Read this, then `problem-spine.md`, then `sprint-1-decisions.md` from the session of
-14 September onward; those entries supersede anything above them that conflicts. The live
-first half is in `course1/sprints/sprint-12/` but is about to be replaced: the whole sprint is
-redrafted on a new sequence in `course1/design/sprint-1-working-draft-v5.md` (now v5.1).
+14 September onward; those entries supersede anything above them that conflicts. Sprint 1 is
+cut-ready in `course1/design/sprint-1-working-draft-v5.md` (v5.4.2) and with Jeremy for the
+rebuild as of 16 September. The next piece of work is Sprint 2; see "Starting Sprint 2" below.
 
 ---
 
@@ -132,6 +132,49 @@ self-check, reflection as `delivery_mode: ai_activity` like Sprints 3 and 4.
    person's frame is available).
 9. **Collect Melisa's and Clare's run results.**
 
+## Starting Sprint 2
+
+Sprint 2 is Leslie's. The outline is `sprint-2-outline.md` (12 September), and it is out of
+date in five ways that have to be fixed before any prose is written:
+
+1. **What it receives.** It says "frame version 2, the riskiest assumption, the list of
+   unverified claims." What Sprint 1 now hands on is the **Problem Frame** (no version
+   numbers anywhere), its part 6 **assumptions list** (each confirmed or unverified, with
+   who could tell you), the Problem Frame's **Part 3** (the two or three assumptions whose
+   failure would break the frame, which may move to open Sprint 2; a [TEAM DECISION]
+   marker on the Sprint 1 page), the framings considered in the Dojo Lab, the runner-up,
+   and the set-aside list. The single riskiest assumption is gone.
+2. **The claim kinds land here.** Checkable, prediction, causal bet were cut from Sprint 1
+   on 15 September because nothing there used them. They belong where the checking
+   happens: the kind decides how an assumption gets checked (ask someone; gather signal;
+   split into a checkable present-tense claim and a bet). Sprint 2 introduces them.
+3. **Dojo Labs are modules.** The outline has two (What Already Exists; Test the Frame).
+   Each is written as a module for Sathya's Dojo core, in the format of
+   `dojo-module-problem-frame.md`: what is mine vs what you carry, rounds with named
+   characters, start here. Until the course-wide Dojo doc exists, each page also ships an
+   interim any-chatbot version of its prompts, capped (a verdict, three findings, one
+   question), under an [INTERIM] marker, exactly as Sprint 1's Dojo Lab does.
+4. **The proxy works.** The outline's risk "the AI proxy is down" is closed; the reflection
+   can be `ai_activity` like Sprint 1's.
+5. **Register and conventions** are the Sprint 1 ones: three to eight hundred words a page,
+   guidance then example then box, two core examples named at the head of the draft
+   (account handovers and the garden plot carry over, so the story holds across sprints),
+   no colons standing in for dashes, no "version one/two," no "student," nothing from
+   Leslie's own run in the material, [NOTE] for build instructions and [TEAM DECISION] /
+   [INTERIM] for reviewer-visible markers.
+
+The way it goes: revise the outline against those five and send it to Leslie as a docx
+(she rules on structure before prose); then draft the whole sprint as one working draft in
+`course1/design/` on the Sprint 1 model (cover note, one item per `##`, an italic line and
+a Response tasks block per item); she reviews in Google Docs and returns a docx; apply
+every change individually, log each disposition, merge the design PR yourself. Sprint 2
+does not wait on Jeremy's Sprint 1 rebuild. It does wait on Leslie's ruling on Part 3's
+home, which changes its first item.
+
+Points: the outline proposes 30 and 55 across two graded items; the team decision on
+points and rubrics across all five sprints is still open, so hold the outline's numbers
+as a proposal.
+
 ## Things that only exist outside the repo
 
 - **Candidate Log template**, Google Doc in a CTI shared drive, id
@@ -155,6 +198,14 @@ under `course1/design/`, the decisions log, this file. Since Jeremy path-filtere
 `validate` workflow, design-only PRs run no checks; merge when the PR is clean. The review of
 that work happens in the document, not in the PR. Claude stops and asks before merging
 anything under `course1/sprints/`, because those merges run the Canvas publish.
+
+**Before any hand-off to Jeremy,** re-read `docs/AUTHORING.md` and `docs/AUTHORING_PRESENTATION.md`.
+He changes them without notice, and his run follows them, not us. Name the mode in his
+vocabulary (faithful conversion, or instructional adaptation) in the cover note.
+
+**The Drive connector is not a rendering check.** Its text export shows bold in table
+cells as literal asterisks and runs empty bullets together. Do not report a formatting
+problem in a Google Doc from that evidence; ask Leslie to look, or render the docx.
 
 **Reading her reviews.** Export must be `.docx`, not markdown; Google's markdown export
 drops comments and flattens suggestions. Walk the XML tree rather than using regex, because
