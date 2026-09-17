@@ -12,7 +12,7 @@ submission_type: text_entry
 delivery_mode: guided_assignment
 completion_requirement: must_submit
 learner_labels: true
-publish: false
+publish: true
 guided_assignment:
   version: '1.0'
   presentation: reading

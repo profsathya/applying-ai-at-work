@@ -11,7 +11,7 @@ points: null
 submission_type: none
 page_presentation: reading
 learner_labels: true
-publish: false
+publish: true
 ---
 
 # Introduction: Integrate People and Context

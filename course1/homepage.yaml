@@ -21,7 +21,7 @@ schedule:
       title: "Direct AI deliberately"
       summary: "Give AI context, compare its suggestions, and record the judgment behind your choices."
     - number: 3
-      sprint: 7
+      sprint: 15
       ready: true
       title: "Integrate people and context"
       summary: "Talk with a real stakeholder and revise your problem frame using what you learn."
@@ -292,7 +292,7 @@ modules:
             meta: "Page - submission steps, saved drafts, key terms, and instructor contact through Canvas Inbox"
 
   - sprint: 7
-    order: 3
+    hidden: true
     title: "Sprint 3: Integrate people and context"
     tag: "People and context"
     open: false
@@ -484,16 +484,15 @@ modules:
             meta: "AI reflection activity - make your judgment, AI's contribution, and one remaining uncertainty specific; 10 points"
 
   - sprint: 15
-    hidden: true
+    order: 3
     title: "Sprint 3: Integrate people and context (V3)"
     tag: "People and context"
     open: false
-    muted: true
     learning_goals:
       - "Identify stakeholders and their relationship to the problem across four relationships: affected, influential, responsible for a constraint, and positioned to challenge your frame."
       - "Design validation questions for stakeholders that produce real evidence rather than agreement."
       - "Revise your Problem Frame using human input and context, and name what still needs validation."
-    prereq: "A rebuild of Sprint 3, kept separate from Sprint 3 (V2) for comparison. Not yet released: every artifact is unpublished, and the two participant templates still need their Google Docs links. Carries the same real problem you have worked on since Sprint 1. The stakeholder map is written without AI; AI tests and widens it afterward."
+    prereq: "Carry forward the same real problem you have worked on since Sprint 1. Build the stakeholder map without AI, then use AI to test and widen it before you speak with a real stakeholder."
     groups:
       - label: "Sprint Week 1: Understand and map"
         items:

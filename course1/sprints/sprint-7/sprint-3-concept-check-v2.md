@@ -12,7 +12,7 @@ quiz_type: practice_quiz
 allowed_attempts: -1
 submission_type: online_quiz
 delivery_mode: canvas_native
-publish: true
+publish: false
 learner_labels: true
 questions:
   - type: true_false

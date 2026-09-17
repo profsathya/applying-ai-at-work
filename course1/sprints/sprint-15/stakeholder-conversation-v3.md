@@ -13,7 +13,7 @@ delivery_mode: ai_activity
 completion_requirement: must_submit
 learner_labels: true
 learning_goal: Hold a real validation conversation, capture what the stakeholder actually said, and separate what it confirmed from what it complicated.
-publish: false
+publish: true
 ai_activity:
   activity_id: course1-stakeholder-conversation-v3
   version: '1.0'

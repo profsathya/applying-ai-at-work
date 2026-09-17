@@ -9,7 +9,7 @@ module: 'Sprint 3: Integrate People and Context (V2)'
 position: 1
 points: null
 submission_type: none
-publish: true
+publish: false
 ---
 
 # Sprint 3: Integrate People and Context (V2)

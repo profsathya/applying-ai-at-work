@@ -10,7 +10,7 @@ position: 5
 points: 50
 submission_type: file_upload
 delivery_mode: ai_activity
-publish: true
+publish: false
 learner_labels: true
 ai_activity:
   activity_id: course1-stakeholder-conversation-v2

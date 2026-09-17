@@ -12,7 +12,7 @@ submission_type: file_upload
 completion_requirement: must_submit
 learner_labels: true
 learning_goal: Profile four stakeholders in your own problem, mark every field confirmed or inferred, and name the guesses a real conversation would have to settle.
-publish: false
+publish: true
 ---
 
 # Stakeholder Map

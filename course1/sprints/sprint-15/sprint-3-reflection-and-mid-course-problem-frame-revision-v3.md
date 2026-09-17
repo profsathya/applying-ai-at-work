@@ -13,7 +13,7 @@ delivery_mode: ai_activity
 completion_requirement: must_submit
 learner_labels: true
 learning_goal: Say what a real person helped you see that AI did not, and revise your Problem Frame on that evidence.
-publish: false
+publish: true
 ai_activity:
   activity_id: course1-sprint-3-reflection-and-mid-course-problem-frame-revision-v3
   version: '1.0'

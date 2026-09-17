@@ -14,7 +14,7 @@ submission_type: online_quiz
 delivery_mode: canvas_native
 learner_labels: true
 learning_goal: Confirm you can tell the four stakeholder relationships apart, recognise a validation question that tests rather than confirms, and say what Sprint 3 requires of you.
-publish: false
+publish: true
 questions:
   - type: true_false
     prompt: >
