@@ -2446,3 +2446,46 @@ which Jeremy's rebuild moved out of the page. Owed to Leslie's Google Doc as v2.
 
 Provenance: Leslie, the ask and every structural ruling the documents follow; Claude,
 the three drafts.
+
+## 17 September, night: the documents reviewed; no Sprint 2 Log; the frame stays at seven parts (v5.2)
+
+Leslie returned the three documents with four rewordings and eight comments, then three
+rulings in chat. Dispositions:
+
+- **Sprint 2 Log, C0 and C3: not manageable; too much in one place; should these run in
+  Canvas as question, guidance, example, box, AI check?** Yes. There is no Sprint 2 Log.
+  The assumptions walk, the judgments, the accepted ones, the check written before
+  looking, and what came back all run on the pages as guidance, example, box. The only
+  Sprint 2 document besides the frame is a one-page What already exists table
+  (`what-already-exists-template.md`), on Sprint 3 V3's pattern of a template only where
+  a table is needed. `sprint-2-log-template.md` is deleted.
+- **Log C1, name the part with its number, course-wide.** Added to the conventions.
+- **Log C2, an example at the top of the walk.** The page pattern supplies it.
+- **Log rewordings** ("you need to have part 6 available to copy and paste"; "Could the
+  answer to any of these end the problem? For example...") carry into the page text.
+- **Frame C0, copy it all at once?** Yes. Leslie: convert the Candidate Log's Part D to
+  reading order before Sprint 1 closes, so it ends with a logical artifact. Done as
+  `candidate-log-template-v2.md` v2.3, with D3 removed (Part 3 is out of the published
+  page). One paste, nothing to move. Owed to her Google Doc.
+- **Frame C1, every part is living.** One sentence at the top says so.
+- **Frame C2, the cost of a change belongs as 3c.** Yes. Part 3 is now who is affected,
+  what the problem costs them, what a change would ask of them. Marked as added in
+  Sprint 2. No part 8.
+- **Frame, Leslie's unsent comment: the verdict will not live past Sprint 2, so not in
+  the frame.** Right. The verdict is written in the Sprint 2 graded item's own box. No
+  part 9. The frame stays at seven parts for the whole course, gaining only 3c and the
+  Checked column in Sprint 2.
+- **Frame rewordings** applied as written: the opening loses "Sprint 2 adds a column..."
+  and "Nothing else you write..."; the "hand to a manager" line becomes her paragraph
+  (best current understanding; make a call; make the case to decision-makers). Leslie in
+  chat: nobody would hand the document over as is; it is the thinking behind the case.
+- **Fixture C0, what is this?** An end-to-end example, the handover case carried to the
+  end of Sprint 2, made to size the documents. Sprint 1 had none as a file because its
+  examples were written into the pages. Renamed `sprint-2-worked-example-handovers.md`
+  and recast: the frame as it stands, then what the participant wrote along the way in
+  page order, which is the source for the pages' worked examples.
+
+Outline v5.2 carries all of it. Docx of the four documents (frame, table, worked
+example, Candidate Log v2.3) sent to Leslie.
+
+Provenance: Leslie, every ruling; Claude, the edits and this record.
