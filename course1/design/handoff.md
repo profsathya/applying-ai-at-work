@@ -40,7 +40,11 @@ first half as a participant. Rubrics and points decided soon. Sprint 5 has no ow
 course1/design/sprint-1-working-draft-v5.md       THE LIVE DRAFT (v5.1): the whole sprint, ten items,
                                                    on the 14 September resequence. Leslie reviewing.
 course1/design/sprint-1-resequence-outline.md     why the sequence changed (14 September)
-course1/design/sprint-2-outline.md                 Sprint 2, outline v5.2 (17 September), with Leslie for a ruling on structure
+course1/design/sprint-2-working-draft-v1.md        THE SPRINT 2 DRAFT, v1 (17 September): whole sprint, eleven items. Leslie reviewing
+course1/design/sprint-2-outline.md                 Sprint 2, outline v5.2 (17 September), the structure the draft follows
+course1/design/problem-frame-template.md           the Problem Frame document, source for the Google Doc
+course1/design/what-already-exists-template.md     the one-page Sprint 2 table, source for the Google Doc
+course1/design/sprint-2-worked-example-handovers.md  handovers carried to the end of Sprint 2
 course1/design/candidate-log-template-v2.md        the Log template, v2 (15 September), source for the Google Doc
 course1/design/dojo-setup-note.md                  the course-wide Dojo tool, for Jeremy (15 September)
 course1/design/dojo-module-problem-frame.md        Sprint 1 Dojo Lab as a Dojo module, v0.3, PARKED
@@ -84,7 +88,7 @@ claims are what Sprint 2 works on.
 | Sprint 1, whole | **v5.4, cut-ready**, in `course1/design/sprint-1-working-draft-v5.md`, with a cover note for Jeremy at the top. Content is v5.3, reviewed by Leslie on every page. Four [TEAM DECISION] markers and one [INTERIM] marker carry the open items into the pages for reviewers. Jeremy rebuilds the whole sprint from this file (docx or repo path) |
 | Sprint 1 first half, live | Jeremy's 11 September cut, published in sprint-12. Melisa is running this version. It is superseded by v5 and will be replaced at the cut |
 | Sprint 1 concept check | Six questions redrafted in v5.1 against the new pages; Jeremy's call on format. Now sits after The problem frame |
-| Sprint 2 | Outline v5.2, 17 September, after Leslie's reviews of v3 and v4 (dispositions in the log, 17 September). Week 1: could anything break it (assumptions walked, one checked, graded write-up). Week 2: what exists (one table, started before AI, filled in the Dojo Lab), then the Problem Frame with a verdict. Waits on her ruling on structure before prose |
+| Sprint 2 | Working draft v1 (17 September, late) on outline v5.2, with Leslie for her first review pass. Outline v5.2, 17 September, after Leslie's reviews of v3 and v4 (dispositions in the log, 17 September). Week 1: could anything break it (assumptions walked, one checked, graded write-up). Week 2: what exists (one table, started before AI, filled in the Dojo Lab), then the Problem Frame with a verdict. Waits on her ruling on structure before prose |
 | Sprint 0, 3, 4 | V2 published; Jeremy reviewing. Sprint 0 owes an introduction of "own your progress" and "graded item" |
 | Sprint 5 | One placeholder page. No owner |
 | AI proxy | Working. CTI-owned, on Jeremy's Netlify, Anthropic direct, since 14 September (`docs/audits/2026-09-14-owned-course-ai-proxy.md`). Unblocks ai_activity reflections and the Sprint 4 AI Exchange |
