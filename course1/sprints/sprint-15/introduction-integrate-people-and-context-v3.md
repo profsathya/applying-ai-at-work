@@ -56,7 +56,7 @@ The same person can hold more than one of these relationships at once, and those
 
 A validation conversation is the conversation you will have with a stakeholder. Validation means testing your Problem Frame, not selling your solution. A good validation conversation isn't about getting a stakeholder to agree; it's about giving them room to tell you what they actually experience, need, fear, value, or see differently than you do. Their perspective gives you the context you need to judge whether your Problem Frame is right, incomplete, or off entirely.
 
-You will write your validation questions in the Stakeholder Map, test them with AI in the Dojo Lab, and put them to a real person in the Stakeholder Conversation.
+You will write your validation questions in the Stakeholder Map, test them with AI in the Dojo Lab, and sharpen them again before you put them to a real person in the Stakeholder Conversation.
 
 **Conflicts as Information**
 
