@@ -2408,3 +2408,22 @@ Outline v5 is in `sprint-2-outline.md` and went to Leslie as a docx. Ten positio
 
 Provenance: Leslie, every ruling above and the practice-run findings behind C3; Claude,
 the dispositions, the restatement of the item-per-activity pattern, the week 2 move, v5.
+
+## 17 September, later still: points, and "accepted, because" (v5.1)
+
+Leslie's two follow-ups on v5. **Points**: 5, 20, 20, 45, 10. The what-exists judgment
+becomes its own graded item (What exists, and what it means, 20), the week 1 write-up
+drops to 20, the Problem Frame to 45. Two graded items in week 2, on Sprint 3 V3's own
+pattern. Eleven positions. **Unverified against inferred**: Leslie does not feel strongly;
+her observation that not every assumption will be verified, some will be chosen to be
+accepted, names a third state. Recommendation for the team: unverified stays in the frame
+because it names a pending decision (check, or accept and say why); inferred stays on
+Sprint 3's map; Sprint 3's Introduction says once they are the same idea; the Checked
+column takes "not yet," what came back, or "accepted, because" with the reason. Leslie:
+the concept of accepting will need explaining. It is defined in item 3 where the call is
+made (the likely answer would not change what you do, or you would push ahead anyway,
+said rather than left unexamined; the reason is the point), and the worked example
+accepts one assumption and checks another. Applied as v5.1, no new docx.
+
+Provenance: Leslie, both rulings and the third-state observation; Claude, the
+recommendation and the definition.
