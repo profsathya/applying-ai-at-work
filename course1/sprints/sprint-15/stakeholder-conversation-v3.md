@@ -60,7 +60,7 @@ ai_activity:
 
 Now it's time to test your Problem Frame against an actual stakeholder, not AI. This activity has four parts: preparing for the conversation, setting it up, having it, and documenting what you learned.
 
-Use the **Stakeholder Validation Report**, a document template you copy once and fill in across this whole activity. [Make your copy of the Stakeholder Validation Report](https://docs.google.com/document/d/STAKEHOLDER-VALIDATION-REPORT-TEMPLATE-DOC-ID/copy). Section A as you prepare, Sections B and C during and just after the conversation, and Section D afterward. Download it and upload it at the end.
+Use the **Stakeholder Validation Report**, a document template you copy once and fill in across this whole activity. [Make your copy of the Stakeholder Validation Report](https://docs.google.com/document/d/1MUOWS7Y8nMMFu5wWP3_aK2-eGQvvEBUr3yV3d36_Ekw/copy). Section A as you prepare, Sections B and C during and just after the conversation, and Section D afterward. Download it and upload it at the end.
 
 ## Part 1: Prepare for the Conversation
 

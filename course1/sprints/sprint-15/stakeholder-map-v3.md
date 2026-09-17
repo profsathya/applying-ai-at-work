@@ -19,7 +19,7 @@ publish: false
 
 Before you talk to anyone, write down what you already believe about the people connected to your problem, and be honest about which parts you actually know. This is your own work. No AI on this one. You will test and widen it with AI in the Dojo Lab afterward, and that only works if there is an independent view to test.
 
-Use the **Stakeholder Map**, a document template you copy once and keep for the whole sprint. [Make your copy of the Stakeholder Map](https://docs.google.com/document/d/STAKEHOLDER-MAP-TEMPLATE-DOC-ID/copy). Fill it in as you work through this page, then download it as a Word or PDF file and upload it when you are done.
+Use the **Stakeholder Map**, a document template you copy once and keep for the whole sprint. [Make your copy of the Stakeholder Map](https://docs.google.com/document/d/1Z0Sg2_2lnQNiryTOpzerdhIovuE4a4-AGivkxR2bRP4/copy). Fill it in as you work through this page, then download it as a Word or PDF file and upload it when you are done.
 
 ## Start with what you already think
 
