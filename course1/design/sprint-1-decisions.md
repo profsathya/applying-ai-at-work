@@ -2263,3 +2263,89 @@ keeps that.
 
 Provenance: Leslie, the arc, the three moves, the research method, every ruling above;
 Claude, the seam map, the sequence, the decisions list, the record.
+
+# Session of 17 September 2026: Sprint 2 outline v3 reviewed, v4 written
+
+## What changed on main overnight
+
+Jeremy published Sprint 1 v5.4 as `sprint-14` (16 September, evening). His rebuild applied
+the later ruling in this log and moved Part 3 out of the Problem Frame item, which now has
+two parts; the reviewer markers were stripped. Melisa's Sprint 3 V3 landed as `sprint-15`
+(17 September, #83): Goal Plan retired throughout, "Problem Frame" as the carried artifact,
+Sprint 1's four-step Dojo flow reused in any chat, a Stakeholder Map with assumption
+blocks and validation questions, confirmed/inferred kept. Welcome gained "Set up your AI
+Dojo" (the participant's own project or Gem with the course document as source), and the
+course document (Dojo and Course tabs) now exists and syncs on publish
+(`docs/COURSE_DOC_SYNC.md`). Consequences for Sprint 2: the interim any-chatbot marker is
+unnecessary (Sprint 3 V3 writes its prompts for any chat and the Dojo alike); Part 3 must
+now live in Sprint 2; the seam with Sprint 3 holds as read on 16 September.
+
+## Leslie's review of outline v3: 28 comments, no tracked changes
+
+`Sprint-2-outline-v3_1.docx`. Most needed a conversation; they were worked through in
+chat the same evening and morning. Dispositions:
+
+- **C0, "what would have to be true" unclear.** Phrase dropped.
+- **C1, C2, C5, the Problem Frame is the continuous artifact; the Confirmation Plan
+  duplicates it.** Ruled. No Confirmation Plan. The frame gains a Checked column in
+  part 6, a part 8 (what a change would cost), and a part 9 (the verdict); everything else
+  stays in the Log. Goal Plan references become Problem Frame (Sprint 3 V3 already did
+  this). Leslie's worry about the frame growing too big: answered with the handover frame
+  at end of Sprint 2 (one column, one row filled, two short parts). Her follow-up worry
+  about the Log: split at the end of Sprint 1 into the Candidate Log (Sprint 1 only), a
+  standalone Problem Frame document, and a short per-sprint worklog. Listed as decision 3.
+- **C3, focus on directing AI with direct instruction.** A page, "Directing AI," in week 1
+  before the first Dojo Lab. Sathya still uses Context, Choices, Confirmation (checked in
+  Common-Curriculum: CST395's reflection prompt and the Symbiotic Thinking context docs),
+  so the vocabulary stays, in his sense: Context is what you provide, Choices what you
+  decide, Confirmation checking the output. The page teaches Context in Leslie's two
+  halves (the drafting you have done; what the draft does not say, about the thing and
+  about how to work with you) and names the other two where they are practised.
+- **C4, is "who could tell you" accurate?** Yes; it has been in Sprint 1's part 6 since
+  v5.2. Only Part 3 moved.
+- **C6, C10, C18, C19, the claim kinds: what do learners do with them?** Cut. Their only
+  job was deciding how to check, and item 3 now teaches that by example. Concept check
+  cut with them (C7's placement question is moot); replaced by a self-check on Context.
+- **C8, is item 8 the write-up of items 4 and 5?** Yes, and it now says so.
+- **C9, C24, C25, C26, C27, cost of change: needs a framework; overlaps with item 3;
+  Leslie's method of walking the assumptions for costs.** Merged into item 3 as a
+  read-back across the walk: what would a change ask of whom, plus the one cost no
+  assumption carries, the time to build anything. Item 9 (cost as its own item) is gone.
+  Claude had argued the estimate belonged after the research; Leslie's question exposed
+  that as backwards for the assumption-derived costs, which are solution-independent and
+  belong with think-first. The verdict framing from C27 is item 10's: no cost so great
+  that the problem is not worth pursuing; the decision is about the problem, not a
+  solution. The side-by-side with 3b is part 8 of the frame (C26).
+- **C11, the why of assumptions.** Leslie's framing replaces Claude's three-way sort: an
+  assumption is not a fact; behind it is a question whose answer could change the problem
+  or show it is not worth working on. The walk is loose (what would I need to find out;
+  what could the answers change; several answers allowed), with the two judgments made
+  across the whole list afterwards. Leslie: resist formula; the scaffolding serves the
+  question of shaping the problem. Five commitments recorded in the outline (open with the
+  problem, slots optional in tone, the example declines a check, criteria grade reasoning,
+  every activity ends by turning back to the frame).
+- **C12, load.** Keep all items unless the work proves too much. Ruled.
+- **C13, the goal is to answer affirmatively enough, and the judgment is theirs.** Now the
+  opening of "What Sprint 2 is for."
+- **C14, "write yours first, twice" unclear.** Dropped; the mechanism is stated plainly on
+  the Directing AI page.
+- **C15, Leslie's five steps for item 3.** Adopted as the spine of the activity. Her later
+  nuance on choosing (likelihood of the killing answer; making the call without checking
+  where you already know enough; reachable beats well-chosen; a check is a temperature
+  check) is in the guidance and the worked example.
+- **C16, the brainstorm needs structure for the Dojo Lab.** Three columns, per Leslie's
+  revision: what exists (external or internal, formal or informal, partial, tangential);
+  how it works as far as you know, pushed toward mechanism; where it might work, where it
+  falls short, what you do not know. "Where" dropped as a column.
+- **C17, the prompt needs testing.** Marked in the outline; Claude runs it on the handover
+  example first and hands over the transcript, as in Sprint 1.
+- **C20, what if they reject nothing; where does "rejected" come from?** From the spine's
+  real-versus-performed pushback test, not from Sathya. Now "kept, set aside, not sure,
+  with a reason," and setting nothing aside is fine if you say why.
+- **C21, C22, paragraph form; the pushback example probably will not play out that way.**
+  Item 8 is five clear questions; the paragraph is gone; the example is gone until the
+  activity has been run.
+- **C23, optional step.** Cut.
+
+Provenance: Leslie, every ruling above and the methods behind them; Claude, the
+dispositions, the reading of the overnight changes, outline v4.
