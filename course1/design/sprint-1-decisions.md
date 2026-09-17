@@ -2427,3 +2427,22 @@ accepts one assumption and checks another. Applied as v5.1, no new docx.
 
 Provenance: Leslie, both rulings and the third-state observation; Claude, the
 recommendation and the definition.
+
+## 17 September, evening: the Problem Frame document, the Sprint 2 Log, and the handover fixture
+
+Leslie asked for the Problem Frame and Sprint 2 Log to look at. Drafted on outline v5.1 as
+three design files, for her review: `problem-frame-template.md` (the living document,
+seven parts in reading order, part 6 with the Checked column, parts 8 and 9 marked as
+Sprint 2's additions); `sprint-2-log-template.md` (Parts A to C: the assumptions walk and
+the check, the what-exists table, notes toward the verdict); and
+`problem-frame-fixture-handovers.md` (worked example A carried to the end of Sprint 2,
+both documents filled, in the participant voice so it can become the worked example).
+The fixture keeps Sprint 3 V3's conflict example (the tracker nobody updates) for the
+conversation to find; Sprint 2's research finds the CRM owner field and the sales team's
+checklist instead. Sizes: the filled frame is about two pages; the filled Log about three.
+
+Noted for the Candidate Log: the published template v2.2 still carries D3 (Part 3),
+which Jeremy's rebuild moved out of the page. Owed to Leslie's Google Doc as v2.3.
+
+Provenance: Leslie, the ask and every structural ruling the documents follow; Claude,
+the three drafts.
