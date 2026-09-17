@@ -182,16 +182,16 @@ hands over the transcript.
 as the boxes of one submission. Points concentrate in the last two.
 
 **10. Problem Frame: is it worth pursuing?** The terminal item, 45 points. The verdict
-is written here, in its own box, and does not go into the frame. Before writing part 9, one
+is written here, in its own box, and does not go into the frame. Before writing it, one
 prompt on this page, in the Dojo: here is my frame, what the check said, what exists,
 and what a change would ask; what does the check settle and not settle; does anything in
-4a or 4b have to change; what did I leave out of the costs; can I say worth pursuing,
-and if not, what is the one thing still missing. Then bring the frame up to date: 4a
-and 4b if the research changed them; part 6 with the Checked column and any assumption
-confirmed, added, or dropped; part 8; part 9 with reasons. The check recorded in full,
-or what was tried and why it could not be run, which is an honest outcome graded as one.
-If the verdict is no: which runner-up, its draft frame, and a shortened pass. A frame
-that did not otherwise change is a legitimate result, said in one line.
+4a or 4b have to change; what did I leave out of 3c; can I say worth pursuing, and if
+not, what is the one thing still missing. Then bring the frame up to date: 4a and 4b if
+the research changed them; 3c; part 6 with the Checked column and any assumption
+confirmed, added, or dropped. The check recorded in full, or what was tried and why it
+could not be run, which is an honest outcome graded as one. The verdict with reasons.
+If it is no: which runner-up, its draft frame, and a shortened pass. A frame that did
+not otherwise change is a legitimate result, said in one line.
 
 **11. Reflection.** `ai_activity`, the Sprint 1 mechanism. Where did something outside
 your head change your view, and where did AI change it; which did you push back on and
