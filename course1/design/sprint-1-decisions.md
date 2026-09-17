@@ -2349,3 +2349,62 @@ chat the same evening and morning. Dispositions:
 
 Provenance: Leslie, every ruling above and the methods behind them; Claude, the
 dispositions, the reading of the overnight changes, outline v4.
+
+## 17 September, later: Leslie's review of outline v4, and the two-week reset (v5)
+
+`Sprint-2-outline-v4_1.docx`: nine comments and three tracked rewordings, on the top of
+the document and the sequence table only; Leslie returned it before reading the item
+descriptions because the table drives them. The three rewordings (the first two moves and
+the "hand to a manager" line) are applied as written, with curly apostrophes and a hyphen
+used as a dash straightened. Dispositions:
+
+- **C0, is the cost folded entirely into item 3?** Yes, as ruled the day before. It stays
+  a clause of the first move and part 8 of the frame.
+- **C1, the Logs are scratchpads; everything that carries is in the Problem Frame.**
+  Confirmed. Three documents ruled: Candidate Log (Sprint 1 only), Problem Frame, Sprint 2
+  Log.
+- **C2, item 3 ends abruptly; should it go through AI?** The item now ends by placing the
+  unchecked assumptions in part 6 with what would need finding out, and by naming Sprint 3
+  as where they go. The AI test became its own item (see the item-per-activity rule
+  below). The graded write-up of the walk is the walk's completion.
+- **C3, the brainstorm is possibilities and questions, not known things.** Leslie's
+  reading from her practice run. The three columns became one table whose finished state
+  is the output of the whole move: what exists, how it works, what it means for your
+  problem (pluses, minuses, questions), started before AI with blanks allowed, filled in
+  the Dojo Lab. Two branches of guidance: guardrails for people with ideas (listing, not
+  designing), question prompts for people with nothing.
+- **C4, C5, Directing AI right before the Dojo Lab.** Then Leslie's second thought: the
+  page was too much for the moment; what they have done twice is Context in Sathya's
+  first sense, and the Dojo document carries most of the other kinds. The page is reduced
+  to three short paragraphs at the head of item 7, the self-check on Context is gone, and
+  a five-point anti-skim self-check on the Introduction (Sprint 3 V3's pattern) keeps
+  the points structure. Directing AI as a course-wide thread is **parked**, to revisit in
+  about a week.
+- **C6, an exchange about how they did at directing AI.** One closing line in each Dojo
+  Lab's prompt (what context helped; what would you give earlier). The larger version is
+  on the parked thread, to raise with Sathya.
+- **C7, where is item 3 graded?** It now has its own graded item in week 1.
+- **C8, what would the before-you-decide lab look like?** Described, judged thin, and
+  folded into the Problem Frame item as the prompt before writing part 9.
+- **Leslie's rule, from the conversation: one activity runs to its own completion.**
+  Combining the assumptions test and the what-exists round in one Dojo Lab was rejected
+  as not how a person works. Then, on her question of how a Dojo Lab differs from an own
+  work item, the course's own pattern was restated (own work with no AI, then a separate
+  item where AI tests it: First frames then Dojo Lab; Stakeholder Map then Dojo Lab; Name
+  the Gap then AI Exchange) and applied: item 3 own work, item 4 its Dojo Lab; item 7 own
+  work, item 8 its Dojo Lab. Two Dojo Labs in the sprint, which the 14 September ruling
+  (one per AI move) allows.
+- **Week balance.** Week 1 had grown heavy while week 2 held a thin lab. The what-exists
+  thread moved to week 2 and the assumptions thread became week 1's whole subject with
+  its own graded item. Five items and four, one graded item each, in the order a person
+  would work: could anything break it, then what exists, then decide. The what-exists
+  judgment is graded through what it changes in the frame and the verdict, not on its
+  own; listed as decision 2.
+- **The lab's title should name the goal.** "Dojo Lab: explore what already exists,"
+  keeping the course's prefix.
+
+Outline v5 is in `sprint-2-outline.md` and went to Leslie as a docx. Ten positions, points
+5, 30, 55, 10 as a proposal, four decisions.
+
+Provenance: Leslie, every ruling above and the practice-run findings behind C3; Claude,
+the dispositions, the restatement of the item-per-activity pattern, the week 2 move, v5.
