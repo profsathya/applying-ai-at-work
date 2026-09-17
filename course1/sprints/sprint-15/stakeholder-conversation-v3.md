@@ -60,6 +60,8 @@ ai_activity:
 
 Now it's time to test your Problem Frame against an actual stakeholder, not AI. This activity has four parts: preparing for the conversation, setting it up, having it, and documenting what you learned.
 
+Send the ask before you prepare. Part 2 sets the clock, three days before you follow up and five before you switch to your backup, so get the request out of your hands first and work through Part 1 while you wait for a reply.
+
 Use the **Stakeholder Validation Report**, a document template you copy once and fill in across this whole activity. [Make your copy of the Stakeholder Validation Report](https://docs.google.com/document/d/1MUOWS7Y8nMMFu5wWP3_aK2-eGQvvEBUr3yV3d36_Ekw/copy). Section A as you prepare, Sections B and C during and just after the conversation, and Section D afterward. Download it and upload it at the end.
 
 ## Part 1: Prepare for the Conversation
@@ -87,6 +89,8 @@ You may sharpen the wording, and you may swap one out if something has changed s
 Write each question into Section A of your report with what you hope to learn from it, and name the single assumption this conversation is meant to test.
 
 **2. Run the AI exchange.**
+
+The Dojo Lab polished these before you knew who would say yes; this pass is for the specific person who did.
 
 This step uses the built-in AI activity below, not your own AI chat. Start it and ask AI to respond to your draft with follow-up questions. Use them to diagnose your own questions. Look for places where AI's response reveals that your question is:
 
