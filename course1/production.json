@@ -903,17 +903,17 @@
       "canvas_payload_hash": "b37e505d0647b158f729bd654040106ad3a367cb093312a20d30099197a0af97",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "99d6accb74da4e87f6a5f9b718dd0a35a656d7e84584655b3b15d87796f95f61",
+      "content_hash": "3e0605f4cab8d7b7509200bb3badc4a120c46d464fcf56b924eb3c3b118058d6",
       "delivery_mode": "ai_activity",
-      "hosted_hash": "0d71c1270e36ec90531ced310b4103b3b24ac548a7348a133056a5db4143bdda",
-      "hosted_last_rendered": "2026-09-17T07:12:27+00:00",
+      "hosted_hash": "1fb92279481ca9a1e0ba3b7ba178f0d960302a909d42e4ddc104982de8b65834",
+      "hosted_last_rendered": "2026-09-17T19:01:27+00:00",
       "hosted_path": "course1/assignments/stakeholder-conversation-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/stakeholder-conversation-v3.html",
-      "last_pushed": "2026-09-17T07:12:27+00:00",
+      "last_pushed": "2026-09-17T19:01:27+00:00",
       "local_path": "course1/sprints/sprint-15/stakeholder-conversation-v3.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "d2172c986ecd79ec6e66f7e21f9630664b8eb5ef",
+      "source_commit": "cd66f0790e898e9d5af94f7a97a72e827402ff23",
       "source_type": "discussion"
     },
     "course1-sprints-sprint-15-stakeholder-map": {
@@ -926,16 +926,16 @@
       "canvas_payload_hash": "d30535289ed6fc08cb1c98fc1360108b0e32197a9ea3e0f03d926e2904fe455a",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "a76e977ef77effc89df3828e6364c41dbb2746b56e81caae9548f01372c03869",
-      "hosted_hash": "e8b6416e41774619410ed39d17b4718fc187b3ca8405849dd6f31b008b520d98",
-      "hosted_last_rendered": "2026-09-17T07:12:29+00:00",
+      "content_hash": "629019cd446b5091a18cbed824e8c92491abd2052a193a439dab7d8b0c021f0f",
+      "hosted_hash": "d6240c4e1673f4aa65a89980659eecac0a48067cd7130d4c6e6283c9ee0fa244",
+      "hosted_last_rendered": "2026-09-17T19:01:27+00:00",
       "hosted_path": "course1/assignments/stakeholder-map-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/stakeholder-map-v3.html",
-      "last_pushed": "2026-09-17T07:12:29+00:00",
+      "last_pushed": "2026-09-17T19:01:27+00:00",
       "local_path": "course1/sprints/sprint-15/stakeholder-map-v3.md",
       "position": 4,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "d2172c986ecd79ec6e66f7e21f9630664b8eb5ef"
+      "source_commit": "cd66f0790e898e9d5af94f7a97a72e827402ff23"
     },
     "course1-sprints-sprint-2-ai-exploration-log-and-3cs-application-log": {
       "artifact_id": "course1-sprints-sprint-2-ai-exploration-log-and-3cs-application-log",
@@ -2181,5 +2181,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-17T07:12:29+00:00"
+  "last_sync": "2026-09-17T19:01:27+00:00"
 }
