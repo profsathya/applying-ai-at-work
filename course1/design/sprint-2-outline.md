@@ -1,10 +1,10 @@
 ---
 purpose: Outline for the Sprint 2 rebuild, for Leslie's ruling on structure before any prose is drafted
-status: outline v5.1, 17 September 2026, after Leslie's review of v4 (nine comments, three rewordings), the conversation that reset the two weeks, and her two follow-up rulings on points and on accepted assumptions; supersedes v4. Dispositions in sprint-1-decisions.md, 17 September, later
+status: outline v5.2, 17 September 2026, after Leslie's review of the Problem Frame document, the Sprint 2 Log, and the fixture: no Sprint 2 Log, the cost of a change as 3c, the verdict in the graded item and not in the frame, Part D in reading order; supersedes v5.1. Dispositions in sprint-1-decisions.md, 17 September, later
 depends_on: problem-spine.md; course1/sprints/sprint-14/ (Sprint 1 v5.4 as published); course1/sprints/sprint-15/ (Sprint 3 V3); course1/sprints/sprint-6/set-up-your-ai-dojo-v2.md; candidate-log-template-v2.md
 ---
 
-# Sprint 2: outline, v5.1
+# Sprint 2: outline, v5.2
 
 Short on purpose. Leslie is ruling on structure. The reasoning behind each choice is in
 the decisions log for 17 September.
@@ -30,7 +30,8 @@ Two weeks, two questions, then a verdict:
    existing solution, it does not necessarily mean your problem is not worth pursuing.
    It just might impact the way you solve your problem.
 3. **The verdict.** Worth pursuing, not worth pursuing, or depends on one named thing,
-   written into the Problem Frame.
+   written in the Sprint 2 graded item. It is Sprint 2's answer, so it does not live in
+   the Problem Frame.
 
 The AI capacity is **direct**, in Sathya's vocabulary: **Context** is what you provide,
 **Choices** are the decisions you make about what comes back, **Confirmation** is checking
@@ -45,39 +46,46 @@ Dojo Labs are where AI tests what you wrote. Same rule as Sprints 1 and 3.
 ## The living artifact
 
 **The Problem Frame carries through the course.** No Confirmation Plan, no Goal Plan.
-In Sprint 2 it grows by a little:
+Seven parts for the whole course; every part is living. In Sprint 2 it grows by two
+things only:
 
+- **3c, what a change would ask of them.** Beside 3b, what the problem costs them. Not
+  the cost of a particular solution; the cost of changing how this is handled at all:
+  time, a habit someone has to change, what gets worse while it settles, who has to
+  agree, and the time to build anything. Leslie's placement: the comparison sits inside
+  one part instead of across the document.
 - **Part 6** gains a *Checked* column, holding one of three things: "not yet"; what came
   back, in one line; or "accepted, because" with the reason. Accepting an assumption is
   a decision that the likely answer would not change what you do, or that you would push
   ahead anyway, said rather than left looking unexamined. The reason is the whole point.
-- **Part 8, what a change would cost.** Four or five lines: what the problem costs now
-  (from 3b), what any change would ask of whom, the time to build anything.
-- **Part 9, the verdict.** One paragraph.
 
-At the end of the course the frame is nine parts on two pages, the kind of document you
-could hand to a manager or use yourself to make a decision about moving forward.
+Nobody would hand this document to a manager as it stands. It is the thinking you would
+need to make the case, spoken or written, and the top of the document says so in
+Leslie's words.
 
-**Three documents.** The Candidate Log stays a Sprint 1 document; the only reason to
-reopen it is the runner-up's draft frame. The Problem Frame is its own document from the
-end of Sprint 1, copied once from Part D. The Sprint 2 Log is a scratchpad, three parts,
-about a page each: the assumptions walk and the check; the what-exists table; working
-notes toward the verdict. Nothing carries sprint to sprint except the Problem Frame.
+**Documents.** The Candidate Log stays a Sprint 1 document, with Part D in reading order
+(v2.3) so it pastes into the Problem Frame document as it stands; the only reason to
+reopen it later is the runner-up's draft frame. The Problem Frame is its own document
+from the end of Sprint 1. Sprint 2 has one document besides it, a one-page What already
+exists table. There is no Sprint 2 Log: everything else the sprint asks for runs on the
+Canvas pages as guidance, example, and box, one step at a time, which is the course's
+pattern and the one Leslie asked for. Nothing carries sprint to sprint except the
+Problem Frame.
 
 ## The sequence
 
 | # | Item | Kind | Points | What the participant leaves with |
 |---|---|---|---|---|
 | 1 | Sprint 2 module header | | | |
-| 2 | Introduction: Is this problem worth pursuing? | Page | | The question of the sprint, the judgment being theirs, the no path, how AI is used, the route, the three documents |
+| 2 | Introduction: Is this problem worth pursuing? | Page | | The question of the sprint, the judgment being theirs, the no path, how AI is used, the route, the two documents |
 | 3 | Which assumptions would break it | Own your progress, no AI | 0 | The assumptions walked; which could end the problem; what a change would ask of people; one chosen to check this week, with the check written before looking; the rest placed in part 6 with what would need finding out |
 | 4 | Dojo Lab: test your assumptions | Own your progress | 0 | One capped prompt: where would AI push back on the walk, and is the one you chose to check the right one |
 | 5 | Sprint 2 Self-check | Self-check | 5 | Anti-skim check on the Introduction, as Sprint 3 V3 does |
 | 6 | Which assumptions, and your check | Graded item | 20 | The two or three that could end the problem, with reasons; the one being checked, written before looking; what a change would ask of people. The check runs from here into week 2 |
-| 7 | What could already solve this | Own your progress, no AI | 0 | The table started: what exists (known, guessed, or a question), how it works as far as you know, blanks where you have nothing yet |
+| 7 | What could already solve this | Own your progress, no AI | 0 | The What already exists table started: what exists (known, guessed, or a question), how it works as far as you know, blanks where you have nothing yet |
 | 8 | Dojo Lab: explore what already exists | Own your progress | 0 | The table filled with AI; the third column, what it means for your problem, written by the participant; two or three looked at for real |
 | 9 | What exists, and what it means | Graded item | 20 | The five questions answered: what you had before you asked; what AI added or answered, and what you made of it; what you looked at and learned; does any of it change your problem; what does this change about how you would describe it |
-| 10 | Problem Frame: is it worth pursuing? | Graded item | 45 | The frame brought up to date, parts 6, 8, and 9; the check recorded with what came back and what you make of it; the runner-up path if the verdict is no |
+| 10 | Problem Frame: is it worth pursuing? | Graded item | 45 | The frame brought up to date (3c, part 6 with the Checked column, 4a and 4b if the research changed them); the check recorded with what came back and what you make of it; the verdict, in its own box; the runner-up path if the verdict is no |
 | 11 | Sprint 2 Reflection: what the world said back | Graded item, ai_activity | 10 | |
 
 Total 100 (5, 20, 20, 45, 10), held as a proposal for the team decision on points. Week 1
@@ -93,7 +101,8 @@ sprint can give it.
 things you assumed. Says what the sprint is for in Leslie's terms, that a verdict of no
 takes the runner-up's draft frame through a shortened pass, and how AI is used. Standard
 Sprint 1 sections: key terms, the route by week, what to keep and submit, about AI in this
-sprint, how to work, where to write (the Problem Frame and the Sprint 2 Log).
+sprint, how to work, where to write (the Problem Frame document and the What already
+exists table; everything else in the activity boxes).
 
 **3. Which assumptions would break it.** Own work. Opens with the why (above). The walk,
 loosely: for each assumption, what would you need to find out, and what could the
@@ -112,9 +121,12 @@ is built for them; checking one is the start. What comes back is a temperature c
 Every activity ends with the same question: what does this change about how you would
 describe the problem?
 
+The page runs as guidance, example, box, one step at a time, on Sathya's pattern: the why,
+then the walk with an example at the top, then each judgment with its example and box.
 The scaffolding stays subordinate to the question: the activity opens with the problem,
-the Log slots are offered as a way to work, the worked example shows one assumption the
-writer declines to check and says why, the criteria grade the reasoning.
+the worked example shows one assumption the writer declines to check and says why, the
+criteria grade the reasoning. Parts are always named with their number (part 6, your
+assumptions), never the number alone; a convention for the whole course.
 
 **4. Dojo Lab: test your assumptions.** Short. Bring the walk and the choice. One capped
 prompt in Sprint 1's test pattern: is the one you chose the right one to check; where
@@ -131,8 +143,8 @@ these and not the others; the one being checked, written before looking, and why
 chosen; what a change would ask of whom. Criteria grade the reasoning: says why, names a
 person or an observation, does not hedge the cost.
 
-**7. What could already solve this.** Own work, no AI. Opens with three short paragraphs
-in place of the Directing AI page: what you did in the last two activities was Context in
+**7. What could already solve this.** Own work, no AI, in the What already exists table.
+Opens with three short paragraphs in place of the Directing AI page: what you did in the last two activities was Context in
 Sathya's sense, and it is why the conversation was worth having; two other kinds of
 context exist, and your Dojo carries most of that from the course document, so the one
 line to add is what you want back and in what shape; Choices and Confirmation in a
@@ -169,16 +181,17 @@ hands over the transcript.
 **9. What exists, and what it means.** Graded, 20 points. The five questions from the lab,
 as the boxes of one submission. Points concentrate in the last two.
 
-**10. Problem Frame: is it worth pursuing?** The terminal item, 45 points. Before writing part 9, one
+**10. Problem Frame: is it worth pursuing?** The terminal item, 45 points. The verdict
+is written here, in its own box, and does not go into the frame. Before writing it, one
 prompt on this page, in the Dojo: here is my frame, what the check said, what exists,
 and what a change would ask; what does the check settle and not settle; does anything in
-4a or 4b have to change; what did I leave out of the costs; can I say worth pursuing,
-and if not, what is the one thing still missing. Then bring the frame up to date: 4a
-and 4b if the research changed them; part 6 with the Checked column and any assumption
-confirmed, added, or dropped; part 8; part 9 with reasons. The check recorded in full,
-or what was tried and why it could not be run, which is an honest outcome graded as one.
-If the verdict is no: which runner-up, its draft frame, and a shortened pass. A frame
-that did not otherwise change is a legitimate result, said in one line.
+4a or 4b have to change; what did I leave out of 3c; can I say worth pursuing, and if
+not, what is the one thing still missing. Then bring the frame up to date: 4a and 4b if
+the research changed them; 3c; part 6 with the Checked column and any assumption
+confirmed, added, or dropped. The check recorded in full, or what was tried and why it
+could not be run, which is an honest outcome graded as one. The verdict with reasons.
+If it is no: which runner-up, its draft frame, and a shortened pass. A frame that did
+not otherwise change is a legitimate result, said in one line.
 
 **11. Reflection.** `ai_activity`, the Sprint 1 mechanism. Where did something outside
 your head change your view, and where did AI change it; which did you push back on and
@@ -190,7 +203,7 @@ what did it cost you; the one thing you are least sure how to find out.
 date; the three framings and the decision on each; the runner-up; the draft frames in the
 Candidate Log; the set-aside list. Part 3 is no longer in Sprint 1.
 
-**Hands to Sprint 3 V3:** the Problem Frame with parts 8 and 9, one check made, and part 6
+**Hands to Sprint 3 V3:** the Problem Frame with 3c filled, one check made, and part 6
 saying who could tell you for each unverified row, which is what the Stakeholder Map opens
 by asking for. Its "what you are guessing, and what would tell you" section is where the
 unverified rows go next; Sprint 2 writes no validation questions.
@@ -215,8 +228,9 @@ depends on" is part 6 after Sprint 3.
   are the same idea in two places; and add "accepted, because" as a legitimate entry in
   the Checked column.
 - **The spine:** section 5's Sprint 2 row and section 7's table.
-- **The Log:** template v3 as three documents. Claude drafts them with the handover
-  fixture once this outline is ruled.
+- **The Candidate Log:** v2.3 (Part D in reading order, D3 removed) to re-paste into the
+  Google Doc. The Problem Frame document and the What already exists table to create as
+  Google Docs. Leslie's.
 - **Parked:** directing AI as a thread through the whole course, and the larger version
   of the closing round, which is Sathya's to build. Revisit in about a week.
 

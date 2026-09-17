@@ -1,6 +1,6 @@
 ---
 purpose: Source text for the Candidate Log template, the document each participant copies once and keeps for Sprint 1
-status: v2.2, 16 September 2026, rebuilt to working draft v5.3 (Parts A to D) with the Problem Frame name and draft frames; replaces the 12 September template built to the old first half
+status: v2.3, 17 September 2026: Part D in reading order (1 to 7) so it pastes into the Problem Frame document as is; D3 removed, since Part 3 moved to Sprint 2 in the published build. v2.2 (16 September) was rebuilt to working draft v5.3 with the Problem Frame name and draft frames
 storage: this file is the source; the participant-facing copy is a Google Doc in Leslie's Drive (id in handoff.md), shared anyone-with-link, view only
 ---
 
@@ -206,9 +206,13 @@ Activity: Problem Frame. You chose one problem at the end of the Dojo Lab. Every
 
 
 
-**D1. Your Problem Frame.** All seven parts, with everything that changed as a result of the Dojo Lab, in your words. Use the same slots as Part C, in the same order, and bring part 6 up to date.
+**D1. Your Problem Frame.** All seven parts, with everything that changed as a result of the Dojo Lab, in your words. The slots here are in reading order, 1 to 7, because this is the version you keep: at the start of Sprint 2 you copy all of it into your Problem Frame document as it stands. Write it in the order you learned (2, 3, 4, 5, 6, 7, then 1) and fill part 1, the goal, last.
 
 Candidate name:
+
+**1. The goal it serves.**
+
+
 
 **2. The problem.**
 
@@ -248,21 +252,9 @@ Candidate name:
 
 
 
-**1. The goal it serves.**
-
-
-
 **D2. What changed, and why.** One short paragraph, in your words. What moved between your draft and your Problem Frame, what argument or evidence moved it, and one thing the Dojo suggested that you rejected, and why.
 
 
-
-**D3. Which assumptions should you investigate first.** Two or three from part 6 whose failure would break the frame. For each: the assumption, what would have to be true for it to hold, and who could tell you or what you could observe.
-
-1.
-
-2.
-
-3.
 
 ---
 
