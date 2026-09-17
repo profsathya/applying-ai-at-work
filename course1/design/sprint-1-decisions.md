@@ -2489,3 +2489,18 @@ Outline v5.2 carries all of it. Docx of the four documents (frame, table, worked
 example, Candidate Log v2.3) sent to Leslie.
 
 Provenance: Leslie, every ruling; Claude, the edits and this record.
+
+## 17 September, late: Sprint 2 working draft v1
+
+Leslie's go, after confirming nothing structural was left unexamined (the unexamined items
+are drafting-level: the garden plot through Sprint 2, the no path's shortened pass, the
+Reflection and Introduction, no AI feedback on multi-box pages, "this week" in a
+self-paced course). `sprint-2-working-draft-v1.md` drafted on outline v5.2 and the Sprint 1
+model: cover note for Jeremy (faithful conversion), one item per heading, an italic line
+and a Response tasks block per item, [BUILD] blocks, guidance then example then box, the
+handover case on every item and the garden plot where a qualitative case teaches something
+handovers cannot. Eleven positions, 5, 20, 20, 45, 10. Leslie's two unknowns are marked
+with [NOTE] at the head of items 3, 4, and 8. Sent as a docx with a note to read those
+first. Prompt transcripts on the handover example to follow before the cut.
+
+Provenance: Leslie, the go and every ruling the draft follows; Claude, the prose.
