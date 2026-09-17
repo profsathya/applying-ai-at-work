@@ -1,0 +1,13 @@
+{
+  "creation_mode": "Reuse of an approved Sprint 1 asset; no new generation",
+  "created_date": "2026-09-17",
+  "external_image_sources": [],
+  "source_note": "Reused from the approved Sprint 1 visual pilot. Original AI-generated textbook illustration, not documentary evidence. Sprint 3 V3 reuses it because the sprint's worked example follows the same account-handover situation introduced in Sprint 1.",
+  "delivery_processing": "Copied byte-for-byte from course1/sprints/sprint-12/assets/workplace-handoff.webp. No re-encoding, no dimension change.",
+  "assets": [
+    {
+      "path": "workplace-handoff.webp",
+      "prompt": "Create one polished editorial textbook illustration for an asynchronous professional-development course called Applying AI at Work. Use case: illustration-story. Intended asset: a modest wide landscape chapter illustration, approximately 3:1 aspect ratio. Style: sophisticated restrained 2D stock-style editorial illustration, lightly textured paper, crisp shapes, realistic adult proportions, navy ink outlines, muted slate blue, teal, warm cream background. Calm, professional, human. Scene: three adult colleagues around a modest worktable reviewing a paper workflow and passing a folder from one person to another; the folder and connecting handoff are the visual center. Include a laptop with simple abstract blocks and a few notes, no readable text anywhere. Diverse adult professionals, natural expressions, no exaggerated cartoon smiles. Open airy composition; generous white/cream breathing room; keep figures within the central band so the image reads well as a small wide illustration. Do not include titles, captions, logos, watermarks, gradients, sci-fi motifs, floating icons, or decorative UI. This is an illustrative scene, not documentary photography. Output only the finished image."
+    }
+  ]
+}
