@@ -1,6 +1,6 @@
 ---
 purpose: Sprint 2, whole sprint, working draft for Leslie's review, on the Sprint 1 model; becomes the cut-ready source for Jeremy's build once reviewed
-status: v1.1, 18 September 2026. Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
+status: v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
 depends_on: sprint-2-outline.md (v5.2); problem-frame-template.md; what-already-exists-template.md; sprint-2-worked-example-handovers.md; course1/sprints/sprint-14/ (Sprint 1 as published, for register and format); course1/sprints/sprint-15/ (Sprint 3 V3, for the hand-off and the Dojo Lab form)
 storage: the next storage folder after sprint-15, Jeremy's call; positions 1 to 11
 ---
@@ -28,7 +28,7 @@ This file is the source for the Sprint 2 build. Everything below the line after 
 |---|---|---|---|---|---|---|
 | 1 | Sprint 2: Is This Problem Worth Pursuing? | Module header | | | | |
 | 2 | Introduction: Is this problem worth pursuing? | Page | | | | One |
-| 3 | Dig into your assumptions [OPEN: title] | Own your progress | 0 | must submit | 4 | One |
+| 3 | Dig into your assumptions | Own your progress | 0 | must submit | 4 | One |
 | 4 | Dojo Lab: test your assumptions | Own your progress | 0 | must submit | 1 | One |
 | 5 | Sprint 2 Self-check | Self-check | 5 | completion | 5 questions | One |
 | 6 | Which assumptions, and your check | Graded item | 20 | one submission | 3 | One |
@@ -42,7 +42,7 @@ Sprint total 100, held as a proposal until the team decision on points across al
 
 **Where things are.** This file: `course1/design/sprint-2-working-draft-v1.md`. Why each choice was made: `course1/design/sprint-1-decisions.md`, 16 and 17 September. The document sources: `problem-frame-template.md`, `what-already-exists-template.md`. The worked example end to end: `sprint-2-worked-example-handovers.md`.
 
-**[NOTE] Two core examples run the sprint**, carried from Sprint 1: account handovers (A, every item) and the neighbourhood garden plot (B, where a qualitative case teaches something A cannot). Sprint 3 V3 continues the handover story with Dana the account lead, so Dana is the account lead here too. Nothing from Leslie's own run appears in the material.
+**[NOTE] Two core examples run the sprint**, carried from Sprint 1: account handovers (A, every item) and the neighborhood garden plot (B, where a qualitative case teaches something A cannot). Sprint 3 V3 continues the handover story with Dana the account lead, so Dana is the account lead here too. Nothing from Leslie's own run appears in the material.
 
 **[NOTE] The two unknowns Leslie named**, for her to read first: whether item 3 reads as thinking rather than form-filling, and what the Dojo prompts in items 4 and 8 actually produce. Claude runs both prompts on the handover example and hands over the transcripts before the cut.
 
@@ -123,8 +123,6 @@ Next up: **Dig into your assumptions**.
 
 *Own your progress. Position 3. 0 points. Submit to mark it complete. No AI on this one.*
 
-[OPEN: the title. Leslie: "would break it" is too narrow; the activity is about understanding your assumptions and their implications. "Dig into your assumptions" follows her verb. Her call.]
-
 [NOTE] This is the first of Leslie's two unknowns: read it as a participant and ask whether it makes you think or makes you fill in boxes. The page runs as guidance, then example, then your box, one step at a time; each numbered section ends in its own box.
 
 **First, make your copy of the Problem Frame document.** Paste all of Part D of your Candidate Log into it, as it stands. [Make your copy of the Problem Frame](LINK-TO-BE-SUPPLIED). Every part of it is living, and this sprint adds two things: a column in Part 6: your assumptions, and a new Part 3c: what a change would ask of people.
@@ -167,7 +165,7 @@ Write yours the same way, one assumption at a time, in the box below: the assump
 
 Read back over what you wrote. You probably have some assumptions that, if they went the other way, might kill the problem. List those in the box below, and say why. We want to take some time to look at them closely. Let us start with the ones that have the potential to end the problem.
 
-For example: *none of the managers think the lack of account handovers is a problem.* On the surface, that seems like a big deal. However, what if you know that your customer service department hears about this from clients all the time? Or what if you have heard managers indirectly or informally mention frustration with this before? Then, even though this is an assumption that could kill your problem, you can use your judgement to determine that there is not a high risk that it would. That is you intentionally accepting an assumption because you see it is not particularly risky. It is a decision you are making after looking at the evidence, and you write the reason down with it.
+For example: *none of the managers think the lack of account handovers is a problem.* On the surface, that seems like a big deal. However, what if you know that your customer service department hears about this from clients all the time? Or what if you have heard managers indirectly or informally mention frustration with this before? Then, even though this is an assumption that could kill your problem, you can use your judgment to determine that there is not a high risk that it would. That is you intentionally accepting an assumption because you see it is not particularly risky. It is a decision you are making after looking at the evidence, and you write the reason down with it.
 
 *More help: an example of an actual kill, from the garden plot.* The assumption: *new plot-holders quit because they had no one to ask.* Questions behind it: why did last year's new people actually stop coming? Different answers: they had no one to ask, which is my frame; the plots were too far from where they live, or too big for a first year; they never meant to stay past one season. If it is either of the last two, pairing new people with old hands fixes nothing, and this problem, as I have framed it, is dead. Nothing I know makes those answers unlikely. This one is risky, and it is the one I would check.
 
@@ -320,7 +318,7 @@ Who would have to do what differently, the time to build anything, and the compa
 
 *Own your progress. Position 7. 0 points. Submit to mark it complete. No AI on this one.*
 
-Week 2 starts by looking outward. Are there examples of people trying to solve this problem, or one like it, in your own situation or out in the world? Products, practices somewhere else, something your own organisation has and does not use, someone who already does this well. If you find an existing solution, it does not necessarily mean your problem is not worth pursuing. It might change how you would go about solving it, and getting something that exists adopted where you are can be the problem worth solving.
+Week 2 starts by looking outward. Are there examples of people trying to solve this problem, or one like it, in your own situation or out in the world? Products, practices somewhere else, something your own organization has and does not use, someone who already does this well. If you find an existing solution, it does not necessarily mean your problem is not worth pursuing. It might change how you would go about solving it, and getting something that exists adopted where you are can be the problem worth solving.
 
 ### What you have been doing is Context
 
@@ -345,7 +343,7 @@ You are listing what exists, not designing anything. "An agenda tool" is a thing
 > | A weekly team note (my guess) | Somebody posts "accounts that moved this week" | Somebody has to write it, forever |
 > | Does anyone here already do this well? | | Question |
 
-*More help: if nothing comes to mind.* Turn your frame into questions to look into. Is there a product for this? Is there a name for this kind of problem? How do people who do this well do it? Does anyone in your own organisation already handle it? What happens in places with the same problem and more money, or less? Each question is a row. For the garden plot the table before AI is four questions and no answers: do other community gardens pair new people with old hands; is there a name for that; what does Ramona's garden do that ours does not; did anyone here try it before.
+*More help: if nothing comes to mind.* Turn your frame into questions to look into. Is there a product for this? Is there a name for this kind of problem? How do people who do this well do it? Does anyone in your own organization already handle it? What happens in places with the same problem and more money, or less? Each question is a row. For the garden plot the table before AI is four questions and no answers: do other community gardens pair new people with old hands; is there a name for that; what does Ramona's garden do that ours does not; did anyone here try it before.
 
 *More help: if you already have ideas.* The guardrail is the first column. Everything in it should be something that exists, somewhere, now. If a row describes what you would build, move it out; it is a solution, and Sprint 2 is not where solutions get chosen.
 
@@ -376,7 +374,7 @@ Paste parts 1, 2, 4a, 4b, and 5 of your Problem Frame, then your table, then thi
 > Above is my problem frame (the goal, the problem, how it is handled today, where that stops working, and what fixed would look like) and a table I have started of what already exists that could solve or ease this problem. Some rows are things I know of, some are guesses, and some are questions. I want to find out what exists, not choose a solution. Your job is to help me find out, not to decide for me.
 >
 > 1. For each row that is a question or a guess, answer it as far as you can: does this exist, and how does it work? Say how sure you are.
-> 2. Add up to three things that exist that I have not listed, one line each on how each works. Products, practices in other kinds of organisation, and what people who do this well actually do all count.
+> 2. Add up to three things that exist that I have not listed, one line each on how each works. Products, practices in other kinds of organization, and what people who do this well actually do all count.
 > 3. For every row, one line: is this viable in a situation like mine, and where does it fall short? Do not write what it means for my problem; that column is mine.
 > 4. Name the two or three rows worth a real look, and for each, what I would need to find out to tell whether it changes my problem.
 >
