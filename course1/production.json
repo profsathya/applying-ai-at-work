@@ -800,17 +800,17 @@
       "canvas_payload_hash": "b346189583b7561e2ab77cac07883357b2ca4d80e2b24266f4977fd248c5090c",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "681360b46df4f69677da80561325bbb296b91cb6c5b535097e8e11b91e9aa9e2",
+      "content_hash": "5e1d0c4cc8a21eef68b7057bf60ae0cc84b0082778a0382dab44ba5d580a4140",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "52b5105b59a165c5451b22cb72fcaf1aa9611bfbdbef01806cbcea899d93cc84",
-      "hosted_last_rendered": "2026-09-18T19:08:25+00:00",
+      "hosted_hash": "2720224ed11ed81320bdf2fc2e1731c6b3c47ba1b8aace1e20fe63d12e1def3a",
+      "hosted_last_rendered": "2026-09-18T21:20:41+00:00",
       "hosted_path": "course1/assignments/dojo-lab-test-widen-choose-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-test-widen-choose-v3.html",
-      "last_pushed": "2026-09-18T19:08:25+00:00",
+      "last_pushed": "2026-09-18T21:20:41+00:00",
       "local_path": "course1/sprints/sprint-15/dojo-lab-test-widen-choose-v3.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "003ef0424405718f13a5ab25552d94d1182316f5"
+      "source_commit": "e40031a3c49523620e5313f987387dea1f7c6d14"
     },
     "course1-sprints-sprint-15-introduction-integrate-people-and-context": {
       "artifact_id": "course1-sprints-sprint-15-introduction-integrate-people-and-context",
@@ -822,20 +822,20 @@
       "canvas_payload_hash": "3a40339c5ef462d4f657e67d250485bc32d2a12d11bea019129d8cdaa9e56e61",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "90f5c6f10d010ac22a26267d8e268f7e70c9a428a454e361fb42f152ec4a2821",
-      "hosted_hash": "fa749949bc35864430a292907d6e63d024b0a845ae317d7f77f27ea8fad1674b",
-      "hosted_last_rendered": "2026-09-17T20:32:44+00:00",
+      "content_hash": "90ef36232c498686fa883ce7ae87e6e50ee612c5e713d782fcdb03b7de8db417",
+      "hosted_hash": "8b606eb8bd9d28c84008806810731c3e74c461625c665405d5c7eaa6bf81a233",
+      "hosted_last_rendered": "2026-09-18T21:20:41+00:00",
       "hosted_path": "course1/activities/introduction-integrate-people-and-context-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-integrate-people-and-context-v3.html",
-      "last_pushed": "2026-09-17T20:32:44+00:00",
+      "last_pushed": "2026-09-18T21:20:41+00:00",
       "local_path": "course1/sprints/sprint-15/introduction-integrate-people-and-context-v3.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "1eca87a3cfbcb37c8c3719de555a3b704bfcd7de"
+      "source_commit": "e40031a3c49523620e5313f987387dea1f7c6d14"
     },
     "course1-sprints-sprint-15-sprint-3-concept-check": {
       "artifact_id": "course1-sprints-sprint-15-sprint-3-concept-check",
-      "canvas_fingerprint": "a2c68e36afc7aec4df003e18bd2cfe992fd3531542645de60334c61d30a6dc75",
+      "canvas_fingerprint": "39c99a436826994d4fbaef76aa1fe3d5296708e46306ff86bcd99872e983073c",
       "canvas_id": 3101,
       "canvas_module_id": 2081,
       "canvas_module_item_id": 17988,
@@ -843,16 +843,16 @@
       "canvas_payload_hash": "2318b92c5752384a3d5b9f1e53cc64eff30bbabe16f9d27632ccbb1504a886f9",
       "canvas_type": "quiz",
       "completion_requirement": "must_submit",
-      "content_hash": "899979dc62c928a7aeb802ea51a12af431d280e3883e1e5c45d7d5e7406702dc",
-      "hosted_hash": "01cdfb3572d38d689e851328dbb349f2078fc793c5f5a9c0d3246d760c04258b",
-      "hosted_last_rendered": "2026-09-17T20:32:47+00:00",
+      "content_hash": "3f5aa9ace07b746cc6c27fd135e6c36c20b1827c520ea9816cd3604f37d99283",
+      "hosted_hash": "8c174857ce2baf59e4123a08a804671545b0eedbf9d792c6898ea275d0518f6d",
+      "hosted_last_rendered": "2026-09-18T21:20:44+00:00",
       "hosted_path": "course1/activities/sprint-3-concept-check-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/sprint-3-concept-check-v3.html",
-      "last_pushed": "2026-09-17T20:32:47+00:00",
+      "last_pushed": "2026-09-18T21:20:44+00:00",
       "local_path": "course1/sprints/sprint-15/sprint-3-concept-check-v3.md",
       "position": 3,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "1eca87a3cfbcb37c8c3719de555a3b704bfcd7de"
+      "source_commit": "e40031a3c49523620e5313f987387dea1f7c6d14"
     },
     "course1-sprints-sprint-15-sprint-3-integrate-people-and-context": {
       "artifact_id": "course1-sprints-sprint-15-sprint-3-integrate-people-and-context",
@@ -903,17 +903,17 @@
       "canvas_payload_hash": "04a810bd14f90330fa7f89c0301dacdc383974af3bb7bd932472c8dddbf544eb",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "691bd4db51c5ac240047dc036f972135e922131ce5b9b73c67c2e00b66a20f89",
+      "content_hash": "10ef56cd1e22eaaa8662dfae191beb916727d2aea12c5a1452b362ea9631c8e8",
       "delivery_mode": "ai_activity",
-      "hosted_hash": "7f7072ad676c188f62afd2988d539243ba64a915f18869fd3586ead791e3b439",
-      "hosted_last_rendered": "2026-09-17T20:32:52+00:00",
+      "hosted_hash": "87666049f83a78c344fe02116c0daccfb5a7cd714d9cf18781a10f1bced069f6",
+      "hosted_last_rendered": "2026-09-18T21:20:45+00:00",
       "hosted_path": "course1/assignments/stakeholder-conversation-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/stakeholder-conversation-v3.html",
-      "last_pushed": "2026-09-17T20:32:52+00:00",
+      "last_pushed": "2026-09-18T21:20:45+00:00",
       "local_path": "course1/sprints/sprint-15/stakeholder-conversation-v3.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "1eca87a3cfbcb37c8c3719de555a3b704bfcd7de",
+      "source_commit": "e40031a3c49523620e5313f987387dea1f7c6d14",
       "source_type": "discussion"
     },
     "course1-sprints-sprint-15-stakeholder-map": {
@@ -926,16 +926,16 @@
       "canvas_payload_hash": "364001f2ce1ca808fbeb28c0d844430f79c00a35f69ea0509056975279d17138",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "32a0c55e7c7227f4492bfe16076bf33e925643521eb0c48c0e58372467ffcd22",
-      "hosted_hash": "d6240c4e1673f4aa65a89980659eecac0a48067cd7130d4c6e6283c9ee0fa244",
-      "hosted_last_rendered": "2026-09-17T20:32:54+00:00",
+      "content_hash": "f7114a439c6fe16df4cd66cc0633fe67f635ea8354df9bf8cfc441b5cf60688d",
+      "hosted_hash": "06d070b4cbdc6ac55cbee57eb50a071c5128eb049f5a67f3e0c38ad49677d6c2",
+      "hosted_last_rendered": "2026-09-18T21:20:46+00:00",
       "hosted_path": "course1/assignments/stakeholder-map-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/stakeholder-map-v3.html",
-      "last_pushed": "2026-09-17T20:32:54+00:00",
+      "last_pushed": "2026-09-18T21:20:46+00:00",
       "local_path": "course1/sprints/sprint-15/stakeholder-map-v3.md",
       "position": 4,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "1eca87a3cfbcb37c8c3719de555a3b704bfcd7de"
+      "source_commit": "e40031a3c49523620e5313f987387dea1f7c6d14"
     },
     "course1-sprints-sprint-2-ai-exploration-log-and-3cs-application-log": {
       "artifact_id": "course1-sprints-sprint-2-ai-exploration-log-and-3cs-application-log",
@@ -2181,5 +2181,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-18T19:34:14+00:00"
+  "last_sync": "2026-09-18T21:20:46+00:00"
 }
