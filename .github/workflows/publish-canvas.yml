@@ -60,6 +60,7 @@ jobs:
         working-directory: content
         run: |
           python canvas_sync/schema.py --all
+          python canvas_sync/link_audit.py --all
           python -m unittest discover
 
       - name: Resolve target manifests

@@ -18,6 +18,8 @@ from pathlib import Path
 from urllib.parse import parse_qsl, quote, urlencode, urlsplit, urlunsplit
 
 import yaml
+from markdown.extensions import Extension
+from markdown.treeprocessors import Treeprocessor
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.schema import parse_frontmatter, validate_artifact
@@ -52,6 +54,43 @@ class HostedConfig:
     progress_endpoint: str
 
 
+TOP_LEVEL_LINK_SCHEMES = {"http", "https", "mailto", "tel"}
+
+
+def link_requires_top_level_navigation(href: str) -> bool:
+    """Return whether a participant link must escape the Canvas iframe.
+
+    Hosted learner pages run inside a cross-origin Canvas iframe. Absolute web,
+    email, and telephone links must therefore navigate the top-level browsing
+    context. Relative paths and same-page fragments intentionally remain inside
+    the hosted course surface.
+    """
+    value = str(href or "").strip()
+    if not value:
+        return False
+    parsed = urlsplit(value)
+    return parsed.scheme.lower() in TOP_LEVEL_LINK_SCHEMES or bool(parsed.netloc)
+
+
+class _TopLevelLinkTreeprocessor(Treeprocessor):
+    def run(self, root):
+        for anchor in root.iter("a"):
+            if link_requires_top_level_navigation(anchor.get("href", "")):
+                # _top works both inside Canvas and on the standalone hosted
+                # page. It avoids destination-specific iframe failures and the
+                # popup suppression observed with _blank in Canvas.
+                anchor.set("target", "_top")
+        return root
+
+
+class _TopLevelLinkExtension(Extension):
+    def extendMarkdown(self, md):
+        # Run after inline links and attr_list have populated anchor elements.
+        md.treeprocessors.register(
+            _TopLevelLinkTreeprocessor(md), "canvas_top_level_links", 1
+        )
+
+
 def hosted_config_from_manifest(manifest: dict) -> HostedConfig:
     config = manifest.get("hosted_html") or {}
     return HostedConfig(
@@ -67,7 +106,13 @@ def markdown_body_to_html(body: str) -> str:
 
     return markdown.markdown(
         body,
-        extensions=["extra", "sane_lists", "smarty", "toc"],
+        extensions=[
+            "extra",
+            "sane_lists",
+            "smarty",
+            "toc",
+            _TopLevelLinkExtension(),
+        ],
         output_format="html5",
     )
 
@@ -145,7 +190,7 @@ def iframe_shell(hosted_url: str, title: str, *, height: int = 900) -> str:
         f'height="{height}" loading="lazy" '
         'style="border:0; width:100%; min-height:900px;" '
         'allowfullscreen></iframe>'
-        f'<p><a href="{escaped_url}" target="_blank" rel="noopener">'
+        f'<p><a href="{escaped_url}" target="_top">'
         "Open hosted page in a new tab</a></p>"
         "</div>"
     )
@@ -306,7 +351,7 @@ def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
     if frontmatter.get("delivery_mode") == "guided_assignment":
         if frontmatter.get('guided_assignment', {}).get('presentation') in ('compact', 'reading'):
             return ''  # The compact workspace owns its single submission instruction/link.
-        link = f'<p><a href="{html_lib.escape(canvas_url, quote=True)}" target="_blank" rel="noopener">Open the Canvas assignment</a></p>' if canvas_url else ""
+        link = f'<p><a href="{html_lib.escape(canvas_url, quote=True)}" target="_top">Open the Canvas assignment</a></p>' if canvas_url else ""
         return '<div class="submit"><h2>Submit to Canvas</h2><p>Paste your final response text into the Canvas assignment. A document link or a saved browser draft is not a submission.</p>' + link + '</div>'
     if is_ai_activity_delivery(frontmatter):
         guidance = (
@@ -316,7 +361,7 @@ def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
         link = ""
         if canvas_url:
             escaped = html_lib.escape(canvas_url, quote=True)
-            link = f'\n      <p><a href="{escaped}" target="_blank" rel="noopener">Open the Canvas assignment</a></p>'
+            link = f'\n      <p><a href="{escaped}" target="_top">Open the Canvas assignment</a></p>'
         return (
             '<div class="submit">\n'
             "      <h2>Submit to Canvas</h2>\n"
@@ -343,7 +388,7 @@ def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
     if canvas_url:
         escaped = html_lib.escape(canvas_url, quote=True)
         label = html_lib.escape(_type_label(artifact_type).lower())
-        link = f'\n      <p><a href="{escaped}" target="_blank" rel="noopener">Open the Canvas {label}</a></p>'
+        link = f'\n      <p><a href="{escaped}" target="_top">Open the Canvas {label}</a></p>'
     return (
         '<div class="submit">\n'
         "      <h2>Submit to Canvas</h2>\n"
@@ -656,7 +701,7 @@ def _render_ai_activity_wrapper_document(
     if canvas_url:
         canvas_link = (
             f'<a class="secondary" href="{html_lib.escape(canvas_url, quote=True)}" '
-            'target="_blank" rel="noopener">Submit on Canvas</a>'
+            'target="_top">Submit on Canvas</a>'
         )
     activity_href = f"../activities/{html_lib.escape(frontmatter['slug'], quote=True)}.html?context=web"
     if frontmatter.get("learner_labels"):
@@ -1314,11 +1359,11 @@ def _render_homepage_item(
     href = str(item_config.get("href") or f"{_artifact_course_relative_path(frontmatter)}?context=web")
     state_entry = _state_entry_for_artifact(md_path, manifest_path, frontmatter, state or manifest)
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry)
-    canvas_attr = f' data-canvas-href="{html_lib.escape(canvas_url, quote=True)}"' if canvas_url else ""
-    # Source-built modules should stay in the current Canvas window. Embedded
-    # browsers may block a new tab even when the native destination is valid.
-    if canvas_url and frontmatter.get("source_provenance"):
-        canvas_attr += ' data-canvas-target="_top"'
+    canvas_attr = (
+        f' data-canvas-href="{html_lib.escape(canvas_url, quote=True)}"'
+        ' data-canvas-target="_top"'
+        if canvas_url else ""
+    )
     module_item_id = state_entry.get("canvas_module_item_id")
     progress_attrs = ""
     progress_html = ""

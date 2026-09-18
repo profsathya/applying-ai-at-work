@@ -35,8 +35,15 @@ Validate the changed source and external state, review the diff, and preserve bo
 
 ```bash
 .venv/bin/python canvas_sync/schema.py --all
+.venv/bin/python canvas_sync/link_audit.py --all
 .venv/bin/python canvas_sync/schema.py --state ../canvas-state/course1/production.json
 ```
+
+The link audit renders every production artifact through the same Markdown
+pipeline used for publishing. Absolute web, Canvas, email, and telephone links
+must navigate the top-level browsing context so they cannot become trapped in
+the hosted Canvas iframe. The audit also rejects unsupported schemes, obvious
+placeholder URLs, and missing same-page fragments before publication.
 
 If sprint content changed in a course with `homepage.yaml`, update that metadata through `homepage-maintainer` before final validation. Reconciled source belongs on the content branch; external deployment state belongs on `canvas-state`. Do not copy external IDs into Markdown or commit the state file onto `main`. Coordinate their reviewed integration so the next publish uses the reconciled baseline.
 

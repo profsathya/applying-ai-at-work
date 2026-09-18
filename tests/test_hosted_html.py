@@ -14,6 +14,7 @@ from canvas_sync.hosted_html import (
     MERMAID_SCRIPT_URL,
     _render_homepage_item,
     iframe_shell,
+    markdown_body_to_html,
     render_hosted_artifact,
     render_hosted_files,
     validate_homepage_metadata,
@@ -252,7 +253,7 @@ class RecordingCanvasClient:
 
 
 class HostedHtmlTests(unittest.TestCase):
-    def test_source_built_canvas_links_use_current_window_without_changing_legacy_links(self):
+    def test_all_canvas_homepage_links_use_current_window(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp).resolve()
             md = root / "course1/sprints/sprint-99/tuple-overview.md"
@@ -269,7 +270,7 @@ class HostedHtmlTests(unittest.TestCase):
             }}}
             legacy = _render_homepage_item(md, fm, {}, manifest_path, manifest, state)
             sourced = _render_homepage_item(md, {**fm, "source_provenance": "tuple-overview.sources.json"}, {}, manifest_path, manifest, state)
-            self.assertNotIn('data-canvas-target=', legacy)
+            self.assertIn('data-canvas-target="_top"', legacy)
             self.assertIn('data-canvas-target="_top"', sourced)
             self.assertIn('target="_blank"', sourced)  # Web context keeps its existing behavior.
             self.assertIn('/courses/12345/pages/tuple-overview', sourced)
@@ -328,10 +329,41 @@ class HostedHtmlTests(unittest.TestCase):
                 r'(?=[^>]*target="_top")[^>]*>'
                 r'Make your copy</a>',
             )
-            self.assertIn(
-                '<a href="https://example.org/reference">Read the reference</a>',
+            self.assertRegex(
                 html,
+                r'<a(?=[^>]*href="https://example\.org/reference")'
+                r'(?=[^>]*target="_top")[^>]*>'
+                r'Read the reference</a>',
             )
+
+    def test_absolute_links_escape_canvas_iframe_without_author_attributes(self) -> None:
+        rendered = markdown_body_to_html(
+            "[Web](https://example.org/reference)\n\n"
+            "[Canvas](https://canvas.example.edu/courses/1)\n\n"
+            "[Protocol relative](//example.org/reference)\n\n"
+            "[Email](mailto:teacher@example.edu)\n\n"
+            "[Telephone](tel:+15555550100)\n\n"
+            "[Authored new tab](https://example.edu/new){: target=\"_blank\"}\n\n"
+            "[Relative](next-page.html)\n\n"
+            "[Fragment](#section)\n\n"
+            "## Section\n"
+        )
+
+        for href in (
+            "https://example.org/reference",
+            "https://canvas.example.edu/courses/1",
+            "//example.org/reference",
+            "mailto:teacher@example.edu",
+            "tel:+15555550100",
+            "https://example.edu/new",
+        ):
+            self.assertRegex(
+                rendered,
+                rf'<a(?=[^>]*href="{re.escape(href)}")(?=[^>]*target="_top")[^>]*>',
+            )
+        self.assertIn('<a href="next-page.html">Relative</a>', rendered)
+        self.assertIn('<a href="#section">Fragment</a>', rendered)
+        self.assertNotIn('target="_blank"', rendered)
 
     def test_mermaid_blocks_render_as_conditional_diagrams(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

@@ -57,7 +57,9 @@ jobs:
         run: pip install -r canvas_sync/requirements.txt
 
       - name: Run schema validation on all artifacts
-        run: python canvas_sync/schema.py --all
+        run: |
+          python canvas_sync/schema.py --all
+          python canvas_sync/link_audit.py --all
 
       - name: Compile sync scripts
         run: python -m py_compile canvas_sync/*.py
