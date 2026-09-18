@@ -303,6 +303,36 @@ class HostedHtmlTests(unittest.TestCase):
             self.assertIn("Back to Module", html)
             self.assertIn('href="../sprint-99.html?context=web"', html)
 
+    def test_explicit_top_level_link_target_survives_hosted_rendering(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-99" / "tuple-overview.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            output_dir = repo_root / "Common-Curriculum"
+            write_page(md_path)
+            md_path.write_text(
+                md_path.read_text(encoding="utf-8")
+                + "\n[Make your copy](https://docs.google.com/document/d/example/copy)"
+                + '{: target="_top"}\n\n'
+                + "[Read the reference](https://example.org/reference)\n",
+                encoding="utf-8",
+            )
+            write_manifest(manifest_path)
+
+            result = render_hosted_artifact(md_path, manifest_path, output_dir)
+            html = Path(result["output_path"]).read_text(encoding="utf-8")
+
+            self.assertRegex(
+                html,
+                r'<a(?=[^>]*href="https://docs\.google\.com/document/d/example/copy")'
+                r'(?=[^>]*target="_top")[^>]*>'
+                r'Make your copy</a>',
+            )
+            self.assertIn(
+                '<a href="https://example.org/reference">Read the reference</a>',
+                html,
+            )
+
     def test_mermaid_blocks_render_as_conditional_diagrams(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()

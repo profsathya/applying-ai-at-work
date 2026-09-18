@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-sprint-14-introduction-find-the-problem-worth-solving",
   "packet_sha256": "cb1be55506b7eb7abbbf854e758571c0323f94b7257fbea776544634f7677877",
   "map_sha256": "e27702ee58b00c208e435240ff73785c72cbb9140453947366e279742297f0c4",
-  "body_sha256": "df7f098efea7a375754a066a053ff1ce014656f8d322c3a325748824163b1bc3",
+  "body_sha256": "f4c994a30c8698d29004c5a4d73ab79a7a3be8724a8a2db739323eb9f932e705",
   "frontmatter_sha256": "15155a9a96fbfd76c453da8df47dad91988b119db59cc72d35c09ccb7413827f",
   "parts": [
     {
@@ -911,79 +911,12 @@
       "markdown": "## Where to write"
     },
     {
-      "ref": "d-bb7cd50440dd3015:word/document.xml/65",
-      "view": "base",
-      "role": "learner",
-      "kind": "source",
-      "source_name": "Sprint-1-cut-ready-v5.4.docx",
-      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
-      "block": {
-        "id": "d-bb7cd50440dd3015:word/document.xml/65",
-        "kind": "paragraph",
-        "location": "word/document.xml/65",
-        "style": null,
-        "heading_level": null,
-        "segments": [
-          {
-            "text": "Use the ",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          },
-          {
-            "text": "Candidate Log",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": true,
-              "italic": false
-            },
-            "comment_ids": []
-          },
-          {
-            "text": ", a document template you copy once and keep for the whole sprint. ",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          },
-          {
-            "text": "Make your copy of the Candidate Log",
-            "changes": [],
-            "link": "https://docs.google.com/document/d/1aTgaDgf1ugkQujJkgvo-EHXUqm9ztN1jMA5SDy3lTjI/copy",
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          },
-          {
-            "text": ". It runs the whole sprint. Part A holds your brainstorm, Part B your table, Part C your draft frames, one per candidate, and Part D your Problem Frame. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box.",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          }
-        ],
-        "flags": [],
-        "comment_ids": [],
-        "text": {
-          "base": "Use the Candidate Log, a document template you copy once and keep for the whole sprint. Make your copy of the Candidate Log. It runs the whole sprint. Part A holds your brainstorm, Part B your table, Part C your draft frames, one per candidate, and Part D your Problem Frame. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box.",
-          "proposed": "Use the Candidate Log, a document template you copy once and keep for the whole sprint. Make your copy of the Candidate Log. It runs the whole sprint. Part A holds your brainstorm, Part B your table, Part C your draft frames, one per candidate, and Part D your Problem Frame. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box."
-        }
-      },
-      "block_sha256": "b2ccdfa867e18bf3355486106b234feeedae849cef880927fd751675f8e53138",
-      "markdown": "Use the **Candidate Log**, a document template you copy once and keep for the whole sprint. [Make your copy of the Candidate Log](https://docs.google.com/document/d/1aTgaDgf1ugkQujJkgvo-EHXUqm9ztN1jMA5SDy3lTjI/copy). It runs the whole sprint. Part A holds your brainstorm, Part B your table, Part C your draft frames, one per candidate, and Part D your Problem Frame. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box."
+      "kind": "new",
+      "markdown": "Use the **Candidate Log**, a document template you copy once and keep for the whole sprint. [Make your copy of the Candidate Log](https://docs.google.com/document/d/1aTgaDgf1ugkQujJkgvo-EHXUqm9ztN1jMA5SDy3lTjI/copy){: target=\"_top\"}. It runs the whole sprint. Part A holds your brainstorm, Part B your table, Part C your draft frames, one per candidate, and Part D your Problem Frame. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box.",
+      "reason": "Preserve the approved wording while making the Google Docs copy link replace the top-level Canvas tab instead of loading inside its iframe.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/65"
+      ]
     },
     {
       "ref": "d-bb7cd50440dd3015:word/document.xml/66",

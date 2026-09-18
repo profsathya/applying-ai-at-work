@@ -74,6 +74,6 @@ Keep everything you write, including items you set aside. The Reflection compare
 
 ## Where to write
 
-Use the **Candidate Log**, a document template you copy once and keep for the whole sprint. [Make your copy of the Candidate Log](https://docs.google.com/document/d/1aTgaDgf1ugkQujJkgvo-EHXUqm9ztN1jMA5SDy3lTjI/copy). It runs the whole sprint. Part A holds your brainstorm, Part B your table, Part C your draft frames, one per candidate, and Part D your Problem Frame. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box.
+Use the **Candidate Log**, a document template you copy once and keep for the whole sprint. [Make your copy of the Candidate Log](https://docs.google.com/document/d/1aTgaDgf1ugkQujJkgvo-EHXUqm9ztN1jMA5SDy3lTjI/copy){: target="_top"}. It runs the whole sprint. Part A holds your brainstorm, Part B your table, Part C your draft frames, one per candidate, and Part D your Problem Frame. Each activity names the part it fills. Paste that part, or a link to your Log, into the activity's response box.
 
 Begin with **Brainstorm your list**.
