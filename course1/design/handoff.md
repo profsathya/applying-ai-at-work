@@ -1,6 +1,6 @@
 ---
 purpose: Everything needed to continue the Sprint 1 V2 rebuild in a new conversation
-last_updated: 2026-09-16, evening
+last_updated: 2026-09-18
 read_first: true
 ---
 
@@ -138,11 +138,32 @@ self-check, reflection as `delivery_mode: ai_activity` like Sprints 3 and 4.
 
 ## Starting Sprint 2
 
-Sprint 2 is Leslie's. The outline is `sprint-2-outline.md`, v5.2 as of 17 September, on the
-arc she set on 16 September and the rulings of 17 September (both in the decisions log). It
-is with her for a ruling on structure. Sprint 1 is published as `sprint-14` with Part 3
-already moved out; Sprint 3 V3 is `sprint-15`; the course-wide Dojo document exists. Its 12 September version was out of date in five ways,
-recorded here because the conventions in point 5 still govern the draft:
+Sprint 2 is Leslie's. As of 18 September the whole sprint is drafted:
+`course1/design/sprint-2-working-draft-v1.md`, on outline v5.2, and Leslie is reviewing it
+section by section in Google Docs. Her method for the draft: she reviews a few sections,
+returns the docx, Claude applies every change individually and logs each disposition in
+`sprint-1-decisions.md`, then sends back a clean docx (v1.1, v1.2, ...) and she continues
+from the next section. Each round leaves one clean document. Sections 1 to 3 (cover note,
+module header, Introduction) were the first round.
+
+Read, in this order: the decisions log from 16 September evening onward (the arc, the
+five review rounds on the outline, the documents, the draft); `sprint-2-outline.md`
+(v5.2, the structure the draft follows); the draft itself. The documents:
+`problem-frame-template.md` (the living artifact, seven parts, 3c and the Checked column
+added in Sprint 2), `what-already-exists-template.md` (the one Sprint 2 table),
+`candidate-log-template-v2.md` (v2.3, Part D in reading order), and
+`sprint-2-worked-example-handovers.md`. There is no Sprint 2 Log; everything else runs
+on the pages as guidance, example, box.
+
+Still open: the two prompts (items 4 and 8) have not been run in a real chat; Leslie's own
+test decides their wording. Points 5, 20, 20, 45, 10 are a proposal for the team.
+Confirmed/unverified against confirmed/inferred is a team decision, with a recommendation
+in the outline. Directing AI as a course-wide thread is parked until about 24 September.
+Owed elsewhere: Leslie's three Google Docs (Problem Frame, the table, Candidate Log
+v2.3); one line in Sprint 1 for Jeremy; one sentence each in Sprints 3 and 4 for Melisa.
+
+The conventions in point 5 below still govern the draft. The five points were written on
+16 September against the 12 September outline and are kept for the record:
 
 1. **What it receives.** It says "frame version 2, the riskiest assumption, the list of
    unverified claims." What Sprint 1 now hands on is the **Problem Frame** (no version
