@@ -2573,3 +2573,37 @@ Introduction; re-verify after the full review.
 
 Provenance: Leslie, every comment and tracked change, including the new example format
 for the walk; Claude, the dispositions, the garden examples, the section 4 bridge.
+
+## 18 September, later: Sprint 4's gap work against Sprint 2's assumptions, read for overlap
+
+Leslie shared Melisa's Sprint 4 Dojo Lab (Design the Learning Path, 6 September capture)
+worried that assumption investigation might overlap gap identification. Read against the
+published Sprint 4 V3 as well. Finding: different objects, mechanics that overlap by
+design. Sprint 2 investigates assumptions about the problem to decide whether it is worth
+pursuing; Sprint 4's gap is what the participant does not know that blocks their next move,
+found from three sources (what the stakeholder said that they had no answer to; something
+still marked inferred that the frame depends on; something they describe vaguely). Only
+the second source touches Sprint 2, and it is Part 6's "not yet" rows. Sprint 4's check
+form (claim stated so it could be false; what would make it wrong, written before checking;
+the source; at least one non-AI check) is the form Sprint 2 borrowed, and its "Start
+Checking the Claims" guidance is Sprint 2's check in miniature.
+
+Owed to Melisa, timing Leslie's (after the Sprint 2 review, with the Sprint 3 note, unless
+she is rewriting Name the Gap's "where to look" list this week):
+
+- "Still marked inferred that your frame depends on" becomes "Part 6: your assumptions,
+  the rows marked not yet." Same change as Sprint 3's.
+- The frame reaches Sprint 4 with a Checked column in Part 6 (not yet; what came back;
+  accepted, because), a Part 3c (what a change would ask of people), and Part 7 possibly
+  carrying questions the Sprint 2 research raised, which are gaps of her third kind
+  already written down. The verdict is not in the frame. The Goal Plan is gone.
+- The Dojo Lab's "two claims your frame rests on that you have not verified" should draw
+  from Part 6's "not yet" rows, and should not re-check an "accepted, because" row unless
+  the gap depends on it.
+- The check is "the same check you wrote in Sprint 2 and again in Sprint 3."
+
+Borrowed the other way, for Sprint 2's check step when Leslie rules on section 3: Melisa's
+"ask what happens rather than what should happen" and "say in one sentence what you will do
+with the answer." Not applied yet.
+
+Provenance: Leslie, the question and the timing; Claude, the reading.
