@@ -1,0 +1,6 @@
+{
+  "version": "v1",
+  "source_authority": "User-approved course policy, 2026-09-18",
+  "sha256": "d0ae8bbe651ab92bb2b45b08abd1419d2bacf0e1848f7246d8a57079626cfbfb",
+  "text": "Reproduce our entire conversation as one message I can copy and paste.\n\nRules:\n— Include every turn, in order, from my very first message to this one.\n— Put “Me:” or “Dojo:” on its own line before each turn, with a blank line between turns.\n— Use my exact words and your exact words. Do not summarise, shorten, fix, or reorder anything, and do not add commentary before or after.\n— Keep lists and code blocks formatted the way they appeared.\n— If it will not fit in one message, stop at a turn boundary and end with the single word CONTINUED. I will reply “continue” and you pick up from exactly where you stopped.\n\nStart with one header line: CIS501 — Dojo transcript — [today’s date].\n"
+}

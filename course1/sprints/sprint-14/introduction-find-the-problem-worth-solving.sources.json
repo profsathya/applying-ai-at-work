@@ -1,9 +1,9 @@
 {
   "evidence_version": 1,
   "artifact_id": "course1-sprints-sprint-14-introduction-find-the-problem-worth-solving",
-  "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
-  "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
-  "body_sha256": "0393d49917ac346b59dda30640a8d420cd569c3568f73eb67504bea82aa6d4f8",
+  "packet_sha256": "cb1be55506b7eb7abbbf854e758571c0323f94b7257fbea776544634f7677877",
+  "map_sha256": "e27702ee58b00c208e435240ff73785c72cbb9140453947366e279742297f0c4",
+  "body_sha256": "df7f098efea7a375754a066a053ff1ce014656f8d322c3a325748824163b1bc3",
   "frontmatter_sha256": "15155a9a96fbfd76c453da8df47dad91988b119db59cc72d35c09ccb7413827f",
   "parts": [
     {
@@ -517,57 +517,12 @@
       "markdown": "## What to keep and submit"
     },
     {
-      "ref": "d-bb7cd50440dd3015:word/document.xml/54",
-      "view": "base",
-      "role": "learner",
-      "kind": "source",
-      "source_name": "Sprint-1-cut-ready-v5.4.docx",
-      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
-      "block": {
-        "id": "d-bb7cd50440dd3015:word/document.xml/54",
-        "kind": "paragraph",
-        "location": "word/document.xml/54",
-        "style": "ListParagraph",
-        "heading_level": null,
-        "segments": [
-          {
-            "text": "Brainstorm your list, Get underneath, Dojo Lab: own your progress, 0 points.",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": true,
-              "italic": false
-            },
-            "comment_ids": []
-          },
-          {
-            "text": " Submit to record completion, or continue without submitting.",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          }
-        ],
-        "flags": [],
-        "comment_ids": [],
-        "list": {
-          "format": "bullet",
-          "start": 1,
-          "definition_xml": "<ns0:lvl xmlns:ns0=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:ns1=\"http://schemas.microsoft.com/office/word/2012/wordml\" ns0:ilvl=\"0\" ns1:tentative=\"1\"><ns0:start ns0:val=\"1\" /><ns0:numFmt ns0:val=\"bullet\" /><ns0:lvlText ns0:val=\"•\" /><ns0:lvlJc ns0:val=\"left\" /><ns0:pPr><ns0:ind ns0:left=\"720\" ns0:hanging=\"360\" /></ns0:pPr></ns0:lvl>",
-          "num_id": "3",
-          "level": 0,
-          "ordinal": 9
-        },
-        "text": {
-          "base": "Brainstorm your list, Get underneath, Dojo Lab: own your progress, 0 points. Submit to record completion, or continue without submitting.",
-          "proposed": "Brainstorm your list, Get underneath, Dojo Lab: own your progress, 0 points. Submit to record completion, or continue without submitting."
-        }
-      },
-      "block_sha256": "5342ca4ab2a02fb10735e13115c5853d38b6f874def5c7683806a146e4283a2f",
-      "markdown": "- **Brainstorm your list, Get underneath, Dojo Lab: own your progress, 0 points.** Submit to record completion, or continue without submitting."
+      "kind": "new",
+      "markdown": "- **Brainstorm your list, Get underneath, Dojo Lab: own your progress, 0 points.** Submit each activity to record completion. These activities carry 0 points, but Canvas requires a submission to complete the module.",
+      "reason": "Correct optional-submission language to match the verified must_submit completion requirement.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/54"
+      ]
     },
     {
       "ref": "d-bb7cd50440dd3015:word/document.xml/55",
@@ -1112,7 +1067,8 @@
     "Apply the later 16 September human design ruling in course1/design/sprint-1-decisions.md and sprint-2-outline.md: defer Problem Frame Part 3 and its response task to Sprint 2. Source blocks 273 through 279 and task block 283 are deliberately excluded from Sprint 1; blocks 280 through 282 remain configuration evidence for the two retained response tasks.",
     "Keep Problem Frame at 50 points after moving Part 3, as directed by the latest design ruling.",
     "Render each More help passage inline as a quoted aside because the current artifact schema has no authored disclosure field.",
-    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab."
+    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab.",
+    "2026-09-18 audit reconciliation corrects must_submit language and introduces the approved transcript-only contract without changing artifact or Canvas identity."
   ],
   "title_source": {
     "ref": "d-bb7cd50440dd3015:word/document.xml/32",

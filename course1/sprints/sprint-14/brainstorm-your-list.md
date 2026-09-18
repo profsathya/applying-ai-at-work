@@ -16,8 +16,8 @@ guided_assignment:
   purpose: Build a broad list of situations from your own week before examining or
     ruling out any candidate.
   builds_on: Bring your own observations and the Candidate Log. Work without AI.
-  standing_instruction: Own your progress · 0 points. Submit to mark it complete,
-    or continue without submitting.
+  standing_instruction: Own your progress · 0 points. Submit to complete this module
+    requirement.
   tasks:
   - id: your-list
     kind: response

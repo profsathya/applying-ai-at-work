@@ -52,7 +52,7 @@ Spread week 1 across several days. The brainstorm's help asks you to watch your 
 
 ## What to keep and submit
 
-- **Brainstorm your list, Get underneath, Dojo Lab: own your progress, 0 points.** Submit to record completion, or continue without submitting.
+- **Brainstorm your list, Get underneath, Dojo Lab: own your progress, 0 points.** Submit each activity to record completion. These activities carry 0 points, but Canvas requires a submission to complete the module.
 
 - **Concept check: 5 points.** Your instructor reviews completion.
 

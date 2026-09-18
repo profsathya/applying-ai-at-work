@@ -1,10 +1,10 @@
 {
   "evidence_version": 1,
   "artifact_id": "course1-sprints-sprint-14-brainstorm-your-list",
-  "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
-  "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
+  "packet_sha256": "cb1be55506b7eb7abbbf854e758571c0323f94b7257fbea776544634f7677877",
+  "map_sha256": "e27702ee58b00c208e435240ff73785c72cbb9140453947366e279742297f0c4",
   "body_sha256": "ce50a308b625ca934536ecd5ccf65bc7146730c08d77d2af46d4f4a0b2790fc6",
-  "frontmatter_sha256": "3a4995580e5c04a315234c54a7f3187b224ad5f134c28f40ab64c2b21fbec976",
+  "frontmatter_sha256": "d8adb393c02b1eb279af5767ebc2cdb96b7de590038ab66ea5aae367714a6db1",
   "parts": [
     {
       "ref": "d-bb7cd50440dd3015:word/document.xml/68",
@@ -743,7 +743,8 @@
   "metadata_decisions": [
     "Convert the source response task to a guided text-entry assignment.",
     "Use reading presentation because all teaching precedes a single response and the source includes several help asides.",
-    "Split the source criteria sentence into four scannable criteria without changing the evidence requested."
+    "Split the source criteria sentence into four scannable criteria without changing the evidence requested.",
+    "2026-09-18 audit reconciliation corrects the standing instruction to match the existing must_submit completion requirement."
   ],
   "source_roles": {
     "d-bb7cd50440dd3015": {
@@ -766,7 +767,8 @@
     "Apply the later 16 September human design ruling in course1/design/sprint-1-decisions.md and sprint-2-outline.md: defer Problem Frame Part 3 and its response task to Sprint 2. Source blocks 273 through 279 and task block 283 are deliberately excluded from Sprint 1; blocks 280 through 282 remain configuration evidence for the two retained response tasks.",
     "Keep Problem Frame at 50 points after moving Part 3, as directed by the latest design ruling.",
     "Render each More help passage inline as a quoted aside because the current artifact schema has no authored disclosure field.",
-    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab."
+    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab.",
+    "2026-09-18 audit reconciliation corrects must_submit language and introduces the approved transcript-only contract without changing artifact or Canvas identity."
   ],
   "title_source": {
     "ref": "d-bb7cd50440dd3015:word/document.xml/68",

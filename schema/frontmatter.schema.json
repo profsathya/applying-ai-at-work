@@ -218,6 +218,20 @@
       },
       "additionalProperties": false
     },
+    "dojo_submission": {
+      "type": "object",
+      "required": ["mode", "prompt_version"],
+      "properties": {
+        "mode": {
+          "const": "transcript"
+        },
+        "prompt_version": {
+          "type": "string",
+          "pattern": "^v[1-9][0-9]*$"
+        }
+      },
+      "additionalProperties": false
+    },
     "ai_activity": {
       "type": "object",
       "required": ["activity_id", "questions"],
@@ -309,5 +323,29 @@
       }
     }
   },
+  "allOf": [
+    {
+      "if": {
+        "required": ["dojo_submission"]
+      },
+      "then": {
+        "required": ["guided_assignment", "delivery_mode", "completion_requirement", "submission_type"],
+        "properties": {
+          "type": {"const": "assignment"},
+          "submission_type": {"const": "text_entry"},
+          "delivery_mode": {"const": "guided_assignment"},
+          "completion_requirement": {"const": "must_submit"},
+          "guided_assignment": {
+            "properties": {
+              "tasks": {
+                "minItems": 1,
+                "maxItems": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
   "additionalProperties": false
 }

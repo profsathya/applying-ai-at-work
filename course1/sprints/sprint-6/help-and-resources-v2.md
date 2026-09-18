@@ -40,7 +40,9 @@ Sprint 1 guided activities save drafts in the browser you use. Keep a copy of im
 
 ## Use AI tools when an activity introduces them
 
-> The available first half of Sprint 1 is completed **without AI**. Use [Set up your AI Dojo](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html) to prepare your coach. When a later activity invites AI use, return to your project or Gem and supply that activity's directions. Keep the activity page available so you can return to the prompts and submission instructions.
+Use [Set up your AI Dojo](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html) to prepare your coach.
+
+> In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames **without AI**. Use the Dojo when the Dojo Lab introduces it. Keep the activity page available so you can return to its prompts and submission instructions.
 
 ## Download a JSON file only when requested
 

@@ -115,6 +115,13 @@ def validate_guided_assignment(label: object, payload: dict, body: str | None = 
         errors.append(f"{label}: page_presentation requires a page or discussion")
     mode = payload.get("delivery_mode")
     config = payload.get("guided_assignment")
+    dojo = payload.get('dojo_submission')
+    canonical_dojo = bool(payload.get('publish')) and (
+        str(payload.get('slug', '')).startswith('dojo-lab-')
+        or str(payload.get('title', '')).startswith('Dojo Lab:')
+    )
+    if canonical_dojo and not isinstance(dojo, dict):
+        errors.append(f'{label}: published canonical Dojo assignments require dojo_submission')
     if mode != "guided_assignment":
         return errors + ([f"{label}: guided_assignment requires its delivery mode"] if config is not None else [])
     if payload.get("type") != "assignment" or payload.get("submission_type") != "text_entry":
@@ -123,6 +130,22 @@ def validate_guided_assignment(label: object, payload: dict, body: str | None = 
         return errors + [f"{label}: guided_assignment requires configuration"]
     if payload.get("questions") or payload.get("ai_activity"):
         errors.append(f"{label}: guided_assignment cannot include native quiz or ai_activity questions")
+    if isinstance(dojo, dict):
+        from canvas_sync.guided_assignment import DOJO_TRANSCRIPT_TASK_ID, DOJO_TRANSCRIPT_TASK_PROMPT, load_dojo_transcript_prompt
+        if (payload.get('type') != 'assignment' or payload.get('submission_type') != 'text_entry'
+                or payload.get('completion_requirement') != 'must_submit' or mode != 'guided_assignment'):
+            errors.append(f'{label}: dojo_submission requires assignment, text_entry, must_submit, and guided_assignment')
+        tasks = config.get('tasks', [])
+        valid_task = (isinstance(tasks, list) and len(tasks) == 1 and isinstance(tasks[0], dict)
+                      and tasks[0].get('id') == DOJO_TRANSCRIPT_TASK_ID
+                      and tasks[0].get('kind', 'response') == 'response'
+                      and tasks[0].get('prompt') == DOJO_TRANSCRIPT_TASK_PROMPT)
+        if not valid_task:
+            errors.append(f'{label}: dojo_submission requires exactly one canonical dojo-transcript response task')
+        try:
+            load_dojo_transcript_prompt(dojo.get('prompt_version'))
+        except ValueError as exc:
+            errors.append(f'{label}: {exc}')
     ids = []
     for task in config.get("tasks", []) if isinstance(config.get("tasks"), list) else []:
         if not isinstance(task, dict):

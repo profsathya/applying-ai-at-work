@@ -261,7 +261,7 @@ modules:
       - "Plan 4-6 hours of weekly work within the recommended ten-week schedule."
       - "Set up an AI coach and check that it supports your thinking while leaving decisions with you."
       - "Find submission guidance and contact your instructor when you need help."
-    prereq: "Start here before Sprint 1. Follow six pages and one discussion in order; the Introduction Post is your only submission. The first half of Sprint 1 is completed without AI."
+    prereq: "Start here before Sprint 1. Follow six pages and one discussion in order; the Introduction Post is your only Sprint 0 submission. In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames without AI; use AI when the Dojo Lab introduces it."
     groups:
       - label: "Read these in order"
         items:
@@ -355,7 +355,7 @@ modules:
         items:
           - slug: "dojo-lab-design-the-learning-path-v3"
             nav_meta: "20 points"
-            meta: "Assignment - sequence the learning with the Dojo and design the two checks"
+            meta: "Assignment - sequence the learning with the Dojo and design the two checks; 20 points, submit the complete Dojo transcript as the sole evidence"
           - slug: "learn-and-check-v3"
             nav_meta: "50 points"
             meta: "Assignment - run the path and check two claims against something that is not AI"
@@ -456,10 +456,10 @@ modules:
             meta: "Page - learn the two-week route, point structure, AI boundaries, and how to use the Candidate Log"
           - slug: "brainstorm-your-list"
             nav_meta: "Practice · Own your progress"
-            meta: "Guided assignment - build a broad list from your own week without AI; 0 points, submission optional for progress"
+            meta: "Guided assignment - build a broad list from your own week without AI; 0 points, submission required for module completion"
           - slug: "get-underneath-three-to-five"
             nav_meta: "Practice · Own your progress"
-            meta: "Guided assignment - describe three to five situations, their current handling, costs, and gaps without AI; 0 points, submission optional for progress"
+            meta: "Guided assignment - describe three to five situations, their current handling, costs, and gaps without AI; 0 points, submission required for module completion"
           - slug: "the-problem-frame"
             nav_meta: "Read"
             meta: "Page - learn the seven-part problem frame through two worked examples"
@@ -475,7 +475,7 @@ modules:
         items:
           - slug: "dojo-lab-test-widen-choose"
             nav_meta: "Practice · Own your progress"
-            meta: "Guided assignment - use AI to test and widen every frame, then choose one with your own judgment; 0 points, submission optional for progress"
+            meta: "Guided assignment - use AI to test and widen every frame, then choose one with your own judgment; 0 points, submit the complete Dojo transcript to complete the module"
           - slug: "problem-frame"
             nav_meta: "50 points"
             meta: "Guided assignment - submit the chosen seven-part Problem Frame and explain what changed, what moved your judgment, and what you rejected; 50 points"
@@ -509,7 +509,7 @@ modules:
             meta: "Assignment - profile four stakeholders without AI, mark each field confirmed or inferred, name what you are guessing, and choose who to talk to first; 35 points"
           - slug: "dojo-lab-test-widen-choose-v3"
             nav_meta: "Practice · Own your progress"
-            meta: "Guided assignment - use your own AI chat to test and widen your map, polish your questions, and confirm your first contact; 0 points, submission optional for progress"
+            meta: "Guided assignment - use your own AI chat to test and widen your map, polish your questions, and confirm your first contact; 0 points, submit the complete Dojo transcript to complete the module"
       - label: "Sprint Week 2: Validate and revise"
         items:
           - slug: "stakeholder-conversation-v3"

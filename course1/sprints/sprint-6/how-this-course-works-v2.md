@@ -30,9 +30,9 @@ Each sprint develops your thinking and contributes evidence to the final integra
 
 ### 1. Find the problem worth solving · Weeks 1-2
 
-Use observations from work or life to compare candidate problems and explain which is worth investigating. Keep your table and your **Test and commit** answers. The planned later work develops a **Goal Plan and Problem Frame**.
+Use observations from work or life to compare candidate problems, write draft problem frames, use AI to test and widen them, and choose one problem worth investigating. Keep one Candidate Log across the sprint and carry your chosen **Problem Frame** into Sprint 2.
 
-**Available now:** the first half of Sprint 1, through Test and commit. Work without AI in this half. The later Dojo activity, Goal Plan and Problem Frame, and reflection are not available yet.
+**Available now:** the complete two-week Sprint 1 sequence. Complete Brainstorm your list, Get underneath three to five, and First frames without AI. Use AI only when the Dojo Lab introduces it, then submit your Problem Frame and reflection.
 
 ### 2. Direct AI deliberately · Weeks 3-4
 

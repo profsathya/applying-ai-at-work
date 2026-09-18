@@ -5,15 +5,47 @@ Canvas still receives ordinary text entry. No automatic grading or backend provi
 from __future__ import annotations
 
 import html
+import hashlib
 import json
 import re
 from pathlib import Path
 
 ASSETS = Path(__file__).parent / 'assets'
+DOJO_TRANSCRIPT_TASK_ID = 'dojo-transcript'
+DOJO_TRANSCRIPT_TASK_PROMPT = 'Paste the complete Dojo transcript, including every CONTINUED chunk, in order.'
+DOJO_TRANSCRIPT_SOURCE_AUTHORITY = 'User-approved course policy, 2026-09-18'
+DOJO_PRIVACY_NOTICE = ('Before you begin, replace names and remove confidential workplace, client, education, patient, '
+                       'financial, or personal details. Use role labels and approximate details when the exact detail is '
+                       'not needed. Do this before you send anything to the AI. Do not edit the transcript later; it must '
+                       'preserve the exact words and order of the conversation.')
+
+
+def load_dojo_transcript_prompt(version: str) -> str:
+    """Load an approved transcript request and fail closed on unknown or altered versions."""
+    if not isinstance(version, str) or not re.fullmatch(r'v[1-9][0-9]*', version):
+        raise ValueError(f'Unknown Dojo transcript prompt version: {version!r}')
+    path = ASSETS / f'dojo-transcript-prompt-{version}.json'
+    if not path.exists():
+        raise ValueError(f'Unknown Dojo transcript prompt version: {version!r}')
+    try:
+        record = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ValueError(f'Invalid Dojo transcript prompt registry for {version!r}') from exc
+    text = record.get('text')
+    digest = record.get('sha256')
+    if (record.get('version') != version or record.get('source_authority') != DOJO_TRANSCRIPT_SOURCE_AUTHORITY
+            or not isinstance(text, str) or not isinstance(digest, str)):
+        raise ValueError(f'Invalid Dojo transcript prompt registry for {version!r}')
+    actual = hashlib.sha256(text.encode('utf-8')).hexdigest()
+    if actual != digest:
+        raise ValueError(f'Dojo transcript prompt digest mismatch for {version!r}')
+    return text
 
 
 def render_guided_body(frontmatter: dict, instructions_html: str, *, task_sections: dict[str, str] | None = None, canvas_url: str | None = None) -> str:
     config = frontmatter['guided_assignment']
+    if frontmatter.get('dojo_submission', {}).get('mode') == 'transcript':
+        return render_dojo_transcript_body(frontmatter, instructions_html, canvas_url)
     if config.get('presentation') == 'reading':
         return render_reading_body(frontmatter, instructions_html, task_sections or {}, canvas_url)
     if config.get('presentation') == 'compact':
@@ -67,6 +99,66 @@ def render_guided_body(frontmatter: dict, instructions_html: str, *, task_sectio
 <div id="clear-confirmation" hidden><p>Clear only this assignment's saved draft in this browser? Copy any work you want to keep first.</p><button type="button" id="confirm-clear">Clear saved responses</button><button type="button" id="cancel-clear">Keep my responses</button></div>
 <p id="copy-status" role="status"></p>
 <label for="copy-output">The text to copy</label><textarea id="copy-output" readonly rows="8"></textarea>
+<script type="application/json" id="guided-config">{serialized}</script>
+<script>{(ASSETS / 'guided-assignment.js').read_text()}</script>
+</div>'''
+
+
+def render_dojo_transcript_body(frontmatter: dict, instructions_html: str, canvas_url: str | None) -> str:
+    """Render one uncapped transcript field as the sole Canvas evidence for a Dojo assignment."""
+    config = frontmatter['guided_assignment']
+    task = config['tasks'][0]
+    version = frontmatter['dojo_submission']['prompt_version']
+    transcript_request = load_dojo_transcript_prompt(version)
+    payload = {
+        'artifactId': frontmatter['artifact_id'],
+        'title': frontmatter['title'],
+        'module': frontmatter['module'],
+        **config,
+        'dojoSubmission': frontmatter['dojo_submission'],
+        'transcriptRequest': transcript_request,
+    }
+    serialized = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+    criteria = ''.join(f'<li>{html.escape(item)}</li>' for item in task['criteria'])
+    link = (f'<a href="{html.escape(canvas_url, quote=True)}" target="_blank" rel="noopener">Open the Canvas assignment</a>'
+            if canvas_url else '')
+    return f'''<style>{(ASSETS / 'guided-assignment.css').read_text()}
+{(ASSETS / 'guided-reading.css').read_text()}</style>
+<div class="guided-workspace guided-reading dojo-transcript" id="guided-workspace">
+<p class="dojo-privacy">{html.escape(DOJO_PRIVACY_NOTICE)}</p>
+{instructions_html}
+<section class="dojo-transcript-submit">
+<h2>Submit the complete transcript</h2>
+<p>The complete transcript is the only evidence you submit for this Dojo Lab.</p>
+<ol>
+<li>Before requesting the transcript, send one final <code>Me:</code> turn that states the decisions this activity asks you to make, in your own words.</li>
+<li>Paste the transcript request below into the same conversation exactly as written.</li>
+</ol>
+<label for="transcript-request-text">Transcript request</label>
+<textarea id="transcript-request-text" readonly rows="18">{html.escape(transcript_request)}</textarea>
+<button type="button" id="copy-transcript-request">Copy transcript request</button>
+<ol start="3">
+<li>If the response ends with <code>CONTINUED</code>, reply <code>continue</code>. Repeat until the conversation is complete.</li>
+<li>Paste every chunk into the one Canvas text-entry field in order. Keep any <code>CONTINUED</code> markers. Do not submit a summary, link, separate answer, or edited excerpt.</li>
+<li>Check that the transcript begins with the required header and includes every turn from your first message through the transcript request, then submit it in Canvas.</li>
+</ol>
+<div class="response-task" data-task="{html.escape(task['id'], quote=True)}">
+<label for="answer-{html.escape(task['id'], quote=True)}">{html.escape(task['prompt'])}</label>
+<textarea id="answer-{html.escape(task['id'], quote=True)}" data-answer="{html.escape(task['id'], quote=True)}" rows="20" aria-describedby="save-status"></textarea>
+<details><summary>Self-check</summary><ul>{criteria}</ul></details>
+</div>
+<p id="save-status" role="status">Drafts save in this browser. Keep your own copy.</p>
+<p>{html.escape(config.get('standing_instruction', ''))}</p>
+<button type="button" id="copy-answers">Copy transcript</button>
+<p>Paste the complete transcript into Canvas to submit. Copying or saving here does not submit your work. {link}</p>
+<p id="copy-status" role="status"></p>
+<details id="more-options"><summary>More options</summary>
+<button type="button" id="clear-draft">Clear this browser draft</button>
+<div id="clear-confirmation" hidden><p>Clear this saved draft? Keep a copy first.</p><button type="button" id="confirm-clear">Clear saved responses</button><button type="button" id="cancel-clear">Keep my responses</button></div>
+<label for="copy-output">Select and copy manually</label><textarea id="copy-output" readonly rows="10"></textarea>
+<p id="completion-status"></p>
+</details>
+</section>
 <script type="application/json" id="guided-config">{serialized}</script>
 <script>{(ASSETS / 'guided-assignment.js').read_text()}</script>
 </div>'''

@@ -12,48 +12,26 @@ submission_type: text_entry
 delivery_mode: guided_assignment
 completion_requirement: must_submit
 guided_assignment:
-  version: '1.0'
+  version: '2.0'
   purpose: Use AI to test and widen your draft frames, then choose one problem using
     your own workplace judgment.
   builds_on: Bring all draft frames from First frames and keep the Candidate Log open.
-  standing_instruction: Own your progress · 0 points. Submit to mark it complete,
-    or continue without submitting.
+  standing_instruction: Own your progress · 0 points. Submit to complete this module
+    requirement.
   tasks:
-  - id: challenges
+  - id: dojo-transcript
     kind: response
-    prompt: 'For each frame: the findings the test raised, and what you changed or
-      did not change in response.'
+    prompt: Paste the complete Dojo transcript, including every CONTINUED chunk, in
+      order.
     criteria:
-    - Include every frame.
-    - Name what you accepted or rejected and why for each response.
-    - Include at least one specific "no, I have seen this directly" and at least one
-      specific "fair, I do not know that."
-    - Do not submit bare agreement.
-    instruction_section: 1. Test each frame
-  - id: framings
-    kind: response
-    prompt: For the frame you are leaning toward, the three other framings, one line
-      each, and which one, if any, changed your frame.
-    criteria:
-    - State three framings in your own words.
-    - Make a decision about each framing.
-    - Reject at least one framing with a reason.
-    instruction_section: 2. Widen each frame
-  - id: your-choice
-    kind: response
-    prompt: Your choice, the three size questions answered for it, why this one, why
-      not the others, why you, and your runner-up.
-    criteria:
-    - Answer the three size questions from the frame's own parts.
-    - Give a reason for each alternative.
-    - Include a specific why-you line.
-    - Name a runner-up or explain why none is workable.
-    - If the search was unsuccessful, report what you tried and a next step instead
-      of forcing a choice.
-    instruction_section: 3. Choose
-  presentation: reading
+    - Include the required header and every turn in the conversation, in order.
+    - Keep every CONTINUED marker and include all continuation chunks.
+    - Include a final Me turn that states the activity decisions in your own words.
 publish: true
 source_provenance: dojo-lab-test-widen-choose.sources.json
+dojo_submission:
+  mode: transcript
+  prompt_version: v1
 ---
 
 # Dojo Lab: test, widen, choose
@@ -98,7 +76,7 @@ Three questions decide whether a frame is the right size, and they are answerabl
 
 A frame that fails the first is too big, so pick one instance you have seen. A frame that fails the second or third is too small, or too private, so ask what it is an instance of, and go up.
 
-Then choose the one that passes and that you want to stay with. Write your reasoning down, because the Problem Frame page asks for it. Its Part 2 reuses why you chose this one and what testing changed, and your runner-up is where you go if the choice does not survive Sprint 2. The box below collects it.
+Then choose the one that passes and that you want to stay with. Write your reasoning down, because the Problem Frame page asks for it. Its Part 2 reuses why you chose this one and what testing changed, and your runner-up is where you go if the choice does not survive Sprint 2. The final `Me:` turn below collects it.
 
 - **Why this one:** what in the frame and the testing makes it workable.
 
@@ -113,3 +91,14 @@ If nothing holds up, or the only survivor does not matter to you, go back to you
 **Illustrative choice**
 
 Handovers and the garden plot both held up under testing. I chose handovers because I work on them weekly and the four managers and the account lead sit near me. The garden plot depends on Ramona, whom I see once a month, so it is my runner-up.
+
+## State your decisions before requesting the transcript
+
+Send one final `Me:` turn in the same Dojo conversation. In your own words, state:
+
+- for every draft frame, the test findings and what you changed or rejected;
+- one direct-observation pushback and one unknown you accepted;
+- the three alternative framings and whether any changed your frame; and
+- your chosen problem, your answers to the three size questions, why this one, why not the others, why you, and your runner-up or recovery plan.
+
+After this final turn, use the transcript request and submission steps below.

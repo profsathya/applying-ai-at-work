@@ -36,7 +36,7 @@ Find **Canvas Inbox** in the course navigation so you know where to contact your
 
 ## 4. Set up your AI coach
 
-Continue to [Set up your AI Dojo](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html). Configure one tool and try its short coaching check. There is no setup submission, and the first half of Sprint 1 remains work you do without AI.
+Continue to [Set up your AI Dojo](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html). Configure one tool and try its short coaching check. There is no setup submission. In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames without AI; use the Dojo only when the Dojo Lab introduces it.
 
 ## 5. Post your introduction
 

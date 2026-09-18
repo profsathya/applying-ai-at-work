@@ -9,8 +9,30 @@ module: 'Sprint 4: Close The Learning Gap (V2)'
 position: 6
 points: 20
 submission_type: text_entry
+delivery_mode: guided_assignment
+completion_requirement: must_submit
 publish: true
 learner_labels: true
+dojo_submission:
+  mode: transcript
+  prompt_version: v1
+guided_assignment:
+  version: '1.0'
+  purpose: Sequence a focused learning path, pressure-test two checks, and make the
+    final decisions yourself.
+  builds_on: Bring your committed gap, definition of closed, AI Exchange changes,
+    and two unverified claims.
+  standing_instruction: 20 points. Submit the complete Dojo transcript as the sole
+    evidence for this assignment.
+  tasks:
+  - id: dojo-transcript
+    kind: response
+    prompt: Paste the complete Dojo transcript, including every CONTINUED chunk, in
+      order.
+    criteria:
+    - Include the required header and every turn in the conversation, in order.
+    - Keep every CONTINUED marker and include all continuation chunks.
+    - Include a final Me turn that states the activity decisions in your own words.
 ---
 
 # Dojo Lab: Design the Learning Path
@@ -70,7 +92,9 @@ AI explanation with another AI explanation?
 
 The Dojo will suggest more than you should take. Decide what to keep, what to reject, and what you are still unsure about. Rejecting a good suggestion because it does not fit your two weeks is a legitimate call, as long as you say what it cost you. If the Dojo agreed with everything you brought it, you did not ask it enough.
 
-## What to Submit
+## State your decisions before requesting the transcript
+
+Send one final `Me:` turn in the same Dojo conversation. In your own words, include all three parts below.
 
 ### 1. The learning path
 
@@ -104,6 +128,8 @@ A check is weak if it is circular (it traces back to the same source as the clai
 ### 3. Kept, rejected, still open
 
 What you took from the Dojo, what you turned down and what turning it down cost you, and what you are still unsure about.
+
+After this final turn, use the transcript request and submission steps below. The complete transcript is the sole evidence for this assignment.
 
 ## Start Any Request Today
 

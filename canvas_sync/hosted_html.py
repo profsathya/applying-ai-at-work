@@ -1085,6 +1085,7 @@ def validate_homepage_metadata(course_dir: Path) -> list[str]:
         return errors
 
     artifact_slugs: set[str] = set()
+    artifact_frontmatter: dict[str, dict] = {}
     artifact_sprints: set[int] = set()
     for md_path in sorted((course_dir / "sprints").glob("sprint-*/*.md")):
         try:
@@ -1100,6 +1101,7 @@ def validate_homepage_metadata(course_dir: Path) -> list[str]:
         if slug in artifact_slugs:
             errors.append(f"{md_path}: duplicate artifact slug {slug!r}")
         artifact_slugs.add(slug)
+        artifact_frontmatter[slug] = fm
         if type(fm.get("sprint")) is int:
             artifact_sprints.add(fm["sprint"])
 
@@ -1148,6 +1150,12 @@ def validate_homepage_metadata(course_dir: Path) -> list[str]:
                             f"{item_label} has unsupported icon {icon!r}; "
                             f"use one of {', '.join(sorted(HOMEPAGE_ICON_KEYS))}"
                         )
+                if isinstance(entry, dict) and isinstance(entry.get('meta'), str):
+                    fm = artifact_frontmatter.get(slug, {})
+                    meta = entry['meta'].lower()
+                    if (fm.get('publish') is True and fm.get('completion_requirement') == 'must_submit'
+                            and ('submission optional' in meta or 'continue without submitting' in meta)):
+                        errors.append(f"{item_label} describes a required submission as optional")
 
     errors.extend(f"{path}: {error}" for error in validate_schedule(payload, artifact_slugs, artifact_sprints))
     return errors

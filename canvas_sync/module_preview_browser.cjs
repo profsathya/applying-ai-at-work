@@ -93,10 +93,24 @@ async function run() {
           if (current.tasks.some(t => t.kind === 'choice')) recordCheck('correct/incorrect feedback and radio arrow keys');
           await page.locator('#copy-answers').focus();
           await page.keyboard.press('Enter');
-          await page.waitForFunction(() => document.getElementById('copy-status').textContent.includes('Copied'));
-          const copied = await page.evaluate(() => navigator.clipboard.readText());
+          await page.waitForFunction(() => /Copied|Select and copy/.test(document.getElementById('copy-status').textContent));
+          const copied = (await page.locator('#copy-status').textContent()).includes('Copied')
+            ? await page.evaluate(() => navigator.clipboard.readText())
+            : await page.locator('#copy-output').inputValue();
           assert(copied.trim());
           for (const task of current.tasks.filter(t => t.kind === 'response')) assert(copied.includes(`Current QA: ${task.id}`));
+          if (current.dojoSubmission?.mode === 'transcript') {
+            assert.equal(copied, 'Current QA: dojo-transcript');
+            assert(!copied.includes(current.title));
+            assert(!copied.includes(current.tasks[0].prompt));
+            await page.locator('#copy-transcript-request').click();
+            await page.waitForFunction(() => /Transcript request copied|Select and copy the transcript request/.test(document.getElementById('copy-status').textContent));
+            const requestCopied = (await page.locator('#copy-status').textContent()).includes('copied')
+              ? await page.evaluate(() => navigator.clipboard.readText())
+              : await page.locator('#transcript-request-text').inputValue();
+            assert.equal(requestCopied, current.transcriptRequest);
+            recordCheck('transcript-only copy and exact transcript-request copy');
+          }
           await page.evaluate(() => { navigator.clipboard.writeText = () => Promise.reject(new Error('QA clipboard denial')); });
           await page.locator('#copy-answers').click();
           await page.waitForFunction(() => document.activeElement.id === 'copy-output');

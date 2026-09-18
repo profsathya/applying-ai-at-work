@@ -2,8 +2,8 @@
   "evidence_version": 1,
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
-  "map_sha256": "6f63926ccabc0997d147041f102475b5770c172ff78f6a6a319dba92f7534249",
-  "body_sha256": "ed1670dab6fb98dfe6fa80ab9b6a5f55021f09f3853d0722cfec44b3a8ee1ffc",
+  "map_sha256": "48b9395e7076ae24827273853f18f1e718d3376750d8b81f284c5f17a63b5ba8",
+  "body_sha256": "6948a9bae2c0369c21273a434f9f171bf46d6b5ed56f8b4367b4a9ee1eb3b61e",
   "frontmatter_sha256": "c1e137fd927aba742410388633e9f380f95585a157529ab1a20918943ededb2b",
   "parts": [
     {
@@ -49,8 +49,8 @@
     },
     {
       "kind": "new",
-      "markdown": "### 1. Find the problem worth solving · Weeks 1-2\n\nUse observations from work or life to compare candidate problems and explain which is worth investigating. Keep your table and your **Test and commit** answers. The planned later work develops a **Goal Plan and Problem Frame**.\n\n**Available now:** the first half of Sprint 1, through Test and commit. Work without AI in this half. The later Dojo activity, Goal Plan and Problem Frame, and reflection are not available yet.",
-      "reason": "Align the Sprint 1 name, actual first-half deliverables, AI timing, and availability with the verified latest Sprint 1 Introduction, rather than promising the planned second half.",
+      "markdown": "### 1. Find the problem worth solving · Weeks 1-2\n\nUse observations from work or life to compare candidate problems, write draft problem frames, use AI to test and widen them, and choose one problem worth investigating. Keep one Candidate Log across the sprint and carry your chosen **Problem Frame** into Sprint 2.\n\n**Available now:** the complete two-week Sprint 1 sequence. Complete Brainstorm your list, Get underneath three to five, and First frames without AI. Use AI only when the Dojo Lab introduces it, then submit your Problem Frame and reflection.",
+      "reason": "Apply the user-authorized 2026-09-18 reconciliation to current Sprint 1 scope and artifact names.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.xs6l5nx7b5hl/body/14",
         "d-a5a526bfcb8ecc4c:tab/t.xs6l5nx7b5hl/body/31"
@@ -157,7 +157,8 @@
     "Preserve meaningful exact source selections; all reorganized prose, added transitions, headings, links, and presentation are explicitly labeled adaptations with based_on references.",
     "Current Canvas wrappers/settings show no target drift. Retain existing source submission and Inbox fixes rather than restoring outdated Google Doc placeholders.",
     "2026-09-15 visual follow-up: replace the reused Sprint 1 image with a new original illustration in the same art style; add selective blue callouts on Welcome, How This Course Works, Your First Week, and Help. Existing Start Here goals accent remains the reference. No instructional or assessment redesign.",
-    "User authorized live publication, five must_view pages and sequential item progression; preserve must_contribute discussion and existing identities. Clarify early help guidance to avoid a locked later-page dependency."
+    "User authorized live publication, five must_view pages and sequential item progression; preserve must_contribute discussion and existing identities. Clarify early help guidance to avoid a locked later-page dependency.",
+    "2026-09-18 audit reconciliation updates obsolete Sprint 1 availability and AI-boundary language without changing artifact or Canvas identity."
   ],
   "title_source": {
     "ref": "d-a5a526bfcb8ecc4c:tab/t.xs6l5nx7b5hl/body/4",

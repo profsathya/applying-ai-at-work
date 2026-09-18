@@ -1,10 +1,10 @@
 {
   "evidence_version": 1,
   "artifact_id": "course1-sprints-sprint-14-dojo-lab-test-widen-choose",
-  "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
-  "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
-  "body_sha256": "51fce4a0ac07c39d4fe011756c396f4ee06e73b413eb59e393ce405751f60409",
-  "frontmatter_sha256": "5bf3feab782508eee1066d2e2c8b75cb035283d8b65fdcea72df28c3c753286d",
+  "packet_sha256": "cb1be55506b7eb7abbbf854e758571c0323f94b7257fbea776544634f7677877",
+  "map_sha256": "e27702ee58b00c208e435240ff73785c72cbb9140453947366e279742297f0c4",
+  "body_sha256": "75e87f54a7eaace93c152467cccc91ec17a98fdd7e79918d9c0c9a4289dffe22",
+  "frontmatter_sha256": "ff2e4421b09e77247656d59fe105164bb4a5d96b2bc4eafc9038c6149fb2158d",
   "parts": [
     {
       "ref": "d-bb7cd50440dd3015:word/document.xml/229",
@@ -806,39 +806,12 @@
       "markdown": "A frame that fails the first is too big, so pick one instance you have seen. A frame that fails the second or third is too small, or too private, so ask what it is an instance of, and go up."
     },
     {
-      "ref": "d-bb7cd50440dd3015:word/document.xml/253",
-      "view": "base",
-      "role": "learner",
-      "kind": "source",
-      "source_name": "Sprint-1-cut-ready-v5.4.docx",
-      "source_sha256": "bb7cd50440dd301553e1dd503313bf06c5b0760297039fb794762d13604d11fc",
-      "block": {
-        "id": "d-bb7cd50440dd3015:word/document.xml/253",
-        "kind": "paragraph",
-        "location": "word/document.xml/253",
-        "style": null,
-        "heading_level": null,
-        "segments": [
-          {
-            "text": "Then choose the one that passes and that you want to stay with. Write your reasoning down, because the Problem Frame page asks for it. Its Part 2 reuses why you chose this one and what testing changed, and your runner-up is where you go if the choice does not survive Sprint 2. The box below collects it.",
-            "changes": [],
-            "link": null,
-            "format": {
-              "bold": false,
-              "italic": false
-            },
-            "comment_ids": []
-          }
-        ],
-        "flags": [],
-        "comment_ids": [],
-        "text": {
-          "base": "Then choose the one that passes and that you want to stay with. Write your reasoning down, because the Problem Frame page asks for it. Its Part 2 reuses why you chose this one and what testing changed, and your runner-up is where you go if the choice does not survive Sprint 2. The box below collects it.",
-          "proposed": "Then choose the one that passes and that you want to stay with. Write your reasoning down, because the Problem Frame page asks for it. Its Part 2 reuses why you chose this one and what testing changed, and your runner-up is where you go if the choice does not survive Sprint 2. The box below collects it."
-        }
-      },
-      "block_sha256": "824f53565da576fbf62e214c0ce7d9afe6d656ac67238038477946ae60c40f4e",
-      "markdown": "Then choose the one that passes and that you want to stay with. Write your reasoning down, because the Problem Frame page asks for it. Its Part 2 reuses why you chose this one and what testing changed, and your runner-up is where you go if the choice does not survive Sprint 2. The box below collects it."
+      "kind": "new",
+      "markdown": "Then choose the one that passes and that you want to stay with. Write your reasoning down, because the Problem Frame page asks for it. Its Part 2 reuses why you chose this one and what testing changed, and your runner-up is where you go if the choice does not survive Sprint 2. The final `Me:` turn below collects it.",
+      "reason": "Align the source-authored collection cue with the approved transcript-only evidence contract.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/253"
+      ]
     },
     {
       "ref": "d-bb7cd50440dd3015:word/document.xml/254",
@@ -1156,12 +1129,23 @@
       },
       "block_sha256": "5282de9c85d21971190815268c31ff516d5a6feeb2a1502d692ca67ce8444f89",
       "markdown": "Handovers and the garden plot both held up under testing. I chose handovers because I work on them weekly and the four managers and the account lead sit near me. The garden plot depends on Ramona, whom I see once a month, so it is my runner-up."
+    },
+    {
+      "kind": "new",
+      "markdown": "## State your decisions before requesting the transcript\n\nSend one final `Me:` turn in the same Dojo conversation. In your own words, state:\n\n- for every draft frame, the test findings and what you changed or rejected;\n- one direct-observation pushback and one unknown you accepted;\n- the three alternative framings and whether any changed your frame; and\n- your chosen problem, your answers to the three size questions, why this one, why not the others, why you, and your runner-up or recovery plan.\n\nAfter this final turn, use the transcript request and submission steps below.",
+      "reason": "Add the activity-specific final judgment turn required by the user-approved transcript evidence contract.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/258",
+        "d-bb7cd50440dd3015:word/document.xml/259",
+        "d-bb7cd50440dd3015:word/document.xml/260"
+      ]
     }
   ],
   "metadata_decisions": [
     "Use the three source sections as instruction sections for their adjacent response tasks.",
     "Exclude the interim reviewer marker while retaining the tested any-chatbot prompts and the participant's responsibility for all revisions.",
-    "Split each source criteria sentence into scannable criteria without changing the requested evidence."
+    "Split each source criteria sentence into scannable criteria without changing the requested evidence.",
+    "2026-09-18 audit reconciliation makes the complete Dojo transcript the sole Canvas evidence and preserves all original teaching and prompts."
   ],
   "source_roles": {
     "d-bb7cd50440dd3015": {
@@ -1184,7 +1168,8 @@
     "Apply the later 16 September human design ruling in course1/design/sprint-1-decisions.md and sprint-2-outline.md: defer Problem Frame Part 3 and its response task to Sprint 2. Source blocks 273 through 279 and task block 283 are deliberately excluded from Sprint 1; blocks 280 through 282 remain configuration evidence for the two retained response tasks.",
     "Keep Problem Frame at 50 points after moving Part 3, as directed by the latest design ruling.",
     "Render each More help passage inline as a quoted aside because the current artifact schema has no authored disclosure field.",
-    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab."
+    "Correct the Introduction's no-AI count to include First frames, which explicitly requires independent work before the Dojo Lab.",
+    "2026-09-18 audit reconciliation corrects must_submit language and introduces the approved transcript-only contract without changing artifact or Canvas identity."
   ],
   "title_source": {
     "ref": "d-bb7cd50440dd3015:word/document.xml/229",

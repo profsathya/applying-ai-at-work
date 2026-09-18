@@ -13,27 +13,26 @@ delivery_mode: guided_assignment
 completion_requirement: must_submit
 learner_labels: true
 publish: true
+dojo_submission:
+  mode: transcript
+  prompt_version: v1
 guided_assignment:
-  version: '1.0'
-  presentation: reading
+  version: '2.0'
   purpose: Test and widen your stakeholder map with AI, then decide yourself what changes
     and who you talk to first.
   builds_on: Bring the Stakeholder Map you just submitted, and the AI chat you already
     use.
-  standing_instruction: Own your progress, 0 points. Submit to record completion, or
-    continue without submitting.
+  standing_instruction: Own your progress · 0 points. Submit to complete this module
+    requirement.
   tasks:
-  - id: what-changed-and-why
+  - id: dojo-transcript
     kind: response
-    prompt: What moved between your first map and this one, what moved it, and one
-      thing the AI suggested that you rejected.
+    prompt: Paste the complete Dojo transcript, including every CONTINUED chunk, in
+      order.
     criteria:
-    - Name what changed in the map, or a specific reason nothing needed to change.
-    - Name the argument or evidence that moved your judgment.
-    - Include one AI suggestion you rejected, with your reason.
-    - Write in your own words rather than the AI's.
-    - Say whether your first-choice stakeholder stayed the same or moved, and why.
-    instruction_section: What changed, and why
+    - Include the required header and every turn in the conversation, in order.
+    - Keep every CONTINUED marker and include all continuation chunks.
+    - Include a final Me turn that states the activity decisions in your own words.
 ---
 
 # Dojo Lab: test, widen, choose
@@ -128,12 +127,13 @@ Look again at the person you named as your first choice, and your backup. Does t
 
 Confirm or change it now, then go and make contact. The Stakeholder Conversation gives you three days before you follow up and five before you switch to your backup, so the sooner you send the ask, the more of this sprint you have left to act on what you hear.
 
-## What changed, and why
+## State your decisions before requesting the transcript
 
-Your instructor cannot see your AI session. This is where they see that you, not the AI, made the calls.
+Send one final `Me:` turn in the same Dojo conversation. In your own words, state:
 
-In one short paragraph, in your own words: what moved between your first map and this one, what argument or evidence moved it, and one thing the AI suggested that you rejected, and why.
+- what moved between your first map and this one, or why nothing moved;
+- the argument or evidence that moved your judgment;
+- one AI suggestion you rejected and why; and
+- whether your first-choice stakeholder stayed the same or changed, and why.
 
-A map that did not change is a legitimate result if you can say what you tested it against.
-
-Keep the paragraph whatever you decide about submitting. Paste it at the top of your stakeholder map, above your four profiles, and leave it there. It travels with the map into the Stakeholder Conversation, which is where your instructor reads it. The map itself travels with you too, and you will update it again after you have talked to a real person. Do not upload the map again here.
+A map that did not change is a legitimate result if you can say what you tested it against. After this final turn, use the transcript request and submission steps below.

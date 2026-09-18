@@ -17,8 +17,8 @@ guided_assignment:
     who bears its cost.
   builds_on: Bring Part A of your Candidate Log from Brainstorm your list. Work without
     AI.
-  standing_instruction: Own your progress · 0 points. Submit to mark it complete,
-    or continue without submitting.
+  standing_instruction: Own your progress · 0 points. Submit to complete this module
+    requirement.
   tasks:
   - id: your-table
     kind: response

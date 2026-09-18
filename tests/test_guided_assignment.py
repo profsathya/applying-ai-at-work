@@ -1,5 +1,8 @@
 from __future__ import annotations
 import json
+import hashlib
+import html
+import re
 import shutil
 import subprocess
 import tempfile
@@ -8,8 +11,10 @@ from pathlib import Path
 from unittest.mock import patch
 import yaml
 from canvas_sync import push
-from canvas_sync.schema import validate_artifact, validate_canvas_state, validate_manifest
-from canvas_sync.guided_assignment import render_guided_body
+from canvas_sync.schema import parse_frontmatter, validate_artifact, validate_canvas_state, validate_manifest
+from canvas_sync.guided_assignment import (DOJO_PRIVACY_NOTICE, DOJO_TRANSCRIPT_SOURCE_AUTHORITY,
+                                           DOJO_TRANSCRIPT_TASK_PROMPT,
+                                           load_dojo_transcript_prompt, render_guided_body)
 from canvas_sync.hosted_html import markdown_body_to_html, render_artifact_document
 from canvas_sync.instruction_sections import partition_instruction_sections
 from canvas_sync.maintenance_state import MaintenanceState
@@ -28,7 +33,98 @@ def frontmatter():
              'explanation': 'The gap compares what happens now with what could happen.'}]}}
 
 
+def dojo_frontmatter():
+    fm = frontmatter()
+    fm.update(title='Dojo Lab: decide', slug='dojo-lab-decide', publish=True,
+              completion_requirement='must_submit', dojo_submission={'mode': 'transcript', 'prompt_version': 'v1'})
+    fm['guided_assignment'] = {
+        'version': '2.0',
+        'standing_instruction': 'Submit the complete transcript.',
+        'tasks': [{'id': 'dojo-transcript', 'kind': 'response', 'prompt': DOJO_TRANSCRIPT_TASK_PROMPT,
+                   'criteria': ['Include every turn.', 'Keep every CONTINUED marker.']}],
+    }
+    return fm
+
+
 class GuidedAssignmentTests(unittest.TestCase):
+    def test_dojo_transcript_registry_render_and_canonical_artifacts(self):
+        prompt = load_dojo_transcript_prompt('v1')
+        self.assertEqual(hashlib.sha256(prompt.encode()).hexdigest(),
+                         'd0ae8bbe651ab92bb2b45b08abd1419d2bacf0e1848f7246d8a57079626cfbfb')
+        self.assertTrue(prompt.endswith('\n'))
+        registry_record = json.loads((ROOT / 'canvas_sync/assets/dojo-transcript-prompt-v1.json').read_text())
+        self.assertEqual(registry_record['source_authority'], DOJO_TRANSCRIPT_SOURCE_AUTHORITY)
+        with self.assertRaisesRegex(ValueError, 'Unknown'):
+            load_dojo_transcript_prompt('v99')
+        with tempfile.TemporaryDirectory() as tmp:
+            registry = Path(tmp) / 'dojo-transcript-prompt-v1.json'
+            registry.write_text(json.dumps({'version': 'v1', 'source_authority': DOJO_TRANSCRIPT_SOURCE_AUTHORITY,
+                                            'sha256': '0' * 64, 'text': prompt}))
+            with patch('canvas_sync.guided_assignment.ASSETS', Path(tmp)):
+                with self.assertRaisesRegex(ValueError, 'digest mismatch'):
+                    load_dojo_transcript_prompt('v1')
+
+        fm = dojo_frontmatter()
+        self.assertEqual(self.validate(fm), [])
+        rendered = render_guided_body(fm, '<p>First authored AI prompt.</p>')
+        self.assertLess(rendered.index(html.escape(DOJO_PRIVACY_NOTICE)), rendered.index('First authored AI prompt.'))
+        match = re.search(r'<textarea id="transcript-request-text"[^>]*>(.*?)</textarea>', rendered, re.S)
+        self.assertIsNotNone(match)
+        self.assertEqual(html.unescape(match.group(1)), prompt)
+        editable = [tag for tag in re.findall(r'<textarea\b[^>]*>', rendered) if 'readonly' not in tag]
+        self.assertEqual(len(editable), 1)
+        self.assertIn('data-answer="dojo-transcript"', editable[0])
+        self.assertNotIn('maxlength=', editable[0])
+        self.assertIn('The complete transcript is the only evidence you submit for this Dojo Lab.', rendered)
+        self.assertIn('Copy transcript request', rendered)
+        self.assertIn('Copy transcript', rendered)
+        self.assertIn('maxlength="20000"', render_guided_body(frontmatter(), '<p>Instructions.</p>'))
+
+        for relative in (
+            'course1/sprints/sprint-14/dojo-lab-test-widen-choose.md',
+            'course1/sprints/sprint-15/dojo-lab-test-widen-choose-v3.md',
+            'course1/sprints/sprint-8/dojo-lab-design-the-learning-path-v3.md',
+        ):
+            with self.subTest(relative=relative):
+                path = ROOT / relative
+                self.assertEqual(validate_artifact(path), [])
+                actual_fm, body = parse_frontmatter(path)
+                actual = render_guided_body(actual_fm, markdown_body_to_html(body))
+                self.assertEqual(actual.count('data-answer="dojo-transcript"'), 1)
+                self.assertEqual(actual.count('id="copy-answers"'), 1)
+                request = re.search(r'<textarea id="transcript-request-text"[^>]*>(.*?)</textarea>', actual, re.S)
+                self.assertEqual(html.unescape(request.group(1)), prompt)
+                editable = [tag for tag in re.findall(r'<textarea\b[^>]*>', actual) if 'readonly' not in tag]
+                self.assertEqual(len(editable), 1)
+                self.assertNotIn('maxlength=', editable[0])
+
+    def test_dojo_transcript_semantic_mutations_fail_closed(self):
+        cases = {
+            'wrong type': ('type', 'page'),
+            'wrong submission': ('submission_type', 'file_upload'),
+            'wrong completion': ('completion_requirement', 'must_view'),
+            'wrong delivery': ('delivery_mode', 'canvas_native'),
+        }
+        for name, (key, value) in cases.items():
+            fm = dojo_frontmatter(); fm[key] = value
+            with self.subTest(name=name):
+                self.assertTrue(self.validate(fm))
+        for mutation in ('extra task', 'wrong id', 'wrong kind', 'wrong prompt'):
+            fm = dojo_frontmatter(); task = fm['guided_assignment']['tasks'][0]
+            if mutation == 'extra task':
+                fm['guided_assignment']['tasks'].append(dict(task, id='other'))
+            elif mutation == 'wrong id':
+                task['id'] = 'other'
+            elif mutation == 'wrong kind':
+                task.update(kind='choice', options=['A', 'B'], correct_index=0, explanation='A')
+            else:
+                task['prompt'] = 'Paste a summary.'
+            with self.subTest(mutation=mutation):
+                self.assertTrue(any('dojo-transcript' in error or 'longer' in error for error in self.validate(fm)))
+        fm = dojo_frontmatter(); fm.pop('dojo_submission')
+        self.assertTrue(any('canonical Dojo' in error for error in self.validate(fm)))
+        fm['publish'] = False
+        self.assertEqual(self.validate(fm), [])
     def test_compact_presentation_is_opt_in_single_response_and_keeps_tools(self):
         fm = frontmatter()
         g = fm['guided_assignment']

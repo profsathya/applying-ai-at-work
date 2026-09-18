@@ -4,6 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from canvas_sync.hosted_html import validate_homepage_metadata
 from canvas_sync.schema import validate_artifact
 
 
@@ -44,6 +45,30 @@ ai_activity:
 
 
 class SchemaValidationTests(unittest.TestCase):
+    def test_homepage_rejects_optional_language_for_required_published_submission(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            course = Path(tmp) / 'course1'
+            artifact = course / 'sprints/sprint-1/required.md'
+            write_artifact(artifact, '''
+type: assignment
+title: Required
+slug: required
+artifact_id: required
+sprint: 1
+module: Sprint 1
+position: 1
+points: 0
+submission_type: text_entry
+completion_requirement: must_submit
+publish: true
+''')
+            homepage = course / 'homepage.yaml'
+            homepage.write_text('''modules:\n  - sprint: 1\n    groups:\n      - label: Work\n        items:\n          - slug: required\n            meta: "Assignment - submission optional for progress"\n''')
+            errors = validate_homepage_metadata(course)
+            self.assertTrue(any('required submission as optional' in error for error in errors))
+            homepage.write_text('''modules:\n  - sprint: 1\n    groups:\n      - label: Work\n        items:\n          - slug: required\n            meta: "Assignment - submission required for module completion"\n''')
+            self.assertEqual(validate_homepage_metadata(course), [])
+
     def test_ai_activity_discussion_frontmatter_is_valid(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             artifact = Path(tmp) / "course1" / "sprints" / "sprint-1" / "ai-discussion.md"

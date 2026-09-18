@@ -19,7 +19,7 @@ completion_requirement: must_view
 
 Set up one AI tool as a coach you can return to throughout the course. You bring the observations and decisions. Your **Dojo** asks questions and tests your reasoning.
 
-There is no submission. **Do not use the Dojo for the first half of Sprint 1**, where you work without AI.
+There is no setup submission. In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames without AI. Use the Dojo when the Dojo Lab introduces it.
 
 ## 1. Create your Dojo
 

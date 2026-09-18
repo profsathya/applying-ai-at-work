@@ -3,10 +3,13 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 const code = fs.readFileSync('canvas_sync/assets/guided-assignment.js', 'utf8');
-function boot({saved = null, storageFails = false, clipboardFails = false, feedbackFails = false, compact = false, reading = false} = {}) {
-  const config = {artifactId:'test', version:'1', title:'Decide', module:'Sprint One', feedback_endpoint:'https://example.invalid/feedback',
+function boot({saved = null, storageFails = false, clipboardFails = false, feedbackFails = false, compact = false, reading = false, transcript = false} = {}) {
+  let config = {artifactId:'test', version:'1', title:'Decide', module:'Sprint One', feedback_endpoint:'https://example.invalid/feedback',
     tasks:[{id:'reason',prompt:'Why this one?',criteria:['Name the deciding check.']},
            {id:'choice',kind:'choice',prompt:'Choose the gap',criteria:['Compare states.'],options:['Complaint','Gap'],correct_index:1,explanation:'Compare current and possible.'}]};
+  if (transcript) config = {artifactId:'dojo', version:'2.0', title:'Dojo Lab: decide', module:'Sprint One',
+    standing_instruction:'Submit the transcript.', dojoSubmission:{mode:'transcript',prompt_version:'v1'},
+    transcriptRequest:'Exact transcript request\n', tasks:[{id:'dojo-transcript',kind:'response',prompt:'Paste the complete transcript.',criteria:['Complete.']}]};
   if (compact) config.presentation = 'compact';
   if (reading) config.presentation = 'reading';
   const nodes = new Map();
@@ -79,5 +82,18 @@ function boot({saved = null, storageFails = false, clipboardFails = false, feedb
   assert.equal(compact.node('copy-output').focused,true);
   assert.equal(compact.node('copy-output').selected,true);
   assert.match(compact.node('copy-output').value,/Preserve this response/);
+  const transcript = boot({transcript:true});
+  const transcriptBox = transcript.node('[data-answer="dojo-transcript"]');
+  transcriptBox.value='Me:\n\nMy decision.\n\nDojo:\n\nAcknowledged.';
+  transcriptBox.listeners.input();
+  await transcript.node('copy-answers').listeners.click();
+  assert.equal(transcript.copies.at(-1),transcriptBox.value);
+  assert.equal(transcript.copies.at(-1).includes('Dojo Lab: decide'),false);
+  assert.equal(transcript.copies.at(-1).includes('Paste the complete transcript.'),false);
+  await transcript.node('copy-transcript-request').listeners.click();
+  assert.equal(transcript.copies.at(-1),'Exact transcript request\n');
+  const transcriptFallback = boot({transcript:true,clipboardFails:true});
+  await transcriptFallback.node('copy-transcript-request').listeners.click();
+  assert.equal(transcriptFallback.node('transcript-request-text').selected,true);
   console.log('guided runtime passed: save/restore, copy/fallback, choice feedback, optional requests, stale feedback, failure retention');
 })().catch(e=>{console.error(e);process.exitCode=1;});
