@@ -10,7 +10,7 @@ Make a copy of this document for Sprint 2. Two activities use it: What could alr
 
 Start on your own, before you open a chat. Things you know of, guesses, and questions all count, and blanks are fine. A table that is mostly questions is a good start. You are listing what exists, not designing anything.
 
-If nothing comes to mind, try these: Is there a product for this? Is there a name for this kind of problem? How do people who do this well do it? Does anyone in your own organisation already handle it? What happens in places with the same problem and more money, or less?
+If nothing comes to mind, try these: Is there a product for this? Is there a name for this kind of problem? How do people who do this well do it? Does anyone in your own organization already handle it? What happens in places with the same problem and more money, or less?
 
 | What exists (known, guessed, or a question) | How it works, as far as you know | What it means for your problem: pluses, minuses, questions |
 |---|---|---|

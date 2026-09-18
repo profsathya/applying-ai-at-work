@@ -2607,3 +2607,23 @@ Borrowed the other way, for Sprint 2's check step when Leslie rules on section 3
 with the answer." Not applied yet.
 
 Provenance: Leslie, the question and the timing; Claude, the reading.
+
+## 18 September, later still: Leslie's answers on the six talk-through points
+
+1. **Title:** "Dig into your assumptions" (or anything other than "would break it," since
+   that is not the only thing the activity looks for). Applied; [OPEN] removed.
+2. **Costs section placement and belonging:** she will look when she reaches it. Open.
+3. **C1's lost anchor:** neither of us knows. Dropped.
+4. **The runner-up standard:** undecided; her instinct is to push them to do it again in
+   full, since the course is self-paced, the second run is faster with a rep under the
+   belt, and it holds fidelity to answering the question rather than checking boxes. Claude
+   asked to say what she is not considering; see the chat reply of this date. Open.
+5. **The how-to-work paragraph in Welcome with a reminder per sprint:** she asked whether
+   that makes sense course-wide. Claude: yes; it belongs with the "own your progress" and
+   "graded item" definitions Welcome already owes, and each Introduction carries a
+   two-sentence reminder, as Sprint 1's does.
+6. **American English course-wide.** Ruled. Applied to the draft and the four Sprint 2
+   design documents (organization, neighborhood, judgment, behavior, color, practice).
+   Sprint 3 V3's British spellings are Melisa's to change; added to the owed list.
+
+Provenance: Leslie, the rulings; Claude, the edits.
