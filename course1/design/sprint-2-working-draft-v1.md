@@ -1,15 +1,15 @@
 ---
 purpose: Sprint 2, whole sprint, working draft for Leslie's review, on the Sprint 1 model; becomes the cut-ready source for Jeremy's build once reviewed
-status: v1, 17 September 2026, drafted on outline v5.2. Not yet reviewed by Leslie. The two unknowns she named are marked at the head of the items where they sit
+status: v1.1, 18 September 2026. Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
 depends_on: sprint-2-outline.md (v5.2); problem-frame-template.md; what-already-exists-template.md; sprint-2-worked-example-handovers.md; course1/sprints/sprint-14/ (Sprint 1 as published, for register and format); course1/sprints/sprint-15/ (Sprint 3 V3, for the hand-off and the Dojo Lab form)
 storage: the next storage folder after sprint-15, Jeremy's call; positions 1 to 11
 ---
 
-# Sprint 2: working draft, v1
+# Sprint 2: working draft, v1.1
 
 ## Cover note for Jeremy
 
-This file is the source for the Sprint 2 build. Everything below the line after this note is either participant text or a build block. It has not yet been reviewed by Leslie; the review happens in this file, and the cut waits for it.
+This file is the source for the Sprint 2 build. Everything below the line after this note is either participant text or a build block. Leslie is reviewing it section by section; sections 1 to 3 carry her first pass. The cut waits for the whole review.
 
 **Rules for the run**
 
@@ -28,11 +28,11 @@ This file is the source for the Sprint 2 build. Everything below the line after 
 |---|---|---|---|---|---|---|
 | 1 | Sprint 2: Is This Problem Worth Pursuing? | Module header | | | | |
 | 2 | Introduction: Is this problem worth pursuing? | Page | | | | One |
-| 3 | Which assumptions would break it | Own your progress | 0 | must submit | 4 | One |
+| 3 | Dig into your assumptions [OPEN: title] | Own your progress | 0 | must submit | 4 | One |
 | 4 | Dojo Lab: test your assumptions | Own your progress | 0 | must submit | 1 | One |
 | 5 | Sprint 2 Self-check | Self-check | 5 | completion | 5 questions | One |
 | 6 | Which assumptions, and your check | Graded item | 20 | one submission | 3 | One |
-| 7 | What could already solve this | Own your progress | 0 | must submit | 1 | Two |
+| 7 | What solutions already exist | Own your progress | 0 | must submit | 1 | Two |
 | 8 | Dojo Lab: explore what already exists | Own your progress | 0 | must submit | 2 | Two |
 | 9 | What exists, and what it means | Graded item | 20 | one submission | 5 | Two |
 | 10 | Problem Frame: is it worth pursuing? | Graded item | 45 | one submission | 4 | Two |
@@ -52,13 +52,13 @@ Sprint total 100, held as a proposal until the team decision on points across al
 
 *Module header. Position 1.*
 
-You chose a problem at the end of Sprint 1 and wrote its Problem Frame. This sprint asks one question of it: is this problem worth the next eight weeks? Over the two weeks you will practise three things:
+You chose a problem at the end of Sprint 1 and wrote its Problem Frame. In this sprint, you will dig into some of the sections to push on the question: is this problem worth the next eight weeks? Over the sprint you will practice three things:
 
-- Find the assumptions in your frame that could break it, and check one of them against the world.
-- Explore what already exists that could solve or ease this problem, with AI helping you think it through.
-- Weigh what a change would ask of people, and decide.
+- Probe into your assumptions to see how finding out if they are true might adjust, or even break, your frame.
+- Explore what kinds of solutions already exist that could solve or ease this problem, with AI helping you think it through.
+- Think about the costs, from a variety of angles, of solving this problem.
 
-**What you carry forward.** Your Problem Frame, brought up to date with what you found out, and a verdict in your own words: worth pursuing, not worth pursuing, or depends on one thing you have named. A no is a result, not a failure. The goal of this course is a workable problem, not a completed set of activities.
+**What you carry forward.** At the end of this sprint, you will have your Problem Frame, brought up to date with what you found out, and a verdict in your own words about whether to continue with this problem or not. If the answer is no, you bring your runner-up through the same work, so that either way you leave with an up-to-date Problem Frame for a problem worth pursuing. A no is a result, not a failure. The goal of this course is a workable problem, not a completed set of activities.
 
 The Introduction lays out the route through the sprint, week by week.
 
@@ -68,127 +68,157 @@ The Introduction lays out the route through the sprint, week by week.
 
 *Page. Position 2.*
 
-You have one problem, a Problem Frame for it, and a list of things you wrote as if they were true. This sprint is about finding out whether the problem deserves the rest of the course. The activities help you consider that. The judgment is yours, and by the end you should be able to say, with reasons, that this problem seems worth pursuing, or that it does not.
+You have one problem, a Problem Frame for it, and a list of assumptions you made about the problem. This sprint is about digging into the problem a little deeper to make sure it is good for this course. The activities in this sprint help you consider that. The judgment is yours, and by the end you should be able to say, with reasons, that this problem seems worth pursuing, or that it does not.
 
 ### Sprint 2 key terms
 
 An **assumption** is something you wrote in your frame as if it were true, but do not really know yet. Behind each one are questions, and the answers could change the problem, or show that it is not worth working on.
 
-**Checking** an assumption means asking one person one question, or going and looking at one thing, and writing down what came back. **Accepting** one means deciding, and saying why, that the likely answer would not change what you do.
+**Checking** an assumption means trying to understand its accuracy by asking someone or looking at something. In this sprint you will ask one person one question, or look at one thing, and write down what came back.
 
-**What already exists** is anything that could solve or ease your problem now: a product, a practice somewhere else, a thing your own organisation has and does not use.
+**What already exists** is anything that could solve or ease your problem now: a product, a practice somewhere else, a thing your own organization has and does not use.
 
 ### Your route through this sprint
 
-**Week 1: could anything break it?**
+**Week 1: understanding your assumptions**
 
 1. Read the Introduction, and take the **Self-check** (5 points).
-2. **Which assumptions would break it.** Walk part 6 of your frame, your assumptions. Decide which could end the problem, what a change would ask of people, and which one you will check. (Own your progress, 0 points.)
+2. **Dig into your assumptions.** Walk Part 6: your assumptions. Work out which are the riskiest, and which one you will check. (Own your progress, 0 points.)
 3. **Dojo Lab: test your assumptions.** Have AI push back on your walk and your choice. (Own your progress, 0 points.)
-4. **Which assumptions, and your check.** Write it up (20 points). Then go and make the check; it has the rest of the sprint to come back.
+4. **Which assumptions, and your check.** Write it up (20 points). Then go and make the check. You record what you learned in week 2.
 
 **Week 2: what exists, and is it worth it?**
 
-5. **What could already solve this.** Start a table on your own. (Own your progress, 0 points.)
-6. **Dojo Lab: explore what already exists.** Fill the table with AI, then look at two or three for real. (Own your progress, 0 points.)
-7. **What exists, and what it means** (20 points).
+5. **What solutions already exist.** From the template, start your What already exists table on your own: what you know of, what you guess, and what you want to find out. (Own your progress, 0 points.)
+6. **Dojo Lab: explore what already exists.** Work with AI and on your own to fill in the gaps in the table, then do a deeper dive to better understand the existing solutions. (Own your progress, 0 points.)
+7. **What exists, and what it means** (20 points). Summarize what you uncovered about what already exists.
 8. **Problem Frame: is it worth pursuing?** Bring your frame up to date and write your verdict (45 points).
 9. **Write the Reflection** (10 points).
 
-Make the check early. Asking someone a question takes a day to arrange and a week to hear back, so the sooner it is out, the more of the sprint you have to use the answer.
+### If you determine your first problem is not worth solving
 
-### If the answer is no
-
-Sometimes the honest verdict is that this problem is not worth eight weeks: something already handles it, or the person who could confirm it says it is not real, or a change would cost more than the problem does. That is this sprint working. Your runner-up is in your Candidate Log with its draft frame from First frames. The Problem Frame item tells you what a shortened pass on it looks like.
+If as you go through these activities you discover that the problem you picked is not worth solving, that is this sprint working. Sometimes the honest verdict is that this problem is not worth eight weeks: something already handles it, or the person who could confirm it says it is not real, or a change would cost more than the problem does. In that case, you move to your runner-up. The Problem Frame item tells you how to bring your runner-up to the same standard, so that you can make the same call about it.
 
 ### About AI in this sprint
 
-The rule is the one you know from Sprint 1. On the items marked own work, no AI, because the point is to have your own view written down before anything tests it. The Dojo Labs are where AI tests what you wrote. Use your Dojo, or any AI chat you already have. Do not paste confidential workplace, client, or personal details; change names and drop anything sensitive first.
+The rule is the one you know from Sprint 1. On the items marked own work, no AI, because the point is to have your own view written down before anything tests it. The Dojo Labs are where AI tests what you wrote, in your Dojo or any AI chat you already have.
 
 ### How to work
 
-Rough notes, in your own words. When an activity asks a question, answer the question you were asked rather than the one you wish you had been asked, and say so when the honest answer is "I do not know." Every activity ends by asking what it changes about how you would describe your problem. Keep that answer short and keep it going.
+We cannot stress enough: the point of this course is for you to understand a problem deeply. The activities and exercises we have included are ones that will help you get there. The work you do in the own-your-progress activities will guide you directly to what you need to submit in the graded items. Your work needs to be useful to you, to better understand the problem and do the graded items. There is a lot of nuance here. Take care to answer the question you were asked rather than the one you wish you had been asked, and when the honest answer is "I do not know," write that down. Unknowns are as valuable as knowns. Every activity ends by asking what it changes about how you would describe your problem. Keep that answer short and keep it going.
+
+[NOTE] Leslie: this paragraph belongs earlier, in Welcome, perhaps as a video, with a reminder in each sprint. Kept here in full until Welcome carries it; owed to Jeremy.
 
 ### Where to write
 
-Two documents this sprint. **Your Problem Frame** is the one that carries through the course. At the start of this sprint you make your copy of the Problem Frame document and paste all of Part D of your Candidate Log into it, as it stands. [Make your copy of the Problem Frame](LINK-TO-BE-SUPPLIED). Every part of it is living, and this sprint adds two things: a column in part 6, your assumptions, and a new part 3c, what a change would ask of people.
+Two documents this sprint. Your Problem Frame, which will carry from here through the rest of the course; you make your copy at the start of the first activity. And the What already exists table, a one-page document for week 2; you make your copy when week 2 starts. The rest of your written work this sprint will be in the activity boxes within Canvas pages.
 
-**The What already exists table** is a one-page document for week 2. [Make your copy of the table](LINK-TO-BE-SUPPLIED). Everything else you write in this sprint goes straight into the activity boxes.
+Next up: **Dig into your assumptions**.
 
-Begin with **Which assumptions would break it**.
-
-> **[BUILD]** Page, `page_presentation: reading`. Two copy-on-click links to be supplied by Leslie. Reuse the Sprint 1 handover illustration if a visual is wanted; none is required.
+> **[BUILD]** Page, `page_presentation: reading`. Reuse the Sprint 1 handover illustration if a visual is wanted; none is required.
 
 ---
 
-## Which assumptions would break it
+## Dig into your assumptions
 
 *Own your progress. Position 3. 0 points. Submit to mark it complete. No AI on this one.*
 
-[NOTE] This is the first of Leslie's two unknowns: read it as a participant and ask whether it makes you think or makes you fill in boxes.
+[OPEN: the title. Leslie: "would break it" is too narrow; the activity is about understanding your assumptions and their implications. "Dig into your assumptions" follows her verb. Her call.]
 
-Open your Problem Frame at part 6, your assumptions. Every line there is something you wrote as if it were true, but do not really know yet. Behind each one are questions, and the answers to those questions could change the shape of your problem, or show you that it is not a problem worth working on. That is why this sprint starts here. The frame is only as good as the assumptions it stands on, and you have not looked at them closely yet.
+[NOTE] This is the first of Leslie's two unknowns: read it as a participant and ask whether it makes you think or makes you fill in boxes. The page runs as guidance, then example, then your box, one step at a time; each numbered section ends in its own box.
 
-Work without AI on this page. The next activity has AI push back on what you write here, and that only works if what you write is your own read.
+**First, make your copy of the Problem Frame document.** Paste all of Part D of your Candidate Log into it, as it stands. [Make your copy of the Problem Frame](LINK-TO-BE-SUPPLIED). Every part of it is living, and this sprint adds two things: a column in Part 6: your assumptions, and a new Part 3c: what a change would ask of people.
+
+Open your Problem Frame and look at Part 6: your assumptions. Every line there is something you wrote as if it were true, but do not really know yet. Behind each one are questions, and the answers to those questions could change the shape of your problem, or show you that it is not a problem worth working on. For example:
+
+> **My assumption:** All four managers are affected by account handovers not happening, not just the one I sat next to.
+>
+> **Questions behind my assumption:** Are the other managers affected by this problem? Is it all four of them? Are they affected in the same way? How bad is the impact?
+>
+> **Different answers that could change my problem:**
+>
+> - None of them think this is a problem. So maybe I need to rethink my problem altogether.
+> - Two of them think it is a huge problem and the other two think it is mild. So I probably need to dig into the differences to learn more, but there is enough here to proceed.
+> - All of them indicate this would be a nice problem to solve. So I proceed with a plan for finding out more from each of them.
+
+That is why this sprint starts here. The frame is only as good as the assumptions it stands on, so it is time to dig into those assumptions.
+
+Work without AI on this page. The next activity has AI push back on what you write here, and that only works if you bring your human value to that conversation.
 
 ### 1. Walk your list
 
-Take each assumption in turn and ask two things. What would I need to find out? And what could the answers change? One question or several; a lot or a little. Uneven answers are the normal result, and "nothing much" is a real answer for some lines.
+Take each assumption in turn and ask two things. What are the questions behind this assumption? And what different answers could change my problem? For some you might have many thoughts. For others, very little. Uneven answers are the normal result, and "nothing much" is a real answer for some lines. Let us look at another assumption from the account handovers problem:
 
-> **Example, three lines of the handover list.**
+> **My assumption:** Clients notice and it costs them something.
 >
-> *All four managers are affected, not just the one I sat next to.* What I would need to find out: whether the other three have had the same thing happen. What the answers could change: if it is only the one I sat next to, this is one person's habit, not a problem for nine weeks.
+> **Questions behind my assumption:** Has a client ever raised this as an issue? Are there any other client complaints that could be traced back to this, even if the client does not specifically know that the handoff is not happening behind the scenes? Do clients feel like they have to give the same information to multiple people from our organization? If yes, do they care?
 >
-> *Clients notice and it costs them something.* What I would need to find out: whether a client has ever raised it, or whether they just answer the questions again. What the answers could change: if they do not notice, the cost is internal only and the goal in part 1 is wrong. The problem would still be real for the managers.
+> **Different answers that could change my problem:**
 >
-> *Managers act on stale ownership for days.* What I would need to find out: how long, really. What the answers could change: not much. Even one day means the client repeats their history.
+> - No evidence of clients noticing or caring. So I might need to rethink my problem.
+> - Some clients are complaining about this. So I probably need to dig into which ones and what their experiences are, but there is enough to proceed.
+> - Many or most clients have complained about this, or we are losing business. So I proceed.
 
-Write yours the same way, one assumption at a time, in the first box below. Rough is right.
+*More help: an assumption where the answer changes little.* From the same frame: *managers act on stale ownership for days.* Questions behind it: how long, really? Different answers: one day, several days, a week. None of them changes the problem. Even one day means the client repeats their history. That is a real result, and it is short.
 
-### 2. Could the answer to any of these end the problem?
+Write yours the same way, one assumption at a time, in the box below: the assumption, the questions behind it, and the different answers that could change your problem. Rough is right.
 
-Read back over what you wrote. Some assumptions, if they went the other way, would adjust your frame. A few would end it: the problem would turn out to be one person's habit, or already handled, or not real. Name those, and say why these and not the others.
+### 2. Which are the riskiest?
 
-Then ask the harder question about each one: how likely is the ending answer, and would you believe it? Some assumptions you can already make the call on. If the likely answer would not change what you do, or you would push ahead anyway, say so and say why. That is **accepting** an assumption, and it is a decision, not a shrug. Accepted with no reason is just unverified wearing a nicer word.
+Read back over what you wrote. You probably have some assumptions that, if they went the other way, might kill the problem. List those in the box below, and say why. We want to take some time to look at them closely. Let us start with the ones that have the potential to end the problem.
 
-> **Example.** Two could end it: the managers one, because if it is one person's habit there is nothing here; and *nobody has tried to fix this before*, because if something was tried and died, I am working on the wrong problem. The clients one changes the goal but not whether the problem is real, so it is not on this list. I am accepting *managers act on stale ownership for days*: even if it is one day, the client still repeats their history, and the length does not change whether this is worth pursuing.
+For example: *none of the managers think the lack of account handovers is a problem.* On the surface, that seems like a big deal. However, what if you know that your customer service department hears about this from clients all the time? Or what if you have heard managers indirectly or informally mention frustration with this before? Then, even though this is an assumption that could kill your problem, you can use your judgement to determine that there is not a high risk that it would. That is you intentionally accepting an assumption because you see it is not particularly risky. It is a decision you are making after looking at the evidence, and you write the reason down with it.
 
-*More help: the garden plot.* Its list has a different shape. *They quit because they had no one to ask* could end the problem, since if they quit for some other reason, pairing people up fixes nothing. *Having someone to ask would keep them going* is the bet the whole frame rests on, and nobody can answer it yet; that one is accepted for now, with the reason that no check this sprint could settle it.
+*More help: an example of an actual kill, from the garden plot.* The assumption: *new plot-holders quit because they had no one to ask.* Questions behind it: why did last year's new people actually stop coming? Different answers: they had no one to ask, which is my frame; the plots were too far from where they live, or too big for a first year; they never meant to stay past one season. If it is either of the last two, pairing new people with old hands fixes nothing, and this problem, as I have framed it, is dead. Nothing I know makes those answers unlikely. This one is risky, and it is the one I would check.
 
-### 3. What would a change ask of people?
+*More help: another handover example.* Two could end it: the managers one, because if it is one person's habit there is nothing here; and *nobody has tried to fix this before*, because if something was tried and died, I am working on the wrong problem. The clients one changes the goal but not whether the problem is real, so it is not on this list. I am accepting *managers act on stale ownership for days*: even if it is one day, the client still repeats their history, and the length does not change whether this is worth pursuing.
 
-Read back over your walk once more, this time for anything that says someone would have to do something differently: a new step, a new habit, time they do not currently spend. Add the one cost no assumption carries, the time it would take to build anything. Then set it beside part 3b, what the problem costs now. You are not pricing a solution; you are pricing change at all, and asking whether it is plainly smaller than the problem, plainly larger, or not yet clear.
+### 3. Choose one to check
+
+From those riskiest assumptions, the ones that could potentially end the problem, pick one to actually follow up on this week. You are going to either talk to one person about this assumption, or look into something that can tell you more. Two criteria to help you decide which assumption to pursue. It should be an assumption that:
+
+- you have deemed as risky or somewhat risky, **and**
+- you can actually follow up on this week.
+
+If none of your assumptions are deemed super-risky, pick one that would be useful to learn more about. Even if you are pretty confident that the account handoffs are an issue, you can sit down with one manager for ten minutes to hear more about their experience with the account handovers, or check the customer service logs to see what clients are saying about this.
+
+Once you have picked the assumption, take a minute to write up exactly what you want to check. Most of this will come from what you have already written:
+
+- **What is your assumption, stated so that it could be wrong?** Account managers see account handovers as a problem in effectively caring for clients.
+- **What result would tell you it was wrong?** A manager not registering this as an issue at all.
+- **Who will you ask, or what will you go and look at, and when?** [Name of manager], at our one-on-one next Tuesday.
+- **What will you ask?** I heard [other manager's name] mention that she gets frustrated when she takes over an account because she feels like she is starting from scratch, having to understand the relationship. Is that your experience? Do you feel like you have to ask clients for a bunch of information you should already have? Does that seem like a problem for you? For the clients?
+
+*More help: a check you look at rather than ask.* For the garden plot: the assumption, stated so it could be wrong, is that most new plot-holders quit by midsummer. What would tell me I was wrong: more than half of last year's new names still gardening in August. What I will look at, and when: last year's sign-up sheet against a walk past the plots this weekend. What I will ask: nothing. Observation counts as a check.
+
+*More help: another handover example.* The assumption: the other three managers have had the same thing happen. What would tell me I was wrong: fewer than two of them describe it. Who and when: the three other managers, at the Thursday team meeting or after it.
+
+To be clear, this check is a temperature check. You are collecting information to decide whether to keep looking into this problem. A lukewarm no is not a no-go, and an enthusiastic yes is not proof. What comes back gets written down so that you can consider it as you decide whether to proceed.
+
+Write your check in the box below, before you look.
+
+### 4. What would a change ask of people?
+
+[OPEN: Leslie, is this section in the right place now that it follows the check, and does it belong on this page at all, or as its own lesson? The tie to the assumptions is the opening sentence below; if that does not hold, it moves.]
+
+Many of your assumptions are quietly about what people would do differently: read a note, update a field, show up on a Tuesday. That makes your walk the best place to see what a change would actually ask of people. Read back over it once more, this time for anything that says someone would have to do something differently: a new step, a new habit, time they do not currently spend. Add the one cost no assumption carries, the time it would take to build anything. Then set it beside Part 3b: what the problem costs now. You are not pricing a solution; you are pricing change at all, and asking whether it is plainly smaller than the problem, plainly larger, or not yet clear.
 
 > **Example.** Every manager would have to do one thing at each handover that they do not do now, a note or a field. Someone would have to keep at them until it is a habit, probably me. Nothing to build; a checklist would take an afternoon. Against clients repeating their history every month and managers working from stale ownership for days, that is small.
 
-### 4. Choose one to check
+Write yours in the box below, and end with one line: what does this page change about how you would describe your problem?
 
-From the assumptions that could end the problem, pick one you will check in the first week of the sprint. Two things decide it. The ending answer has to be plausible enough to be worth finding out; if you have already made the call, do not check it. And you have to be able to reach it: someone you can ask this week, or something you can go and look at. Reachable beats well-chosen. A perfect question you cannot ask teaches nothing, and one real answer is worth more than three good intentions. If none of the ending ones is reachable, check any assumption you can.
+### 5. What happens to the other assumptions?
 
-Then write the check before you look, so that the answer cannot rearrange what you were asking:
-
-- The assumption, stated so that it could be wrong.
-- What result would tell you it was wrong.
-- Who you will ask, or what you will go and look at, and when.
-
-> **Example.** The assumption: the other three managers have had the same thing happen. What would tell me I was wrong: fewer than two of them describe it. Who and when: the three other managers, at the Thursday team meeting or after it.
-
-*More help: a check you can look at rather than ask.* For the garden plot, *most new plot-holders quit by midsummer* can be checked against last year's sign-up sheet and a walk past the plots in August. No conversation needed. Observation counts as a check.
-
-A check is a temperature check. You are collecting information to decide whether to keep looking into this problem. A lukewarm no is not a no-go, and an enthusiastic yes is not proof. What comes back gets written down next to what you make of it, and those are two different things.
-
-**What happens to the rest.** The assumptions you are not checking do not disappear. They stay in part 6 of your frame, and in the last column, added this sprint, you write "not yet" against the ones still open and "accepted, because" against the ones you have made the call on. Sprint 3 is built for the open ones: that is where you take them to a real person. Checking one now is the start of that, not the whole of it.
-
-Before you leave this page, one line: what does this change about how you would describe your problem?
+The assumptions you are not checking do not disappear. They stay in Part 6 of your frame, and in the last column, added this sprint, you write "not yet" against the ones still open and "accepted, because" against the ones you have made the call on. Sprint 3 is built for the open ones: that is where you take them to a real person. Checking one now is the start of that, not the whole of it.
 
 ### Response tasks
 
-- **the-walk** (response). Prompt: *Your assumptions, one at a time: what you would need to find out, and what the answers could change.* Criteria: every assumption from part 6 appears; each has at least one thing to find out; the "what could change" answers vary rather than repeating one formula; "nothing much" appears where it is honest.
-- **could-it-end** (response). Prompt: *Which assumptions could end the problem, and why these and not the others. Which you are accepting, and why.* Criteria: names one to three, not the whole list; says why the others are adjustments rather than endings; each accepted assumption carries a reason that says why the answer would not change what you do.
-- **what-a-change-asks** (response). Prompt: *What a change would ask of people, plus the time to build anything, set beside what the problem costs now.* Criteria: names who would have to do what; includes the build cost or says there is none; says which is larger, or that it is not yet clear.
-- **your-check** (response). Prompt: *The one you will check, written before you look: the assumption, what result would say it was wrong, who or what you will check it against and when. And one line on what this page changed about how you describe your problem.* Criteria: the assumption is one that could end the problem, or the reason it is not is given; the wrong-result line is concrete; a named person or observation and a day; the closing line is present.
+- **the-walk** (response). Prompt: *Your assumptions, one at a time: the assumption, the questions behind it, and the different answers that could change your problem.* Criteria: every assumption from Part 6 appears; each has at least one question behind it; the different-answers lines vary rather than repeating one formula; "nothing much" appears where it is honest.
+- **the-riskiest** (response). Prompt: *The assumptions that could kill the problem, and why. Any you are accepting after looking at the evidence, with the reason.* Criteria: names the riskiest, not the whole list; says why the others are adjustments rather than endings; each accepted assumption carries a reason that says why the risk is low.
+- **your-check** (response). Prompt: *The one you will check, written before you look: the assumption stated so it could be wrong, what result would say it was wrong, who or what you will check it against and when, and what you will ask.* Criteria: the assumption is one you deemed risky, or the reason it is not is given; the wrong-result line is concrete; a named person or observation and a day; if asking, the question is written out.
+- **what-a-change-asks** (response). Prompt: *What a change would ask of people, plus the time to build anything, set beside what the problem costs now. And one line on what this page changed about how you describe your problem.* Criteria: names who would have to do what; includes the build cost or says there is none; says which is larger, or that it is not yet clear; the closing line is present.
 
-> **[BUILD]** `presentation: reading`, four boxes. Section 1 feeds the-walk, section 2 could-it-end, section 3 what-a-change-asks, section 4 your-check.
+> **[BUILD]** `presentation: reading`, four boxes. Section 1 feeds the-walk, section 2 the-riskiest, section 3 your-check, section 4 what-a-change-asks. Section 5 has no box and renders after the last one. Copy-on-click link to the Problem Frame document to be supplied by Leslie.
 
 ---
 
@@ -233,6 +263,8 @@ Take what lands and fix your walk yourself. If it named a better assumption to c
 ## Sprint 2 Self-check
 
 *Self-check. Position 5. 5 points, completion. Practice quiz, unlimited attempts.*
+
+[NOTE] Not yet reviewed by Leslie. Question 2 and question 5 refer to material now taught in Dig into your assumptions rather than the Introduction; re-verify once sections 4 to 11 are reviewed.
 
 A short check that you are set up for this sprint before the work starts in earnest. It covers what the sprint asks of you and the few ideas it runs on: what an assumption is, what checking and accepting mean, how AI is used, and where things get written. If a question surprises you, go back to the Introduction.
 
@@ -284,7 +316,7 @@ Who would have to do what differently, the time to build anything, and the compa
 
 ---
 
-## What could already solve this
+## What solutions already exist
 
 *Own your progress. Position 7. 0 points. Submit to mark it complete. No AI on this one.*
 
@@ -300,7 +332,7 @@ The other two Cs come later on the same page. **Choices** are the decisions you 
 
 ### Start the table on your own
 
-Before you open a chat, make your copy of the What already exists table and fill in what you can. Three columns: what exists, how it works as far as you know, and what it means for your problem. Things you know of, guesses, and questions all count in the first column, and blanks are fine in the others. A table that is mostly questions is a good start; it tells the next activity what to go and find out.
+Before you open a chat, make your copy of the What already exists table and fill in what you can. [Make your copy of the table](LINK-TO-BE-SUPPLIED). Three columns: what exists, how it works as far as you know, and what it means for your problem. Things you know of, guesses, and questions all count in the first column, and blanks are fine in the others. A table that is mostly questions is a good start; it tells the next activity what to go and find out.
 
 You are listing what exists, not designing anything. "An agenda tool" is a thing that exists. "We should build an agenda tool" is a solution, and it waits.
 
@@ -335,7 +367,7 @@ One line before you leave: what does starting this table change about how you wo
 
 The goal is to find out what exists. AI is here to help you think better about it: it has read about more workplaces, products, and practices than you ever will, and it can answer the questions in your table and add rows you did not think of. It cannot know what any of it means for your situation. That column stays yours.
 
-Use your Dojo, or any AI chat you already have. Same rhythm: bring the table; have it widened and tested; then you choose. Keep your table open beside the chat and make every change there.
+Use your Dojo, or any AI chat you already have. Change names and drop anything confidential before you paste. Same rhythm: bring the table; have it widened and tested; then you choose. Keep your table open beside the chat and make every change there.
 
 ### 1. Widen and answer
 
@@ -462,7 +494,7 @@ One paragraph, in your own words. Worth pursuing, not worth pursuing, or depends
 
 > **Example.** Worth pursuing. Two of three managers describe the same thing, so it is not one person's habit, and the cost of any change is minutes per handover against clients repeating themselves every month. The one thing that could still end it is the third manager being right that it only happens with one outgoing owner; even then the same fix would cover that case, so it changes the size of the problem rather than whether to work on it. What I do not know that matters most is whether anyone has tried before, and Dana can tell me; that is the first thing for Sprint 3.
 
-**If the verdict is no.** Open your Candidate Log. Your runner-up's draft frame is in Part C. Copy it into a fresh Problem Frame document, then give it a shortened pass, in the same box as your verdict: its two assumptions that could end it, what a change would ask of the people in it, and one line on what you already know exists for it. You will not have checked anything for it yet; say so in the Checked column, and Sprint 3's conversation becomes its first check. Say in your verdict why the first problem did not survive. That paragraph is the most useful thing in this submission, and it is graded as such.
+**If the verdict is no.** Open your Candidate Log. Your runner-up's draft frame is in Part C. Copy it into a fresh Problem Frame document and bring it to the same standard, so that you can make the same call about it: dig into its assumptions the way you did in week 1, name the riskiest, start its What already exists table, and write what a change would ask of the people in it. If there is time, make one check; if not, say so in the Checked column, and Sprint 3's conversation becomes its first check. Then write its verdict here, and say why the first problem did not survive. That paragraph is the most useful thing in this submission, and it is graded as such.
 
 ### Response tasks
 
