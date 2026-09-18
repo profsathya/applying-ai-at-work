@@ -2627,3 +2627,34 @@ Provenance: Leslie, the question and the timing; Claude, the reading.
    Sprint 3 V3's British spellings are Melisa's to change; added to the owed list.
 
 Provenance: Leslie, the rulings; Claude, the edits.
+
+## 18 September, evening: review copies for Clare, and how her comments come back
+
+Leslie, Jeremy, and Melisa agreed to give Clare one Google Doc per published sprint with
+the verbatim page text to comment on. Built from the published Markdown (sprint-6, sprint-14,
+sprint-15, and sprint-8 for later): every page in module order, a kind-and-points line per
+page, response boxes with prompt and criteria, self-check questions with the correct
+answer marked, AI-activity prompts with the AI's instructions marked separately,
+illustrations as bracketed descriptions. Builder and converter in the session scratchpad
+(not in the repo). Sent to Leslie as docx; she drops them into a Drive folder, "CIS 501
+review copies for Clare," created in her Drive. Sprint 4 is held until Melisa says it is
+ready. The status email to Clare went out after Jeremy and Melisa confirmed it; it lists
+Sprints 0, 1, and 3 as published, Sprint 2 as in progress (expected 19 September), Sprint 4
+as in progress, Sprint 5 as starting soon.
+
+**How Clare's comments come back (Leslie's ruling).** Leslie and Melisa review them and
+keep the ones that make sense; the docx with the surviving comments comes to Claude; every
+comment is extracted with its anchor and logged with a disposition, as with Leslie's own
+reviews. Where they land: Sprint 2's fold into the draft before the cut; Sprints 0, 1, and
+3 are published, so the change is a packet (comment, anchor, proposed wording, page owner)
+and then a PR Leslie approves or a hand-off to Jeremy (Sprint 1 pages are locked to his
+build map) or Melisa (Sprint 3). Batch rather than trickle, since participants start on
+5 October.
+
+Also found today: Sprint 4 V3 has been published in Canvas since 11 September and marked
+ready on the homepage, so the Dojo course document already carries its text while Melisa
+revises it; Jeremy's feedback demo module has no readiness entry and would be exported if
+published. Leslie to raise with Jeremy.
+
+Provenance: Leslie, Jeremy, Melisa, the plan and the ruling; Claude, the documents and
+the record.
