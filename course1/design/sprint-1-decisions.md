@@ -2504,3 +2504,72 @@ with [NOTE] at the head of items 3, 4, and 8. Sent as a docx with a note to read
 first. Prompt transcripts on the handover example to follow before the cut.
 
 Provenance: Leslie, the go and every ruling the draft follows; Claude, the prose.
+
+## 18 September: Leslie's first pass on the draft, sections 1 to 3, applied as v1.1
+
+`Sprint-2-working-draft-v1_1.docx`: 56 tracked paragraphs and 22 comments on the cover
+note, module header, Introduction, and the assumptions activity. Every tracked change was
+applied individually and audited afterward (27 insertions checked present, 8 deletions
+checked gone); curly apostrophes, doubled full stops, and hyphens used as dashes
+straightened; "practise" follows her edit to "practice." Dispositions by comment:
+
+- **C0, the end goal is an updated frame even after cycling through two problems.** The
+  module header's carry-forward line now says so.
+- **C1, "don't think this means anything here."** Anchor lost in the export; not
+  applied. Raised with Leslie.
+- **C2, C4, TC8, "would break it" is too narrow; "riskiest."** The activity opens with
+  understanding assumptions and their implications; section 2 is "Which are the
+  riskiest?"; week 1 is "understanding your assumptions." The item title is
+  provisionally "Dig into your assumptions," marked [OPEN] for her.
+- **C3, "which" assumes they will find one.** Route line reworded to "work out which are
+  the riskiest."
+- **C5, "the rest of the sprint to come back" unclear.** Now "you record what you learned
+  in week 2."
+- **C6, "possible solutions already exist?"** Item 7 retitled "What solutions already
+  exist."
+- **C7, the route line for item 7 is thin, and the template belongs there.** Reworded,
+  with the template named.
+- **C8, the runner-up should be pressure-tested enough to make the same call.** Item 10's
+  no path now brings the runner-up to the same standard (dig into its assumptions, name
+  the riskiest, start its table, what a change would ask, one check if there is time).
+- **C9, are the AI rules necessary?** The own-work-versus-Dojo rule stays in the
+  Introduction, since it is the differentiation she asked for. The confidentiality line
+  moved out of the Introduction into the two Dojo Labs, where Sprint 3 V3 also carries it.
+- **C10, the how-to-work paragraph belongs in Welcome, with a reminder per sprint.** Her
+  paragraph applied in full, with a [NOTE] that it is owed to Welcome (Jeremy) and
+  reduces to a reminder once Welcome carries it.
+- **C11, C12, the document-setup detail is too much for the Introduction.** The copy
+  instructions and links moved to the first activity that needs each document; the
+  Introduction names the two documents in one paragraph.
+- **C13, the "Part 6: your assumptions" reference format.** Adopted throughout the
+  reviewed sections; the convention is number then colon then name.
+- **C14, match the walk's two questions to her example's categories.** Done: "the
+  questions behind this assumption" and "different answers that could change my
+  problem."
+- **C15, handovers again, or the garden, or another through line?** Handovers stay the
+  primary example on every page because Sprint 3 V3 continues that story. The garden plot
+  supplies the second example where it teaches something handovers cannot: an actual
+  kill in section 2, an observation check in section 3.
+- **C16, C17, C21, how the page works.** Guidance, then example, then the box, one step
+  at a time; "read back over what you wrote" refers to their first box, and they list
+  the riskiest in the second rather than highlighting; "What happens to the other
+  assumptions?" is now section 5, after the boxes, with no box of its own. Stated in the
+  [NOTE] and the [BUILD] block.
+- **C18, C20, examples as optional or expandable, two each, one a kill and one an
+  observation.** Sections 2 and 3 each carry one inline example (hers) and two "More
+  help" examples, which Jeremy renders as disclosures if the renderer allows and as
+  asides if not, as in Sprint 1.
+- **C19, "what a change would ask" is awkwardly placed and may not belong here.** Moved
+  after the check, as section 4, with an opening sentence that ties it to the
+  assumptions. Marked [OPEN] for her ruling on whether it stays on this page or becomes
+  its own lesson.
+- **Her check template gains "What will you ask?"** with her worked example; kept as the
+  inline example, with the observation check and the earlier handover check as More help.
+
+Two ripples outside sections 1 to 3, applied because the rulings demanded them: item 10's
+no path (C8) and item 7's title and template link (C6, C7, C12). The Self-check carries a
+[NOTE] that two of its questions now test material taught in the activity rather than the
+Introduction; re-verify after the full review.
+
+Provenance: Leslie, every comment and tracked change, including the new example format
+for the walk; Claude, the dispositions, the garden examples, the section 4 bridge.
