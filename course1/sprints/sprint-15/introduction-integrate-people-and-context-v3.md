@@ -20,9 +20,9 @@ A Problem Frame gets stronger when it meets real people and real constraints. In
 
 AI is your thinking partner throughout, but you own the goal, the standards, and the final judgment calls. Start with your own thinking first. Then use AI to challenge it, identify blind spots, or prepare for conversations with real people that AI can't replace. Your job is to decide what to keep, reject, revise, or verify. The thinking is yours.
 
-![Three colleagues review a workflow and pass a folder across a worktable.](assets/workplace-handoff.webp)
+![Four colleagues listen and compare perspectives around a shared workflow at a meeting table.](assets/stakeholder-listening-conversation.png)
 
-*Work moves between people, and so does the problem. Illustration created with AI for this course.*
+*Different stakeholders can describe the same process differently. Illustration created with AI for this course.*
 
 ## Sprint 3 Road Map
 
@@ -56,7 +56,7 @@ The same person can hold more than one of these relationships at once, and those
 
 A validation conversation is the conversation you will have with a stakeholder. Validation means testing your Problem Frame, not selling your solution. A good validation conversation isn't about getting a stakeholder to agree; it's about giving them room to tell you what they actually experience, need, fear, value, or see differently than you do. Their perspective gives you the context you need to judge whether your Problem Frame is right, incomplete, or off entirely.
 
-You will write your validation questions in the Stakeholder Map, test them with AI in the Dojo Lab, and sharpen them again before you put them to a real person in the Stakeholder Conversation.
+Non-leading questions make that possible. Ask about a specific experience, past behavior, or concrete tradeoff so the stakeholder can surprise you instead of echoing your premise. You will write the questions in the Stakeholder Map, test them with AI in the Dojo Lab, and ask them of a real person in the Stakeholder Conversation.
 
 **Conflicts as Information**
 

@@ -1,13 +1,25 @@
 {
-  "creation_mode": "Reuse of an approved Sprint 1 asset; no new generation",
-  "created_date": "2026-09-17",
+  "creation_mode": "New original AI illustration for Sprint 3, with the prior reused Sprint 1 asset retained but no longer referenced by participant-facing source",
+  "created_date": "2026-09-18",
+  "tool_source": "OpenAI built-in image generation",
   "external_image_sources": [],
-  "source_note": "Reused from the approved Sprint 1 visual pilot. Original AI-generated textbook illustration, not documentary evidence. Sprint 3 V3 reuses it because the sprint's worked example follows the same account-handover situation introduced in Sprint 1.",
-  "delivery_processing": "Copied byte-for-byte from course1/sprints/sprint-12/assets/workplace-handoff.webp. No re-encoding, no dimension change.",
+  "source_note": "The new scene was generated with the approved Sprint 1 visual family as style reference. It is illustrative course art, not documentary evidence.",
+  "delivery_processing": "The generated 2172 x 724 RGB PNG was copied into the Sprint 3 assets directory without resizing or format conversion.",
+  "reference_assets": [
+    "course1/sprints/sprint-12/assets/workplace-handoff.webp",
+    "course1/sprints/sprint-12/assets/onboarding-help.webp",
+    "course1/sprints/sprint-6/assets/problem-investigation.png"
+  ],
   "assets": [
     {
+      "path": "stakeholder-listening-conversation.png",
+      "sha256": "6a952392f37f38d86f7427ed6c5d1afbe3a328014909e1357a4d52a4d79e7c18",
+      "prompt": "Use case: illustration-story\nAsset type: wide chapter illustration for the Course 180 Sprint 3 Introduction\nPrimary request: Create a distinct editorial illustration that communicates stakeholder relationships, multiple perspectives, and a real listening conversation about one shared workplace process.\nInput images: Image 1, Image 2, and Image 3 are style references only. Match their approved restrained visual family without copying their exact compositions or people.\nScene/backdrop: a calm contemporary workplace meeting area with a warm cream paper-textured background and only a few subtle plants or shelves.\nSubject: four diverse working adults gathered around one modest table. One stakeholder is describing a concrete experience while another person listens attentively and takes notes. Two other adults contribute visibly different perspectives to the same process, shown through natural eye lines and gestures toward one simple shared paper workflow on the table. The scene should feel like listening and inquiry, not a presentation, transaction, or handoff.\nStyle/medium: sophisticated restrained 2D editorial textbook illustration, crisp navy ink outlines, light paper texture, realistic natural adult proportions, calm professional expressions.\nComposition/framing: very wide landscape, approximately 3:1. Uncluttered airy composition with generous warm cream breathing room. Keep faces, hands, and the shared workflow visible at small size. Keep figures within the central band for mobile scaling.\nLighting/mood: soft daylight, thoughtful, collaborative, grounded.\nColor palette: restrained navy, muted slate blue, teal, warm cream, with very limited muted accents.\nConstraints: no readable text anywhere, no labels, no speech bubbles, no logos, no watermarks, no decorative interface elements. Do not imply that every stakeholder agrees. This is illustrative course art, not documentary evidence.\nAvoid: exaggerated cartoon expressions, futuristic motifs, gradients, tiny illegible writing, crowded tables, duplicated limbs or hands, and the folder-passing composition from Image 1."
+    },
+    {
       "path": "workplace-handoff.webp",
-      "prompt": "Create one polished editorial textbook illustration for an asynchronous professional-development course called Applying AI at Work. Use case: illustration-story. Intended asset: a modest wide landscape chapter illustration, approximately 3:1 aspect ratio. Style: sophisticated restrained 2D stock-style editorial illustration, lightly textured paper, crisp shapes, realistic adult proportions, navy ink outlines, muted slate blue, teal, warm cream background. Calm, professional, human. Scene: three adult colleagues around a modest worktable reviewing a paper workflow and passing a folder from one person to another; the folder and connecting handoff are the visual center. Include a laptop with simple abstract blocks and a few notes, no readable text anywhere. Diverse adult professionals, natural expressions, no exaggerated cartoon smiles. Open airy composition; generous white/cream breathing room; keep figures within the central band so the image reads well as a small wide illustration. Do not include titles, captions, logos, watermarks, gradients, sci-fi motifs, floating icons, or decorative UI. This is an illustrative scene, not documentary photography. Output only the finished image."
+      "status": "retained unreferenced",
+      "source": "Copied byte-for-byte from course1/sprints/sprint-12/assets/workplace-handoff.webp on 2026-09-17."
     }
   ]
 }

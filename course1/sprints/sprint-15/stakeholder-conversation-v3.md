@@ -66,25 +66,11 @@ Use the **Stakeholder Validation Report**, a document template you copy once and
 
 ## Part 1: Prepare for the Conversation
 
-**What a weak question costs you in a real room.**
-
-Say your Problem Frame assumes: "New employees struggle because onboarding materials are outdated."
-
-**Question A (weak):** "Do you think the onboarding materials need to be updated?"
-
-This invites a simple yes or no, and most people will just agree to be agreeable. It doesn't test your assumption, it asks for approval of it.
-
-**Question B (strong):** "Walk me through your first two weeks on the job. What was confusing or hard to figure out?"
-
-This asks for a real, specific account. The stakeholder might confirm your assumption, that the materials really were the problem, or they might reveal something you didn't expect: maybe the materials were fine, but there was no time in the schedule to go over them.
-
-That is the difference between a conversation that tells you something and one that tells you what you already believed.
-
 **1. Bring your three questions.**
 
-Your three questions come from the assumption blocks in your Stakeholder Map, the ones your chosen stakeholder can actually answer. Bring them here rather than writing new ones. If only two of your assumptions fit this person, take the third from their "Next question to ask" field in your map.
+Your three questions come from the assumption blocks in your Stakeholder Map, the ones your chosen stakeholder can actually answer. Bring them here rather than writing new ones. If only two of your assumptions fit this person, take the third from their "Next question to ask" field in your map. Use the full weak-and-strong examples and self-check in the Stakeholder Map if you need a refresher.
 
-You may sharpen the wording, and you may swap one out if something has changed since you wrote them, but start from what you already have.
+You may sharpen the wording, and you may swap one out if something has changed since you wrote them, but start from what you already have. Each question should help this specific person describe an experience, decision, or tradeoff that bears on the one assumption you need to test.
 
 Write each question into Section A of your report with what you hope to learn from it, and name the single assumption this conversation is meant to test.
 

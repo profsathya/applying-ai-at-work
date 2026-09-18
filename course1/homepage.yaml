@@ -500,7 +500,7 @@ modules:
             nav_meta: "Read"
             meta: "Page - how stakeholders, evidence status, and validation conversations work in this sprint"
           - slug: "sprint-3-concept-check-v3"
-            nav_meta: "Practice · Ungraded"
+            nav_meta: "Practice · 5 points"
             meta: "Practice quiz - check your understanding before you start mapping; unlimited attempts, 5 points"
             badge: "Self-check"
             selfcheck: true

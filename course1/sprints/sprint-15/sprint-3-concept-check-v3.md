@@ -13,7 +13,7 @@ allowed_attempts: -1
 submission_type: online_quiz
 delivery_mode: canvas_native
 learner_labels: true
-learning_goal: Confirm you can tell the four stakeholder relationships apart, recognise a validation question that tests rather than confirms, and say what Sprint 3 requires of you.
+learning_goal: Confirm you can tell the four stakeholder relationships apart, recognize a validation question that tests rather than confirms, and say what Sprint 3 requires of you.
 publish: true
 questions:
   - type: true_false
@@ -82,4 +82,4 @@ questions:
 
 A short self-test to confirm you are set up for this sprint before you start mapping. It covers both what Sprint 3 asks you to do and the core concepts behind it: stakeholders, evidence status, validation questions, and conflicts as information.
 
-This is an anti-skim check, not a graded assessment. If a question surprises you, revisit the Introduction before moving on to the Stakeholder Map.
+This is a low-stakes, five-point anti-skim check. If a question surprises you, revisit the Introduction before moving on to the Stakeholder Map.

@@ -96,9 +96,9 @@ A validation question should be open enough that a stakeholder could tell you so
 - **Weak:** "Would a solution like Y help you?" This pitches your idea and asks for approval.
 - **Strong:** "What would need to be true for this to actually get easier for you?" This leaves room for the stakeholder to name something you hadn't considered.
 
-Good validation questions ask about specific experiences, past behaviour, or concrete tradeoffs, rather than opinions about your idea.
+Good validation questions ask about specific experiences, past behavior, or concrete tradeoffs, rather than opinions about your idea.
 
-**Quick self-check.** Does your question ask about a specific experience, a past behaviour, or a concrete tradeoff? If it asks for an opinion about your idea instead, rewrite it.
+**Quick self-check.** Does your question ask about a specific experience, a past behavior, or a concrete tradeoff? If it asks for an opinion about your idea instead, rewrite it.
 
 ### Write two or three assumption blocks
 

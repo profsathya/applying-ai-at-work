@@ -12,6 +12,7 @@ submission_type: text_entry
 delivery_mode: guided_assignment
 completion_requirement: must_submit
 learner_labels: true
+learning_goal: Use AI to test and widen your Stakeholder Map, then decide which changes to keep and whom to contact first.
 publish: true
 dojo_submission:
   mode: transcript
@@ -119,7 +120,7 @@ listen or whether it pitches my own idea, and why. Do not
 rewrite them.
 ```
 
-Then rewrite the weak ones yourself. You already know what strong looks like from your Stakeholder Map: a specific experience, a past behaviour, or a concrete tradeoff, rather than an opinion about your idea.
+Then rewrite the weak ones yourself. Use the Stakeholder Map self-check: ask about a specific experience, past behavior, or concrete tradeoff, not an opinion about your idea.
 
 ## 4. Choose: confirm who you talk to first
 
