@@ -64,10 +64,10 @@ Begin with your own observations and judgment. When an activity introduces AI, u
 
 ## Turning in your work
 
-Submit through Canvas using the type specified by the activity: discussion, text entry, or file upload. Saving, copying, or downloading work inside an activity does not submit it to Canvas. Use [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources) for the steps and for checking that a submission went through.
+Submit through Canvas using the type specified by the activity: discussion, text entry, or file upload. Saving, copying, or downloading work inside an activity does not submit it to Canvas. Use [Help and Resources](artifact:course1-sprints-welcome-and-orientation-v2-help-and-resources-v2) for the steps and for checking that a submission went through.
 
 ## Continuing into Course 2
 
 CIS 501 develops your problem frame and goals. In **CIS 502: Designing Solutions with AI**, you use the integrated problem document to begin building and refining a solution. Continuing into CIS 502 is recommended to complete the certificate sequence.
 
-Continue to [Your First Week](https://cti-courses.instructure.com/courses/180/pages/your-first-week) for your orientation checklist.
+Continue to [Your First Week](artifact:course1-sprints-welcome-and-orientation-v2-your-first-week-v2) for your orientation checklist.

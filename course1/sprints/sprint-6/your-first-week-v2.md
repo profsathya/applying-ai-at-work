@@ -22,7 +22,7 @@ Use this checklist to finish Sprint 0. The introduction post is the only thing y
 
 ## 1. Read the course guide
 
-Read [Welcome](https://cti-courses.instructure.com/courses/180/pages/welcome) and [How This Course Works](https://cti-courses.instructure.com/courses/180/pages/how-this-course-works). Check that you can explain what the integrated problem document will show and how the recommended sprint schedule works.
+Read [Welcome](artifact:course1-sprints-welcome-and-orientation-v2-welcome-v2) and [How This Course Works](artifact:course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2). Check that you can explain what the integrated problem document will show and how the recommended sprint schedule works.
 
 ## 2. Put weekly work on your calendar
 
@@ -36,10 +36,10 @@ Find **Canvas Inbox** in the course navigation so you know where to contact your
 
 ## 4. Set up your AI coach
 
-Continue to [Set up your AI Dojo](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html). Configure one tool and try its short coaching check. There is no setup submission. In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames without AI; use the Dojo only when the Dojo Lab introduces it.
+Continue to [Set up your AI Dojo](artifact:course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2). Configure one tool and try its short coaching check. There is no setup submission. In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames without AI; use the Dojo only when the Dojo Lab introduces it.
 
 ## 5. Post your introduction
 
-Open [Introduction Post](https://cti-courses.instructure.com/courses/180/discussion_topics/1533) and follow its prompts. This zero-point discussion is graded complete or incomplete. Read a few introductions when they are available; replies are optional.
+Open [Introduction Post](artifact:course1-sprints-welcome-and-orientation-v2-introduction-post-v2) and follow its prompts. This zero-point discussion is graded complete or incomplete. Read a few introductions when they are available; replies are optional.
 
-After the Dojo setup and your introduction, continue to [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources) for any guidance you need, then begin [Sprint 1: Find the Problem Worth Solving](https://cti-courses.instructure.com/courses/180/pages/introduction-find-the-problem-worth-solving-2).
+After the Dojo setup and your introduction, continue to [Help and Resources](artifact:course1-sprints-welcome-and-orientation-v2-help-and-resources-v2) for any guidance you need, then begin [Sprint 1: Find the Problem Worth Solving](artifact:course1-sprints-sprint-14-introduction-find-the-problem-worth-solving).

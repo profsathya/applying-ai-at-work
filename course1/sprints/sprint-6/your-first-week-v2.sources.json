@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-your-first-week-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "48b9395e7076ae24827273853f18f1e718d3376750d8b81f284c5f17a63b5ba8",
-  "body_sha256": "f1eecf5c01dc3c012e5bc646ff751a6ddb418ca1955043ebb1a0d839e5a7c1fc",
+  "body_sha256": "20cff37d7d5db965a15dff53bfbf25fd7fe8768a3d8f08c15c15d9b8af3d07ae",
   "frontmatter_sha256": "05dd1a2411ec75f0e1d1f4753813a854cd7632c2164a659aa512a5c88ba6416a",
   "parts": [
     {
@@ -25,7 +25,7 @@
     },
     {
       "kind": "new",
-      "markdown": "## 1. Read the course guide\n\nRead [Welcome](https://cti-courses.instructure.com/courses/180/pages/welcome) and [How This Course Works](https://cti-courses.instructure.com/courses/180/pages/how-this-course-works). Check that you can explain what the integrated problem document will show and how the recommended sprint schedule works.",
+      "markdown": "## 1. Read the course guide\n\nRead [Welcome](artifact:course1-sprints-welcome-and-orientation-v2-welcome-v2) and [How This Course Works](artifact:course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2). Check that you can explain what the integrated problem document will show and how the recommended sprint schedule works.",
       "reason": "Remove the absent-video dependency and retain a useful self-check on the supplied orientation goals. Sequential-progression follow-up: do not require access to the final Help page before the introduction contribution.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.oc50ud5j09tu/body/10",
@@ -55,7 +55,7 @@
     },
     {
       "kind": "new",
-      "markdown": "## 4. Set up your AI coach\n\nContinue to [Set up your AI Dojo](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html). Configure one tool and try its short coaching check. There is no setup submission. In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames without AI; use the Dojo only when the Dojo Lab introduces it.\n\n## 5. Post your introduction\n\nOpen [Introduction Post](https://cti-courses.instructure.com/courses/180/discussion_topics/1533) and follow its prompts. This zero-point discussion is graded complete or incomplete. Read a few introductions when they are available; replies are optional.",
+      "markdown": "## 4. Set up your AI coach\n\nContinue to [Set up your AI Dojo](artifact:course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2). Configure one tool and try its short coaching check. There is no setup submission. In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames without AI; use the Dojo only when the Dojo Lab introduces it.\n\n## 5. Post your introduction\n\nOpen [Introduction Post](artifact:course1-sprints-welcome-and-orientation-v2-introduction-post-v2) and follow its prompts. This zero-point discussion is graded complete or incomplete. Read a few introductions when they are available; replies are optional.",
       "reason": "Apply the user-authorized 2026-09-18 reconciliation to the complete Sprint 1 sequence and AI boundary.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.oc50ud5j09tu/body/19",
@@ -64,7 +64,7 @@
     },
     {
       "kind": "new",
-      "markdown": "After the Dojo setup and your introduction, continue to [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources) for any guidance you need, then begin [Sprint 1: Find the Problem Worth Solving](https://cti-courses.instructure.com/courses/180/pages/introduction-find-the-problem-worth-solving-2).",
+      "markdown": "After the Dojo setup and your introduction, continue to [Help and Resources](artifact:course1-sprints-welcome-and-orientation-v2-help-and-resources-v2) for any guidance you need, then begin [Sprint 1: Find the Problem Worth Solving](artifact:course1-sprints-sprint-14-introduction-find-the-problem-worth-solving).",
       "reason": "Provide a clear handoff through existing Canvas identities. Sequential-progression follow-up: do not require access to the final Help page before the introduction contribution. Dojo setup integration: update orientation route while preserving the sole discussion submission and no-AI Sprint 1 boundary.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.oc50ud5j09tu/body/22"
@@ -94,7 +94,8 @@
     "Current Canvas wrappers/settings show no target drift. Retain existing source submission and Inbox fixes rather than restoring outdated Google Doc placeholders.",
     "2026-09-15 visual follow-up: replace the reused Sprint 1 image with a new original illustration in the same art style; add selective blue callouts on Welcome, How This Course Works, Your First Week, and Help. Existing Start Here goals accent remains the reference. No instructional or assessment redesign.",
     "User authorized live publication, five must_view pages and sequential item progression; preserve must_contribute discussion and existing identities. Clarify early help guidance to avoid a locked later-page dependency.",
-    "2026-09-18 audit reconciliation updates obsolete Sprint 1 availability and AI-boundary language without changing artifact or Canvas identity."
+    "2026-09-18 audit reconciliation updates obsolete Sprint 1 availability and AI-boundary language without changing artifact or Canvas identity.",
+    "Replace institution-specific and fixed hosted links with portable artifact references so public routing and the selected Canvas profile resolve at render time."
   ],
   "title_source": {
     "ref": "d-a5a526bfcb8ecc4c:tab/t.oc50ud5j09tu/body/4",

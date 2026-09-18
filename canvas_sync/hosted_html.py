@@ -91,6 +91,44 @@ class _TopLevelLinkExtension(Extension):
         )
 
 
+class _ArtifactLinkTreeprocessor(Treeprocessor):
+    def __init__(self, md, artifact_links: dict[str, dict[str, str]]):
+        super().__init__(md)
+        self.artifact_links = artifact_links
+
+    def run(self, root):
+        for anchor in root.iter("a"):
+            href = str(anchor.get("href") or "")
+            if not href.startswith("artifact:"):
+                continue
+            artifact_id = href.removeprefix("artifact:").strip()
+            target = self.artifact_links.get(artifact_id)
+            if target is None:
+                raise ValueError(
+                    f"Unknown artifact link target {artifact_id!r}; "
+                    "use an artifact_id from this course"
+                )
+            anchor.set("href", target["web"])
+            if target.get("canvas"):
+                anchor.set("data-canvas-href", target["canvas"])
+                anchor.set("data-canvas-target", "_top")
+        return root
+
+
+class _ArtifactLinkExtension(Extension):
+    def __init__(self, artifact_links: dict[str, dict[str, str]]):
+        super().__init__()
+        self.artifact_links = artifact_links
+
+    def extendMarkdown(self, md):
+        # Resolve before the top-level-link pass decides whether to add target.
+        md.treeprocessors.register(
+            _ArtifactLinkTreeprocessor(md, self.artifact_links),
+            "canvas_artifact_links",
+            2,
+        )
+
+
 def hosted_config_from_manifest(manifest: dict) -> HostedConfig:
     config = manifest.get("hosted_html") or {}
     return HostedConfig(
@@ -101,18 +139,25 @@ def hosted_config_from_manifest(manifest: dict) -> HostedConfig:
     )
 
 
-def markdown_body_to_html(body: str) -> str:
+def markdown_body_to_html(
+    body: str,
+    *,
+    artifact_links: dict[str, dict[str, str]] | None = None,
+) -> str:
     import markdown
 
+    extensions = [
+        "extra",
+        "sane_lists",
+        "smarty",
+        "toc",
+    ]
+    if artifact_links is not None:
+        extensions.append(_ArtifactLinkExtension(artifact_links))
+    extensions.append(_TopLevelLinkExtension())
     return markdown.markdown(
         body,
-        extensions=[
-            "extra",
-            "sane_lists",
-            "smarty",
-            "toc",
-            _TopLevelLinkExtension(),
-        ],
+        extensions=extensions,
         output_format="html5",
     )
 
@@ -344,6 +389,45 @@ def _canvas_item_url(manifest: dict, frontmatter: dict, entry: dict) -> str | No
     return None
 
 
+def _artifact_link_targets(
+    manifest_path: Path,
+    manifest: dict,
+    state: dict | None,
+) -> dict[str, dict[str, str]]:
+    """Build public-first destinations for every renderable course artifact."""
+    targets: dict[str, dict[str, str]] = {}
+    state_data = state or manifest
+    for md_path in discover_artifact_files(manifest_path):
+        frontmatter, _body = parse_frontmatter(md_path)
+        if frontmatter["type"] == "module_header":
+            continue
+        artifact_id = str(
+            frontmatter.get("artifact_id")
+            or _artifact_progress_id(md_path, manifest_path, frontmatter)
+        )
+        hosted = artifact_hosted_info(md_path, manifest_path, manifest, frontmatter)
+        target = {"web": with_context(hosted["hosted_url"], "web")}
+        entry = _state_entry_for_artifact(
+            md_path, manifest_path, frontmatter, state_data
+        )
+        canvas_url = _canvas_item_url(manifest, frontmatter, entry)
+        if canvas_url:
+            target["canvas"] = canvas_url
+        targets[artifact_id] = target
+    return targets
+
+
+def _canvas_only_anchor(canvas_url: str | None, label: str, *, css_class: str = "") -> str:
+    if not canvas_url:
+        return ""
+    class_attr = f' class="{html_lib.escape(css_class, quote=True)}"' if css_class else ""
+    return (
+        f'<a{class_attr} hidden data-canvas-only '
+        f'data-canvas-href="{html_lib.escape(canvas_url, quote=True)}" '
+        f'data-canvas-target="_top">{html_lib.escape(label)}</a>'
+    )
+
+
 def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
     artifact_type = frontmatter["type"]
     if artifact_type == "page" and frontmatter.get("page_presentation") == "reading":
@@ -351,17 +435,16 @@ def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
     if frontmatter.get("delivery_mode") == "guided_assignment":
         if frontmatter.get('guided_assignment', {}).get('presentation') in ('compact', 'reading'):
             return ''  # The compact workspace owns its single submission instruction/link.
-        link = f'<p><a href="{html_lib.escape(canvas_url, quote=True)}" target="_top">Open the Canvas assignment</a></p>' if canvas_url else ""
+        anchor = _canvas_only_anchor(canvas_url, "Open the Canvas assignment")
+        link = f"<p>{anchor}</p>" if anchor else ""
         return '<div class="submit"><h2>Submit to Canvas</h2><p>Paste your final response text into the Canvas assignment. A document link or a saved browser draft is not a submission.</p>' + link + '</div>'
     if is_ai_activity_delivery(frontmatter):
         guidance = (
             "Complete the interactive activity, copy or download the JSON response file, "
             "and upload it to the Canvas assignment."
         )
-        link = ""
-        if canvas_url:
-            escaped = html_lib.escape(canvas_url, quote=True)
-            link = f'\n      <p><a href="{escaped}" target="_top">Open the Canvas assignment</a></p>'
+        anchor = _canvas_only_anchor(canvas_url, "Open the Canvas assignment")
+        link = f"\n      <p>{anchor}</p>" if anchor else ""
         return (
             '<div class="submit">\n'
             "      <h2>Submit to Canvas</h2>\n"
@@ -384,11 +467,9 @@ def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
     }.get(artifact_type, "Return to Canvas for the next step.")
     if frontmatter.get("learner_labels") and artifact_type == "discussion":
         guidance = "Post your introduction in Canvas, then read a few other introductions. Peer replies are optional."
-    link = ""
-    if canvas_url:
-        escaped = html_lib.escape(canvas_url, quote=True)
-        label = html_lib.escape(_type_label(artifact_type).lower())
-        link = f'\n      <p><a href="{escaped}" target="_top">Open the Canvas {label}</a></p>'
+    label = f"Open the Canvas {_type_label(artifact_type).lower()}"
+    anchor = _canvas_only_anchor(canvas_url, label)
+    link = f"\n      <p>{anchor}</p>" if anchor else ""
     return (
         '<div class="submit">\n'
         "      <h2>Submit to Canvas</h2>\n"
@@ -404,8 +485,11 @@ def render_artifact_document(
     manifest: dict,
     hosted_info: dict,
     state_entry: dict | None = None,
+    artifact_links: dict[str, dict[str, str]] | None = None,
 ) -> str:
-    rendered = _strip_leading_h1(markdown_body_to_html(body))
+    rendered = _strip_leading_h1(
+        markdown_body_to_html(body, artifact_links=artifact_links)
+    )
     rendered, has_mermaid = _render_mermaid_blocks(rendered)
     reading_mode = frontmatter.get("page_presentation") == "reading" or frontmatter.get("guided_assignment", {}).get("presentation") == "reading"
     sections = _wrap_sections(rendered, overview=not reading_mode)
@@ -527,6 +611,7 @@ def render_artifact_document(
     }}
     .submit h2 {{ color: #065f46; }}
     .submit p {{ margin: 4px 0; }}
+    a[data-canvas-only][hidden] {{ display: none !important; }}
     footer {{ text-align: center; margin: 28px 0 8px; opacity: 0.55; }}
     footer img {{ height: 22px; }}
     .back-link {{
@@ -549,6 +634,18 @@ def render_artifact_document(
         document.documentElement.classList.add('ctx-web');
       }}
       document.addEventListener('DOMContentLoaded', function() {{
+        document.querySelectorAll('a[data-canvas-href]').forEach(function(a) {{
+          if (ctx === 'canvas') {{
+            a.href = a.getAttribute('data-canvas-href');
+            a.hidden = false;
+            if (a.hasAttribute('data-canvas-target')) {{
+              a.target = a.getAttribute('data-canvas-target');
+            }}
+          }} else if (a.hasAttribute('data-canvas-only')) {{
+            a.removeAttribute('href');
+            a.hidden = true;
+          }}
+        }});
         document.querySelectorAll('a[data-keep-context]').forEach(function(a) {{
           try {{
             var u = new URL(a.getAttribute('href'), location.href);
@@ -686,8 +783,11 @@ def _render_ai_activity_wrapper_document(
     manifest: dict,
     hosted_info: dict,
     state_entry: dict | None = None,
+    artifact_links: dict[str, dict[str, str]] | None = None,
 ) -> str:
-    rendered = _strip_leading_h1(markdown_body_to_html(body))
+    rendered = _strip_leading_h1(
+        markdown_body_to_html(body, artifact_links=artifact_links)
+    )
     rendered, has_mermaid = _render_mermaid_blocks(rendered)
     sections = _wrap_sections(rendered)
     title = html_lib.escape(frontmatter["title"])
@@ -697,12 +797,9 @@ def _render_ai_activity_wrapper_document(
     sprint = int(frontmatter["sprint"])
     points = frontmatter.get("points")
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {})
-    canvas_link = ""
-    if canvas_url:
-        canvas_link = (
-            f'<a class="secondary" href="{html_lib.escape(canvas_url, quote=True)}" '
-            'target="_top">Submit on Canvas</a>'
-        )
+    canvas_link = _canvas_only_anchor(
+        canvas_url, "Submit on Canvas", css_class="secondary"
+    )
     activity_href = f"../activities/{html_lib.escape(frontmatter['slug'], quote=True)}.html?context=web"
     if frontmatter.get("learner_labels"):
         activity_href += "&v=v2-consistency-20260911"
@@ -775,6 +872,7 @@ def _render_ai_activity_wrapper_document(
     }}
     a.button {{ color: #fff; background: #4f46e5; }}
     a.secondary {{ color: #065f46; background: #d1fae5; }}
+    a[data-canvas-only][hidden] {{ display: none !important; }}
     a {{ color: #4f46e5; word-break: break-word; }}
     .back-link {{
       display: none;
@@ -791,6 +889,27 @@ def _render_ai_activity_wrapper_document(
       if (ctx !== 'canvas') {{
         document.documentElement.classList.add('ctx-web');
       }}
+      document.addEventListener('DOMContentLoaded', function() {{
+        document.querySelectorAll('a[data-canvas-href]').forEach(function(a) {{
+          if (ctx === 'canvas') {{
+            a.href = a.getAttribute('data-canvas-href');
+            a.hidden = false;
+            if (a.hasAttribute('data-canvas-target')) {{
+              a.target = a.getAttribute('data-canvas-target');
+            }}
+          }} else if (a.hasAttribute('data-canvas-only')) {{
+            a.removeAttribute('href');
+            a.hidden = true;
+          }}
+        }});
+        document.querySelectorAll('a[data-keep-context]').forEach(function(a) {{
+          try {{
+            var u = new URL(a.getAttribute('href'), location.href);
+            u.searchParams.set('context', ctx === 'canvas' ? 'canvas' : 'web');
+            a.href = u.href;
+          }} catch (e) {{ }}
+        }});
+      }});
     }})();
   </script>
 {mermaid_script}\
@@ -807,7 +926,7 @@ def _render_ai_activity_wrapper_document(
       <h2>Start the AI activity</h2>
       <p>Complete the interactive activity in one sitting on the same device. Your responses are saved in this browser while you work.</p>
       <div class="actions">
-        <a class="button" href="{activity_href}">Open activity &rarr;</a>
+        <a class="button" href="{activity_href}" data-keep-context>Open activity &rarr;</a>
       </div>
     </div>
 
@@ -858,11 +977,13 @@ def _render_ai_activity_shell_document(
   <script src="../../../js/activity-components.js{runtime_version}"></script>
   <script src="../../../js/activity-engine.js{runtime_version}"></script>
   <script>
+    const activityContext = new URLSearchParams(location.search).get('context')
+      || (window.self !== window.top ? 'canvas' : 'web');
     ActivityEngine.init({{
       containerId: 'activity-container',
       configUrl: {json.dumps(config_url)},
       courseTheme: {json.dumps(course_theme)},
-      canvasUrl: {json.dumps(canvas_url)}
+      canvasUrl: activityContext === 'canvas' ? {json.dumps(canvas_url)} : null
     }});
   </script>
 </body>
@@ -877,12 +998,20 @@ def _render_ai_activity_artifact(
     *,
     manifest: dict,
     state: dict | None,
+    artifact_links: dict[str, dict[str, str]],
 ) -> dict:
     fm, body = parse_frontmatter(md_path)
     course_key = course_dir_for_manifest(manifest_path).name
     hosted_info = artifact_hosted_info(md_path, manifest_path, manifest, fm)
     state_entry = _state_entry_for_artifact(md_path, manifest_path, fm, state or manifest)
-    wrapper = _render_ai_activity_wrapper_document(fm, body, manifest, hosted_info, state_entry)
+    wrapper = _render_ai_activity_wrapper_document(
+        fm,
+        body,
+        manifest,
+        hosted_info,
+        state_entry,
+        artifact_links,
+    )
     shell = _render_ai_activity_shell_document(fm, manifest, course_key, state_entry)
     activity_config = _ai_activity_config(fm, body, manifest, course_key)
 
@@ -938,6 +1067,7 @@ def render_hosted_artifact(
     *,
     manifest: dict | None = None,
     state: dict | None = None,
+    artifact_links: dict[str, dict[str, str]] | None = None,
 ) -> dict:
     manifest_data = manifest or load_json(manifest_path)
     config = hosted_config_from_manifest(manifest_data)
@@ -946,6 +1076,9 @@ def render_hosted_artifact(
     fm, body = parse_frontmatter(md_path)
     if fm["type"] == "module_header":
         raise ValueError(f"Module headers do not render as hosted HTML: {md_path}")
+    link_targets = artifact_links or _artifact_link_targets(
+        manifest_path, manifest_data, state or manifest_data
+    )
     if is_ai_activity_delivery(fm):
         return _render_ai_activity_artifact(
             md_path,
@@ -953,10 +1086,18 @@ def render_hosted_artifact(
             output_dir,
             manifest=manifest_data,
             state=state,
+            artifact_links=link_targets,
         )
     hosted_info = artifact_hosted_info(md_path, manifest_path, manifest_data, fm)
     state_entry = _state_entry_for_artifact(md_path, manifest_path, fm, state or manifest_data)
-    document = render_artifact_document(fm, body, manifest_data, hosted_info, state_entry)
+    document = render_artifact_document(
+        fm,
+        body,
+        manifest_data,
+        hosted_info,
+        state_entry,
+        link_targets,
+    )
     output_path = hosted_output_path(output_dir, manifest_data, hosted_info["hosted_path"])
     assets = local_image_assets(md_path, markdown_body_to_html(body))
     asset_outputs = []
@@ -2059,6 +2200,9 @@ def render_hosted_files(
     course_key = course_dir_for_manifest(manifest_path).name
     course_dir = course_dir_for_manifest(manifest_path)
     index_files = discover_artifact_files(manifest_path)
+    artifact_links = _artifact_link_targets(
+        manifest_path, manifest_data, state or manifest_data
+    )
     results = []
     for md_path in files:
         errors = validate_artifact(md_path)
@@ -2074,6 +2218,7 @@ def render_hosted_files(
                 output_dir,
                 manifest=manifest_data,
                 state=state or manifest_data,
+                artifact_links=artifact_links,
             )
         )
 

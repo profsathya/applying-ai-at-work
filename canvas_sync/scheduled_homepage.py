@@ -123,9 +123,14 @@ def _module_row_html(key: str, title: str, dates: str, href: str | None, groups:
     """Keep module navigation and the activity disclosure as separate controls."""
     esc = html.escape
     name = esc(title)
-    destination = canvas_href or href
-    navigation = 'target="_top" data-canvas-module-link' if canvas_href else 'data-module-link'
-    label = f'<a class="module-title" href="{esc(destination, quote=True)}" {navigation}>{name}</a>' if destination else f'<span class="module-title">{name}</span>'
+    canvas = (
+        f' data-canvas-href="{esc(canvas_href, quote=True)}" data-canvas-target="_top"'
+        if canvas_href else ""
+    )
+    label = (
+        f'<a class="module-title" href="{esc(href, quote=True)}" data-module-link{canvas}>{name}</a>'
+        if href else f'<span class="module-title">{name}</span>'
+    )
     panel_id = f"module-items-{key}"
     activities = _activity_groups_html(groups) if href else ""
     toggle = (
@@ -177,7 +182,7 @@ def render_scheduled_homepage(
     <p class="dates" id="sprint-dates">Sprint 1 begins {data['start']}</p>
     <p class="note" id="sprint-note" hidden></p>
     <p class="availability" id="sprint-unavailable" hidden>Materials are in preparation. Available modules are below.</p>
-    <a class="primary" href="{esc(data['orientation']['canvas_href'] or data['orientation']['href'])}" id="sprint-action"{' target="_top"' if data['orientation']['canvas_href'] else ''}><span id="sprint-action-label">Open orientation</span><span aria-hidden="true">→</span></a>
+    <a class="primary" href="{esc(data['orientation']['href'])}" id="sprint-action"{' data-canvas-href="' + esc(data['orientation']['canvas_href'], quote=True) + '" data-canvas-target="_top"' if data['orientation']['canvas_href'] else ''}><span id="sprint-action-label">Open orientation</span><span aria-hidden="true">→</span></a>
   </section>
   <p class="sr-only" id="schedule-announcement" aria-live="polite"></p>
   <section class="other-modules" aria-labelledby="other-modules-title">

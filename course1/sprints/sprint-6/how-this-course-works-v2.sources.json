@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "48b9395e7076ae24827273853f18f1e718d3376750d8b81f284c5f17a63b5ba8",
-  "body_sha256": "6948a9bae2c0369c21273a434f9f171bf46d6b5ed56f8b4367b4a9ee1eb3b61e",
+  "body_sha256": "726384d8f3149bcb5537c0f784d35fd175741c4a0f29399bc0590fe82bde786f",
   "frontmatter_sha256": "c1e137fd927aba742410388633e9f380f95585a157529ab1a20918943ededb2b",
   "parts": [
     {
@@ -110,7 +110,7 @@
     },
     {
       "kind": "new",
-      "markdown": "## Turning in your work\n\nSubmit through Canvas using the type specified by the activity: discussion, text entry, or file upload. Saving, copying, or downloading work inside an activity does not submit it to Canvas. Use [Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources) for the steps and for checking that a submission went through.",
+      "markdown": "## Turning in your work\n\nSubmit through Canvas using the type specified by the activity: discussion, text entry, or file upload. Saving, copying, or downloading work inside an activity does not submit it to Canvas. Use [Help and Resources](artifact:course1-sprints-welcome-and-orientation-v2-help-and-resources-v2) for the steps and for checking that a submission went through.",
       "reason": "Retain newer verified submission guidance and include the native discussion alongside assignment submission types.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.xs6l5nx7b5hl/body/33",
@@ -128,7 +128,7 @@
     },
     {
       "kind": "new",
-      "markdown": "Continue to [Your First Week](https://cti-courses.instructure.com/courses/180/pages/your-first-week) for your orientation checklist.",
+      "markdown": "Continue to [Your First Week](artifact:course1-sprints-welcome-and-orientation-v2-your-first-week-v2) for your orientation checklist.",
       "reason": "Link the next existing Canvas page.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.xs6l5nx7b5hl/body/38"
@@ -158,7 +158,8 @@
     "Current Canvas wrappers/settings show no target drift. Retain existing source submission and Inbox fixes rather than restoring outdated Google Doc placeholders.",
     "2026-09-15 visual follow-up: replace the reused Sprint 1 image with a new original illustration in the same art style; add selective blue callouts on Welcome, How This Course Works, Your First Week, and Help. Existing Start Here goals accent remains the reference. No instructional or assessment redesign.",
     "User authorized live publication, five must_view pages and sequential item progression; preserve must_contribute discussion and existing identities. Clarify early help guidance to avoid a locked later-page dependency.",
-    "2026-09-18 audit reconciliation updates obsolete Sprint 1 availability and AI-boundary language without changing artifact or Canvas identity."
+    "2026-09-18 audit reconciliation updates obsolete Sprint 1 availability and AI-boundary language without changing artifact or Canvas identity.",
+    "Replace institution-specific and fixed hosted links with portable artifact references so public routing and the selected Canvas profile resolve at render time."
   ],
   "title_source": {
     "ref": "d-a5a526bfcb8ecc4c:tab/t.xs6l5nx7b5hl/body/4",

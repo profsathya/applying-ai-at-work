@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-start-here-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "6f63926ccabc0997d147041f102475b5770c172ff78f6a6a319dba92f7534249",
-  "body_sha256": "69309dd2f6e2ab66ff67520f29f88d9098e8bbdf06f89c44825bb67d851ab898",
+  "body_sha256": "db20cd8e9d4bd7907001767eb64a7a24d04709156f80df2ed069200e63d6e6f3",
   "frontmatter_sha256": "4cd8f80cf990b4fed70158d7ec15d1405b371df3d0c9ac58b75b235da6ccbf49",
   "parts": [
     {
@@ -38,7 +38,7 @@
     },
     {
       "kind": "new",
-      "markdown": "## Your route through Sprint 0\n\nThis module has **six pages and one discussion**, including this page:\n\n1. **Start Here:** the route and goals you are reading now.\n2. **[Welcome](https://cti-courses.instructure.com/courses/180/pages/welcome):** what the course helps you do and what you will have by the end.\n3. **[How This Course Works](https://cti-courses.instructure.com/courses/180/pages/how-this-course-works):** the sprint roadmap, weekly rhythm, and submissions.\n4. **[Your First Week](https://cti-courses.instructure.com/courses/180/pages/your-first-week):** a checklist for getting ready.\n5. **[Set up your AI Dojo](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html):** configure your AI coach and check its behavior without completing Sprint 1 work.\n6. **[Introduction Post](https://cti-courses.instructure.com/courses/180/discussion_topics/1533):** your one orientation submission, graded complete or incomplete, worth zero points.\n7. **[Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources):** submission steps, key terms, and instructor contact. Read it after posting your introduction, then return when needed.",
+      "markdown": "## Your route through Sprint 0\n\nThis module has **six pages and one discussion**, including this page:\n\n1. **Start Here:** the route and goals you are reading now.\n2. **[Welcome](artifact:course1-sprints-welcome-and-orientation-v2-welcome-v2):** what the course helps you do and what you will have by the end.\n3. **[How This Course Works](artifact:course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2):** the sprint roadmap, weekly rhythm, and submissions.\n4. **[Your First Week](artifact:course1-sprints-welcome-and-orientation-v2-your-first-week-v2):** a checklist for getting ready.\n5. **[Set up your AI Dojo](artifact:course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2):** configure your AI coach and check its behavior without completing Sprint 1 work.\n6. **[Introduction Post](artifact:course1-sprints-welcome-and-orientation-v2-introduction-post-v2):** your one orientation submission, graded complete or incomplete, worth zero points.\n7. **[Help and Resources](artifact:course1-sprints-welcome-and-orientation-v2-help-and-resources-v2):** submission steps, key terms, and instructor contact. Read it after posting your introduction, then return when needed.",
       "reason": "Map all six existing items in Canvas order; make the reusable help page and single submission explicit without duplicating the discussion prompts. Sequential-progression follow-up: do not require access to the final Help page before the introduction contribution. Dojo setup integration: update orientation route while preserving the sole discussion submission and no-AI Sprint 1 boundary.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/8",
@@ -51,7 +51,7 @@
     },
     {
       "kind": "new",
-      "markdown": "Continue to [Welcome](https://cti-courses.instructure.com/courses/180/pages/welcome).",
+      "markdown": "Continue to [Welcome](artifact:course1-sprints-welcome-and-orientation-v2-welcome-v2).",
       "reason": "Provide a working next-page link instead of a repeated description. Sequential-progression follow-up: do not require access to the final Help page before the introduction contribution.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/16"
@@ -80,7 +80,8 @@
     "Preserve meaningful exact source selections; all reorganized prose, added transitions, headings, links, and presentation are explicitly labeled adaptations with based_on references.",
     "Current Canvas wrappers/settings show no target drift. Retain existing source submission and Inbox fixes rather than restoring outdated Google Doc placeholders.",
     "2026-09-15 visual follow-up: replace the reused Sprint 1 image with a new original illustration in the same art style; add selective blue callouts on Welcome, How This Course Works, Your First Week, and Help. Existing Start Here goals accent remains the reference. No instructional or assessment redesign.",
-    "User authorized live publication, five must_view pages and sequential item progression; preserve must_contribute discussion and existing identities. Clarify early help guidance to avoid a locked later-page dependency."
+    "User authorized live publication, five must_view pages and sequential item progression; preserve must_contribute discussion and existing identities. Clarify early help guidance to avoid a locked later-page dependency.",
+    "Replace institution-specific and fixed hosted links with portable artifact references so public routing and the selected Canvas profile resolve at render time."
   ],
   "title_source": {
     "ref": "d-a5a526bfcb8ecc4c:tab/t.xz447vcms4wv/body/4",

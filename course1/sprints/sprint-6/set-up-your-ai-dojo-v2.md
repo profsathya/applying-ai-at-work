@@ -66,4 +66,4 @@ If it cannot access the sources, add the dated copies and try again. You do not 
 
 When an activity invites AI use, return to this Dojo with your notes and the activity directions. Keep workplace details appropriate for the tool, and check requirements against Canvas.
 
-Continue to [Introduction Post](https://cti-courses.instructure.com/courses/180/discussion_topics/1533). If setup is blocked, use Canvas Inbox and explain which step stopped you.
+Continue to [Introduction Post](artifact:course1-sprints-welcome-and-orientation-v2-introduction-post-v2). If setup is blocked, use Canvas Inbox and explain which step stopped you.

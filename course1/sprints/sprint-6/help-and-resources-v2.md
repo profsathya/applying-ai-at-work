@@ -40,7 +40,7 @@ Sprint 1 guided activities save drafts in the browser you use. Keep a copy of im
 
 ## Use AI tools when an activity introduces them
 
-Use [Set up your AI Dojo](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html) to prepare your coach.
+Use [Set up your AI Dojo](artifact:course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2) to prepare your coach.
 
 > In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames **without AI**. Use the Dojo when the Dojo Lab introduces it. Keep the activity page available so you can return to its prompts and submission instructions.
 
@@ -87,4 +87,4 @@ The available Sprint 1 guided activities use Canvas text entry instead. Follow e
 
 **UMPIRE.** Understand, Map, Plan, Implement, Review, Evaluate. You may encounter this sequence in the Dojo; CIS 501 focuses on understanding and mapping the problem.
 
-When you have finished orientation, begin [Sprint 1: Find the Problem Worth Solving](https://cti-courses.instructure.com/courses/180/pages/introduction-find-the-problem-worth-solving-2). Keep this page available for later questions.
+When you have finished orientation, begin [Sprint 1: Find the Problem Worth Solving](artifact:course1-sprints-sprint-14-introduction-find-the-problem-worth-solving). Keep this page available for later questions.

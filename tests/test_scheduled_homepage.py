@@ -109,9 +109,17 @@ class ScheduledHomepageTests(unittest.TestCase):
             self.assertIn('class="activity-meta">Read</span>', home)
             self.assertNotIn("Long instructions stay", home)
             native_module = f'{instance["base_url"].rstrip("/")}/courses/{instance["course_id"]}/modules/730'
-            self.assertIn(f'href="{native_module}" target="_top" data-canvas-module-link', home)
+            self.assertIn(
+                f'href="sprint-99.html" data-module-link data-canvas-href="{native_module}" data-canvas-target="_top"',
+                home,
+            )
             landing = (root / "out/deanza/course1/home.html").read_text()
-            self.assertIn(f'class="primary" href="{native_module}" id="sprint-action" target="_top"', landing)
+            self.assertIn(
+                f'class="primary" href="sprint-99.html" id="sprint-action" data-canvas-href="{native_module}" data-canvas-target="_top"',
+                landing,
+            )
+            self.assertNotIn(f' href="{native_module}"', landing)
+            self.assertIn('if (context === "canvas" && entry.canvas_href)', landing)
             payload = json.loads(re.search(r'<script id="course-schedule" type="application/json">(.*?)</script>', landing, re.S)[1])
             self.assertEqual(payload["sprints"][0]["canvas_href"], native_module)
             self.assertIsNone(payload["sprints"][1]["canvas_href"])

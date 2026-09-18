@@ -34,11 +34,11 @@ You will be ready to:
 This module has **six pages and one discussion**, including this page:
 
 1. **Start Here:** the route and goals you are reading now.
-2. **[Welcome](https://cti-courses.instructure.com/courses/180/pages/welcome):** what the course helps you do and what you will have by the end.
-3. **[How This Course Works](https://cti-courses.instructure.com/courses/180/pages/how-this-course-works):** the sprint roadmap, weekly rhythm, and submissions.
-4. **[Your First Week](https://cti-courses.instructure.com/courses/180/pages/your-first-week):** a checklist for getting ready.
-5. **[Set up your AI Dojo](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html):** configure your AI coach and check its behavior without completing Sprint 1 work.
-6. **[Introduction Post](https://cti-courses.instructure.com/courses/180/discussion_topics/1533):** your one orientation submission, graded complete or incomplete, worth zero points.
-7. **[Help and Resources](https://cti-courses.instructure.com/courses/180/pages/help-and-resources):** submission steps, key terms, and instructor contact. Read it after posting your introduction, then return when needed.
+2. **[Welcome](artifact:course1-sprints-welcome-and-orientation-v2-welcome-v2):** what the course helps you do and what you will have by the end.
+3. **[How This Course Works](artifact:course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2):** the sprint roadmap, weekly rhythm, and submissions.
+4. **[Your First Week](artifact:course1-sprints-welcome-and-orientation-v2-your-first-week-v2):** a checklist for getting ready.
+5. **[Set up your AI Dojo](artifact:course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2):** configure your AI coach and check its behavior without completing Sprint 1 work.
+6. **[Introduction Post](artifact:course1-sprints-welcome-and-orientation-v2-introduction-post-v2):** your one orientation submission, graded complete or incomplete, worth zero points.
+7. **[Help and Resources](artifact:course1-sprints-welcome-and-orientation-v2-help-and-resources-v2):** submission steps, key terms, and instructor contact. Read it after posting your introduction, then return when needed.
 
-Continue to [Welcome](https://cti-courses.instructure.com/courses/180/pages/welcome).
+Continue to [Welcome](artifact:course1-sprints-welcome-and-orientation-v2-welcome-v2).

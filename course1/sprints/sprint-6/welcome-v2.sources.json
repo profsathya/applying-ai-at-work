@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-welcome-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "6f63926ccabc0997d147041f102475b5770c172ff78f6a6a319dba92f7534249",
-  "body_sha256": "b9ca749e6c7e67619ea2413cf40dcbd07678adbc6f0210361ec0d4f3429d83a3",
+  "body_sha256": "14fc6572a9852ca30c8efcf5724c1ad33d9fdd94d1dbc7208f3fd72f1336f1da",
   "frontmatter_sha256": "52112fa5c322e11fdfde9f21ea4f348e21a57755abe31f822ab306690d01f4dc",
   "parts": [
     {
@@ -188,7 +188,7 @@
     },
     {
       "kind": "new",
-      "markdown": "Continue to [How This Course Works](https://cti-courses.instructure.com/courses/180/pages/how-this-course-works) to plan your weekly work.",
+      "markdown": "Continue to [How This Course Works](artifact:course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2) to plan your weekly work.",
       "reason": "Link the next step using the existing Canvas page identity. Missing instructor bio/video material is omitted under the user decision.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.61m2fwihmg1q/body/34"
@@ -217,7 +217,8 @@
     "Preserve meaningful exact source selections; all reorganized prose, added transitions, headings, links, and presentation are explicitly labeled adaptations with based_on references.",
     "Current Canvas wrappers/settings show no target drift. Retain existing source submission and Inbox fixes rather than restoring outdated Google Doc placeholders.",
     "2026-09-15 visual follow-up: replace the reused Sprint 1 image with a new original illustration in the same art style; add selective blue callouts on Welcome, How This Course Works, Your First Week, and Help. Existing Start Here goals accent remains the reference. No instructional or assessment redesign.",
-    "User authorized live publication, five must_view pages and sequential item progression; preserve must_contribute discussion and existing identities. Clarify early help guidance to avoid a locked later-page dependency."
+    "User authorized live publication, five must_view pages and sequential item progression; preserve must_contribute discussion and existing identities. Clarify early help guidance to avoid a locked later-page dependency.",
+    "Replace institution-specific and fixed hosted links with portable artifact references so public routing and the selected Canvas profile resolve at render time."
   ],
   "title_source": {
     "ref": "d-a5a526bfcb8ecc4c:tab/t.61m2fwihmg1q/body/4",

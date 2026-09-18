@@ -20,6 +20,15 @@ DOJO_PRIVACY_NOTICE = ('Before you begin, replace names and remove confidential 
                        'preserve the exact words and order of the conversation.')
 
 
+def _canvas_only_link(canvas_url: str | None) -> str:
+    if not canvas_url:
+        return ''
+    return (
+        f'<a hidden data-canvas-only data-canvas-href="{html.escape(canvas_url, quote=True)}" '
+        'data-canvas-target="_top">Open the Canvas assignment</a>'
+    )
+
+
 def load_dojo_transcript_prompt(version: str) -> str:
     """Load an approved transcript request and fail closed on unknown or altered versions."""
     if not isinstance(version, str) or not re.fullmatch(r'v[1-9][0-9]*', version):
@@ -120,8 +129,7 @@ def render_dojo_transcript_body(frontmatter: dict, instructions_html: str, canva
     }
     serialized = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     criteria = ''.join(f'<li>{html.escape(item)}</li>' for item in task['criteria'])
-    link = (f'<a href="{html.escape(canvas_url, quote=True)}" target="_top">Open the Canvas assignment</a>'
-            if canvas_url else '')
+    link = _canvas_only_link(canvas_url)
     return f'''<style>{(ASSETS / 'guided-assignment.css').read_text()}
 {(ASSETS / 'guided-reading.css').read_text()}</style>
 <div class="guided-workspace guided-reading dojo-transcript" id="guided-workspace">
@@ -177,7 +185,7 @@ def render_compact_body(frontmatter: dict, instructions_html: str, task_sections
     reflection = f'<p>{html.escape(task["reflection"])}</p>' if task.get('reflection') else ''
     payload = {'artifactId': frontmatter['artifact_id'], 'title': frontmatter['title'], 'module': frontmatter['module'], **config}
     serialized = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
-    link = f'<a href="{html.escape(canvas_url, quote=True)}" target="_top">Open the Canvas assignment</a>' if canvas_url else ''
+    link = _canvas_only_link(canvas_url)
     return f'''<style>{(ASSETS / 'guided-assignment.css').read_text()}
 {(ASSETS / 'guided-compact.css').read_text()}</style>
 <div class="guided-workspace guided-compact" id="guided-workspace">
@@ -235,7 +243,7 @@ def render_reading_body(frontmatter: dict, instructions_html: str, task_sections
                          f'<details><summary>Self-check</summary><ul>{criteria}</ul>{reflection}</details></div>')
     payload = {'artifactId': frontmatter['artifact_id'], 'title': frontmatter['title'], 'module': frontmatter['module'], **config}
     serialized = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
-    link = f'<a href="{html.escape(canvas_url, quote=True)}" target="_top">Open the Canvas assignment</a>' if canvas_url else ''
+    link = _canvas_only_link(canvas_url)
     return f'''<style>{(ASSETS / 'guided-assignment.css').read_text()}
 {(ASSETS / 'guided-reading.css').read_text()}</style>
 <div class="guided-workspace guided-reading" id="guided-workspace">

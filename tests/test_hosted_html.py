@@ -15,6 +15,7 @@ from canvas_sync.hosted_html import (
     _render_homepage_item,
     iframe_shell,
     markdown_body_to_html,
+    render_artifact_document,
     render_hosted_artifact,
     render_hosted_files,
     validate_homepage_metadata,
@@ -253,6 +254,71 @@ class RecordingCanvasClient:
 
 
 class HostedHtmlTests(unittest.TestCase):
+    def test_artifact_links_are_public_by_default_and_keep_canvas_destination_as_data(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            source = root / "course1/sprints/sprint-99/tuple-overview.md"
+            target = root / "course1/sprints/sprint-99/second-overview.md"
+            manifest = root / "course1/manifests/production.json"
+            output = root / "out"
+            write_page(source)
+            write_second_page(target)
+            source.write_text(source.read_text() + "\n[Continue](artifact:second-overview)\n")
+            write_manifest(manifest)
+            state = {"artifacts": {"second-overview": {
+                "canvas_type": "page",
+                "canvas_page_url": "second-overview",
+                "canvas_id": 22,
+            }}}
+
+            result = render_hosted_artifact(source, manifest, output, state=state)
+            rendered = Path(result["output_path"]).read_text()
+            public_url = (
+                "https://profsathya.github.io/Common-Curriculum/deanza/"
+                "course1/activities/second-overview.html?context=web"
+            )
+            canvas_url = "https://example.instructure.com/courses/12345/pages/second-overview"
+            self.assertIn(f'href="{public_url}"', rendered)
+            self.assertIn(f'data-canvas-href="{canvas_url}"', rendered)
+            self.assertNotIn(f' href="{canvas_url}"', rendered)
+            self.assertNotIn("artifact:second-overview", rendered)
+
+    def test_standard_submission_links_are_canvas_context_only(self):
+        manifest = {"instance": {
+            "base_url": "https://example.instructure.com",
+            "course_id": 12345,
+        }}
+        cases = (
+            ("assignment", "assignment", "assignments/17", "text_entry"),
+            ("discussion", "discussion", "discussion_topics/18", "discussion_topic"),
+            ("quiz", "quiz", "quizzes/19", "online_quiz"),
+        )
+        for index, (artifact_type, canvas_type, suffix, submission_type) in enumerate(cases, 17):
+            with self.subTest(artifact_type=artifact_type):
+                fm = {
+                    "type": artifact_type,
+                    "title": "Submit",
+                    "slug": f"submit-{artifact_type}",
+                    "artifact_id": f"submit-{artifact_type}",
+                    "sprint": 1,
+                    "module": "Module",
+                    "position": 1,
+                    "points": 1,
+                    "submission_type": submission_type,
+                    "publish": False,
+                }
+                url = f"https://example.instructure.com/courses/12345/{suffix}"
+                rendered = render_artifact_document(
+                    fm,
+                    "Directions.",
+                    manifest,
+                    {"hosted_path": f"course1/activities/{fm['slug']}.html"},
+                    {"canvas_type": canvas_type, "canvas_id": index},
+                )
+                self.assertIn(f'data-canvas-href="{url}"', rendered)
+                self.assertIn("hidden data-canvas-only", rendered)
+                self.assertNotIn(f' href="{url}"', rendered)
+
     def test_all_canvas_homepage_links_use_current_window(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp).resolve()
@@ -644,7 +710,14 @@ modules:
             write_ai_discussion(md_path)
             write_manifest(manifest_path)
 
-            result = render_hosted_artifact(md_path, manifest_path, output_dir)
+            canvas_url = "https://example.instructure.com/courses/12345/assignments/77"
+            state = {"artifacts": {"tuple-ai-discussion": {
+                "canvas_type": "assignment",
+                "canvas_id": 77,
+            }}}
+            result = render_hosted_artifact(
+                md_path, manifest_path, output_dir, state=state
+            )
 
             wrapper = output_dir / "deanza" / "course1" / "assignments" / "tuple-ai-discussion.html"
             shell = output_dir / "deanza" / "course1" / "activities" / "tuple-ai-discussion.html"
@@ -655,9 +728,16 @@ modules:
             self.assertTrue(wrapper.exists())
             self.assertTrue(shell.exists())
             self.assertTrue(config.exists())
-            self.assertIn("../activities/tuple-ai-discussion.html?context=web", wrapper.read_text(encoding="utf-8"))
-            self.assertIn("../../../js/activity-engine.js", shell.read_text(encoding="utf-8"))
-            self.assertIn("../../../activities/deanza/course1/tuple-ai-discussion.json", shell.read_text(encoding="utf-8"))
+            wrapper_text = wrapper.read_text(encoding="utf-8")
+            shell_text = shell.read_text(encoding="utf-8")
+            self.assertIn("../activities/tuple-ai-discussion.html?context=web", wrapper_text)
+            self.assertIn(f'data-canvas-href="{canvas_url}"', wrapper_text)
+            self.assertIn("hidden data-canvas-only", wrapper_text)
+            self.assertNotIn(f' href="{canvas_url}"', wrapper_text)
+            self.assertIn("../../../js/activity-engine.js", shell_text)
+            self.assertIn("../../../activities/deanza/course1/tuple-ai-discussion.json", shell_text)
+            self.assertIn("activityContext === 'canvas' ?", shell_text)
+            self.assertIn(f'"{canvas_url}" : null', shell_text)
             config_data = json.loads(config.read_text(encoding="utf-8"))
             self.assertEqual(config_data["activityId"], "deanza-course1-tuple-ai-discussion")
             self.assertEqual(config_data["settings"]["exportMode"], "json")

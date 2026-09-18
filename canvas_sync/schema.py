@@ -28,6 +28,14 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_DIR = REPO_ROOT / "schema"
 COURSE_KEY_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+ARTIFACT_LINK_RE = re.compile(
+    r"\]\(\s*artifact:([^\s)]*)"
+)
+CANVAS_COURSE_URL_RE = re.compile(
+    r"https?://[^\s)>]+/courses/\d+(?:/|\b)",
+    re.IGNORECASE,
+)
+ARTIFACT_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
@@ -54,6 +62,52 @@ def parse_frontmatter(md_path: Path) -> tuple[dict, str]:
     return frontmatter, body
 
 
+def _course_dir_for_artifact(md_path: Path) -> Path | None:
+    for parent in md_path.resolve().parents:
+        if parent.name == "sprints":
+            return parent.parent
+    return None
+
+
+def validate_artifact_references(md_path: Path, body: str) -> list[str]:
+    raw_references = ARTIFACT_LINK_RE.findall(body)
+    references = [value for value in raw_references if ARTIFACT_ID_RE.fullmatch(value)]
+    errors: list[str] = []
+    if CANVAS_COURSE_URL_RE.search(body):
+        errors.append(
+            f"{md_path}: participant-facing Markdown must not contain an "
+            "instance-specific Canvas course URL; use artifact:<artifact_id>"
+        )
+    for value in sorted(set(raw_references) - set(references)):
+        errors.append(
+            f"{md_path}: invalid artifact reference {value!r}; "
+            "expected artifact:<artifact_id>"
+        )
+    if not raw_references:
+        return errors
+    course_dir = _course_dir_for_artifact(md_path)
+    if course_dir is None:
+        return errors + [
+            f"{md_path}: cannot resolve artifact references outside a course sprints directory"
+        ]
+    known: set[str] = set()
+    for candidate in course_dir.glob("sprints/sprint-*/**/*.md"):
+        try:
+            frontmatter, _candidate_body = parse_frontmatter(candidate)
+        except (ValueError, yaml.YAMLError):
+            continue
+        artifact_id = frontmatter.get("artifact_id")
+        if artifact_id and frontmatter.get("type") != "module_header":
+            known.add(str(artifact_id))
+    for artifact_id in sorted(set(references)):
+        if artifact_id not in known:
+            errors.append(
+                f"{md_path}: unknown or non-renderable artifact reference "
+                f"{artifact_id!r}"
+            )
+    return errors
+
+
 def validate_artifact(md_path: Path) -> list[str]:
     errors: list[str] = []
     try:
@@ -69,6 +123,7 @@ def validate_artifact(md_path: Path) -> list[str]:
 
     errors.extend(validate_ai_activity_delivery(md_path, frontmatter))
     errors.extend(validate_guided_assignment(md_path, frontmatter, body))
+    errors.extend(validate_artifact_references(md_path, body))
 
     for key in ("quiz_type", "allowed_attempts"):
         if key in frontmatter and (frontmatter.get("type") != "quiz" or frontmatter.get("delivery_mode") == "ai_activity"):

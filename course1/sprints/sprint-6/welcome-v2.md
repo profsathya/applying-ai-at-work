@@ -46,4 +46,4 @@ The course calls this partnership **Symbiotic Thinking**. You bring your own thi
 
 AI tools will change. The habits you practice here, framing a problem, judging suggestions, and explaining your reasoning, remain useful as the tools change.
 
-Continue to [How This Course Works](https://cti-courses.instructure.com/courses/180/pages/how-this-course-works) to plan your weekly work.
+Continue to [How This Course Works](artifact:course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2) to plan your weekly work.

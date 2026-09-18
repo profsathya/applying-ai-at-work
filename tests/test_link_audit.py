@@ -13,6 +13,7 @@ class LinkAuditTests(unittest.TestCase):
         <a href="mailto:teacher@example.edu" target="_top">Email</a>
         <a href="next.html">Next</a>
         <a href="#details">Details</a>
+        <a href="artifact:target-id">Course artifact</a>
         """
         self.assertEqual(audit_rendered_html(rendered, "fixture"), [])
 

@@ -26,7 +26,7 @@ from canvas_sync.schema import parse_frontmatter
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-ALLOWED_SCHEMES = {"", "http", "https", "mailto", "tel"}
+ALLOWED_SCHEMES = {"", "http", "https", "mailto", "tel", "artifact"}
 PLACEHOLDER_RE = re.compile(
     r"(?:example\.com|placeholder|replace[-_ ]?me|doc[-_ ]?id|"
     r"link[-_ ]?to[-_ ]?be[-_ ]?supplied|your[-_ ]?(?:url|link))",

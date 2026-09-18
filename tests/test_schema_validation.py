@@ -45,6 +45,47 @@ ai_activity:
 
 
 class SchemaValidationTests(unittest.TestCase):
+    def test_artifact_references_resolve_within_course_and_reject_canvas_urls(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            course = Path(tmp) / "course1"
+            target = course / "sprints/sprint-1/target.md"
+            source = course / "sprints/sprint-1/source.md"
+            write_artifact(target, '''
+type: page
+title: Target
+slug: target
+artifact_id: target-id
+sprint: 1
+module: Sprint 1
+position: 1
+points: null
+submission_type: none
+publish: false
+''')
+            write_artifact(source, '''
+type: page
+title: Source
+slug: source
+artifact_id: source-id
+sprint: 1
+module: Sprint 1
+position: 2
+points: null
+submission_type: none
+publish: false
+''')
+            source.write_text(source.read_text() + "\n[Target](artifact:target-id)\n")
+            self.assertEqual(validate_artifact(source), [])
+            source.write_text(source.read_text().replace("artifact:target-id", "artifact:missing-id"))
+            self.assertTrue(any("unknown or non-renderable artifact reference 'missing-id'" in error for error in validate_artifact(source)))
+            source.write_text(source.read_text().replace("artifact:missing-id", "artifact:"))
+            self.assertTrue(any("invalid artifact reference ''" in error for error in validate_artifact(source)))
+            source.write_text(source.read_text().replace(
+                "artifact:",
+                "https://cti-courses.instructure.com/courses/180/pages/target",
+            ))
+            self.assertTrue(any("must not contain an instance-specific Canvas course URL" in error for error in validate_artifact(source)))
+
     def test_homepage_rejects_optional_language_for_required_published_submission(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             course = Path(tmp) / 'course1'

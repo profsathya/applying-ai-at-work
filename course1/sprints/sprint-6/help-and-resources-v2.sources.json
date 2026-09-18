@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-help-and-resources-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "48b9395e7076ae24827273853f18f1e718d3376750d8b81f284c5f17a63b5ba8",
-  "body_sha256": "13851b91056c911ce03b8df482678d8f5d240fb180411453c0f5671be292a806",
+  "body_sha256": "a04735e25dfec953e717db67da1fa03abf56529a749987fb79793484532b38e9",
   "frontmatter_sha256": "73f575daf6972f795044ff1b0012c6e51ff09217e6172f47d22ac73e10b5d37c",
   "parts": [
     {
@@ -56,7 +56,7 @@
     },
     {
       "kind": "new",
-      "markdown": "## Use AI tools when an activity introduces them\n\nUse [Set up your AI Dojo](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html) to prepare your coach.\n\n> In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames **without AI**. Use the Dojo when the Dojo Lab introduces it. Keep the activity page available so you can return to its prompts and submission instructions.",
+      "markdown": "## Use AI tools when an activity introduces them\n\nUse [Set up your AI Dojo](artifact:course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2) to prepare your coach.\n\n> In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames **without AI**. Use the Dojo when the Dojo Lab introduces it. Keep the activity page available so you can return to its prompts and submission instructions.",
       "reason": "Apply the user-authorized 2026-09-18 reconciliation to the complete Sprint 1 sequence and AI boundary.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.r7f4tyvql3ki/body/11",
@@ -118,7 +118,7 @@
     },
     {
       "kind": "new",
-      "markdown": "When you have finished orientation, begin [Sprint 1: Find the Problem Worth Solving](https://cti-courses.instructure.com/courses/180/pages/introduction-find-the-problem-worth-solving-2). Keep this page available for later questions.",
+      "markdown": "When you have finished orientation, begin [Sprint 1: Find the Problem Worth Solving](artifact:course1-sprints-sprint-14-introduction-find-the-problem-worth-solving). Keep this page available for later questions.",
       "reason": "Add a useful ending to the reading page and connect orientation to the verified current Sprint 1.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.r7f4tyvql3ki/body/8"
@@ -148,7 +148,8 @@
     "Current Canvas wrappers/settings show no target drift. Retain existing source submission and Inbox fixes rather than restoring outdated Google Doc placeholders.",
     "2026-09-15 visual follow-up: replace the reused Sprint 1 image with a new original illustration in the same art style; add selective blue callouts on Welcome, How This Course Works, Your First Week, and Help. Existing Start Here goals accent remains the reference. No instructional or assessment redesign.",
     "User authorized live publication, five must_view pages and sequential item progression; preserve must_contribute discussion and existing identities. Clarify early help guidance to avoid a locked later-page dependency.",
-    "2026-09-18 audit reconciliation updates obsolete Sprint 1 availability and AI-boundary language without changing artifact or Canvas identity."
+    "2026-09-18 audit reconciliation updates obsolete Sprint 1 availability and AI-boundary language without changing artifact or Canvas identity.",
+    "Replace institution-specific and fixed hosted links with portable artifact references so public routing and the selected Canvas profile resolve at render time."
   ],
   "title_source": {
     "ref": "d-a5a526bfcb8ecc4c:tab/t.r7f4tyvql3ki/body/4",

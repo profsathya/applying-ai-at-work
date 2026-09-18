@@ -48,7 +48,15 @@
     if (unsavedToken && url.origin === root.location.origin) url.hash = new URLSearchParams({progress_token:unsavedToken}).toString();
     return url.href;
   }
-  doc.querySelectorAll("[data-module-link]").forEach(link => { link.href = moduleHref(link.getAttribute("href")); });
+  doc.querySelectorAll("[data-module-link]").forEach(link => {
+    if (context === "canvas" && link.dataset.canvasHref) {
+      link.href = link.dataset.canvasHref;
+      link.target = link.dataset.canvasTarget || "_top";
+    } else {
+      link.href = moduleHref(link.getAttribute("href"));
+      link.removeAttribute("target");
+    }
+  });
   doc.querySelectorAll("[data-module-toggle]").forEach(button => {
     const panel = doc.getElementById(button.getAttribute("aria-controls"));
     button.hidden = false;
@@ -99,7 +107,7 @@
     doc.getElementById("sprint-unavailable").hidden = Boolean(entry.href);
     const action = doc.getElementById("sprint-action");
     action.hidden = !entry.href;
-    if (entry.canvas_href) {
+    if (context === "canvas" && entry.canvas_href) {
       action.href = entry.canvas_href;
       action.target = "_top";
     } else if (entry.href) {

@@ -211,6 +211,8 @@ class GuidedAssignmentTests(unittest.TestCase):
         self.assertNotIn('<h2>Overview</h2>', result)
         self.assertEqual(result.count('<div class="submit">'), 1)
         self.assertIn('https://example.invalid/courses/180/discussion_topics/1533', result)
+        self.assertIn('hidden data-canvas-only data-canvas-href="https://example.invalid/courses/180/discussion_topics/1533"', result)
+        self.assertNotIn(' href="https://example.invalid/courses/180/discussion_topics/1533"', result)
         self.assertIn('Peer replies are optional.', result)
         self.assertNotIn('id="copy-answers"', result)
         fm.pop('page_presentation')
@@ -218,6 +220,13 @@ class GuidedAssignmentTests(unittest.TestCase):
             {'hosted_path': 'course1/activities/intro.html'}, {'canvas_id': 1533})
         self.assertNotIn('class="activity reading-page"', legacy)
         self.assertIn('<h2>Overview</h2>', legacy)
+
+    def test_guided_submission_link_is_canvas_context_only(self):
+        canvas_url = 'https://example.instructure.com/courses/180/assignments/17'
+        rendered = render_guided_body(dojo_frontmatter(), '<p>Instructions.</p>', canvas_url=canvas_url)
+        self.assertIn(f'data-canvas-href="{canvas_url}"', rendered)
+        self.assertIn('hidden data-canvas-only', rendered)
+        self.assertNotIn(f' href="{canvas_url}"', rendered)
 
     def test_publish_persists_guided_delivery_in_valid_maintenance_state(self):
         class Client:
