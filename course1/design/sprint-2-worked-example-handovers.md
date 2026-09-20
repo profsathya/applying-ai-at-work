@@ -1,6 +1,6 @@
 ---
 purpose: The account handovers example carried end to end through Sprint 2, in the participant voice, as the source for the worked examples inside the Sprint 2 pages and as a size check on the Problem Frame document
-status: v0.3, 20 September 2026. The verdict names the obvious-fix tension (if it is that easy, why has it not happened); 4a and 4b carry the two lines asked of Jeremy for Sprint 1's worked example A, so the two frames match. v0.2, 17 September, after Leslie's review of v0.1 (then called a fixture): the cost of a change as 3c, no verdict in the frame, the Sprint 2 Log's contents recast as what the pages' examples will show
+status: v0.3.1, 20 September 2026. The part 6 row "nobody has tried to fix this before" is now "nothing has been tried that stuck," to match 4a. The verdict names the obvious-fix tension (if it is that easy, why has it not happened); 4a and 4b carry the two lines asked of Jeremy for Sprint 1's worked example A, so the two frames match. v0.2, 17 September, after Leslie's review of v0.1 (then called a fixture): the cost of a change as 3c, no verdict in the frame, the Sprint 2 Log's contents recast as what the pages' examples will show
 depends_on: course1/sprints/sprint-14/the-problem-frame.md (worked example A); course1/sprints/sprint-15/stakeholder-map-v3.md (Dana the account lead); sprint-2-outline.md (v5.2)
 ---
 
@@ -42,7 +42,7 @@ Last updated: Sprint 2, week 2.
 | 3a | All four managers are affected, not just the one I sat next to | unverified | the other three managers | Complicated. Two of the three describe the same thing. The third says it only happens when one particular manager is the outgoing owner |
 | 3b | Clients notice and it costs them something | unverified | Dana, the account lead | not yet |
 | 3b | Managers act on stale ownership for days | unverified | the other managers | Accepted, because even if it is one day, the client still repeats their history. How long does not change whether this is worth pursuing |
-| 4a | Nobody has tried to fix this before | unverified | Dana | not yet |
+| 4a | Nothing has been tried that stuck | unverified | Dana | not yet |
 | 4a | Our CRM's owner field is not in use | unverified | Dana, or whoever administers the CRM | not yet |
 | 5 | One day is fast enough to matter | unverified | nobody has said what fast enough is | Accepted, because anything faster than several days is an improvement. What fast enough means can wait until something is being changed |
 
@@ -64,11 +64,11 @@ Clients notice and it costs them something. What I would need to find out: wheth
 
 Managers act on stale ownership for days. What I would need to find out: how long, really. What the answers could change: not much. Even one day means the client repeats their history.
 
-Nobody has tried to fix this before. What I would need to find out: whether Dana or anyone tried something that died. What the answers could change: if something was tried, my real problem is whatever killed it, and 4a is wrong.
+Nothing has been tried that stuck. What I would need to find out: whether Dana or anyone tried something that died. What the answers could change: if something was tried, my real problem is whatever killed it, and 4a is wrong.
 
 One day is fast enough to matter. What I would need to find out: what fast enough would even mean. What the answers could change: nothing yet. Anything faster than several days is better.
 
-**Could the answer to any of these end the problem?** The managers one, because if it is one person's habit there is nothing here. The nobody-has-tried one, because if something was tried and died, I am working on the wrong problem. The clients one changes the goal but not whether the problem is real, so it is not on this list.
+**Could the answer to any of these end the problem?** The managers one, because if it is one person's habit there is nothing here. The nothing-stuck one, because if something was tried and died, I am working on the wrong problem. The clients one changes the goal but not whether the problem is real, so it is not on this list.
 
 **What would a change ask of people?** Every manager would have to do one thing at each handover that they do not do now, a note or a field. Someone would have to keep at them. If the CRM field exists, someone switches it on and shows people. Building: nothing, or an afternoon for a checklist.
 
@@ -78,7 +78,7 @@ One day is fast enough to matter. What I would need to find out: what fast enoug
 
 ### Dojo Lab: test your assumptions
 
-It asked whether "the same thing" was specific enough to ask about, and it was not; I am asking for the last time an account changed hands and what they knew about it. It also asked why I was not checking the nobody-has-tried one, since it could end the problem too. Because Dana is harder to catch this week, and Sprint 3 is built for that conversation.
+It asked whether "the same thing" was specific enough to ask about, and it was not; I am asking for the last time an account changed hands and what they knew about it. It also asked why I was not checking the nothing-stuck one, since it could end the problem too. Because Dana is harder to catch this week, and Sprint 3 is built for that conversation.
 
 ### What came back
 
