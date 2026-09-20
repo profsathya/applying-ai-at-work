@@ -1,6 +1,6 @@
 ---
 purpose: Sprint 2, whole sprint, working draft for Leslie's review, on the Sprint 1 model; becomes the cut-ready source for Jeremy's build once reviewed
-status: v1.1.4, 20 September 2026. Dojo Lab: test your assumptions carries Leslie's 20 September run (labeled prompt, paste-your-frame line for a chat outside the Dojo, illustrative exchange from the run, [NOTE] retired); both Dojo Labs stay interim single-shot prompts until the course doc exists (Leslie, 20 September). The handover example's part 6 row "nobody has tried" is now "nothing has been tried that stuck" wherever the pages quote it. Item 8's verdict example names the obvious-fix tension (Leslie, 20 September). v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
+status: v1.1.5, 21 September 2026. Leslie's second pass on the first half applied: eight tracked changes; Dojo Lab submits a transcript as Sprint 1 does; the frame-paste line covers both Dojo and plain chat; What a change would ask of people is off the walk page, destination open; the Problem Frame copy moves to the end of Sprint 1 (Jeremy). Held for her rulings: 3c's destination, and the Assumptions walk activity sheet with the graded item's paste shape. Dojo Lab: test your assumptions carries Leslie's 20 September run (labeled prompt, paste-your-frame line for a chat outside the Dojo, illustrative exchange from the run, [NOTE] retired); both Dojo Labs stay interim single-shot prompts until the course doc exists (Leslie, 20 September). The handover example's part 6 row "nobody has tried" is now "nothing has been tried that stuck" wherever the pages quote it. Item 8's verdict example names the obvious-fix tension (Leslie, 20 September). v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
 depends_on: sprint-2-outline.md (v5.2); problem-frame-template.md; what-already-exists-template.md; sprint-2-worked-example-handovers.md; course1/sprints/sprint-14/ (Sprint 1 as published, for register and format); course1/sprints/sprint-15/ (Sprint 3 V3, for the hand-off and the Dojo Lab form)
 storage: the next storage folder after sprint-15, Jeremy's call; positions 1 to 11
 ---
@@ -125,9 +125,11 @@ Next up: **Dig into your assumptions**.
 
 [NOTE] This is the first of Leslie's two unknowns: read it as a participant and ask whether it makes you think or makes you fill in boxes. The page runs as guidance, then example, then your box, one step at a time; each numbered section ends in its own box.
 
-**First, make your copy of the Problem Frame document.** Paste all of Part D of your Candidate Log into it, as it stands. [Make your copy of the Problem Frame](LINK-TO-BE-SUPPLIED). Every part of it is living, and this sprint adds two things: a column in Part 6: your assumptions, and a new Part 3c: what a change would ask of people.
+Open your Problem Frame from Sprint 1. The Problem Frame is a living document, and you are going to be making changes, additions, and adjustments to it throughout the course. During this sprint you are going to expand on Part 6: your assumptions, and on Part 3: who is affected and costs.
 
-Open your Problem Frame and look at Part 6: your assumptions. Every line there is something you wrote as if it were true, but do not really know yet. Behind each one are questions, and the answers to those questions could change the shape of your problem, or show you that it is not a problem worth working on. For example:
+[NOTE] Leslie, 21 September: the copy of the Problem Frame document (paste Part D of the Candidate Log) moves to the end of Sprint 1, with Jeremy. If it is not there by 5 October, the make-a-copy line returns here. "And on Part 3" rides on the open decision about where What a change would ask of people goes.
+
+Let's start by looking at Part 6: your assumptions. Every line there is something you wrote as if it were true, but you do not really know yet. Behind each assumption are questions, whose answers could change the shape of your problem, or show you that it is not a problem worth working on. For example:
 
 > **My assumption:** All four managers are affected by account handovers not happening, not just the one I sat next to.
 >
@@ -183,21 +185,21 @@ If none of your assumptions are deemed super-risky, pick one that would be usefu
 Once you have picked the assumption, take a minute to write up exactly what you want to check. Most of this will come from what you have already written:
 
 - **What is your assumption, stated so that it could be wrong?** Account managers see account handovers as a problem in effectively caring for clients.
-- **What result would tell you it was wrong?** A manager not registering this as an issue at all.
+- **What result would tell you it was wrong?** A manager tells you this is not an issue at all.
 - **Who will you ask, or what will you go and look at, and when?** [Name of manager], at our one-on-one next Tuesday.
-- **What will you ask?** I heard [other manager's name] mention that she gets frustrated when she takes over an account because she feels like she is starting from scratch, having to understand the relationship. Is that your experience? Do you feel like you have to ask clients for a bunch of information you should already have? Does that seem like a problem for you? For the clients?
+- **What will you ask?** I heard [other manager's name] mention that she gets frustrated when she takes over an account because she feels like she is starting from scratch having to understand the relationship. Is that your experience? Do you feel like you have to ask clients for a bunch of information you should already have? Does that seem like a problem for you? For the clients?
 
-*More help: a check you look at rather than ask.* For the garden plot: the assumption, stated so it could be wrong, is that most new plot-holders quit by midsummer. What would tell me I was wrong: more than half of last year's new names still gardening in August. What I will look at, and when: last year's sign-up sheet against a walk past the plots this weekend. What I will ask: nothing. Observation counts as a check.
+*More help: a check you look at rather than ask.* For the garden plot: the assumption, stated so it could be wrong, is that most new plot-holders quit by midsummer. What would tell me I was wrong: more than half of last year's new names still gardening in August. What I will look at, and when: last year's sign-up sheet against a walk past the plots this weekend. What I will ask: how many people have plots this year who were signed up last year?
 
 *More help: another handover example.* The assumption: the other three managers have had the same thing happen. What would tell me I was wrong: fewer than two of them describe it. Who and when: the three other managers, at the Thursday team meeting or after it.
 
-To be clear, this check is a temperature check. You are collecting information to decide whether to keep looking into this problem. A lukewarm no is not a no-go, and an enthusiastic yes is not proof. What comes back gets written down so that you can consider it as you decide whether to proceed.
+To be clear, this check is a temperature check. You are collecting information and using your judgement to decide whether to keep looking into this problem.
 
 Write your check in the box below, before you look.
 
 ### 4. What would a change ask of people?
 
-[OPEN: Leslie, is this section in the right place now that it follows the check, and does it belong on this page at all, or as its own lesson? The tie to the assumptions is the opening sentence below; if that does not hold, it moves.]
+[OPEN: Leslie ruled 21 September that this section does not belong on this page. Where it goes is undecided: week 2 (after What already exists, feeding the verdict) or held for a later sprint. It stays here, unbuilt, until she rules; Part 3c of the frame, Part 3 of the graded item, the verdict's reasons, the worked example, and the reflection's AI instructions all follow that ruling.]
 
 Many of your assumptions are quietly about what people would do differently: read a note, update a field, show up on a Tuesday. That makes your walk the best place to see what a change would actually ask of people. Read back over it once more, this time for anything that says someone would have to do something differently: a new step, a new habit, time they do not currently spend. Add the one cost no assumption carries, the time it would take to build anything. Then set it beside Part 3b: what the problem costs now. You are not pricing a solution; you are pricing change at all, and asking whether it is plainly smaller than the problem, plainly larger, or not yet clear.
 
@@ -224,9 +226,9 @@ The assumptions you are not checking do not disappear. They stay in Part 6 of yo
 
 *Own your progress. Position 4. 0 points. Submit to mark it complete.*
 
-Bring what you wrote on the last page. This is the first of two Dojo Labs in the sprint, and it is short. AI is good at one thing here: noticing where your read of your own assumptions is too comfortable. It cannot know which of your managers would actually tell you the truth, or whether Thursday's meeting is the right moment. You can.
+You're going to use this Dojo Lab to push on what you've written. Bring what you wrote on the last page. This is the first of two Dojo Labs in the sprint, and it is short. AI is good at one thing here: noticing where your read of your own assumptions is too comfortable. It cannot know which of your managers would actually tell you the truth, or whether Thursday's meeting is the right moment. You can.
 
-Use your Dojo, or any AI chat you already have. If it is a chat outside your Dojo, paste your Problem Frame first, so that it knows what problem it is being a skeptic about. Change names and drop anything sensitive before you paste.
+Use your Dojo, or any AI chat you already have. Your Dojo reads your Problem Frame if you added it in setup; otherwise, paste your Problem Frame first, so that it knows what problem it is being a skeptic about. Change names and drop anything sensitive before you paste.
 
 The rhythm is the one from Sprint 1: bring what you wrote, have it tested, decide what to keep. Nothing here rewrites your walk; you do.
 
@@ -254,9 +256,15 @@ Take what lands and fix your walk yourself. If it named a better assumption to c
 
 ### Response tasks
 
-- **what-it-pushed-on** (response). Prompt: *What AI pushed back on, what you changed, and what you kept with a reason. Your check as it now stands.* Criteria: at least one push named in the participant's words; at least one thing changed or one thing kept with a reason; the check is restated, still written before looking; no bare agreement.
+### State what you kept before requesting the transcript
 
-> **[BUILD]** Single box, `presentation: reading` or compact, Jeremy's call. Section 1 feeds what-it-pushed-on.
+Send one final `Me:` turn in the same conversation. In your own words, one line each: what it pushed back on, what you changed, what you kept and why, and your check as it now stands. Then use the transcript request and submission steps below.
+
+### Response tasks
+
+- **dojo-transcript** (response). Prompt: *Paste the complete Dojo transcript, including every CONTINUED chunk, in order.* Criteria: the required header and every turn, in order; every CONTINUED marker and continuation chunk kept; a final Me turn that states what was pushed on, what changed, what was kept with a reason, and the check as it now stands, still written before looking.
+
+> **[BUILD]** `dojo_submission: mode: transcript`, as Sprint 1's Dojo Lab (sprint-14, position 8): the transcript request and submission steps render from the build. Single box.
 
 ---
 
@@ -282,7 +290,7 @@ A short check that you are set up for this sprint before the work starts in earn
 
 *Graded item. Position 6. 20 points. One submission.*
 
-This is the write-up of the walk, and the completion of it. You have looked closely at your assumptions, decided which could end the problem, priced a change, chosen one to check, and had AI push on all of it. Now put it in one place, in your words, so that your instructor can see the reasoning and so that you have it to come back to when the check comes in.
+This is the write-up of the walk, and the completion of it. You have looked closely at your assumptions, decided which could end the problem, chosen one to check, and had AI push on all of it. Now put it in one place, in your words, so that your instructor can see the reasoning and so that you have it to come back to when the check comes in.
 
 Three parts. Each is short, and most of it exists already in your boxes from the last two activities; bring it forward and tidy it, in your own words. Remember, for each part you will see the guidance, then the example, then the box.
 
