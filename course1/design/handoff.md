@@ -155,8 +155,10 @@ added in Sprint 2), `what-already-exists-template.md` (the one Sprint 2 table),
 `sprint-2-worked-example-handovers.md`. There is no Sprint 2 Log; everything else runs
 on the pages as guidance, example, box.
 
-Still open: the two prompts (items 4 and 8) have not been run in a real chat; Leslie's own
-test decides their wording. Points 5, 20, 20, 45, 10 are a proposal for the team.
+Still open: the second Dojo Lab's prompt (explore what already exists) has not been run
+in a real chat; Leslie ran the first on 20 September and the draft carries the result.
+Both Dojo Labs stay interim single-shot prompts until the course doc exists (Leslie,
+20 September). Points 5, 20, 20, 45, 10 are a proposal for the team.
 Confirmed/unverified against confirmed/inferred is a team decision, with a recommendation
 in the outline. Directing AI as a course-wide thread is parked until about 24 September.
 Owed elsewhere: Leslie's three Google Docs (Problem Frame, the table, Candidate Log

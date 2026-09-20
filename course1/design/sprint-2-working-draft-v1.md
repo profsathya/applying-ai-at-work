@@ -1,6 +1,6 @@
 ---
 purpose: Sprint 2, whole sprint, working draft for Leslie's review, on the Sprint 1 model; becomes the cut-ready source for Jeremy's build once reviewed
-status: v1.1.3, 20 September 2026. The handover example's part 6 row "nobody has tried" is now "nothing has been tried that stuck" wherever the pages quote it. Item 8's verdict example names the obvious-fix tension (Leslie, 20 September). v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
+status: v1.1.4, 20 September 2026. Dojo Lab: test your assumptions carries Leslie's 20 September run (labeled prompt, paste-your-frame line for a chat outside the Dojo, illustrative exchange from the run, [NOTE] retired); both Dojo Labs stay interim single-shot prompts until the course doc exists (Leslie, 20 September). The handover example's part 6 row "nobody has tried" is now "nothing has been tried that stuck" wherever the pages quote it. Item 8's verdict example names the obvious-fix tension (Leslie, 20 September). v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
 depends_on: sprint-2-outline.md (v5.2); problem-frame-template.md; what-already-exists-template.md; sprint-2-worked-example-handovers.md; course1/sprints/sprint-14/ (Sprint 1 as published, for register and format); course1/sprints/sprint-15/ (Sprint 3 V3, for the hand-off and the Dojo Lab form)
 storage: the next storage folder after sprint-15, Jeremy's call; positions 1 to 11
 ---
@@ -224,11 +224,9 @@ The assumptions you are not checking do not disappear. They stay in Part 6 of yo
 
 *Own your progress. Position 4. 0 points. Submit to mark it complete.*
 
-[NOTE] The second unknown: what this prompt actually produces. Transcript on the handover example to follow.
-
 Bring what you wrote on the last page. This is the first of two Dojo Labs in the sprint, and it is short. AI is good at one thing here: noticing where your read of your own assumptions is too comfortable. It cannot know which of your managers would actually tell you the truth, or whether Thursday's meeting is the right moment. You can.
 
-Use your Dojo, or any AI chat you already have. Change names and drop anything sensitive before you paste.
+Use your Dojo, or any AI chat you already have. If it is a chat outside your Dojo, paste your Problem Frame first, so that it knows what problem it is being a skeptic about. Change names and drop anything sensitive before you paste.
 
 The rhythm is the one from Sprint 1: bring what you wrote, have it tested, decide what to keep. Nothing here rewrites your walk; you do.
 
@@ -238,17 +236,21 @@ Paste your four boxes from the last page, then this:
 
 > I am going to paste my walk through the assumptions in my problem frame: for each one, what I would need to find out and what the answers could change; which ones could end the problem and which I am accepting; what a change would ask of people; and the one I have chosen to check this week, written before I look. Your job is to be a skeptic who works in this situation, not an editor. Do not rewrite anything and do not suggest solutions. Do not list everything you notice.
 >
-> 1. Is the one I chose to check the right one to check first? Answer "yes" or "not yet," with one reason.
-> 2. Two places where you would push back on what I said the answers could change, or on an assumption I accepted too easily. One line each, quoting my words.
-> 3. One question someone who works in this situation would ask me before I go and check.
+> Answer in four short labeled parts, in this order, and nothing else.
 >
-> Then one line: what did I give you that helped you answer, and what would you have wanted earlier?
+> THE CHECK: Is the one I chose to check the right one to check first? "Yes" or "not yet," with one reason.
 >
-> Nothing else. Here is my walk:
+> PUSHBACK: Two places where you would push back on what I said the answers could change, or on an assumption I accepted too easily. One line each, each starting with my words in quotation marks.
+>
+> ONE QUESTION: The one question someone who works in this situation would ask me before I go and check.
+>
+> WHAT HELPED: One line on what I gave you that helped you answer, and what you would have wanted earlier.
+>
+> Here is my walk:
 
 Take what lands and fix your walk yourself. If it named a better assumption to check and you agree, change your check and write the new one before you look. If it pushed on an acceptance and the push was fair, move that line back to "not yet." If it was wrong about your situation, say so in your box below; disagreeing with a reason is a good answer.
 
-> **Illustrative exchange, handovers.** It said "not yet" on my choice, because *nothing has been tried that stuck* could also end the problem and I had not said why I was not checking it. Fair, and my reason is that Dana is hard to catch this week and Sprint 3 is built for that conversation, so I am keeping my choice and writing that down. It pushed on "the same thing" as too vague to ask about, which it was; I am now asking each manager about the last time an account changed hands and what they knew. And it asked whether the managers would tell me the truth in a team meeting, which is why two of the three are getting asked afterwards instead.
+> **Illustrative exchange, handovers.** It said "not yet" on my check, because one manager's reaction cannot tell me whether all four are affected, and asking "is this a problem for you?" presumes the problem exists. Fair. My check is now all three managers, wrong if fewer than two describe it, and I am asking about the last time an account changed hands and what they knew, not whether they see a problem. It pushed on "if it is one person's habit, there is nothing here": one person's habit can still expose a process that fails whenever accounts move. I have changed that line to "then it is smaller, and probably a conversation rather than a nine-week problem." It pushed on "one day is fast enough to matter" as accepting a target before knowing how fast the work needs the information; true, and it does not change the verdict, so it stays accepted with a better reason. Its question was the best line: before I ask, how will I tell a manager who has not noticed the problem from one who has adapted to it and no longer calls it a problem? That is why the question is about the last handover, not about whether there is a problem.
 
 ### Response tasks
 
