@@ -2706,3 +2706,35 @@ Timing is Leslie's; it can travel with Clare's Sprint 1 comments as one packet.
 
 Provenance: Leslie, the question and the ruling; Claude, the reading, the lines, and the
 record.
+
+## 20 September, later: Leslie's run of the Dojo Lab prompt, and the interim ruling
+
+Leslie ran the Dojo Lab: test your assumptions prompt in plain ChatGPT on the handover
+example, with her own walk (her notebook for four rows, the draft's examples for the
+rest). Content: right. It said "not yet" on the one-manager check (cannot settle whether
+all four are affected; the question presumes the problem), pushed on "one person's habit,
+nothing here" and on accepting "one day is fast enough," asked how she would tell not
+noticing from having adapted, and wanted the actual handover examples earlier. Form:
+wrong. Unlabeled first answer, the rest numbered from 1, so the parts could not be told
+apart. Two causes: a bare chat has no frame (the prompt assumed the Dojo has it), and the
+prompt asked for numbered answers rather than labeled parts.
+
+**Leslie's ruling.** The course doc and the Sprint 0 setup item are planned for the
+course start, but right now both Sprint 2 Dojo Labs are written as interim single-shot
+prompts, not as Dojo modules. Modules wait. (Claude had proposed writing the two modules
+now and was wrong to steer toward single-shot as the design; Sathya's Dojo is a
+conversation, and the doc's Dojo tab is the guardrail. The interim is the fallback, and
+today it is the whole thing.)
+
+**Applied, draft v1.1.4:** the prompt asks for four labeled parts (THE CHECK, PUSHBACK,
+ONE QUESTION, WHAT HELPED); a line tells anyone in a chat outside the Dojo to paste the
+Problem Frame first; the illustrative exchange is rewritten from the run; the [NOTE] on
+the page is retired. The second Dojo Lab's prompt is unchanged until Leslie runs it; it
+should get the same labels and frame line then.
+
+Also from the run: the walk page's section 3 example check (one manager, a one-on-one)
+is the weaker of the two versions in the material, and the Dojo caught it. Kept as
+written; the Dojo Lab's exchange now shows it being pushed to the three-manager version.
+
+Provenance: Leslie, the run and the ruling; Claude, the reading and the edits.
+
