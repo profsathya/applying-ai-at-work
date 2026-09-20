@@ -2658,3 +2658,43 @@ published. Leslie to raise with Jeremy.
 
 Provenance: Leslie, Jeremy, Melisa, the plan and the ruling; Claude, the documents and
 the record.
+
+## 20 September: the handover example, is it big enough, and the note for Jeremy
+
+Leslie read the end-of-Sprint-1 handover frame (worked example A) and found it weak: a
+small team, an obvious fix, and nothing in the frame saying what a third person being
+caught out looks like. Her first reading added teams and support phases; the written
+example is simpler (one owner per account, the handover is a conversation between two
+managers, nobody else told). Agreed to keep the mechanism and the size. The size is the
+point: the course's goal is a workable problem, and an example the size of a participant's
+own problem sets the right scale. The obvious fix (a note, a field, a checklist) is easy to
+name and hard to make stick, which is what 3c (a new habit, someone to keep at them) and
+Sprint 3's conflict example (the tracker nobody updates) teach. What was missing was the
+example saying so. Ruled: raise the visibility, not the head count; four other managers is
+what lets the riskiest assumption be checked in a week.
+
+**Changed here (Claude's files):**
+
+- `sprint-2-worked-example-handovers.md` v0.3: the verdict now names the tension ("The
+  fix looks obvious and cheap, a note or a field, and that is the real question: if it is
+  that easy, why has it not happened? Either nobody has tried, or someone did and it did
+  not last, and those are different problems."). 4a and 4b carry the two lines below so
+  the Sprint 1 and Sprint 2 frames match.
+- `sprint-2-working-draft-v1.md` v1.1.2: item 8's Part 4 verdict example, the same text.
+
+**Owed to Jeremy, for Sprint 1's The problem frame page, worked example A** (his build
+map; the sprint-14 pages are locked). Two lines, both in the published example's own
+register:
+
+- 4a, after "Nobody remembers anyone trying anything else": "though someone has probably
+  suggested announcing handovers at some point; if so, it did not last."
+- 4b, after "At the moment a third person needs to know": ": the next time the client
+  contacts anyone else, they are routed to the old owner or asked to start from the
+  beginning."
+
+Neither line names a tracker or says who owns the handover process; Sprint 3's conflict
+example stays for the conversation to find. Part 6 and worked example B are unchanged.
+Timing is Leslie's; it can travel with Clare's Sprint 1 comments as one packet.
+
+Provenance: Leslie, the question and the ruling; Claude, the reading, the lines, and the
+record.

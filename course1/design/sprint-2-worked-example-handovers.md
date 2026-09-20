@@ -1,12 +1,12 @@
 ---
 purpose: The account handovers example carried end to end through Sprint 2, in the participant voice, as the source for the worked examples inside the Sprint 2 pages and as a size check on the Problem Frame document
-status: v0.2, 17 September 2026, after Leslie's review of v0.1 (then called a fixture): the cost of a change as 3c, no verdict in the frame, the Sprint 2 Log's contents recast as what the pages' examples will show
+status: v0.3, 20 September 2026. The verdict names the obvious-fix tension (if it is that easy, why has it not happened); 4a and 4b carry the two lines asked of Jeremy for Sprint 1's worked example A, so the two frames match. v0.2, 17 September, after Leslie's review of v0.1 (then called a fixture): the cost of a change as 3c, no verdict in the frame, the Sprint 2 Log's contents recast as what the pages' examples will show
 depends_on: course1/sprints/sprint-14/the-problem-frame.md (worked example A); course1/sprints/sprint-15/stakeholder-map-v3.md (Dana the account lead); sprint-2-outline.md (v5.2)
 ---
 
 # Worked example, end of Sprint 2: account handovers
 
-Everything in Sprint 1's worked example A carries. Sprint 2 adds 3c, the Checked column, and one row in part 6 from the research. The stakeholder Sprint 3 V3 calls Dana is the account lead here too. Nothing here pre-empts Sprint 3's conflict example (the tracker nobody updates), which stays for the conversation to find.
+Everything in Sprint 1's worked example A carries. Two lines in 4a and 4b are new on 20 September and are also asked of Jeremy for the Sprint 1 page; if his wording differs, this copy follows his. Sprint 2 adds 3c, the Checked column, and one row in part 6 from the research. The stakeholder Sprint 3 V3 calls Dana is the account lead here too. Nothing here pre-empts Sprint 3's conflict example (the tracker nobody updates), which stays for the conversation to find.
 
 Part 1 is the Problem Frame as it stands at the end of Sprint 2. Part 2 is what the participant wrote along the way, in the order of the pages, which is where the pages' worked examples come from.
 
@@ -28,9 +28,9 @@ Last updated: Sprint 2, week 2.
 
 **3c. What a change would ask of them.** Each manager: about a minute per handover, to post a note or update a field, and a new habit. Someone, probably me and possibly Dana, to keep at them until it is a habit. If the CRM field is already there, someone to switch it on and show people once. Nothing to build; a checklist would take an afternoon. Dana is the only person who has to agree. Against 3b: minutes a month against clients repeating themselves every month.
 
-**4a. How it is handled today.** The outgoing owner tells the incoming owner directly. Nobody remembers anyone trying anything else. Our CRM has an owner field on every account; I do not know whether ours is switched on or whether anyone looks at it.
+**4a. How it is handled today.** The outgoing owner tells the incoming owner directly. Nobody remembers anyone trying anything else, though someone has probably suggested announcing handovers at some point; if so, it did not last. Our CRM has an owner field on every account; I do not know whether ours is switched on or whether anyone looks at it.
 
-**4b. The moment it stops working.** At the moment a third person needs to know. The conversation works for the two people in it and reaches nobody else.
+**4b. The moment it stops working.** At the moment a third person needs to know: the next time the client contacts anyone else, they are routed to the old owner or asked to start from the beginning. The conversation works for the two people in it and reaches nobody else.
 
 **5. What fixed would look like.** Everyone on the team knows within a day when an account changes hands.
 
@@ -99,4 +99,4 @@ Checked against: the three managers, Thursday, one in the meeting and two after.
 
 ### Problem Frame: is it worth pursuing?
 
-**The verdict, as submitted.** Worth pursuing. Two of three managers describe the same thing, so it is not one person's habit, and the cost of any change is minutes per handover against clients repeating themselves every month. The one thing that could still end it is the third manager being right that it only happens with one outgoing owner; even then the same fix would cover that case, so it changes the size of the problem rather than whether to work on it. What I do not know that matters most is whether anyone has tried before, and Dana can tell me; that is the first thing for Sprint 3.
+**The verdict, as submitted.** Worth pursuing. Two of three managers describe the same thing, so it is not one person's habit, and the cost of any change is minutes per handover against clients repeating themselves every month. The fix looks obvious and cheap, a note or a field, and that is the real question: if it is that easy, why has it not happened? Either nobody has tried, or someone did and it did not last, and those are different problems. The one thing that could still end it is the third manager being right that it only happens with one outgoing owner; even then the same fix would cover that case, so it changes the size of the problem rather than whether to work on it. What I do not know that matters most is whether anyone has tried before, and Dana can tell me; that is the first thing for Sprint 3.

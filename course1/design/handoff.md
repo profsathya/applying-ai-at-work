@@ -160,7 +160,9 @@ test decides their wording. Points 5, 20, 20, 45, 10 are a proposal for the team
 Confirmed/unverified against confirmed/inferred is a team decision, with a recommendation
 in the outline. Directing AI as a course-wide thread is parked until about 24 September.
 Owed elsewhere: Leslie's three Google Docs (Problem Frame, the table, Candidate Log
-v2.3); one line in Sprint 1 for Jeremy; one sentence each in Sprints 3 and 4 for Melisa.
+v2.3); three lines in Sprint 1 for Jeremy (the workable-problem line, and the two
+lines for worked example A logged 20 September); one sentence each in Sprints 3 and 4
+for Melisa.
 
 The conventions in point 5 below still govern the draft. The five points were written on
 16 September against the 12 September outline and are kept for the record:
