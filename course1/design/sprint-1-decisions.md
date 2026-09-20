@@ -2692,8 +2692,16 @@ register:
   contacts anyone else, they are routed to the old owner or asked to start from the
   beginning."
 
-Neither line names a tracker or says who owns the handover process; Sprint 3's conflict
-example stays for the conversation to find. Part 6 and worked example B are unchanged.
+And one row in part 6, so it matches the new 4a line (added later the same day, after
+Leslie asked why it had been left):
+
+- Part 6, the 4a row: "Nobody has tried to fix this before" becomes "Nothing has been
+  tried that stuck." Status and who-could-tell-me unchanged.
+
+None of these names a tracker or says who owns the handover process; Sprint 3's conflict
+example stays for the conversation to find. Worked example B is unchanged. On Claude's
+side the same row change is in the worked example (v0.3.1) and everywhere the draft quotes
+the row (v1.1.3).
 Timing is Leslie's; it can travel with Clare's Sprint 1 comments as one packet.
 
 Provenance: Leslie, the question and the ruling; Claude, the reading, the lines, and the

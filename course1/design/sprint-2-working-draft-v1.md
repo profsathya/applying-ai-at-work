@@ -1,6 +1,6 @@
 ---
 purpose: Sprint 2, whole sprint, working draft for Leslie's review, on the Sprint 1 model; becomes the cut-ready source for Jeremy's build once reviewed
-status: v1.1.2, 20 September 2026. Item 8's verdict example names the obvious-fix tension (Leslie, 20 September). v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
+status: v1.1.3, 20 September 2026. The handover example's part 6 row "nobody has tried" is now "nothing has been tried that stuck" wherever the pages quote it. Item 8's verdict example names the obvious-fix tension (Leslie, 20 September). v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
 depends_on: sprint-2-outline.md (v5.2); problem-frame-template.md; what-already-exists-template.md; sprint-2-worked-example-handovers.md; course1/sprints/sprint-14/ (Sprint 1 as published, for register and format); course1/sprints/sprint-15/ (Sprint 3 V3, for the hand-off and the Dojo Lab form)
 storage: the next storage folder after sprint-15, Jeremy's call; positions 1 to 11
 ---
@@ -169,7 +169,7 @@ For example: *none of the managers think the lack of account handovers is a prob
 
 *More help: an example of an actual kill, from the garden plot.* The assumption: *new plot-holders quit because they had no one to ask.* Questions behind it: why did last year's new people actually stop coming? Different answers: they had no one to ask, which is my frame; the plots were too far from where they live, or too big for a first year; they never meant to stay past one season. If it is either of the last two, pairing new people with old hands fixes nothing, and this problem, as I have framed it, is dead. Nothing I know makes those answers unlikely. This one is risky, and it is the one I would check.
 
-*More help: another handover example.* Two could end it: the managers one, because if it is one person's habit there is nothing here; and *nobody has tried to fix this before*, because if something was tried and died, I am working on the wrong problem. The clients one changes the goal but not whether the problem is real, so it is not on this list. I am accepting *managers act on stale ownership for days*: even if it is one day, the client still repeats their history, and the length does not change whether this is worth pursuing.
+*More help: another handover example.* Two could end it: the managers one, because if it is one person's habit there is nothing here; and *nothing has been tried that stuck*, because if something was tried and died, I am working on the wrong problem. The clients one changes the goal but not whether the problem is real, so it is not on this list. I am accepting *managers act on stale ownership for days*: even if it is one day, the client still repeats their history, and the length does not change whether this is worth pursuing.
 
 ### 3. Choose one to check
 
@@ -248,7 +248,7 @@ Paste your four boxes from the last page, then this:
 
 Take what lands and fix your walk yourself. If it named a better assumption to check and you agree, change your check and write the new one before you look. If it pushed on an acceptance and the push was fair, move that line back to "not yet." If it was wrong about your situation, say so in your box below; disagreeing with a reason is a good answer.
 
-> **Illustrative exchange, handovers.** It said "not yet" on my choice, because *nobody has tried to fix this before* could also end the problem and I had not said why I was not checking it. Fair, and my reason is that Dana is hard to catch this week and Sprint 3 is built for that conversation, so I am keeping my choice and writing that down. It pushed on "the same thing" as too vague to ask about, which it was; I am now asking each manager about the last time an account changed hands and what they knew. And it asked whether the managers would tell me the truth in a team meeting, which is why two of the three are getting asked afterwards instead.
+> **Illustrative exchange, handovers.** It said "not yet" on my choice, because *nothing has been tried that stuck* could also end the problem and I had not said why I was not checking it. Fair, and my reason is that Dana is hard to catch this week and Sprint 3 is built for that conversation, so I am keeping my choice and writing that down. It pushed on "the same thing" as too vague to ask about, which it was; I am now asking each manager about the last time an account changed hands and what they knew. And it asked whether the managers would tell me the truth in a team meeting, which is why two of the three are getting asked afterwards instead.
 
 ### Response tasks
 
@@ -288,13 +288,13 @@ Three parts. Each is short, and most of it exists already in your boxes from the
 
 The one to three you named, and why these and not the others. For each: the assumption, and what answer would end the problem. Then the ones you are accepting, each with its reason.
 
-> **Example.** *All four managers are affected, not just the one I sat next to.* If only one of them sees it, this is one person's habit, not a problem for nine weeks. *Nobody has tried to fix this before.* If something was tried and died, the real problem is whatever killed it, and my part 4a is wrong. Not on the list: *clients notice and it costs them something*, because a no there changes my goal, not whether the problem is real. Accepting: *managers act on stale ownership for days*, because even one day means the client repeats their history.
+> **Example.** *All four managers are affected, not just the one I sat next to.* If only one of them sees it, this is one person's habit, not a problem for nine weeks. *Nothing has been tried that stuck.* If something was tried and died, the real problem is whatever killed it, and my part 4a is wrong. Not on the list: *clients notice and it costs them something*, because a no there changes my goal, not whether the problem is real. Accepting: *managers act on stale ownership for days*, because even one day means the client repeats their history.
 
 ### Part 2. Your check, written before you look
 
 The one you are checking, as it stands after the Dojo Lab: the assumption stated so it could be wrong, the result that would tell you it was, who or what you are checking it against and when, and why this one. If AI moved you off your first choice, say what moved you.
 
-> **Example.** The other three managers have had the same thing happen. Wrong if fewer than two describe it. Asking each of them about the last time an account changed hands and what they knew: one in Thursday's meeting, two afterwards, because I am not sure people will say so in the room. This one because it could end the problem and they sit near me. The Dojo pushed me to make the question specific, and I did; it also asked why not the nobody-has-tried one, and the answer is that Dana is for Sprint 3.
+> **Example.** The other three managers have had the same thing happen. Wrong if fewer than two describe it. Asking each of them about the last time an account changed hands and what they knew: one in Thursday's meeting, two afterwards, because I am not sure people will say so in the room. This one because it could end the problem and they sit near me. The Dojo pushed me to make the question specific, and I did; it also asked why not the nothing-stuck one, and the answer is that Dana is for Sprint 3.
 
 ### Part 3. What a change would ask of people
 
