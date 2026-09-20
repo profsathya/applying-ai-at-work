@@ -2698,4 +2698,3 @@ Timing is Leslie's; it can travel with Clare's Sprint 1 comments as one packet.
 
 Provenance: Leslie, the question and the ruling; Claude, the reading, the lines, and the
 record.
-
