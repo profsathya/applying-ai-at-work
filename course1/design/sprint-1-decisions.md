@@ -2738,3 +2738,44 @@ written; the Dojo Lab's exchange now shows it being pushed to the three-manager 
 
 Provenance: Leslie, the run and the ruling; Claude, the reading and the edits.
 
+## 21 September: Leslie's second pass on the first half of the Sprint 2 draft
+
+Docx "DA - Sprint-2-working-draft-v1.1": eight tracked changes, nine comments. Applied as
+v1.1.5; dispositions:
+
+- TC1 (Where to write): her rewrite, "Open your Problem Frame from Sprint 1 ... expand on
+  Part 6 and on Part 3." Applied; a [NOTE] records that the copy step moves to Sprint 1
+  and that "and on Part 3" rides on the 3c decision.
+- TC2 (walk opening), TC3 (wrong-result line), TC4 (comma), TC6 (temperature check
+  shortened), TC7 (Dojo Lab opening), TC8 ("priced a change" removed): applied as written.
+- TC5 (garden check now has a question to ask): applied. Flagged to Leslie that the page
+  then has no example of a check by observation alone; her call whether that idea returns.
+- C0 (make the Problem Frame copy at the end of Sprint 1): agreed; joins the Sprint 1
+  packet for Jeremy. Sprint 2 keeps a fallback line if it is not there by 5 October.
+- C1, C2 (how the walk is presented; where the check is written): Leslie's four-column
+  table (My assumption, Questions, Different answers, Risky) with the check beneath it,
+  as a one-page activity sheet like What already exists. Leslie clarified that "no Sprint
+  2 Log" was not a ruling: two activity sheets are fine if the activities warrant them, and
+  the team can call them Logs. Awaiting her go to draft the sheet. Course-wide question
+  she raised, for the team: can an external sheet be uploaded rather than pasted?
+- C3 (What a change would ask of people): off the walk page, ruled. Destination open:
+  Claude recommends week 2, after What already exists, feeding the verdict; the
+  alternative is holding it for a later sprint, which takes 3c out of the frame and the
+  cost side out of the verdict. Biggest open decision; Leslie thinking.
+- C4, C5 (instructions for chats outside the Dojo): the team plans the Dojo doc for the
+  start; until then every Dojo Lab is a plain chat. Line rewritten to be true either way:
+  the Dojo reads the frame if added in setup, otherwise paste it. For Jeremy's Sprint 0
+  setup item: have learners add their own Problem Frame doc to the project.
+- C6 (what is submitted after a Dojo Lab): as Sprint 1, the transcript with a final Me
+  turn; `dojo_submission: mode: transcript`. Applied.
+- C7 (self-check rhythm): Sprint 1's week 2 teaches nothing new, so one check covered it;
+  Sprint 2's week 2 does teach (Context by doing, what exists, the verdict). Leslie takes
+  a second self-check to the team; points are theirs.
+- C8 (what the graded item is now): Part 1 riskiest with why and any accepted with reason,
+  Part 2 the check; with the sheet, paste the whole table plus the check, no repeated
+  guidance. Someone who skips the OYP submits the same table; OYPs are 0 points and were
+  never graded. Rubric to ask what changed after the Dojo or why it was not used. Graded
+  item edit held until the sheet is ruled.
+
+Provenance: Leslie, every edit and ruling; Claude, the dispositions and the record.
+
