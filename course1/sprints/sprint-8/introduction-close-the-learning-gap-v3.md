@@ -5,101 +5,59 @@ slug: introduction-close-the-learning-gap-v3
 artifact_id: course1-sprints-sprint-9-introduction-close-the-learning-gap-v3
 sprint: 8
 week: 7
-module: 'Sprint 4: Close The Learning Gap (V2)'
+module: 'Sprint 4: Close the Learning Gap (V3)'
 position: 2
 points: null
 submission_type: none
-publish: true
+page_presentation: reading
 learner_labels: true
+publish: true
 ---
 
-By the end of Sprint 3 you had a problem frame that had survived contact with a real person. You also had something that did not fit: a thing they said that you had no answer to, or a number you have been quoting that you cannot actually back up.
+# Introduction: Close the Learning Gap
 
-That gap is the subject of this sprint.
+You have been naming what you do not know since Sprint 1. Part 7 of your Problem Frame asks for it directly. In Sprint 3 you marked fields on your stakeholder map as Inferred, wrote assumption blocks for the guesses that would change your next move, and ended your validation report with what still needs validation.
 
-AI is very good at closing gaps like this. It explains things clearly, sequences what to learn first, and adapts to where you are stuck. It will also produce a fluent, confident, entirely plausible explanation of something it has wrong, and you will get no signal that it did. That is the problem this sprint is built around.
+This sprint calls those open items gaps, and it is where they stop sitting at the end of a report and become a plan. You will not close them all in two weeks. You will plan how to close them, and that planning will show you which parts of your frame you can trust and which you cannot yet.
+
+AI is very good at helping with this. It can suggest what to learn first, where to look, and how to check what you find. But it will also produce a clear, confident answer that may not be true for your situation. That is why your own list comes first, and why every plan names a way to check that is not AI.
+
+By the end of this sprint you can say, about your own problem, what you know, what you are guessing, and how you will find out. Most people cannot say that about the work in front of them. You got there the same way you have all term: your own thinking first, a real person's view from Sprint 3, and AI to widen the options before you decided which ones fit.
 
 ## Sprint 4 Road Map
 
-1. **Name the gap.** Write your own list first, before you ask any AI. Mark what is blocking you and what is just interesting. Commit to one.
-2. **Test it.** Take your committed gap to the AI Exchange and find out whether it is really a gap or a topic in disguise.
-3. **Plan the route.** Use the Dojo to sequence the learning and to design the checks that will tell you whether what you learned is true.
-4. **Learn it, and check it.** Do the learning. Run two checks. At least one has to be independent of AI.
-5. **Say what changed.** Update your Goal Plan and say what you can now do that you could not do two weeks ago.
+1. **Gather your gaps.** Bring together what Sprint 1 and Sprint 3 already left open, in your own words, before any AI. Add anything new. Sort each one as blocking, useful, or interesting.
+2. **Test and plan.** In the Dojo Lab, AI tests your list, helps you build the plan, and tests how you will check your answers. You decide what to keep.
+3. **Write the plan.** For each gap, say why it matters, where you will learn it, the steps, and how you will know.
+4. **Update your frame.** Revise parts 6 and 7 of your Problem Frame to match your plan.
+5. **Say what changed.** Reflect on how planning changed your view of the problem.
 
-## Concepts in Sprint 4
+## Sprint 4 Concepts
 
-### A Topic Is Not a Gap
+**A gap, not a topic.** A topic is something you would like to understand. A gap is something whose absence is stopping you. Test it with this sentence: "Until I know this, I can't ___."
 
-A topic is something you would like to understand. A gap is something whose absence is stopping you.
+- Topic: "I should learn more about how teams handle account handovers." Nothing fills the blank.
+- Gap: "I don't know whether the other account managers really find out late when an account changes hands, so I can't tell whether my problem is real for the whole team." The blank fills itself.
 
-The difference matters because a topic has no end. You can read about onboarding best practices for a year and never reach a point where you would say you were finished. A gap closes.
+**Blocking, useful, interesting.** Not everything you do not know is in your way. Sprint 3 called an assumption high-stakes if being wrong about it would change your next move. Blocking is that same test, with two more shelves for the things that do not pass it.
 
-Here is the test. Try to finish this sentence:
+- **Blocking:** a decision or next step is waiting on it.
+- **Useful:** it would improve the work, but nothing is stopped.
+- **Interesting:** you want to know it, and nothing you do next depends on it.
 
-> "Until I know this, I can't ___."
+Interesting is the one that quietly eats your time. Naming it keeps it from hiding inside "essential."
 
-Topic: "I need to learn more about onboarding best practices." Nothing fills the blank.
+**Closed means answered.** A gap is closed when you have an answer you can stand behind, whether that answer confirms what you thought or shows you were wrong. It does not mean the problem is solved.
 
-Gap: "I don't know how our ticket system counts the age of a reassigned ticket, so I can't tell whether the nine day figure I have been quoting is real." The blank fills itself.
-
-### Blocking, Useful, Interesting
-
-Not everything you do not know is in your way. Some of it has a decision waiting on it. Some of it would improve the work without stopping anything. And some of it you simply want to know.
-
-Interesting is the one that quietly eats the sprint. Curiosity has no stopping point, and it is very easy to mistake for necessity. Naming it as its own category is what keeps it from hiding inside "essential."
-
-You will sort your own gaps into those three in Name the Gap, and you will commit to a blocking one. If more than one is blocking, which is common, choose the one you actually want to spend a week on. Wanting to know it is what gets the work done. It is just not what makes something a gap.
-
-### Knowing What "Closed" Looks Like
-
-Before you plan how to learn something, write down how you will know you are finished. It has to be something you could point at rather than a feeling, or you will stop when you get tired instead of when you are done.
-
-You are not becoming an expert. The standard is that you know enough to make the next decision and to defend it if someone pushed back.
-
-### An Explanation Is Not Evidence
-
-When something explains a thing to you clearly and you understand it, it feels like knowledge. It is not, yet. It is an explanation you found convincing.
-
-Two words you will use for the rest of this course, carried over from Sprint 1 and Sprint 3:
-
-> **Confirmed.** You checked it against something independent, and it held.
->
-> **Inferred.** You believe it, and you have not checked it.
-
-A clear, confident AI explanation is inferred. So is something a colleague said in passing. So is your own reasonable assumption. Most of what you learn in two weeks will be inferred, and that is fine. Marking it honestly is what makes your final report defensible.
-
-### A Check That Cannot Fail Is Not a Check
-
-Before you go look, write down what result would tell you that you were wrong. Do it in that order. If you write it afterward, you will find a version that matches whatever you discovered.
-
-The best checks come from your real setting: your own admin console, your team's policy document, watching the thing happen, asking the person who would know. Those are also the checks a general purpose AI cannot do for you, because it does not know how your instance is configured or what your policy says.
-
-You will design your two checks in the Dojo Lab, and @auditor will tell you where they are weak.
-
-### Most Results Come Back "Yes, But"
-
-A check has three possible outcomes, and only two of them are the ones people expect. It can confirm your claim, contradict it, or complicate it.
-
-Complicated is the most common and the most useful. It is the result where the honest answer is "yes, but," and the "but" is usually the finding. It is also the one people round off to confirmed, because "yes, but" takes more work to write down than "yes." Do not round it off.
-
-And a check that comes back confirmed is still a real result. Report it, and say what would have changed your mind.
-
-### What You Are Choosing Not to Learn
-
-Deciding what to set aside is scope control, not laziness. But an exclusion is only legitimate if you can say what it costs you.
-
-You will write that down for each gap you are not closing, in Name the Gap.
+**Confirmed and inferred.** The same marks you used on your stakeholder map in Sprint 3. **Confirmed** means you checked it against something independent, and it held. **Inferred** means you believe it but have not checked it. A clear AI explanation is inferred until you check it. Your plan is how inferred things become confirmed later.
 
 ## Two-Week Sprint Map
 
-- **Week 1.** Read this page. Pass the Concept Check. Write Name the Gap. Take it through the AI Exchange.
-- **Week 2.** Design the path in the Dojo, at the start of the week. Do the learning. Run your checks. Write up Learn and Check and finish with the reflection.
+- **Week 1.** Read this page. Take the Concept Check. Write Name the Gap, without AI, and upload it. Then run the Dojo Lab at the end of the same week, while your list is fresh. These two go back to back, so plan for both.
+- **Week 2.** Write your Learning Plan and update your Problem Frame. Finish with the reflection.
 
-## Carry Forward
+## Portfolio Capture
 
-Keep your gap list, the path you designed, the sources you actually used, the prompts you steered with, and your check results. In Sprint 5 the Integrated Problem Document and Readiness Report asks what you can now do that you could not do in week 1. This sprint is where a large part of that answer comes from.
+Keep everything in your Learning Plan template. In Sprint 5, your readiness report asks what you are ready to do next. Your plan is a large part of that answer, and it is where you start in CIS 502.
 
-## Next
-
-Take the Sprint 4 Concept Check, then start Name the Gap.
+Next: take the Sprint 4 Concept Check, then start Name the Gap.
