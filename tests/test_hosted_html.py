@@ -319,6 +319,22 @@ class HostedHtmlTests(unittest.TestCase):
                 self.assertIn("hidden data-canvas-only", rendered)
                 self.assertNotIn(f' href="{url}"', rendered)
 
+    def test_course1_artifact_footer_pairs_cti_and_de_anza_branding(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            source = root / "course1/sprints/sprint-99/tuple-overview.md"
+            manifest = root / "course1/manifests/production.json"
+            write_page(source)
+            write_manifest(manifest)
+
+            result = render_hosted_artifact(source, manifest, root / "out")
+            rendered = Path(result["output_path"]).read_text()
+
+            self.assertIn('<footer aria-label="Course partners">', rendered)
+            self.assertIn('alt="Computing Talent Initiative"', rendered)
+            self.assertIn('alt="De Anza College"', rendered)
+            self.assertIn("De_Anza_College_logo.svg", rendered)
+
     def test_all_canvas_homepage_links_use_current_window(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp).resolve()

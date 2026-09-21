@@ -9,6 +9,8 @@ from datetime import date, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
+from canvas_sync.branding import partner_brand_row
+
 
 def validate_schedule(homepage: dict, slugs: set[str], artifact_sprints: set[int]) -> list[str]:
     schedule = homepage.get("schedule")
@@ -146,6 +148,7 @@ def _module_row_html(key: str, title: str, dates: str, href: str | None, groups:
 
 def render_scheduled_homepage(
     course: dict, schedule: dict, *, logo_url: str, help_link: dict,
+    deanza_logo_url: str | None = None,
     module_groups: dict | None = None, module_links: dict | None = None, directory: bool = False,
 ) -> str:
     esc = html.escape
@@ -194,6 +197,19 @@ def render_scheduled_homepage(
   </nav>
   <noscript><p>Use the module dates above to find your current sprint.</p></noscript>'''
     title = esc(course["title"])
+    if deanza_logo_url:
+        header_brand_row = partner_brand_row(logo_url, deanza_logo_url)
+        footer_brand_row = partner_brand_row(logo_url, deanza_logo_url, decorative=True)
+        brand_header = f'''<header class="brand">
+    {header_brand_row}
+  </header>'''
+        brand_footer = f'''<footer>
+    {footer_brand_row}
+    <span class="footer-copy">{esc(course['footer'])}</span>
+  </footer>'''
+    else:
+        brand_header = f'<header class="brand"><img src="{esc(logo_url)}" alt="Computing Talent Initiative"><span>De Anza College</span></header>'
+        brand_footer = f'<footer><img src="{esc(logo_url)}" alt=""><span class="footer-copy">{esc(course["footer"])}</span></footer>'
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -204,10 +220,10 @@ def render_scheduled_homepage(
 </head>
 <body>
 <main class="course-home">
-  <header class="brand"><img src="{esc(logo_url)}" alt="Computing Talent Initiative"><span>De Anza College</span></header>
+  {brand_header}
   <h1>{title}</h1>
   {content}
-  <footer><img src="{esc(logo_url)}" alt=""><span>{esc(course['footer'])}</span></footer>
+  {brand_footer}
 </main>
 <script id="course-schedule" type="application/json">{payload}</script>
 <script>{script}</script>
