@@ -1,6 +1,6 @@
 ---
 purpose: Sprint 2, whole sprint, working draft for Leslie's review, on the Sprint 1 model; becomes the cut-ready source for Jeremy's build once reviewed
-status: v1.1.5, 21 September 2026. Leslie's second pass on the first half applied: eight tracked changes; Dojo Lab submits a transcript as Sprint 1 does; the frame-paste line covers both Dojo and plain chat; What a change would ask of people is off the walk page, destination open; the Problem Frame copy moves to the end of Sprint 1 (Jeremy). Held for her rulings: 3c's destination, and the Assumptions walk activity sheet with the graded item's paste shape. Dojo Lab: test your assumptions carries Leslie's 20 September run (labeled prompt, paste-your-frame line for a chat outside the Dojo, illustrative exchange from the run, [NOTE] retired); both Dojo Labs stay interim single-shot prompts until the course doc exists (Leslie, 20 September). The handover example's part 6 row "nobody has tried" is now "nothing has been tried that stuck" wherever the pages quote it. Item 8's verdict example names the obvious-fix tension (Leslie, 20 September). v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
+status: v1.2, 21 September 2026. Leslie's 3c ruling applied: What a change would ask of people is off week 1 entirely (walk page section and graded Part 3 removed); 3c is one line in the Problem Frame item, drawn from the minuses in the What already exists table after the real look; verdict, Dojo step, worked example, and reflection follow. Second half ready for Leslie's run. Leslie's second pass on the first half applied: eight tracked changes; Dojo Lab submits a transcript as Sprint 1 does; the frame-paste line covers both Dojo and plain chat; What a change would ask of people is off the walk page, destination open; the Problem Frame copy moves to the end of Sprint 1 (Jeremy). Held for her rulings: 3c's destination, and the Assumptions walk activity sheet with the graded item's paste shape. Dojo Lab: test your assumptions carries Leslie's 20 September run (labeled prompt, paste-your-frame line for a chat outside the Dojo, illustrative exchange from the run, [NOTE] retired); both Dojo Labs stay interim single-shot prompts until the course doc exists (Leslie, 20 September). The handover example's part 6 row "nobody has tried" is now "nothing has been tried that stuck" wherever the pages quote it. Item 8's verdict example names the obvious-fix tension (Leslie, 20 September). v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
 depends_on: sprint-2-outline.md (v5.2); problem-frame-template.md; what-already-exists-template.md; sprint-2-worked-example-handovers.md; course1/sprints/sprint-14/ (Sprint 1 as published, for register and format); course1/sprints/sprint-15/ (Sprint 3 V3, for the hand-off and the Dojo Lab form)
 storage: the next storage folder after sprint-15, Jeremy's call; positions 1 to 11
 ---
@@ -127,7 +127,7 @@ Next up: **Dig into your assumptions**.
 
 Open your Problem Frame from Sprint 1. The Problem Frame is a living document, and you are going to be making changes, additions, and adjustments to it throughout the course. During this sprint you are going to expand on Part 6: your assumptions, and on Part 3: who is affected and costs.
 
-[NOTE] Leslie, 21 September: the copy of the Problem Frame document (paste Part D of the Candidate Log) moves to the end of Sprint 1, with Jeremy. If it is not there by 5 October, the make-a-copy line returns here. "And on Part 3" rides on the open decision about where What a change would ask of people goes.
+[NOTE] Leslie, 21 September: the copy of the Problem Frame document (paste Part D of the Candidate Log) moves to the end of Sprint 1, with Jeremy. If it is not there by 5 October, the make-a-copy line returns here. "And on Part 3" is 3c, filled in week 2 from the What already exists table when the frame is brought up to date (Leslie, 21 September).
 
 Let's start by looking at Part 6: your assumptions. Every line there is something you wrote as if it were true, but you do not really know yet. Behind each assumption are questions, whose answers could change the shape of your problem, or show you that it is not a problem worth working on. For example:
 
@@ -197,17 +197,7 @@ To be clear, this check is a temperature check. You are collecting information a
 
 Write your check in the box below, before you look.
 
-### 4. What would a change ask of people?
-
-[OPEN: Leslie ruled 21 September that this section does not belong on this page. Where it goes is undecided: week 2 (after What already exists, feeding the verdict) or held for a later sprint. It stays here, unbuilt, until she rules; Part 3c of the frame, Part 3 of the graded item, the verdict's reasons, the worked example, and the reflection's AI instructions all follow that ruling.]
-
-Many of your assumptions are quietly about what people would do differently: read a note, update a field, show up on a Tuesday. That makes your walk the best place to see what a change would actually ask of people. Read back over it once more, this time for anything that says someone would have to do something differently: a new step, a new habit, time they do not currently spend. Add the one cost no assumption carries, the time it would take to build anything. Then set it beside Part 3b: what the problem costs now. You are not pricing a solution; you are pricing change at all, and asking whether it is plainly smaller than the problem, plainly larger, or not yet clear.
-
-> **Example.** Every manager would have to do one thing at each handover that they do not do now, a note or a field. Someone would have to keep at them until it is a habit, probably me. Nothing to build; a checklist would take an afternoon. Against clients repeating their history every month and managers working from stale ownership for days, that is small.
-
-Write yours in the box below, and end with one line: what does this page change about how you would describe your problem?
-
-### 5. What happens to the other assumptions?
+### 4. What happens to the other assumptions?
 
 The assumptions you are not checking do not disappear. They stay in Part 6 of your frame, and in the last column, added this sprint, you write "not yet" against the ones still open and "accepted, because" against the ones you have made the call on. Sprint 3 is built for the open ones: that is where you take them to a real person. Checking one now is the start of that, not the whole of it.
 
@@ -216,9 +206,8 @@ The assumptions you are not checking do not disappear. They stay in Part 6 of yo
 - **the-walk** (response). Prompt: *Your assumptions, one at a time: the assumption, the questions behind it, and the different answers that could change your problem.* Criteria: every assumption from Part 6 appears; each has at least one question behind it; the different-answers lines vary rather than repeating one formula; "nothing much" appears where it is honest.
 - **the-riskiest** (response). Prompt: *The assumptions that could kill the problem, and why. Any you are accepting after looking at the evidence, with the reason.* Criteria: names the riskiest, not the whole list; says why the others are adjustments rather than endings; each accepted assumption carries a reason that says why the risk is low.
 - **your-check** (response). Prompt: *The one you will check, written before you look: the assumption stated so it could be wrong, what result would say it was wrong, who or what you will check it against and when, and what you will ask.* Criteria: the assumption is one you deemed risky, or the reason it is not is given; the wrong-result line is concrete; a named person or observation and a day; if asking, the question is written out.
-- **what-a-change-asks** (response). Prompt: *What a change would ask of people, plus the time to build anything, set beside what the problem costs now. And one line on what this page changed about how you describe your problem.* Criteria: names who would have to do what; includes the build cost or says there is none; says which is larger, or that it is not yet clear; the closing line is present.
 
-> **[BUILD]** `presentation: reading`, four boxes. Section 1 feeds the-walk, section 2 the-riskiest, section 3 your-check, section 4 what-a-change-asks. Section 5 has no box and renders after the last one. Copy-on-click link to the Problem Frame document to be supplied by Leslie.
+> **[BUILD]** `presentation: reading`, three boxes. Section 1 feeds the-walk, section 2 the-riskiest, section 3 your-check. Section 4 has no box and renders after the last one. Copy-on-click link to the Problem Frame document to be supplied by Leslie.
 
 ---
 
@@ -292,7 +281,9 @@ A short check that you are set up for this sprint before the work starts in earn
 
 This is the write-up of the walk, and the completion of it. You have looked closely at your assumptions, decided which could end the problem, chosen one to check, and had AI push on all of it. Now put it in one place, in your words, so that your instructor can see the reasoning and so that you have it to come back to when the check comes in.
 
-Three parts. Each is short, and most of it exists already in your boxes from the last two activities; bring it forward and tidy it, in your own words. Remember, for each part you will see the guidance, then the example, then the box.
+Two parts. Each is short, and most of it exists already in your boxes from the last two activities; bring it forward and tidy it, in your own words. Remember, for each part you will see the guidance, then the example, then the box.
+
+[NOTE] Leslie, 21 September: with the Assumptions walk activity sheet, this becomes "paste your table and your check," without repeated guidance and example. Rewrite waits on the sheet.
 
 ### Part 1. The assumptions that could end the problem
 
@@ -306,21 +297,13 @@ The one you are checking, as it stands after the Dojo Lab: the assumption stated
 
 > **Example.** The other three managers have had the same thing happen. Wrong if fewer than two describe it. Asking each of them about the last time an account changed hands and what they knew: one in Thursday's meeting, two afterwards, because I am not sure people will say so in the room. This one because it could end the problem and they sit near me. The Dojo pushed me to make the question specific, and I did; it also asked why not the nothing-stuck one, and the answer is that Dana is for Sprint 3.
 
-### Part 3. What a change would ask of people
-
-Who would have to do what differently, the time to build anything, and the comparison with part 3b, what the problem costs now. This becomes part 3c of your Problem Frame, so write it as you would want it to read there.
-
-> **Example.** Each manager: about a minute per handover, to post a note or update a field, and a new habit. Someone to keep at them until it is a habit, probably me. Nothing to build; a checklist would take an afternoon. Dana is the only person who has to agree. Against clients repeating themselves every month and days of stale ownership, small.
-
 **Then go and make the check.** It has the rest of the sprint to come back. You record what came back in the Problem Frame item in week 2.
 
 ### Response tasks
 
 - **could-end-it** (response). Prompt: *The one to three assumptions that could end the problem, with the answer that would end it; why the others are not on the list; the ones you are accepting, with reasons.* Criteria: one to three, not all; each has a concrete ending answer; the reasoning for exclusions is present; each acceptance has a reason that says why the answer would not change what you do.
 - **the-check** (response). Prompt: *Your check, written before you look, as it stands after the Dojo Lab.* Criteria: the assumption could be wrong as stated; the wrong result is concrete; a named person or observation and a day within the first week; why this one; what the Dojo changed, or that it changed nothing and why.
-- **what-a-change-asks** (response). Prompt: *What a change would ask of whom, the build cost, and the comparison with 3b.* Criteria: names people and what they would do differently; the build cost or its absence; a comparison stated, or "not yet clear" with what would make it clear; written to stand as part 3c of the frame.
-
-> **[BUILD]** `presentation: reading`, three boxes. Part 1 feeds could-end-it, Part 2 the-check, Part 3 what-a-change-asks.
+> **[BUILD]** `presentation: reading`, two boxes. Part 1 feeds could-end-it, Part 2 the-check.
 
 ---
 
@@ -471,7 +454,7 @@ One prompt in your Dojo, or any AI chat. Paste your Problem Frame, what came bac
 >
 > 1. What did my check settle, and what does it not settle? Two lines.
 > 2. Given what exists, does anything in how the problem is handled today (4a) or where it stops working (4b) have to change? One line, or "no."
-> 3. What did I leave out of what a change would ask of people (3c)? One line.
+> 3. From what exists, what would any change here ask of the people involved that I have not said? One line.
 > 4. Can I say this is worth pursuing? Answer "yes," "no," or "depends on one thing," and name the thing.
 >
 > Nothing else. Here is everything:
@@ -489,20 +472,20 @@ The check as you wrote it before you looked, and then: what you checked it again
 Open your Problem Frame document and bring it up to date. Only what this sprint changed:
 
 - **Part 6, your assumptions.** Fill the Checked column: what came back, in a line, against the one you checked; "accepted, because" and the reason against the ones you accepted; "not yet" against the rest. Add any assumption the research turned up.
-- **Part 3c, what a change would ask of them.** From your week 1 write-up, revised if the research changed it.
+- **Part 3c, what a change would ask of them.** New this sprint, and one or two sentences. Read the minuses in your table: a habit nobody enforces, a document someone writes forever, a process too heavy to survive. Whatever was done here, what would it ask of the people in 3a, and who would have to agree? Set it beside 3b, what the problem costs now, and say which is larger, or that it is not yet clear.
 - **Parts 4a and 4b**, if what exists changed how you would describe current handling. Nothing else unless it has genuinely moved. A frame that did not otherwise change is a legitimate result; say so in one line.
 
 Paste the whole frame into the box. Sprint 3 starts from it.
 
-> **Example, the changed lines only.** Part 6 gains one row, *our CRM's owner field is not in use*, unverified, Dana could tell me, not yet. The managers row now reads "complicated" with what the third manager said. Two rows read "accepted, because." Part 3c is in. Part 4a now ends: our CRM has an owner field on every account; I do not know whether ours is switched on or whether anyone looks at it.
+> **Example, the changed lines only.** Part 6 gains one row, *our CRM's owner field is not in use*, unverified, Dana could tell me, not yet. The managers row now reads "complicated" with what the third manager said. Two rows read "accepted, because." Part 3c, from the table: each manager, about a minute per handover to post a note or update a field, and a new habit; someone to keep at them, probably me; Dana is the only person who has to agree; nothing to build. Against clients repeating themselves every month, small. Part 4a now ends: our CRM has an owner field on every account; I do not know whether ours is switched on or whether anyone looks at it.
 
 ### Part 4. Your verdict
 
-One paragraph, in your own words. Worth pursuing, not worth pursuing, or depends on one thing you name. Your reasons are what the check said, what exists, and what a change would ask, weighed by you. Nobody else can make this call, and the activities in this sprint were there to help you make it, not to make it for you.
+One paragraph, in your own words. Worth pursuing, not worth pursuing, or depends on one thing you name. Your reasons are what the check said, what exists, and what you wrote in 3c, weighed by you. Nobody else can make this call, and the activities in this sprint were there to help you make it, not to make it for you.
 
 > **Example.** Worth pursuing. Two of three managers describe the same thing, so it is not one person's habit, and the cost of any change is minutes per handover against clients repeating themselves every month. The fix looks obvious and cheap, a note or a field, and that is the real question: if it is that easy, why has it not happened? Either nobody has tried, or someone did and it did not last, and those are different problems. The one thing that could still end it is the third manager being right that it only happens with one outgoing owner; even then the same fix would cover that case, so it changes the size of the problem rather than whether to work on it. What I do not know that matters most is whether anyone has tried before, and Dana can tell me; that is the first thing for Sprint 3.
 
-**If the verdict is no.** Open your Candidate Log. Your runner-up's draft frame is in Part C. Copy it into a fresh Problem Frame document and bring it to the same standard, so that you can make the same call about it: dig into its assumptions the way you did in week 1, name the riskiest, start its What already exists table, and write what a change would ask of the people in it. If there is time, make one check; if not, say so in the Checked column, and Sprint 3's conversation becomes its first check. Then write its verdict here, and say why the first problem did not survive. That paragraph is the most useful thing in this submission, and it is graded as such.
+**If the verdict is no.** Open your Candidate Log. Your runner-up's draft frame is in Part C. Copy it into a fresh Problem Frame document and bring it to the same standard, so that you can make the same call about it: dig into its assumptions the way you did in week 1, name the riskiest, and start its What already exists table. If there is time, make one check; if not, say so in the Checked column, and Sprint 3's conversation becomes its first check. Then write its verdict here, and say why the first problem did not survive. That paragraph is the most useful thing in this submission, and it is graded as such.
 
 ### Response tasks
 
@@ -521,7 +504,7 @@ One paragraph, in your own words. Worth pursuing, not worth pursuing, or depends
 
 This sprint you checked one thing against a real person or a real record, looked at what already exists, and priced a change. Write about what came back from outside your own head. Where did something in the world change your view, and where did AI change it? Which of them did you push back on, and what did it cost you to push back? And what is the one thing in your frame you are least sure how to find out?
 
-> **[BUILD] ai_activity configuration.** One `ai-discussion` question. Prompt as above, minLength 150, numQuestions 3. aiContext: *This is the Sprint 2 reflection for Reframing Problems with AI. The participant walked the assumptions in their Problem Frame, checked one against a person or a record, explored what already exists with AI and looked at two or three things for real, priced what a change would ask of people, and wrote a verdict on whether the problem is worth pursuing. Ask follow-up questions that catch a "complicated" result rounded to confirmed, a change attributed to AI that the participant actually made, a pushback with nothing lost by it, and an "I am least sure how to find out" that is really a to-do. Push them to name what the world said back that they did not expect. Do not rewrite the reflection.* summaryLabel: Your Sprint 2 Reflection. Uses the CTI-owned AI proxy; falls back to text entry if it goes down.
+> **[BUILD] ai_activity configuration.** One `ai-discussion` question. Prompt as above, minLength 150, numQuestions 3. aiContext: *This is the Sprint 2 reflection for Reframing Problems with AI. The participant walked the assumptions in their Problem Frame, checked one against a person or a record, explored what already exists with AI and looked at two or three things for real, wrote what any change would ask of people from that table, and wrote a verdict on whether the problem is worth pursuing. Ask follow-up questions that catch a "complicated" result rounded to confirmed, a change attributed to AI that the participant actually made, a pushback with nothing lost by it, and an "I am least sure how to find out" that is really a to-do. Push them to name what the world said back that they did not expect. Do not rewrite the reflection.* summaryLabel: Your Sprint 2 Reflection. Uses the CTI-owned AI proxy; falls back to text entry if it goes down.
 
 ---
 
@@ -535,4 +518,4 @@ This sprint you checked one thing against a real person or a real record, looked
 
 ## Provenance
 
-Human (Leslie): the arc and every structural ruling in the decisions log for 16 and 17 September; the why of assumptions; the loosened walk; the choosing rule and the temperature-check framing; the one-table shape and its two branches; Context by doing; the item-per-activity rule; the living artifact and 3c; the verdict outside the frame; the workable-problem framing. AI (Claude): the prose of every page, the handover and garden examples carried through, the self-check questions, the prompts, the response tasks and criteria, the reflection's aiContext. Nothing from Leslie's own run appears in the material.
+Human (Leslie): the arc and every structural ruling in the decisions log for 16 and 17 September; the why of assumptions; the loosened walk; the choosing rule and the temperature-check framing; the one-table shape and its two branches; Context by doing; the item-per-activity rule; the living artifact and 3c, written in week 2 from the table; one activity per week; the verdict outside the frame; the workable-problem framing. AI (Claude): the prose of every page, the handover and garden examples carried through, the self-check questions, the prompts, the response tasks and criteria, the reflection's aiContext. Nothing from Leslie's own run appears in the material.
