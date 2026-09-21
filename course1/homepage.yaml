@@ -330,38 +330,35 @@ modules:
     tag: "Learning gap"
     open: false
     learning_goals:
-      - "Name the gap that is blocking your next move, and tell it apart from something you are simply curious about."
-      - "Design a focused learning path that has an end point you can point at."
-      - "Check an important claim against evidence, and say what the check returned."
-    prereq: "A rebuild of Sprint 4, kept separate from the original Sprint 4. Starts from the gap your Sprint 3 conversation opened up."
+      - "Name what you do not yet know about your problem, and tell a gap that blocks you apart from something that is only interesting."
+      - "Build a learning plan that says, for each gap, why it matters, where you will learn it, what steps you will take, and how you will know you learned it."
+      - "Update your Problem Frame so it shows clearly what you know, what you are still assuming, and how you plan to find out."
+    prereq: "Carry forward the same real problem and the open items Sprint 3 left you. Gather your gaps without AI, then use AI to test the list and widen how you could close each one."
     groups:
       - label: "Sprint Week 1: Name the gap"
         items:
           - slug: "introduction-close-the-learning-gap-v3"
             nav_meta: "Read"
-            meta: "Page - what separates a gap from a topic, and an explanation from evidence"
+            meta: "Page - what separates a gap from a topic, how to sort blocking from interesting, and what closed means"
           - slug: "sprint-4-concept-check-v3"
-            nav_meta: "Practice · Ungraded"
-            meta: "Practice quiz - check your understanding before you start; ungraded, unlimited attempts"
+            nav_meta: "Practice · 5 points"
+            meta: "Practice quiz - check your understanding before you start; unlimited attempts, 5 points"
             badge: "Self-check"
             selfcheck: true
           - slug: "name-the-gap-v3"
-            nav_meta: "15 points"
-            meta: "Assignment - write your own gap list and commit to one, before any AI"
-          - slug: "ai-exchange-is-this-a-gap-v3"
-            nav_meta: "AI exchange · 0 points"
-            meta: "AI exchange activity - test whether your committed gap is really a gap"
-      - label: "Sprint Week 2: Plan, learn, and check"
-        items:
+            nav_meta: "35 points"
+            meta: "Assignment - gather your gaps without AI, sort and rank them, and say which part of your Problem Frame each one holds up; 35 points"
           - slug: "dojo-lab-design-the-learning-path-v3"
-            nav_meta: "20 points"
-            meta: "Assignment - sequence the learning with the Dojo and design the two checks; 20 points, submit the complete Dojo transcript as the sole evidence"
-          - slug: "learn-and-check-v3"
+            nav_meta: "Practice · Own your progress"
+            meta: "Guided assignment - use your own AI chat to test your gap list, widen your options, and test how you will know; 0 points, submit the complete Dojo transcript to complete the module"
+      - label: "Sprint Week 2: Plan and reflect"
+        items:
+          - slug: "learning-plan-and-updated-problem-frame-v3"
             nav_meta: "50 points"
-            meta: "Assignment - run the path and check two claims against something that is not AI"
-          - slug: "sprint-4-reflection-what-i-learned-and-how-i-know-v3"
+            meta: "Assignment - write the five-question learning plan for each gap and update parts 6 and 7 of your Problem Frame; 50 points"
+          - slug: "sprint-4-reflection-what-changed-v3"
             nav_meta: "10 points"
-            meta: "AI reflection activity - name the capability you gained and what you checked"
+            meta: "Assignment - say how planning your learning changed your view of the problem; text entry, 10 points"
 
   - sprint: 9
     order: 5

@@ -1,44 +1,43 @@
 ---
 type: module_header
-title: 'Sprint 4: Close The Learning Gap (V2)'
+title: 'Sprint 4: Close the Learning Gap (V3)'
 slug: sprint-4-close-the-learning-gap-v3
 artifact_id: course1-sprints-sprint-9-sprint-4-close-the-learning-gap-v3
 sprint: 8
 week: 7
-module: 'Sprint 4: Close The Learning Gap (V2)'
+module: 'Sprint 4: Close the Learning Gap (V3)'
 position: 1
 points: null
 submission_type: none
 publish: true
 ---
 
-# Sprint 4: Close The Learning Gap (V2)
+# Sprint 4: Close the Learning Gap (V3)
 
-In Sprint 3 you took your problem to a real person. Whatever they told you, you probably came out of that conversation knowing less than you thought you did going in. Something did not fit.
+Sprint 3 already told you what you do not know. Your stakeholder map has fields marked Inferred, your assumption blocks name the guesses that would change your next move, and Section D of your validation report ends with what still needs validation.
 
-This sprint is where you go find out. You name the one thing you do not know that is holding the problem up, you plan a way to close it, you learn it, and you check what you learned against something that is not AI.
+This sprint is where you plan how to find out. You will gather those open items in one place, decide which ones are really blocking you, and build a learning plan to close them. You will follow that plan in CIS 502. Writing it will also sharpen your Problem Frame now.
 
-Your problem is the same problem you have carried since Sprint 1. It can come from your job, a job search, a role transition, volunteer work, community work, caregiving, campus work, a portfolio project, or a small business.
+Your problem is the same problem you have carried since Sprint 1.
 
-## What You Will Be Able To Do
+By the end of this sprint, you should be able to:
 
-1. Name the gap that is blocking your next move, and tell it apart from something you are simply curious about.
-2. Design a focused learning path that has an end point you can point at.
-3. Check an important claim against evidence, and say what the check returned.
+1. Name what you do not yet know about your problem, and tell a gap that blocks you apart from something that is only interesting.
+2. Build a learning plan that says, for each gap, why it matters, where you will learn it, what steps you will take, and how you will know you learned it.
+3. Update your Problem Frame so it shows clearly what you know, what you are still assuming, and how you plan to find out.
 
 ## Sprint Rhythm
 
-1. Read the Introduction and pass the Concept Check.
-2. Write your own list of what you know and what you do not, and commit to one gap.
-3. Test that gap in the AI Exchange before you plan anything.
-4. Design the learning path in the Dojo.
-5. Do the learning, run your checks, and write up what came back.
-6. Update your Goal Plan and reflect on what you can now do.
+1. Read the Introduction and take the Concept Check.
+2. Pull your open items from Sprint 3 into one list, without AI.
+3. Test your list and build your plan with AI in the Dojo Lab.
+4. Write your Learning Plan and update your Problem Frame.
+5. Reflect on what changed.
 
 ## Portfolio Thread
 
-Keep your gap list, your learning path, the sources you used, the prompts you steered with, and your check results. The write-up from Learn and Check becomes the learning evidence section of your final Integrated Problem Document and Readiness Report in Sprint 5.
+Keep your gap list, your Learning Plan and your updated Problem Frame in the Learning Plan template. Your plan becomes part of your readiness report in Sprint 5, and it is where you start in CIS 502.
 
-## You Are Done When
+## Completion Criteria
 
-You can name what you did not know, point at evidence that you now know it well enough to act, say what you checked it against, and show how that moves your problem forward.
+You are done when your Problem Frame names what you still do not know, and your Learning Plan shows how you will find out and how you will know.
