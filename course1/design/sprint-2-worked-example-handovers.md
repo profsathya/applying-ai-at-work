@@ -1,6 +1,6 @@
 ---
 purpose: The account handovers example carried end to end through Sprint 2, in the participant voice, as the source for the worked examples inside the Sprint 2 pages and as a size check on the Problem Frame document
-status: v0.3.1, 20 September 2026. The part 6 row "nobody has tried to fix this before" is now "nothing has been tried that stuck," to match 4a. The verdict names the obvious-fix tension (if it is that easy, why has it not happened); 4a and 4b carry the two lines asked of Jeremy for Sprint 1's worked example A, so the two frames match. v0.2, 17 September, after Leslie's review of v0.1 (then called a fixture): the cost of a change as 3c, no verdict in the frame, the Sprint 2 Log's contents recast as what the pages' examples will show
+status: v0.4, 21 September 2026. 3c now comes from the What already exists table in week 2, not from the week 1 walk (Leslie's ruling); the week 1 cost paragraph is gone and a 3c paragraph opens the Problem Frame section. The part 6 row "nobody has tried to fix this before" is now "nothing has been tried that stuck," to match 4a. The verdict names the obvious-fix tension (if it is that easy, why has it not happened); 4a and 4b carry the two lines asked of Jeremy for Sprint 1's worked example A, so the two frames match. v0.2, 17 September, after Leslie's review of v0.1 (then called a fixture): the cost of a change as 3c, no verdict in the frame, the Sprint 2 Log's contents recast as what the pages' examples will show
 depends_on: course1/sprints/sprint-14/the-problem-frame.md (worked example A); course1/sprints/sprint-15/stakeholder-map-v3.md (Dana the account lead); sprint-2-outline.md (v5.2)
 ---
 
@@ -70,8 +70,6 @@ One day is fast enough to matter. What I would need to find out: what fast enoug
 
 **Could the answer to any of these end the problem?** The managers one, because if it is one person's habit there is nothing here. The nothing-stuck one, because if something was tried and died, I am working on the wrong problem. The clients one changes the goal but not whether the problem is real, so it is not on this list.
 
-**What would a change ask of people?** Every manager would have to do one thing at each handover that they do not do now, a note or a field. Someone would have to keep at them. If the CRM field exists, someone switches it on and shows people. Building: nothing, or an afternoon for a checklist.
-
 **The ones I am accepting.** Days versus one day: accepted, the length does not change whether to pursue it. Fast enough: accepted, it can wait until something changes.
 
 **The one I will check this week.** The assumption: the other three managers have had the same thing happen. What would tell me I was wrong: fewer than two of them describe it. Who and when: the three other managers, at the Thursday team meeting or after it. Why this one: it could end the problem, and they sit near me.
@@ -98,5 +96,7 @@ Checked against: the three managers, Thursday, one in the meeting and two after.
 **The real look.** The CRM owner field: read our CRM's help page. It exists on every account and can send a notification to a team when it changes. So the mechanism is there. Whether ours is on is the question, and that is a new row in part 6. The sales team's checklist: asked the person who sits nearest. It is a shared document; when it is signed off it goes into a folder nobody reads. It solves the two-person conversation and not the third-person problem, which is mine. Neither kills the problem. The first might make it cheap.
 
 ### Problem Frame: is it worth pursuing?
+
+**3c, from the table.** Every option in the table asks the same thing of the managers: one new step at each handover, a note or a field, and a habit that someone, probably me, has to keep at until it holds. Dana is the only person who has to agree. Nothing to build; a checklist would take an afternoon. Against clients repeating themselves every month, small.
 
 **The verdict, as submitted.** Worth pursuing. Two of three managers describe the same thing, so it is not one person's habit, and the cost of any change is minutes per handover against clients repeating themselves every month. The fix looks obvious and cheap, a note or a field, and that is the real question: if it is that easy, why has it not happened? Either nobody has tried, or someone did and it did not last, and those are different problems. The one thing that could still end it is the third manager being right that it only happens with one outgoing owner; even then the same fix would cover that case, so it changes the size of the problem rather than whether to work on it. What I do not know that matters most is whether anyone has tried before, and Dana can tell me; that is the first thing for Sprint 3.

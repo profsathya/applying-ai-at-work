@@ -2779,3 +2779,28 @@ v1.1.5; dispositions:
 
 Provenance: Leslie, every edit and ruling; Claude, the dispositions and the record.
 
+## 21 September, later: where the cost of a change goes
+
+Leslie's instinct: one activity per week. Week 1 digs into the assumptions and plans the
+check; week 2 explores what exists. A third walk, pricing a change, does not fit either
+and on its own produces a note and nothing to do with it. Claude's reading: the cost of
+change is not a third activity but a by-product of the second. The What already exists
+table's third column (pluses, minuses, questions) is the cost of change per option, and
+the real look makes those costs real. The throughline is the same move twice: something
+written as if true (an assumption; "nothing handles this today") checked against
+something real (a person; the world). Options offered: drop 3c from Sprint 2 (nothing in
+Sprints 4 or 5 prices a change today, so it would leave the course), or keep 3c as one
+line in the Problem Frame item, drawn from the table after the real look.
+
+**Ruled: the second.** 3c is written when the frame is brought up to date, not when the
+table is made, because the costs are guesses until the real look and because 3c is a
+statement across options, not a row. One line of guidance and a one-sentence example.
+
+Applied: draft v1.2 (walk page section removed, sections renumbered; week 1 graded item
+down to two parts and two boxes; Problem Frame item Part 3 bullet rewritten; Dojo step
+question 3 reworded; verdict guidance and no-path updated; reflection aiContext);
+worked example v0.4; Problem Frame template v0.3; outline v5.3 status line. Melisa's
+alignment note for Sprint 4 stands ("frame arrives with 3c").
+
+Provenance: Leslie, the instinct and the ruling; Claude, the reading and the edits.
+
