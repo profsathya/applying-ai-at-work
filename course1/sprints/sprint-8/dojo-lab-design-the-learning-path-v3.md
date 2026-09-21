@@ -1,148 +1,133 @@
 ---
 type: assignment
-title: 'Dojo Lab: Design the Learning Path'
+title: 'Dojo Lab: Design the Learning Plan'
 slug: dojo-lab-design-the-learning-path-v3
 artifact_id: course1-sprints-sprint-9-dojo-lab-design-the-learning-path-v3
 sprint: 8
 week: 7
-module: 'Sprint 4: Close The Learning Gap (V2)'
-position: 6
-points: 20
+module: 'Sprint 4: Close the Learning Gap (V3)'
+position: 5
+points: 0
 submission_type: text_entry
 delivery_mode: guided_assignment
 completion_requirement: must_submit
-publish: true
 learner_labels: true
+learning_goal: Use AI to test your gap list, widen the ways you could close each gap, and test how you will know, then decide yourself what goes into your plan.
+publish: true
 dojo_submission:
   mode: transcript
   prompt_version: v1
 guided_assignment:
-  version: '1.0'
-  purpose: Sequence a focused learning path, pressure-test two checks, and make the
-    final decisions yourself.
-  builds_on: Bring your committed gap, definition of closed, AI Exchange changes,
-    and two unverified claims.
-  standing_instruction: 20 points. Submit the complete Dojo transcript as the sole
-    evidence for this assignment.
+  version: '2.0'
+  purpose: Test your gap list with AI, widen the ways you could close each gap, test
+    how you will know, and then decide yourself what to keep.
+  builds_on: Bring the list from Name the Gap, and the AI chat you already use.
+  standing_instruction: Own your progress · 0 points. Submit to complete this module
+    requirement.
   tasks:
   - id: dojo-transcript
     kind: response
     prompt: Paste the complete Dojo transcript, including every CONTINUED chunk, in
       order.
     criteria:
-    - Include the required header and every turn in the conversation, in order.
-    - Keep every CONTINUED marker and include all continuation chunks.
-    - Include a final Me turn that states the activity decisions in your own words.
+    - Include the required header and every turn, in order.
+    - Keep every CONTINUED marker and all continuation chunks.
+    - Include a final Me turn that states the decisions in your own words.
 ---
 
-# Dojo Lab: Design the Learning Path
+# Dojo Lab: Design the Learning Plan
 
-## Purpose
+Bring your list from Name the Gap. This activity follows the Dojo Flow you know from Sprints 1 and 3: test what you wrote, widen your options, test how you will know, then choose. AI does one job at a time, and each prompt tells it which.
 
-Your gap survived the exchange. Now you plan the route.
+AI can spot a vague gap in seconds. It cannot know that Dana never answers email, or which manager would tell you the truth. You can. That is the division of labor.
 
-The Dojo is not here to tell you what your gap is. You settled that last week, and you settled it yourself. What the Dojo is good at is sequencing: what to learn first, what can wait, what to cut, and whether the way you plan to check your claims would actually catch you being wrong.
+Use any AI chat you already have (ChatGPT, Claude, or Gemini). Do not paste confidential workplace, client, or personal details. Change names and remove anything sensitive before you start.
 
-## Before You Open the Dojo
+One rule holds for the whole activity. **Your list and your plan stay in your words.** AI may point at something; you rewrite it. If you find yourself pasting its sentences into your template, stop and type the sentence yourself.
 
-Have four things in front of you: your committed gap, your definition of "closed," anything the AI Exchange made you change, and the two claims your frame rests on that you have not verified.
+## 1. Test your list
 
-## Open the Dojo
-
-Use the [Open the Symbiotic Thinking Dojo](https://dojo.symbioticthinking.ai/) link for this lab. First-time users should open Learn About -> Privacy & Setup and configure a Gemini API key in the browser before starting.
-
-
-Do not paste confidential information, names, or anything your organization would not want outside its systems.
-
-## The Dojo Session
-
-Three personas, in order. @framer sequences the learning, @reflector pressures the shape of it, @auditor pressures your checks.
-
-Paste this in, then keep going. The follow-up questions are where the Dojo earns its keep.
+Paste this prompt, then your list:
 
 ```text
-I am working on this problem:
-[paste your revised problem statement]
+I am working on this problem: [paste your Problem Frame, parts 1 to 7]
 
-This is the gap I committed to, the decision waiting on it,
-and what "closed" looks like:
-[paste from Name the Gap]
+Here is my list of what I do not know yet, sorted as blocking, useful,
+or interesting, and ranked: [paste Part A of your template]
 
-These are the two claims my frame rests on that I have not verified:
-[paste both]
+Your job is to be a skeptic, not an editor. Do not rewrite anything
+and do not suggest solutions. Do not list everything you notice. Name
+what fails before saying anything encouraging.
 
-Use Learn + Solve mode.
-
-@framer, help me sequence the learning:
-1. What is the smallest set of things I need to know, and in what order?
-2. What can I skip entirely and still make the decision?
-3. What sources besides AI should I be using?
-4. Now cut that sequence in half. What is lost?
-
-@reflector, pressure the shape. Is this path too broad, too vague, or
-disconnected from the decision I said was waiting? Where am I planning
-to learn something I do not actually need?
-
-@auditor, pressure the checks. Would these catch me being wrong? Which
-one is circular, unfalsifiable, or vague? Where am I about to verify an
-AI explanation with another AI explanation?
+1. The three gaps most likely to mislead me, ranked. One or two lines
+   each, quoting my words. For each, say which of these it fails:
+   - I cannot finish "Until I know this, I can't ___" from what you
+     wrote.
+   - It is sorted wrong: marked blocking but really useful or
+     interesting, or the other way around.
+   - A different answer would change nothing in your Problem Frame.
+2. One line on whether my ranking makes sense.
 ```
 
-## Your Judgment Step
+Take what lands and fix your list yourself, in Part A of your template. A longer description does not make a gap more important. You do not have to accept a verdict. If you think the AI misread your situation, say so, and give your reasons.
 
-The Dojo will suggest more than you should take. Decide what to keep, what to reject, and what you are still unsure about. Rejecting a good suggestion because it does not fit your two weeks is a legitimate call, as long as you say what it cost you. If the Dojo agreed with everything you brought it, you did not ask it enough.
+## 2. Widen your options, using your 3Cs
+
+**The 3Cs, in this step.** You learned these in Sprint 2. Here is what each one looks like when you are planning your learning.
+
+**Context. Tell it your situation before you ask for anything.** Who will actually talk to you, how much time you have, what you can get access to, what is off limits. Sprint 2's test still works: if your prompt could have been sent by anyone in the class, it needs more of you in it.
+
+**Choices. Ask for more than one way to close each gap.** Two or three, with what each would take and what it would miss. A single suggestion is not a choice.
+
+**Confirmation. A plan built on AI suggestions is inferred until something independent backs it up.** Naming what that is comes in step 3.
+
+In between Choices and Confirmation sits your judgment. For every suggestion, write keep or reject with one line of your own reasoning. "The AI said so" is not a reason.
+
+Follow up with:
+
+```text
+Here is my situation and what I can reach: [paste your context]
+
+Now widen it. Help me plan how to close the gaps in my plan, in rank
+order. Do not add gaps and do not answer them for me. For each gap:
+1. Give me two or three different ways I could close it, not one. For
+   each, what would it take, and what would it miss?
+2. Where could I learn this? Name sources besides AI: a person,
+   a document, a system, an observation.
+3. What are the smallest steps, and in what order?
+4. What can I skip and still make the decision?
+Then: if I cut this plan in half, what would I lose?
+```
+
+Now confirm. For every suggestion, write **keep** or **reject** in your template, with one line of your own reasoning. Reject anything your situation rules out, and say what ruling it out costs you. "The AI said so" is not a reason to keep something. Then write what you kept into Part B of your template as bullets: possible sources, possible steps, possible ways to check, under the gap they belong to. Bullets, not sentences. You are collecting raw material here, not writing the plan. That happens next week, and nobody grades the wording of these notes.
+
+## 3. Test how you will know
+
+For each gap, write how you will know you learned it, and name something independent that could confirm it, in the Sprint 3 sense: a person, a document, a record, anything that is not you or the AI. Then paste:
+
+```text
+Now test how I plan to know I closed each gap. Your job is still to be
+a skeptic, not an editor. Here are my checks: [paste]
+For each one: would this catch me being wrong? Is it circular, meaning
+it comes back to the same source as my belief? Is it vague, meaning
+there is no named person or document I could actually go to? Am I
+planning to check an AI answer with another AI answer?
+Do not rewrite my checks.
+```
+
+You do not run these checks now. You will run them in CIS 502. The plan only needs to show they would work.
+
+## 4. Choose
+
+The Dojo will suggest more than you might take. Decide what to keep, what to reject, and what you are still unsure about. Rejecting a good suggestion is fine, as long as you say what it costs you.
 
 ## State your decisions before requesting the transcript
 
-Send one final `Me:` turn in the same Dojo conversation. In your own words, include all three parts below.
+Send one final Me: turn in the same conversation. In your own words, state:
 
-### 1. The learning path
+- which gaps changed after the first test, and what you did about them;
+- one suggestion from the widening step you kept, and one you rejected, with your reason;
+- one check the AI pushed on in step 3, and how you changed it, or why you kept it; and
+- what you are still unsure about.
 
-Five steps maximum, three is often right. For each step:
-
-- What you are learning.
-- Why it is in the path.
-- The actual source. "Our admin console," not "documentation." "The service desk lead," not "an expert."
-- What counts as having learned it.
-- A rough time estimate. You will compare this against reality at the end.
-
-If your gap will not fit in five steps, it was a topic. Go back and narrow it. That is diagnostic information, not a failure.
-
-### 2. The two claims you will check
-
-Your frame rests on things you have not verified. Name two, and for each one:
-
-- **The claim.** Stated so that it could turn out to be false.
-- **What told you it.** Where the belief came from.
-- **What would make it wrong.** Write this now, before you check. You will copy this into Learn and Check unchanged.
-- **What you will check it against.** The actual source, and whether it is independent of what gave you the claim.
-
-At least one of your two checks must be non-AI, independent of whatever produced the claim, and from your real setting: a document, a system, an observation, or a person. When the answer is not written down anywhere, a person is often the fastest route.
-
-A check is weak if it is circular (it traces back to the same source as the claim), unfalsifiable (no result would change your mind), or vague (no named source you could actually go to on a Tuesday afternoon).
-
-> Weak: "I'll verify the nine day figure with documentation."
->
-> Strong: "I'll check our own admin console for how ticket age is calculated, and ask the service desk lead what happens when a ticket gets reassigned. If reassigned tickets are closed and reopened as new ones, nine days is undercounting."
-
-### 3. Kept, rejected, still open
-
-What you took from the Dojo, what you turned down and what turning it down cost you, and what you are still unsure about.
-
-After this final turn, use the transcript request and submission steps below. The complete transcript is the sole evidence for this assignment.
-
-## Start Any Request Today
-
-If either of your checks depends on another person, send that request now, on the first day of week 2. Do not wait until you need the answer.
-
-Keep the ask small. This is not a validation conversation like Sprint 3. You need one fact.
-
-- **Pick by proximity to the answer, not seniority.** Whoever runs the queue usually knows more about how it behaves than whoever owns it.
-- **Ask one question, and ask what happens rather than what should happen.** "What happens to a ticket when it gets reassigned to the hardware queue?" not "Does our system measure ticket age correctly?"
-- **Say in one sentence what you will do with the answer.** People reply faster when the question is not open-ended.
-
-If you have not heard back in three days, follow up once. If you have nothing by day five, use your other check and say in your write-up what the silence told you.
-
-## Next
-
-Go do the learning. Learn and Check is where you write up what happened.
+A list that did not change is a legitimate result if you can say what you tested it against.
