@@ -1,6 +1,6 @@
 ---
 purpose: Sprint 2, whole sprint, working draft for Leslie's review, on the Sprint 1 model; becomes the cut-ready source for Jeremy's build once reviewed
-status: v1.2, 21 September 2026. Leslie's 3c ruling applied: What a change would ask of people is off week 1 entirely (walk page section and graded Part 3 removed); 3c is one line in the Problem Frame item, drawn from the minuses in the What already exists table after the real look; verdict, Dojo step, worked example, and reflection follow. Second half ready for Leslie's run. Leslie's second pass on the first half applied: eight tracked changes; Dojo Lab submits a transcript as Sprint 1 does; the frame-paste line covers both Dojo and plain chat; What a change would ask of people is off the walk page, destination open; the Problem Frame copy moves to the end of Sprint 1 (Jeremy). Held for her rulings: 3c's destination, and the Assumptions walk activity sheet with the graded item's paste shape. Dojo Lab: test your assumptions carries Leslie's 20 September run (labeled prompt, paste-your-frame line for a chat outside the Dojo, illustrative exchange from the run, [NOTE] retired); both Dojo Labs stay interim single-shot prompts until the course doc exists (Leslie, 20 September). The handover example's part 6 row "nobody has tried" is now "nothing has been tried that stuck" wherever the pages quote it. Item 8's verdict example names the obvious-fix tension (Leslie, 20 September). v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
+status: v1.3, 21 September 2026. Leslie's first pass on the second half applied (16 tracked changes, 4 comments): What solutions already exist rebuilt column by column with a bridge from week 1, Context reflection in her words, and guidance and examples for each column; Dojo Lab: explore what already exists rebuilt as one conversation in three moves with the look inside the row loop and labeled prompts; whole frame pasted everywhere; transcript submission. v1.2, 21 September 2026. Leslie's 3c ruling applied: What a change would ask of people is off week 1 entirely (walk page section and graded Part 3 removed); 3c is one line in the Problem Frame item, drawn from the minuses in the What already exists table after the real look; verdict, Dojo step, worked example, and reflection follow. Second half ready for Leslie's run. Leslie's second pass on the first half applied: eight tracked changes; Dojo Lab submits a transcript as Sprint 1 does; the frame-paste line covers both Dojo and plain chat; What a change would ask of people is off the walk page, destination open; the Problem Frame copy moves to the end of Sprint 1 (Jeremy). Held for her rulings: 3c's destination, and the Assumptions walk activity sheet with the graded item's paste shape. Dojo Lab: test your assumptions carries Leslie's 20 September run (labeled prompt, paste-your-frame line for a chat outside the Dojo, illustrative exchange from the run, [NOTE] retired); both Dojo Labs stay interim single-shot prompts until the course doc exists (Leslie, 20 September). The handover example's part 6 row "nobody has tried" is now "nothing has been tried that stuck" wherever the pages quote it. Item 8's verdict example names the obvious-fix tension (Leslie, 20 September). v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
 depends_on: sprint-2-outline.md (v5.2); problem-frame-template.md; what-already-exists-template.md; sprint-2-worked-example-handovers.md; course1/sprints/sprint-14/ (Sprint 1 as published, for register and format); course1/sprints/sprint-15/ (Sprint 3 V3, for the hand-off and the Dojo Lab form)
 storage: the next storage folder after sprint-15, Jeremy's call; positions 1 to 11
 ---
@@ -311,32 +311,62 @@ The one you are checking, as it stands after the Dojo Lab: the assumption stated
 
 *Own your progress. Position 7. 0 points. Submit to mark it complete. No AI on this one.*
 
-Week 2 starts by looking outward. Are there examples of people trying to solve this problem, or one like it, in your own situation or out in the world? Products, practices somewhere else, something your own organization has and does not use, someone who already does this well. If you find an existing solution, it does not necessarily mean your problem is not worth pursuing. It might change how you would go about solving it, and getting something that exists adopted where you are can be the problem worth solving.
+Week 2 starts by looking outward. Can you find other examples of people trying to solve this problem, or one like it, in your own situation or out in the world? Are there products, practices, or someone else who already does this well? If you find an existing solution, it does not necessarily mean your problem is not worth pursuing, but it might change how you think about it.
 
-### What you have been doing is Context
+For the first part of this sprint, you looked at your assumptions to see how a better understanding of them might change your problem. In this second part, you're going to look at what solutions already exist, with the same goal of seeing how they might change your problem.
 
-Twice now you have thought first and then handed AI your thinking: your draft frames in Sprint 1, your walk in week 1. That is what Sathya's Symbiotic Thinking method calls **Context**, the first of its three Cs, and it is why those conversations were worth having. AI had your read to work against, so it could push on it instead of inventing one.
+### Reflect on how you've been working with AI: providing Context
 
-There are two other kinds of context: what AI needs to know about your situation, and how you want it to work with you. Your Dojo carries most of that already, from the course document it was set up with. The one thing worth adding at the start of a chat is what you want back and in what shape; the prompts in the next activity show it.
+Twice now you have thought first and then come to AI with your thinking already developed: your draft frames in Sprint 1 and your walk in week 1. That is you providing **Context** to AI. Instead of handing AI the problem and having it generate the work, which it would not have been able to do a very good job of, you gave AI your thinking, which it read and pushed against. Context is the first C of Symbiotic Thinking, the partnership you met by name in Welcome, and it is why those conversations were worth having.
 
-The other two Cs come later on the same page. **Choices** are the decisions you make about what AI gives you: kept, set aside, not sure. **Confirmation** is checking against something real, which in this sprint is the real look at two or three things and the check you already have out.
+There are two other kinds of context you can provide: what AI needs to know about your situation, such as that you are doing this for school or work or yourself, that you have a deadline, that you want to share it with someone else; and how you want the AI to work with you, such as that you want no more than 150-word answers, that it should not change anything without asking you first, that you do not want colons. Your Dojo is set up with many of those instructions already. Go take a look at the course document you attached to the project; you will see many instructions for how the Dojo is supposed to interact with you. The one thing worth adding at the start of a chat is what you want back and in what shape; the prompts in the next activity show it.
 
-### Start the table on your own
+[INTERIM: the sentence about the course document attached to the project is true once the Dojo doc and the Sprint 0 setup item exist. If they are not ready at the cut, it becomes "Once your Dojo is set up, its course document carries many of those instructions."]
 
-Before you open a chat, make your copy of the What already exists table and fill in what you can. [Make your copy of the table](LINK-TO-BE-SUPPLIED). Three columns: what exists, how it works as far as you know, and what it means for your problem. Things you know of, guesses, and questions all count in the first column, and blanks are fine in the others. A table that is mostly questions is a good start; it tells the next activity what to go and find out.
+And also, to not leave you hanging, the other two Cs come later in this sprint. **Choices** are the decisions you make about what AI gives you: kept, set aside, not sure. **Confirmation** is checking to make sure you can put your name behind the output: in this sprint, the look you take at what exists, and the check you already have out.
 
-You are listing what exists, not designing anything. "An agenda tool" is a thing that exists. "We should build an agenda tool" is a solution, and it waits.
+### Back to existing solutions
 
-> **Example, the handover table before AI.**
+Before we start, make your copy of the What already exists table, which we will walk through. [Make your copy of the table](LINK-TO-BE-SUPPLIED). You will see there are three columns: what exists, how it works as far as you know, and what it means for your problem. You are going to spend some time thinking about and looking into solutions and strategies that might already be out there for problems similar to yours. This activity might be a little different from the previous ones in that you may be filling the columns with far more questions, gaps, than things you know for sure. That is okay. A table that is mostly questions is a good start, and will be very useful for the next activity.
+
+Work the table one column at a time: first everything you can think of for column 1, then columns 2 and 3 for each row.
+
+### Column 1: what exists
+
+With your problem in mind, brainstorm existing solutions that might be related to part or all of your problem. Ask yourself:
+
+- What products or services do I know of that claim to have solutions in this problem space?
+- Do I know anyone who has a similar problem but seems to be handling it well?
+- Does my own organization already have something for this, used or not?
+- Do I know anything about how AI might be able to help solve this problem?
+
+Remember, you are listing what exists, not designing anything. "An agenda tool" is a thing that exists. "We should build an agenda tool" is a solution, and it waits. Put anything you can think of in your What exists column: things you know of, things you have heard of, guesses, and questions all count.
+
+> **Example, column 1 for account handovers.** An owner field in our CRM. A handover checklist (the sales team next door has one). A weekly "accounts that moved" note (my guess; I have not seen one). Is there a name for this kind of problem? Does anyone here already do this well?
+
+*More help: the garden plot, when nothing comes to mind.* Turn your frame into questions and make each one a row. Do other community gardens pair new people with returning ones? Is there a name for that? What does the garden two streets over do that ours does not? Did anyone here try something before? Four questions and no answers is a real column 1.
+
+### Column 2: how it works, as far as you know
+
+For each row, write what you actually know about how it works, and be honest about what you do not. Have you seen it yourself? Where does it live? Who can change it, and who can see it? How easy is it to find? If you have not seen it, how do you know it exists? Who would have to switch it on? Could you look it up? A row that is mostly "I do not know" is fine; that is what the next activity is for.
+
+> **Example, column 2.** The CRM owner field: whoever edits the record sets the owner. I have never seen anyone use it, and I do not know whether ours is switched on or who could turn it on. The handover checklist: the outgoing person fills it in and the incoming person signs it. I do not know where it goes after that. The weekly note: somebody posts which accounts moved. I have never seen it done here.
+
+### Column 3: what it means for your problem
+
+For each row, what would it mean for your problem if this were in play here: pluses, minuses, and questions. Before you have looked into anything, most of this column will be questions, and that is the right result. The point is to write down what you would need to know to tell whether this thing bears on your problem.
+
+> **Example, column 3.** The CRM owner field: is ours switched on? What would it take to use it? How do other people and organizations use it? The checklist: still between two people? Where does it live once it is created and signed? The weekly note: somebody has to write it, forever. Who?
+
+> **Example, the whole table before AI.**
 >
 > | What exists | How it works, as far as I know | What it means for my problem |
 > |---|---|---|
-> | An owner field in our CRM | Whoever edits the record sets the owner. I have never seen anyone use it | Question: is ours switched on? |
-> | A handover checklist | The sales team next door has one; the outgoing person fills it in, the incoming person signs | Still between two people? |
-> | A weekly team note (my guess) | Somebody posts "accounts that moved this week" | Somebody has to write it, forever |
-> | Does anyone here already do this well? | | Question |
-
-*More help: if nothing comes to mind.* Turn your frame into questions to look into. Is there a product for this? Is there a name for this kind of problem? How do people who do this well do it? Does anyone in your own organization already handle it? What happens in places with the same problem and more money, or less? Each question is a row. For the garden plot the table before AI is four questions and no answers: do other community gardens pair new people with old hands; is there a name for that; what does Ramona's garden do that ours does not; did anyone here try it before.
+> | An owner field in our CRM | Whoever edits the record sets the owner. I have never seen anyone use it | Is ours switched on? What would it take to use it? How do other people and organizations use it? |
+> | A handover checklist | The sales team next door has one; the outgoing person fills it in, the incoming person signs. I do not know where it goes after that | Still between two people? Where does it live once created and signed? |
+> | A weekly "accounts that moved" note (my guess) | Somebody posts it. I have never seen it done here | Somebody has to write it, forever. Who? |
+> | Is there a name for this kind of problem? | | |
+> | Does anyone here already do this well? | | |
 
 *More help: if you already have ideas.* The guardrail is the first column. Everything in it should be something that exists, somewhere, now. If a row describes what you would build, move it out; it is a solution, and Sprint 2 is not where solutions get chosen.
 
@@ -346,7 +376,7 @@ One line before you leave: what does starting this table change about how you wo
 
 - **your-table** (response). Prompt: *Your table as it stands before AI, pasted from your What already exists document, and the one line.* Criteria: at least three rows, questions allowed; nothing in the first column is a solution the participant would build; blanks left blank rather than filled with guesses dressed as facts; the closing line is present.
 
-> **[BUILD]** Single box, `presentation: reading`. Section "Start the table on your own" feeds your-table; the teaching before it is unreferenced and renders first. Copy-on-click link to be supplied by Leslie.
+> **[BUILD]** Single box, `presentation: reading`. Section "Column 3" feeds your-table; the teaching before it renders first. Copy-on-click link to be supplied by Leslie.
 
 ---
 
@@ -354,47 +384,71 @@ One line before you leave: what does starting this table change about how you wo
 
 *Own your progress. Position 8. 0 points. Submit to mark it complete.*
 
-[NOTE] The second unknown, second prompt. Transcript on the handover table to follow, and Leslie's own test decides the wording.
+[NOTE] Prompts not yet run in a real chat. Leslie's run on the handover table decides the wording, as with the first Dojo Lab.
 
-The goal is to find out what exists. AI is here to help you think better about it: it has read about more workplaces, products, and practices than you ever will, and it can answer the questions in your table and add rows you did not think of. It cannot know what any of it means for your situation. That column stays yours.
+The goal is to find out what exists. AI is here to help you think better about it: it has read about more workplaces, products, and practices than you ever will, it can answer the questions in your table and add rows you did not think of, and it can point you at where to look. It cannot know what any of it means for your situation. That column stays yours.
 
-Use your Dojo, or any AI chat you already have. Change names and drop anything confidential before you paste. Same rhythm: bring the table; have it widened and tested; then you choose. Keep your table open beside the chat and make every change there.
+Use your Dojo, or any AI chat you already have. Your Dojo reads your Problem Frame if you added it in setup; otherwise, paste your Problem Frame first. Change names and drop anything confidential before you paste. Keep your table open beside the chat and make every change there.
 
-### 1. Widen and answer
+This is one conversation in three moves, and the third C, **Confirmation**, is built into the second. Wherever AI tells you something about a thing in your table, you go and look at it somewhere AI cannot vouch for: the product's help page, your own system, the person who uses it. What you learn from the look is what goes in your table, not what the chat said.
 
-Paste parts 1, 2, 4a, 4b, and 5 of your Problem Frame, then your table, then this:
+### 1. Is my column 1 complete?
 
-> Above is my problem frame (the goal, the problem, how it is handled today, where that stops working, and what fixed would look like) and a table I have started of what already exists that could solve or ease this problem. Some rows are things I know of, some are guesses, and some are questions. I want to find out what exists, not choose a solution. Your job is to help me find out, not to decide for me.
+Paste your Problem Frame if your Dojo does not have it, then your table, then this:
+
+> Above is my problem frame and a table I have started of what already exists that could solve or ease this problem. Some rows are things I know of, some are guesses, and some are questions. I want to find out what exists, not choose a solution. Your job is to help me find out, not to decide for me.
 >
-> 1. For each row that is a question or a guess, answer it as far as you can: does this exist, and how does it work? Say how sure you are.
-> 2. Add up to three things that exist that I have not listed, one line each on how each works. Products, practices in other kinds of organization, and what people who do this well actually do all count.
-> 3. For every row, one line: is this viable in a situation like mine, and where does it fall short? Do not write what it means for my problem; that column is mine.
-> 4. Name the two or three rows worth a real look, and for each, what I would need to find out to tell whether it changes my problem.
+> Look only at my first column for now. Answer in two short labeled parts and nothing else.
 >
-> Then one line: what did I give you that helped, and what would you have wanted earlier?
+> MISSING: Up to three things that exist that I have not listed, one line each on what it is. Products, practices in other kinds of organization, and what people who do this well actually do all count.
 >
-> Here is the frame and the table:
+> WHICH FIRST: Of all the rows, mine and yours, which three or four most bear on whether this problem is worth pursuing, and one line on why each.
 
-Put what comes back into your table, marked so you can tell its rows from yours, and write the third column yourself: pluses, minuses, and questions, for your situation. One row will usually be generic and worth ignoring. One will usually land.
+Add the rows you want to keep, marked as AI's. One will usually be generic and worth ignoring.
 
-> **Example, two rows after AI.** It confirmed the CRM owner field exists in every version of our system and can notify a team when it changes, which I did not know. It added account transition plans, the kind agencies use, with history, open items, and contacts written up per client; viable in principle, and far too heavy for two accounts a month, so my third column says "would die in a fortnight." It named the CRM field and the sales team's checklist as the two worth a real look.
+### 2. One row at a time
 
-### 2. The real look
+For each row you care about, three or four is usually right, send this, filled in:
 
-Take the two or three it named, or your own choice, and look at them properly. Open the product's help page. Ask the person who uses the checklist. Read one account of someone who tried the practice. Enough to say, for each, whether it would kill your problem, ease it, or is something your situation could not adopt. Write it in the table, under the rows.
+> Row: [the thing]. What I know about how it works: [your column 2]. What I do not know: [the gaps]. What I think it means for my problem: [your column 3, questions included].
+>
+> Answer in three short labeled parts and nothing else.
+>
+> HOW IT WORKS: What you know about how this works, and how sure you are.
+>
+> WHERE TO LOOK: One place I could look, or one person I could ask, to know for myself.
+>
+> PUSHBACK: One line on what I think it means for my problem, quoting my words, if you would push on it. Do not write what it means for my problem; that is mine.
 
-> **Example.** The CRM owner field: read the help page. It is on every account and can send a notification to the team when it changes. So the mechanism exists; whether ours is switched on is a new question for part 6. The sales team's checklist: asked the person nearest me. It goes into a folder nobody reads once it is signed. It solves the two-person conversation and not the third-person problem, which is mine. Neither kills the problem. The first might make it cheap.
+Then go and look where it pointed, or somewhere better you know of. The help page, your own CRM, the person who uses the checklist, one account of someone who tried the practice. Enough to write column 3 for your situation: does it exist, roughly how does it work, and does it kill your problem, ease it, or not fit here. Not enough to put it in place; if you find yourself working out how you would roll it out, stop. That is a later sprint.
 
-*More help: the garden plot.* The real look was a phone call to the garden two streets over, which pairs new plot-holders with a returning one in April. The person who runs it said half the pairs never speak after the first week, and the half that do are the ones who stay. That does not kill the problem; it narrows it to what makes a pair actually talk.
+Come back and send:
 
-One line before you leave: what does this change about how you would describe your problem?
+> I looked at [where]. What I found: [two or three lines]. Does this change what it means for my problem? One line, and one question I should still be asking.
+
+Write columns 2 and 3 in your table from what you found, in your words.
+
+> **Example, one row.** The CRM owner field. It said the field is standard in every version of our system, usually with a change log, and to read the help page for notifications. I read it: the field is on every account and can send a notification to a team when it changes. So the mechanism exists. Whether ours is switched on is a new row for part 6, and Dana or whoever administers the CRM can tell me. It pushed on "what would it take to use it": the question is not the field, it is who makes people fill it in.
+
+*More help: the garden plot.* The row was "the garden two streets over." AI knew nothing about it and said so, and told me to ask. The look was a phone call. The person who runs it pairs new plot-holders with a returning one in April, half the pairs never speak after the first week, and the half that do are the ones who stay. That does not kill the problem; it narrows it to what makes a pair actually talk.
+
+### 3. Close
+
+When you have been through your rows:
+
+> Of everything in my table now, which two or three bear most on whether this problem is worth pursuing, and why? Two lines each, quoting my table. Then one line: what did I give you that helped, and what would you have wanted earlier?
+
+You decide what to keep. Then one line of your own: what does this change about how you would describe your problem?
+
+### State what you kept before requesting the transcript
+
+Send one final `Me:` turn in the same conversation. In your own words: which rows AI added and which you kept; for each row you looked at, where you looked and what you found; the two or three that bear most on whether the problem is worth pursuing; and the one line on how you would now describe your problem. Then use the transcript request and submission steps below.
 
 ### Response tasks
 
-- **the-table** (response). Prompt: *Your table after the Dojo Lab, AI's rows marked, the third column in your words.* Criteria: AI's contributions are distinguishable from the participant's; the third column is present for every row and in the participant's words; at least one row is set aside as generic or unusable, with a reason.
-- **the-real-look** (response). Prompt: *The two or three you looked at properly: where you looked, what you learned about how it works, and whether it kills the problem, eases it, or could not be adopted here. And the one line.* Criteria: two or three, each with a source that is not the chat; a verdict of kill, ease, or cannot adopt for each, with a reason; the closing line is present.
+- **dojo-transcript** (response). Prompt: *Paste the complete Dojo transcript, including every CONTINUED chunk, in order.* Criteria: the required header and every turn, in order; every CONTINUED marker and continuation chunk kept; a final Me turn that states what was added and kept, where each look happened and what it found, the two or three that matter, and the one line.
 
-> **[BUILD]** `presentation: reading`, two boxes. Section 1 feeds the-table, section 2 the-real-look. No feedback endpoint.
+> **[BUILD]** `dojo_submission: mode: transcript`, as Sprint 1's Dojo Lab. Single box. No feedback endpoint.
 
 ---
 
@@ -416,7 +470,7 @@ For each thing it added or answered: kept, set aside, or not sure, with a reason
 
 ### 3. What did you look at, and what did you learn?
 
-The two or three from the real look, with where you looked.
+The rows you looked at for yourself, with where you looked and what you found there, as against what the chat said.
 
 ### 4. Does any of it change your problem?
 
