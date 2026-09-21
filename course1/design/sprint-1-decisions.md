@@ -2804,3 +2804,41 @@ alignment note for Sprint 4 stands ("frame arrives with 3c").
 
 Provenance: Leslie, the instinct and the ruling; Claude, the reading and the edits.
 
+## 21 September, evening: Leslie's first pass on the second half of Sprint 2, and the shape of the what-exists work
+
+Docx "Sprint-2-working-draft-v1.2_1", first two pages of week 2: 16 tracked changes, 4
+comments. Applied as draft v1.3 and template v0.2.
+
+- TC1 to TC16: applied as written (the week 2 opening; the bridge from week 1; the Context
+  section retitled and in her words, with the two other kinds of context illustrated; the
+  other two Cs; "Back to existing solutions"; the table walked through; the three
+  brainstorm questions; the column 3 examples as questions). TC4's "go take a look at the
+  course document you attached to the project" carries an [INTERIM] marker with a fallback
+  sentence for a cut before the Dojo doc exists.
+- C0 (is Symbiotic Thinking introduced earlier?): by name in Sprint 0's Welcome, one
+  sentence; the 3Cs are defined in Sprint 0's Help and resources glossary; Sprint 1's pages
+  never use the name. A clause now says "the partnership you met by name in Welcome."
+- C1 (the activity column by column): ruled yes. The page now teaches column 1 as a
+  brainstorm with her questions and a column-1 example (handovers; the garden plot as the
+  thin-start case), then column 2 with her guidance (have you seen it, where does it live,
+  who can change or see it, who would switch it on, could you look it up), then column 3,
+  then the whole table before AI. One box. The template carries the same column guidance.
+- C2 (paste the whole frame): yes, everywhere in the sprint.
+- C3 (the Dojo Lab as a conversation that walks the same process): ruled yes, with Sprint
+  1's Dojo Lab as the precedent (three prompts in one conversation). Leslie's clarification
+  on the real look: it is not off the chat; in her own workflow she asks AI, probes, goes
+  to look at what it points to, and comes back. So the look sits inside the row loop:
+  what I know and do not know, what AI knows, where to look, go look, come back with what
+  I found, does it change what it means. "Enough" is enough to write column 3 (exists,
+  roughly how it works, kills or eases or does not fit), never enough to implement. No
+  cap on rows beyond "the three or four you care about"; a row takes minutes. Three
+  moves: is column 1 complete (MISSING, WHICH FIRST); one row at a time (HOW IT WORKS,
+  WHERE TO LOOK, PUSHBACK, then the look, then "I looked at ... does this change what it
+  means"); close (the two or three that bear on worth pursuing). Transcript submission
+  with a final Me turn, as ruled for the first Dojo Lab. [NOTE] stays until Leslie runs it.
+- The graded write-up's question 3 now asks for what was found where they looked, as
+  against what the chat said.
+
+Provenance: Leslie, every edit, the workflow, and the rulings; Claude, the pages and the
+record.
+

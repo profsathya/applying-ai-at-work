@@ -1,16 +1,20 @@
 ---
-purpose: Source text for the one-page What already exists table, the only Sprint 2 document besides the Problem Frame; the participant-facing copy is a Google Doc template
-status: v0.1, 17 September 2026, replacing the Sprint 2 Log after Leslie's review; everything else Sprint 2 asks for runs on the Canvas pages as guidance, example, and box
-depends_on: sprint-2-outline.md (v5.2, items 7 and 8)
+purpose: Source text for the one-page What already exists table, one of Sprint 2's two activity sheets; the participant-facing copy is a Google Doc template
+status: v0.2, 21 September 2026, after Leslie's first pass on the second half: worked one column at a time, with her column guidance, and the look inside the Dojo Lab's row loop
+depends_on: sprint-2-working-draft-v1.md (v1.3, What solutions already exist and Dojo Lab: explore what already exists)
 ---
 
 # What already exists
 
-Make a copy of this document for Sprint 2. Two activities use it: What could already solve this, where you start the table on your own, and Dojo Lab: explore what already exists, where you fill it with AI. Paste the finished table into the Dojo Lab's response box.
+Make a copy of this document for Sprint 2. Two activities use it: What solutions already exist, where you fill what you can on your own, and Dojo Lab: explore what already exists, where you fill the rest with AI and by looking for yourself. Paste the table into each activity's response box when it asks.
 
-Start on your own, before you open a chat. Things you know of, guesses, and questions all count, and blanks are fine. A table that is mostly questions is a good start. You are listing what exists, not designing anything.
+Work one column at a time. First everything you can think of for column 1; then, for each row, columns 2 and 3. Things you know of, guesses, and questions all count, and blanks are fine. A table that is mostly questions is a good start. You are listing what exists, not designing anything.
 
-If nothing comes to mind, try these: Is there a product for this? Is there a name for this kind of problem? How do people who do this well do it? Does anyone in your own organization already handle it? What happens in places with the same problem and more money, or less?
+**Column 1, what exists.** What products or services claim to solve this? Does anyone with a similar problem seem to handle it well? Does your own organization already have something for this, used or not? Could AI help with it? Is there a name for this kind of problem?
+
+**Column 2, how it works, as far as you know.** Have you seen it yourself? Where does it live? Who can change it, who can see it, who would have to switch it on? If you have not seen it, how do you know it exists? Say what you do not know.
+
+**Column 3, what it means for your problem.** Pluses, minuses, and questions, for your situation. Before you have looked into anything, most of this will be questions. After the Dojo Lab, write it from what you found where you looked, in your words. AI can help you find out how something works; it cannot know what it means for you.
 
 | What exists (known, guessed, or a question) | How it works, as far as you know | What it means for your problem: pluses, minuses, questions |
 |---|---|---|
@@ -22,12 +26,4 @@ If nothing comes to mind, try these: Is there a product for this? Is there a nam
 | | | |
 | | | |
 
-Mark the rows AI added or answered, so you can tell yours from its. The third column is yours to write; AI can help you find out how something works, and it cannot know what it means for your situation.
-
-**The real look.** Two or three from the table that you looked at properly: where you looked, what you learned about how it works, and whether it kills the problem, eases it, or is something your situation could not adopt.
-
-1.
-
-2.
-
-3.
+Mark the rows AI added, so you can tell yours from its. For each row you looked at for yourself, note where you looked. Enough to say whether it kills your problem, eases it, or does not fit here; not enough to put it in place.
