@@ -139,7 +139,7 @@
     try {
       await navigator.clipboard.writeText(text);
       byId('copy-status').className = 'status ok';
-      byId('copy-status').textContent = 'Copied. Paste this into the matching Canvas text-entry submission. This page has not submitted your work.';
+      byId('copy-status').textContent = 'Copied. Paste your list into the Canvas text-entry box below.';
     } catch (_) {
       byId('copy-status').className = 'status';
       byId('copy-status').textContent = 'Copy did not work in this browser. Select and copy the text shown below.';
