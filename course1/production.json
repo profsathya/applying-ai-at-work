@@ -253,23 +253,25 @@
     },
     "course1-sprints-sprint-15-brainstorm-your-list-ai-guided-activity": {
       "artifact_id": "course1-sprints-sprint-15-brainstorm-your-list-ai-guided-activity",
-      "canvas_fingerprint": "ca12259ac8cd18a730c42e8b6fd9ee515c87c8343333447858bd7c037524bb77",
+      "canvas_fingerprint": "49fcd8d5a44db4e155a99b0b20a85c7c7df6788e2490e1db758a799c068e9372",
       "canvas_id": 7162,
       "canvas_module_id": 2083,
       "canvas_module_item_id": 17994,
       "canvas_page_url": null,
-      "canvas_payload_hash": "d109eeb23a11ae95bd96d0f5f0c40c5c26ad922b6a81d16186858e9eab399ebc",
+      "canvas_payload_hash": "90b8875a7124495966cd992abbb50424ccab160224f5650758891bf002e1c98e",
       "canvas_type": "assignment",
-      "content_hash": "a11b4e60094d541e5ab31306b102195df0f68fe831633c06301160af33560edb",
-      "delivery_mode": "ai_activity",
-      "hosted_hash": "b92ac8fa21b96039a69986e8820414402fdae47a8a2885eee70f062d9fbbcb27",
-      "hosted_last_rendered": "2026-09-22T17:09:01+00:00",
-      "hosted_path": "course1/assignments/brainstorm-your-list-ai-guided-activity.html",
-      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/brainstorm-your-list-ai-guided-activity.html",
-      "last_pushed": "2026-09-22T17:09:01+00:00",
+      "completion_requirement": "must_submit",
+      "content_hash": "53b89f5ac851084e495566f3188fdb904b60a86ef72dc39da9f83b0ce30a8e99",
+      "delivery_mode": "guided_assignment",
+      "hosted_hash": "0b1f4b5533cf7fa4e8ccc88f5b8dcf1582ce3bd6a03ddebb12a4f80ab76bc6e5",
+      "hosted_last_rendered": "2026-09-22T21:26:37+00:00",
+      "hosted_path": "course1/activities/brainstorm-your-list-ai-guided-activity.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/brainstorm-your-list-ai-guided-activity.html",
+      "last_pushed": "2026-09-22T21:26:37+00:00",
       "local_path": "course1/sprints/sprint-15/brainstorm-your-list-ai-guided-activity.md",
       "position": 1,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "source_commit": "dbe998cc78ac8cd8d7fb9401a8165c91a4455b1c",
       "source_type": "quiz"
     },
     "course1-sprints-sprint-15-dojo-lab-test-widen-choose": {
@@ -1081,5 +1083,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-22T17:09:01+00:00"
+  "last_sync": "2026-09-22T21:26:37+00:00"
 }
