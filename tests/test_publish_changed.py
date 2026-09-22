@@ -175,6 +175,39 @@ class PublishChangedTests(unittest.TestCase):
             drift.assert_not_called()
             push.assert_not_called()
 
+    def test_selected_unchanged_artifact_renders_without_course_indexes(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp).resolve()
+            md_path = repo_root / "course1" / "sprints" / "sprint-0" / "stable-page.md"
+            manifest_path = repo_root / "course1" / "manifests" / "production.json"
+            state_dir = repo_root / ".canvas-state"
+            state_path = state_dir / "course1" / "production.json"
+            output_dir = repo_root / "Common-Curriculum"
+            write_page(md_path)
+            write_manifest(manifest_path, hosted=True)
+            write_state(state_path, hash_value=content_hash(md_path))
+
+            with patch.object(publish_changed, "REPO_ROOT", repo_root):
+                with patch.object(
+                    publish_changed,
+                    "render_hosted_files",
+                    return_value={"rendered": [], "indexes": []},
+                ) as render:
+                    result = publish_changed.publish_manifest(
+                        manifest_path,
+                        state_dir,
+                        dry_run=False,
+                        check_drift=False,
+                        require_state=True,
+                        hosted_output_dir=output_dir,
+                        only_files={"course1/sprints/sprint-0/stable-page.md"},
+                    )
+
+            self.assertEqual(result["changed"], [])
+            self.assertIsNotNone(result["hosted"])
+            self.assertEqual(render.call_args.args[2], [md_path])
+            self.assertFalse(render.call_args.kwargs["include_indexes"])
+
     def test_changed_artifacts_publish_against_external_state(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()
