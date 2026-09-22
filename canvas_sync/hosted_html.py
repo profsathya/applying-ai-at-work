@@ -438,7 +438,7 @@ def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
     if artifact_type == "page" and frontmatter.get("page_presentation") == "reading":
         return ""
     if frontmatter.get("delivery_mode") == "guided_assignment":
-        if frontmatter.get("guided_assignment", {}).get("presentation") == "interleaved":
+        if frontmatter.get("guided_assignment", {}).get("presentation") in ("interleaved", "walkthrough"):
             return ""
         if frontmatter.get('guided_assignment', {}).get('presentation') in ('compact', 'reading'):
             return ''  # The compact workspace owns its single submission instruction/link.
@@ -523,7 +523,7 @@ def render_artifact_document(
     # Authored document builds already contain their instructional framing. Keep
     # storage/version identifiers and generated generic goals out of that prose.
     meta = f"{module} &middot; {artifact_type}" if frontmatter.get("source_provenance") or frontmatter.get("learner_labels") else f"{course_key} &middot; Sprint {sprint} &middot; {module} &middot; {artifact_type}"
-    goal_block = "" if frontmatter.get("source_provenance") or reading_mode or frontmatter.get("guided_assignment", {}).get("presentation") == "interleaved" else f'<div class="goal"><h2>Learning goal</h2><p>{goal}</p></div>'
+    goal_block = "" if frontmatter.get("source_provenance") or reading_mode or frontmatter.get("guided_assignment", {}).get("presentation") in ("interleaved", "walkthrough") else f'<div class="goal"><h2>Learning goal</h2><p>{goal}</p></div>'
     source_class = " source-derived" if frontmatter.get("source_provenance") else ""
     reading_style = ""
     if frontmatter.get("page_presentation") == "reading":

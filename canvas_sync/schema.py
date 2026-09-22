@@ -124,6 +124,20 @@ def validate_artifact(md_path: Path) -> list[str]:
     errors.extend(validate_ai_activity_delivery(md_path, frontmatter))
     errors.extend(validate_guided_assignment(md_path, frontmatter, body))
     errors.extend(validate_artifact_references(md_path, body))
+    source_id = frontmatter.get('walkthrough_after')
+    if source_id:
+        course_dir = _course_dir_for_artifact(md_path)
+        if course_dir:
+            sources = []
+            for candidate in course_dir.glob('sprints/sprint-*/*.md'):
+                try:
+                    candidate_fm, _ = parse_frontmatter(candidate)
+                except (ValueError, yaml.YAMLError):
+                    continue
+                if candidate_fm.get('artifact_id') == source_id:
+                    sources.append(candidate_fm)
+            if len(sources) != 1 or sources[0].get('module') != frontmatter.get('module'):
+                errors.append(f'{md_path}: walkthrough_after must resolve to one source in the same course module')
 
     for key in ("quiz_type", "allowed_attempts"):
         if key in frontmatter and (frontmatter.get("type") != "quiz" or frontmatter.get("delivery_mode") == "ai_activity"):
@@ -185,8 +199,10 @@ def validate_guided_assignment(label: object, payload: dict, body: str | None = 
         and config.get("presentation") == "interleaved"
         and config.get("feedback_protocol") == "brainstorm-list-v1"
     )
-    if (payload.get("type") != "assignment" and not quiz_backed_assignment) or payload.get("submission_type") != "text_entry":
-        errors.append(f"{label}: guided_assignment requires an assignment with text_entry submission")
+    walkthrough = config.get('presentation') == 'walkthrough' if isinstance(config, dict) else False
+    permitted_submissions = {'text_entry', 'file_upload'} if walkthrough else {'text_entry'}
+    if (payload.get("type") != "assignment" and not quiz_backed_assignment) or payload.get("submission_type") not in permitted_submissions:
+        errors.append(f"{label}: guided_assignment requires an assignment with text_entry (or file_upload for walkthrough)")
     if not isinstance(config, dict):
         return errors + [f"{label}: guided_assignment requires configuration"]
     if payload.get("questions") or payload.get("ai_activity"):
@@ -218,6 +234,35 @@ def validate_guided_assignment(label: object, payload: dict, body: str | None = 
     if len(set(str(i) for i in ids)) != len(ids):
         errors.append(f"{label}: guided task IDs must be unique")
     tasks = config.get('tasks', [])
+    if walkthrough:
+        if not payload.get('walkthrough_after'):
+            errors.append(f'{label}: walkthrough requires walkthrough_after source artifact ID')
+        if payload.get('type') != 'assignment':
+            errors.append(f'{label}: walkthrough requires type assignment')
+        if payload.get('submission_type') == 'file_upload' and not config.get('export_filename'):
+            errors.append(f'{label}: file-upload walkthrough requires export_filename')
+        if config.get('feedback_protocol') and not config.get('feedback_endpoint'):
+            errors.append(f'{label}: feedback_protocol requires feedback_endpoint')
+        if payload.get('walkthrough_after') == payload.get('artifact_id'):
+            errors.append(f'{label}: walkthrough_after cannot refer to itself')
+        for task in tasks if isinstance(tasks, list) else []:
+            if not isinstance(task, dict):
+                continue
+            if task.get('feedback_enabled') and not config.get('feedback_endpoint'):
+                errors.append(f'{label}: task feedback requires feedback_endpoint')
+            if task.get('kind') == 'group':
+                fields = task.get('fields') or []
+                field_ids = [field.get('id') for field in fields if isinstance(field, dict)]
+                if len(field_ids) != len(set(field_ids)):
+                    errors.append(f'{label}: group field IDs must be unique')
+                labels = task.get('repeat_labels') or []
+                if labels and len(labels) != task.get('repeat_count'):
+                    errors.append(f'{label}: repeat_labels must match repeat_count')
+                for field in fields:
+                    if isinstance(field, dict) and field.get('kind') == 'select' and not field.get('options'):
+                        errors.append(f'{label}: select field requires options')
+            elif task.get('kind') == 'choice':
+                errors.append(f'{label}: walkthrough supports response and group tasks only')
     if config.get('presentation') == 'reading' and config.get('feedback_endpoint'):
         errors.append(f'{label}: reading presentation does not support an AI feedback endpoint')
     if config.get('presentation') == 'compact':

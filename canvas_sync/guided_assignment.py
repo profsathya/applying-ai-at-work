@@ -53,6 +53,9 @@ def load_dojo_transcript_prompt(version: str) -> str:
 
 def render_guided_body(frontmatter: dict, instructions_html: str, *, task_sections: dict[str, str] | None = None, canvas_url: str | None = None) -> str:
     config = frontmatter['guided_assignment']
+    if config.get('presentation') == 'walkthrough':
+        from canvas_sync.walkthrough import render_walkthrough_body
+        return render_walkthrough_body(frontmatter, instructions_html, task_sections or {})
     if frontmatter.get('dojo_submission', {}).get('mode') == 'transcript':
         return render_dojo_transcript_body(frontmatter, instructions_html, canvas_url)
     if config.get('presentation') == 'interleaved':

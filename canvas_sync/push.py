@@ -394,6 +394,30 @@ def enforce_module_order(client, desired):
     return verified
 
 
+def walkthrough_position(client, source_artifact_id, artifacts, *, module_name, current_item_id=None):
+    """Resolve a new walk-through's live source anchor before any Canvas write."""
+    matches = [entry for key, entry in artifacts.items()
+               if key == source_artifact_id or entry.get('artifact_id') == source_artifact_id]
+    if len(matches) != 1:
+        raise ValueError(f'Walk-through source {source_artifact_id!r} must resolve to one deployment entry')
+    source = matches[0]
+    module_id, anchor_id = source.get('canvas_module_id'), source.get('canvas_module_item_id')
+    if not module_id or not anchor_id:
+        raise ValueError(f'Walk-through source {source_artifact_id!r} lacks a Canvas module item in deployment state')
+    module = next((item for item in client.list_modules() if int(item['id']) == int(module_id)), None)
+    if not module or module.get('name') != module_name:
+        raise ValueError(f'Walk-through source {source_artifact_id!r} is not in the requested live module')
+    ordered = sorted(client.list_module_items(int(module_id)), key=lambda item: item['position'])
+    original_ids = [int(item['id']) for item in ordered]
+    anchor_id = int(anchor_id)
+    if anchor_id not in original_ids:
+        raise ValueError(f'Walk-through source {source_artifact_id!r} is missing from its live module')
+    current_item_id = int(current_item_id) if current_item_id is not None else None
+    without_new = [item_id for item_id in original_ids if item_id != current_item_id]
+    position = without_new.index(anchor_id) + 2
+    return int(module_id), anchor_id, position, without_new
+
+
 def push_artifact(
     md_path: Path,
     manifest_path: Path,
@@ -450,6 +474,14 @@ def push_artifact(
         existing = artifacts.get(state_key, {})
         existing_id = existing.get("canvas_id")
         existing_page_url = existing.get("canvas_page_url")
+        walkthrough_order = None
+        if fm.get('walkthrough_after'):
+            source_module, source_item, adjacent_position, prior_order = walkthrough_position(
+                client, fm['walkthrough_after'], artifacts, module_name=fm['module'],
+                current_item_id=existing.get('canvas_module_item_id'))
+            fm = {**fm, 'position': adjacent_position}
+            canvas_fm = frontmatter_for_canvas_push(fm)
+            walkthrough_order = (source_module, source_item, prior_order)
         guard_canvas_type_migration(
             rel_path=rel_path,
             existing=existing,
@@ -461,6 +493,8 @@ def push_artifact(
         hosted_info = artifact_hosted_info(md_path, manifest_path, manifest, fm)
         if is_ai_activity_delivery(fm) and not hosted_info["enabled"]:
             raise ValueError(f"{rel_path}: delivery_mode ai_activity requires hosted_html.enabled")
+        if fm.get('guided_assignment', {}).get('presentation') == 'walkthrough' and not hosted_info['enabled']:
+            raise ValueError(f'{rel_path}: walk-through requires hosted_html.enabled')
         if hosted_info["enabled"] and artifact_type != "module_header":
             html = iframe_shell(hosted_info["hosted_url"], fm["title"])
 
@@ -488,6 +522,7 @@ def push_artifact(
         # hosted_output_dir so the change always lands somewhere.
         if (
             action == "updated"
+            and not walkthrough_order
             and hosted_output_dir is not None
             and hosted_info["enabled"]
             and artifact_type != "module_header"
@@ -711,6 +746,17 @@ def push_artifact(
                     "module completion requirement through the artifact push path"
                 )
 
+        if walkthrough_order and canvas_module_item_id:
+            source_module, source_item, prior_order = walkthrough_order
+            if int(module_id) != source_module:
+                raise ValueError(f'{rel_path}: walk-through landed in the wrong Canvas module')
+            live_ids = [int(item['id']) for item in sorted(client.list_module_items(module_id), key=lambda item: item['position'])]
+            new_item_id = int(canvas_module_item_id)
+            expected = list(prior_order)
+            expected.insert(expected.index(source_item) + 1, new_item_id)
+            if live_ids != expected:
+                raise ValueError(f'{rel_path}: Canvas did not preserve source-adjacent module order')
+
         # Record successful module placement into the provisional entry right
         # away, so a failure in the remaining steps leaves a retry that knows
         # the object is already placed (no duplicate module item).
@@ -724,6 +770,13 @@ def push_artifact(
             provisional_entry["canvas_module_item_id"] = canvas_module_item_id
             artifacts[state_key] = provisional_entry
             store.save(deployment_state, state_path)
+
+        if fm.get('walkthrough_after') and canvas_module_item_id:
+            client.update_module_item(module_id, int(canvas_module_item_id),
+                                      {'published': bool(fm.get('publish', True))})
+            live_item = client._request('GET', f'modules/{module_id}/items/{canvas_module_item_id}')
+            if live_item.get('published') is not bool(fm.get('publish', True)):
+                raise ValueError(f'{rel_path}: Canvas did not confirm walk-through module item visibility')
 
         pushed_at = utc_now()
         # State records where the item ACTUALLY lives: when a module change
