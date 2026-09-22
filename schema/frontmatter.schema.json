@@ -116,8 +116,8 @@
         },
         "presentation": {
           "type": "string",
-          "enum": ["standard", "compact", "reading"],
-          "description": "Compact is an opt-in continuous page for one response task with an instruction_section."
+          "enum": ["standard", "compact", "reading", "interleaved"],
+          "description": "Interleaved is an activity-specific embedded workspace that keeps examples, response fields, and feedback together."
         },
         "purpose": {
           "type": "string"
@@ -131,6 +131,10 @@
         "feedback_endpoint": {
           "type": "string",
           "pattern": "^https://[^\\s]+$"
+        },
+        "feedback_protocol": {
+          "type": "string",
+          "enum": ["brainstorm-list-v1"]
         },
         "tasks": {
           "type": "array",
@@ -216,6 +220,21 @@
           }
         }
       },
+      "allOf": [
+        {
+          "if": {
+            "properties": {"presentation": {"const": "interleaved"}},
+            "required": ["presentation"]
+          },
+          "then": {
+            "required": ["feedback_endpoint", "feedback_protocol"],
+            "properties": {
+              "feedback_protocol": {"const": "brainstorm-list-v1"},
+              "tasks": {"minItems": 1, "maxItems": 1}
+            }
+          }
+        }
+      ],
       "additionalProperties": false
     },
     "dojo_submission": {
@@ -324,6 +343,19 @@
     }
   },
   "allOf": [
+    {
+      "if": {
+        "properties": {"delivery_mode": {"const": "guided_assignment"}},
+        "required": ["delivery_mode"]
+      },
+      "then": {
+        "required": ["guided_assignment", "submission_type"],
+        "properties": {
+          "type": {"enum": ["assignment", "quiz"]},
+          "submission_type": {"const": "text_entry"}
+        }
+      }
+    },
     {
       "if": {
         "required": ["dojo_submission"]

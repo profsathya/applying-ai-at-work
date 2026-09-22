@@ -96,6 +96,12 @@ def is_ai_activity_delivery(frontmatter: dict) -> bool:
 def canvas_type_for(frontmatter: dict) -> str:
     if is_ai_activity_delivery(frontmatter):
         return "assignment"
+    if (delivery_mode_for(frontmatter) == "guided_assignment" and frontmatter.get("type") == "quiz"
+            and frontmatter.get("guided_assignment", {}).get("feedback_protocol") == "brainstorm-list-v1"):
+        # Some existing hosted AI activities were authored as quizzes but
+        # deliberately delivered as Canvas assignments. Keep the source type
+        # immutable when converting their hosted presentation to guided work.
+        return "assignment"
     return frontmatter["type"]
 
 

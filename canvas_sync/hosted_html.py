@@ -501,16 +501,21 @@ def render_artifact_document(
     if frontmatter.get("delivery_mode") == "guided_assignment":
         from canvas_sync.guided_assignment import render_guided_body
         from canvas_sync.instruction_sections import partition_instruction_sections
-        remaining, task_sections = partition_instruction_sections(rendered, frontmatter['guided_assignment']['tasks'])
-        sections = render_guided_body(
-            frontmatter, _wrap_sections(remaining, overview=not reading_mode) if remaining else '', task_sections=task_sections,
-            canvas_url=_canvas_item_url(manifest, frontmatter, state_entry or {}),
-        ) if task_sections else render_guided_body(frontmatter, sections, canvas_url=_canvas_item_url(manifest, frontmatter, state_entry or {}))
+        canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {})
+        if frontmatter.get('guided_assignment', {}).get('presentation') == 'interleaved':
+            sections = render_guided_body(frontmatter, rendered, canvas_url=canvas_url)
+        else:
+            remaining, task_sections = partition_instruction_sections(rendered, frontmatter['guided_assignment']['tasks'])
+            sections = render_guided_body(
+                frontmatter, _wrap_sections(remaining, overview=not reading_mode) if remaining else '', task_sections=task_sections,
+                canvas_url=canvas_url,
+            ) if task_sections else render_guided_body(frontmatter, sections, canvas_url=canvas_url)
     title = html_lib.escape(frontmatter["title"])
     module = html_lib.escape(frontmatter["module"])
     course_key_value = str(hosted_info["hosted_path"]).split("/", 1)[0]
     course_key = html_lib.escape(course_key_value)
-    artifact_type = html_lib.escape("Assignment" if frontmatter.get("learner_labels") and frontmatter.get("delivery_mode") == "ai_activity" else _type_label(frontmatter["type"]))
+    assignment_delivery = frontmatter.get("delivery_mode") == "guided_assignment" and frontmatter.get("type") == "quiz"
+    artifact_type = html_lib.escape("Assignment" if assignment_delivery or (frontmatter.get("learner_labels") and frontmatter.get("delivery_mode") == "ai_activity") else _type_label(frontmatter["type"]))
     sprint = int(frontmatter["sprint"])
     goal = html_lib.escape(_learning_goal(frontmatter))
     # Authored document builds already contain their instructional framing. Keep
@@ -809,7 +814,8 @@ def _render_ai_activity_wrapper_document(
     title = html_lib.escape(frontmatter["title"])
     module = html_lib.escape(frontmatter["module"])
     course_key = html_lib.escape(str(hosted_info["hosted_path"]).split("/", 1)[0])
-    artifact_type = html_lib.escape("Assignment" if frontmatter.get("learner_labels") and frontmatter.get("delivery_mode") == "ai_activity" else _type_label(frontmatter["type"]))
+    assignment_delivery = frontmatter.get("delivery_mode") == "guided_assignment" and frontmatter.get("type") == "quiz"
+    artifact_type = html_lib.escape("Assignment" if assignment_delivery or (frontmatter.get("learner_labels") and frontmatter.get("delivery_mode") == "ai_activity") else _type_label(frontmatter["type"]))
     sprint = int(frontmatter["sprint"])
     points = frontmatter.get("points")
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {})
@@ -2232,6 +2238,7 @@ def render_hosted_files(
     *,
     manifest: dict | None = None,
     state: dict | None = None,
+    include_indexes: bool = True,
 ) -> dict:
     manifest_data = manifest or load_json(manifest_path)
     course_key = course_dir_for_manifest(manifest_path).name
@@ -2258,6 +2265,9 @@ def render_hosted_files(
                 artifact_links=artifact_links,
             )
         )
+
+    if not include_indexes:
+        return {"rendered": results, "indexes": []}
 
     for md_path in index_files:
         errors = validate_artifact(md_path)

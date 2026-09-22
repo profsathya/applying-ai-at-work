@@ -179,7 +179,13 @@ def validate_guided_assignment(label: object, payload: dict, body: str | None = 
         errors.append(f'{label}: published canonical Dojo assignments require dojo_submission')
     if mode != "guided_assignment":
         return errors + ([f"{label}: guided_assignment requires its delivery mode"] if config is not None else [])
-    if payload.get("type") != "assignment" or payload.get("submission_type") != "text_entry":
+    quiz_backed_assignment = (
+        payload.get("type") == "quiz"
+        and isinstance(config, dict)
+        and config.get("presentation") == "interleaved"
+        and config.get("feedback_protocol") == "brainstorm-list-v1"
+    )
+    if (payload.get("type") != "assignment" and not quiz_backed_assignment) or payload.get("submission_type") != "text_entry":
         errors.append(f"{label}: guided_assignment requires an assignment with text_entry submission")
     if not isinstance(config, dict):
         return errors + [f"{label}: guided_assignment requires configuration"]

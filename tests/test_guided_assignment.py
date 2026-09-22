@@ -47,6 +47,34 @@ def dojo_frontmatter():
 
 
 class GuidedAssignmentTests(unittest.TestCase):
+    def test_brainstorm_interleaved_keeps_original_body_and_canvas_assignment_identity(self):
+        path = ROOT / 'course1/sprints/sprint-15/brainstorm-your-list-ai-guided-activity.md'
+        source_path = ROOT / 'course1/sprints/sprint-14/brainstorm-your-list.md'
+        fm, body = parse_frontmatter(path)
+        _source_fm, source_body = parse_frontmatter(source_path)
+        self.assertEqual(validate_artifact(path), [])
+        self.assertEqual(body, source_body)
+        self.assertEqual(push.canvas_type_for(fm), 'assignment')
+        rendered = render_guided_body(fm, markdown_body_to_html(body))
+        for key, phrase in (
+            ('work', 'Account handovers always get dropped'),
+            ('home', 'Groceries run out midweek and somebody makes a second trip'),
+            ('other', 'Volunteer shift sign-ups happen across three group texts'),
+        ):
+            card = re.search(rf'<article class="category-card" data-category-card="{key}">(.*?)</article>', rendered, re.S)
+            self.assertIsNotNone(card)
+            self.assertIn(phrase, card.group(1))
+            self.assertIn(f'data-entry="{key}"', card.group(1))
+            self.assertIn(f'data-ai="{key}"', card.group(1))
+        self.assertLess(rendered.index('1. Set up your categories'), rendered.index('2. Walk your week and write everything down'))
+        self.assertLess(rendered.index('2. Walk your week and write everything down'), rendered.index('data-category-card="work"'))
+        self.assertLess(rendered.index('3. If your list is short'), rendered.index('data-ai="final"'))
+        self.assertIn('data-category="additional"', rendered)
+        self.assertIn('feedbackProtocol', rendered)
+        self.assertIn('activity section, current category label, and response text', rendered)
+        self.assertIn('data-entry="work"', rendered)
+        self.assertNotIn('messages:[{role', rendered)
+
     def test_dojo_transcript_registry_render_and_canonical_artifacts(self):
         prompt = load_dojo_transcript_prompt('v1')
         self.assertEqual(hashlib.sha256(prompt.encode()).hexdigest(),
