@@ -66,6 +66,7 @@ Sprint numbers start at `sprint-0` and extend for however many modules the human
   - `homepage-maintainer`: update `<course>/homepage.yaml` after course artifact additions, edits, or removals.
   - `canvas-inspector`: inspect live Canvas state, inventory modules/items, write a ledger, or evaluate drift before reconcile.
   - `canvas-remover`: remove manifest-backed Canvas modules or items after inspection, dry run, and matching confirmation token.
+  - `create-canvas-walkthrough-assignments`: create a new Canvas walk-through assignment immediately below each selected live Canvas item, using its instructions and optional source document while preserving the original.
 
 ## Authoring Guidance
 

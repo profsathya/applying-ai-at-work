@@ -48,6 +48,7 @@ The coordinator inspects the full desktop/mobile sequence using the adult-learne
 | One artifact | `canvas-author` uses relevant shared skills, writes exactly one artifact, validates it, and returns findings |
 | Adding one artifact | `add-artifact` coordinates the author, contextual review, homepage maintenance, validation, and saved record |
 | Substantive revision | A local path edit follows this contract directly; a live Canvas item uses `update-artifact` to prepare it first. Review the changed content and relevant neighbors |
+| Creating Canvas walk-through assignments from selected items | `create-canvas-walkthrough-assignments` maps each live item and optional document, creates a separate AI-guided activity immediately below the original, and prepares a local review before publishing |
 | Homepage copy | `homepage-maintainer` uses goal and concise-copy guidance, validates only authorized YAML edits, and returns findings |
 
 After artifact additions, edits, or removals, route homepage maintenance when the course has `homepage.yaml`, as required by `AGENTS.md`. The maintainer changes only curated copy made inaccurate by the artifact change. A purely mechanical change may require no copy edit and does not activate a general editorial pass.
