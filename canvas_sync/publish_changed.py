@@ -63,7 +63,8 @@ def load_state(manifest_path: Path, state_dir: Path, *, require_state: bool) -> 
     return empty_state_from_manifest(manifest), state_path
 
 
-def changed_artifacts(manifest_path: Path, state_dir: Path, *, require_state: bool) -> tuple[list[dict], dict]:
+def changed_artifacts(manifest_path: Path, state_dir: Path, *, require_state: bool,
+                      only_files: set[str] | None = None) -> tuple[list[dict], dict]:
     state, state_path = load_state(manifest_path, state_dir, require_state=require_state)
     changed: list[dict] = []
     invalid: list[dict] = []
@@ -90,8 +91,10 @@ def changed_artifacts(manifest_path: Path, state_dir: Path, *, require_state: bo
         artifact_id = frontmatter["artifact_id"]
         state_entry = state.get("artifacts", {}).get(artifact_id)
         hash_value = content_hash(md_path)
-        if (not state_entry or state_entry.get("content_hash") != hash_value
-                or state_entry.get("local_path") != repo_relative(md_path)):
+        selected = only_files is None or repo_relative(md_path) in only_files
+        is_changed = (not state_entry or state_entry.get("content_hash") != hash_value
+                      or state_entry.get("local_path") != repo_relative(md_path))
+        if selected and is_changed:
             changed.append(
                 {
                     "file": repo_relative(md_path),
@@ -275,6 +278,7 @@ def publish_manifest(
     require_state: bool,
     hosted_output_dir: Path | None = None,
     hosted_only: bool = False,
+    only_files: set[str] | None = None,
 ) -> dict:
     manifest = load_json(manifest_path)
     hosted_only = hosted_only or manifest.get("canvas_publish") is False
@@ -282,6 +286,7 @@ def publish_manifest(
         manifest_path,
         state_dir,
         require_state=require_state,
+        only_files=only_files,
     )
     result: dict = {
         "manifest": repo_relative(manifest_path),
@@ -477,11 +482,24 @@ def publish_manifest(
     if hosted_output_dir and result["published"]:
         try:
             latest_state, _state_path = load_state(manifest_path, state_dir, require_state=True)
+            published_ids = {item.get("artifact_id") for item in result["published"]}
+            published_sources = [
+                item for item in changed if item["artifact_id"] in published_ids
+            ]
+            render_sources = (
+                discover_artifact_files(manifest_path)
+                if only_files is None
+                else [item["path"] for item in published_sources]
+            )
             result["hosted"] = render_hosted_files(
                 manifest_path,
                 hosted_output_dir,
-                discover_artifact_files(manifest_path),
+                render_sources,
                 state=latest_state,
+                include_indexes=(only_files is None or any(
+                    parse_frontmatter(item["path"])[0].get("publish", True)
+                    for item in published_sources
+                )),
             )
         except Exception as exc:  # noqa: BLE001 - surface hosted render failures in publish result
             result["failed"].append(
@@ -530,6 +548,11 @@ def main() -> int:
     parser.add_argument("--require-state", action="store_true")
     parser.add_argument("--hosted-output-dir", type=Path)
     parser.add_argument(
+        "--only-files", action="store_true",
+        help="Publish only the exact --file paths selected by a protected workflow push.",
+    )
+    parser.add_argument("--file", action="append", default=[], help="Artifact path, repeatable with --only-files.")
+    parser.add_argument(
         "--hosted-only",
         action="store_true",
         help="Render hosted HTML from Markdown and state without Canvas reads or writes.",
@@ -542,6 +565,17 @@ def main() -> int:
     args = parser.parse_args()
     if args.hosted_only and not args.hosted_output_dir:
         parser.error("--hosted-only requires --hosted-output-dir")
+    if args.file and not args.only_files:
+        parser.error("--file requires --only-files")
+    only_files = None
+    if args.only_files:
+        only_files = set()
+        for value in args.file:
+            path = (REPO_ROOT / value).resolve()
+            try:
+                only_files.add(repo_relative(path))
+            except ValueError:
+                parser.error(f"--file must be within the repository: {value}")
 
     manifests = args.manifest if args.manifest else discover_manifests()
     results = []
@@ -556,6 +590,7 @@ def main() -> int:
                 require_state=args.require_state,
                 hosted_output_dir=args.hosted_output_dir.resolve() if args.hosted_output_dir else None,
                 hosted_only=args.hosted_only,
+                only_files=only_files,
             )
             results.append(result)
             if result["failed"] or result["drifted"]:

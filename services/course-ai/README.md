@@ -14,6 +14,8 @@ Production uses a project-specific Anthropic API key stored as a secret, product
 
 The default model is `claude-sonnet-4-5-20250929`. `COURSE_AI_MODEL` is a server-side override. Callers cannot choose models, enable tools, or turn on streaming. Do not add credentials to source or browser code.
 
+`/.netlify/functions/brainstorm-your-list` is a separate, activity-scoped route pinned to `claude-sonnet-5`. It accepts only a section key, an editable category label, and participant response text. Its curriculum instructions and criteria are server-side; callers cannot provide system messages, change models, or enable tools. Participant text is treated as untrusted data. The general `ai-proxy` endpoint and its model default are unchanged.
+
 ## Limits
 
 Only configured browser origins are accepted (`AI_ALLOWED_ORIGINS`, comma-separated; defaults to the course GitHub Pages origin and this project's production origin). Origin checking is not authentication: scripts can spoof Origin. Netlify's function rate limit is 120 requests per minute per IP/domain, including preflights; a shared campus network shares this allowance. It is not a team-wide spending cap. Monitor provider usage in the Anthropic console and function usage in Netlify.

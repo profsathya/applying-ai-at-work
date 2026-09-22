@@ -55,6 +55,8 @@ def render_guided_body(frontmatter: dict, instructions_html: str, *, task_sectio
     config = frontmatter['guided_assignment']
     if frontmatter.get('dojo_submission', {}).get('mode') == 'transcript':
         return render_dojo_transcript_body(frontmatter, instructions_html, canvas_url)
+    if config.get('presentation') == 'interleaved':
+        return render_interleaved_brainstorm_body(frontmatter, instructions_html, canvas_url)
     if config.get('presentation') == 'reading':
         return render_reading_body(frontmatter, instructions_html, task_sections or {}, canvas_url)
     if config.get('presentation') == 'compact':
@@ -110,6 +112,95 @@ def render_guided_body(frontmatter: dict, instructions_html: str, *, task_sectio
 <label for="copy-output">The text to copy</label><textarea id="copy-output" readonly rows="8"></textarea>
 <script type="application/json" id="guided-config">{serialized}</script>
 <script>{(ASSETS / 'guided-assignment.js').read_text()}</script>
+</div>'''
+
+
+def render_interleaved_brainstorm_body(frontmatter: dict, instructions_html: str, canvas_url: str | None) -> str:
+    """Keep each source example and its participant response in one category card."""
+    config = frontmatter['guided_assignment']
+    if config.get('feedback_protocol') != 'brainstorm-list-v1' or not config.get('feedback_endpoint'):
+        raise ValueError('Interleaved presentation requires the brainstorm-list-v1 feedback protocol and endpoint')
+    if len(config.get('tasks', [])) != 1:
+        raise ValueError('Interleaved brainstorm presentation requires one final-list task')
+
+    chunks = re.split(r'(?=<h2\b)', instructions_html)
+    sections: dict[str, str] = {}
+    for chunk in chunks:
+        match = re.match(r'<h2\b[^>]*>(.*?)</h2>', chunk, re.S)
+        if not match:
+            continue
+        heading = html.unescape(re.sub(r'<[^>]+>', '', match.group(1))).strip()
+        sections[heading] = chunk[match.end():]
+    labels = ('1. Set up your categories', '2. Walk your week and write everything down', '3. If your list is short')
+    if any(label not in sections for label in labels):
+        raise ValueError('Interleaved brainstorm requires the original three source sections')
+
+    setup, walk, short = (sections[label] for label in labels)
+    example = re.search(r'<blockquote\b[^>]*>.*?</blockquote>', walk, re.S)
+    if not example:
+        raise ValueError('Interleaved brainstorm could not locate the source example list')
+    examples = {}
+    for key, title in (('work', 'Work'), ('home', 'Home'), ('other', 'Other')):
+        pattern = rf'<p\b[^>]*>\s*<strong>\s*{title}\s*</strong>\s*</p>\s*(<ul\b[^>]*>.*?</ul>)'
+        found = re.search(pattern, example.group(0), re.S)
+        if not found:
+            raise ValueError(f'Interleaved brainstorm could not locate the {title} source examples')
+        examples[key] = found.group(1)
+    walk = walk[:example.start()] + walk[example.end():]
+
+    categories = ''.join(
+        f'<label>{caption}<input type="text" data-category="{key}" value="{default}" maxlength="80"></label>'
+        for key, caption, default in (
+            ('work', 'First heading', 'Work'), ('home', 'Second heading', 'Home'),
+            ('other', 'Third heading', 'Other'),
+        )
+    ) + '<label>Custom heading, if useful<input type="text" data-category="additional" placeholder="For example: Caregiving" maxlength="80"></label>'
+
+    cards = []
+    for key, title in (('work', 'Work'), ('home', 'Home'), ('other', 'Other')):
+        cards.append(f'''<article class="category-card" data-category-card="{key}">
+<div class="category-example"><p class="example-kicker"><strong>Here is an example list</strong></p><h3>{title}</h3>{examples[key]}</div>
+<div class="category-response"><label for="list-{key}"><span data-heading-display="{key}">{title}</span> list</label>
+<p class="field-note">Write one situation per line. Get feedback only after you have written your own observations.</p>
+<textarea id="list-{key}" data-entry="{key}" maxlength="16000" rows="5" placeholder="One situation per line"></textarea>
+<button type="button" data-ai="{key}" disabled>Get AI feedback on this list</button>
+<div class="feedback" data-feedback="{key}" role="status" aria-live="polite"></div></div></article>''')
+    cards.append('''<article class="category-card" data-category-card="additional" hidden>
+<div class="category-response"><label for="list-additional"><span data-heading-display="additional">Custom heading</span> list</label>
+<p class="field-note">Use this box only if you added a fourth heading.</p>
+<textarea id="list-additional" data-entry="additional" maxlength="16000" rows="5" placeholder="One situation per line"></textarea>
+<button type="button" data-ai="additional" disabled>Get AI feedback on this list</button>
+<div class="feedback" data-feedback="additional" role="status" aria-live="polite"></div></div></article>''')
+
+    criteria = ''.join(f'<li>{html.escape(item)}</li>' for item in config['tasks'][0]['criteria'])
+    payload = {
+        'artifactId': frontmatter['artifact_id'], 'version': config['version'],
+        'feedbackEndpoint': config['feedback_endpoint'], 'feedbackProtocol': config['feedback_protocol'],
+        'title': frontmatter['title'], 'criteria': config['tasks'][0]['criteria'],
+    }
+    serialized = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+    link = _canvas_only_link(canvas_url)
+    safe_note = ('AI feedback is optional and formative, not a grade. When you request feedback, this page sends the activity section, current category label, and response text, or your assembled list for the final review, to the course feedback service. The activity context and criteria are applied server-side. Remove confidential or identifying details before sending. Your saved draft stays in this browser; it is not sent unless you request feedback.')
+    return f'''<style>{(ASSETS / 'guided-assignment.css').read_text()}
+{(ASSETS / 'guided-reading.css').read_text()}
+{(ASSETS / 'guided-interleaved.css').read_text()}</style>
+<div class="guided-workspace guided-reading guided-interleaved" id="guided-workspace">
+<aside class="tool-note"><p><strong>This is an AI-guided activity.</strong> Work from your own week first. The AI gives feedback on text you choose to send; it will not add situations, rank them, or choose for you.</p>
+<p>Responses save in this browser on this device when storage is available. Keep your own copy before leaving.</p>
+<p>{html.escape(safe_note)}</p><p id="save-status" class="save-line" role="status" aria-live="polite">Your draft will save in this browser as you type.</p>
+<p id="storage-warning" class="storage-warning" hidden>Browser saving is unavailable. Your writing will stay on this page for this visit, but it may not survive a reload. Copy your list before you leave.</p></aside>
+<section><h2>1. Set up your categories</h2>{setup}<div class="response-task category-setup"><h3>Your headings</h3><p>Keep or rename these headings so they fit your week. Add a fourth only if you need it.</p><div class="category-grid">{categories}</div></div></section>
+<section><h2>2. Walk your week and write everything down</h2>{walk}{''.join(cards)}</section>
+<section><h2>3. If your list is short</h2>{short}
+<div class="response-task final-review"><h3>Review your assembled list</h3><p>Use the original activity criteria:</p><ul>{criteria}</ul>
+<button type="button" data-ai="final" disabled>Get AI feedback on my full list</button><div class="feedback" data-feedback="final" role="status" aria-live="polite"></div></div></section>
+<section class="reading-submit"><h2>Copy your list</h2><p>Copy your assembled list. Paste it into the matching <strong>Brainstorm your list</strong> Canvas text-entry submission to complete the module requirement. This page does not submit anything for you. {link}</p>
+<button type="button" id="copy-list" disabled>Copy my brainstorm list</button><p id="copy-status" class="status" role="status" aria-live="polite"></p>
+<label for="summary-output">The text that gets copied</label><textarea id="summary-output" class="summary-output" readonly rows="10"></textarea></section>
+<button type="button" id="clear-draft">Clear this browser draft</button>
+<div id="clear-confirmation" hidden><p>Clear only this assignment's saved draft in this browser? Copy any work you want to keep first.</p><button type="button" id="confirm-clear">Clear saved responses</button><button type="button" id="cancel-clear">Keep my responses</button></div>
+<script type="application/json" id="guided-config">{serialized}</script>
+<script>{(ASSETS / 'brainstorm-interleaved.js').read_text()}</script>
 </div>'''
 
 

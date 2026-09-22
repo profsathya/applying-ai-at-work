@@ -38,6 +38,8 @@ jobs:
     outputs:
       has_targets: ${{ steps.target_manifests.outputs.has_targets }}
       manifests: ${{ steps.target_manifests.outputs.manifests }}
+      publish_scope: ${{ steps.target_manifests.outputs.publish_scope }}
+      artifact_files: ${{ steps.target_manifests.outputs.artifact_files }}
     steps:
       - name: Check out content branch
         uses: actions/checkout@v4
@@ -191,12 +193,20 @@ jobs:
           CANVAS_API_URL: ${{ secrets.CANVAS_API_URL }}
           CANVAS_API_TOKEN: ${{ secrets.CANVAS_API_TOKEN }}
           TARGET_MANIFESTS: ${{ needs.validate.outputs.manifests }}
+          PUBLISH_SCOPE: ${{ needs.validate.outputs.publish_scope }}
+          ARTIFACT_FILES: ${{ needs.validate.outputs.artifact_files }}
         run: |
           set -euo pipefail
           args=()
           while IFS= read -r manifest; do
             [ -n "$manifest" ] && args+=(--manifest "$manifest")
           done <<< "$TARGET_MANIFESTS"
+          if [ "$PUBLISH_SCOPE" = "selected" ]; then
+            args+=(--only-files)
+            while IFS= read -r file; do
+              [ -n "$file" ] && args+=(--file "$file")
+            done <<< "$ARTIFACT_FILES"
+          fi
           hosted_args=()
           if [ "$HOSTED_ONLY" = "true" ]; then
             hosted_args+=(--hosted-only)
