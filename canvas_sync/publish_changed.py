@@ -349,11 +349,20 @@ def publish_manifest(
                 result["failed"].append({"file": "<module_order>", "artifact_id": None, "error": str(exc)})
         if hosted_output_dir:
             try:
+                render_sources = discover_artifact_files(manifest_path)
+                include_indexes = True
+                if only_files is not None:
+                    render_sources = [
+                        path for path in render_sources
+                        if repo_relative(path) in only_files
+                    ]
+                    include_indexes = False
                 result["hosted"] = render_hosted_files(
                     manifest_path,
                     hosted_output_dir,
-                    discover_artifact_files(manifest_path),
+                    render_sources,
                     state=state_info["state"],
+                    include_indexes=include_indexes,
                 )
             except Exception as exc:  # noqa: BLE001 - surface hosted render failures in publish result
                 result["failed"].append(
