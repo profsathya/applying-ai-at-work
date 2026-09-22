@@ -30,6 +30,10 @@ from canvas_sync.state import (
     load_json,
     state_path_for_manifest,
 )
+from canvas_sync.walkthrough_release import (
+    assert_source_has_no_submissions, preflight_pair, release_pairs, rollback_pair,
+    verify_walkthrough_adjacency,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -335,9 +339,13 @@ def publish_manifest(
         return result
     if not changed:
         desired = []
-        for path in discover_artifact_files(manifest_path):
+        course_paths = discover_artifact_files(manifest_path)
+        anchored_modules = {fm['module'] for path in course_paths
+                            if (fm := parse_frontmatter(path)[0]).get('walkthrough_after')
+                            and state_info['state']['artifacts'].get(fm['artifact_id'], {}).get('canvas_module_item_id')}
+        for path in course_paths:
             fm, _ = parse_frontmatter(path)
-            if fm.get("learner_labels") and fm["type"] != "module_header":
+            if fm.get("learner_labels") and fm["type"] != "module_header" and fm['module'] not in anchored_modules:
                 desired.append((state_info["state"]["artifacts"].get(fm["artifact_id"], {}), fm["position"]))
         if desired:
             check_instance_ready(manifest, manifest_label=str(manifest_path))
@@ -426,8 +434,70 @@ def publish_manifest(
                     }
                 )
 
+    # A release is a coordinated visibility switch. Assess every pair before
+    # changing any item, then process each replacement before its source.
+    try:
+        pairs = release_pairs(changed, discover_artifact_files(manifest_path))
+        pair_states = {}
+        if pairs:
+            blocked_pairs = [f"{source['artifact_id']} / {new['artifact_id']}"
+                             for source, new in pairs if source['artifact_id'] in blocked_ids or new['artifact_id'] in blocked_ids]
+            if blocked_pairs:
+                raise ValueError(f"Walk-through release has Canvas drift: {', '.join(blocked_pairs)}")
+            release_client = CanvasClient.from_env(course_id=int(manifest['instance']['course_id']))
+            for source, new in pairs:
+                pair_states[new['artifact_id']] = preflight_pair(
+                    release_client, source, new, state_info['state'])
+    except Exception as exc:  # noqa: BLE001 - no writes have occurred yet
+        result['failed'].append({'file': '<walkthrough_release>', 'artifact_id': None, 'error': str(exc)})
+        return result
+
+    paired_ids = {item['artifact_id'] for pair in pairs for item in pair}
+    for source, new in pairs:
+        pair_state = pair_states[new['artifact_id']]
+        try:
+            new_result = push_artifact(new['path'], manifest_path, state_dir=state_dir,
+                                       hosted_output_dir=hosted_output_dir, render_course=False)
+            new_live = release_client.get_assignment(int(pair_state['replacement']['canvas_id']))
+            if new_live.get('published') is not True:
+                raise ValueError('Canvas did not confirm the replacement as published')
+            new_module_items = release_client.list_module_items(int(pair_state['replacement']['canvas_module_id']))
+            new_module_item = next((entry for entry in new_module_items if int(entry['id']) == int(pair_state['replacement']['canvas_module_item_id'])), None)
+            if not new_module_item or new_module_item.get('published') is not True:
+                raise ValueError('Canvas did not confirm the replacement module item as published')
+            assert_source_has_no_submissions(release_client, pair_state['source'])
+            source_result = push_artifact(source['path'], manifest_path, state_dir=state_dir,
+                                          hosted_output_dir=hosted_output_dir, render_course=False)
+            source_live = fetch_canvas_state(release_client, pair_state['source'])
+            if not source_live or source_live.get('published') is not False:
+                raise ValueError('Canvas did not confirm the source as unpublished')
+            source_module = int(pair_state['source']['canvas_module_id'])
+            source_item = int(pair_state['source']['canvas_module_item_id'])
+            release_client.update_module_item(source_module, source_item, {'published': False})
+            live_source_item = next((entry for entry in release_client.list_module_items(source_module)
+                                     if int(entry['id']) == source_item), None)
+            if not live_source_item or live_source_item.get('published') is not False:
+                raise ValueError('Canvas did not confirm the source module item as unpublished')
+            module_ids = [int(entry['id']) for entry in sorted(
+                release_client.list_module_items(int(pair_state['source']['canvas_module_id'])),
+                key=lambda entry: entry['position'])]
+            if module_ids != pair_state['module_order']:
+                raise ValueError('Canvas module order changed during release')
+            result['published'].extend((new_result, source_result))
+        except Exception as exc:  # noqa: BLE001 - restore prior visible state and stop batch
+            try:
+                rollback_errors = rollback_pair(release_client, pair_state, state_info['state_path'])
+            except Exception as rollback_exc:  # noqa: BLE001
+                rollback_errors = [str(rollback_exc)]
+            result['failed'].extend([
+                {'file': source['file'], 'artifact_id': source['artifact_id'], 'error': f'release stopped: {exc}'},
+                {'file': new['file'], 'artifact_id': new['artifact_id'],
+                 'error': 'replacement rollback attempted' + (f"; restore errors: {'; '.join(rollback_errors)}" if rollback_errors else '')},
+            ])
+            return result
+
     for item in changed:
-        if item["artifact_id"] in blocked_ids:
+        if item["artifact_id"] in blocked_ids or item['artifact_id'] in paired_ids:
             continue
         try:
             kwargs = {"state_dir": state_dir}
@@ -477,14 +547,21 @@ def publish_manifest(
         latest_state, _ = load_state(manifest_path, state_dir, require_state=True)
         # Only explicitly selected source modules opt into final ordering.
         desired = []
-        for path in discover_artifact_files(manifest_path):
+        course_paths = discover_artifact_files(manifest_path)
+        anchored_modules = {fm['module'] for path in course_paths
+                            if (fm := parse_frontmatter(path)[0]).get('walkthrough_after')
+                            and latest_state['artifacts'].get(fm['artifact_id'], {}).get('canvas_module_item_id')}
+        for path in course_paths:
             fm, _ = parse_frontmatter(path)
-            if fm.get("learner_labels") and fm["type"] != "module_header":
+            if fm.get("learner_labels") and fm["type"] != "module_header" and fm['module'] not in anchored_modules:
                 desired.append((latest_state["artifacts"].get(fm["artifact_id"], {}), fm["position"]))
-        if desired:
+        if desired or anchored_modules:
             try:
                 client = CanvasClient.from_env(course_id=int(manifest["instance"]["course_id"]))
-                result["verified_order"] = enforce_module_order(client, desired)
+                if desired:
+                    result["verified_order"] = enforce_module_order(client, desired)
+                if anchored_modules:
+                    result['verified_walkthrough_order'] = verify_walkthrough_adjacency(client, course_paths, latest_state)
             except Exception as exc:
                 result["failed"].append({"file": "<module_order>", "artifact_id": None, "error": str(exc)})
 
