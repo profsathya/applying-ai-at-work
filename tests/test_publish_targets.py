@@ -2,7 +2,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from canvas_sync.publish_targets import resolve_artifact_files, resolve_targets
+from canvas_sync.publish_targets import resolve_artifact_files, resolve_dispatch, resolve_targets
 
 
 class PublishTargetTests(unittest.TestCase):
@@ -35,6 +35,30 @@ class PublishTargetTests(unittest.TestCase):
                 resolve_targets(root, ['course1/sprints/sprint-15/activity.md', 'canvas_sync/push.py']),
                 ['course1/manifests/production.json'],
             )
+
+    def test_manual_dispatch_can_select_one_artifact(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / 'course1/manifests').mkdir(parents=True)
+            (root / 'course1/manifests/production.json').write_text('{}')
+            artifact = 'course1/sprints/sprint-15/activity.md'
+            target = root / artifact
+            target.parent.mkdir(parents=True)
+            target.write_text('content')
+
+            self.assertEqual(
+                resolve_dispatch(root, 'course1', artifact),
+                (['course1/manifests/production.json'], 'selected', [artifact]),
+            )
+
+    def test_manual_dispatch_rejects_artifacts_outside_selected_course(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / 'course1/manifests').mkdir(parents=True)
+            (root / 'course1/manifests/production.json').write_text('{}')
+
+            with self.assertRaisesRegex(ValueError, 'under the selected course'):
+                resolve_dispatch(root, 'course1', 'course2/sprints/sprint-1/activity.md')
 
 
 if __name__ == '__main__':

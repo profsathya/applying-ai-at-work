@@ -179,7 +179,6 @@ def render_interleaved_brainstorm_body(frontmatter: dict, instructions_html: str
         'title': frontmatter['title'], 'criteria': config['tasks'][0]['criteria'],
     }
     serialized = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
-    link = _canvas_only_link(canvas_url)
     safe_note = ('AI feedback is optional and formative, not a grade. When you request feedback, this page sends the activity section, current category label, and response text, or your assembled list for the final review, to the course feedback service. The activity context and criteria are applied server-side. Remove confidential or identifying details before sending. Your saved draft stays in this browser; it is not sent unless you request feedback.')
     return f'''<style>{(ASSETS / 'guided-assignment.css').read_text()}
 {(ASSETS / 'guided-reading.css').read_text()}
@@ -194,7 +193,7 @@ def render_interleaved_brainstorm_body(frontmatter: dict, instructions_html: str
 <section><h2>3. If your list is short</h2>{short}
 <div class="response-task final-review"><h3>Review your assembled list</h3><p>Use the original activity criteria:</p><ul>{criteria}</ul>
 <button type="button" data-ai="final" disabled>Get AI feedback on my full list</button><div class="feedback" data-feedback="final" role="status" aria-live="polite"></div></div></section>
-<section class="reading-submit"><h2>Copy your list</h2><p>Copy your assembled list. Paste it into the matching <strong>Brainstorm your list</strong> Canvas text-entry submission to complete the module requirement. This page does not submit anything for you. {link}</p>
+<section class="reading-submit"><h2>Copy your list</h2><p>Copy your assembled list and paste it into the Canvas text-entry box below.</p>
 <button type="button" id="copy-list" disabled>Copy my brainstorm list</button><p id="copy-status" class="status" role="status" aria-live="polite"></p>
 <label for="summary-output">The text that gets copied</label><textarea id="summary-output" class="summary-output" readonly rows="10"></textarea></section>
 <button type="button" id="clear-draft">Clear this browser draft</button>

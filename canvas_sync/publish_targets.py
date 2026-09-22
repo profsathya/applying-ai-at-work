@@ -54,12 +54,34 @@ def resolve_artifact_files(root: Path, changed_paths: list[str]) -> list[str]:
     return sorted(files)
 
 
+def resolve_dispatch(
+    root: Path, course: str, artifact_file: str | None = None
+) -> tuple[list[str], str, list[str]]:
+    """Resolve a reviewed manual dispatch to a course or one exact artifact."""
+    targets = resolve_targets(root, [], course=course)
+    if artifact_file is None or not artifact_file.strip():
+        return targets, "all", []
+    path = Path(artifact_file)
+    if (path.is_absolute() or ".." in path.parts or len(path.parts) < 4
+            or path.parts[0] != course or path.parts[1] != "sprints"
+            or not path.parts[2].startswith("sprint-") or path.suffix != ".md"):
+        raise ValueError(
+            "Artifact must be a Markdown file under the selected course's sprints directory"
+        )
+    normalized = path.as_posix()
+    if not (root / normalized).is_file():
+        raise ValueError(f"Artifact not found: {normalized}")
+    return targets, "selected", [normalized]
+
+
 def main() -> None:
     root = Path.cwd()
     if os.environ.get("EVENT_NAME") == "workflow_dispatch":
-        targets = resolve_targets(root, [], course=os.environ.get("INPUT_COURSE", ""))
-        scope = "all"
-        artifact_files: list[str] = []
+        targets, scope, artifact_files = resolve_dispatch(
+            root,
+            os.environ.get("INPUT_COURSE", ""),
+            os.environ.get("INPUT_ARTIFACT_FILE") or None,
+        )
     else:
         before = os.environ.get("BEFORE_SHA", "")
         if not before or set(before) == {"0"}:
