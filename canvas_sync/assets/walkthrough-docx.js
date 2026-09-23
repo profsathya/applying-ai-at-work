@@ -49,15 +49,15 @@
         ? '<w:p><w:r><w:rPr><w:b/></w:rPr><w:t xml:space="preserve">' + escape(line) + '</w:t></w:r></w:p>'
         : paragraph(line)).join('') + '</w:tc>';
   }
-  function table(rows, weights) {
+  function table(rows, weights, hasHeader = true) {
     const widths = weights ? weights.map(weight => Math.round(weight / weights.reduce((sum, n) => sum + n, 0) * 10500))
       : rows[0].length === 3 ? [2400, 4200, 3900] : [3500, 7000];
     return '<w:tbl><w:tblPr><w:tblW w:w="0" w:type="auto"/><w:tblBorders>' +
       ['top', 'left', 'bottom', 'right', 'insideH', 'insideV'].map(edge =>
         '<w:' + edge + ' w:val="single" w:sz="4" w:color="B8C8D2"/>').join('') +
       '</w:tblBorders></w:tblPr><w:tblGrid>' + widths.map(width => '<w:gridCol w:w="' + width + '"/>').join('') + '</w:tblGrid>' +
-      rows.map((row, index) => '<w:tr>' + (index === 0 ? '<w:trPr><w:tblHeader w:val="1"/></w:trPr>' : '') +
-        row.map((value, column) => cell(value, widths[column], index === 0)).join('') + '</w:tr>').join('') + '</w:tbl>';
+      rows.map((row, index) => '<w:tr>' + (hasHeader && index === 0 ? '<w:trPr><w:tblHeader w:val="1"/></w:trPr>' : '') +
+        row.map((value, column) => cell(value, widths[column], hasHeader && index === 0)).join('') + '</w:tr>').join('') + '</w:tbl>';
   }
   function build(config, answers) {
     const blocks = [paragraph(config.title, 'Title')];
@@ -65,9 +65,9 @@
     for (const task of config.tasks) {
       blocks.push(paragraph(task.prompt, 'Heading1'));
       if (task.kind === 'table') {
-        const rows = [task.columns.map(column => column.label),
+        const rows = [...(task.header_rows === 0 ? [] : [task.columns.map(column => column.label)]),
           ...task.rows.map(row => globalThis.WalkthroughTables.filledRow(task, row, answers))];
-        blocks.push(table(rows, task.columns.map(column => column.width || 1)));
+        blocks.push(table(rows, task.columns.map(column => column.width || 1), task.header_rows !== 0));
       } else if (task.kind === 'group') {
         for (let i = 1; i <= task.repeat_count; i++) {
           blocks.push(paragraph(task.repeat_labels?.[i - 1] || 'Entry ' + i, 'Heading2'));

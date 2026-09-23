@@ -81,6 +81,7 @@ def _source_table(task: dict, *, has_feedback: bool) -> str:
     colgroup = '<colgroup>' + ''.join(
         f'<col style="width:{weight / total * 100:.4f}%">' for weight in weights) + '</colgroup>'
     headings = ''.join(f'<th scope="col">{html.escape(column["label"])}</th>' for column in columns)
+    header = f'<thead><tr>{headings}</tr></thead>' if task.get('header_rows', 1) else ''
     rows = []
     controls = []
     response_number = 0
@@ -95,6 +96,8 @@ def _source_table(task: dict, *, has_feedback: bool) -> str:
         for column_index, (column, cell) in enumerate(zip(columns, row['cells'])):
             source_text = html.escape(cell['text']).replace('\n', '<br>')
             content = f'<div class="walk-source-cell-text">{source_text}</div>' if source_text else ''
+            if column_index == 0:
+                content += _guidance(row)
             if cell.get('response'):
                 key = f'{ident}.{row["id"]}.{column["id"]}'
                 control_id = 'walk-' + key.replace('.', '-')
@@ -133,7 +136,7 @@ def _source_table(task: dict, *, has_feedback: bool) -> str:
              '<p class="walk-table-scroll-hint">Scroll sideways to see all columns.</p>'
              f'<div class="{scroll_class}" role="region" aria-label="{html.escape(task["prompt"], quote=True)} table" '
              f'style="--walk-table-min-width:{minimum_width}px" tabindex="0"><table class="walk-source-table"><caption class="walk-sr-only">'
-             f'{html.escape(task["prompt"])}</caption>{colgroup}<thead><tr>{headings}</tr></thead>'
+             f'{html.escape(task["prompt"])}</caption>{colgroup}{header}'
              f'<tbody>{"".join(rows)}</tbody></table></div>')
     feedback = (f'<section class="walk-row-feedback-results" aria-label="AI feedback results">'
                 f'{"".join(controls)}</section>' if controls else '')
@@ -227,6 +230,14 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
                else copy_button + text_download + download)
     feedback_intro = ('<p>AI feedback is optional and is not a grade. It reviews only the response you choose to send. Remove confidential or identifying details before asking for feedback.</p>'
                       if config.get('feedback_endpoint') and has_writable else '')
+    destination = config.get('records_destination')
+    records = ('Keep your own copy in your workbook or another document you can return to. '
+               'Use the copy or download controls below before leaving this page.')
+    if destination:
+        records = (f'Keep your own copy in <a href="{html.escape(destination["url"], quote=True)}" '
+                   f'target="_blank" rel="noopener">{html.escape(destination["label"])}</a>. '
+                   'Use the copy control below to paste your completed tables and responses into that document, '
+                   'or download a Word copy before leaving this page.')
     payload = {
         'artifactId': frontmatter['artifact_id'], 'title': frontmatter['title'],
         'version': config['version'], 'tasks': config['tasks'], 'hasWritable': has_writable,
@@ -252,6 +263,7 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
     return f'''<style>{(ASSETS / 'guided-walkthrough.css').read_text()}</style>
 <div class="guided-workspace guided-walkthrough" id="guided-workspace">
 <aside class="walk-intro"><h2>How this walk-through works</h2><p>{html.escape(intro)}</p>
+<p>{records}</p>
 {feedback_intro}
 <p id="walk-save-status" role="status" aria-live="polite">{html.escape(save_message)}</p></aside>
 {intro_html}{''.join(cards)}

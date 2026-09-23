@@ -1,9 +1,8 @@
-/** Reviewed course criteria live here, never in browser-supplied requests. */
+import guidance from './walkthrough-guidance.json' with {type: 'json'};
+
+/** Shared with the artifact validator; criteria never come from browser requests. */
 export const WALKTHROUGH_GUIDANCE: Record<string, {
   title: string;
   rule: string;
   checkpoints: Record<string, string>;
-}> = {
-  // Add an entry when a reviewed Canvas walk-through is authored. The key must
-  // equal its stable artifact_id; checkpoint keys must equal guided task IDs.
-};
+}> = guidance;

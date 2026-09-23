@@ -98,8 +98,8 @@ async function checkWalkthrough(page, config, result) {
     const step = page.locator(`[data-walk-step="${task.id}"]`);
     const table = step.locator('table.walk-source-table');
     assert.equal(await table.count(), 1, `${task.id}: expected one source table`);
-    assert.equal(await table.locator('thead th').count(), task.columns.length);
-    assert.deepEqual(await table.locator('thead th').allTextContents(), task.columns.map(column => column.label));
+    assert.equal(await table.locator('thead th').count(), task.header_rows === 0 ? 0 : task.columns.length);
+    assert.deepEqual(await table.locator('thead th').allTextContents(), task.header_rows === 0 ? [] : task.columns.map(column => column.label));
     const rows = table.locator('tbody tr');
     assert.equal(await rows.count(), task.rows.length);
     let responseRows = 0;
@@ -213,7 +213,7 @@ async function checkWalkthrough(page, config, result) {
     assert.equal(copiedTables.length, tables.length);
     for (let index = 0; index < tables.length; index++) {
       const task = tables[index];
-      assert.deepEqual(copiedTables[index].headings, task.columns.map(column => column.label));
+      assert.deepEqual(copiedTables[index].headings, task.header_rows === 0 ? [] : task.columns.map(column => column.label));
       assert.deepEqual(copiedTables[index].rows, task.rows.map(row => row.cells.map((cell, columnIndex) =>
         [cell.text, cell.response ? qaAnswer(answerKey(task, row, task.columns[columnIndex])) : '']
           .filter(Boolean).join('\n'))));
@@ -238,8 +238,8 @@ async function checkWalkthrough(page, config, result) {
       assert(tableStart >= 0 && tableEnd > tableStart, `${task.id}: Word export lost table`);
       const grid = documentXml.slice(tableStart, tableEnd);
       assert.equal((grid.match(/<w:gridCol /g) || []).length, task.columns.length);
-      assert.equal((grid.match(/<w:tr>/g) || []).length, task.rows.length + 1);
-      for (const column of task.columns) assert(grid.includes(column.label), `${task.id}: Word export lost heading`);
+      assert.equal((grid.match(/<w:tr>/g) || []).length, task.rows.length + (task.header_rows === 0 ? 0 : 1));
+      for (const column of task.header_rows === 0 ? [] : task.columns) assert(grid.includes(column.label.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')), `${task.id}: Word export lost heading`);
     }
     for (const key of answerKeys) assert(documentXml.includes(qaAnswer(key)));
     assert(!documentXml.includes('Preview sample feedback'), 'AI feedback leaked into Word export');

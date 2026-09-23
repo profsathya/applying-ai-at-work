@@ -414,7 +414,12 @@ def walkthrough_position(client, source_artifact_id, artifacts, *, module_name, 
         raise ValueError(f'Walk-through source {source_artifact_id!r} is missing from its live module')
     current_item_id = int(current_item_id) if current_item_id is not None else None
     without_new = [item_id for item_id in original_ids if item_id != current_item_id]
-    position = without_new.index(anchor_id) + 2
+    # Canvas positions can be sparse (for example 2, 3, 4 after a deletion).
+    # Use its live position rather than an offset into the returned array.
+    anchor = next(item for item in ordered if int(item['id']) == anchor_id)
+    position = int(anchor['position']) + 1
+    if current_item_id in original_ids and original_ids.index(current_item_id) < original_ids.index(anchor_id):
+        position -= 1  # Moving the existing item first removes its earlier slot.
     return int(module_id), anchor_id, position, without_new
 
 
@@ -746,17 +751,6 @@ def push_artifact(
                     "module completion requirement through the artifact push path"
                 )
 
-        if walkthrough_order and canvas_module_item_id:
-            source_module, source_item, prior_order = walkthrough_order
-            if int(module_id) != source_module:
-                raise ValueError(f'{rel_path}: walk-through landed in the wrong Canvas module')
-            live_ids = [int(item['id']) for item in sorted(client.list_module_items(module_id), key=lambda item: item['position'])]
-            new_item_id = int(canvas_module_item_id)
-            expected = list(prior_order)
-            expected.insert(expected.index(source_item) + 1, new_item_id)
-            if live_ids != expected:
-                raise ValueError(f'{rel_path}: Canvas did not preserve source-adjacent module order')
-
         # Record successful module placement into the provisional entry right
         # away, so a failure in the remaining steps leaves a retry that knows
         # the object is already placed (no duplicate module item).
@@ -770,6 +764,17 @@ def push_artifact(
             provisional_entry["canvas_module_item_id"] = canvas_module_item_id
             artifacts[state_key] = provisional_entry
             store.save(deployment_state, state_path)
+
+        if walkthrough_order and canvas_module_item_id:
+            source_module, source_item, prior_order = walkthrough_order
+            if int(module_id) != source_module:
+                raise ValueError(f'{rel_path}: walk-through landed in the wrong Canvas module')
+            live_ids = [int(item['id']) for item in sorted(client.list_module_items(module_id), key=lambda item: item['position'])]
+            new_item_id = int(canvas_module_item_id)
+            expected = list(prior_order)
+            expected.insert(expected.index(source_item) + 1, new_item_id)
+            if live_ids != expected:
+                raise ValueError(f'{rel_path}: Canvas did not preserve source-adjacent module order')
 
         if fm.get('walkthrough_after') and canvas_module_item_id:
             client.update_module_item(module_id, int(canvas_module_item_id),

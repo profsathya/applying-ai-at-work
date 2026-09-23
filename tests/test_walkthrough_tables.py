@@ -45,6 +45,23 @@ def rectangular_block(width):
 
 
 class WalkthroughTableTests(unittest.TestCase):
+    def test_headerless_form_preserves_first_row_and_single_row_tables(self):
+        block = rectangular_block(2)
+        block['rows'] = [block['rows'][1]]
+        task = create_task(block, 'form', 'Your form', ['Use your own evidence.'],
+                           header_rows=0, column_labels=['Field', 'Your answer'], response_cells={(1, 2)})
+        self.assertEqual(len(task['rows']), 1)
+        self.assertEqual(compare_task(block, task, header_rows=0, response_cells={(1, 2)}), [])
+        rendered = render_walkthrough_body({'title': 'Form', 'artifact_id': 'form',
+            'submission_type': 'file_upload', 'guided_assignment': {'version': '1', 'tasks': [task],
+            'records_destination': {'label': 'your map', 'url': 'https://docs.google.com/document/d/test/copy'}}}, '', {})
+        self.assertNotIn('<thead>', rendered.split('<script')[0])
+        self.assertIn('data-walk-answer="form.row-1.column-2"', rendered)
+        self.assertIn('Keep your own copy in <a', rendered)
+        self.assertIn('Guidance 1<br>Second line', rendered)
+        with self.assertRaisesRegex(TableMappingError, 'accessible label'):
+            create_task(block, 'form', 'Your form', ['Check it.'], header_rows=0, response_cells={(1, 2)})
+
     def test_candidate_log_maps_four_columns_and_five_response_rows(self):
         block = candidate_log_block(); task = candidate_task()
         self.assertEqual(len(task['columns']), 4)
