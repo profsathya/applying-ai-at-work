@@ -234,20 +234,38 @@ def validate_guided_assignment(label: object, payload: dict, body: str | None = 
     if len(set(str(i) for i in ids)) != len(ids):
         errors.append(f"{label}: guided task IDs must be unique")
     tasks = config.get('tasks', [])
+    if not isinstance(tasks, list):
+        tasks = []
+    if not walkthrough and any(isinstance(task, dict) and task.get('kind') == 'table' for task in tasks):
+        errors.append(f'{label}: table tasks require walkthrough presentation')
     if walkthrough:
+        writable_tasks = [task for task in tasks if isinstance(task, dict)
+                          and not (task.get('kind') == 'table' and task.get('read_only') is True)]
+        if writable_tasks and not config.get('feedback_endpoint') and not config.get('feedback_omission_reason'):
+            errors.append(f'{label}: walkthrough response tasks require feedback_endpoint or feedback_omission_reason')
         if not payload.get('walkthrough_after'):
             errors.append(f'{label}: walkthrough requires walkthrough_after source artifact ID')
         if payload.get('type') != 'assignment':
             errors.append(f'{label}: walkthrough requires type assignment')
         if payload.get('submission_type') == 'file_upload' and not config.get('export_filename'):
             errors.append(f'{label}: file-upload walkthrough requires export_filename')
+        if any(isinstance(task, dict) and task.get('kind') == 'table' for task in tasks) and not config.get('export_filename'):
+            errors.append(f'{label}: table walkthrough requires export_filename')
         if config.get('feedback_protocol') and not config.get('feedback_endpoint'):
             errors.append(f'{label}: feedback_protocol requires feedback_endpoint')
+        if (isinstance(config.get('feedback_endpoint'), str) and not config['feedback_endpoint'].rstrip('/').endswith(
+                '/.netlify/functions/walkthrough-feedback')):
+            errors.append(f'{label}: walkthrough feedback_endpoint must use the shared walkthrough-feedback route')
         if payload.get('walkthrough_after') == payload.get('artifact_id'):
             errors.append(f'{label}: walkthrough_after cannot refer to itself')
         for task in tasks if isinstance(tasks, list) else []:
             if not isinstance(task, dict):
                 continue
+            if task.get('kind') != 'table' and 'read_only' in task:
+                errors.append(f'{label}: read_only applies only to table tasks')
+            if (task in writable_tasks and task.get('feedback_enabled') is False
+                    and not task.get('feedback_omission_reason')):
+                errors.append(f'{label}: {task.get("id")}: disabled AI feedback requires feedback_omission_reason')
             if task.get('feedback_enabled') and not config.get('feedback_endpoint'):
                 errors.append(f'{label}: task feedback requires feedback_endpoint')
             if task.get('kind') == 'group':
@@ -261,8 +279,30 @@ def validate_guided_assignment(label: object, payload: dict, body: str | None = 
                 for field in fields:
                     if isinstance(field, dict) and field.get('kind') == 'select' and not field.get('options'):
                         errors.append(f'{label}: select field requires options')
+            elif task.get('kind') == 'table':
+                columns = task.get('columns') or []
+                rows = task.get('rows') or []
+                read_only = task.get('read_only') is True
+                column_ids = [column.get('id') for column in columns if isinstance(column, dict)]
+                row_ids = [row.get('id') for row in rows if isinstance(row, dict)]
+                if len(column_ids) != len(set(column_ids)):
+                    errors.append(f'{label}: table column IDs must be unique')
+                if len(row_ids) != len(set(row_ids)):
+                    errors.append(f'{label}: table row IDs must be unique')
+                if any(isinstance(row, dict) and len(row.get('cells', [])) != len(columns) for row in rows):
+                    errors.append(f'{label}: every table row must match the column count')
+                has_response = any(isinstance(cell, dict) and cell.get('response') for row in rows if isinstance(row, dict)
+                                   for cell in row.get('cells', []))
+                if read_only and has_response:
+                    errors.append(f'{label}: read-only table cannot contain response cells')
+                if read_only and 'criteria' in task:
+                    errors.append(f'{label}: read-only table cannot contain self-check criteria')
+                if read_only and task.get('feedback_enabled'):
+                    errors.append(f'{label}: read-only table cannot enable AI feedback')
+                if not read_only and not has_response:
+                    errors.append(f'{label}: table requires at least one response cell')
             elif task.get('kind') == 'choice':
-                errors.append(f'{label}: walkthrough supports response and group tasks only')
+                errors.append(f'{label}: walkthrough supports response, group, and table tasks only')
     if config.get('presentation') == 'reading' and config.get('feedback_endpoint'):
         errors.append(f'{label}: reading presentation does not support an AI feedback endpoint')
     if config.get('presentation') == 'compact':

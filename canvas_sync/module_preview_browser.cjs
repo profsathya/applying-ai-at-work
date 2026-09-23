@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const assert = require('assert/strict');
+const {fillBaseline, verifyBaseline, checkWalkthrough} = require('./module_preview_walkthrough.cjs');
 
 async function run() {
   const [directory, baseURL, ...args] = process.argv.slice(2);
@@ -18,7 +19,7 @@ async function run() {
       const result = {id: item.id, title: item.title, checks: [], skipped: [], errors: []};
       results.push(result);
       if (!item.after) { result.skipped.push(item.skipped); continue; }
-      const context = await browser.newContext({permissions: ['clipboard-read', 'clipboard-write']});
+      const context = await browser.newContext({permissions: ['clipboard-read', 'clipboard-write'], acceptDownloads: true});
       const page = await context.newPage();
       page.setDefaultTimeout(10000);
       page.on('pageerror', error => result.errors.push(error.message));
@@ -34,25 +35,33 @@ async function run() {
       try {
         await page.setViewportSize({width: 1280, height: 900});
         let previous = null;
+        let previousWalkthrough = false;
+        let baselineWalkthroughValues = [];
         if (item.before) {
           await page.goto(new URL(item.before, baseURL).href);
           previous = await config();
-          if (previous) for (const task of previous.tasks) {
+          previousWalkthrough = Boolean(await page.locator('.guided-walkthrough').count());
+          if (previousWalkthrough) baselineWalkthroughValues = await fillBaseline(page);
+          else if (previous) for (const task of previous.tasks) {
             if (task.kind === 'response') await taskField('data-answer', task.id).fill(`Baseline QA: ${task.id}`);
             else await taskField('name', task.id).first().check();
           }
         }
         await page.goto(new URL(item.after, baseURL).href);
         const current = await config();
+        const currentWalkthrough = Boolean(await page.locator('.guided-walkthrough').count());
         if (previous && current) {
-          let comparable = 0;
-          for (const task of previous.tasks) {
-            if (!current.tasks.some(t => t.id === task.id && t.kind === task.kind)) continue;
-            if (task.kind === 'response') assert.equal(await taskField('data-answer', task.id).inputValue(), `Baseline QA: ${task.id}`);
-            else assert(await taskField('name', task.id).first().isChecked());
-            comparable++;
+          if (previousWalkthrough && currentWalkthrough) await verifyBaseline(page, baselineWalkthroughValues, recordCheck);
+          else if (!previousWalkthrough && !currentWalkthrough) {
+            let comparable = 0;
+            for (const task of previous.tasks) {
+              if (!current.tasks.some(t => t.id === task.id && t.kind === task.kind)) continue;
+              if (task.kind === 'response') assert.equal(await taskField('data-answer', task.id).inputValue(), `Baseline QA: ${task.id}`);
+              else assert(await taskField('name', task.id).first().isChecked());
+              comparable++;
+            }
+            if (comparable) recordCheck(`baseline drafts restored for ${comparable} shared tasks`);
           }
-          if (comparable) recordCheck(`baseline drafts restored for ${comparable} shared tasks`);
         }
         const headings = await page.locator('h1,h2,h3,h4,h5,h6').evaluateAll(elements => elements.map(e => ({level: Number(e.tagName.slice(1)), text: e.textContent.trim()})));
         assert.equal(headings.filter(h => h.level === 1).length, 1, 'Expected one page heading');
@@ -69,65 +78,68 @@ async function run() {
         }
         result.images = images; recordCheck('local image loading and image text alternatives');
         if (current) {
-          for (const task of current.tasks) {
-            if (task.kind === 'response') await taskField('data-answer', task.id).fill(`Current QA: ${task.id}`);
-            else {
-              const options = taskField('name', task.id);
-              await options.nth((task.correct_index + 1) % task.options.length).check();
-              await taskField('data-check', task.id).click();
-              assert.match(await taskField('data-result', task.id).textContent(), /Revisit the idea/);
-              await options.nth(task.correct_index).check();
-              await taskField('data-check', task.id).click();
-              assert.match(await taskField('data-result', task.id).textContent(), /That fits/);
-              await options.nth(task.correct_index).focus();
-              await page.keyboard.press('ArrowRight');
-              assert(await options.nth((task.correct_index + 1) % task.options.length).isChecked());
+          if (currentWalkthrough) await checkWalkthrough(page, current, result);
+          else {
+            for (const task of current.tasks) {
+              if (task.kind === 'response') await taskField('data-answer', task.id).fill(`Current QA: ${task.id}`);
+              else {
+                const options = taskField('name', task.id);
+                await options.nth((task.correct_index + 1) % task.options.length).check();
+                await taskField('data-check', task.id).click();
+                assert.match(await taskField('data-result', task.id).textContent(), /Revisit the idea/);
+                await options.nth(task.correct_index).check();
+                await taskField('data-check', task.id).click();
+                assert.match(await taskField('data-result', task.id).textContent(), /That fits/);
+                await options.nth(task.correct_index).focus();
+                await page.keyboard.press('ArrowRight');
+                assert(await options.nth((task.correct_index + 1) % task.options.length).isChecked());
+              }
             }
-          }
-          await page.reload();
-          for (const task of current.tasks) {
-            if (task.kind === 'response') assert.equal(await taskField('data-answer', task.id).inputValue(), `Current QA: ${task.id}`);
-            else assert(await taskField('name', task.id).nth((task.correct_index + 1) % task.options.length).isChecked());
-          }
-          recordCheck('save and reload all response/choice tasks');
-          if (current.tasks.some(t => t.kind === 'choice')) recordCheck('correct/incorrect feedback and radio arrow keys');
-          await page.locator('#copy-answers').focus();
-          await page.keyboard.press('Enter');
-          await page.waitForFunction(() => /Copied|Select and copy/.test(document.getElementById('copy-status').textContent));
-          const copied = (await page.locator('#copy-status').textContent()).includes('Copied')
-            ? await page.evaluate(() => navigator.clipboard.readText())
-            : await page.locator('#copy-output').inputValue();
-          assert(copied.trim());
-          for (const task of current.tasks.filter(t => t.kind === 'response')) assert(copied.includes(`Current QA: ${task.id}`));
-          if (current.dojoSubmission?.mode === 'transcript') {
-            assert.equal(copied, 'Current QA: dojo-transcript');
-            assert(!copied.includes(current.title));
-            assert(!copied.includes(current.tasks[0].prompt));
-            await page.locator('#copy-transcript-request').click();
-            await page.waitForFunction(() => /Transcript request copied|Select and copy the transcript request/.test(document.getElementById('copy-status').textContent));
-            const requestCopied = (await page.locator('#copy-status').textContent()).includes('copied')
-              ? await page.evaluate(() => navigator.clipboard.readText())
-              : await page.locator('#transcript-request-text').inputValue();
-            assert.equal(requestCopied, current.transcriptRequest);
-            recordCheck('transcript-only copy and exact transcript-request copy');
-          }
-          await page.evaluate(() => { navigator.clipboard.writeText = () => Promise.reject(new Error('QA clipboard denial')); });
-          await page.locator('#copy-answers').click();
-          await page.waitForFunction(() => document.activeElement.id === 'copy-output');
-          assert(await page.locator('#copy-output').isVisible());
-          assert.equal(await page.locator('#copy-output').inputValue(), copied);
-          recordCheck('keyboard copy and clipboard-denial fallback focus');
-          if (await page.locator('#more-options').count()) {
-            assert(await page.locator('#more-options').evaluate(e => e.open));
-            await page.locator('#more-options > summary').focus();
+            await page.reload();
+            for (const task of current.tasks) {
+              if (task.kind === 'response') assert.equal(await taskField('data-answer', task.id).inputValue(), `Current QA: ${task.id}`);
+              else assert(await taskField('name', task.id).nth((task.correct_index + 1) % task.options.length).isChecked());
+            }
+            recordCheck('save and reload all response/choice tasks');
+            if (current.tasks.some(t => t.kind === 'choice')) recordCheck('correct/incorrect feedback and radio arrow keys');
+            await page.locator('#copy-answers').focus();
             await page.keyboard.press('Enter');
-            assert(!(await page.locator('#more-options').evaluate(e => e.open)));
-            assert.notEqual(await page.locator('#more-options > summary').evaluate(e => getComputedStyle(e).outlineWidth), '0px');
-            recordCheck('disclosure keyboard operation and visible focus');
+            await page.waitForFunction(() => /Copied|Select and copy/.test(document.getElementById('copy-status').textContent));
+            const copied = (await page.locator('#copy-status').textContent()).includes('Copied')
+              ? await page.evaluate(() => navigator.clipboard.readText())
+              : await page.locator('#copy-output').inputValue();
+            assert(copied.trim());
+            for (const task of current.tasks.filter(t => t.kind === 'response')) assert(copied.includes(`Current QA: ${task.id}`));
+            if (current.dojoSubmission?.mode === 'transcript') {
+              assert.equal(copied, 'Current QA: dojo-transcript');
+              assert(!copied.includes(current.title));
+              assert(!copied.includes(current.tasks[0].prompt));
+              await page.locator('#copy-transcript-request').click();
+              await page.waitForFunction(() => /Transcript request copied|Select and copy the transcript request/.test(document.getElementById('copy-status').textContent));
+              const requestCopied = (await page.locator('#copy-status').textContent()).includes('copied')
+                ? await page.evaluate(() => navigator.clipboard.readText())
+                : await page.locator('#transcript-request-text').inputValue();
+              assert.equal(requestCopied, current.transcriptRequest);
+              recordCheck('transcript-only copy and exact transcript-request copy');
+            }
+            await page.evaluate(() => { navigator.clipboard.writeText = () => Promise.reject(new Error('QA clipboard denial')); });
+            await page.locator('#copy-answers').click();
+            await page.waitForFunction(() => document.activeElement.id === 'copy-output');
+            assert(await page.locator('#copy-output').isVisible());
+            assert.equal(await page.locator('#copy-output').inputValue(), copied);
+            recordCheck('keyboard copy and clipboard-denial fallback focus');
+            if (await page.locator('#more-options').count()) {
+              assert(await page.locator('#more-options').evaluate(e => e.open));
+              await page.locator('#more-options > summary').focus();
+              await page.keyboard.press('Enter');
+              assert(!(await page.locator('#more-options').evaluate(e => e.open)));
+              assert.notEqual(await page.locator('#more-options > summary').evaluate(e => getComputedStyle(e).outlineWidth), '0px');
+              recordCheck('disclosure keyboard operation and visible focus');
+            }
+            if (current.feedback_endpoint) result.skipped.push('AI feedback endpoint was not invoked');
+            // Capture an ordinary saved page, without QA-generated status/fallback clutter.
+            await page.reload();
           }
-          if (current.feedback_endpoint) result.skipped.push('AI feedback endpoint was not invoked');
-          // Capture an ordinary saved page, without QA-generated status/fallback clutter.
-          await page.reload();
         } else result.skipped.push('Guided-response controls are not applicable; Canvas interactions are outside this preview');
         const unnamed = await page.locator('button,input:not([type=hidden]),textarea,select,summary,a[href]').evaluateAll(elements => elements.filter(e => {
           if (!e.getClientRects().length) return false;
@@ -139,6 +151,17 @@ async function run() {
         for (const width of [1280, 390]) {
           await page.setViewportSize({width, height: 900});
           assert(!(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1)), 'Page overflow at ' + width);
+          if (currentWalkthrough && current.tasks.some(task => task.kind === 'table') && width === 390) {
+            const scrollers = await page.locator('.walk-table-scroll').evaluateAll(elements =>
+              elements.filter(element => element.querySelector('.walk-source-table')).map(element => {
+                const style = getComputedStyle(element);
+                const minimum = parseFloat(style.getPropertyValue('--walk-table-min-width')) + parseFloat(style.paddingRight);
+                return {client: element.clientWidth, scroll: element.scrollWidth, minimum};
+              }));
+            assert(scrollers.every(item => item.minimum <= item.client || item.scroll > item.client),
+              'Wide source tables should scroll inside the page on narrow screens');
+            recordCheck('table horizontal scrolling on narrow screens');
+          }
           const file = `screenshots/${index + 1}-${width}.png`;
           await page.screenshot({path: path.join(directory, file), fullPage: true}); result.screenshots.push(file);
         }
