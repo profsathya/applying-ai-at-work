@@ -40,10 +40,48 @@ def resolve_targets(
     return sorted(targets)
 
 
+def resolve_artifact_files(root: Path, changed_paths: list[str]) -> list[str]:
+    """Return changed Markdown artifact paths; do not widen a push to its course."""
+    files = set()
+    for value in changed_paths:
+        path = Path(value)
+        if (path.is_absolute() or len(path.parts) < 3 or path.parts[1] != "sprints"
+                or path.suffix != ".md" or not COURSE_KEY.fullmatch(path.parts[0])):
+            continue
+        normalized = path.as_posix()
+        if (root / normalized).is_file():
+            files.add(normalized)
+    return sorted(files)
+
+
+def resolve_dispatch(
+    root: Path, course: str, artifact_file: str | None = None
+) -> tuple[list[str], str, list[str]]:
+    """Resolve a reviewed manual dispatch to a course or one exact artifact."""
+    targets = resolve_targets(root, [], course=course)
+    if artifact_file is None or not artifact_file.strip():
+        return targets, "all", []
+    path = Path(artifact_file)
+    if (path.is_absolute() or ".." in path.parts or len(path.parts) < 4
+            or path.parts[0] != course or path.parts[1] != "sprints"
+            or not path.parts[2].startswith("sprint-") or path.suffix != ".md"):
+        raise ValueError(
+            "Artifact must be a Markdown file under the selected course's sprints directory"
+        )
+    normalized = path.as_posix()
+    if not (root / normalized).is_file():
+        raise ValueError(f"Artifact not found: {normalized}")
+    return targets, "selected", [normalized]
+
+
 def main() -> None:
     root = Path.cwd()
     if os.environ.get("EVENT_NAME") == "workflow_dispatch":
-        targets = resolve_targets(root, [], course=os.environ.get("INPUT_COURSE", ""))
+        targets, scope, artifact_files = resolve_dispatch(
+            root,
+            os.environ.get("INPUT_COURSE", ""),
+            os.environ.get("INPUT_ARTIFACT_FILE") or None,
+        )
     else:
         before = os.environ.get("BEFORE_SHA", "")
         if not before or set(before) == {"0"}:
@@ -64,9 +102,14 @@ def main() -> None:
             capture_output=True,
             text=True,
         )
-        targets = resolve_targets(root, result.stdout.split("\0"))
+        changed_paths = [value for value in result.stdout.split("\0") if value]
+        targets = resolve_targets(root, changed_paths)
+        scope = "selected"
+        artifact_files = resolve_artifact_files(root, changed_paths)
     with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
         output.write(f"has_targets={str(bool(targets)).lower()}\n")
+        output.write(f"publish_scope={scope}\n")
+        output.write("artifact_files<<ARTIFACT_FILES\n" + "\n".join(artifact_files) + "\nARTIFACT_FILES\n")
         output.write("manifests<<TARGETS\n" + "\n".join(targets) + "\nTARGETS\n")
     print(
         "\n".join(targets)

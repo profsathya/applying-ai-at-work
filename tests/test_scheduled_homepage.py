@@ -73,6 +73,11 @@ class ScheduledHomepageTests(unittest.TestCase):
             self.assertIn('id="course-schedule"', home)
             self.assertNotIn("Module Learning Goals", home)
             self.assertIn("Module Learning Goals", (directory / "sprint-99.html").read_text())
+            sprint = (directory / "sprint-99.html").read_text()
+            self.assertIn('class="brand-row" aria-label="Course partners"', sprint)
+            self.assertIn('alt="De Anza College"', sprint)
+            self.assertIn('class="footer-copy"', home)
+            self.assertNotIn("footer span {", home)
             self.assertIn('class="primary" href="sprint-99.html" id="sprint-action"', home)
             self.assertEqual(home.count('alt="Computing Talent Initiative"'), 1)
             self.assertEqual(home.count("New._CTI_Logo_RGB-1.png"), 2)
@@ -136,6 +141,20 @@ class ScheduledHomepageTests(unittest.TestCase):
         self.assertNotIn('data-activities="100"', home)
         self.assertNotIn('href="sprint-100.html"', home)
         self.assertNotIn('aria-controls="module-items-2"', home)
+
+    def test_partner_branding_adds_de_anza_mark_without_changing_footer_copy(self):
+        data = homepage()["schedule"]
+        home = render_scheduled_homepage(
+            {"title": "Course", "footer": "Computing Talent Initiative - De Anza College"},
+            data,
+            logo_url="cti.png",
+            deanza_logo_url="deanza.svg",
+            help_link={"web": "help.html", "canvas": None},
+        )
+        self.assertIn('class="brand-row" aria-label="Course partners"', home)
+        self.assertIn('src="cti.png" alt="Computing Talent Initiative"', home)
+        self.assertIn('src="deanza.svg" alt="De Anza College"', home)
+        self.assertIn('Computing Talent Initiative - De Anza College', home)
 
     def test_json_payload_and_copy_are_html_safe(self):
         data = homepage()["schedule"]

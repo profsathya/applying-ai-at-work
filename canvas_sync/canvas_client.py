@@ -150,8 +150,15 @@ class CanvasClient:
     def update_assignment(self, assignment_id: int, payload: dict) -> dict:
         return self._request("PUT", f"assignments/{assignment_id}", {"assignment": payload})
 
-    def get_assignment(self, assignment_id: int) -> dict:
-        return self._request("GET", f"assignments/{assignment_id}")
+    def get_assignment(self, assignment_id: int, *, include: list[str] | None = None) -> dict:
+        return self._request("GET", f"assignments/{assignment_id}",
+                             params={"include[]": include} if include else None)
+
+    def list_assignment_submissions(self, assignment_id: int) -> list[dict]:
+        return self._request_paginated("GET", f"assignments/{assignment_id}/submissions")
+
+    def list_assignment_overrides(self, assignment_id: int) -> list[dict]:
+        return self._request_paginated("GET", f"assignments/{assignment_id}/overrides")
 
     def delete_assignment(self, assignment_id: int) -> dict:
         return self._request("DELETE", f"assignments/{assignment_id}")

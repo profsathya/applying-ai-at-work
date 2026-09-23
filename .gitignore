@@ -49,3 +49,6 @@ course*/manifests/*.json.lock
 
 # Private document snapshots, editorial packets, and local previews
 .source-intake/
+
+# Local Netlify folder
+.netlify

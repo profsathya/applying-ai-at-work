@@ -30,6 +30,10 @@ from canvas_sync.state import (
     load_json,
     state_path_for_manifest,
 )
+from canvas_sync.walkthrough_release import (
+    assert_source_has_no_submissions, preflight_pair, release_pairs, rollback_pair,
+    verify_walkthrough_adjacency,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -63,7 +67,8 @@ def load_state(manifest_path: Path, state_dir: Path, *, require_state: bool) -> 
     return empty_state_from_manifest(manifest), state_path
 
 
-def changed_artifacts(manifest_path: Path, state_dir: Path, *, require_state: bool) -> tuple[list[dict], dict]:
+def changed_artifacts(manifest_path: Path, state_dir: Path, *, require_state: bool,
+                      only_files: set[str] | None = None) -> tuple[list[dict], dict]:
     state, state_path = load_state(manifest_path, state_dir, require_state=require_state)
     changed: list[dict] = []
     invalid: list[dict] = []
@@ -90,8 +95,10 @@ def changed_artifacts(manifest_path: Path, state_dir: Path, *, require_state: bo
         artifact_id = frontmatter["artifact_id"]
         state_entry = state.get("artifacts", {}).get(artifact_id)
         hash_value = content_hash(md_path)
-        if (not state_entry or state_entry.get("content_hash") != hash_value
-                or state_entry.get("local_path") != repo_relative(md_path)):
+        selected = only_files is None or repo_relative(md_path) in only_files
+        is_changed = (not state_entry or state_entry.get("content_hash") != hash_value
+                      or state_entry.get("local_path") != repo_relative(md_path))
+        if selected and is_changed:
             changed.append(
                 {
                     "file": repo_relative(md_path),
@@ -275,6 +282,7 @@ def publish_manifest(
     require_state: bool,
     hosted_output_dir: Path | None = None,
     hosted_only: bool = False,
+    only_files: set[str] | None = None,
 ) -> dict:
     manifest = load_json(manifest_path)
     hosted_only = hosted_only or manifest.get("canvas_publish") is False
@@ -282,6 +290,7 @@ def publish_manifest(
         manifest_path,
         state_dir,
         require_state=require_state,
+        only_files=only_files,
     )
     result: dict = {
         "manifest": repo_relative(manifest_path),
@@ -330,9 +339,13 @@ def publish_manifest(
         return result
     if not changed:
         desired = []
-        for path in discover_artifact_files(manifest_path):
+        course_paths = discover_artifact_files(manifest_path)
+        anchored_modules = {fm['module'] for path in course_paths
+                            if (fm := parse_frontmatter(path)[0]).get('walkthrough_after')
+                            and state_info['state']['artifacts'].get(fm['artifact_id'], {}).get('canvas_module_item_id')}
+        for path in course_paths:
             fm, _ = parse_frontmatter(path)
-            if fm.get("learner_labels") and fm["type"] != "module_header":
+            if fm.get("learner_labels") and fm["type"] != "module_header" and fm['module'] not in anchored_modules:
                 desired.append((state_info["state"]["artifacts"].get(fm["artifact_id"], {}), fm["position"]))
         if desired:
             check_instance_ready(manifest, manifest_label=str(manifest_path))
@@ -344,11 +357,20 @@ def publish_manifest(
                 result["failed"].append({"file": "<module_order>", "artifact_id": None, "error": str(exc)})
         if hosted_output_dir:
             try:
+                render_sources = discover_artifact_files(manifest_path)
+                include_indexes = True
+                if only_files is not None:
+                    render_sources = [
+                        path for path in render_sources
+                        if repo_relative(path) in only_files
+                    ]
+                    include_indexes = False
                 result["hosted"] = render_hosted_files(
                     manifest_path,
                     hosted_output_dir,
-                    discover_artifact_files(manifest_path),
+                    render_sources,
                     state=state_info["state"],
+                    include_indexes=include_indexes,
                 )
             except Exception as exc:  # noqa: BLE001 - surface hosted render failures in publish result
                 result["failed"].append(
@@ -412,8 +434,70 @@ def publish_manifest(
                     }
                 )
 
+    # A release is a coordinated visibility switch. Assess every pair before
+    # changing any item, then process each replacement before its source.
+    try:
+        pairs = release_pairs(changed, discover_artifact_files(manifest_path))
+        pair_states = {}
+        if pairs:
+            blocked_pairs = [f"{source['artifact_id']} / {new['artifact_id']}"
+                             for source, new in pairs if source['artifact_id'] in blocked_ids or new['artifact_id'] in blocked_ids]
+            if blocked_pairs:
+                raise ValueError(f"Walk-through release has Canvas drift: {', '.join(blocked_pairs)}")
+            release_client = CanvasClient.from_env(course_id=int(manifest['instance']['course_id']))
+            for source, new in pairs:
+                pair_states[new['artifact_id']] = preflight_pair(
+                    release_client, source, new, state_info['state'])
+    except Exception as exc:  # noqa: BLE001 - no writes have occurred yet
+        result['failed'].append({'file': '<walkthrough_release>', 'artifact_id': None, 'error': str(exc)})
+        return result
+
+    paired_ids = {item['artifact_id'] for pair in pairs for item in pair}
+    for source, new in pairs:
+        pair_state = pair_states[new['artifact_id']]
+        try:
+            new_result = push_artifact(new['path'], manifest_path, state_dir=state_dir,
+                                       hosted_output_dir=hosted_output_dir, render_course=False)
+            new_live = release_client.get_assignment(int(pair_state['replacement']['canvas_id']))
+            if new_live.get('published') is not True:
+                raise ValueError('Canvas did not confirm the replacement as published')
+            new_module_items = release_client.list_module_items(int(pair_state['replacement']['canvas_module_id']))
+            new_module_item = next((entry for entry in new_module_items if int(entry['id']) == int(pair_state['replacement']['canvas_module_item_id'])), None)
+            if not new_module_item or new_module_item.get('published') is not True:
+                raise ValueError('Canvas did not confirm the replacement module item as published')
+            assert_source_has_no_submissions(release_client, pair_state['source'])
+            source_result = push_artifact(source['path'], manifest_path, state_dir=state_dir,
+                                          hosted_output_dir=hosted_output_dir, render_course=False)
+            source_live = fetch_canvas_state(release_client, pair_state['source'])
+            if not source_live or source_live.get('published') is not False:
+                raise ValueError('Canvas did not confirm the source as unpublished')
+            source_module = int(pair_state['source']['canvas_module_id'])
+            source_item = int(pair_state['source']['canvas_module_item_id'])
+            release_client.update_module_item(source_module, source_item, {'published': False})
+            live_source_item = next((entry for entry in release_client.list_module_items(source_module)
+                                     if int(entry['id']) == source_item), None)
+            if not live_source_item or live_source_item.get('published') is not False:
+                raise ValueError('Canvas did not confirm the source module item as unpublished')
+            module_ids = [int(entry['id']) for entry in sorted(
+                release_client.list_module_items(int(pair_state['source']['canvas_module_id'])),
+                key=lambda entry: entry['position'])]
+            if module_ids != pair_state['module_order']:
+                raise ValueError('Canvas module order changed during release')
+            result['published'].extend((new_result, source_result))
+        except Exception as exc:  # noqa: BLE001 - restore prior visible state and stop batch
+            try:
+                rollback_errors = rollback_pair(release_client, pair_state, state_info['state_path'])
+            except Exception as rollback_exc:  # noqa: BLE001
+                rollback_errors = [str(rollback_exc)]
+            result['failed'].extend([
+                {'file': source['file'], 'artifact_id': source['artifact_id'], 'error': f'release stopped: {exc}'},
+                {'file': new['file'], 'artifact_id': new['artifact_id'],
+                 'error': 'replacement rollback attempted' + (f"; restore errors: {'; '.join(rollback_errors)}" if rollback_errors else '')},
+            ])
+            return result
+
     for item in changed:
-        if item["artifact_id"] in blocked_ids:
+        if item["artifact_id"] in blocked_ids or item['artifact_id'] in paired_ids:
             continue
         try:
             kwargs = {"state_dir": state_dir}
@@ -463,25 +547,45 @@ def publish_manifest(
         latest_state, _ = load_state(manifest_path, state_dir, require_state=True)
         # Only explicitly selected source modules opt into final ordering.
         desired = []
-        for path in discover_artifact_files(manifest_path):
+        course_paths = discover_artifact_files(manifest_path)
+        anchored_modules = {fm['module'] for path in course_paths
+                            if (fm := parse_frontmatter(path)[0]).get('walkthrough_after')
+                            and latest_state['artifacts'].get(fm['artifact_id'], {}).get('canvas_module_item_id')}
+        for path in course_paths:
             fm, _ = parse_frontmatter(path)
-            if fm.get("learner_labels") and fm["type"] != "module_header":
+            if fm.get("learner_labels") and fm["type"] != "module_header" and fm['module'] not in anchored_modules:
                 desired.append((latest_state["artifacts"].get(fm["artifact_id"], {}), fm["position"]))
-        if desired:
+        if desired or anchored_modules:
             try:
                 client = CanvasClient.from_env(course_id=int(manifest["instance"]["course_id"]))
-                result["verified_order"] = enforce_module_order(client, desired)
+                if desired:
+                    result["verified_order"] = enforce_module_order(client, desired)
+                if anchored_modules:
+                    result['verified_walkthrough_order'] = verify_walkthrough_adjacency(client, course_paths, latest_state)
             except Exception as exc:
                 result["failed"].append({"file": "<module_order>", "artifact_id": None, "error": str(exc)})
 
     if hosted_output_dir and result["published"]:
         try:
             latest_state, _state_path = load_state(manifest_path, state_dir, require_state=True)
+            published_ids = {item.get("artifact_id") for item in result["published"]}
+            published_sources = [
+                item for item in changed if item["artifact_id"] in published_ids
+            ]
+            render_sources = (
+                discover_artifact_files(manifest_path)
+                if only_files is None
+                else [item["path"] for item in published_sources]
+            )
             result["hosted"] = render_hosted_files(
                 manifest_path,
                 hosted_output_dir,
-                discover_artifact_files(manifest_path),
+                render_sources,
                 state=latest_state,
+                include_indexes=(only_files is None or any(
+                    parse_frontmatter(item["path"])[0].get("publish", True)
+                    for item in published_sources
+                )),
             )
         except Exception as exc:  # noqa: BLE001 - surface hosted render failures in publish result
             result["failed"].append(
@@ -530,6 +634,11 @@ def main() -> int:
     parser.add_argument("--require-state", action="store_true")
     parser.add_argument("--hosted-output-dir", type=Path)
     parser.add_argument(
+        "--only-files", action="store_true",
+        help="Publish only the exact --file paths selected by a protected workflow push.",
+    )
+    parser.add_argument("--file", action="append", default=[], help="Artifact path, repeatable with --only-files.")
+    parser.add_argument(
         "--hosted-only",
         action="store_true",
         help="Render hosted HTML from Markdown and state without Canvas reads or writes.",
@@ -542,6 +651,17 @@ def main() -> int:
     args = parser.parse_args()
     if args.hosted_only and not args.hosted_output_dir:
         parser.error("--hosted-only requires --hosted-output-dir")
+    if args.file and not args.only_files:
+        parser.error("--file requires --only-files")
+    only_files = None
+    if args.only_files:
+        only_files = set()
+        for value in args.file:
+            path = (REPO_ROOT / value).resolve()
+            try:
+                only_files.add(repo_relative(path))
+            except ValueError:
+                parser.error(f"--file must be within the repository: {value}")
 
     manifests = args.manifest if args.manifest else discover_manifests()
     results = []
@@ -556,6 +676,7 @@ def main() -> int:
                 require_state=args.require_state,
                 hosted_output_dir=args.hosted_output_dir.resolve() if args.hosted_output_dir else None,
                 hosted_only=args.hosted_only,
+                only_files=only_files,
             )
             results.append(result)
             if result["failed"] or result["drifted"]:

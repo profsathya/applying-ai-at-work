@@ -25,6 +25,7 @@ Artifact bodies remain Canvas-native Markdown. The hosted guided-assignment rend
 
 ## Choose a supported layout
 
+- Set `guided_assignment.presentation: walkthrough` for a document or page converted into an interactive assignment. Use `walkthrough_after` to anchor the separate replacement, and `layout: table` on group tasks when the source uses tables. The renderer puts teaching beside response fields, saves browser drafts, supports copy and text download, and creates a local Word document for file-upload assignments. Omit the feedback endpoint for independent work that forbids AI.
 - Standard guided assignments support multiple tasks. Omit `presentation` to keep the standard layout; do not consolidate distinct task identities just to obtain compact styling.
 - Set `guided_assignment.presentation: compact` only for exactly one task of kind `response`, with an `instruction_section` and no `feedback_endpoint`. Preserve the task ID, artifact ID, version, and assessment metadata when revising an existing activity.
 - Native discussions can opt into `page_presentation: reading` to share the informational reading column, headings, and blue accents. They retain their discussion type and Canvas submission link; their submission panel uses the reading palette.

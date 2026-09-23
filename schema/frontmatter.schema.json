@@ -87,6 +87,11 @@
       "type": "integer",
       "minimum": 1
     },
+    "walkthrough_after": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Stable source artifact_id used to place a replacement immediately after its original."
+    },
     "points": {
       "type": ["number", "null"],
       "minimum": 0
@@ -116,8 +121,8 @@
         },
         "presentation": {
           "type": "string",
-          "enum": ["standard", "compact", "reading"],
-          "description": "Compact is an opt-in continuous page for one response task with an instruction_section."
+          "enum": ["standard", "compact", "reading", "interleaved", "walkthrough"],
+          "description": "Interleaved is an activity-specific embedded workspace that keeps examples, response fields, and feedback together."
         },
         "purpose": {
           "type": "string"
@@ -128,9 +133,19 @@
         "standing_instruction": {
           "type": "string"
         },
+        "export_filename": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*\\.docx$"
+        },
+        "document_prefix": {"type": "array", "items": {"type": "string"}},
+        "document_suffix": {"type": "array", "items": {"type": "string"}},
         "feedback_endpoint": {
           "type": "string",
           "pattern": "^https://[^\\s]+$"
+        },
+        "feedback_protocol": {
+          "type": "string",
+          "enum": ["brainstorm-list-v1", "walkthrough-v1"]
         },
         "tasks": {
           "type": "array",
@@ -151,7 +166,8 @@
                 "type": "string",
                 "enum": [
                   "response",
-                  "choice"
+                  "choice",
+                  "group"
                 ]
               },
               "prompt": {
@@ -173,6 +189,35 @@
               },
               "reflection": {
                 "type": "string"
+              },
+              "feedback_enabled": {"type": "boolean"},
+              "document_after": {"type": "array", "items": {"type": "string"}},
+              "repeat_count": {"type": "integer", "minimum": 1, "maximum": 20},
+              "layout": {"type": "string", "enum": ["fields", "table"]},
+              "repeat_labels": {"type": "array", "items": {"type": "string", "minLength": 1}},
+              "fields": {
+                "type": "array", "minItems": 1,
+                "items": {
+                  "type": "object", "required": ["id", "label"],
+                  "properties": {
+                    "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+                    "label": {"type": "string", "minLength": 1},
+                    "kind": {"type": "string", "enum": ["text", "textarea", "select"]},
+                    "guidance": {
+                      "type": "object",
+                      "properties": {
+                        "ask": {"type": "string", "minLength": 1},
+                        "example": {"type": "string", "minLength": 1},
+                        "avoid": {"type": "string", "minLength": 1}
+                      },
+                      "minProperties": 1,
+                      "additionalProperties": false
+                    },
+                    "evidence_status": {"type": "boolean"},
+                    "options": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}}
+                  },
+                  "additionalProperties": false
+                }
               },
               "options": {
                 "type": "array",
@@ -210,12 +255,39 @@
                     "explanation"
                   ]
                 }
+              },
+              {
+                "if": {"properties": {"kind": {"const": "group"}}, "required": ["kind"]},
+                "then": {"required": ["repeat_count", "fields"]}
               }
             ],
             "additionalProperties": false
           }
         }
       },
+      "allOf": [
+        {
+          "if": {
+            "properties": {"presentation": {"const": "interleaved"}},
+            "required": ["presentation"]
+          },
+          "then": {
+            "required": ["feedback_endpoint", "feedback_protocol"],
+            "properties": {
+              "feedback_protocol": {"const": "brainstorm-list-v1"},
+              "tasks": {"minItems": 1, "maxItems": 1}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"presentation": {"const": "walkthrough"}}, "required": ["presentation"]},
+          "then": {
+            "properties": {"feedback_protocol": {"const": "walkthrough-v1"}},
+            "if": {"required": ["feedback_endpoint"]},
+            "then": {"required": ["feedback_protocol"]}
+          }
+        }
+      ],
       "additionalProperties": false
     },
     "dojo_submission": {
@@ -324,6 +396,19 @@
     }
   },
   "allOf": [
+    {
+      "if": {
+        "properties": {"delivery_mode": {"const": "guided_assignment"}},
+        "required": ["delivery_mode"]
+      },
+      "then": {
+        "required": ["guided_assignment", "submission_type"],
+        "properties": {
+          "type": {"enum": ["assignment", "quiz"]},
+          "submission_type": {"enum": ["text_entry", "file_upload"]}
+        }
+      }
+    },
     {
       "if": {
         "required": ["dojo_submission"]

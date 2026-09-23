@@ -6,6 +6,11 @@ body { font-family:Arial,Helvetica,sans-serif; color:var(--ink); background:#fff
 .course-home { max-width:920px; margin:0 auto; padding:24px 28px 36px; }
 .brand { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; border-bottom:1px solid var(--rule); padding-bottom:20px; }
 .brand img { display:block; width:108px; height:auto; }
+.brand-row { display:flex; align-items:center; gap:16px; flex-wrap:nowrap; }
+.brand-row img { width:auto; height:auto; }
+.brand-row .cti-logo { width:108px; }
+.brand-row .deanza-logo { width:112px; }
+.brand-divider { width:1px; height:28px; background:var(--rule); }
 .brand span { font-size:15px; color:var(--secondary); }
 h1 { font-size:26px; line-height:1.25; letter-spacing:-.4px; margin:24px 0; }
 h2 { font-size:23px; line-height:1.3; margin:7px 0 10px; }
@@ -43,7 +48,10 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--blue); outline-o
 .module-list [aria-current="step"] { text-decoration-thickness:2px; }
 footer { display:flex; flex-wrap:wrap; align-items:center; gap:12px; border-top:1px solid var(--rule); padding-top:18px; margin-top:28px; color:var(--secondary); font-size:14px; }
 footer img { width:62px; height:auto; }
-footer span { flex:1 1 220px; }
+footer .brand-row { flex:0 0 auto; }
+footer .brand-row .cti-logo { width:62px; }
+footer .brand-row .deanza-logo { width:84px; }
+.footer-copy { flex:1 1 220px; }
 .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 @media(max-width:620px) { .activity-list a { flex-direction:column; gap:2px; } }
 @media(max-width:520px) { .course-home { padding:18px; } .current-sprint { padding:18px; } h1 { font-size:24px; } h2 { font-size:22px; } }

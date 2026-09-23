@@ -23,6 +23,7 @@ from markdown.treeprocessors import Treeprocessor
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.schema import parse_frontmatter, validate_artifact
+from canvas_sync.branding import partner_brand_row
 from canvas_sync.local_images import local_image_assets
 from canvas_sync.state import course_dir_for_manifest, derive_artifact_id, load_json
 from canvas_sync.scheduled_homepage import render_scheduled_homepage, validate_schedule
@@ -35,6 +36,10 @@ DEFAULT_PROGRESS_ENDPOINT = "https://canvas-progress-lti.netlify.app/.netlify/fu
 CTI_LOGO_URL = (
     "https://computingtalentinitiative.org/wp-content/uploads/2026/06/"
     "New._CTI_Logo_RGB-1.png"
+)
+DE_ANZA_LOGO_URL = (
+    "https://upload.wikimedia.org/wikipedia/commons/b/be/"
+    "De_Anza_College_logo.svg"
 )
 MERMAID_VERSION = "11.16.0"
 MERMAID_SCRIPT_URL = (
@@ -433,6 +438,8 @@ def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
     if artifact_type == "page" and frontmatter.get("page_presentation") == "reading":
         return ""
     if frontmatter.get("delivery_mode") == "guided_assignment":
+        if frontmatter.get("guided_assignment", {}).get("presentation") in ("interleaved", "walkthrough"):
+            return ""
         if frontmatter.get('guided_assignment', {}).get('presentation') in ('compact', 'reading'):
             return ''  # The compact workspace owns its single submission instruction/link.
         anchor = _canvas_only_anchor(canvas_url, "Open the Canvas assignment")
@@ -496,21 +503,27 @@ def render_artifact_document(
     if frontmatter.get("delivery_mode") == "guided_assignment":
         from canvas_sync.guided_assignment import render_guided_body
         from canvas_sync.instruction_sections import partition_instruction_sections
-        remaining, task_sections = partition_instruction_sections(rendered, frontmatter['guided_assignment']['tasks'])
-        sections = render_guided_body(
-            frontmatter, _wrap_sections(remaining, overview=not reading_mode) if remaining else '', task_sections=task_sections,
-            canvas_url=_canvas_item_url(manifest, frontmatter, state_entry or {}),
-        ) if task_sections else render_guided_body(frontmatter, sections, canvas_url=_canvas_item_url(manifest, frontmatter, state_entry or {}))
+        canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {})
+        if frontmatter.get('guided_assignment', {}).get('presentation') == 'interleaved':
+            sections = render_guided_body(frontmatter, rendered, canvas_url=canvas_url)
+        else:
+            remaining, task_sections = partition_instruction_sections(rendered, frontmatter['guided_assignment']['tasks'])
+            sections = render_guided_body(
+                frontmatter, _wrap_sections(remaining, overview=not reading_mode) if remaining else '', task_sections=task_sections,
+                canvas_url=canvas_url,
+            ) if task_sections else render_guided_body(frontmatter, sections, canvas_url=canvas_url)
     title = html_lib.escape(frontmatter["title"])
     module = html_lib.escape(frontmatter["module"])
-    course_key = html_lib.escape(str(hosted_info["hosted_path"]).split("/", 1)[0])
-    artifact_type = html_lib.escape("Assignment" if frontmatter.get("learner_labels") and frontmatter.get("delivery_mode") == "ai_activity" else _type_label(frontmatter["type"]))
+    course_key_value = str(hosted_info["hosted_path"]).split("/", 1)[0]
+    course_key = html_lib.escape(course_key_value)
+    assignment_delivery = frontmatter.get("delivery_mode") == "guided_assignment" and frontmatter.get("type") == "quiz"
+    artifact_type = html_lib.escape("Assignment" if assignment_delivery or (frontmatter.get("learner_labels") and frontmatter.get("delivery_mode") == "ai_activity") else _type_label(frontmatter["type"]))
     sprint = int(frontmatter["sprint"])
     goal = html_lib.escape(_learning_goal(frontmatter))
     # Authored document builds already contain their instructional framing. Keep
     # storage/version identifiers and generated generic goals out of that prose.
     meta = f"{module} &middot; {artifact_type}" if frontmatter.get("source_provenance") or frontmatter.get("learner_labels") else f"{course_key} &middot; Sprint {sprint} &middot; {module} &middot; {artifact_type}"
-    goal_block = "" if frontmatter.get("source_provenance") or reading_mode else f'<div class="goal"><h2>Learning goal</h2><p>{goal}</p></div>'
+    goal_block = "" if frontmatter.get("source_provenance") or reading_mode or frontmatter.get("guided_assignment", {}).get("presentation") in ("interleaved", "walkthrough") else f'<div class="goal"><h2>Learning goal</h2><p>{goal}</p></div>'
     source_class = " source-derived" if frontmatter.get("source_provenance") else ""
     reading_style = ""
     if frontmatter.get("page_presentation") == "reading":
@@ -521,6 +534,11 @@ def render_artifact_document(
     back_href = f"../sprint-{sprint}.html?context=web"
     mermaid_styles = _mermaid_styles() if has_mermaid else ""
     mermaid_script = _mermaid_script() if has_mermaid else ""
+    partner_footer = (
+        f'<footer aria-label="Course partners">{partner_brand_row(CTI_LOGO_URL, DE_ANZA_LOGO_URL)}</footer>'
+        if course_key_value == "course1"
+        else f'<footer><img src="{CTI_LOGO_URL}" alt="Computing Talent Initiative" onerror="this.style.display=\'none\'"></footer>'
+    )
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -614,6 +632,11 @@ def render_artifact_document(
     a[data-canvas-only][hidden] {{ display: none !important; }}
     footer {{ text-align: center; margin: 28px 0 8px; opacity: 0.55; }}
     footer img {{ height: 22px; }}
+    .brand-row {{ display: inline-flex; align-items: center; justify-content: center; gap: 14px; }}
+    .brand-logo {{ display: block; width: auto; object-fit: contain; }}
+    .brand-logo.cti-logo {{ height: 22px; }}
+    .brand-logo.deanza-logo {{ height: 26px; }}
+    .brand-divider {{ width: 1px; height: 22px; background: #cbd5e1; }}
     .back-link {{
       display: none;
       font-size: 13px;
@@ -716,7 +739,7 @@ def render_artifact_document(
 
     {submit_guidance}
 
-    <footer><img src="{CTI_LOGO_URL}" alt="Computing Talent Initiative" onerror="this.style.display='none'"></footer>
+{partner_footer}
   </div>
 </body>
 </html>
@@ -793,7 +816,8 @@ def _render_ai_activity_wrapper_document(
     title = html_lib.escape(frontmatter["title"])
     module = html_lib.escape(frontmatter["module"])
     course_key = html_lib.escape(str(hosted_info["hosted_path"]).split("/", 1)[0])
-    artifact_type = html_lib.escape("Assignment" if frontmatter.get("learner_labels") and frontmatter.get("delivery_mode") == "ai_activity" else _type_label(frontmatter["type"]))
+    assignment_delivery = frontmatter.get("delivery_mode") == "guided_assignment" and frontmatter.get("type") == "quiz"
+    artifact_type = html_lib.escape("Assignment" if assignment_delivery or (frontmatter.get("learner_labels") and frontmatter.get("delivery_mode") == "ai_activity") else _type_label(frontmatter["type"]))
     sprint = int(frontmatter["sprint"])
     points = frontmatter.get("points")
     canvas_url = _canvas_item_url(manifest, frontmatter, state_entry or {})
@@ -1629,6 +1653,21 @@ def _career_homepage_document(
         back = f'<a class="back-link" href="{html_lib.escape(back_href, quote=True)}" data-keep-context>&larr; Back to course home</a>'
     progress_endpoint_json = json.dumps(progress_endpoint or DEFAULT_PROGRESS_ENDPOINT)
     course_key_json = json.dumps(str(course_meta.get("course_key") or ""))
+    course1_branding = str(course_meta.get("course_key") or "") == "course1"
+    header_brand = (
+        partner_brand_row(CTI_LOGO_URL, DE_ANZA_LOGO_URL, cti_fallback=True)
+        if course1_branding
+        else (
+            f'<img class="cti-logo" src="{CTI_LOGO_URL}" alt="Computing Talent Initiative" '
+            "onerror=\"this.style.display='none';this.nextElementSibling.style.display='block';\">"
+            '<div class="cti-logo-fallback">Computing Talent<br>Initiative</div>'
+        )
+    )
+    footer_brand = (
+        partner_brand_row(CTI_LOGO_URL, DE_ANZA_LOGO_URL, decorative=True)
+        if course1_branding
+        else f'<img src="{CTI_LOGO_URL}" alt="" onerror="this.style.display=\'none\'">'
+    )
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -1654,6 +1693,11 @@ def _career_homepage_document(
   .course-header h1{{font-size:23px;font-weight:700;margin:0 0 4px;}}
   .course-header .lead{{color:var(--muted);font-size:13.5px;max-width:660px;}}
   .cti-logo{{height:34px;width:auto;display:block;opacity:.9;}}
+  .course-header .brand-row{{display:inline-flex;align-items:center;gap:12px;flex-wrap:nowrap;}}
+  .course-header .brand-logo{{height:34px;width:auto;display:block;opacity:.9;object-fit:contain;}}
+  .course-header .brand-logo.deanza-logo{{height:34px;}}
+  .brand-divider{{width:1px;height:28px;background:var(--border);flex:0 0 1px;}}
+  .cti-mark{{display:block;}}
   .cti-logo-fallback{{display:none;font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.3px;text-align:right;line-height:1.2;}}
   .module{{border:1px solid var(--border);border-radius:4px;margin-bottom:20px;overflow:hidden;}}
   details.module > summary{{list-style:none;cursor:pointer;}}
@@ -1702,7 +1746,10 @@ def _career_homepage_document(
   .selfcheck .verify{{margin-top:5px;font-size:12.5px;color:#3d5346;display:flex;gap:6px;align-items:flex-start;}}
   .selfcheck .verify svg{{width:14px;height:14px;flex:0 0 14px;margin-top:2px;}}
   .page-footer{{margin-top:30px;padding-top:16px;border-top:1px solid var(--border-light);display:flex;align-items:center;gap:10px;color:var(--muted);font-size:11.5px;}}
-  .page-footer img{{height:20px;opacity:.55;}}
+  .page-footer .brand-row{{display:inline-flex;align-items:center;gap:10px;flex:0 0 auto;flex-wrap:nowrap;}}
+  .page-footer .brand-logo{{height:20px;width:auto;opacity:.55;object-fit:contain;}}
+  .page-footer .brand-logo.deanza-logo{{height:24px;}}
+  .page-footer .footer-copy{{flex:1 1 220px;}}
 </style>
 </head>
 <body>
@@ -1713,16 +1760,13 @@ def _career_homepage_document(
         <h1>{html_lib.escape(course_meta["title"])}</h1>
         <div class="lead">{html_lib.escape(course_meta["lead"])}</div>
       </div>
-      <div>
-        <img class="cti-logo" src="{CTI_LOGO_URL}" alt="Computing Talent Initiative" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-        <div class="cti-logo-fallback">Computing Talent<br>Initiative</div>
-      </div>
+      <div>{header_brand}</div>
     </div>
     <div class="progress-status" id="progress-status" hidden></div>
     {modules_html}
     <footer class="page-footer">
-      <img src="{CTI_LOGO_URL}" alt="" onerror="this.style.display='none'">
-      <span>{html_lib.escape(course_meta["footer"])}</span>
+      {footer_brand}
+      <span class="footer-copy">{html_lib.escape(course_meta["footer"])}</span>
     </footer>
   </div>
   <script>
@@ -1954,6 +1998,7 @@ def _render_career_course_index(
         help_state = _state_entry_for_artifact(help_path, manifest_path, help_fm, state or manifest)
         scheduled_options = {
             "logo_url": CTI_LOGO_URL,
+            "deanza_logo_url": DE_ANZA_LOGO_URL if course_key == "course1" else None,
             "module_groups": module_groups,
             "module_links": module_links,
             "help_link": {
@@ -2195,6 +2240,7 @@ def render_hosted_files(
     *,
     manifest: dict | None = None,
     state: dict | None = None,
+    include_indexes: bool = True,
 ) -> dict:
     manifest_data = manifest or load_json(manifest_path)
     course_key = course_dir_for_manifest(manifest_path).name
@@ -2221,6 +2267,9 @@ def render_hosted_files(
                 artifact_links=artifact_links,
             )
         )
+
+    if not include_indexes:
+        return {"rendered": results, "indexes": []}
 
     for md_path in index_files:
         errors = validate_artifact(md_path)
