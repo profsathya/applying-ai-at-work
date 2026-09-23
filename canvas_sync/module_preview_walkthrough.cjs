@@ -66,9 +66,15 @@ async function checkWalkthrough(page, config, result) {
     assert.equal(copy, 'Copy reference table');
   } else if (config.submissionType === 'file_upload') {
     assert(finishText.includes('Submit this walk-through in Canvas'));
-    assert(finishText.includes('upload the file'));
-    assert.equal(copy, 'Copy work for your records');
-    assert.equal(await finish.locator('#walk-download').innerText(), 'Download Word document for Canvas submission');
+    if (config.pdfFromDocument) {
+      assert(finishText.includes('upload that PDF'));
+      assert.equal(copy, 'Copy work into your document');
+      assert.equal(await finish.locator('#walk-download').innerText(), 'Download Word backup');
+    } else {
+      assert(finishText.includes('upload the file'));
+      assert.equal(copy, 'Copy work for your records');
+      assert.equal(await finish.locator('#walk-download').innerText(), 'Download Word document for Canvas submission');
+    }
   } else {
     assert(finishText.includes('Submit this walk-through in Canvas'));
     assert(finishText.includes('text-entry box'));

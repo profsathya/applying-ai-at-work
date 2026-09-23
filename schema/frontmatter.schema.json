@@ -137,6 +137,10 @@
           "type": "string",
           "pattern": "^[a-z0-9]+(-[a-z0-9]+)*\\.docx$"
         },
+        "submission_format": {
+          "type": "string",
+          "enum": ["word", "pdf_from_document"]
+        },
         "document_prefix": {"type": "array", "items": {"type": "string"}},
         "document_suffix": {"type": "array", "items": {"type": "string"}},
         "records_destination": {
