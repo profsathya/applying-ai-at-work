@@ -2957,3 +2957,14 @@ convert to the box style.
 Provenance: Leslie, the question and the Candidate Log reading; Claude, the rule, the
 note, and the record.
 
+**Later, v0.2 of the note.** Leslie: a plain Canvas box cannot hold multi-step work, so
+in practice "box" only ever means short prose or a paste surface, and everything
+structured is the walkthrough. Agreed, with Sprint 1 as the proof (First frames' boxes
+were paste surfaces for the Candidate Log). The rule is now two working surfaces,
+walkthrough and document, with the box for short prose and submission. And her second
+question, whether the learner could start the table in the walkthrough and then keep
+working in a document: yes, that is the walkthrough's Word export, which carries the
+table and the "After the Dojo Lab" section; no separate template. Consequence for the
+build: the reading versions are fallbacks that need a document behind them; if the
+walkthroughs cannot be released before 5 October, an Assumptions walk template is made.
+
