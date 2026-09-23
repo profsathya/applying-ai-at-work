@@ -7,6 +7,7 @@
   const copyStatus = document.getElementById('walk-copy-status');
   const richOutput = document.getElementById('walk-rich-output');
   const hasTable = config.tasks.some(task => task.kind === 'table');
+  const pdfFromDocument = Boolean(config.pdfFromDocument);
   const inputs = Array.from(document.querySelectorAll('[data-walk-answer]'));
   const buttons = Array.from(document.querySelectorAll('[data-walk-feedback]'));
   let state = {answers: Object.create(null), feedback: Object.create(null)};
@@ -144,6 +145,8 @@
       richOutput.hidden = true;
       copyStatus.textContent = !config.hasWritable
         ? 'Copied the reference table. Paste it into a document if useful; copying has not submitted anything to Canvas.'
+        : pdfFromDocument
+        ? 'Copied as a table. Paste it into your continuing document, export the completed document as PDF, then submit that PDF in Canvas.'
         : config.submissionType === 'file_upload'
         ? 'Copied as a table for your records. Download the Word document and upload it through Submit Assignment in Canvas.'
         : 'Copied as a table. In Canvas, select Submit Assignment, paste into the text-entry box, and submit. Copying here has not submitted your work.';
@@ -151,7 +154,9 @@
       richOutput.focus();
       range.selectNodeContents(richOutput);
       selection.removeAllRanges(); selection.addRange(range);
-      copyStatus.textContent = config.submissionType === 'file_upload' && config.hasWritable
+      copyStatus.textContent = pdfFromDocument
+        ? 'Clipboard access is unavailable. Select and copy the table below into your continuing document, then export it as PDF for Canvas.'
+        : config.submissionType === 'file_upload' && config.hasWritable
         ? 'Clipboard access is unavailable. Download the Word document and upload it through Submit Assignment in Canvas.'
         : 'Clipboard access is unavailable. Copy the selected table below, or download the Word document. Copying has not submitted your work.';
     }
@@ -236,12 +241,16 @@
     if (hasTable) { await copyTables(); return; }
     try {
       await navigator.clipboard.writeText(output.value);
-      copyStatus.textContent = config.submissionType === 'file_upload'
+      copyStatus.textContent = pdfFromDocument
+        ? 'Copied. Paste it into your continuing document, export the completed document as PDF, then submit that PDF in Canvas.'
+        : config.submissionType === 'file_upload'
         ? 'Copied. This copy is for your records. Download the Word document and upload it through Submit Assignment in Canvas.'
         : 'Copied. In Canvas, select Submit Assignment, paste into the text-entry box, and submit. Copying here has not submitted your work.';
     } catch (_) {
       output.focus(); output.select();
-      copyStatus.textContent = config.submissionType === 'file_upload'
+      copyStatus.textContent = pdfFromDocument
+        ? 'Select and copy this text into your continuing document, then export it as PDF for Canvas.'
+        : config.submissionType === 'file_upload'
         ? 'Select and copy the text shown here for your records. Download the Word document to submit in Canvas.'
         : 'Select and copy the text shown here. Then paste it into the Canvas text-entry box and submit. Copying here has not submitted your work.';
     }
@@ -266,6 +275,8 @@
       setTimeout(() => URL.revokeObjectURL(url), 60000);
       copyStatus.textContent = !config.hasWritable
         ? 'Reference Word document downloaded for your records. Downloading has not submitted anything to Canvas.'
+        : pdfFromDocument
+        ? 'Word backup downloaded. Keep working in your continuing document and export that completed document as PDF for Canvas.'
         : config.submissionType === 'file_upload'
         ? 'Word document downloaded. Upload it through this Canvas assignment; downloading is not a submission.'
         : 'Word document downloaded for your records. Submit your response through this Canvas assignment; downloading is not a submission.';
@@ -275,7 +286,9 @@
         copyStatus.textContent = 'Download is unavailable. Select and copy the table below into a document.';
       } else {
         output.value = assembledText(); output.focus(); output.select();
-        copyStatus.textContent = 'Download is unavailable. Copy this text into a document, then upload that document to Canvas.';
+        copyStatus.textContent = pdfFromDocument
+          ? 'Download is unavailable. Copy this text into your continuing document, then export it as PDF for Canvas.'
+          : 'Download is unavailable. Copy this text into a document, then upload that document to Canvas.';
       }
     }
   });

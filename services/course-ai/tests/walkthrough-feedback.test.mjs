@@ -22,6 +22,7 @@ test('uses server criteria and only the selected response', async () => {
     assert.equal(url, 'https://provider.example/v1/messages');
     const payload = JSON.parse(options.body);
     assert.equal(payload.model, 'claude-sonnet-5');
+    assert.equal(payload.max_tokens, 640);
     assert.equal(payload.tools, undefined);
     assert.match(payload.messages[0].content, /Name a concrete event and one uncertainty/);
     assert.match(payload.messages[0].content, /<<<PARTICIPANT_RESPONSE>>>\nMy own observation/);

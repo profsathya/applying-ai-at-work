@@ -188,6 +188,7 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
 {self_check}
 {response}</section>''')
     submission = frontmatter['submission_type']
+    pdf_from_document = config.get('submission_format') == 'pdf_from_document'
     has_table = any(task.get('kind') == 'table' for task in config['tasks'])
     has_writable = any(task.get('kind') != 'table' or not task.get('read_only') for task in config['tasks'])
     if not has_writable:
@@ -200,12 +201,20 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
     elif submission == 'file_upload':
         intro = ('This is a Canvas walk-through assignment. Work through the activity one step at a time, '
                  'writing in the spaces provided. Your draft saves in this browser on this device when storage '
+                 'is available. At the bottom, copy your work into your continuing document, export it as PDF, '
+                 'and submit that PDF in Canvas.' if pdf_from_document else
+                 'This is a Canvas walk-through assignment. Work through the activity one step at a time, '
+                 'writing in the spaces provided. Your draft saves in this browser on this device when storage '
                  'is available. At the bottom, download your work and submit the file in Canvas.')
         finish_heading = 'Submit this walk-through in Canvas'
-        final_direction = ('Download your Word document. In Canvas, select Submit Assignment, upload the file, '
+        final_direction = ('Copy your completed work into the same working document used for this sprint. '
+                           'Export the completed document as PDF. In Canvas, select Submit Assignment, upload '
+                           'that PDF, and submit it. Saving, copying, or downloading here does not submit your work.'
+                           if pdf_from_document else
+                           'Download your Word document. In Canvas, select Submit Assignment, upload the file, '
                            'and submit it. Saving, copying, or downloading here does not submit your work.')
-        copy_label = 'Copy work for your records'
-        download_label = 'Download Word document for Canvas submission'
+        copy_label = 'Copy work into your document' if pdf_from_document else 'Copy work for your records'
+        download_label = 'Download Word backup' if pdf_from_document else 'Download Word document for Canvas submission'
     else:
         intro = ('This is a Canvas walk-through assignment. Work through the activity one step at a time, '
                  'writing in the spaces provided. Your draft saves in this browser on this device when storage '
@@ -219,14 +228,14 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
                            'submit your work.')
         copy_label = 'Copy text for Canvas submission'
         download_label = 'Download Word copy for your records'
-    download_class = ' class="walk-secondary"' if submission != 'file_upload' or not has_writable else ''
-    copy_class = ' class="walk-secondary"' if submission == 'file_upload' and has_writable else ''
+    download_class = ' class="walk-secondary"' if submission != 'file_upload' or not has_writable or pdf_from_document else ''
+    copy_class = ' class="walk-secondary"' if submission == 'file_upload' and has_writable and not pdf_from_document else ''
     download = (f'<button type="button" id="walk-download"{download_class}>'
                 f'{html.escape(download_label)}</button>' if config.get('export_filename') else '')
     copy_button = (f'<button type="button" id="walk-copy"{copy_class}>'
                    f'{html.escape(copy_label)}</button>')
     text_download = '<button type="button" id="walk-text-download" class="walk-secondary">Download text copy</button>'
-    actions = (download + copy_button + text_download if submission == 'file_upload' and has_writable
+    actions = (download + copy_button + text_download if submission == 'file_upload' and has_writable and not pdf_from_document
                else copy_button + text_download + download)
     feedback_intro = ('<p>AI feedback is optional and is not a grade. It reviews only the response you choose to send. Remove confidential or identifying details before asking for feedback.</p>'
                       if config.get('feedback_endpoint') and has_writable else '')
@@ -244,6 +253,7 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
         'feedbackEndpoint': config.get('feedback_endpoint'),
         'feedbackOmissionReason': config.get('feedback_omission_reason'),
         'exportFilename': config.get('export_filename'), 'submissionType': submission,
+        'pdfFromDocument': pdf_from_document,
         'documentPrefix': config.get('document_prefix', []),
         'documentSuffix': config.get('document_suffix', []),
     }
