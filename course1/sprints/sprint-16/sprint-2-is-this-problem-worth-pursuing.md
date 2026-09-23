@@ -19,7 +19,6 @@ You chose a problem at the end of Sprint 1 and wrote its Problem Frame. In this 
 
 - Probe into your assumptions to see how finding out if they are true might adjust, or even break, your frame.
 - Explore what kinds of solutions already exist that could solve or ease this problem, with AI helping you think it through.
-- Think about the costs, from a variety of angles, of solving this problem.
 
 **What you carry forward.** At the end of this sprint, you will have your Problem Frame, brought up to date with what you found out, and a verdict in your own words about whether to continue with this problem or not. If the answer is no, you bring your runner-up through the same work, so that either way you leave with an up-to-date Problem Frame for a problem worth pursuing. A no is a result, not a failure. The goal of this course is a workable problem, not a completed set of activities.
 
