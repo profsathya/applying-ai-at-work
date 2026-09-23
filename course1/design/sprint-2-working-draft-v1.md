@@ -52,7 +52,7 @@ Sprint total 100, held as a proposal until the team decision on points across al
 
 *Module header. Position 1.*
 
-You chose a problem at the end of Sprint 1 and wrote its Problem Frame. In this sprint, you will dig into some of the sections to push on the question: is this problem worth the next eight weeks? Over the sprint you will practice three things:
+You chose a problem at the end of Sprint 1 and wrote its Problem Frame. In this sprint, you will dig into some of the sections to push on the question, "Is this problem worth the next eight weeks?" Over the sprint you will practice three things:
 
 - Probe into your assumptions to see how finding out if they are true might adjust, or even break, your frame.
 - Explore what kinds of solutions already exist that could solve or ease this problem, with AI helping you think it through.

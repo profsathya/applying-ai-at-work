@@ -7,7 +7,7 @@ sprint: 16
 week: 1
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 1
-learning_goal: Decide, on evidence you gathered yourself, whether the problem you chose is worth the rest of the course.
+learning_goal: Gather evidence, adjust your frame, and decide whether the problem you chose is worth the rest of the course.
 points: null
 submission_type: none
 publish: false
@@ -15,7 +15,7 @@ publish: false
 
 # Sprint 2: Is This Problem Worth Pursuing?
 
-You chose a problem at the end of Sprint 1 and wrote its Problem Frame. In this sprint, you will dig into some of the sections to push on the question: is this problem worth the next eight weeks? Over the sprint you will practice three things:
+You chose a problem at the end of Sprint 1 and wrote its Problem Frame. In this sprint, you will dig into some of the sections to push on the question, "Is this problem worth the next eight weeks?" Over the sprint you will practice three things:
 
 - Probe into your assumptions to see how finding out if they are true might adjust, or even break, your frame.
 - Explore what kinds of solutions already exist that could solve or ease this problem, with AI helping you think it through.
