@@ -7,6 +7,7 @@ sprint: 16
 week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 11
+learning_goal: Say what came back from outside your own head, what you pushed back on, and what you are least sure how to find out.
 points: 10
 submission_type: file_upload
 delivery_mode: ai_activity

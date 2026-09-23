@@ -7,6 +7,7 @@ sprint: 16
 week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 8
+learning_goal: Fill in what exists with AI's help and your own look, and say what each thing means for your problem.
 points: 0
 submission_type: text_entry
 delivery_mode: guided_assignment

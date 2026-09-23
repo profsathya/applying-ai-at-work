@@ -7,6 +7,7 @@ sprint: 16
 week: 1
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 4
+learning_goal: Have AI push on your walk and your check, and decide what to keep and why.
 points: 0
 submission_type: text_entry
 delivery_mode: guided_assignment
