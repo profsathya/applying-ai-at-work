@@ -37,11 +37,11 @@
       escape(value).replace(/\n/g, '<br>') + '</td>').join('') + '</tr>').join('');
     return '<table style="border-collapse:collapse;width:100%;--walk-table-min-width:' +
       (task.columns.length * 180) + 'px">' + colgroup +
-      '<thead><tr>' + heads + '</tr></thead><tbody>' + rows + '</tbody></table>';
+      (task.header_rows === 0 ? '' : '<thead><tr>' + heads + '</tr></thead>') + '<tbody>' + rows + '</tbody></table>';
   }
   function tsv(task, answers) {
     const quote = value => /[\t\r\n"]/.test(value) ? '"' + value.replace(/"/g, '""') + '"' : value;
-    return [task.columns.map(column => column.label),
+    return [...(task.header_rows === 0 ? [] : [task.columns.map(column => column.label)]),
       ...task.rows.map(row => filledRow(task, row, answers))]
       .map(row => row.map(value => quote(String(value))).join('\t')).join('\n');
   }

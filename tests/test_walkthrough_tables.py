@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -45,6 +46,23 @@ def rectangular_block(width):
 
 
 class WalkthroughTableTests(unittest.TestCase):
+    def test_headerless_form_preserves_first_row_and_single_row_tables(self):
+        block = rectangular_block(2)
+        block['rows'] = [block['rows'][1]]
+        task = create_task(block, 'form', 'Your form', ['Use your own evidence.'],
+                           header_rows=0, column_labels=['Field', 'Your answer'], response_cells={(1, 2)})
+        self.assertEqual(len(task['rows']), 1)
+        self.assertEqual(compare_task(block, task, header_rows=0, response_cells={(1, 2)}), [])
+        rendered = render_walkthrough_body({'title': 'Form', 'artifact_id': 'form',
+            'submission_type': 'file_upload', 'guided_assignment': {'version': '1', 'tasks': [task],
+            'records_destination': {'label': 'your map', 'url': 'https://docs.google.com/document/d/test/copy'}}}, '', {})
+        self.assertNotIn('<thead>', rendered.split('<script')[0])
+        self.assertIn('data-walk-answer="form.row-1.column-2"', rendered)
+        self.assertIn('Keep your own copy in <a', rendered)
+        self.assertIn('Guidance 1<br>Second line', rendered)
+        with self.assertRaisesRegex(TableMappingError, 'accessible label'):
+            create_task(block, 'form', 'Your form', ['Check it.'], header_rows=0, response_cells={(1, 2)})
+
     def test_candidate_log_maps_four_columns_and_five_response_rows(self):
         block = candidate_log_block(); task = candidate_task()
         self.assertEqual(len(task['columns']), 4)
@@ -141,7 +159,7 @@ class WalkthroughTableTests(unittest.TestCase):
             block = rectangular_block(2)
             packet = root / 'source-packet.json'
             packet.write_text(json.dumps({'documents': [{'sections': [{'blocks': [block]}]}]}))
-            common = [str(ROOT / '.venv/bin/python'), str(ROOT / 'canvas_sync/walkthrough_tables.py'),
+            common = [sys.executable, str(ROOT / 'canvas_sync/walkthrough_tables.py'),
                       '--packet', str(packet), '--block', block['id'], '--view', 'base', '--task-id', 'reference']
             drafted = subprocess.run([*common, '--prompt', 'Use this grid', '--read-only'], cwd=ROOT,
                                      capture_output=True, text=True)
@@ -240,7 +258,7 @@ class WalkthroughTableTests(unittest.TestCase):
             common = ['--packet', str(packet), '--block', block['id'], '--view', 'base',
                       '--task-id', 'candidate-log']
             responses = [part for source_row in range(3, 8) for part in ('--response-row', str(source_row))]
-            command = [str(ROOT / '.venv/bin/python'), str(ROOT / 'canvas_sync/walkthrough_tables.py'),
+            command = [sys.executable, str(ROOT / 'canvas_sync/walkthrough_tables.py'),
                        *common, '--prompt', 'Get underneath three to five',
                        '--criterion', 'Complete three to five candidate rows.', *responses]
             drafted = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
@@ -249,13 +267,13 @@ class WalkthroughTableTests(unittest.TestCase):
             self.assertEqual(compare_task(block, task), [])
             artifact = root / 'candidate-log.md'
             artifact.write_text('---\n' + yaml.safe_dump({'guided_assignment': {'tasks': [task]}}) + '---\n')
-            verified = subprocess.run([str(ROOT / '.venv/bin/python'),
+            verified = subprocess.run([sys.executable,
                                        str(ROOT / 'canvas_sync/walkthrough_tables.py'), *common,
                                        '--artifact', str(artifact), *responses], cwd=ROOT, capture_output=True, text=True)
             self.assertEqual(verified.returncode, 0, verified.stderr)
             task['rows'][1]['cells'][0].pop('response')
             artifact.write_text('---\n' + yaml.safe_dump({'guided_assignment': {'tasks': [task]}}) + '---\n')
-            mismatch = subprocess.run([str(ROOT / '.venv/bin/python'),
+            mismatch = subprocess.run([sys.executable,
                                        str(ROOT / 'canvas_sync/walkthrough_tables.py'), *common,
                                        '--artifact', str(artifact), *responses], cwd=ROOT, capture_output=True, text=True)
             self.assertNotEqual(mismatch.returncode, 0)

@@ -14,7 +14,7 @@ import tempfile
 import unittest
 from contextlib import contextmanager
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import patch, Mock
 
 from canvas_sync import push
 from canvas_sync.state import state_path_for_manifest
@@ -94,6 +94,47 @@ class CountingClient:
 
 
 class CreateIdentityPersistenceTests(unittest.TestCase):
+    def test_walkthrough_uses_sparse_live_positions(self):
+        client = Mock()
+        client.list_modules.return_value = [{'id': 55, 'name': 'Sprint 3'}]
+        client.list_module_items.return_value = [
+            {'id': 8000, 'position': 2}, {'id': 8001, 'position': 3},
+            {'id': 9000, 'position': 4}, {'id': 9002, 'position': 5}]
+        artifacts = {'source': {'canvas_module_id': 55, 'canvas_module_item_id': 9000}}
+        result = push.walkthrough_position(client, 'source', artifacts, module_name='Sprint 3')
+        self.assertEqual(result, (55, 9000, 5, [8000, 8001, 9000, 9002]))
+        # A retry moving an existing item from above the anchor closes one slot.
+        result = push.walkthrough_position(client, 'source', artifacts, module_name='Sprint 3', current_item_id=8001)
+        self.assertEqual(result, (55, 9000, 4, [8000, 9000, 9002]))
+
+    def test_walkthrough_placement_identity_survives_order_check_failure(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            md = root / 'course1/sprints/sprint-99/tuple-overview.md'
+            manifest = root / 'course1/manifests/production.json'
+            state_dir = root / '.canvas-state'
+            write_page(md); write_manifest(manifest)
+            md.write_text(md.read_text().replace('position: 1', 'position: 2\nwalkthrough_after: source'))
+            client = CountingClient()
+            client.add_module_item = Mock(wraps=client.add_module_item)
+            client.list_module_items = Mock(return_value=[{'id': 9001, 'position': 1}, {'id': 9000, 'position': 2}])
+            client._request = Mock(return_value={'id': 9001, 'position': 2, 'published': False})
+            client.update_module_item = Mock(return_value={})
+            with chdir(root), patch.object(push, 'validate_artifact', return_value=[]), \
+                    patch.object(push.CanvasClient, 'from_env', return_value=client), \
+                    patch.object(push, 'walkthrough_position', return_value=(55, 9000, 2, [9000])), \
+                    patch.object(push, 'resolve_or_create_module', return_value=55):
+                with self.assertRaisesRegex(ValueError, 'source-adjacent module order'):
+                    push.push_artifact(md, manifest, state_dir=state_dir)
+                state_path = state_path_for_manifest(manifest, state_dir, json.loads(manifest.read_text()))
+                entry = json.loads(state_path.read_text())['artifacts']['tuple-overview']
+                self.assertEqual(entry['canvas_module_item_id'], 9001)
+                self.assertEqual(entry['content_hash'], push.PROVISIONAL_CONTENT_HASH)
+                client.list_module_items.return_value = [{'id': 9000, 'position': 1}, {'id': 9001, 'position': 2}]
+                push.push_artifact(md, manifest, state_dir=state_dir)
+            self.assertEqual(client.add_module_item.call_count, 1)
+            self.assertEqual(client.creates, 1)
+
     def test_identity_survives_failure_and_rerun_updates(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()

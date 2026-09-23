@@ -75,6 +75,16 @@ function zipEntry(data, wanted) {
 }
 
 (async () => {
+  const headerless = {...reference, header_rows: 0};
+  const noHeaderHtml = WalkthroughTables.html(headerless, {});
+  assert(!noHeaderHtml.includes('<thead>'));
+  assert.equal((noHeaderHtml.match(/<tr>/g) || []).length, 1);
+  assert(!WalkthroughTables.tsv(headerless, {}).startsWith('First\tSecond'));
+  const headerlessXml = zipEntry(Buffer.from(await WalkthroughDocx.build({title: 'Form', tasks: [headerless]}, {})
+    .arrayBuffer()), 'word/document.xml');
+  assert.equal((headerlessXml.match(/<w:tr>/g) || []).length, 1);
+  assert(!headerlessXml.includes('w:tblHeader'));
+  assert(headerlessXml.includes('Line one'));
   const file = WalkthroughDocx.build({title: 'Candidate Log', tasks: [task]}, answers);
   const xml = zipEntry(Buffer.from(await file.arrayBuffer()), 'word/document.xml');
   assert.equal((xml.match(/<w:gridCol /g) || []).length, 4);

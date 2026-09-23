@@ -123,6 +123,8 @@ def validate_artifact(md_path: Path) -> list[str]:
 
     errors.extend(validate_ai_activity_delivery(md_path, frontmatter))
     errors.extend(validate_guided_assignment(md_path, frontmatter, body))
+    from canvas_sync.walkthrough_feedback_check import check_registration
+    errors.extend(f'{md_path}: {error}' for error in check_registration(frontmatter))
     errors.extend(validate_artifact_references(md_path, body))
     source_id = frontmatter.get('walkthrough_after')
     if source_id:

@@ -1,0 +1,77 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-stakeholder-map-canvas-walkthrough",
+  "packet_sha256": "8ff1627fc37bdea2bf5421fcc4dff230bbe96a0248363d4851ce1362094c6b37",
+  "map_sha256": "69fdc32ee3b9894b999f0ec440bddd9e0719aed7a682cf0b06b3570b1403bedf",
+  "body_sha256": "065addfe5856c0b5bde615135abfe95c5ddafdd8b8defecdd553554aff901297",
+  "frontmatter_sha256": "f0c4bb9b1ba8b8832784d0bca0576b8b104768e756d570a4311d0fca8b122b4d",
+  "parts": [
+    {
+      "kind": "new",
+      "markdown": "# Stakeholder Map Canvas Walkthrough\n\nBefore you talk to anyone, write down what you already believe about the people connected to your problem, and be honest about which parts you actually know. Bring your current **Problem Frame**. You will leave with four stakeholder profiles, two or three assumptions to test, and a first contact.\n\n**Write each response yourself before asking for feedback.** In this walkthrough, the optional AI check points to a gap or asks a question about what you wrote. It cannot know your workplace or supply your evidence. You decide what to revise, in your own words. Keep your first draft before revising it so you have a view to test in the later Dojo Lab.\n\n## Set up your map\n\nWrite your name and the Problem Frame you are using. This is the map you will keep working in throughout the sprint. Use roles or initials for other people, and keep confidential details out of responses you send for feedback.\n\n## What changed, and why\n\n*Leave this table blank for now.* It stays in your copied or downloaded map so you can fill it in after the **Dojo Lab: test, widen, choose**.\n\n## Stakeholder 1 of 4: Affected\n\nStart with someone the problem reaches directly. If you do not have a workplace stakeholder, choose a mentor, community member, customer, or another person with a genuine relationship to the problem.\n\nAcross the next four tables, profile **one stakeholder in each relationship**. A person may hold several relationships; name every one that applies. Write **one to three sentences per field** and give every field a status and a reason. **Confirmed** means supported by a conversation, observation, or reliable documentation. **Inferred** means a reasoned hypothesis you still need to test.\n\nFor the question field, mark whether the concern behind your question is Confirmed or Inferred and say why. You are not claiming to know the person's answer.\n\nThe optional examples beside the fields describe Dana, the account lead in the course's handover example. Read them together for one complete profile, then write about your own situation. Feedback beside a row reviews only that row.\n\n## Stakeholder 2 of 4: Influential\n\nChoose someone who has a say over what changes. Keep impact and authority separate: the person who feels the problem most may have the least power to change it. If you write “high,” say what this person has influence over.\n\n## Stakeholder 3 of 4: Responsible for a constraint\n\nChoose someone responsible for a condition any change must work within. A constraint can be a policy or budget, but it can also be a history, a relationship, or a reputation. Mark what you are guessing.\n\n## Stakeholder 4 of 4: Positioned to challenge your frame\n\nChoose the person most likely to tell you that you are solving the wrong problem. That is much cheaper to hear now than after you have built something. Think about who sees a part of the situation you do not.\n\n## Assumption 1\n\nLook back at what you marked **Inferred**. Some guesses barely matter. A few hold your whole frame up. Pick **two or three assumptions** that would change what you do next if you turned out to be wrong.\n\nImagine the stakeholder tells you the opposite of what you assumed. Would you choose a different problem, different people to speak with, or a different picture of what fixed would look like? If you would carry on the same way, choose a more consequential assumption.\n\nA useful question invites a real account. **“Do you agree that X is the main problem?”** leads the person toward your answer. **“Walk me through the last time X happened. What did you actually do?”** leaves room for something you have not considered.\n\n> **Illustrative example from the handover problem**\n>\n> **Assumption:** Nobody has tried to fix the handover problem before.\n>\n> **Why it matters:** If someone tried and it died, the real problem is whatever killed the fix, and that changes my Problem Frame.\n>\n> **Question to ask:** “When an account changed hands badly in the past, what happened next?”\n>\n> **What a different answer changes:** If she names a failed attempt, my next conversation is with whoever ran it, not with the four managers.\n\nWrite your own four lines below.\n\n## Assumption 2\n\nChoose a second assumption and complete all four lines. Ask about a specific experience, past behavior, or concrete tradeoff. If your question asks the stakeholder to approve your solution, rewrite it.\n\n## Assumption 3 (only if you have a third)\n\nAdd a third block if another assumption would change your next move. Otherwise, leave this table blank. If you cannot say what a different answer would change, the assumption probably does not belong on this list.\n\n## Who you will talk to first\n\nChoose the person you will approach first for your real validation conversation, and name a backup in case they do not respond. Explain in **two or three sentences** why this person comes before anyone else.\n\nThey might be able to break your riskiest assumption, be the most affected person you know least about, sit at a point of disagreement, or speak for a larger group. Make the reason specific to your map.\n\n## Outreach log\n\n*Leave this table blank now.* Fill it in during the **Stakeholder Conversation**, as it happens.\n\nBefore you submit, check that your map has **four stakeholders**, every field marked **Confirmed or Inferred with a reason**, **two or three complete assumption blocks**, and **a first choice, a backup, and your reasoning**. Keep this file with your portfolio. You will update it in the Dojo Lab and after your conversation, then upload it again with your Stakeholder Conversation.",
+      "reason": "Instructional adaptation of the visible Google Doc and verified live hosted Canvas assignment: preserve table sequence, evidence, tone, and assessment; add adjacent responses and user-requested formative feedback.",
+      "based_on": [
+        "d-46083d085df8b33c:tab/t.0/body/1",
+        "d-46083d085df8b33c:tab/t.0/body/2",
+        "d-46083d085df8b33c:tab/t.0/body/3",
+        "d-46083d085df8b33c:tab/t.0/body/4",
+        "d-46083d085df8b33c:tab/t.0/body/5",
+        "d-46083d085df8b33c:tab/t.0/body/6",
+        "d-46083d085df8b33c:tab/t.0/body/7",
+        "d-46083d085df8b33c:tab/t.0/body/8",
+        "d-46083d085df8b33c:tab/t.0/body/9",
+        "d-46083d085df8b33c:tab/t.0/body/10",
+        "d-46083d085df8b33c:tab/t.0/body/11",
+        "d-46083d085df8b33c:tab/t.0/body/12",
+        "d-46083d085df8b33c:tab/t.0/body/13",
+        "d-46083d085df8b33c:tab/t.0/body/14",
+        "d-46083d085df8b33c:tab/t.0/body/15",
+        "d-46083d085df8b33c:tab/t.0/body/16",
+        "d-46083d085df8b33c:tab/t.0/body/17",
+        "d-46083d085df8b33c:tab/t.0/body/18",
+        "d-46083d085df8b33c:tab/t.0/body/19",
+        "d-46083d085df8b33c:tab/t.0/body/20",
+        "d-46083d085df8b33c:tab/t.0/body/21",
+        "d-46083d085df8b33c:tab/t.0/body/22",
+        "d-46083d085df8b33c:tab/t.0/body/23",
+        "d-46083d085df8b33c:tab/t.0/body/24",
+        "d-46083d085df8b33c:tab/t.0/body/25",
+        "d-46083d085df8b33c:tab/t.0/body/26",
+        "d-46083d085df8b33c:tab/t.0/body/27",
+        "d-46083d085df8b33c:tab/t.0/body/28",
+        "d-46083d085df8b33c:tab/t.0/body/29",
+        "d-46083d085df8b33c:tab/t.0/body/30",
+        "d-46083d085df8b33c:tab/t.0/body/31",
+        "d-46083d085df8b33c:tab/t.0/body/32",
+        "d-46083d085df8b33c:tab/t.0/body/33",
+        "d-46083d085df8b33c:tab/t.0/body/34",
+        "d-46083d085df8b33c:tab/t.0/body/35",
+        "d-46083d085df8b33c:tab/t.0/body/36",
+        "d-46083d085df8b33c:tab/t.0/body/37",
+        "d-46083d085df8b33c:tab/t.0/body/38",
+        "d-46083d085df8b33c:tab/t.0/body/39",
+        "d-46083d085df8b33c:tab/t.0/body/40",
+        "d-46083d085df8b33c:tab/t.0/body/41",
+        "d-46083d085df8b33c:tab/t.0/body/42"
+      ]
+    }
+  ],
+  "metadata_decisions": [
+    "Storage sprint 16 is isolated drafting storage; live module is the original Sprint 3 module.",
+    "Title appends Canvas Walkthrough.",
+    "Task metadata contains exact source table text; cell mapping and full packet remain in private intake."
+  ],
+  "source_roles": {
+    "d-46083d085df8b33c": {
+      "role": "primary_authoring",
+      "reason": "User selected the Stakeholder Map template alongside the live Canvas assignment.",
+      "coverage_decision": "Use the complete currently visible PREVIEW_WITHOUT_SUGGESTIONS body. No comments returned. Hidden suggestions are unverified; no suggestions are accepted or inferred."
+    }
+  },
+  "decisions": [
+    "Instructional adaptation requested by user: write first, then interwoven formative AI feedback; this explicitly changes the source no-AI rule for this new unpublished alternative only.",
+    "All 11 source table grids and source text preserved through walkthrough_tables, base view. Seven headerless tables retain every original row. Profile tables retain their header. Later-use reflection and outreach grids remain read-only and blank.",
+    "Live Canvas assignment 7159 in course 180: 35 points, online_upload, no rubric, due/availability dates or overrides. Original remains published.",
+    "Source voice preserved through direct second-person prompts, concrete handover examples, original terminology and restrained emphasis. New sections place each source table after its relevant directions."
+  ]
+}
