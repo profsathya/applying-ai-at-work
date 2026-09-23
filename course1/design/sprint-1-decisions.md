@@ -2842,3 +2842,57 @@ comments. Applied as draft v1.3 and template v0.2.
 Provenance: Leslie, every edit, the workflow, and the rulings; Claude, the pages and the
 record.
 
+## 23 September: Leslie's notes on the rest of the Sprint 2 draft (v1.3)
+
+34 tracked changes, 17 comments, from What solutions already exist to the reflection.
+Applied as draft v1.4, template v0.3. Dispositions:
+
+- TC1 to TC34: applied as written. Among them: the bridge folded into the week 2 opening;
+  the Context section in her words; the table intro ("better to mark what you don't know
+  than make something up"); "or do I personally"; the problem named above each column-1
+  example (TC7, and the garden problem filled in for TC13); the garden questions in her
+  words; her column 2 examples for all three rows; "The whole table" as a section; the
+  guardrail as "take another look at the first column"; the Dojo Lab's goal paragraph;
+  TC28 (the Confirmation paragraph) deleted, with one sentence restored inside move 2 at
+  the point of the look; the graded write-up's questions 1, 2, and 4 and the Problem Frame
+  item's opening in her words.
+- C0 (does "what you want back and in what shape" actually happen?): sentence cut.
+- C1 (the other-two-Cs paragraph is too much): cut. Choices gets one sentence where it is
+  used (graded write-up, question 2); Confirmation gets one sentence where it is used
+  (Dojo Lab, move 2).
+- C2 (columns 2 and 3 back to back): yes. The page now teaches column 1, then columns 2
+  and 3 together one row at a time, then the whole table. Template matches.
+- C3 (remind them of the problem): her TC7 line, and the garden problem in one line.
+- C4 ("is there a name for this" and "does anyone here do this well" do not belong in the
+  handover column 1): removed from that example. "Name for this" stays in the garden
+  example where it is a real question; "anyone doing it well" is already a brainstorm
+  prompt.
+- C5 (column 3's "questions"): her reading adopted. Column 3 is now "good, bad, not sure":
+  reasons it would be good for the problem, reasons it might be bad, and what you are
+  honestly not sure about. Header changed in the page, the template, and the worked
+  example. Example rewritten in her form (the CRM field).
+- C6 (where does the one line before you leave go?): cut from the OYP and from the Dojo
+  Lab's close; the graded write-up's question 5 asks it, and the transcript's last message
+  carries it.
+- C7 (can the Dojo give the table back for pasting?): yes; move 1 and move 3 now ask for
+  the whole table back with AI's rows marked, to paste into the document.
+- C8 (how do they decide which rows?): start with WHICH FIRST's rows, or the ones that
+  would most change the problem if real here; three or four.
+- C9 (the final Me turn is unclear): rewritten as "Before you ask for the transcript," a
+  plain four-item list of what to write in the last message.
+- C10 (they will not have the table as they started it): the OYP submission holds it;
+  question 1 now says so and asks for a sentence or two, full or thin, things or questions.
+- C11, C12, C13 (questions 2 and 3 hard to follow; kept/set aside/not sure not intuitive):
+  her wording for both questions; the example rewritten to match; the response tasks
+  renamed (what-changed) and their criteria rewritten.
+- C14 (the Problem Frame item: too much for one page, and the Dojo step in the middle):
+  [OPEN] on the page with Claude's recommendation: cut Part 1, the Dojo step; three boxes
+  (what came back, the frame pasted whole from the Google Doc as Sprint 1 does, the
+  verdict); Part 2 given a four-line guide. Held for her ruling.
+- C15 (Dojo activities placeholdered for a later pass): noted; the [NOTE]s stay.
+- C16 (reflection as separate boxes?): [OPEN] on the page. The mechanism allows a list of
+  questions; Sprint 1 uses one. Recommendation: one, cut to three questions.
+
+Provenance: Leslie, every edit and comment; Claude, the dispositions, the pages, and the
+record.
+
