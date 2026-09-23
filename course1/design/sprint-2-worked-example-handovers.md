@@ -84,7 +84,7 @@ Checked against: the three managers, Thursday, one in the meeting and two after.
 
 ### What already exists
 
-| What exists | How it works, as far as you know | What it means for your problem: pluses, minuses, questions |
+| What exists | How it works, as far as you know | What it means for your problem: good, bad, not sure |
 |---|---|---|
 | An owner field in our CRM | Whoever edits the record sets the owner. I have never seen anyone use it. (AI: standard in every CRM; usually a dropdown, often with a change log) | Plus: it already exists and costs nothing. Minus: nobody is made to use it. Question: is ours switched on? |
 | A handover checklist | The sales team next door has one; the outgoing person fills it in and the incoming person signs it off | Plus: forces the conversation to be written down. Minus: still between two people; the rest of the team does not see it. Question: does theirs go anywhere after it is signed? |
