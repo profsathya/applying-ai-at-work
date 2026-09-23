@@ -1,6 +1,6 @@
 ---
 purpose: Sprint 2, whole sprint, working draft for Leslie's review, on the Sprint 1 model; becomes the cut-ready source for Jeremy's build once reviewed
-status: v1.4, 23 September 2026. Leslie's notes on the rest of the doc applied (34 tracked changes, 17 comments): What solutions already exist reworked again (columns 2 and 3 taught together per row; the problem named above each example; column 3 as good, bad, not sure; the other-two-Cs paragraph and the one-line closers cut); the Dojo Lab hands the table back for pasting and says how to pick rows; the graded write-up's questions in her words; the Problem Frame item and the reflection carry [OPEN] markers for her rulings. v1.3, 21 September 2026. Leslie's first pass on the second half applied (16 tracked changes, 4 comments): What solutions already exist rebuilt column by column with a bridge from week 1, Context reflection in her words, and guidance and examples for each column; Dojo Lab: explore what already exists rebuilt as one conversation in three moves with the look inside the row loop and labeled prompts; whole frame pasted everywhere; transcript submission. v1.2, 21 September 2026. Leslie's 3c ruling applied: What a change would ask of people is off week 1 entirely (walk page section and graded Part 3 removed); 3c is one line in the Problem Frame item, drawn from the minuses in the What already exists table after the real look; verdict, Dojo step, worked example, and reflection follow. Second half ready for Leslie's run. Leslie's second pass on the first half applied: eight tracked changes; Dojo Lab submits a transcript as Sprint 1 does; the frame-paste line covers both Dojo and plain chat; What a change would ask of people is off the walk page, destination open; the Problem Frame copy moves to the end of Sprint 1 (Jeremy). Held for her rulings: 3c's destination, and the Assumptions walk activity sheet with the graded item's paste shape. Dojo Lab: test your assumptions carries Leslie's 20 September run (labeled prompt, paste-your-frame line for a chat outside the Dojo, illustrative exchange from the run, [NOTE] retired); both Dojo Labs stay interim single-shot prompts until the course doc exists (Leslie, 20 September). The handover example's part 6 row "nobody has tried" is now "nothing has been tried that stuck" wherever the pages quote it. Item 8's verdict example names the obvious-fix tension (Leslie, 20 September). v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
+status: v2.0, 23 September 2026, cut-ready. Leslie's rulings applied: the Problem Frame item loses its Dojo step (three boxes); the reflection is three questions in one box. Dig into your assumptions and What solutions already exist rewritten in walkthrough-ready form (Jeremy's presentation: walkthrough, fields with ask/example/avoid, Word export, later-use sections); the week 1 graded item is paste your table and your check. v1.4, 23 September 2026. Leslie's notes on the rest of the doc applied (34 tracked changes, 17 comments): What solutions already exist reworked again (columns 2 and 3 taught together per row; the problem named above each example; column 3 as good, bad, not sure; the other-two-Cs paragraph and the one-line closers cut); the Dojo Lab hands the table back for pasting and says how to pick rows; the graded write-up's questions in her words; the Problem Frame item and the reflection carry [OPEN] markers for her rulings. v1.3, 21 September 2026. Leslie's first pass on the second half applied (16 tracked changes, 4 comments): What solutions already exist rebuilt column by column with a bridge from week 1, Context reflection in her words, and guidance and examples for each column; Dojo Lab: explore what already exists rebuilt as one conversation in three moves with the look inside the row loop and labeled prompts; whole frame pasted everywhere; transcript submission. v1.2, 21 September 2026. Leslie's 3c ruling applied: What a change would ask of people is off week 1 entirely (walk page section and graded Part 3 removed); 3c is one line in the Problem Frame item, drawn from the minuses in the What already exists table after the real look; verdict, Dojo step, worked example, and reflection follow. Second half ready for Leslie's run. Leslie's second pass on the first half applied: eight tracked changes; Dojo Lab submits a transcript as Sprint 1 does; the frame-paste line covers both Dojo and plain chat; What a change would ask of people is off the walk page, destination open; the Problem Frame copy moves to the end of Sprint 1 (Jeremy). Held for her rulings: 3c's destination, and the Assumptions walk activity sheet with the graded item's paste shape. Dojo Lab: test your assumptions carries Leslie's 20 September run (labeled prompt, paste-your-frame line for a chat outside the Dojo, illustrative exchange from the run, [NOTE] retired); both Dojo Labs stay interim single-shot prompts until the course doc exists (Leslie, 20 September). The handover example's part 6 row "nobody has tried" is now "nothing has been tried that stuck" wherever the pages quote it. Item 8's verdict example names the obvious-fix tension (Leslie, 20 September). v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
 depends_on: sprint-2-outline.md (v5.2); problem-frame-template.md; what-already-exists-template.md; sprint-2-worked-example-handovers.md; course1/sprints/sprint-14/ (Sprint 1 as published, for register and format); course1/sprints/sprint-15/ (Sprint 3 V3, for the hand-off and the Dojo Lab form)
 storage: the next storage folder after sprint-15, Jeremy's call; positions 1 to 11
 ---
@@ -9,42 +9,42 @@ storage: the next storage folder after sprint-15, Jeremy's call; positions 1 to 
 
 ## Cover note for Jeremy
 
-This file is the source for the Sprint 2 build. Everything below the line after this note is either participant text or a build block. Leslie is reviewing it section by section; sections 1 to 3 carry her first pass. The cut waits for the whole review.
+This file is the cut-ready source for the Sprint 2 build (v2.0, 23 September). Leslie has reviewed every page. Leslie and Claude build it together into the next storage folder, on a PR Leslie approves, with every page `publish: false` until she flips it.
 
 **Rules for the run**
 
 1. **Mode: faithful conversion, not instructional adaptation** (in the terms of `docs/AUTHORING.md`). Carry the text as written. Where Canvas mechanics force a change, keep the meaning and list the change in the authoring report.
-2. **Bracketed markers are reviewer notes.** `[TEAM DECISION: ...]` and `[INTERIM: ...]` carry into the pages verbatim for the review export and are stripped at publish. `[NOTE]` lines are for you and are not page text.
-3. **`[BUILD]` blocks and the italic line under each item title are configuration**, not page text: kind, position, points, submit or not, and the box prompts and criteria under each **Response tasks** heading (one response box per bullet, `presentation: reading` wherever there is more than one box).
+2. **Bracketed markers are reviewer notes.** `[TEAM DECISION: ...]` and `[INTERIM: ...]` carry into the pages verbatim for the review export and are stripped at publish. `[NOTE]` lines are for the builder and are not page text.
+3. **`[BUILD]` blocks and the italic line under each item title are configuration**, not page text: kind, position, points, submit or not, presentation, and the box prompts and criteria under each **Response tasks** heading.
 4. **"More help" paragraphs** are collapsed help, as in Sprint 1. If no disclosure exists, render inline as an indented aside and say so.
-5. **Section-to-box mapping**, for pages with more than one box, is given in each item's `[BUILD]` block.
-6. **Two documents.** The Problem Frame document and the What already exists table are Google Doc templates, copy-on-click, links to be supplied by Leslie. The Candidate Log link is the Sprint 1 one; Sprint 2 only reopens it for the runner-up path.
-7. **The Dojo.** Every AI activity says "your Dojo, or any AI chat you already have," matching Sprint 3 V3. Prompts run in either.
+5. **Presentation per item** is in the table below and in each `[BUILD]` block. The two activity pages (positions 3 and 7) are written for `presentation: walkthrough` (the 22 September renderer): group tasks with `layout: table`, each field with ask, example, and avoid, no feedback endpoint, a Word export with later-use sections. Their `[BUILD]` blocks carry the field spec. If the walkthrough renderer is not ready at the cut, build them as `reading` with one box each and link the Google Doc fallback for the table.
+6. **One document.** The Problem Frame document is a Google Doc template, copy-on-click, link to be supplied by Leslie; its creation moves to the end of Sprint 1 (Jeremy). The Candidate Log link is the Sprint 1 one; Sprint 2 only reopens it for the runner-up path.
+7. **The Dojo.** Every AI activity says "your Dojo, or any AI chat you already have," matching Sprint 3 V3, with a line that covers both. Both Dojo Labs are interim single-shot prompts (Leslie, 20 September) with `dojo_submission: mode: transcript`, `prompt_version: v1`. The first prompt was run by Leslie on 20 September; the second has not been run.
 8. **Send back the readback** before the pages go to Clare.
 
 **Items**
 
-| Position | Item | Kind | Points | Submit | Boxes | Week |
+| Position | Item | Kind | Points | Submit | Presentation | Week |
 |---|---|---|---|---|---|---|
 | 1 | Sprint 2: Is This Problem Worth Pursuing? | Module header | | | | |
-| 2 | Introduction: Is this problem worth pursuing? | Page | | | | One |
-| 3 | Dig into your assumptions | Own your progress | 0 | must submit | 4 | One |
-| 4 | Dojo Lab: test your assumptions | Own your progress | 0 | must submit | 1 | One |
-| 5 | Sprint 2 Self-check | Self-check | 5 | completion | 5 questions | One |
-| 6 | Which assumptions, and your check | Graded item | 20 | one submission | 3 | One |
-| 7 | What solutions already exist | Own your progress | 0 | must submit | 1 | Two |
-| 8 | Dojo Lab: explore what already exists | Own your progress | 0 | must submit | 2 | Two |
-| 9 | What exists, and what it means | Graded item | 20 | one submission | 5 | Two |
-| 10 | Problem Frame: is it worth pursuing? | Graded item | 45 | one submission | 4 | Two |
-| 11 | Sprint 2 Reflection: what the world said back | Graded item | 10 | ai_activity, JSON upload | 1 | Two |
+| 2 | Introduction: Is this problem worth pursuing? | Page | | | `page_presentation: reading` | One |
+| 3 | Dig into your assumptions | Own your progress | 0 | must submit | `walkthrough`, 2 tasks, Word export | One |
+| 4 | Dojo Lab: test your assumptions | Own your progress | 0 | must submit | transcript, 1 box | One |
+| 5 | Sprint 2 Self-check | Self-check | 5 | completion | practice quiz, 5 questions | One |
+| 6 | Which assumptions, and your check | Graded item | 20 | one submission | `reading`, 2 boxes | One |
+| 7 | What solutions already exist | Own your progress | 0 | must submit | `walkthrough`, 1 task, Word export | Two |
+| 8 | Dojo Lab: explore what already exists | Own your progress | 0 | must submit | transcript, 1 box | Two |
+| 9 | What exists, and what it means | Graded item | 20 | one submission | `reading`, 5 boxes | Two |
+| 10 | Problem Frame: is it worth pursuing? | Graded item | 45 | one submission | `reading`, 3 boxes | Two |
+| 11 | Sprint 2 Reflection: what the world said back | Graded item | 10 | ai_activity, JSON upload | 1 question, 3 parts | Two |
 
 Sprint total 100, held as a proposal until the team decision on points across all five sprints.
 
-**Where things are.** This file: `course1/design/sprint-2-working-draft-v1.md`. Why each choice was made: `course1/design/sprint-1-decisions.md`, 16 and 17 September. The document sources: `problem-frame-template.md`, `what-already-exists-template.md`. The worked example end to end: `sprint-2-worked-example-handovers.md`.
+**For the team's consistency pass**, after publishing: the self-check rhythm (Sprint 2's week 2 teaches new material and has no check); the Dojo submission shape (transcript everywhere); the interim prompts and their labels; the [INTERIM] sentence about the course document; whether "activity sheet" or "Log" is the course-wide word.
 
-**[NOTE] Two core examples run the sprint**, carried from Sprint 1: account handovers (A, every item) and the neighborhood garden plot (B, where a qualitative case teaches something A cannot). Sprint 3 V3 continues the handover story with Dana the account lead, so Dana is the account lead here too. Nothing from Leslie's own run appears in the material.
+**Where things are.** This file: `course1/design/sprint-2-working-draft-v1.md`. Why each choice was made: `course1/design/sprint-1-decisions.md`, 16 to 23 September. The document source: `problem-frame-template.md`. The fallback table: `what-already-exists-template.md`. The worked example end to end: `sprint-2-worked-example-handovers.md`.
 
-**[NOTE] The two unknowns Leslie named**, for her to read first: whether item 3 reads as thinking rather than form-filling, and what the Dojo prompts in items 4 and 8 actually produce. Claude runs both prompts on the handover example and hands over the transcripts before the cut.
+**[NOTE] Two core examples run the sprint**, carried from Sprint 1: account handovers (A, every item) and the neighborhood garden plot (B, where a qualitative case teaches something A cannot). Sprint 3 V3 continues the handover story with Dana the account lead; nothing here pre-empts its conflict example.
 
 ---
 
@@ -123,91 +123,80 @@ Next up: **Dig into your assumptions**.
 
 *Own your progress. Position 3. 0 points. Submit to mark it complete. No AI on this one.*
 
-[NOTE] This is the first of Leslie's two unknowns: read it as a participant and ask whether it makes you think or makes you fill in boxes. The page runs as guidance, then example, then your box, one step at a time; each numbered section ends in its own box.
-
 Open your Problem Frame from Sprint 1. The Problem Frame is a living document, and you are going to be making changes, additions, and adjustments to it throughout the course. During this sprint you are going to expand on Part 6: your assumptions, and on Part 3: who is affected and costs.
 
-[NOTE] Leslie, 21 September: the copy of the Problem Frame document (paste Part D of the Candidate Log) moves to the end of Sprint 1, with Jeremy. If it is not there by 5 October, the make-a-copy line returns here. "And on Part 3" is 3c, filled in week 2 from the What already exists table when the frame is brought up to date (Leslie, 21 September).
+[NOTE] Leslie, 21 September: the copy of the Problem Frame document (paste Part D of the Candidate Log) moves to the end of Sprint 1, with Jeremy. If it is not there by 5 October, the make-a-copy line returns here. The two activity sheets (Assumptions walk, What already exists) are the walkthrough pages themselves, which export a Word file; no Google Doc templates for them unless the walkthrough renderer is not ready at the cut.
 
-Let's start by looking at Part 6: your assumptions. Every line there is something you wrote as if it were true, but you do not really know yet. Behind each assumption are questions, whose answers could change the shape of your problem, or show you that it is not a problem worth working on. For example:
+Let's start by looking at Part 6: your assumptions. Every line there is something you wrote as if it were true, but you do not really know yet. Behind each assumption are questions, whose answers could change the shape of your problem, or show you that it is not a problem worth working on. The frame is only as good as the assumptions it stands on, so this sprint starts here.
 
+Work without AI on this page. The next activity has AI push back on what you write here, and that only works if you bring your own thinking. This page is a table, one row per assumption, and a short block at the end for the one you will check. You get a Word file of it when you finish; keep it for week 2.
+
+### Walk your assumptions
+
+Take each assumption from Part 6 in turn and ask two things. What are the questions behind this assumption? And what different answers could change my problem? For some you might have many thoughts. For others, very little. Uneven answers are the normal result, and "nothing much" is a real answer for some lines.
+
+Then decide: is this one risky? It is risky if an answer that went the other way would end the problem. Some could end it in principle but you already have reason to think they will not: customer service hears about it from clients all the time, or managers have mentioned frustration before. That is you accepting an assumption after looking at what you know, and you write the reason down with it.
+
+> **Example, one row.**
+>
 > **My assumption:** All four managers are affected by account handovers not happening, not just the one I sat next to.
 >
 > **Questions behind my assumption:** Are the other managers affected by this problem? Is it all four of them? Are they affected in the same way? How bad is the impact?
 >
-> **Different answers that could change my problem:**
+> **Different answers that could change my problem:** None of them think this is a problem, so maybe I need to rethink my problem altogether. Two of them think it is a huge problem and the other two think it is mild, so I dig into the differences, but there is enough to proceed. All of them see it, so I proceed with a plan for finding out more from each.
 >
-> - None of them think this is a problem. So maybe I need to rethink my problem altogether.
-> - Two of them think it is a huge problem and the other two think it is mild. So I probably need to dig into the differences to learn more, but there is enough here to proceed.
-> - All of them indicate this would be a nice problem to solve. So I proceed with a plan for finding out more from each of them.
+> **Risky?** Could end it. If only one manager sees this, it is one person's habit, not a problem for nine weeks.
 
-That is why this sprint starts here. The frame is only as good as the assumptions it stands on, so it is time to dig into those assumptions.
+*More help: a row where the answer changes little.* *Managers act on stale ownership for days.* Questions: how long, really? Different answers: one day, several days, a week; none changes the problem, because even one day means the client repeats their history. Risky? Accepted, because the length does not change whether this is worth pursuing. A real row, and short.
 
-Work without AI on this page. The next activity has AI push back on what you write here, and that only works if you bring your human value to that conversation.
+*More help: a real kill, from the garden plot.* *New plot-holders quit because they had no one to ask.* Questions: why did last year's new people actually stop coming? Different answers: no one to ask, which is my frame; the plots were too far away or too big; they never meant to stay past one season. If it is either of the last two, pairing new people with old hands fixes nothing. Risky? Could end it, and it is the one I would check.
 
-### 1. Walk your list
+### Choose one to check
 
-Take each assumption in turn and ask two things. What are the questions behind this assumption? And what different answers could change my problem? For some you might have many thoughts. For others, very little. Uneven answers are the normal result, and "nothing much" is a real answer for some lines. Let us look at another assumption from the account handovers problem:
+From the rows you marked as risky, pick one to actually follow up on this week: talk to one person about it, or look into something that can tell you more. Two criteria: you marked it risky, and you can follow up on it this week. If none of your rows is very risky, pick one that would be useful to learn more about. Even if you are pretty confident, you can sit down with one manager for ten minutes, or check the customer service logs.
 
-> **My assumption:** Clients notice and it costs them something.
+Write up exactly what you want to check, before you look. Most of it comes from the row you already wrote.
+
+> **Example.**
 >
-> **Questions behind my assumption:** Has a client ever raised this as an issue? Are there any other client complaints that could be traced back to this, even if the client does not specifically know that the handoff is not happening behind the scenes? Do clients feel like they have to give the same information to multiple people from our organization? If yes, do they care?
+> **My assumption, stated so that it could be wrong:** Account managers see account handovers as a problem in effectively caring for clients.
 >
-> **Different answers that could change my problem:**
+> **What result would tell me it was wrong:** A manager tells me this is not an issue at all.
 >
-> - No evidence of clients noticing or caring. So I might need to rethink my problem.
-> - Some clients are complaining about this. So I probably need to dig into which ones and what their experiences are, but there is enough to proceed.
-> - Many or most clients have complained about this, or we are losing business. So I proceed.
+> **Who I will ask, or what I will go and look at, and when:** [Name of manager], at our one-on-one next Tuesday.
+>
+> **What I will ask:** I heard [other manager's name] mention that she gets frustrated when she takes over an account because she feels like she is starting from scratch having to understand the relationship. Is that your experience? Do you feel like you have to ask clients for a bunch of information you should already have? Does that seem like a problem for you? For the clients?
 
-*More help: an assumption where the answer changes little.* From the same frame: *managers act on stale ownership for days.* Questions behind it: how long, really? Different answers: one day, several days, a week. None of them changes the problem. Even one day means the client repeats their history. That is a real result, and it is short.
+*More help: a check you look at rather than ask.* Garden plot: most new plot-holders quit by midsummer. Wrong if more than half of last year's new names are still gardening in August. What I will look at: last year's sign-up sheet against a walk past the plots this weekend. What I will ask: how many people have plots this year who were signed up last year?
 
-Write yours the same way, one assumption at a time, in the box below: the assumption, the questions behind it, and the different answers that could change your problem. Rough is right.
+This check is a temperature check. You are collecting information and using your judgement to decide whether to keep looking into this problem.
 
-### 2. Which are the riskiest?
-
-Read back over what you wrote. You probably have some assumptions that, if they went the other way, might kill the problem. List those in the box below, and say why. We want to take some time to look at them closely. Let us start with the ones that have the potential to end the problem.
-
-For example: *none of the managers think the lack of account handovers is a problem.* On the surface, that seems like a big deal. However, what if you know that your customer service department hears about this from clients all the time? Or what if you have heard managers indirectly or informally mention frustration with this before? Then, even though this is an assumption that could kill your problem, you can use your judgment to determine that there is not a high risk that it would. That is you intentionally accepting an assumption because you see it is not particularly risky. It is a decision you are making after looking at the evidence, and you write the reason down with it.
-
-*More help: an example of an actual kill, from the garden plot.* The assumption: *new plot-holders quit because they had no one to ask.* Questions behind it: why did last year's new people actually stop coming? Different answers: they had no one to ask, which is my frame; the plots were too far from where they live, or too big for a first year; they never meant to stay past one season. If it is either of the last two, pairing new people with old hands fixes nothing, and this problem, as I have framed it, is dead. Nothing I know makes those answers unlikely. This one is risky, and it is the one I would check.
-
-*More help: another handover example.* Two could end it: the managers one, because if it is one person's habit there is nothing here; and *nothing has been tried that stuck*, because if something was tried and died, I am working on the wrong problem. The clients one changes the goal but not whether the problem is real, so it is not on this list. I am accepting *managers act on stale ownership for days*: even if it is one day, the client still repeats their history, and the length does not change whether this is worth pursuing.
-
-### 3. Choose one to check
-
-From those riskiest assumptions, the ones that could potentially end the problem, pick one to actually follow up on this week. You are going to either talk to one person about this assumption, or look into something that can tell you more. Two criteria to help you decide which assumption to pursue. It should be an assumption that:
-
-- you have deemed as risky or somewhat risky, **and**
-- you can actually follow up on this week.
-
-If none of your assumptions are deemed super-risky, pick one that would be useful to learn more about. Even if you are pretty confident that the account handoffs are an issue, you can sit down with one manager for ten minutes to hear more about their experience with the account handovers, or check the customer service logs to see what clients are saying about this.
-
-Once you have picked the assumption, take a minute to write up exactly what you want to check. Most of this will come from what you have already written:
-
-- **What is your assumption, stated so that it could be wrong?** Account managers see account handovers as a problem in effectively caring for clients.
-- **What result would tell you it was wrong?** A manager tells you this is not an issue at all.
-- **Who will you ask, or what will you go and look at, and when?** [Name of manager], at our one-on-one next Tuesday.
-- **What will you ask?** I heard [other manager's name] mention that she gets frustrated when she takes over an account because she feels like she is starting from scratch having to understand the relationship. Is that your experience? Do you feel like you have to ask clients for a bunch of information you should already have? Does that seem like a problem for you? For the clients?
-
-*More help: a check you look at rather than ask.* For the garden plot: the assumption, stated so it could be wrong, is that most new plot-holders quit by midsummer. What would tell me I was wrong: more than half of last year's new names still gardening in August. What I will look at, and when: last year's sign-up sheet against a walk past the plots this weekend. What I will ask: how many people have plots this year who were signed up last year?
-
-*More help: another handover example.* The assumption: the other three managers have had the same thing happen. What would tell me I was wrong: fewer than two of them describe it. Who and when: the three other managers, at the Thursday team meeting or after it.
-
-To be clear, this check is a temperature check. You are collecting information and using your judgement to decide whether to keep looking into this problem.
-
-Write your check in the box below, before you look.
-
-### 4. What happens to the other assumptions?
+### What happens to the other assumptions
 
 The assumptions you are not checking do not disappear. They stay in Part 6 of your frame, and in the last column, added this sprint, you write "not yet" against the ones still open and "accepted, because" against the ones you have made the call on. Sprint 3 is built for the open ones: that is where you take them to a real person. Checking one now is the start of that, not the whole of it.
 
-### Response tasks
-
-- **the-walk** (response). Prompt: *Your assumptions, one at a time: the assumption, the questions behind it, and the different answers that could change your problem.* Criteria: every assumption from Part 6 appears; each has at least one question behind it; the different-answers lines vary rather than repeating one formula; "nothing much" appears where it is honest.
-- **the-riskiest** (response). Prompt: *The assumptions that could kill the problem, and why. Any you are accepting after looking at the evidence, with the reason.* Criteria: names the riskiest, not the whole list; says why the others are adjustments rather than endings; each accepted assumption carries a reason that says why the risk is low.
-- **your-check** (response). Prompt: *The one you will check, written before you look: the assumption stated so it could be wrong, what result would say it was wrong, who or what you will check it against and when, and what you will ask.* Criteria: the assumption is one you deemed risky, or the reason it is not is given; the wrong-result line is concrete; a named person or observation and a day; if asking, the question is written out.
-
-> **[BUILD]** `presentation: reading`, three boxes. Section 1 feeds the-walk, section 2 the-riskiest, section 3 your-check. Section 4 has no box and renders after the last one. Copy-on-click link to the Problem Frame document to be supplied by Leslie.
+> **[BUILD]** `delivery_mode: guided_assignment`, `presentation: walkthrough`, no feedback endpoint (no AI on this page). Two group tasks, `layout: table`. Export filename `assumptions-walk.docx`.
+>
+> **Task 1, `the-walk`**, instruction section "Walk your assumptions", `repeat_count: 8`, labels "Assumption 1" to "Assumption 8", rows 4 to 8 marked optional. Fields, each with ask / example / avoid:
+>
+> - `assumption`, "My assumption" (text). Ask: one line from Part 6 of your frame, as you wrote it. Example: All four managers are affected, not just the one I sat next to. Avoid: rewriting it into something safer than what you actually assumed.
+> - `questions`, "Questions behind my assumption" (textarea). Ask: what would you have to find out to know whether this is true? Example: Are the other managers affected? All four? In the same way? How bad is it? Avoid: one question that just restates the assumption with a question mark.
+> - `answers`, "Different answers that could change my problem" (textarea). Ask: two or three ways the answer could come back, and what each would do to your problem. Example: None of them see it, so I rethink the problem. Two do and two do not, so I dig into the difference. All do, so I proceed. Avoid: three answers that all lead to "so I proceed."
+> - `risky`, "Risky?" (textarea). Ask: could an answer end the problem? Write "could end it, because," "accepted, because," or "not yet." Example: Could end it. If only one manager sees this, it is one person's habit. Avoid: "accepted" with no reason, or marking every row risky.
+>
+> Criteria: every assumption from Part 6 has a row; each row has at least one question; the answers vary rather than repeating one formula; every "accepted" carries a reason; "nothing much" appears where it is honest.
+>
+> **Task 2, `your-check`**, instruction section "Choose one to check", `repeat_count: 1`, label "The one I will check". Fields:
+>
+> - `assumption`, "My assumption, stated so that it could be wrong" (textarea). Ask: which row, in a form that a real answer could contradict. Example: Account managers see account handovers as a problem in caring for clients. Avoid: a statement nobody could disagree with.
+> - `wrong`, "What result would tell me it was wrong" (textarea). Ask: what would you have to hear or see to drop this. Example: A manager tells me this is not an issue at all. Avoid: a result you would explain away.
+> - `who-when`, "Who I will ask, or what I will look at, and when" (text). Ask: a named person or a specific thing, and a day this week. Example: Rae, at our one-on-one next Tuesday. Avoid: "the team," "soon."
+> - `ask`, "What I will ask" (textarea). Ask: the actual words, or what you will look for if it is an observation. Example: I heard Sam say she starts from scratch when she takes over an account. Is that your experience? Avoid: a question that tells them the answer you want.
+> - `why-this`, "Why this one" (textarea). Ask: why this row and not another risky one. Example: It could end the problem, and they sit near me. Avoid: "it seemed easiest."
+>
+> Criteria: the assumption is one marked risky, or the reason it is not is given; the wrong-result line is concrete; a named person or observation and a day; if asking, the question is written out.
+>
+> `document_after` on task 2: "What came back", "Leave this blank now. Fill it in week 2, after you have made the check: what you checked it against and when, what came back, and what you make of it." Section "What happens to the other assumptions" is unreferenced and renders before the tasks. Link to the Problem Frame document to be supplied by Leslie.
 
 ---
 
@@ -279,31 +268,26 @@ A short check that you are set up for this sprint before the work starts in earn
 
 *Graded item. Position 6. 20 points. One submission.*
 
-This is the write-up of the walk, and the completion of it. You have looked closely at your assumptions, decided which could end the problem, chosen one to check, and had AI push on all of it. Now put it in one place, in your words, so that your instructor can see the reasoning and so that you have it to come back to when the check comes in.
+This is the write-up of the walk. You have looked closely at your assumptions, decided which could end the problem, chosen one to check, and had AI push on all of it. Put it here so that your instructor can see the reasoning and so that you have it to come back to when the check comes in.
 
-Two parts. Each is short, and most of it exists already in your boxes from the last two activities; bring it forward and tidy it, in your own words. Remember, for each part you will see the guidance, then the example, then the box.
+### Part 1. Your table
 
-[NOTE] Leslie, 21 September: with the Assumptions walk activity sheet, this becomes "paste your table and your check," without repeated guidance and example. Rewrite waits on the sheet.
-
-### Part 1. The assumptions that could end the problem
-
-The one to three you named, and why these and not the others. For each: the assumption, and what answer would end the problem. Then the ones you are accepting, each with its reason.
-
-> **Example.** *All four managers are affected, not just the one I sat next to.* If only one of them sees it, this is one person's habit, not a problem for nine weeks. *Nothing has been tried that stuck.* If something was tried and died, the real problem is whatever killed it, and my part 4a is wrong. Not on the list: *clients notice and it costs them something*, because a no there changes my goal, not whether the problem is real. Accepting: *managers act on stale ownership for days*, because even one day means the client repeats their history.
+Paste your Assumptions walk table, every row, as it stands after the Dojo Lab. If the Dojo Lab changed a row, paste the changed version; the table is yours and it is supposed to move.
 
 ### Part 2. Your check, written before you look
 
-The one you are checking, as it stands after the Dojo Lab: the assumption stated so it could be wrong, the result that would tell you it was, who or what you are checking it against and when, and why this one. If AI moved you off your first choice, say what moved you.
+Paste your check as it now stands. Then two short answers underneath it: what the Dojo Lab pushed back on and what you changed or kept, with the reason; and if it moved you off your first choice, what moved you. If you did not use the Dojo Lab, say so and why.
 
-> **Example.** The other three managers have had the same thing happen. Wrong if fewer than two describe it. Asking each of them about the last time an account changed hands and what they knew: one in Thursday's meeting, two afterwards, because I am not sure people will say so in the room. This one because it could end the problem and they sit near me. The Dojo pushed me to make the question specific, and I did; it also asked why not the nothing-stuck one, and the answer is that Dana is for Sprint 3.
+> **Example, the two answers.** It pushed on my check: one manager cannot tell me whether all four are affected, and "is this a problem for you?" presumes the problem. I changed the check to all three managers, wrong if fewer than two describe it, asking about the last time an account changed hands rather than whether there is a problem. It also pushed on "one person's habit, nothing here," and I changed that row: one person's habit can still expose a process that fails whenever accounts move.
 
 **Then go and make the check.** It has the rest of the sprint to come back. You record what came back in the Problem Frame item in week 2.
 
 ### Response tasks
 
-- **could-end-it** (response). Prompt: *The one to three assumptions that could end the problem, with the answer that would end it; why the others are not on the list; the ones you are accepting, with reasons.* Criteria: one to three, not all; each has a concrete ending answer; the reasoning for exclusions is present; each acceptance has a reason that says why the answer would not change what you do.
-- **the-check** (response). Prompt: *Your check, written before you look, as it stands after the Dojo Lab.* Criteria: the assumption could be wrong as stated; the wrong result is concrete; a named person or observation and a day within the first week; why this one; what the Dojo changed, or that it changed nothing and why.
-> **[BUILD]** `presentation: reading`, two boxes. Part 1 feeds could-end-it, Part 2 the-check.
+- **the-table** (response). Prompt: *Your Assumptions walk table, every row, as it stands after the Dojo Lab.* Criteria: every assumption from Part 6 has a row; at least one row marked "could end it, because" or the reason none is; every "accepted" carries a reason that says why the answer would not change what you do; the different-answers lines vary rather than repeating one formula.
+- **the-check** (response). Prompt: *Your check as it now stands, then: what the Dojo Lab pushed on and what you changed or kept, with the reason; what moved you if it moved you; or why you did not use it.* Criteria: the assumption could be wrong as stated; the wrong result is concrete; a named person or observation and a day within the first week; why this one; what the Dojo changed, or that it changed nothing and why.
+
+> **[BUILD]** `presentation: reading`, two boxes. Part 1 feeds the-table, Part 2 the-check. Rubric to follow the team decision; the check and the risky column carry most of the points.
 
 ---
 
@@ -323,9 +307,9 @@ There are two other kinds of context you can provide: what AI needs to know abou
 
 ### Back to existing solutions
 
-Before we start, make your copy of the What already exists table, which we will walk through. [Make your copy of the table](LINK-TO-BE-SUPPLIED). You will see there are three columns: what exists, how it works as far as you know, and what it means for your problem. You are going to spend some time thinking about and looking into solutions and strategies that might already exist for problems similar to yours. As always, filling in the columns with questions or question marks when you don't know something is encouraged. It is better to mark what you don't know than make something up. A table that is mostly questions will still be very useful for the next activity.
+This page is a table, three columns: what exists, how it works as far as you know, and what it means for your problem. As always, questions and question marks where you don't know something are encouraged. It is better to mark what you don't know than make something up; a table that is mostly questions will still be very useful for the next activity. You get a Word file of it when you finish; keep it, because the next activity fills it in.
 
-Work the table in two passes: first everything you can think of for column 1, then columns 2 and 3 together, one row at a time.
+Two passes: first everything you can think of for column 1, then columns 2 and 3 together, one row at a time.
 
 ### Column 1: what exists
 
@@ -336,68 +320,35 @@ With your problem in mind, brainstorm existing solutions that might be related t
 - Does my own organization, or do I personally, already have something for this, used or not?
 - Do I know anything about how AI might be able to help solve this problem?
 
-Remember, you are listing what exists, not designing anything. "An agenda tool" is a thing that exists. "We should build an agenda tool" is a solution, and it waits. Put anything you can think of in your What exists column: things you know of, things you have heard of, guesses, and questions all count.
+You are listing what exists, not designing anything. "An agenda tool" is a thing that exists. "We should build an agenda tool" is a solution, and it waits. Things you know of, things you have heard of, guesses, and questions all count.
 
-> **Example, column 1 for account handovers.**
->
-> Problem: account handovers happen with no record.
->
-> Possible solutions that exist:
->
-> - An owner field in our CRM
-> - A handover checklist (the sales team next door has one)
-> - Is there a weekly "accounts that moved" note, or does it ever come up in a weekly team meeting?
+> **Example, column 1 for account handovers.** Problem: account handovers happen with no record. Possible solutions that exist: an owner field in our CRM; a handover checklist (the sales team next door has one); is there a weekly "accounts that moved" note, or does it ever come up in a weekly team meeting?
 
-*More help: the garden plot. Remember, if you don't know what solutions do exist, you can ask questions.*
-
-> Problem: new plot-holders start alone in April with no one to ask, and most stop coming by midsummer.
->
-> Possible solutions that exist:
->
-> - Do other community gardens pair new people with returning ones?
-> - Is there a name for this problem? Can I find other people talking about it online?
-> - What does the garden two streets over do that ours does not?
-> - Did anyone here try something before?
->
-> This example resulted in four questions and no answers in column 1. But there is real thinking here. That is what is needed.
+*More help: the garden plot. If you don't know what solutions exist, you can ask questions.* Problem: new plot-holders start alone in April, and most stop coming by midsummer. Possible solutions that exist: do other community gardens pair new people with returning ones? Is there a name for this problem, and are people talking about it online? What does the garden two streets over do that ours does not? Did anyone here try something before? Four questions and no answers, but there is real thinking here. That is what is needed.
 
 ### Columns 2 and 3: one row at a time
 
-Now take each row in turn and fill the other two columns for it, while that thing is in your head.
+Now take each row in turn and fill the other two columns while that thing is in your head.
 
-**Column 2, how it works, as far as you know.** Write what you actually know about how it works, and be honest about what you do not. Have you seen it yourself? Where does it live? Who can change it, and who can see it? How easy is it to find? If you have not seen it, how do you know it exists? Who would have to switch it on? Could you look it up? A row that is mostly "I do not know" is fine; that is what the next activity is for.
+**Column 2, how it works, as far as you know.** Write what you actually know about how it works, and be honest about what you do not. Have you seen it yourself? Where does it live? Who can change it, and who can see it? If you have not seen it, how do you know it exists? Who would have to switch it on? A row that is mostly "I do not know" is fine; that is what the next activity is for.
 
-**Column 3, what it means for your problem.** Reasons this would be good for your problem, reasons it might be bad, and what you are honestly not sure about. Before you have looked into anything, most of this column will be "not sure," and that is the right result. The point is to write down what you would need to know to tell whether this thing bears on your problem.
+**Column 3, what it means for your problem.** Reasons this would be good for your problem, reasons it might be bad, and what you are honestly not sure about. Before you have looked into anything, most of this column will be "not sure," and that is the right result.
 
-> **Example, one row, the CRM owner field.**
+> **Example, one row, the CRM owner field.** Column 2: I have seen a CRM owner field, but it's grayed out. I don't know who can set it or if it can be turned on. If it can be, would the old owner change the name at the handover point? How would the new owner, or any of the other managers, be notified? Column 3: Good: it seems to already exist as a feature in a product we already use. Bad: it's not turned on, and people aren't using the CRM much as it is, so it might not make a difference. Not sure: whether turning it on costs anything, and who decides.
+
+*More help: take another look at the first column.* Everything in it should be something that exists, somewhere, now, or a question about one. If a row describes what you would build, move it out. That is a solution, and Sprint 2 is not where solutions get chosen.
+
+> **[BUILD]** `delivery_mode: guided_assignment`, `presentation: walkthrough`, no feedback endpoint. One group task, `layout: table`. Export filename `what-already-exists.docx`. The teaching sections before "Column 1" are unreferenced and render first.
 >
-> Column 2: I have seen a CRM owner field, but it's grayed out. I don't know who can set it or if it can be turned on. If it can be, how would that work: would the old owner change the name at the handover point? How would the new owner, or any of the other managers, be notified?
+> **Task `your-table`**, instruction section "Columns 2 and 3: one row at a time" (with "Column 1: what exists" rendered before it as unreferenced teaching, or as the instruction section of a first single-field task if the renderer needs column 1 first; Jeremy's call), `repeat_count: 6`, labels "Row 1" to "Row 6", rows 4 to 6 optional. Fields, each with ask / example / avoid:
 >
-> Column 3: Good: it seems to already exist as a feature in a product we already use. Bad: it's not turned on, and people aren't using the CRM much as it is, so it might not make a difference. Not sure: whether turning it on costs anything, and who decides.
-
-> **Example, two more rows.**
+> - `exists`, "What exists" (text). Ask: a thing that exists somewhere now, or a question about one. Example: An owner field in our CRM. Avoid: something you would build.
+> - `how`, "How it works, as far as I know" (textarea). Ask: what you have actually seen, where it lives, who can change or see it, and what you do not know. Example: I have seen the field, grayed out. I don't know who can set it or whether it can be turned on. Avoid: describing how it probably works as if you had seen it.
+> - `means`, "What it means for my problem: good, bad, not sure" (textarea). Ask: reasons it would be good for your problem, reasons it might be bad, and what you are not sure about. Example: Good: already in a product we use. Bad: not on, and people barely use the CRM. Not sure: what turning it on costs, and who decides. Avoid: deciding it is the answer before you have looked.
 >
-> The handover checklist. Column 2: Have we ever tried one, or can I find anything online about a handover checklist? Is there an app or online tool for that? The outgoing person fills it in and the incoming person signs it. I do not know where it would go after that. Column 3: Good: forces the handover to be written down. Bad: still between two people? Not sure: where it lives once created and signed.
+> Criteria: at least three rows, questions allowed; nothing in the first column is a solution the participant would build; blanks and "not sure" left as they are rather than filled with guesses dressed as facts.
 >
-> The weekly note. Column 2: Have we ever tried a weekly note, where somebody posts which accounts moved, or it gets added to a weekly agenda? I have never seen it done here. Column 3: Good: would reach everyone. Bad: somebody has to write it, forever. Not sure: who.
-
-### The whole table
-
-Now you should have your table filled out, even if with a lot of questions and gaps. Remember, that's okay. Your table should look something like this:
-
-> | What exists | How it works, as far as I know | What it means for my problem: good, bad, not sure |
-> |---|---|---|
-> | An owner field in our CRM | I have seen one, grayed out. I don't know who can set it or whether it can be turned on, or how anyone would be notified | Good: already in a product we use. Bad: not on, and people barely use the CRM. Not sure: what turning it on costs, and who decides |
-> | A handover checklist | The sales team next door has one; the outgoing person fills it in, the incoming person signs. Is there an online tool for this? I do not know where it goes after that | Good: written down. Bad: still between two people? Not sure: where it lives once signed |
-> | A weekly "accounts that moved" note, or the weekly meeting | Never seen it done here. Somebody would post it, or it goes on the agenda | Good: reaches everyone. Bad: somebody writes it, forever. Not sure: who |
-
-*More help: take another look at the first column.* Everything in it should be something that exists, somewhere, now, or a question about something that exists, somewhere, now. If a row describes what you would build, move it out. That is a solution, and Sprint 2 is not where solutions get chosen.
-
-### Response tasks
-
-- **your-table** (response). Prompt: *Your table as it stands before AI, pasted from your What already exists document.* Criteria: at least three rows, questions allowed; nothing in the first column is a solution the participant would build; blanks and "not sure" left as they are rather than filled with guesses dressed as facts.
-
-> **[BUILD]** Single box, `presentation: reading`. Section "The whole table" feeds your-table; the teaching before it renders first. Copy-on-click link to be supplied by Leslie.
+> `document_after`: "After the Dojo Lab", "Fill this in during the next activity: which rows AI added and which you kept; for each row you went and looked at, where you looked and what you found; and your table as it now stands." Link to a Google Doc version of the table (`what-already-exists-template.md`) only if the walkthrough is not ready at the cut.
 
 ---
 
@@ -407,11 +358,9 @@ Now you should have your table filled out, even if with a lot of questions and g
 
 [NOTE] Prompts not yet run in a real chat. Leslie's run on the handover table decides the wording, as with the first Dojo Lab.
 
-The ultimate goal here is for you to find out and understand what solutions might already exist, to better inform your understanding of the problem. AI is here to help you. It has access to information about more workplaces, products, and practices than you possibly can, it can help you explore the questions in your table and add rows you did not think of, and it can point you at where to look. It cannot know what any of it means for your situation. That column stays yours.
+The goal here is for you to find out and understand what solutions might already exist, to better inform your understanding of the problem. AI has access to information about more workplaces, products, and practices than you possibly can; it can help you explore the questions in your table, add rows you did not think of, and point you at where to look. It cannot know what any of it means for your situation. That column stays yours.
 
-Use your Dojo, or any AI chat you already have. Your Dojo reads your Problem Frame if you added it in setup; otherwise, paste your Problem Frame first. Change names and drop anything confidential before you paste. Keep your table open beside the chat and make every change there.
-
-This is one conversation in three moves.
+Use your Dojo, or any AI chat you already have. Your Dojo reads your Problem Frame if you added it in setup; otherwise, paste your Problem Frame first. Change names and drop anything confidential before you paste. Keep your table open beside the chat and make every change there. One conversation, three moves.
 
 ### 1. Is my column 1 complete?
 
@@ -443,7 +392,7 @@ Take the rows one at a time, starting with the ones WHICH FIRST named, or your o
 >
 > PUSHBACK: One line on what I think it means for my problem, quoting my words, if you would push on it. Do not write what it means for my problem; that is mine.
 
-Then go and look where it pointed, or somewhere better you know of: the help page, your own CRM, the person who uses the checklist, one account of someone who tried the practice. This is the third C, **Confirmation**: what goes in your table is what you found where you looked, not what the chat said. Enough to write column 3 for your situation: does it exist, roughly how does it work, and does it kill your problem, ease it, or not fit here. Not enough to put it in place; if you find yourself working out how you would roll it out, stop. That is a later sprint.
+Then go and look where it pointed, or somewhere better you know of: the help page, your own CRM, the person who uses the checklist. This is the third C, **Confirmation**: what goes in your table is what you found where you looked, not what the chat said. Enough to write column 3: does it exist, roughly how does it work, and does it kill your problem, ease it, or not fit here. Not enough to put it in place; if you find yourself working out a rollout, stop. That is a later sprint.
 
 Come back and send:
 
@@ -453,7 +402,7 @@ Write columns 2 and 3 for that row in your table from what you found, in your wo
 
 > **Example, one row.** The CRM owner field. It said the field is standard in every version of our system, usually with a change log, and to read the help page for notifications. I read it: the field is on every account and can send a notification to a team when it changes. So the mechanism exists. Whether ours is switched on is a new row for part 6, and Dana or whoever administers the CRM can tell me. It pushed on "what would it take to use it": the question is not the field, it is who makes people fill it in.
 
-*More help: the garden plot.* The row was "the garden two streets over." AI knew nothing about it and said so, and told me to ask. The look was a phone call. The person who runs it pairs new plot-holders with a returning one in April, half the pairs never speak after the first week, and the half that do are the ones who stay. That does not kill the problem; it narrows it to what makes a pair actually talk.
+*More help: the garden plot.* The row was "the garden two streets over." AI knew nothing about it, said so, and told me to ask. The look was a phone call: they pair new plot-holders with a returning one in April, half the pairs never speak after the first week, and the half that do are the ones who stay. That does not kill the problem; it narrows it to what makes a pair actually talk.
 
 ### 3. Close
 
@@ -530,30 +479,15 @@ One paragraph. If the answer is "nothing," say what you looked at that could hav
 
 As you wrap up Sprint 2, all of your work so far has helped you push on and dig into your problem. Now it's time to confirm: is there enough here to keep pursuing this problem?
 
-[OPEN: Leslie, 23 September, on this page's shape (her comment C14). Four parts on one Canvas page, one of them a Dojo conversation, is a lot. Claude's recommendation: cut Part 1, the Dojo step. The two Dojo Labs already pushed on the check and on what exists, the verdict is meant to be the participant's own, and cutting it leaves three boxes with no chat in the middle: what came back from your check, your frame brought up to date (worked in the Google Doc, whole frame pasted here, as Sprint 1's Problem Frame item does), and your verdict. Part 2 gets a four-line guide for the result. Held until she rules; Part 1 stays below for now.]
+Three parts: the check as it came back, your Problem Frame brought up to date, and the verdict. The verdict is yours. It lives here, in your own words, and not in the frame, because it is this sprint's answer and the frame carries on.
 
-### Part 1. Before you decide
-
-Before you decide, do one more Dojo conversation, or any AI chat. Paste your Problem Frame, what came back from your check, and your table after the real look, then:
-
-> Above is my problem frame, the result of one check I made on an assumption in it, and a table of what already exists. I am about to decide whether this problem is worth pursuing for the rest of a course. Be a skeptic who works in this situation, not an editor. Do not rewrite anything and do not suggest solutions.
->
-> 1. What did my check settle, and what does it not settle? Two lines.
-> 2. Given what exists, does anything in how the problem is handled today (4a) or where it stops working (4b) have to change? One line, or "no."
-> 3. From what exists, what would any change here ask of the people involved that I have not said? One line.
-> 4. Can I say this is worth pursuing? Answer "yes," "no," or "depends on one thing," and name the thing.
->
-> Nothing else. Here is everything:
-
-Take what lands into the parts below. You decide; it does not.
-
-### Part 2. What came back from your check
+### Part 1. What came back from your check
 
 Four lines, in this order. The check as you wrote it before you looked, copied from your week 1 write-up. What you checked it against, and when. What came back: confirmed, contradicted, or complicated, with the "but" written down if there is one. What you make of it, which is a separate thing from what came back. If the check could not be run, say what you tried and leave the assumption as "not yet." That is an honest outcome and it is graded as one.
 
 > **Example.** Checked against the three managers, Thursday, one in the meeting and two after. Complicated. Two described exactly the same thing. The third said it only happens when one particular manager is the outgoing owner, and that other handovers go fine. What I make of it: real, and possibly smaller than I wrote. Worth finding out whether the third is right; either way the fix is the same.
 
-### Part 3. Your Problem Frame, brought up to date
+### Part 2. Your Problem Frame, brought up to date
 
 Work in your Problem Frame document, then paste the whole frame into the box here, as you did at the end of Sprint 1. Only what this sprint changed:
 
@@ -565,7 +499,7 @@ Paste the whole frame into the box. Sprint 3 starts from it.
 
 > **Example, the changed lines only.** Part 6 gains one row, *our CRM's owner field is not in use*, unverified, Dana could tell me, not yet. The managers row now reads "complicated" with what the third manager said. Two rows read "accepted, because." Part 3c, from the table: each manager, about a minute per handover to post a note or update a field, and a new habit; someone to keep at them, probably me; Dana is the only person who has to agree; nothing to build. Against clients repeating themselves every month, small. Part 4a now ends: our CRM has an owner field on every account; I do not know whether ours is switched on or whether anyone looks at it.
 
-### Part 4. Your verdict
+### Part 3. Your verdict
 
 One paragraph, in your own words. Worth pursuing, not worth pursuing, or depends on one thing you name. Your reasons are what the check said, what exists, and what you wrote in 3c, weighed by you. Nobody else can make this call, and the activities in this sprint were there to help you make it, not to make it for you.
 
@@ -575,12 +509,11 @@ One paragraph, in your own words. Worth pursuing, not worth pursuing, or depends
 
 ### Response tasks
 
-- **before-you-decide** (response). Prompt: *What the Dojo step gave you: what the check settles and does not, anything in 4a, 4b, or 3c it changed, and its answer to whether this is worth pursuing, with your read of that answer.* Criteria: the four answers are present in the participant's words; at least one is disagreed with or qualified, or the agreement gives a reason.
 - **what-came-back** (response). Prompt: *Your check as written before you looked, then what you checked it against, what came back, and what you make of it.* Criteria: the before-looking version is unchanged; a source and a date; confirmed, contradicted, or complicated, with the "but"; what you make of it is separate from what came back; a check that could not be run reports what was tried.
 - **problem-frame** (response). Prompt: *Your Problem Frame, all seven parts, brought up to date: part 6 with the Checked column filled, part 3c in, 4a and 4b if changed.* Criteria: all seven parts present, in the participant's words; every row of part 6 has a Checked entry; every "accepted" carries a reason; part 3c is present and compares with 3b; at least one assumption still reads "not yet," since a frame with none at this stage is a warning sign.
 - **verdict** (response). Prompt: *Worth pursuing, not worth pursuing, or depends on one named thing, with your reasons. If no: the runner-up's shortened pass and why the first did not survive.* Criteria: one of the three, stated; reasons draw on the check, what exists, and what a change would ask; "depends on" names one thing and who or what could settle it; a no names the runner-up and gives its shortened pass.
 
-> **[BUILD]** `presentation: reading`, four boxes. Part 1 feeds before-you-decide, Part 2 what-came-back, Part 3 problem-frame, Part 4 verdict. Rubric to follow the team decision; the verdict and the frame carry most of the points.
+> **[BUILD]** `presentation: reading`, three boxes. Part 1 feeds what-came-back, Part 2 problem-frame, Part 3 verdict. Rubric to follow the team decision; the verdict and the frame carry most of the points.
 
 ---
 
@@ -588,11 +521,9 @@ One paragraph, in your own words. Worth pursuing, not worth pursuing, or depends
 
 *Graded item. Position 11. 10 points. ai_activity, JSON upload, same mechanism as Sprint 1.*
 
-This sprint you checked one thing against a real person or a real record, looked at what already exists, and priced a change. Write about what came back from outside your own head. Where did something in the world change your view, and where did AI change it? Which of them did you push back on, and what did it cost you to push back? And what is the one thing in your frame you are least sure how to find out?
+This sprint you checked one thing against a real person or a real record, and looked at what already exists. Write about what came back from outside your own head, in three parts. Where did something in the world change your view of your problem, and where did AI change it? What did you push back on, from either, and what did it cost you to push back? And what is the one thing in your frame you are least sure how to find out?
 
-[OPEN: Leslie asks whether the reflection's questions should be separate boxes. The mechanism allows a list of questions, each with its own AI follow-ups; Sprint 1 uses one. Claude's recommendation: keep one, matching Sprint 1, and cut to three questions. Her call.]
-
-> **[BUILD] ai_activity configuration.** One `ai-discussion` question. Prompt as above, minLength 150, numQuestions 3. aiContext: *This is the Sprint 2 reflection for Reframing Problems with AI. The participant walked the assumptions in their Problem Frame, checked one against a person or a record, explored what already exists with AI and looked at two or three things for real, wrote what any change would ask of people from that table, and wrote a verdict on whether the problem is worth pursuing. Ask follow-up questions that catch a "complicated" result rounded to confirmed, a change attributed to AI that the participant actually made, a pushback with nothing lost by it, and an "I am least sure how to find out" that is really a to-do. Push them to name what the world said back that they did not expect. Do not rewrite the reflection.* summaryLabel: Your Sprint 2 Reflection. Uses the CTI-owned AI proxy; falls back to text entry if it goes down.
+> **[BUILD] ai_activity configuration.** One `ai-discussion` question. Prompt as above, three questions in one box, minLength 150, numQuestions 3. aiContext: *This is the Sprint 2 reflection for Reframing Problems with AI. The participant walked the assumptions in their Problem Frame, checked one against a person or a record, explored what already exists with AI and looked at two or three things for real, wrote what any change would ask of people from that table, and wrote a verdict on whether the problem is worth pursuing. Ask follow-up questions that catch a "complicated" result rounded to confirmed, a change attributed to AI that the participant actually made, a pushback with nothing lost by it, and an "I am least sure how to find out" that is really a to-do. Push them to name what the world said back that they did not expect. Do not rewrite the reflection.* summaryLabel: Your Sprint 2 Reflection. Uses the CTI-owned AI proxy; falls back to text entry if it goes down.
 
 ---
 
