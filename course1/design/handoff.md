@@ -47,6 +47,7 @@ course1/design/what-already-exists-template.md     the one-page Sprint 2 table, 
 course1/design/sprint-2-worked-example-handovers.md  handovers carried to the end of Sprint 2
 course1/design/candidate-log-template-v2.md        the Log template, v2 (15 September), source for the Google Doc
 course1/design/dojo-setup-note.md                  the course-wide Dojo tool, for Jeremy (15 September)
+course1/design/where-work-lives.md                 box, document, or walkthrough: one rule, read against Sprints 1 and 2, for the team (23 September)
 course1/design/dojo-module-problem-frame.md        Sprint 1 Dojo Lab as a Dojo module, v0.3, PARKED
 course1/design/problem-spine.md                    course-level design
 course1/design/sprint-1-decisions.md               every judgment call, dated

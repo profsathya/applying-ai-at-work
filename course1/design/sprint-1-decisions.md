@@ -2938,3 +2938,22 @@ flip of `publish: true` per item and `ready: true` on the homepage schedule.
 Provenance: Leslie, the rulings; Jeremy, the format and the go; Claude, the pages, the
 build, and the record.
 
+## 23 September, evening: where work lives (box, document, or walkthrough)
+
+Leslie asked whether the What already exists table should be a Canvas activity-boxes
+page. The answer became a rule: one-sitting work lives in a box; work edited across
+activities needs a document; the box is always the submission surface. Leslie then
+pointed out that Parts A to D of the Candidate Log correspond one to one to Brainstorm,
+Get underneath, First frames, and the Problem Frame, each written in one sitting, so the
+Candidate Log does not need to be a document if Sprint 1's activities convert to boxes;
+only the Problem Frame does. In Sprint 2 the one mismatch is What already exists, edited
+across three activities in a week, built today with a box and no document. Written up as
+`where-work-lives.md`, a proposal for the team's consistency pass, with the reading for
+every Sprint 1 and Sprint 2 activity and four open items (the rule; Sprint 1's
+conversions and the Candidate Log; the one-line What already exists fix; the course-wide
+word for sheets). Leslie is going back through Sprint 1 to decide which activities
+convert to the box style.
+
+Provenance: Leslie, the question and the Candidate Log reading; Claude, the rule, the
+note, and the record.
+
