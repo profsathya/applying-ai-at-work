@@ -232,8 +232,6 @@ Take what lands and fix your walk yourself. If it named a better assumption to c
 
 > **Illustrative exchange, handovers.** It said "not yet" on my check, because one manager's reaction cannot tell me whether all four are affected, and asking "is this a problem for you?" presumes the problem exists. Fair. My check is now all three managers, wrong if fewer than two describe it, and I am asking about the last time an account changed hands and what they knew, not whether they see a problem. It pushed on "if it is one person's habit, there is nothing here": one person's habit can still expose a process that fails whenever accounts move. I have changed that line to "then it is smaller, and probably a conversation rather than a nine-week problem." It pushed on "one day is fast enough to matter" as accepting a target before knowing how fast the work needs the information; true, and it does not change the verdict, so it stays accepted with a better reason. Its question was the best line: before I ask, how will I tell a manager who has not noticed the problem from one who has adapted to it and no longer calls it a problem? That is why the question is about the last handover, not about whether there is a problem.
 
-### Response tasks
-
 ### State what you kept before requesting the transcript
 
 Send one final `Me:` turn in the same conversation. In your own words, one line each: what it pushed back on, what you changed, what you kept and why, and your check as it now stands. Then use the transcript request and submission steps below.

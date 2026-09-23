@@ -2896,3 +2896,45 @@ Applied as draft v1.4, template v0.3. Dispositions:
 Provenance: Leslie, every edit and comment; Claude, the dispositions, the pages, and the
 record.
 
+## 23 September, later: Sprint 2 draft v2.0 and the build
+
+**Leslie's rulings.** The Problem Frame item loses its Dojo step (three boxes: what came
+back, the frame pasted whole from the Google Doc, the verdict). The reflection is three
+questions in one box, as Sprint 1. The two activity pages take Jeremy's walkthrough
+format. Jeremy: Leslie and Claude build Sprint 2 together, as Melisa did for Sprints 3
+and 4. Leslie is reviewing the non-activity pages in parallel from the v2.0 docx.
+
+**Draft v2.0, cut-ready.** Dig into your assumptions and What solutions already exist
+rewritten in walkthrough-ready form: each column a field with ask, example, and avoid
+lines, the Word export carrying a later-use section ("What came back"; "After the Dojo
+Lab"), the page prose reduced to what sits above the table. The week 1 graded item is
+"paste your table and your check." Four long pages tightened. Cover note for Jeremy
+rewritten with presentation per item and the list for the team's consistency pass.
+Learner-facing words after the pass: Introduction 792, Dig 1043, Dojo Lab 1 719, graded
+1 278, What exists 1046, Dojo Lab 2 1034, graded 2 451, Problem Frame 911, reflection 86
+(examples and prompts included; the three pages over 1000 are mostly example and prompt).
+
+**The build, `course1/sprints/sprint-16/`, 13 files, all `publish: false`.** Eleven items
+at positions 1 to 11 plus two staged walkthrough replacements. Jeremy's validator
+requires a walkthrough to name a live source item in the same module (`walkthrough_after`)
+and his release flow flips the pair together, so the two activity pages exist twice: a
+`reading` version with boxes as the live item (positions 3 and 7), and the walkthrough
+version, same position, `walkthrough_after` pointing at it, for Jeremy to release when
+his renderer is ready. Presentations: page `reading` for the Introduction; `reading` with
+boxes for the graded items and the self-check (five choice tasks, as Sprint 1's concept
+check); `dojo_submission: mode: transcript, prompt_version: v1` for both Dojo Labs; `quiz`
+with `ai_activity` for the reflection, mirroring Sprint 1's. `[INTERIM]` lines carry into
+the pages as Sprint 1 and 3 do; `[NOTE]`, `[OPEN]`, and `[BUILD]` do not. Homepage: the
+schedule's Sprint 2 entry points at storage sprint 16 with `ready: false`; a hidden module
+block lists the eleven items. Validation: every file passes `schema.py --artifact`, the
+course passes `schema.py --all`, and all thirteen pages render locally through
+`hosted_html.render_artifact_document` (the walkthroughs at 37 and 18 answer fields).
+No browser inspection was performed; that is Leslie's and Jeremy's on the preview after
+merge, once an item is flipped to publish.
+
+**Build PR** opened for Leslie's approval; Claude does not merge it. Publishing is her
+flip of `publish: true` per item and `ready: true` on the homepage schedule.
+
+Provenance: Leslie, the rulings; Jeremy, the format and the go; Claude, the pages, the
+build, and the record.
+
