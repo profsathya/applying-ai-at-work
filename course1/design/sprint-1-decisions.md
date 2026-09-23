@@ -2968,3 +2968,19 @@ table and the "After the Dojo Lab" section; no separate template. Consequence fo
 build: the reading versions are fallbacks that need a document behind them; if the
 walkthroughs cannot be released before 5 October, an Assumptions walk template is made.
 
+## 23 September, late: the course-wide list
+
+Leslie asked where course-wide comments were being tracked. Nowhere single: the handoff's
+owed line, the draft's cover note and owed section, dated log entries, and the open items
+in where-work-lives.md. Consolidated into `course-wide-list.md`, 29 items in six groups
+(the Dojo; activity pages and where work lives; structure and rhythm; prose that belongs
+in Welcome; continuity across sprints; process), each with its origin and the sprints it
+touches, no owners assigned. Leslie: the team decides how to tackle and implement. New
+items from the Introduction review: the self-check's place in the route (moved to after
+the Dojo Lab, where the built page sits); the "changing problems" page; module header
+body text reaching no learner. Introduction changes applied (opening, week 2 heading, AI
+and how-to-work paragraphs in her words, key terms cut under the 31 August rule, Where to
+write marked interim).
+
+Provenance: Leslie, the ask and the review; Claude, the list and the record.
+
