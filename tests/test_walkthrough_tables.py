@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -158,7 +159,7 @@ class WalkthroughTableTests(unittest.TestCase):
             block = rectangular_block(2)
             packet = root / 'source-packet.json'
             packet.write_text(json.dumps({'documents': [{'sections': [{'blocks': [block]}]}]}))
-            common = [str(ROOT / '.venv/bin/python'), str(ROOT / 'canvas_sync/walkthrough_tables.py'),
+            common = [sys.executable, str(ROOT / 'canvas_sync/walkthrough_tables.py'),
                       '--packet', str(packet), '--block', block['id'], '--view', 'base', '--task-id', 'reference']
             drafted = subprocess.run([*common, '--prompt', 'Use this grid', '--read-only'], cwd=ROOT,
                                      capture_output=True, text=True)
@@ -257,7 +258,7 @@ class WalkthroughTableTests(unittest.TestCase):
             common = ['--packet', str(packet), '--block', block['id'], '--view', 'base',
                       '--task-id', 'candidate-log']
             responses = [part for source_row in range(3, 8) for part in ('--response-row', str(source_row))]
-            command = [str(ROOT / '.venv/bin/python'), str(ROOT / 'canvas_sync/walkthrough_tables.py'),
+            command = [sys.executable, str(ROOT / 'canvas_sync/walkthrough_tables.py'),
                        *common, '--prompt', 'Get underneath three to five',
                        '--criterion', 'Complete three to five candidate rows.', *responses]
             drafted = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
@@ -266,13 +267,13 @@ class WalkthroughTableTests(unittest.TestCase):
             self.assertEqual(compare_task(block, task), [])
             artifact = root / 'candidate-log.md'
             artifact.write_text('---\n' + yaml.safe_dump({'guided_assignment': {'tasks': [task]}}) + '---\n')
-            verified = subprocess.run([str(ROOT / '.venv/bin/python'),
+            verified = subprocess.run([sys.executable,
                                        str(ROOT / 'canvas_sync/walkthrough_tables.py'), *common,
                                        '--artifact', str(artifact), *responses], cwd=ROOT, capture_output=True, text=True)
             self.assertEqual(verified.returncode, 0, verified.stderr)
             task['rows'][1]['cells'][0].pop('response')
             artifact.write_text('---\n' + yaml.safe_dump({'guided_assignment': {'tasks': [task]}}) + '---\n')
-            mismatch = subprocess.run([str(ROOT / '.venv/bin/python'),
+            mismatch = subprocess.run([sys.executable,
                                        str(ROOT / 'canvas_sync/walkthrough_tables.py'), *common,
                                        '--artifact', str(artifact), *responses], cwd=ROOT, capture_output=True, text=True)
             self.assertNotEqual(mismatch.returncode, 0)
