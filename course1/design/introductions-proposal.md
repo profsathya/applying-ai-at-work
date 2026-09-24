@@ -19,7 +19,7 @@ While reviewing Sprint 2 we compared the five Introductions. They follow two dif
 | Terms | three key terms | none | four concepts, about 500 words, with a worked example | four concepts, medium | none |
 | Points and submission | a section | in the route | none | none | none |
 | AI | "About AI in this sprint" | same | a paragraph in the opening | a paragraph in the opening | none |
-| How to work | a section | same | none | none | none |
+| How to work | a section | cut, 24 September | none | none | none |
 | Where to write | "Where to write" | same | none | "Portfolio Capture" | "Carry Forward" |
 | Ending | next activity named | same | "Continue onto the Concept Check" | next two items named | "still being written" |
 
@@ -33,11 +33,11 @@ One Introduction shape, in this order, with these names:
 2. **Your route through this sprint.** By week, numbered, each item with its kind (page, own your progress, Dojo Lab, graded item, self-check, reflection) and its points. One line each.
 3. **Terms**, only where the 31 August rule applies: a term gets a slot if the everyday meaning would mislead, or the sprint runs on it. One or two lines each, and no worked examples here. Otherwise a term is defined on the page where it is first used.
 4. **About AI in this sprint.** Which items are own work, which use AI, and where. Two or three sentences; the full version lives in Welcome.
-5. **How to work.** One short paragraph, the same reminder in every sprint: the point is to understand the problem, not to checkbox activities; "I do not know" beats making something up. The full version lives in Welcome.
-6. **Where to write.** Which document or file this sprint uses and where it comes from.
-7. **Next up**, naming the first activity.
+5. **Next up**, naming the first activity.
 
-Target: 500 to 650 words. Sprints 1 and 2 are there now.
+Two sections Sprints 1 and 2 had, "How to work" and "Where to write," come out. Each activity page says what to open and where to write, and the working reminder (understand the problem, do not checkbox activities; "I do not know" beats making something up) belongs in Welcome with one line on the activity pages where it matters.
+
+Target: 400 to 550 words. Sprint 2 is there now.
 
 ## What this means for Sprint 3
 
@@ -58,7 +58,7 @@ The Introduction is about 780 words with four concepts. Three are taught again w
 - Blocking, useful, interesting: on every page.
 - Confirmed and inferred: defined on Sprint 3's map page and used throughout Sprint 4.
 
-Two lines have no other home and should move to the Learning Plan page: **closed means answered, not solved**, and **a clear AI explanation is still inferred until you have checked it**. The "Two-Week Sprint Map" and "Portfolio Capture" sections fold into the route and Where to write.
+Two lines have no other home and should move to the Learning Plan page: **closed means answered, not solved**, and **a clear AI explanation is still inferred until you have checked it**. The "Two-Week Sprint Map" folds into the route; "Portfolio Capture" moves to the Learning Plan page, which is where the file lives.
 
 ## Two vocabulary notes that touch your pages
 

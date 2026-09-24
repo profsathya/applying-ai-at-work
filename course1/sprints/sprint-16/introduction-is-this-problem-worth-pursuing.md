@@ -47,12 +47,4 @@ If as you go through these activities you discover that the problem you picked i
 
 The rule is the one you know from Sprint 1. In most cases, for AI to be useful, you need to have your own view written down so that AI can react to it. The more guidance you can give AI about what it's trying to do, the better the results. So, your work first, then AI. Two activities are your own work with no AI: Dig into your assumptions and What solutions already exist. The Dojo Lab activities are where AI tests what you wrote.
 
-## How to work
-
-It cannot be stressed enough: the point of this course is for you to understand a problem deeply. It is not for you to checkbox the activities and exercises. Activities and exercises have been included to help you get there. The work you do in the own-your-progress activities will guide you directly to what you need to submit in the graded items. Your work needs to be useful to you, to better understand the problem and do the graded items. Remember, marking something as "I do not know" is more useful than making something up.
-
-## Where to write
-
-Two documents this sprint. Your Problem Frame, which will carry from here through the rest of the course; you make your copy at the start of the first activity. And the What already exists table, a one-page document for week 2; you make your copy when week 2 starts. The rest of your written work this sprint will be in the activity boxes within Canvas pages.
-
 Next up: **Dig into your assumptions**.
