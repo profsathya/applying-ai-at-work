@@ -24,7 +24,7 @@ guided_assignment:
     criteria:
     - The required header and every turn, in order.
     - Every CONTINUED marker and continuation chunk kept.
-    - A last message in the participant's words with the four things above.
+    - The conversation reaches the module's last round, where you say what you keep.
 dojo_submission:
   mode: transcript
   prompt_version: v1
@@ -35,67 +35,60 @@ publish: false
 
 # Dojo Lab: explore what already exists
 
-The goal here is for you to find out and understand what solutions might already exist, to better inform your understanding of the problem. AI has access to information about more workplaces, products, and practices than you possibly can; it can help you explore the questions in your table, add rows you did not think of, and point you at where to look. It cannot know what any of it means for your situation. That column stays yours.
+## What you need for this Dojo Lab
 
-Use your Dojo, or any AI chat you already have. Your Dojo reads your Problem Frame if you added it in setup; otherwise, paste your Problem Frame first. Change names and drop anything confidential before you paste. Keep your table open beside the chat and make every change there. One conversation, three moves.
+- Your draft **Problem Frame**.
+- Your **What already exists** table, pasted into your **Sprint 2 working book**.
 
-## 1. Is my column 1 complete?
+## The three parts to this activity
 
-Paste your Problem Frame if your Dojo does not have it, then your table, then this:
+1. Your Dojo conversation, with a look of your own partway through.
+2. Requesting a transcript from the Dojo and submitting it back into Canvas.
+3. Updating your What already exists table based on your conversation.
 
-> Above is my problem frame and a table I have started of what already exists that could solve or ease this problem. Some rows are things I know of, some are guesses, and some are questions. I want to find out what exists, not choose a solution. Your job is to help me find out, not to decide for me.
+## Part 1: Your Dojo conversation
+
+The goal of this Dojo Lab is to find out what already exists that could solve or ease your problem, so that you understand your problem better. AI has seen more workplaces, products, and practices than you can; it can add rows you did not think of, tell you what it knows about how something works, and point you at where to look. It cannot know what any of it means for your situation. That column stays yours.
+
+Open your Dojo and say: "Walk me through Dojo Lab: explore what already exists." Then paste your Problem Frame and your What already exists table. Your Dojo knows what this activity is for and will take it from there.
+
+Partway through, for each row you take on, your Dojo will send you to go and look for yourself: a help page, your own system, the person who uses the thing. Go and look, then come back to the same conversation and say what you found. This is the third C, **Confirmation**: what goes in your table is what you found where you looked, not what the chat said. Enough to say whether it exists, roughly how it works, and whether it kills your problem, eases it, or does not fit here. If you find yourself working out how to put it in place, stop. That is a later sprint.
+
+> **Example, one row.** The CRM owner field. The Dojo said the field is standard in every version of our system and pointed me at the help page for notifications. I read it: the field is on every account and can notify a team when the owner changes. So the mechanism exists. Whether ours is switched on is a new question, and whoever administers the CRM can answer it. It pushed on my "this would solve it": the question is not the field, it is who makes people fill it in.
+
+*More help: if your Dojo is not set up yet.* Use any AI chat. Paste the text below as your first message, then your Problem Frame and your table.
+
+> Before we start, here is how to work with me. Be my coach, not my editor. Ask one question at a time and wait for my answer. Keep each reply under 120 words. Ask what I think before you offer your own read. Never rewrite my work; point at a line and make me change it myself. When you push on something weak, say you are pushing and why. When I have defended a line, ease off and say so. If I lean on you two turns running, say so and make me put it in my own words. Do not invent anything about my workplace; ask. End with a recap I can save.
 >
-> Look only at my first column for now. Answer in two short labeled parts and nothing else.
+> EXPLORE WHAT ALREADY EXISTS DOJO - module (v0.1, use with the Dojo Core)
 >
-> MISSING: Up to three things that exist that I have not listed, one line each on what it is. Products, practices in other kinds of organization, and what people who do this well actually do all count.
+> This module makes you a scout who has seen more workplaces, products, and practices than I have. I have started a table of what already exists that could solve or ease my problem: what exists, how it works as far as I know, and what it means for my problem. Some rows are things I know of, some are guesses, and some are questions. I want to find out what exists, not choose a solution. Your job is to fill gaps in my first column, tell me what you know and how sure you are, send me to look for myself, and push on what I say it means. What it means for my problem stays mine. You behave per the Dojo Core; the rounds below are your method.
 >
-> WHICH FIRST: Of all the rows, mine and yours, which three or four most bear on whether this problem is worth pursuing, and one line on why each.
+> == What I bring ==
+> My Problem Frame (attached to this project, or pasted), and my What already exists table from the Sprint 2 working book. If I have not pasted the table, ask for it before Round 1.
 >
-> Then give me my whole table back, with the rows you added marked (AI), so I can paste it into my document.
-
-Paste the table back into your document and drop any row you do not want to keep. One of AI's will usually be generic and worth ignoring.
-
-## 2. One row at a time
-
-Take the rows one at a time, starting with the ones WHICH FIRST named, or your own pick: the rows that would most change your problem if they turned out to be real here. Three or four is usually right. For each, send this, filled in:
-
-> Row: [the thing]. What I know about how it works: [your column 2]. What I do not know: [the gaps]. What I think it means for my problem: [your column 3, good, bad, and not sure].
+> == The rounds ==
+> 1. My read (Sensei). Before you look at the table, ask me which row I think bears most on whether this problem is worth pursuing, and why. Say back what you heard.
+> 2. My first column (Scout). Give me up to three things that exist that I have not listed, one line each on what it is, marked (AI). Products, practices in other kinds of organization, and what people who do this well actually do all count. Then say which three or four rows, mine and yours, bear most on whether this problem is worth pursuing, one line on why each. Ask me which rows I am keeping and which I will take one at a time. I decide.
+> 3. One row at a time (Scout, then Challenger). For each row I chose, in three short labeled parts: HOW IT WORKS, what you know about how this works and how sure you are; WHERE TO LOOK, one place I could look or one person I could ask to know for myself; PUSHBACK, one line quoting my words on what I said it means for my problem, if you would push on it. Then send me to go and look, and wait. When I come back and tell you what I found, ask me two things: does this change what it means for my problem, and what question should I still be asking? Make me write the row's how-it-works and what-it-means cells in my own words before the next row.
+> 4. What I keep (Reflector). Ask me to say, one line each: which rows you added and which of those I kept; for each row I looked at, where I looked and what I found; the two or three rows that bear most on whether my problem is worth pursuing; and what all this changes about how I would describe my problem. Check that the words are mine. Then one line from you: what I gave you that helped, and what you would have wanted earlier. Then give me my whole table back as it now stands, your rows still marked (AI), so I can paste it into my document.
 >
-> Answer in three short labeled parts and nothing else.
+> == What you do not do ==
+> Do not write what anything means for my problem; quote me and push, but the cell is mine. Do not state how a product or practice works as fact when you are not sure; say how sure you are and where I can check. Do not design a solution or a rollout; if I start working out how to put something in place, stop me, that is a later sprint.
 >
-> HOW IT WORKS: What you know about how this works, and how sure you are.
->
-> WHERE TO LOOK: One place I could look, or one person I could ask, to know for myself.
->
-> PUSHBACK: One line on what I think it means for my problem, quoting my words, if you would push on it. Do not write what it means for my problem; that is mine.
+> == Start here ==
+> Start as the Sensei: say what this module does in two lines, ask for my table if it is not here, then begin Round 1. One question at a time.
 
-Then go and look where it pointed, or somewhere better you know of: the help page, your own CRM, the person who uses the checklist. This is the third C, **Confirmation**: what goes in your table is what you found where you looked, not what the chat said. Enough to write column 3: does it exist, roughly how does it work, and does it kill your problem, ease it, or not fit here. Not enough to put it in place; if you find yourself working out a rollout, stop. That is a later sprint.
+## Part 2: Requesting and submitting the transcript
 
-Come back and send:
+The transcript is the only thing you submit for this Dojo Lab. Five steps:
 
-> I looked at [where]. What I found: [two or three lines]. Does this change what it means for my problem? One line, and one question I should still be asking.
+1. Copy the transcript request at the bottom of this page.
+2. Paste it into your Dojo conversation as your next message.
+3. If the reply ends with CONTINUED, type "continue" and repeat until it stops.
+4. Copy the Dojo's reply, every chunk, in order.
+5. Paste it into the Canvas text box below this page and submit.
 
-Write columns 2 and 3 for that row in your table from what you found, in your words.
+## Part 3: Updating your table
 
-> **Example, one row.** The CRM owner field. It said the field is standard in every version of our system, usually with a change log, and to read the help page for notifications. I read it: the field is on every account and can send a notification to a team when it changes. So the mechanism exists. Whether ours is switched on is a new row for part 6, and Dana or whoever administers the CRM can tell me. It pushed on "what would it take to use it": the question is not the field, it is who makes people fill it in.
-
-*More help: the garden plot.* The row was "the garden two streets over." AI knew nothing about it, said so, and told me to ask. The look was a phone call: they pair new plot-holders with a returning one in April, half the pairs never speak after the first week, and the half that do are the ones who stay. That does not kill the problem; it narrows it to what makes a pair actually talk.
-
-## 3. Close
-
-When you have been through your rows:
-
-> Of everything in my table now, which two or three bear most on whether this problem is worth pursuing, and why? Two lines each, quoting my table. Then one line: what did I give you that helped, and what would you have wanted earlier? Then give me my whole table back one more time, as it now stands.
-
-You decide what to keep, and paste the final table into your document.
-
-## Before you ask for the transcript
-
-Write one last message in the same conversation, in your own words, so that it is in the transcript you submit. Four short things:
-
-- Which rows AI added, and which of those you kept.
-- For each row you went and looked at: where you looked, and what you found.
-- The two or three rows that matter most for whether your problem is worth pursuing.
-- One line: what does all this change about how you would describe your problem?
-
-Then use the transcript request and submission steps below.
+After you submit the transcript, go back to your What already exists table in your Sprint 2 working book and update it from the conversation and from what you found when you looked. You decide what to keep. That table, and what you make of it, are submitted in the next activity.
