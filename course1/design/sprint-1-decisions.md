@@ -3091,3 +3091,55 @@ template link. Introductions proposal to Melisa (`introductions-proposal.md`).
 
 Provenance: Leslie, every ruling and both merge decisions; Jeremy, the who-edits-what;
 Claude, the renders, the edits, the merges on request, and the record.
+
+## 25 September: the walkthroughs reviewed, the grid, the Dojo understood, and the course moves under us
+
+**Leslie's rulings on the walkthroughs, applied and merged (PR #116).** The per-field prose under
+the instruction section duplicated the renderer's ask, example, and avoid lines: cut from both
+walkthrough bodies; the reading versions keep theirs. Dig into your assumptions opens in the
+same sequence as What solutions already exist (What you need for this activity; the Canvas and
+no-AI paragraph; the goal paragraph on its own), the template link as an INTERIM line, and the
+work under its own heading. What solutions already exist above the table is Leslie's text:
+brainstorm first, one example, three numbered steps under "Build your understanding about
+what exists," the questions-are-encouraged line restored, the two More help lines cut.
+
+**The grid.** Jeremy's newer walkthroughs carry a true source grid (kind: table). Built for
+What solutions already exist at Leslie's request: three columns, a header row, a Guidance row,
+two example rows (the second mostly blank, on purpose), six response rows with the last three
+optional; the avoid lines join the criteria. Leslie: "I'm liking this." Dig into your
+assumptions stays field-per-entry; she is not sold on the grid there.
+
+**Module order.** Leslie found the Canvas module out of order and dragged it right. Cause
+recorded as list item 31. The finish block wording is list item 32; the submit-button
+confusion on the write-ups joins 29b.
+
+**Dojo Lab: explore what already exists** rebuilt in the first Dojo Lab's shape (PR #117),
+Module 2 written, then matched to Dig on Leslie's four rulings: goal paragraph, Confirmation
+paragraph, and example cut; one note that the Dojo may send the learner out to look.
+
+**The end of the sprint, thought through as one.** Leslie's five goals against four items showed
+the overlap sat in What exists, and what it means. Drafted for her: that item as two boxes
+mirroring Your updated assumptions (the table; what the Dojo changed and what you found), the
+Reflection moved off the content, one Introduction paragraph on where work lives. She cut the
+Introduction paragraph and the pacing line with it ("I can look at how we talk about where to
+work in one pass").
+
+**The Dojo, understood.** From the Common-Curriculum repo: the Dojo tab is the Core plus three
+shared career modules, identical in every course doc; a CST499 activity runs from its own page
+on the Course tab, with no activity text on the Dojo tab. Our modules are more scripted than
+his practice; three options and the test that decides them are in
+`dojo-understanding-note.md`. Leslie sent her own update to Melisa and Jeremy.
+
+**The course moved under us (24 September, afternoon).** Jeremy published Sprint 2 (every item
+publish: true, homepage ready, module unhidden) and released both walkthrough pairs, retitling
+them "Canvas Walkthrough," switching them to Word upload, and replacing our closing lines with
+his upload steps. Melisa replaced every sprint's reflection with one shared five-question
+format in a plain text box, no AI (PRs #118 to #120); our Sprint 2 reflection draft is
+withdrawn. **Leslie's ruling:** the publish stands; course-wide decisions of Jeremy's and
+Melisa's are not overridden; anything of that kind is a conversation. Consequences: PR #117
+now edits live pages; the Sprint 2 generator is retired and built files are edited directly;
+the working book question is list item 33.
+
+Provenance: Leslie, every ruling; Jeremy, the release and its wording; Melisa, the reflection
+format; Claude, the builds, the merges, the Dojo reading, and the record.
+
