@@ -14,6 +14,7 @@ This repo builds the "Applying AI at Work" certificate for CTI and De Anza. It h
 4. Schema validation is mandatory before any Canvas push.
 5. Artifact bodies must remain Canvas-native Markdown. Do not add HTML, iframes, JavaScript, inline styles, or external CDN references.
 6. Design docs are read-only build inputs: `context/`, `<course>/design/`, and `archive/`.
+7. For hosted Canvas items, use the shared iframe shell without a separate "Open hosted page in a new tab" link. The hosted page remains available inside the iframe.
 
 ## Style Conventions
 

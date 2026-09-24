@@ -810,6 +810,7 @@ modules:
             self.assertIsNotNone(client.page_payload)
             self.assertFalse(client.page_payload["published"])
             self.assertIn("<iframe", client.page_payload["body"])
+            self.assertNotIn("Open hosted page in a new tab", client.page_payload["body"])
 
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
             state_path = state_path_for_manifest(manifest_path, state_dir, manifest)
