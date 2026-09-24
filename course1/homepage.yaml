@@ -244,7 +244,7 @@ modules:
           - slug: "final-integrated-problem-document-and-readiness-report"
             meta: "Assignment - submit the final integrated document and readiness report"
           - slug: "closing-reflection-and-final-goal-plan-check"
-            meta: "AI reflection activity - close the loop on your goal plan"
+            meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry"
           - slug: "readiness-self-check"
             meta: "AI self-check - refine an evidence-backed readiness judgment"
             badge: "Self-check"
@@ -358,7 +358,7 @@ modules:
             meta: "Assignment - write the five-question learning plan for each gap and update parts 6 and 7 of your Problem Frame; 50 points"
           - slug: "sprint-4-reflection-what-changed-v3"
             nav_meta: "10 points"
-            meta: "Assignment - say how planning your learning changed your view of the problem; text entry, 10 points"
+            meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 10 points"
 
   - sprint: 9
     order: 5
@@ -478,7 +478,7 @@ modules:
             meta: "Guided assignment - submit the chosen seven-part Problem Frame and explain what changed, what moved your judgment, and what you rejected; 50 points"
           - slug: "sprint-1-reflection-what-changed-v54"
             nav_meta: "10 points"
-            meta: "AI reflection activity - make your judgment, AI's contribution, and one remaining uncertainty specific; 10 points"
+            meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 10 points"
 
   - sprint: 16
     hidden: true
@@ -530,7 +530,7 @@ modules:
             meta: "Guided assignment - bring your Problem Frame up to date and give your verdict; 45 points"
           - slug: "sprint-2-reflection-what-the-world-said-back"
             nav_meta: "10 points"
-            meta: "AI reflection activity - what came back from outside your own head, what you pushed back on, and what you are least sure how to find out; 10 points"
+            meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 10 points"
 
   - sprint: 15
     order: 3
@@ -566,4 +566,4 @@ modules:
             meta: "Assignment - diagnose your three questions with AI, then prepare, hold, and document a real stakeholder conversation; three files, 50 points"
           - slug: "sprint-3-reflection-and-mid-course-problem-frame-revision-v3"
             nav_meta: "10 points"
-            meta: "AI reflection activity - refine your mid-course Problem Frame revision against stakeholder evidence; 10 points"
+            meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 10 points"
