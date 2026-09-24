@@ -261,16 +261,16 @@
       "canvas_payload_hash": "8df74cfec97b0e23f171d31f737b219c5fa4dcad472ad77b075ed0c8b0884422",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "163e343dbb5911d15f97688604b0f99e600fdcd4af492c9a4787e8511234f60b",
-      "hosted_hash": "4535f1abbc0098f9b679b5cc0ad74f6d1f763e19dee7bbcddf8a2a6a7a300007",
-      "hosted_last_rendered": "2026-09-24T21:14:29+00:00",
+      "content_hash": "9d9478e5a69101d67b99f7acf606f75cbca8e2042be69df09942357293209da9",
+      "hosted_hash": "d2c04aaa963febe0ad8e029546f561b93791fffb65665294623cce21ddeb4e49",
+      "hosted_last_rendered": "2026-09-24T21:47:41+00:00",
       "hosted_path": "course1/assignments/sprint-1-reflection-what-changed-v54.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-1-reflection-what-changed-v54.html",
-      "last_pushed": "2026-09-24T21:14:29+00:00",
+      "last_pushed": "2026-09-24T21:47:41+00:00",
       "local_path": "course1/sprints/sprint-14/sprint-1-reflection-what-changed-v54.md",
       "position": 10,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "b0b968bebbca051d6b59fb934afc0252c7982c2d"
+      "source_commit": "0591eac75cfecad2f78528c23eb2f98398ff1b9b"
     },
     "course1-sprints-sprint-14-the-problem-frame": {
       "artifact_id": "course1-sprints-sprint-14-the-problem-frame",
@@ -406,16 +406,16 @@
       "canvas_payload_hash": "8904de83f33dc9cae87939f30a45acf83650ea8cbcfbd07868a15070eddd3574",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "0cdf16b6710f750079ed20a546c446f10469330f2111250b86aee40a53ceff41",
-      "hosted_hash": "9ffd42ed5d2c1d98bbaa06c511c3d3d35405ac9974e973e82a3acbc3525386f5",
-      "hosted_last_rendered": "2026-09-24T21:14:30+00:00",
+      "content_hash": "d19857ab88ed4787f06ca3107c92c7187e0026f01fa92c667140b07c491d8568",
+      "hosted_hash": "3ef458b2003c145e91c4c9f6d5b720bf4f78b014b571013bcba4f37be879f52d",
+      "hosted_last_rendered": "2026-09-24T21:47:42+00:00",
       "hosted_path": "course1/assignments/sprint-3-reflection-and-mid-course-problem-frame-revision-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-3-reflection-and-mid-course-problem-frame-revision-v3.html",
-      "last_pushed": "2026-09-24T21:14:30+00:00",
+      "last_pushed": "2026-09-24T21:47:42+00:00",
       "local_path": "course1/sprints/sprint-15/sprint-3-reflection-and-mid-course-problem-frame-revision-v3.md",
       "position": 7,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "b0b968bebbca051d6b59fb934afc0252c7982c2d"
+      "source_commit": "0591eac75cfecad2f78528c23eb2f98398ff1b9b"
     },
     "course1-sprints-sprint-15-stakeholder-conversation": {
       "artifact_id": "course1-sprints-sprint-15-stakeholder-conversation",
@@ -618,16 +618,16 @@
       "canvas_payload_hash": "7f1af809494d2f35e14a00e0ebea8f0246562a095375c00c3b7a1863420cba92",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "64089f73eb46eff40ad024a8f09aac737cc1749df98094254c4a48df656b8053",
-      "hosted_hash": "ab6df7f38efcd97881ea2dd3877f22f456658b2139ad8def93e5537967233eb1",
-      "hosted_last_rendered": "2026-09-24T21:14:32+00:00",
+      "content_hash": "9a60865fa4e4ffbd708f6929c43c404b0acdc3f947b0b15edefc4afc09d37443",
+      "hosted_hash": "e525a2e823868e233dc52aeb6e18411c6f634fac4c04a7569df849f4cbaaa84d",
+      "hosted_last_rendered": "2026-09-24T21:47:43+00:00",
       "hosted_path": "course1/assignments/sprint-2-reflection-what-the-world-said-back.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-2-reflection-what-the-world-said-back.html",
-      "last_pushed": "2026-09-24T21:14:32+00:00",
+      "last_pushed": "2026-09-24T21:47:43+00:00",
       "local_path": "course1/sprints/sprint-16/sprint-2-reflection-what-the-world-said-back.md",
       "position": 12,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "b0b968bebbca051d6b59fb934afc0252c7982c2d"
+      "source_commit": "0591eac75cfecad2f78528c23eb2f98398ff1b9b"
     },
     "course1-sprints-sprint-16-sprint-2-self-check": {
       "artifact_id": "course1-sprints-sprint-16-sprint-2-self-check",
@@ -928,16 +928,16 @@
       "canvas_payload_hash": "fbbe2d7f440dba00dff6a1d16283464e69d9f73a828b08ba12bc1cd430f77d6f",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "a15bf7067690c7de6fc4be73841af8442ba43fa839c8d3af5acba38b74160fc7",
-      "hosted_hash": "3870d243f87cbba41bfe52725f9ee4bfe5dc6b564f29d0f2d723655755e6d18b",
-      "hosted_last_rendered": "2026-09-24T21:14:33+00:00",
+      "content_hash": "cba5da111ef4b5eb887e76224652c27120b18522156930f44b9bd8bc55130e59",
+      "hosted_hash": "cf60d6a37d5c43648d513c1f58f35b16eeb61668934757346729c81e500602b1",
+      "hosted_last_rendered": "2026-09-24T21:47:44+00:00",
       "hosted_path": "course1/assignments/closing-reflection-and-final-goal-plan-check.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/closing-reflection-and-final-goal-plan-check.html",
-      "last_pushed": "2026-09-24T21:14:33+00:00",
+      "last_pushed": "2026-09-24T21:47:44+00:00",
       "local_path": "course1/sprints/sprint-5/closing-reflection-and-final-goal-plan-check.md",
       "position": 8,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "b0b968bebbca051d6b59fb934afc0252c7982c2d"
+      "source_commit": "0591eac75cfecad2f78528c23eb2f98398ff1b9b"
     },
     "course1-sprints-sprint-5-concept-from-artifacts-to-argument": {
       "artifact_id": "course1-sprints-sprint-5-concept-from-artifacts-to-argument",
@@ -1105,16 +1105,16 @@
       "canvas_payload_hash": "02623523646052ab429919d7e8b7138525d99cd93ed5440b72a180d356d3b5d8",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "3ab909b1f2de50abe0236169f2e814696ad463876797f41fd5b99e0a57ce5ae1",
-      "hosted_hash": "3cee4311d58700de3e5731bac643fc690c835841c9f940c1ab1d2a4eae4c2aca",
-      "hosted_last_rendered": "2026-09-24T21:14:35+00:00",
+      "content_hash": "3a3b214fd6a401a89536da64676bad0e1bfda243df168edfad5672abb1ed36ac",
+      "hosted_hash": "e5d7fb33312f5028071920eb47ef7a2c557f8afb0c385b40c2c0354edaa5da9f",
+      "hosted_last_rendered": "2026-09-24T21:47:44+00:00",
       "hosted_path": "course1/assignments/sprint-4-reflection-what-changed-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-4-reflection-what-changed-v3.html",
-      "last_pushed": "2026-09-24T21:14:35+00:00",
+      "last_pushed": "2026-09-24T21:47:44+00:00",
       "local_path": "course1/sprints/sprint-8/sprint-4-reflection-what-changed-v3.md",
       "position": 7,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "b0b968bebbca051d6b59fb934afc0252c7982c2d"
+      "source_commit": "0591eac75cfecad2f78528c23eb2f98398ff1b9b"
     },
     "course1-sprints-sprint-9-dojo-lab-design-the-learning-path-v3": {
       "artifact_id": "course1-sprints-sprint-9-dojo-lab-design-the-learning-path-v3",
@@ -1468,5 +1468,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-24T21:14:35+00:00"
+  "last_sync": "2026-09-24T21:47:44+00:00"
 }
