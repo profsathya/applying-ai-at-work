@@ -36,22 +36,22 @@ publish: false
 
 # Dojo Lab: test your assumptions
 
-## What you need
+## What you need for this Dojo Lab
 
 - Your draft **Problem Frame**.
-- Your **Dig into your assumptions** tables, pasted into your Sprint 2 working book.
+- Your **Dig into your assumptions** tables, pasted into your **Sprint 2 working book**.
 
-## The three parts
+## The three parts to this activity
 
 1. Your Dojo conversation.
-2. Submitting the transcript of the conversation back into Canvas.
+2. Requesting a transcript from the Dojo and submitting it back into Canvas.
 3. Updating your Dig into your assumptions tables based on your conversation.
 
-## Your Dojo conversation
+## Part 1: Your Dojo conversation
 
 Open your Dojo and say: "Walk me through Dojo Lab: test your assumptions." Then paste your Problem Frame and your Dig into your assumptions tables. Your Dojo knows what this activity is for and will take it from there.
 
-When you are done, write one last message in your own words: what it pushed on, what you changed, and what you kept and why.
+Before you ask for the transcript, send one last message that sums up, in your own words, what the Dojo pushed on, what you changed, and what you kept and why. That message becomes the last thing in your transcript, and it is what your instructor reads first.
 
 *More help: if your Dojo is not set up yet.* Use any AI chat. Paste the text below as your first message, then your Problem Frame and your tables.
 
@@ -76,10 +76,10 @@ When you are done, write one last message in your own words: what it pushed on, 
 > == Start here ==
 > Start as the Sensei: say what this module does in two lines, ask for my tables if they are not here, then begin Round 1. One question at a time.
 
-## Submit the transcript
+## Part 2: Requesting and submitting the transcript
 
-Use the transcript request and submission steps below.
+The steps are at the bottom of this page, under **Submit the complete transcript**: copy the transcript request into your conversation, reply "continue" until it is complete, and paste every chunk into the Canvas box. The transcript is the only thing you submit for this Dojo Lab.
 
-## Update your tables
+## Part 3: Updating your tables
 
-Go back to your Dig into your assumptions tables in your Sprint 2 working book and make the changes you decided on. Those tables are what you submit in Which assumptions.
+After you submit the transcript of your Dojo conversation, go back to your Dig into your assumptions tables in your Sprint 2 working book and update them based on what you learned. Those updated tables will be submitted in a later activity.
