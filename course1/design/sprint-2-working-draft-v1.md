@@ -215,7 +215,13 @@ Open your Dojo and say: "Walk me through Dojo Lab: test your assumptions." Then 
 
 ### Part 2: Requesting and submitting the transcript
 
-The steps are at the bottom of this page, under **Submit the complete transcript**: copy the transcript request into your conversation, reply "continue" until it is complete, and paste every chunk into the Canvas box. The transcript is the only thing you submit for this Dojo Lab.
+The transcript is the only thing you submit for this Dojo Lab. Five steps:
+
+1. Copy the transcript request at the bottom of this page.
+2. Paste it into your Dojo conversation as your next message.
+3. If the reply ends with CONTINUED, type "continue" and repeat until it stops.
+4. Copy the Dojo's reply, every chunk, in order.
+5. Paste it into the Canvas text box below this page and submit.
 
 ### Part 3: Updating your tables
 
