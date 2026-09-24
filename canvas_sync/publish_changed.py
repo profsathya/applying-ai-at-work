@@ -52,6 +52,15 @@ def repo_relative(path: Path) -> str:
     return str(path.resolve().relative_to(REPO_ROOT))
 
 
+def include_hosted_indexes(only_files: set[str] | None, published_sources: list[dict]) -> bool:
+    if only_files is None:
+        return True
+    # An exact-file content update to an already visible item cannot change
+    # its index placement. Avoid rebuilding unrelated scheduled sprints.
+    return any(parse_frontmatter(item["path"])[0].get("publish", True)
+               and not item.get("verified_live_published") for item in published_sources)
+
+
 def load_state(manifest_path: Path, state_dir: Path, *, require_state: bool) -> tuple[dict, Path]:
     manifest = load_json(manifest_path)
     state_path = state_path_for_manifest(manifest_path, state_dir, manifest)
@@ -599,10 +608,7 @@ def publish_manifest(
                 hosted_output_dir,
                 render_sources,
                 state=latest_state,
-                include_indexes=(only_files is None or any(
-                    parse_frontmatter(item["path"])[0].get("publish", True)
-                    for item in published_sources
-                )),
+                include_indexes=include_hosted_indexes(only_files, published_sources),
             )
         except Exception as exc:  # noqa: BLE001 - surface hosted render failures in publish result
             result["failed"].append(

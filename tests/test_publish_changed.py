@@ -889,6 +889,16 @@ class DriftSelfHealTests(unittest.TestCase):
 
     LIVE_PAGE = {"page_id": 1001, "url": "stable-page", "title": "Stable Page", "body": "<h1>Stable Page</h1><p>Body text.</p>", "published": True}
 
+    def test_exact_file_update_of_visible_item_skips_unrelated_indexes(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "stable-page.md"
+            write_page(path)
+            item = {"path": path, "verified_live_published": True}
+            self.assertFalse(publish_changed.include_hosted_indexes({"stable-page.md"}, [item]))
+            self.assertTrue(publish_changed.include_hosted_indexes(None, [item]))
+            item["verified_live_published"] = False
+            self.assertTrue(publish_changed.include_hosted_indexes({"stable-page.md"}, [item]))
+
     def _drift(self, entry: dict | None, live: dict | None):
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()
