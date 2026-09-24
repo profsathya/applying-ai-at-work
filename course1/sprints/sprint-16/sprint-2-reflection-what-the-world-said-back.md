@@ -6,7 +6,7 @@ artifact_id: course1-sprints-sprint-16-sprint-2-reflection-what-the-world-said-b
 sprint: 16
 week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
-position: 11
+position: 12
 points: 10
 submission_type: file_upload
 delivery_mode: ai_activity

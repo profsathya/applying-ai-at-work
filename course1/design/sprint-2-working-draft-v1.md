@@ -1,6 +1,6 @@
 ---
 purpose: Sprint 2, whole sprint, working draft for Leslie's review, on the Sprint 1 model; becomes the cut-ready source for Jeremy's build once reviewed
-status: v2.5, 24 September 2026, cut-ready. The Concept check moves to the end of week 2, before the Problem Frame item, and covers both weeks (Leslie and Melisa). Positions 5 to 9 renumbered. v2.4, 24 September 2026, cut-ready. The reflection on the Dojo conversation moves from the Dojo Lab's last message to Which assumptions as a graded second box (Leslie); the Dojo Lab page keeps only the conversation, the transcript, and the table update. v2.3, 24 September 2026, cut-ready. Dojo Lab: test your assumptions is Leslie's one-line page for a set-up Dojo, with a module on the Dojo tab (dojo-modules-sprint-2.md) and the same module inside a plain-chat fallback paste. v2.2, 24 September 2026, cut-ready. Introduction aligned with Sprint 1 (title case, the submission line, Concept check, a pacing line, own-work items named) and its How to work and Where to write sections cut (Leslie). v2.1, 24 September 2026, cut-ready. The check is removed from Sprint 2 (Leslie, 24 September): Sprint 3's conversation is the first check. Dig into your assumptions is Leslie's rewrite (three questions per assumption, risk as consequence and likelihood, one table per assumption, an optional find-out line); the Dojo Lab tests the walk only; the week 1 graded item is Which assumptions, one box; the Problem Frame item has two parts; self-check and reflection follow. v2.0, 23 September 2026, cut-ready. Leslie's rulings applied: the Problem Frame item loses its Dojo step (three boxes); the reflection is three questions in one box. Dig into your assumptions and What solutions already exist rewritten in walkthrough-ready form (Jeremy's presentation: walkthrough, fields with ask/example/avoid, Word export, later-use sections); the week 1 graded item is paste your table and your check. v1.4, 23 September 2026. Leslie's notes on the rest of the doc applied (34 tracked changes, 17 comments): What solutions already exist reworked again (columns 2 and 3 taught together per row; the problem named above each example; column 3 as good, bad, not sure; the other-two-Cs paragraph and the one-line closers cut); the Dojo Lab hands the table back for pasting and says how to pick rows; the graded write-up's questions in her words; the Problem Frame item and the reflection carry [OPEN] markers for her rulings. v1.3, 21 September 2026. Leslie's first pass on the second half applied (16 tracked changes, 4 comments): What solutions already exist rebuilt column by column with a bridge from week 1, Context reflection in her words, and guidance and examples for each column; Dojo Lab: explore what already exists rebuilt as one conversation in three moves with the look inside the row loop and labeled prompts; whole frame pasted everywhere; transcript submission. v1.2, 21 September 2026. Leslie's 3c ruling applied: What a change would ask of people is off week 1 entirely (walk page section and graded Part 3 removed); 3c is one line in the Problem Frame item, drawn from the minuses in the What already exists table after the real look; verdict, Dojo step, worked example, and reflection follow. Second half ready for Leslie's run. Leslie's second pass on the first half applied: eight tracked changes; Dojo Lab submits a transcript as Sprint 1 does; the frame-paste line covers both Dojo and plain chat; What a change would ask of people is off the walk page, destination open; the Problem Frame copy moves to the end of Sprint 1 (Jeremy). Held for her rulings: 3c's destination, and the Assumptions walk activity sheet with the graded item's paste shape. Dojo Lab: test your assumptions carries Leslie's 20 September run (labeled prompt, paste-your-frame line for a chat outside the Dojo, illustrative exchange from the run, [NOTE] retired); both Dojo Labs stay interim single-shot prompts until the course doc exists (Leslie, 20 September). The handover example's part 6 row "nobody has tried" is now "nothing has been tried that stuck" wherever the pages quote it. Item 8's verdict example names the obvious-fix tension (Leslie, 20 September). v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
+status: v2.6, 24 September 2026, cut-ready. Working with AI: Context split out as a reading page (position 6); What solutions already exist brought to the walk page's shape (what you need, the goal, three questions, one example per field, the table). Twelve items. v2.5, 24 September 2026, cut-ready. The Concept check moves to the end of week 2, before the Problem Frame item, and covers both weeks (Leslie and Melisa). Positions 5 to 9 renumbered. v2.4, 24 September 2026, cut-ready. The reflection on the Dojo conversation moves from the Dojo Lab's last message to Which assumptions as a graded second box (Leslie); the Dojo Lab page keeps only the conversation, the transcript, and the table update. v2.3, 24 September 2026, cut-ready. Dojo Lab: test your assumptions is Leslie's one-line page for a set-up Dojo, with a module on the Dojo tab (dojo-modules-sprint-2.md) and the same module inside a plain-chat fallback paste. v2.2, 24 September 2026, cut-ready. Introduction aligned with Sprint 1 (title case, the submission line, Concept check, a pacing line, own-work items named) and its How to work and Where to write sections cut (Leslie). v2.1, 24 September 2026, cut-ready. The check is removed from Sprint 2 (Leslie, 24 September): Sprint 3's conversation is the first check. Dig into your assumptions is Leslie's rewrite (three questions per assumption, risk as consequence and likelihood, one table per assumption, an optional find-out line); the Dojo Lab tests the walk only; the week 1 graded item is Which assumptions, one box; the Problem Frame item has two parts; self-check and reflection follow. v2.0, 23 September 2026, cut-ready. Leslie's rulings applied: the Problem Frame item loses its Dojo step (three boxes); the reflection is three questions in one box. Dig into your assumptions and What solutions already exist rewritten in walkthrough-ready form (Jeremy's presentation: walkthrough, fields with ask/example/avoid, Word export, later-use sections); the week 1 graded item is paste your table and your check. v1.4, 23 September 2026. Leslie's notes on the rest of the doc applied (34 tracked changes, 17 comments): What solutions already exist reworked again (columns 2 and 3 taught together per row; the problem named above each example; column 3 as good, bad, not sure; the other-two-Cs paragraph and the one-line closers cut); the Dojo Lab hands the table back for pasting and says how to pick rows; the graded write-up's questions in her words; the Problem Frame item and the reflection carry [OPEN] markers for her rulings. v1.3, 21 September 2026. Leslie's first pass on the second half applied (16 tracked changes, 4 comments): What solutions already exist rebuilt column by column with a bridge from week 1, Context reflection in her words, and guidance and examples for each column; Dojo Lab: explore what already exists rebuilt as one conversation in three moves with the look inside the row loop and labeled prompts; whole frame pasted everywhere; transcript submission. v1.2, 21 September 2026. Leslie's 3c ruling applied: What a change would ask of people is off week 1 entirely (walk page section and graded Part 3 removed); 3c is one line in the Problem Frame item, drawn from the minuses in the What already exists table after the real look; verdict, Dojo step, worked example, and reflection follow. Second half ready for Leslie's run. Leslie's second pass on the first half applied: eight tracked changes; Dojo Lab submits a transcript as Sprint 1 does; the frame-paste line covers both Dojo and plain chat; What a change would ask of people is off the walk page, destination open; the Problem Frame copy moves to the end of Sprint 1 (Jeremy). Held for her rulings: 3c's destination, and the Assumptions walk activity sheet with the graded item's paste shape. Dojo Lab: test your assumptions carries Leslie's 20 September run (labeled prompt, paste-your-frame line for a chat outside the Dojo, illustrative exchange from the run, [NOTE] retired); both Dojo Labs stay interim single-shot prompts until the course doc exists (Leslie, 20 September). The handover example's part 6 row "nobody has tried" is now "nothing has been tried that stuck" wherever the pages quote it. Item 8's verdict example names the obvious-fix tension (Leslie, 20 September). v1.1.1, 18 September 2026. Title of item 3 settled; American English throughout (Leslie, 18 September). Sections 1 to 3 (cover note, module header, Introduction, Dig into your assumptions) carry Leslie's first review pass, applied change by change; sections 4 to 11 are v1, not yet reviewed. Two [OPEN] markers in section 3 wait on her
 depends_on: sprint-2-outline.md (v5.2); problem-frame-template.md; what-already-exists-template.md; sprint-2-worked-example-handovers.md; course1/sprints/sprint-14/ (Sprint 1 as published, for register and format); course1/sprints/sprint-15/ (Sprint 3 V3, for the hand-off and the Dojo Lab form)
 storage: the next storage folder after sprint-15, Jeremy's call; positions 1 to 11
 ---
@@ -31,12 +31,13 @@ This file is the cut-ready source for the Sprint 2 build (v2.0, 23 September). L
 | 3 | Dig into your assumptions | Own your progress | 0 | must submit | `walkthrough`, 1 task, Word export | One |
 | 4 | Dojo Lab: test your assumptions | Own your progress | 0 | must submit | transcript, 1 box | One |
 | 5 | Your updated assumptions | Graded item | 20 | one submission | `reading`, 2 boxes | One |
-| 6 | What solutions already exist | Own your progress | 0 | must submit | `walkthrough`, 1 task, Word export | Two |
-| 7 | Dojo Lab: explore what already exists | Own your progress | 0 | must submit | transcript, 1 box | Two |
-| 8 | What exists, and what it means | Graded item | 20 | one submission | `reading`, 5 boxes | Two |
-| 9 | Sprint 2 Concept check | Self-check | 5 | completion | practice quiz, 5 questions, both weeks | Two |
-| 10 | Problem Frame: is it worth pursuing? | Graded item | 45 | one submission | `reading`, 2 boxes | Two |
-| 11 | Sprint 2 Reflection: what the world said back | Graded item | 10 | ai_activity, JSON upload | 1 question, 3 parts | Two |
+| 6 | Working with AI: Context | Page | | | `page_presentation: reading` | Two |
+| 7 | What solutions already exist | Own your progress | 0 | must submit | `walkthrough`, 1 task, Word export | Two |
+| 8 | Dojo Lab: explore what already exists | Own your progress | 0 | must submit | transcript, 1 box | Two |
+| 9 | What exists, and what it means | Graded item | 20 | one submission | `reading`, 5 boxes | Two |
+| 10 | Sprint 2 Concept check | Self-check | 5 | completion | practice quiz, 5 questions, both weeks | Two |
+| 11 | Problem Frame: is it worth pursuing? | Graded item | 45 | one submission | `reading`, 2 boxes | Two |
+| 12 | Sprint 2 Reflection: what the world said back | Graded item | 10 | ai_activity, JSON upload | 1 question, 3 parts | Two |
 
 Sprint total 100, held as a proposal until the team decision on points across all five sprints.
 
@@ -82,12 +83,13 @@ Own your progress activities carry 0 points, but Canvas requires a submission to
 
 **Week 2: what exists, and your verdict on proceeding**
 
-5. **What solutions already exist.** From the template, start your What already exists table on your own: what you know of, what you guess, and what you want to find out. (Own your progress, 0 points.)
-6. **Dojo Lab: explore what already exists.** Work with AI and on your own to fill in the gaps in the table, then do a deeper dive to better understand the existing solutions. (Own your progress, 0 points.)
-7. **What exists, and what it means** (20 points). Summarize what you uncovered about what already exists.
-8. Take the **Concept check** (5 points).
-9. **Problem Frame: is it worth pursuing?** Bring your frame up to date and write your verdict (45 points).
-10. **Write the Reflection** (10 points).
+5. Read **Working with AI: Context**.
+6. **What solutions already exist.** Start your What already exists table on your own: what you know of, what you guess, and what you want to find out. (Own your progress, 0 points.)
+7. **Dojo Lab: explore what already exists.** Work with AI and on your own to fill in the gaps in the table, then do a deeper dive to better understand the existing solutions. (Own your progress, 0 points.)
+8. **What exists, and what it means** (20 points). Summarize what you uncovered about what already exists.
+9. Take the **Concept check** (5 points).
+10. **Problem Frame: is it worth pursuing?** Bring your frame up to date and write your verdict (45 points).
+11. **Write the Reflection** (10 points).
 
 In week 1, the Dojo Lab and the write-up go back to back, so plan for both in one sitting or two close together. The Concept check comes at the end of week 2, before you write your verdict.
 
@@ -260,13 +262,11 @@ In your own words: what the Dojo pushed on, what you changed, and what you kept 
 
 ---
 
-## What solutions already exist
+## Working with AI: Context
 
-*Own your progress. Position 6. 0 points. Submit to mark it complete. No AI on this one.*
+*Page. Position 6.*
 
-For the first part of this sprint, you looked at your assumptions to see how a better understanding of them might change your problem. Week 2 starts by looking outward. Can you find other examples of people trying to solve this problem, or one like it, in your own situation or out in the world? Are there products, practices, or someone else who already does this well? If you find an existing solution, it does not necessarily mean your problem is not worth pursuing, but it might change how you think about it.
-
-### Reflect on how you've been working with AI: providing Context
+For the first part of this sprint, you looked at your assumptions to see how a better understanding of them might change your problem. Before week 2's activity, a short look at how you have been working with AI.
 
 In two activities so far, you have thought first and then come to AI with your thinking already developed: your draft frames in Sprint 1 and your walk in week 1. That is you providing **Context** to AI, to get more useful results. Instead of handing AI the problem and having it generate the work, which it would not have been able to do a very good job of, you gave AI your thinking, which it read and pushed against. Context is the first C of Symbiotic Thinking, the partnership you met by name in Welcome, and it is one way to make your conversations with AI useful.
 
@@ -274,56 +274,80 @@ There are two other kinds of context you can provide: what AI needs to know abou
 
 [INTERIM: the sentence about the course document attached to the project is true once the Dojo doc and the Sprint 0 setup item exist. If they are not ready at the cut, it becomes "Once your Dojo is set up, its course document carries many of those instructions."]
 
-### Back to existing solutions
+Week 2 uses AI the same way. You start the What already exists table on your own, then bring it to the Dojo Lab, where AI helps you fill it in and points you at where to look.
 
-This page is a table, three columns: what exists, how it works as far as you know, and what it means for your problem. As always, questions and question marks where you don't know something are encouraged. It is better to mark what you don't know than make something up; a table that is mostly questions will still be very useful for the next activity. You get a Word file of it when you finish; keep it, because the next activity fills it in.
+Next up: **What solutions already exist**.
 
-Two passes: first everything you can think of for column 1, then columns 2 and 3 together, one row at a time.
+> **[BUILD]** Page, `page_presentation: reading`. Split out of What solutions already exist on 24 September (Leslie): teaching gets its own page, as Sprint 1's The problem frame does. Learning goal: "Say what Context means when you work with AI, and name the two other kinds you can give it."
 
-### Column 1: what exists
+---
 
-With your problem in mind, brainstorm existing solutions that might be related to part or all of your problem. Ask yourself:
+## What solutions already exist
 
-- What products or services do I know of that claim to have solutions in this problem space?
-- Do I know anyone who has a similar problem but seems to be handling it well?
-- Does my own organization, or do I personally, already have something for this, used or not?
-- Do I know anything about how AI might be able to help solve this problem?
+*Own your progress. Position 7. 0 points. Submit to mark it complete. No AI on this one.*
 
-You are listing what exists, not designing anything. "An agenda tool" is a thing that exists. "We should build an agenda tool" is a solution, and it waits. Things you know of, things you have heard of, guesses, and questions all count.
+### What you need for this activity
 
-> **Example, column 1 for account handovers.** Problem: account handovers happen with no record. Possible solutions that exist: an owner field in our CRM; a handover checklist (the sales team next door has one); is there a weekly "accounts that moved" note, or does it ever come up in a weekly team meeting?
+- Your draft **Problem Frame**.
+- Your **Sprint 2 working book**, to paste your table into when you finish.
 
-*More help: the garden plot. If you don't know what solutions exist, you can ask questions.* Problem: new plot-holders start alone in April, and most stop coming by midsummer. Possible solutions that exist: do other community gardens pair new people with returning ones? Is there a name for this problem, and are people talking about it online? What does the garden two streets over do that ours does not? Did anyone here try something before? Four questions and no answers, but there is real thinking here. That is what is needed.
+You will do your work within Canvas. Work without AI on this page; the next activity is where AI helps you fill the table in.
 
-### Columns 2 and 3: one row at a time
+The goal of this activity is for you to start a table of what already exists that could solve or ease your problem. Week 2 looks outward. Can you find other examples of people trying to solve this problem, or one like it, in your own situation or out in the world? Are there products, practices, or someone else who already does this well? If you find an existing solution, it does not necessarily mean your problem is not worth pursuing, but it might change how you think about it.
 
-Now take each row in turn and fill the other two columns while that thing is in your head.
+> **Example:** Our CRM has an owner field on every account. I have seen it, grayed out. I do not know whether ours is switched on.
 
-**Column 2, how it works, as far as you know.** Write what you actually know about how it works, and be honest about what you do not. Have you seen it yourself? Where does it live? Who can change it, and who can see it? If you have not seen it, how do you know it exists? Who would have to switch it on? A row that is mostly "I do not know" is fine; that is what the next activity is for.
+You are listing what exists, not designing anything. "An agenda tool" is a thing that exists; "we should build an agenda tool" is a solution, and it waits. Things you know of, things you have heard of, guesses, and questions all count. As always, marking what you don't know is better than making something up. A table that is mostly questions will still be very useful for the next activity.
 
-**Column 3, what it means for your problem.** Reasons this would be good for your problem, reasons it might be bad, and what you are honestly not sure about. Before you have looked into anything, most of this column will be "not sure," and that is the right result.
+### Build your table
 
-> **Example, one row, the CRM owner field.** Column 2: I have seen a CRM owner field, but it's grayed out. I don't know who can set it or if it can be turned on. If it can be, would the old owner change the name at the handover point? How would the new owner, or any of the other managers, be notified? Column 3: Good: it seems to already exist as a feature in a product we already use. Bad: it's not turned on, and people aren't using the CRM much as it is, so it might not make a difference. Not sure: whether turning it on costs anything, and who decides.
+With your problem in mind, ask three things about each thing that might already exist:
+
+- What exists?
+- How does it work, as far as I know?
+- What does it mean for my problem?
+
+To find things for the first question, ask yourself: What products or services claim to have solutions in this problem space? Do I know anyone who has a similar problem but seems to be handling it well? Does my own organization, or do I personally, already have something for this, used or not? Could AI help with this problem?
+
+The table below will help you think through each one. Fill one row per thing. Do the first column for everything you can think of, then the other two columns one row at a time.
+
+**What exists.** A thing that exists somewhere now, or a question about one.
+
+> Account handover example: An owner field in our CRM.
+>
+> Garden plot example: Do other community gardens pair new people with returning ones?
+
+**How it works, as far as I know.** What you have actually seen, where it lives, who can change or see it, and what you do not know.
+
+> Account handover example: I have seen a CRM owner field, but it's grayed out. I don't know who can set it or if it can be turned on. If it can be, would the old owner change the name at the handover point? How would the new owner, or any of the other managers, be notified?
+>
+> Garden plot example: I don't know. The garden two streets over might do it. I have never asked.
+
+**What it means for my problem: good, bad, not sure.** Reasons it would be good for your problem, reasons it might be bad, and what you are not sure about. Before you have looked into anything, most of this will be "not sure," and that is the right result.
+
+> Account handover example: Good: it seems to already exist as a feature in a product we already use. Bad: it's not turned on, and people aren't using the CRM much as it is, so it might not make a difference. Not sure: whether turning it on costs anything, and who decides.
+>
+> Garden plot example: Good: if it works there, it could work here. Bad: pairing takes someone to organize it every spring. Not sure: whether the pairs actually talk.
+
+*More help: if nothing comes to mind.* Turn your frame into questions and make each one a row. Is there a name for this problem, and are people talking about it online? What does the place next door do that we do not? Did anyone here try something before? Four questions and no answers, but there is real thinking here. That is what is needed.
 
 *More help: take another look at the first column.* Everything in it should be something that exists, somewhere, now, or a question about one. If a row describes what you would build, move it out. That is a solution, and Sprint 2 is not where solutions get chosen.
 
-> **[BUILD]** `delivery_mode: guided_assignment`, `presentation: walkthrough`, no feedback endpoint. One group task, `layout: table`. Export filename `what-already-exists.docx`. The teaching sections before "Column 1" are unreferenced and render first.
->
-> **Task `your-table`**, instruction section "Columns 2 and 3: one row at a time" (with "Column 1: what exists" rendered before it as unreferenced teaching, or as the instruction section of a first single-field task if the renderer needs column 1 first; Jeremy's call), `repeat_count: 6`, labels "Row 1" to "Row 6", rows 4 to 6 optional. Fields, each with ask / example / avoid:
+When you finish, paste your table into your Sprint 2 working book. The next activity fills it in.
+
+> **[BUILD]** `delivery_mode: guided_assignment`, `presentation: walkthrough`, no feedback endpoint (no AI on this page). One group task, `layout: table`, `repeat_count: 6`, labels "Row 1" to "Row 6", rows 4 to 6 marked optional. Export filename `what-already-exists.docx`. Submission: the text copy into the box as the completion marker; the table pasted into the working book. Fields, each with ask / example / avoid (garden examples in the page prose):
 >
 > - `exists`, "What exists" (text). Ask: a thing that exists somewhere now, or a question about one. Example: An owner field in our CRM. Avoid: something you would build.
 > - `how`, "How it works, as far as I know" (textarea). Ask: what you have actually seen, where it lives, who can change or see it, and what you do not know. Example: I have seen the field, grayed out. I don't know who can set it or whether it can be turned on. Avoid: describing how it probably works as if you had seen it.
 > - `means`, "What it means for my problem: good, bad, not sure" (textarea). Ask: reasons it would be good for your problem, reasons it might be bad, and what you are not sure about. Example: Good: already in a product we use. Bad: not on, and people barely use the CRM. Not sure: what turning it on costs, and who decides. Avoid: deciding it is the answer before you have looked.
 >
-> Criteria: at least three rows, questions allowed; nothing in the first column is a solution the participant would build; blanks and "not sure" left as they are rather than filled with guesses dressed as facts.
->
-> `document_after`: "After the Dojo Lab", "Fill this in during the next activity: which rows AI added and which you kept; for each row you went and looked at, where you looked and what you found; and your table as it now stands." Link to a Google Doc version of the table (`what-already-exists-template.md`) only if the walkthrough is not ready at the cut.
+> Criteria: at least three rows, questions allowed; nothing in the first column is a solution the participant would build; blanks and "not sure" left as they are rather than filled with guesses dressed as facts. `document_after`: "After the Dojo Lab", "Fill this in during the next activity: which rows AI added and which you kept; for each row you went and looked at, where you looked and what you found; and your table as it now stands." Until Jeremy's table export is ready, the reading fallback is one box: "your table, one row per thing."
 
 ---
 
 ## Dojo Lab: explore what already exists
 
-*Own your progress. Position 7. 0 points. Submit to mark it complete.*
+*Own your progress. Position 8. 0 points. Submit to mark it complete.*
 
 [NOTE] Prompts not yet run in a real chat. Leslie's run on the handover table decides the wording, as with the first Dojo Lab.
 
@@ -402,7 +426,7 @@ Then use the transcript request and submission steps below.
 
 ## What exists, and what it means
 
-*Graded item. Position 8. 20 points. One submission.*
+*Graded item. Position 9. 20 points. One submission.*
 
 The write-up of the last two activities, in five short answers. Most of it is in your table and your boxes already. What is new here is the judgment in the last two questions, and that is where most of the points are.
 
@@ -444,7 +468,7 @@ One paragraph. If the answer is "nothing," say what you looked at that could hav
 
 ## Sprint 2 Concept check
 
-*Self-check. Position 9. 5 points, completion. Practice quiz, unlimited attempts.*
+*Self-check. Position 10. 5 points, completion. Practice quiz, unlimited attempts.*
 
 A short check before you write your verdict. It covers the few ideas this sprint runs on, from both weeks: what an assumption is, what makes one risky, what the What already exists table is for, what Context means when you work with AI, and what a verdict of no means. If a question surprises you, go back to the page it names.
 
@@ -460,7 +484,7 @@ A short check before you write your verdict. It covers the few ideas this sprint
 
 ## Problem Frame: is it worth pursuing?
 
-*Graded item. Position 10. 45 points. One submission.*
+*Graded item. Position 11. 45 points. One submission.*
 
 As you wrap up Sprint 2, all of your work so far has helped you push on and dig into your problem. Now it's time to confirm: is there enough here to keep pursuing this problem?
 
@@ -497,7 +521,7 @@ One paragraph, in your own words. Worth pursuing, not worth pursuing, or depends
 
 ## Sprint 2 Reflection: what the world said back
 
-*Graded item. Position 11. 10 points. ai_activity, JSON upload, same mechanism as Sprint 1.*
+*Graded item. Position 12. 10 points. ai_activity, JSON upload, same mechanism as Sprint 1.*
 
 This sprint you rated the risk in your own assumptions and looked at what already exists. Write about what came back from outside your own head, in three parts. Where did something in the world change your view of your problem, and where did AI change it? What did you push back on, from either, and what did it cost you to push back? And what is the one thing in your frame you are least sure how to find out?
 

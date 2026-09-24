@@ -508,6 +508,9 @@ modules:
             meta: "Guided assignment - submit your updated assumption tables and what the Dojo changed; 20 points"
       - label: "Sprint Week 2: What exists, and is it worth it?"
         items:
+          - slug: "working-with-ai-context"
+            nav_meta: "Read"
+            meta: "Page - what Context means when you work with AI, and the two other kinds you can give it"
           - slug: "what-solutions-already-exist"
             nav_meta: "Practice · Own your progress"
             meta: "Guided assignment - start your table of what already exists on your own; 0 points, submission required for module completion"

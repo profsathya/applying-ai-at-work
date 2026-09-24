@@ -6,7 +6,7 @@ artifact_id: course1-sprints-sprint-16-sprint-2-self-check
 sprint: 16
 week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
-position: 9
+position: 10
 points: 5
 submission_type: text_entry
 delivery_mode: guided_assignment

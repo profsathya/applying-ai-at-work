@@ -6,7 +6,7 @@ artifact_id: course1-sprints-sprint-16-what-exists-and-what-it-means
 sprint: 16
 week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
-position: 8
+position: 9
 points: 20
 submission_type: text_entry
 delivery_mode: guided_assignment
