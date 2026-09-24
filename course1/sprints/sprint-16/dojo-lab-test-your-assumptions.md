@@ -24,8 +24,7 @@ guided_assignment:
     criteria:
     - The required header and every turn, in order.
     - Every CONTINUED marker and continuation chunk kept.
-    - A last message in your own words with what was pushed on, what changed, and what was
-      kept with a reason.
+    - The conversation reaches the module's last round, where you say what you keep.
 dojo_submission:
   mode: transcript
   prompt_version: v1
@@ -50,8 +49,6 @@ publish: false
 ## Part 1: Your Dojo conversation
 
 Open your Dojo and say: "Walk me through Dojo Lab: test your assumptions." Then paste your Problem Frame and your Dig into your assumptions tables. Your Dojo knows what this activity is for and will take it from there.
-
-Before you ask for the transcript, send one last message that sums up, in your own words, what the Dojo pushed on, what you changed, and what you kept and why. That message becomes the last thing in your transcript, and it is what your instructor reads first.
 
 *More help: if your Dojo is not set up yet.* Use any AI chat. Paste the text below as your first message, then your Problem Frame and your tables.
 

@@ -510,7 +510,7 @@ modules:
             selfcheck: true
           - slug: "which-assumptions"
             nav_meta: "20 points"
-            meta: "Guided assignment - submit your assumption tables with a risk rating and reason for each; 20 points"
+            meta: "Guided assignment - submit your updated assumption tables and what the Dojo changed; 20 points"
       - label: "Sprint Week 2: What exists, and is it worth it?"
         items:
           - slug: "what-solutions-already-exist"
