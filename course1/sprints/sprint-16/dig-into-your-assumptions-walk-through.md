@@ -1,6 +1,6 @@
 ---
 type: assignment
-title: Dig into your assumptions walk-through
+title: Dig into your assumptions Canvas Walkthrough
 slug: dig-into-your-assumptions-walk-through
 artifact_id: course1-sprints-sprint-16-dig-into-your-assumptions-walk-through
 sprint: 16
@@ -8,7 +8,7 @@ week: 1
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 3
 points: 0
-submission_type: text_entry
+submission_type: file_upload
 delivery_mode: guided_assignment
 completion_requirement: must_submit
 learner_labels: true
@@ -82,9 +82,7 @@ publish: false
 ## What you need for this activity
 
 - Your draft Problem Frame that you created in Sprint 1, so open that up.
-- Your Sprint 2 working book, the document you paste each activity's tables into.
-
-[INTERIM: the Sprint 2 working book template link goes here once the team settles the format.]
+- A place to keep your completed Word document with your other Sprint 2 work.
 
 You will do your work within Canvas. Work without AI on this page. The next activity has AI push back on what you write here, and that only works if you bring your own thinking.
 
@@ -107,3 +105,5 @@ With that in mind, take each assumption from Part 6 of your frame and ask three 
 - How risky is this to shutting down my problem?
 
 The table below will help you think through each assumption. Fill one table per assumption.
+
+When you finish, select **Download as Word document** below. In Canvas, select **Start Assignment**, attach that Word file, and select **Submit Assignment**. Keep the file for the Dojo Lab, where you will test these assumptions. Downloading it alone does not submit your work.

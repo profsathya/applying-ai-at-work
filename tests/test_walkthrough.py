@@ -118,7 +118,8 @@ class WalkthroughChecks(unittest.TestCase):
             client.assignments[2]['published'] = True
             client.module_items[0]['published'] = False
             client.module_items[1]['published'] = True
-            pair = {'source': state['artifacts']['source'], 'replacement': state['artifacts']['new']}
+            pair = {'source': state['artifacts']['source'], 'replacement': state['artifacts']['new'],
+                    'source_was_published': True, 'replacement_was_published': False}
             self.assertEqual(rollback_pair(client, pair, path), [])
             self.assertTrue(client.assignments[1]['published'])
             self.assertFalse(client.assignments[2]['published'])
@@ -127,6 +128,58 @@ class WalkthroughChecks(unittest.TestCase):
             saved = load_json(path)
             self.assertEqual(saved['artifacts']['source']['content_hash'], '')
             self.assertEqual(saved['artifacts']['new']['content_hash'], '')
+
+    def test_release_preserves_already_published_replacement_on_rollback(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source_path = Path(directory) / 'source.md'
+            new_path = Path(directory) / 'new.md'
+            source_path.write_text('---\nartifact_id: source\ntype: assignment\nmodule: M\npoints: 35\nsubmission_type: file_upload\npublish: false\n---\n')
+            new_path.write_text('---\nartifact_id: new\ntype: assignment\nmodule: M\npoints: 35\nsubmission_type: file_upload\nwalkthrough_after: source\npublish: true\n---\n')
+            source = {'artifact_id': 'source', 'path': source_path}
+            new = {'artifact_id': 'new', 'path': new_path}
+            state = {'artifacts': {
+                'source': {'artifact_id': 'source', 'canvas_id': 1, 'canvas_type': 'assignment',
+                           'canvas_module_id': 5, 'canvas_module_item_id': 10, 'content_hash': 'old'},
+                'new': {'artifact_id': 'new', 'canvas_id': 2, 'canvas_type': 'assignment',
+                        'canvas_module_id': 5, 'canvas_module_item_id': 11, 'content_hash': 'new'},
+            }}
+            client = CanvasStub()
+            client.assignments[2]['published'] = True
+            client.module_items[1]['published'] = True
+            pair = preflight_pair(client, source, new, state)
+            self.assertTrue(pair['replacement_was_published'])
+            path = Path(directory) / 'state.json'
+            path.write_text(json.dumps(state))
+            client.assignments[1]['published'] = False
+            client.module_items[0]['published'] = False
+            self.assertEqual(rollback_pair(client, pair, path), [])
+            self.assertTrue(client.assignments[1]['published'])
+            self.assertTrue(client.assignments[2]['published'])
+            self.assertTrue(client.module_items[0]['published'])
+            self.assertTrue(client.module_items[1]['published'])
+
+    def test_ungraded_text_entry_to_word_upload_requires_reviewed_walkthrough(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source_path = Path(directory) / 'source.md'
+            new_path = Path(directory) / 'new.md'
+            source_path.write_text('---\nartifact_id: source\ntype: assignment\nmodule: M\npoints: 0\nsubmission_type: text_entry\npublish: false\n---\n')
+            new_path.write_text('---\nartifact_id: new\ntype: assignment\nmodule: M\npoints: 0\nsubmission_type: file_upload\nwalkthrough_after: source\npublish: true\nguided_assignment:\n  presentation: walkthrough\n  export_filename: work.docx\n---\n')
+            source = {'artifact_id': 'source', 'path': source_path}
+            new = {'artifact_id': 'new', 'path': new_path}
+            state = {'artifacts': {
+                'source': {'artifact_id': 'source', 'canvas_id': 1, 'canvas_type': 'assignment',
+                           'canvas_module_id': 5, 'canvas_module_item_id': 10},
+                'new': {'artifact_id': 'new', 'canvas_id': 2, 'canvas_type': 'assignment',
+                        'canvas_module_id': 5, 'canvas_module_item_id': 11},
+            }}
+            client = CanvasStub()
+            client.assignments[1]['points_possible'] = 0
+            client.assignments[2]['points_possible'] = 0
+            client.assignments[1]['submission_types'] = ['online_text_entry']
+            self.assertEqual(preflight_pair(client, source, new, state)['module_order'], [10, 11])
+            new_path.write_text(new_path.read_text().replace('work.docx', 'work.txt'))
+            with self.assertRaisesRegex(ValueError, 'submission_types'):
+                preflight_pair(client, source, new, state)
 
 
 if __name__ == '__main__':

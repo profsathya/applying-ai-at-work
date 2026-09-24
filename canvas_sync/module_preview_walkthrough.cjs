@@ -30,6 +30,9 @@ function storedZipEntry(data, wanted) {
 }
 
 async function fillBaseline(page) {
+  while (await page.locator('.walk-entry:not([open])').count()) {
+    await page.locator('.walk-entry:not([open])').first().locator(':scope > summary').click();
+  }
   const inputs = page.locator('[data-walk-answer]');
   const values = new Map();
   for (let index = 0; index < await inputs.count(); index++) {
@@ -55,16 +58,16 @@ async function verifyBaseline(page, values, recordCheck) {
 
 async function checkWalkthrough(page, config, result) {
   const recordCheck = name => result.checks.push(name);
-  assert.equal(await page.locator('.walk-intro h2').innerText(), 'How this walk-through works');
+  assert.equal(await page.locator('.walk-intro h2').innerText(), 'How this Canvas Walkthrough works');
   const intro = await page.locator('.walk-intro').innerText();
-  assert(intro.includes('Canvas walk-through assignment'), 'Walk-through context is missing');
+  assert(intro.includes('This Canvas Walkthrough'), 'Walk-through context is missing');
   const finish = page.locator('.walk-finish');
   const finishText = await finish.innerText();
   if (!config.hasWritable) {
     assert(finishText.includes('no response to submit'), 'Reference-only page implies a submission');
     assert.equal(await finish.locator('#walk-copy').innerText(), 'Copy reference table');
   } else if (config.submissionType === 'file_upload') {
-    assert(finishText.includes('Submit this walk-through in Canvas'));
+    assert(finishText.includes('Submit your work in Canvas'));
     if (config.pdfFromDocument) {
       assert(finishText.includes('upload that PDF'));
       assert.equal(await finish.locator('#walk-copy').innerText(), 'Copy work into your document');
@@ -77,7 +80,7 @@ async function checkWalkthrough(page, config, result) {
       assert.equal(await finish.locator('#walk-text-download').count(), 0);
     }
   } else {
-    assert(finishText.includes('Submit this walk-through in Canvas'));
+    assert(finishText.includes('Submit your work in Canvas'));
     assert(finishText.includes('text-entry box'));
     assert.equal(await finish.locator('#walk-copy').innerText(), 'Copy text for Canvas submission');
   }
@@ -152,6 +155,9 @@ async function checkWalkthrough(page, config, result) {
   }
   if (tables.length) recordCheck('table headings, source cells, dimensions, labels, and row-side controls');
 
+  while (await page.locator('.walk-entry:not([open])').count()) {
+    await page.locator('.walk-entry:not([open])').first().locator(':scope > summary').click();
+  }
   const inputs = page.locator('[data-walk-answer]');
   const entered = new Map();
   for (let index = 0; index < await inputs.count(); index++) {

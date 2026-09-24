@@ -135,12 +135,12 @@ class WalkthroughTableTests(unittest.TestCase):
         self.assertNotIn('<details class="walk-check">', rendered)
         self.assertNotIn('data-walk-answer="', rendered)
         self.assertNotIn('data-walk-feedback="', rendered)
-        self.assertIn('How this walk-through works', rendered)
-        self.assertIn('This Canvas walk-through assignment includes a reference table.', rendered)
+        self.assertIn('How this Canvas Walkthrough works', rendered)
+        self.assertIn('This Canvas Walkthrough includes a reference table.', rendered)
         self.assertIn('Copy reference table', rendered)
         self.assertIn('Download Word copy of table', rendered)
         self.assertIn('This page has no response to submit.', rendered)
-        self.assertNotIn('Submit this walk-through in Canvas', rendered)
+        self.assertNotIn('Submit your work in Canvas', rendered)
         with self.assertRaisesRegex(TableMappingError, 'cannot mark response'):
             create_task(candidate_log_block(), 'invalid', 'Read', read_only=True, response_rows={3})
         with self.assertRaisesRegex(TableMappingError, 'do not have self-check'):
@@ -196,8 +196,8 @@ class WalkthroughTableTests(unittest.TestCase):
         self.assertLess(rendered.index('data-walk-feedback='), rendered.index('</table>'))
         self.assertIn('walk-table-with-feedback', rendered)
         self.assertIn('The situation</th>', rendered)
-        self.assertIn('This is a Canvas walk-through assignment.', rendered)
-        self.assertIn('Submit this walk-through in Canvas', rendered)
+        self.assertIn('This Canvas Walkthrough takes you through the activity', rendered)
+        self.assertIn('Submit your work in Canvas', rendered)
         self.assertIn('Copy text for Canvas submission', rendered)
         self.assertIn('paste it into the text-entry box, and submit it', rendered)
         self.assertLess(rendered.index('id="walk-copy"'), rendered.index('id="walk-download"'))
@@ -214,7 +214,7 @@ class WalkthroughTableTests(unittest.TestCase):
               'delivery_mode': 'guided_assignment', 'walkthrough_after': 'source-example',
               'submission_type': 'text_entry', 'guided_assignment': config}
         text_entry = render_walkthrough_body(fm, '', {})
-        self.assertIn('How this walk-through works', text_entry)
+        self.assertIn('How this Canvas Walkthrough works', text_entry)
         self.assertIn('Copy text for Canvas submission', text_entry)
         self.assertIn('paste it into the text-entry box', text_entry)
         fm['submission_type'] = 'file_upload'

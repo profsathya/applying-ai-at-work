@@ -161,6 +161,34 @@ class ScheduledHomepageTests(unittest.TestCase):
                 self.assertNotIn("Draft", rendered)
             self.assertIn("/modules/730", (output / "home.html").read_text())
 
+    def test_ready_sprint_includes_curated_replacement_stored_in_another_sprint(self):
+        import yaml
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            course = root / "course1"
+            original = course / "sprints/sprint-99/tuple-overview.md"
+            replacement = course / "sprints/sprint-100/tuple-walkthrough.md"
+            manifest = course / "manifests/production.json"
+            write_page(original)
+            replacement.parent.mkdir(parents=True)
+            replacement.write_text(original.read_text().replace('Tuple Overview', 'Tuple Walkthrough')
+                                   .replace('tuple-overview', 'tuple-walkthrough')
+                                   .replace('sprint: 99', 'sprint: 100')
+                                   .replace('publish: false', 'publish: true'))
+            write_manifest(manifest)
+            data = homepage()
+            data['modules'][0]['groups'] = [{'label': 'Begin', 'items': [{'slug': 'tuple-walkthrough'}]}]
+            (course / 'homepage.yaml').write_text(yaml.safe_dump(data))
+            state = {'artifacts': {'tuple-walkthrough': {
+                'canvas_module_id': 730, 'canvas_module_item_id': 732, 'canvas_type': 'page'}}}
+            render_hosted_files(manifest, root / 'out', [], state=state)
+            output = root / 'out/deanza/course1'
+            for name in ('home.html', 'modules.html', 'sprint-99.html'):
+                rendered = (output / name).read_text()
+                self.assertIn('Tuple Walkthrough', rendered)
+                self.assertNotIn('Tuple Overview', rendered)
+            self.assertIn('/modules/items/732', (output / 'home.html').read_text())
+
     def test_unready_panels_are_excluded_and_activity_labels_are_escaped(self):
         data = homepage()["schedule"]
         data["sprints"][1]["sprint"] = 100
