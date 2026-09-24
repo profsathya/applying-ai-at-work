@@ -1423,25 +1423,25 @@
     },
     "course1-stakeholder-conversation-canvas-walkthrough": {
       "artifact_id": "course1-stakeholder-conversation-canvas-walkthrough",
-      "canvas_fingerprint": "98dbe7830ef470e607eee8bcae219293a475624c57adb38ae7f14930646407db",
+      "canvas_fingerprint": "feb3d28dcb29727379fd031f8e6e115e5d7d530e467be2e532455d8abb808748",
       "canvas_id": 7166,
       "canvas_module_id": 2081,
       "canvas_module_item_id": 17998,
       "canvas_page_url": null,
-      "canvas_payload_hash": "d839e103a80fa7a751cf6281851631f0a0f5b83463e74686035a201bdc4f174b",
+      "canvas_payload_hash": "d271326618afd66fbc66e74b0b8381130e441c7055d78d77bcdb9f52e7513a33",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "f3729ae675349c505589114766dcaa58471ce2a752bc5a200e0f909311c44caf",
+      "content_hash": "c069e4abb78c02e6fff61cfce85d6b3571b5f54e1c0bfa45ac3dec2b315ce7c4",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "18ccb8d7d8ac4843c9705a0e7c1544981d6f55f8f7528923f41353e9b8f0fca3",
-      "hosted_last_rendered": "2026-09-23T22:09:40+00:00",
+      "hosted_hash": "4b6fa1cb6eb2c44e08096cdb3502fbcfffd327c5f6d79fe54efe8e66f42b83bc",
+      "hosted_last_rendered": "2026-09-24T20:02:20+00:00",
       "hosted_path": "course1/assignments/stakeholder-conversation-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/stakeholder-conversation-canvas-walkthrough.html",
-      "last_pushed": "2026-09-23T22:09:40+00:00",
+      "last_pushed": "2026-09-24T20:02:20+00:00",
       "local_path": "course1/sprints/sprint-16/stakeholder-conversation-canvas-walkthrough.md",
       "position": 8,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "8007f92c036ba04b0ed47e66872c56f7496e68df"
+      "source_commit": "eace8a3a98247f59acb710ef7c8783bdc9b0d091"
     },
     "course1-stakeholder-map-canvas-walkthrough": {
       "artifact_id": "course1-stakeholder-map-canvas-walkthrough",
@@ -1472,5 +1472,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-24T16:14:26+00:00"
+  "last_sync": "2026-09-24T20:02:20+00:00"
 }
