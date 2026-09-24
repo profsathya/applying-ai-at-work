@@ -91,10 +91,6 @@ Own your progress activities carry 0 points, but Canvas requires a submission to
 10. **Problem Frame: is it worth pursuing?** Bring your frame up to date and write your verdict (45 points).
 11. **Write the Reflection** (10 points).
 
-In week 1, the Dojo Lab and the write-up go back to back, so plan for both in one sitting or two close together. The Concept check comes at the end of week 2, before you write your verdict.
-
-During the sprint, your tables live in your Sprint 2 working book, not in your Problem Frame. The frame itself is brought up to date once, at the end, in Problem Frame: is it worth pursuing?, which tells you exactly which parts to change.
-
 ### If you determine your first problem is not worth solving
 
 If as you go through these activities you discover that the problem you picked is not worth solving, that is this sprint working. Sometimes the honest verdict is that this problem is not worth eight weeks: something already handles it, or the person who could confirm it says it is not real, or a change would cost more than the problem does. In that case, you move to your runner-up. The Problem Frame item tells you how to bring your runner-up to the same standard, so that you can make the same call about it.
