@@ -46,6 +46,7 @@ guided_assignment:
 publish: true
 ---
 
+
 # Problem Frame: is it worth pursuing?
 
 As you wrap up Sprint 2, all of your work so far has helped you push on and dig into your problem. Now it's time to confirm: is there enough here to keep pursuing this problem?

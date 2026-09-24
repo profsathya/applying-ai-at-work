@@ -63,6 +63,7 @@ guided_assignment:
 publish: true
 ---
 
+
 # What exists, and what it means
 
 The write-up of the last two activities, in five short answers. Most of it is in your table and your boxes already. What is new here is the judgment in the last two questions, and that is where most of the points are.

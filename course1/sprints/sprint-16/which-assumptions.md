@@ -42,6 +42,7 @@ guided_assignment:
 publish: true
 ---
 
+
 # Your updated assumptions
 
 This is where your week 1 work gets read. Two parts.

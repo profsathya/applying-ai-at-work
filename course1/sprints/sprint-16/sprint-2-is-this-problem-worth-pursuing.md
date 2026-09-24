@@ -14,6 +14,7 @@ learning_goal: Gather evidence, adjust your frame, and decide whether the proble
 publish: true
 ---
 
+
 # Sprint 2: Is This Problem Worth Pursuing?
 
 You chose a problem at the end of Sprint 1 and wrote its Problem Frame. In this sprint, you will dig into some of the sections to push on the question, "Is this problem worth the next eight weeks?" Over the sprint you will practice three things:

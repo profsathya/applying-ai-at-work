@@ -146,6 +146,41 @@ def write_state(path: Path, *, hash_value: str, fingerprint: str = "a" * 64) -> 
     )
 
 
+class StagedVisibilityTests(unittest.TestCase):
+    def test_parent_module_release_restores_unpublished_assignment(self):
+        class Client:
+            published = True
+            item_published = True
+
+            def get_assignment(self, assignment_id):
+                return {"id": assignment_id, "published": self.published}
+
+            def update_assignment(self, assignment_id, payload):
+                self.published = payload["published"]
+
+            def list_module_items(self, module_id):
+                return [{"id": 22, "published": self.item_published}]
+
+            def update_module_item(self, module_id, item_id, payload):
+                self.item_published = payload["published"]
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "draft.md"
+            write_page(path, artifact_id="draft")
+            path.write_text(path.read_text().replace("type: page", "type: assignment")
+                            .replace("submission_type: none", "submission_type: text_entry")
+                            .replace("publish: true", "publish: false"))
+            state = {"artifacts": {"draft": {
+                "canvas_type": "assignment", "canvas_id": 21,
+                "canvas_module_id": 20, "canvas_module_item_id": 22,
+            }}}
+            client = Client()
+            restored = publish_changed.restore_staged_items(client, [path], state, {"Test Module"})
+            self.assertEqual(restored, ["draft"])
+            self.assertFalse(client.published)
+            self.assertFalse(client.item_published)
+
+
 class PublishChangedTests(unittest.TestCase):
     def test_unchanged_artifacts_are_skipped(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

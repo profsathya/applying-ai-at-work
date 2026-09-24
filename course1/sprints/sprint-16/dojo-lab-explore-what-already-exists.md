@@ -33,6 +33,7 @@ learning_goal: Fill in what exists with AI's help and your own look, and say wha
 publish: true
 ---
 
+
 # Dojo Lab: explore what already exists
 
 The goal here is for you to find out and understand what solutions might already exist, to better inform your understanding of the problem. AI has access to information about more workplaces, products, and practices than you possibly can; it can help you explore the questions in your table, add rows you did not think of, and point you at where to look. It cannot know what any of it means for your situation. That column stays yours.

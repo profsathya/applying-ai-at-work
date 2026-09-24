@@ -61,6 +61,43 @@ def include_hosted_indexes(only_files: set[str] | None, published_sources: list[
                and not item.get("verified_live_published") for item in published_sources)
 
 
+def restore_staged_items(client: CanvasClient, course_paths: list[Path], state: dict,
+                         released_modules: set[str]) -> list[str]:
+    """Keep staged artifacts hidden after Canvas publishes their parent module."""
+    restored = []
+    for path in course_paths:
+        fm, _ = parse_frontmatter(path)
+        if fm["module"] not in released_modules or fm.get("publish", True):
+            continue
+        entry = state.get("artifacts", {}).get(fm["artifact_id"])
+        if not entry or not entry.get("canvas_module_item_id"):
+            continue
+        kind = entry.get("canvas_type")
+        live = fetch_canvas_state(client, entry)
+        if live and live.get("published"):
+            if kind == "assignment":
+                client.update_assignment(int(entry["canvas_id"]), {"published": False, "notify_of_update": False})
+            elif kind == "page":
+                client.update_page(entry["canvas_page_url"], {"published": False})
+            elif kind == "discussion":
+                client.update_discussion(int(entry["canvas_id"]), {"published": False})
+            elif kind == "quiz":
+                client.update_quiz(int(entry["canvas_id"]), {"published": False, "notify_of_update": False})
+            else:
+                raise ValueError(f"Unsupported staged Canvas type: {kind}")
+        module_id = int(entry["canvas_module_id"])
+        item_id = int(entry["canvas_module_item_id"])
+        item = next((item for item in client.list_module_items(module_id) if int(item["id"]) == item_id), None)
+        if item and item.get("published"):
+            client.update_module_item(module_id, item_id, {"published": False})
+        checked = fetch_canvas_state(client, entry)
+        checked_item = next((item for item in client.list_module_items(module_id) if int(item["id"]) == item_id), None)
+        if not checked or checked.get("published") is not False or not checked_item or checked_item.get("published") is not False:
+            raise ValueError(f"{fm['artifact_id']}: Canvas did not keep the staged item unpublished")
+        restored.append(fm["artifact_id"])
+    return restored
+
+
 def load_state(manifest_path: Path, state_dir: Path, *, require_state: bool) -> tuple[dict, Path]:
     manifest = load_json(manifest_path)
     state_path = state_path_for_manifest(manifest_path, state_dir, manifest)
@@ -568,6 +605,31 @@ def publish_manifest(
                         "state must be committed so the retry updates instead of duplicating",
                     }
                 )
+
+    if result["published"]:
+        latest_state, _ = load_state(manifest_path, state_dir, require_state=True)
+        published_ids = {item.get("artifact_id") for item in result["published"]}
+        released_modules = {
+            fm["module"] for item in changed if item["artifact_id"] in published_ids
+            if (fm := parse_frontmatter(item["path"])[0]).get("publish", True)
+        }
+        if released_modules:
+            try:
+                staged_paths = []
+                for path in discover_artifact_files(manifest_path):
+                    if validate_artifact(path):
+                        continue
+                    fm, _ = parse_frontmatter(path)
+                    if (fm["module"] in released_modules and not fm.get("publish", True)
+                            and latest_state["artifacts"].get(fm["artifact_id"], {}).get("canvas_module_item_id")):
+                        staged_paths.append(path)
+                if staged_paths:
+                    client = CanvasClient.from_env(course_id=int(manifest["instance"]["course_id"]))
+                    result["staged_unpublished"] = restore_staged_items(
+                        client, staged_paths, latest_state, released_modules
+                    )
+            except Exception as exc:
+                result["failed"].append({"file": "<staged_visibility>", "artifact_id": None, "error": str(exc)})
 
     if result["published"] and not result["failed"] and not result["drifted"]:
         latest_state, _ = load_state(manifest_path, state_dir, require_state=True)

@@ -15,6 +15,7 @@ learning_goal: Say what Context means when you work with AI, and name the two ot
 publish: true
 ---
 
+
 # Working with AI: Context
 
 For the first part of this sprint, you looked at your assumptions to see how a better understanding of them might change your problem. Before week 2's activity, a short look at how you have been working with AI.
