@@ -6,7 +6,7 @@ artifact_id: course1-sprints-sprint-16-which-assumptions
 sprint: 16
 week: 1
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
-position: 6
+position: 5
 points: 20
 submission_type: text_entry
 delivery_mode: guided_assignment

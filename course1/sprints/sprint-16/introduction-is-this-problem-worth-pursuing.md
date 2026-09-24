@@ -26,18 +26,18 @@ Own your progress activities carry 0 points, but Canvas requires a submission to
 1. Read the Introduction.
 2. **Dig into your assumptions.** Walk Part 6: your assumptions, and rate how risky each one is to your problem. (Own your progress, 0 points.)
 3. **Dojo Lab: test your assumptions.** Have AI push back on your walk. (Own your progress, 0 points.)
-4. Take the **Concept check** (5 points).
-5. **Your updated assumptions.** Submit your updated tables and what the Dojo changed (20 points).
+4. **Your updated assumptions.** Submit your updated tables and what the Dojo changed (20 points).
 
 **Week 2: what exists, and your verdict on proceeding**
 
-6. **What solutions already exist.** From the template, start your What already exists table on your own: what you know of, what you guess, and what you want to find out. (Own your progress, 0 points.)
-7. **Dojo Lab: explore what already exists.** Work with AI and on your own to fill in the gaps in the table, then do a deeper dive to better understand the existing solutions. (Own your progress, 0 points.)
-8. **What exists, and what it means** (20 points). Summarize what you uncovered about what already exists.
+5. **What solutions already exist.** From the template, start your What already exists table on your own: what you know of, what you guess, and what you want to find out. (Own your progress, 0 points.)
+6. **Dojo Lab: explore what already exists.** Work with AI and on your own to fill in the gaps in the table, then do a deeper dive to better understand the existing solutions. (Own your progress, 0 points.)
+7. **What exists, and what it means** (20 points). Summarize what you uncovered about what already exists.
+8. Take the **Concept check** (5 points).
 9. **Problem Frame: is it worth pursuing?** Bring your frame up to date and write your verdict (45 points).
 10. **Write the Reflection** (10 points).
 
-In week 1, the Dojo Lab and the write-up go back to back, so plan for both in one sitting or two close together.
+In week 1, the Dojo Lab and the write-up go back to back, so plan for both in one sitting or two close together. The Concept check comes at the end of week 2, before you write your verdict.
 
 ## If you determine your first problem is not worth solving
 

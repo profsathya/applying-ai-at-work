@@ -28,7 +28,7 @@ Items that reach beyond one sprint. **Needs Jeremy's tooling:** items 1, 2 (the 
 
 ## C. Structure and rhythm
 
-11. **Self-checks.** One per sprint after week 1 (Sprints 1, 3, 4). Sprint 2's week 2 teaches new material with no check. Leslie's proposal: a check wherever a week teaches. Points are the team's.
+11. **Concept checks.** Sprints 1, 3, and 4 place theirs after the week 1 reading, so the second half of each sprint is never checked. Leslie and Melisa (24 September): one concept check per sprint, placed at the end of week 2 just before the final graded item, with questions from both weeks. Sprint 2 is the first case (position 9, five questions). Sprints 1, 3, and 4 to follow in their owners' PRs.
 12. **Points across the five sprints.** Sprint 2 proposes 5/20/20/45/10. Team decision, carried as a [TEAM DECISION] marker.
 13. **One vocabulary for the same things.** Confirmed/unverified (Sprints 1, 2) against confirmed/inferred (Sprints 3, 4); risky (Sprint 2, defined as consequence and likelihood) against high-stakes (Sprint 3, consequence only); a walk table (Sprint 2) against an assumption block (Sprint 3). Recommendation: Sprint 2 sets the words since it comes first. Team decision.
 14. **Reflections.** One AI-discussion question per sprint (Sprint 1, Sprint 2 as ruled). Check Sprints 3 and 4 match.

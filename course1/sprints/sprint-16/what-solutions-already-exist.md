@@ -6,7 +6,7 @@ artifact_id: course1-sprints-sprint-16-what-solutions-already-exist
 sprint: 16
 week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
-position: 7
+position: 6
 points: 0
 submission_type: text_entry
 delivery_mode: guided_assignment
