@@ -45,19 +45,25 @@ guided_assignment:
     - id: guidance
       label: Guidance
       cells:
-      - text: A thing that exists somewhere now, or a question about one.
-      - text: What I have actually seen, where it lives, who can change or see it, and what
-          I do not know.
-      - text: 'Good, bad, and not sure: reasons it would be good for my problem, reasons it
-          might be bad, and what I am not sure about.'
-    - id: example
-      label: Example
+      - text: 'Guidance: a thing that exists somewhere now, or a question about one.'
+      - text: 'Guidance: what I have actually seen, where it lives, who can change or see
+          it, and what I do not know.'
+      - text: 'Guidance: good, bad, and not sure. Reasons it would be good for my problem,
+          reasons it might be bad, and what I am not sure about.'
+    - id: example-1
+      label: Example 1
       cells:
-      - text: 'Example: an owner field in our CRM.'
-      - text: 'Example: I have seen the field, grayed out. I don''t know who can set it or
-          whether it can be turned on.'
-      - text: 'Example: Good: already in a product we use. Bad: not on, and people barely
+      - text: 'Example 1: an owner field in our CRM.'
+      - text: 'Example 1: I have seen the field, grayed out. I don''t know who can set it
+          or whether it can be turned on.'
+      - text: 'Example 1: Good: already in a product we use. Bad: not on, and people barely
           use the CRM. Not sure: what turning it on costs, and who decides.'
+    - id: example-2
+      label: Example 2
+      cells:
+      - text: 'Example 2: do other community gardens pair new people with returning ones?'
+      - text: 'Example 2: I don''t know. The garden two streets over might. I have never asked.'
+      - text: 'Example 2: not sure yet.'
     - id: row-1
       label: Row 1
       cells:
