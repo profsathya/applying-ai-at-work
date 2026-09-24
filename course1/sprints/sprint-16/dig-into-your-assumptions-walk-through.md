@@ -81,7 +81,7 @@ publish: false
 In this activity, you are going to need two things:
 
 - Your draft Problem Frame that you created in Sprint 1, so open that up.
-- Your Sprint 2 working book. [Download the template here](LINK-TO-BE-SUPPLIED).
+- Your Sprint 2 working book, the document you paste each activity's tables into. The template link goes here once the team settles the format.
 
 You will do your work within Canvas. The goal of this activity is for you to explore your assumptions to understand how they might impact your Problem Frame. Work without AI on this page. The next activity has AI push back on what you write here, and that only works if you bring your own thinking.
 

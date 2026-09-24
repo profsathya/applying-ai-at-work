@@ -120,7 +120,7 @@ Next up: **Dig into your assumptions**.
 In this activity, you are going to need two things:
 
 - Your draft Problem Frame that you created in Sprint 1, so open that up.
-- Your Sprint 2 working book. [Download the template here](LINK-TO-BE-SUPPLIED).
+- Your Sprint 2 working book, the document you paste each activity's tables into. The template link goes here once the team settles the format.
 
 [NOTE] Leslie, 24 September: "Sprint 2 working book" is a placeholder name; the course-wide word is on the course-wide list. The copy of the Problem Frame document (paste Part D of the Candidate Log) moves to the end of Sprint 1, with Jeremy; if it is not there by 5 October, the make-a-copy line returns here.
 
