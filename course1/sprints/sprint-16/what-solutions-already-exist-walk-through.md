@@ -16,7 +16,7 @@ walkthrough_after: course1-sprints-sprint-16-what-solutions-already-exist
 guided_assignment:
   version: '1.0'
   presentation: walkthrough
-  feedback_omission_reason: No AI on this page by design: the learner's own view is written here first, and the next activity, a Dojo Lab, is where AI tests it.
+  feedback_omission_reason: "No AI on this page by design: the learner's own view is written here first, and the next activity, a Dojo Lab, is where AI tests it."
   export_filename: what-already-exists.docx
   purpose: Start a table of what already exists that could solve or ease your problem, on
     your own, before AI.
