@@ -61,6 +61,8 @@ With that in mind, start building a table that addresses these three questions:
 2. How do they work?
 3. What does that mean for my problem?
 
+As always, questions and question marks where you don't know something are encouraged. It is better to mark what you don't know than make something up; a table that is mostly questions will still be very useful for the next activity.
+
 The table below will help you think this through.
 
 **What exists.** A thing that exists somewhere now, or a question about one.
