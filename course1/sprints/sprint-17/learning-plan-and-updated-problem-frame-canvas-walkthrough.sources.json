@@ -4,7 +4,7 @@
   "packet_sha256": "095c658a39e481917734876f60a6516dd14a81977441391fece36873cd9f1dd6",
   "map_sha256": "f9439b11b07478208479611fb51b735c9f13988a85bab5fe8165554bf79a5d10",
   "body_sha256": "bc423b83ad702fd8126e8340a3848d8b7ae9d1d027c6b4e8cdff0c9545b34be3",
-  "frontmatter_sha256": "006103c0805a7c9683c470ef68c22c13e32d280528c94c3ac95748cb9073786a",
+  "frontmatter_sha256": "94e0f1927bad7efe4ce2e4918f6d4307170c91a4f659f0c88bcb02044a085076",
   "parts": [
     {
       "kind": "new",
@@ -33,7 +33,8 @@
   "metadata_decisions": [
     "Store the unpublished alternative in sprint-17 while placing it in the live Sprint 4 module.",
     "Keep the source assignment's points and file-upload assessment.",
-    "Anchor the new module item immediately after its live original."
+    "Anchor the new module item immediately after its live original.",
+    "Publish the instructor-approved Canvas Walkthrough in place of its original while retaining both Canvas identities."
   ],
   "source_roles": {
     "d-83aa73137f01cb9d": {

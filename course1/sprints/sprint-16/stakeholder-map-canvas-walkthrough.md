@@ -15,7 +15,7 @@ delivery_mode: guided_assignment
 learner_labels: true
 learning_goal: Profile four stakeholders in your own problem, mark every field confirmed
   or inferred, and name the guesses a real conversation would have to settle.
-publish: false
+publish: true
 guided_assignment:
   version: '1.1'
   presentation: walkthrough

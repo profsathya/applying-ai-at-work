@@ -15,7 +15,7 @@ delivery_mode: guided_assignment
 learner_labels: true
 learning_goal: Plan how to investigate every blocking gap and update the Problem Frame
   so its assumptions and unknowns match that plan.
-publish: false
+publish: true
 guided_assignment:
   version: '1.0'
   presentation: walkthrough

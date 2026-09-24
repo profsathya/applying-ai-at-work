@@ -130,7 +130,7 @@ guided_assignment:
     - 'Fill this in during the next activity: which rows AI added and which you kept; for
       each row you went and looked at, where you looked and what you found; and your table
       as it now stands.'
-publish: false
+publish: true
 ---
 
 # What solutions already exist

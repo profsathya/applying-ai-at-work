@@ -15,7 +15,7 @@ delivery_mode: guided_assignment
 learner_labels: true
 learning_goal: Identify and rank the unknowns that could change your Problem Frame,
   then connect each planned gap to a decision.
-publish: false
+publish: true
 guided_assignment:
   version: '1.0'
   presentation: walkthrough

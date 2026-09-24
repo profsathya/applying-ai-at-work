@@ -12,7 +12,7 @@ submission_type: file_upload
 completion_requirement: must_submit
 learner_labels: true
 learning_goal: Write a learning plan that says for each gap why it matters, where you will learn it, the steps, and how you will know, then update your Problem Frame to match.
-publish: true
+publish: false
 ---
 
 # Learning Plan and Updated Problem Frame
