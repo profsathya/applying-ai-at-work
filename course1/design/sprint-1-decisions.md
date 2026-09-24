@@ -3028,3 +3028,66 @@ Build rebuilt to match.
 Provenance: Leslie, the concern, the rewrite, and every ruling; Claude, the reading, the
 side-by-side, the fixes, and the record.
 
+
+## 24 September, evening: the page-by-page review, two merges, and the first Canvas runs
+
+**Who edits what, from Jeremy (relayed by Leslie).** Leslie and Melisa edit their own
+sprints' pages through Claude and PRs. Sprint 1 edits are ours by PR, with the source
+sidecars updated as Jeremy did on 18 September, no longer his build map. Canvas itself is
+for settings only: publish state, points, dates, module order, walkthrough release.
+Course-wide list v0.3 carries the who-does-what line (Jeremy's tooling: 1, 2, 4a, 4b, 8,
+28; team: 6, 11, 12, 13, 16, 17, 30; ours by PR: 7, 20, 20a, 21, 22, 25, 26).
+
+**Build PR #110 merged on Leslie's word** ("I approve. Can you merge it?"), all items
+`publish: false`, so Sprint 2 sits in Canvas as an unpublished module. The first publish
+run staged eleven items; the two walkthrough replacements failed ("source must resolve to
+one deployment entry") because their source items did not yet exist in deployment state.
+
+**Leslie's page-by-page review, from local HTML renders**, one page at a time in chat.
+Rulings, each applied and logged as it came:
+
+- Module header: Sprint 3's style, a learning goal for the whole sprint: "Gather
+  evidence, adjust your frame, and decide whether the problem you chose is worth the rest
+  of the course." Learning goals also set on both Dojo Labs, the reflection, and the
+  Context page, so the generic block does not render.
+- Introduction: title case; "In this sprint, you will dig into some of the sections to
+  push on the question, 'Is this problem worth the next eight weeks?'"; the key-terms
+  block cut (assumption, checking, and what already exists are ordinary words, and risky
+  is a concept the walk page teaches, not a term); How to work and Where to write cut;
+  the submission line and the pacing line kept; ends on "Next up."
+- Dojo Lab: test your assumptions, restructured on Leslie's simplified text: What you
+  need for this Dojo Lab; The three parts to this activity; Part 1 is one line, "Open
+  your Dojo and say: 'Walk me through Dojo Lab: test your assumptions,'" with the
+  condensed core plus module as the More help fallback for plain chat; Part 2 the five
+  transcript steps, ending "Paste it into the Canvas text box below this page and
+  submit"; Part 3 updating the tables, "submitted in a later activity." The final Me:
+  turn moved here from the next page. Two pathways stand: a set-up Dojo, or plain chat
+  with the module pasted (`dojo-modules-sprint-2.md`).
+- Which assumptions renamed Your updated assumptions (Leslie: "the short form works");
+  two boxes, the updated tables and what the Dojo changed.
+- Concept check moved to the end of week 2, before the Problem Frame item, questions
+  from both weeks (Leslie and Melisa agree; otherwise the second half of a sprint is
+  never checked). Sprint 1's may follow.
+- What solutions already exist: the Context teaching split out to its own reading page,
+  Working with AI: Context, as Sprint 1's The problem frame; the activity brought to the
+  walk page's shape (needs list, goal, three questions, four where-to-look questions,
+  handover and garden examples per field, two More help lines, paste into the working
+  book). Leslie edits behind.
+- Renderer facts established, routed to Jeremy on the list rather than changed per page:
+  the page's own box, the transcript block, and the confidentiality paragraph cannot be
+  moved or removed; `prompt_version` v1 is the only valid transcript request. Wording that
+  Jeremy's change would alter is left as is.
+
+**PR #114 merged on Leslie's word** ("Let's do 114. I'd really like to see the
+walkthroughs."), squash 90243de. Publish run green: ten items updated in place (the two
+unchanged ones untouched), the Context page added, and both walkthrough replacements
+staged this time, hosted deployment queued. Still `publish: false` throughout; the
+publish flip is one decision at the end, Leslie's.
+
+**Next:** the review continues from Dojo Lab: explore what already exists; then What
+exists and what it means, the Concept check in its new place, the Problem Frame item,
+the reflection. Sprint 1's five edits go by PR once Leslie sends the Problem Frame
+template link. Introductions proposal to Melisa (`introductions-proposal.md`).
+
+Provenance: Leslie, every ruling and both merge decisions; Jeremy, the who-edits-what;
+Claude, the renders, the edits, the merges on request, and the record.
