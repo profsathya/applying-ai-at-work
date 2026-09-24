@@ -16,7 +16,8 @@ walkthrough_after: course1-sprints-sprint-16-what-solutions-already-exist
 guided_assignment:
   version: '1.0'
   presentation: walkthrough
-  feedback_omission_reason: "No AI on this page by design: the learner's own view is written here first, and the next activity, a Dojo Lab, is where AI tests it."
+  feedback_omission_reason: 'No AI on this page by design: the learner''s own view is written
+    here first, and the next activity, a Dojo Lab, is where AI tests it.'
   export_filename: what-already-exists.docx
   purpose: Start a table of what already exists that could solve or ease your problem, on
     your own, before AI.
@@ -77,7 +78,7 @@ guided_assignment:
 publish: false
 ---
 
-# What solutions already exist walk-through
+# What solutions already exist
 
 For the first part of this sprint, you looked at your assumptions to see how a better understanding of them might change your problem. Week 2 starts by looking outward. Can you find other examples of people trying to solve this problem, or one like it, in your own situation or out in the world? Are there products, practices, or someone else who already does this well? If you find an existing solution, it does not necessarily mean your problem is not worth pursuing, but it might change how you think about it.
 
