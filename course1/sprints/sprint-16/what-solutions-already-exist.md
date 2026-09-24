@@ -23,7 +23,7 @@ guided_assignment:
   tasks:
   - id: your-table
     kind: response
-    instruction_section: Build your table
+    instruction_section: Build your understanding about what exists
     prompt: 'Your table, one row per thing: what exists; how it works, as far as you know;
       and what it means for your problem (good, bad, not sure).'
     criteria:
@@ -43,23 +43,25 @@ publish: false
 
 You will do your work within Canvas. Work without AI on this page; the next activity is where AI helps you fill the table in.
 
-The goal of this activity is for you to start a table of what already exists that could solve or ease your problem. Week 2 looks outward. Can you find other examples of people trying to solve this problem, or one like it, in your own situation or out in the world? Are there products, practices, or someone else who already does this well? If you find an existing solution, it does not necessarily mean your problem is not worth pursuing, but it might change how you think about it.
+The goal of this activity is for you to brainstorm and look into what already exists that could solve or ease your problem.
 
-> **Example:** Our CRM has an owner field on every account. I have seen it, grayed out. I do not know whether ours is switched on.
+## Start by brainstorming what exists
 
-You are listing what exists, not designing anything. "An agenda tool" is a thing that exists; "we should build an agenda tool" is a solution, and it waits. Things you know of, things you have heard of, guesses, and questions all count. As always, marking what you don't know is better than making something up. A table that is mostly questions will still be very useful for the next activity.
+With your problem in mind, think about existing solutions that might be related to your problem. What products or services do you know of that claim to have solutions in this problem space? Do you know anyone who is already handling this problem well? Do you know anything about how AI might be able to help solve this problem? Remember, this is a brainstorm, so anything counts - things you know of, things you have heard of, guesses, and even questions you have about what might exist should be included.
 
-## Build your table
+> **Example.** Problem: account handovers happen with no record. Possible solutions that exist: there is an owner field in our CRM that isn't being used; the sales team uses a handover checklist that might be similar; is there a weekly "accounts that moved" note, or does it ever come up in a weekly team meeting?
 
-With your problem in mind, ask three things about each thing that might already exist:
+Then, for each item you thought of, you're going to describe what you know about it and how its existence might impact your problem.
 
-- What exists?
-- How does it work, as far as I know?
-- What does it mean for my problem?
+## Build your understanding about what exists
 
-To find things for the first question, ask yourself: What products or services claim to have solutions in this problem space? Do I know anyone who has a similar problem but seems to be handling it well? Does my own organization, or do I personally, already have something for this, used or not? Could AI help with this problem?
+With that in mind, start building your list by answering three questions:
 
-The table below will help you think through each one. Fill one row per thing. Do the first column for everything you can think of, then the other two columns one row at a time.
+1. What solutions already exist?
+2. How do they work?
+3. What does that mean for my problem?
+
+The table below will help you think this through.
 
 **What exists.** A thing that exists somewhere now, or a question about one.
 
