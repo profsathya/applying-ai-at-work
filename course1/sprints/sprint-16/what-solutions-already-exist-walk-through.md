@@ -146,20 +146,18 @@ The goal of this activity is for you to brainstorm and look into what already ex
 
 ## Start by brainstorming what exists
 
-With your problem in mind, think about existing solutions that might be related to your problem. What products or services do you know of that claim to have solutions in this problem space? Do you know anyone who is already handling this problem well? Do you know anything about how AI might be able to help solve this problem? Remember, this is a brainstorm, so anything counts - things you know of, things you have heard of, guesses, and even questions you have about what might exist should be included.
+With your problem in mind, think about existing solutions that might be related to your problem. Remember, this is a brainstorm, so anything counts - things you know of, things you have heard of, guesses, and even questions you have about what might exist.
 
 > **Example.** Problem: account handovers happen with no record. Possible solutions that exist: there is an owner field in our CRM that isn't being used; the sales team uses a handover checklist that might be similar; is there a weekly "accounts that moved" note, or does it ever come up in a weekly team meeting?
 
-Then, for each item you thought of, you're going to describe what you know about it and how its existence might impact your problem.
-
 ## Build your understanding about what exists
 
-With that in mind, start building a table that addresses these three questions:
+The table below has three columns: what exists, how it works, and what it means for your problem. Fill it in three steps.
 
-1. What solutions already exist?
-2. How do they work?
-3. What does that mean for my problem?
+1. **Fill the first column, What exists, with everything from your brainstorm**, one row per thing. To find more, ask yourself: What products or services claim to have solutions in this problem space? Do I know anyone who is already handling this problem well? Does my own organization already have something for this, used or not? Could AI help with this problem?
+2. **For each row, fill in How it works, as far as I know.** Write what you have actually seen, where it lives, who can change or see it, and what you do not know.
+3. **For each row, fill in What it means for my problem.** Reasons it would be good for your problem, reasons it might be bad, and what you are not sure about.
 
 As always, questions and question marks where you don't know something are encouraged. It is better to mark what you don't know than make something up; a table that is mostly questions will still be very useful for the next activity.
 
-The table below will help you think this through.
+When you finish, copy your table into your Sprint 2 working book. The next activity fills it in.
