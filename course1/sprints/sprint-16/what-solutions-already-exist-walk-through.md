@@ -32,25 +32,32 @@ guided_assignment:
     instruction_section: Build your understanding about what exists
     columns:
     - id: exists
-      label: 'What exists: a thing that exists somewhere now, or a question about one'
+      label: What exists
       width: 5
     - id: how
-      label: 'How it works, as far as I know: what I have seen, where it lives, who can change
-        or see it, and what I do not know'
+      label: How it works, as far as I know
       width: 7
     - id: means
-      label: 'What it means for my problem: good, bad, not sure'
+      label: What it means for my problem
       width: 8
     header_rows: 1
     rows:
+    - id: guidance
+      label: Guidance
+      cells:
+      - text: A thing that exists somewhere now, or a question about one.
+      - text: What I have actually seen, where it lives, who can change or see it, and what
+          I do not know.
+      - text: 'Good, bad, and not sure: reasons it would be good for my problem, reasons it
+          might be bad, and what I am not sure about.'
     - id: example
       label: Example
       cells:
       - text: 'Example: an owner field in our CRM.'
-      - text: I have seen the field, grayed out. I don't know who can set it or whether it
-          can be turned on.
-      - text: 'Good: already in a product we use. Bad: not on, and people barely use the CRM.
-          Not sure: what turning it on costs, and who decides.'
+      - text: 'Example: I have seen the field, grayed out. I don''t know who can set it or
+          whether it can be turned on.'
+      - text: 'Example: Good: already in a product we use. Bad: not on, and people barely
+          use the CRM. Not sure: what turning it on costs, and who decides.'
     - id: row-1
       label: Row 1
       cells:
