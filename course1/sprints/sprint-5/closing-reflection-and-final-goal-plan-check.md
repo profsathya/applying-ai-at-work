@@ -12,6 +12,7 @@ submission_type: text_entry
 delivery_mode: canvas_native
 completion_requirement: must_submit
 learner_labels: true
+learning_goal: Reflect honestly on how you are working and growing.
 publish: false
 ---
 
