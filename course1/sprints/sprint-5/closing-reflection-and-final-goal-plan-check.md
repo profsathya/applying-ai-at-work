@@ -26,7 +26,7 @@ For question 4, "next sprint" means your next course or project.
 1. **What is your biggest takeaway and your biggest challenge from this sprint?** Name one idea that stuck with you and one thing that was hard, and say why for each. *(2-4 sentences)*
 2. **Did you tackle anything you couldn't have on your own, with the help of AI?** Name the moment. What did AI make possible that you would not have reached alone? *(2-4 sentences)*
 3. **How is what you did better because you were involved?** What did you bring that AI could not: judgment, context, a relationship, a call you made? *(2-4 sentences)*
-4. **What did you notice about how you are working?** Where you pushed, stalled, avoided something, or surprised yourself, and what you will do same or differently next sprint. *(2-4 sentences)*
+4. **What did you notice about how you are working?** Where you pushed, stalled, avoided something, or surprised yourself, and what you will keep doing or do differently next sprint. *(2-4 sentences)*
 5. **How are the pace and workload landing for you right now?** *(1-2 sentences)*
 
 ## How to do it
