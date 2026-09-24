@@ -1,7 +1,10 @@
 import unittest
 from unittest.mock import patch
 
-from canvas_sync.cleanup_hosted_links import state_allows_cleanup, without_legacy_link
+from canvas_sync.cleanup_hosted_links import (
+    same_except_body, state_allows_cleanup, state_needs_link_cleanup_heal,
+    without_legacy_link,
+)
 from canvas_sync.state import canvas_fingerprint
 
 
@@ -41,6 +44,17 @@ class HostedLinkCleanupTests(unittest.TestCase):
                    return_value=({"publish": True}, "")):
             self.assertFalse(state_allows_cleanup(entry, live, "assignment"))
         self.assertFalse(state_allows_cleanup(entry, {**live, "name": "Canvas edit"}, "assignment"))
+
+    def test_recognizes_link_removed_through_linked_canvas_object(self):
+        frame = '<iframe src="https://example.test/page?context=canvas"></iframe>'
+        clean = '<div class="hosted-html-shell">' + frame + '</div>'
+        old = (clean[:-6] + '<p><a href="https://example.test/page?context=canvas" '
+               'target="_blank">Open hosted page in a new tab</a></p></div>')
+        live = {"title": "Example", "message": clean, "published": True}
+        entry = {"canvas_fingerprint": canvas_fingerprint({**live, "message": old}, "discussion")}
+        self.assertTrue(state_needs_link_cleanup_heal(entry, live, "discussion"))
+        self.assertTrue(same_except_body({**live, "message": old}, live, "discussion"))
+        self.assertFalse(same_except_body({**live, "title": "Other"}, live, "discussion"))
 
 
 if __name__ == "__main__":

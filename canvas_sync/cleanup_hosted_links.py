@@ -22,7 +22,7 @@ from canvas_sync.canvas_client import CanvasClient
 from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
 from canvas_sync.schema import parse_frontmatter
 from canvas_sync.state import (
-    canvas_fingerprint, check_state_instance, fetch_canvas_state, load_json,
+    canvas_fingerprint, canvas_snapshot, check_state_instance, fetch_canvas_state, load_json,
     save_json_atomic, state_path_for_manifest, utc_now,
 )
 
@@ -95,6 +95,34 @@ def state_allows_cleanup(entry: dict, live: dict, kind: str) -> bool:
     return frontmatter.get("publish", True) == live["published"]
 
 
+def state_needs_link_cleanup_heal(entry: dict, live: dict, kind: str) -> bool:
+    """Recognize a link already removed through a linked Canvas assignment."""
+    body = live.get(BODY_FIELD[kind]) or ""
+    if ("Open hosted page in a new tab" in body or
+            not body.startswith('<div class="hosted-html-shell">') or
+            not body.endswith("</iframe></div>") or
+            entry.get("canvas_fingerprint") == canvas_fingerprint(live, kind)):
+        return False
+    frames = list(IFRAME.finditer(body))
+    if len(frames) != 1:
+        return False
+    src = frames[0].group("src")
+    for target in ("_blank", "_top"):
+        link = (f'<p><a href="{src}" target="{target}">'
+                'Open hosted page in a new tab</a></p>')
+        prior = {**live, BODY_FIELD[kind]: body[:-6] + link + "</div>"}
+        if state_allows_cleanup(entry, prior, kind):
+            return True
+    return False
+
+
+def same_except_body(before: dict, after: dict, kind: str) -> bool:
+    old = canvas_snapshot(before, kind)
+    new = canvas_snapshot(after, kind)
+    new["body"] = old["body"]
+    return old == new
+
+
 def inventory(client: CanvasClient) -> list[tuple[str, dict]]:
     rows = []
     for kind, endpoint in (
@@ -154,15 +182,18 @@ def cleanup(manifest_path: Path, state_dir: Path, *, apply: bool) -> dict:
         mapped = indexed.get(key)
         entry = mapped[1] if mapped else None
         field = BODY_FIELD[kind]
-        if "Open hosted page in a new tab" not in (row.get(field) or ""):
+        has_link = "Open hosted page in a new tab" in (row.get(field) or "")
+        if not has_link and not entry:
             continue
         label = (entry or {}).get("local_path") or f"{kind}:{key[1]}"
         try:
             live = current(client, kind, row, entry)
             revised = without_legacy_link(live.get(field) or "")
             if revised is None:
-                continue
-            if entry and not state_allows_cleanup(entry, live, kind):
+                if not entry or not state_needs_link_cleanup_heal(entry, live, kind):
+                    continue
+                revised = live.get(field) or ""
+            elif entry and not state_allows_cleanup(entry, live, kind):
                 raise ValueError("Canvas item differs from its state-backed fingerprint")
             planned.append((kind, row, live, revised, mapped, label))
             result["changed"].append({"file": label, "artifact_id": mapped[0] if mapped else None})
@@ -176,17 +207,21 @@ def cleanup(manifest_path: Path, state_dir: Path, *, apply: bool) -> dict:
         try:
             # Refuse a concurrent Canvas edit after preflight.
             latest = current(client, kind, row, entry)
+            wrote = False
             if canvas_fingerprint(latest, kind) != canvas_fingerprint(before, kind):
-                raise ValueError("Canvas item changed during cleanup")
-            update(client, kind, row, revised)
-            after = current(client, kind, row, entry)
+                if latest.get(BODY_FIELD[kind]) != revised or not same_except_body(before, latest, kind):
+                    raise ValueError("Canvas item changed during cleanup")
+            elif latest.get(BODY_FIELD[kind]) != revised:
+                update(client, kind, row, revised)
+                wrote = True
+            after = current(client, kind, row, entry) if wrote else latest
             if after.get(BODY_FIELD[kind]) != revised:
                 raise ValueError("Canvas did not retain the link-free iframe shell")
             if entry:
                 entry["canvas_fingerprint"] = canvas_fingerprint(after, kind)
                 state["last_sync"] = utc_now()
                 save_json_atomic(state_path, state)
-            result["published"].append({"action": "updated", "file": label,
+            result["published"].append({"action": "updated" if wrote else "state_healed", "file": label,
                                         "artifact_id": artifact_id,
                                         "canvas_id": row.get("id"),
                                         "canvas_page_url": row.get("url") if kind == "page" else None})
