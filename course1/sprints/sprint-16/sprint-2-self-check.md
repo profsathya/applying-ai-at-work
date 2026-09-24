@@ -13,8 +13,8 @@ delivery_mode: guided_assignment
 completion_requirement: must_submit
 guided_assignment:
   version: '1.0'
-  purpose: Confirm you can say what an assumption is, what checking and accepting mean, and
-    what Sprint 2 asks of you.
+  purpose: Confirm you can say what an assumption is, what makes one risky, and what Sprint
+    2 asks of you.
   builds_on: Read the Introduction and Dig into your assumptions.
   standing_instruction: Submit all five answers for 5 completion points reviewed by your instructor.
     Unlimited attempts.
@@ -31,33 +31,33 @@ guided_assignment:
     correct_index: 1
     explanation: False. It is something you wrote as if it were true but do not really know
       yet.
-  - id: accepted-because
+  - id: low-risk-because
     kind: choice
-    prompt: 'You decide not to check an assumption because the likely answer would not change
-      what you do. In Part 6 of your frame you write:'
+    prompt: 'You rate an assumption low risk because the likely answers would not change what
+      you do. In Part 6 of your frame you write:'
     criteria:
     - Choose the entry the Checked column uses for a judgment you have made.
     options:
     - Confirmed
     - Not yet
-    - Accepted, because, and your reason
+    - Low risk, because, and your reason
     - Nothing, and delete the line
     correct_index: 2
-    explanation: Accepting an assumption is a decision you make after looking at what you
-      know, and you write the reason down with it.
-  - id: which-to-check
+    explanation: Rating an assumption low risk is a decision you make after looking at what
+      you know, and you write the reason down with it.
+  - id: what-makes-it-risky
     kind: choice
-    prompt: Which of these is the best reason to choose an assumption to check in week 1?
+    prompt: What makes an assumption high risk?
     criteria:
-    - Choose the reason that matches the two criteria on the activity page.
+    - Choose the answer that matches how the walk page defines risk.
     options:
-    - It is the one you are most curious about
-    - Its answer could end the problem, and you can reach someone or something this week
+    - You are unsure about it
+    - An answer that could come back would make you drop the problem, and that answer is likely
     - It is the first one on the list
-    - AI suggested it
+    - AI flagged it
     correct_index: 1
-    explanation: A risky assumption you can actually follow up on this week. Curiosity and
-      AI's suggestion are not the criteria.
+    explanation: 'Risk is two things together: an answer that would end the problem, and a
+      real chance of getting that answer.'
   - id: no-is-a-result
     kind: choice
     prompt: 'True or false: if the verdict at the end of the sprint is that the problem is
@@ -89,6 +89,6 @@ publish: false
 
 # Sprint 2 Self-check
 
-A short check that you are set up for this sprint before the work starts in earnest. It covers what the sprint asks of you and the few ideas it runs on: what an assumption is, what checking and accepting mean, how AI is used, and where things get written. If a question surprises you, go back to the Introduction.
+A short check that you are set up for this sprint before the work starts in earnest. It covers what the sprint asks of you and the few ideas it runs on: what an assumption is, what makes one risky, how AI is used, and where things get written. If a question surprises you, go back to the Introduction.
 
 Answer the five questions below. Each shows the right answer once you have chosen.

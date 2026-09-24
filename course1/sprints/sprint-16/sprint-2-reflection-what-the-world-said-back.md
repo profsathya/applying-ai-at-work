@@ -7,7 +7,6 @@ sprint: 16
 week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 11
-learning_goal: Say what came back from outside your own head, what you pushed back on, and what you are least sure how to find out.
 points: 10
 submission_type: file_upload
 delivery_mode: ai_activity
@@ -22,12 +21,11 @@ ai_activity:
   questions:
   - id: q1-sprint-2-reflection
     type: ai-discussion
-    prompt: This sprint you checked one thing against a real person or a real record, and
-      looked at what already exists. Write about what came back from outside your own head,
-      in three parts. Where did something in the world change your view of your problem, and
-      where did AI change it? What did you push back on, from either, and what did it cost
-      you to push back? And what is the one thing in your frame you are least sure how to
-      find out?
+    prompt: This sprint you rated the risk in your own assumptions and looked at what already
+      exists. Write about what came back from outside your own head, in three parts. Where
+      did something in the world change your view of your problem, and where did AI change
+      it? What did you push back on, from either, and what did it cost you to push back? And
+      what is the one thing in your frame you are least sure how to find out?
     placeholder: Use specific moments from your check, your table, and your verdict.
     minLength: 150
     numQuestions: 3
@@ -49,9 +47,11 @@ ai_activity:
     saveButtonText: Save Reflection
     updateButtonText: Update Reflection
     digDeeperText: Dig deeper with AI guidance
+learning_goal: Say what came back from outside your own head, what you pushed back on, and
+  what you are least sure how to find out.
 publish: false
 ---
 
 # Sprint 2 Reflection: what the world said back
 
-This sprint you checked one thing against a real person or a real record, and looked at what already exists. Write about what came back from outside your own head, in three parts. Where did something in the world change your view of your problem, and where did AI change it? What did you push back on, from either, and what did it cost you to push back? And what is the one thing in your frame you are least sure how to find out?
+This sprint you rated the risk in your own assumptions and looked at what already exists. Write about what came back from outside your own head, in three parts. Where did something in the world change your view of your problem, and where did AI change it? What did you push back on, from either, and what did it cost you to push back? And what is the one thing in your frame you are least sure how to find out?

@@ -1,6 +1,6 @@
 ---
 purpose: The one list of course-wide items raised during Sprint 2's design and build, for the team (Leslie, Jeremy, Melisa) to decide how to tackle and implement; no owners assigned here
-status: v0.1, 23 September 2026, consolidated from the handoff, the Sprint 2 cover note, the decisions log (16 to 23 September), and where-work-lives.md
+status: v0.2, 24 September 2026 (items 13 and 23 widened after the check was removed from Sprint 2). v0.1, 23 September 2026, consolidated from the handoff, the Sprint 2 cover note, the decisions log (16 to 23 September), and where-work-lives.md
 depends_on: sprint-1-decisions.md; handoff.md; where-work-lives.md; sprint-2-working-draft-v1.md (v2.0)
 ---
 
@@ -28,7 +28,7 @@ Items that reach beyond one sprint. Each names where it came from and which spri
 
 11. **Self-checks.** One per sprint after week 1 (Sprints 1, 3, 4). Sprint 2's week 2 teaches new material with no check. Leslie's proposal: a check wherever a week teaches. Points are the team's.
 12. **Points across the five sprints.** Sprint 2 proposes 5/20/20/45/10. Team decision, carried as a [TEAM DECISION] marker.
-13. **Confirmed/unverified (Sprints 1, 2) against confirmed/inferred (Sprints 3, 4).** Recommendation in the Sprint 2 outline. Team decision, carried as a marker.
+13. **One vocabulary for the same things.** Confirmed/unverified (Sprints 1, 2) against confirmed/inferred (Sprints 3, 4); risky (Sprint 2, defined as consequence and likelihood) against high-stakes (Sprint 3, consequence only); a walk table (Sprint 2) against an assumption block (Sprint 3). Recommendation: Sprint 2 sets the words since it comes first. Team decision.
 14. **Reflections.** One AI-discussion question per sprint (Sprint 1, Sprint 2 as ruled). Check Sprints 3 and 4 match.
 15. **Learning goal per page.** Sprint 3 V3 sets a one-line goal on every page; Sprint 2 now does on the pages that show the block; Sprint 1's pages skip the block because they were document-built. Decide whether every sprint sets them.
 16. **Key terms in Introductions.** The 31 August rule: a slot only if the everyday meaning misleads or the sprint runs on it. Sprint 2's section was cut under it (23 September). Check Sprints 3 and 4's Introductions against the rule.
@@ -44,7 +44,7 @@ Items that reach beyond one sprint. Each names where it came from and which spri
 
 21. **The Problem Frame document.** Created at the end of Sprint 1 (Part D pasted once), not at the start of Sprint 2. Owed to Sprint 1.
 22. **Sprint 1's worked example A**, three lines (4a, 4b, the part 6 row "nothing has been tried that stuck") so it matches Sprint 2's version. Owed to Sprint 1.
-23. **Sprint 3 alignment** (Melisa): the frame arrives with the Checked column, 3c, and Part 7 questions; "still marked inferred" becomes "Part 6: your assumptions, rows marked not yet"; the stakeholder conversation is "the same check as Sprint 2"; the mid-course revision revises a document that exists.
+23. **Sprint 3 alignment** (Melisa): Sprint 2 no longer makes a check (24 September), so Sprint 3's conversation is the course's first test of an assumption against a person, and its page can say so. The frame arrives with the Checked column (not yet, or low risk because), 3c, and Part 7 questions; "still marked inferred" becomes "Part 6: your assumptions, rows marked not yet"; the mid-course revision revises a document that exists. Sprint 3's assumption blocks are the same walk as Sprint 2's (questions, different answers, risk); Sprint 3 should name it as a repeat on new material and use the same words.
 24. **Sprint 4 alignment** (Melisa): Goal Plan references become Problem Frame; Name the Gap points at part 6's "not yet" rows; Sprint 4's "gap" is not Sprint 2's assumptions.
 25. **American English course-wide** (ruled 18 September). Sprints 3 and 4 carry British spellings.
 26. **Two core examples** (account handovers with Dana; the garden plot with Ramona) run Sprints 1 to 3. Check Sprint 4 uses them or says why not.

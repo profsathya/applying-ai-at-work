@@ -76,7 +76,7 @@ guided_assignment:
 publish: false
 ---
 
-# What solutions already exist
+# What solutions already exist walk-through
 
 For the first part of this sprint, you looked at your assumptions to see how a better understanding of them might change your problem. Week 2 starts by looking outward. Can you find other examples of people trying to solve this problem, or one like it, in your own situation or out in the world? Are there products, practices, or someone else who already does this well? If you find an existing solution, it does not necessarily mean your problem is not worth pursuing, but it might change how you think about it.
 

@@ -2984,3 +2984,47 @@ write marked interim).
 
 Provenance: Leslie, the ask and the review; Claude, the list and the record.
 
+## 24 September: the Sprint 2 and Sprint 3 overlap, and the check removed
+
+Leslie read Sprint 3 V3's conversation planning against Sprint 2's week 1 and found too
+much overlap. Claude's reading, confirmed on a side-by-side docx: two overlaps. The walk
+(Sprint 2's questions, different answers, risky) and Sprint 3's assumption blocks (question
+to ask, what a different answer changes, high-stakes) are the same method with different
+words on different material (frame claims against guesses about people); the material is
+new in Sprint 3, so the walk stays in both and Sprint 3 should name the repeat. The check
+(Sprint 2's one-person question, AI-diagnosed, written before you look) and Sprint 3's
+conversation are two sizes of one thing. Options offered: a look rather than a
+conversation; no check; a check with no scaffolding.
+
+**Leslie's ruling: remove the check from Sprint 2.** Not everyone will have something to
+look at, a short extra page is odd, and a result that comes back days later has no natural
+place to land. Sprint 3's conversation is the course's first check. Kept: one optional
+line at the end of the walk, "if any of these would be easy to find out this week, go and
+find out, and note it," with no wrap-up.
+
+**Leslie's rewrite of Dig into your assumptions** (docx, 24 September) adopted: a needs
+list (the frame, the Sprint 2 working book, a placeholder name); three questions per
+assumption, the third being how risky it is to shutting the problem down, with risk as
+consequence and likelihood ("if you know clients are complaining, it might not matter what
+the managers think: not risky"); one table per assumption, up to seven, each field with
+guidance and a handover and a garden example. Claude's fixes, agreed: the garden
+different-answers line rewritten as answers (no one to ask; too far or too big; never
+meant to stay), the garden risk line rewritten, "work without AI" restored, the
+other-assumptions paragraph moved to the Problem Frame item. Submission: the text copy
+into the box as the completion marker, the table into the working book. "Accepted,
+because" becomes "low risk, because" everywhere.
+
+**The vocabulary.** Leslie asked whether Sprint 2 should use high-stakes. Recommendation:
+one word across the course, risky, since Sprint 2 comes first and its definition carries
+likelihood; team decision, course-wide list item 13.
+
+**Applied, draft v2.1:** the walk page; the Dojo Lab tests the walk only (PUSHBACK, ONE
+QUESTION, WHAT HELPED); Which assumptions, one box, 20 points; self-check questions 2 and
+3; the Problem Frame item in two parts, the Checked column from the walk, the verdict on
+what is known now naming what would change it; the reflection; the route and cover note.
+Worked example v0.5, template v0.4, outline v5.4, course-wide list v0.2 (items 13 and 23).
+Build rebuilt to match.
+
+Provenance: Leslie, the concern, the rewrite, and every ruling; Claude, the reading, the
+side-by-side, the fixes, and the record.
+

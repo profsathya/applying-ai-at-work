@@ -7,9 +7,10 @@ sprint: 16
 week: 1
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 1
-learning_goal: Gather evidence, adjust your frame, and decide whether the problem you chose is worth the rest of the course.
 points: null
 submission_type: none
+learning_goal: Gather evidence, adjust your frame, and decide whether the problem you chose
+  is worth the rest of the course.
 publish: false
 ---
 
