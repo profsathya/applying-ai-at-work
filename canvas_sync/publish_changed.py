@@ -150,6 +150,7 @@ def drift_for_changed(manifest_path: Path, changed: list[dict]) -> list[dict]:
                 }
             )
             continue
+        item["verified_live_published"] = live_state.get("published") is True
         actual = canvas_fingerprint(live_state, entry["canvas_type"])
         if not expected:
             # No baseline is not evidence that Canvas is safe to overwrite.
@@ -170,6 +171,18 @@ def drift_for_changed(manifest_path: Path, changed: list[dict]) -> list[dict]:
                 item["healed_fingerprint"] = actual
             continue
         if actual != expected:
+            # A Canvas visibility change may already have been reconciled in
+            # the selected source. Prove that publication is the only change
+            # from the stored Canvas snapshot and that the live assignment
+            # matches the current source before accepting its new baseline.
+            if entry["canvas_type"] == "assignment" and isinstance(live_state.get("published"), bool):
+                prior_visibility = {**live_state, "published": not live_state["published"]}
+                if canvas_fingerprint(prior_visibility, entry["canvas_type"]) == expected:
+                    path = item.get("path") or REPO_ROOT / item["file"]
+                    if not hosted_canvas_drift(path, manifest_path, manifest, live_state, entry["canvas_type"]):
+                        item["healed_fingerprint"] = actual
+                        item["healed_reason"] = "Canvas publication change already reconciled in selected source"
+                        continue
             # Real drift: a stored fingerprint exists and live Canvas does not
             # match it. Refuse so Canvas-side edits are not silently replaced.
             drifted.append(
@@ -422,7 +435,7 @@ def publish_manifest(
                     {
                         "file": item["file"],
                         "artifact_id": item["artifact_id"],
-                        "reason": "hydrated missing canvas_fingerprint from live canvas during publish",
+                        "reason": item.get("healed_reason", "hydrated missing canvas_fingerprint from live canvas during publish"),
                     }
                 )
             elif item.get("first_publish"):
@@ -437,7 +450,11 @@ def publish_manifest(
     # A release is a coordinated visibility switch. Assess every pair before
     # changing any item, then process each replacement before its source.
     try:
-        pairs = release_pairs(changed, discover_artifact_files(manifest_path))
+        pairs = release_pairs(
+            changed, discover_artifact_files(manifest_path),
+            already_live_ids={item["artifact_id"] for item in changed
+                              if item.get("verified_live_published") and item["artifact_id"] not in blocked_ids},
+        )
         pair_states = {}
         if pairs:
             blocked_pairs = [f"{source['artifact_id']} / {new['artifact_id']}"

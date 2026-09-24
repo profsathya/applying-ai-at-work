@@ -55,10 +55,12 @@ class WalkthroughTableTests(unittest.TestCase):
         self.assertEqual(compare_task(block, task, header_rows=0, response_cells={(1, 2)}), [])
         rendered = render_walkthrough_body({'title': 'Form', 'artifact_id': 'form',
             'submission_type': 'file_upload', 'guided_assignment': {'version': '1', 'tasks': [task],
+            'export_filename': 'form.docx',
             'records_destination': {'label': 'your map', 'url': 'https://docs.google.com/document/d/test/copy'}}}, '', {})
         self.assertNotIn('<thead>', rendered.split('<script')[0])
         self.assertIn('data-walk-answer="form.row-1.column-2"', rendered)
-        self.assertIn('Keep your own copy in <a', rendered)
+        self.assertIn('Keep the downloaded Word document as your durable copy', rendered)
+        self.assertNotIn('Keep your own copy in <a', rendered)
         self.assertIn('Guidance 1<br>Second line', rendered)
         with self.assertRaisesRegex(TableMappingError, 'accessible label'):
             create_task(block, 'form', 'Your form', ['Check it.'], header_rows=0, response_cells={(1, 2)})
@@ -217,11 +219,11 @@ class WalkthroughTableTests(unittest.TestCase):
         self.assertIn('paste it into the text-entry box', text_entry)
         fm['submission_type'] = 'file_upload'
         file_upload = render_walkthrough_body(fm, '', {})
-        self.assertIn('Download Word document for Canvas submission', file_upload)
-        self.assertIn('Copy work for your records', file_upload)
-        self.assertIn('select Submit Assignment, upload the file', file_upload)
+        self.assertIn('Download as Word document', file_upload)
+        self.assertIn('select Start Assignment, attach the Word document', file_upload)
+        self.assertNotIn('id="walk-copy"', file_upload)
+        self.assertNotIn('id="walk-text-download"', file_upload)
         self.assertNotIn('paste it into the text-entry box', file_upload)
-        self.assertLess(file_upload.index('id="walk-download"'), file_upload.index('id="walk-copy"'))
 
     def test_writable_feedback_requires_endpoint_or_recorded_exception(self):
         task = {'id': 'reflection', 'kind': 'response', 'prompt': 'Reflect',

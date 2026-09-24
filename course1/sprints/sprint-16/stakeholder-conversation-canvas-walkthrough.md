@@ -15,9 +15,9 @@ delivery_mode: guided_assignment
 learner_labels: true
 learning_goal: Hold a real validation conversation, capture what the stakeholder actually
   said, and separate what it confirmed from what it complicated.
-publish: false
+publish: true
 guided_assignment:
-  version: '1.0'
+  version: '1.1'
   presentation: walkthrough
   purpose: Hold a real validation conversation, document what the stakeholder said,
     and revise or confirm your Problem Frame based on evidence.

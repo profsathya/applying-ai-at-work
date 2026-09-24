@@ -17,6 +17,8 @@ Use synthetic answers. Keep source captures, answer fixtures, exports, and detai
 
 ## Real Google Docs paste
 
+Run this section only when the walk-through exposes a Copy action for its required submission route. A Word-upload walk-through uses the downloaded DOCX and has no competing Copy action.
+
 1. In the rendered walkthrough, enter synthetic values, including a multiline cell, and leave some cells blank. Click the actual Copy work button.
 2. Create a disposable blank Google Doc in the browser's signed-in account. Paste normally with the system paste shortcut. Do not use a generated DOCX import, HTML parser, or connector-created table as a substitute.
 3. Inspect the result visually. Export that saved Google Doc to DOCX (or read its native table structure through an authorized connector). Compare **all** tables in order, their row/column counts, headings, source cells, blank cells, multiline answers, and entered responses. Page breaks do not create new logical tables. Normalize only nonsemantic surrounding whitespace or NBSP padding, and record that normalization.

@@ -61,8 +61,8 @@ class WalkthroughChecks(unittest.TestCase):
         self.assertEqual(html.count('data-walk-feedback='), 0)
         self.assertNotIn('<h2>Learning goal</h2>', html)
         self.assertNotIn('<h2>Submit to Canvas</h2>', html)
-        self.assertIn('Download Word document', html)
-        self.assertIn('Download text copy', html)
+        self.assertIn('Download as Word document', html)
+        self.assertNotIn('Download text copy', html)
         self.assertEqual(html.count('>Profile four stakeholders</h2>'), 1)
         self.assertEqual(html.count('<table class="walk-response-table">'), 9)
         self.assertEqual(html.count('<th scope="col">Confirmed or Inferred, and why</th>'), 4)
@@ -78,6 +78,11 @@ class WalkthroughChecks(unittest.TestCase):
             source = {'artifact_id': 'source', 'path': source_path, 'file': 'source.md'}
             new = {'artifact_id': 'new', 'path': new_path, 'file': 'new.md'}
             self.assertEqual(release_pairs([new, source], [source_path, new_path]), [(source, new)])
+            source_path.write_text(source_path.read_text().replace('publish: false', 'publish: true'))
+            with self.assertRaisesRegex(ValueError, 'requires source publish: false'):
+                release_pairs([new], [source_path, new_path])
+            self.assertEqual(release_pairs([new], [source_path, new_path], already_live_ids={'new'}), [])
+            source_path.write_text(source_path.read_text().replace('publish: true', 'publish: false'))
             state = {'artifacts': {
                 'source': {'artifact_id': 'source', 'canvas_id': 1, 'canvas_type': 'assignment',
                            'canvas_module_id': 5, 'canvas_module_item_id': 10},

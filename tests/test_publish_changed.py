@@ -960,6 +960,32 @@ class DriftSelfHealTests(unittest.TestCase):
         self.assertEqual(len(drifted), 1)
         self.assertEqual(drifted[0]["reason"], "canvas changed since last state-backed publish")
 
+    def test_reconciled_assignment_publication_only_is_accepted(self) -> None:
+        live = {"id": 7166, "name": "Walkthrough", "description": "<p>Stable shell</p>",
+                "points_possible": 50, "submission_types": ["online_upload"], "published": True}
+        prior = {**live, "published": False}
+        entry = {"canvas_type": "assignment", "canvas_id": 7166,
+                 "canvas_fingerprint": publish_changed.canvas_fingerprint(prior, "assignment")}
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manifest = root / "course1/manifests/production.json"
+            write_manifest(manifest, hosted=True)
+            changed = [{"file": "course1/sprints/sprint-0/walkthrough.md",
+                        "path": root / "course1/sprints/sprint-0/walkthrough.md",
+                        "artifact_id": "walkthrough", "state_entry": entry}]
+            with patch.object(publish_changed.CanvasClient, "from_env", return_value=object()), \
+                 patch.object(publish_changed, "fetch_canvas_state", return_value=live), \
+                 patch.object(publish_changed, "hosted_canvas_drift", return_value={}):
+                self.assertEqual(publish_changed.drift_for_changed(manifest, changed), [])
+            self.assertEqual(changed[0]["healed_fingerprint"],
+                             publish_changed.canvas_fingerprint(live, "assignment"))
+            changed[0].pop("healed_fingerprint")
+            with patch.object(publish_changed.CanvasClient, "from_env", return_value=object()), \
+                 patch.object(publish_changed, "fetch_canvas_state", return_value=live), \
+                 patch.object(publish_changed, "hosted_canvas_drift", return_value={"title": "changed"}):
+                drifted = publish_changed.drift_for_changed(manifest, changed)
+            self.assertEqual(drifted[0]["reason"], "canvas changed since last state-backed publish")
+
     def test_missing_canvas_object_still_refuses(self) -> None:
         entry = {"canvas_type": "page", "canvas_id": 1001, "canvas_page_url": "stable-page"}
         drifted, _ = self._drift(entry, None)

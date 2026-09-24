@@ -35,7 +35,8 @@ def _override_shape(value: list[dict]) -> list[dict]:
                   key=lambda entry: str(sorted(entry.items())))
 
 
-def release_pairs(changed: list[dict], course_paths: list[Path]) -> list[tuple[dict, dict]]:
+def release_pairs(changed: list[dict], course_paths: list[Path], *,
+                  already_live_ids: set[str] | None = None) -> list[tuple[dict, dict]]:
     """Find a coordinated source/new publish flip in the selected changes."""
     all_fm = {}
     for path in course_paths:
@@ -45,6 +46,7 @@ def release_pairs(changed: list[dict], course_paths: list[Path]) -> list[tuple[d
             continue  # The existing publisher reports invalid neighbors per artifact.
         all_fm[fm['artifact_id']] = fm
     changed_by_id = {item['artifact_id']: item for item in changed}
+    already_live_ids = already_live_ids or set()
     pairs = []
     claimed = set()
     for item in changed:
@@ -56,6 +58,11 @@ def release_pairs(changed: list[dict], course_paths: list[Path]) -> list[tuple[d
         if not source:
             raise ValueError(f"Walk-through {item['artifact_id']}: source {source_id} is missing")
         if source.get('publish', True):
+            # A replacement already published in Canvas can receive a content
+            # update without changing either item's visibility. The caller
+            # supplies this set only after a live read and drift check.
+            if item['artifact_id'] in already_live_ids and source_id not in changed_by_id:
+                continue
             raise ValueError(f"Walk-through {item['artifact_id']}: release requires source publish: false")
         source_item = changed_by_id.get(source_id)
         if not source_item:

@@ -4,7 +4,7 @@
   "packet_sha256": "242d7920b490e1288f2d9fd8c030304f8db2a901984c7577e81a81078d610b9a",
   "map_sha256": "199d2897dff45aed7ce4e7bd1a73845180b459df18862a48b5fc1f0d843ad2f7",
   "body_sha256": "d06c0a7bf5cbfd2a704003b35daff7e33cad6d96657f168622f4c9f4253a0742",
-  "frontmatter_sha256": "8f0ea02d07fa0b1235d185514f735834b6187681021f91eff8a91087a784372d",
+  "frontmatter_sha256": "60590a6720a78ecefe4298873803095bafac7c3187b85bb7e404f0b94dfe46ce",
   "parts": [
     {
       "kind": "new",
@@ -42,7 +42,8 @@
   "metadata_decisions": [
     "Storage sprint 16 is draft storage; the live module is Sprint 3 V3.",
     "The title appends Canvas Walkthrough; the artifact has a new slug and identity.",
-    "50 points and file upload match live Canvas; publish false stages an alternative."
+    "50 points and file upload match live Canvas. Assignment 7166 and its module item were published at the 2026-09-24 readback; this update preserves that visibility.",
+    "Version 1.1 rerenders assignment 7166 with one Word download action and Canvas Start Assignment attachment directions."
   ],
   "source_roles": {
     "d-92d6b91158f50fe2": {
@@ -52,7 +53,7 @@
     }
   },
   "decisions": [
-    "Original Canvas assignment 7158 is published, 50 points, file upload, no rubric, dates, overrides, or submitted work. New draft remains unpublished after item 17990.",
+    "Original Canvas assignment 7158 and walkthrough 7166 were both published at the 2026-09-24 readback; both use 50 points and file upload. This update changes only the walkthrough content and keeps the live visibility.",
     "All six source report tables retain original cells and order in base view; every right column cell is an answer field. Headerless source tables use accessible column labels without visible invented rows.",
     "The existing hosted Part 1 AI activity remains the route to the required JSON response. The guided walkthrough exports the report DOCX; the updated Stakeholder Map remains a separate third file.",
     "AI row feedback is omitted for identity, meeting setup, and another person’s conversation notes for privacy. Question, first-impression, and afterward rows have optional formative feedback."
