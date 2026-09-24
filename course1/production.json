@@ -475,17 +475,17 @@
       "canvas_payload_hash": "563f8a95adeca3eda9aa454d1956e188523bca72ada1b60c6c81ef64fcbb65b0",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "da04dad6ee13f5a3131a1a314ef37a34f1ac5b7bdf460288b6463a7110e0e886",
+      "content_hash": "67912d5eb84234a1cc71e3b66cc9c7345f63a0b535e84346edbc442c519dea70",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "4594951bc6f54f785513fe8edfadc55ed95e33b6761b0215fe35f46a0035bcf0",
-      "hosted_last_rendered": "2026-09-24T05:08:29+00:00",
+      "hosted_hash": "cb797ae9e46ac3c0b76908e9d28821ce7988dd28e40cb53efd353ebad2e78e50",
+      "hosted_last_rendered": "2026-09-24T16:14:22+00:00",
       "hosted_path": "course1/assignments/dig-into-your-assumptions.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dig-into-your-assumptions.html",
-      "last_pushed": "2026-09-24T05:08:29+00:00",
+      "last_pushed": "2026-09-24T16:14:22+00:00",
       "local_path": "course1/sprints/sprint-16/dig-into-your-assumptions.md",
       "position": 3,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "2bb6e6f78ae95093e1614ca992d8bd15d790b9fa"
+      "source_commit": "91371b62d926287a6b8a7ed3d59ca814d5815ed8"
     },
     "course1-sprints-sprint-16-dig-into-your-assumptions-walk-through": {
       "artifact_id": "course1-sprints-sprint-16-dig-into-your-assumptions-walk-through",
@@ -494,20 +494,20 @@
       "canvas_module_id": 2084,
       "canvas_module_item_id": 18011,
       "canvas_page_url": null,
-      "canvas_payload_hash": "551cd66f24790b4350981a5b642fa5d2e8516de6d44fa4c75069c115d8bb584a",
+      "canvas_payload_hash": "a79fd22155b5381e014b790a2c6c48fbac9ab41f747fd6addda9c64ad27ffa7e",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "c151e7ed8c9f3f6c16b3a135a35d5b8e52bd6ea2ce6e62e347f734a021556c68",
+      "content_hash": "bd6c3b9bf7e5b81eebbcdeb2f80c1babe72079dc3e35165797b16cdfab7512db",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "0603d3e7eaa0b14d729b0bed59b76bf40136efed37ed97dee80d123fad988511",
-      "hosted_last_rendered": "2026-09-24T07:49:40+00:00",
+      "hosted_hash": "4ea717ab91764e06e5c929a2585ca1d9b65aca44aa243dbfd5c060fb9ec00fe1",
+      "hosted_last_rendered": "2026-09-24T16:14:21+00:00",
       "hosted_path": "course1/assignments/dig-into-your-assumptions-walk-through.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dig-into-your-assumptions-walk-through.html",
-      "last_pushed": "2026-09-24T07:49:40+00:00",
+      "last_pushed": "2026-09-24T16:14:21+00:00",
       "local_path": "course1/sprints/sprint-16/dig-into-your-assumptions-walk-through.md",
-      "position": 4,
+      "position": 3,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "90243dec612d170ad341b60f1e625342ed7969c6"
+      "source_commit": "91371b62d926287a6b8a7ed3d59ca814d5815ed8"
     },
     "course1-sprints-sprint-16-dojo-lab-explore-what-already-exists": {
       "artifact_id": "course1-sprints-sprint-16-dojo-lab-explore-what-already-exists",
@@ -689,17 +689,17 @@
       "canvas_payload_hash": "83b5fe47faf74b4b5404e0fccca9974a0d1b6be53a9f50bf1897bf5efe4b3cac",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "ddb48d664b015ffd5fac5e17182e4e73191ef4c71e43711ea131e8abf256766e",
+      "content_hash": "e65b32273f209fbf04240a003c4fce9143dddb90fa603fec5cd146817395369e",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "a3e65aa4373743554a1206c6ff6aec82ca6d3dc79055d35860e7b7f0096dc4df",
-      "hosted_last_rendered": "2026-09-24T07:49:52+00:00",
+      "hosted_hash": "26d685d2979998beeebc8e7fa32a20ced2f233d6ec0b699f22af7e3ecbe5413f",
+      "hosted_last_rendered": "2026-09-24T16:14:26+00:00",
       "hosted_path": "course1/assignments/what-solutions-already-exist.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/what-solutions-already-exist.html",
-      "last_pushed": "2026-09-24T07:49:52+00:00",
+      "last_pushed": "2026-09-24T16:14:26+00:00",
       "local_path": "course1/sprints/sprint-16/what-solutions-already-exist.md",
       "position": 7,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "90243dec612d170ad341b60f1e625342ed7969c6"
+      "source_commit": "91371b62d926287a6b8a7ed3d59ca814d5815ed8"
     },
     "course1-sprints-sprint-16-what-solutions-already-exist-walk-through": {
       "artifact_id": "course1-sprints-sprint-16-what-solutions-already-exist-walk-through",
@@ -711,17 +711,17 @@
       "canvas_payload_hash": "071215dc2772296aa091bd05c9832486fa946f303f06d015fb5dc2559d842963",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "2b76e172077bb568eb0454d7ab74dc8d3df4a1fc510fa0e8855168030a47987c",
+      "content_hash": "3da6bf1daa09c02459f40e9a0b63af93dfebf4613d120fbaa04e9968ad5cd1a3",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "34e3d3eb43e316ea3210c8623fd97f91366275798246f1e8ff542983e7fa65eb",
-      "hosted_last_rendered": "2026-09-24T07:49:51+00:00",
+      "hosted_hash": "d8aef149e5cd8c535861b79f62b6f31cb48f52307fe3d907097014d834ab359d",
+      "hosted_last_rendered": "2026-09-24T16:14:25+00:00",
       "hosted_path": "course1/assignments/what-solutions-already-exist-walk-through.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/what-solutions-already-exist-walk-through.html",
-      "last_pushed": "2026-09-24T07:49:51+00:00",
+      "last_pushed": "2026-09-24T16:14:25+00:00",
       "local_path": "course1/sprints/sprint-16/what-solutions-already-exist-walk-through.md",
       "position": 8,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "90243dec612d170ad341b60f1e625342ed7969c6"
+      "source_commit": "91371b62d926287a6b8a7ed3d59ca814d5815ed8"
     },
     "course1-sprints-sprint-16-which-assumptions": {
       "artifact_id": "course1-sprints-sprint-16-which-assumptions",
@@ -1472,5 +1472,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-24T07:49:55+00:00"
+  "last_sync": "2026-09-24T16:14:26+00:00"
 }
