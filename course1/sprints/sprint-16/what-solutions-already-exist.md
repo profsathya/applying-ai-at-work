@@ -19,13 +19,13 @@ guided_assignment:
   builds_on: Bring your Problem Frame. Work without AI on this page; the next activity fills
     the table in.
   standing_instruction: Own your progress · 0 points. Submit to complete this module requirement,
-    and copy what you write for the Dojo Lab.
+    and paste your table into your Sprint 2 working book.
   tasks:
   - id: your-table
     kind: response
-    instruction_section: 'Columns 2 and 3: one row at a time'
-    prompt: 'Your table as it stands before AI: for each row, what exists; how it works, as
-      far as you know; and what it means for your problem (good, bad, not sure).'
+    instruction_section: Build your table
+    prompt: 'Your table, one row per thing: what exists; how it works, as far as you know;
+      and what it means for your problem (good, bad, not sure).'
     criteria:
     - Fill at least three rows; questions count.
     - Keep solutions you would build out of the first column.
@@ -36,45 +36,51 @@ publish: false
 
 # What solutions already exist
 
-For the first part of this sprint, you looked at your assumptions to see how a better understanding of them might change your problem. Week 2 starts by looking outward. Can you find other examples of people trying to solve this problem, or one like it, in your own situation or out in the world? Are there products, practices, or someone else who already does this well? If you find an existing solution, it does not necessarily mean your problem is not worth pursuing, but it might change how you think about it.
+## What you need for this activity
 
-## Reflect on how you've been working with AI: providing Context
+- Your draft **Problem Frame**.
+- Your **Sprint 2 working book**, to paste your table into when you finish.
 
-In two activities so far, you have thought first and then come to AI with your thinking already developed: your draft frames in Sprint 1 and your walk in week 1. That is you providing **Context** to AI, to get more useful results. Instead of handing AI the problem and having it generate the work, which it would not have been able to do a very good job of, you gave AI your thinking, which it read and pushed against. Context is the first C of Symbiotic Thinking, the partnership you met by name in Welcome, and it is one way to make your conversations with AI useful.
+You will do your work within Canvas. Work without AI on this page; the next activity is where AI helps you fill the table in.
 
-There are two other kinds of context you can provide: what AI needs to know about your situation, such as that you are doing this for school or work or yourself, that you have a deadline, that you want to share it with someone else; and how you want the AI to work with you, such as that you want no more than 150-word answers, that it should not change anything without asking you first, that you do not want colons. Your Dojo is set up with many of those instructions already. Go take a look at the course document you attached to the project; you will see many instructions for how the Dojo is supposed to interact with you.
+The goal of this activity is for you to start a table of what already exists that could solve or ease your problem. Week 2 looks outward. Can you find other examples of people trying to solve this problem, or one like it, in your own situation or out in the world? Are there products, practices, or someone else who already does this well? If you find an existing solution, it does not necessarily mean your problem is not worth pursuing, but it might change how you think about it.
 
-[INTERIM: the sentence about the course document attached to the project is true once the Dojo doc and the Sprint 0 setup item exist. If they are not ready at the cut, it becomes "Once your Dojo is set up, its course document carries many of those instructions."]
+> **Example:** Our CRM has an owner field on every account. I have seen it, grayed out. I do not know whether ours is switched on.
 
-## Back to existing solutions
+You are listing what exists, not designing anything. "An agenda tool" is a thing that exists; "we should build an agenda tool" is a solution, and it waits. Things you know of, things you have heard of, guesses, and questions all count. As always, marking what you don't know is better than making something up. A table that is mostly questions will still be very useful for the next activity.
 
-This page is a table, three columns: what exists, how it works as far as you know, and what it means for your problem. As always, questions and question marks where you don't know something are encouraged. It is better to mark what you don't know than make something up; a table that is mostly questions will still be very useful for the next activity. Copy what you write before you leave, because the next activity fills it in.
+## Build your table
 
-Two passes: first everything you can think of for column 1, then columns 2 and 3 together, one row at a time.
+With your problem in mind, ask three things about each thing that might already exist:
 
-## Column 1: what exists
+- What exists?
+- How does it work, as far as I know?
+- What does it mean for my problem?
 
-With your problem in mind, brainstorm existing solutions that might be related to part or all of your problem. Ask yourself:
+To find things for the first question, ask yourself: What products or services claim to have solutions in this problem space? Do I know anyone who has a similar problem but seems to be handling it well? Does my own organization, or do I personally, already have something for this, used or not? Could AI help with this problem?
 
-- What products or services do I know of that claim to have solutions in this problem space?
-- Do I know anyone who has a similar problem but seems to be handling it well?
-- Does my own organization, or do I personally, already have something for this, used or not?
-- Do I know anything about how AI might be able to help solve this problem?
+The table below will help you think through each one. Fill one row per thing. Do the first column for everything you can think of, then the other two columns one row at a time.
 
-You are listing what exists, not designing anything. "An agenda tool" is a thing that exists. "We should build an agenda tool" is a solution, and it waits. Things you know of, things you have heard of, guesses, and questions all count.
+**What exists.** A thing that exists somewhere now, or a question about one.
 
-> **Example, column 1 for account handovers.** Problem: account handovers happen with no record. Possible solutions that exist: an owner field in our CRM; a handover checklist (the sales team next door has one); is there a weekly "accounts that moved" note, or does it ever come up in a weekly team meeting?
+> Account handover example: An owner field in our CRM.
+>
+> Garden plot example: Do other community gardens pair new people with returning ones?
 
-*More help: the garden plot. If you don't know what solutions exist, you can ask questions.* Problem: new plot-holders start alone in April, and most stop coming by midsummer. Possible solutions that exist: do other community gardens pair new people with returning ones? Is there a name for this problem, and are people talking about it online? What does the garden two streets over do that ours does not? Did anyone here try something before? Four questions and no answers, but there is real thinking here. That is what is needed.
+**How it works, as far as I know.** What you have actually seen, where it lives, who can change or see it, and what you do not know.
 
-## Columns 2 and 3: one row at a time
+> Account handover example: I have seen a CRM owner field, but it's grayed out. I don't know who can set it or if it can be turned on. If it can be, would the old owner change the name at the handover point? How would the new owner, or any of the other managers, be notified?
+>
+> Garden plot example: I don't know. The garden two streets over might do it. I have never asked.
 
-Now take each row in turn and fill the other two columns while that thing is in your head.
+**What it means for my problem: good, bad, not sure.** Reasons it would be good for your problem, reasons it might be bad, and what you are not sure about. Before you have looked into anything, most of this will be "not sure," and that is the right result.
 
-**Column 2, how it works, as far as you know.** Write what you actually know about how it works, and be honest about what you do not. Have you seen it yourself? Where does it live? Who can change it, and who can see it? If you have not seen it, how do you know it exists? Who would have to switch it on? A row that is mostly "I do not know" is fine; that is what the next activity is for.
+> Account handover example: Good: it seems to already exist as a feature in a product we already use. Bad: it's not turned on, and people aren't using the CRM much as it is, so it might not make a difference. Not sure: whether turning it on costs anything, and who decides.
+>
+> Garden plot example: Good: if it works there, it could work here. Bad: pairing takes someone to organize it every spring. Not sure: whether the pairs actually talk.
 
-**Column 3, what it means for your problem.** Reasons this would be good for your problem, reasons it might be bad, and what you are honestly not sure about. Before you have looked into anything, most of this column will be "not sure," and that is the right result.
-
-> **Example, one row, the CRM owner field.** Column 2: I have seen a CRM owner field, but it's grayed out. I don't know who can set it or if it can be turned on. If it can be, would the old owner change the name at the handover point? How would the new owner, or any of the other managers, be notified? Column 3: Good: it seems to already exist as a feature in a product we already use. Bad: it's not turned on, and people aren't using the CRM much as it is, so it might not make a difference. Not sure: whether turning it on costs anything, and who decides.
+*More help: if nothing comes to mind.* Turn your frame into questions and make each one a row. Is there a name for this problem, and are people talking about it online? What does the place next door do that we do not? Did anyone here try something before? Four questions and no answers, but there is real thinking here. That is what is needed.
 
 *More help: take another look at the first column.* Everything in it should be something that exists, somewhere, now, or a question about one. If a row describes what you would build, move it out. That is a solution, and Sprint 2 is not where solutions get chosen.
+
+When you finish, paste your table into your Sprint 2 working book. The next activity fills it in.

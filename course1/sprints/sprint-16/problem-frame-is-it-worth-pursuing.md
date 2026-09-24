@@ -6,7 +6,7 @@ artifact_id: course1-sprints-sprint-16-problem-frame-is-it-worth-pursuing
 sprint: 16
 week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
-position: 10
+position: 11
 points: 45
 submission_type: text_entry
 delivery_mode: guided_assignment

@@ -16,7 +16,8 @@ walkthrough_after: course1-sprints-sprint-16-dig-into-your-assumptions
 guided_assignment:
   version: '1.0'
   presentation: walkthrough
-  feedback_omission_reason: "No AI on this page by design: the learner's own view is written here first, and the next activity, a Dojo Lab, is where AI tests it."
+  feedback_omission_reason: 'No AI on this page by design: the learner''s own view is written
+    here first, and the next activity, a Dojo Lab, is where AI tests it.'
   export_filename: assumptions-walk.docx
   purpose: Walk every assumption in your Problem Frame and rate how risky each one is to your
     problem.
@@ -76,7 +77,7 @@ guided_assignment:
 publish: false
 ---
 
-# Dig into your assumptions walk-through
+# Dig into your assumptions
 
 In this activity, you are going to need two things:
 

@@ -1,12 +1,12 @@
 ---
 purpose: The one list of course-wide items raised during Sprint 2's design and build, for the team (Leslie, Jeremy, Melisa) to decide how to tackle and implement; no owners assigned here
-status: v0.2, 24 September 2026 (items 13 and 23 widened after the check was removed from Sprint 2). v0.1, 23 September 2026, consolidated from the handoff, the Sprint 2 cover note, the decisions log (16 to 23 September), and where-work-lives.md
+status: v0.3, 24 September 2026 (who-does-what line at the top; the final-Me-turn ask withdrawn). v0.2, 24 September 2026 (items 13 and 23 widened after the check was removed from Sprint 2). v0.1, 23 September 2026, consolidated from the handoff, the Sprint 2 cover note, the decisions log (16 to 23 September), and where-work-lives.md
 depends_on: sprint-1-decisions.md; handoff.md; where-work-lives.md; sprint-2-working-draft-v1.md (v2.0)
 ---
 
 # Course-wide list
 
-Items that reach beyond one sprint. Each names where it came from and which sprints it touches. Status is "open" unless a ruling exists, in which case the ruling is stated and what remains is the rollout. Add to this file rather than to the sprint files; the decisions log records how each was settled.
+Items that reach beyond one sprint. **Needs Jeremy's tooling:** items 1, 2 (the Dojo tab), 4a, 4b, 8, and 28. **Team decisions:** 6, 11, 12, 13, 16, 17, 30. **Ours by PR once decided:** 7, 20, 20a, 21, 22, 25, 26. Each names where it came from and which sprints it touches. Status is "open" unless a ruling exists, in which case the ruling is stated and what remains is the rollout. Add to this file rather than to the sprint files; the decisions log records how each was settled.
 
 ## A. The Dojo
 
@@ -14,26 +14,32 @@ Items that reach beyond one sprint. Each names where it came from and which spri
 2. **Dojo Labs as modules or as interim prompts.** Ruled 20 September: every Dojo Lab is an interim single-shot prompt until the course document exists; modules come after. Open: when modules are written, and whether the interim prompts stay as the plain-chat fallback. Touches Sprints 1 to 4.
 3. **Prompt shape.** Leslie's 20 September run: prompts should ask for labeled parts, and say what to paste. Sprint 2's first Dojo Lab has this; Sprint 1's, 3's, 4's, and Sprint 2's second do not yet. Touches every Dojo Lab.
 4. **What a Dojo Lab submits.** Sprint 1 and Sprint 2 submit the transcript with a final Me turn. Check Sprints 3 and 4 do the same.
+4b. **The transcript block's position.** The renderer places "Submit the complete transcript" (the final Me turn, the request, continue, paste) at the bottom of every transcript Dojo Lab. A page cannot put those steps under its own heading. Proposal for Jeremy: let a page name the section the block renders under, as instruction_section does for tasks. Two wording notes (Leslie, 24 September): "Copy and paste the transcript request below"; and say what "the required header" is (the one line the request asks the AI to start with: CIS501, Dojo transcript, the date) rather than call it required. The "final Me: turn" line can stay: Sprint 2's modules have the Dojo ask for the learner's decisions in the last round, so the transcript ends in their words regardless. The header line in the prompt file uses em dashes, which the course rule bans in authored prose.
+4a. **The confidentiality paragraph on transcript Dojo Labs.** The renderer adds a four-sentence paragraph at the top of every transcript-submission Dojo Lab (course policy, 18 September). Leslie, 24 September: it reads as out of place at the top. Proposal for Jeremy: shorten it to two sentences and place it beside the transcript request at the bottom, where the transcript is made.
 5. **Directing AI as a course thread.** Parked 17 September, revisit after Sprint 2 publishes: Context by doing in Sprint 2, Choices and Confirmation named where used. Where the 3Cs are taught in full (Welcome names Symbiotic Thinking in one sentence; the glossary defines the 3Cs) and where each C is first practiced. Touches Sprint 0, 2, 3, 4.
 
 ## B. Activity pages and where work lives
 
 6. **The rule** (`where-work-lives.md`, v0.2): structured one-sitting work on a walkthrough page, cross-activity work in a document, the plain box for short prose and submission. For the team to confirm.
-7. **Sprint 1 conversions.** Get underneath and First frames as walkthroughs; Brainstorm as a box or Jeremy's interleaved version; the Candidate Log retired when they convert. Sprint 1 pages are Jeremy's build map.
+7. **Sprint 1 conversions.** Get underneath and First frames as walkthroughs; Brainstorm as a box or Jeremy's interleaved version; the Candidate Log retired when they convert. Leslie's pages, by PR, once the walkthrough export (item 8) is settled.
 8. **The walkthrough's table output.** Jeremy investigating (23 September): a grid with a row per entry and a column per field, in the Word export and on copy; the Word download on text-entry pages; per-step copy. Decides the Sprint 2 activity pages and Sprint 1's conversions.
 9. **"Download your file before you leave."** Every walkthrough page says it. And a course-wide word for the thing the learner keeps: file, document, sheet, Log, or nothing.
 10. **Sprint 2's Where to write section** follows item 8.
 
 ## C. Structure and rhythm
 
-11. **Self-checks.** One per sprint after week 1 (Sprints 1, 3, 4). Sprint 2's week 2 teaches new material with no check. Leslie's proposal: a check wherever a week teaches. Points are the team's.
+11. **Concept checks.** Sprints 1, 3, and 4 place theirs after the week 1 reading, so the second half of each sprint is never checked. Leslie and Melisa (24 September): one concept check per sprint, placed at the end of week 2 just before the final graded item, with questions from both weeks. Sprint 2 is the first case (position 9, five questions). Sprints 1, 3, and 4 to follow in their owners' PRs.
 12. **Points across the five sprints.** Sprint 2 proposes 5/20/20/45/10. Team decision, carried as a [TEAM DECISION] marker.
 13. **One vocabulary for the same things.** Confirmed/unverified (Sprints 1, 2) against confirmed/inferred (Sprints 3, 4); risky (Sprint 2, defined as consequence and likelihood) against high-stakes (Sprint 3, consequence only); a walk table (Sprint 2) against an assumption block (Sprint 3). Recommendation: Sprint 2 sets the words since it comes first. Team decision.
 14. **Reflections.** One AI-discussion question per sprint (Sprint 1, Sprint 2 as ruled). Check Sprints 3 and 4 match.
 15. **Learning goal per page.** Sprint 3 V3 sets a one-line goal on every page; Sprint 2 now does on the pages that show the block; Sprint 1's pages skip the block because they were document-built. Decide whether every sprint sets them.
-16. **Key terms in Introductions.** The 31 August rule: a slot only if the everyday meaning misleads or the sprint runs on it. Sprint 2's section was cut under it (23 September). Check Sprints 3 and 4's Introductions against the rule.
+16. **One shape for the Introductions.** Sprints 1 and 2 share one template; Sprints 3 and 4 another; Sprint 5 is a stub. Proposal to Melisa in `introductions-proposal.md` (24 September): route by week with points, terms only under the 31 August rule, AI, how to work, where to write, next up; Sprint 3's conflicts paragraph moves to the Conversation page, Sprint 4's closed-means-answered and AI-is-inferred lines to the Learning Plan page.
 17. **Changing problems.** Nothing in Sprints 1, 3, or 4 says what to do if the problem fails; Sprint 2 says it three times in prose. Proposal: one optional page, "If you change problems," in Sprint 0 or Sprint 2, with a one-line pointer at each point a learner could reach that decision (Sprint 2 week 1 after a contradicted check, Sprint 2 week 2 when something would simply solve it, the Sprint 2 verdict, Sprint 3 when the stakeholder says it is not real). And a ruling on whether a change after Sprint 2 is allowed.
 18. **Module headers.** Their body text reaches no learner (a module header only creates and names the Canvas module). Decide whether the body is kept as the sprint's statement for reviewers or dropped.
+
+29b. **The submission block under every box.** Six lines of chrome (drafts save in this browser; the standing instruction; copy; paste into Canvas to submit; more options; the fields-filled counter). Each exists for a reason, but on a transcript page whose one action is paste, it is a lot. Proposal for Jeremy: a compact block for transcript pages (one button, one sentence). And for Welcome: one screenshot of the hosted page inside Canvas with the Canvas submit box beneath it, since "paste into Canvas" points at something on the same screen.
+29a. **The criteria label under each response box.** The renderer hard-codes "Self-check" (reading and compact pages) and "What to check in your work" (walkthrough). Sathya's pages say "Check it yourself: the same criteria, without the AI." Leslie, 24 September: "Self-check" is not obvious there, and it is also the homepage badge for the concept checks. Proposal for Jeremy: "Check it yourself" on every box, one wording across presentations.
+30. **Marking document names.** The published pages bold a document name once, on the sentence that carries its copy link (the Candidate Log, the Stakeholder Map, the Learning Plan), and never again; Problem Frame is never marked. Proposal: bold a document's name at its first mention on a page, plain after; activity names stay plain and match their titles. Applied on Sprint 2's Dojo Lab as the first case.
 
 ## D. Prose that belongs in Welcome, with reminders per sprint
 
@@ -42,14 +48,18 @@ Items that reach beyond one sprint. Each names where it came from and which spri
 
 ## E. Continuity across sprints
 
-21. **The Problem Frame document.** Created at the end of Sprint 1 (Part D pasted once), not at the start of Sprint 2. Owed to Sprint 1.
-22. **Sprint 1's worked example A**, three lines (4a, 4b, the part 6 row "nothing has been tried that stuck") so it matches Sprint 2's version. Owed to Sprint 1.
+20a. **Sprint 1 Introduction, for consistency with Sprint 2** (Leslie and Claude, by PR, 24 September): week subtitles ("Week 1: build candidate frames" and "Week 2: test, choose, and reflect," as the homepage has them); the "What to keep and submit" section folded into the route, keeping one line above it that own-your-progress items carry 0 points but need a submission; the ending as "Next up: **Brainstorm your list**."; the "How to work" and "Where to write" sections cut, with the Candidate Log link moving to Brainstorm your list, where it is first used. The illustration and the pacing line stay.
+21. **The Problem Frame document.** Created at the end of Sprint 1 (Part D pasted once), not at the start of Sprint 2. Sprint 1's Problem Frame item, by PR; needs the template link from Leslie.
+22. **Sprint 1's worked example A**, three lines (4a, 4b, the part 6 row "nothing has been tried that stuck") so it matches Sprint 2's version, plus the workable-problem line in the Introduction and header (item 20). By PR.
 23. **Sprint 3 alignment** (Melisa): Sprint 2 no longer makes a check (24 September), so Sprint 3's conversation is the course's first test of an assumption against a person, and its page can say so. The frame arrives with the Checked column (not yet, or low risk because), 3c, and Part 7 questions; "still marked inferred" becomes "Part 6: your assumptions, rows marked not yet"; the mid-course revision revises a document that exists. Sprint 3's assumption blocks are the same walk as Sprint 2's (questions, different answers, risk); Sprint 3 should name it as a repeat on new material and use the same words.
 24. **Sprint 4 alignment** (Melisa): Goal Plan references become Problem Frame; Name the Gap points at part 6's "not yet" rows; Sprint 4's "gap" is not Sprint 2's assumptions.
 25. **American English course-wide** (ruled 18 September). Sprints 3 and 4 carry British spellings.
 26. **Two core examples** (account handovers with Dana; the garden plot with Ramona) run Sprints 1 to 3. Check Sprint 4 uses them or says why not.
 
 ## F. Process
+
+**How pages change (Jeremy, 24 September, relayed by Leslie):** Leslie and Melisa edit their sprints' pages through Claude and PRs, as Sprint 2 is being done. Sprint 1's document-built pages are edited the same way, with each page's source sidecar updated in the same commit, as Jeremy did on 18 September. Canvas itself is for settings: publish state, points, dates, module order, the walkthrough release.
+
 
 27. **Clare's comments.** Leslie and Melisa filter; the surviving comments come to Claude; each is logged with a disposition; published sprints become a packet and a PR Leslie approves or a hand-off to the page owner. Review copies for Sprints 0, 1, 3 are in Drive; Sprint 4 held until Melisa says ready.
 28. **Sprint 4 V3 is published in Canvas and marked ready** while Melisa revises it, so its text is already in the Dojo course document; Jeremy's feedback demo module has no readiness entry. Raised with Jeremy.
