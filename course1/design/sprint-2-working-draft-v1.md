@@ -219,7 +219,7 @@ The steps are at the bottom of this page, under **Submit the complete transcript
 
 ### Part 3: Updating your tables
 
-After you submit the transcript of your Dojo conversation, go back to your Dig into your assumptions tables in your Sprint 2 working book and update them based on what you learned. Those updated tables will be submitted in a later activity.
+After you submit the transcript of your Dojo conversation, go back to your Dig into your assumptions tables in your Sprint 2 working book and update them based on what you learned. Those updated tables will be submitted in the next activity.
 
 ### Response tasks
 
