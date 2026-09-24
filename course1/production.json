@@ -1302,7 +1302,7 @@
     },
     "course1-sprints-welcome-and-orientation-v2-introduction-post-v2": {
       "artifact_id": "course1-sprints-welcome-and-orientation-v2-introduction-post-v2",
-      "canvas_fingerprint": "5447ecfa45e79dba583b73f68b85aebcebe1d8ac0f3f1169a857f9eefe802d38",
+      "canvas_fingerprint": "939842b46db97264cc23c7c0bb247e3830b3ffb8036fecae0f9b90ad422d3dec",
       "canvas_id": 1533,
       "canvas_module_id": 2075,
       "canvas_module_item_id": 17936,
@@ -1472,5 +1472,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-24T20:41:33+00:00"
+  "last_sync": "2026-09-24T20:46:52+00:00"
 }
