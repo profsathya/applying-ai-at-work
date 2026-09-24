@@ -42,19 +42,15 @@ publish: false
 
 ## The three parts to this activity
 
-1. Your Dojo conversation, with a look of your own partway through.
+1. Your Dojo conversation.
 2. Requesting a transcript from the Dojo and submitting it back into Canvas.
 3. Updating your What already exists table based on your conversation.
 
 ## Part 1: Your Dojo conversation
 
-The goal of this Dojo Lab is to find out what already exists that could solve or ease your problem, so that you understand your problem better. AI has seen more workplaces, products, and practices than you can; it can add rows you did not think of, tell you what it knows about how something works, and point you at where to look. It cannot know what any of it means for your situation. That column stays yours.
-
 Open your Dojo and say: "Walk me through Dojo Lab: explore what already exists." Then paste your Problem Frame and your What already exists table. Your Dojo knows what this activity is for and will take it from there.
 
-Partway through, for each row you take on, your Dojo will send you to go and look for yourself: a help page, your own system, the person who uses the thing. Go and look, then come back to the same conversation and say what you found. This is the third C, **Confirmation**: what goes in your table is what you found where you looked, not what the chat said. Enough to say whether it exists, roughly how it works, and whether it kills your problem, eases it, or does not fit here. If you find yourself working out how to put it in place, stop. That is a later sprint.
-
-> **Example, one row.** The CRM owner field. The Dojo said the field is standard in every version of our system and pointed me at the help page for notifications. I read it: the field is on every account and can notify a team when the owner changes. So the mechanism exists. Whether ours is switched on is a new question, and whoever administers the CRM can answer it. It pushed on my "this would solve it": the question is not the field, it is who makes people fill it in.
+Note: throughout the lab, your Dojo might send you out to look up information and research for yourself. Go and look, then come back to the same conversation and say what you found.
 
 *More help: if your Dojo is not set up yet.* Use any AI chat. Paste the text below as your first message, then your Problem Frame and your table.
 
