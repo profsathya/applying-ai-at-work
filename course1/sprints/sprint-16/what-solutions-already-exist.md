@@ -31,7 +31,7 @@ guided_assignment:
     - Keep solutions you would build out of the first column.
     - Leave blanks and "not sure" as they are rather than filling them with guesses dressed
       as facts.
-publish: false
+publish: true
 ---
 
 # What solutions already exist

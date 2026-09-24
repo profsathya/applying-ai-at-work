@@ -11,7 +11,7 @@ points: null
 submission_type: none
 learning_goal: Gather evidence, adjust your frame, and decide whether the problem you chose
   is worth the rest of the course.
-publish: false
+publish: true
 ---
 
 # Sprint 2: Is This Problem Worth Pursuing?

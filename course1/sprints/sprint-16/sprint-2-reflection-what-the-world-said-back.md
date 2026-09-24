@@ -13,7 +13,7 @@ delivery_mode: canvas_native
 completion_requirement: must_submit
 learner_labels: true
 learning_goal: Look honestly at how you are working, what AI made possible, what you brought that AI could not, and how the course is landing for you.
-publish: false
+publish: true
 ---
 
 # Sprint 2 Reflection

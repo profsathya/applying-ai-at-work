@@ -60,7 +60,7 @@ guided_assignment:
     - A specific change to a named part of the frame, or a specific reason nothing changed.
     instruction_section: 5. What does this change about how you would describe your problem?
   presentation: reading
-publish: false
+publish: true
 ---
 
 # What exists, and what it means

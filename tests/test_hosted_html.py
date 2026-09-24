@@ -777,12 +777,13 @@ modules:
             self.assertIn("No Canvas submission is required", wrapper.read_text())
             self.assertNotIn("<h2>Submit to Canvas</h2>", wrapper.read_text())
 
-    def test_iframe_shell_contains_hosted_url_and_fallback_link(self) -> None:
+    def test_iframe_shell_contains_hosted_url_without_extra_link(self) -> None:
         shell = iframe_shell("https://example.test/deanza/course1/activities/tuple.html", "Tuple Page")
 
         self.assertIn("<iframe", shell)
         self.assertIn("https://example.test/deanza/course1/activities/tuple.html?context=canvas", shell)
-        self.assertIn("Open hosted page in a new tab", shell)
+        self.assertNotIn("Open hosted page in a new tab", shell)
+        self.assertNotIn("<a ", shell)
 
     def test_push_uses_iframe_shell_and_records_hosted_state(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -809,6 +810,7 @@ modules:
             self.assertIsNotNone(client.page_payload)
             self.assertFalse(client.page_payload["published"])
             self.assertIn("<iframe", client.page_payload["body"])
+            self.assertNotIn("Open hosted page in a new tab", client.page_payload["body"])
 
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
             state_path = state_path_for_manifest(manifest_path, state_dir, manifest)

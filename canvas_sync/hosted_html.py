@@ -240,8 +240,6 @@ def iframe_shell(hosted_url: str, title: str, *, height: int = 900) -> str:
         f'height="{height}" loading="lazy" '
         'style="border:0; width:100%; min-height:900px;" '
         'allowfullscreen></iframe>'
-        f'<p><a href="{escaped_url}" target="_top">'
-        "Open hosted page in a new tab</a></p>"
         "</div>"
     )
 
@@ -2287,6 +2285,27 @@ def render_hosted_files(
     for item in items:
         sprint = int(item[1]["sprint"])
         items_by_sprint.setdefault(sprint, []).append(item)
+
+    # A storage sprint can also contain staged replacements or walkthroughs
+    # for another Canvas module. A scheduled release uses its curated list as
+    # the public set for both the homepage and that sprint's index.
+    if homepage and homepage.get("schedule"):
+        configs = _module_config_by_sprint(homepage)
+        for entry in homepage["schedule"]["sprints"]:
+            if not entry.get("ready"):
+                continue
+            sprint = entry["sprint"]
+            groups = configs.get(sprint, {}).get("groups", [])
+            if not groups:
+                continue
+            public_slugs = {
+                slug for group in groups for item in group.get("items", [])
+                if (slug := _homepage_entry_slug(item))
+            }
+            items_by_sprint[sprint] = [
+                item for item in items_by_sprint.get(sprint, [])
+                if item[1]["slug"] in public_slugs and item[1].get("publish", True)
+            ]
 
     indexes = []
     progress_map = None

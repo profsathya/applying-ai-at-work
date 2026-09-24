@@ -30,7 +30,7 @@ dojo_submission:
   prompt_version: v1
 learning_goal: Have AI push on your analysis of your assumptions, and decide what to keep
   and why.
-publish: false
+publish: true
 ---
 
 # Dojo Lab: test your assumptions
