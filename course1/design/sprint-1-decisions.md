@@ -2896,3 +2896,135 @@ Applied as draft v1.4, template v0.3. Dispositions:
 Provenance: Leslie, every edit and comment; Claude, the dispositions, the pages, and the
 record.
 
+## 23 September, later: Sprint 2 draft v2.0 and the build
+
+**Leslie's rulings.** The Problem Frame item loses its Dojo step (three boxes: what came
+back, the frame pasted whole from the Google Doc, the verdict). The reflection is three
+questions in one box, as Sprint 1. The two activity pages take Jeremy's walkthrough
+format. Jeremy: Leslie and Claude build Sprint 2 together, as Melisa did for Sprints 3
+and 4. Leslie is reviewing the non-activity pages in parallel from the v2.0 docx.
+
+**Draft v2.0, cut-ready.** Dig into your assumptions and What solutions already exist
+rewritten in walkthrough-ready form: each column a field with ask, example, and avoid
+lines, the Word export carrying a later-use section ("What came back"; "After the Dojo
+Lab"), the page prose reduced to what sits above the table. The week 1 graded item is
+"paste your table and your check." Four long pages tightened. Cover note for Jeremy
+rewritten with presentation per item and the list for the team's consistency pass.
+Learner-facing words after the pass: Introduction 792, Dig 1043, Dojo Lab 1 719, graded
+1 278, What exists 1046, Dojo Lab 2 1034, graded 2 451, Problem Frame 911, reflection 86
+(examples and prompts included; the three pages over 1000 are mostly example and prompt).
+
+**The build, `course1/sprints/sprint-16/`, 13 files, all `publish: false`.** Eleven items
+at positions 1 to 11 plus two staged walkthrough replacements. Jeremy's validator
+requires a walkthrough to name a live source item in the same module (`walkthrough_after`)
+and his release flow flips the pair together, so the two activity pages exist twice: a
+`reading` version with boxes as the live item (positions 3 and 7), and the walkthrough
+version, same position, `walkthrough_after` pointing at it, for Jeremy to release when
+his renderer is ready. Presentations: page `reading` for the Introduction; `reading` with
+boxes for the graded items and the self-check (five choice tasks, as Sprint 1's concept
+check); `dojo_submission: mode: transcript, prompt_version: v1` for both Dojo Labs; `quiz`
+with `ai_activity` for the reflection, mirroring Sprint 1's. `[INTERIM]` lines carry into
+the pages as Sprint 1 and 3 do; `[NOTE]`, `[OPEN]`, and `[BUILD]` do not. Homepage: the
+schedule's Sprint 2 entry points at storage sprint 16 with `ready: false`; a hidden module
+block lists the eleven items. Validation: every file passes `schema.py --artifact`, the
+course passes `schema.py --all`, and all thirteen pages render locally through
+`hosted_html.render_artifact_document` (the walkthroughs at 37 and 18 answer fields).
+No browser inspection was performed; that is Leslie's and Jeremy's on the preview after
+merge, once an item is flipped to publish.
+
+**Build PR** opened for Leslie's approval; Claude does not merge it. Publishing is her
+flip of `publish: true` per item and `ready: true` on the homepage schedule.
+
+Provenance: Leslie, the rulings; Jeremy, the format and the go; Claude, the pages, the
+build, and the record.
+
+## 23 September, evening: where work lives (box, document, or walkthrough)
+
+Leslie asked whether the What already exists table should be a Canvas activity-boxes
+page. The answer became a rule: one-sitting work lives in a box; work edited across
+activities needs a document; the box is always the submission surface. Leslie then
+pointed out that Parts A to D of the Candidate Log correspond one to one to Brainstorm,
+Get underneath, First frames, and the Problem Frame, each written in one sitting, so the
+Candidate Log does not need to be a document if Sprint 1's activities convert to boxes;
+only the Problem Frame does. In Sprint 2 the one mismatch is What already exists, edited
+across three activities in a week, built today with a box and no document. Written up as
+`where-work-lives.md`, a proposal for the team's consistency pass, with the reading for
+every Sprint 1 and Sprint 2 activity and four open items (the rule; Sprint 1's
+conversions and the Candidate Log; the one-line What already exists fix; the course-wide
+word for sheets). Leslie is going back through Sprint 1 to decide which activities
+convert to the box style.
+
+Provenance: Leslie, the question and the Candidate Log reading; Claude, the rule, the
+note, and the record.
+
+**Later, v0.2 of the note.** Leslie: a plain Canvas box cannot hold multi-step work, so
+in practice "box" only ever means short prose or a paste surface, and everything
+structured is the walkthrough. Agreed, with Sprint 1 as the proof (First frames' boxes
+were paste surfaces for the Candidate Log). The rule is now two working surfaces,
+walkthrough and document, with the box for short prose and submission. And her second
+question, whether the learner could start the table in the walkthrough and then keep
+working in a document: yes, that is the walkthrough's Word export, which carries the
+table and the "After the Dojo Lab" section; no separate template. Consequence for the
+build: the reading versions are fallbacks that need a document behind them; if the
+walkthroughs cannot be released before 5 October, an Assumptions walk template is made.
+
+## 23 September, late: the course-wide list
+
+Leslie asked where course-wide comments were being tracked. Nowhere single: the handoff's
+owed line, the draft's cover note and owed section, dated log entries, and the open items
+in where-work-lives.md. Consolidated into `course-wide-list.md`, 29 items in six groups
+(the Dojo; activity pages and where work lives; structure and rhythm; prose that belongs
+in Welcome; continuity across sprints; process), each with its origin and the sprints it
+touches, no owners assigned. Leslie: the team decides how to tackle and implement. New
+items from the Introduction review: the self-check's place in the route (moved to after
+the Dojo Lab, where the built page sits); the "changing problems" page; module header
+body text reaching no learner. Introduction changes applied (opening, week 2 heading, AI
+and how-to-work paragraphs in her words, key terms cut under the 31 August rule, Where to
+write marked interim).
+
+Provenance: Leslie, the ask and the review; Claude, the list and the record.
+
+## 24 September: the Sprint 2 and Sprint 3 overlap, and the check removed
+
+Leslie read Sprint 3 V3's conversation planning against Sprint 2's week 1 and found too
+much overlap. Claude's reading, confirmed on a side-by-side docx: two overlaps. The walk
+(Sprint 2's questions, different answers, risky) and Sprint 3's assumption blocks (question
+to ask, what a different answer changes, high-stakes) are the same method with different
+words on different material (frame claims against guesses about people); the material is
+new in Sprint 3, so the walk stays in both and Sprint 3 should name the repeat. The check
+(Sprint 2's one-person question, AI-diagnosed, written before you look) and Sprint 3's
+conversation are two sizes of one thing. Options offered: a look rather than a
+conversation; no check; a check with no scaffolding.
+
+**Leslie's ruling: remove the check from Sprint 2.** Not everyone will have something to
+look at, a short extra page is odd, and a result that comes back days later has no natural
+place to land. Sprint 3's conversation is the course's first check. Kept: one optional
+line at the end of the walk, "if any of these would be easy to find out this week, go and
+find out, and note it," with no wrap-up.
+
+**Leslie's rewrite of Dig into your assumptions** (docx, 24 September) adopted: a needs
+list (the frame, the Sprint 2 working book, a placeholder name); three questions per
+assumption, the third being how risky it is to shutting the problem down, with risk as
+consequence and likelihood ("if you know clients are complaining, it might not matter what
+the managers think: not risky"); one table per assumption, up to seven, each field with
+guidance and a handover and a garden example. Claude's fixes, agreed: the garden
+different-answers line rewritten as answers (no one to ask; too far or too big; never
+meant to stay), the garden risk line rewritten, "work without AI" restored, the
+other-assumptions paragraph moved to the Problem Frame item. Submission: the text copy
+into the box as the completion marker, the table into the working book. "Accepted,
+because" becomes "low risk, because" everywhere.
+
+**The vocabulary.** Leslie asked whether Sprint 2 should use high-stakes. Recommendation:
+one word across the course, risky, since Sprint 2 comes first and its definition carries
+likelihood; team decision, course-wide list item 13.
+
+**Applied, draft v2.1:** the walk page; the Dojo Lab tests the walk only (PUSHBACK, ONE
+QUESTION, WHAT HELPED); Which assumptions, one box, 20 points; self-check questions 2 and
+3; the Problem Frame item in two parts, the Checked column from the walk, the verdict on
+what is known now naming what would change it; the reflection; the route and cover note.
+Worked example v0.5, template v0.4, outline v5.4, course-wide list v0.2 (items 13 and 23).
+Build rebuilt to match.
+
+Provenance: Leslie, the concern, the rewrite, and every ruling; Claude, the reading, the
+side-by-side, the fixes, and the record.
+

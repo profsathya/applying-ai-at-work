@@ -1,6 +1,6 @@
 ---
 purpose: The account handovers example carried end to end through Sprint 2, in the participant voice, as the source for the worked examples inside the Sprint 2 pages and as a size check on the Problem Frame document
-status: v0.4, 21 September 2026. 3c now comes from the What already exists table in week 2, not from the week 1 walk (Leslie's ruling); the week 1 cost paragraph is gone and a 3c paragraph opens the Problem Frame section. The part 6 row "nobody has tried to fix this before" is now "nothing has been tried that stuck," to match 4a. The verdict names the obvious-fix tension (if it is that easy, why has it not happened); 4a and 4b carry the two lines asked of Jeremy for Sprint 1's worked example A, so the two frames match. v0.2, 17 September, after Leslie's review of v0.1 (then called a fixture): the cost of a change as 3c, no verdict in the frame, the Sprint 2 Log's contents recast as what the pages' examples will show
+status: v0.5, 24 September 2026. No check in Sprint 2 (Leslie): the walk is one table per assumption with a risk rating; the Checked column reads not yet or low risk, because; the verdict is on what is known now and names what would change it; Sprint 3 makes the first check. v0.4, 21 September 2026. 3c now comes from the What already exists table in week 2, not from the week 1 walk (Leslie's ruling); the week 1 cost paragraph is gone and a 3c paragraph opens the Problem Frame section. The part 6 row "nobody has tried to fix this before" is now "nothing has been tried that stuck," to match 4a. The verdict names the obvious-fix tension (if it is that easy, why has it not happened); 4a and 4b carry the two lines asked of Jeremy for Sprint 1's worked example A, so the two frames match. v0.2, 17 September, after Leslie's review of v0.1 (then called a fixture): the cost of a change as 3c, no verdict in the frame, the Sprint 2 Log's contents recast as what the pages' examples will show
 depends_on: course1/sprints/sprint-14/the-problem-frame.md (worked example A); course1/sprints/sprint-15/stakeholder-map-v3.md (Dana the account lead); sprint-2-outline.md (v5.2)
 ---
 
@@ -39,12 +39,12 @@ Last updated: Sprint 2, week 2.
 | From | Assumption | Confirmed or unverified | Who could tell me | Checked |
 |---|---|---|---|---|
 | 2 | Nothing reaches the rest of the team | unverified | the other managers | not yet |
-| 3a | All four managers are affected, not just the one I sat next to | unverified | the other three managers | Complicated. Two of the three describe the same thing. The third says it only happens when one particular manager is the outgoing owner |
+| 3a | All four managers are affected, not just the one I sat next to | unverified | the other three managers | not yet. High risk, and the first thing to ask in Sprint 3 |
 | 3b | Clients notice and it costs them something | unverified | Dana, the account lead | not yet |
-| 3b | Managers act on stale ownership for days | unverified | the other managers | Accepted, because even if it is one day, the client still repeats their history. How long does not change whether this is worth pursuing |
+| 3b | Managers act on stale ownership for days | unverified | the other managers | Low risk, because even if it is one day, the client still repeats their history. How long does not change whether this is worth pursuing |
 | 4a | Nothing has been tried that stuck | unverified | Dana | not yet |
 | 4a | Our CRM's owner field is not in use | unverified | Dana, or whoever administers the CRM | not yet |
-| 5 | One day is fast enough to matter | unverified | nobody has said what fast enough is | Accepted, because anything faster than several days is an improvement. What fast enough means can wait until something is being changed |
+| 5 | One day is fast enough to matter | unverified | nobody has said what fast enough is | Low risk, because anything faster than several days is an improvement. What fast enough means can wait until something is being changed |
 
 **7. What you do not know yet.** I do not know who owns the handover process, if anyone. I do not know whether the CRM field is on. Dana is the person to ask about both.
 
@@ -52,35 +52,27 @@ Last updated: Sprint 2, week 2.
 
 ## 2. What the participant wrote along the way
 
-### Which assumptions would break it
+### Dig into your assumptions
 
-**The walk.** Part 6, your assumptions, one at a time.
+One table per assumption from part 6. Three questions each: the questions behind it, the different answers that could change my problem, and how risky it is to shutting the problem down.
 
-Nothing reaches the rest of the team. What I would need to find out: whether the other managers hear about handovers some other way I do not see; whether Dana announces them. What the answers could change: if there is a channel and it works, my problem is smaller than I think, or it is really about that channel not reaching everyone.
+**Nothing reaches the rest of the team.** Questions: do the other managers hear about handovers some other way I do not see? Does Dana announce them? Different answers: yes, right away; sometimes, or only if they go looking; no, or eventually with nobody meaning it to happen. Risk: high. If there is a channel and it works, my problem is smaller than I think, or it is really about that channel not reaching everyone. I have no reason to think there is one, so this is likely to hold, but it is the frame itself.
 
-All four managers are affected, not just the one I sat next to. What I would need to find out: whether the other three have had the same thing happen. What the answers could change: if it is only the one I sat next to, this is one person's habit, not a problem for nine weeks.
+**All four managers are affected, not just the one I sat next to.** Questions: have the other three had the same thing happen? When was the last time an account changed hands, and what did they know? Different answers: only the one I sat next to; two or three of them; all of them. Risk: high. If it is one person's habit, there is nothing here for nine weeks, and I do not know how likely that is.
 
-Clients notice and it costs them something. What I would need to find out: whether a client has ever raised it; whether they notice at all, or just answer the questions again. What the answers could change: if they do not notice, the cost is internal only, and the goal in part 1 is wrong. The problem would still be real for the managers.
+**Clients notice and it costs them something.** Questions: has a client ever raised it? Do clients feel they give the same information to several people, and do they care? Different answers: no evidence; some complaints; many, or lost business. Risk: medium. A no changes my goal in part 1, not whether the problem is real for the managers.
 
-Managers act on stale ownership for days. What I would need to find out: how long, really. What the answers could change: not much. Even one day means the client repeats their history.
+**Managers act on stale ownership for days.** Questions: how long, really? Different answers: one day, several days, weeks. Risk: low. The length of time does not change whether this is worth pursuing.
 
-Nothing has been tried that stuck. What I would need to find out: whether Dana or anyone tried something that died. What the answers could change: if something was tried, my real problem is whatever killed it, and 4a is wrong.
+**Nothing has been tried that stuck.** Questions: has anything been tried? What? Why did it not stick? Different answers: nothing; half-hearted attempts; a real attempt that could not get traction. Risk: high. If something was tried and died, my real problem is whatever killed it, and 4a is wrong. Someone has probably suggested announcing handovers at some point, so this is not unlikely.
 
-One day is fast enough to matter. What I would need to find out: what fast enough would even mean. What the answers could change: nothing yet. Anything faster than several days is better.
+**One day is fast enough to matter.** Not really its own thing; it may be part of 3b or 2. Risk: low. Anything faster than several days is an improvement.
 
-**Could the answer to any of these end the problem?** The managers one, because if it is one person's habit there is nothing here. The nothing-stuck one, because if something was tried and died, I am working on the wrong problem. The clients one changes the goal but not whether the problem is real, so it is not on this list.
-
-**The ones I am accepting.** Days versus one day: accepted, the length does not change whether to pursue it. Fast enough: accepted, it can wait until something changes.
-
-**The one I will check this week.** The assumption: the other three managers have had the same thing happen. What would tell me I was wrong: fewer than two of them describe it. Who and when: the three other managers, at the Thursday team meeting or after it. Why this one: it could end the problem, and they sit near me.
+Optional find-out: I looked at the last two accounts that changed hands in the CRM. Neither record shows the owner changing. Noted in the CRM row when it arrives in week 2.
 
 ### Dojo Lab: test your assumptions
 
-It asked whether "the same thing" was specific enough to ask about, and it was not; I am asking for the last time an account changed hands and what they knew about it. It also asked why I was not checking the nothing-stuck one, since it could end the problem too. Because Dana is harder to catch this week, and Sprint 3 is built for that conversation.
-
-### What came back
-
-Checked against: the three managers, Thursday, one in the meeting and two after. What came back: complicated. Two described exactly the same thing. The third said it only happens when one particular manager is the outgoing owner, and that other handovers go fine. What I make of it: real, and possibly smaller than I wrote. Worth finding out whether the third is right, but either way the fix is the same.
+It pushed on "if it is one person's habit, there is nothing here": one person's habit can still expose a process that fails whenever accounts move. I changed that line to "then it is smaller, and probably a conversation rather than a nine-week problem." It pushed on "one day is fast enough" as low risk, accepting a target before knowing how fast the work needs the information; true, and it does not change the verdict, so the rating stays with a better reason. Its question: how would I tell a manager who has not noticed the problem from one who has adapted to it and no longer calls it a problem? I do not know yet. That goes against the managers row, for Sprint 3.
 
 ### What already exists
 
@@ -99,4 +91,4 @@ Checked against: the three managers, Thursday, one in the meeting and two after.
 
 **3c, from the table.** Every option in the table asks the same thing of the managers: one new step at each handover, a note or a field, and a habit that someone, probably me, has to keep at until it holds. Dana is the only person who has to agree. Nothing to build; a checklist would take an afternoon. Against clients repeating themselves every month, small.
 
-**The verdict, as submitted.** Worth pursuing. Two of three managers describe the same thing, so it is not one person's habit, and the cost of any change is minutes per handover against clients repeating themselves every month. The fix looks obvious and cheap, a note or a field, and that is the real question: if it is that easy, why has it not happened? Either nobody has tried, or someone did and it did not last, and those are different problems. The one thing that could still end it is the third manager being right that it only happens with one outgoing owner; even then the same fix would cover that case, so it changes the size of the problem rather than whether to work on it. What I do not know that matters most is whether anyone has tried before, and Dana can tell me; that is the first thing for Sprint 3.
+**The verdict, as submitted.** Worth pursuing, on what I know now. The cost of any change is minutes per handover against clients repeating themselves every month, and the CRM already has the mechanism. The fix looks obvious and cheap, a note or a field, and that is the real question: if it is that easy, why has it not happened? Either nobody has tried, or someone did and it did not last, and those are different problems. The one thing that could still end it is the high-risk row: if only the manager I sat next to is affected, this is one person's habit. I have not asked the others yet. That, and whether anyone has tried before, are the first two things for Sprint 3, and Dana can answer the second.

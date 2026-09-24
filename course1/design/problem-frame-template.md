@@ -1,6 +1,6 @@
 ---
 purpose: Source text for the Problem Frame document, the one artifact that carries through the course from the end of Sprint 1; the participant-facing copy is a Google Doc template
-status: v0.3, 21 September 2026: 3c is written in week 2 from the What already exists table (Leslie's ruling). v0.2, 17 September 2026, after Leslie's review of v0.1: her opening text, one paste from Part D, every part living, the cost of a change as 3c, no verdict in the document
+status: v0.4, 24 September 2026: the Checked column reads not yet, low risk because, or what was found out. v0.3, 21 September 2026: 3c is written in week 2 from the What already exists table (Leslie's ruling). v0.2, 17 September 2026, after Leslie's review of v0.1: her opening text, one paste from Part D, every part living, the cost of a change as 3c, no verdict in the document
 depends_on: sprint-2-outline.md (v5.2, "The living artifact"); candidate-log-template-v2.md (v2.3, Part D in reading order); course1/sprints/sprint-14/the-problem-frame.md (the seven parts as published)
 ---
 
@@ -50,7 +50,7 @@ Last updated (sprint and date):
 
 \
 
-**6. Your assumptions.** Everything in parts 2 to 5 that you wrote as if it were true without having seen it yourself or heard it from someone who would know. Each one confirmed or unverified, with who could tell you. The last column is *added in Sprint 2* and filled in as the course goes: "not yet," or what came back when you checked, in one line, or "accepted, because" and your reason.
+**6. Your assumptions.** Everything in parts 2 to 5 that you wrote as if it were true without having seen it yourself or heard it from someone who would know. Each one confirmed or unverified, with who could tell you. The last column is *added in Sprint 2* and filled in as the course goes: "not yet," or "low risk, because" and your reason, or what you found out, in one line.
 
 | From | Assumption | Confirmed or unverified | Who could tell me | Checked |
 |---|---|---|---|---|
