@@ -55,7 +55,7 @@ Then, for each item you thought of, you're going to describe what you know about
 
 ## Build your understanding about what exists
 
-With that in mind, start building your list by answering three questions:
+With that in mind, start building a table that addresses these three questions:
 
 1. What solutions already exist?
 2. How do they work?
@@ -80,9 +80,5 @@ The table below will help you think this through.
 > Account handover example: Good: it seems to already exist as a feature in a product we already use. Bad: it's not turned on, and people aren't using the CRM much as it is, so it might not make a difference. Not sure: whether turning it on costs anything, and who decides.
 >
 > Garden plot example: Good: if it works there, it could work here. Bad: pairing takes someone to organize it every spring. Not sure: whether the pairs actually talk.
-
-*More help: if nothing comes to mind.* Turn your frame into questions and make each one a row. Is there a name for this problem, and are people talking about it online? What does the place next door do that we do not? Did anyone here try something before? Four questions and no answers, but there is real thinking here. That is what is needed.
-
-*More help: take another look at the first column.* Everything in it should be something that exists, somewhere, now, or a question about one. If a row describes what you would build, move it out. That is a solution, and Sprint 2 is not where solutions get chosen.
 
 When you finish, paste your table into your Sprint 2 working book. The next activity fills it in.
