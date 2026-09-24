@@ -42,6 +42,7 @@ Items that reach beyond one sprint. Each names where it came from and which spri
 
 ## E. Continuity across sprints
 
+20a. **Sprint 1 Introduction, for consistency with Sprint 2** (Jeremy's build map, 24 September): week subtitles ("Week 1: build candidate frames" and "Week 2: test, choose, and reflect," as the homepage has them); the "What to keep and submit" section folded into the route, keeping one line above it that own-your-progress items carry 0 points but need a submission; the ending as "Next up: **Brainstorm your list**." The illustration and the pacing line stay.
 21. **The Problem Frame document.** Created at the end of Sprint 1 (Part D pasted once), not at the start of Sprint 2. Owed to Sprint 1.
 22. **Sprint 1's worked example A**, three lines (4a, 4b, the part 6 row "nothing has been tried that stuck") so it matches Sprint 2's version. Owed to Sprint 1.
 23. **Sprint 3 alignment** (Melisa): Sprint 2 no longer makes a check (24 September), so Sprint 3's conversation is the course's first test of an assumption against a person, and its page can say so. The frame arrives with the Checked column (not yet, or low risk because), 3c, and Part 7 questions; "still marked inferred" becomes "Part 6: your assumptions, rows marked not yet"; the mid-course revision revises a document that exists. Sprint 3's assumption blocks are the same walk as Sprint 2's (questions, different answers, risk); Sprint 3 should name it as a repeat on new material and use the same words.

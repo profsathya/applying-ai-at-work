@@ -1,6 +1,6 @@
 ---
 type: assignment
-title: Sprint 2 Self-check
+title: Sprint 2 Concept check
 slug: sprint-2-self-check
 artifact_id: course1-sprints-sprint-16-sprint-2-self-check
 sprint: 16
@@ -87,7 +87,7 @@ guided_assignment:
 publish: false
 ---
 
-# Sprint 2 Self-check
+# Sprint 2 Concept check
 
 A short check that you are set up for this sprint before the work starts in earnest. It covers what the sprint asks of you and the few ideas it runs on: what an assumption is, what makes one risky, how AI is used, and where things get written. If a question surprises you, go back to the Introduction.
 

@@ -505,7 +505,7 @@ modules:
             meta: "Guided assignment - have AI push on your walk and your risk ratings; 0 points, submit the complete Dojo transcript to complete the module"
           - slug: "sprint-2-self-check"
             nav_meta: "5 points"
-            meta: "Guided concept check - five questions on assumptions, checking, accepting, and where the frame lives; 5 completion points"
+            meta: "Guided concept check - five questions on assumptions, risk, and where the frame lives; 5 completion points"
             badge: "Self-check"
             selfcheck: true
           - slug: "which-assumptions"
