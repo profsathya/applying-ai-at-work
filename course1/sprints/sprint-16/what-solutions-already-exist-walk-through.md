@@ -27,49 +27,91 @@ guided_assignment:
     and keep the exported file for the Dojo Lab.
   tasks:
   - id: your-table
-    kind: group
+    kind: table
     prompt: Your table, one row per thing that exists
     instruction_section: Build your understanding about what exists
-    repeat_count: 6
-    layout: table
-    repeat_labels:
-    - Row 1
-    - Row 2
-    - Row 3
-    - Row 4 (optional)
-    - Row 5 (optional)
-    - Row 6 (optional)
-    fields:
+    columns:
     - id: exists
-      label: What exists
-      kind: text
-      guidance:
-        ask: A thing that exists somewhere now, or a question about one.
-        example: An owner field in our CRM.
-        avoid: Something you would build.
+      label: 'What exists: a thing that exists somewhere now, or a question about one'
+      width: 5
     - id: how
-      label: How it works, as far as I know
-      kind: textarea
-      guidance:
-        ask: What you have actually seen, where it lives, who can change or see it, and what
-          you do not know.
-        example: I have seen the field, grayed out. I don't know who can set it or whether
-          it can be turned on.
-        avoid: Describing how it probably works as if you had seen it.
+      label: 'How it works, as far as I know: what I have seen, where it lives, who can change
+        or see it, and what I do not know'
+      width: 7
     - id: means
       label: 'What it means for my problem: good, bad, not sure'
-      kind: textarea
-      guidance:
-        ask: Reasons it would be good for your problem, reasons it might be bad, and what
-          you are not sure about.
-        example: 'Good: already in a product we use. Bad: not on, and people barely use the
-          CRM. Not sure: what turning it on costs, and who decides.'
-        avoid: Deciding it is the answer before you have looked.
+      width: 8
+    header_rows: 1
+    rows:
+    - id: example
+      label: Example
+      cells:
+      - text: 'Example: an owner field in our CRM.'
+      - text: I have seen the field, grayed out. I don't know who can set it or whether it
+          can be turned on.
+      - text: 'Good: already in a product we use. Bad: not on, and people barely use the CRM.
+          Not sure: what turning it on costs, and who decides.'
+    - id: row-1
+      label: Row 1
+      cells:
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+    - id: row-2
+      label: Row 2
+      cells:
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+    - id: row-3
+      label: Row 3
+      cells:
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+    - id: row-4
+      label: Row 4 (optional)
+      cells:
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+    - id: row-5
+      label: Row 5 (optional)
+      cells:
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+    - id: row-6
+      label: Row 6 (optional)
+      cells:
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+      - text: ''
+        response: true
     criteria:
     - Fill at least three rows; questions count.
     - Keep solutions you would build out of the first column.
+    - Write how it works from what you have actually seen, not how it probably works.
     - Leave blanks and "not sure" as they are rather than filling them with guesses dressed
       as facts.
+    - Do not decide a row is the answer before you have looked.
     document_after:
     - After the Dojo Lab
     - 'Fill this in during the next activity: which rows AI added and which you kept; for
