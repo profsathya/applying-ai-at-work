@@ -27,49 +27,104 @@ guided_assignment:
     and keep the exported file for the Dojo Lab.
   tasks:
   - id: your-table
-    kind: group
+    kind: table
     prompt: Your table, one row per thing that exists
-    instruction_section: Build your table
-    repeat_count: 6
-    layout: table
-    repeat_labels:
-    - Row 1
-    - Row 2
-    - Row 3
-    - Row 4 (optional)
-    - Row 5 (optional)
-    - Row 6 (optional)
-    fields:
+    instruction_section: Build your understanding about what exists
+    columns:
     - id: exists
       label: What exists
-      kind: text
-      guidance:
-        ask: A thing that exists somewhere now, or a question about one.
-        example: An owner field in our CRM.
-        avoid: Something you would build.
+      width: 5
     - id: how
       label: How it works, as far as I know
-      kind: textarea
-      guidance:
-        ask: What you have actually seen, where it lives, who can change or see it, and what
-          you do not know.
-        example: I have seen the field, grayed out. I don't know who can set it or whether
-          it can be turned on.
-        avoid: Describing how it probably works as if you had seen it.
+      width: 7
     - id: means
-      label: 'What it means for my problem: good, bad, not sure'
-      kind: textarea
-      guidance:
-        ask: Reasons it would be good for your problem, reasons it might be bad, and what
-          you are not sure about.
-        example: 'Good: already in a product we use. Bad: not on, and people barely use the
-          CRM. Not sure: what turning it on costs, and who decides.'
-        avoid: Deciding it is the answer before you have looked.
+      label: What it means for my problem
+      width: 8
+    header_rows: 1
+    rows:
+    - id: guidance
+      label: Guidance
+      cells:
+      - text: 'Guidance: a thing that exists somewhere now, or a question about one.'
+      - text: 'Guidance: what I have actually seen, where it lives, who can change or see
+          it, and what I do not know.'
+      - text: 'Guidance: good, bad, and not sure. Reasons it would be good for my problem,
+          reasons it might be bad, and what I am not sure about.'
+    - id: example-1
+      label: Example 1
+      cells:
+      - text: 'Example 1: an owner field in our CRM.'
+      - text: 'Example 1: I have seen the field, grayed out. I don''t know who can set it
+          or whether it can be turned on.'
+      - text: 'Example 1: Good: already in a product we use. Bad: not on, and people barely
+          use the CRM. Not sure: what turning it on costs, and who decides.'
+    - id: example-2
+      label: Example 2
+      cells:
+      - text: 'Example 2: do other community gardens pair new people with returning ones?'
+      - text: 'Example 2: I don''t know. The garden two streets over might. I have never asked.'
+      - text: 'Example 2: not sure yet.'
+    - id: row-1
+      label: Row 1
+      cells:
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+    - id: row-2
+      label: Row 2
+      cells:
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+    - id: row-3
+      label: Row 3
+      cells:
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+    - id: row-4
+      label: Row 4 (optional)
+      cells:
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+    - id: row-5
+      label: Row 5 (optional)
+      cells:
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+    - id: row-6
+      label: Row 6 (optional)
+      cells:
+      - text: ''
+        response: true
+      - text: ''
+        response: true
+      - text: ''
+        response: true
     criteria:
     - Fill at least three rows; questions count.
     - Keep solutions you would build out of the first column.
+    - Write how it works from what you have actually seen, not how it probably works.
     - Leave blanks and "not sure" as they are rather than filling them with guesses dressed
       as facts.
+    - Do not decide a row is the answer before you have looked.
     document_after:
     - After the Dojo Lab
     - 'Fill this in during the next activity: which rows AI added and which you kept; for
@@ -87,44 +142,22 @@ publish: false
 
 You will do your work within Canvas. Work without AI on this page; the next activity is where AI helps you fill the table in.
 
-The goal of this activity is for you to start a table of what already exists that could solve or ease your problem. Week 2 looks outward. Can you find other examples of people trying to solve this problem, or one like it, in your own situation or out in the world? Are there products, practices, or someone else who already does this well? If you find an existing solution, it does not necessarily mean your problem is not worth pursuing, but it might change how you think about it.
+The goal of this activity is for you to brainstorm and look into what already exists that could solve or ease your problem.
 
-> **Example:** Our CRM has an owner field on every account. I have seen it, grayed out. I do not know whether ours is switched on.
+## Start by brainstorming what exists
 
-You are listing what exists, not designing anything. "An agenda tool" is a thing that exists; "we should build an agenda tool" is a solution, and it waits. Things you know of, things you have heard of, guesses, and questions all count. As always, marking what you don't know is better than making something up. A table that is mostly questions will still be very useful for the next activity.
+With your problem in mind, think about existing solutions that might be related to your problem. Remember, this is a brainstorm, so anything counts - things you know of, things you have heard of, guesses, and even questions you have about what might exist.
 
-## Build your table
+> **Example.** Problem: account handovers happen with no record. Possible solutions that exist: there is an owner field in our CRM that isn't being used; the sales team uses a handover checklist that might be similar; is there a weekly "accounts that moved" note, or does it ever come up in a weekly team meeting?
 
-With your problem in mind, ask three things about each thing that might already exist:
+## Build your understanding about what exists
 
-- What exists?
-- How does it work, as far as I know?
-- What does it mean for my problem?
+The table below has three columns: what exists, how it works, and what it means for your problem. Fill it in three steps.
 
-To find things for the first question, ask yourself: What products or services claim to have solutions in this problem space? Do I know anyone who has a similar problem but seems to be handling it well? Does my own organization, or do I personally, already have something for this, used or not? Could AI help with this problem?
+1. **Fill the first column, What exists, with everything from your brainstorm**, one row per thing. Ask yourself: What products or services claim to have solutions in this problem space? Do I know anyone who is already handling this problem well? Does my own organization already have something for this, used or not? Could AI help with this problem?
+2. **For each row, fill in How it works, as far as I know.** Write what you have actually seen, where it lives, who can change or see it, or indicate that you don't know if that is the case.
+3. **For each row, fill in What it means for my problem.** Reasons it would be good for your problem, reasons it might be bad, and what you are not sure about.
 
-The table below will help you think through each one. Fill one row per thing. Do the first column for everything you can think of, then the other two columns one row at a time.
+As always, questions and question marks where you don't know something are encouraged. It is better to mark what you don't know than make something up; a table that is mostly questions will still be very useful for the next activity.
 
-**What exists.** A thing that exists somewhere now, or a question about one.
-
-> Account handover example: An owner field in our CRM.
->
-> Garden plot example: Do other community gardens pair new people with returning ones?
-
-**How it works, as far as I know.** What you have actually seen, where it lives, who can change or see it, and what you do not know.
-
-> Account handover example: I have seen a CRM owner field, but it's grayed out. I don't know who can set it or if it can be turned on. If it can be, would the old owner change the name at the handover point? How would the new owner, or any of the other managers, be notified?
->
-> Garden plot example: I don't know. The garden two streets over might do it. I have never asked.
-
-**What it means for my problem: good, bad, not sure.** Reasons it would be good for your problem, reasons it might be bad, and what you are not sure about. Before you have looked into anything, most of this will be "not sure," and that is the right result.
-
-> Account handover example: Good: it seems to already exist as a feature in a product we already use. Bad: it's not turned on, and people aren't using the CRM much as it is, so it might not make a difference. Not sure: whether turning it on costs anything, and who decides.
->
-> Garden plot example: Good: if it works there, it could work here. Bad: pairing takes someone to organize it every spring. Not sure: whether the pairs actually talk.
-
-*More help: if nothing comes to mind.* Turn your frame into questions and make each one a row. Is there a name for this problem, and are people talking about it online? What does the place next door do that we do not? Did anyone here try something before? Four questions and no answers, but there is real thinking here. That is what is needed.
-
-*More help: take another look at the first column.* Everything in it should be something that exists, somewhere, now, or a question about one. If a row describes what you would build, move it out. That is a solution, and Sprint 2 is not where solutions get chosen.
-
-When you finish, paste your table into your Sprint 2 working book. The next activity fills it in.
+When you finish, copy your table into your Sprint 2 working book. The next activity fills it in.
