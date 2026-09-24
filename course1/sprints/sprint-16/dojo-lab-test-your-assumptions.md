@@ -28,7 +28,7 @@ guided_assignment:
       kept with a reason.
 dojo_submission:
   mode: transcript
-  prompt_version: v2
+  prompt_version: v1
 learning_goal: Have AI push on your walk and your check, and decide what to keep and why.
 publish: false
 ---

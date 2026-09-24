@@ -215,7 +215,7 @@ When you are done, write one last message in your own words: what it pushed on, 
 
 - **dojo-transcript** (response). Prompt: *Paste the complete Dojo transcript, including every CONTINUED chunk, in order.* Criteria: the required header and every turn, in order; every CONTINUED marker and continuation chunk kept; a last message in your own words with what was pushed on, what changed, and what was kept with a reason.
 
-> **[BUILD]** `dojo_submission: mode: transcript, prompt_version: v2`, as Sprint 1's Dojo Lab. Single box. The module text is also the Dojo tab entry for this lab (`dojo-modules-sprint-2.md`).
+> **[BUILD]** `dojo_submission: mode: transcript, prompt_version: v1` (the transcript request prompt, not the module), as Sprint 1's Dojo Lab. Single box. The module text is also the Dojo tab entry for this lab (`dojo-modules-sprint-2.md`).
 
 ---
 
