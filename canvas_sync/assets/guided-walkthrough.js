@@ -5,6 +5,9 @@
   const output = document.getElementById('walk-output');
   const saveStatus = document.getElementById('walk-save-status');
   const copyStatus = document.getElementById('walk-copy-status');
+  const richOutput = document.getElementById('walk-rich-output');
+  const hasTable = config.tasks.some(task => task.kind === 'table');
+  const pdfFromDocument = Boolean(config.pdfFromDocument);
   const inputs = Array.from(document.querySelectorAll('[data-walk-answer]'));
   const buttons = Array.from(document.querySelectorAll('[data-walk-feedback]'));
   let state = {answers: Object.create(null), feedback: Object.create(null)};
@@ -26,7 +29,7 @@
           }
         }
       }
-      if (Object.values(state.answers).some(value => typeof value === 'string' && value.trim())) {
+      if (config.hasWritable && Object.values(state.answers).some(value => typeof value === 'string' && value.trim())) {
         saveStatus.textContent = 'Your saved responses from this browser are loaded. Keep your own copy before leaving.';
       }
     }
@@ -44,6 +47,10 @@
   }
 
   function responseFor(task, index) {
+    if (task.kind === 'table') {
+      const row = task.rows.find(item => item.id === index);
+      return row ? globalThis.WalkthroughTables.rowResponse(task, row, state.answers) : '';
+    }
     if (task.kind !== 'group') return String(state.answers[task.id] || '').trim();
     return task.fields.map(field => {
       const value = String(state.answers[task.id + '.' + index + '.' + field.id] || '').trim();
@@ -58,7 +65,9 @@
     const lines = [config.title, '', ...(config.documentPrefix || []), ''];
     for (const task of config.tasks) {
       lines.push(task.prompt);
-      if (task.kind === 'group') {
+      if (task.kind === 'table') {
+        lines.push(globalThis.WalkthroughTables.tsv(task, state.answers));
+      } else if (task.kind === 'group') {
         for (let i = 1; i <= task.repeat_count; i++) {
           lines.push('', task.repeat_labels?.[i - 1] || 'Entry ' + i, responseFor(task, i) || '(not entered)');
         }
@@ -73,8 +82,84 @@
   function responseForButton(button) {
     const task = config.tasks.find(item => item.id === button.dataset.checkpoint);
     if (!task) return '';
-    const parts = button.dataset.walkFeedback.split('.');
-    return responseFor(task, parts.length > 1 ? Number(parts[1]) : undefined);
+    const suffix = button.dataset.walkFeedback.slice(task.id.length + 1);
+    return responseFor(task, task.kind === 'table' ? suffix : suffix ? Number(suffix) : undefined);
+  }
+
+  function assembledHtml() {
+    const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const parts = ['<div>', '<h1>' + escape(config.title) + '</h1>'];
+    for (const line of config.documentPrefix || []) parts.push('<p>' + escape(line) + '</p>');
+    for (const task of config.tasks) {
+      parts.push('<h2>' + escape(task.prompt) + '</h2>');
+      if (task.kind === 'table') parts.push(globalThis.WalkthroughTables.html(task, state.answers));
+      else if (task.kind === 'group') {
+        for (let i = 1; i <= task.repeat_count; i++) {
+          parts.push('<h3>' + escape(task.repeat_labels?.[i - 1] || 'Entry ' + i) + '</h3>');
+          parts.push('<p>' + escape(responseFor(task, i)).replace(/\n/g, '<br>') + '</p>');
+        }
+      } else parts.push('<p>' + escape(responseFor(task)).replace(/\n/g, '<br>') + '</p>');
+      for (const line of task.document_after || []) parts.push('<p>' + escape(line) + '</p>');
+    }
+    for (const line of config.documentSuffix || []) parts.push('<p>' + escape(line) + '</p>');
+    parts.push('</div>');
+    return parts.join('');
+  }
+
+  async function copyTables() {
+    const html = assembledHtml(), plain = assembledText();
+    let asyncWrite;
+    try {
+      asyncWrite = navigator.clipboard.write([new ClipboardItem({
+        'text/html': new Blob([html], {type: 'text/html'}),
+        'text/plain': new Blob([plain], {type: 'text/plain'}),
+      })]);
+    } catch (_) { /* Canvas may not expose the async Clipboard API. */ }
+    richOutput.innerHTML = html;
+    richOutput.hidden = false;
+    richOutput.classList.add('walk-copy-staging');
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(richOutput);
+    selection.removeAllRanges(); selection.addRange(range);
+    let copied = false;
+    const handleCopy = event => {
+      if (!event.clipboardData) return;
+      event.clipboardData.setData('text/html', html);
+      event.clipboardData.setData('text/plain', plain);
+      event.preventDefault();
+      copied = true;
+    };
+    document.addEventListener('copy', handleCopy);
+    try { copied = document.execCommand('copy') && copied; }
+    catch (_) { copied = false; }
+    document.removeEventListener('copy', handleCopy);
+    if (asyncWrite) {
+      try { await asyncWrite; copied = true; }
+      catch (_) { /* Keep the synchronous copy result or show the fallback. */ }
+    }
+    richOutput.classList.remove('walk-copy-staging');
+    if (copied) {
+      selection.removeAllRanges();
+      richOutput.hidden = true;
+      copyStatus.textContent = !config.hasWritable
+        ? 'Copied the reference table. Paste it into a document if useful; copying has not submitted anything to Canvas.'
+        : pdfFromDocument
+        ? 'Copied as a table. Paste it into your continuing document, export the completed document as PDF, then submit that PDF in Canvas.'
+        : config.submissionType === 'file_upload'
+        ? 'Copied as a table for your records. Download the Word document and upload it through Submit Assignment in Canvas.'
+        : 'Copied as a table. In Canvas, select Submit Assignment, paste into the text-entry box, and submit. Copying here has not submitted your work.';
+    } else {
+      richOutput.focus();
+      range.selectNodeContents(richOutput);
+      selection.removeAllRanges(); selection.addRange(range);
+      copyStatus.textContent = pdfFromDocument
+        ? 'Clipboard access is unavailable. Select and copy the table below into your continuing document, then export it as PDF for Canvas.'
+        : config.submissionType === 'file_upload' && config.hasWritable
+        ? 'Clipboard access is unavailable. Download the Word document and upload it through Submit Assignment in Canvas.'
+        : 'Clipboard access is unavailable. Copy the selected table below, or download the Word document. Copying has not submitted your work.';
+    }
   }
 
   function showFeedback(button, message, stale, preview) {
@@ -95,10 +180,19 @@
     if (output.value) output.value = assembledText();
   }
 
+  function resizeTableInput(input) {
+    if (!input.closest('.walk-source-table')) return;
+    input.style.height = 'auto';
+    input.style.height = Math.max(62, Math.min(input.scrollHeight, 320)) + 'px';
+    input.style.overflowY = input.scrollHeight > 320 ? 'auto' : 'hidden';
+  }
+
   inputs.forEach(input => {
     input.value = state.answers[input.dataset.walkAnswer] || '';
+    resizeTableInput(input);
     input.addEventListener('input', () => {
       state.answers[input.dataset.walkAnswer] = input.value;
+      resizeTableInput(input);
       update(); clearTimeout(saveTimer); saveTimer = setTimeout(save, 350);
     });
     input.addEventListener('blur', save);
@@ -107,6 +201,12 @@
   buttons.forEach(button => button.addEventListener('click', async () => {
     const response = responseForButton(button);
     if (!response) return;
+    if (response.length > 16000) {
+      const target = document.querySelector('[data-walk-feedback-result="' + button.dataset.walkFeedback + '"]');
+      target.hidden = false;
+      target.textContent = 'This row is too long for feedback. Shorten it before asking, or continue using your own review.';
+      return;
+    }
     const responseKey = response;
     button.disabled = true;
     const result = document.querySelector('[data-walk-feedback-result="' + button.dataset.walkFeedback + '"]');
@@ -138,12 +238,21 @@
 
   document.getElementById('walk-copy').addEventListener('click', async () => {
     output.value = assembledText();
+    if (hasTable) { await copyTables(); return; }
     try {
       await navigator.clipboard.writeText(output.value);
-      copyStatus.textContent = 'Copied. Paste into your own Google Doc, the original template, or the Canvas submission area. Copying has not submitted your work.';
+      copyStatus.textContent = pdfFromDocument
+        ? 'Copied. Paste it into your continuing document, export the completed document as PDF, then submit that PDF in Canvas.'
+        : config.submissionType === 'file_upload'
+        ? 'Copied. This copy is for your records. Download the Word document and upload it through Submit Assignment in Canvas.'
+        : 'Copied. In Canvas, select Submit Assignment, paste into the text-entry box, and submit. Copying here has not submitted your work.';
     } catch (_) {
       output.focus(); output.select();
-      copyStatus.textContent = 'Select and copy the text shown here. Copying has not submitted your work.';
+      copyStatus.textContent = pdfFromDocument
+        ? 'Select and copy this text into your continuing document, then export it as PDF for Canvas.'
+        : config.submissionType === 'file_upload'
+        ? 'Select and copy the text shown here for your records. Download the Word document to submit in Canvas.'
+        : 'Select and copy the text shown here. Then paste it into the Canvas text-entry box and submit. Copying here has not submitted your work.';
     }
   });
   document.getElementById('walk-text-download').addEventListener('click', () => {
@@ -164,27 +273,44 @@
       link.href = url; link.download = config.exportFilename; link.hidden = true;
       document.body.appendChild(link); link.click(); link.remove();
       setTimeout(() => URL.revokeObjectURL(url), 60000);
-      copyStatus.textContent = 'Word document downloaded. Upload it through this Canvas assignment; downloading is not a submission.';
+      copyStatus.textContent = !config.hasWritable
+        ? 'Reference Word document downloaded for your records. Downloading has not submitted anything to Canvas.'
+        : pdfFromDocument
+        ? 'Word backup downloaded. Keep working in your continuing document and export that completed document as PDF for Canvas.'
+        : config.submissionType === 'file_upload'
+        ? 'Word document downloaded. Upload it through this Canvas assignment; downloading is not a submission.'
+        : 'Word document downloaded for your records. Submit your response through this Canvas assignment; downloading is not a submission.';
     } catch (_) {
-      output.value = assembledText(); output.focus(); output.select();
-      copyStatus.textContent = 'Download is unavailable. Copy this text into a document, then upload that document to Canvas.';
+      if (hasTable) {
+        richOutput.innerHTML = assembledHtml(); richOutput.hidden = false; richOutput.focus();
+        copyStatus.textContent = 'Download is unavailable. Select and copy the table below into a document.';
+      } else {
+        output.value = assembledText(); output.focus(); output.select();
+        copyStatus.textContent = pdfFromDocument
+          ? 'Download is unavailable. Copy this text into your continuing document, then export it as PDF for Canvas.'
+          : 'Download is unavailable. Copy this text into a document, then upload that document to Canvas.';
+      }
     }
   });
-  document.getElementById('walk-clear').addEventListener('click', () => { document.getElementById('walk-clear-confirm').hidden = false; });
-  document.getElementById('walk-clear-no').addEventListener('click', () => { document.getElementById('walk-clear-confirm').hidden = true; });
-  document.getElementById('walk-clear-yes').addEventListener('click', () => {
-    clearTimeout(saveTimer);
-    try { localStorage.removeItem(key); }
-    catch (_) { saveStatus.textContent = 'Could not clear the saved draft. Keep a copy of your responses.'; return; }
-    state = {answers: Object.create(null), feedback: Object.create(null)};
-    inputs.forEach(input => { input.value = ''; });
-    buttons.forEach(button => {
-      document.querySelector('[data-walk-feedback-result="' + button.dataset.walkFeedback + '"]').textContent = '';
+  const clearButton = document.getElementById('walk-clear');
+  if (clearButton) {
+    clearButton.addEventListener('click', () => { document.getElementById('walk-clear-confirm').hidden = false; });
+    document.getElementById('walk-clear-no').addEventListener('click', () => { document.getElementById('walk-clear-confirm').hidden = true; });
+    document.getElementById('walk-clear-yes').addEventListener('click', () => {
+      clearTimeout(saveTimer);
+      try { localStorage.removeItem(key); }
+      catch (_) { saveStatus.textContent = 'Could not clear the saved draft. Keep a copy of your responses.'; return; }
+      state = {answers: Object.create(null), feedback: Object.create(null)};
+      inputs.forEach(input => { input.value = ''; resizeTableInput(input); });
+      buttons.forEach(button => {
+        document.querySelector('[data-walk-feedback-result="' + button.dataset.walkFeedback + '"]').textContent = '';
+      });
+      output.value = ''; copyStatus.textContent = '';
+      if (richOutput) { richOutput.innerHTML = ''; richOutput.hidden = true; }
+      document.getElementById('walk-clear-confirm').hidden = true;
+      saveStatus.textContent = 'This browser draft was cleared.';
+      update();
     });
-    output.value = ''; copyStatus.textContent = '';
-    document.getElementById('walk-clear-confirm').hidden = true;
-    saveStatus.textContent = 'This browser draft was cleared.';
-    update();
-  });
+  }
   update();
 }());

@@ -17,6 +17,7 @@ publish: false
 guided_assignment:
   version: '1.0'
   presentation: walkthrough
+  feedback_omission_reason: Local rendering fixture without a deployed feedback service.
   export_filename: stakeholder-map.docx
   purpose: Draft an evidence-aware map of four real stakeholders in your own problem.
   tasks:
