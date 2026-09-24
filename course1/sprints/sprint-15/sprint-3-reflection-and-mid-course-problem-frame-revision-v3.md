@@ -24,7 +24,7 @@ This reflection is not about your assignments. It is about you: how you are work
 
 This sprint, look back at your stakeholder conversation.
 
-1. **What is your biggest takeaway or challenge from this sprint?** Name one idea that stuck with you, or one thing that was hard, and say why. *(2-3 sentences)*
+1. **What is your biggest takeaway and your biggest challenge from this sprint?** Name one idea that stuck with you and one thing that was hard, and say why for each. *(2-4 sentences)*
 2. **Did you tackle a problem you couldn't have on your own, with the help of AI?** Name the moment. What did AI make possible that you would not have reached alone? *(2-4 sentences)*
 3. **How is what you did better because you were involved?** What did you bring that AI could not: judgment, context, a relationship, a call you made? *(2-4 sentences)*
 4. **What did you notice about how you are working?** Where you pushed, stalled, avoided something, or surprised yourself, and what you will do differently next sprint. *(2-4 sentences)*
