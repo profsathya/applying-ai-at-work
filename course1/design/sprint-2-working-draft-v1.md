@@ -31,7 +31,7 @@ This file is the cut-ready source for the Sprint 2 build (v2.0, 23 September). L
 | 3 | Dig into your assumptions | Own your progress | 0 | must submit | `walkthrough`, 1 task, Word export | One |
 | 4 | Dojo Lab: test your assumptions | Own your progress | 0 | must submit | transcript, 1 box | One |
 | 5 | Sprint 2 Concept check | Self-check | 5 | completion | practice quiz, 5 questions | One |
-| 6 | Which assumptions | Graded item | 20 | one submission | `reading`, 2 boxes | One |
+| 6 | Your updated assumptions | Graded item | 20 | one submission | `reading`, 2 boxes | One |
 | 7 | What solutions already exist | Own your progress | 0 | must submit | `walkthrough`, 1 task, Word export | Two |
 | 8 | Dojo Lab: explore what already exists | Own your progress | 0 | must submit | transcript, 1 box | Two |
 | 9 | What exists, and what it means | Graded item | 20 | one submission | `reading`, 5 boxes | Two |
@@ -79,7 +79,7 @@ Own your progress activities carry 0 points, but Canvas requires a submission to
 2. **Dig into your assumptions.** Walk Part 6: your assumptions, and rate how risky each one is to your problem. (Own your progress, 0 points.)
 3. **Dojo Lab: test your assumptions.** Have AI push back on your walk. (Own your progress, 0 points.)
 4. Take the **Concept check** (5 points).
-5. **Which assumptions.** Submit your updated tables and what the Dojo changed (20 points).
+5. **Your updated assumptions.** Submit your updated tables and what the Dojo changed (20 points).
 
 **Week 2: what exists, and your verdict on proceeding**
 
@@ -247,7 +247,7 @@ A short check that you are set up for this sprint before the work starts in earn
 
 ---
 
-## Which assumptions
+## Your updated assumptions
 
 *Graded item. Position 6. 20 points. One submission.*
 

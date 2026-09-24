@@ -27,7 +27,7 @@ Own your progress activities carry 0 points, but Canvas requires a submission to
 2. **Dig into your assumptions.** Walk Part 6: your assumptions, and rate how risky each one is to your problem. (Own your progress, 0 points.)
 3. **Dojo Lab: test your assumptions.** Have AI push back on your walk. (Own your progress, 0 points.)
 4. Take the **Concept check** (5 points).
-5. **Which assumptions.** Submit your updated tables and what the Dojo changed (20 points).
+5. **Your updated assumptions.** Submit your updated tables and what the Dojo changed (20 points).
 
 **Week 2: what exists, and your verdict on proceeding**
 

@@ -1,6 +1,6 @@
 ---
 type: assignment
-title: Which assumptions
+title: Your updated assumptions
 slug: which-assumptions
 artifact_id: course1-sprints-sprint-16-which-assumptions
 sprint: 16
@@ -42,7 +42,7 @@ guided_assignment:
 publish: false
 ---
 
-# Which assumptions
+# Your updated assumptions
 
 This is where your week 1 work gets read. Two parts.
 
