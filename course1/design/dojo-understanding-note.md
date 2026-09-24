@@ -47,3 +47,7 @@ This morning Leslie said the Dojo tab holds activity-specific pages. Having read
 - Is the "Walk me through" one-liner plus the Course tab the intended pattern for our labs too?
 
 Provenance: Leslie, the question and the morning conversation it corrects; Claude, the reading of the Common-Curriculum repo and the write-up.
+
+## What went to Melisa and Jeremy (Leslie, 25 September)
+
+Leslie sent her own version: the Dojo tab holds three career modules, not activity pages; in CST499 the activity page carries a mention, the Dojo knows the activity from the Course tab, and the Core supplies the method; more guidance per Dojo activity probably wanted, to be tested; if wanted, it lives either on the Dojo tab as Sathya's modules do, or as text on the Canvas page aimed at the Dojo, with the risk that students read it. One correction for the record: the three modules are shared across every course doc, so a module of ours would appear in every course unless it gets a separate home.
