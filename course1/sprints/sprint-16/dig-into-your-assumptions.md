@@ -36,12 +36,18 @@ publish: false
 
 # Dig into your assumptions
 
-In this activity, you are going to need two things:
+## What you need for this activity
 
 - Your draft Problem Frame that you created in Sprint 1, so open that up.
-- Your Sprint 2 working book, the document you paste each activity's tables into. The template link goes here once the team settles the format.
+- Your Sprint 2 working book, the document you paste each activity's tables into.
 
-You will do your work within Canvas. The goal of this activity is for you to explore your assumptions to understand how they might impact your Problem Frame. Work without AI on this page. The next activity has AI push back on what you write here, and that only works if you bring your own thinking.
+[INTERIM: the Sprint 2 working book template link goes here once the team settles the format.]
+
+You will do your work within Canvas. Work without AI on this page. The next activity has AI push back on what you write here, and that only works if you bring your own thinking.
+
+The goal of this activity is for you to explore your assumptions to understand how they might impact your Problem Frame.
+
+## Start with Part 6: your assumptions
 
 Let's start by looking at Part 6: your assumptions. Every line there is something you wrote as if it were true, but you do not really know yet.
 
