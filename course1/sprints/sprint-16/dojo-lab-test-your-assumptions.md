@@ -33,6 +33,7 @@ learning_goal: Have AI push on your analysis of your assumptions, and decide wha
 publish: true
 ---
 
+
 # Dojo Lab: test your assumptions
 
 ## What you need for this Dojo Lab

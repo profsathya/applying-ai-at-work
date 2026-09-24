@@ -705,6 +705,7 @@ def push_artifact(
                 stored_position = live_item.get("position")
                 needs_reposition = (
                     fm.get("position") is not None
+                    and fm.get("position") != existing.get("position")
                     and fm.get("position") != stored_position
                 )
                 if needs_move or needs_reposition:

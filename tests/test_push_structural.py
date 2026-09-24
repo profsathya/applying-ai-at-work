@@ -284,6 +284,15 @@ class StructuralChangeTests(unittest.TestCase):
         )
         self.assertEqual(entry["position"], 5)
 
+    def test_publish_change_preserves_position_shifted_by_walkthrough(self) -> None:
+        class ShiftedClient(StructuralClient):
+            def _request(self, method, path):
+                return {"position": 3, "quiz_submissions": []}
+
+        with tempfile.TemporaryDirectory() as tmp:
+            _result, client, _entry, _sp = self._run(tmp, client=ShiftedClient())
+        self.assertEqual(client.module_item_updates, [])
+
     def test_move_happens_before_completion_update_at_new_module(self) -> None:
         """A module change plus a completion change: the item moves first, then
         the completion update addresses the module the item now lives in."""

@@ -88,6 +88,7 @@ guided_assignment:
 publish: true
 ---
 
+
 # Sprint 2 Concept check
 
 A short check before you write your verdict. It covers the few ideas this sprint runs on, from both weeks: what an assumption is, what makes one risky, what the What already exists table is for, what Context means when you work with AI, and what a verdict of no means. If a question surprises you, go back to the page it names.

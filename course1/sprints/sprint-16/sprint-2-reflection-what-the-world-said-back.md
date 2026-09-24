@@ -52,6 +52,7 @@ learning_goal: Say what came back from outside your own head, what you pushed ba
 publish: true
 ---
 
+
 # Sprint 2 Reflection: what the world said back
 
 This sprint you rated the risk in your own assumptions and looked at what already exists. Write about what came back from outside your own head, in three parts. Where did something in the world change your view of your problem, and where did AI change it? What did you push back on, from either, and what did it cost you to push back? And what is the one thing in your frame you are least sure how to find out?
