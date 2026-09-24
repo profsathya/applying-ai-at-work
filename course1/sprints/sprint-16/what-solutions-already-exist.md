@@ -55,8 +55,8 @@ With your problem in mind, think about existing solutions that might be related 
 
 The table below has three columns: what exists, how it works, and what it means for your problem. Fill it in three steps.
 
-1. **Fill the first column, What exists, with everything from your brainstorm**, one row per thing. To find more, ask yourself: What products or services claim to have solutions in this problem space? Do I know anyone who is already handling this problem well? Does my own organization already have something for this, used or not? Could AI help with this problem?
-2. **For each row, fill in How it works, as far as I know.** Write what you have actually seen, where it lives, who can change or see it, and what you do not know.
+1. **Fill the first column, What exists, with everything from your brainstorm**, one row per thing. Ask yourself: What products or services claim to have solutions in this problem space? Do I know anyone who is already handling this problem well? Does my own organization already have something for this, used or not? Could AI help with this problem?
+2. **For each row, fill in How it works, as far as I know.** Write what you have actually seen, where it lives, who can change or see it, or indicate that you don't know if that is the case.
 3. **For each row, fill in What it means for my problem.** Reasons it would be good for your problem, reasons it might be bad, and what you are not sure about.
 
 As always, questions and question marks where you don't know something are encouraged. It is better to mark what you don't know than make something up; a table that is mostly questions will still be very useful for the next activity.
