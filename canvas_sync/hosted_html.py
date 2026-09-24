@@ -240,8 +240,6 @@ def iframe_shell(hosted_url: str, title: str, *, height: int = 900) -> str:
         f'height="{height}" loading="lazy" '
         'style="border:0; width:100%; min-height:900px;" '
         'allowfullscreen></iframe>'
-        f'<p><a href="{escaped_url}" target="_top">'
-        "Open hosted page in a new tab</a></p>"
         "</div>"
     )
 

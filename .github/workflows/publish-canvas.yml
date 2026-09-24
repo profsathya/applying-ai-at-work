@@ -26,6 +26,11 @@ on:
         description: 'Optional exact Markdown artifact path to publish instead of the full course'
         required: false
         type: string
+      cleanup_hosted_links:
+        description: 'Remove legacy Open hosted page links from existing Canvas iframe shells'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -93,6 +98,7 @@ jobs:
       pull-requests: write
     env:
       HOSTED_ONLY: ${{ github.event_name == 'workflow_dispatch' && inputs.hosted_only == true }}
+      CLEANUP_HOSTED_LINKS: ${{ github.event_name == 'workflow_dispatch' && inputs.cleanup_hosted_links == true }}
     steps:
       - name: Check out content branch
         uses: actions/checkout@v4
@@ -217,13 +223,24 @@ jobs:
             hosted_args+=(--hosted-only)
           fi
           set -o pipefail
-          python canvas_sync/publish_changed.py \
-            "${args[@]}" \
-            --state-dir ../canvas-state \
-            --hosted-output-dir ../common-curriculum \
-            --check-drift \
-            --require-state \
-            "${hosted_args[@]}" --report-file ../publish-result.json
+          if [ "$CLEANUP_HOSTED_LINKS" = "true" ]; then
+            if [ "$HOSTED_ONLY" = "true" ] || [ "$PUBLISH_SCOPE" = "selected" ] || [ "${#args[@]}" -ne 2 ]; then
+              echo "::error::Hosted-link cleanup requires one full course and Canvas access."
+              exit 1
+            fi
+            python canvas_sync/cleanup_hosted_links.py \
+              --manifest "${args[1]}" \
+              --state-dir ../canvas-state \
+              --apply --report-file ../publish-result.json
+          else
+            python canvas_sync/publish_changed.py \
+              "${args[@]}" \
+              --state-dir ../canvas-state \
+              --hosted-output-dir ../common-curriculum \
+              --check-drift \
+              --require-state \
+              "${hosted_args[@]}" --report-file ../publish-result.json
+          fi
 
 
       - name: Determine publish outcome
