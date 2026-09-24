@@ -12,7 +12,6 @@ submission_type: text_entry
 delivery_mode: canvas_native
 completion_requirement: must_submit
 learner_labels: true
-learning_goal: Look honestly at how you are working, what AI made possible, what you brought that AI could not, and how the course is landing for you.
 publish: true
 ---
 
@@ -22,13 +21,11 @@ This reflection is not about your assignments. It is about you: how you are work
 
 ## The five questions
 
-This sprint, look back at checking an assumption against a real person or record, and at what you found already exists.
-
 1. **What is your biggest takeaway and your biggest challenge from this sprint?** Name one idea that stuck with you and one thing that was hard, and say why for each. *(2-4 sentences)*
-2. **Did you tackle a problem you couldn't have on your own, with the help of AI?** Name the moment. What did AI make possible that you would not have reached alone? *(2-4 sentences)*
+2. **Did you tackle anything you couldn't have on your own, with the help of AI?** Name the moment. What did AI make possible that you would not have reached alone? *(2-4 sentences)*
 3. **How is what you did better because you were involved?** What did you bring that AI could not: judgment, context, a relationship, a call you made? *(2-4 sentences)*
-4. **What did you notice about how you are working?** Where you pushed, stalled, avoided something, or surprised yourself, and what you will do differently next sprint. *(2-4 sentences)*
-5. **How are the pace and workload landing for you right now?** An honest answer helps your instructor adjust. *(1-2 sentences)*
+4. **What did you notice about how you are working?** Where you pushed, stalled, avoided something, or surprised yourself, and what you will do same or differently next sprint. *(2-4 sentences)*
+5. **How are the pace and workload landing for you right now?** *(1-2 sentences)*
 
 ## How to do it
 
@@ -36,9 +33,8 @@ Answer each question in your own words in the Canvas text box. Number your answe
 
 ## What a strong reflection looks like
 
-- Each answer points to a specific moment, not to AI or the course in general.
-- It is honest. "AI did not add much this sprint, and here is why" is a real answer.
-- You wrote it yourself, without AI. This is the one place in the course where we want your unedited thinking.
+- You answer all five questions, honestly and specifically.
+- You wrote it yourself, without AI. We want your unedited thinking and personal reflection.
 
 ## Carry it forward
 
