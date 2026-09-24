@@ -15,21 +15,17 @@ delivery_mode: guided_assignment
 learner_labels: true
 learning_goal: Identify and rank the unknowns that could change your Problem Frame,
   then connect each planned gap to a decision.
-publish: false
+publish: true
 guided_assignment:
   version: '1.0'
   presentation: walkthrough
   purpose: Identify and rank the unknowns that could change your Problem Frame.
-  export_filename: learning-plan-week-7-backup.docx
-  submission_format: pdf_from_document
-  records_destination:
-    label: your continuing Learning Plan document
-    url: https://docs.google.com/document/d/1XgCf1cTadZOCQtHdLEoebhJ8FWNjV6IzKUslKAtqxIA/copy
+  export_filename: learning-plan-week-7.docx
   feedback_endpoint: https://cti-course-ai.netlify.app/.netlify/functions/walkthrough-feedback
   feedback_protocol: walkthrough-v1
   document_prefix:
-  - Name the Gap, week 7. Keep Part A and C1 in the same Learning Plan file you will
-    use in week 8.
+  - Name the Gap, week 7. Keep this Word file with your Sprint 4 work. You will attach
+    it alongside a separate week 8 Word file in the next assignment.
   tasks:
   - id: template-timing
     kind: table
@@ -57,7 +53,7 @@ guided_assignment:
       - text: D. Results
       - text: CIS 502
     read_only: true
-    instruction_section: Keep one working document
+    instruction_section: Keep your Week 7 Word file
   - id: what-i-know
     kind: response
     prompt: A1. What I already understand well enough
@@ -242,9 +238,9 @@ Start with the Problem Frame you revised after your real stakeholder conversatio
 
 The original Name the Gap assignment asks for work without AI. This Canvas Walkthrough adds instructor-requested, optional formative feedback **after** you write. It reviews only the response or row you select; it cannot know your workplace, add evidence, or decide your ranking. Leave out names and confidential details in any feedback request. You can use the self-checks and complete every part without AI.
 
-## Keep one working document
+## Keep your Week 7 Word file
 
-[Make one copy of the Learning Plan template](https://docs.google.com/document/d/1XgCf1cTadZOCQtHdLEoebhJ8FWNjV6IzKUslKAtqxIA/copy) and keep using that same file through week 8. Part A and C1 are due here. Part B begins in the Dojo Lab and is completed in Learning Plan; C2 is updated then. Part D stays empty until CIS 502. The table below keeps that schedule visible.
+Use this walkthrough to complete Part A and C1. The [Learning Plan template](https://docs.google.com/document/d/1XgCf1cTadZOCQtHdLEoebhJ8FWNjV6IzKUslKAtqxIA/copy) is available if you want to compare the source layout. Part B begins in the Dojo Lab and is completed in week 8; C2 is updated then. Part D stays empty until CIS 502. The table below keeps that schedule visible. Download and keep your Week 7 Word file. You will attach it alongside a separate Week 8 Word file in the next assignment.
 
 ## A1. Start from what you know
 
@@ -258,7 +254,7 @@ An illustrative blocking gap is whether managers hear about a handover too late.
 
 ## If you need more than four rows
 
-The source grid has four rows. If your frame still contains a consequential unknown, add it here and in your continuing Learning Plan document using the same fields: unknown, decision it affects, and priority. Do not stop at four merely because the table ends.
+The source grid has four rows. If your frame still contains a consequential unknown, add it here using the same fields: unknown, decision it affects, and priority. Do not stop at four merely because the table ends.
 
 ## A3. Put them in order
 
@@ -274,6 +270,6 @@ Copy the frame from Section D of your Stakeholder Validation Report into these s
 
 ## Keep Part D for later
 
-The source template includes this results table for CIS 502. Keep it in your continuing file, but leave it blank now.
+The source template includes this results table for CIS 502. Keep it with your Word file, but leave it blank now.
 
-Copy the completed Part A and C1 work into your one Learning Plan document. Export that document as a **PDF** and upload it in this Canvas assignment. Part A and C1 are graded here. Keep working in the same file for the Dojo Lab and week 8. Saving a browser draft or pasting into your own document does not submit the PDF.
+Select **Download as Word document** below. In Canvas, select **Start Assignment**, attach your Week 7 Word file, and select **Submit Assignment**. Part A and C1 are graded here. Keep this file for the Dojo Lab and week 8. Saving a browser draft or downloading the file alone does not submit your work.

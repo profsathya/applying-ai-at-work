@@ -15,9 +15,9 @@ delivery_mode: guided_assignment
 learner_labels: true
 learning_goal: Hold a real validation conversation, capture what the stakeholder actually
   said, and separate what it confirmed from what it complicated.
-publish: false
+publish: true
 guided_assignment:
-  version: '1.0'
+  version: '1.1'
   presentation: walkthrough
   purpose: Hold a real validation conversation, document what the stakeholder said,
     and revise or confirm your Problem Frame based on evidence.
@@ -311,4 +311,4 @@ While the conversation is still fresh, write a line or two for each first impres
 
 Give each answer a short paragraph. Revise your Problem Frame using what the stakeholder actually said, or explain honestly why your original frame held. Identify what moved from **Inferred** to **Confirmed** on your map, and what still needs validation. A clear confirmation is a useful result; do not force a change to show progress.
 
-Then update your Stakeholder Map: correct fields this conversation settled, keep uncertainty visible, and add any stakeholder this person helped you identify. Keep your **What changed, and why** paragraph at the top. Download this report as a Word document below. In Canvas, submit **three files**: the Part 1 AI JSON response, this completed report, and the updated Stakeholder Map. Downloading or saving a browser draft does not submit them.
+Then update your Stakeholder Map: correct fields this conversation settled, keep uncertainty visible, and add any stakeholder this person helped you identify. Keep your **What changed, and why** paragraph at the top. Download this report as a Word document below. In Canvas, select **Start Assignment**, attach **three files** (the Part 1 AI JSON response, this completed report, and the updated Stakeholder Map), then select **Submit Assignment**. Downloading or saving a browser draft does not submit them.

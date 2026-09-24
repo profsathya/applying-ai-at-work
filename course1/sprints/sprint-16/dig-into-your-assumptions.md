@@ -34,6 +34,7 @@ guided_assignment:
 publish: false
 ---
 
+
 # Dig into your assumptions
 
 ## What you need for this activity

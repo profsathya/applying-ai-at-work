@@ -41,7 +41,7 @@ guided_assignment:
   presentation: reading
 learning_goal: Show your assumption tables after the Dojo Lab, and say what it changed and
   what you kept.
-publish: false
+publish: true
 ---
 
 # Your updated assumptions

@@ -1,6 +1,6 @@
 ---
 type: assignment
-title: What solutions already exist walk-through
+title: What solutions already exist Canvas Walkthrough
 slug: what-solutions-already-exist-walk-through
 artifact_id: course1-sprints-sprint-16-what-solutions-already-exist-walk-through
 sprint: 16
@@ -8,7 +8,7 @@ week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 7
 points: 0
-submission_type: text_entry
+submission_type: file_upload
 delivery_mode: guided_assignment
 completion_requirement: must_submit
 learner_labels: true
@@ -130,7 +130,7 @@ guided_assignment:
     - 'Fill this in during the next activity: which rows AI added and which you kept; for
       each row you went and looked at, where you looked and what you found; and your table
       as it now stands.'
-publish: false
+publish: true
 ---
 
 # What solutions already exist
@@ -138,7 +138,7 @@ publish: false
 ## What you need for this activity
 
 - Your draft **Problem Frame**.
-- Your **Sprint 2 working book**, to paste your table into when you finish.
+- A place to keep your completed Word document with your other Sprint 2 work.
 
 You will do your work within Canvas. Work without AI on this page; the next activity is where AI helps you fill the table in.
 
@@ -160,4 +160,4 @@ The table below has three columns: what exists, how it works, and what it means 
 
 As always, questions and question marks where you don't know something are encouraged. It is better to mark what you don't know than make something up; a table that is mostly questions will still be very useful for the next activity.
 
-When you finish, copy your table into your Sprint 2 working book. The next activity fills it in.
+When you finish, select **Download as Word document** below. In Canvas, select **Start Assignment**, attach that Word file, and select **Submit Assignment**. Keep the file for the next activity, where you will add to this table. Downloading it alone does not submit your work.

@@ -1,6 +1,6 @@
 ---
 type: assignment
-title: 'Sprint 4 Reflection: What Changed'
+title: 'Sprint 4 Reflection'
 slug: sprint-4-reflection-what-changed-v3
 artifact_id: course1-sprints-sprint-8-sprint-4-reflection-what-changed-v3
 sprint: 8
@@ -12,41 +12,31 @@ submission_type: text_entry
 delivery_mode: canvas_native
 completion_requirement: must_submit
 learner_labels: true
-learning_goal: Say in your own words how planning your learning changed your view of the problem, and what you now do with AI that you did not do in Sprint 1.
+learning_goal: Reflect honestly on how you are working and growing.
 publish: true
 ---
 
-# Sprint 4 Reflection: What Changed
+# Sprint 4 Reflection
 
-## Purpose
+This reflection is not about your assignments. It is about you: how you are working with AI, what you bring to the work, and how the course is landing for you. The same five questions come back at the end of every sprint, so by Sprint 5 you can see how your answers have moved.
 
-Say, in your own words, how planning your learning changed your view of the problem.
+## The five questions
 
-## What your reflection covers
+1. **What is your biggest takeaway and your biggest challenge from this sprint?** Name one idea that stuck with you and one thing that was hard, and say why for each. *(2-4 sentences)*
+2. **Did you tackle anything you couldn't have on your own, with the help of AI?** Name the moment. What did AI make possible that you would not have reached alone? *(2-4 sentences)*
+3. **How is what you did better because you were involved?** What did you bring that AI could not: judgment, context, a relationship, a call you made? *(2-4 sentences)*
+4. **What did you notice about how you are working?** Where you pushed, stalled, avoided something, or surprised yourself, and what you will keep doing or do differently next sprint. *(2-4 sentences)*
+5. **How are the pace and workload landing for you right now?** *(1-2 sentences)*
 
-Put C1, the frame you came in with, beside C2, your updated frame. Then answer the three questions below. Half a page to a page is plenty.
+## How to do it
 
-**This sprint**
+Answer each question in your own words in the Canvas text box. Number your answers 1 to 5. Honest and specific is what counts; there is no right answer.
 
-1. **What do you now see that you only half knew?** Something you would have stated confidently in week 7, but now know you have not checked.
-2. **What stood out to you about working with AI this sprint?** Something that surprised you, frustrated you, or got your situation wrong. Say what you actually noticed.
+## What a strong reflection looks like
 
-**Stepping back**
+- You answer all five questions, honestly and specifically.
+- You wrote it yourself, without AI. We want your unedited thinking and personal reflection.
 
-3. **What is one thing you now do with AI that you did not do in Sprint 1?** Would you still do it if no one asked you to?
+## Carry it forward
 
-## Submission Format
-
-Your reflection, as a text entry.
-
-## Assessed on
-
-- All three questions are answered.
-- The half-known thing is specific enough that someone could tell what you actually have evidence for.
-- The AI answer describes a real moment from this sprint, not AI in general.
-- The Sprint 1 comparison names a specific practice, and says honestly whether it is yours now.
-- It is your own account, not a polished AI answer.
-
-## Portfolio Capture
-
-Sprint 5 asks how your thinking moved from week 1 to week 10. This is the entry that answers it for Sprint 4.
+Keep this reflection. In Sprint 5 you will read all four sprint reflections back to see how your answers changed.

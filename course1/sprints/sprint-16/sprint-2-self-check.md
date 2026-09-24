@@ -85,8 +85,9 @@ guided_assignment:
     explanation: 'False. A no is a result. Your runner-up''s draft frame is in your Candidate
       Log. See Problem Frame: is it worth pursuing?'
   presentation: reading
-publish: false
+publish: true
 ---
+
 
 # Sprint 2 Concept check
 

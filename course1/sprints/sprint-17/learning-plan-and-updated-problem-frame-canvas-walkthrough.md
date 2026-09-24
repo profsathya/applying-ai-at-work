@@ -15,19 +15,18 @@ delivery_mode: guided_assignment
 learner_labels: true
 learning_goal: Plan how to investigate every blocking gap and update the Problem Frame
   so its assumptions and unknowns match that plan.
-publish: false
+publish: true
 guided_assignment:
   version: '1.0'
   presentation: walkthrough
   purpose: Plan how to investigate every blocking gap and update the Problem Frame
     to match.
-  export_filename: learning-plan-week-8-backup.docx
-  submission_format: pdf_from_document
+  export_filename: learning-plan-week-8.docx
   feedback_endpoint: https://cti-course-ai.netlify.app/.netlify/functions/walkthrough-feedback
   feedback_protocol: walkthrough-v1
   document_prefix:
-  - Learning Plan, week 8. Continue in the same file used for Name the Gap; keep Part
-    A and C1 unchanged.
+  - Learning Plan, week 8. Attach this Word file and the separate Week 7 Word file
+    from Name the Gap. Keep Part A and C1 in that earlier file unchanged.
   tasks:
   - id: template-timing
     kind: table
@@ -55,7 +54,7 @@ guided_assignment:
       - text: D. Results
       - text: CIS 502
     read_only: true
-    instruction_section: Return to your existing file
+    instruction_section: Bring your Week 7 Word file
   - id: plan-gap-1
     kind: table
     prompt: Part B. Gap 1
@@ -219,6 +218,10 @@ guided_assignment:
   - id: dojo-choices
     kind: table
     prompt: Choices from the Dojo Lab
+    feedback_enabled: false
+    feedback_omission_reason: This table records completed Dojo Lab decisions rather than requesting a new AI review.
+    criteria:
+    - Record the Dojo suggestions you kept or rejected and why each choice fits your context.
     columns:
     - id: column-1
       label: Suggestion
@@ -230,19 +233,27 @@ guided_assignment:
     - id: row-1
       cells:
       - text:  
+        response: true
       - text:  
+        response: true
       - text:  
+        response: true
     - id: row-2
       cells:
       - text:  
+        response: true
       - text:  
+        response: true
       - text:  
+        response: true
     - id: row-3
       cells:
       - text:  
+        response: true
       - text:  
+        response: true
       - text:  
-    read_only: true
+        response: true
     instruction_section: Keep your Dojo decisions
   - id: frame-c2
     kind: table
@@ -381,13 +392,13 @@ source_provenance: learning-plan-and-updated-problem-frame-canvas-walkthrough.so
 
 # Learning Plan and Updated Problem Frame Canvas Walkthrough
 
-Open the **same Learning Plan document** you submitted for Name the Gap. Keep Part A and C1 as your week 7 record. Use your Dojo Lab bullets to finish Part B, then copy C1 into C2 and update your frame. You are planning how to learn in CIS 502, not claiming you have already closed these gaps.
+Bring the **Week 7 Word file** you submitted for Name the Gap. Keep Part A and C1 there as your week 7 record. Use your Dojo Lab bullets to finish Part B here, then carry C1 into C2 and update your frame. You are planning how to learn in CIS 502, not claiming you have already closed these gaps.
 
 Write your own answers before requesting optional AI feedback. A selected row may be sent for formative feedback, but the service cannot know your workplace or supply evidence. Remove names and confidential details from any row you send. You can use the self-checks and finish every part without AI.
 
-## Return to your existing file
+## Bring your Week 7 Word file
 
-The [Learning Plan template](https://docs.google.com/document/d/1XgCf1cTadZOCQtHdLEoebhJ8FWNjV6IzKUslKAtqxIA/copy) is a reference if you need to see the source layout. Continue in the personal copy you made in week 7. Do not replace Part A or C1; the same file is uploaded again at the end of this assignment. The table below shows when each part belongs.
+The [Learning Plan template](https://docs.google.com/document/d/1XgCf1cTadZOCQtHdLEoebhJ8FWNjV6IzKUslKAtqxIA/copy) is a reference if you need to see the source layout. Keep your Week 7 Word file with Part A and C1 unchanged. This walkthrough produces a separate Week 8 Word file with Part B and C2. Attach both files in this assignment. The table below shows when each part belongs.
 
 ## Plan for Gap 1
 
@@ -405,21 +416,21 @@ Use this block for a third planned gap. Leave it blank if your ranked list stops
 
 ## If your plan has more than three gaps
 
-Add a block for each remaining planned gap here and in your continuing document. Use the same six lines as the template: Dojo raw material and the five planning questions. Keep the ranking from Part A unless your Dojo work gave you a reason to change it; record that reason in your document.
+Add a block for each remaining planned gap here. Use the same six lines as the template: Dojo raw material and the five planning questions. Keep the ranking from Part A unless your Dojo work gave you a reason to change it; record that reason in your Week 8 file.
 
 ## Keep your Dojo decisions
 
-Your continuing document already holds the context you gave AI, which suggestions you kept or rejected, and what changed after the Dojo. Keep those real entries. The blank source grid below is a reminder of its three columns, not a request to repeat the Dojo or accept a suggestion now.
+Keep your Dojo Lab record of the context you gave AI, which suggestions you kept or rejected, and what changed. Enter up to three decisions that affected your plan in the source grid below. This records choices you already made; it is not a request to repeat the Dojo or accept a new suggestion now.
 
 ## C2. Update your Problem Frame
 
-Copy C1 into C2 in your continuing document. Keep C1 unchanged. Update **part 6** so each assumption is marked Confirmed or Inferred and each remaining inference names the gap that will check it. Update **part 7** with planned gaps in rank order plus interesting gaps you left out. Correct another part only if planning showed it was wrong or vague, and record why.
+Use C1 in your Week 7 Word file to complete C2 here. Keep C1 unchanged. Update **part 6** so each assumption is marked Confirmed or Inferred and each remaining inference names the gap that will check it. Update **part 7** with planned gaps in rank order plus interesting gaps you left out. Correct another part only if planning showed it was wrong or vague, and record why.
 
 The response rows below help you review all seven parts. If a selected row contains private workplace details, use the self-check without sending it for feedback.
 
 ## Track what will test each assumption
 
-Use the source template's assumption table to link each inference to a gap. A confirmed claim still needs a real basis. Add rows in your continuing document if you have more than two assumptions; the source grid shows only two.
+Use the source template's assumption table to link each inference to a gap. A confirmed claim still needs a real basis. If you have more than two assumptions, record the additional ones in the response below the table; the source grid shows only two.
 
 ## Record any other correction
 
@@ -429,4 +440,4 @@ If planning changed another part of your frame, name the part and explain what m
 
 This source table records what you find while following the plan in CIS 502. Leave it blank for now.
 
-Copy the completed Part B and C2 work into your **existing** Learning Plan document, preserving Part A, C1, and the Dojo decisions already there. Export the complete file as a **PDF** and upload it in this Canvas assignment. The assessed work is Part B and C2; Part A and C1 carry over. Saving a browser draft, copying, or downloading a Word backup does not submit the PDF.
+Select **Download as Word document** below. In Canvas, select **Start Assignment**, attach this Week 8 Word file **and** your separate Week 7 Word file, then select **Submit Assignment**. The assessed work is Part B and C2; Part A and C1 in the Week 7 file provide the starting record. Keep your Dojo Lab decisions with these files. Saving a browser draft or downloading the file alone does not submit your work.

@@ -191,35 +191,37 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
     pdf_from_document = config.get('submission_format') == 'pdf_from_document'
     has_table = any(task.get('kind') == 'table' for task in config['tasks'])
     has_writable = any(task.get('kind') != 'table' or not task.get('read_only') for task in config['tasks'])
+    word_upload = submission == 'file_upload' and has_writable and not pdf_from_document
     if not has_writable:
-        intro = ('This Canvas walk-through assignment includes a reference table. Read it as you work through '
+        intro = ('This Canvas Walkthrough includes a reference table. Read it as you work through '
                  'the activity. There is nothing to enter on this page; you can keep a copy of the table below.')
         finish_heading = 'Keep the reference table'
         final_direction = 'Copy or download this table if useful. This page has no response to submit.'
         copy_label = 'Copy reference table'
         download_label = 'Download Word copy of table'
     elif submission == 'file_upload':
-        intro = ('This is a Canvas walk-through assignment. Work through the activity one step at a time, '
+        intro = ('This Canvas Walkthrough takes you through the activity one step at a time, '
                  'writing in the spaces provided. Your draft saves in this browser on this device when storage '
                  'is available. At the bottom, copy your work into your continuing document, export it as PDF, '
                  'and submit that PDF in Canvas.' if pdf_from_document else
-                 'This is a Canvas walk-through assignment. Work through the activity one step at a time, '
+                 'This Canvas Walkthrough takes you through the activity one step at a time, '
                  'writing in the spaces provided. Your draft saves in this browser on this device when storage '
-                 'is available. At the bottom, download your work and submit the file in Canvas.')
-        finish_heading = 'Submit this walk-through in Canvas'
+                 'is available. At the bottom, download your work as a Word document and submit it in Canvas.')
+        finish_heading = 'Submit your work in Canvas'
         final_direction = ('Copy your completed work into the same working document used for this sprint. '
                            'Export the completed document as PDF. In Canvas, select Submit Assignment, upload '
                            'that PDF, and submit it. Saving, copying, or downloading here does not submit your work.'
                            if pdf_from_document else
-                           'Download your Word document. In Canvas, select Submit Assignment, upload the file, '
-                           'and submit it. Saving, copying, or downloading here does not submit your work.')
+                           'Select Download as Word document below. In Canvas, select Start Assignment, attach '
+                           'the Word document and any other files named in the instructions above, then select '
+                           'Submit Assignment. Saving or downloading here does not submit your work.')
         copy_label = 'Copy work into your document' if pdf_from_document else 'Copy work for your records'
-        download_label = 'Download Word backup' if pdf_from_document else 'Download Word document for Canvas submission'
+        download_label = 'Download Word backup' if pdf_from_document else 'Download as Word document'
     else:
-        intro = ('This is a Canvas walk-through assignment. Work through the activity one step at a time, '
+        intro = ('This Canvas Walkthrough takes you through the activity one step at a time, '
                  'writing in the spaces provided. Your draft saves in this browser on this device when storage '
                  'is available. At the bottom, copy your work and submit it in Canvas.')
-        finish_heading = 'Submit this walk-through in Canvas'
+        finish_heading = 'Submit your work in Canvas'
         final_direction = ('Copy your completed work. In Canvas, select Submit Assignment, paste it into the '
                            'text-entry box, and submit it. Tables copy with their rows and columns when your '
                            'browser supports rich copy. Saving or copying here does not submit your work.'
@@ -235,18 +237,19 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
     copy_button = (f'<button type="button" id="walk-copy"{copy_class}>'
                    f'{html.escape(copy_label)}</button>')
     text_download = '<button type="button" id="walk-text-download" class="walk-secondary">Download text copy</button>'
-    actions = (download + copy_button + text_download if submission == 'file_upload' and has_writable and not pdf_from_document
-               else copy_button + text_download + download)
+    actions = download if word_upload else copy_button + text_download + download
     feedback_intro = ('<p>AI feedback is optional and is not a grade. It reviews only the response you choose to send. Remove confidential or identifying details before asking for feedback.</p>'
                       if config.get('feedback_endpoint') and has_writable else '')
     destination = config.get('records_destination')
-    records = ('Keep your own copy in your workbook or another document you can return to. '
+    records = ('Keep the downloaded Word document as your durable copy after submitting it.' if word_upload else
+               'Keep your own copy in your workbook or another document you can return to. '
                'Use the copy or download controls below before leaving this page.')
-    if destination:
+    if destination and not word_upload:
         records = (f'Keep your own copy in <a href="{html.escape(destination["url"], quote=True)}" '
                    f'target="_blank" rel="noopener">{html.escape(destination["label"])}</a>. '
-                   'Use the copy control below to paste your completed tables and responses into that document, '
-                   'or download a Word copy before leaving this page.')
+                   + ('Download the Word document below before leaving this page.' if word_upload else
+                      'Use the copy control below to paste your completed tables and responses into that document, '
+                      'or download a Word copy before leaving this page.'))
     payload = {
         'artifactId': frontmatter['artifact_id'], 'title': frontmatter['title'],
         'version': config['version'], 'tasks': config['tasks'], 'hasWritable': has_writable,
@@ -260,7 +263,7 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
     serialized = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     docx_script = (ASSETS / 'walkthrough-docx.js').read_text() if config.get('export_filename') else ''
     table_script = (ASSETS / 'walkthrough-tables.js').read_text() if has_table else ''
-    plain_output = ('<details class="walk-plain-output"><summary>Plain text backup</summary>'
+    plain_output = ('<details class="walk-plain-output"' + (' hidden' if word_upload else '') + '><summary>Plain text backup</summary>'
                     '<label for="walk-output">Your assembled responses as text</label><textarea id="walk-output" readonly rows="12"></textarea></details>'
                     if has_table else '<label for="walk-output">Your assembled responses</label><textarea id="walk-output" readonly rows="12"></textarea>')
     rich_output = ('<div id="walk-rich-output" class="walk-rich-output" hidden tabindex="0" '
@@ -272,7 +275,7 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
                       '<button type="button" id="walk-clear-no">Keep draft</button></div>' if has_writable else '')
     return f'''<style>{(ASSETS / 'guided-walkthrough.css').read_text()}</style>
 <div class="guided-workspace guided-walkthrough" id="guided-workspace">
-<aside class="walk-intro"><h2>How this walk-through works</h2><p>{html.escape(intro)}</p>
+<aside class="walk-intro"><h2>How this Canvas Walkthrough works</h2><p>{html.escape(intro)}</p>
 <p>{records}</p>
 {feedback_intro}
 <p id="walk-save-status" role="status" aria-live="polite">{html.escape(save_message)}</p></aside>

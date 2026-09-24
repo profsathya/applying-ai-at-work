@@ -240,8 +240,6 @@ def iframe_shell(hosted_url: str, title: str, *, height: int = 900) -> str:
         f'height="{height}" loading="lazy" '
         'style="border:0; width:100%; min-height:900px;" '
         'allowfullscreen></iframe>'
-        f'<p><a href="{escaped_url}" target="_top">'
-        "Open hosted page in a new tab</a></p>"
         "</div>"
     )
 
@@ -1926,6 +1924,7 @@ def _render_career_course_index(
     manifest: dict,
     course_key: str,
     items_by_sprint: dict[int, list[tuple[Path, dict]]],
+    all_items: list[tuple[Path, dict]],
     homepage: dict | None,
     state: dict | None,
 ) -> dict:
@@ -1991,10 +1990,8 @@ def _render_career_course_index(
                 raise ValueError(f"Scheduled sprint {sprint} has activities in multiple Canvas modules")
             if canvas_modules and module_ids:
                 module_links[sprint] = f"{canvas_modules}/{next(iter(module_ids))}"
-        help_path, help_fm = next(
-            item for items in items_by_sprint.values() for item in items
-            if item[1]["slug"] == schedule["help_slug"]
-        )
+        help_path, help_fm = next(item for item in all_items
+                                  if item[1]["slug"] == schedule["help_slug"])
         help_state = _state_entry_for_artifact(help_path, manifest_path, help_fm, state or manifest)
         scheduled_options = {
             "logo_url": CTI_LOGO_URL,
@@ -2288,6 +2285,30 @@ def render_hosted_files(
         sprint = int(item[1]["sprint"])
         items_by_sprint.setdefault(sprint, []).append(item)
 
+    # A storage sprint can also contain staged replacements or walkthroughs
+    # for another Canvas module. A scheduled release uses its curated list as
+    # the public set for both the homepage and that sprint's index.
+    if homepage and homepage.get("schedule"):
+        configs = _module_config_by_sprint(homepage)
+        all_items_by_slug = {fm["slug"]: (path, fm) for path, fm in items}
+        for entry in homepage["schedule"]["sprints"]:
+            if not entry.get("ready"):
+                continue
+            sprint = entry["sprint"]
+            groups = configs.get(sprint, {}).get("groups", [])
+            if not groups:
+                continue
+            public_slugs = {
+                slug for group in groups for item in group.get("items", [])
+                if (slug := _homepage_entry_slug(item))
+            }
+            expected_modules = {fm["module"] for _, fm in items_by_sprint.get(sprint, [])}
+            selected = [all_items_by_slug[slug] for slug in public_slugs
+                        if slug in all_items_by_slug and all_items_by_slug[slug][1].get("publish", True)]
+            if expected_modules and any(fm["module"] not in expected_modules for _, fm in selected):
+                raise ValueError(f"Scheduled sprint {sprint} links an artifact from another Canvas module")
+            items_by_sprint[sprint] = selected
+
     indexes = []
     progress_map = None
     for sprint, sprint_items in sorted(items_by_sprint.items()):
@@ -2311,6 +2332,7 @@ def render_hosted_files(
                 manifest_data,
                 course_key,
                 items_by_sprint,
+                items,
                 homepage,
                 state or manifest_data,
             )
