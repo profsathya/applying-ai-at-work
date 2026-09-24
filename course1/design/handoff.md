@@ -49,6 +49,7 @@ course1/design/candidate-log-template-v2.md        the Log template, v2 (15 Sept
 course1/design/dojo-setup-note.md                  the course-wide Dojo tool, for Jeremy (15 September)
 course1/design/where-work-lives.md                 box, document, or walkthrough: one rule, read against Sprints 1 and 2, for the team (23 September)
 course1/design/course-wide-list.md                 the one list of course-wide items for the team to tackle (23 September)
+course1/design/introductions-proposal.md           one Introduction shape across the sprints, a proposal to Melisa (24 September)
 course1/design/dojo-module-problem-frame.md        Sprint 1 Dojo Lab as a Dojo module, v0.3, PARKED
 course1/design/problem-spine.md                    course-level design
 course1/design/sprint-1-decisions.md               every judgment call, dated
