@@ -43,7 +43,7 @@ guided_assignment:
     - A no names the runner-up and gives its shortened pass.
     instruction_section: Part 2. Your verdict
   presentation: reading
-publish: false
+publish: true
 ---
 
 # Problem Frame: is it worth pursuing?

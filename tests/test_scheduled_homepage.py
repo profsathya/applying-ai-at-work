@@ -102,6 +102,7 @@ class ScheduledHomepageTests(unittest.TestCase):
             md = root / "course1/sprints/sprint-99/tuple-overview.md"
             manifest = root / "course1/manifests/production.json"
             write_page(md)
+            md.write_text(md.read_text().replace("publish: false", "publish: true"))
             write_manifest(manifest)
             data = homepage()
             data["modules"][0]["groups"] = [{"label": "Begin", "items": [{"slug": "tuple-overview", "nav_meta": "Read", "meta": "Long instructions stay on the module page."}]}]
@@ -128,6 +129,37 @@ class ScheduledHomepageTests(unittest.TestCase):
             payload = json.loads(re.search(r'<script id="course-schedule" type="application/json">(.*?)</script>', landing, re.S)[1])
             self.assertEqual(payload["sprints"][0]["canvas_href"], native_module)
             self.assertIsNone(payload["sprints"][1]["canvas_href"])
+
+    def test_ready_sprint_links_only_curated_published_items(self):
+        import yaml
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            course = root / "course1"
+            first = course / "sprints/sprint-99/tuple-overview.md"
+            draft = course / "sprints/sprint-99/draft.md"
+            other = course / "sprints/sprint-99/other-module.md"
+            manifest = course / "manifests/production.json"
+            write_page(first)
+            first.write_text(first.read_text().replace("publish: false", "publish: true"))
+            draft.write_text(first.read_text().replace("Tuple Overview", "Draft").replace("tuple-overview", "draft").replace("publish: true", "publish: false"))
+            other.write_text(first.read_text().replace("Tuple Overview", "Other Module").replace("tuple-overview", "other-module").replace("Hosted HTML Pilot", "Another Canvas Module"))
+            write_manifest(manifest)
+            data = homepage()
+            data["modules"][0]["groups"] = [{"label": "Begin", "items": [{"slug": "tuple-overview"}]}]
+            (course / "homepage.yaml").write_text(yaml.safe_dump(data))
+            state = {"artifacts": {
+                "tuple-overview": {"canvas_module_id": 730, "canvas_module_item_id": 731, "canvas_type": "page"},
+                "other-module": {"canvas_module_id": 831, "canvas_module_item_id": 832, "canvas_type": "page"},
+            }}
+
+            render_hosted_files(manifest, root / "out", [], state=state)
+            output = root / "out/deanza/course1"
+            for name in ("home.html", "modules.html", "sprint-99.html"):
+                rendered = (output / name).read_text()
+                self.assertIn("Tuple Overview", rendered)
+                self.assertNotIn("Other Module", rendered)
+                self.assertNotIn("Draft", rendered)
+            self.assertIn("/modules/730", (output / "home.html").read_text())
 
     def test_unready_panels_are_excluded_and_activity_labels_are_escaped(self):
         data = homepage()["schedule"]

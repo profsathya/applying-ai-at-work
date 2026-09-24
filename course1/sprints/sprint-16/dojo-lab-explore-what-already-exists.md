@@ -30,7 +30,7 @@ dojo_submission:
   prompt_version: v1
 learning_goal: Fill in what exists with AI's help and your own look, and say what each thing
   means for your problem.
-publish: false
+publish: true
 ---
 
 # Dojo Lab: explore what already exists

@@ -39,7 +39,7 @@ guided_assignment:
     - No bare agreement.
     instruction_section: 'Part 2: What the Dojo changed'
   presentation: reading
-publish: false
+publish: true
 ---
 
 # Your updated assumptions

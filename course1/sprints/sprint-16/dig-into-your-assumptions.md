@@ -31,7 +31,7 @@ guided_assignment:
     - Write at least one question behind each assumption.
     - Vary the different-answers lines rather than repeating one formula.
     - Give a reason with every risk rating.
-publish: false
+publish: true
 ---
 
 # Dig into your assumptions

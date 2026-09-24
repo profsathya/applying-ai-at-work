@@ -17,7 +17,7 @@ schedule:
       note: "Both weeks available. Start without AI, then use it to test and widen your frames."
     - number: 2
       sprint: 16
-      ready: false
+      ready: true
       title: "Is this problem worth pursuing?"
       summary: "Dig into your assumptions, check one against a real person or record, explore what already exists, and decide whether your problem is worth pursuing."
     - number: 3
@@ -481,7 +481,7 @@ modules:
             meta: "AI reflection activity - make your judgment, AI's contribution, and one remaining uncertainty specific; 10 points"
 
   - sprint: 16
-    hidden: true
+    hidden: false
     order: 2
     title: "Sprint 2: Is this problem worth pursuing?"
     tag: "Assumptions and what exists"

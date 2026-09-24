@@ -10,7 +10,7 @@ position: 2
 points: null
 submission_type: none
 page_presentation: reading
-publish: false
+publish: true
 ---
 
 # Introduction: Is This Problem Worth Pursuing?

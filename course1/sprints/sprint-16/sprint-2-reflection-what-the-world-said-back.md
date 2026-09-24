@@ -49,7 +49,7 @@ ai_activity:
     digDeeperText: Dig deeper with AI guidance
 learning_goal: Say what came back from outside your own head, what you pushed back on, and
   what you are least sure how to find out.
-publish: false
+publish: true
 ---
 
 # Sprint 2 Reflection: what the world said back

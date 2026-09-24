@@ -12,7 +12,7 @@ submission_type: none
 page_presentation: reading
 learning_goal: Say what Context means when you work with AI, and name the two other kinds
   you can give it.
-publish: false
+publish: true
 ---
 
 # Working with AI: Context
