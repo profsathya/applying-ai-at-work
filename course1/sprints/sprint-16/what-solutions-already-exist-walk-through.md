@@ -105,24 +105,6 @@ To find things for the first question, ask yourself: What products or services c
 
 The table below will help you think through each one. Fill one row per thing. Do the first column for everything you can think of, then the other two columns one row at a time.
 
-**What exists.** A thing that exists somewhere now, or a question about one.
-
-> Account handover example: An owner field in our CRM.
->
-> Garden plot example: Do other community gardens pair new people with returning ones?
-
-**How it works, as far as I know.** What you have actually seen, where it lives, who can change or see it, and what you do not know.
-
-> Account handover example: I have seen a CRM owner field, but it's grayed out. I don't know who can set it or if it can be turned on. If it can be, would the old owner change the name at the handover point? How would the new owner, or any of the other managers, be notified?
->
-> Garden plot example: I don't know. The garden two streets over might do it. I have never asked.
-
-**What it means for my problem: good, bad, not sure.** Reasons it would be good for your problem, reasons it might be bad, and what you are not sure about. Before you have looked into anything, most of this will be "not sure," and that is the right result.
-
-> Account handover example: Good: it seems to already exist as a feature in a product we already use. Bad: it's not turned on, and people aren't using the CRM much as it is, so it might not make a difference. Not sure: whether turning it on costs anything, and who decides.
->
-> Garden plot example: Good: if it works there, it could work here. Bad: pairing takes someone to organize it every spring. Not sure: whether the pairs actually talk.
-
 *More help: if nothing comes to mind.* Turn your frame into questions and make each one a row. Is there a name for this problem, and are people talking about it online? What does the place next door do that we do not? Did anyone here try something before? Four questions and no answers, but there is real thinking here. That is what is needed.
 
 *More help: take another look at the first column.* Everything in it should be something that exists, somewhere, now, or a question about one. If a row describes what you would build, move it out. That is a solution, and Sprint 2 is not where solutions get chosen.
