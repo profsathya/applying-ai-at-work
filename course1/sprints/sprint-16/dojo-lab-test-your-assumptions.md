@@ -29,24 +29,29 @@ guided_assignment:
 dojo_submission:
   mode: transcript
   prompt_version: v1
-learning_goal: Have AI push on your walk and your check, and decide what to keep and why.
+learning_goal: Have AI push on your analysis of your assumptions, and decide what to keep
+  and why.
 publish: false
 ---
 
 # Dojo Lab: test your assumptions
 
-In this activity, you are going to need two things:
+## What you need
 
-- Your draft Problem Frame.
-- Your Dig into your assumptions tables that you pasted into your Sprint 2 working book.
+- Your draft **Problem Frame**.
+- Your **Dig into your assumptions** tables, pasted into your Sprint 2 working book.
 
-You will do your work within your Dojo, and update your Dig into your assumptions tables with what you learn from the Dojo Lab.
+## The three parts
 
-The goal of this activity is for you to have AI push back on your analysis of your assumptions.
+1. Your Dojo conversation.
+2. Submitting the transcript of the conversation back into Canvas.
+3. Updating your Dig into your assumptions tables based on your conversation.
 
-Tell your Dojo that you are doing the Dig into your assumptions activity. Paste your draft Problem Frame and your Dig into your assumptions tables into the Dojo. Change names and drop anything sensitive before you paste.
+## Your Dojo conversation
 
-When you are done, write one last message in your own words: what it pushed on, what you changed, and what you kept and why. Then use the transcript request and submission steps below.
+Open your Dojo and say: "Walk me through Dojo Lab: test your assumptions." Then paste your Problem Frame and your Dig into your assumptions tables. Your Dojo knows what this activity is for and will take it from there.
+
+When you are done, write one last message in your own words: what it pushed on, what you changed, and what you kept and why.
 
 *More help: if your Dojo is not set up yet.* Use any AI chat. Paste the text below as your first message, then your Problem Frame and your tables.
 
@@ -70,3 +75,11 @@ When you are done, write one last message in your own words: what it pushed on, 
 > 
 > == Start here ==
 > Start as the Sensei: say what this module does in two lines, ask for my tables if they are not here, then begin Round 1. One question at a time.
+
+## Submit the transcript
+
+Use the transcript request and submission steps below.
+
+## Update your tables
+
+Go back to your Dig into your assumptions tables in your Sprint 2 working book and make the changes you decided on. Those tables are what you submit in Which assumptions.

@@ -14,6 +14,7 @@ Items that reach beyond one sprint. Each names where it came from and which spri
 2. **Dojo Labs as modules or as interim prompts.** Ruled 20 September: every Dojo Lab is an interim single-shot prompt until the course document exists; modules come after. Open: when modules are written, and whether the interim prompts stay as the plain-chat fallback. Touches Sprints 1 to 4.
 3. **Prompt shape.** Leslie's 20 September run: prompts should ask for labeled parts, and say what to paste. Sprint 2's first Dojo Lab has this; Sprint 1's, 3's, 4's, and Sprint 2's second do not yet. Touches every Dojo Lab.
 4. **What a Dojo Lab submits.** Sprint 1 and Sprint 2 submit the transcript with a final Me turn. Check Sprints 3 and 4 do the same.
+4a. **The confidentiality paragraph on transcript Dojo Labs.** The renderer adds a four-sentence paragraph at the top of every transcript-submission Dojo Lab (course policy, 18 September). Leslie, 24 September: it reads as out of place at the top. Proposal for Jeremy: shorten it to two sentences and place it beside the transcript request at the bottom, where the transcript is made.
 5. **Directing AI as a course thread.** Parked 17 September, revisit after Sprint 2 publishes: Context by doing in Sprint 2, Choices and Confirmation named where used. Where the 3Cs are taught in full (Welcome names Symbiotic Thinking in one sentence; the glossary defines the 3Cs) and where each C is first practiced. Touches Sprint 0, 2, 3, 4.
 
 ## B. Activity pages and where work lives
@@ -34,6 +35,8 @@ Items that reach beyond one sprint. Each names where it came from and which spri
 16. **One shape for the Introductions.** Sprints 1 and 2 share one template; Sprints 3 and 4 another; Sprint 5 is a stub. Proposal to Melisa in `introductions-proposal.md` (24 September): route by week with points, terms only under the 31 August rule, AI, how to work, where to write, next up; Sprint 3's conflicts paragraph moves to the Conversation page, Sprint 4's closed-means-answered and AI-is-inferred lines to the Learning Plan page.
 17. **Changing problems.** Nothing in Sprints 1, 3, or 4 says what to do if the problem fails; Sprint 2 says it three times in prose. Proposal: one optional page, "If you change problems," in Sprint 0 or Sprint 2, with a one-line pointer at each point a learner could reach that decision (Sprint 2 week 1 after a contradicted check, Sprint 2 week 2 when something would simply solve it, the Sprint 2 verdict, Sprint 3 when the stakeholder says it is not real). And a ruling on whether a change after Sprint 2 is allowed.
 18. **Module headers.** Their body text reaches no learner (a module header only creates and names the Canvas module). Decide whether the body is kept as the sprint's statement for reviewers or dropped.
+
+30. **Marking document names.** The published pages bold a document name once, on the sentence that carries its copy link (the Candidate Log, the Stakeholder Map, the Learning Plan), and never again; Problem Frame is never marked. Proposal: bold a document's name at its first mention on a page, plain after; activity names stay plain and match their titles. Applied on Sprint 2's Dojo Lab as the first case.
 
 ## D. Prose that belongs in Welcome, with reminders per sprint
 
