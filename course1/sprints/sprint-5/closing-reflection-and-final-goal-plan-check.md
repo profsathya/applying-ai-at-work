@@ -1,6 +1,6 @@
 ---
-type: quiz
-title: Closing Reflection and Final Goal Plan Check
+type: assignment
+title: 'Sprint 5 Reflection'
 slug: closing-reflection-and-final-goal-plan-check
 artifact_id: course1-sprints-sprint-5-closing-reflection-and-final-goal-plan-check
 sprint: 5
@@ -8,94 +8,38 @@ week: 9
 module: 'Sprint 5: Synthesize And Show Readiness'
 position: 8
 points: 10
-submission_type: file_upload
-delivery_mode: ai_activity
+submission_type: text_entry
+delivery_mode: canvas_native
+completion_requirement: must_submit
+learner_labels: true
+learning_goal: Look honestly at how you are working, what AI made possible, what you brought that AI could not, and how the course is landing for you.
 publish: false
-ai_activity:
-  activity_id: course1-closing-reflection-and-final-goal-plan-check
-  version: "1.0"
-  title: Closing Reflection and Final Goal Plan Check
-  description: Use AI follow-up questions to refine your closing reflection and next responsible move.
-  questions:
-    - id: q1-closing-reflection
-      type: ai-discussion
-      prompt: >
-        Draft your closing reflection. Explain what changed most in how you frame
-        problems, what role AI played across the course, where your own judgment
-        mattered most, what would have been worse if you had handed this problem
-        to AI, and your next move.
-      placeholder: >
-        Use your Week 1 goal, final report, stakeholder evidence, learning
-        journey, readiness claim, and current Goal Plan. Write honestly about the
-        course arc.
-      minLength: 150
-      numQuestions: 3
-      aiContext: >
-        This is the closing reflection for Reframing Problems with AI. The
-        participant is explaining how their problem framing changed across the
-        course, what AI contributed, where human judgment mattered, and what
-        responsible next move they can take. Ask follow-up questions that make the
-        course arc concrete, surface the participant's judgment, and test whether
-        the next move is specific and responsible. Do not rewrite the reflection
-        for them.
-      generateButtonText: Get Follow-up Questions
-      loadingText: Generating follow-up questions...
-      discussionPrompt: >
-        Use these questions to revise your closing reflection. Your refined
-        version should show the course arc, AI's role, your judgment, and your
-        next move.
-      summaryLabel: Your Refined Closing Reflection
-      summaryPlaceholder: >
-        Write the final version you want to submit. Include what changed, AI's
-        role, where your judgment mattered, what would have been worse if AI had
-        taken over, and your next move.
-      saveButtonText: Save Reflection
-      updateButtonText: Update Reflection
-      digDeeperText: Dig deeper with AI guidance
-rubric:
-- description: Names what changed in problem framing
-  points: 2
-- description: Explains AI role across the course
-  points: 2
-- description: Names where human judgment mattered most
-  points: 3
-- description: States a concrete next move
-  points: 3
 ---
 
-# Closing Reflection and Final Goal Plan Check
+# Sprint 5 Reflection
 
-## Purpose
+This reflection is not about your assignments. It is about you: how you are working with AI, what you bring to the work, and how the course is landing for you. The same five questions come back at the end of every sprint, so by Sprint 5 you can see how your answers have moved.
 
-Close the course by naming what changed in how you frame problems, how AI contributed, and what your next responsible move is.
+## The five questions
 
-## Task Instructions
+This time, answer for the whole course. Read your Sprint 1 to 4 reflections side by side first, and notice where your answers moved. For question 4, "next sprint" means your next course or project.
 
-1. Review your Week 1 goal, final report, stakeholder evidence, learning journey, and readiness claim.
-2. Write an initial reflection in the activity. Be honest about change over time. Do not make the course sound cleaner than it was.
-3. Generate AI follow-up questions and use them to identify what is still vague, generic, or unsupported.
-4. Revise your reflection so it ends with a next move you can actually take.
-5. Use the deeper AI guidance button if your answer does not yet show where your judgment mattered.
-6. Save the refined response in the activity.
+1. **What is your biggest takeaway and your biggest challenge from this sprint?** Name one idea that stuck with you and one thing that was hard, and say why for each. *(2-4 sentences)*
+2. **Did you tackle a problem you couldn't have on your own, with the help of AI?** Name the moment. What did AI make possible that you would not have reached alone? *(2-4 sentences)*
+3. **How is what you did better because you were involved?** What did you bring that AI could not: judgment, context, a relationship, a call you made? *(2-4 sentences)*
+4. **What did you notice about how you are working?** Where you pushed, stalled, avoided something, or surprised yourself, and what you will do differently next sprint. *(2-4 sentences)*
+5. **How are the pace and workload landing for you right now?** An honest answer helps your instructor adjust. *(1-2 sentences)*
 
-## Deliverable
+## How to do it
 
-Your refined reflection should answer:
+Answer each question in your own words in the Canvas text box. Number your answers 1 to 5. Honest and specific is what counts; there is no right answer.
 
-- What changed most in how you frame problems.
-- What role AI played across the course.
-- Where your own judgment mattered most.
-- What would have been worse if you had handed this problem to AI.
-- Your next move.
+## What a strong reflection looks like
 
-## Submission Format
+- Each answer points to a specific moment, not to AI or the course in general.
+- It is honest. "AI did not add much this sprint, and here is why" is a real answer.
+- You wrote it yourself, without AI. This is the one place in the course where we want your unedited thinking.
 
-Download the JSON response file from the activity and upload it to Canvas.
+## Carry it forward
 
-## Evidence Of Success
-
-Your final response should be specific enough that another person can understand your context, your reasoning, and what you are ready to do next. Do not submit a polished AI answer without showing your own judgment.
-
-## Portfolio Capture
-
-Save this reflection with the final report. It shows the metacognitive arc of the course.
+Keep this reflection with your other four. Together they show how you moved across the course and what you take into what comes next.

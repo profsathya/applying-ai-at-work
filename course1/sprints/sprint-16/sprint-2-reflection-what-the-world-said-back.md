@@ -1,6 +1,6 @@
 ---
-type: quiz
-title: 'Sprint 2 Reflection: what the world said back'
+type: assignment
+title: 'Sprint 2 Reflection'
 slug: sprint-2-reflection-what-the-world-said-back
 artifact_id: course1-sprints-sprint-16-sprint-2-reflection-what-the-world-said-back
 sprint: 16
@@ -8,51 +8,38 @@ week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 12
 points: 10
-submission_type: file_upload
-delivery_mode: ai_activity
+submission_type: text_entry
+delivery_mode: canvas_native
 completion_requirement: must_submit
 learner_labels: true
-ai_activity:
-  activity_id: course1-sprint-2-reflection-what-the-world-said-back
-  version: '1.0'
-  title: 'Sprint 2 Reflection: what the world said back'
-  description: Use AI follow-up questions to make your account of what came back from outside
-    your own head more specific.
-  questions:
-  - id: q1-sprint-2-reflection
-    type: ai-discussion
-    prompt: This sprint you rated the risk in your own assumptions and looked at what already
-      exists. Write about what came back from outside your own head, in three parts. Where
-      did something in the world change your view of your problem, and where did AI change
-      it? What did you push back on, from either, and what did it cost you to push back? And
-      what is the one thing in your frame you are least sure how to find out?
-    placeholder: Use specific moments from your check, your table, and your verdict.
-    minLength: 150
-    numQuestions: 3
-    aiContext: This is the Sprint 2 reflection for Reframing Problems with AI. The participant
-      walked the assumptions in their Problem Frame, checked one against a person or a record,
-      explored what already exists with AI and looked at two or three things for real, wrote
-      what any change would ask of people from that table, and wrote a verdict on whether
-      the problem is worth pursuing. Ask follow-up questions that catch a "complicated" result
-      rounded to confirmed, a change attributed to AI that the participant actually made,
-      a pushback with nothing lost by it, and an "I am least sure how to find out" that is
-      really a to-do. Push them to name what the world said back that they did not expect.
-      Do not rewrite the reflection.
-    generateButtonText: Get Follow-up Questions
-    loadingText: Generating follow-up questions...
-    discussionPrompt: Use these questions to revise so that what came back from outside your
-      own head is specific.
-    summaryLabel: Your Sprint 2 Reflection
-    summaryPlaceholder: Write the final version you want to submit.
-    saveButtonText: Save Reflection
-    updateButtonText: Update Reflection
-    digDeeperText: Dig deeper with AI guidance
-learning_goal: Say what came back from outside your own head, what you pushed back on, and
-  what you are least sure how to find out.
+learning_goal: Look honestly at how you are working, what AI made possible, what you brought that AI could not, and how the course is landing for you.
 publish: true
 ---
 
+# Sprint 2 Reflection
 
-# Sprint 2 Reflection: what the world said back
+This reflection is not about your assignments. It is about you: how you are working with AI, what you bring to the work, and how the course is landing for you. The same five questions come back at the end of every sprint, so by Sprint 5 you can see how your answers have moved.
 
-This sprint you rated the risk in your own assumptions and looked at what already exists. Write about what came back from outside your own head, in three parts. Where did something in the world change your view of your problem, and where did AI change it? What did you push back on, from either, and what did it cost you to push back? And what is the one thing in your frame you are least sure how to find out?
+## The five questions
+
+This sprint, look back at checking an assumption against a real person or record, and at what you found already exists.
+
+1. **What is your biggest takeaway and your biggest challenge from this sprint?** Name one idea that stuck with you and one thing that was hard, and say why for each. *(2-4 sentences)*
+2. **Did you tackle a problem you couldn't have on your own, with the help of AI?** Name the moment. What did AI make possible that you would not have reached alone? *(2-4 sentences)*
+3. **How is what you did better because you were involved?** What did you bring that AI could not: judgment, context, a relationship, a call you made? *(2-4 sentences)*
+4. **What did you notice about how you are working?** Where you pushed, stalled, avoided something, or surprised yourself, and what you will do differently next sprint. *(2-4 sentences)*
+5. **How are the pace and workload landing for you right now?** An honest answer helps your instructor adjust. *(1-2 sentences)*
+
+## How to do it
+
+Answer each question in your own words in the Canvas text box. Number your answers 1 to 5. Honest and specific is what counts; there is no right answer.
+
+## What a strong reflection looks like
+
+- Each answer points to a specific moment, not to AI or the course in general.
+- It is honest. "AI did not add much this sprint, and here is why" is a real answer.
+- You wrote it yourself, without AI. This is the one place in the course where we want your unedited thinking.
+
+## Carry it forward
+
+Keep this reflection. In Sprint 5 you will read all four sprint reflections back to see how your answers changed.
