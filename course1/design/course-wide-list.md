@@ -19,7 +19,7 @@ Items that reach beyond one sprint. Each names where it came from and which spri
 ## B. Activity pages and where work lives
 
 6. **The rule** (`where-work-lives.md`, v0.2): structured one-sitting work on a walkthrough page, cross-activity work in a document, the plain box for short prose and submission. For the team to confirm.
-7. **Sprint 1 conversions.** Get underneath and First frames as walkthroughs; Brainstorm as a box or Jeremy's interleaved version; the Candidate Log retired when they convert. Sprint 1 pages are Jeremy's build map.
+7. **Sprint 1 conversions.** Get underneath and First frames as walkthroughs; Brainstorm as a box or Jeremy's interleaved version; the Candidate Log retired when they convert. Leslie's pages, by PR, once the walkthrough export (item 8) is settled.
 8. **The walkthrough's table output.** Jeremy investigating (23 September): a grid with a row per entry and a column per field, in the Word export and on copy; the Word download on text-entry pages; per-step copy. Decides the Sprint 2 activity pages and Sprint 1's conversions.
 9. **"Download your file before you leave."** Every walkthrough page says it. And a course-wide word for the thing the learner keeps: file, document, sheet, Log, or nothing.
 10. **Sprint 2's Where to write section** follows item 8.
@@ -42,15 +42,18 @@ Items that reach beyond one sprint. Each names where it came from and which spri
 
 ## E. Continuity across sprints
 
-20a. **Sprint 1 Introduction, for consistency with Sprint 2** (Jeremy's build map, 24 September): week subtitles ("Week 1: build candidate frames" and "Week 2: test, choose, and reflect," as the homepage has them); the "What to keep and submit" section folded into the route, keeping one line above it that own-your-progress items carry 0 points but need a submission; the ending as "Next up: **Brainstorm your list**."; the "How to work" and "Where to write" sections cut, with the Candidate Log link moving to Brainstorm your list, where it is first used. The illustration and the pacing line stay.
-21. **The Problem Frame document.** Created at the end of Sprint 1 (Part D pasted once), not at the start of Sprint 2. Owed to Sprint 1.
-22. **Sprint 1's worked example A**, three lines (4a, 4b, the part 6 row "nothing has been tried that stuck") so it matches Sprint 2's version. Owed to Sprint 1.
+20a. **Sprint 1 Introduction, for consistency with Sprint 2** (Leslie and Claude, by PR, 24 September): week subtitles ("Week 1: build candidate frames" and "Week 2: test, choose, and reflect," as the homepage has them); the "What to keep and submit" section folded into the route, keeping one line above it that own-your-progress items carry 0 points but need a submission; the ending as "Next up: **Brainstorm your list**."; the "How to work" and "Where to write" sections cut, with the Candidate Log link moving to Brainstorm your list, where it is first used. The illustration and the pacing line stay.
+21. **The Problem Frame document.** Created at the end of Sprint 1 (Part D pasted once), not at the start of Sprint 2. Sprint 1's Problem Frame item, by PR; needs the template link from Leslie.
+22. **Sprint 1's worked example A**, three lines (4a, 4b, the part 6 row "nothing has been tried that stuck") so it matches Sprint 2's version, plus the workable-problem line in the Introduction and header (item 20). By PR.
 23. **Sprint 3 alignment** (Melisa): Sprint 2 no longer makes a check (24 September), so Sprint 3's conversation is the course's first test of an assumption against a person, and its page can say so. The frame arrives with the Checked column (not yet, or low risk because), 3c, and Part 7 questions; "still marked inferred" becomes "Part 6: your assumptions, rows marked not yet"; the mid-course revision revises a document that exists. Sprint 3's assumption blocks are the same walk as Sprint 2's (questions, different answers, risk); Sprint 3 should name it as a repeat on new material and use the same words.
 24. **Sprint 4 alignment** (Melisa): Goal Plan references become Problem Frame; Name the Gap points at part 6's "not yet" rows; Sprint 4's "gap" is not Sprint 2's assumptions.
 25. **American English course-wide** (ruled 18 September). Sprints 3 and 4 carry British spellings.
 26. **Two core examples** (account handovers with Dana; the garden plot with Ramona) run Sprints 1 to 3. Check Sprint 4 uses them or says why not.
 
 ## F. Process
+
+**How pages change (Jeremy, 24 September, relayed by Leslie):** Leslie and Melisa edit their sprints' pages through Claude and PRs, as Sprint 2 is being done. Sprint 1's document-built pages are edited the same way, with each page's source sidecar updated in the same commit, as Jeremy did on 18 September. Canvas itself is for settings: publish state, points, dates, module order, the walkthrough release.
+
 
 27. **Clare's comments.** Leslie and Melisa filter; the surviving comments come to Claude; each is logged with a disposition; published sprints become a packet and a PR Leslie approves or a hand-off to the page owner. Review copies for Sprints 0, 1, 3 are in Drive; Sprint 4 held until Melisa says ready.
 28. **Sprint 4 V3 is published in Canvas and marked ready** while Melisa revises it, so its text is already in the Dojo course document; Jeremy's feedback demo module has no readiness entry. Raised with Jeremy.

@@ -88,7 +88,7 @@ claims are what Sprint 2 works on.
 
 | Piece | State |
 |---|---|
-| Sprint 1, whole | **v5.4, cut-ready**, in `course1/design/sprint-1-working-draft-v5.md`, with a cover note for Jeremy at the top. Content is v5.3, reviewed by Leslie on every page. Four [TEAM DECISION] markers and one [INTERIM] marker carry the open items into the pages for reviewers. Jeremy rebuilds the whole sprint from this file (docx or repo path) |
+| Sprint 1, whole | Published in sprint-14 from v5.4. Five edits owed, listed in `course-wide-list.md` (20a, 21, 22), to be made by Leslie and Claude by PR with sidecars updated (Jeremy, 24 September). Earlier: **v5.4, cut-ready**, in `course1/design/sprint-1-working-draft-v5.md`, with a cover note for Jeremy at the top. Content is v5.3, reviewed by Leslie on every page. Four [TEAM DECISION] markers and one [INTERIM] marker carry the open items into the pages for reviewers. Jeremy rebuilds the whole sprint from this file (docx or repo path) |
 | Sprint 1 first half, live | Jeremy's 11 September cut, published in sprint-12. Melisa is running this version. It is superseded by v5 and will be replaced at the cut |
 | Sprint 1 concept check | Six questions redrafted in v5.1 against the new pages; Jeremy's call on format. Now sits after The problem frame |
 | Sprint 2 | **Built, unpublished** (23 September): `course1/sprints/sprint-16/`, 13 files, all `publish: false`, from draft v2.0 (`sprint-2-working-draft-v1.md`, cut-ready). Two activity pages exist as reading items plus staged walkthrough replacements for Jeremy's release. Leslie flips publish per item and `ready: true` on the homepage schedule. Decisions log, 16 to 23 September |
