@@ -5,17 +5,18 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import re
+import subprocess
 import sys
 
-import yaml
 from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.canvas_client import CanvasClient
 from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
 from canvas_sync.maintenance_state import MaintenanceState
-from canvas_sync.schema import parse_frontmatter
-from canvas_sync.state import canvas_fingerprint, content_hash, fetch_canvas_state, save_json_atomic, utc_now
+from canvas_sync.schema import parse_frontmatter_text
+from canvas_sync.state import canvas_fingerprint, fetch_canvas_state, save_json_atomic, utc_now
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -43,18 +44,49 @@ def learner_content(fm: dict, body: str) -> str:
     return '\n\n'.join(p for p in parts if p).strip() + '\n'
 
 
-def eligible_slugs(homepage: dict) -> dict:
-    readiness = {s['sprint']: s.get('ready') is True for s in homepage.get('schedule', {}).get('sprints', []) if s.get('sprint') is not None}
-    allowed = {}
-    for module in homepage.get('modules', []):
-        sprint = module['sprint']
-        if module.get('hidden') or readiness.get(sprint, True) is not True:
-            continue
-        allowed[sprint] = {i['slug'] for g in module.get('groups', []) for i in g.get('items', [])}
-    return allowed
+def published_placement(entry: dict, modules: dict, items: dict) -> tuple[dict, dict] | None:
+    """Find a learner-visible placement for a manifest-backed Canvas object."""
+    module_id = entry.get('canvas_module_id')
+    module = modules.get(module_id)
+    if not module or module.get('published') is not True:
+        return None
+    atype = entry.get('canvas_type')
+    candidates = [i for i in items.get(module_id, []) if i.get('published') is True and
+                  ((atype == 'page' and i.get('type') == 'Page' and i.get('page_url') == entry.get('canvas_page_url')) or
+                   (atype != 'page' and i.get('type') == {'assignment': 'Assignment', 'discussion': 'Discussion', 'quiz': 'Quiz'}.get(atype) and i.get('content_id') == entry.get('canvas_id')))]
+    if not candidates:
+        return None
+    return module, min(candidates, key=lambda i: i.get('position', 0))
 
 
-def build_release(*, artifacts: dict, homepage: dict, sources: dict,
+def released_source(repo_root: Path, path: str, entry: dict) -> dict:
+    """Read the exact source recorded at publication, even if a newer draft exists."""
+    relative = Path(path)
+    if relative.is_absolute() or '..' in relative.parts:
+        raise ValueError(f'Unsafe released source path: {path}')
+    expected = entry.get('content_hash')
+    if not expected:
+        raise ValueError(f'Missing released source hash: {path}')
+    md = repo_root / relative
+    raw = md.read_bytes() if md.exists() else None
+    if raw is None or hashlib.sha256(raw).hexdigest() != expected:
+        commit = entry.get('source_commit', '')
+        if not re.fullmatch(r'[0-9a-f]{40}', commit):
+            raise ValueError(f'Unreleased local changes and no source commit: {path}')
+        try:
+            raw = subprocess.run(
+                ['git', 'show', f'{commit}:{path}'], cwd=repo_root,
+                check=True, capture_output=True,
+            ).stdout
+        except subprocess.CalledProcessError as error:
+            raise ValueError(f'Missing recorded released source: {path}') from error
+        if hashlib.sha256(raw).hexdigest() != expected:
+            raise ValueError(f'Recorded source does not match released hash: {path}')
+    fm, body = parse_frontmatter_text(raw.decode('utf-8'), path)
+    return {'frontmatter': fm, 'body': body, 'content_hash': expected}
+
+
+def build_release(*, artifacts: dict, sources: dict,
                   modules: list[dict], items: dict, objects: dict,
                   generated_at: str | None = None) -> dict:
     """Pure builder. sources maps local paths to {frontmatter, body, content_hash}.
@@ -62,35 +94,21 @@ def build_release(*, artifacts: dict, homepage: dict, sources: dict,
     objects maps those paths to freshly fetched Canvas objects; items maps module
     IDs to their fresh module-item lists. Missing evidence never authorizes export.
     """
-    allowed = eligible_slugs(homepage)
     live_modules = {m['id']: m for m in modules}
     pages = []
     seen = set()
     for path, entry in artifacts.items():
+        placement = published_placement(entry, live_modules, items)
+        if not placement:
+            continue
         source = sources.get(path)
         if not source:
-            try:
-                sprint = int(Path(path).parent.name.removeprefix('sprint-'))
-            except ValueError:
-                raise ValueError(f'Invalid artifact path: {path}')
-            if Path(path).stem in allowed.get(sprint, set()):
-                raise ValueError(f'Missing curated local source: {path}')
-            continue
+            raise ValueError(f'Missing local source for published Canvas item: {path}')
         fm = source['frontmatter']
         if fm.get('publish') is not True or fm.get('type') == 'module_header':
-            continue
-        if fm.get('slug') not in allowed.get(fm.get('sprint'), set()):
-            continue
-        module_id = entry.get('canvas_module_id')
-        module = live_modules.get(module_id)
-        if not module or module.get('published') is not True:
-            continue
+            raise ValueError(f'Published Canvas item is not a released local artifact: {path}')
         atype = entry['canvas_type']
-        candidates = [i for i in items.get(module_id, []) if
-                      (atype == 'page' and i.get('type') == 'Page' and i.get('page_url') == entry.get('canvas_page_url')) or
-                      (atype != 'page' and i.get('type') == {'assignment': 'Assignment', 'discussion': 'Discussion', 'quiz': 'Quiz'}.get(atype) and i.get('content_id') == entry.get('canvas_id'))]
-        if not candidates or not any(i.get('published') is True for i in candidates):
-            continue
+        module, item = placement
         live = objects.get(path)
         if live is None:
             raise ValueError(f'Missing live object: {path}')
@@ -112,7 +130,6 @@ def build_release(*, artifacts: dict, homepage: dict, sources: dict,
         url = live.get('html_url') or entry.get('hosted_url')
         if not url or not url.startswith('https://'):
             raise ValueError(f'Missing source URL: {path}')
-        item = min((i for i in candidates if i.get('published') is True), key=lambda i: i.get('position', 0))
         pages.append(((module.get('position', 0), item.get('position', 0), path), {
             'path': relative, 'title': fm['title'], 'source_url': url,
             'content': learner_content(fm, source['body']),
@@ -129,21 +146,18 @@ def export_release(manifest_path: Path, state_dir: Path | None = None, *, repo_r
     check_instance_ready(manifest, manifest_label=str(manifest_path))
     check_env_matches_instance(manifest, manifest_label=str(manifest_path))
     client = client or CanvasClient.from_env(course_id=manifest['instance']['course_id'])
-    homepage = yaml.safe_load((manifest_path.parent.parent / 'homepage.yaml').read_text())
     modules = client.list_modules()
     items = {m['id']: client.list_module_items(m['id']) for m in modules}
+    live_modules = {m['id']: m for m in modules}
     sources, objects = {}, {}
-    allowed = eligible_slugs(homepage)
     for path, entry in manifest['artifacts'].items():
-        md = repo_root / path
-        if not md.exists():
-            continue  # The builder rejects missing curated sources; retired state is ignored.
-        fm, body = parse_frontmatter(md)
-        sources[path] = {'frontmatter': fm, 'body': body, 'content_hash': content_hash(md)}
-        if (entry.get('canvas_type') != 'module_header' and fm.get('publish') is True
-                and fm.get('slug') in allowed.get(fm.get('sprint'), set())):
+        if entry.get('canvas_type') == 'module_header' or not published_placement(entry, live_modules, items):
+            continue
+        source = released_source(repo_root, path, entry)
+        sources[path] = source
+        if source['frontmatter'].get('publish') is True:
             objects[path] = fetch_canvas_state(client, entry)
-    return build_release(artifacts=manifest['artifacts'], homepage=homepage, sources=sources, modules=modules, items=items, objects=objects)
+    return build_release(artifacts=manifest['artifacts'], sources=sources, modules=modules, items=items, objects=objects)
 
 
 def main():

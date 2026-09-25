@@ -48,16 +48,20 @@ def load_schema(name: str) -> dict:
 
 def parse_frontmatter(md_path: Path) -> tuple[dict, str]:
     """Split an MD file into (frontmatter_dict, body_str)."""
-    content = md_path.read_text(encoding="utf-8")
+    return parse_frontmatter_text(md_path.read_text(encoding="utf-8"), str(md_path))
+
+
+def parse_frontmatter_text(content: str, label: str = '<source>') -> tuple[dict, str]:
+    """Split a verified Markdown source without requiring a working-tree file."""
     lines = content.splitlines(keepends=True)
     if not lines or lines[0].strip() != "---":
-        raise ValueError(f"{md_path}: missing YAML frontmatter")
+        raise ValueError(f"{label}: missing YAML frontmatter")
     closing = next((i for i, line in enumerate(lines[1:], 1) if line.strip() == "---"), None)
     if closing is None:
-        raise ValueError(f"{md_path}: malformed frontmatter (no closing ---)")
+        raise ValueError(f"{label}: malformed frontmatter (no closing ---)")
     frontmatter = yaml.safe_load("".join(lines[1:closing]))
     if not isinstance(frontmatter, dict):
-        raise ValueError(f"{md_path}: frontmatter must be a YAML mapping")
+        raise ValueError(f"{label}: frontmatter must be a YAML mapping")
     body = "".join(lines[closing + 1:]).lstrip("\n")
     return frontmatter, body
 
