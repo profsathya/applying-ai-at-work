@@ -105,7 +105,9 @@ function checkVersions(props, docId, payload) {
   }
   var versions = {};
   payload.sections.forEach(function(section) {
-    if (!section.tab || versions[section.tab] || !Array.isArray(section.pages) || !/^[a-f0-9]{64}$/.test(section.content_digest || "")) {
+    if (!section.tab || versions[section.tab] || !Array.isArray(section.pages) ||
+        !/^[a-f0-9]{64}$/.test(section.content_digest || "") ||
+        !/^[a-f0-9]{64}$/.test(section.rendered_digest || "")) {
       throw new Error("invalid_section");
     }
     var old = JSON.parse(props.getProperty(versionKey(docId, section.tab)) || "null");
@@ -179,6 +181,20 @@ function rebuildDocument(docId, payload) {
     targets.push({ section: section, tab: tab });
   }
 
+  // A prior request may have saved the document but lost its receipt. Verify
+  // the actual text before rewriting a large tab on a same-generation retry.
+  var existingDigests = {};
+  var alreadyCurrent = targets.every(function(target) {
+    var digest = bodyDigest(target.tab.asDocumentTab().getBody());
+    existingDigests[target.section.tab] = digest;
+    return digest === target.section.rendered_digest;
+  });
+  if (alreadyCurrent) {
+    return { tabs: [], pages: targets.reduce(function(total, target) {
+      return total + target.section.pages.length;
+    }, 0), digests: existingDigests };
+  }
+
   // Preserve existing tab bodies for recovery if rendering or saving fails.
   var backups = targets.map(function(target) { return target.tab.asDocumentTab().getBody().copy(); });
   try {
@@ -195,14 +211,10 @@ function rebuildDocument(docId, payload) {
   var readTabs = collectTabs(readback.getTabs(), {});
   var digests = {};
   payload.sections.forEach(function(section) {
-    var text = readTabs[section.tab].asDocumentTab().getBody().getText().split(/\r?\n/)
-      .map(function(line) { return line.trim(); }).filter(function(line) { return line.length > 0; }).join("\n");
-    var digest = Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, text, Utilities.Charset.UTF_8)
-      .map(function(byte) { return (byte < 0 ? byte + 256 : byte).toString(16).padStart(2, "0"); }).join("");
+    var digest = bodyDigest(readTabs[section.tab].asDocumentTab().getBody());
     if (digest !== section.rendered_digest) { throw new Error("document_readback_mismatch"); }
     digests[section.tab] = digest;
   });
-  readback.saveAndClose();
   return { tabs: titles, pages: pages, digests: digests };
   } catch (error) {
     doc = DocumentApp.openById(docId);
@@ -224,6 +236,13 @@ function rebuildDocument(docId, payload) {
     doc.saveAndClose();
     throw error;
   }
+}
+
+function bodyDigest(body) {
+  var text = body.getText().split(/\r?\n/)
+    .map(function(line) { return line.trim(); }).filter(function(line) { return line.length > 0; }).join("\n");
+  return Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, text, Utilities.Charset.UTF_8)
+    .map(function(byte) { return (byte < 0 ? byte + 256 : byte).toString(16).padStart(2, "0"); }).join("");
 }
 
 function writeSection(body, section, payload) {
