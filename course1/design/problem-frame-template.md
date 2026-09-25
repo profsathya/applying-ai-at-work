@@ -1,6 +1,6 @@
 ---
 purpose: Source text for the Problem Frame document, the one artifact that carries through the course from the end of Sprint 1; the participant-facing copy is a Google Doc template
-status: v0.7, 25 September 2026: 3c is What fixing this would ask of people, of anyone involved, in 3a or not; the Status column holds the risk rating with reason, no "not yet" (Leslie). v0.6, 25 September 2026: the whole frame from the start, with filled-in-Sprint-X-week-Y labels on 3c, the Part 6 Status column (renamed from Checked), and Part 7; one note at the top that each sprint's last activity names the parts to update (Leslie). v0.5, 25 September 2026: 3c names who would have to agree even if not in 3a, and carries a leave-blank-until label (Leslie). v0.4, 24 September 2026: the Checked column reads not yet, low risk because, or what was found out. v0.3, 21 September 2026: 3c is written in week 2 from the What already exists table (Leslie's ruling). v0.2, 17 September 2026, after Leslie's review of v0.1: her opening text, one paste from Part D, every part living, the cost of a change as 3c, no verdict in the document
+status: v0.8, 25 September 2026: 3c no longer asks for the comparison with 3b; the verdict weighs it (Leslie). v0.7, 25 September 2026: 3c is What fixing this would ask of people, of anyone involved, in 3a or not; the Status column holds the risk rating with reason, no "not yet" (Leslie). v0.6, 25 September 2026: the whole frame from the start, with filled-in-Sprint-X-week-Y labels on 3c, the Part 6 Status column (renamed from Checked), and Part 7; one note at the top that each sprint's last activity names the parts to update (Leslie). v0.5, 25 September 2026: 3c names who would have to agree even if not in 3a, and carries a leave-blank-until label (Leslie). v0.4, 24 September 2026: the Checked column reads not yet, low risk because, or what was found out. v0.3, 21 September 2026: 3c is written in week 2 from the What already exists table (Leslie's ruling). v0.2, 17 September 2026, after Leslie's review of v0.1: her opening text, one paste from Part D, every part living, the cost of a change as 3c, no verdict in the document
 depends_on: sprint-2-outline.md (v5.2, "The living artifact"); candidate-log-template-v2.md (v2.3, Part D in reading order); course1/sprints/sprint-14/the-problem-frame.md (the seven parts as published)
 ---
 
@@ -36,7 +36,7 @@ Last updated (sprint and date):
 
 \
 
-**3c. What fixing this would ask of people.** *Filled in Sprint 2, week 2, from your What already exists table. Leave blank until then.* Not the cost of a particular solution; what any change to how this is handled would ask of the people involved, in 3a or not: a new step, a habit, someone's time, and who would have to agree. Set it beside 3b.
+**3c. What fixing this would ask of people.** *Filled in Sprint 2, week 2, from your What already exists table. Leave blank until then.* Not the cost of a particular solution; what any change to how this is handled would ask of the people involved, in 3a or not: a new step, a habit, someone's time, and who would have to agree. Weighing it against 3b is the verdict's job, not this line's.
 
 \
 

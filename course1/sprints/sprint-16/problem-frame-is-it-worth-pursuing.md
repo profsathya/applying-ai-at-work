@@ -38,7 +38,7 @@ guided_assignment:
     - All seven parts present, in the participant's words.
     - Every row of part 6 has an entry in its Status column.
     - Every risk rating carries a reason.
-    - Part 3c is present and compares with 3b.
+    - Part 3c is present.
     - At least one assumption is rated high risk and unconfirmed, since a frame with none at
       this stage is a warning sign.
     instruction_section: Part 2. Your Problem Frame, brought up to date
@@ -75,9 +75,9 @@ You will tackle them one at a time following the guidance below.
 
 You have already thought about what using an existing solution for your problem might involve, in the third column of your What already exists table. Now you are going to think specifically about who would be involved if those or similar solutions were put in place, and what the change would ask of them.
 
-> **Example.** On the account handover problem, almost every existing solution points towards the same thing: whatever is implemented, each manager will have to consistently and immediately write the handover down somewhere other people can see it, and everyone will have to get in the habit of looking for those updates. That will cost them a few minutes each week, but more importantly a mindset shift that they'll likely resist. Dana administers the CRM, so she would have to agree to anything that uses it.
+> **Example.** On the account handover problem, almost every existing solution points towards the same thing: whatever is implemented, each manager will have to consistently and immediately write the handover down somewhere other people can see it, and everyone will have to get in the habit of looking for those updates. That will cost them a few minutes each week, but more importantly a mindset shift that they'll likely resist.
 
-To complete the box below, open your What already exists table. Look at column 3 and think about what any change would ask of the people involved. Who would need to complete a new step, build a habit, take time out of their day, or make a decision in order to put a solution in place? Write down who they are, whether or not they are in Part 3a of your frame, and what each of them would have to do differently. Then set that beside what the problem costs people now, in 3b: does fixing this ask more of people than the problem already does, or less? This will become Part 3c of your Problem Frame in Part 2 on this page.
+To complete the box below, open your What already exists table. Look at column 3 and think about what any change would ask of the people involved. Who would need to complete a new step, build a habit, take time out of their day, or make a decision in order to put a solution in place? Write down who they are, whether or not they are in Part 3a of your frame, and what each of them would have to do differently. This will become Part 3c of your Problem Frame in Part 2 on this page.
 
 ## Part 2. Your Problem Frame, brought up to date
 
