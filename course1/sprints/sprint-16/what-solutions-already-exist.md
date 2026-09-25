@@ -52,13 +52,15 @@ With your problem in mind, think about existing solutions that might be related 
 
 > **Example.** Problem: account handovers happen with no record. Possible solutions that exist: there is an owner field in our CRM that isn't being used; the sales team uses a handover checklist that might be similar; is there a weekly "accounts that moved" note, or does it ever come up in a weekly team meeting?
 
+Then, think about how that solution actually works, and what it might mean for your problem. The table below will help you think through these questions.
+
 ## Build your understanding about what exists
 
 The table below has three columns: what exists, how it works, and what using it here would involve. Fill it in three steps.
 
 1. **Fill the first column, What exists, with everything from your brainstorm**, one row per thing. Ask yourself: What products or services claim to have solutions in this problem space? Do I know anyone who is already handling this problem well? Does my own organization already have something for this, used or not? Could AI help with this problem?
 2. **For each row, fill in How it works, as far as I know.** Write what you have actually seen, where it lives, who can change or see it, or indicate that you don't know if that is the case.
-3. **For each row, fill in What using it here would involve.** What would change for the better, what it would ask of the people involved (a step, a habit, someone's time, a decision), and what you cannot tell yet. What all of it means for your problem comes at the end of the sprint, once you have looked.
+3. **For each row, fill in What using it here would involve.** In a sentence or two: what would change for the better, what it would ask of the people involved, and what you cannot tell yet.
 
 As always, questions and question marks where you don't know something are encouraged. It is better to mark what you don't know than make something up; a table that is mostly questions will still be very useful for the next activity.
 
@@ -74,10 +76,10 @@ As always, questions and question marks where you don't know something are encou
 >
 > Garden plot example: I don't know. The garden two streets over might do it. I have never asked.
 
-**What using it here would involve.** What would change for the better, what it would ask of the people involved (a step, a habit, someone's time, a decision), and what you cannot tell yet. Before you have looked into anything, most of this will be "cannot tell yet," and that is the right result.
+**What using it here would involve.** In a sentence or two: what would change for the better, what it would ask of the people involved, and what you cannot tell yet. Before you have looked into anything, most of this will be "cannot tell yet," and that is the right result.
 
-> Account handover example: Better: the owner is written down where everyone can see it. Asks: every manager updates it at each handover, and someone keeps at them; people aren't using the CRM much as it is. Cannot tell yet: whether turning it on costs anything, and who decides.
+> Account handover example: The owner would be tracked somewhere people can actually see it. However, I don't know if it can be turned on, and it would require people to fill it out and pay attention to it.
 >
-> Garden plot example: Cannot tell yet. If they do it: asks someone to organize the pairs every spring, and I do not know whether the pairs actually talk.
+> Garden plot example: I can't tell yet. If they do it, it would take someone to organize the pairs every spring, and I don't know whether the pairs actually talk.
 
 When you finish, copy your table into your Sprint 2 working book. The next activity fills it in.
