@@ -36,7 +36,7 @@ guided_assignment:
       column filled, part 7 added to, part 3c in, 4a if changed, the date at the top.'
     criteria:
     - All seven parts present, in the participant's words.
-    - Every row of part 6 has an entry in its last column.
+    - Every row of part 6 has an entry in its Status column.
     - Every "low risk" carries a reason.
     - Part 3c is present and compares with 3b.
     - At least one assumption still reads "not yet," since a frame with none at this stage
@@ -77,7 +77,7 @@ In the box, gather those up: what any change here, whatever it turned out to be,
 
 Work in your Problem Frame document with both weeks' tables open beside it, then paste the whole frame into the box, as you did at the end of Sprint 1. Go through it in this order:
 
-1. **Part 6, last column, from your walk.** Against each assumption: "low risk, because" and your reason for the ones you rated low; "not yet" for the rest; and anything you found out along the way, in a line. Sprint 3 is built for the "not yet" rows: that is where you take them to a real person.
+1. **Part 6, Status column, from your walk.** Against each assumption: "low risk, because" and your reason for the ones you rated low; "not yet" for the rest; and anything you found out along the way, in a line. Sprint 3 is built for the "not yet" rows: that is where you take them to a real person.
 2. **Part 6, new rows.** Anything you now realize you are assuming that was not there before, from either week. "Our CRM's owner field is not in use" is one: unverified, and someone could tell you.
 3. **Part 7, what you do not know yet.** Add the questions from your walk that are still open. This is the list Sprint 3 draws on.
 4. **Part 3c.** Paste in what you wrote in Part 1 above, trimmed to one or two sentences.

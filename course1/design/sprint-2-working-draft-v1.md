@@ -476,7 +476,7 @@ In the box, gather those up: what any change here, whatever it turned out to be,
 
 Work in your Problem Frame document with both weeks' tables open beside it, then paste the whole frame into the box, as you did at the end of Sprint 1. Go through it in this order:
 
-1. **Part 6, last column, from your walk.** Against each assumption: "low risk, because" and your reason for the ones you rated low; "not yet" for the rest; and anything you found out along the way, in a line. Sprint 3 is built for the "not yet" rows: that is where you take them to a real person.
+1. **Part 6, Status column, from your walk.** Against each assumption: "low risk, because" and your reason for the ones you rated low; "not yet" for the rest; and anything you found out along the way, in a line. Sprint 3 is built for the "not yet" rows: that is where you take them to a real person.
 2. **Part 6, new rows.** Anything you now realize you are assuming that was not there before, from either week. "Our CRM's owner field is not in use" is one: unverified, and someone could tell you.
 3. **Part 7, what you do not know yet.** Add the questions from your walk that are still open. This is the list Sprint 3 draws on.
 4. **Part 3c.** Paste in what you wrote in Part 1 above, trimmed to one or two sentences.
@@ -496,7 +496,7 @@ One paragraph, in your own words. Worth pursuing, not worth pursuing, or depends
 ### Response tasks
 
 - **what-a-change-would-ask** (response). Prompt: *What any change here would ask of the people in 3a, and who would have to agree: gathered from the third column of your What already exists table.* Criteria: names at least one thing a change would ask of a person in 3a (a step, a habit, time, or a decision); names who would have to agree; draws on the third column of the table, not on a chosen solution.
-- **problem-frame** (response). Prompt: *Your Problem Frame, all seven parts, brought up to date: part 6 with its last column filled, part 7 added to, part 3c in, 4a if changed, the date at the top.* Criteria: all seven parts present, in the participant's words; every row of part 6 has an entry in its last column; every "low risk" carries a reason; part 3c is present and compares with 3b; at least one assumption still reads "not yet."
+- **problem-frame** (response). Prompt: *Your Problem Frame, all seven parts, brought up to date: part 6 with its Status column filled, part 7 added to, part 3c in, 4a if changed, the date at the top.* Criteria: all seven parts present, in the participant's words; every row of part 6 has an entry in its Status column; every "low risk" carries a reason; part 3c is present and compares with 3b; at least one assumption still reads "not yet."
 - **verdict** (response). Prompt: *Worth pursuing, not worth pursuing, or depends on one named thing, with your reasons. If no: the runner-up's shortened pass and why the first did not survive.* Criteria: one of the three, stated; reasons draw on the risk ratings, what exists, and what a change would ask; names what would most change the verdict; "depends on" names one thing and who or what could settle it; a no names the runner-up and gives its shortened pass.
 
 > **[BUILD]** `presentation: reading`, three boxes. Learning goal: "Bring your Problem Frame up to date from both weeks, and give your verdict on whether this problem is worth pursuing." Leslie, 25 September: three parts (the 3c brainstorm with an example; the frame as a checklist; the verdict); "concerned this will be unwieldy, but we won't know until we see it." Points across the three boxes are the team's; the weight stays on the verdict.
@@ -514,7 +514,7 @@ Owned by Melisa's shared format since 24 September (PRs #118 to #120): every spr
 ## Owed elsewhere, from this draft
 
 - **Sprint 1** (Jeremy's build map): one line in the Introduction and module header that the goal is a workable problem, not completing the activities.
-- **Sprint 3 V3** (Melisa): one sentence at the Stakeholder Map's opening acknowledging the frame arrives with one check made and part 6's Checked column filled; the mid-course item's "revise your Problem Frame" now revises a document that exists.
+- **Sprint 3 V3** (Melisa): one sentence at the Stakeholder Map's opening acknowledging the frame arrives with one check made and part 6's Status column filled; the mid-course item's "revise your Problem Frame" now revises a document that exists.
 - **Sprint 4 V3** (Melisa): Goal Plan references become Problem Frame; Name the Gap points at part 6's "not yet" rows.
 - **Google Docs** (Leslie): the Problem Frame document and the What already exists table as copy-on-click templates; the Candidate Log re-pasted as v2.3.
 - **Team**: points across the five sprints; confirmed and unverified against confirmed and inferred.
