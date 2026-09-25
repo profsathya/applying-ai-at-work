@@ -22,12 +22,12 @@ guided_assignment:
   - id: what-a-change-would-ask
     kind: response
     prompt: 'What any change here would ask of the people in 3a, and who would have to agree:
-      a short brainstorm from the Bad entries in your table.'
+      a short brainstorm, row by row, from your What already exists table.'
     criteria:
     - Names at least one thing a change would ask of a person in 3a (a step, a habit, time,
       or a decision).
     - Names who would have to agree.
-    - Draws on the Bad entries in your What already exists table, not on a solution you have
+    - Draws on the rows of your What already exists table, not on a solution you have
       chosen.
     instruction_section: Part 1. What a change would ask of them
   - id: problem-frame
@@ -67,11 +67,11 @@ Three parts, in this order: a short brainstorm on what a change would ask of peo
 
 ## Part 1. What a change would ask of them
 
-Part 3c of your frame is new this sprint, and this is where you work it out. Open your What already exists table and read down the Bad entries. Some are about the thing itself: it might not make a difference, it is not switched on. Others are about what using it would ask of people: a new step, a habit somebody has to keep, someone's time, a decision only one person can make. Those are the ones you want.
+Part 3c of your frame is new this sprint, and this is where you work it out. Open your What already exists table and take each row that could plausibly be part of a change here, whether you marked it good, bad, or not sure. For each one, ask what using it would ask of the people in 3a: a new step, a habit somebody has to keep, someone's time, a decision only one person can make. A thing that already exists and works well still asks something of the people who would have to use it.
 
 In the box, write what any change here, whatever it turned out to be, would ask of the people in 3a, and who would have to agree. Then set it beside 3b, what the problem costs them now, and say which looks larger, or that it is not yet clear. A few sentences. You are not choosing a solution; you are pricing the change.
 
-> **Example.** From the Bad entries: the owner field is not on and people barely use the CRM; a checklist is still between two people; a weekly note means somebody writes it, forever. So any change asks each manager for about a minute per handover, to post a note or update a field, and a new habit. It asks someone to keep at them, probably me. Dana is the only person who has to agree, and there is nothing to build. Against clients repeating themselves every month, small.
+> **Example.** Row by row: the owner field already exists, but using it means every manager updates it at each handover; a checklist is filled in by two people each time; a weekly note means somebody writes it, forever. So any change asks each manager for about a minute per handover, to post a note or update a field, and a new habit. It asks someone to keep at them, probably me. Dana is the only person who has to agree, and there is nothing to build. Against clients repeating themselves every month, small.
 
 ## Part 2. Your Problem Frame, brought up to date
 
