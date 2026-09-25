@@ -279,7 +279,7 @@ modules:
             meta: "Page - plan weekly work, find Canvas Inbox, set up your coach, and post your introduction"
           - slug: "set-up-your-ai-dojo-v2"
             nav_meta: "Set up · No submission"
-            meta: "Page - configure your chosen AI tool with the shared Dojo method and check its coaching behavior; no submission"
+            meta: "Page - set up your AI coach with Dojo Core, course pages, and lab methods; check its coaching behavior; no submission"
       - label: "The one submission"
         items:
           - slug: "introduction-post-v2"

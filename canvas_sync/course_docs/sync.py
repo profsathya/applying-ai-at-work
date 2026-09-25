@@ -15,6 +15,8 @@ import urllib.request
 from datetime import datetime, timezone
 
 CORE_URL = 'https://profsathya.github.io/Common-Curriculum/common/dojo/dojo-core.txt'
+LABS_PATH = Path(__file__).resolve().parents[2] / 'course1/dojo/dojo-labs.txt'
+LABS_URL = 'https://github.com/profsathya/applying-ai-at-work/blob/main/course1/dojo/dojo-labs.txt'
 TITLE = 'CIS 501: Reframing Problems with AI — Dojo and Course Context'
 
 
@@ -50,7 +52,15 @@ def dojo_section(core):
                 pages=[dict(path=CORE_URL, title=lines[0], content='Source: ' + CORE_URL + '\n' + '\n'.join(lines[1:]))], glossary=[])
 
 
-def build(release, core, generation, repository, commit_sha):
+def labs_section(labs):
+    lines = labs.strip().splitlines()
+    if len(lines) < 2 or not lines[0].startswith('CIS 501 DOJO LABS'):
+        raise ValueError('Dojo Labs source is not valid activity guidance')
+    return dict(tab='Dojo Labs', heading='CIS 501 Dojo Labs: activity methods',
+                pages=[dict(path=LABS_URL, title=lines[0], content='Source: ' + LABS_URL + '\n' + '\n'.join(lines[1:]))], glossary=[])
+
+
+def build(release, core, generation, repository, commit_sha, labs=None):
     if generation < 1 or not repository or not commit_sha:
         raise ValueError('A positive main-branch generation and source identity are required')
     sections = []
@@ -58,6 +68,8 @@ def build(release, core, generation, repository, commit_sha):
         sections.append(course_section(release))
     if core is not None:
         sections.append(dojo_section(core))
+    if labs is not None:
+        sections.append(labs_section(labs))
     if not sections:
         raise ValueError('No document section selected')
     for section in sections:
@@ -143,14 +155,14 @@ def send_update(url, request_payload, attempts=3):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--release', type=Path)
-    parser.add_argument('--section', choices=['course', 'dojo', 'all'], default='all')
+    parser.add_argument('--section', choices=['course', 'dojo', 'labs', 'all'], default='all')
     parser.add_argument('--generation', type=int, required=True)
     parser.add_argument('--repository', required=True)
     parser.add_argument('--commit-sha', required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--send', action='store_true')
     args = parser.parse_args()
-    release = core = None
+    release = core = labs = None
     if args.section in ('course', 'all'):
         if not args.release:
             parser.error('--release is required for Course updates')
@@ -158,7 +170,9 @@ def main():
     if args.section in ('dojo', 'all'):
         with urllib.request.urlopen(CORE_URL, timeout=30) as response:
             core = response.read().decode('utf-8')
-    payload = build(release, core, args.generation, args.repository, args.commit_sha)
+    if args.section in ('labs', 'all'):
+        labs = LABS_PATH.read_text()
+    payload = build(release, core, args.generation, args.repository, args.commit_sha, labs)
     args.output.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + '\n')
     if args.send:
         url = os.environ['COURSE_DOC_SYNC_URL']

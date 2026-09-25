@@ -1,6 +1,10 @@
 name: Sync course context document
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'course1/dojo/**'
   workflow_run:
     workflows: [Publish Canvas]
     types: [completed]
@@ -42,7 +46,7 @@ jobs:
         if: steps.config.outputs.enabled != 'true'
         run: echo 'Document sync is disabled pending receiver and document provisioning.' >> "$GITHUB_STEP_SUMMARY"
       - name: Select successful publication and verify hosted deployment
-        if: steps.config.outputs.enabled == 'true'
+        if: steps.config.outputs.enabled == 'true' && github.event_name != 'push'
         env:
           GH_TOKEN: ${{ github.token }}
           HOSTED_READ_TOKEN: ${{ secrets.COMMON_CURRICULUM_TOKEN }}
@@ -56,6 +60,7 @@ jobs:
         run: |
           section=dojo
           if [ "$GITHUB_EVENT_NAME" = workflow_run ]; then section=course; fi
+          if [ "$GITHUB_EVENT_NAME" = push ]; then section=labs; fi
           if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then section=all; fi
           python -m canvas_sync.course_docs.sync --release course-context-release.json --section "$section" --generation "$GITHUB_RUN_ID" --repository "$GITHUB_REPOSITORY" --commit-sha "$(git rev-parse HEAD)" --output course-doc-payload.json --send
       - uses: actions/upload-artifact@v4
