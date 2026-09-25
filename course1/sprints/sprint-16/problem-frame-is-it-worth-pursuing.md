@@ -21,12 +21,10 @@ guided_assignment:
   tasks:
   - id: what-a-change-would-ask
     kind: response
-    prompt: 'What fixing this problem would ask of the people involved, and who would have to
-      agree: from the third column of your What already exists table.'
+    prompt: What fixing this problem would ask of the people involved.
     criteria:
     - Names at least one thing fixing this would ask of a named person (a step, a habit,
       time, or a decision).
-    - Names who would have to agree.
     - Draws on the third column of your What already exists table, not on a solution you
       have chosen.
     instruction_section: Part 1. What fixing this would ask of people
@@ -44,14 +42,14 @@ guided_assignment:
     instruction_section: Part 2. Your Problem Frame, brought up to date
   - id: verdict
     kind: response
-    prompt: 'Worth pursuing, not worth pursuing, or depends on one named thing, with your
-      reasons. If no: the runner-up''s shortened pass and why the first did not survive.'
+    prompt: Worth pursuing, not worth pursuing, or depends on something specific, with your
+      reasons and what is still uncertain.
     criteria:
     - One of the three, stated.
     - Reasons draw on the risk ratings, what exists, and what a change would ask.
-    - Names the one thing that could still change the verdict.
-    - '"depends on" names one thing and who or what could settle it.'
-    - A no names the runner-up and gives its shortened pass.
+    - Says what is still uncertain, and what would settle it.
+    - '"depends on" says what it depends on and who or what could settle it.'
+    - A no gives the reasoning, and the runner-up's pass comes back to this page.
     instruction_section: Part 3. Taking stock of your problem
   presentation: reading
 learning_goal: Work out what fixing this would ask of people, bring your Problem Frame up to
@@ -77,16 +75,16 @@ You have already thought about what using an existing solution for your problem 
 
 > **Example.** On the account handover problem, almost every existing solution points towards the same thing: whatever is implemented, each manager will have to consistently and immediately write the handover down somewhere other people can see it, and everyone will have to get in the habit of looking for those updates. That will cost them a few minutes each week, but more importantly a mindset shift that they'll likely resist.
 
-To complete the box below, open your What already exists table. Look at column 3 and think about what any change would ask of the people involved. Who would need to complete a new step, build a habit, take time out of their day, or make a decision in order to put a solution in place? Write down who they are, whether or not they are in Part 3a of your frame, and what each of them would have to do differently. This will become Part 3c of your Problem Frame in Part 2 on this page.
+To complete the box below, open your What already exists table. Look at column 3 and think about what any change would ask of the people involved. Who would need to complete a new step, build a habit, take time out of their day, or make a decision in order to put a solution in place? Write down who they are, whether or not they are in Part 3a of your frame, and what each of them would have to do differently. Enter that information in the box below. Then, copy the same information into Part 3c of your Problem Frame.
 
 ## Part 2. Your Problem Frame, brought up to date
 
-The work you have done this sprint should result in changes to your understanding of your problem, which means your Problem Frame, which captures your current understanding of your problem, should also change.
+The work you have done this sprint should have expanded your understanding of your problem, which means your Problem Frame should be adjusted accordingly.
 
-Open your Problem Frame document, your Dig into your assumptions tables, and your What already exists table. Use your tables and your thinking in the section above to update your Problem Frame. Based on Sprint 2's work, the likely places you will have updates are at least:
+Open your Problem Frame document, and the two items you have worked on this sprint: your Dig into your assumptions tables, and your What already exists table. Use these materials to update your Problem Frame. The likely places you will have updates are at least:
 
 1. **Part 6, your assumptions.** In the Status column, mark each one high risk or low risk from your walk, with the reason, and note anything you found out along the way. Add, delete, or adjust rows as you need.
-2. **Part 3c.** Paste in what you wrote in Part 1 above, trimmed to one or two sentences.
+2. **Part 3c.** If you haven't already, paste in what you wrote in Part 1 above, trimmed to one or two sentences.
 3. **Part 4a, how it is handled today,** only if what exists changed how you would describe it.
 4. **Last updated,** at the top: Sprint 2 and the date.
 
@@ -96,12 +94,19 @@ Make the changes to your Problem Frame, then copy and paste its entire contents 
 
 ## Part 3. Taking stock of your problem
 
-Now it's time to consider: does it seem like this problem is worth pursuing, not worth pursuing, or does it depend on something specific? Your reasons are what your walk showed about the risks, what exists, and what you wrote in 3c, weighed by you. You have not tested any of it against a person yet; Sprint 3 does that. So the verdict is on what you know now, and it names the one thing that could still change your mind. Nobody else can make this call, and the activities in this sprint were there to help you make it, not to make it for you.
+Now it's time to consider whether to continue with this problem. One very important thing to keep in mind is that you don't have to be able to answer with a resounding "Yes, it is definitely worth pursuing." You can still be unsure or even have open questions. Go ahead and note that uncertainty here in your write-up. What you don't want is to decide to keep going with a problem that is already signaling it is a likely no. You have not tested any of it against a person yet; Sprint 3 does that. Nobody else can make this call, and the activities in this sprint were there to help you make it, not to make it for you.
+
+Some questions to ask yourself as you consider:
+
+1. Do you have any high risks that seem very likely to be true?
+2. What do possible solutions look like, even roughly, and do they seem in the realm of possibility?
+3. Will possible solutions require so much of people that it could make implementing them not worth it?
+4. Is the problem so painful that something needs to be done no matter what?
 
 > **Example, a yes.** My problem is worth pursuing, on what I know now. The cost of any change isn't big: it will take managers minutes and will stop clients repeating themselves every month. Also, the CRM already has the mechanism, which might simplify the fix. That is the real question, though. If it is that easy, why has it not happened? Either nobody has tried, or someone did and it did not last, and those are different problems. The one other big concern, and the thing that could change my mind, is finding out whether only the manager I sat next to is affected, or all four.
 
-> **Example, a no.** Not worth pursuing as I framed it. My high-risk assumption was that new plot-holders quit because they had no one to ask. When I looked, the garden two streets over pairs new people with returning ones, and half the pairs never speak after the first week; the ones who stay are the ones who talk. What I heard from our own drop-outs was about distance and plot size, not about having nobody to ask. So pairing fixes nothing here, and the problem as I framed it is gone. My runner-up, the sign-up sheet that fills in March and empties by June, is where I go next.
+> **Example, a no.** Not worth pursuing as I framed it. My high-risk assumption was that new plot-holders quit because they had no one to ask. When I looked, the garden two streets over pairs new people with returning ones, and half the pairs never speak after the first week; the ones who stay are the ones who talk. And when I set last year's sign-up sheet against which plots emptied, the ones that emptied were the biggest and the furthest from the gate, not the ones with the newest holders. So pairing fixes nothing here, and the problem as I framed it is gone. My runner-up, the sign-up sheet that fills in March and empties by June, is where I go next.
 
 Enter your verdict in the box below.
 
-**If the verdict is no.** That is okay. In fact, that's good. It means all your work this sprint did what it's supposed to do. However, it also means you need to go through the same process with your runner-up problem. It should be much faster this time, since you've already done it once. Open your Candidate Log. Your runner-up's draft frame is in Part C. Copy it into a fresh Problem Frame document and bring it to the same standard, so that you can make the same call about it: dig into its assumptions the way you did in week 1, rate their risk, and start its What already exists table. Sprint 3's conversation becomes its first check. Then write its verdict here, and say why the first problem did not survive. That paragraph is the most useful thing in this submission, and it is graded as such.
+**If the verdict is no.** That is okay. In fact, that's good. It means all your work this sprint did what it's supposed to do. You should still submit your no answer and reasoning here. However, you now need to find yourself another problem worth pursuing. Open your Candidate Log from Sprint 1, the document where you outlined three to five draft problems. Copy your runner-up's draft frame from Part C into a fresh Problem Frame document and go through the two Sprint 2 activities so that you can make a call about it: dig into its assumptions and explore what already exists. Then come back and resubmit this page based on it.
