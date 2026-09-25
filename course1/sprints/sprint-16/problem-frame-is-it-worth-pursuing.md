@@ -69,9 +69,9 @@ Three parts, in this order: a short brainstorm on what a change would ask of peo
 
 Part 3c of your frame is new this sprint, and this is where you work it out. Open your What already exists table and read down the third column, What using it here would involve. Every row that could plausibly be part of a change here has something in it about what it would ask of the people involved: a new step, a habit somebody has to keep, someone's time, a decision only one person can make.
 
-In the box, gather those up: what any change here, whatever it turned out to be, would ask of the people in 3a, and who would have to agree. Then set it beside 3b, what the problem costs them now, and say which looks larger, or that it is not yet clear. A few sentences. You are not choosing a solution; you are pricing the change.
+In the box, gather those up: what any change here, whatever it turned out to be, would ask of the people in 3a, and who would have to agree. The people a change would ask something of are not always the people in 3a; name them anyway, especially whoever would have to agree. Sprint 3's Stakeholder Map starts from them. Then set it beside 3b, what the problem costs them now, and say which looks larger, or that it is not yet clear. A few sentences. You are not choosing a solution; you are pricing the change.
 
-> **Example.** From the third column: the owner field asks every manager to update it at each handover; a checklist asks two people to fill it in each time; a weekly note asks somebody to write it, forever. So any change asks each manager for about a minute per handover, to post a note or update a field, and a new habit. It asks someone to keep at them, probably me. Dana is the only person who has to agree, and there is nothing to build. Against clients repeating themselves every month, small.
+> **Example.** Reading down my third column, every row comes back to the same thing: whatever we did, each manager would have to write the handover down somewhere and get in the habit of it, about a minute a time, and someone would have to keep at them, probably me. Dana administers the CRM, so she is the one person who would have to agree, and she is not in 3a. Nothing to build. Against clients repeating themselves every month, that is small.
 
 ## Part 2. Your Problem Frame, brought up to date
 
