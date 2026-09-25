@@ -88,4 +88,4 @@ The transcript is the only thing you submit for this Dojo Lab. Five steps:
 
 ## Part 3: Updating your table
 
-After you submit the transcript, go back to your What already exists table in your Sprint 2 working book and update it from the conversation and from what you found when you looked. You decide what to keep. That table, and what you make of it, are submitted in the next activity.
+After you submit the transcript, go back to your What already exists table in your Sprint 2 working book and update it from the conversation and from what you found when you looked: keep or drop the rows the Dojo added, and rewrite the second and third columns of any row you looked into, in your own words. You decide what to keep. That table, and what you make of it, are submitted in the next activity.

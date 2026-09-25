@@ -13,52 +13,31 @@ delivery_mode: guided_assignment
 completion_requirement: must_submit
 guided_assignment:
   version: '1.0'
-  purpose: Write up what already exists, what you made of it, and whether it changes your
-    problem.
+  purpose: Show your What already exists table after the Dojo Lab, and say what changed, what
+    you kept, and what you found when you looked.
   builds_on: Bring your table as it stands after the Dojo Lab, and what you found where you
     looked.
-  standing_instruction: Submit all five responses together as one Canvas text entry · 20 points.
+  standing_instruction: Submit both responses together as one Canvas text entry · 20 points.
   tasks:
-  - id: before
+  - id: the-table
     kind: response
-    prompt: 'Your first draft of the table in a sentence or two: was it full, and was it mostly
-      things or mostly questions?'
+    prompt: Your What already exists table, as it stands after the Dojo Lab.
     criteria:
-    - Matches the table submitted in the previous activity.
-    instruction_section: 1. What did you think already existed, before you asked?
-  - id: what-changed
+    - At least three rows, questions allowed.
+    - Nothing in the first column is a solution the participant would build.
+    - Blanks and "not sure" left as they are.
+    - At least one row changed after the Dojo Lab, or the reason none did.
+    instruction_section: 'Part 1: Your updated table'
+  - id: what-the-dojo-changed
     kind: response
-    prompt: How your table changed through the Dojo conversation and what you made of it;
-      if nothing changed, why you did not take AI's suggestions.
+    prompt: 'In your own words: what the Dojo added or pushed on, what you changed, and what
+      you kept and why; where you looked and what you found; or why you did not use it.'
     criteria:
-    - Names what changed, or gives a reason nothing did.
-    - Says what AI helped you learn.
-    - At least one thing AI offered was not taken, with a reason, or the reason everything
-      was.
-    instruction_section: 2. Through your conversation with your Dojo, how did your table change,
-      and what did you make of it?
-  - id: what-you-looked-at
-    kind: response
-    prompt: The items you looked at most closely, where you looked, and what you found.
-    criteria:
-    - At least one source outside the chat.
-    - What was found is about how the thing works.
-    instruction_section: 3. What did you look at, and what did you learn?
-  - id: does-it-change
-    kind: response
-    prompt: 'Does any of it change your problem: stands, adopting it is the problem, or it
-      would simply solve it.'
-    criteria:
-    - One of the three, or a stated position between them.
-    - The reason names the specific thing that exists.
-    - If "simply solves it," the runner-up is named.
-    instruction_section: 4. Does any of it change your problem?
-  - id: how-you-describe-it
-    kind: response
-    prompt: What this changes about how you would describe your problem.
-    criteria:
-    - A specific change to a named part of the frame, or a specific reason nothing changed.
-    instruction_section: 5. What does this change about how you would describe your problem?
+    - At least one push or added row named in the participant's words.
+    - At least one thing changed or one thing kept with a reason.
+    - At least one place looked at outside the chat, with what was found.
+    - No bare agreement.
+    instruction_section: 'Part 2: What the Dojo changed, and what you found'
   presentation: reading
 learning_goal: Show your What already exists table after the Dojo Lab, and say what changed,
   what you kept, and what you found when you looked.

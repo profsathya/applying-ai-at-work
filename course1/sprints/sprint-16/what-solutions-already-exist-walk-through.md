@@ -48,8 +48,9 @@ guided_assignment:
       - text: 'Guidance: a thing that exists somewhere now, or a question about one.'
       - text: 'Guidance: what I have actually seen, where it lives, who can change or see
           it, and what I do not know.'
-      - text: 'Guidance: good, bad, and not sure. Reasons it would be good for my problem,
-          reasons it might be bad, and what I am not sure about.'
+      - text: 'Guidance: good, bad, and not sure. Reasons it would be good for my problem;
+          reasons it might be bad, including what using it would ask of the people involved
+          (a step, a habit, someone''s time); and what I am not sure about.'
     - id: example-1
       label: Example 1
       cells:

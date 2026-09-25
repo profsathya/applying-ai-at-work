@@ -15,22 +15,33 @@ guided_assignment:
   version: '1.0'
   purpose: Bring your Problem Frame up to date and give your verdict on whether this problem
     is worth pursuing.
-  builds_on: Bring your assumption tables, your Problem Frame document, and your What already
-    exists table.
-  standing_instruction: Submit both responses together as one Canvas text entry · 45 points.
+  builds_on: Bring your Problem Frame document, your assumption tables, and your What already
+    exists table, both as they stand after the Dojo Labs.
+  standing_instruction: Submit all three responses together as one Canvas text entry · 45 points.
   tasks:
+  - id: what-a-change-would-ask
+    kind: response
+    prompt: 'What any change here would ask of the people in 3a, and who would have to agree:
+      a short brainstorm from the Bad entries in your table.'
+    criteria:
+    - Names at least one thing a change would ask of a person in 3a (a step, a habit, time,
+      or a decision).
+    - Names who would have to agree.
+    - Draws on the Bad entries in your What already exists table, not on a solution you have
+      chosen.
+    instruction_section: Part 1. What a change would ask of them
   - id: problem-frame
     kind: response
-    prompt: 'Your Problem Frame, all seven parts, brought up to date: part 6 with the Checked
-      column filled, part 3c in, 4a and 4b if changed.'
+    prompt: 'Your Problem Frame, all seven parts, brought up to date: part 6 with its last
+      column filled, part 7 added to, part 3c in, 4a if changed, the date at the top.'
     criteria:
     - All seven parts present, in the participant's words.
-    - Every row of part 6 has a Checked entry.
+    - Every row of part 6 has an entry in its last column.
     - Every "low risk" carries a reason.
     - Part 3c is present and compares with 3b.
     - At least one assumption still reads "not yet," since a frame with none at this stage
       is a warning sign.
-    instruction_section: Part 1. Your Problem Frame, brought up to date
+    instruction_section: Part 2. Your Problem Frame, brought up to date
   - id: verdict
     kind: response
     prompt: 'Worth pursuing, not worth pursuing, or depends on one named thing, with your
@@ -41,31 +52,41 @@ guided_assignment:
     - Names what would most change the verdict.
     - '"depends on" names one thing and who or what could settle it.'
     - A no names the runner-up and gives its shortened pass.
-    instruction_section: Part 2. Your verdict
+    instruction_section: Part 3. Your verdict
   presentation: reading
+learning_goal: Bring your Problem Frame up to date from both weeks, and give your verdict on
+  whether this problem is worth pursuing.
 publish: true
 ---
-
 
 # Problem Frame: is it worth pursuing?
 
 As you wrap up Sprint 2, all of your work so far has helped you push on and dig into your problem. Now it's time to confirm: is there enough here to keep pursuing this problem?
 
-Two parts: your Problem Frame brought up to date, and the verdict. The verdict is yours. It lives here, in your own words, and not in the frame, because it is this sprint's answer and the frame carries on.
+Three parts, in this order: a short brainstorm on what a change would ask of people, your Problem Frame brought up to date, and your verdict. The verdict is yours. It lives here, in your own words, and not in the frame, because it is this sprint's answer and the frame carries on.
 
-## Part 1. Your Problem Frame, brought up to date
+## Part 1. What a change would ask of them
 
-Work in your Problem Frame document, then paste the whole frame into the box here, as you did at the end of Sprint 1. Only what this sprint changed:
+Part 3c of your frame is new this sprint, and this is where you work it out. Open your What already exists table and read down the Bad entries. Some are about the thing itself: it might not make a difference, it is not switched on. Others are about what using it would ask of people: a new step, a habit somebody has to keep, someone's time, a decision only one person can make. Those are the ones you want.
 
-- **Part 6, your assumptions.** Fill the Checked column from your walk: "low risk, because" and the reason against the ones you rated low; anything you found out along the way, in a line; "not yet" against the rest. Add any assumption the research turned up. Sprint 3 is built for the "not yet" rows: that is where you take them to a real person.
-- **Part 3c, what a change would ask of them.** New this sprint, and one or two sentences. Read the minuses in your table: a habit nobody enforces, a document someone writes forever, a process too heavy to survive. Whatever was done here, what would it ask of the people in 3a, and who would have to agree? Set it beside 3b, what the problem costs now, and say which is larger, or that it is not yet clear.
-- **Parts 4a and 4b**, if what exists changed how you would describe current handling. Nothing else unless it has genuinely moved. A frame that did not otherwise change is a legitimate result; say so in one line.
+In the box, write what any change here, whatever it turned out to be, would ask of the people in 3a, and who would have to agree. Then set it beside 3b, what the problem costs them now, and say which looks larger, or that it is not yet clear. A few sentences. You are not choosing a solution; you are pricing the change.
 
-Paste the whole frame into the box. Sprint 3 starts from it.
+> **Example.** From the Bad entries: the owner field is not on and people barely use the CRM; a checklist is still between two people; a weekly note means somebody writes it, forever. So any change asks each manager for about a minute per handover, to post a note or update a field, and a new habit. It asks someone to keep at them, probably me. Dana is the only person who has to agree, and there is nothing to build. Against clients repeating themselves every month, small.
 
-> **Example, the changed lines only.** Part 6 gains one row, *our CRM's owner field is not in use*, unverified, Dana could tell me, not yet. Two rows read "low risk, because." The managers row reads "not yet, and the first thing to ask in Sprint 3." Part 3c, from the table: each manager, about a minute per handover to post a note or update a field, and a new habit; someone to keep at them, probably me; Dana is the only person who has to agree; nothing to build. Against clients repeating themselves every month, small. Part 4a now ends: our CRM has an owner field on every account; I do not know whether ours is switched on or whether anyone looks at it.
+## Part 2. Your Problem Frame, brought up to date
 
-## Part 2. Your verdict
+Work in your Problem Frame document with both weeks' tables open beside it, then paste the whole frame into the box, as you did at the end of Sprint 1. Go through it in this order:
+
+1. **Part 6, last column, from your walk.** Against each assumption: "low risk, because" and your reason for the ones you rated low; "not yet" for the rest; and anything you found out along the way, in a line. Sprint 3 is built for the "not yet" rows: that is where you take them to a real person.
+2. **Part 6, new rows.** Anything you now realize you are assuming that was not there before, from either week. "Our CRM's owner field is not in use" is one: unverified, and someone could tell you.
+3. **Part 7, what you do not know yet.** Add the questions from your walk that are still open. This is the list Sprint 3 draws on.
+4. **Part 3c.** Paste in what you wrote in Part 1 above, trimmed to one or two sentences.
+5. **Part 4a, how it is handled today,** only if what exists changed how you would describe it. Nothing else unless it has genuinely moved. A frame that did not otherwise change is a legitimate result; say so in one line.
+6. **Last updated,** at the top: Sprint 2 and the date.
+
+> **Example, the changed lines only.** Part 6 gains one row, *our CRM's owner field is not in use*, unverified, Dana could tell me, not yet. Two rows read "low risk, because." The managers row reads "not yet, and the first thing to ask in Sprint 3." Part 7 gains "how long does it actually take for managers to get updated?" Part 3c, from Part 1 above: each manager, about a minute per handover and a new habit; someone to keep at them, probably me; Dana has to agree; nothing to build. Small against clients repeating themselves every month. Part 4a now ends: our CRM has an owner field on every account; I do not know whether ours is switched on or whether anyone looks at it.
+
+## Part 3. Your verdict
 
 One paragraph, in your own words. Worth pursuing, not worth pursuing, or depends on one thing you name. Your reasons are what your walk showed about the risks, what exists, and what you wrote in 3c, weighed by you. You have not tested any of it against a person yet; Sprint 3 does that. So the verdict is on what you know now, and it says what would most change it. Nobody else can make this call, and the activities in this sprint were there to help you make it, not to make it for you.
 
