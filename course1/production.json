@@ -380,6 +380,28 @@
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
       "source_commit": "e40031a3c49523620e5313f987387dea1f7c6d14"
     },
+    "course1-sprints-sprint-15-sprint-3-concept-check-v4": {
+      "artifact_id": "course1-sprints-sprint-15-sprint-3-concept-check-v4",
+      "canvas_fingerprint": "cec3535a27915d8c89aecd73b1252de551c3611fcc36594ae1320c938226b2ce",
+      "canvas_id": 7180,
+      "canvas_module_id": 2081,
+      "canvas_module_item_id": 18014,
+      "canvas_page_url": null,
+      "canvas_payload_hash": "b99d9cb98e9c579696fd8b547d5ead0b63feb2272cdbd4bf6c4fff24390dd20c",
+      "canvas_type": "assignment",
+      "completion_requirement": "must_submit",
+      "content_hash": "8fd3ef40ffa8a36bab87a6c78e726661ceb0a2890587fafbdc065930f5c6a087",
+      "delivery_mode": "guided_assignment",
+      "hosted_hash": "bfd41a38b851fd0138dfa535b5a32d8960e4aa081690d01b77312ba7bf7130f4",
+      "hosted_last_rendered": "2026-09-25T06:19:58+00:00",
+      "hosted_path": "course1/assignments/sprint-3-concept-check-v4.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-3-concept-check-v4.html",
+      "last_pushed": "2026-09-25T06:19:58+00:00",
+      "local_path": "course1/sprints/sprint-15/sprint-3-concept-check-v4.md",
+      "position": 10,
+      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "source_commit": "5fc106b707d90a5463854f22c08ae99505aadf4f"
+    },
     "course1-sprints-sprint-15-sprint-3-integrate-people-and-context": {
       "artifact_id": "course1-sprints-sprint-15-sprint-3-integrate-people-and-context",
       "canvas_id": null,
@@ -1095,6 +1117,28 @@
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
       "source_commit": "03fcb526e8eaa6961b1d8eecf657c355393ed3cf"
     },
+    "course1-sprints-sprint-8-sprint-4-concept-check-v4": {
+      "artifact_id": "course1-sprints-sprint-8-sprint-4-concept-check-v4",
+      "canvas_fingerprint": "730e9cc7e33bd4e0c2e0ba0264fd9a15d5b0226974531266c2bc1129a0ca830c",
+      "canvas_id": 7181,
+      "canvas_module_id": 2082,
+      "canvas_module_item_id": 18015,
+      "canvas_page_url": null,
+      "canvas_payload_hash": "20269424624d1f0cf76cd83e97a1f6d5023cb263cbed23c76505ba7332a642d0",
+      "canvas_type": "assignment",
+      "completion_requirement": "must_submit",
+      "content_hash": "c427e5e302e3b54b0eca1f86a46a6caf768ed1db7a84cdacef2d06a589338471",
+      "delivery_mode": "guided_assignment",
+      "hosted_hash": "7d2887c60bfaf6238d3175f88cacd7bc5a80845a047917b5c30d9d66b1acc490",
+      "hosted_last_rendered": "2026-09-25T06:20:00+00:00",
+      "hosted_path": "course1/assignments/sprint-4-concept-check-v4.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-4-concept-check-v4.html",
+      "last_pushed": "2026-09-25T06:20:00+00:00",
+      "local_path": "course1/sprints/sprint-8/sprint-4-concept-check-v4.md",
+      "position": 10,
+      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "source_commit": "5fc106b707d90a5463854f22c08ae99505aadf4f"
+    },
     "course1-sprints-sprint-8-sprint-4-reflection-what-changed-v3": {
       "artifact_id": "course1-sprints-sprint-8-sprint-4-reflection-what-changed-v3",
       "canvas_fingerprint": "1f0379b4a4c4efbeea3c98bb5a562dd89051ce2362d5ccbaadf18ca1f2b416df",
@@ -1468,5 +1512,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-25T06:08:57+00:00"
+  "last_sync": "2026-09-25T06:20:00+00:00"
 }
