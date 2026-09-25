@@ -1371,16 +1371,16 @@
       "canvas_payload_hash": "d32522a0b94a9cf809b15079fcde8c745dca1b0661f47bc861645061191f8d37",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "a52d3bcc37c2c0fe6e7fd0bf415273b67594f92b8bd971f8cc6a4e38f583cea5",
-      "hosted_hash": "a7b8310b7f7099a6963913c8f18422c2bbad289f2498a6e641c7d0b6b22c4271",
-      "hosted_last_rendered": "2026-09-18T21:22:22+00:00",
+      "content_hash": "6cd5e66b5e86a02eab80ec7a8809869732a36527efe40af74f0071fc3def29ea",
+      "hosted_hash": "9fa2c2bac1f820d4bd22956ec6b26bd8988daa867462dce9891c40f86b5de6fc",
+      "hosted_last_rendered": "2026-09-25T23:51:47+00:00",
       "hosted_path": "course1/activities/set-up-your-ai-dojo-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/set-up-your-ai-dojo-v2.html",
-      "last_pushed": "2026-09-18T21:22:22+00:00",
+      "last_pushed": "2026-09-25T23:51:47+00:00",
       "local_path": "course1/sprints/sprint-6/set-up-your-ai-dojo-v2.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "8bbfafbdcd9975b5000189fecd26b6e15f65e316"
+      "source_commit": "5f5df545d7dd46f4034a1f93d9d6c405bd079c5d"
     },
     "course1-sprints-welcome-and-orientation-v2-start-here-v2": {
       "artifact_id": "course1-sprints-welcome-and-orientation-v2-start-here-v2",
@@ -1512,5 +1512,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-25T06:20:00+00:00"
+  "last_sync": "2026-09-25T23:51:47+00:00"
 }
