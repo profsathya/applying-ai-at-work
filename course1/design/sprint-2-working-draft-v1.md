@@ -495,7 +495,7 @@ Make the changes to your Problem Frame, then copy and paste its entire contents 
 
 ### Part 3. Taking stock of your problem
 
-Now it's time to consider whether to continue with this problem. One very important thing to keep in mind is that you don't have to be able to answer with a resounding "Yes, it is definitely worth pursuing." You can still be unsure or even have open questions. Go ahead and note that uncertainty here in your write-up. What you don't want is to decide to keep going with a problem that is already signaling it is a likely no. You have not tested any of it against a person yet; Sprint 3 does that. Nobody else can make this call, and the activities in this sprint were there to help you make it, not to make it for you.
+Now it's time to consider whether to continue with this problem. One very important thing to keep in mind is that you don't have to be able to answer with a resounding "Yes, it is definitely worth pursuing." You can still be unsure or even have open questions. Go ahead and note that uncertainty here in your write-up. What you don't want is to decide to keep going with a problem that is already signaling it is a likely no.
 
 Some questions to ask yourself as you consider:
 
