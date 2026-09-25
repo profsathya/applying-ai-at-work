@@ -4,7 +4,7 @@ The implementation lives in Applying AI at Work. It adapts the Common Curriculum
 
 ## Inputs and behavior
 
-`canvas_sync/course_docs/sync.py` consumes the publisher's explicit `course-context-release.json`, schema version 1, containing `release_id`, `generated_at`, and ordered `pages` with `path`, `title`, HTTPS `source_url`, and participant-facing Markdown `content`. It never crawls the hosted site. An empty page list removes all previously exported course content. The publisher is responsible for selecting only published, visible content and withholding the inventory on partial failure.
+`canvas_sync/course_docs/sync.py` consumes the publisher's explicit `course-context-release.json`, schema version 1, containing `release_id`, `generated_at`, and ordered `pages` with `path`, `title`, HTTPS `source_url`, and participant-facing Markdown `content`. It never crawls the hosted site. An empty page list removes all previously exported course content. The exporter selects manifest-backed items in published Canvas modules, verifies each live object against deployment state, and withholds the inventory on partial failure. When a local Markdown file has changed since its last publication, it reads the recorded publication commit and checks the source bytes against the deployed content hash. Homepage curation does not remove a live published item from the Course tab.
 
 Course and Dojo are independent sections. The Course tab contains exactly the release inventory. The Dojo tab contains only the canonical Core from `https://profsathya.github.io/Common-Curriculum/common/dojo/dojo-core.txt`. The payload includes a section content digest and source metadata. No participant responses or conversations are accepted as inputs.
 

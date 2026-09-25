@@ -1,5 +1,11 @@
 import unittest
-from canvas_sync.course_context import build_release, learner_content
+from hashlib import sha256
+from pathlib import Path
+import subprocess
+import tempfile
+from unittest.mock import patch
+
+from canvas_sync.course_context import build_release, learner_content, released_source
 from canvas_sync.state import canvas_fingerprint
 
 
@@ -7,7 +13,6 @@ def fixture():
     live = {'title': 'Welcome', 'body': 'Published', 'published': True, 'html_url': 'https://canvas.example/pages/welcome'}
     return dict(artifacts={'a.md': {'canvas_type': 'page', 'canvas_page_url': 'welcome', 'canvas_module_id': 1, 'content_hash': 'hash', 'canvas_fingerprint': canvas_fingerprint(live, 'page'), 'hosted_path': 'course1/activities/welcome.html'}},
                 sources={'a.md': {'frontmatter': {'type': 'page', 'sprint': 6, 'slug': 'welcome', 'title': 'Welcome', 'publish': True}, 'body': 'Published', 'content_hash': 'hash'}},
-                homepage={'modules': [{'sprint': 6, 'groups': [{'items': [{'slug': 'welcome'}]}]}]},
                 modules=[{'id': 1, 'published': True, 'position': 1}],
                 items={1: [{'type': 'Page', 'page_url': 'welcome', 'published': True, 'position': 1}]}, objects={'a.md': live})
 
@@ -22,18 +27,18 @@ class CourseContextTests(unittest.TestCase):
         assert a['pages'][0]['content'] == 'Published\n'
 
 
-    def test_ineligible_content_excluded(self):
-        for change in ['hidden', 'not_ready', 'local_unpublished', 'module_unpublished', 'item_unpublished', 'object_unpublished', 'not_curated']:
+    def test_unpublished_content_excluded_and_visible_source_mismatch_fails(self):
+        for change in ['local_unpublished', 'module_unpublished', 'item_unpublished', 'object_unpublished']:
             with self.subTest(change=change):
                 args = fixture()
-                if change == 'hidden': args['homepage']['modules'][0]['hidden'] = True
-                if change == 'not_ready': args['homepage']['schedule'] = {'sprints': [{'sprint': 6, 'ready': False}]}
                 if change == 'local_unpublished': args['sources']['a.md']['frontmatter']['publish'] = False
                 if change == 'module_unpublished': args['modules'][0]['published'] = False
                 if change == 'item_unpublished': args['items'][1][0]['published'] = False
                 if change == 'object_unpublished': args['objects']['a.md']['published'] = False
-                if change == 'not_curated': args['homepage']['modules'][0]['groups'] = []
-                with self.assertRaisesRegex(ValueError, 'No verified'): build_release(**args)
+                if change in ('local_unpublished', 'object_unpublished'):
+                    with self.assertRaises(ValueError): build_release(**args)
+                else:
+                    with self.assertRaisesRegex(ValueError, 'No verified'): build_release(**args)
 
 
     def test_drift_fails_closed(self):
@@ -58,23 +63,39 @@ class CourseContextTests(unittest.TestCase):
         for excluded in ['SECRET', 'ANSWER KEY', 'correct']: assert excluded not in text
 
 
-    def test_missing_retired_source_does_not_block_but_curated_does(self):
+    def test_missing_retired_source_does_not_block_but_published_does(self):
         args = fixture()
         args['artifacts']['course1/sprints/sprint-0/retired.md'] = {}
         assert len(build_release(**args)['pages']) == 1
-        args['artifacts']['course1/sprints/sprint-6/welcome.md'] = {}
-        with self.assertRaisesRegex(ValueError, 'Missing curated'):
+        args['artifacts']['course1/sprints/sprint-6/welcome.md'] = dict(args['artifacts']['a.md'])
+        with self.assertRaisesRegex(ValueError, 'Missing local source'):
             build_release(**args)
 
-    def test_optional_visible_module_and_withdrawal(self):
+    def test_visible_module_is_included_regardless_of_storage_sprint(self):
         args = fixture()
-        args['homepage']['schedule'] = {'sprints': [{'sprint': 12, 'ready': True}]}
-        args['sources']['a.md']['frontmatter']['sprint'] = 13
-        args['homepage']['modules'][0]['sprint'] = 13
+        args['sources']['a.md']['frontmatter']['sprint'] = 17
         assert len(build_release(**args)['pages']) == 1
         # A removed module item cannot survive in the next inventory.
         args['items'][1] = []
         with self.assertRaisesRegex(ValueError, 'No verified'): build_release(**args)
+
+    def test_released_source_uses_recorded_commit_when_working_copy_is_newer(self):
+        published = b'---\ntype: page\ntitle: Published\npublish: true\n---\n\nPublished body\n'
+        draft = b'---\ntype: page\ntitle: Draft\npublish: true\n---\n\nDraft body\n'
+        entry = {'content_hash': sha256(published).hexdigest(), 'source_commit': 'a' * 40}
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'page.md').write_bytes(draft)
+            with patch('canvas_sync.course_context.subprocess.run', return_value=subprocess.CompletedProcess([], 0, published)) as git_show:
+                source = released_source(root, 'page.md', entry)
+            assert source['frontmatter']['title'] == 'Published'
+            assert source['body'] == 'Published body\n'
+            git_show.assert_called_once()
+            with patch('canvas_sync.course_context.subprocess.run', return_value=subprocess.CompletedProcess([], 0, draft)):
+                with self.assertRaisesRegex(ValueError, 'does not match released hash'):
+                    released_source(root, 'page.md', entry)
+            with self.assertRaisesRegex(ValueError, 'no source commit'):
+                released_source(root, 'page.md', {'content_hash': entry['content_hash']})
 
 if __name__ == "__main__":
     unittest.main()
