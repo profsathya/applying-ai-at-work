@@ -83,7 +83,7 @@ guided_assignment:
     - 'False'
     correct_index: 1
     explanation: 'False. A no is a result. Your runner-up''s draft frame is in your Candidate
-      Log. See Problem Frame: is it worth pursuing?'
+      Log. See Problem Frame: taking stock of where you are.'
   presentation: reading
 publish: true
 ---

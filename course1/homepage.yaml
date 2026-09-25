@@ -527,7 +527,7 @@ modules:
             selfcheck: true
           - slug: "problem-frame-is-it-worth-pursuing"
             nav_meta: "45 points"
-            meta: "Guided assignment - bring your Problem Frame up to date and give your verdict; 45 points"
+            meta: "Guided assignment - what fixing this would ask of people, your Problem Frame up to date, and your verdict; 45 points"
           - slug: "sprint-2-reflection-what-the-world-said-back"
             nav_meta: "10 points"
             meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 10 points"
