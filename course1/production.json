@@ -223,17 +223,17 @@
       "canvas_payload_hash": "78f44c6680a763d770fdfe5756c7758a9d73396e4242755643597d73bb059193",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "aa403b1909a34f071968ce9a5920ea211430152ad30f525dc2a8ea65bafcf287",
+      "content_hash": "bbe47940b8902317a974a1b02c204a7e01f3ce97b0a3172460f7e24a779f2d5a",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "ced2bada52a300211b986845f6fb34ecd76483c05d94570b6694290d14aee7c6",
-      "hosted_last_rendered": "2026-09-16T23:27:42+00:00",
+      "hosted_hash": "1c484b87e2b2f705b88442f2c95a1b6adda109203b16b3260c2946d80c07bfff",
+      "hosted_last_rendered": "2026-09-25T06:08:57+00:00",
       "hosted_path": "course1/assignments/sprint-1-concept-check.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-1-concept-check.html",
-      "last_pushed": "2026-09-16T23:27:42+00:00",
+      "last_pushed": "2026-09-25T06:08:57+00:00",
       "local_path": "course1/sprints/sprint-14/sprint-1-concept-check.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "6d822f0cbe7da816bf02f93fcd73b5669ba9df7c"
+      "source_commit": "ba73b697bc5575e8564953a6ee056e3fe4ae6dd8"
     },
     "course1-sprints-sprint-14-sprint-1-find-the-problem-worth-solving": {
       "artifact_id": "course1-sprints-sprint-14-sprint-1-find-the-problem-worth-solving",
@@ -639,17 +639,17 @@
       "canvas_payload_hash": "06388668cfc0112a09d7a8c29731c459b423aefd1fbc38cd35ddc1dd665e7f94",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "42ba4b43ab415d5fb4c4a6aba2cf112e994b299019002e95fe559ef8f8d7253f",
+      "content_hash": "e82d2860443efed3eca870812c8a7feefd4488e373a71cdca8c353473d0f0583",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "78adf2205652b43dc37a40dbaaab3fcae4dac8dfac1eb6bb5a252e0c70588c07",
-      "hosted_last_rendered": "2026-09-24T21:09:57+00:00",
+      "hosted_hash": "92ddd850c25983dbaa4cddcfcf0af81e37a297775cdfaa8f115ffa4d2d6c86b8",
+      "hosted_last_rendered": "2026-09-25T06:08:57+00:00",
       "hosted_path": "course1/assignments/sprint-2-self-check.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-2-self-check.html",
-      "last_pushed": "2026-09-24T21:09:57+00:00",
+      "last_pushed": "2026-09-25T06:08:57+00:00",
       "local_path": "course1/sprints/sprint-16/sprint-2-self-check.md",
       "position": 10,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "061b9eab37123e1bb31ad1bda6762043bb07291f"
+      "source_commit": "ba73b697bc5575e8564953a6ee056e3fe4ae6dd8"
     },
     "course1-sprints-sprint-16-what-exists-and-what-it-means": {
       "artifact_id": "course1-sprints-sprint-16-what-exists-and-what-it-means",
@@ -1468,5 +1468,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-24T22:20:40+00:00"
+  "last_sync": "2026-09-25T06:08:57+00:00"
 }
