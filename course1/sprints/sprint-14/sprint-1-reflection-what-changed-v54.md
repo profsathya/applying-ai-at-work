@@ -1,6 +1,6 @@
 ---
-type: quiz
-title: 'Sprint 1 Reflection: what changed'
+type: assignment
+title: 'Sprint 1 Reflection'
 slug: sprint-1-reflection-what-changed-v54
 artifact_id: course1-sprints-sprint-14-sprint-1-reflection-what-changed
 sprint: 14
@@ -8,49 +8,35 @@ week: 2
 module: 'Sprint 1: Find the Problem Worth Solving (V2)'
 position: 10
 points: 10
-submission_type: file_upload
-delivery_mode: ai_activity
+submission_type: text_entry
+delivery_mode: canvas_native
 completion_requirement: must_submit
 learner_labels: true
+learning_goal: Reflect honestly on how you are working and growing.
 publish: true
-ai_activity:
-  activity_id: course1-sprint-1-reflection-what-changed-v54
-  version: '1.0'
-  title: 'Sprint 1 Reflection: what changed'
-  description: Use AI follow-up questions to make your account of how the frame changed
-    more specific.
-  questions:
-  - id: q1-sprint-1-reflection-v54
-    type: ai-discussion
-    prompt: Put your draft frames beside your Problem Frame and write about the distance
-      between them. Explain what AI found that you would not have reached alone, what
-      you contributed that AI could not because it depends on what you know about
-      the people and the place, how you decided what to accept and reject, and the
-      one thing you are still unsure of and carrying forward on purpose.
-    placeholder: Use specific moments from your draft frames, Dojo Lab, and final
-      Problem Frame.
-    minLength: 150
-    numQuestions: 3
-    aiContext: This is the Sprint 1 reflection for Reframing Problems with AI. The
-      participant wrote draft frames for three to five situations, had AI test and
-      widen them, chose one, and wrote their Problem Frame. Ask follow-up questions
-      that catch a change attributed to AI that the participant actually made, a contribution
-      described as "judgment" without saying what was judged, an accept-or-reject
-      decision with no reason behind it, and a carried-forward uncertainty that is
-      really a to-do. Push them to name one thing they are still unsure of. Do not
-      rewrite the reflection.
-    generateButtonText: Get Follow-up Questions
-    loadingText: Generating follow-up questions...
-    discussionPrompt: Use these questions to revise so that your own judgment and
-      remaining uncertainty are visible.
-    summaryLabel: Your Sprint 1 Reflection
-    summaryPlaceholder: Write the final version you want to submit.
-    saveButtonText: Save Reflection
-    updateButtonText: Update Reflection
-    digDeeperText: Dig deeper with AI guidance
-source_provenance: sprint-1-reflection-what-changed-v54.sources.json
 ---
 
-# Sprint 1 Reflection: what changed
+# Sprint 1 Reflection
 
-Put your draft frames beside your Problem Frame and write about the distance between them. You have already written what changed. Here, write about how it changed. What did AI find that you would not have reached alone? What did you contribute that AI could not, because it depends on what you know about the people and the place? How did you decide what to accept and what to reject? And what is the one thing you are still unsure of and are carrying forward on purpose?
+This reflection is not about your assignments. It is about you: how you are working with AI, what you bring to the work, and how the course is landing for you. The same five questions come back at the end of every sprint, so by Sprint 5 you can see how your answers have moved.
+
+## The five questions
+
+1. **What is your biggest takeaway and your biggest challenge from this sprint?** Name one idea that stuck with you and one thing that was hard, and say why for each. *(2-4 sentences)*
+2. **Did you tackle anything you couldn't have on your own, with the help of AI?** Name the moment. What did AI make possible that you would not have reached alone? *(2-4 sentences)*
+3. **How is what you did better because you were involved?** What did you bring that AI could not: judgment, context, a relationship, a call you made? *(2-4 sentences)*
+4. **What did you notice about how you are working?** Where you pushed, stalled, avoided something, or surprised yourself, and what you will keep doing or do differently next sprint. *(2-4 sentences)*
+5. **How are the pace and workload landing for you right now?** *(1-2 sentences)*
+
+## How to do it
+
+Answer each question in your own words in the Canvas text box. Number your answers 1 to 5. Honest and specific is what counts; there is no right answer.
+
+## What a strong reflection looks like
+
+- You answer all five questions, honestly and specifically.
+- You wrote it yourself, without AI. We want your unedited thinking and personal reflection.
+
+## Carry it forward
+
+Keep this reflection. In Sprint 5 you will read all four sprint reflections back to see how your answers changed.

@@ -12,7 +12,7 @@ submission_type: file_upload
 completion_requirement: must_submit
 learner_labels: true
 learning_goal: Gather what you do not yet know about your own problem, sort and rank it as blocking, useful, or interesting, and say which part of your Problem Frame each gap holds up.
-publish: true
+publish: false
 ---
 
 # Name the Gap

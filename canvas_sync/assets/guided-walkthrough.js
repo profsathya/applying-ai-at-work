@@ -236,7 +236,8 @@
     } finally { clearTimeout(timeout); }
   }));
 
-  document.getElementById('walk-copy').addEventListener('click', async () => {
+  const copyButton = document.getElementById('walk-copy');
+  if (copyButton) copyButton.addEventListener('click', async () => {
     output.value = assembledText();
     if (hasTable) { await copyTables(); return; }
     try {
@@ -255,7 +256,8 @@
         : 'Select and copy the text shown here. Then paste it into the Canvas text-entry box and submit. Copying here has not submitted your work.';
     }
   });
-  document.getElementById('walk-text-download').addEventListener('click', () => {
+  const textDownload = document.getElementById('walk-text-download');
+  if (textDownload) textDownload.addEventListener('click', () => {
     const blob = new Blob([assembledText()], {type: 'text/plain;charset=utf-8'});
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
@@ -278,7 +280,7 @@
         : pdfFromDocument
         ? 'Word backup downloaded. Keep working in your continuing document and export that completed document as PDF for Canvas.'
         : config.submissionType === 'file_upload'
-        ? 'Word document downloaded. Upload it through this Canvas assignment; downloading is not a submission.'
+        ? 'Word document downloaded. In Canvas, select Start Assignment, attach it with any other required files, then select Submit Assignment. Downloading is not a submission.'
         : 'Word document downloaded for your records. Submit your response through this Canvas assignment; downloading is not a submission.';
     } catch (_) {
       if (hasTable) {

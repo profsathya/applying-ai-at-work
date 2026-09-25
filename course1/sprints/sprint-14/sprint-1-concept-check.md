@@ -13,95 +13,85 @@ delivery_mode: guided_assignment
 completion_requirement: must_submit
 guided_assignment:
   version: '1.0'
-  purpose: Check the distinctions you need before writing draft problem frames.
-  builds_on: Complete Brainstorm your list, Get underneath three to five, and read
-    The problem frame.
-  standing_instruction: Submit all six answers for 5 completion points reviewed by
-    your instructor.
+  purpose: Practice the judgment you'll use in First frames on a sample first, then use the same judgment on your own frames.
+  builds_on: Complete Brainstorm your list, Get underneath three to five, and read The problem frame.
+  standing_instruction: Submit all six answers for 5 completion points reviewed by your instructor.
   tasks:
   - id: indicator
     kind: choice
-    prompt: You write, "I dread the weekly handover" on your list. What is that, at
-      this stage?
+    prompt: You write, "I dread the weekly handover" on your list. What is that, at this stage?
     criteria:
     - Choose the answer that matches how indicators are used before a cause is confirmed.
     options:
-    - A confirmed cause
-    - An indicator, to get underneath by describing how it works now
-    - A solution
+    - A confirmed cause you can now fix
+    - An indicator, a sign to dig under
+    - A solution idea you should build next
     correct_index: 1
-    explanation: A feeling that something is off points toward a problem. Describing
-      how it works now is what shows the gap.
-    instruction_section: Check the ideas before writing draft frames
+    explanation: A feeling that something is off points toward a problem. Describing how it works now is what shows the gap.
+    instruction_section: Practice before First frames
   - id: current-actions
     kind: choice
-    prompt: Which sentence belongs in "How it works now"?
+    prompt: Preparing for your First frames, which sentence best answers "How does it work now?"
     criteria:
     - Choose the sentence that describes actions without blame or a proposed fix.
     options:
-    - We should buy a handover app
-    - Nobody cares about communicating
-    - The outgoing owner tells the incoming owner; the rest of the team hears later.
+    - We should buy an app that tracks every handover.
+    - Nobody on this team really cares about communicating.
+    - The old owner tells the new one. Others hear later.
     correct_index: 2
-    explanation: That column describes what happens and who does what. It does not
-      prescribe a fix or replace observation with blame.
+    explanation: That part describes what happens and who does what. It doesn't suggest a fix or blame anyone.
   - id: finished-gap
     kind: choice
-    prompt: Your gap reads "The process is manual and inconsistent." Is it finished?
+    prompt: 'Preparing for your First frames: a sample gap reads, "The process is manual and inconsistent." Is it finished?'
     criteria:
-    - Choose the answer that names the missing evidence in the gap.
+    - Choose the answer that names what the gap is missing.
     options:
-    - Yes, submit it
-    - No. It names a process, not who does not know, cannot do, or has to redo what
-    - No. It needs a solution
+    - Yes. It clearly says what is wrong.
+    - No. It doesn't say who is stuck, or how.
+    - No. It still needs a solution added.
     correct_index: 1
-    explanation: A process description is not a gap yet. The gap shows when it names
-      who pays.
+    explanation: A process isn't a gap yet. A gap says who can't know, can't do, or has to redo something.
   - id: changed-state
     kind: choice
-    prompt: Which of these is a changed state rather than a solution?
+    prompt: Preparing for your First frames, which of these is a changed state, not a solution?
     criteria:
-    - Choose the outcome state that does not prescribe what to build.
+    - Choose the outcome that does not say what to build.
     options:
-    - Build a shared handover checklist
-    - Set up an alert
-    - Everyone on the team knows within a day when an account changes hands.
+    - We build a shared checklist for every handover.
+    - We set up an alert when an account changes owners.
+    - The whole team knows within a day of a handover.
     correct_index: 2
-    explanation: Part 5 of a frame says what is true once the problem is gone, not
-      what was built. Solutions come later in the course.
+    explanation: A changed state says what's true once the problem is gone, not what you built. Solutions come later in the course.
   - id: failure-moment
     kind: choice
-    prompt: Which of these is the moment current handling stops working, rather than
-      its consequence?
+    prompt: Preparing for your First frames, which sentence names the moment the current way stops working?
     criteria:
     - Choose the condition under which the current handling breaks.
     options:
-    - Which means clients repeat their history
-    - Handovers are informal
-    - The instant a third person needs to know who owns the account.
+    - Clients end up repeating their history to the team.
+    - Handovers here are informal and never written down.
+    - A third person needs to know who the new owner is.
     correct_index: 2
-    explanation: Part 4b names the condition under which the current handling breaks.
-      The consequence is what follows from it.
+    explanation: The breaking point is when the current way fails. What follows, like clients repeating themselves, is the result.
   - id: specific-goal
     kind: choice
-    prompt: '"Better client communication" as the goal a problem serves fails which
-      test?'
+    prompt: 'Preparing for your First frames: a sample goal reads, "Better client communication." What''s wrong with it?'
     criteria:
     - Choose the test that makes a goal point to this problem rather than its neighbours.
     options:
-    - Nobody involved would dispute it
-    - It would serve any client problem anywhere
-    - It names a solution
+    - Nobody on the team would disagree with it.
+    - It could fit almost any client problem anywhere.
+    - It names a solution instead of a goal.
     correct_index: 1
-    explanation: A goal has to be specific enough to point at your problem and not
-      its neighbours.
+    explanation: A goal has to point at your problem, not every problem nearby.
   presentation: reading
 publish: true
-source_provenance: sprint-1-concept-check.sources.json
 ---
 
 # Sprint 1 Concept check
 
-## Check the ideas before writing draft frames
+## Practice before First frames
 
-Answer all six from your own thinking, without AI. Review each explanation; if it surprises you, revisit the page it points to and try again. Your instructor reviews completion in Canvas; the on-page checks do not assign your grade.
+Practice the judgment you'll use in First frames on a sample first. Then use the same judgment on your own frames. Answer all six from your own thinking, without AI.
+
+These questions use a handover example you'll see throughout the course. Some details are made up for practice.

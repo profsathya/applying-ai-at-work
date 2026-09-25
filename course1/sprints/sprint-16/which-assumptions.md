@@ -39,7 +39,9 @@ guided_assignment:
     - No bare agreement.
     instruction_section: 'Part 2: What the Dojo changed'
   presentation: reading
-publish: false
+learning_goal: Show your assumption tables after the Dojo Lab, and say what it changed and
+  what you kept.
+publish: true
 ---
 
 # Your updated assumptions

@@ -30,8 +30,9 @@ dojo_submission:
   prompt_version: v1
 learning_goal: Have AI push on your analysis of your assumptions, and decide what to keep
   and why.
-publish: false
+publish: true
 ---
+
 
 # Dojo Lab: test your assumptions
 
@@ -85,4 +86,4 @@ The transcript is the only thing you submit for this Dojo Lab. Five steps:
 
 ## Part 3: Updating your tables
 
-After you submit the transcript of your Dojo conversation, go back to your Dig into your assumptions tables in your Sprint 2 working book and update them based on what you learned. Those updated tables will be submitted in a later activity.
+After you submit the transcript of your Dojo conversation, go back to your Dig into your assumptions tables in your Sprint 2 working book and update them based on what you learned: change a rating or a reason where the Dojo moved you, rewrite a cell where you agreed it was thin, and leave the rest as it was. Those updated tables will be submitted in a later activity.

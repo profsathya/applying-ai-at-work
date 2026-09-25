@@ -40,10 +40,12 @@ function boot({saved = null, storageFails = false, clipboardFails = false, feedb
   assert.equal(app.requests[0][1].messages[0].content.includes('Choose the gap'),false);
   input.value='I observed the handover yesterday.'; input.listeners.input();
   assert.match(app.node('[data-feedback-result="reason"]').textContent,/earlier draft/);
+  app.node('[data-check="choice"]').listeners.click();
+  assert.equal(app.node('[data-result="choice"]').textContent,'Choose an answer first.');
   app.radios[0].listeners.change(); app.node('[data-check="choice"]').listeners.click();
-  assert.match(app.node('[data-result="choice"]').textContent,/Revisit the idea/);
+  assert.equal(app.node('[data-result="choice"]').textContent,'Not quite. Reread the details in the question and try again.');
   app.radios[1].listeners.change(); app.node('[data-check="choice"]').listeners.click();
-  assert.match(app.node('[data-result="choice"]').textContent,/That fits/);
+  assert.equal(app.node('[data-result="choice"]').textContent,'That fits. Compare current and possible.');
   await app.node('copy-answers').listeners.click();
   assert.match(app.copies.at(-1),/I observed the handover yesterday/);
   assert.match(app.copies.at(-1),/Gap/); assert.equal(app.copies.at(-1).includes('Name what you observed'),false);

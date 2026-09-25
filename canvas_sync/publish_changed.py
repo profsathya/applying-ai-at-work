@@ -52,6 +52,52 @@ def repo_relative(path: Path) -> str:
     return str(path.resolve().relative_to(REPO_ROOT))
 
 
+def include_hosted_indexes(only_files: set[str] | None, published_sources: list[dict]) -> bool:
+    if only_files is None:
+        return True
+    # An exact-file content update to an already visible item cannot change
+    # its index placement. Avoid rebuilding unrelated scheduled sprints.
+    return any(parse_frontmatter(item["path"])[0].get("publish", True)
+               and not item.get("verified_live_published") for item in published_sources)
+
+
+def restore_staged_items(client: CanvasClient, course_paths: list[Path], state: dict,
+                         released_modules: set[str]) -> list[str]:
+    """Keep staged artifacts hidden after Canvas publishes their parent module."""
+    restored = []
+    for path in course_paths:
+        fm, _ = parse_frontmatter(path)
+        if fm["module"] not in released_modules or fm.get("publish", True):
+            continue
+        entry = state.get("artifacts", {}).get(fm["artifact_id"])
+        if not entry or not entry.get("canvas_module_item_id"):
+            continue
+        kind = entry.get("canvas_type")
+        live = fetch_canvas_state(client, entry)
+        if live and live.get("published"):
+            if kind == "assignment":
+                client.update_assignment(int(entry["canvas_id"]), {"published": False, "notify_of_update": False})
+            elif kind == "page":
+                client.update_page(entry["canvas_page_url"], {"published": False})
+            elif kind == "discussion":
+                client.update_discussion(int(entry["canvas_id"]), {"published": False})
+            elif kind == "quiz":
+                client.update_quiz(int(entry["canvas_id"]), {"published": False, "notify_of_update": False})
+            else:
+                raise ValueError(f"Unsupported staged Canvas type: {kind}")
+        module_id = int(entry["canvas_module_id"])
+        item_id = int(entry["canvas_module_item_id"])
+        item = next((item for item in client.list_module_items(module_id) if int(item["id"]) == item_id), None)
+        if item and item.get("published"):
+            client.update_module_item(module_id, item_id, {"published": False})
+        checked = fetch_canvas_state(client, entry)
+        checked_item = next((item for item in client.list_module_items(module_id) if int(item["id"]) == item_id), None)
+        if not checked or checked.get("published") is not False or not checked_item or checked_item.get("published") is not False:
+            raise ValueError(f"{fm['artifact_id']}: Canvas did not keep the staged item unpublished")
+        restored.append(fm["artifact_id"])
+    return restored
+
+
 def load_state(manifest_path: Path, state_dir: Path, *, require_state: bool) -> tuple[dict, Path]:
     manifest = load_json(manifest_path)
     state_path = state_path_for_manifest(manifest_path, state_dir, manifest)
@@ -150,6 +196,7 @@ def drift_for_changed(manifest_path: Path, changed: list[dict]) -> list[dict]:
                 }
             )
             continue
+        item["verified_live_published"] = live_state.get("published") is True
         actual = canvas_fingerprint(live_state, entry["canvas_type"])
         if not expected:
             # No baseline is not evidence that Canvas is safe to overwrite.
@@ -170,6 +217,18 @@ def drift_for_changed(manifest_path: Path, changed: list[dict]) -> list[dict]:
                 item["healed_fingerprint"] = actual
             continue
         if actual != expected:
+            # A Canvas visibility change may already have been reconciled in
+            # the selected source. Prove that publication is the only change
+            # from the stored Canvas snapshot and that the live assignment
+            # matches the current source before accepting its new baseline.
+            if entry["canvas_type"] == "assignment" and isinstance(live_state.get("published"), bool):
+                prior_visibility = {**live_state, "published": not live_state["published"]}
+                if canvas_fingerprint(prior_visibility, entry["canvas_type"]) == expected:
+                    path = item.get("path") or REPO_ROOT / item["file"]
+                    if not hosted_canvas_drift(path, manifest_path, manifest, live_state, entry["canvas_type"]):
+                        item["healed_fingerprint"] = actual
+                        item["healed_reason"] = "Canvas publication change already reconciled in selected source"
+                        continue
             # Real drift: a stored fingerprint exists and live Canvas does not
             # match it. Refuse so Canvas-side edits are not silently replaced.
             drifted.append(
@@ -422,7 +481,7 @@ def publish_manifest(
                     {
                         "file": item["file"],
                         "artifact_id": item["artifact_id"],
-                        "reason": "hydrated missing canvas_fingerprint from live canvas during publish",
+                        "reason": item.get("healed_reason", "hydrated missing canvas_fingerprint from live canvas during publish"),
                     }
                 )
             elif item.get("first_publish"):
@@ -437,7 +496,11 @@ def publish_manifest(
     # A release is a coordinated visibility switch. Assess every pair before
     # changing any item, then process each replacement before its source.
     try:
-        pairs = release_pairs(changed, discover_artifact_files(manifest_path))
+        pairs = release_pairs(
+            changed, discover_artifact_files(manifest_path),
+            already_live_ids={item["artifact_id"] for item in changed
+                              if item.get("verified_live_published") and item["artifact_id"] not in blocked_ids},
+        )
         pair_states = {}
         if pairs:
             blocked_pairs = [f"{source['artifact_id']} / {new['artifact_id']}"
@@ -543,6 +606,31 @@ def publish_manifest(
                     }
                 )
 
+    if result["published"]:
+        latest_state, _ = load_state(manifest_path, state_dir, require_state=True)
+        published_ids = {item.get("artifact_id") for item in result["published"]}
+        released_modules = {
+            fm["module"] for item in changed if item["artifact_id"] in published_ids
+            if (fm := parse_frontmatter(item["path"])[0]).get("publish", True)
+        }
+        if released_modules:
+            try:
+                staged_paths = []
+                for path in discover_artifact_files(manifest_path):
+                    if validate_artifact(path):
+                        continue
+                    fm, _ = parse_frontmatter(path)
+                    if (fm["module"] in released_modules and not fm.get("publish", True)
+                            and latest_state["artifacts"].get(fm["artifact_id"], {}).get("canvas_module_item_id")):
+                        staged_paths.append(path)
+                if staged_paths:
+                    client = CanvasClient.from_env(course_id=int(manifest["instance"]["course_id"]))
+                    result["staged_unpublished"] = restore_staged_items(
+                        client, staged_paths, latest_state, released_modules
+                    )
+            except Exception as exc:
+                result["failed"].append({"file": "<staged_visibility>", "artifact_id": None, "error": str(exc)})
+
     if result["published"] and not result["failed"] and not result["drifted"]:
         latest_state, _ = load_state(manifest_path, state_dir, require_state=True)
         # Only explicitly selected source modules opt into final ordering.
@@ -582,10 +670,7 @@ def publish_manifest(
                 hosted_output_dir,
                 render_sources,
                 state=latest_state,
-                include_indexes=(only_files is None or any(
-                    parse_frontmatter(item["path"])[0].get("publish", True)
-                    for item in published_sources
-                )),
+                include_indexes=include_hosted_indexes(only_files, published_sources),
             )
         except Exception as exc:  # noqa: BLE001 - surface hosted render failures in publish result
             result["failed"].append(

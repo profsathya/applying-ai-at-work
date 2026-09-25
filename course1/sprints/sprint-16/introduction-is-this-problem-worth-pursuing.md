@@ -10,8 +10,9 @@ position: 2
 points: null
 submission_type: none
 page_presentation: reading
-publish: false
+publish: true
 ---
+
 
 # Introduction: Is This Problem Worth Pursuing?
 
@@ -33,12 +34,10 @@ Own your progress activities carry 0 points, but Canvas requires a submission to
 5. Read **Working with AI: Context**.
 6. **What solutions already exist.** Start your What already exists table on your own: what you know of, what you guess, and what you want to find out. (Own your progress, 0 points.)
 7. **Dojo Lab: explore what already exists.** Work with AI and on your own to fill in the gaps in the table, then do a deeper dive to better understand the existing solutions. (Own your progress, 0 points.)
-8. **What exists, and what it means** (20 points). Summarize what you uncovered about what already exists.
+8. **What exists, and what it means.** Submit your updated table and what the Dojo changed (20 points).
 9. Take the **Concept check** (5 points).
-10. **Problem Frame: is it worth pursuing?** Bring your frame up to date and write your verdict (45 points).
+10. **Problem Frame: taking stock of where you are.** Work out what fixing this would ask of people, bring your frame up to date, and decide whether to proceed (45 points).
 11. **Write the Reflection** (10 points).
-
-In week 1, the Dojo Lab and the write-up go back to back, so plan for both in one sitting or two close together. The Concept check comes at the end of week 2, before you write your verdict.
 
 ## If you determine your first problem is not worth solving
 

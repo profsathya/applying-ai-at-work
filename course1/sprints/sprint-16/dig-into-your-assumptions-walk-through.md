@@ -1,6 +1,6 @@
 ---
 type: assignment
-title: Dig into your assumptions walk-through
+title: Dig into your assumptions Canvas Walkthrough
 slug: dig-into-your-assumptions-walk-through
 artifact_id: course1-sprints-sprint-16-dig-into-your-assumptions-walk-through
 sprint: 16
@@ -8,7 +8,7 @@ week: 1
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 3
 points: 0
-submission_type: text_entry
+submission_type: file_upload
 delivery_mode: guided_assignment
 completion_requirement: must_submit
 learner_labels: true
@@ -74,17 +74,21 @@ guided_assignment:
     - Write at least one question behind each assumption.
     - Vary the different-answers lines rather than repeating one formula.
     - Give a reason with every risk rating.
-publish: false
+publish: true
 ---
 
 # Dig into your assumptions
 
-In this activity, you are going to need two things:
+## What you need for this activity
 
 - Your draft Problem Frame that you created in Sprint 1, so open that up.
-- Your Sprint 2 working book, the document you paste each activity's tables into. The template link goes here once the team settles the format.
+- A place to keep your completed Word document with your other Sprint 2 work.
 
-You will do your work within Canvas. The goal of this activity is for you to explore your assumptions to understand how they might impact your Problem Frame. Work without AI on this page. The next activity has AI push back on what you write here, and that only works if you bring your own thinking.
+You will do your work within Canvas. Work without AI on this page. The next activity has AI push back on what you write here, and that only works if you bring your own thinking.
+
+The goal of this activity is for you to explore your assumptions to understand how they might impact your Problem Frame.
+
+## Start with Part 6: your assumptions
 
 Let's start by looking at Part 6: your assumptions. Every line there is something you wrote as if it were true, but you do not really know yet.
 
@@ -102,28 +106,4 @@ With that in mind, take each assumption from Part 6 of your frame and ask three 
 
 The table below will help you think through each assumption. Fill one table per assumption.
 
-**My assumption.** Copy and paste one of the assumptions from Part 6 of your Problem Frame.
-
-> Account handover example: Managers act on stale ownership for days.
->
-> Garden plot example: New plot-holders in the community garden quit because they have no one to ask questions to.
-
-**Questions behind my assumption.** Turn what you are assuming into a question or questions.
-
-> Account handover example: How long does it actually take for managers to get updated?
->
-> Garden plot example: Why did last year's new people stop coming?
-
-**Different answers that could change my problem.** What possible answers could you get to your question(s)?
-
-> Account handover example: It takes one day. It takes several days. It takes weeks.
->
-> Garden plot example: They had no one to ask, which is my frame. The plots were too far from where they live, or too big for a first year. They never meant to stay past one season.
-
-**How risky is this to shutting down my problem?** Would any of the answers above lead you to drop the problem? How likely is that answer?
-
-> Account handover example: Low risk. The length of time doesn't change whether this is worth pursuing.
->
-> Garden plot example: High risk. If they quit because the plots were too far or too big, pairing new people with old hands fixes nothing, and I think that is likely.
-
-If any of these would be easy to find out this week, go and find out, and note what you learned in the Risky cell. That is optional. Whatever you learn goes into your frame in week 2.
+When you finish, select **Download as Word document** below. In Canvas, select **Start Assignment**, attach that Word file, and select **Submit Assignment**. Keep the file for the Dojo Lab, where you will test these assumptions. Downloading it alone does not submit your work.

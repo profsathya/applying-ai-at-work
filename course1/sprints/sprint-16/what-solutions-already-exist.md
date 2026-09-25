@@ -23,16 +23,17 @@ guided_assignment:
   tasks:
   - id: your-table
     kind: response
-    instruction_section: Build your table
+    instruction_section: Build your understanding about what exists
     prompt: 'Your table, one row per thing: what exists; how it works, as far as you know;
-      and what it means for your problem (good, bad, not sure).'
+      and what using it here would involve.'
     criteria:
     - Fill at least three rows; questions count.
     - Keep solutions you would build out of the first column.
-    - Leave blanks and "not sure" as they are rather than filling them with guesses dressed
+    - Leave blanks and "cannot tell yet" as they are rather than filling them with guesses dressed
       as facts.
 publish: false
 ---
+
 
 # What solutions already exist
 
@@ -43,23 +44,25 @@ publish: false
 
 You will do your work within Canvas. Work without AI on this page; the next activity is where AI helps you fill the table in.
 
-The goal of this activity is for you to start a table of what already exists that could solve or ease your problem. Week 2 looks outward. Can you find other examples of people trying to solve this problem, or one like it, in your own situation or out in the world? Are there products, practices, or someone else who already does this well? If you find an existing solution, it does not necessarily mean your problem is not worth pursuing, but it might change how you think about it.
+The goal of this activity is for you to brainstorm and look into what already exists that could solve or ease your problem.
 
-> **Example:** Our CRM has an owner field on every account. I have seen it, grayed out. I do not know whether ours is switched on.
+## Start by brainstorming what exists
 
-You are listing what exists, not designing anything. "An agenda tool" is a thing that exists; "we should build an agenda tool" is a solution, and it waits. Things you know of, things you have heard of, guesses, and questions all count. As always, marking what you don't know is better than making something up. A table that is mostly questions will still be very useful for the next activity.
+With your problem in mind, think about existing solutions that might be related to your problem. Remember, this is a brainstorm, so anything counts - things you know of, things you have heard of, guesses, and even questions you have about what might exist.
 
-## Build your table
+> **Example.** Problem: account handovers happen with no record. Possible solutions that exist: there is an owner field in our CRM that isn't being used; the sales team uses a handover checklist that might be similar; is there a weekly "accounts that moved" note, or does it ever come up in a weekly team meeting?
 
-With your problem in mind, ask three things about each thing that might already exist:
+Then, think about how that solution actually works, and what it might mean for your problem. The table below will help you think through these questions.
 
-- What exists?
-- How does it work, as far as I know?
-- What does it mean for my problem?
+## Build your understanding about what exists
 
-To find things for the first question, ask yourself: What products or services claim to have solutions in this problem space? Do I know anyone who has a similar problem but seems to be handling it well? Does my own organization, or do I personally, already have something for this, used or not? Could AI help with this problem?
+The table below has three columns: what exists, how it works, and what using it here would involve. Fill it in three steps.
 
-The table below will help you think through each one. Fill one row per thing. Do the first column for everything you can think of, then the other two columns one row at a time.
+1. **Fill the first column, What exists, with everything from your brainstorm**, one row per thing. Ask yourself: What products or services claim to have solutions in this problem space? Do I know anyone who is already handling this problem well? Does my own organization already have something for this, used or not? Could AI help with this problem?
+2. **For each row, fill in How it works, as far as I know.** Write what you have actually seen, where it lives, who can change or see it, or indicate that you don't know if that is the case.
+3. **For each row, fill in What using it here would involve.** In a sentence or two: what would change for the better, what it would ask of the people involved, and what you cannot tell yet.
+
+As always, questions and question marks where you don't know something are encouraged. It is better to mark what you don't know than make something up; a table that is mostly questions will still be very useful for the next activity.
 
 **What exists.** A thing that exists somewhere now, or a question about one.
 
@@ -73,14 +76,10 @@ The table below will help you think through each one. Fill one row per thing. Do
 >
 > Garden plot example: I don't know. The garden two streets over might do it. I have never asked.
 
-**What it means for my problem: good, bad, not sure.** Reasons it would be good for your problem, reasons it might be bad, and what you are not sure about. Before you have looked into anything, most of this will be "not sure," and that is the right result.
+**What using it here would involve.** In a sentence or two: what would change for the better, what it would ask of the people involved, and what you cannot tell yet. Before you have looked into anything, most of this will be "cannot tell yet," and that is the right result.
 
-> Account handover example: Good: it seems to already exist as a feature in a product we already use. Bad: it's not turned on, and people aren't using the CRM much as it is, so it might not make a difference. Not sure: whether turning it on costs anything, and who decides.
+> Account handover example: The owner would be tracked somewhere people can actually see it. However, I don't know if it can be turned on, and it would require people to fill it out and pay attention to it.
 >
-> Garden plot example: Good: if it works there, it could work here. Bad: pairing takes someone to organize it every spring. Not sure: whether the pairs actually talk.
+> Garden plot example: I can't tell yet. If they do it, it would take someone to organize the pairs every spring, and I don't know whether the pairs actually talk.
 
-*More help: if nothing comes to mind.* Turn your frame into questions and make each one a row. Is there a name for this problem, and are people talking about it online? What does the place next door do that we do not? Did anyone here try something before? Four questions and no answers, but there is real thinking here. That is what is needed.
-
-*More help: take another look at the first column.* Everything in it should be something that exists, somewhere, now, or a question about one. If a row describes what you would build, move it out. That is a solution, and Sprint 2 is not where solutions get chosen.
-
-When you finish, paste your table into your Sprint 2 working book. The next activity fills it in.
+When you finish, copy your table into your Sprint 2 working book. The next activity fills it in.

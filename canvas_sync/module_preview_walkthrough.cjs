@@ -30,6 +30,9 @@ function storedZipEntry(data, wanted) {
 }
 
 async function fillBaseline(page) {
+  while (await page.locator('.walk-entry:not([open])').count()) {
+    await page.locator('.walk-entry:not([open])').first().locator(':scope > summary').click();
+  }
   const inputs = page.locator('[data-walk-answer]');
   const values = new Map();
   for (let index = 0; index < await inputs.count(); index++) {
@@ -55,30 +58,31 @@ async function verifyBaseline(page, values, recordCheck) {
 
 async function checkWalkthrough(page, config, result) {
   const recordCheck = name => result.checks.push(name);
-  assert.equal(await page.locator('.walk-intro h2').innerText(), 'How this walk-through works');
+  assert.equal(await page.locator('.walk-intro h2').innerText(), 'How this Canvas Walkthrough works');
   const intro = await page.locator('.walk-intro').innerText();
-  assert(intro.includes('Canvas walk-through assignment'), 'Walk-through context is missing');
+  assert(intro.includes('This Canvas Walkthrough'), 'Walk-through context is missing');
   const finish = page.locator('.walk-finish');
   const finishText = await finish.innerText();
-  const copy = await finish.locator('#walk-copy').innerText();
   if (!config.hasWritable) {
     assert(finishText.includes('no response to submit'), 'Reference-only page implies a submission');
-    assert.equal(copy, 'Copy reference table');
+    assert.equal(await finish.locator('#walk-copy').innerText(), 'Copy reference table');
   } else if (config.submissionType === 'file_upload') {
-    assert(finishText.includes('Submit this walk-through in Canvas'));
+    assert(finishText.includes('Submit your work in Canvas'));
     if (config.pdfFromDocument) {
       assert(finishText.includes('upload that PDF'));
-      assert.equal(copy, 'Copy work into your document');
+      assert.equal(await finish.locator('#walk-copy').innerText(), 'Copy work into your document');
       assert.equal(await finish.locator('#walk-download').innerText(), 'Download Word backup');
     } else {
-      assert(finishText.includes('upload the file'));
-      assert.equal(copy, 'Copy work for your records');
-      assert.equal(await finish.locator('#walk-download').innerText(), 'Download Word document for Canvas submission');
+      assert(finishText.includes('select Start Assignment'));
+      assert(finishText.includes('attach the Word document'));
+      assert.equal(await finish.locator('#walk-download').innerText(), 'Download as Word document');
+      assert.equal(await finish.locator('#walk-copy').count(), 0);
+      assert.equal(await finish.locator('#walk-text-download').count(), 0);
     }
   } else {
-    assert(finishText.includes('Submit this walk-through in Canvas'));
+    assert(finishText.includes('Submit your work in Canvas'));
     assert(finishText.includes('text-entry box'));
-    assert.equal(copy, 'Copy text for Canvas submission');
+    assert.equal(await finish.locator('#walk-copy').innerText(), 'Copy text for Canvas submission');
   }
   recordCheck('walk-through context and Canvas submission action');
   const tables = config.tasks.filter(task => task.kind === 'table');
@@ -151,6 +155,9 @@ async function checkWalkthrough(page, config, result) {
   }
   if (tables.length) recordCheck('table headings, source cells, dimensions, labels, and row-side controls');
 
+  while (await page.locator('.walk-entry:not([open])').count()) {
+    await page.locator('.walk-entry:not([open])').first().locator(':scope > summary').click();
+  }
   const inputs = page.locator('[data-walk-answer]');
   const entered = new Map();
   for (let index = 0; index < await inputs.count(); index++) {
@@ -190,18 +197,20 @@ async function checkWalkthrough(page, config, result) {
     result.skipped.push('Live AI feedback endpoint was not invoked');
   }
 
-  await page.locator('#walk-copy').focus();
-  await page.keyboard.press('Enter');
-  await page.waitForFunction(() => /Copied as a table|Copied the reference table|Clipboard access is unavailable|Copied\./.test(
-    document.getElementById('walk-copy-status').textContent));
-  const copied = await page.evaluate(async () => {
-    const items = await navigator.clipboard.read();
-    const item = items.find(entry => entry.types.includes('text/html'));
-    return item ? await (await item.getType('text/html')).text() : '';
-  });
-  const plain = await page.evaluate(() => navigator.clipboard.readText());
-  for (const value of entered.values()) assert(plain.includes(value), 'Plain copy lost a response');
-  if (tables.length) {
+  const hasCopy = Boolean(await page.locator('#walk-copy').count());
+  if (hasCopy) {
+    await page.locator('#walk-copy').focus();
+    await page.keyboard.press('Enter');
+    await page.waitForFunction(() => /Copied as a table|Copied the reference table|Clipboard access is unavailable|Copied\./.test(
+      document.getElementById('walk-copy-status').textContent));
+    const copied = await page.evaluate(async () => {
+      const items = await navigator.clipboard.read();
+      const item = items.find(entry => entry.types.includes('text/html'));
+      return item ? await (await item.getType('text/html')).text() : '';
+    });
+    const plain = await page.evaluate(() => navigator.clipboard.readText());
+    for (const value of entered.values()) assert(plain.includes(value), 'Plain copy lost a response');
+    if (tables.length) {
     assert(copied, 'Rich table copy was not written to the clipboard');
     const copiedTables = await page.evaluate(html => {
       const document = new DOMParser().parseFromString(html, 'text/html');
@@ -228,7 +237,8 @@ async function checkWalkthrough(page, config, result) {
     for (const key of answerKeys) assert(copied.includes(qaAnswer(key)));
     assert(!copied.includes('Preview sample feedback'), 'AI feedback leaked into copy');
     for (const key of answerKeys) assert(plain.includes(qaAnswer(key)));
-    recordCheck('rich clipboard tables and plain text retain grid, answers, and source text');
+      recordCheck('rich clipboard tables and plain text retain grid, answers, and source text');
+    }
   }
 
   if (tables.length) {
@@ -258,20 +268,22 @@ async function checkWalkthrough(page, config, result) {
     recordCheck('file-upload Word document retains answers');
   }
 
-  await page.evaluate(() => {
-    Object.defineProperty(navigator.clipboard, 'write', {configurable: true, value: () => Promise.reject(new Error('QA clipboard denial'))});
-    Object.defineProperty(navigator.clipboard, 'writeText', {configurable: true, value: () => Promise.reject(new Error('QA clipboard denial'))});
-    document.execCommand = () => false;
-  });
-  await page.locator('#walk-copy').click();
-  if (tables.length) {
-    await page.waitForFunction(() => document.activeElement?.id === 'walk-rich-output');
-    assert(await page.locator('#walk-rich-output').isVisible());
-    assert.equal(await page.locator('#walk-rich-output table').count(), tables.length);
-    recordCheck('clipboard-denial selectable-table fallback');
-  } else {
-    await page.waitForFunction(() => document.activeElement?.id === 'walk-output');
-    recordCheck('clipboard-denial text fallback');
+  if (hasCopy) {
+    await page.evaluate(() => {
+      Object.defineProperty(navigator.clipboard, 'write', {configurable: true, value: () => Promise.reject(new Error('QA clipboard denial'))});
+      Object.defineProperty(navigator.clipboard, 'writeText', {configurable: true, value: () => Promise.reject(new Error('QA clipboard denial'))});
+      document.execCommand = () => false;
+    });
+    await page.locator('#walk-copy').click();
+    if (tables.length) {
+      await page.waitForFunction(() => document.activeElement?.id === 'walk-rich-output');
+      assert(await page.locator('#walk-rich-output').isVisible());
+      assert.equal(await page.locator('#walk-rich-output table').count(), tables.length);
+      recordCheck('clipboard-denial selectable-table fallback');
+    } else {
+      await page.waitForFunction(() => document.activeElement?.id === 'walk-output');
+      recordCheck('clipboard-denial text fallback');
+    }
   }
   await page.reload();
 }

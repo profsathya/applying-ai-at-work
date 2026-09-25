@@ -35,7 +35,8 @@ def _override_shape(value: list[dict]) -> list[dict]:
                   key=lambda entry: str(sorted(entry.items())))
 
 
-def release_pairs(changed: list[dict], course_paths: list[Path]) -> list[tuple[dict, dict]]:
+def release_pairs(changed: list[dict], course_paths: list[Path], *,
+                  already_live_ids: set[str] | None = None) -> list[tuple[dict, dict]]:
     """Find a coordinated source/new publish flip in the selected changes."""
     all_fm = {}
     for path in course_paths:
@@ -45,6 +46,7 @@ def release_pairs(changed: list[dict], course_paths: list[Path]) -> list[tuple[d
             continue  # The existing publisher reports invalid neighbors per artifact.
         all_fm[fm['artifact_id']] = fm
     changed_by_id = {item['artifact_id']: item for item in changed}
+    already_live_ids = already_live_ids or set()
     pairs = []
     claimed = set()
     for item in changed:
@@ -56,6 +58,11 @@ def release_pairs(changed: list[dict], course_paths: list[Path]) -> list[tuple[d
         if not source:
             raise ValueError(f"Walk-through {item['artifact_id']}: source {source_id} is missing")
         if source.get('publish', True):
+            # A replacement already published in Canvas can receive a content
+            # update without changing either item's visibility. The caller
+            # supplies this set only after a live read and drift check.
+            if item['artifact_id'] in already_live_ids and source_id not in changed_by_id:
+                continue
             raise ValueError(f"Walk-through {item['artifact_id']}: release requires source publish: false")
         source_item = changed_by_id.get(source_id)
         if not source_item:
@@ -101,8 +108,9 @@ def preflight_pair(client, source_item: dict, new_item: dict, state: dict) -> di
     new_live = client.get_assignment(int(new_entry['canvas_id']), include=['overrides', 'all_dates'])
     if not source_live or not new_live:
         raise ValueError(f"{source_item['artifact_id']} / {new_item['artifact_id']}: Canvas item is missing")
-    if source_live.get('published') is not True or new_live.get('published') is not False:
-        raise ValueError(f"{source_item['artifact_id']} / {new_item['artifact_id']}: expected published source and unpublished replacement")
+    if source_live.get('published') is not True or new_live.get('published') not in (True, False):
+        raise ValueError(f"{source_item['artifact_id']} / {new_item['artifact_id']}: expected published source and existing replacement")
+    original_replacement_published = new_live['published']
     source_module = source_entry.get('canvas_module_id')
     source_module_item = source_entry.get('canvas_module_item_id')
     new_module = new_entry.get('canvas_module_id')
@@ -113,12 +121,24 @@ def preflight_pair(client, source_item: dict, new_item: dict, state: dict) -> di
     if int(source_module_item) not in ordered or ordered.index(int(source_module_item)) + 1 >= len(ordered) or ordered[ordered.index(int(source_module_item)) + 1] != int(new_module_item):
         raise ValueError(f"{new_item['artifact_id']}: replacement is not directly below its source")
     items_by_id = {int(item['id']): item for item in client.list_module_items(int(source_module))}
-    if items_by_id[int(source_module_item)].get('published') is not True or items_by_id[int(new_module_item)].get('published') is not False:
-        raise ValueError(f"{new_item['artifact_id']}: expected published source and unpublished replacement module items")
+    if (items_by_id[int(source_module_item)].get('published') is not True
+            or items_by_id[int(new_module_item)].get('published') is not original_replacement_published):
+        raise ValueError(f"{new_item['artifact_id']}: source/replacement publication differs from module items")
     if source_entry['canvas_type'] == 'assignment':
         assert_source_has_no_submissions(client, source_entry)
         source_live = client.get_assignment(int(source_entry['canvas_id']), include=['overrides', 'all_dates'])
-        mismatches = [key for key in ASSESSMENT_KEYS if source_live.get(key) != new_live.get(key)]
+        word_conversion = (
+            source_fm.get('submission_type') == 'text_entry'
+            and new_fm.get('submission_type') == 'file_upload'
+            and source_fm.get('points') == new_fm.get('points') == 0
+            and new_fm.get('guided_assignment', {}).get('presentation') == 'walkthrough'
+            and str(new_fm.get('guided_assignment', {}).get('export_filename', '')).endswith('.docx')
+            and source_live.get('submission_types') == ['online_text_entry']
+            and new_live.get('submission_types') == ['online_upload']
+        )
+        mismatches = [key for key in ASSESSMENT_KEYS
+                      if source_live.get(key) != new_live.get(key)
+                      and not (word_conversion and key == 'submission_types')]
         if _rubric_shape(source_live.get('rubric')) != _rubric_shape(new_live.get('rubric')):
             mismatches.append('rubric')
         old_overrides = client.list_assignment_overrides(int(source_entry['canvas_id']))
@@ -127,11 +147,14 @@ def preflight_pair(client, source_item: dict, new_item: dict, state: dict) -> di
             mismatches.append('assignment overrides')
         if mismatches:
             raise ValueError(f"{new_item['artifact_id']}: assessment settings differ from source: {', '.join(mismatches)}")
-        if source_fm.get('points') != new_fm.get('points') or source_fm.get('submission_type') != new_fm.get('submission_type'):
+        if source_fm.get('points') != new_fm.get('points') or (
+                source_fm.get('submission_type') != new_fm.get('submission_type') and not word_conversion):
             raise ValueError(f"{new_item['artifact_id']}: local points or submission type differ from source")
     elif new_fm.get('points') != 0:
         raise ValueError(f"{new_item['artifact_id']}: page replacement must be ungraded")
-    return {'source': source_entry, 'replacement': new_entry, 'module_order': ordered}
+    return {'source': source_entry, 'replacement': new_entry, 'module_order': ordered,
+            'source_was_published': True,
+            'replacement_was_published': original_replacement_published}
 
 
 def _set_published(client, entry: dict, published: bool) -> None:
@@ -153,9 +176,10 @@ def _set_published(client, entry: dict, published: bool) -> None:
 
 
 def rollback_pair(client, pair_state: dict, state_path: Path) -> list[str]:
-    """Restore published source and unpublished replacement, then invalidate hashes."""
+    """Restore each item's preflight visibility, then invalidate hashes."""
     failures = []
-    for entry, published in ((pair_state['source'], True), (pair_state['replacement'], False)):
+    for entry, published in ((pair_state['source'], pair_state['source_was_published']),
+                             (pair_state['replacement'], pair_state['replacement_was_published'])):
         try:
             _set_published(client, entry, published)
         except Exception as exc:  # noqa: BLE001 - attempt the other restoration too

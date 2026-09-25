@@ -4,7 +4,7 @@
   "packet_sha256": "8ff1627fc37bdea2bf5421fcc4dff230bbe96a0248363d4851ce1362094c6b37",
   "map_sha256": "69fdc32ee3b9894b999f0ec440bddd9e0719aed7a682cf0b06b3570b1403bedf",
   "body_sha256": "065addfe5856c0b5bde615135abfe95c5ddafdd8b8defecdd553554aff901297",
-  "frontmatter_sha256": "f0c4bb9b1ba8b8832784d0bca0576b8b104768e756d570a4311d0fca8b122b4d",
+  "frontmatter_sha256": "4b859a39f02ee382d12c35bd9c609b0e9e4ecac181b3495a738f332d4c468296",
   "parts": [
     {
       "kind": "new",
@@ -59,7 +59,9 @@
   "metadata_decisions": [
     "Storage sprint 16 is isolated drafting storage; live module is the original Sprint 3 module.",
     "Title appends Canvas Walkthrough.",
-    "Task metadata contains exact source table text; cell mapping and full packet remain in private intake."
+    "Task metadata contains exact source table text; cell mapping and full packet remain in private intake.",
+    "Walkthrough version raised to 1.1 so the shared single Word download and Canvas upload finish flow is deployed; source task and assessment stay the same.",
+    "Publish the instructor-approved Canvas Walkthrough in place of its original while retaining both Canvas identities."
   ],
   "source_roles": {
     "d-46083d085df8b33c": {

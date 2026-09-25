@@ -146,6 +146,41 @@ def write_state(path: Path, *, hash_value: str, fingerprint: str = "a" * 64) -> 
     )
 
 
+class StagedVisibilityTests(unittest.TestCase):
+    def test_parent_module_release_restores_unpublished_assignment(self):
+        class Client:
+            published = True
+            item_published = True
+
+            def get_assignment(self, assignment_id):
+                return {"id": assignment_id, "published": self.published}
+
+            def update_assignment(self, assignment_id, payload):
+                self.published = payload["published"]
+
+            def list_module_items(self, module_id):
+                return [{"id": 22, "published": self.item_published}]
+
+            def update_module_item(self, module_id, item_id, payload):
+                self.item_published = payload["published"]
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "draft.md"
+            write_page(path, artifact_id="draft")
+            path.write_text(path.read_text().replace("type: page", "type: assignment")
+                            .replace("submission_type: none", "submission_type: text_entry")
+                            .replace("publish: true", "publish: false"))
+            state = {"artifacts": {"draft": {
+                "canvas_type": "assignment", "canvas_id": 21,
+                "canvas_module_id": 20, "canvas_module_item_id": 22,
+            }}}
+            client = Client()
+            restored = publish_changed.restore_staged_items(client, [path], state, {"Test Module"})
+            self.assertEqual(restored, ["draft"])
+            self.assertFalse(client.published)
+            self.assertFalse(client.item_published)
+
+
 class PublishChangedTests(unittest.TestCase):
     def test_unchanged_artifacts_are_skipped(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -889,6 +924,16 @@ class DriftSelfHealTests(unittest.TestCase):
 
     LIVE_PAGE = {"page_id": 1001, "url": "stable-page", "title": "Stable Page", "body": "<h1>Stable Page</h1><p>Body text.</p>", "published": True}
 
+    def test_exact_file_update_of_visible_item_skips_unrelated_indexes(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "stable-page.md"
+            write_page(path)
+            item = {"path": path, "verified_live_published": True}
+            self.assertFalse(publish_changed.include_hosted_indexes({"stable-page.md"}, [item]))
+            self.assertTrue(publish_changed.include_hosted_indexes(None, [item]))
+            item["verified_live_published"] = False
+            self.assertTrue(publish_changed.include_hosted_indexes({"stable-page.md"}, [item]))
+
     def _drift(self, entry: dict | None, live: dict | None):
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()
@@ -959,6 +1004,32 @@ class DriftSelfHealTests(unittest.TestCase):
         drifted, _ = self._drift(entry, self.LIVE_PAGE)
         self.assertEqual(len(drifted), 1)
         self.assertEqual(drifted[0]["reason"], "canvas changed since last state-backed publish")
+
+    def test_reconciled_assignment_publication_only_is_accepted(self) -> None:
+        live = {"id": 7166, "name": "Walkthrough", "description": "<p>Stable shell</p>",
+                "points_possible": 50, "submission_types": ["online_upload"], "published": True}
+        prior = {**live, "published": False}
+        entry = {"canvas_type": "assignment", "canvas_id": 7166,
+                 "canvas_fingerprint": publish_changed.canvas_fingerprint(prior, "assignment")}
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manifest = root / "course1/manifests/production.json"
+            write_manifest(manifest, hosted=True)
+            changed = [{"file": "course1/sprints/sprint-0/walkthrough.md",
+                        "path": root / "course1/sprints/sprint-0/walkthrough.md",
+                        "artifact_id": "walkthrough", "state_entry": entry}]
+            with patch.object(publish_changed.CanvasClient, "from_env", return_value=object()), \
+                 patch.object(publish_changed, "fetch_canvas_state", return_value=live), \
+                 patch.object(publish_changed, "hosted_canvas_drift", return_value={}):
+                self.assertEqual(publish_changed.drift_for_changed(manifest, changed), [])
+            self.assertEqual(changed[0]["healed_fingerprint"],
+                             publish_changed.canvas_fingerprint(live, "assignment"))
+            changed[0].pop("healed_fingerprint")
+            with patch.object(publish_changed.CanvasClient, "from_env", return_value=object()), \
+                 patch.object(publish_changed, "fetch_canvas_state", return_value=live), \
+                 patch.object(publish_changed, "hosted_canvas_drift", return_value={"title": "changed"}):
+                drifted = publish_changed.drift_for_changed(manifest, changed)
+            self.assertEqual(drifted[0]["reason"], "canvas changed since last state-backed publish")
 
     def test_missing_canvas_object_still_refuses(self) -> None:
         entry = {"canvas_type": "page", "canvas_id": 1001, "canvas_page_url": "stable-page"}
