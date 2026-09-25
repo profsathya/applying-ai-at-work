@@ -86,10 +86,10 @@ async function run() {
                 const options = taskField('name', task.id);
                 await options.nth((task.correct_index + 1) % task.options.length).check();
                 await taskField('data-check', task.id).click();
-                assert.match(await taskField('data-result', task.id).textContent(), /Revisit the idea/);
+                assert.equal(await taskField('data-result', task.id).textContent(), 'Not quite. Reread the details in the question and try again.');
                 await options.nth(task.correct_index).check();
                 await taskField('data-check', task.id).click();
-                assert.match(await taskField('data-result', task.id).textContent(), /That fits/);
+                assert.equal(await taskField('data-result', task.id).textContent(), 'That fits. ' + task.explanation);
                 await options.nth(task.correct_index).focus();
                 await page.keyboard.press('ArrowRight');
                 assert(await options.nth((task.correct_index + 1) % task.options.length).isChecked());
