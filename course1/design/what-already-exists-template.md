@@ -1,6 +1,6 @@
 ---
 purpose: Source text for the one-page What already exists table, one of Sprint 2's two activity sheets; the participant-facing copy is a Google Doc template
-status: v0.3, 23 September 2026: columns 2 and 3 together per row; column 3 as good, bad, not sure (Leslie, 23 September). v0.2, 21 September 2026, after Leslie's first pass on the second half: worked one column at a time, with her column guidance, and the look inside the Dojo Lab's row loop
+status: v0.4, 25 September 2026: column 3 is What using it here would involve (Leslie). v0.3, 23 September 2026: columns 2 and 3 together per row; column 3 as good, bad, not sure (Leslie, 23 September). v0.2, 21 September 2026, after Leslie's first pass on the second half: worked one column at a time, with her column guidance, and the look inside the Dojo Lab's row loop
 depends_on: sprint-2-working-draft-v1.md (v1.3, What solutions already exist and Dojo Lab: explore what already exists)
 ---
 
