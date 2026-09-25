@@ -38,7 +38,7 @@ guided_assignment:
       label: How it works, as far as I know
       width: 7
     - id: means
-      label: What it means for my problem
+      label: What using it here would involve
       width: 8
     header_rows: 1
     rows:
@@ -48,23 +48,24 @@ guided_assignment:
       - text: 'Guidance: a thing that exists somewhere now, or a question about one.'
       - text: 'Guidance: what I have actually seen, where it lives, who can change or see
           it, and what I do not know.'
-      - text: 'Guidance: good, bad, and not sure. Reasons it would be good for my problem,
-          reasons it might be bad, and what I am not sure about. Either way, note what using
-          it would ask of the people involved: a step, a habit, someone''s time.'
+      - text: 'Guidance: what would change for the better, what it would ask of the people
+          involved (a step, a habit, someone''s time, a decision), and what I cannot tell yet.'
     - id: example-1
       label: Example 1
       cells:
       - text: 'Example 1: an owner field in our CRM.'
       - text: 'Example 1: I have seen the field, grayed out. I don''t know who can set it
           or whether it can be turned on.'
-      - text: 'Example 1: Good: already in a product we use. Bad: not on, and people barely
-          use the CRM. Not sure: what turning it on costs, and who decides.'
+      - text: 'Example 1: Better: the owner is written down where everyone can see it.
+          Asks: every manager updates it at each handover, and someone keeps at them. Cannot
+          tell yet: what turning it on costs, and who decides.'
     - id: example-2
       label: Example 2
       cells:
       - text: 'Example 2: do other community gardens pair new people with returning ones?'
       - text: 'Example 2: I don''t know. The garden two streets over might. I have never asked.'
-      - text: 'Example 2: not sure yet.'
+      - text: 'Example 2: cannot tell yet. If they do it, asks: someone to organize the pairs
+          every spring.'
     - id: row-1
       label: Row 1
       cells:
@@ -123,7 +124,7 @@ guided_assignment:
     - Fill at least three rows; questions count.
     - Keep solutions you would build out of the first column.
     - Write how it works from what you have actually seen, not how it probably works.
-    - Leave blanks and "not sure" as they are rather than filling them with guesses dressed
+    - Leave blanks and "cannot tell yet" as they are rather than filling them with guesses dressed
       as facts.
     - Do not decide a row is the answer before you have looked.
     document_after:
@@ -153,11 +154,11 @@ With your problem in mind, think about existing solutions that might be related 
 
 ## Build your understanding about what exists
 
-The table below has three columns: what exists, how it works, and what it means for your problem. Fill it in three steps.
+The table below has three columns: what exists, how it works, and what using it here would involve. Fill it in three steps.
 
 1. **Fill the first column, What exists, with everything from your brainstorm**, one row per thing. Ask yourself: What products or services claim to have solutions in this problem space? Do I know anyone who is already handling this problem well? Does my own organization already have something for this, used or not? Could AI help with this problem?
 2. **For each row, fill in How it works, as far as I know.** Write what you have actually seen, where it lives, who can change or see it, or indicate that you don't know if that is the case.
-3. **For each row, fill in What it means for my problem.** Reasons it would be good for your problem, reasons it might be bad, and what you are not sure about.
+3. **For each row, fill in What using it here would involve.** What would change for the better, what it would ask of the people involved (a step, a habit, someone's time, a decision), and what you cannot tell yet. What all of it means for your problem comes at the end of the sprint, once you have looked.
 
 As always, questions and question marks where you don't know something are encouraged. It is better to mark what you don't know than make something up; a table that is mostly questions will still be very useful for the next activity.
 

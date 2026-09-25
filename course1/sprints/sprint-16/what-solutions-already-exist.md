@@ -25,11 +25,11 @@ guided_assignment:
     kind: response
     instruction_section: Build your understanding about what exists
     prompt: 'Your table, one row per thing: what exists; how it works, as far as you know;
-      and what it means for your problem (good, bad, not sure).'
+      and what using it here would involve.'
     criteria:
     - Fill at least three rows; questions count.
     - Keep solutions you would build out of the first column.
-    - Leave blanks and "not sure" as they are rather than filling them with guesses dressed
+    - Leave blanks and "cannot tell yet" as they are rather than filling them with guesses dressed
       as facts.
 publish: false
 ---
@@ -54,11 +54,11 @@ With your problem in mind, think about existing solutions that might be related 
 
 ## Build your understanding about what exists
 
-The table below has three columns: what exists, how it works, and what it means for your problem. Fill it in three steps.
+The table below has three columns: what exists, how it works, and what using it here would involve. Fill it in three steps.
 
 1. **Fill the first column, What exists, with everything from your brainstorm**, one row per thing. Ask yourself: What products or services claim to have solutions in this problem space? Do I know anyone who is already handling this problem well? Does my own organization already have something for this, used or not? Could AI help with this problem?
 2. **For each row, fill in How it works, as far as I know.** Write what you have actually seen, where it lives, who can change or see it, or indicate that you don't know if that is the case.
-3. **For each row, fill in What it means for my problem.** Reasons it would be good for your problem, reasons it might be bad, and what you are not sure about.
+3. **For each row, fill in What using it here would involve.** What would change for the better, what it would ask of the people involved (a step, a habit, someone's time, a decision), and what you cannot tell yet. What all of it means for your problem comes at the end of the sprint, once you have looked.
 
 As always, questions and question marks where you don't know something are encouraged. It is better to mark what you don't know than make something up; a table that is mostly questions will still be very useful for the next activity.
 
@@ -74,10 +74,10 @@ As always, questions and question marks where you don't know something are encou
 >
 > Garden plot example: I don't know. The garden two streets over might do it. I have never asked.
 
-**What it means for my problem: good, bad, not sure.** Reasons it would be good for your problem, reasons it might be bad, and what you are not sure about. Before you have looked into anything, most of this will be "not sure," and that is the right result.
+**What using it here would involve.** What would change for the better, what it would ask of the people involved (a step, a habit, someone's time, a decision), and what you cannot tell yet. Before you have looked into anything, most of this will be "cannot tell yet," and that is the right result.
 
-> Account handover example: Good: it seems to already exist as a feature in a product we already use. Bad: it's not turned on, and people aren't using the CRM much as it is, so it might not make a difference. Not sure: whether turning it on costs anything, and who decides.
+> Account handover example: Better: the owner is written down where everyone can see it. Asks: every manager updates it at each handover, and someone keeps at them; people aren't using the CRM much as it is. Cannot tell yet: whether turning it on costs anything, and who decides.
 >
-> Garden plot example: Good: if it works there, it could work here. Bad: pairing takes someone to organize it every spring. Not sure: whether the pairs actually talk.
+> Garden plot example: Cannot tell yet. If they do it: asks someone to organize the pairs every spring, and I do not know whether the pairs actually talk.
 
 When you finish, copy your table into your Sprint 2 working book. The next activity fills it in.
