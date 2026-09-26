@@ -749,17 +749,17 @@
       "canvas_payload_hash": "8c14a47dcf7ad0fd835392564ea68616fb5fac100c96aeabc14770ef278d8d65",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "dc346459d4fe88549313e7ed8eb59439d5b95046e5f2f3b969230ea048ea9067",
+      "content_hash": "7b29a49874be7c211cd1b45669bb81f6a79d9764e52685a53314653bc29bba97",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "f7afb1221eea6a6d7c638fc3a604b558e1d6b00f21909518ea2a782d2594b2fd",
-      "hosted_last_rendered": "2026-09-24T21:09:59+00:00",
+      "hosted_hash": "a3986d1fc0943a5826cf7015250a1b5afaa9c9c718f41ac089200d791b6df130",
+      "hosted_last_rendered": "2026-09-26T20:30:39+00:00",
       "hosted_path": "course1/assignments/which-assumptions.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/which-assumptions.html",
-      "last_pushed": "2026-09-24T21:09:59+00:00",
+      "last_pushed": "2026-09-26T20:30:39+00:00",
       "local_path": "course1/sprints/sprint-16/which-assumptions.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "061b9eab37123e1bb31ad1bda6762043bb07291f"
+      "source_commit": "4971f7e90f8d91ba5cfebe8acfa9c7d4caaad387"
     },
     "course1-sprints-sprint-16-working-with-ai-context": {
       "artifact_id": "course1-sprints-sprint-16-working-with-ai-context",
@@ -1512,5 +1512,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-26T20:06:52+00:00"
+  "last_sync": "2026-09-26T20:30:39+00:00"
 }
