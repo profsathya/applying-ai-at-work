@@ -594,25 +594,25 @@
     },
     "course1-sprints-sprint-16-problem-frame-is-it-worth-pursuing": {
       "artifact_id": "course1-sprints-sprint-16-problem-frame-is-it-worth-pursuing",
-      "canvas_fingerprint": "3e1c558f7627dacb4c0fc3e68a59df98c62751af5b9bfaef5ea64626bfd38dfb",
+      "canvas_fingerprint": "7b93d6457569100cc280ee1279943ff49aa836aaeb6be51d679bcc6040c9a142",
       "canvas_id": 7172,
       "canvas_module_id": 2084,
       "canvas_module_item_id": 18005,
       "canvas_page_url": null,
-      "canvas_payload_hash": "134661998db96c5df7442e9823affa7053852a999d8ce5a6f64f032a0c7501e6",
+      "canvas_payload_hash": "68e5af02640c6f612cbcdf9b0495949af6b2cd3d9b0d0eef09673ce9501d4230",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "990b466c622de4de354c376a4b78ae93bfccf9a075fac6808af8d8f3eeaa6f1f",
+      "content_hash": "78106e291a91dac2e76c3663edcfaa3fc671d5fdcef967d345a5bc16c1ae13d6",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "5529a2340c2eb8a0f20260c538c0b199f5e257aa120a3da16ca1c2553e71c71a",
-      "hosted_last_rendered": "2026-09-24T21:09:56+00:00",
+      "hosted_hash": "80b7da778e14389a1c17dd141ebaf092416068b0247d0ea938670d05d8070896",
+      "hosted_last_rendered": "2026-09-26T22:58:19+00:00",
       "hosted_path": "course1/assignments/problem-frame-is-it-worth-pursuing.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/problem-frame-is-it-worth-pursuing.html",
-      "last_pushed": "2026-09-24T21:09:56+00:00",
+      "last_pushed": "2026-09-26T22:58:19+00:00",
       "local_path": "course1/sprints/sprint-16/problem-frame-is-it-worth-pursuing.md",
       "position": 11,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "061b9eab37123e1bb31ad1bda6762043bb07291f"
+      "source_commit": "cd0ca54a2552d6ab11d694b586cc5c975398b766"
     },
     "course1-sprints-sprint-16-sprint-2-is-this-problem-worth-pursuing": {
       "artifact_id": "course1-sprints-sprint-16-sprint-2-is-this-problem-worth-pursuing",
@@ -1512,5 +1512,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-26T20:30:39+00:00"
+  "last_sync": "2026-09-26T22:58:19+00:00"
 }
