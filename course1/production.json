@@ -683,17 +683,17 @@
       "canvas_payload_hash": "16ea325cc084f2dace07e3c76ffab9c500267fcf6d61752c8f4ee20e5f94248c",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "a5d2d085b76ad45bce62ec86115dfbcb9dd22cc61a606213a795b541c39f8855",
+      "content_hash": "fb3ba93a28a329121cbd893fd38ee98e5e6a278b2360362f0eb6d570f561317a",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "98a5af6e263a9fe711cdba19d50712ccfc6185c7ba841a4dfd5ea13169ee3ce0",
-      "hosted_last_rendered": "2026-09-24T21:09:58+00:00",
+      "hosted_hash": "204b9eb0a64556a3c7ff0b52904b43e8edfae5c7a6ef06f207cf13cf7856595b",
+      "hosted_last_rendered": "2026-09-26T20:06:52+00:00",
       "hosted_path": "course1/assignments/what-exists-and-what-it-means.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/what-exists-and-what-it-means.html",
-      "last_pushed": "2026-09-24T21:09:58+00:00",
+      "last_pushed": "2026-09-26T20:06:52+00:00",
       "local_path": "course1/sprints/sprint-16/what-exists-and-what-it-means.md",
       "position": 9,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "061b9eab37123e1bb31ad1bda6762043bb07291f"
+      "source_commit": "4971f7e90f8d91ba5cfebe8acfa9c7d4caaad387"
     },
     "course1-sprints-sprint-16-what-solutions-already-exist": {
       "artifact_id": "course1-sprints-sprint-16-what-solutions-already-exist",
@@ -1512,5 +1512,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-26T19:47:44+00:00"
+  "last_sync": "2026-09-26T20:06:52+00:00"
 }
