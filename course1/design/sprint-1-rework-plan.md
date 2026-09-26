@@ -1,6 +1,6 @@
 ---
 purpose: The page-by-page plan for bringing Sprint 1 to the Sprint 2 and Sprint 3 design decisions, turning its three activity pages into Canvas Walkthroughs, and retiring the Candidate Log; Leslie edits this before anything is built
-status: v0.1, 26 September 2026, draft for Leslie
+status: v0.2, 26 September 2026: Clare's review folded in (clare-sprint-1-review.md); the brainstorm loses its ten-minute timebox and keeps no-judgment; the household exception on the Dojo Lab's size questions is open for Leslie. v0.1, 26 September 2026, draft for Leslie
 depends_on: course1/sprints/sprint-14/ (Sprint 1 as published, ten items); sprint-2-working-draft-v1.md (v2.18); problem-frame-template.md (v0.8); course-wide-list.md (v0.9); sprint-1-decisions.md; course1/dojo/dojo-labs.txt (Jeremy, Sprint 1 method)
 ---
 
@@ -36,7 +36,7 @@ Wording changes on a live page. Bring to the Sprint 2 shape: title case already;
 
 ### 3. Brainstorm your list, walkthrough
 
-Today: one box, Part A. The page's three sections (set up your categories, walk your week, if your list is short) are already the shape of a walkthrough, and Jeremy's interleaved presentation was built from exactly this page. Proposed: the interleaved brainstorm if it renders well, otherwise a grid with one column per category and rows for items. The example list becomes the example rows. The three More help notes stay as prose after the table. Learning goal: "List everything in your week that could hold a problem, before you judge any of it."
+Today: one box, Part A. Leslie, 26 September, on Clare's comment: the ten-minute timebox goes, here and on the Introduction's route line; the page says list first and judge later, and keeps the day-or-two More help. The page's three sections (set up your categories, walk your week, if your list is short) are already the shape of a walkthrough, and Jeremy's interleaved presentation was built from exactly this page. Proposed: the interleaved brainstorm if it renders well, otherwise a grid with one column per category and rows for items. The example list becomes the example rows. The three More help notes stay as prose after the table. Learning goal: "List everything in your week that could hold a problem, before you judge any of it."
 
 ### 4. Get underneath three to five, walkthrough
 
@@ -56,7 +56,7 @@ Today: five boxes, one draft frame each, written in Part C and pasted. Proposed:
 
 ### 8. Dojo Lab: test, widen, choose
 
-Today: the old shape, with the prompts on the page and a final Me: turn. Proposed: the Sprint 2 shape. What you need (your First frames Word file). The three parts. Part 1: "Open your Dojo and say: Walk me through Dojo Lab: test, widen, choose. Then paste your frames, one at a time." A note that the Dojo will test each, widen each, and help you choose. The fallback paste: the condensed core plus Jeremy's Sprint 1 method from the Dojo Labs tab, verbatim, so there is one text. Part 2: the five transcript steps. Part 3: go back to your frames and make the changes you decided on; your chosen frame goes into the Problem Frame document in the next activity. The three size questions and the choose section stay on the page as teaching, since they are what the learner decides with. The final Me: turn goes, as it did in Sprint 2; the method's Round 4 collects it.
+Today: the old shape, with the prompts on the page and a final Me: turn. Proposed: the Sprint 2 shape. What you need (your First frames Word file). The three parts. Part 1: "Open your Dojo and say: Walk me through Dojo Lab: test, widen, choose. Then paste your frames, one at a time." A note that the Dojo will test each, widen each, and help you choose. The fallback paste: the condensed core plus Jeremy's Sprint 1 method from the Dojo Labs tab, verbatim, so there is one text. Part 2: the five transcript steps. Part 3: go back to your frames and make the changes you decided on; your chosen frame goes into the Problem Frame document in the next activity. The three size questions and the choose section stay on the page as teaching, since they are what the learner decides with, with Clare's fixes: "how the problem is handled today" for "how it works," and "ask what larger situation this is one case of, and frame that instead" for "go up." The household exception ("someone outside the household") is open: Leslie wants to think through the course for a household or job-search problem before it is reworded or cut. The final Me: turn goes, as it did in Sprint 2; the method's Round 4 collects it.
 
 ### 9. Problem Frame
 
