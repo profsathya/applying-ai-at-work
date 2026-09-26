@@ -21,6 +21,12 @@ class CourseDocsTests(unittest.TestCase):
         self.assertEqual([s['tab'] for s in result['sections']], ['Dojo'])
         self.assertEqual(len(result['sections'][0]['pages']), 1)
 
+    def test_labs_only_does_not_replace_course_or_core(self):
+        result = build(None, None, 3, 'owner/repo', 'sha',
+                       'CIS 501 DOJO LABS - activity methods\n== Sprint 1 ==\nAsk for the frame.')
+        self.assertEqual([s['tab'] for s in result['sections']], ['Dojo Labs'])
+        self.assertIn('Sprint 1', result['sections'][0]['pages'][0]['content'])
+
     def test_invalid_inventory_fails_before_payload(self):
         release = self.release(); release['pages'][0]['path'] = '../draft.html'
         with self.assertRaises(ValueError): build(release, None, 3, 'owner/repo', 'sha')

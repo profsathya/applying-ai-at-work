@@ -3,13 +3,12 @@
  * Adapted from profsathya/Common-Curriculum apps-script/CourseDocSync.gs.
  *
  * Receives one course's context payload from GitHub Actions and rewrites the
- * named tabs of that course's Google Doc. Each doc has a Course tab and a Dojo
- * tab; a payload carries one or both, and any tab it does not name is left
- * completely alone. That is what lets a dojo edit refresh the Dojo tab in every
- * course doc without rebuilding any course content.
+ * named tabs of that course's Google Doc. The Course 180 document has Course,
+ * Dojo, and Dojo Labs tabs; a payload names only the tabs to update, and every
+ * other tab is left completely alone.
  *
- * Tabs cannot be created by script — add them by hand once per doc, then keep
- * their titles matching config/course-docs.json.
+ * This receiver does not create tabs. Add them once in Google Docs, then keep
+ * their titles matching the section names sent by the sync client.
  *
  * The doc is downstream of the repo. Any edit made in a synced tab is lost the
  * next time that tab syncs.

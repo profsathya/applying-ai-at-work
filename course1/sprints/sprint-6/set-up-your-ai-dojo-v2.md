@@ -39,12 +39,12 @@ If projects or Gems are unavailable, use a regular chat and provide the instruct
 https://docs.google.com/document/d/1q4Dpbzr1quGMw-_i5mn99EO4bi-xj-VK-DoAJG13r38/edit
 ```
 
-- **Paste it into your Dojo:** use **Add source** in a ChatGPT project, **Google Drive** in Claude project knowledge, or **Knowledge → Drive** in a Gemini Gem. The document combines the [shared Dojo Core](https://profsathya.github.io/Common-Curriculum/common/dojo/dojo-core.txt) with released course material.
-- **If the source cannot be read:** paste or upload a dated copy of both tabs. Replace that copy when the document changes.
+- **Paste it into your Dojo:** use **Add source** in a ChatGPT project, **Google Drive** in Claude project knowledge, or **Knowledge → Drive** in a Gemini Gem. The document combines the [shared Dojo Core](https://profsathya.github.io/Common-Curriculum/common/dojo/dojo-core.txt), released course material, and the Dojo Lab methods.
+- **If the source cannot be read:** paste or upload a dated copy of all three tabs: Dojo, Course, and Dojo Labs. Replace that copy when the document changes.
 
 Copy this instruction into your project or Gem:
 
-> Act as my Dojo coach for CIS 501: Reframing Problems with AI. Use the attached Dojo and Course Context document. At the start of each chat, tell me which tabs you accessed and the Course generation date. Ask me for any source you cannot access.
+> Act as my Dojo coach for CIS 501: Reframing Problems with AI. Use the attached Dojo and Course Context document. At the start of each chat, tell me which tabs you accessed and the Course generation date. When I name a Dojo Lab, use its method in Dojo Labs and its assignment page in Course. Ask me for any source you cannot access.
 >
 > Ask for my thinking first and one focused question at a time. Challenge assumptions without deciding for me or inventing evidence, stakeholder responses, policies, or deadlines. Name the source for course answers, respect directions to work without AI, and follow current Canvas directions when sources differ.
 
