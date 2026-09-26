@@ -51,3 +51,8 @@ Provenance: Leslie, the question and the morning conversation it corrects; Claud
 ## What went to Melisa and Jeremy (Leslie, 25 September)
 
 Leslie sent her own version: the Dojo tab holds three career modules, not activity pages; in CST499 the activity page carries a mention, the Dojo knows the activity from the Course tab, and the Core supplies the method; more guidance per Dojo activity probably wanted, to be tested; if wanted, it lives either on the Dojo tab as Sathya's modules do, or as text on the Canvas page aimed at the Dojo, with the risk that students read it. One correction for the record: the three modules are shared across every course doc, so a module of ours would appear in every course unless it gets a separate home.
+
+## What Jeremy built (25 September, PR #127)
+
+A third tab, Dojo Labs, in the course document: `course1/dojo/dojo-labs.txt`, one method per Dojo Lab for Sprints 1 to 4, in the rounds-and-characters shape, with a routing section ("Find the right lab") and the rule that the Course tab supplies the activity and the Dojo Labs tab supplies only the method. The Sprint 0 setup page tells the Dojo to use the method when the learner names a lab. That is option 1 from above, with a course-specific home rather than the shared Dojo folder, and it settles the question. What remains: keep his Sprint 2 methods in step with the pages (column 3 is now what using it here would involve), and decide whether the Dojo Lab pages keep their own copy of the module in the fallback paste. Course-wide list item 37.
+
