@@ -537,17 +537,17 @@
       "canvas_payload_hash": "629a1cbd0487a9b1d8df2ea6d9a322a80c6a4f06298024a54d817d3ede08a0c7",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "ffa50a86e9f152405326703a406c87e93a4e81a5363a9e895da6d46d3124ee72",
+      "content_hash": "05189a89abbf92087d3656cab749fbc002c39fad100878d5d1201e03687c271e",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "78eb0c07ab5be6a3ed180b032769c639acd0fc145e73b2c7c058ff5726fd87da",
-      "hosted_last_rendered": "2026-09-24T21:09:54+00:00",
+      "hosted_hash": "f6f273367b739387a1ae3e7093ae9ca3d5d4e8f9cc6b57cc6861ff4d64c08021",
+      "hosted_last_rendered": "2026-09-26T19:38:18+00:00",
       "hosted_path": "course1/assignments/dojo-lab-explore-what-already-exists.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-explore-what-already-exists.html",
-      "last_pushed": "2026-09-24T21:09:54+00:00",
+      "last_pushed": "2026-09-26T19:38:18+00:00",
       "local_path": "course1/sprints/sprint-16/dojo-lab-explore-what-already-exists.md",
       "position": 8,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "061b9eab37123e1bb31ad1bda6762043bb07291f"
+      "source_commit": "e392db1602504eee6bfb0fbfd78667c14740cd67"
     },
     "course1-sprints-sprint-16-dojo-lab-test-your-assumptions": {
       "artifact_id": "course1-sprints-sprint-16-dojo-lab-test-your-assumptions",
@@ -1512,5 +1512,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-25T23:51:47+00:00"
+  "last_sync": "2026-09-26T19:38:18+00:00"
 }
