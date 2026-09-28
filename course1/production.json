@@ -440,6 +440,27 @@
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
       "source_commit": "1eca87a3cfbcb37c8c3719de555a3b704bfcd7de"
     },
+    "course1-sprints-sprint-15-sprint-3-overview": {
+      "artifact_id": "course1-sprints-sprint-15-sprint-3-overview",
+      "canvas_fingerprint": "b44d12229fc5ac346eb207e911929b641f2dd847deb982b91c05c6ed4cfb1959",
+      "canvas_id": 3628,
+      "canvas_module_id": 2081,
+      "canvas_module_item_id": 18017,
+      "canvas_page_url": "sprint-3-integrate-people-and-context-v3",
+      "canvas_payload_hash": "d8c43fbd9dff96e3b05e910761df71af343e3bf2facc42ed4516b6f79c5e07a5",
+      "canvas_type": "page",
+      "completion_requirement": "must_view",
+      "content_hash": "50abbd0462c4018304f8ed5ba43415083e70f1132a8012c5f88de3ca767bcbe5",
+      "hosted_hash": "3977998496c25171245f9c7a94398a41c71f20aebd4a9c0e51274f953da3c2d3",
+      "hosted_last_rendered": "2026-09-28T19:30:41+00:00",
+      "hosted_path": "course1/activities/sprint-3-overview-v3.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/sprint-3-overview-v3.html",
+      "last_pushed": "2026-09-28T19:30:41+00:00",
+      "local_path": "course1/sprints/sprint-15/sprint-3-overview-v3.md",
+      "position": 1,
+      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "source_commit": "07e9b0304e6d1292f2e0103acc59fbb696ab1edc"
+    },
     "course1-sprints-sprint-15-sprint-3-reflection-and-mid-course-problem-frame-revision": {
       "artifact_id": "course1-sprints-sprint-15-sprint-3-reflection-and-mid-course-problem-frame-revision",
       "canvas_fingerprint": "075f6623f2da55ecc63ca94f2f6c9bb6d87c4e5dae305259390af3c7125ed2c4",
@@ -1534,5 +1555,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-28T17:43:12+00:00"
+  "last_sync": "2026-09-28T19:30:41+00:00"
 }
