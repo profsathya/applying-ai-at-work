@@ -38,3 +38,7 @@ BUILT: Optional AI Feedback: What Changed and Try It, sprint-13/ai-feedback-chec
 ## Post-build: 2026-09-15 Sprint 0 revision
 
 Published the seven-tab Google Doc adaptation from `course1/sprints/sprint-6/` through protected workflow 35036913818, source `153dbeb`, Canvas state `1ff4e14`, hosted `e38ef80`. Module 2075 retains six original items: five required views and one required introduction contribution, now sequential. New Welcome art, blue accents, consistent discussion presentation, revised orientation route, and homepage copy are live. Full schema, 235 unit tests, and final responsive preview passed; API and hosted readback verified publication. See [publication and source-alignment analysis](reports/publication/sprint-0-publication-20260915.md) for evidence and limits.
+
+## Post-build: 2026-09-28 First frames replacement staging
+
+BUILT: First frames Canvas Walkthrough, `sprint-14/first-frames-canvas-walkthrough.md`, staged unpublished through protected workflow 36459953039 as assignment 7182 / module item 18016, immediately below original 7151 / 17979 in module 2079. The original remains published and unchanged. Five no-AI response areas use full self-checks and Word export; Frames 1–3 require 100 non-whitespace characters. Local and live embedded checks passed; no coursework submitted. Release awaits Leslie's revised DOCX and coordinated homepage/visibility reconciliation. See [staging verification](reports/publication/first-frames-walkthrough-staging-20260928.md).
