@@ -5,13 +5,16 @@ const fs = require('node:fs');
 const answerKey = (task, row, column) => `${task.id}.${row.id}.${column.id}`;
 const qaAnswer = key => `Preview QA: ${key}`;
 
-async function fillInput(input, key) {
+async function fillInput(input, key, minimum = 0) {
   if (await input.evaluate(element => element.tagName === 'SELECT')) {
     const choices = await input.locator('option').evaluateAll(options =>
       options.filter(option => !option.disabled && option.value).map(option => option.value));
     assert(choices.length, `${key}: select has no usable option`);
     await input.selectOption(choices[0]);
-  } else await input.fill(qaAnswer(key));
+  } else {
+    const answer = qaAnswer(key);
+    await input.fill(minimum ? answer + ' ' + 'x'.repeat(minimum) : answer);
+  }
   return input.inputValue();
 }
 
@@ -91,6 +94,22 @@ async function checkWalkthrough(page, config, result) {
     assert(config.feedbackOmissionReason, 'Writable walk-through lacks AI feedback or an omission reason');
   }
   const answerKeys = [];
+  const minimumTasks = config.tasks.filter(task => task.min_response_chars);
+  if (minimumTasks.length) {
+    const download = page.locator('#walk-download');
+    assert(await download.isDisabled(), 'Download must initially require minimum text');
+    for (const task of minimumTasks) {
+      const input = page.locator(`[data-walk-answer="${task.id}"]`);
+      await input.fill(' \n\t ');
+      assert(await download.isDisabled(), 'Whitespace must not unlock download');
+      await input.fill('x'.repeat(task.min_response_chars));
+    }
+    assert(await download.isEnabled(), 'Required responses should unlock download without optional responses');
+    const first = minimumTasks[0];
+    await page.locator(`[data-walk-answer="${first.id}"]`).fill('x'.repeat(first.min_response_chars - 1));
+    assert(await download.isDisabled(), 'Deleting below the minimum must disable download');
+    recordCheck('minimum text: whitespace, boundary, deletion, and optional responses');
+  }
   let feedbackButtons = 0;
   for (const task of writableTasks) {
     if (task.feedback_enabled === false) {
@@ -163,7 +182,8 @@ async function checkWalkthrough(page, config, result) {
   for (let index = 0; index < await inputs.count(); index++) {
     const input = inputs.nth(index);
     const key = await input.getAttribute('data-walk-answer');
-    entered.set(key, await fillInput(input, key));
+    const task = config.tasks.find(task => task.id === key);
+    entered.set(key, await fillInput(input, key, task?.min_response_chars || 0));
   }
   if (await inputs.count()) await page.keyboard.press('Tab');
   await page.reload();
@@ -172,6 +192,7 @@ async function checkWalkthrough(page, config, result) {
     assert.equal(await input.inputValue(), entered.get(await input.getAttribute('data-walk-answer')));
   }
   recordCheck('walk-through draft save and reload');
+  if (minimumTasks.length) assert(await page.locator('#walk-download').isEnabled(), 'Restored responses must unlock download');
 
   if (feedbackButtons) {
     const button = page.locator('.walk-source-table [data-walk-feedback]').first();
@@ -266,6 +287,19 @@ async function checkWalkthrough(page, config, result) {
     const documentXml = storedZipEntry(fs.readFileSync(await download.path()), 'word/document.xml');
     for (const value of entered.values()) assert(documentXml.includes(value), 'Word upload lost a response');
     recordCheck('file-upload Word document retains answers');
+    if (minimumTasks.length) {
+      await page.evaluate(() => { globalThis.WalkthroughDocx.build = () => { throw new Error('QA export failure'); }; });
+      await page.locator('#walk-download').click();
+      assert(await page.locator('#walk-output').isVisible(), 'Failed export must reveal recovery');
+      for (const value of entered.values()) assert((await page.locator('#walk-output').inputValue()).includes(value));
+      recordCheck('Word export failure preserves responses in visible recovery');
+      await page.locator('#walk-clear').click();
+      await page.locator('#walk-clear-yes').click();
+      assert(await page.locator('#walk-download').isDisabled(), 'Clearing must disable download');
+      await page.reload();
+      assert(await page.locator('#walk-download').isDisabled(), 'Cleared responses must stay cleared after reload');
+      recordCheck('clear and reload reset minimum-text download');
+    }
   }
 
   if (hasCopy) {

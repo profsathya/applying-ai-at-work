@@ -186,6 +186,12 @@
                 "type": "string",
                 "minLength": 1
               },
+              "min_response_chars": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 16000,
+                "description": "Minimum non-whitespace Unicode characters before Word download, for walkthrough response tasks only."
+              },
               "instruction_section": {
                 "type": "string",
                 "minLength": 1,

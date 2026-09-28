@@ -1,0 +1,87 @@
+{
+  "evidence_version": 1,
+  "artifact_id": "course1-sprints-sprint-14-first-frames-canvas-walkthrough",
+  "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
+  "map_sha256": "ff093675486737343dc9deffd11e275a19a9e7ea12f37fd9529dd55d8b3e7f34",
+  "body_sha256": "7a924e37f9b3fd2333361cc8d26e5e456a665d6a5313a62f5d7e28db24b302a2",
+  "frontmatter_sha256": "fb75d2b923c242b2c5264b354797d4cf85f1c72084b9bd46c78df5a74e5d0db0",
+  "parts": [
+    {
+      "kind": "new",
+      "markdown": "# First frames Canvas Walkthrough\n\nWrite one complete draft frame for each of your three to five candidates from **Get underneath three to five**. Work one candidate at a time directly in the response areas below. Frames 1–3 are required; Frames 4–5 are optional. Submit the frames together for **35 points**.\n\nWork without AI. These drafts capture your own read before the Dojo Lab tests and widens it. Keep them rough and specific. If you cannot fill a part, write **I do not know yet** instead of guessing.\n\nUse the seven-part template and worked examples on [The problem frame](artifact:course1-sprints-sprint-14-the-problem-frame) as your reference. Label all seven parts in each response and draft them in this order: **2, 3, 4, 5, 6, 7, then 1**. Bring your earlier candidate descriptions into the frame where they fit.\n\n## Part 2: the problem\n\nStart with the gap from your candidate work. Write it as a condition someone is living in, not a task or annoyance. One or two sentences is enough.\n\n## Part 3: who is affected, and what it costs them\n\nIn **3a**, name people or specific roles. In **3b**, attach a cost to each one: time, money, errors, or strain. If you do not know who is affected, say who you would ask.\n\n## Part 4: how it is handled today, and where that falls short\n\nIn **4a**, describe the current process, habit, workaround, or person handling it, including anything tried and abandoned. In **4b**, name the moment that handling stops working, not the consequence that follows. If 4b is blank, look for the moment the cost in Part 3b first appears.\n\n## Part 5: what fixed would look like\n\nWrite one sentence describing the changed state, not a solution. For example, change \"a shared handover checklist\" into \"everyone on the team knows within a day when an account changes hands.\"\n\n## Part 6: find your assumptions\n\nReview Parts 2 through 5 line by line. List anything written as true that you have not seen yourself or heard from someone who would know. Include at least four assumptions and at least one about a cost in Part 3b. Mark each **confirmed** or **unverified**. For every unverified assumption, name who could tell you.\n\n## Part 7: what you do not know yet\n\nAdd the questions left after Part 6, such as who owns the process or whether something was tried before. Keep the focus on the problem. Tool research and automation ideas belong later.\n\n## Part 1: the goal it serves, last\n\nStart from Part 5 and ask why the changed state matters until you reach a goal nobody involved would dispute. Then make it specific enough to point to this problem rather than any similar problem. Write one sentence and say nothing about what to build.\n\n## Draft your frames\n\nGive each candidate one response area and use the self-check beneath it to review all seven parts. Download becomes available when each of Frames 1–3 contains at least **100 characters, excluding whitespace**. This minimum-text check does not assess completeness; use the self-checks before submitting.\n\nKeep the Word document exactly as submitted. You will bring these frames to the Dojo Lab, and the Reflection will compare your first drafts with your final Problem Frame.",
+      "reason": "Adapt the existing First frames into a separate no-AI Canvas Walkthrough under Jeremy Shaw’s approved 28 September plan: direct writing, descriptive repeated self-checks, linked lesson, Word upload, and minimum-text download check. This is an instructional adaptation, not a verbatim DOCX conversion.",
+      "based_on": [
+        "d-bb7cd50440dd3015:word/document.xml/176",
+        "d-bb7cd50440dd3015:word/document.xml/178",
+        "d-bb7cd50440dd3015:word/document.xml/179",
+        "d-bb7cd50440dd3015:word/document.xml/180",
+        "d-bb7cd50440dd3015:word/document.xml/181",
+        "d-bb7cd50440dd3015:word/document.xml/182",
+        "d-bb7cd50440dd3015:word/document.xml/183",
+        "d-bb7cd50440dd3015:word/document.xml/184",
+        "d-bb7cd50440dd3015:word/document.xml/185",
+        "d-bb7cd50440dd3015:word/document.xml/186",
+        "d-bb7cd50440dd3015:word/document.xml/187",
+        "d-bb7cd50440dd3015:word/document.xml/188",
+        "d-bb7cd50440dd3015:word/document.xml/189",
+        "d-bb7cd50440dd3015:word/document.xml/190",
+        "d-bb7cd50440dd3015:word/document.xml/191",
+        "d-bb7cd50440dd3015:word/document.xml/192",
+        "d-bb7cd50440dd3015:word/document.xml/193",
+        "d-bb7cd50440dd3015:word/document.xml/194",
+        "d-bb7cd50440dd3015:word/document.xml/195",
+        "d-bb7cd50440dd3015:word/document.xml/196",
+        "d-bb7cd50440dd3015:word/document.xml/197",
+        "d-bb7cd50440dd3015:word/document.xml/198",
+        "d-bb7cd50440dd3015:word/document.xml/199",
+        "d-bb7cd50440dd3015:word/document.xml/200",
+        "d-bb7cd50440dd3015:word/document.xml/201",
+        "d-bb7cd50440dd3015:word/document.xml/202",
+        "d-bb7cd50440dd3015:word/document.xml/203",
+        "d-bb7cd50440dd3015:word/document.xml/204",
+        "d-bb7cd50440dd3015:word/document.xml/205",
+        "d-bb7cd50440dd3015:word/document.xml/206",
+        "d-bb7cd50440dd3015:word/document.xml/207",
+        "d-bb7cd50440dd3015:word/document.xml/208",
+        "d-bb7cd50440dd3015:word/document.xml/209",
+        "d-bb7cd50440dd3015:word/document.xml/211",
+        "d-bb7cd50440dd3015:word/document.xml/212",
+        "d-bb7cd50440dd3015:word/document.xml/213",
+        "d-bb7cd50440dd3015:word/document.xml/214",
+        "d-bb7cd50440dd3015:word/document.xml/215",
+        "d-bb7cd50440dd3015:word/document.xml/216",
+        "d-bb7cd50440dd3015:word/document.xml/217",
+        "d-bb7cd50440dd3015:word/document.xml/218",
+        "d-bb7cd50440dd3015:word/document.xml/219",
+        "d-bb7cd50440dd3015:word/document.xml/220"
+      ]
+    }
+  ],
+  "source_roles": {
+    "d-bb7cd50440dd3015": {
+      "role": "primary_authoring",
+      "reason": "The user supplied Sprint-1-cut-ready-v5.4.docx as the source for the Sprint 1 rebuild."
+    }
+  },
+  "metadata_decisions": [
+    "Distinct unpublished replacement below original; preserve original identity, content and publication while staged.",
+    "35 points and must_submit retained; Word upload replaces text entry as explicitly approved.",
+    "First three response tasks require 100 non-whitespace characters; optional fourth and fifth frames do not gate download.",
+    "No AI retained by the explicit user-approved plan. Newer design proposals for grids, AI, and merged teaching are deferred for source reconciliation before release.",
+    "No Candidate Log required within this replacement. Neighboring pages still need release reconciliation."
+  ],
+  "review_inputs": [
+    {
+      "path": "course1/sprints/sprint-14/first-frames.md",
+      "sha256": "5dbffad6acafeeae5282c6ff187fa75a378088bb6e897803052c1f20a2fe5dc7"
+    },
+    {
+      "url": "https://cs-you-monterey.slack.com/archives/C06DH8365S7/p1790528437936099",
+      "role": "Sathya revision suggestions"
+    },
+    {
+      "url": "https://cs-you-monterey.slack.com/archives/C06DH8365S7/p1790616297317219",
+      "role": "Leslie walkthrough direction"
+    }
+  ]
+}

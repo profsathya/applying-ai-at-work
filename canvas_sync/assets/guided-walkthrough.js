@@ -6,12 +6,17 @@
   const saveStatus = document.getElementById('walk-save-status');
   const copyStatus = document.getElementById('walk-copy-status');
   const richOutput = document.getElementById('walk-rich-output');
+  const recovery = document.getElementById('walk-recovery');
+  const download = document.getElementById('walk-download');
+  const downloadRequirements = document.getElementById('walk-download-requirements');
+  const minimumTasks = config.tasks.filter(task => task.min_response_chars);
   const hasTable = config.tasks.some(task => task.kind === 'table');
   const pdfFromDocument = Boolean(config.pdfFromDocument);
   const inputs = Array.from(document.querySelectorAll('[data-walk-answer]'));
   const buttons = Array.from(document.querySelectorAll('[data-walk-feedback]'));
   let state = {answers: Object.create(null), feedback: Object.create(null)};
   let saveTimer;
+  let recoveryNeeded = false;
 
   try {
     const saved = JSON.parse(localStorage.getItem(key) || 'null');
@@ -35,6 +40,7 @@
     }
   } catch (_) {
     saveStatus.textContent = 'This browser could not load a saved draft. Copy your work before leaving.';
+    recoveryNeeded = true;
   }
 
   function save() {
@@ -43,7 +49,20 @@
       saveStatus.textContent = 'Saved in this browser on this device. Keep your own copy before leaving.';
     } catch (_) {
       saveStatus.textContent = 'Browser saving is unavailable. Copy or download your work before leaving.';
+      showRecovery();
     }
+  }
+
+  function showRecovery() {
+    recoveryNeeded = true;
+    if (recovery) recovery.hidden = false;
+    output.value = assembledText();
+  }
+
+  function unmetMinimums() {
+    return minimumTasks.map(task => ({task,
+      count: Array.from(String(state.answers[task.id] || '').replace(/\s/gu, '')).length,
+    })).filter(item => item.count < item.task.min_response_chars);
   }
 
   function responseFor(task, index) {
@@ -171,13 +190,21 @@
   }
 
   function update() {
+    if (download && minimumTasks.length) {
+      const missing = unmetMinimums();
+      download.disabled = missing.length > 0;
+      downloadRequirements.textContent = missing.length
+        ? 'Before downloading: ' + missing.map(({task, count}) => task.prompt + ': ' + count + '/' + task.min_response_chars + ' non-whitespace characters').join('; ') + '. This checks text length only; use each self-check to review completeness.'
+        : 'The required responses meet the minimum text length. Use each self-check to review completeness before downloading.';
+    }
     for (const button of buttons) {
       const response = responseForButton(button);
       const previous = state.feedback[button.dataset.walkFeedback];
       button.disabled = Boolean(!response || (previous && previous.onText === response && !previous.preview));
       if (previous) showFeedback(button, previous.text, previous.onText !== response, previous.preview);
     }
-    if (output.value) output.value = assembledText();
+    if (recoveryNeeded) showRecovery();
+    else if (output.value) output.value = assembledText();
   }
 
   function resizeTableInput(input) {
@@ -266,8 +293,8 @@
     setTimeout(() => URL.revokeObjectURL(url), 60000);
     copyStatus.textContent = 'Text copy downloaded. Keep it for your records; downloading is not a Canvas submission.';
   });
-  const download = document.getElementById('walk-download');
   if (download) download.addEventListener('click', () => {
+    if (unmetMinimums().length) { update(); return; }
     try {
       const blob = globalThis.WalkthroughDocx.build(config, state.answers);
       const url = URL.createObjectURL(blob);
@@ -283,6 +310,7 @@
         ? 'Word document downloaded. In Canvas, select Start Assignment, attach it with any other required files, then select Submit Assignment. Downloading is not a submission.'
         : 'Word document downloaded for your records. Submit your response through this Canvas assignment; downloading is not a submission.';
     } catch (_) {
+      showRecovery();
       if (hasTable) {
         richOutput.innerHTML = assembledHtml(); richOutput.hidden = false; richOutput.focus();
         copyStatus.textContent = 'Download is unavailable. Select and copy the table below into a document.';
@@ -303,6 +331,8 @@
       try { localStorage.removeItem(key); }
       catch (_) { saveStatus.textContent = 'Could not clear the saved draft. Keep a copy of your responses.'; return; }
       state = {answers: Object.create(null), feedback: Object.create(null)};
+      recoveryNeeded = false;
+      if (recovery) recovery.hidden = true;
       inputs.forEach(input => { input.value = ''; resizeTableInput(input); });
       buttons.forEach(button => {
         document.querySelector('[data-walk-feedback-result="' + button.dataset.walkFeedback + '"]').textContent = '';

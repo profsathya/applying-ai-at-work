@@ -242,6 +242,13 @@ def validate_guided_assignment(label: object, payload: dict, body: str | None = 
     tasks = config.get('tasks', [])
     if not isinstance(tasks, list):
         tasks = []
+    for task in tasks:
+        if isinstance(task, dict) and 'min_response_chars' in task:
+            if (not walkthrough or task.get('kind', 'response') != 'response'
+                    or payload.get('submission_type') != 'file_upload'
+                    or not config.get('export_filename')
+                    or config.get('submission_format') == 'pdf_from_document'):
+                errors.append(f'{label}: min_response_chars requires a Word-upload walkthrough response task')
     if not walkthrough and any(isinstance(task, dict) and task.get('kind') == 'table' for task in tasks):
         errors.append(f'{label}: table tasks require walkthrough presentation')
     if walkthrough:

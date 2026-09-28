@@ -182,16 +182,23 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
             response = f'''<label class="walk-field" for="walk-{key}"><span>Your response</span>
 <textarea id="walk-{key}" data-walk-answer="{key}" maxlength="16000" rows="6"></textarea></label>
 {feedback}'''
+        task_content = response + self_check if kind == 'response' else self_check + response
         cards.append(f'''<section class="walk-step" data-walk-step="{html.escape(ident, quote=True)}">
 <p class="walk-step-number">Step {number}</p><h2>{html.escape(task['prompt'])}</h2>
 <div class="walk-teaching">{teaching}</div>
-{self_check}
-{response}</section>''')
+{task_content}</section>''')
     submission = frontmatter['submission_type']
     pdf_from_document = config.get('submission_format') == 'pdf_from_document'
     has_table = any(task.get('kind') == 'table' for task in config['tasks'])
     has_writable = any(task.get('kind') != 'table' or not task.get('read_only') for task in config['tasks'])
     word_upload = submission == 'file_upload' and has_writable and not pdf_from_document
+    minimum_tasks = [task for task in config['tasks'] if task.get('min_response_chars')]
+    minimum_message = 'Before downloading, enter ' + '; '.join(
+        f'{task["min_response_chars"]} non-whitespace characters in {task["prompt"]}'
+        for task in minimum_tasks) + '. This checks text length only; use each self-check to review completeness.'
+    download_gate = ('<p id="walk-download-requirements" role="status" aria-live="polite">'
+                     + html.escape(minimum_message) + '</p>') if minimum_tasks else ''
+    gate_attributes = ' disabled aria-describedby="walk-download-requirements"' if minimum_tasks else ''
     if not has_writable:
         intro = ('This Canvas Walkthrough includes a reference table. Read it as you work through '
                  'the activity. There is nothing to enter on this page; you can keep a copy of the table below.')
@@ -232,7 +239,7 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
         download_label = 'Download Word copy for your records'
     download_class = ' class="walk-secondary"' if submission != 'file_upload' or not has_writable or pdf_from_document else ''
     copy_class = ' class="walk-secondary"' if submission == 'file_upload' and has_writable and not pdf_from_document else ''
-    download = (f'<button type="button" id="walk-download"{download_class}>'
+    download = (f'<button type="button" id="walk-download"{download_class}{gate_attributes}>'
                 f'{html.escape(download_label)}</button>' if config.get('export_filename') else '')
     copy_button = (f'<button type="button" id="walk-copy"{copy_class}>'
                    f'{html.escape(copy_label)}</button>')
@@ -266,6 +273,9 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
     plain_output = ('<details class="walk-plain-output"' + (' hidden' if word_upload else '') + '><summary>Plain text backup</summary>'
                     '<label for="walk-output">Your assembled responses as text</label><textarea id="walk-output" readonly rows="12"></textarea></details>'
                     if has_table else '<label for="walk-output">Your assembled responses</label><textarea id="walk-output" readonly rows="12"></textarea>')
+    if word_upload:
+        plain_output = ('<div id="walk-recovery" hidden><label for="walk-output">Your responses for recovery</label>'
+                        '<textarea id="walk-output" readonly rows="12"></textarea></div>')
     rich_output = ('<div id="walk-rich-output" class="walk-rich-output" hidden tabindex="0" '
                    'aria-label="Tables and responses for manual copying"></div>' if has_table else '')
     save_message = 'Your draft will save as you type.' if has_writable else 'No browser draft is needed for this reference table.'
@@ -281,7 +291,7 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
 <p id="walk-save-status" role="status" aria-live="polite">{html.escape(save_message)}</p></aside>
 {intro_html}{''.join(cards)}
 <section class="walk-finish"><h2>{html.escape(finish_heading)}</h2><p>{html.escape(final_direction)}</p>
-{actions}
+{download_gate}{actions}
 <p id="walk-copy-status" role="status" aria-live="polite"></p>
 {plain_output}{rich_output}
 {clear_controls}
