@@ -83,6 +83,9 @@ class WalkthroughChecks(unittest.TestCase):
                 release_pairs([new], [source_path, new_path])
             self.assertEqual(release_pairs([new], [source_path, new_path], already_live_ids={'new'}), [])
             source_path.write_text(source_path.read_text().replace('publish: true', 'publish: false'))
+            with self.assertRaisesRegex(ValueError, 'requires changed source'):
+                release_pairs([new], [source_path, new_path])
+            self.assertEqual(release_pairs([new], [source_path, new_path], already_live_ids={'new'}), [])
             state = {'artifacts': {
                 'source': {'artifact_id': 'source', 'canvas_id': 1, 'canvas_type': 'assignment',
                            'canvas_module_id': 5, 'canvas_module_item_id': 10},
