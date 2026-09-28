@@ -370,16 +370,16 @@
       "canvas_payload_hash": "3a40339c5ef462d4f657e67d250485bc32d2a12d11bea019129d8cdaa9e56e61",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "90ef36232c498686fa883ce7ae87e6e50ee612c5e713d782fcdb03b7de8db417",
-      "hosted_hash": "8b606eb8bd9d28c84008806810731c3e74c461625c665405d5c7eaa6bf81a233",
-      "hosted_last_rendered": "2026-09-18T21:20:41+00:00",
+      "content_hash": "5ff1bfd631c1709657c13cd0292ab89e52a94d312fd6d04cfabd4fef18eb9063",
+      "hosted_hash": "a4c560eac3ab360ae8652b790c96f6f3ef35b6a3ebafaabe764aec81da0cf669",
+      "hosted_last_rendered": "2026-09-28T19:51:30+00:00",
       "hosted_path": "course1/activities/introduction-integrate-people-and-context-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-integrate-people-and-context-v3.html",
-      "last_pushed": "2026-09-18T21:20:41+00:00",
+      "last_pushed": "2026-09-28T19:51:30+00:00",
       "local_path": "course1/sprints/sprint-15/introduction-integrate-people-and-context-v3.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "e40031a3c49523620e5313f987387dea1f7c6d14"
+      "source_commit": "ffb628e9cdf21bb05fdf6c553f015b52defcba19"
     },
     "course1-sprints-sprint-15-sprint-3-concept-check": {
       "artifact_id": "course1-sprints-sprint-15-sprint-3-concept-check",
@@ -1555,5 +1555,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-28T19:30:41+00:00"
+  "last_sync": "2026-09-28T19:51:30+00:00"
 }
