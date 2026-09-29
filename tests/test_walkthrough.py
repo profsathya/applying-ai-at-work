@@ -10,7 +10,7 @@ from canvas_sync.hosted_html import artifact_hosted_info, render_artifact_docume
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.state import load_json
 from canvas_sync.walkthrough_release import preflight_pair, release_pairs, rollback_pair
-from canvas_sync.walkthrough import _guidance, guidance_labels
+from canvas_sync.walkthrough import _field_cell_text, _guidance, guidance_labels
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -80,6 +80,16 @@ class WalkthroughChecks(unittest.TestCase):
         self.assertNotIn('Watch for', custom)
         self.assertIn('<strong>Ask yourself:</strong> A', custom)
         self.assertIn('<strong>Example:</strong> E', custom)
+
+    def test_field_cell_bold_name_and_ask_label_are_opt_in(self):
+        labels = guidance_labels({})
+        text = 'Role\nWho is <this> person?'
+        self.assertEqual(_field_cell_text({}, text, labels), 'Role<br>Who is &lt;this&gt; person?')
+        styled = _field_cell_text({'bold_field_names': True, 'label_field_questions': True}, text, labels)
+        self.assertEqual(styled, '<strong>Role</strong><br><strong>Ask yourself:</strong> Who is &lt;this&gt; person?')
+        self.assertEqual(_field_cell_text({'bold_field_names': True}, 'Role', labels), 'Role')
+        custom = guidance_labels({'guidance_labels': {'ask': 'Consider'}})
+        self.assertIn('<strong>Consider:</strong>', _field_cell_text({'label_field_questions': True}, text, custom))
 
     def test_release_requires_pair_and_assessment_parity(self):
         with tempfile.TemporaryDirectory() as directory:

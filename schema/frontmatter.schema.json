@@ -217,6 +217,8 @@
               "read_only": {"type": "boolean"},
               "header_rows": {"type": "integer", "enum": [0, 1], "default": 1},
               "document_after": {"type": "array", "items": {"type": "string"}},
+              "bold_field_names": {"type": "boolean"},
+              "label_field_questions": {"type": "boolean"},
               "repeat_count": {"type": "integer", "minimum": 1, "maximum": 20},
               "layout": {"type": "string", "enum": ["fields", "table"]},
               "repeat_labels": {"type": "array", "items": {"type": "string", "minLength": 1}},

@@ -104,4 +104,17 @@ function zipEntry(data, wanted) {
   assert.equal((wideXml.match(/<w:gridCol /g) || []).length, 5);
   assert.ok(wideXml.includes('Source guidance'));
   assert.ok(wideXml.includes('Answer'));
+  const fieldTask = {
+    id: 'fields', kind: 'table', prompt: 'Fields', bold_field_names: true, label_field_questions: true,
+    columns: [{id: 'field', label: 'Field'}, {id: 'answer', label: 'Your answer'}],
+    rows: [{id: 'role', label: 'Role', cells: [{text: 'Role\nWho is this person?'}, {text: '', response: true}]}],
+  };
+  const fieldXml = zipEntry(Buffer.from(await WalkthroughDocx.build(
+    {title: 'Fields', askLabel: 'Ask yourself', tasks: [fieldTask]}, {}).arrayBuffer()), 'word/document.xml');
+  assert.match(fieldXml, /<w:b\/><\/w:rPr><w:t xml:space="preserve">Role<\/w:t>/);
+  assert.match(fieldXml, /<w:b\/><\/w:rPr><w:t xml:space="preserve">Ask yourself: <\/w:t><\/w:r><w:r><w:t xml:space="preserve">Who is this person\?<\/w:t>/);
+  const plainXml = zipEntry(Buffer.from(await WalkthroughDocx.build(
+    {title: 'Fields', tasks: [{...fieldTask, bold_field_names: false, label_field_questions: false}]}, {}).arrayBuffer()), 'word/document.xml');
+  assert.doesNotMatch(plainXml, /Ask yourself/);
+  assert.match(plainXml, /<w:p><w:r><w:t xml:space="preserve">Role<\/w:t><\/w:r><\/w:p>/);
 })().catch(error => { console.error(error); process.exitCode = 1; });
