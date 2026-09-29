@@ -87,6 +87,8 @@ guided_assignment:
   - id: stakeholder-1
     kind: table
     prompt: Stakeholder Table 1
+    bold_field_names: true
+    label_field_questions: true
     columns:
     - id: column-1
       label: Field
@@ -218,6 +220,8 @@ guided_assignment:
   - id: stakeholder-2
     kind: table
     prompt: Stakeholder Table 2
+    bold_field_names: true
+    label_field_questions: true
     columns:
     - id: column-1
       label: Field
@@ -349,6 +353,8 @@ guided_assignment:
   - id: stakeholder-3
     kind: table
     prompt: Stakeholder Table 3
+    bold_field_names: true
+    label_field_questions: true
     columns:
     - id: column-1
       label: Field
@@ -480,6 +486,8 @@ guided_assignment:
   - id: stakeholder-4
     kind: table
     prompt: Stakeholder Table 4
+    bold_field_names: true
+    label_field_questions: true
     columns:
     - id: column-1
       label: Field

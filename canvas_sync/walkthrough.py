@@ -27,6 +27,21 @@ def _guidance(field: dict, labels: tuple[tuple[str, str], ...] = GUIDANCE_LABELS
     return f'<details class="walk-field-guidance"><summary>Example and guidance</summary>{parts}</details>'
 
 
+def _field_cell_text(task: dict, text: str, labels: tuple[tuple[str, str], ...]) -> str:
+    """First-column row text, optionally with a bold field name and a labelled question."""
+    match = re.fullmatch(r'([^\n]+)(\n+)(.+)', text, flags=re.DOTALL)
+    if not match or not (task.get('bold_field_names') or task.get('label_field_questions')):
+        return html.escape(text).replace('\n', '<br>')
+    name, gap, question = match.groups()
+    name_html = html.escape(name)
+    if task.get('bold_field_names'):
+        name_html = f'<strong>{name_html}</strong>'
+    question_html = html.escape(question).replace('\n', '<br>')
+    if task.get('label_field_questions'):
+        question_html = f'<strong>{html.escape(dict(labels)["ask"])}:</strong> {question_html}'
+    return name_html + '<br>' * len(gap) + question_html
+
+
 def _field(task_id: str, repeat: int | None, field: dict,
            labels: tuple[tuple[str, str], ...] = GUIDANCE_LABELS) -> str:
     key = '.'.join(str(part) for part in (task_id, repeat, field['id']) if part is not None)
@@ -105,7 +120,8 @@ def _source_table(task: dict, *, has_feedback: bool,
         feedback_key = html.escape(f'{ident}.{row["id"]}', quote=True) if response_row and has_feedback else ''
         feedback_result_id = f'walk-feedback-{ident}-{row["id"]}' if feedback_key else ''
         for column_index, (column, cell) in enumerate(zip(columns, row['cells'])):
-            source_text = html.escape(cell['text']).replace('\n', '<br>')
+            source_text = (_field_cell_text(task, cell['text'], labels) if column_index == 0
+                           else html.escape(cell['text']).replace('\n', '<br>'))
             content = f'<div class="walk-source-cell-text">{source_text}</div>' if source_text else ''
             if column_index == 0:
                 content += _guidance(row, labels)
@@ -272,6 +288,8 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
         'documentPrefix': config.get('document_prefix', []),
         'documentSuffix': config.get('document_suffix', []),
     }
+    if any(task.get('label_field_questions') for task in config['tasks']):
+        payload['askLabel'] = dict(label_pairs)['ask']
     serialized = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     docx_script = (ASSETS / 'walkthrough-docx.js').read_text() if config.get('export_filename') else ''
     table_script = (ASSETS / 'walkthrough-tables.js').read_text() if has_table else ''
