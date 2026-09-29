@@ -234,7 +234,11 @@ source_provenance: name-the-gap-canvas-walkthrough.sources.json
 
 # Name the Gap Canvas Walkthrough
 
-Start with the Problem Frame you revised after your real stakeholder conversation. This week, identify what you know, what you still need to learn, and which unknowns could change your next decision. Make your own first list before using any feedback. That list is the material you will test in the Dojo Lab.
+**Learning goal:** Gather what you do not yet know about your own problem, in your own words, before any AI gets involved. Sort and rank it as blocking, useful, or interesting, and determine which part of your Problem Frame each gap holds up.
+
+## Do this part without AI
+
+If you ask an AI what someone working on your problem would need to learn, it will hand you a clean, sensible list. But it will be generic, not tailored to you. AI comes in at the Dojo Lab. Right now, the list has to come from your thinking.
 
 The original Name the Gap assignment asks for work without AI. This Canvas Walkthrough adds instructor-requested, optional formative feedback **after** you write. It reviews only the response or row you select; it cannot know your workplace, add evidence, or decide your ranking. Leave out names and confidential details in any feedback request. You can use the self-checks and complete every part without AI.
 
@@ -244,13 +248,55 @@ Use this walkthrough to complete Part A and C1. The [Learning Plan template](htt
 
 ## A1. Start from what you know
 
-Write two or three things about your problem that you already understand well enough. Add one line for each showing how you know. A stakeholder's account, your observation, or a reliable record can support a claim. Keep this short so your gaps start from solid ground.
+### Start with your frame
+
+Your latest Problem Frame is the one you revised in Sprint 3, after your stakeholder conversation. It is in Section D of your Stakeholder Validation Report. Copy that version into C1 of your template, “My frame coming in.” After this week, leave C1 as it is. It is your record of where you started.
+
+### Where to look for gaps
+
+With your frame in front of you, and your Sprint 3 report open next to it, look for four things:
+
+1. **Your assumptions** (part 6): anything still unverified or inferred. If your frame never marked them, mark them now.
+2. **What you do not know yet** (part 7).
+3. **Section D of your Sprint 3 report:** what still needs validation.
+4. **Anything you describe vaguely** because you do not know the specifics.
+
+The fourth is the easiest to miss. Vagueness in how you describe your own problem is usually a gap you have been routing around.
+
+Write two or three things about your problem that you understand well enough. One line each on how you know.
+
+*Example:* I know the outgoing manager tells the incoming manager directly. I have watched it happen twice, and Dana described it the same way.
+
+Keep this short. It is here so you start from solid ground, not a list of everything you do not know.
 
 ## A2. Name and sort your gaps
 
-Read your Sprint 3 validation report, the Inferred fields on your stakeholder map, and the assumptions and unknowns in your frame. Also look for vague language that may hide a missing fact. In each row, write one specific unknown and complete the sentence **Until I know this, I can't...** Then mark it **Blocking** if a decision waits on it, **Useful** if it improves the work without stopping it, or **Interesting** if no next step depends on it yet. Keep the numbered source rows and leave unused rows blank.
+Write your gaps, one line each.
 
-An illustrative blocking gap is whether managers hear about a handover too late. Until that is checked, you cannot say the delay affects the whole team. By contrast, learning how another company handles handovers may be interesting but outside this plan unless your real stakeholders make it relevant.
+**How many should you have?** It depends on where Sprint 3 left you. You tested one assumption with a real person, so one of your blocks may already be settled, and that conversation probably raised things you had not thought of before. Some people arrive with two open items, some with six.
+
+You have enough when you can read your Problem Frame end to end and every part that could still be wrong has a gap pointing at it. Nothing unnamed. Most people land between three and five, but the number is a result, not a target.
+
+**If you only find one or two,** look again in three places: what your stakeholder said that you had no answer for, anything in your frame you describe vaguely, and the parts of the frame the conversation never touched.
+
+Run the sentence test on each: “Until I know this, I can’t ___.” If the blank will not fill, you have written a topic. Rewrite it or replace it.
+
+Then sort each one:
+
+- **Blocking.** A decision or next step is waiting on it. If you cannot name the decision, it is not blocking.
+- **Useful.** It would improve the work, but nothing is stopped.
+- **Interesting.** You want to know it, and nothing you do next depends on it.
+
+A finished list looks like this:
+
+1. I don’t know whether the other managers really find out late when an account changes hands. **Blocking.** I can’t say the problem is real for the whole team until I know.
+2. I don’t know whether anyone tried to fix handovers before. **Blocking.** If a fix was tried and failed, the real problem is whatever killed it.
+3. I don’t know how many handovers happen each month. **Useful.** It would show the size of the problem, but I can move without it.
+4. I don’t know how other companies handle handovers. **Interesting.** Nothing I do next depends on it.
+
+Be honest about the marks. There is no right number of blocking gaps. If none are blocking, go back to “Where to look for gaps,” especially the vagueness step. Lists with nothing blocking are usually too polite. If you have looked twice and still find none, say so and describe what you looked at.
+
+Keep the numbered source rows and leave unused rows blank.
 
 ## If you need more than four rows
 
@@ -258,18 +304,30 @@ The source grid has four rows. If your frame still contains a consequential unkn
 
 ## A3. Put them in order
 
-Every blocking gap goes into your plan. Rank those gaps, starting with the answer that could change what the others mean. Add useful gaps below if you choose. List interesting gaps outside the plan, with one line about what would make each start to matter. If none of your gaps is blocking after checking your frame twice, say what you examined and why no decision is waiting.
+Every blocking gap goes into your plan. Rank them. Ask: **which answer could change what the other gaps mean?** That one goes first.
+
+Useful gaps can go into your plan too, below the blocking ones. You decide.
+
+Interesting gaps stay on your list but not in your plan. For each one, write one line: what would tell you it has started to matter.
+
+*Example:* Not in my plan: how other companies handle handovers. It starts to matter if Dana says the team wants to copy another company’s approach.
 
 ## A4. Explain the stakes
 
-For each gap entering your plan, name the part of your seven-part Problem Frame that depends on it. State what would change if the answer went the other way. If the answer would change nothing, reconsider whether the gap is blocking.
+For each gap going into your plan, write one or two sentences: **which part of your Problem Frame depends on it, and what would change if the answer went the other way?**
+
+*Example:* Gap 1 sits under part 3 of my frame, who is affected, where I wrote that all four managers are affected. If most managers already know about handovers, the problem is smaller than I said, and it may only affect new managers.
+
+If the answer would change nothing in your frame, it is not blocking. Move it down.
 
 ## C1. Keep your Sprint 3 frame
 
-Copy the frame from Section D of your Stakeholder Validation Report into these seven slots. If that revision is a paragraph, separate it into the seven parts as well as you can. Note any slot you cannot fill. Leave C1 unchanged after this week so C2 can show what planning changed.
+The seven slots are already there, from Sprint 1: the goal, the problem, who is affected, how it is handled today, what fixed looks like, your assumptions, and what you do not know yet. If your Sprint 3 revision came out as a paragraph rather than seven parts, split it back out as best you can. A slot you cannot fill is a finding, not a failure. Note it and carry on.
 
 ## Keep Part D for later
 
 The source template includes this results table for CIS 502. Keep it with your Word file, but leave it blank now.
 
 Select **Download as Word document** below. In Canvas, select **Start Assignment**, attach your Week 7 Word file, and select **Submit Assignment**. Part A and C1 are graded here. Keep this file for the Dojo Lab and week 8. Saving a browser draft or downloading the file alone does not submit your work.
+
+Next: take your list to the Dojo Lab, later this week. Leave yourself time for it. The Dojo Lab only works once this list exists, so the two go back to back.
