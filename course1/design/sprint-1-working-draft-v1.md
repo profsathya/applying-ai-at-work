@@ -1,10 +1,10 @@
 ---
 purpose: Sprint 1, whole sprint, working draft for Leslie's review, with the Sprint 2 and 3 design decisions applied, three activities as Canvas Walkthroughs, the teaching page merged into First frames, and the Candidate Log retired; becomes the cut-ready source for the rebuilt pages once reviewed
-status: v1.0, 27 September 2026, draft for Leslie. Written from sprint-1-rework-plan.md v0.3, the live Sprint 1 pages (v5.4), Jeremy's interleaved Brainstorm build (assignment 7162), his Dojo Labs tab method for Sprint 1, and Clare's review dispositions
+status: v1.1, 29 September 2026: Leslie's tracked edits applied (95 changes) and her 21 comments answered in the BUILD notes; open: C18 (the Word file as the Problem Frame document) and worked example B. v1.0, 27 September 2026, draft for Leslie. Written from sprint-1-rework-plan.md v0.3, the live Sprint 1 pages (v5.4), Jeremy's interleaved Brainstorm build (assignment 7162), his Dojo Labs tab method for Sprint 1, and Clare's review dispositions
 depends_on: sprint-1-rework-plan.md (v0.3); clare-sprint-1-review.md; problem-frame-template.md (v0.8); course1/dojo/dojo-labs.txt; course1/sprints/sprint-14/ (Sprint 1 as published); course1/sprints/sprint-15/brainstorm-your-list-ai-guided-activity.md
 ---
 
-# Sprint 1: working draft, v1.0
+# Sprint 1: working draft, v1.1
 
 ## Cover note
 
@@ -44,7 +44,7 @@ This sprint is about choosing a problem you can investigate through this course.
 
 A **problem** is a gap between how something works now and how it could work, where the gap costs someone something real. A gap is the difference between what you are experiencing now and what you would like to see.
 
-A **problem frame** is your written account of a problem. It says what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know.
+A **problem frame** is your written account of a problem. It says what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know. By the end of this sprint you will have written up a draft problem frame, which you will continue working on throughout the course.
 
 ![Three colleagues review a workflow and pass a folder across a worktable.](assets/workplace-handoff.webp)
 
@@ -64,7 +64,7 @@ The goal is to move from a wide list to one framed problem, over two weeks. Own 
 **Week 2**
 
 5. **Dojo Lab: test, widen, choose.** Your Dojo tests and widens your frames and helps you choose one. (Own your progress, 0 points.)
-6. **Problem Frame.** Write up the problem you chose in the document that carries it through the course, and say why this one (50 points).
+6. **Problem Frame.** Write up the problem you chose and say why this one (50 points).
 7. Take the **Concept check** (5 points).
 8. **Write the Reflection** (10 points).
 
@@ -72,15 +72,11 @@ Spread week 1 across several days. The brainstorm asks you to keep adding to you
 
 ### About AI in this sprint
 
-The rule for the whole course starts here: your thinking first, then AI. The reason you write first is that AI does not know your daily frustrations. It cannot tell what you have stopped noticing, what you keep putting off, or what you quietly work around, and those are often where the real problems hide. Only you can spot them. Once you have written down your thoughts, AI can be your partner: each activity has a button to get feedback on what you have written, and the Dojo Lab uses AI to test and widen your frames.
-
-### What you carry into Sprint 2
-
-Your Problem Frame, in its own document, which you make in the last activity of this sprint. Every later sprint adds to it.
+The general rule of thumb for this course is that in most cases, for AI to be useful, you need to do some of the thinking and work first so that AI can react to it. The more guidance you can give AI about what it's trying to do, the better the results. Once you have written down your thoughts, AI can be your partner: each activity has a button to get feedback on what you have written, and the Dojo Lab uses AI to test and widen your frames.
 
 Begin with **Brainstorm your list**.
 
-> **[BUILD]** `page_presentation: reading`. Learning goal: "Say what this sprint asks of you and where each piece of work lands." Changes from v5.4: gap defined (Clare C1); "what you carry forward" spelled out (C2); the About AI paragraph in Clare's plain English (C6, C7, C8), turned from "three activities without AI" to "your thinking first, then feedback" (list item 38); the ten minutes gone from the route line (Leslie); How to work, Where to write, and What to keep and submit cut, their surviving sentences moved into the pages; key terms: problem and problem frame kept, candidate problems moved to Get underneath where it is defined in place (Leslie to confirm, C2 note); the concept check at item 7. The illustration stays.
+> **[BUILD]** `page_presentation: reading`. Learning goal: "Say what this sprint asks of you and where each piece of work lands." v1.1 (Leslie, 29 September): the problem-frame term gains its closing sentence; the About AI paragraph is Leslie's; "What you carry into Sprint 2" cut (not a section every sprint has). Whether Welcome explains "0 points but a submission completes the module" is course-wide list item 40; Sprint 0 does not say it today. Earlier: gap defined (Clare C1); the ten minutes gone; How to work, Where to write, and What to keep and submit cut; key terms kept as they were; the concept check at item 7.
 
 ---
 
@@ -90,27 +86,13 @@ Begin with **Brainstorm your list**.
 
 ### What you need for this activity
 
-- Nothing but your week: your calendar, your to-do list, and your inbox, open beside you.
+- Nothing but material that will help you think about your week: your calendar, your to-do list, your inbox, and so on, open beside you.
 
-You will do your work within Canvas. Write your own list first; the feedback button at the end reads what you wrote and nothing else.
+You will do your work within Canvas. Write your own list first; the AI feedback button at the end reads what you wrote and nothing else.
 
-The goal of this activity is a long list of situations in your life that could hold a problem, before you judge any of them.
+### Brainstorm where you encounter challenges
 
-### 1. Set up your categories
-
-Open a blank text page. Write three or four headings for the areas of your life where things happen: **work**, **home**, and **other**. Add **job search**, **volunteering**, **caregiving**, or **side business** if those are part of your week.
-
-### 2. Walk your week and write everything down
-
-Under each heading, list situations that could hold problems. A phrase per item. Do not examine anything yet, and do not decide whether it counts. This is a brainstorm: judgment comes later, in the next activity.
-
-Walk through your typical week in order. Look for:
-
-- Things you do over and over.
-- Things you dread or that bug you.
-- Things you wish worked differently.
-- Things somebody asked you for that do not feel quite right.
-- Things you have been putting off.
+At the end of this activity, you will have a list of twelve to twenty potential problems that you could explore for the rest of this course. To get there, you are going to start with an open brainstorm. Think about parts of your everyday life, such as work, home, job search, volunteering, caregiving, a side business, or something else, where you experience friction or challenges, or where something could work better or more smoothly than it does. Make a list of those friction points. Do not judge your answers right now. Anything is fair game.
 
 > **Here is an example list**
 >
@@ -135,21 +117,35 @@ Walk through your typical week in order. Look for:
 > - Half the new plots at the community garden went to weeds by August
 > - My resume has not been touched in two years
 
-A long list is the goal. Twelve to twenty items across all headings is normal. Nothing on it is a problem yet, and most of it will not become one. Keep adding to it over the next day or two as things come up; the next activity is where you pick.
+### 1. Set up your categories
+
+Start by thinking about the areas of your life where things happen. You may have two, you may have four. Common categories people consider are work, home, job search, volunteering, caregiving, a side business, or something else. Enter your categories in the boxes below.
+
+### 2. Walk your week and write everything down
+
+Under each heading, list situations that could hold problems. A phrase per item. It might help to walk through your typical week, with your calendar, to-do list, and email inbox open if that helps. Look for:
+
+- Things you do over and over.
+- Things you dread or that bug you.
+- Things you wish worked differently.
+- Things somebody asked you for that do not feel quite right.
+- Things you have been putting off.
+
+The table below will guide you through this activity. Keep adding to it over the next day or two as things come up; the next activity is where you pick.
 
 ### 3. If your list is short
 
-Three places to look. Use the ones you need.
+Here is some additional guidance about how to think about this if you are struggling.
 
-*More help: what bugs you.* Something you dread or complain about. Describe the last time it happened, step by step, who did what. Each step that made you sigh goes on your list.
+*More help: take a day or two.* Take a day or two to observe your life with this activity in mind. As you go through your everyday life, make note of times and scenarios where you think "this could work better" than it does right now.
 
-*More help: what you stopped noticing.* A **workaround** is something you do to get around a difficulty, and repeating it makes its cost feel like an ordinary part of the job. Over the next day or two, notice a step you redo, a person you chase, or a private file you keep because the shared version does not work for you. Each one goes on your list.
+*More help: what bugs you.* Pay attention to things you dread or complain about. These feelings sometimes indicate something that could work better, if only.
 
-*More help: what somebody handed you.* A **surface request** names a solution before the problem is clear: "we need an app to track onboarding" says what to build, not what needs to change. Ask why, then why does that matter, until you reach a goal nobody would dispute, then list what could be in the way of that goal. Each of those goes on your list.
+*More help: what you stopped noticing.* A **workaround** is something you do to get around a difficulty. For example, the report that never generates how your team actually needs it, so you spend 20 minutes every Monday morning reformatting it. These workaround moments can be great indicators of a problem.
 
-When you finish, select Download as Word document below and submit the file in Canvas. Keep the file: the next activity starts from it.
+When you finish, select Download as Word document below. In Canvas, select Start Assignment, attach that Word file, and select Submit Assignment. Keep the file for the next activity, which starts from it. Downloading it alone does not submit your work.
 
-> **[BUILD]** Base: `course1/sprints/sprint-15/brainstorm-your-list-ai-guided-activity.md` (Jeremy, 22 September): `presentation: interleaved`, his three source sections, the example list rendered beside each category, `feedback_endpoint` and `feedback_protocol: brainstorm-list-v1` on his service. Moved into the Sprint 1 module as the staged replacement for `brainstorm-your-list` (`walkthrough_after`), Word download on finish as the released walkthroughs have. Changes to his text: the ten minutes gone and the no-judgment line added (Leslie; Clare C4, C13); "open a blank text page" (C11); the headings sentence merged (C12); the More help notes as plain paragraphs, since the smaller grey rendering is list item C14 for Jeremy; the Candidate Log line replaced by the Word file line. Criteria as his: at least two category headings; specific situations from your own week; nothing examined or ruled out yet; if the list is short, what you tried. Learning goal: "List everything in your week that could hold a problem, before you judge any of it." Jeremy's interleaved renderer requires the three section titles exactly ("1. Set up your categories", "2. Walk your week and write everything down", "3. If your list is short"); kept.
+> **[BUILD]** Base: Jeremy's interleaved build (`sprint-15/brainstorm-your-list-ai-guided-activity.md`), moved into the Sprint 1 module as the staged replacement for `brainstorm-your-list`, Word download on finish. His renderer needs the three section titles exactly ("1. Set up your categories", "2. Walk your week and write everything down", "3. If your list is short") and renders the category boxes under section 1 and the lists under section 2; the example list is rendered beside each category by his build, so the example block above sits in the open brainstorm section as teaching. v1.1 (Leslie, 29 September): the open brainstorm section is hers, placed before the categories; "enter your categories in the boxes below" replaces the 7162 placeholder; the More help notes are hers, with "take a day or two" added and "what somebody handed you" (the surface request) cut, which nothing later depends on: the live concept check does not use it and later sprints do not name it. The closing line is Jeremy's release wording, the same on every walkthrough. Feedback: his list protocol, on. Criteria as his. Learning goal: "List everything in your week that could hold a problem, before you judge any of it."
 
 ---
 
@@ -161,36 +157,29 @@ When you finish, select Download as Word document below and submit the file in C
 
 - Your **Brainstorm your list** Word file.
 
-You will do your work within Canvas. Write each row yourself first; then, if you want it, the feedback button beside a row reads what you wrote there.
+You will do your work within Canvas. Write it yourself first. Then, if you want it, select AI feedback beside a row; it reads only what you wrote there.
 
-The goal of this activity is to pick three to five situations from your list and describe each closely enough that the gap starts to show.
+The goal of this activity is to pick three to five situations from your list and describe each in enough detail that the gap between how things work now and what better would look like starts to show.
 
-### Pick three to five
+### Pick three to five to describe in more detail
 
 From your list, choose three to five situations to look at more closely. There is no perfect way to pick, but favor items that:
 
 - Would make a real difference if they were different.
-- You could not fix this week.
-- You do not already know a solution for.
+- Are hefty enough that they could not be solved in a day or two.
+- You do not already have a solution in hand for.
 
-These are your **candidate problems**, or candidates for short. Do not pick the one you already care most about and stop. Three is the minimum because the next activities compare them.
+These are your **candidate problems**, or candidates for short. Three is the minimum because the next activities compare them.
 
-### Describe each one
+### Describe each candidate
 
-Each candidate gets a row in the table below, in four steps:
-
-1. **The situation.** Restate the item from your list, a phrase.
-2. **How it works now.** Two or three sentences. Who does what, in what order. Describe what happens now, not how it should be, and not a solution.
-3. **What it costs, and whom.** Name who is affected (there are very likely several people or roles) and, for each of them, what it costs in time, money, errors, or strain.
-4. **The gap.** One sentence that combines the other two: what could be different, and who feels the cost. Name who does not know, cannot do, or has to redo what. If your sentence describes a process (manual, informal, inconsistent, slow), it is not finished yet, so say who pays for that.
-
-The fact that you noticed each of these is a sign that something may be wrong. Getting underneath it is describing how it works now until the gap shows.
+The table below will help you think through each candidate so that you can better understand its gap. One row per candidate, four columns: the situation, how it works now, what it costs and whom, and the gap. The guidance and an example sit in the table beside each column.
 
 *More help: if the gap will not come.* Ask "How does that part work now?" two or three times about the step where the cost appears. In the example row, asking it about "nobody else is told" is what produced the gap.
 
-When you finish, select Download as Word document below and submit the file in Canvas. Keep the file: First frames starts from these rows.
+When you finish, select Download as Word document below. In Canvas, select Start Assignment, attach that Word file, and select Submit Assignment. Keep the file for the next activity, which starts from it. Downloading it alone does not submit your work.
 
-> **[BUILD]** `presentation: walkthrough`, one source grid (`kind: table`), four columns: The situation (width 4); How it works now (7); What it costs, and whom (6); The gap (6). Header row; Guidance row (the four step texts, shortened to a line each); Example 1, account handovers, from the live page's worked example, all four cells; Example 2, the garden plot, mostly blank: "Half the new plots went to weeds by August" / "New people get a plot in April and start alone. Ramona runs sign-ups and answers questions when people find her." / "Cannot tell yet. The new plot-holders, and Ramona." / "Cannot tell yet." Five response rows, rows 4 and 5 optional, all four cells writable. Feedback on: `feedback_endpoint` Jeremy's walkthrough service, the row registered as a checkpoint; feedback reads the selected row only. Criteria: three to five rows; each How it works now describes what happens, not what should; each cost names a person or role; each gap names who feels it. Word export `get-underneath.docx`. Learning goal: "Describe how each candidate works now and what it costs, closely enough that the gap shows." Candidate problems defined here (moved from the Introduction's key terms; Leslie to confirm).
+> **[BUILD]** `presentation: walkthrough`, one source grid (`kind: table`), four columns: The situation (width 4); How it works now (7); What it costs, and whom (6); The gap (6). Header row; Guidance row, in the table (Leslie C8): "Restate the item from your list, a phrase." / "Two or three sentences: who does what, in what order. What happens now, not how it should be, and not a solution." / "Who is affected, very likely several people or roles, and for each what it costs in time, money, errors, or strain." / "One sentence: what could be different, and who feels the cost. If it describes a process (manual, informal, slow), say who pays for that." Example 1, account handovers, from the live worked example; Example 2, the garden plot, mostly blank ("Half the new plots went to weeds by August" / "New people get a plot in April and start alone. Ramona runs sign-ups and answers questions when people find her." / "Cannot tell yet. The new plot-holders, and Ramona." / "Cannot tell yet."). Five response rows, rows 4 and 5 optional. Feedback on, the row registered as a checkpoint. The More help paragraph renders as prose in the instruction section, above the table (Leslie C9; its smaller grey style is Jeremy's, Clare C14). Criteria: three to five rows; each How it works now describes what happens, not what should; each cost names a person or role; each gap names who feels it. Word export `get-underneath.docx`. Learning goal: "Describe how each candidate works now and what it costs, closely enough that the gap shows." v1.1: Leslie's wording on the goal, the pick criteria ("solution in hand," C7), and the table lead-in; the four-step prose moved into the Guidance row; the "sign that something may be wrong" line cut.
 
 ---
 
@@ -202,45 +191,25 @@ When you finish, select Download as Word document below and submit the file in C
 
 - Your **Get underneath three to five** Word file.
 
-You will do your work within Canvas. Write each part yourself first; the feedback button beside a part reads what you wrote there. Keep your drafts rough and specific. If you cannot fill a part, write "I do not know yet" instead of guessing. A guess written as a guess is fine.
+You will do your work within Canvas. Write it yourself first. Then, if you want it, select AI feedback beside a row; it reads only what you wrote there. Keep your drafts rough and specific. If you cannot fill a part, write "I do not know yet" instead of guessing. A guess written as a guess is fine.
 
 The goal of this activity is one complete draft frame for each of your three to five candidates, so that you can tell, in the Dojo Lab, which one is worth the rest of the course.
 
 ### What a problem frame is
 
-A **problem frame** is your account of a problem. It says what is happening, who it costs and what it costs them, how it is handled today, and what you do not yet know. A frame is not a proposal. You are not thinking about what you would build. It is your description of the problem, and marking what you do not yet know matters as much as detailing what you do. You will spend later sprints filling in those gaps.
+A **problem frame** is your detailed description of a problem. It has specific parts that help you think about the problem from different angles: who it impacts and how it impacts them, how it is handled today, what fixed would look like, what you are assuming. A frame is not a solution or a proposal. You are not thinking about how you would solve the problem. You are making sure you understand it.
 
-A frame has seven parts. This is the whole of it, and it is the same seven parts your Problem Frame document will carry through the course.
-
-1. **The goal it serves.** One sentence. Nobody involved would dispute it, and it points at this problem rather than its neighbors.
-2. **The problem.** The gap between now and that goal, as a condition someone is living in. One or two sentences.
-3. **Who is affected, and what it costs them.** 3a names the people or specific roles. 3b says what it costs each of them, in time, money, errors, or strain. (3c, what fixing this would ask of them, is added in Sprint 2.)
-4. **How it is handled today, and where that falls short.** 4a describes the system, process, habit, or person coping with it now, and anything tried and abandoned. 4b names the moment it stops working, not the consequence that follows.
-5. **What fixed would look like.** A changed state, not a solution. One sentence.
-6. **Your assumptions.** Everything in parts 2 to 5 that you wrote as if it were true without having seen it yourself or heard it from someone who would know. Each one marked confirmed or unverified, and for each unverified one, who could tell you.
-7. **What you do not know yet.** What is left after part 6.
-
-The frame reuses what you already wrote in your table: your gap, the people you listed, and your description of how things work now. Reuse it freely.
-
-### Write in this order
-
-Write parts **2, 3, 4** first, then **5**, then **6 and 7**, then **1** last. Part 1 is presented first because that is how the finished frame reads, but you cannot write it until you know what fixed looks like. The table below is in that order.
+The problem frame we are using in this course has seven parts: the goal the problem serves; the problem; who is affected, and what it costs them; how it is handled today, and where that falls short; what fixed would look like; your assumptions; and what you do not know yet.
 
 ### Write your frames
 
-One table per candidate. Fill at least three; the fourth and fifth are optional. Each row of the table is one part of the frame, with guidance and the account handover example beside it.
+In this activity you will draft frames for at least three of your problems. Refer to your Get underneath three to five Word file, where you have already done some thinking about your gap, the people impacted, and your description of how things work now.
 
-- **Part 2: the problem.** Start with the gap from your table. Write it as a condition someone is living in, not a task or annoyance. One or two sentences.
-- **Part 3: who is affected, and what it costs them.** In 3a, name people or specific roles. In 3b, attach a cost to each one. If you do not know who is affected, say who you would ask.
-- **Part 4: how it is handled today, and where that falls short.** In 4a, the current process, habit, workaround, or person, including anything tried and abandoned. In 4b, the moment that handling stops working, not the consequence that follows. If 4b is blank, look for the moment the cost in 3b first appears.
-- **Part 5: what fixed would look like.** One sentence describing the changed state, not a solution. Change "a shared handover checklist" into "everyone on the team knows within a day when an account changes hands."
-- **Part 6: your assumptions.** Review parts 2 to 5 line by line. List anything written as true that you have not seen yourself or heard from someone who would know, one per line: which part it comes from, the assumption, confirmed or unverified, and who could tell you. At least four, and at least one about a cost in 3b.
-- **Part 7: what you do not know yet.** The questions left after part 6, such as who owns the process or whether something was tried before. Keep the focus on the problem; tool research and automation ideas belong later.
-- **Part 1: the goal it serves, last.** Start from part 5 and ask why the changed state matters until you reach a goal nobody involved would dispute. Then make it specific enough to point to this problem rather than any similar one. Say nothing about what to build.
+The tables below will walk you through how to write the different parts of your frame. Write parts 2, 3, 4 first, then 5, then 6 and 7, then 1 last. It is best to save Part 1 for last, because you cannot write it until you know what fixed looks like. Build one table per candidate. Fill in at least three; the fourth and fifth are optional. Each row of the table is one part of the frame, with guidance and the account handover example beside it.
 
-When you finish, select Download as Word document below and submit the file in Canvas. Keep every draft exactly as submitted: the Dojo Lab tests them, and the Reflection looks back at them.
+When you finish, select Download as Word document below. In Canvas, select Start Assignment, attach that Word file, and select Submit Assignment. Keep the file: the Dojo Lab tests these frames, and the one you choose becomes your Problem Frame. Downloading it alone does not submit your work.
 
-> **[BUILD]** `presentation: walkthrough`, five source grids (`kind: table`), "Frame 1" to "Frame 5", frames 4 and 5 optional, each two columns: Part (width 3), Your frame (9). Rows in writing order: Part 2, Part 3a, Part 3b, Part 4a, Part 4b, Part 5, Part 6, Part 7, Part 1; every row writable. Row guidance from the bullets above (ask), the account handover worked example as the example per row (Part 6 as lines: "From Part 3a: All four managers are affected, not just the one I sat next to. Unverified. Who could tell me: the other three managers." and so on), avoid lines: a task or annoyance for Part 2; a cost with nobody attached for 3b; a consequence for 4b; a solution for Part 5; "all confirmed" for Part 6; automation ideas for Part 7; a goal that fits every problem for Part 1. Feedback on, per frame, registered as checkpoints. Criteria: every part present or marked "I do not know yet"; 3b attaches a cost to each person in 3a; part 5 is a state, not a solution; part 6 has at least four assumptions, one about a cost, each marked, each unverified one with who could tell you. Word export `first-frames.docx`. Learning goal: "Write a complete first frame for each candidate, in your own words, with your assumptions marked." Worked example B, the garden plot: not in the grid; Leslie decides whether it appears as a second full example above the table or is dropped. Part 6 is lines, not a table, in the frame drafts; the five-column table is in the Problem Frame document (plan, section 7). "A guess written as a guess is fine" moved here from the Introduction's How to work.
+> **[BUILD]** `presentation: walkthrough`, five source grids (`kind: table`), "Frame 1" to "Frame 5", frames 4 and 5 optional, each two columns: Part (width 3), Your frame (9). Rows in frame order 1 to 7 (Leslie C13, so the Word download reads as a frame): Part 1 the goal it serves; Part 2 the problem; Part 3a who is affected; Part 3b what it costs them; Part 3c what fixing this would ask of them (static: "Filled in Sprint 2"); Part 4a how it is handled today; Part 4b the moment it stops working; Part 5 what fixed would look like; Part 6 your assumptions; Part 7 what you do not know yet. The writing order (2, 3, 4, 5, 6, 7, 1) is in the prose and in each row's guidance ("write this last"). Row guidance, the per-part teaching from the retired page (Leslie C12): Part 1 "Start from part 5 and ask why the changed state matters until you reach a goal nobody involved would dispute; make it point at this problem rather than any similar one; say nothing about what to build." Part 2 "Start with the gap from your table, as a condition someone is living in, not a task or annoyance. One or two sentences." 3a "People or specific roles. If you do not know, say who you would ask." 3b "A cost for each person in 3a: time, money, errors, or strain." 4a "The current process, habit, workaround, or person, and anything tried and abandoned." 4b "The moment that handling stops working, not the consequence that follows; if blank, look for when the cost in 3b first appears." Part 5 "One sentence, a changed state, not a solution." Part 6 "Anything in parts 2 to 5 written as true that you have not seen yourself or heard from someone who would know, one per line: the part it comes from, the assumption, confirmed or unverified, who could tell you. At least four, one about a cost." Part 7 "The questions left after part 6, such as who owns the process or whether something was tried before. Tool research and automation ideas belong later." Example column: worked example A, account handovers, every row. Worked example B, the garden plot: Leslie decides on seeing the render. Feedback on, per frame. Criteria: every part present or marked "I do not know yet"; 3b attaches a cost to each person in 3a; part 5 is a state, not a solution; part 6 has at least four assumptions, one about a cost, each marked, each unverified one with who could tell you. Word export `first-frames.docx`. Learning goal: "Write a complete first frame for each candidate, in your own words, with your assumptions marked." v1.1: Leslie's definition of a frame and her lead-ins; the seven-part list cut to names only (C10, C11); the per-part bullets moved into the grid (C12); rows in 1 to 7 order (C13).
 
 ---
 
@@ -262,7 +231,7 @@ When you finish, select Download as Word document below and submit the file in C
 
 Open your Dojo and say: "Walk me through Dojo Lab: test, widen, choose." Then paste your frames, one at a time as it asks. Your Dojo knows what this activity is for and will take it from there: it tests each frame, widens each one with other ways of seeing the situation, and helps you choose one to carry forward.
 
-One rule holds for the whole conversation. Your frames should always be in your own words. Your Dojo may point at a part, and you rewrite it. If you find yourself pasting its sentences into your frame, stop and write the sentence yourself.
+One rule holds for the whole conversation. Your frames are yours, not the AI's. Your Dojo conversation should be a conversation, meaning you do not take its feedback blindly. Push back, engage, tell it when you disagree, or ask it to justify its reasoning. If you find yourself pasting its sentences into your frames, you are letting it take over. This is about you grappling with and understanding your problem, so stop and make sure that is happening.
 
 *More help: if your Dojo is not set up yet.* Use any AI chat. Paste the text below as your first message, then your frames one at a time.
 
@@ -288,7 +257,7 @@ After you submit the transcript, go back to your First frames Word file and make
 
 - **dojo-transcript** (response). Prompt: *Paste the complete Dojo transcript, including every CONTINUED chunk, in order.* Criteria: the required header and every turn, in order; every CONTINUED marker and continuation chunk kept; the conversation reaches the method's last round, where you say what changed and what you chose.
 
-> **[BUILD]** `dojo_submission: mode: transcript, prompt_version: v1`, single box, as Sprint 2's Dojo Labs. Learning goal: "Have AI test and widen every draft frame, and choose one to carry forward, with your reasons." Changes from v5.4: the prompts and the final Me: turn gone (Clare C29, C30, C35, C38; the method's Round 4 collects the decisions); "in four seconds" cut (C26); "But it cannot" (C27, the sentence itself now gone with the opening rewrite); "should always be in your own words" (C28); the choose section, the three size questions, and the why-this-one prompts moved to the Problem Frame item (Leslie, C12); "write that change yourself" resolved in Part 3 (C31). The fallback paste's module text is Jeremy's Sprint 1 method; the page carries a copy until the team decides whether pages keep copies (list item 37).
+> **[BUILD]** `dojo_submission: mode: transcript, prompt_version: v1`, single box, as Sprint 2's Dojo Labs. Learning goal: "Have AI test and widen every draft frame, and choose one to carry forward, with your reasons." Changes from v5.4: the prompts and the final Me: turn gone (Clare C29, C30, C35, C38; the method's Round 4 collects the decisions); "in four seconds" cut (C26); "But it cannot" (C27, the sentence itself now gone with the opening rewrite); "should always be in your own words" (C28); the choose section, the three size questions, and the why-this-one prompts moved to the Problem Frame item (Leslie, C12); "write that change yourself" resolved in Part 3 (C31). The fallback paste's module text is Jeremy's Sprint 1 method; the page carries a copy until the team decides whether pages keep copies (list item 37). v1.1: the one-rule paragraph is Leslie's; how much of it belongs in Sprint 0 instead is her standing question (C14), on the list with item 38's Sprint 0 Dojo activity.
 
 ---
 
@@ -296,52 +265,50 @@ After you submit the transcript, go back to your First frames Word file and make
 
 *Graded item. Position 7. 50 points. One submission. Three boxes.*
 
-You chose one problem in the Dojo Lab. From here on, everything in the course works on that one. This page has three parts:
+In the Dojo Lab you explored your problem frames and, hopefully, narrowed down to one to proceed with for this course. On this page you are going to share more about that process and where you landed. Specifically, you will answer:
 
-1. Why this one.
-2. Your Problem Frame, in its own document.
-3. What changed, and why.
+1. Part 1: Which problem you selected and why.
+2. Part 2: Your updated Problem Frame for the problem you chose.
+3. Part 3: What changed after the Dojo conversation, and why.
 
-### Part 1. Why this one
+### Part 1. Which problem you selected and why
 
-Three questions decide whether a frame is the right size, and your Dojo walked you through them. Write your answers here, in your own words.
+Your Dojo walked you through whether each frame is the right size and helped you choose. Write up where you landed, in a few sentences for each of the four questions below, in order.
 
-- Can you describe how the problem is handled today in one paragraph? (Part 4a.)
-- Is there at least one person other than you, with a stake in it or knowledge of it, who would talk to you about it? (Part 3a, or part 7.) [OPEN, Leslie: the household exception, "for a household problem, someone outside the household," is being rethought for household and job-search problems.]
-- Is there at least one thing you would have to find out to move on it? (Part 6.)
+1. **Which problem, and what about it interests you:** your connection to it.
+2. **Why for this course:** what in the frame and the testing makes it workable for nine weeks.
+3. **Why not the others:** one or two sentences each, including those that mostly held up.
+4. **Runner-up:** your fallback if this choice does not survive Sprint 2.
 
-A frame that fails the first is too big, so pick one instance you have seen. A frame that fails the second or third is too small, or too private, so ask what larger situation this is one case of, and frame that instead.
-
-Then, in a few sentences each:
-
-- **Why this one:** what in the frame and the testing makes it workable.
-- **Why not the others:** one or two sentences each, including those that mostly held up.
-- **Why you want it:** your connection to it and why you want the next nine weeks on it.
-- **Runner-up:** your fallback, or that none is currently workable. Your runner-up is where you go if this choice does not survive Sprint 2.
-
-> **Example answer.** Handovers and the garden plot both held up under testing. I chose handovers because I work on them weekly and the four managers and the account lead sit near me. The garden plot depends on Ramona, whom I see once a month, so it is my runner-up.
+> **Example answer.** 1. Account handovers. I work on them weekly and it bugs me every time a client has to repeat themselves. 2. The four managers and the account lead sit near me, I can describe how it is handled today, and there is real uncertainty to resolve: whether all four managers are affected or just the one I sat next to. 3. The garden plot held up under testing but depends on Ramona, whom I see once a month. The report columns turned out to be a workaround with a known fix. 4. The garden plot.
 
 If nothing held up, or the only survivor does not matter to you, go back to your list. Items you set aside are still there. Report what you tried and where you will look next instead of forcing a choice.
 
 ### Part 2. Your Problem Frame
 
-Your Problem Frame lives in its own document from here to the end of the course. [Make your copy of the Problem Frame document](LINK-FROM-LESLIE). It has all seven parts. A few are marked with the sprint that fills them; leave those blank until then.
+Open your First frames Word file and find the frame you chose. Bring it up to date with everything that changed as a result of the Dojo Lab. In Part 6, each assumption is its own line, marked confirmed or unverified, with who could tell you. Leave 3c blank; Sprint 2 fills it.
 
-Copy your chosen frame into it, part by part, with everything that changed as a result of the Dojo Lab. In Part 6, put each assumption in its own row of the table, marked confirmed or unverified, with who could tell you; leave the Status column blank. Leave 3c blank. Fill in Last updated at the top: Sprint 1 and the date.
+[OPEN, Leslie C18: whether this Word file is the Problem Frame document from here on, or the frame is copied once into the Google Doc template. See the note below.]
 
-Then paste the whole document into the box below.
+Then paste the whole frame into the box below.
 
-### Part 3. What changed, and why
+### Part 3. What changed after the Dojo conversation, and why
 
-Your instructor cannot see your Dojo Lab session. This paragraph is where they see that the frame was tested and that you, not the AI, made the changes. Start from the recap your Dojo gave you and check it against your First frames file. Then, in one short paragraph and in your words, say what moved between your draft and your Problem Frame, what argument or evidence moved it, and one thing the Dojo suggested that you rejected, and why. A frame that did not change is a legitimate result if you can say what you tested it against.
+Your instructor cannot see your Dojo Lab session. This is where they see that the frame was tested and that you, not the AI, made the changes. Start from the recap your Dojo gave you and check it against your First frames file. Then, in a few sentences each:
+
+1. **What moved** between your draft and your Problem Frame.
+2. **What moved it:** the argument or evidence.
+3. **One thing the Dojo suggested that you rejected,** and why.
+
+A frame that did not change is a legitimate result if you can say what you tested it against.
 
 ### Response tasks
 
-- **why-this-one** (response). Prompt: *Your answers to the three size questions, then why this one, why not the others, why you want it, and your runner-up.* Criteria: all three size questions answered for the chosen frame; why not the others covers every frame tested; a runner-up named, or the reason none is workable.
-- **problem-frame** (response). Prompt: *Your Problem Frame document, pasted whole: all seven parts, Part 6 as the table with the Status column blank, 3c blank, Last updated filled.* Criteria: all seven parts present, in the participant's words; every assumption in Part 6 marked, each unverified one with who could tell you; nothing in 3c or Status.
-- **what-changed** (response). Prompt: *What moved between your draft and your Problem Frame, what moved it, and one thing the Dojo suggested that you rejected, and why.* Criteria: at least one change or a stated reason nothing changed; the evidence or argument named; one rejected suggestion with a reason.
+- **which-and-why** (response). Prompt: *Which problem you selected and why: the four questions, in order.* Criteria: all four answered; why not the others covers every frame tested; a runner-up named, or the reason none is workable.
+- **problem-frame** (response). Prompt: *Your Problem Frame, pasted whole: all seven parts, Part 6 with every assumption marked, 3c blank.* Criteria: all seven parts present, in the participant's words; every assumption in Part 6 marked, each unverified one with who could tell you; 3c blank.
+- **what-changed** (response). Prompt: *What moved, what moved it, and one thing the Dojo suggested that you rejected, and why.* Criteria: at least one change or a stated reason nothing changed; the evidence or argument named; one rejected suggestion with a reason.
 
-> **[BUILD]** `presentation: reading`, three boxes. Learning goal: "Write up the one problem you chose, in the document that carries it through the course, and say why this one." Changes from v5.4: the choose section moved here from the Dojo Lab (Leslie, C12) with Clare's fixes ("how the problem is handled today" C32; "ask what larger situation this is one case of, and frame that instead" C34; "Why you want it" C36; "Example answer" C37); the Problem Frame document introduced here with the make-a-copy link (problem-frame-template.md v0.8; Leslie supplies the link); the one paste in the course. Points across three boxes are the team's; the weight stays on the frame.
+> **[BUILD]** `presentation: reading`, three boxes. Learning goal: "Write up the one problem you chose and say why this one." v1.1 (Leslie, 29 September): her opening and part titles; the three size questions removed from the page (C15, C16, C20): Jeremy's Sprint 1 method runs them in Round 3, so the page asks only for where the learner landed, and "why for this course" carries the workable-for-nine-weeks judgment; Part 1 and Part 3 as numbered questions answered in order in one box (C17, C19); "why you want it" became "what about it interests you"; the example answer rewritten to match the four questions. **C18, the frame document:** the First frames Word download is now in frame order 1 to 7 with a 3c row, so the chosen frame's table can be the Problem Frame document from here on, kept and updated by the learner in Word and pasted whole into each sprint's frame item. That retires the Google Doc template (problem-frame-template.md) and the make-a-copy step, and changes list item 21. What it costs: Part 6 stays as lines rather than the five-column table, so the Status column from Sprint 2 becomes a phrase on each line ("high risk, because..."); Sprint 2's Problem Frame item and the Sprint 4 walkthroughs already work from pasted text, so nothing downstream breaks. Recommendation: yes, the Word file is the document. Leslie's call.
 
 ---
 

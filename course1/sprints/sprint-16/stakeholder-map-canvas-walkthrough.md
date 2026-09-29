@@ -84,7 +84,7 @@ guided_assignment:
     instruction_section: What changed, and why
   - id: stakeholder-1
     kind: table
-    prompt: 'Stakeholder 1 of 4: Affected'
+    prompt: Stakeholder Table 1
     columns:
     - id: column-1
       label: Field
@@ -100,7 +100,7 @@ guided_assignment:
       cells:
       - text: 'Role
 
-          Who is this person in relation to my problem, not on the org chart?'
+          Who is this person in relation to my problem?'
       - text:   
         response: true
       - text:   
@@ -212,10 +212,10 @@ guided_assignment:
       and explain why.
     - Distinguish impact from authority. State a need in the stakeholder’s terms and
       ask a question that could surprise you.
-    instruction_section: 'Stakeholder 1 of 4: Affected'
+    instruction_section: Stakeholder Table 1
   - id: stakeholder-2
     kind: table
-    prompt: 'Stakeholder 2 of 4: Influential'
+    prompt: Stakeholder Table 2
     columns:
     - id: column-1
       label: Field
@@ -231,7 +231,7 @@ guided_assignment:
       cells:
       - text: 'Role
 
-          Who is this person in relation to my problem, not on the org chart?'
+          Who is this person in relation to my problem?'
       - text:   
         response: true
       - text:   
@@ -343,10 +343,10 @@ guided_assignment:
       and explain why.
     - Distinguish impact from authority. State a need in the stakeholder’s terms and
       ask a question that could surprise you.
-    instruction_section: 'Stakeholder 2 of 4: Influential'
+    instruction_section: Stakeholder Table 2
   - id: stakeholder-3
     kind: table
-    prompt: 'Stakeholder 3 of 4: Responsible for a constraint'
+    prompt: Stakeholder Table 3
     columns:
     - id: column-1
       label: Field
@@ -362,7 +362,7 @@ guided_assignment:
       cells:
       - text: 'Role
 
-          Who is this person in relation to my problem, not on the org chart?'
+          Who is this person in relation to my problem?'
       - text:   
         response: true
       - text:   
@@ -474,10 +474,10 @@ guided_assignment:
       and explain why.
     - Distinguish impact from authority. State a need in the stakeholder’s terms and
       ask a question that could surprise you.
-    instruction_section: 'Stakeholder 3 of 4: Responsible for a constraint'
+    instruction_section: Stakeholder Table 3
   - id: stakeholder-4
     kind: table
-    prompt: 'Stakeholder 4 of 4: Positioned to challenge your frame'
+    prompt: Stakeholder Table 4
     columns:
     - id: column-1
       label: Field
@@ -493,7 +493,7 @@ guided_assignment:
       cells:
       - text: 'Role
 
-          Who is this person in relation to my problem, not on the org chart?'
+          Who is this person in relation to my problem?'
       - text:   
         response: true
       - text:   
@@ -605,7 +605,7 @@ guided_assignment:
       and explain why.
     - Distinguish impact from authority. State a need in the stakeholder’s terms and
       ask a question that could surprise you.
-    instruction_section: 'Stakeholder 4 of 4: Positioned to challenge your frame'
+    instruction_section: Stakeholder Table 4
   - id: assumption-1
     kind: table
     prompt: Assumption 1
@@ -818,9 +818,9 @@ source_provenance: stakeholder-map-canvas-walkthrough.sources.json
 
 # Stakeholder Map Canvas Walkthrough
 
-Before you talk to anyone, write down what you already believe about the people connected to your problem, and be honest about which parts you actually know. Bring your current **Problem Frame**. You will leave with four stakeholder profiles, two or three assumptions to test, and a first contact.
+Before you talk to anyone, write down what you already believe about the people connected to your problem, and be honest about which parts you actually know. This is your own work, so write it yourself first. The optional AI feedback on each row can point to a gap, but it cannot know your situation or supply your evidence. You will test and widen your map with AI in the Dojo Lab afterward, and that only works because you have an independent view to test.
 
-**Write each response yourself before asking for feedback.** In this walkthrough, the optional AI check points to a gap or asks a question about what you wrote. It cannot know your workplace or supply your evidence. You decide what to revise, in your own words. Keep your first draft before revising it so you have a view to test in the later Dojo Lab.
+**Write each response yourself before asking for feedback.**
 
 ## Set up your map
 
@@ -830,35 +830,60 @@ Write your name and the Problem Frame you are using. This is the map you will ke
 
 *Leave this table blank for now.* It stays in your copied or downloaded map so you can fill it in after the **Dojo Lab: test, widen, choose**.
 
-## Stakeholder 1 of 4: Affected
+## Stakeholder Table 1
 
-Start with someone the problem reaches directly. If you do not have a workplace stakeholder, choose a mentor, community member, customer, or another person with a genuine relationship to the problem.
+### Start with what you already think
 
-Across the next four tables, profile **one stakeholder in each relationship**. A person may hold several relationships; name every one that applies. Write **one to three sentences per field** and give every field a status and a reason. **Confirmed** means supported by a conversation, observation, or reliable documentation. **Inferred** means a reasoned hypothesis you still need to test.
+Identify four stakeholders. People can hold more than one relationship, so choose who makes sense for your problem. If you can, push yourself to cover all four: Affected, Influential, Responsible for a constraint, and Positioned to challenge your frame. If you don't have a workplace stakeholder, reach out to a mentor, community member, customer, or anyone with a genuine relationship to the problem.
 
-For the question field, mark whether the concern behind your question is Confirmed or Inferred and say why. You are not claiming to know the person's answer.
+For each stakeholder, fill in the seven corresponding questions. One to three sentences each is plenty; the example answers below show the length to aim for. The last field asks you for a question; write a first attempt, and sharpen it in the next sections.
 
-The optional examples beside the fields describe Dana, the account lead in the course's handover example. Read them together for one complete profile, then write about your own situation. Feedback beside a row reviews only that row.
+Mark each field's status honestly. **Confirmed** means supported by evidence: a conversation, an observation, or reliable documentation. **Inferred** means a reasoned hypothesis based on what you currently know, that should be validated later. For the question field, mark whether the concern behind your question is Confirmed or Inferred and say why.
 
-## Stakeholder 2 of 4: Influential
+Below is an example of how someone would answer each question in the table. The example stakeholder is the account lead from the Sprint 1 handover problem, the person you were told to start with at the end of that worked example. Feedback beside a row reviews only that row.
 
-Choose someone who has a say over what changes. Keep impact and authority separate: the person who feels the problem most may have the least power to change it. If you write “high,” say what this person has influence over.
+If you can, start with someone the problem reaches directly.
 
-## Stakeholder 3 of 4: Responsible for a constraint
+## Stakeholder Table 2
 
-Choose someone responsible for a condition any change must work within. A constraint can be a policy or budget, but it can also be a history, a relationship, or a reputation. Mark what you are guessing.
+If you can, choose someone who has a say over what changes. Keep impact and authority separate: the person who feels the problem most may have the least power to change it. If you write “high,” say what this person has influence over.
 
-## Stakeholder 4 of 4: Positioned to challenge your frame
+## Stakeholder Table 3
 
-Choose the person most likely to tell you that you are solving the wrong problem. That is much cheaper to hear now than after you have built something. Think about who sees a part of the situation you do not.
+If you can, choose someone responsible for a condition any change must work within. A constraint can be a policy or budget, but it can also be a history, a relationship, or a reputation. Mark what you are guessing.
+
+## Stakeholder Table 4
+
+If you can, choose someone positioned to challenge your frame. This one is the hardest to find and the most valuable. They are the person most likely to tell you that you are solving the wrong problem, which is much cheaper to hear now than after you have built something.
 
 ## Assumption 1
 
-Look back at what you marked **Inferred**. Some guesses barely matter. A few hold your whole frame up. Pick **two or three assumptions** that would change what you do next if you turned out to be wrong.
+### What you are guessing, and what would tell you
 
-Imagine the stakeholder tells you the opposite of what you assumed. Would you choose a different problem, different people to speak with, or a different picture of what fixed would look like? If you would carry on the same way, choose a more consequential assumption.
+Now step back and look at what you marked **Inferred**. Some of those guesses barely matter. A few of them hold your whole frame up and are high-stakes.
 
-A useful question invites a real account. **“Do you agree that X is the main problem?”** leads the person toward your answer. **“Walk me through the last time X happened. What did you actually do?”** leaves room for something you have not considered.
+**What “high-stakes” means.** An assumption is high-stakes if being wrong about it would change what you do next. Not a small correction, but a real change: a different problem, different people affected, or a different picture of what a fixed problem would look like.
+
+Here is the test. Imagine the stakeholder tells you the opposite of what you assumed. Would that change your next move? If yes, it is high-stakes. If you would carry on the same way either way, it is not.
+
+This is about the assumption, not the person. A guess about someone with no authority at all can still be the highest-stakes thing in your map.
+
+### Writing questions that test rather than confirm
+
+A validation question should be open enough that a stakeholder could tell you something you haven't thought of. Some examples of weak versus strong:
+
+- **Weak:** “Do you agree that X is the main problem?” This invites a yes or no, and it leads people toward answering that X is the problem.
+- **Strong:** “Walk me through the last time X happened. What did you actually do?” This asks for a specific, real account, which is much harder to fake or soften.
+- **Weak:** “Would a solution like Y help you?” This pitches your idea and asks for approval.
+- **Strong:** “What would need to be true for this to actually get easier for you?” This leaves room for the stakeholder to name something you hadn't considered.
+
+Good validation questions ask about specific experiences, past behavior, or concrete tradeoffs, rather than opinions about your idea.
+
+**Quick self-check.** Does your question ask about a specific experience, a past behavior, or a concrete tradeoff? If it asks for an opinion about your idea instead, rewrite it.
+
+### Write two or three assumption blocks
+
+Pick the two or three high-stakes assumptions that would change what you do next, and write a block for each. Four lines, in this order.
 
 > **Illustrative example from the handover problem**
 >
@@ -869,6 +894,8 @@ A useful question invites a real account. **“Do you agree that X is the main p
 > **Question to ask:** “When an account changed hands badly in the past, what happened next?”
 >
 > **What a different answer changes:** If she names a failed attempt, my next conversation is with whoever ran it, not with the four managers.
+
+The last line is also your test for whether an assumption belongs on this list at all. If you cannot say what a different answer would change, it probably isn't high-stakes.
 
 Write your own four lines below.
 
@@ -882,9 +909,14 @@ Add a third block if another assumption would change your next move. Otherwise, 
 
 ## Who you will talk to first
 
-Choose the person you will approach first for your real validation conversation, and name a backup in case they do not respond. Explain in **two or three sentences** why this person comes before anyone else.
+Choose the one person you will reach out to first for your real validation conversation, and name a backup in case your first choice does not respond. Then explain your reasoning in two or three sentences: why this person, before anyone else?
 
-They might be able to break your riskiest assumption, be the most affected person you know least about, sit at a point of disagreement, or speak for a larger group. Make the reason specific to your map.
+Some strong reasons to contact someone first:
+
+- They can confirm or break your high-stakes assumption: talking to them first tells you fastest whether your frame is pointed in the right direction.
+- They're the most affected, and you know the least about them: your evidence is thin exactly where the stakes are high.
+- They sit at a point of disagreement: if your map shows two people who seem to see the problem differently, talking to one of them first can clarify that tension early.
+- They represent the largest group, not just one person: if a stakeholder role stands in for many people, they can tell you something that generalizes further.
 
 ## Outreach log
 

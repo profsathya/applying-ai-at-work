@@ -65,6 +65,10 @@ def release_pairs(changed: list[dict], course_paths: list[Path], *,
                 continue
             raise ValueError(f"Walk-through {item['artifact_id']}: release requires source publish: false")
         source_item = changed_by_id.get(source_id)
+        if not source_item and item['artifact_id'] in already_live_ids:
+            # Already released: the replacement is live and its source stays
+            # unpublished, so a content update changes neither visibility.
+            continue
         if not source_item:
             raise ValueError(f"Walk-through {item['artifact_id']}: release requires changed source {source_id} in the same batch")
         if source_id in claimed:
