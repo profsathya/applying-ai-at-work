@@ -23,6 +23,8 @@ guided_assignment:
     or inferred, and name the guesses a real conversation would have to settle.
   feedback_endpoint: https://cti-course-ai.netlify.app/.netlify/functions/walkthrough-feedback
   feedback_protocol: walkthrough-v1
+  guidance_labels:
+    avoid: Trap to avoid
   export_filename: stakeholder-map.docx
   records_destination:
     label: your own Stakeholder Map document

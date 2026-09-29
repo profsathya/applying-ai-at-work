@@ -10,6 +10,7 @@ from canvas_sync.hosted_html import artifact_hosted_info, render_artifact_docume
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.state import load_json
 from canvas_sync.walkthrough_release import preflight_pair, release_pairs, rollback_pair
+from canvas_sync.walkthrough import _guidance, guidance_labels
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -68,6 +69,17 @@ class WalkthroughChecks(unittest.TestCase):
         self.assertEqual(html.count('<th scope="col">Confirmed or Inferred, and why</th>'), 4)
         self.assertIn('<th scope="row">Role in relation to the problem', html)
         self.assertIn('Example and guidance</summary>', html)
+
+    def test_guidance_labels_default_and_override(self):
+        field = {'guidance': {'ask': 'A', 'example': 'E', 'avoid': 'V'}}
+        default = _guidance(field, guidance_labels({}))
+        self.assertIn('<strong>Watch for:</strong> V', default)
+        self.assertEqual(default, _guidance(field))
+        custom = _guidance(field, guidance_labels({'guidance_labels': {'avoid': 'Trap to avoid'}}))
+        self.assertIn('<strong>Trap to avoid:</strong> V', custom)
+        self.assertNotIn('Watch for', custom)
+        self.assertIn('<strong>Ask yourself:</strong> A', custom)
+        self.assertIn('<strong>Example:</strong> E', custom)
 
     def test_release_requires_pair_and_assessment_parity(self):
         with tempfile.TemporaryDirectory() as directory:

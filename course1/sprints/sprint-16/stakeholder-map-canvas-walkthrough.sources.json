@@ -4,7 +4,7 @@
   "packet_sha256": "8ff1627fc37bdea2bf5421fcc4dff230bbe96a0248363d4851ce1362094c6b37",
   "map_sha256": "69fdc32ee3b9894b999f0ec440bddd9e0719aed7a682cf0b06b3570b1403bedf",
   "body_sha256": "c7b3532a2b76172a25cbcf8010cd4c159e33bb6aa68bb347d1d173be7547ce87",
-  "frontmatter_sha256": "2fb8aea2ccc4d35445e0a9ff681c26bff6f065b7d5d354ddd0ca2ae226fd74aa",
+  "frontmatter_sha256": "1cf3ad7fa627baaac8c4df3d8bec38df2f142dd1ba96629dafc797c5a0e0a5ee",
   "parts": [
     {
       "kind": "new",
@@ -61,7 +61,8 @@
     "Title appends Canvas Walkthrough.",
     "Task metadata contains exact source table text; cell mapping and full packet remain in private intake.",
     "Walkthrough version raised to 1.1 so the shared single Word download and Canvas upload finish flow is deployed; source task and assessment stay the same.",
-    "Publish the instructor-approved Canvas Walkthrough in place of its original while retaining both Canvas identities."
+    "Publish the instructor-approved Canvas Walkthrough in place of its original while retaining both Canvas identities.",
+    "2026-09-29: guidance_labels.avoid set to \"Trap to avoid\" to match the approved review doc; guidance text unchanged."
   ],
   "source_roles": {
     "d-46083d085df8b33c": {
