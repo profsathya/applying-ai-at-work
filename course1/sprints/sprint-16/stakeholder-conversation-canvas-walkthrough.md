@@ -277,9 +277,7 @@ source_provenance: stakeholder-conversation-canvas-walkthrough.sources.json
 
 # Stakeholder Conversation Canvas Walkthrough
 
-Now test your Problem Frame with a real stakeholder. This report keeps your preparation, their account, your first impressions, and your evidence-based conclusion together. Bring your current Stakeholder Map and Problem Frame. You will submit the report, your updated map, and the JSON file from the question-check activity.
-
-**Send the ask first.** Choose a channel the person uses. Ask for 20 to 30 minutes, then work through your questions while you wait. If there is no reply in three days, follow up once and offer a shorter or written option. If there is still no reply by day five, contact your backup and note the switch on your map. Confirm the format, time, and length when someone agrees.
+Now it's time to test your Problem Frame against an actual stakeholder, not AI. This activity has four parts: preparing for the conversation, setting it up, having it, and documenting what you learned. Bring your current Stakeholder Map and Problem Frame. You will submit the report, your updated map, and the JSON file from the question-check activity.
 
 Write before requesting optional AI feedback. It sees only the selected row, cannot know what happened in your workplace, and cannot supply evidence. Use roles or initials in feedback requests, leave out confidential details, and keep a path through every step without feedback. You decide what to revise.
 
@@ -293,22 +291,66 @@ Carry the stakeholder, relationship, assumption, and starting Problem Frame over
 
 ## Your three validation questions
 
-Bring the questions from your map's assumption blocks that this person can answer. If only two fit, take the third from that stakeholder's **Next question to ask** field. For each question, state what you hope to learn about the one assumption you are testing. Ask about a specific experience, past behavior, decision, or tradeoff. A question that invites approval of your solution is unlikely to reveal much.
+### Part 1: Prepare for the Conversation
 
-After writing your draft questions here, [open the existing Part 1 AI question exchange](https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/stakeholder-conversation-v3.html). Give it your three questions, this stakeholder's relationship to the problem, what you hope to learn, and the one assumption you are testing. Use its follow-up questions to diagnose leading wording, vague questions, or missing evidence. **Rewrite the weak questions yourself** in this table. Download the JSON response file from that exchange. Use that page for the AI exchange and JSON download, then return to this walkthrough to finish the report. Upload all three files through this Canvas assignment. The AI exchange is preparation; your real conversation supplies the evidence.
+**1. Bring your three questions.**
+
+Your three questions come from the assumption blocks in your Stakeholder Map, the ones your chosen stakeholder can actually answer. Bring them here rather than writing new ones. If only two of your assumptions fit this person, take the third from their "Next question to ask" field in your map. Use the full weak-and-strong examples and self-check in the Stakeholder Map if you need a refresher.
+
+You may sharpen the wording, and you may swap one out if something has changed since you wrote them, but start from what you already have. Each question should help this specific person describe an experience, decision, or tradeoff that bears on the one assumption you need to test.
+
+Write each question into the table below with what you hope to learn from it.
+
+**2. Run the AI exchange.**
+
+The Dojo Lab polished these before you knew who would say yes; this pass is for the specific person who did.
+
+This step uses the built-in AI activity, not your own AI chat. [Open the AI question exchange](https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/stakeholder-conversation-v3.html?context=web) Start it and ask AI to respond to your draft with follow-up questions. Use them to diagnose your own questions. Look for places where AI's response reveals that your question is:
+
+- **Leading:** it nudges the stakeholder toward the answer you want.
+- **Vague:** it's unclear what you're really asking, so any answer would be hard to use.
+- **Missing evidence:** it asks for an opinion rather than something you could verify, such as an experience, a specific example, or a real decision they made.
+
+Use the deeper AI guidance button for more targeted help in refining your three questions.
+
+**3. Rewrite the weak ones yourself**, and update the table below.
+
+When you're done working with the AI, copy or download the JSON response file from the activity. You will submit it together with your report at the end.
 
 The row feedback in this walkthrough is optional and narrower than the Part 1 exchange. It checks only the question or learning statement you choose, so it cannot judge whether all three questions work together. If feedback is unavailable, use the criteria above and continue.
 
 ## B. During the meeting
 
-Ask your prepared questions and stay open to answers you did not expect. Keep these notes short so you can listen. Record the person's words as closely as you can, or paraphrase sensitive material without changing its meaning. Leave your interpretation for Sections C and D. This table has no AI button because it may contain another person's account.
+### Part 2: Set Up the Conversation
+
+- Pick the method of communication this person actually answers: in person to set a time if you see them regularly; email if you want it in writing; phone or text if that is how you two normally talk.
+- Send the ask, and note the date you sent it on your stakeholder map. Keep it short: who you are, that you're investigating the problem, and that you would like 20 to 30 minutes.
+- No reply in 3 days? Follow up once in the same thread, and make it easier to say yes: offer 15 minutes, or offer to send two questions they can answer in writing.
+- Still no reply by day 5? Go to your backup stakeholder and start again. Note the switch on your map. A stakeholder who does not respond is itself information about access and influence.
+- Got a yes? Confirm the time, the format, and the length, so you both arrive expecting the same conversation.
+
+This is a real problem in your own work, and it is in both your interests to connect early. The sooner you talk, the more of this sprint you have left to act on what you hear.
+
+### Part 3: Have the Conversation
+
+- Check that the format, date, and time you wrote in Section A match what actually happened, and correct them if the meeting moved.
+- Ask the validation questions you've prepared. Stay open to answers you didn't expect.
+- Take notes in Section B, in the stakeholder's own words, as closely as you can capture them. Do not include confidential details, protect the person's privacy, and paraphrase anything sensitive. Don't add your interpretation; stay as close as you can to how the stakeholder described their experience.
+
+Keep this short. You are listening, not writing. This table has no AI button because it may contain another person's account.
 
 ## C. Within five minutes of finishing
 
-While the conversation is still fresh, write a line or two for each first impression. What did the person confirm? What challenged or complicated your view? Does the Problem Frame seem to change? What would you ask next? These are provisional notes, not a polished conclusion. Optional row feedback can help you check whether an impression points to actual evidence.
+Within five minutes of finishing, fill in Section C, while it is still fresh. A line or two for each. You are catching your first impressions, not polishing them. Optional row feedback can help you check whether an impression points to actual evidence.
 
 ## D. Afterward, same day or next
 
-Give each answer a short paragraph. Revise your Problem Frame using what the stakeholder actually said, or explain honestly why your original frame held. Identify what moved from **Inferred** to **Confirmed** on your map, and what still needs validation. A clear confirmation is a useful result; do not force a change to show progress.
+### Part 4: Document What You Learned
 
-Then update your Stakeholder Map: correct fields this conversation settled, keep uncertainty visible, and add any stakeholder this person helped you identify. Keep your **What changed, and why** paragraph at the top. Download this report as a Word document below. In Canvas, select **Start Assignment**, attach **three files** (the Part 1 AI JSON response, this completed report, and the updated Stakeholder Map), then select **Submit Assignment**. Downloading or saving a browser draft does not submit them.
+Complete Section D of your report, the same day or the next. This is the only section that asks for new thinking rather than a record of what happened. A short paragraph for each. This is the section that asks for your thinking, so give it room.
+
+Two things to hold on to as you write it. Update your Problem Frame on evidence, not on your own interpretation of what you heard. If the conversation fully confirmed your original frame, report that honestly. A clear confirmation is a real and valuable result.
+
+Then open your Stakeholder Map and make those changes in it. Update the status of every field the conversation settled, correct anything that turned out to be wrong, and add any stakeholder this person made you aware of. Leave your "What changed, and why" paragraph from the Dojo Lab sitting at the top of the file. You submit the updated map with your report.
+
+Download this report as a Word document below. In Canvas, select **Start Assignment**, attach **three files** (the Part 1 AI JSON response, this completed report, and the updated Stakeholder Map), then select **Submit Assignment**. Downloading or saving a browser draft does not submit them.
