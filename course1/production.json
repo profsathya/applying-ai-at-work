@@ -29,20 +29,20 @@
       "canvas_module_id": 2082,
       "canvas_module_item_id": 17999,
       "canvas_page_url": null,
-      "canvas_payload_hash": "32585fbc9d611fbc4118aa576c63d006bc81a22df8811467451a0de692ee8887",
+      "canvas_payload_hash": "0b1b6ee28c3d4e3ac412e5617d083dcd4cf04d402b8c0d28607c00b03cd1bc36",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "0b423084b28125466fc1e7154a458ef4eebef134fd023fc63c7ba1e139c6ce70",
+      "content_hash": "f47eefbb7cede083b7a7feadd9d0cf0f6aa0b6294f2fa38252faea73256bbac8",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "e4ef6792cfa753cf8cfe556aa395aac221c2cb0d659e40428048379543401cf6",
-      "hosted_last_rendered": "2026-09-24T22:02:11+00:00",
+      "hosted_hash": "60b99ec1443ce0cefb6e08059e723a7c853e0d09f00087605af84840aacfffa0",
+      "hosted_last_rendered": "2026-09-29T03:14:27+00:00",
       "hosted_path": "course1/assignments/name-the-gap-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/name-the-gap-canvas-walkthrough.html",
-      "last_pushed": "2026-09-24T22:02:11+00:00",
+      "last_pushed": "2026-09-29T03:14:27+00:00",
       "local_path": "course1/sprints/sprint-17/name-the-gap-canvas-walkthrough.md",
-      "position": 4,
+      "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "03fcb526e8eaa6961b1d8eecf657c355393ed3cf"
+      "source_commit": "a1ab8bd1197b1100e58fcb24565e30adebf4a0d3"
     },
     "course1-sprint-13-ai-feedback-check": {
       "artifact_id": "course1-sprint-13-ai-feedback-check",
@@ -1555,5 +1555,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-29T02:51:08+00:00"
+  "last_sync": "2026-09-29T03:14:27+00:00"
 }
