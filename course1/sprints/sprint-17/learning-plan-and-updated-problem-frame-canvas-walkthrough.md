@@ -392,7 +392,15 @@ source_provenance: learning-plan-and-updated-problem-frame-canvas-walkthrough.so
 
 # Learning Plan and Updated Problem Frame Canvas Walkthrough
 
-Bring the **Week 7 Word file** you submitted for Name the Gap. Keep Part A and C1 there as your week 7 record. Use your Dojo Lab bullets to finish Part B here, then carry C1 into C2 and update your frame. You are planning how to learn in CIS 502, not claiming you have already closed these gaps.
+**Learning goal:** Write a learning plan that says for each gap why it matters, where you will learn it, the steps, and how you will know, then update your Problem Frame to match.
+
+## Purpose
+
+Plan how you will close the gaps in your Problem Frame, and update the frame so it shows what you know, what you are still assuming, and how you will find out.
+
+You are not doing the learning now. You will follow this plan in CIS 502. What you write here needs to be clear enough that you could pick it up on the first day of that course and start.
+
+Continue with Part B below, then Part C. Your Dojo Lab bullets are the raw material: pick from them, cut what did not survive, and write the five questions in full sentences, in your own words. Two things the Dojo never touched are yours to add here: the reason each gap matters to your frame, and the updated frame itself.
 
 Write your own answers before requesting optional AI feedback. A selected row may be sent for formative feedback, but the service cannot know your workplace or supply evidence. Remove names and confidential details from any row you send. You can use the self-checks and finish every part without AI.
 
@@ -402,9 +410,27 @@ The [Learning Plan template](https://docs.google.com/document/d/1XgCf1cTadZOCQtH
 
 ## Plan for Gap 1
 
-Start with your highest-ranked gap. Bring the raw options you wrote in the Dojo Lab, then answer the five template questions in full sentences. Name the source you can actually reach, make the steps small and ordered with a rough time, and say what independent evidence could confirm your conclusion or show you were wrong. A person can be a source; say how you will reach them.
+For each gap in your plan, in rank order, answer five questions. One or two sentences each is enough.
 
-For example, checking whether managers hear about handovers late could mean comparing their accounts with dated handover emails. Saying only that you will ask AI whether delays happen would not check the real process.
+- **What do I need to learn?** The gap, in one line, and whether it is blocking or useful.
+- **Why does my Problem Frame need it?** The part of the frame that depends on it, from A4.
+- **Where will I learn it?** The sources: a person, a document, a system, an observation. Name them. A person counts; say how you will reach them.
+- **What steps will I take, and in what order?** Small steps you could finish in one sitting, with a rough time for each.
+- **How will I know I learned it?** What you will be able to show, and the independent thing you will check it against, which could confirm it or prove you wrong.
+
+*Example, gap 1:*
+
+**Learn:** Whether the other account managers really find out late when an account changes hands. Blocking.
+
+**Why:** Part 3 of my frame, who is affected, says all four managers are. If they are not, the problem is smaller than I said.
+
+**Where:** The four account managers. Dana, who sees every handover. The last three handover emails.
+
+**Steps:** First, ask Dana for the dates of the last three handovers (15 min). Then ask each manager when they found out about those handovers (four short chats, about 1 hour). Then compare the dates (30 min).
+
+**Know:** I can say, for each of the last three handovers, how many days passed before each manager knew. Confirmed if most managers found out more than a day late; wrong if most knew the same day. Checked against: the managers’ own answers, set beside the handover email dates.
+
+If a gap does not fit in five small steps, it is probably a topic. Go back and narrow it.
 
 ## Plan for Gap 2
 
@@ -424,7 +450,18 @@ Keep your Dojo Lab record of the context you gave AI, which suggestions you kept
 
 ## C2. Update your Problem Frame
 
-Use C1 in your Week 7 Word file to complete C2 here. Keep C1 unchanged. Update **part 6** so each assumption is marked Confirmed or Inferred and each remaining inference names the gap that will check it. Update **part 7** with planned gaps in rank order plus interesting gaps you left out. Correct another part only if planning showed it was wrong or vague, and record why.
+Your frame from Sprint 3 is already in C1, in your Week 7 Word file. Leave it there. Copy it into C2, “My updated frame,” and in C2 update parts 6 and 7 so they match your plan:
+
+- **Part 6, assumptions.** Keep each assumption marked confirmed or inferred. For each one still inferred, add which gap in your plan will check it, in place of “who could tell me.”
+- **Part 7, what you do not know yet.** Rewrite it so it lists the gaps in your plan, in rank order, plus the interesting ones you left out.
+
+If writing the plan showed you that another part of the frame is wrong or vague, fix it, and note which part you changed.
+
+*Example, part 6:*
+
+From part 3: All four managers are affected. Status: inferred. Checked by: Gap 1 in my plan.
+
+From part 4: Nobody has tried to fix this before. Status: inferred. Checked by: Gap 2 in my plan.
 
 The response rows below help you review all seven parts. If a selected row contains private workplace details, use the self-check without sending it for feedback.
 
@@ -441,3 +478,7 @@ If planning changed another part of your frame, name the part and explain what m
 This source table records what you find while following the plan in CIS 502. Leave it blank for now.
 
 Select **Download as Word document** below. In Canvas, select **Start Assignment**, attach this Week 8 Word file **and** your separate Week 7 Word file, then select **Submit Assignment**. The assessed work is Part B and C2; Part A and C1 in the Week 7 file provide the starting record. Keep your Dojo Lab decisions with these files. Saving a browser draft or downloading the file alone does not submit your work.
+
+### Portfolio Capture
+
+This plan is part of your readiness report in Sprint 5, and it is where you start in CIS 502.
