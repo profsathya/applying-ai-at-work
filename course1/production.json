@@ -192,6 +192,28 @@
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
       "source_commit": "003ef0424405718f13a5ab25552d94d1182316f5"
     },
+    "course1-sprints-sprint-14-get-underneath-three-to-five-walk-through": {
+      "artifact_id": "course1-sprints-sprint-14-get-underneath-three-to-five-walk-through",
+      "canvas_fingerprint": "936514e3d22f2916eda33d05f0e245192a14b51e8598e83887427d42740b2d37",
+      "canvas_id": 7183,
+      "canvas_module_id": 2079,
+      "canvas_module_item_id": 18018,
+      "canvas_page_url": null,
+      "canvas_payload_hash": "a07a47188a7b3ed736143db25f207c3971d90424309ef2ccf3d0d3097db0d76f",
+      "canvas_type": "assignment",
+      "completion_requirement": "must_submit",
+      "content_hash": "2f0b270fe2bfa28df9591721f6e230fcf831b91dd701f2dba6439f45ff4d50ce",
+      "delivery_mode": "guided_assignment",
+      "hosted_hash": "f80f57019632ef7be3af14bedd1d062e8ce2980ee4e487d4bd3f3d3712485682",
+      "hosted_last_rendered": "2026-09-29T21:14:53+00:00",
+      "hosted_path": "course1/assignments/get-underneath-three-to-five-walk-through.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/get-underneath-three-to-five-walk-through.html",
+      "last_pushed": "2026-09-29T21:14:53+00:00",
+      "local_path": "course1/sprints/sprint-14/get-underneath-three-to-five-walk-through.md",
+      "position": 4,
+      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "source_commit": "67e95176234d62f380e76796a4115d366a7d5550"
+    },
     "course1-sprints-sprint-14-introduction-find-the-problem-worth-solving": {
       "artifact_id": "course1-sprints-sprint-14-introduction-find-the-problem-worth-solving",
       "canvas_fingerprint": "bf9608449ae40254aa5feb0b45f25b6f1505f3d114b5ed61739d5fda544cd7f5",
@@ -1555,5 +1577,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-29T14:53:35+00:00"
+  "last_sync": "2026-09-29T21:14:53+00:00"
 }
