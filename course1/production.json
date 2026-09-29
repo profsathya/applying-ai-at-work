@@ -1213,17 +1213,17 @@
       "canvas_payload_hash": "7c0cdf4e12c39096228e079354b21b67ea29f7983fb25fb083d879b588ae5350",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "ce36c99733c4dc3f3ee40499139123bbecb11b7c308d28155e8483b464410c91",
+      "content_hash": "3af01ba09583d391554f1599ef1d75bab692d1531e42a0e0501a75c22fa1f408",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "722d1e87484cd499e64aea532ff7d914a816513f2de11202060a630bf9a4172b",
-      "hosted_last_rendered": "2026-09-21T04:16:56+00:00",
+      "hosted_hash": "e2fab06b2615f93109c6aacbfc9372bf11cc1b2664b986d754bde64f17d2c251",
+      "hosted_last_rendered": "2026-09-29T04:27:33+00:00",
       "hosted_path": "course1/assignments/dojo-lab-design-the-learning-path-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-design-the-learning-path-v3.html",
-      "last_pushed": "2026-09-21T04:16:56+00:00",
+      "last_pushed": "2026-09-29T04:27:33+00:00",
       "local_path": "course1/sprints/sprint-8/dojo-lab-design-the-learning-path-v3.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "421d2464957a61001a6fdbdbd65d02ac387cac21"
+      "source_commit": "178271c7cbdfc5d2a2bceb38f933a1c5d22ae6b1"
     },
     "course1-sprints-sprint-9-introduction-close-the-learning-gap-v3": {
       "artifact_id": "course1-sprints-sprint-9-introduction-close-the-learning-gap-v3",
@@ -1555,5 +1555,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-29T03:14:27+00:00"
+  "last_sync": "2026-09-29T04:27:33+00:00"
 }
