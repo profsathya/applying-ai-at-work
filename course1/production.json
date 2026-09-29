@@ -170,6 +170,28 @@
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
       "source_commit": "6548e2d393a21ebc9222f2e5c6d6db756312617c"
     },
+    "course1-sprints-sprint-14-first-frames-walk-through": {
+      "artifact_id": "course1-sprints-sprint-14-first-frames-walk-through",
+      "canvas_fingerprint": "4a42b499bb76521aeb495fd2357c93456d39a355b263b7a47b41da4753d9a6d6",
+      "canvas_id": 7184,
+      "canvas_module_id": 2079,
+      "canvas_module_item_id": 18019,
+      "canvas_page_url": null,
+      "canvas_payload_hash": "b871c09b0eff7a7d1ad4fd030888ef41a0701902686c2b5e6a5685b1360bbe56",
+      "canvas_type": "assignment",
+      "completion_requirement": "must_submit",
+      "content_hash": "71b9c5ec6ceb1541814b1c1c7ccb0d99b5f7085d13c4c7975e6b3fc61b028540",
+      "delivery_mode": "guided_assignment",
+      "hosted_hash": "c8a53a9b7d87052eecdc9dc16a1bd3be350e917e304114120b33b639d5563ec7",
+      "hosted_last_rendered": "2026-09-29T21:16:38+00:00",
+      "hosted_path": "course1/assignments/first-frames-walk-through.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/first-frames-walk-through.html",
+      "last_pushed": "2026-09-29T21:16:38+00:00",
+      "local_path": "course1/sprints/sprint-14/first-frames-walk-through.md",
+      "position": 7,
+      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "source_commit": "c14ffe8724e8a117f8a21b6bfe4a98335fc0f2a9"
+    },
     "course1-sprints-sprint-14-get-underneath-three-to-five": {
       "artifact_id": "course1-sprints-sprint-14-get-underneath-three-to-five",
       "canvas_fingerprint": "b1b6cb421a4362221d78710d54e2603b7079a90ef04e7844bd59038bedecdec1",
@@ -1577,5 +1599,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-29T21:14:53+00:00"
+  "last_sync": "2026-09-29T21:16:38+00:00"
 }
