@@ -770,17 +770,17 @@
       "canvas_payload_hash": "51c2182a8bc3c44af561e620c9c1d65ba1de45e3fbf8d7d3e0e34188a93e107f",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "cb214baa36966ee37c2b1b4bd7af70376559ad6f0a42188843165b66a6bea45a",
+      "content_hash": "6ad6996e809274ce8dc21ad73a7fde7795012fd54c03e690e2f30f15bd17fac1",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "39ce1a49426ccfc9b950257015a01aec7e9f32618bdd8ab2171e195ce4e7a174",
-      "hosted_last_rendered": "2026-09-24T22:01:57+00:00",
+      "hosted_hash": "b423e97f47f0aa87935688de016755d45df4573108958ec1ff7734212291b324",
+      "hosted_last_rendered": "2026-09-29T14:53:35+00:00",
       "hosted_path": "course1/assignments/what-solutions-already-exist-walk-through.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/what-solutions-already-exist-walk-through.html",
-      "last_pushed": "2026-09-24T22:01:57+00:00",
+      "last_pushed": "2026-09-29T14:53:35+00:00",
       "local_path": "course1/sprints/sprint-16/what-solutions-already-exist-walk-through.md",
       "position": 7,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "03fcb526e8eaa6961b1d8eecf657c355393ed3cf"
+      "source_commit": "d79af9f0cf8021fb18e19139e6bddf9c431a3537"
     },
     "course1-sprints-sprint-16-which-assumptions": {
       "artifact_id": "course1-sprints-sprint-16-which-assumptions",
@@ -1555,5 +1555,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-29T04:52:14+00:00"
+  "last_sync": "2026-09-29T14:53:35+00:00"
 }
