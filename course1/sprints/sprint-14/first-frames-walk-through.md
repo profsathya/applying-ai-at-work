@@ -143,7 +143,6 @@ guided_assignment:
     - Part 5 is a state, not a solution.
     - Part 6 has at least four assumptions, each marked confirmed or unverified, each unverified
       one with who could tell you.
-    instruction_section: Write your frames
   - id: frame-2
     kind: table
     prompt: Frame 2
