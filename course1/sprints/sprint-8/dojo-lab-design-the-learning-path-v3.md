@@ -39,7 +39,7 @@ guided_assignment:
 
 Bring your list from Name the Gap. This activity follows the Dojo Flow you know from Sprints 1 and 3: test what you wrote, widen your options, test how you will know, then choose. AI does one job at a time, and each prompt tells it which.
 
-AI can spot a vague gap in seconds. It cannot know that Dana never answers email, or which manager would tell you the truth. You can. That is the division of labor.
+AI can spot a vague gap in seconds. It cannot know that Dana never answers email, or which manager would tell you what actually happens. You can. That is the division of labor.
 
 Use any AI chat you already have (ChatGPT, Claude, or Gemini). Do not paste confidential workplace, client, or personal details. Change names and remove anything sensitive before you start.
 
@@ -69,19 +69,19 @@ what fails before saying anything encouraging.
 2. One line on whether my ranking makes sense.
 ```
 
-Take what lands and fix your list yourself, in Part A of your template. A longer description does not make a gap more important. You do not have to accept a verdict. If you think the AI misread your situation, say so, and give your reasons.
+Take what lands and fix your list yourself, in Part A of your template. Update it as needed. A longer description does not make a gap more important. You do not have to accept a verdict. If you think the AI misread your situation, say so and give your reasons. Keep the exchange going until you are comfortable that it understands your situation.
 
 ## 2. Widen your options, using your 3Cs
 
 **The 3Cs, in this step.** You learned these in Sprint 2. Here is what each one looks like when you are planning your learning.
 
-**Context. Tell it your situation before you ask for anything.** Who will actually talk to you, how much time you have, what you can get access to, what is off limits. Sprint 2's test still works: if your prompt could have been sent by anyone in the class, it needs more of you in it.
+**Context. Tell your AI your situation before you ask for anything.** Who will actually talk to you, how much time you have, what you can get access to, what is off limits. Sprint 2's test still works: if your prompt could have been sent by anyone in the class, it needs more of you in it.
 
 **Choices. Ask for more than one way to close each gap.** Two or three, with what each would take and what it would miss. A single suggestion is not a choice.
 
-**Confirmation. A plan built on AI suggestions is inferred until something independent backs it up.** Naming what that is comes in step 3.
+**Confirmation. A plan built on AI suggestions is inferred until something independent backs it up.** Naming that confirmation comes in step 3.
 
-In between Choices and Confirmation sits your judgment. For every suggestion, write keep or reject with one line of your own reasoning. "The AI said so" is not a reason.
+In between Choices and Confirmation sits your judgment.
 
 Follow up with:
 
