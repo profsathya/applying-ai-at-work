@@ -17,7 +17,7 @@ from canvas_sync.hosted_html import (
     SHARED_OUTPUT_NAMES,
     artifact_hosted_output_paths,
     course_shared_output_dir,
-    render_hosted_files,
+    render_published_hosted_files as render_hosted_files,
 )
 from canvas_sync.push import push_artifact, enforce_module_order
 from canvas_sync.schema import parse_frontmatter, validate_artifact
@@ -704,6 +704,18 @@ def publish_manifest(
                     ),
                 )
             )
+        if unsuccessful and result.get("hosted"):
+            # Restoring a blocked item's body must not restore stale positions.
+            # Refresh annotations alone against final live membership, including
+            # blocked siblings, without rendering any unpublished source body.
+            try:
+                refreshed = render_hosted_files(
+                    manifest_path, hosted_output_dir, [],
+                    state=latest_state, include_indexes=False,
+                )
+                result["hosted"]["rendered"].extend(refreshed["rendered"])
+            except Exception as exc:
+                result["failed"].append({"file": "<item_sequence>", "artifact_id": None, "error": str(exc)})
     return result
 
 

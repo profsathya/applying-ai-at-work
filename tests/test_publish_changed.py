@@ -182,6 +182,12 @@ class StagedVisibilityTests(unittest.TestCase):
 
 
 class PublishChangedTests(unittest.TestCase):
+    def setUp(self):
+        # Sequence API reads are independently covered by test_item_sequence.
+        positions = patch("canvas_sync.hosted_html._published_item_positions", return_value={})
+        positions.start()
+        self.addCleanup(positions.stop)
+
     def test_unchanged_artifacts_are_skipped(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()
@@ -671,6 +677,12 @@ class ProvisionalIdentityReportTests(unittest.TestCase):
 
 
 class HostedRestoreTests(unittest.TestCase):
+    def setUp(self):
+        # Sequence API reads are independently covered by test_item_sequence.
+        positions = patch("canvas_sync.hosted_html._published_item_positions", return_value={})
+        positions.start()
+        self.addCleanup(positions.stop)
+
     """Blocked artifacts' hosted output stays at baseline; healthy output goes live."""
 
     def test_blocked_artifact_hosted_output_restored_to_baseline(self) -> None:
@@ -760,6 +772,12 @@ class HostedRestoreTests(unittest.TestCase):
 
 
 class SharedIndexRestoreTests(unittest.TestCase):
+    def setUp(self):
+        # Sequence API reads are independently covered by test_item_sequence.
+        positions = patch("canvas_sync.hosted_html._published_item_positions", return_value={})
+        positions.start()
+        self.addCleanup(positions.stop)
+
     def test_blocked_title_change_does_not_reach_hosted_index(self) -> None:
         """Shared indexes stay at baseline when any artifact is blocked."""
         with tempfile.TemporaryDirectory() as tmp:
