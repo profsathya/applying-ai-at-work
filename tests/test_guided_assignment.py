@@ -63,6 +63,7 @@ class GuidedAssignmentTests(unittest.TestCase):
             self.assertNotIn('category-example', card.group(1))
             self.assertIn(f'data-entry="{key}"', card.group(1))
         self.assertLess(rendered.index('example-once'), rendered.index('data-category-card="work"'))
+        self.assertLess(rendered.index('example-once'), rendered.index('A long list is the goal'))
 
     def test_brainstorm_interleaved_keeps_original_body_and_canvas_assignment_identity(self):
         path = ROOT / 'course1/sprints/sprint-15/brainstorm-your-list-ai-guided-activity.md'
