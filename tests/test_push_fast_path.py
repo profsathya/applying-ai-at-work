@@ -134,6 +134,9 @@ def write_state(state_path: Path) -> None:
 
 
 class FakeClient:
+    def list_modules(self):
+        return []  # These fixtures publish draft items only.
+
     """Serves live objects; records whether any Canvas write happened."""
 
     def __init__(self, live_page: dict | None = None, live_assignment: dict | None = None) -> None:

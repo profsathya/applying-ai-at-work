@@ -21,6 +21,18 @@ Set up one AI tool as a coach you can return to throughout the course. You bring
 
 There is no setup submission. In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames without AI. Use the Dojo when the Dojo Lab introduces it.
 
+## Get started
+
+Watch the walkthrough for the tool you choose, then follow the steps below. Keep this page open for the source link and instruction text.
+
+```video
+{"src":"assets/dojo-setup/cis501-dojo-setup-chatgpt-narrated.mp4","title":"Set up a ChatGPT Project (2:07)","captions":"assets/dojo-setup/cis501-dojo-setup-chatgpt-narrated.vtt"}
+```
+
+```video
+{"src":"assets/dojo-setup/cis501-dojo-setup-gemini-narrated.mp4","title":"Set up a Gemini Gem (2:26)","captions":"assets/dojo-setup/cis501-dojo-setup-gemini-narrated.vtt"}
+```
+
 ## 1. Create your Dojo
 
 Name your project or Gem **CIS 501 AI Dojo**:

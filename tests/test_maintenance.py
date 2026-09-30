@@ -132,6 +132,29 @@ class MaintenanceTests(unittest.TestCase):
         with self.assertRaises(FileNotFoundError):
             self.run_reconcile()
 
+    def test_candidate_preserves_adjacent_source_evidence_checks(self):
+        from canvas_sync.source_intake import digest, json_bytes
+        fm, body = parse_frontmatter(self.path)
+        fm["source_provenance"] = "stable-page.sources.json"
+        text = "---\n" + yaml.safe_dump(fm, sort_keys=False) + "---\n\n" + body
+        self.path.write_text(text)
+        evidence = {
+            "evidence_version": 1, "artifact_id": fm["artifact_id"],
+            "frontmatter_sha256": digest(json_bytes(fm)),
+            "body_sha256": digest(body.encode()),
+            "parts": [{"kind": "new", "markdown": body.rstrip(), "reason": "Reviewed test source"}],
+        }
+        sidecar = self.path.with_name(fm["source_provenance"])
+        sidecar.write_text(json.dumps(evidence))
+        self.assertEqual(pull.validate_candidate(self.path, text), [])
+        self.assertTrue(pull.validate_candidate(self.path, text.replace("Judgment", "Other wording")))
+        sidecar.unlink()
+        self.assertTrue(pull.validate_candidate(self.path, text))
+        target = self.root / "evidence.json"
+        target.write_text(json.dumps(evidence))
+        sidecar.symlink_to(target)
+        self.assertIn("symlink", pull.validate_candidate(self.path, text)[0])
+
     def test_native_roundtrip_is_a_noop(self):
         original = self.path.read_bytes()
         report = self.run_reconcile()

@@ -182,6 +182,12 @@ class StagedVisibilityTests(unittest.TestCase):
 
 
 class PublishChangedTests(unittest.TestCase):
+    def setUp(self):
+        # Sequence API reads are independently covered by test_item_sequence.
+        positions = patch("canvas_sync.hosted_html._published_item_positions", return_value={})
+        positions.start()
+        self.addCleanup(positions.stop)
+
     def test_unchanged_artifacts_are_skipped(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()
@@ -671,7 +677,57 @@ class ProvisionalIdentityReportTests(unittest.TestCase):
 
 
 class HostedRestoreTests(unittest.TestCase):
+    def setUp(self):
+        # Sequence API reads are independently covered by test_item_sequence.
+        positions = patch("canvas_sync.hosted_html._published_item_positions", return_value={})
+        positions.start()
+        self.addCleanup(positions.stop)
+
     """Blocked artifacts' hosted output stays at baseline; healthy output goes live."""
+
+    def test_sequence_read_failure_after_success_restores_all_hosted_outputs(self):
+        from canvas_sync.hosted_html import render_hosted_artifact
+        from canvas_sync.publish_outcome import summarize
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            md = root / "course1/sprints/sprint-0/stable-page.md"
+            manifest = root / "course1/manifests/production.json"
+            state_dir = root / ".canvas-state"
+            output = root / "site"
+            write_page(md, body="Changed content")
+            write_manifest(manifest, hosted=True)
+            write_state(state_dir / "course1/production.json", hash_value="d" * 64)
+            course = output / "deanza/course1"
+            page = course / "activities/stable-page.html"
+            page.parent.mkdir(parents=True)
+            page.write_text('<h1>Released</h1><p class="item-sequence">Item 1 of 2 · 1 item remaining</p>')
+            sibling = page.with_name("sibling.html")
+            sibling.write_text('<h1>Sibling</h1><p class="item-sequence">Item 2 of 2 · 0 items remaining</p>')
+            (course / "home.html").write_text("Released homepage")
+            baseline = {p: p.read_bytes() for p in course.rglob("*") if p.is_file()}
+
+            def successful_push(*args, **kwargs):
+                # Reproduce push_artifact's intermediate write before final read.
+                render_hosted_artifact(md, manifest, output)
+                self.assertNotIn("item-sequence", page.read_text())
+                return {"artifact_id": "stable-page", "action": "updated", "hosted_url": "https://example.org/page"}
+
+            with patch.object(publish_changed, "REPO_ROOT", root), \
+                 patch.object(publish_changed, "push_artifact", side_effect=successful_push), \
+                 patch("canvas_sync.hosted_html._published_item_positions", side_effect=RuntimeError("sequence read unavailable")), \
+                 patch("canvas_sync.hosted_html.source_sequences") as preview:
+                result = publish_changed.publish_manifest(
+                    manifest, state_dir, dry_run=False, check_drift=False,
+                    require_state=True, hosted_output_dir=output)
+            preview.assert_not_called()
+            self.assertEqual(len(result["published"]), 1)
+            self.assertTrue(any(row["file"] == "<hosted_html>" for row in result["failed"]))
+            self.assertEqual({p: p.read_bytes() for p in course.rglob("*") if p.is_file()}, baseline)
+            self.assertIsNone(result["hosted"])
+            self.assertTrue(summarize([result])["commit_state"])
+            self.assertFalse(summarize([result])["hosted_commit"])
+            # A healthy second course must not re-enable a shared hosted commit.
+            self.assertFalse(summarize([result, {"published": [{}], "hosted": {"rendered": []}}])["hosted_commit"])
 
     def test_blocked_artifact_hosted_output_restored_to_baseline(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -760,6 +816,12 @@ class HostedRestoreTests(unittest.TestCase):
 
 
 class SharedIndexRestoreTests(unittest.TestCase):
+    def setUp(self):
+        # Sequence API reads are independently covered by test_item_sequence.
+        positions = patch("canvas_sync.hosted_html._published_item_positions", return_value={})
+        positions.start()
+        self.addCleanup(positions.stop)
+
     def test_blocked_title_change_does_not_reach_hosted_index(self) -> None:
         """Shared indexes stay at baseline when any artifact is blocked."""
         with tempfile.TemporaryDirectory() as tmp:

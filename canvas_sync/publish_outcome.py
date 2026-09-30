@@ -27,12 +27,17 @@ def summarize(results: list[dict]) -> dict:
       no recorded identities commit nothing.
     - ``hosted_commit``: hosted output may be committed per-item; blocked
       artifacts' files are already restored to baseline by publish_changed.
+      A course-wide render/sequence failure blocks the shared hosted commit
+      regardless of successful Canvas writes or another course's success.
     """
     published = sum(len(r.get("published", [])) for r in results)
     failed = sum(len(r.get("failed", [])) for r in results)
     drifted = sum(len(r.get("drifted", [])) for r in results)
     provisional = sum(len(r.get("provisional", [])) for r in results)
     hosted_ok = any(r.get("hosted") for r in results)
+    hosted_blocked = any(r.get("hosted_commit_blocked") or any(
+        entry.get("file") in {"<hosted_html>", "<item_sequence>"}
+        for entry in r.get("failed", [])) for r in results)
     clean = failed == 0 and drifted == 0
     return {
         "published": published,
@@ -41,7 +46,7 @@ def summarize(results: list[dict]) -> dict:
         "hosted_ok": hosted_ok,
         "clean": clean,
         "commit_state": published > 0 or clean or provisional > 0,
-        "hosted_commit": published > 0 or hosted_ok or clean,
+        "hosted_commit": not hosted_blocked and (published > 0 or hosted_ok or clean),
     }
 
 
