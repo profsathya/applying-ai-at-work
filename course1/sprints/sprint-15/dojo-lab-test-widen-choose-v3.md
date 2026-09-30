@@ -47,17 +47,6 @@ AI can spot the need you are guessing at. But it cannot know that your account l
 - Your **Stakeholder Map**, as you submitted it.
 - Your **Problem Frame**.
 
-**The Dojo Flow**
-
-You know this rhythm from Sprints 1 and 2. Same four steps:
-
-1. **Bring what you already wrote.** Never arrive empty-handed.
-2. **Test it.** AI pokes holes; it does not fix them.
-3. **Widen it.** AI offers other ways to see the same situation.
-4. **Choose.** You decide what to keep, reject, or revise. Alone.
-
-You have already done step 1: you arrived with a map. Steps 2 to 4 happen below, with one extra beat (polishing your questions) sitting between widening and choosing.
-
 **Start in your Dojo**
 
 Open your Dojo and say: "Walk me through the Sprint 3 Dojo Lab: test, widen, choose." Then paste your Stakeholder Map and your Problem Frame. Your Dojo knows this activity and will lead you through the four steps below, one at a time. Use the sections below to follow along.
