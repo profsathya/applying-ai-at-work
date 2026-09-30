@@ -18,6 +18,15 @@ publish: true
 
 A Problem Frame gets stronger when it meets real people and real constraints. In this sprint, you will identify the stakeholders connected to your problem across four relationships: **Affected, Influential, Responsible for a constraint, Positioned to challenge your frame**. You will draft a stakeholder map that shows what you actually know versus what you are assuming, test and widen it with AI, and then have at least one real validation conversation to test your Problem Frame against a person's input. Based on what you learn, you may revise your Problem Frame.
 
+In Sprint 2 you rated your assumptions without checking any of them. This sprint is the first time one of them meets a real person.
+
+## What you need for this sprint
+
+- Your Problem Frame as you left it at the end of Sprint 2, with "Last updated: Sprint 2" at the top. Open it up. Part 6, with its Status column, is where this sprint starts.
+- Your Dig into your assumptions tables. The questions you wrote there become your first stakeholder questions.
+- Your verdict. If you moved to your runner-up, bring that new frame instead.
+- A place to keep your Sprint 3 work with your other work.
+
 AI is your thinking partner throughout, but you own the goal, the data, and the final judgment calls. Start with your own thinking first. Then use AI to challenge it, identify blind spots, or prepare for conversations with real people that AI can't replace. Your job is to decide what to keep, reject, revise, or verify. The thinking is yours.
 
 ![Four colleagues listen and compare perspectives around a shared workflow at a meeting table.](assets/stakeholder-listening-conversation.png)
@@ -30,10 +39,14 @@ What you will do:
 
 1. **Identify your stakeholders.** Name at least one person in each of the four relationships: Affected, Influential, Responsible for a constraint, Positioned to challenge your frame.
 2. **Draft a stakeholder map with honest evidence status.** Lay out what you know for each stakeholder, and be clear about what is confirmed fact versus your own assumption.
-3. **Name what you are guessing, and write the questions that would settle it.** Pull out the assumptions that would change what you do next if you turned out to be wrong, and write a question for each.
+3. **Name what you are guessing, and write the questions that would settle it.** Start with the Part 6 rows you rated high risk in Sprint 2, add anything new your map turns up, and write a question for each.
 4. **Test and widen your map with AI.** Use your own AI chat to poke holes in what you wrote and to offer other ways to see the same situation. You decide what changes.
 5. **Conduct at least one real validation conversation.** Talk to an actual stakeholder and see whether your Problem Frame holds up.
 6. **Revise your Problem Frame based on what you learn.** Use what you heard to sharpen, adjust, or rebuild your frame.
+
+## If the conversation tells you the problem is not real
+
+Sometimes the person who would know says the problem is not what you framed, or not there at all. That is the conversation doing its job. Report it honestly in your Stakeholder Conversation; a supported "my frame did not hold" is a valid result.
 
 ## Sprint 3 Concepts
 
@@ -62,13 +75,13 @@ Non-leading questions make that possible. Ask about a specific experience, past 
 
 Expect stakeholder perspectives to be in conflict. This is normal, not a sign you did something wrong. When they do, resist the urge to smooth over the tension just to make your report look cleaner or more resolved. That tension is data. It can point to scope you missed, risk you underestimated, unclear authority, misaligned incentives, or evidence your original frame overlooked entirely.
 
-**An example.** Your frame says handovers get dropped because there is no shared record of who owns an account.
+**An example.** Your frame says handovers get dropped because nobody makes managers fill in the CRM owner field.
 
-- The **account lead** tells you the real issue is that managers are handed accounts with no notice, so a record would not have helped.
-- **Another account manager** tells you there *is* a shared tracker, and nobody updates it.
+- The **account lead** tells you the real issue is that managers are handed accounts with no notice, so there is nothing to fill in when it matters.
+- **Another account manager** tells you the field was switched on once, and people stopped using it within a month.
 
-Those two accounts conflict with each other, and neither one matches your frame. Do not average them into "communication could be better." The conflict *is* the finding: one person is describing a timing problem, one is describing an adoption problem, and you assumed a tooling problem. That tells you exactly what to look at next.
+Those two accounts conflict with each other, and neither one matches your frame. Do not average them into "communication could be better." The conflict *is* the finding: one person is describing a timing problem, one is describing an adoption problem, and you assumed an enforcement problem. That tells you exactly what to look at next.
 
 **Conflict can also show up inside a single conversation.** A stakeholder tells you the current process works fine, and then, five minutes later, describes the workaround they built to survive it. Both are true to them. Write down both. The gap between what someone says works and what they actually do is usually where the problem lives.
 
-Continue onto the Concept Check.
+Next up: **Sprint 3 Concept Check**.
