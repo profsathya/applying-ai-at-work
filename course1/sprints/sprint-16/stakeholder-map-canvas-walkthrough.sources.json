@@ -4,7 +4,7 @@
   "packet_sha256": "8ff1627fc37bdea2bf5421fcc4dff230bbe96a0248363d4851ce1362094c6b37",
   "map_sha256": "69fdc32ee3b9894b999f0ec440bddd9e0719aed7a682cf0b06b3570b1403bedf",
   "body_sha256": "37674ef37eadd03a9a4ff9bf128649219c212ded14f849a481b23355c8c5cefc",
-  "frontmatter_sha256": "fcb35380931014fbe21593ed56266919acd1a3d085d8c847e3309ba4edae4742",
+  "frontmatter_sha256": "02879db37911d5aa4a812542b4bd9b9dbd052bebfe669f5b99845098ad798e11",
   "parts": [
     {
       "kind": "new",
@@ -67,7 +67,8 @@
     "2026-09-30: Sprint 2 to Sprint 3 continuity, per the content editor: setup row reads \"Your problem, from Part 2 of your Problem Frame as you left it in Sprint 2\"; instructions add the Sprint 2 links (Part 6 high-risk rows as first candidates, the assumption block named as Sprint 2's walk on new material, a bridge line from high risk to high-stakes, the example's Sprint 1 and Sprint 2 origin, and who to talk to first from Part 6 and the verdict). Walkthrough mechanics unchanged.",
     "2026-09-30: Stakeholder Tables 1-4 prompts name the relationship each table encourages (Affected, Influential, Responsible for a constraint, Positioned to challenge your frame), and each table carries one neutral line that the person may also hold other relationships, naming any that apply, without suggesting a combination, per the content editor. Walkthrough mechanics unchanged.",
     "2026-09-30: Problem Frame references name each part as well as its number (The problem (Part 2), Your assumptions (Part 6), Who is affected (Part 3a), What fixing this would ask of people (Part 3c)), including the setup row; Table 1 points learners back to the people already named in 3a, 3c, and the Who could tell me column, per the content editor. Walkthrough mechanics unchanged.",
-    "2026-09-30: repeated_tables shows Stakeholder Tables 1-4 as collapsible steps with one field guide in Step 3 (field questions, examples, and traps moved word for word), field names only in each table, and one shared self-check after Step 6; task data, saved answers, AI feedback, and Word export unchanged."
+    "2026-09-30: repeated_tables shows Stakeholder Tables 1-4 as collapsible steps with one field guide in Step 3 (field questions, examples, and traps moved word for word), field names only in each table, and one shared self-check after Step 6; task data, saved answers, AI feedback, and Word export unchanged.",
+    "2026-09-30: guided_assignment.final_check adds a display-only \"What to check in your work\" list just before the submit section; not saved, exported, or sent for AI feedback."
   ],
   "source_roles": {
     "d-46083d085df8b33c": {

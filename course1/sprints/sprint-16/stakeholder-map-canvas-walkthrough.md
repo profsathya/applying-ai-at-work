@@ -44,6 +44,12 @@ guided_assignment:
     conversation.
   - Write in your own words. Keep your first draft before revising it with optional
     feedback.
+  final_check:
+  - Four stakeholders, each defined by their relationship to your problem.
+  - All seven fields are complete for every stakeholder, and each one is marked Confirmed or Inferred with a specific reason.
+  - Your fields show real thinking.
+  - Two or three complete assumption blocks, each with all four lines.
+  - A first choice, a backup and your reasoning, submitted as one Word document.
   tasks:
   - id: map-context
     kind: table

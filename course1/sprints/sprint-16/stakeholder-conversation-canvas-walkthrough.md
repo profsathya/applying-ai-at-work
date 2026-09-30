@@ -32,6 +32,12 @@ guided_assignment:
     Section C within five minutes, and Section D the same day or next.'
   - Submit this report together with the JSON response file from the Part 1 AI exchange
     and your updated Stakeholder Map.
+  final_check:
+  - Section A is complete and carried over from your Stakeholder Map.
+  - Your three validation questions are sharpened, not just copied.
+  - Section B uses the stakeholder's own words, not your interpretation.
+  - Section C records your first impressions right after the conversation.
+  - Section D is based on evidence, and everything is submitted as one Word document.
   tasks:
   - id: report-name
     kind: table

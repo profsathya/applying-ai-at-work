@@ -133,6 +133,23 @@ class WalkthroughChecks(unittest.TestCase):
         self.assertIn('map: repeated_tables must list writable table tasks',
                       validate_guided_assignment('map', frontmatter))
 
+    def test_final_check_shows_before_submit_without_changing_task_data(self):
+        config = {'version': '1', 'presentation': 'walkthrough', 'export_filename': 'report.docx',
+                  'tasks': [{'id': 'only', 'prompt': 'Only', 'criteria': ['Per step.']}]}
+        frontmatter = {'type': 'assignment', 'title': 'Report', 'artifact_id': 'report',
+                       'submission_type': 'file_upload', 'delivery_mode': 'guided_assignment',
+                       'walkthrough_after': 'source', 'guided_assignment': config}
+        plain = render_walkthrough_body(frontmatter, '', {})
+        config['final_check'] = ['Section A is done.', "Their <own> words."]
+        html = render_walkthrough_body(frontmatter, '', {})
+        config_json = lambda page: page.split('id="guided-config">', 1)[1].split('</script>', 1)[0]
+        self.assertEqual(config_json(html), config_json(plain))
+        self.assertEqual(html.count('data-walk-answer='), plain.count('data-walk-answer='))
+        self.assertEqual(html.count('What to check in your work'), 2)
+        final = ('<details class="walk-check walk-shared-check" open><summary>What to check in your work</summary>'
+                 '<ul><li>Section A is done.</li><li>Their &lt;own&gt; words.</li></ul></details>')
+        self.assertIn(final + '\n<section class="walk-finish">', html)
+
     def test_release_requires_pair_and_assessment_parity(self):
         with tempfile.TemporaryDirectory() as directory:
             source_path = Path(directory) / 'source.md'

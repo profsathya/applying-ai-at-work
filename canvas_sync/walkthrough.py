@@ -281,6 +281,10 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
 <div class="walk-teaching">{teaching}</div>
 {self_check}
 {response}</section>''')
+    final_items = ''.join(f'<li>{html.escape(item)}</li>' for item in config.get('final_check', []))
+    if final_items:
+        cards.append(f'<details class="walk-check walk-shared-check" open><summary>What to check in your work</summary>'
+                     f'<ul>{final_items}</ul></details>')
     submission = frontmatter['submission_type']
     pdf_from_document = config.get('submission_format') == 'pdf_from_document'
     has_table = any(task.get('kind') == 'table' for task in config['tasks'])
