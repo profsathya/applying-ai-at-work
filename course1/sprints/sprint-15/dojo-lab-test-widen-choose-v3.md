@@ -42,6 +42,11 @@ Bring your stakeholder map. This activity uses AI in the one way Sprint 3 asks f
 
 AI can spot the need you are guessing at. But it cannot know that your account lead never answers email, or that the person with the most authority here is the one who least wants this raised. You can. That is the division of labor.
 
+## What you need for this Dojo Lab
+
+- Your **Stakeholder Map**, as you submitted it.
+- Your **Problem Frame**.
+
 **The Dojo Flow**
 
 You know this rhythm from Sprints 1 and 2. Same four steps:
@@ -142,3 +147,7 @@ Send one final `Me:` turn in the same Dojo conversation. In your own words, stat
 - whether your first-choice stakeholder stayed the same or changed, and why.
 
 A map that did not change is a legitimate result if you can say what you tested it against. After this final turn, use the transcript request and submission steps below.
+
+## Updating your map
+
+After you submit the transcript, go back to your Stakeholder Map and update it from the conversation: change a status, sharpen a field, or add a stakeholder where the Dojo moved you, in your own words. Then fill in the **What changed, and why** table at the top of your map. You will upload the updated map with your Stakeholder Conversation.
