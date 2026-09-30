@@ -7,7 +7,7 @@ sprint: 16
 week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 11
-points: 45
+points: 50
 submission_type: text_entry
 delivery_mode: guided_assignment
 completion_requirement: must_submit
@@ -17,7 +17,7 @@ guided_assignment:
     and decide whether this problem is worth pursuing.
   builds_on: Bring your Problem Frame document, your assumption tables, and your What already
     exists table, both as they stand after the Dojo Labs.
-  standing_instruction: Submit all three responses together as one Canvas text entry · 45 points.
+  standing_instruction: Submit all three responses together as one Canvas text entry · 50 points.
   tasks:
   - id: what-a-change-would-ask
     kind: response

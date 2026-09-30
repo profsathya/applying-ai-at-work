@@ -7,7 +7,7 @@ sprint: 16
 week: 1
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 5
-points: 20
+points: 0
 submission_type: text_entry
 delivery_mode: guided_assignment
 completion_requirement: must_submit
@@ -15,7 +15,7 @@ guided_assignment:
   version: '1.0'
   purpose: Show the reasoning behind how risky each of your assumptions is to your problem.
   builds_on: Bring your assumption tables as they stand after the Dojo Lab.
-  standing_instruction: Submit both responses together as one Canvas text entry · 20 points.
+  standing_instruction: Own your progress · 0 points. Submit both responses together as one Canvas text entry to complete this module requirement.
   tasks:
   - id: the-tables
     kind: response
