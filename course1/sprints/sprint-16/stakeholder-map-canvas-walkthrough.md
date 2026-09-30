@@ -8,7 +8,7 @@ week: 5
 module: 'Sprint 3: Integrate People and Context (V3)'
 position: 5
 walkthrough_after: course1-sprints-sprint-15-stakeholder-map
-points: 35
+points: 50
 submission_type: file_upload
 completion_requirement: must_submit
 delivery_mode: guided_assignment
