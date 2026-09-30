@@ -4,7 +4,7 @@
   "packet_sha256": "095c658a39e481917734876f60a6516dd14a81977441391fece36873cd9f1dd6",
   "map_sha256": "dd0957d10e08d605f1352664496c22ff2162340c901554ac3371698db7870f79",
   "body_sha256": "a842900a4a251b7f1feb21590f73d6cc007ae8a1eb481c3463be76932b5788e2",
-  "frontmatter_sha256": "9a3ef2c763e2a2d95575ecb12ef988d7d217d43ad874250eb215ddaf4c73c7b2",
+  "frontmatter_sha256": "893934399aab47e780fafe4007a2564571c388a516464095684423659b319371",
   "parts": [
     {
       "kind": "new",
@@ -29,7 +29,8 @@
     "Store the unpublished alternative in sprint-17 while placing it in the live Sprint 4 module.",
     "Keep the source assignment's points and file-upload assessment.",
     "Anchor the new module item immediately after its live original.",
-    "Publish the instructor-approved Canvas Walkthrough in place of its original while retaining both Canvas identities."
+    "Publish the instructor-approved Canvas Walkthrough in place of its original while retaining both Canvas identities.",
+    "2026-09-30: Reconcile the instructor-confirmed 50-point major-assignment policy from live Canvas; preserve Main Assignments group 430 and existing publication intent."
   ],
   "source_roles": {
     "d-83aa73137f01cb9d": {

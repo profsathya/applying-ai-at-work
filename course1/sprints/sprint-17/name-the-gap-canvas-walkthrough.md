@@ -8,7 +8,7 @@ week: 7
 module: 'Sprint 4: Close the Learning Gap (V3)'
 position: 4
 walkthrough_after: course1-sprints-sprint-9-name-the-gap-v3
-points: 35
+points: 50
 submission_type: file_upload
 completion_requirement: must_submit
 delivery_mode: guided_assignment
