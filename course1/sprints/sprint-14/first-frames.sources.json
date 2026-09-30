@@ -4,7 +4,7 @@
   "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
   "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
   "body_sha256": "668e23703aabe176ee90ef171e216f13eb45681616fc5a1828c27a23f5b35112",
-  "frontmatter_sha256": "4f73a3eb3a07376883e846361f9a9319132e6ad44e1acaf1f9bf678d0d9482d7",
+  "frontmatter_sha256": "471f159c664816b593c81fe80a1c8244a41a2793ffac2bd230d56a6d639b045d",
   "parts": [
     {
       "kind": "new",
@@ -61,7 +61,8 @@
     "Keep all seven required parts and the source's writing order, but consolidate explanations already taught on the immediately preceding The problem frame page.",
     "Mark Frames 4 and 5 optional in task prompts because the current schema has no task-level optional field.",
     "Use the full criteria on Frame 1 and explicit same-standard criteria on later frames to preserve the source's repeated standard without duplicating a long list four times.",
-    "This verbosity adaptation preserves the activity, evidence, examples available on the preceding page, and no-AI boundary while reducing repeated body copy."
+    "This verbosity adaptation preserves the activity, evidence, examples available on the preceding page, and no-AI boundary while reducing repeated body copy.",
+    "2026-09-30: Reconcile the instructor-confirmed 50-point major-assignment policy from live Canvas; preserve Main Assignments group 430 and existing publication intent."
   ],
   "source_roles": {
     "d-bb7cd50440dd3015": {

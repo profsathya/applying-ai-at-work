@@ -346,8 +346,8 @@ modules:
             badge: "Self-check"
             selfcheck: true
           - slug: "name-the-gap-canvas-walkthrough"
-            nav_meta: "35 points"
-            meta: "Canvas Walkthrough - gather, rank, and connect your gaps to Problem Frame decisions; submit the Week 7 Word document, 35 points"
+            nav_meta: "50 points"
+            meta: "Canvas Walkthrough - gather, rank, and connect your gaps to Problem Frame decisions; submit the Week 7 Word document, 50 points"
           - slug: "dojo-lab-design-the-learning-path-v3"
             nav_meta: "Practice · Own your progress"
             meta: "Guided assignment - use your own AI chat to test your gap list, widen your options, and test how you will know; 0 points, submit the complete Dojo transcript to complete the module"
@@ -466,8 +466,8 @@ modules:
             badge: "Self-check"
             selfcheck: true
           - slug: "first-frames"
-            nav_meta: "35 points"
-            meta: "Guided assignment - write at least three complete draft problem frames without AI and submit them together; 35 points"
+            nav_meta: "50 points"
+            meta: "Guided assignment - write at least three complete draft problem frames without AI and submit them together; 50 points"
       - label: "Sprint Week 2: Test, choose, and reflect"
         items:
           - slug: "dojo-lab-test-widen-choose"

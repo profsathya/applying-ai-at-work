@@ -10,6 +10,8 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
+import shutil
 import sys
 import tempfile
 from contextlib import nullcontext
@@ -24,7 +26,7 @@ from canvas_sync.drift import canvas_body, compute_drift, html_to_markdown
 from canvas_sync.hosted_html import artifact_hosted_info
 from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
 from canvas_sync.maintenance_state import MaintenanceState
-from canvas_sync.schema import parse_frontmatter, validate_artifact
+from canvas_sync.schema import parse_frontmatter, parse_frontmatter_text, validate_artifact
 from canvas_sync.state import (
     canvas_fingerprint,
     content_hash,
@@ -60,6 +62,16 @@ def validate_candidate(md_path: Path, text: str) -> list[str]:
     with tempfile.TemporaryDirectory() as tmp:
         candidate = Path(tmp) / md_path.name
         candidate.write_text(text, encoding="utf-8")
+        fm, _ = parse_frontmatter_text(text, str(md_path))
+        evidence_name = fm.get("source_provenance")
+        if isinstance(evidence_name, str) and re.fullmatch(r"[a-z0-9-]+\.sources\.json", evidence_name):
+            evidence = md_path.parent / evidence_name
+            # Preserve the reviewed evidence unchanged. Validation must still
+            # reject altered frontmatter/body, missing evidence, and symlinks.
+            if evidence.is_symlink():
+                return [f"{md_path}: source fidelity: Source evidence cannot be a symlink"]
+            if evidence.is_file():
+                shutil.copyfile(evidence, candidate.parent / evidence_name)
         return validate_artifact(candidate)
 
 
