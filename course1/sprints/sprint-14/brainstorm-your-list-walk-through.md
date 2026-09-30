@@ -23,6 +23,7 @@ guided_assignment:
   standing_instruction: Own your progress · 0 points. Submit to complete this module requirement.
   feedback_endpoint: https://cti-course-ai.netlify.app/.netlify/functions/brainstorm-your-list
   feedback_protocol: brainstorm-list-v1
+  example_placement: once
   tasks:
   - id: final-list
     kind: response
