@@ -52,10 +52,10 @@ guided_assignment:
       label: Your name
     - id: row-2
       cells:
-      - text: Your starting Problem Frame, in one sentence
+      - text: Your problem, from Part 2 of your Problem Frame as you left it in Sprint 2
       - text:   
         response: true
-      label: Your starting Problem Frame, in one sentence
+      label: Your problem, from Part 2 of your Problem Frame as you left it in Sprint 2
     header_rows: 0
     criteria:
     - Bring the Problem Frame you are already working on.
@@ -834,7 +834,7 @@ Before you talk to anyone, write down what you already believe about the people 
 
 ## Set up your map
 
-Write your name and the Problem Frame you are using. This is the map you will keep working in throughout the sprint. Use roles or initials for other people, and keep confidential details out of responses you send for feedback.
+Write your name and your problem, from Part 2 of your Problem Frame as you left it at the end of Sprint 2. This is the map you will keep working in throughout the sprint. Use roles or initials for other people, and keep confidential details out of responses you send for feedback.
 
 ## What changed, and why
 
@@ -850,7 +850,7 @@ For each stakeholder, fill in the seven corresponding questions. One to three se
 
 Mark each field's status honestly. **Confirmed** means supported by evidence: a conversation, an observation, or reliable documentation. **Inferred** means a reasoned hypothesis based on what you currently know, that should be validated later. For the question field, mark whether the concern behind your question is Confirmed or Inferred and say why.
 
-Below is an example of how someone would answer each question in the table. The example stakeholder is the account lead from the Sprint 1 handover problem, the person you were told to start with at the end of that worked example. Feedback beside a row reviews only that row.
+Below is an example of how someone would answer each question in the table. The example stakeholder is the account lead from the handover problem. Sprint 1's worked example ended with "Start with the account lead," and Sprint 2's verdict left the question she can answer: if the fix is that easy, why has it not happened? Feedback beside a row reviews only that row.
 
 If you can, start with someone the problem reaches directly.
 
@@ -870,9 +870,11 @@ If you can, choose someone positioned to challenge your frame. This one is the h
 
 ### What you are guessing, and what would tell you
 
-Now step back and look at what you marked **Inferred**. Some of those guesses barely matter. A few of them hold your whole frame up and are high-stakes.
+Now step back. Start with Part 6 of your Problem Frame: the rows you rated high risk in Sprint 2 are your first candidates. Then look at what you marked **Inferred** on this map. Some of those guesses barely matter. A few of them hold your whole frame up and are high-stakes.
 
 **What “high-stakes” means.** An assumption is high-stakes if being wrong about it would change what you do next. Not a small correction, but a real change: a different problem, different people affected, or a different picture of what a fixed problem would look like.
+
+In Sprint 2 you also weighed how likely each answer was. Here the question is only what a different answer would change, because you are about to find out.
 
 Here is the test. Imagine the stakeholder tells you the opposite of what you assumed. Would that change your next move? If yes, it is high-stakes. If you would carry on the same way either way, it is not.
 
@@ -894,6 +896,8 @@ Good validation questions ask about specific experiences, past behavior, or conc
 ### Write two or three assumption blocks
 
 Pick the two or three high-stakes assumptions that would change what you do next, and write a block for each. Four lines, in this order.
+
+This is the walk you did in Sprint 2, on new material: the questions behind an assumption and what a different answer would change. What is new is that you will ask the question of a real person.
 
 > **Illustrative example from the handover problem**
 >
@@ -920,6 +924,8 @@ Add a third block if another assumption would change your next move. Otherwise, 
 ## Who you will talk to first
 
 Choose the one person you will reach out to first for your real validation conversation, and name a backup in case your first choice does not respond. Then explain your reasoning in two or three sentences: why this person, before anyone else?
+
+Start with what you already have: the "Who could tell me" column in Part 6, and whoever your Sprint 2 verdict said could settle what is still uncertain.
 
 Some strong reasons to contact someone first:
 
