@@ -29,7 +29,22 @@ function storedZipEntry(data, wanted) {
   throw new Error(`Word export is missing ${wanted}`);
 }
 
+async function openSteps(page) {
+  const closed = page.locator('.walk-accordion-toggle[aria-expanded="false"]');
+  while (await closed.count()) await closed.first().click();
+}
+
+// First-column text as rendered: repeated tables show the field name only; labelled questions gain the ask label.
+function expectedCellText(task, text, columnIndex, repeated, askLabel) {
+  const match = columnIndex === 0 ? /^([^\n]+)(\n+)([\s\S]+)$/.exec(text) : null;
+  if (!match) return text.trimEnd();
+  if (repeated) return match[1];
+  if (task.label_field_questions && askLabel) return (match[1] + match[2] + askLabel + ': ' + match[3]).trimEnd();
+  return text.trimEnd();
+}
+
 async function fillBaseline(page) {
+  await openSteps(page);
   while (await page.locator('.walk-entry:not([open])').count()) {
     await page.locator('.walk-entry:not([open])').first().locator(':scope > summary').click();
   }
@@ -85,6 +100,7 @@ async function checkWalkthrough(page, config, result) {
     assert.equal(await finish.locator('#walk-copy').innerText(), 'Copy text for Canvas submission');
   }
   recordCheck('walk-through context and Canvas submission action');
+  await openSteps(page);
   const tables = config.tasks.filter(task => task.kind === 'table');
   const writableTasks = config.tasks.filter(task => task.kind !== 'table' || !task.read_only);
   if (writableTasks.length && !config.feedbackEndpoint) {
@@ -107,6 +123,7 @@ async function checkWalkthrough(page, config, result) {
   for (const task of tables) {
     const step = page.locator(`[data-walk-step="${task.id}"]`);
     const table = step.locator('table.walk-source-table');
+    const repeated = (await step.getAttribute('data-walk-repeated-table')) !== null;
     assert.equal(await table.count(), 1, `${task.id}: expected one source table`);
     assert.equal(await table.locator('thead th').count(), task.header_rows === 0 ? 0 : task.columns.length);
     assert.deepEqual(await table.locator('thead th').allTextContents(), task.header_rows === 0 ? [] : task.columns.map(column => column.label));
@@ -123,7 +140,8 @@ async function checkWalkthrough(page, config, result) {
         const rendered = cells.nth(columnIndex);
         const source = rendered.locator('.walk-source-cell-text');
         assert.equal(await source.count(), cell.text ? 1 : 0);
-        if (cell.text) assert.equal((await source.innerText()).replace(/\r/g, '').trimEnd(), cell.text.trimEnd());
+        if (cell.text) assert.equal((await source.innerText()).replace(/\r/g, '').trimEnd(),
+          expectedCellText(task, cell.text, columnIndex, repeated, config.askLabel));
         const input = rendered.locator('[data-walk-answer]');
         assert.equal(await input.count(), cell.response ? 1 : 0);
         if (cell.response) {
@@ -139,7 +157,8 @@ async function checkWalkthrough(page, config, result) {
     const expectedButtons = task.read_only || !config.feedbackEndpoint || task.feedback_enabled === false ? 0 : responseRows;
     const buttons = step.locator('[data-walk-feedback]');
     assert.equal(await buttons.count(), expectedButtons, `${task.id}: row feedback controls`);
-    assert.equal(await step.locator('.walk-check').count(), task.read_only ? 0 : 1);
+    assert.equal(await step.locator('.walk-check').count(), task.read_only || repeated ? 0 : 1);
+    if (repeated) assert.equal(await page.locator('.walk-shared-check').count(), 1, `${task.id}: shared self-check`);
     if (task.read_only) assert.equal(responseRows, 0, `${task.id}: read-only table has inputs`);
     for (let index = 0; index < expectedButtons; index++) {
       const button = buttons.nth(index);
@@ -167,6 +186,7 @@ async function checkWalkthrough(page, config, result) {
   }
   if (await inputs.count()) await page.keyboard.press('Tab');
   await page.reload();
+  await openSteps(page);
   for (let index = 0; index < await inputs.count(); index++) {
     const input = inputs.nth(index);
     assert.equal(await input.inputValue(), entered.get(await input.getAttribute('data-walk-answer')));

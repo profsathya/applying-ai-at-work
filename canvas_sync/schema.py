@@ -182,6 +182,43 @@ def validate_artifact(md_path: Path) -> list[str]:
     return errors
 
 
+def _repeated_table_errors(config: dict, tasks: list, walkthrough: bool) -> list[str]:
+    """Repeated tables share one field guide and self-check, so their field rows must match."""
+    group = config.get('repeated_tables')
+    if not isinstance(group, dict) or not isinstance(group.get('tasks'), list):
+        return []  # JSON Schema reports malformed shapes.
+    if not walkthrough:
+        return ['require walkthrough presentation']
+    by_id = {task.get('id'): task for task in tasks if isinstance(task, dict)}
+    order = [task.get('id') for task in tasks if isinstance(task, dict)]
+    wanted = group['tasks']
+    missing = [ident for ident in wanted if ident not in by_id]
+    if missing:
+        return [f'names unknown tasks: {", ".join(map(str, missing))}']
+    start = order.index(wanted[0])
+    if order[start:start + len(wanted)] != wanted:
+        return ['must list consecutive tasks in page order']
+    group_tasks = [by_id[ident] for ident in wanted]
+    if any(task.get('kind') != 'table' or task.get('read_only') for task in group_tasks):
+        return ['must list writable table tasks']
+    from canvas_sync.walkthrough import split_field_text
+
+    def fields(task):
+        return [(row.get('cells', [{}])[0].get('text'), row.get('guidance'))
+                for row in task.get('rows', []) if isinstance(row, dict)]
+    errors = []
+    first = group_tasks[0]
+    if any(fields(task) != fields(first) for task in group_tasks[1:]):
+        errors.append('must share identical field names, questions, and guidance')
+    if not first.get('criteria') or any(task.get('criteria') != first.get('criteria') for task in group_tasks[1:]):
+        errors.append('must share identical self-check criteria')
+    for row in first.get('rows', []):
+        if (isinstance(row, dict) and any(isinstance(cell, dict) and cell.get('response') for cell in row.get('cells', []))
+                and not split_field_text(str(row.get('cells', [{}])[0].get('text') or ''))):
+            errors.append(f'{first.get("id")}.{row.get("id")}: field cell needs a name line and a question')
+    return errors
+
+
 def validate_guided_assignment(label: object, payload: dict, body: str | None = None) -> list[str]:
     errors = []
     if "require_sequential_progress" in payload and payload.get("type") != "module_header":
@@ -309,6 +346,8 @@ def validate_guided_assignment(label: object, payload: dict, body: str | None = 
                     errors.append(f'{label}: table requires at least one response cell')
             elif task.get('kind') == 'choice':
                 errors.append(f'{label}: walkthrough supports response, group, and table tasks only')
+    if 'repeated_tables' in config:
+        errors.extend(f'{label}: repeated_tables {message}' for message in _repeated_table_errors(config, tasks, walkthrough))
     if config.get('presentation') == 'reading' and config.get('feedback_endpoint'):
         errors.append(f'{label}: reading presentation does not support an AI feedback endpoint')
     if config.get('presentation') == 'compact':
