@@ -158,7 +158,8 @@
           "type": "string",
           "pattern": "^https://[^\\s]+$"
         },
-        "guidance_labels": {
+        "example_placement": {"type": "string", "enum": ["cards", "once"], "description": "Interleaved brainstorm only: where the source example list renders. cards (default) puts each example group beside its category card; once shows the whole example list one time above the cards, so renamed headings do not sit beside a mismatched example."},
+            "guidance_labels": {
           "type": "object",
           "additionalProperties": false,
           "minProperties": 1,

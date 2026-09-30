@@ -149,7 +149,6 @@ def render_interleaved_brainstorm_body(frontmatter: dict, instructions_html: str
         if not found:
             raise ValueError(f'Interleaved brainstorm could not locate the {title} source examples')
         examples[key] = found.group(1)
-    walk = walk[:example.start()] + walk[example.end():]
 
     categories = ''.join(
         f'<label>{caption}<input type="text" data-category="{key}" value="{default}" maxlength="80"></label>'
@@ -159,11 +158,19 @@ def render_interleaved_brainstorm_body(frontmatter: dict, instructions_html: str
         )
     ) + '<label>Custom heading, if useful<input type="text" data-category="additional" placeholder="For example: Caregiving" maxlength="80"></label>'
 
+    once = config.get('example_placement') == 'once'
+    example_block = ''
+    if once:
+        example_block = ('<div class="category-example example-once"><p class="example-kicker"><strong>Here is an example list</strong></p>'
+                         + ''.join(f'<h3>{title}</h3>{examples[key]}' for key, title in (('work', 'Work'), ('home', 'Home'), ('other', 'Other')))
+                         + '</div>')
+    walk = walk[:example.start()] + example_block + walk[example.end():]
+    example_block = ''
     cards = []
     for key, title in (('work', 'Work'), ('home', 'Home'), ('other', 'Other')):
+        card_example = '' if once else f'<div class="category-example"><p class="example-kicker"><strong>Here is an example list</strong></p><h3>{title}</h3>{examples[key]}</div>\n'
         cards.append(f'''<article class="category-card" data-category-card="{key}">
-<div class="category-example"><p class="example-kicker"><strong>Here is an example list</strong></p><h3>{title}</h3>{examples[key]}</div>
-<div class="category-response"><label for="list-{key}"><span data-heading-display="{key}">{title}</span> list</label>
+{card_example}<div class="category-response"><label for="list-{key}"><span data-heading-display="{key}">{title}</span> list</label>
 <p class="field-note">Write one situation per line. Get feedback only after you have written your own observations.</p>
 <textarea id="list-{key}" data-entry="{key}" maxlength="16000" rows="5" placeholder="One situation per line"></textarea>
 <button type="button" data-ai="{key}" disabled>Get AI feedback on this list</button>
@@ -192,7 +199,7 @@ def render_interleaved_brainstorm_body(frontmatter: dict, instructions_html: str
 <p>{html.escape(safe_note)}</p><p id="save-status" class="save-line" role="status" aria-live="polite">Your draft will save in this browser as you type.</p>
 <p id="storage-warning" class="storage-warning" hidden>Browser saving is unavailable. Your writing will stay on this page for this visit, but it may not survive a reload. Copy your list before you leave.</p></aside>
 <section><h2>1. Set up your categories</h2>{setup}<div class="response-task category-setup"><h3>Your headings</h3><p>Keep or rename these headings so they fit your week. Add a fourth only if you need it.</p><div class="category-grid">{categories}</div></div></section>
-<section><h2>2. Walk your week and write everything down</h2>{walk}{''.join(cards)}</section>
+<section><h2>2. Walk your week and write everything down</h2>{walk}{example_block}{''.join(cards)}</section>
 <section><h2>3. If your list is short</h2>{short}
 <div class="response-task final-review"><h3>Review your assembled list</h3><p>Use the original activity criteria:</p><ul>{criteria}</ul>
 <button type="button" data-ai="final" disabled>Get AI feedback on my full list</button><div class="feedback" data-feedback="final" role="status" aria-live="polite"></div></div></section>
