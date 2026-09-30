@@ -13,92 +13,77 @@ delivery_mode: guided_assignment
 completion_requirement: must_submit
 guided_assignment:
   version: '2.0'
-  purpose: Use AI to test and widen your draft frames, then choose one problem using
-    your own workplace judgment.
-  builds_on: Bring all draft frames from First frames and keep the Candidate Log open.
-  standing_instruction: Own your progress · 0 points. Submit to complete this module
-    requirement.
+  purpose: Have AI test and widen every draft frame, and choose one to carry forward, with
+    your reasons.
+  builds_on: Bring your First frames Word file.
+  standing_instruction: Own your progress · 0 points. Submit to complete this module requirement.
   tasks:
   - id: dojo-transcript
     kind: response
-    prompt: Paste the complete Dojo transcript, including every CONTINUED chunk, in
-      order.
+    prompt: Paste the complete Dojo transcript, including every CONTINUED chunk, in order.
     criteria:
-    - Include the required header and every turn in the conversation, in order.
-    - Keep every CONTINUED marker and include all continuation chunks.
-    - Include a final Me turn that states the activity decisions in your own words.
+    - The required header and every turn, in order.
+    - Every CONTINUED marker and continuation chunk kept.
+    - The conversation reaches the method's last round, where you say what changed and what
+      you chose.
 publish: true
-source_provenance: dojo-lab-test-widen-choose.sources.json
 dojo_submission:
   mode: transcript
   prompt_version: v1
+learning_goal: Have AI test and widen every draft frame, and choose one to carry forward,
+  with your reasons.
 ---
 
 # Dojo Lab: test, widen, choose
 
-Bring your frames. This activity uses AI in the one way Sprint 1 asks for, which is to test a frame you are too close to see around, and to widen it. AI can find the assumption you made without noticing in four seconds. It cannot know which of your situations your director would care about or which colleague would quietly block it. You can. That is the division of labor here.
+## What you need for this Dojo Lab
 
-Use any AI chat you already have (ChatGPT, Claude, or Gemini). Do not paste confidential workplace, client, or personal details. Change names and drop anything sensitive before you start.
+- Your **First frames** Word file.
 
-One rule holds for the whole activity. **Your frames stay in your words.** AI may point at a part, and you rewrite it. If you find yourself pasting its sentences into your frame, stop and write the sentence yourself.
+## The three parts to this activity
 
-## 1. Test each frame
+1. Your Dojo conversation.
+2. Requesting a transcript from the Dojo and submitting it back into Canvas.
+3. Updating your frames based on your conversation.
 
-Paste one frame at a time and use this prompt:
+## Part 1: Your Dojo conversation
 
-I am going to paste a problem frame. It has seven parts: 1 the goal it serves, 2 the problem, 3 who is affected and what it costs them, 4 how it is handled today and the moment that stops working, 5 what fixed would look like (a changed state, never a solution), 6 my assumptions marked confirmed or unverified, and 7 what I do not know yet. This is a first draft. Most of my assumptions are unverified, and that is expected; I will check them over the next nine weeks. Your job is to be a skeptic who works in this situation, not an editor. Do not rewrite anything and do not suggest solutions. Do not list everything you notice.
+Open your Dojo and say: "Walk me through Dojo Lab: test, widen, choose." Then paste your frames, one at a time as it asks. Your Dojo knows what this activity is for and will take it from there: it tests each frame, widens each one with other ways of seeing the situation, and helps you choose one to carry forward.
 
-1. Is this frame specific enough to be a starting point? Answer "yes" or "not yet," with one reason. 2. The three findings that matter most before I move on, ranked. One or two lines each, naming the part and quoting my words. Look especially for a cost with nobody attached, a solution hiding in part 5 or 7, and a part still empty. 3. One question someone who works in this situation would ask me first.
+One rule holds for the whole conversation. Your frames are yours, not the AI's. Your Dojo conversation should be a conversation, meaning you do not take its feedback blindly. Push back, engage, tell it when you disagree, or ask it to justify its reasoning. If you find yourself pasting its sentences into your frames, you are letting it take over. This is about you grappling with and understanding your problem, so stop and make sure that is happening.
 
-Nothing else. Here is the frame:
+*More help: if your Dojo is not set up yet.* Use any AI chat. Paste the text below as your first message, then your frames one at a time.
 
-Take what lands and fix the frame yourself, in your Log. Add an assumption where it found one you missed. Move a solution out. Attach a cost to a person. If a finding needs more than a line or two to fix, it is desk work, so go and do it in the Log rather than in the chat. Do this for every frame.
+> Before we start, here is how to work with me. Be my coach, not my editor. Ask one question at a time and wait for my answer. Keep each reply under 120 words. Ask what I think before you offer your own read. Never rewrite my work; point at a line and make me change it myself. When you push on something weak, say you are pushing and why. When I have defended a line, ease off and say so. If I lean on you two turns running, say so and make me put it in my own words. Do not invent anything about my workplace; ask. End with a recap I can save.
+>
+> == Sprint 1: Dojo Lab: test, widen, choose - problem frames ==
+>
+> Purpose: Test and widen every draft problem frame, then help the learner choose one workable problem with a reasoned runner-up or recovery plan. Use the Sprint 1 page with this title in the Course tab.
+>
+> What the learner brings: All draft seven-part frames from First frames and their First frames Word file, where revisions belong. Ask for one frame at a time. If they bring only a vague idea, ask for their written frame before testing it.
+>
+> The rounds:
+>
+> 1. Test each frame (Auditor, then Challenger). For each frame, give a short yes-or-not-yet readiness judgment with one reason. Rank at most three findings that matter before moving on, naming the frame part and quoting the learner's words. Pay particular attention to an unattached cost, an empty part, a solution disguised as the changed state, and claims presented as confirmed without support. Ask which finding the learner would address first. Work through a material finding with one question and, if needed, one follow-up. Have the learner state the change they will make in their First frames Word file. Send larger desk work back to the Word file instead of completing it in chat. Continue until every frame has been tested.
+>
+> 2. Widen each frame (Framer). Offer three genuinely different ways to view that same situation. For each, say what it reveals and whose perspective it brings in. Ask which, if any, changes the learner's frame. Flag when a framing suggests the problem may already be handled elsewhere. Treat all new framings as possibilities, not workplace facts.
+>
+> 3. Choose (Sensei). Help the learner apply the page's three size checks: can they describe current handling, can someone beyond themselves talk about it, and is there something consequential to find out? Ask them to choose the frame they want to carry forward, explain why this one and not the others, and name their own connection to it. Ask for a runner-up. If no frame holds up, help them name what they tried and where they will look next rather than forcing a choice.
+>
+> 4. Close (Reflector). Ask the learner to state, in their own words, what changed or was rejected for each frame, what direct observation they defended, what remains unknown, the alternative framings they considered, and their choice or recovery plan. Recap only the decisions they actually made and the next work in the Word file.
+>
+> Do not rewrite the frames, suggest solutions, or require evidence that later sprints are designed to gather. Do not turn a first-draft test into an exhaustive audit.
 
-## 2. Widen each frame
+## Part 2: Requesting and submitting the transcript
 
-Follow up with:
+The transcript is the only thing you submit for this Dojo Lab. Five steps:
 
-Now give me three other ways to see the same situation, two lines each: what it makes visible that my frame does not, and who would have to be involved. Then one line on whether any of them suggests this problem is already handled somewhere I have not looked.
+1. Copy the transcript request at the bottom of this page.
+2. Paste it into your Dojo conversation as your next message.
+3. If the reply ends with CONTINUED, type "continue" and repeat until it stops.
+4. Copy the Dojo's reply, every chunk, in order.
+5. Paste it into the Canvas text box below this page and submit.
 
-Read the three framings against your own situation. One will usually be generic and worth ignoring. One will usually land. If one lands, decide what it changes in your frame, and write that change yourself.
+## Part 3: Updating your frames
 
-## 3. Choose
-
-With all your frames tested, choose one.
-
-Three questions decide whether a frame is the right size, and they are answerable now because the frame exists:
-
-- Can you describe how it works now in one paragraph? (Part 4a.)
-
-- Is there at least one person other than you, with a stake in it or knowledge of it, who would talk to you about it? (Part 3a, or part 7.) For a household problem, someone **outside the household** whom it would be normal to ask.
-
-- Is there at least one thing you would have to find out to move on it? (Part 6.)
-
-A frame that fails the first is too big, so pick one instance you have seen. A frame that fails the second or third is too small, or too private, so ask what it is an instance of, and go up.
-
-Then choose the one that passes and that you want to stay with. Write your reasoning down, because the Problem Frame page asks for it. Its Part 2 reuses why you chose this one and what testing changed, and your runner-up is where you go if the choice does not survive Sprint 2. The final `Me:` turn below collects it.
-
-- **Why this one:** what in the frame and the testing makes it workable.
-
-- **Why not the others:** one or two sentences each, including those that mostly held up.
-
-- **Why you:** your connection to it and why you want the next nine weeks on it.
-
-- **Runner-up:** your fallback, or that none is currently workable.
-
-If nothing holds up, or the only survivor does not matter to you, go back to your list. Items you set aside are still there. Report what you tried and where you will look next instead of forcing a choice.
-
-**Illustrative choice**
-
-Handovers and the garden plot both held up under testing. I chose handovers because I work on them weekly and the four managers and the account lead sit near me. The garden plot depends on Ramona, whom I see once a month, so it is my runner-up.
-
-## State your decisions before requesting the transcript
-
-Send one final `Me:` turn in the same Dojo conversation. In your own words, state:
-
-- for every draft frame, the test findings and what you changed or rejected;
-- one direct-observation pushback and one unknown you accepted;
-- the three alternative framings and whether any changed your frame; and
-- your chosen problem, your answers to the three size questions, why this one, why not the others, why you, and your runner-up or recovery plan.
-
-After this final turn, use the transcript request and submission steps below.
+After you submit the transcript, go back to your First frames Word file and make the changes you decided on in the conversation: add an assumption it found, move a solution out, attach a cost to a person. Change what you decided to change and leave the rest. The frame you chose, brought up to date in that file, is what you paste into the Problem Frame in the next activity.

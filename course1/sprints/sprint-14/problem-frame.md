@@ -13,46 +13,76 @@ delivery_mode: guided_assignment
 completion_requirement: must_submit
 guided_assignment:
   version: '1.0'
-  purpose: Submit the problem frame you chose and show how testing changed, or confirmed,
-    your judgment.
-  builds_on: Bring the chosen frame, your Dojo Lab responses, and your Candidate Log.
-  standing_instruction: Submit both responses together as one Canvas text entry ·
-    50 points.
+  purpose: Write up the one problem you chose and say why this one.
+  builds_on: Bring your First frames Word file, brought up to date after the Dojo Lab.
+  standing_instruction: Submit all three responses together as one Canvas text entry · 50
+    points.
   tasks:
+  - id: which-and-why
+    kind: response
+    prompt: 'Which problem you selected and why: the four questions, in order.'
+    criteria:
+    - All four questions answered.
+    - Why not the others covers every frame you tested.
+    - A runner-up named, or the reason none is workable.
+    instruction_section: Part 1. Which problem you selected and why
   - id: problem-frame
     kind: response
-    prompt: Your Problem Frame, all seven parts, with Part 6 up to date.
+    prompt: 'Your Problem Frame, pasted whole: all seven parts, Part 6 with every assumption
+      marked, 3c blank.'
     criteria:
-    - Include all seven parts in your own words.
-    - Write Part 5 as one sentence describing a state.
-    - Give every assumption a status and name who could tell you for every unverified
-      one.
-    - Keep at least one unverified assumption; a frame with none at this stage is
-      a warning sign.
-    - Make Part 1 pass both goal tests.
-    instruction_section: Part 1. Your Problem Frame
+    - All seven parts present, in your own words.
+    - Every assumption in Part 6 marked confirmed or unverified, each unverified one with
+      who could tell you.
+    - Part 3c left blank for Sprint 2.
+    instruction_section: Part 2. Your Problem Frame
   - id: what-changed
     kind: response
-    prompt: What changed from your draft, what moved it, and one suggestion you rejected.
+    prompt: What moved, what moved it, and one thing the Dojo suggested that you rejected,
+      and why.
     criteria:
-    - Name a specific change or a specific reason for no change.
-    - Name the evidence or argument that moved your judgment.
-    - Include one rejected suggestion with a reason.
-    - Write in your own words rather than the Dojo's.
-    instruction_section: Part 2. What changed, and why
+    - At least one change, or a stated reason nothing changed.
+    - The evidence or argument that moved it, named.
+    - One rejected suggestion with a reason.
+    instruction_section: Part 3. What changed after the Dojo conversation, and why
   presentation: reading
 publish: true
-source_provenance: problem-frame.sources.json
+learning_goal: Write up the one problem you chose and say why this one.
 ---
 
 # Problem Frame
 
-You chose one problem at the end of the Dojo Lab. From here on, everything in the course works on that one. This is where you write it up properly, in two parts and one submission. Your Problem Frame is what the rest of the course builds on. Part 2 tells your instructor how you got there.
+In the Dojo Lab you explored your problem frames and, hopefully, narrowed down to one to proceed with for this course. On this page you are going to share more about that process and where you landed. Specifically, you will answer:
 
-## Part 1. Your Problem Frame
+1. Part 1: Which problem you selected and why
+2. Part 2: Your updated Problem Frame for the problem you chose
+3. Part 3: What changed after the Dojo conversation, and why
 
-Rewrite the draft frame you chose with everything that changed as a result of the Dojo Lab. All seven parts, in your words. Bring part 6 up to date, so that it lists every assumption you still hold, each marked confirmed or unverified, and for each unverified one, who could tell you.
+## Part 1. Which problem you selected and why
 
-## Part 2. What changed, and why
+Your Dojo walked you through whether each frame is the right size and helped you choose. Write up where you landed, in a few sentences for each of the four questions below, in order.
 
-Your instructor cannot see your Dojo Lab session. This paragraph is where they see that the frame was tested and that you, not the AI, made the changes. Start from the recap your Dojo session gave you and check it against your Log. Then, in one short paragraph and in your words, say what moved between your draft and your Problem Frame, what argument or evidence moved it, and one thing the Dojo suggested that you rejected, and why. A frame that did not change is a legitimate result if you can say what you tested it against.
+1. **Which problem did you select, and what about it interests you:** your connection to it.
+2. **Why for this course:** what in the frame and the testing makes it workable for nine weeks.
+3. **Why not the others:** one or two sentences each, including those that mostly held up.
+4. **Runner-up:** your fallback if this choice does not survive Sprint 2.
+
+> **Example answer.** 1. Account handovers. I work on them weekly and it bugs me every time a client has to repeat themselves. 2. The four managers and the account lead sit near me, I can describe how it is handled today, and there is real uncertainty to resolve: whether all four managers are affected or just the one I sat next to. 3. The garden plot held up under testing but depends on Ramona, whom I see once a month. The report columns turned out to be a workaround with a known fix. 4. The garden plot.
+
+If nothing held up, or the only survivor does not matter to you, go back to your brainstorm list and work through a different problem. Items you set aside are still there. Take the new one through Get underneath and First frames on your own, in your Word files, and test it in your Dojo the same way. Then write it up here, and say what you tried first and why it did not survive.
+
+## Part 2. Your Problem Frame
+
+Open your First frames Word file and find the frame you chose. If you haven't already, bring it up to date with everything that changed as a result of the Dojo Lab. In Part 6, each assumption is its own line, marked confirmed or unverified, with who could tell you. Leave 3c blank; Sprint 2 fills it. From here on, that table in your Word file is your Problem Frame document: keep it, and update it as the course goes on.
+
+Then paste the whole frame into the box below.
+
+## Part 3. What changed after the Dojo conversation, and why
+
+The Dojo should have pushed your thinking in some areas, even if you ultimately decided to reject its feedback or accept it with adjustments. Capture what happened in that exchange here. Review the recap your Dojo gave you, check your First frames file against your updated Problem Frame, then, in a few sentences each, answer:
+
+1. **What moved** between your draft and your Problem Frame.
+2. **What moved it:** the argument or evidence.
+3. **One thing the Dojo suggested that you rejected,** and why.
+
+A frame that did not change is a legitimate result if you can say what you tested it against.
