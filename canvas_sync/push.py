@@ -41,7 +41,7 @@ from canvas_sync.hosted_html import (
     discover_artifact_files as discover_hosted_artifact_files,
     iframe_shell,
     render_hosted_artifact,
-    render_hosted_files,
+    render_published_hosted_files as render_hosted_files,
     markdown_body_to_html,
 )
 from canvas_sync.schema import parse_frontmatter, validate_artifact
@@ -569,23 +569,21 @@ def push_artifact(
                     if fingerprint:
                         entry["canvas_fingerprint"] = fingerprint
                 artifacts[state_key] = entry
-                hosted_result = render_hosted_artifact(
-                    md_path,
-                    manifest_path,
-                    hosted_output_dir,
-                    manifest=manifest,
-                    state=deployment_state,
-                )
+                if render_course:
+                    rendered = render_hosted_files(
+                        manifest_path, hosted_output_dir,
+                        discover_hosted_artifact_files(manifest_path),
+                        manifest=manifest, state=deployment_state,
+                    )
+                    hosted_result = next(row for row in rendered["rendered"]
+                                         if Path(row["file"]).resolve() == md_path.resolve())
+                else:
+                    hosted_result = render_hosted_artifact(
+                        md_path, manifest_path, hosted_output_dir,
+                        manifest=manifest, state=deployment_state,
+                    )
                 entry["hosted_hash"] = hosted_result["hosted_hash"]
                 entry["hosted_last_rendered"] = pushed_at
-                if render_course:
-                    render_hosted_files(
-                        manifest_path,
-                        hosted_output_dir,
-                        discover_hosted_artifact_files(manifest_path),
-                        manifest=manifest,
-                        state=deployment_state,
-                    )
                 deployment_state["last_sync"] = pushed_at
                 store.save(deployment_state, state_path)
                 fast_result = {
@@ -820,23 +818,21 @@ def push_artifact(
             entry["position"] = fm["position"]
         artifacts[state_key] = entry
         if hosted_info["enabled"] and artifact_type != "module_header" and hosted_output_dir:
-            hosted_result = render_hosted_artifact(
-                md_path,
-                manifest_path,
-                hosted_output_dir,
-                manifest=manifest,
-                state=deployment_state,
-            )
+            if render_course:
+                rendered = render_hosted_files(
+                    manifest_path, hosted_output_dir,
+                    discover_hosted_artifact_files(manifest_path),
+                    manifest=manifest, state=deployment_state,
+                )
+                hosted_result = next(row for row in rendered["rendered"]
+                                     if Path(row["file"]).resolve() == md_path.resolve())
+            else:
+                hosted_result = render_hosted_artifact(
+                    md_path, manifest_path, hosted_output_dir,
+                    manifest=manifest, state=deployment_state,
+                )
             entry["hosted_hash"] = hosted_result["hosted_hash"]
             entry["hosted_last_rendered"] = pushed_at
-            if render_course:
-                render_hosted_files(
-                    manifest_path,
-                    hosted_output_dir,
-                    discover_hosted_artifact_files(manifest_path),
-                    manifest=manifest,
-                    state=deployment_state,
-                )
 
         if store.external:
             live_state = fetch_canvas_state(client, entry)
