@@ -149,7 +149,6 @@ def render_interleaved_brainstorm_body(frontmatter: dict, instructions_html: str
         if not found:
             raise ValueError(f'Interleaved brainstorm could not locate the {title} source examples')
         examples[key] = found.group(1)
-    walk = walk[:example.start()] + walk[example.end():]
 
     categories = ''.join(
         f'<label>{caption}<input type="text" data-category="{key}" value="{default}" maxlength="80"></label>'
@@ -165,6 +164,8 @@ def render_interleaved_brainstorm_body(frontmatter: dict, instructions_html: str
         example_block = ('<div class="category-example example-once"><p class="example-kicker"><strong>Here is an example list</strong></p>'
                          + ''.join(f'<h3>{title}</h3>{examples[key]}' for key, title in (('work', 'Work'), ('home', 'Home'), ('other', 'Other')))
                          + '</div>')
+    walk = walk[:example.start()] + example_block + walk[example.end():]
+    example_block = ''
     cards = []
     for key, title in (('work', 'Work'), ('home', 'Home'), ('other', 'Other')):
         card_example = '' if once else f'<div class="category-example"><p class="example-kicker"><strong>Here is an example list</strong></p><h3>{title}</h3>{examples[key]}</div>\n'
