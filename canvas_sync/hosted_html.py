@@ -26,6 +26,7 @@ from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.branding import partner_brand_row
 from canvas_sync.item_sequence import live_sequences, source_sequences, sequence_line, update_sequence_line
 from canvas_sync.local_images import local_image_assets
+from canvas_sync.videos import render_video_blocks
 from canvas_sync.state import course_dir_for_manifest, derive_artifact_id, load_json
 from canvas_sync.scheduled_homepage import render_scheduled_homepage, validate_schedule
 
@@ -161,11 +162,11 @@ def markdown_body_to_html(
     if artifact_links is not None:
         extensions.append(_ArtifactLinkExtension(artifact_links))
     extensions.append(_TopLevelLinkExtension())
-    return markdown.markdown(
+    return render_video_blocks(markdown.markdown(
         body,
         extensions=extensions,
         output_format="html5",
-    )
+    ))
 
 
 def _render_mermaid_blocks(rendered: str) -> tuple[str, bool]:
@@ -566,6 +567,9 @@ def render_artifact_document(
       background: var(--bg);
     }}
     .activity {{ max-width: 760px; margin: 0 auto; }}
+    .course-video {{ margin: 16px 0 24px; }}
+    .course-video video {{ display: block; width: 100%; height: auto; background: #111; }}
+    .course-video figcaption {{ margin-top: 6px; font-size: 14px; }}
     .source-derived table {{ width: 100%; border-collapse: collapse; }}
     .source-derived th, .source-derived td {{ border: 1px solid #ccd5df; padding: 8px; vertical-align: top; overflow-wrap: anywhere; }}
     .meta {{
@@ -1134,7 +1138,8 @@ def render_hosted_artifact(
     assets = local_image_assets(md_path, markdown_body_to_html(body))
     asset_outputs = []
     for asset in assets:
-        document = document.replace('src="' + html_lib.escape(asset['source'], quote=True) + '"', 'src="' + asset['url'] + '"')
+        for attribute in ("src", "href"):
+            document = document.replace(attribute + '="' + html_lib.escape(asset['source'], quote=True) + '"', attribute + '="' + asset['url'] + '"')
         asset_path = output_path.parent / asset['url']
         asset_changed = not asset_path.exists() or asset_path.read_bytes() != asset['payload']
         if asset_changed:
