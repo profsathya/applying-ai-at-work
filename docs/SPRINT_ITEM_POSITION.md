@@ -22,4 +22,13 @@ body restoration also refreshes annotations against final live membership.
 A subsequent publication refreshes counts after additions, removals, or reordering;
 Canvas-only edits require a publication refresh to reach static hosted pages.
 
+Both batch publication and direct `push.py` publication use fresh Canvas sequence
+reads. Direct pushes obtain the sequence before rendering; batch publication
+preserves a complete pre-run hosted baseline. A failed course-wide render or
+sequence read restores that baseline and blocks the hosted commit, even after
+successful Canvas writes or alongside another successful course. Canvas state
+still records actual remote writes; existing workflow reconciliation handles
+content-only state when the hosted deployment is skipped. Rendering failures
+also remove newly generated files and restore sibling annotations and assets.
+
 Validation: `python -m unittest tests.test_item_sequence tests.test_hosted_html tests.test_publish_changed`.

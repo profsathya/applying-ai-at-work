@@ -78,6 +78,31 @@ class ItemSequenceTests(unittest.TestCase):
             self.assertEqual(update_sequence_line(released, (1, 2)), sibling.read_text())
             self.assertTrue(any(row.get('sequence_only') for row in updated['rendered']))
 
+    def test_live_render_failure_rolls_back_partial_files_and_new_assets(self):
+        from canvas_sync.hosted_html import render_published_hosted_files
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manifest = root / "course1/manifests/production.json"
+            write_manifest(manifest)
+            output = root / "site"
+            course = output / "deanza/course1"
+            course.mkdir(parents=True)
+            page = course / "home.html"
+            page.write_text("Previous release")
+            new_asset = course / "new-asset.svg"
+
+            def partial_render(*args, **kwargs):
+                page.write_text("Incomplete release")
+                new_asset.write_text("New asset")
+                raise RuntimeError("render interrupted")
+
+            with patch("canvas_sync.hosted_html._published_item_positions", return_value={}), \
+                 patch("canvas_sync.hosted_html.render_hosted_files", side_effect=partial_render):
+                with self.assertRaisesRegex(RuntimeError, "render interrupted"):
+                    render_published_hosted_files(manifest, output, [])
+            self.assertEqual(page.read_text(), "Previous release")
+            self.assertFalse(new_asset.exists())
+
     def test_both_heading_renderers_preserve_title_and_wrap_on_mobile(self):
         fm = dict(type='page', title='A long authored title', module='Sprint 1', sprint=1,
                   slug='example', points=None)

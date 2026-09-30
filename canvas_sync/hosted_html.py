@@ -2274,13 +2274,38 @@ def _published_item_positions(manifest_path: Path, manifest: dict, state: dict) 
     return mapped
 
 
+def snapshot_course_outputs(course_dir: Path) -> dict[Path, bytes]:
+    """Capture the complete course output, including sibling annotations/assets."""
+    return {path: path.read_bytes() for path in course_dir.rglob("*") if path.is_file()}
+
+
+def restore_course_outputs(course_dir: Path, baseline: dict[Path, bytes]) -> list[str]:
+    restored = []
+    current = {path for path in course_dir.rglob("*") if path.is_file()}
+    for path in current | baseline.keys():
+        if path not in baseline:
+            path.unlink()
+            restored.append(str(path))
+        elif not path.exists() or path.read_bytes() != baseline[path]:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(baseline[path])
+            restored.append(str(path))
+    return sorted(restored)
+
+
 def render_published_hosted_files(manifest_path: Path, output_dir: Path, files: list[Path], **kwargs) -> dict:
     """Render using a fresh read of the final Canvas publication state."""
     manifest = kwargs.get("manifest") or load_json(manifest_path)
     if manifest.get("canvas_publish") is False:
         return render_hosted_files(manifest_path, output_dir, files, **kwargs)
     mapped = _published_item_positions(manifest_path, manifest, kwargs.get("state") or manifest)
-    return render_hosted_files(manifest_path, output_dir, files, item_positions=mapped, **kwargs)
+    course_dir = course_shared_output_dir(manifest_path, output_dir, manifest=manifest)
+    baseline = snapshot_course_outputs(course_dir)
+    try:
+        return render_hosted_files(manifest_path, output_dir, files, item_positions=mapped, **kwargs)
+    except Exception:
+        restore_course_outputs(course_dir, baseline)
+        raise
 
 
 def render_hosted_files(
