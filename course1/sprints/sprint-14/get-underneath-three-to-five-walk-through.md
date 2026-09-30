@@ -22,7 +22,7 @@ guided_assignment:
   export_filename: get-underneath.docx
   purpose: Describe how each candidate works now and what it costs, closely enough that the
     gap shows.
-  builds_on: Bring your Brainstorm your list Word file.
+  builds_on: Bring the list you submitted in Brainstorm your list.
   standing_instruction: Own your progress · 0 points. Submit to complete this module requirement,
     and keep the exported file for First frames.
   tasks:
@@ -142,7 +142,7 @@ publish: true
 
 ## What you need for this activity
 
-- Your **Brainstorm your list** Word file.
+- The list you submitted in **Brainstorm your list**.
 
 You will do your work within Canvas.
 
