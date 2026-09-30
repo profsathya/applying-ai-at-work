@@ -7,6 +7,26 @@ class CourseDocsTests(unittest.TestCase):
         return {'schema_version': 1, 'release_id': 'released', 'generated_at': '2026-09-16T00:00:00Z',
                 'pages': [{'path': 'activities/start.html', 'title': 'Start', 'source_url': 'https://example.org/start', 'content': 'Approved question?'}]}
 
+    def test_manual_dispatch_defaults_to_course_and_rejects_unknown_sections(self):
+        import os
+        import subprocess
+        from pathlib import Path
+        import yaml
+        workflow = yaml.load(Path('.github/workflows/sync-course-context.yml').read_text(), Loader=yaml.BaseLoader)
+        self.assertEqual(workflow['on']['workflow_dispatch']['inputs']['section']['default'], 'course')
+        step = next(step for step in workflow['jobs']['sync']['steps'] if step.get('name') == 'Sync selected sections')
+        selector = step['run'].split('python -m canvas_sync.course_docs.sync', 1)[0]
+        for requested, expected in [('', 'course'), ('course', 'course'), ('dojo', 'dojo'), ('labs', 'labs'), ('all', 'all')]:
+            result = subprocess.run(['bash', '-c', selector + '\nprintf "%s" "$section"'],
+                                    env={**os.environ, 'GITHUB_EVENT_NAME': 'workflow_dispatch', 'REQUESTED_SECTION': requested},
+                                    capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0)
+            self.assertEqual(result.stdout, expected)
+        rejected = subprocess.run(['bash', '-c', selector],
+                                  env={**os.environ, 'GITHUB_EVENT_NAME': 'workflow_dispatch', 'REQUESTED_SECTION': 'unknown'},
+                                  capture_output=True, text=True)
+        self.assertNotEqual(rejected.returncode, 0)
+
     def test_only_explicit_content_and_order(self):
         result = build(self.release(), None, 3, 'owner/repo', 'sha')
         self.assertEqual([s['tab'] for s in result['sections']], ['Course'])

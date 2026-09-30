@@ -16,9 +16,8 @@ walkthrough_after: course1-sprints-sprint-14-get-underneath-three-to-five
 guided_assignment:
   version: '1.0'
   presentation: walkthrough
-  feedback_omission_reason: AI feedback per row is the design (course-wide list item 38);
-    it switches on once the row checkpoint is registered on the walkthrough-feedback service.
-    Until then the learner writes without AI on this page.
+  feedback_endpoint: https://cti-course-ai.netlify.app/.netlify/functions/walkthrough-feedback
+  feedback_protocol: walkthrough-v1
   export_filename: get-underneath.docx
   purpose: Describe how each candidate works now and what it costs, closely enough that the
     gap shows.

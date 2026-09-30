@@ -233,6 +233,9 @@ def write_manifest(path: Path, artifacts: dict | None = None) -> None:
 
 
 class RecordingCanvasClient:
+    def list_modules(self):
+        return []  # These fixtures publish draft items only.
+
     def __init__(self) -> None:
         self.page_payload: dict | None = None
 
@@ -785,6 +788,29 @@ modules:
         self.assertNotIn("Open hosted page in a new tab", shell)
         self.assertNotIn("<a ", shell)
 
+    def test_direct_push_sequence_read_failure_preserves_hosted_baseline(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            md = root / "course1/sprints/sprint-99/tuple-overview.md"
+            manifest = root / "course1/manifests/production.json"
+            output = root / "site"
+            write_page(md)
+            write_manifest(manifest)
+            target = output / "deanza/course1/activities/tuple-overview.html"
+            target.parent.mkdir(parents=True)
+            baseline = '<h1>Released</h1><p class="item-sequence">Item 1 of 1 · 0 items remaining</p>'
+            target.write_text(baseline)
+            with chdir(root), \
+                 patch.object(push.CanvasClient, "from_env", return_value=RecordingCanvasClient()), \
+                 patch.object(push, "resolve_or_create_module", return_value=55), \
+                 patch("canvas_sync.hosted_html._published_item_positions", side_effect=RuntimeError("sequence read unavailable")) as live, \
+                 patch("canvas_sync.hosted_html.source_sequences") as preview:
+                with self.assertRaisesRegex(RuntimeError, "sequence read unavailable"):
+                    push.push_artifact(md, manifest, state_dir=root / ".canvas-state", hosted_output_dir=output)
+                live.assert_called_once()
+                preview.assert_not_called()
+            self.assertEqual(target.read_text(), baseline)
+
     def test_push_uses_iframe_shell_and_records_hosted_state(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo_root = Path(tmp).resolve()
@@ -896,6 +922,9 @@ modules:
 
     def test_ai_activity_discussion_pushes_canvas_assignment_shell(self) -> None:
         class AiActivityClient:
+            def list_modules(self):
+                return []
+
             def __init__(self) -> None:
                 self.assignment_payload: dict | None = None
                 self.module_item: dict | None = None

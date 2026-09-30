@@ -10,6 +10,17 @@ on:
     types: [completed]
     branches: [main]
   workflow_dispatch:
+    inputs:
+      section:
+        description: Document section to refresh
+        type: choice
+        required: true
+        default: course
+        options:
+          - course
+          - dojo
+          - labs
+          - all
   schedule:
     - cron: '17 10 * * *'
 
@@ -57,11 +68,15 @@ jobs:
         env:
           COURSE_DOC_SYNC_URL: ${{ secrets.COURSE_DOC_SYNC_URL }}
           COURSE_DOC_SYNC_TOKEN: ${{ secrets.COURSE_DOC_SYNC_TOKEN }}
+          REQUESTED_SECTION: ${{ inputs.section }}
         run: |
           section=dojo
           if [ "$GITHUB_EVENT_NAME" = workflow_run ]; then section=course; fi
           if [ "$GITHUB_EVENT_NAME" = push ]; then section=labs; fi
-          if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then section=all; fi
+          if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then
+            section="${REQUESTED_SECTION:-course}"
+            case "$section" in course|dojo|labs|all) ;; *) echo "Invalid section" >&2; exit 1 ;; esac
+          fi
           python -m canvas_sync.course_docs.sync --release course-context-release.json --section "$section" --generation "$GITHUB_RUN_ID" --repository "$GITHUB_REPOSITORY" --commit-sha "$(git rev-parse HEAD)" --output course-doc-payload.json --send
       - uses: actions/upload-artifact@v4
         if: always() && steps.config.outputs.enabled == 'true'

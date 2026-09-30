@@ -1,4 +1,4 @@
-"""Resolve course-local raster illustrations for deterministic hosted output."""
+"""Resolve course-local illustrations, videos, and captions for deterministic hosted output."""
 from __future__ import annotations
 
 import hashlib
@@ -11,16 +11,18 @@ class _Images(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.sources = []
+        self.tags = {}
 
     def handle_starttag(self, tag, attrs):
-        if tag == 'img':
+        if tag in ('img', 'source', 'track'):
             source = dict(attrs).get('src', '')
             if source and source not in self.sources:
                 self.sources.append(source)
+                self.tags[source] = tag
 
 
 def local_image_assets(md_path: Path, rendered: str) -> list[dict]:
-    """Only relative assets/ images are copied; remote URLs keep their behavior.
+    """Only relative assets/ images, MP4s, and WebVTT captions are copied; remote URLs keep their behavior.
 
     Content-addressed names make a changed image change the page hash as well.
     Each artifact owns its output assets so publish recovery can restore them.
@@ -36,11 +38,14 @@ def local_image_assets(md_path: Path, rendered: str) -> list[dict]:
         path = (md_path.parent / unquote(url.path)).resolve()
         if not path.is_relative_to(root):
             raise ValueError(f'{md_path}: local image must be inside adjacent assets/: {source}')
-        if path.suffix.lower() not in ('.png', '.jpg', '.jpeg', '.webp', '.gif'):
-            raise ValueError(f'{md_path}: unsupported local image format: {source}')
+        formats = {'img': ('.png', '.jpg', '.jpeg', '.webp', '.gif'), 'source': ('.mp4',), 'track': ('.vtt',)}
+        if path.suffix.lower() not in formats[parser.tags[source]]:
+            raise ValueError(f'{md_path}: unsupported local media format: {source}')
         if not path.is_file():
             raise ValueError(f'{md_path}: missing local image: {source}')
         payload = path.read_bytes()
+        if path.suffix.lower() == '.vtt' and not payload.startswith(b'WEBVTT\n'):
+            raise ValueError(f'{md_path}: captions must be WebVTT: {source}')
         digest = hashlib.sha256(payload).hexdigest()
         result.append({'source': source, 'path': path, 'hash': digest,
                        'url': f'assets/{md_path.stem}/{digest[:16]}{path.suffix.lower()}', 'payload': payload})

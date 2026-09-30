@@ -15,9 +15,12 @@ from canvas_sync.drift import hosted_canvas_drift
 from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
 from canvas_sync.hosted_html import (
     SHARED_OUTPUT_NAMES,
+    snapshot_course_outputs,
+    course_output_roots,
+    restore_course_outputs,
     artifact_hosted_output_paths,
     course_shared_output_dir,
-    render_hosted_files,
+    render_published_hosted_files as render_hosted_files,
 )
 from canvas_sync.push import push_artifact, enforce_module_order
 from canvas_sync.schema import parse_frontmatter, validate_artifact
@@ -333,6 +336,42 @@ def restore_hosted_outputs(
 
 
 def publish_manifest(
+    manifest_path: Path,
+    state_dir: Path,
+    *,
+    dry_run: bool,
+    check_drift: bool,
+    require_state: bool,
+    hosted_output_dir: Path | None = None,
+    hosted_only: bool = False,
+    only_files: set[str] | None = None,
+) -> dict:
+    # push_artifact may render before the final sequence read. Keep the entire
+    # course baseline so any course-wide render failure rolls those writes back.
+    baselines = {}
+    if hosted_output_dir is not None and not dry_run:
+        baselines = {root: snapshot_course_outputs(root) for root in
+                     course_output_roots(manifest_path, hosted_output_dir)}
+    try:
+        result = _publish_manifest(
+            manifest_path, state_dir, dry_run=dry_run, check_drift=check_drift,
+            require_state=require_state, hosted_output_dir=hosted_output_dir,
+            hosted_only=hosted_only, only_files=only_files,
+        )
+    except Exception:
+        for root, baseline in baselines.items():
+            restore_course_outputs(root, baseline)
+        raise
+    if any(item.get("file") in {"<hosted_html>", "<item_sequence>"}
+           for item in result.get("failed", [])):
+        result["hosted_commit_blocked"] = True
+        result["hosted"] = None
+        for root, baseline in baselines.items():
+            result.setdefault("hosted_restored", []).extend(restore_course_outputs(root, baseline))
+    return result
+
+
+def _publish_manifest(
     manifest_path: Path,
     state_dir: Path,
     *,
@@ -704,6 +743,18 @@ def publish_manifest(
                     ),
                 )
             )
+        if unsuccessful and result.get("hosted"):
+            # Restoring a blocked item's body must not restore stale positions.
+            # Refresh annotations alone against final live membership, including
+            # blocked siblings, without rendering any unpublished source body.
+            try:
+                refreshed = render_hosted_files(
+                    manifest_path, hosted_output_dir, [],
+                    state=latest_state, include_indexes=False,
+                )
+                result["hosted"]["rendered"].extend(refreshed["rendered"])
+            except Exception as exc:
+                result["failed"].append({"file": "<item_sequence>", "artifact_id": None, "error": str(exc)})
     return result
 
 
