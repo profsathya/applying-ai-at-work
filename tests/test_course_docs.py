@@ -43,6 +43,30 @@ class CourseDocsTests(unittest.TestCase):
         second = build(self.release(), None, 4, 'owner/repo', 'newsha')
         self.assertEqual(first['sections'][0]['content_digest'], second['sections'][0]['content_digest'])
 
+    def test_receiver_rejection_without_document_reports_safe_code(self):
+        payload = build(self.release(), None, 3, 'owner/repo', 'sha')
+        for code in ('invalid_token', 'document_id_mismatch', 'document_update_failed'):
+            with self.subTest(code=code), self.assertRaisesRegex(
+                    ValueError, '^Document endpoint rejected update: ' + code + '$'):
+                verify_response(payload, {'ok': False, 'error': code,
+                                          'message': 'private receiver details'}, 'doc')
+
+    def test_unknown_receiver_error_is_not_logged(self):
+        for error in ('private receiver details', {'private': 'details'}, None):
+            with self.subTest(error=error), self.assertRaisesRegex(
+                    ValueError, '^Document endpoint rejected update: unknown$'):
+                verify_response({}, {'ok': False, 'error': error}, 'doc')
+
+    def test_only_exact_internal_receiver_reasons_are_reported(self):
+        for reason in ('missing_source_generation', 'invalid_section',
+                       'stale_or_conflicting_generation', 'document_readback_mismatch'):
+            with self.assertRaisesRegex(ValueError, 'document_update_failed:' + reason + '$'):
+                verify_response({}, {'ok': False, 'error': 'document_update_failed',
+                                     'message': 'Error: ' + reason}, 'doc')
+            with self.assertRaisesRegex(ValueError, 'document_update_failed$'):
+                verify_response({}, {'ok': False, 'error': 'document_update_failed',
+                                     'message': 'Error: ' + reason + ' private details'}, 'doc')
+
 class PreparedReleaseTests(unittest.TestCase):
     def test_mismatched_source_never_reaches_hosting_or_writes(self):
         import io

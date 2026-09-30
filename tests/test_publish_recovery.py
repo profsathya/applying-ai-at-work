@@ -20,6 +20,7 @@ class MemoryCanvas:
 
     def __init__(self):
         self.pages = {}
+        self.module_items = {}
         self.quiz = {}
         self.questions = []
         self.page_creates = 0
@@ -41,8 +42,19 @@ class MemoryCanvas:
     def get_page(self, url):
         return dict(self.pages[url])
 
+    def list_modules(self):
+        return [{"id": module_id, "published": True, "name": "Test Module"}
+                for module_id in self.module_items]
+
+    def list_module_items(self, module_id):
+        return self.module_items.get(module_id, [])
+
     def add_module_item(self, module_id, **kwargs):
-        return {"id": 100 + self.page_creates, "module_id": module_id}
+        rows = self.module_items.setdefault(module_id, [])
+        item = {"id": 100 + self.page_creates, "module_id": module_id,
+                "position": len(rows) + 1, "type": "Page", "published": True}
+        rows.append(item)
+        return item
 
     def update_module_item(self, *args):
         return {}

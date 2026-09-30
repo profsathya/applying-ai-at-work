@@ -7,7 +7,7 @@ sprint: 14
 week: 1
 module: 'Sprint 1: Find the Problem Worth Solving (V2)'
 position: 7
-points: 35
+points: 50
 submission_type: text_entry
 delivery_mode: guided_assignment
 completion_requirement: must_submit
@@ -18,7 +18,7 @@ guided_assignment:
   builds_on: Bring Parts A and B of your Candidate Log and review The problem frame
     and the Concept check.
   standing_instruction: Submit at least three complete draft frames together as one
-    Canvas text entry · 35 points. Frames 4 and 5 are optional.
+    Canvas text entry · 50 points. Frames 4 and 5 are optional.
   tasks:
   - id: frame-1
     kind: response

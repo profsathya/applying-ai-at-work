@@ -105,10 +105,30 @@ def rendered_digest(section, payload):
 
 
 def verify_response(payload, response, document_id):
+    if response.get('ok') is not True:
+        # Rejections do not include a document ID. Report only receiver-defined
+        # codes, never its free-form message or an arbitrary response value.
+        known_errors = {
+            'missing_body', 'invalid_json', 'missing_token_property',
+            'invalid_token', 'missing_course', 'invalid_payload',
+            'unknown_course', 'document_id_mismatch', 'lock_timeout',
+            'document_update_failed',
+        }
+        error = response.get('error')
+        code = error if isinstance(error, str) and error in known_errors else 'unknown'
+        if code == 'document_update_failed':
+            # Apps Script wraps its fixed internal errors in this generic code.
+            # Match complete known messages; never expose arbitrary exception text.
+            reasons = ('missing_source_generation', 'invalid_section',
+                       'stale_or_conflicting_generation', 'document_readback_mismatch')
+            message = response.get('message')
+            for reason in reasons:
+                if message == 'Error: ' + reason:
+                    code += ':' + reason
+                    break
+        raise ValueError('Document endpoint rejected update: ' + code)
     if not document_id or response.get("document_id") != document_id:
         raise ValueError("Receiver returned an unexpected document")
-    if response.get('ok') is not True:
-        raise ValueError('Document endpoint rejected update: ' + str(response.get('error', 'unknown')))
     for section in payload['sections']:
         actual = response.get('versions', {}).get(section['tab'], {})
         if (actual.get('content_digest') != section['content_digest'] or

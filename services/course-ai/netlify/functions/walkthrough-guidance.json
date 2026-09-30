@@ -45,5 +45,12 @@
       "assumption-checks": "This is one row of the source assumption table, not all assumptions. Check whether the assumption is specific, its status distinguishes evidence from inference, and the named gap could check it. A confirmed status needs a real basis, but do not invent one or demand unseen rows.",
       "other-frame-changes": "Review the participant's explanation of another frame correction or a justified no-change conclusion. Ask which frame part and which planning evidence supports the statement if that is unclear. Do not force a change or invent evidence."
     }
+  },
+  "course1-sprints-sprint-14-get-underneath-three-to-five-walk-through": {
+    "title": "Get underneath three to five Canvas Walkthrough",
+    "rule": "Participants first describe three to five candidate situations from their own brainstorm list without AI. This route offers optional formative feedback on one table row they choose, after they have written it. Use at most three short sentences and one useful revision question. Do not propose solutions, add candidates, rewrite their row, decide which candidate is best, or assign a grade. A participant may finish without any AI feedback.",
+    "checkpoints": {
+      "your-table": "This is one row with four cells: The situation, How it works now, What it costs and whom, The gap. Evaluate only this row. How it works now should describe what happens (who does what, in what order), not how it should be and not a fix. What it costs and whom should name at least one person or role and a cost in time, money, errors, or strain. The gap should say what could be different and who feels the cost; a gap that only names a process (manual, informal, slow) is unfinished, so ask who pays for that. Blank cells and \"cannot tell yet\" are acceptable at this stage; do not fault them or fill them in."
+    }
   }
 }

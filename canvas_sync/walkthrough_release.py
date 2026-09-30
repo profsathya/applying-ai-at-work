@@ -112,8 +112,13 @@ def preflight_pair(client, source_item: dict, new_item: dict, state: dict) -> di
     new_live = client.get_assignment(int(new_entry['canvas_id']), include=['overrides', 'all_dates'])
     if not source_live or not new_live:
         raise ValueError(f"{source_item['artifact_id']} / {new_item['artifact_id']}: Canvas item is missing")
-    if source_live.get('published') is not True or new_live.get('published') not in (True, False):
-        raise ValueError(f"{source_item['artifact_id']} / {new_item['artifact_id']}: expected published source and existing replacement")
+    if type(source_live.get('published')) is not bool or type(new_live.get('published')) is not bool:
+        raise ValueError(f"{source_item['artifact_id']} / {new_item['artifact_id']}: expected existing source and replacement publication states")
+    original_source_published = source_live['published']
+    if not original_source_published and (
+            source_fm.get('publish') is not False or
+            source_entry.get('canvas_fingerprint') != canvas_fingerprint(source_live, source_entry['canvas_type'])):
+        raise ValueError(f"{source_item['artifact_id']}: unpublished source must be explicitly reconciled before resuming release")
     original_replacement_published = new_live['published']
     source_module = source_entry.get('canvas_module_id')
     source_module_item = source_entry.get('canvas_module_item_id')
@@ -125,7 +130,7 @@ def preflight_pair(client, source_item: dict, new_item: dict, state: dict) -> di
     if int(source_module_item) not in ordered or ordered.index(int(source_module_item)) + 1 >= len(ordered) or ordered[ordered.index(int(source_module_item)) + 1] != int(new_module_item):
         raise ValueError(f"{new_item['artifact_id']}: replacement is not directly below its source")
     items_by_id = {int(item['id']): item for item in client.list_module_items(int(source_module))}
-    if (items_by_id[int(source_module_item)].get('published') is not True
+    if (items_by_id[int(source_module_item)].get('published') is not original_source_published
             or items_by_id[int(new_module_item)].get('published') is not original_replacement_published):
         raise ValueError(f"{new_item['artifact_id']}: source/replacement publication differs from module items")
     if source_entry['canvas_type'] == 'assignment':
@@ -134,7 +139,7 @@ def preflight_pair(client, source_item: dict, new_item: dict, state: dict) -> di
         word_conversion = (
             source_fm.get('submission_type') == 'text_entry'
             and new_fm.get('submission_type') == 'file_upload'
-            and source_fm.get('points') == new_fm.get('points') == 0
+            and source_fm.get('points') == new_fm.get('points')
             and new_fm.get('guided_assignment', {}).get('presentation') == 'walkthrough'
             and str(new_fm.get('guided_assignment', {}).get('export_filename', '')).endswith('.docx')
             and source_live.get('submission_types') == ['online_text_entry']
@@ -157,7 +162,7 @@ def preflight_pair(client, source_item: dict, new_item: dict, state: dict) -> di
     elif new_fm.get('points') != 0:
         raise ValueError(f"{new_item['artifact_id']}: page replacement must be ungraded")
     return {'source': source_entry, 'replacement': new_entry, 'module_order': ordered,
-            'source_was_published': True,
+            'source_was_published': original_source_published,
             'replacement_was_published': original_replacement_published}
 
 

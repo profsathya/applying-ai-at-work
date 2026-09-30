@@ -24,7 +24,9 @@ from markdown.treeprocessors import Treeprocessor
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.branding import partner_brand_row
+from canvas_sync.item_sequence import live_sequences, source_sequences, sequence_line, update_sequence_line
 from canvas_sync.local_images import local_image_assets
+from canvas_sync.videos import render_video_blocks
 from canvas_sync.state import course_dir_for_manifest, derive_artifact_id, load_json
 from canvas_sync.scheduled_homepage import render_scheduled_homepage, validate_schedule
 
@@ -160,11 +162,11 @@ def markdown_body_to_html(
     if artifact_links is not None:
         extensions.append(_ArtifactLinkExtension(artifact_links))
     extensions.append(_TopLevelLinkExtension())
-    return markdown.markdown(
+    return render_video_blocks(markdown.markdown(
         body,
         extensions=extensions,
         output_format="html5",
-    )
+    ))
 
 
 def _render_mermaid_blocks(rendered: str) -> tuple[str, bool]:
@@ -491,6 +493,7 @@ def render_artifact_document(
     hosted_info: dict,
     state_entry: dict | None = None,
     artifact_links: dict[str, dict[str, str]] | None = None,
+    item_position: tuple[int, int] | None = None,
 ) -> str:
     rendered = _strip_leading_h1(
         markdown_body_to_html(body, artifact_links=artifact_links)
@@ -564,6 +567,9 @@ def render_artifact_document(
       background: var(--bg);
     }}
     .activity {{ max-width: 760px; margin: 0 auto; }}
+    .course-video {{ margin: 16px 0 24px; }}
+    .course-video video {{ display: block; width: 100%; height: auto; background: #111; }}
+    .course-video figcaption {{ margin-top: 6px; font-size: 14px; }}
     .source-derived table {{ width: 100%; border-collapse: collapse; }}
     .source-derived th, .source-derived td {{ border: 1px solid #ccd5df; padding: 8px; vertical-align: top; overflow-wrap: anywhere; }}
     .meta {{
@@ -730,6 +736,7 @@ def render_artifact_document(
     <a class="back-link" href="{back_href}" data-keep-context>&larr; Back to Module</a>
     <p class="meta">{meta}</p>
     <h1>{title}</h1>
+    {sequence_line(item_position)}
 
 {('    ' + goal_block) if goal_block else ''}
 
@@ -805,6 +812,7 @@ def _render_ai_activity_wrapper_document(
     hosted_info: dict,
     state_entry: dict | None = None,
     artifact_links: dict[str, dict[str, str]] | None = None,
+    item_position: tuple[int, int] | None = None,
 ) -> str:
     rendered = _strip_leading_h1(
         markdown_body_to_html(body, artifact_links=artifact_links)
@@ -941,6 +949,7 @@ def _render_ai_activity_wrapper_document(
     <a class="back-link" href="{back_href}">&larr; Back to Module</a>
     <p class="meta">{meta} &middot; {html_lib.escape(points_text)}</p>
     <h1>{title}</h1>
+    {sequence_line(item_position)}
 
     {sections}
 
@@ -1021,6 +1030,7 @@ def _render_ai_activity_artifact(
     manifest: dict,
     state: dict | None,
     artifact_links: dict[str, dict[str, str]],
+    item_position: tuple[int, int] | None = None,
 ) -> dict:
     fm, body = parse_frontmatter(md_path)
     course_key = course_dir_for_manifest(manifest_path).name
@@ -1033,6 +1043,7 @@ def _render_ai_activity_artifact(
         hosted_info,
         state_entry,
         artifact_links,
+        item_position,
     )
     shell = _render_ai_activity_shell_document(fm, manifest, course_key, state_entry)
     activity_config = _ai_activity_config(fm, body, manifest, course_key)
@@ -1090,6 +1101,7 @@ def render_hosted_artifact(
     manifest: dict | None = None,
     state: dict | None = None,
     artifact_links: dict[str, dict[str, str]] | None = None,
+    item_position: tuple[int, int] | None = None,
 ) -> dict:
     manifest_data = manifest or load_json(manifest_path)
     config = hosted_config_from_manifest(manifest_data)
@@ -1109,6 +1121,7 @@ def render_hosted_artifact(
             manifest=manifest_data,
             state=state,
             artifact_links=link_targets,
+            item_position=item_position,
         )
     hosted_info = artifact_hosted_info(md_path, manifest_path, manifest_data, fm)
     state_entry = _state_entry_for_artifact(md_path, manifest_path, fm, state or manifest_data)
@@ -1119,12 +1132,14 @@ def render_hosted_artifact(
         hosted_info,
         state_entry,
         link_targets,
+        item_position,
     )
     output_path = hosted_output_path(output_dir, manifest_data, hosted_info["hosted_path"])
     assets = local_image_assets(md_path, markdown_body_to_html(body))
     asset_outputs = []
     for asset in assets:
-        document = document.replace('src="' + html_lib.escape(asset['source'], quote=True) + '"', 'src="' + asset['url'] + '"')
+        for attribute in ("src", "href"):
+            document = document.replace(attribute + '="' + html_lib.escape(asset['source'], quote=True) + '"', attribute + '="' + asset['url'] + '"')
         asset_path = output_path.parent / asset['url']
         asset_changed = not asset_path.exists() or asset_path.read_bytes() != asset['payload']
         if asset_changed:
@@ -2230,6 +2245,84 @@ def _render_course_index(
     }
 
 
+def _hidden_sequence_modules(course_dir: Path) -> set[str]:
+    homepage = _load_homepage_metadata(course_dir) or {}
+    hidden_sprints = {m["sprint"] for m in homepage.get("modules", []) if m.get("hidden")}
+    schedule = homepage.get("schedule")
+    if schedule:
+        hidden_sprints.update(e["sprint"] for e in schedule["sprints"] if not e.get("ready"))
+    # Only module headers establish module visibility: cross-folder walkthroughs
+    # must not accidentally hide their actual destination module.
+    headers = []
+    for path in course_dir.glob("sprints/*/*.md"):
+        fm, _ = parse_frontmatter(path)
+        if fm.get("type") == "module_header":
+            headers.append(fm)
+    return {fm["module"] for fm in headers if fm.get("sprint") in hidden_sprints}
+
+
+def _published_item_positions(manifest_path: Path, manifest: dict, state: dict) -> dict:
+    """Read final Canvas membership; never substitute source guesses on failure."""
+    from canvas_sync.canvas_client import CanvasClient
+    from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
+    check_instance_ready(manifest, manifest_label=str(manifest_path))
+    check_env_matches_instance(manifest, manifest_label=str(manifest_path))
+    client = CanvasClient.from_env(course_id=int(manifest["instance"]["course_id"]))
+    modules = client.list_modules()
+    items = {m["id"]: client.list_module_items(m["id"]) for m in modules if m.get("published") is True}
+    paths = discover_artifact_files(manifest_path)
+    artifacts = _load_artifact_items(paths)
+    positions = live_sequences(modules, items, hidden_modules=_hidden_sequence_modules(course_dir_for_manifest(manifest_path)))
+    mapped = {_artifact_progress_id(path, manifest_path, fm): positions.get(
+        _state_entry_for_artifact(path, manifest_path, fm, state).get("canvas_module_item_id"))
+        for path, fm in artifacts}
+    return mapped
+
+
+def course_output_roots(manifest_path: Path, output_dir: Path, *, manifest: dict | None = None) -> tuple[Path, Path]:
+    """Both course HTML/assets and the separately hosted AI configurations."""
+    manifest = manifest or load_json(manifest_path)
+    config = hosted_config_from_manifest(manifest)
+    course_key = course_dir_for_manifest(manifest_path).name
+    return (course_shared_output_dir(manifest_path, output_dir, manifest=manifest),
+            output_dir / "activities" / config.path_prefix / course_key)
+
+
+def snapshot_course_outputs(course_dir: Path) -> dict[Path, bytes]:
+    """Capture the complete course output, including sibling annotations/assets."""
+    return {path: path.read_bytes() for path in course_dir.rglob("*") if path.is_file()}
+
+
+def restore_course_outputs(course_dir: Path, baseline: dict[Path, bytes]) -> list[str]:
+    restored = []
+    current = {path for path in course_dir.rglob("*") if path.is_file()}
+    for path in current | baseline.keys():
+        if path not in baseline:
+            path.unlink()
+            restored.append(str(path))
+        elif not path.exists() or path.read_bytes() != baseline[path]:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(baseline[path])
+            restored.append(str(path))
+    return sorted(restored)
+
+
+def render_published_hosted_files(manifest_path: Path, output_dir: Path, files: list[Path], **kwargs) -> dict:
+    """Render using a fresh read of the final Canvas publication state."""
+    manifest = kwargs.get("manifest") or load_json(manifest_path)
+    if manifest.get("canvas_publish") is False:
+        return render_hosted_files(manifest_path, output_dir, files, **kwargs)
+    mapped = _published_item_positions(manifest_path, manifest, kwargs.get("state") or manifest)
+    baselines = {root: snapshot_course_outputs(root) for root in
+                 course_output_roots(manifest_path, output_dir, manifest=manifest)}
+    try:
+        return render_hosted_files(manifest_path, output_dir, files, item_positions=mapped, **kwargs)
+    except Exception:
+        for root, baseline in baselines.items():
+            restore_course_outputs(root, baseline)
+        raise
+
+
 def render_hosted_files(
     manifest_path: Path,
     output_dir: Path,
@@ -2238,6 +2331,7 @@ def render_hosted_files(
     manifest: dict | None = None,
     state: dict | None = None,
     include_indexes: bool = True,
+    item_positions: dict | None = None,
 ) -> dict:
     manifest_data = manifest or load_json(manifest_path)
     course_key = course_dir_for_manifest(manifest_path).name
@@ -2246,6 +2340,9 @@ def render_hosted_files(
     artifact_links = _artifact_link_targets(
         manifest_path, manifest_data, state or manifest_data
     )
+    all_items = _load_artifact_items(index_files)
+    if item_positions is None:
+        item_positions = source_sequences(all_items, hidden_modules=_hidden_sequence_modules(course_dir))
     results = []
     for md_path in files:
         errors = validate_artifact(md_path)
@@ -2262,8 +2359,25 @@ def render_hosted_files(
                 manifest=manifest_data,
                 state=state or manifest_data,
                 artifact_links=artifact_links,
+                item_position=item_positions.get(_artifact_progress_id(md_path, manifest_path, fm)),
             )
         )
+
+    selected = {path.resolve() for path in files}
+    for md_path, fm in all_items:
+        if md_path.resolve() in selected:
+            continue
+        info = artifact_hosted_info(md_path, manifest_path, manifest_data, fm)
+        target = hosted_output_path(output_dir, manifest_data, info["hosted_path"])
+        if not target.exists():
+            continue
+        previous = target.read_text(encoding="utf-8")
+        updated = update_sequence_line(previous, item_positions.get(_artifact_progress_id(md_path, manifest_path, fm)))
+        if updated != previous:
+            changed, digest = _write_if_changed(target, updated)
+            results.append({"file": str(md_path), "output_path": str(target),
+                            "hosted_path": info["hosted_path"], "hosted_url": info["hosted_url"],
+                            "hosted_hash": digest, "changed": changed, "sequence_only": True})
 
     if not include_indexes:
         return {"rendered": results, "indexes": []}

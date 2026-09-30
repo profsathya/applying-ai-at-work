@@ -8,7 +8,7 @@ from pathlib import Path
 
 from canvas_sync.hosted_html import artifact_hosted_info, render_artifact_document
 from canvas_sync.schema import parse_frontmatter, validate_artifact
-from canvas_sync.state import load_json
+from canvas_sync.state import canvas_fingerprint, load_json
 from canvas_sync.walkthrough_release import preflight_pair, release_pairs, rollback_pair
 from canvas_sync.schema import validate_guided_assignment
 from canvas_sync.walkthrough import _field_cell_text, _guidance, guidance_labels, render_walkthrough_body
@@ -175,6 +175,22 @@ class WalkthroughChecks(unittest.TestCase):
             }}
             client = CanvasStub()
             self.assertEqual(preflight_pair(client, source, new, state)['module_order'], [10, 11])
+            client.assignments[1]['published'] = False
+            client.module_items[0]['published'] = False
+            with self.assertRaisesRegex(ValueError, 'explicitly reconciled'):
+                preflight_pair(client, source, new, state)
+            state['artifacts']['source']['canvas_fingerprint'] = canvas_fingerprint(client.assignments[1], 'assignment')
+            pair = preflight_pair(client, source, new, state)
+            self.assertFalse(pair['source_was_published'])
+            state_path = Path(directory) / 'state.json'
+            state_path.write_text(json.dumps(state))
+            client.assignments[2]['published'] = True
+            client.module_items[1]['published'] = True
+            self.assertEqual(rollback_pair(client, pair, state_path), [])
+            self.assertFalse(client.assignments[1]['published'])
+            self.assertFalse(client.assignments[2]['published'])
+            client.assignments[1]['published'] = True
+            client.module_items[0]['published'] = True
             client.assignments[2]['points_possible'] = 20
             with self.assertRaisesRegex(ValueError, 'points_possible'):
                 preflight_pair(client, source, new, state)
@@ -242,7 +258,7 @@ class WalkthroughChecks(unittest.TestCase):
             self.assertTrue(client.module_items[0]['published'])
             self.assertTrue(client.module_items[1]['published'])
 
-    def test_ungraded_text_entry_to_word_upload_requires_reviewed_walkthrough(self):
+    def test_text_entry_to_word_upload_preserves_points_and_requires_reviewed_walkthrough(self):
         with tempfile.TemporaryDirectory() as directory:
             source_path = Path(directory) / 'source.md'
             new_path = Path(directory) / 'new.md'
@@ -261,6 +277,15 @@ class WalkthroughChecks(unittest.TestCase):
             client.assignments[2]['points_possible'] = 0
             client.assignments[1]['submission_types'] = ['online_text_entry']
             self.assertEqual(preflight_pair(client, source, new, state)['module_order'], [10, 11])
+            source_path.write_text(source_path.read_text().replace('points: 0', 'points: 50'))
+            new_path.write_text(new_path.read_text().replace('points: 0', 'points: 50'))
+            client.assignments[1]['points_possible'] = 50
+            client.assignments[2]['points_possible'] = 50
+            self.assertEqual(preflight_pair(client, source, new, state)['module_order'], [10, 11])
+            client.assignments[2]['points_possible'] = 35
+            with self.assertRaisesRegex(ValueError, 'points_possible'):
+                preflight_pair(client, source, new, state)
+            client.assignments[2]['points_possible'] = 50
             new_path.write_text(new_path.read_text().replace('work.docx', 'work.txt'))
             with self.assertRaisesRegex(ValueError, 'submission_types'):
                 preflight_pair(client, source, new, state)
