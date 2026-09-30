@@ -89,18 +89,18 @@ guided_assignment:
       cells:
       - text: 'The assumption this conversation is meant to test
 
-          One assumption, from your map.'
+          One assumption, from the assumption blocks on your Stakeholder Map.'
       - text:   
         response: true
       label: The assumption this conversation is meant to test
     - id: row-5
       cells:
-      - text: 'Your starting Problem Frame
+      - text: 'Your problem, from The problem (Part 2) of your Problem Frame
 
-          A sentence or two, as it stands right now.'
+          As it stands right now.'
       - text:   
         response: true
-      label: Your starting Problem Frame
+      label: Your problem, from The problem (Part 2) of your Problem Frame
     header_rows: 0
     criteria:
     - Carry over the selected stakeholder, relationship, and assumption from your
@@ -277,7 +277,7 @@ source_provenance: stakeholder-conversation-canvas-walkthrough.sources.json
 
 # Stakeholder Conversation Canvas Walkthrough
 
-Now it's time to test your Problem Frame against an actual stakeholder, not AI. This activity has four parts: preparing for the conversation, setting it up, having it, and documenting what you learned. Bring your current Stakeholder Map and Problem Frame. You will submit the report, your updated map, and the JSON file from the question-check activity.
+Now it's time to test your Problem Frame against an actual stakeholder, not AI. This activity has four parts: preparing for the conversation, setting it up, having it, and documenting what you learned. Bring your current Stakeholder Map and Problem Frame. You will submit the report, your updated map, and the JSON file from the AI question exchange in Part 1.
 
 Write before requesting optional AI feedback. It sees only the selected row, cannot know what happened in your workplace, and cannot supply evidence. Use roles or initials in feedback requests, leave out confidential details, and keep a path through every step without feedback. You decide what to revise.
 
@@ -324,9 +324,9 @@ The row feedback in this walkthrough is optional and narrower than the Part 1 ex
 ### Part 2: Set Up the Conversation
 
 - Pick the method of communication this person actually answers: in person to set a time if you see them regularly; email if you want it in writing; phone or text if that is how you two normally talk.
-- Send the ask, and note the date you sent it on your stakeholder map. Keep it short: who you are, that you're investigating the problem, and that you would like 20 to 30 minutes.
+- Send the ask, and note the date in the **Outreach log** of your Stakeholder Map. Keep it short: who you are, that you're investigating the problem, and that you would like 20 to 30 minutes.
 - No reply in 3 days? Follow up once in the same thread, and make it easier to say yes: offer 15 minutes, or offer to send two questions they can answer in writing.
-- Still no reply by day 5? Go to your backup stakeholder and start again. Note the switch on your map. A stakeholder who does not respond is itself information about access and influence.
+- Still no reply by day 5? Go to your backup stakeholder and start again. Note the switch in the **Outreach log**. A stakeholder who does not respond is itself information about access and influence.
 - Got a yes? Confirm the time, the format, and the length, so you both arrive expecting the same conversation.
 
 This is a real problem in your own work, and it is in both your interests to connect early. The sooner you talk, the more of this sprint you have left to act on what you hear.
@@ -349,7 +349,9 @@ Within five minutes of finishing, fill in Section C, while it is still fresh. A 
 
 Complete Section D of your report, the same day or the next. This is the only section that asks for new thinking rather than a record of what happened. A short paragraph for each. This is the section that asks for your thinking, so give it room.
 
-Two things to hold on to as you write it. Update your Problem Frame on evidence, not on your own interpretation of what you heard. If the conversation fully confirmed your original frame, report that honestly. A clear confirmation is a real and valuable result.
+Two things to hold on to as you write it. Update your Problem Frame on evidence, not on your own interpretation of what you heard. If the conversation fully confirmed your original frame, report that honestly. A clear confirmation is a real and valuable result. The same holds the other way: if the person told you the problem is not what you framed, or not there at all, say so. A supported "my frame did not hold" is also a valid result.
+
+In your Problem Frame, update: the **Status** column in **Your assumptions** (Part 6) for every assumption this conversation tested; **The problem** (Part 2), **Who is affected** (Part 3a), or **How it is handled today** (Part 4a) if what you heard changed them; **What you do not know yet** (Part 7); and **Last updated** at the top: Sprint 3 and the date.
 
 Then open your Stakeholder Map and make those changes in it. Update the status of every field the conversation settled, correct anything that turned out to be wrong, and add any stakeholder this person made you aware of. Leave your "What changed, and why" paragraph from the Dojo Lab sitting at the top of the file. You submit the updated map with your report.
 
