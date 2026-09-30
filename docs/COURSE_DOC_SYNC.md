@@ -37,3 +37,9 @@ Inspect the document's visible version marker and representative content after d
 ## Checks
 
 Run `.venv/bin/python -m unittest tests.test_course_docs` and `node tests/course_docs_receiver.cjs`. These cover explicit inventory, removal, core-only section isolation, malformed inventories, strict acknowledgement, digest stability, stale requests, conflicting retries, and independent section generations. They do not claim a live Google Docs or AI-platform test.
+
+### Safe receiver diagnostics
+
+Update failures return and log only fixed `phase`, `kind`, and `reason` categories. Raw exception messages, stack traces, document contents and identifiers, payloads, and script properties are not logged. The client independently allowlists each diagnostic field. An unknown runtime exception remains `reason=unknown`; its phase still identifies whether the failure occurred while opening, reading, backing up, rendering, saving, verifying, restoring, or recording versions. A failure during restoration reports `phase=restore`, since the saved document then requires inspection.
+
+These diagnostics take effect only after the reviewed receiver source is installed as a new version of the existing Apps Script deployment. Merging repository changes does not deploy Apps Script. Preserve the existing deployment URL, properties, account, and document mapping. Do not trigger another sync merely to test diagnostics without authorization for its document writes. Existing caught failures may appear as completed executions without logs; installing this change cannot recover their missing exception details.

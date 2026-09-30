@@ -70,9 +70,11 @@ function doPost(e) {
     return jsonResponse({ ok: false, error: "lock_timeout", message: "Could not acquire the sync lock." });
   }
 
+  var diagnostic = {phase: "version_check"};
   try {
     var versions = checkVersions(props, docId, payload);
-    var written = rebuildDocument(docId, payload);
+    var written = rebuildDocument(docId, payload, diagnostic);
+    diagnostic.phase = "save_versions";
     Object.keys(versions).forEach(function(tab) {
       versions[tab].rendered_digest = written.digests[tab];
       props.setProperty(versionKey(docId, tab), JSON.stringify(versions[tab]));
@@ -87,10 +89,31 @@ function doPost(e) {
       updated_at: new Date().toISOString()
     });
   } catch (err) {
-    return jsonResponse({ ok: false, error: "document_update_failed", message: String(err) });
+    var safe = safeUpdateDiagnostic(err, diagnostic);
+    console.error(JSON.stringify({event: "course_doc_update_failed", diagnostic: safe}));
+    return jsonResponse({ ok: false, error: "document_update_failed", diagnostic: safe });
   } finally {
     lock.releaseLock();
   }
+}
+
+// Only fixed categories cross the receiver boundary. Never log String(error),
+// stack traces, payloads, property values, document IDs, or document contents.
+function safeUpdateDiagnostic(error, diagnostic) {
+  var phases = ["version_check", "open_document", "resolve_tabs", "hash_existing",
+    "backup", "render", "save", "open_readback", "verify_readback", "restore", "save_versions"];
+  var phase = phases.indexOf(diagnostic.phase) >= 0 ? diagnostic.phase : "unknown";
+  var names = ["Error", "TypeError", "RangeError", "Exception"];
+  var kind = error && names.indexOf(error.name) >= 0 ? error.name : "unknown";
+  var message = error && typeof error.message === "string" ? error.message : "";
+  var reasons = ["missing_source_generation", "invalid_section",
+    "stale_or_conflicting_generation", "document_readback_mismatch"];
+  var reason = reasons.indexOf(message) >= 0 ? message : "unknown";
+  if (message === "Cannot insert an empty text element.") reason = "empty_text";
+  if (/^Service invoked too many times\b/.test(message)) reason = "service_quota";
+  if (/^Service Documents failed while accessing document\b/.test(message)) reason = "document_service";
+  if (/^You do not have permission to access the requested document\b/.test(message)) reason = "document_access";
+  return {phase: phase, kind: kind, reason: reason};
 }
 
 function versionKey(docId, tab) { return "VERSION:" + docId + ":" + tab; }
@@ -160,8 +183,11 @@ function collectTabs(tabs, found) {
   return found;
 }
 
-function rebuildDocument(docId, payload) {
+function rebuildDocument(docId, payload, diagnostic) {
+  diagnostic = diagnostic || {};
+  diagnostic.phase = "open_document";
   var doc = DocumentApp.openById(docId);
+  diagnostic.phase = "resolve_tabs";
   var tabsByTitle = collectTabs(doc.getTabs(), {});
 
   // Resolve every tab before writing anything, so one bad title can't leave
@@ -183,6 +209,7 @@ function rebuildDocument(docId, payload) {
   // A prior request may have saved the document but lost its receipt. Verify
   // the actual text before rewriting a large tab on a same-generation retry.
   var existingDigests = {};
+  diagnostic.phase = "hash_existing";
   var alreadyCurrent = targets.every(function(target) {
     var digest = bodyDigest(target.tab.asDocumentTab().getBody());
     existingDigests[target.section.tab] = digest;
@@ -195,20 +222,25 @@ function rebuildDocument(docId, payload) {
   }
 
   // Preserve existing tab bodies for recovery if rendering or saving fails.
+  diagnostic.phase = "backup";
   var backups = targets.map(function(target) { return target.tab.asDocumentTab().getBody().copy(); });
   try {
   var titles = [];
   var pages = 0;
+  diagnostic.phase = "render";
   for (var j = 0; j < targets.length; j++) {
     writeSection(targets[j].tab.asDocumentTab().getBody(), targets[j].section, payload);
     titles.push(targets[j].section.tab);
     pages += (targets[j].section.pages || []).length;
   }
 
+  diagnostic.phase = "save";
   doc.saveAndClose();
+  diagnostic.phase = "open_readback";
   var readback = DocumentApp.openById(docId);
   var readTabs = collectTabs(readback.getTabs(), {});
   var digests = {};
+  diagnostic.phase = "verify_readback";
   payload.sections.forEach(function(section) {
     var digest = bodyDigest(readTabs[section.tab].asDocumentTab().getBody());
     if (digest !== section.rendered_digest) { throw new Error("document_readback_mismatch"); }
@@ -216,6 +248,8 @@ function rebuildDocument(docId, payload) {
   });
   return { tabs: titles, pages: pages, digests: digests };
   } catch (error) {
+    var failedPhase = diagnostic.phase;
+    diagnostic.phase = "restore";
     doc = DocumentApp.openById(docId);
     var restoreTabs = collectTabs(doc.getTabs(), {});
     targets.forEach(function(target, index) {
@@ -233,6 +267,7 @@ function rebuildDocument(docId, payload) {
       }
     });
     doc.saveAndClose();
+    diagnostic.phase = failedPhase;
     throw error;
   }
 }

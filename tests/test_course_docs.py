@@ -67,6 +67,16 @@ class CourseDocsTests(unittest.TestCase):
                 verify_response({}, {'ok': False, 'error': 'document_update_failed',
                                      'message': 'Error: ' + reason + ' private details'}, 'doc')
 
+    def test_receiver_diagnostics_are_allowlisted(self):
+        with self.assertRaisesRegex(ValueError, 'phase=open_document kind=Error reason=document_service$'):
+            verify_response({}, {'ok': False, 'error': 'document_update_failed',
+                                 'diagnostic': {'phase': 'open_document', 'kind': 'Error',
+                                                'reason': 'document_service', 'message': 'private'}}, 'doc')
+        for value in ('private', {'secret': 'private'}, ['private']):
+            with self.assertRaisesRegex(ValueError, 'document_update_failed$'):
+                verify_response({}, {'ok': False, 'error': 'document_update_failed',
+                                     'diagnostic': dict.fromkeys(('phase', 'kind', 'reason'), value)}, 'doc')
+
 class PreparedReleaseTests(unittest.TestCase):
     def test_mismatched_source_never_reaches_hosting_or_writes(self):
         import io
