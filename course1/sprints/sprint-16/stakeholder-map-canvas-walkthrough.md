@@ -856,15 +856,15 @@ If you can, start with someone who is **Affected**: the problem reaches them dir
 
 ## Stakeholder Table 2
 
-If you can, choose someone who is **Influential**: they have a say over what changes. Keep impact and authority separate: the person who feels the problem most may have the least power to change it. If you write “high,” say what this person has influence over.
+If you can, choose someone who is **Influential**: they have a say over what changes. They may also be Affected; if so, name both. Keep impact and authority separate: the person who feels the problem most may have the least power to change it. If you write “high,” say what this person has influence over.
 
 ## Stakeholder Table 3
 
-If you can, choose someone who is **Responsible for a constraint**: they control a condition any change must work within. A constraint can be a policy or budget, but it can also be a history, a relationship, or a reputation. Mark what you are guessing.
+If you can, choose someone who is **Responsible for a constraint**: they control a condition any change must work within. They may also be Influential or Affected; name every relationship that applies. A constraint can be a policy or budget, but it can also be a history, a relationship, or a reputation. Mark what you are guessing.
 
 ## Stakeholder Table 4
 
-If you can, choose someone who is **Positioned to challenge your frame**. This one is the hardest to find and the most valuable. They are the person most likely to tell you that you are solving the wrong problem, which is much cheaper to hear now than after you have built something.
+If you can, choose someone who is **Positioned to challenge your frame**. They may hold another relationship too; name every one that applies. This one is the hardest to find and the most valuable. They are the person most likely to tell you that you are solving the wrong problem, which is much cheaper to hear now than after you have built something.
 
 ## Assumption 1
 
