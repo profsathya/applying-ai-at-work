@@ -22,7 +22,7 @@ In Sprint 2 you rated your assumptions without checking any of them. This sprint
 
 ## What you need for this sprint
 
-- Your Problem Frame as you left it at the end of Sprint 2, with "Last updated: Sprint 2" at the top. Open it up. Part 6, with its Status column, is where this sprint starts.
+- Your Problem Frame as you left it at the end of Sprint 2, with "Last updated: Sprint 2" at the top. Open it up. **Your assumptions** (Part 6), with its Status column, is where this sprint starts.
 - Your Dig into your assumptions tables. The questions you wrote there become your first stakeholder questions.
 - Your verdict. If you moved to your runner-up, bring that new frame instead.
 - A place to keep your Sprint 3 work with your other work.
@@ -39,7 +39,7 @@ What you will do:
 
 1. **Identify your stakeholders.** Name at least one person in each of the four relationships: Affected, Influential, Responsible for a constraint, Positioned to challenge your frame.
 2. **Draft a stakeholder map with honest evidence status.** Lay out what you know for each stakeholder, and be clear about what is confirmed fact versus your own assumption.
-3. **Name what you are guessing, and write the questions that would settle it.** Start with the Part 6 rows you rated high risk in Sprint 2, add anything new your map turns up, and write a question for each.
+3. **Name what you are guessing, and write the questions that would settle it.** Start with the rows in **Your assumptions** (Part 6) that you rated high risk in Sprint 2, add anything new your map turns up, and write a question for each.
 4. **Test and widen your map with AI.** Use your own AI chat to poke holes in what you wrote and to offer other ways to see the same situation. You decide what changes.
 5. **Conduct at least one real validation conversation.** Talk to an actual stakeholder and see whether your Problem Frame holds up.
 6. **Revise your Problem Frame based on what you learn.** Use what you heard to sharpen, adjust, or rebuild your frame.

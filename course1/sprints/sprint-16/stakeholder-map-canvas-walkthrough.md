@@ -52,10 +52,10 @@ guided_assignment:
       label: Your name
     - id: row-2
       cells:
-      - text: Your problem, from Part 2 of your Problem Frame as you left it in Sprint 2
+      - text: Your problem, from The problem (Part 2) of your Problem Frame as you left it in Sprint 2
       - text:   
         response: true
-      label: Your problem, from Part 2 of your Problem Frame as you left it in Sprint 2
+      label: Your problem, from The problem (Part 2) of your Problem Frame as you left it in Sprint 2
     header_rows: 0
     criteria:
     - Bring the Problem Frame you are already working on.
@@ -834,7 +834,7 @@ Before you talk to anyone, write down what you already believe about the people 
 
 ## Set up your map
 
-Write your name and your problem, from Part 2 of your Problem Frame as you left it at the end of Sprint 2. This is the map you will keep working in throughout the sprint. Use roles or initials for other people, and keep confidential details out of responses you send for feedback.
+Write your name and your problem, from **The problem** (Part 2) of your Problem Frame as you left it at the end of Sprint 2. This is the map you will keep working in throughout the sprint. Use roles or initials for other people, and keep confidential details out of responses you send for feedback.
 
 ## What changed, and why
 
@@ -844,7 +844,7 @@ Write your name and your problem, from Part 2 of your Problem Frame as you left 
 
 ### Start with what you already think
 
-Identify four stakeholders. People can hold more than one relationship, so choose who makes sense for your problem. If you can, push yourself to cover all four: Affected, Influential, Responsible for a constraint, and Positioned to challenge your frame. If you don't have a workplace stakeholder, reach out to a mentor, community member, customer, or anyone with a genuine relationship to the problem.
+Identify four stakeholders. You have already started naming them. Look back at your Problem Frame: **Who is affected** (Part 3a), **What fixing this would ask of people** (Part 3c), and the **Who could tell me** column in **Your assumptions** (Part 6). Start with the people you named there. People can hold more than one relationship, so choose who makes sense for your problem. If you can, push yourself to cover all four: Affected, Influential, Responsible for a constraint, and Positioned to challenge your frame. If you don't have a workplace stakeholder, reach out to a mentor, community member, customer, or anyone with a genuine relationship to the problem.
 
 For each stakeholder, fill in the seven corresponding questions. One to three sentences each is plenty; the example answers below show the length to aim for. The last field asks you for a question; write a first attempt, and sharpen it in the next sections.
 
@@ -870,7 +870,7 @@ If you can, choose someone who is **Positioned to challenge your frame**. This p
 
 ### What you are guessing, and what would tell you
 
-Now step back. Start with Part 6 of your Problem Frame: the rows you rated high risk in Sprint 2 are your first candidates. Then look at what you marked **Inferred** on this map. Some of those guesses barely matter. A few of them hold your whole frame up and are high-stakes.
+Now step back. Start with **Your assumptions** (Part 6) in your Problem Frame: the rows you rated high risk in Sprint 2 are your first candidates. Then look at what you marked **Inferred** on this map. Some of those guesses barely matter. A few of them hold your whole frame up and are high-stakes.
 
 **What “high-stakes” means.** An assumption is high-stakes if being wrong about it would change what you do next. Not a small correction, but a real change: a different problem, different people affected, or a different picture of what a fixed problem would look like.
 
@@ -925,7 +925,7 @@ Add a third block if another assumption would change your next move. Otherwise, 
 
 Choose the one person you will reach out to first for your real validation conversation, and name a backup in case your first choice does not respond. Then explain your reasoning in two or three sentences: why this person, before anyone else?
 
-Start with what you already have: the "Who could tell me" column in Part 6, and whoever your Sprint 2 verdict said could settle what is still uncertain.
+Start with what you already have: the **Who could tell me** column in **Your assumptions** (Part 6), and whoever your Sprint 2 verdict said could settle what is still uncertain.
 
 Some strong reasons to contact someone first:
 
