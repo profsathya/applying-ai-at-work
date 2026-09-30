@@ -35,7 +35,7 @@ guided_assignment:
     - If the list is short, report honestly what you tried.
 learning_goal: List everything in your week that could hold a problem, before you judge any
   of it.
-publish: false
+publish: true
 ---
 
 # Brainstorm your list
