@@ -25,6 +25,16 @@ guided_assignment:
   feedback_protocol: walkthrough-v1
   guidance_labels:
     avoid: Trap to avoid
+  repeated_tables:
+    tasks:
+    - stakeholder-1
+    - stakeholder-2
+    - stakeholder-3
+    - stakeholder-4
+    field_guide_heading: How to fill in each field
+    field_guide_intro: All four stakeholder tables use these seven fields. To see this
+      guide again while you work on a later table, reopen Step 3.
+    check_intro: These checks apply to every stakeholder table.
   export_filename: stakeholder-map.docx
   records_destination:
     label: your own Stakeholder Map document

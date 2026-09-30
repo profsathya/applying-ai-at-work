@@ -169,6 +169,18 @@
           "enum": ["brainstorm-list-v1", "walkthrough-v1"]
         },
         "feedback_omission_reason": {"type": "string", "minLength": 1},
+        "repeated_tables": {
+          "type": "object",
+          "required": ["tasks", "field_guide_heading", "field_guide_intro", "check_intro"],
+          "additionalProperties": false,
+          "description": "Walkthrough presentation for consecutive identical tables: one field guide in the first, field names only in each table, one shared self-check after the last, and collapsible steps. Changes the page only, not the saved, exported, or feedback task data.",
+          "properties": {
+            "tasks": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"}},
+            "field_guide_heading": {"type": "string", "minLength": 1},
+            "field_guide_intro": {"type": "string", "minLength": 1},
+            "check_intro": {"type": "string", "minLength": 1}
+          }
+        },
         "tasks": {
           "type": "array",
           "minItems": 1,

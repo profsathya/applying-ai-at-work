@@ -18,13 +18,50 @@ def guidance_labels(config: dict) -> tuple[tuple[str, str], ...]:
     return tuple((key, overrides.get(key, label)) for key, label in GUIDANCE_LABELS)
 
 
+def _guidance_parts(guidance: dict, labels: tuple[tuple[str, str], ...]) -> str:
+    return ''.join(f'<p><strong>{html.escape(label)}:</strong> {html.escape(guidance[key])}</p>'
+                   for key, label in labels if guidance.get(key))
+
+
 def _guidance(field: dict, labels: tuple[tuple[str, str], ...] = GUIDANCE_LABELS) -> str:
     guidance = field.get('guidance') or {}
     if not guidance:
         return ''
-    parts = ''.join(f'<p><strong>{html.escape(label)}:</strong> {html.escape(guidance[key])}</p>'
-                    for key, label in labels if guidance.get(key))
-    return f'<details class="walk-field-guidance"><summary>Example and guidance</summary>{parts}</details>'
+    return (f'<details class="walk-field-guidance"><summary>Example and guidance</summary>'
+            f'{_guidance_parts(guidance, labels)}</details>')
+
+
+def split_field_text(text: str) -> tuple[str, str] | None:
+    """A first-column cell written as a field name line followed by its question."""
+    match = re.fullmatch(r'([^\n]+)(\n+)(.+)', text, flags=re.DOTALL)
+    return (match.group(1), match.group(3)) if match else None
+
+
+def repeated_table_ids(config: dict) -> list[str]:
+    group = config.get('repeated_tables')
+    return list(group.get('tasks') or []) if isinstance(group, dict) else []
+
+
+def _field_guide(task: dict, group: dict, labels: tuple[tuple[str, str], ...]) -> str:
+    """One reference table explaining the fields shared by a run of repeated tables."""
+    ident = task['id']
+    rows = []
+    for row in task['rows']:
+        if not any(cell.get('response') for cell in row['cells']):
+            continue
+        name, question = split_field_text(row['cells'][0]['text'])
+        details = _guidance_parts(row.get('guidance') or {}, tuple(pair for pair in labels if pair[0] != 'ask'))
+        rows.append(f'<tr><th scope="row" data-label="Field"><strong>{html.escape(name)}</strong></th>'
+                    f'<td data-label="{html.escape(dict(labels)["ask"], quote=True)}">'
+                    f'{html.escape(question).replace(chr(10), "<br>")}</td>'
+                    f'<td data-label="Example and guidance">{details}</td></tr>')
+    heading = html.escape(group['field_guide_heading'])
+    return (f'<section class="walk-field-guide" aria-labelledby="walk-field-guide-{ident}">'
+            f'<h3 id="walk-field-guide-{ident}">{heading}</h3><p>{html.escape(group["field_guide_intro"])}</p>'
+            f'<table class="walk-guide-table"><caption class="walk-sr-only">{heading}</caption>'
+            '<colgroup><col style="width:20%"><col style="width:28%"><col style="width:52%"></colgroup>'
+            f'<thead><tr><th scope="col">Field</th><th scope="col">{html.escape(dict(labels)["ask"])}</th>'
+            f'<th scope="col">Example and guidance</th></tr></thead><tbody>{"".join(rows)}</tbody></table></section>')
 
 
 def _field_cell_text(task: dict, text: str, labels: tuple[tuple[str, str], ...]) -> str:
@@ -98,7 +135,8 @@ def _table_row(task_id: str, repeat: int, field: dict, *, with_evidence: bool,
 
 
 def _source_table(task: dict, *, has_feedback: bool,
-                  labels: tuple[tuple[str, str], ...] = GUIDANCE_LABELS) -> str:
+                  labels: tuple[tuple[str, str], ...] = GUIDANCE_LABELS,
+                  field_names_only: bool = False) -> str:
     ident = task['id']
     columns = task['columns']
     minimum_width = len(columns) * 180
@@ -120,10 +158,13 @@ def _source_table(task: dict, *, has_feedback: bool,
         feedback_key = html.escape(f'{ident}.{row["id"]}', quote=True) if response_row and has_feedback else ''
         feedback_result_id = f'walk-feedback-{ident}-{row["id"]}' if feedback_key else ''
         for column_index, (column, cell) in enumerate(zip(columns, row['cells'])):
-            source_text = (_field_cell_text(task, cell['text'], labels) if column_index == 0
-                           else html.escape(cell['text']).replace('\n', '<br>'))
+            if column_index == 0 and field_names_only and cell['text']:
+                source_text = f'<strong>{html.escape(cell["text"].split(chr(10), 1)[0])}</strong>'
+            else:
+                source_text = (_field_cell_text(task, cell['text'], labels) if column_index == 0
+                               else html.escape(cell['text']).replace('\n', '<br>'))
             content = f'<div class="walk-source-cell-text">{source_text}</div>' if source_text else ''
-            if column_index == 0:
+            if column_index == 0 and not field_names_only:
                 content += _guidance(row, labels)
             if cell.get('response'):
                 key = f'{ident}.{row["id"]}.{column["id"]}'
@@ -170,9 +211,25 @@ def _source_table(task: dict, *, has_feedback: bool,
     return table + feedback
 
 
+def _repeated_step(task: dict, number: int, teaching: str, response: str, guide: str) -> str:
+    """A collapsible step in a run of repeated tables; the step script sets its open and done state."""
+    ident = html.escape(task['id'], quote=True)
+    return f'''<section class="walk-step walk-accordion-step" data-walk-step="{ident}" data-walk-repeated-table>
+<h2 class="walk-accordion-heading"><button type="button" class="walk-accordion-toggle" id="walk-toggle-{ident}" aria-expanded="true" aria-controls="walk-panel-{ident}">
+<span class="walk-step-number">Step {number}</span><span class="walk-accordion-title">{html.escape(task['prompt'])}</span>
+<span class="walk-accordion-status" data-walk-status></span></button></h2>
+<div class="walk-accordion-panel" id="walk-panel-{ident}" role="region" aria-labelledby="walk-toggle-{ident}">
+<div class="walk-teaching">{teaching}</div>
+{guide}
+{response}
+<button type="button" class="walk-accordion-done" data-walk-done>Done, go to next</button></div></section>'''
+
+
 def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: dict[str, str]) -> str:
     config = frontmatter['guided_assignment']
     label_pairs = guidance_labels(config)
+    group = config.get('repeated_tables') or {}
+    group_ids = repeated_table_ids(config)
     cards: list[str] = []
     for number, task in enumerate(config['tasks'], 1):
         ident = task['id']
@@ -184,8 +241,10 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
         has_feedback = (bool(config.get('feedback_endpoint')) and task.get('feedback_enabled', True)
                         and not task.get('read_only'))
         kind = task.get('kind', 'response')
+        repeated = ident in group_ids
         if kind == 'table':
-            response = _source_table(task, has_feedback=has_feedback, labels=label_pairs)
+            response = _source_table(task, has_feedback=has_feedback, labels=label_pairs,
+                                     field_names_only=repeated)
         elif kind == 'group':
             labels = task.get('repeat_labels') or [f'Entry {i}' for i in range(1, task['repeat_count'] + 1)]
             entries = []
@@ -210,6 +269,13 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
             response = f'''<label class="walk-field" for="walk-{key}"><span>Your response</span>
 <textarea id="walk-{key}" data-walk-answer="{key}" maxlength="16000" rows="6"></textarea></label>
 {feedback}'''
+        if repeated:
+            cards.append(_repeated_step(task, number, teaching, response,
+                                        _field_guide(task, group, label_pairs) if ident == group_ids[0] else ''))
+            if ident == group_ids[-1]:
+                cards.append(f'<details class="walk-check walk-shared-check" open><summary>What to check in your work</summary>'
+                             f'<p>{html.escape(group["check_intro"])}</p><ul>{criteria}</ul></details>')
+            continue
         cards.append(f'''<section class="walk-step" data-walk-step="{html.escape(ident, quote=True)}">
 <p class="walk-step-number">Step {number}</p><h2>{html.escape(task['prompt'])}</h2>
 <div class="walk-teaching">{teaching}</div>
@@ -293,6 +359,8 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
     serialized = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     docx_script = (ASSETS / 'walkthrough-docx.js').read_text() if config.get('export_filename') else ''
     table_script = (ASSETS / 'walkthrough-tables.js').read_text() if has_table else ''
+    step_style = f"<style>{(ASSETS / 'walkthrough-steps.css').read_text()}</style>" if group_ids else ''
+    step_script = f"<script>{(ASSETS / 'walkthrough-steps.js').read_text()}</script>" if group_ids else ''
     plain_output = ('<details class="walk-plain-output"' + (' hidden' if word_upload else '') + '><summary>Plain text backup</summary>'
                     '<label for="walk-output">Your assembled responses as text</label><textarea id="walk-output" readonly rows="12"></textarea></details>'
                     if has_table else '<label for="walk-output">Your assembled responses</label><textarea id="walk-output" readonly rows="12"></textarea>')
@@ -303,7 +371,7 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
                       '<div id="walk-clear-confirm" hidden><p>Clear this saved draft? Keep a copy first.</p>'
                       '<button type="button" id="walk-clear-yes">Clear draft</button>'
                       '<button type="button" id="walk-clear-no">Keep draft</button></div>' if has_writable else '')
-    return f'''<style>{(ASSETS / 'guided-walkthrough.css').read_text()}</style>
+    return f'''<style>{(ASSETS / 'guided-walkthrough.css').read_text()}</style>{step_style}
 <div class="guided-workspace guided-walkthrough" id="guided-workspace">
 <aside class="walk-intro"><h2>How this Canvas Walkthrough works</h2><p>{html.escape(intro)}</p>
 <p>{records}</p>
@@ -316,4 +384,4 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
 {plain_output}{rich_output}
 {clear_controls}
 </section><script type="application/json" id="guided-config">{serialized}</script>
-<script>{table_script}</script><script>{docx_script}</script><script>{(ASSETS / 'guided-walkthrough.js').read_text()}</script></div>'''
+<script>{table_script}</script><script>{docx_script}</script><script>{(ASSETS / 'guided-walkthrough.js').read_text()}</script>{step_script}</div>'''

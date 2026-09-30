@@ -10,7 +10,8 @@ from canvas_sync.hosted_html import artifact_hosted_info, render_artifact_docume
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.state import load_json
 from canvas_sync.walkthrough_release import preflight_pair, release_pairs, rollback_pair
-from canvas_sync.walkthrough import _field_cell_text, _guidance, guidance_labels
+from canvas_sync.schema import validate_guided_assignment
+from canvas_sync.walkthrough import _field_cell_text, _guidance, guidance_labels, render_walkthrough_body
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -90,6 +91,47 @@ class WalkthroughChecks(unittest.TestCase):
         self.assertEqual(_field_cell_text({'bold_field_names': True}, 'Role', labels), 'Role')
         custom = guidance_labels({'guidance_labels': {'ask': 'Consider'}})
         self.assertIn('<strong>Consider:</strong>', _field_cell_text({'label_field_questions': True}, text, custom))
+
+    def test_repeated_tables_share_one_guide_and_check_without_changing_task_data(self):
+        def table(ident):
+            return {'id': ident, 'kind': 'table', 'prompt': ident.title(), 'instruction_section': ident.title(),
+                    'bold_field_names': True, 'label_field_questions': True, 'criteria': ['Check one.', 'Check two.'],
+                    'columns': [{'id': 'c1', 'label': 'Field'}, {'id': 'c2', 'label': 'Your answer'}],
+                    'rows': [{'id': 'r1', 'label': 'Role', 'guidance': {'example': 'Dana <lead>.', 'avoid': 'A title.'},
+                              'cells': [{'text': 'Role\nWho is this person?'}, {'text': ' ', 'response': True}]}]}
+        tasks = [table('one'), table('two'), {'id': 'after', 'prompt': 'After'}]
+        config = {'version': '1', 'presentation': 'walkthrough', 'export_filename': 'map.docx',
+                  'feedback_endpoint': 'https://example.invalid/.netlify/functions/walkthrough-feedback',
+                  'feedback_protocol': 'walkthrough-v1', 'guidance_labels': {'avoid': 'Trap to avoid'}, 'tasks': tasks}
+        frontmatter = {'type': 'assignment', 'title': 'Map', 'artifact_id': 'map', 'submission_type': 'file_upload',
+                       'delivery_mode': 'guided_assignment', 'walkthrough_after': 'source', 'guided_assignment': config}
+        plain = render_walkthrough_body(frontmatter, '', {})
+        config['repeated_tables'] = {'tasks': ['one', 'two'], 'field_guide_heading': 'Field guide',
+                                     'field_guide_intro': 'Use these fields.', 'check_intro': 'Applies to every table.'}
+        html = render_walkthrough_body(frontmatter, '', {})
+        config_json = lambda page: page.split('id="guided-config">', 1)[1].split('</script>', 1)[0]
+        self.assertEqual(config_json(html), config_json(plain))
+        self.assertEqual(html.count('data-walk-answer='), plain.count('data-walk-answer='))
+        self.assertEqual(html.count('data-walk-feedback='), plain.count('data-walk-feedback='))
+        self.assertEqual(html.count('class="walk-field-guide"'), 1)
+        self.assertIn('<th scope="row" data-label="Field"><strong>Role</strong></th><td data-label="Ask yourself">Who is this person?</td>', html)
+        self.assertIn('<strong>Example:</strong> Dana &lt;lead&gt;.</p><p><strong>Trap to avoid:</strong> A title.', html)
+        self.assertEqual(html.count('<div class="walk-source-cell-text"><strong>Role</strong></div>'), 2)
+        self.assertNotIn('class="walk-field-guidance"', html)
+        self.assertEqual(html.count('What to check in your work'), 1)
+        self.assertIn('<p>Applies to every table.</p>', html)
+        self.assertLess(html.index('data-walk-step="two"'), html.index('<details class="walk-check walk-shared-check"'))
+        self.assertLess(html.index('<details class="walk-check walk-shared-check"'), html.index('data-walk-step="after"'))
+        self.assertEqual(html.count('aria-expanded="true" aria-controls="walk-panel-'), 2)
+        self.assertEqual(html.count('Done, go to next'), 2)
+        self.assertNotIn('walk-accordion', plain)
+        self.assertEqual(validate_guided_assignment('map', frontmatter), [])
+        tasks[1]['criteria'] = ['Different.']
+        self.assertIn('map: repeated_tables must share identical self-check criteria',
+                      validate_guided_assignment('map', frontmatter))
+        config['repeated_tables']['tasks'] = ['two', 'after']
+        self.assertIn('map: repeated_tables must list writable table tasks',
+                      validate_guided_assignment('map', frontmatter))
 
     def test_release_requires_pair_and_assessment_parity(self):
         with tempfile.TemporaryDirectory() as directory:
