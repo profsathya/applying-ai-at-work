@@ -114,17 +114,17 @@
       "canvas_payload_hash": "98c742c4dc2acb3c2951c7b8ff409282d2a5522356061c2202b886678255e891",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "a1a8e332f3a5b791fd02668fe6412aeebc9cd8d4d8282facdbc521d75b60019d",
+      "content_hash": "501c2795aee854a19600e3110daf86686896ba72dd661e2a068d59552fe19f56",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "5dab6b7ab63d84fd0127940eac0f3ccb618f0a6fa137d6561c4dcc7a2f4d0d99",
-      "hosted_last_rendered": "2026-09-18T19:08:24+00:00",
+      "hosted_hash": "c23b2cadc4bc8a9aeaca97f31911e1586e2bb7d57b69cc553bef3a79ecae4801",
+      "hosted_last_rendered": "2026-09-30T13:37:41+00:00",
       "hosted_path": "course1/assignments/dojo-lab-test-widen-choose.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-test-widen-choose.html",
-      "last_pushed": "2026-09-18T19:08:24+00:00",
+      "last_pushed": "2026-09-30T13:37:41+00:00",
       "local_path": "course1/sprints/sprint-14/dojo-lab-test-widen-choose.md",
       "position": 8,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "003ef0424405718f13a5ab25552d94d1182316f5"
+      "source_commit": "93ecf7be5ffeaf4d763f5f1dc0e7e528a148da3c"
     },
     "course1-sprints-sprint-14-first-frames": {
       "artifact_id": "course1-sprints-sprint-14-first-frames",
@@ -246,16 +246,16 @@
       "canvas_payload_hash": "6917ed7c0f7862733debcd49ed308e277de87c6f11356b8f24fbd7c17cc39ed2",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "b1116c051edc009ef7908194ba7ec2f5fbbb5bf20535ba1ec933361c787da834",
-      "hosted_hash": "fe8db501ab6ac4d18cc5f80f63f3650c0b461fa733efc5689a5bfe858df04903",
-      "hosted_last_rendered": "2026-09-18T19:34:14+00:00",
+      "content_hash": "d8395e16665c0a39bd9a0a90d69c776f4bc753c8b9cc3e25f96ecde8721e2459",
+      "hosted_hash": "4e1ff3942f34fe9310cd2bce6c80c173548a365480726bc6fc3a0550b8f87e74",
+      "hosted_last_rendered": "2026-09-30T13:37:42+00:00",
       "hosted_path": "course1/activities/introduction-find-the-problem-worth-solving.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-find-the-problem-worth-solving.html",
-      "last_pushed": "2026-09-18T19:34:14+00:00",
+      "last_pushed": "2026-09-30T13:37:42+00:00",
       "local_path": "course1/sprints/sprint-14/introduction-find-the-problem-worth-solving.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "1665c4b3bab0e99763dd05db4ec3fbb66ebf8d82"
+      "source_commit": "93ecf7be5ffeaf4d763f5f1dc0e7e528a148da3c"
     },
     "course1-sprints-sprint-14-problem-frame": {
       "artifact_id": "course1-sprints-sprint-14-problem-frame",
@@ -267,17 +267,17 @@
       "canvas_payload_hash": "d3cdd2489a4dfb21cf00d6763c3fb916218528b3a34bb244ea39897c44246735",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "4597b454954abec009fa90818ad07df4b7885a84b89f6ec3b535e670e81f9867",
+      "content_hash": "923ebc2c75bcb4ca99c3c7f57b23718e6221b1f182713e563560c9d3c17e8f3b",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "cf294758ec89f8e9b8d15bfb7709efada76d07214eb1aa8a5aa279d5c848dad5",
-      "hosted_last_rendered": "2026-09-16T23:27:40+00:00",
+      "hosted_hash": "b6cf1bf157e997d81f12999ecbe953469027237d108adedb6ee97e108efab5b0",
+      "hosted_last_rendered": "2026-09-30T13:37:43+00:00",
       "hosted_path": "course1/assignments/problem-frame.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/problem-frame.html",
-      "last_pushed": "2026-09-16T23:27:40+00:00",
+      "last_pushed": "2026-09-30T13:37:43+00:00",
       "local_path": "course1/sprints/sprint-14/problem-frame.md",
       "position": 9,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "6d822f0cbe7da816bf02f93fcd73b5669ba9df7c"
+      "source_commit": "93ecf7be5ffeaf4d763f5f1dc0e7e528a148da3c"
     },
     "course1-sprints-sprint-14-sprint-1-concept-check": {
       "artifact_id": "course1-sprints-sprint-14-sprint-1-concept-check",
@@ -1599,5 +1599,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-30T05:53:41+00:00"
+  "last_sync": "2026-09-30T13:37:43+00:00"
 }
