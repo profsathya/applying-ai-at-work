@@ -49,3 +49,27 @@ assert.equal(matched.tabs.length, 0);
 assert.equal(copied, false);
 assert.equal(saved, false);
 console.log('Receiver ordering, validation, and saved-document retry passed.');
+
+// Diagnostic output contains fixed categories even when runtime errors contain secrets.
+const logs = [];
+let released = false;
+context.console = {error: message => logs.push(message)};
+context.PropertiesService = {getScriptProperties: () => ({getProperty: key =>
+  key === 'COURSE_DOC_SYNC_TOKEN' ? 'test-secret' : key === 'COURSE_DOC_IDS' ? '{"course1":"doc"}' : null})};
+context.LockService = {getScriptLock: () => ({tryLock: () => true, releaseLock: () => {released = true;}})};
+context.jsonResponse = value => value;
+context.DocumentApp = {openById: () => {throw new Error('Service Documents failed while accessing document private-id test-secret');}};
+const rejected = context.doPost({postData: {contents: JSON.stringify({
+  ...payload(7), token: 'test-secret', course: 'course1', document_id: 'doc'
+})}});
+assert.equal(rejected.error, 'document_update_failed');
+assert.equal(rejected.diagnostic.phase, 'open_document');
+assert.equal(rejected.diagnostic.reason, 'document_service');
+assert.equal(rejected.diagnostic.kind, 'Error');
+assert.equal(released, true);
+assert.equal(logs.length, 1);
+assert.doesNotMatch(JSON.stringify(rejected) + logs[0], /private-id|test-secret/);
+assert.equal(rejected.message, undefined);
+const unknownDiagnostic = context.safeUpdateDiagnostic({name: 'private-name', message: 'private-message'}, {phase: 'private-phase'});
+assert.equal(JSON.stringify(unknownDiagnostic), '{"phase":"unknown","kind":"unknown","reason":"unknown"}');
+console.log('Receiver diagnostics redact runtime details and preserve lock cleanup.');
