@@ -39,17 +39,11 @@ publish: false
 
 # Brainstorm your list
 
-## What you need for this activity
+## 1. Set up your categories
 
-- Nothing but material that will help you think about what you do each week: your calendar, your to-do list, your inbox, open beside you.
-
-You will do your work within Canvas. Write your own list first; the AI feedback buttons read what you wrote and nothing else.
-
-## Brainstorm where you encounter challenges
+You need nothing for this activity but material that will help you think about what you do each week: your calendar, your to-do list, your inbox, open beside you. You will do your work within Canvas. Write your own list first; the AI feedback buttons read what you wrote and nothing else.
 
 At the end of this activity, you will have a list of twelve to twenty potential problems that you could explore for the rest of this course. To get there, you are going to start with an open brainstorm. Think about parts of your everyday life, such as work, home, job search, volunteering, caregiving, a side business, or something else, where you experience friction or challenges, or where something could work better or more smoothly than it does. Make a list of those friction points. Do not judge your answers right now. Anything is fair game.
-
-## 1. Set up your categories
 
 Start by thinking about the areas of your life where things happen. You may have two, you may have four. Common categories people consider are work, home, job search, volunteering, caregiving, a side business, or something else. Enter your categories in the boxes below.
 
