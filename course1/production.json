@@ -224,17 +224,17 @@
       "canvas_payload_hash": "e3134a3914f37d9daee81e261f0ead7fd1331a194356998a88889dc4413753ae",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "1750ce24546267c93153adfb2c522c52349899712d28669e10e4999f37857090",
+      "content_hash": "ab21190e6e6eaf402d621aa5d0d1d00393f15fbda708413aac00216767fa8783",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "4d3c8db34bebd9bf0495ccd7b932ca19c35c818b1feefe8828bfd9fd84482e69",
-      "hosted_last_rendered": "2026-09-30T20:00:24+00:00",
+      "hosted_hash": "ca38b008b375ddf1491e02f352d98a647e8ae8b64a0559d9730bcc8d4ee4e8dd",
+      "hosted_last_rendered": "2026-09-30T23:24:52+00:00",
       "hosted_path": "course1/assignments/get-underneath-three-to-five-walk-through.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/get-underneath-three-to-five-walk-through.html",
-      "last_pushed": "2026-09-30T20:00:24+00:00",
+      "last_pushed": "2026-09-30T23:24:52+00:00",
       "local_path": "course1/sprints/sprint-14/get-underneath-three-to-five-walk-through.md",
       "position": 4,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "ae10eef1a4d1d2b76964c0df441259ad2ab3f882"
+      "source_commit": "9abb957c3f9310662aec9225ac44d3f74a9708aa"
     },
     "course1-sprints-sprint-14-introduction-find-the-problem-worth-solving": {
       "artifact_id": "course1-sprints-sprint-14-introduction-find-the-problem-worth-solving",
@@ -1599,5 +1599,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-30T20:15:59+00:00"
+  "last_sync": "2026-09-30T23:24:52+00:00"
 }
