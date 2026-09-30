@@ -21,8 +21,8 @@ guided_assignment:
   version: '2.0'
   purpose: Test and widen your stakeholder map with AI, then decide yourself what changes
     and who you talk to first.
-  builds_on: Bring the Stakeholder Map you just submitted, and the AI chat you already
-    use.
+  builds_on: Bring the Stakeholder Map you just submitted, your Problem Frame, and the
+    AI chat you already use.
   standing_instruction: Own your progress · 0 points. Submit to complete this module
     requirement.
   tasks:
@@ -44,7 +44,7 @@ AI can spot the need you are guessing at. But it cannot know that your account l
 
 **The Dojo Flow**
 
-You know this rhythm from Sprint 1. Same four steps, in your own AI chat:
+You know this rhythm from Sprints 1 and 2. Same four steps:
 
 1. **Bring what you already wrote.** Never arrive empty-handed.
 2. **Test it.** AI pokes holes; it does not fix them.
@@ -53,15 +53,19 @@ You know this rhythm from Sprint 1. Same four steps, in your own AI chat:
 
 You have already done step 1: you arrived with a map. Steps 2 to 4 happen below, with one extra beat (polishing your questions) sitting between widening and choosing.
 
-**Which AI, and the rules**
+**Start in your Dojo**
 
-Use any AI chat you already have (ChatGPT, Claude, or Gemini). Do not paste confidential workplace, client, education, patient, or personal details. De-identify details and keep sensitive information out of the prompt.
+Open your Dojo and say: "Walk me through the Sprint 3 Dojo Lab: test, widen, choose." Then paste your Stakeholder Map and your Problem Frame. Your Dojo knows this activity and will lead you through the four steps below, one at a time. Use the sections below to follow along.
+
+*More help: if your Dojo is not set up yet.* Use any AI chat you already have (ChatGPT, Claude, or Gemini) and paste the prompt in each section below, in order.
+
+Whichever you use, do not paste confidential workplace, client, education, patient, or personal details. De-identify details and keep sensitive information out of the prompt.
 
 One rule holds for the whole activity. **Your map stays in your words.** AI may point at a field, and you rewrite it. If you find yourself pasting its sentences into your map, stop and write the sentence yourself.
 
 ## 1. Test your map
 
-Paste this prompt, followed by your map:
+Without a Dojo, paste this prompt, followed by your map:
 
 ```text
 I am going to paste a stakeholder map for a real problem I am
@@ -124,7 +128,7 @@ Then rewrite the weak ones yourself. Use the Stakeholder Map self-check: ask abo
 
 ## 4. Choose: confirm who you talk to first
 
-Look again at the person you named as your first choice, and your backup. Does the testing change who you should talk to first? If a new stakeholder surfaced in step 2, or an assumption you thought was safe turned out to be the risky one, your first choice may have moved.
+Look again at the person you named as your first choice, and your backup. Does the testing change who you should talk to first? If a new stakeholder surfaced in step 2, or an assumption you rated low risk turned out to be high risk, your first choice may have moved.
 
 Confirm or change it now, then go and make contact. The Stakeholder Conversation gives you three days before you follow up and five before you switch to your backup, so the sooner you send the ask, the more of this sprint you have left to act on what you hear.
 
