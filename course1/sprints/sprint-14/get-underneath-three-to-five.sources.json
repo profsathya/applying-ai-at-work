@@ -4,7 +4,7 @@
   "packet_sha256": "cb1be55506b7eb7abbbf854e758571c0323f94b7257fbea776544634f7677877",
   "map_sha256": "e27702ee58b00c208e435240ff73785c72cbb9140453947366e279742297f0c4",
   "body_sha256": "3ab0057e09680d654faaec432faccf4b9e8ed9c9fa581f7711c1054ccee39bef",
-  "frontmatter_sha256": "41528431a045e77dc271732b8e26fc471b495848a0e75ede18cdfb434b613b4e",
+  "frontmatter_sha256": "abbb895ddaeaaa58871441a0d661667eaa3c654071bcbd0ce99ced64a1e88fe5",
   "parts": [
     {
       "ref": "d-bb7cd50440dd3015:word/document.xml/94",

@@ -31,7 +31,7 @@ guided_assignment:
     - State who lacks or must redo what in each gap, rather than only describing a
       process.
   presentation: reading
-publish: true
+publish: false
 source_provenance: get-underneath-three-to-five.sources.json
 ---
 

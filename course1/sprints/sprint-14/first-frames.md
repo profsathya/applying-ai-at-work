@@ -60,7 +60,7 @@ guided_assignment:
     criteria:
     - If you include Frame 5, use the same complete seven-part standard as Frame 1.
   presentation: reading
-publish: true
+publish: false
 source_provenance: first-frames.sources.json
 ---
 

@@ -591,7 +591,7 @@ guided_assignment:
         example: I do not know who owns the handover process, if anyone. Nobody obvious to
           ask. Start with the account lead.
     criteria: *id001
-publish: false
+publish: true
 ---
 
 # First frames

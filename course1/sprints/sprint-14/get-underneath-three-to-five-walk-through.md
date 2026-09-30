@@ -135,7 +135,7 @@ guided_assignment:
     - Each How it works now describes what happens, not what should happen and not a fix.
     - Each cost names a person or role.
     - Each gap says who feels the cost.
-publish: false
+publish: true
 ---
 
 # Get underneath three to five
