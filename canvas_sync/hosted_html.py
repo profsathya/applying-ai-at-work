@@ -2274,6 +2274,15 @@ def _published_item_positions(manifest_path: Path, manifest: dict, state: dict) 
     return mapped
 
 
+def course_output_roots(manifest_path: Path, output_dir: Path, *, manifest: dict | None = None) -> tuple[Path, Path]:
+    """Both course HTML/assets and the separately hosted AI configurations."""
+    manifest = manifest or load_json(manifest_path)
+    config = hosted_config_from_manifest(manifest)
+    course_key = course_dir_for_manifest(manifest_path).name
+    return (course_shared_output_dir(manifest_path, output_dir, manifest=manifest),
+            output_dir / "activities" / config.path_prefix / course_key)
+
+
 def snapshot_course_outputs(course_dir: Path) -> dict[Path, bytes]:
     """Capture the complete course output, including sibling annotations/assets."""
     return {path: path.read_bytes() for path in course_dir.rglob("*") if path.is_file()}
@@ -2299,12 +2308,13 @@ def render_published_hosted_files(manifest_path: Path, output_dir: Path, files: 
     if manifest.get("canvas_publish") is False:
         return render_hosted_files(manifest_path, output_dir, files, **kwargs)
     mapped = _published_item_positions(manifest_path, manifest, kwargs.get("state") or manifest)
-    course_dir = course_shared_output_dir(manifest_path, output_dir, manifest=manifest)
-    baseline = snapshot_course_outputs(course_dir)
+    baselines = {root: snapshot_course_outputs(root) for root in
+                 course_output_roots(manifest_path, output_dir, manifest=manifest)}
     try:
         return render_hosted_files(manifest_path, output_dir, files, item_positions=mapped, **kwargs)
     except Exception:
-        restore_course_outputs(course_dir, baseline)
+        for root, baseline in baselines.items():
+            restore_course_outputs(root, baseline)
         raise
 
 

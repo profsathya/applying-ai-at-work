@@ -16,6 +16,7 @@ from canvas_sync.instance_guard import check_env_matches_instance, check_instanc
 from canvas_sync.hosted_html import (
     SHARED_OUTPUT_NAMES,
     snapshot_course_outputs,
+    course_output_roots,
     restore_course_outputs,
     artifact_hosted_output_paths,
     course_shared_output_dir,
@@ -347,11 +348,10 @@ def publish_manifest(
 ) -> dict:
     # push_artifact may render before the final sequence read. Keep the entire
     # course baseline so any course-wide render failure rolls those writes back.
-    course_dir = None
-    baseline = {}
+    baselines = {}
     if hosted_output_dir is not None and not dry_run:
-        course_dir = course_shared_output_dir(manifest_path, hosted_output_dir)
-        baseline = snapshot_course_outputs(course_dir)
+        baselines = {root: snapshot_course_outputs(root) for root in
+                     course_output_roots(manifest_path, hosted_output_dir)}
     try:
         result = _publish_manifest(
             manifest_path, state_dir, dry_run=dry_run, check_drift=check_drift,
@@ -359,15 +359,15 @@ def publish_manifest(
             hosted_only=hosted_only, only_files=only_files,
         )
     except Exception:
-        if course_dir is not None:
-            restore_course_outputs(course_dir, baseline)
+        for root, baseline in baselines.items():
+            restore_course_outputs(root, baseline)
         raise
     if any(item.get("file") in {"<hosted_html>", "<item_sequence>"}
            for item in result.get("failed", [])):
         result["hosted_commit_blocked"] = True
         result["hosted"] = None
-        if course_dir is not None:
-            result.setdefault("hosted_restored", []).extend(restore_course_outputs(course_dir, baseline))
+        for root, baseline in baselines.items():
+            result.setdefault("hosted_restored", []).extend(restore_course_outputs(root, baseline))
     return result
 
 

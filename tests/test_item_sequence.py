@@ -103,6 +103,50 @@ class ItemSequenceTests(unittest.TestCase):
             self.assertEqual(page.read_text(), "Previous release")
             self.assertFalse(new_asset.exists())
 
+    def test_partial_ai_render_restores_configs_and_removes_new_files(self):
+        from canvas_sync.hosted_html import render_published_hosted_files
+        from canvas_sync.publish_changed import publish_manifest
+        for mode in ("direct", "batch"):
+            for existing in (False, True):
+                with self.subTest(mode=mode, existing=existing), tempfile.TemporaryDirectory() as tmp:
+                    root = Path(tmp)
+                    manifest = root / "course1/manifests/production.json"
+                    write_manifest(manifest)
+                    output = root / "site"
+                    configs = output / "activities/deanza/course1"
+                    old = configs / "released.json"
+                    new = configs / "new.json"
+                    neighbor = output / "activities/deanza/course2/keep.json"
+                    neighbor.parent.mkdir(parents=True)
+                    neighbor.write_text("Other course")
+                    if existing:
+                        configs.mkdir(parents=True)
+                        old.write_text("Released configuration")
+
+                    def partial_render(*args, **kwargs):
+                        configs.mkdir(parents=True, exist_ok=True)
+                        old.write_text("Incomplete configuration")
+                        new.write_text("New configuration")
+                        raise RuntimeError("partial AI render")
+
+                    with patch("canvas_sync.hosted_html._published_item_positions", return_value={}):
+                        target = ("canvas_sync.hosted_html.render_hosted_files" if mode == "direct"
+                                  else "canvas_sync.publish_changed._publish_manifest")
+                        with patch(target, side_effect=partial_render):
+                            with self.assertRaisesRegex(RuntimeError, "partial AI render"):
+                                if mode == "direct":
+                                    render_published_hosted_files(manifest, output, [])
+                                else:
+                                    publish_manifest(manifest, root / "state", dry_run=False,
+                                                     check_drift=True, require_state=True,
+                                                     hosted_output_dir=output)
+                    if existing:
+                        self.assertEqual(old.read_text(), "Released configuration")
+                    else:
+                        self.assertFalse(old.exists())
+                    self.assertFalse(new.exists())
+                    self.assertEqual(neighbor.read_text(), "Other course")
+
     def test_both_heading_renderers_preserve_title_and_wrap_on_mobile(self):
         fm = dict(type='page', title='A long authored title', module='Sprint 1', sprint=1,
                   slug='example', points=None)

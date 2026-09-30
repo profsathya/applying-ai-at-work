@@ -29,6 +29,8 @@ sequence read restores that baseline and blocks the hosted commit, even after
 successful Canvas writes or alongside another successful course. Canvas state
 still records actual remote writes; existing workflow reconciliation handles
 content-only state when the hosted deployment is skipped. Rendering failures
-also remove newly generated files and restore sibling annotations and assets.
+also remove newly generated files and restore sibling annotations, assets, and
+AI activity configurations under `activities/<prefix>/<course>/`. Other courses
+remain untouched.
 
 Validation: `python -m unittest tests.test_item_sequence tests.test_hosted_html tests.test_publish_changed`.
