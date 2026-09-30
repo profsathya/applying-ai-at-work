@@ -18,6 +18,9 @@
 .guided-interleaved .category-card h3 { margin: 0 0 10px; padding-left: 12px; color: #315d7b; font-size: 1.05rem; border-left: 3px solid #477b9b; }
 .guided-interleaved .category-card .example-kicker { margin: 0 0 8px; }
 .guided-interleaved .category-card .example-list { margin: 8px 0 0; padding-left: 22px; }
+.guided-interleaved .example-once { margin: 16px 0 20px; padding: 16px 20px; border: 1px solid #cbd8e4; border-radius: 12px; background: #f8fafc; }
+.guided-interleaved .example-once h3 { margin: 12px 0 6px; padding-left: 12px; color: #315d7b; font-size: 1.05rem; border-left: 3px solid #477b9b; }
+.guided-interleaved .example-once .example-list { margin: 6px 0 0; padding-left: 22px; }
 .guided-interleaved .category-response { margin-top: 18px; padding-top: 16px; border-top: 1px solid #ccd5df; }
 .guided-interleaved .category-response label { display: block; font-weight: 650; }
 .guided-interleaved textarea { display: block; width: 100%; min-height: 132px; margin: 7px 0; padding: 12px; color: #1a1a1a; font: inherit; border: 1px solid #8294a7; border-radius: 5px; background: #fff; resize: vertical; }

@@ -47,6 +47,23 @@ def dojo_frontmatter():
 
 
 class GuidedAssignmentTests(unittest.TestCase):
+    def test_brainstorm_interleaved_example_once_moves_examples_above_cards(self):
+        path = ROOT / 'course1/sprints/sprint-15/brainstorm-your-list-ai-guided-activity.md'
+        fm, body = parse_frontmatter(path)
+        fm['guided_assignment']['example_placement'] = 'once'
+        rendered = render_guided_body(fm, markdown_body_to_html(body))
+        block = re.search(r'<div class="category-example example-once">(.*?)</div>\s*<article', rendered, re.S)
+        self.assertIsNotNone(block)
+        for phrase in ('Account handovers always get dropped', 'Groceries run out midweek and somebody makes a second trip',
+                       'Volunteer shift sign-ups happen across three group texts'):
+            self.assertIn(phrase, block.group(1))
+            self.assertEqual(rendered.count(phrase), 1)
+        for key in ('work', 'home', 'other'):
+            card = re.search(rf'<article class="category-card" data-category-card="{key}">(.*?)</article>', rendered, re.S)
+            self.assertNotIn('category-example', card.group(1))
+            self.assertIn(f'data-entry="{key}"', card.group(1))
+        self.assertLess(rendered.index('example-once'), rendered.index('data-category-card="work"'))
+
     def test_brainstorm_interleaved_keeps_original_body_and_canvas_assignment_identity(self):
         path = ROOT / 'course1/sprints/sprint-15/brainstorm-your-list-ai-guided-activity.md'
         source_path = ROOT / 'course1/sprints/sprint-14/brainstorm-your-list.md'
