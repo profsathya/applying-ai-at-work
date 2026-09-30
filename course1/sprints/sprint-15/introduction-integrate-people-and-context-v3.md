@@ -18,6 +18,13 @@ publish: true
 
 A Problem Frame gets stronger when it meets real people and real constraints. In this sprint, you will identify the stakeholders connected to your problem across four relationships: **Affected, Influential, Responsible for a constraint, Positioned to challenge your frame**. You will draft a stakeholder map that shows what you actually know versus what you are assuming, test and widen it with AI, and then have at least one real validation conversation to test your Problem Frame against a person's input. Based on what you learn, you may revise your Problem Frame.
 
+## What you need for this sprint
+
+- Your Problem Frame as you left it at the end of Sprint 2, with "Last updated: Sprint 2" at the top. Open it up. Part 6, with its Status column, is where this sprint starts.
+- Your Dig into your assumptions tables. The questions you wrote there become your first stakeholder questions.
+- Your verdict. If you moved to your runner-up, bring that new frame instead.
+- A place to keep your Sprint 3 work with your other work.
+
 AI is your thinking partner throughout, but you own the goal, the data, and the final judgment calls. Start with your own thinking first. Then use AI to challenge it, identify blind spots, or prepare for conversations with real people that AI can't replace. Your job is to decide what to keep, reject, revise, or verify. The thinking is yours.
 
 ![Four colleagues listen and compare perspectives around a shared workflow at a meeting table.](assets/stakeholder-listening-conversation.png)
