@@ -20,7 +20,7 @@ guided_assignment:
     it.
   builds_on: Bring your calendar, your to-do list, and your inbox. Write your own list first;
     AI feedback reads only what you wrote.
-  standing_instruction: Own your progress · 0 points. Submit to complete this module requirement.
+  standing_instruction: Own your progress · 0 points. Submit your list to complete this module requirement.
   feedback_endpoint: https://cti-course-ai.netlify.app/.netlify/functions/brainstorm-your-list
   feedback_protocol: brainstorm-list-v1
   example_placement: once
