@@ -143,7 +143,7 @@ publish: true
 
 - The list you submitted in **Brainstorm your list**.
 
-You will do your work within Canvas.
+You will do your work within Canvas. Write it yourself first. Then, if you want it, select AI feedback beside a row; it reads only what you wrote there.
 
 The goal of this activity is to pick three to five situations from your list and describe each in enough detail so that the gap between how things work now and what better would look like starts to show.
 

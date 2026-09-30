@@ -101,3 +101,5 @@ Add the questions left after Part 6, such as who owns the process or whether som
 Start from Part 5 and ask why the changed state matters until you reach a goal nobody involved would dispute. Then make it specific enough to point to this problem rather than any similar problem. Say nothing about what to build.
 
 Keep every draft exactly as submitted. The Reflection compares these drafts with your final Problem Frame.
+
+This page has been replaced by the First frames Canvas Walkthrough, which sits directly below it in the module.

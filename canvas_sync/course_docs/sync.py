@@ -126,6 +126,20 @@ def verify_response(payload, response, document_id):
                 if message == 'Error: ' + reason:
                     code += ':' + reason
                     break
+            diagnostic = response.get('diagnostic')
+            if isinstance(diagnostic, dict):
+                allowed = {
+                    'phase': {'version_check', 'open_document', 'resolve_tabs', 'hash_existing',
+                              'backup', 'render', 'save', 'open_readback', 'verify_readback',
+                              'restore', 'save_versions', 'unknown'},
+                    'kind': {'Error', 'TypeError', 'RangeError', 'Exception', 'unknown'},
+                    'reason': set(reasons) | {'empty_text', 'service_quota', 'document_service',
+                                              'document_access', 'unknown'},
+                }
+                for key, values in allowed.items():
+                    value = diagnostic.get(key)
+                    if isinstance(value, str) and value in values:
+                        code += ' ' + key + '=' + value
         raise ValueError('Document endpoint rejected update: ' + code)
     if not document_id or response.get("document_id") != document_id:
         raise ValueError("Receiver returned an unexpected document")

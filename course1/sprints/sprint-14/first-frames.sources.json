@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-sprint-14-first-frames",
   "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
   "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
-  "body_sha256": "668e23703aabe176ee90ef171e216f13eb45681616fc5a1828c27a23f5b35112",
+  "body_sha256": "e145b0a425efb43bdd4807f936cff1ffe00b11f2acdb1731ed14013f093b3fb4",
   "frontmatter_sha256": "471f159c664816b593c81fe80a1c8244a41a2793ffac2bd230d56a6d639b045d",
   "parts": [
     {
@@ -55,6 +55,11 @@
         "d-bb7cd50440dd3015:word/document.xml/219",
         "d-bb7cd50440dd3015:word/document.xml/220"
       ]
+    },
+    {
+      "kind": "new",
+      "markdown": "This page has been replaced by the First frames Canvas Walkthrough, which sits directly below it in the module.",
+      "reason": "Retirement note: the page is unpublished and replaced by the Canvas Walkthrough (Sprint 1 rebuild, 30 September 2026)."
     }
   ],
   "metadata_decisions": [
