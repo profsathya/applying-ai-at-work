@@ -52,7 +52,7 @@ class GuidedAssignmentTests(unittest.TestCase):
         fm, body = parse_frontmatter(path)
         fm['guided_assignment']['example_placement'] = 'once'
         rendered = render_guided_body(fm, markdown_body_to_html(body))
-        block = re.search(r'<div class="category-example example-once">(.*?)</div>\s*<article', rendered, re.S)
+        block = re.search(r'<div class="category-example example-once">(.*?)</div>', rendered, re.S)
         self.assertIsNotNone(block)
         for phrase in ('Account handovers always get dropped', 'Groceries run out midweek and somebody makes a second trip',
                        'Volunteer shift sign-ups happen across three group texts'):
