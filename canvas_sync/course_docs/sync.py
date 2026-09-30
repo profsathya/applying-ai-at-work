@@ -116,6 +116,16 @@ def verify_response(payload, response, document_id):
         }
         error = response.get('error')
         code = error if isinstance(error, str) and error in known_errors else 'unknown'
+        if code == 'document_update_failed':
+            # Apps Script wraps its fixed internal errors in this generic code.
+            # Match complete known messages; never expose arbitrary exception text.
+            reasons = ('missing_source_generation', 'invalid_section',
+                       'stale_or_conflicting_generation', 'document_readback_mismatch')
+            message = response.get('message')
+            for reason in reasons:
+                if message == 'Error: ' + reason:
+                    code += ':' + reason
+                    break
         raise ValueError('Document endpoint rejected update: ' + code)
     if not document_id or response.get("document_id") != document_id:
         raise ValueError("Receiver returned an unexpected document")
