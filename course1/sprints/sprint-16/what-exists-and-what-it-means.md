@@ -7,7 +7,7 @@ sprint: 16
 week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 9
-points: 20
+points: 0
 submission_type: text_entry
 delivery_mode: guided_assignment
 completion_requirement: must_submit
@@ -17,7 +17,7 @@ guided_assignment:
     you kept, and what you found when you looked.
   builds_on: Bring your table as it stands after the Dojo Lab, and what you found where you
     looked.
-  standing_instruction: Submit both responses together as one Canvas text entry · 20 points.
+  standing_instruction: Own your progress · 0 points. Submit both responses together as one Canvas text entry to complete this module requirement.
   tasks:
   - id: the-table
     kind: response

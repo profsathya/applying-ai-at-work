@@ -7,7 +7,7 @@ sprint: 16
 week: 1
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 3
-points: 0
+points: 50
 submission_type: file_upload
 delivery_mode: guided_assignment
 completion_requirement: must_submit
@@ -22,7 +22,7 @@ guided_assignment:
   purpose: Walk every assumption in your Problem Frame and rate how risky each one is to your
     problem.
   builds_on: Bring your Problem Frame from Sprint 1. Work without AI on this page.
-  standing_instruction: Own your progress · 0 points. Submit to complete this module requirement,
+  standing_instruction: 50 points. Submit this walkthrough as one Word document,
     and keep the exported file for week 2.
   tasks:
   - id: the-walk
