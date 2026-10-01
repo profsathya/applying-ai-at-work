@@ -30,8 +30,6 @@ guided_assignment:
   document_prefix:
   - 'Complete this report across the conversation: Section A before, Section B during,
     Section C within five minutes, and Section D the same day or next.'
-  - Submit this report together with the JSON response file from the Part 1 AI exchange
-    and your updated Stakeholder Map.
   final_check:
   - Section A is complete and carried over from your Stakeholder Map.
   - Your three validation questions are sharpened, not just copied.
@@ -255,10 +253,10 @@ guided_assignment:
     rows:
     - id: row-1
       cells:
-      - text: Revised Problem Frame, or an honest statement that it held
+      - text: What changed in your Problem Frame, and why, or an honest statement that it held
       - text:   
         response: true
-      label: Revised Problem Frame, or an honest statement that it held
+      label: What changed in your Problem Frame, and why, or an honest statement that it held
     - id: row-2
       cells:
       - text: What moved from Inferred to Confirmed on your map
@@ -278,12 +276,34 @@ guided_assignment:
       or replace the participant’s judgment.
     instruction_section: D. Afterward, same day or next
     feedback_enabled: true
+  - id: frame-update
+    kind: table
+    prompt: Update your Problem Frame
+    columns:
+    - id: column-1
+      label: Field
+    - id: column-2
+      label: Your answer
+    rows:
+    - id: row-1
+      cells:
+      - text: Your Problem Frame, all seven parts, brought up to date.
+      - text:   
+        response: true
+      label: Your Problem Frame, all seven parts, brought up to date.
+    header_rows: 0
+    criteria:
+    - All seven parts of your Problem Frame, brought up to date.
+    instruction_section: Update your Problem Frame
+    feedback_enabled: false
+    feedback_omission_reason: The updated Problem Frame is pasted whole for the report;
+      no AI feedback button is needed.
 source_provenance: stakeholder-conversation-canvas-walkthrough.sources.json
 ---
 
 # Stakeholder Conversation Canvas Walkthrough
 
-Now it's time to test your Problem Frame against an actual stakeholder, not AI. This activity has four parts: preparing for the conversation, setting it up, having it, and documenting what you learned. Bring your current Stakeholder Map and Problem Frame. You will submit the report, your updated map, and the JSON file from the AI question exchange in Part 1.
+Now it's time to test your Problem Frame against an actual stakeholder, not AI. This activity has four parts: preparing for the conversation, setting it up, having it, and documenting what you learned. Bring your current Stakeholder Map and Problem Frame. You will submit this report, with your updated Problem Frame in it.
 
 Write before requesting optional AI feedback. It sees only the selected row, cannot know what happened in your workplace, and cannot supply evidence. Use roles or initials in feedback requests, leave out confidential details, and keep a path through every step without feedback. You decide what to revise.
 
@@ -321,8 +341,6 @@ Use the deeper AI guidance button for more targeted help in refining your three 
 
 **3. Rewrite the weak ones yourself**, and update the table below.
 
-When you're done working with the AI, copy or download the JSON response file from the activity. You will submit it together with your report at the end.
-
 The row feedback in this walkthrough is optional and narrower than the Part 1 exchange. It checks only the question or learning statement you choose, so it cannot judge whether all three questions work together. If feedback is unavailable, use the criteria above and continue.
 
 ## B. During the meeting
@@ -357,10 +375,17 @@ Within five minutes of finishing, fill in Section C, while it is still fresh. A 
 
 Complete Section D of your report, the same day or the next. This is the only section that asks for new thinking rather than a record of what happened. A short paragraph for each. This is the section that asks for your thinking, so give it room.
 
-Two things to hold on to as you write it. Update your Problem Frame on evidence, not on your own interpretation of what you heard. If the conversation fully confirmed your original frame, report that honestly. A clear confirmation is a real and valuable result. The same holds the other way: if the person told you the problem is not what you framed, or not there at all, say so. A supported "my frame did not hold" is also a valid result.
+If the conversation fully confirmed your original frame, report that honestly. A clear confirmation is a real and valuable result. The same holds the other way: if the person told you the problem is not what you framed, or not there at all, say so. A supported "my frame did not hold" is also a valid result.
 
-In your Problem Frame, update: the **Status** column in **Your assumptions** (Part 6) for every assumption this conversation tested; **The problem** (Part 2), **Who is affected** (Part 3a), or **How it is handled today** (Part 4a) if what you heard changed them; **What you do not know yet** (Part 7); and **Last updated** at the top: Sprint 3 and the date. Mark an assumption confirmed if this conversation settled it. If it didn't, it stays unverified, the same way it stays Inferred on your map.
+## Update your Problem Frame
 
-Then open your Stakeholder Map and make those changes in it. Update the status of every field the conversation settled, correct anything that turned out to be wrong, and add any stakeholder this person made you aware of. You submit the updated map with your report.
+Now bring your Problem Frame up to date with what you heard. Update it on evidence, not on your own read of what you heard. The parts that will have updates are at least:
 
-Download this report as a Word document below. In Canvas, select **Start Assignment**, attach **three files** (the Part 1 AI JSON response, this completed report, and the updated Stakeholder Map), then select **Submit Assignment**. Downloading or saving a browser draft does not submit them.
+1. **Part 6, your assumptions.** In the Status column, mark each assumption this conversation tested: confirmed if it settled it, unverified if it did not.
+2. **Parts 2, 3a, or 4a,** only if what you heard changed them.
+3. **Part 7, what you do not know yet.**
+4. **Last updated,** at the top: Sprint 3 and the date.
+
+You can change anything in your Problem Frame if your thinking has changed. Then copy and paste its entire contents into the box below.
+
+Then update your Stakeholder Map the same way. Keep it for your own work; you do not submit it here.
