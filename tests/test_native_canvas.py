@@ -11,14 +11,16 @@ NATIVE = {'hosted_html': {'native_canvas_navigation': True}}
 
 class NativeCanvasTests(unittest.TestCase):
     def test_only_navigation_is_removed(self):
-        controls = '<textarea id="answer"></textarea><button id="walk-download">Download as Word document</button><a href="https://docs.google.com/document/d/template/copy">Template</a><script>saveDraft();</script>'
+        controls = '<textarea id="answer"></textarea><button id="walk-download">Download as Word document</button><a href="https://docs.google.com/document/d/template/copy">Template</a><script>saveDraft();</script><p>Attach your Week 7 Word file and select Submit Assignment.</p>'
         old = '<html><head></head><body>' + controls + '<a hidden data-canvas-only data-canvas-href="https://cti-courses.instructure.com/courses/180/assignments/1">Open the Canvas assignment</a><a href="help.html" data-canvas-href="https://cti-courses.instructure.com/courses/180/pages/help">Help</a></body></html>'
         new = apply_native_canvas(old, NATIVE)
         self.assertIn(controls, new)
         self.assertIn('<a href="help.html">Help</a>', new)
         self.assertNotIn('cti-courses', new)
         self.assertNotIn('Open the Canvas assignment', new)
-        self.assertIn('Submit work in the Canvas activity', new)
+        self.assertNotIn('Submit work in the Canvas activity', new)
+        self.assertNotIn('native-canvas-notice', new)
+        self.assertIn('html.native-canvas-context .back-link', new)
         self.assertEqual(apply_native_canvas(new, NATIVE), new)
         self.assertEqual(apply_native_canvas(old, {}), old)
 
