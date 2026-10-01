@@ -1572,17 +1572,17 @@
       "canvas_payload_hash": "caec83e924b5b6718fe94b64c86dc7bd681c865d55362a7ba320412bf780e594",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "3bf8445758243566f4ef97d44e11a4086015766372b8364d7a991273d927bbc6",
+      "content_hash": "b7e67eeffa9b37aa58e7776e23298190ec57990831fed23e2ef0a8824eaf1dbd",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "f6ae0b710179eda3bb28d0ab9e0336195ab434d6857c60ca3a6b8802ea476c68",
-      "hosted_last_rendered": "2026-09-30T05:53:41+00:00",
+      "hosted_hash": "99b5cdbcdbb2be534f162c43956443ec7c5805965646593d411fa0b30ec4ab29",
+      "hosted_last_rendered": "2026-10-01T03:11:04+00:00",
       "hosted_path": "course1/assignments/stakeholder-conversation-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/stakeholder-conversation-canvas-walkthrough.html",
-      "last_pushed": "2026-09-30T05:53:41+00:00",
+      "last_pushed": "2026-10-01T03:11:04+00:00",
       "local_path": "course1/sprints/sprint-16/stakeholder-conversation-canvas-walkthrough.md",
       "position": 9,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "914e73b40603ab850e8c33984bc74b262056eed3"
+      "source_commit": "0c22bdad2c2a2feaa3594727817439d2f571fb0a"
     },
     "course1-stakeholder-map-canvas-walkthrough": {
       "artifact_id": "course1-stakeholder-map-canvas-walkthrough",
@@ -1613,5 +1613,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-01T02:22:41+00:00"
+  "last_sync": "2026-10-01T03:11:04+00:00"
 }
