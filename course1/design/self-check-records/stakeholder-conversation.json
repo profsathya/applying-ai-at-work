@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "id": "stakeholder-conversation",
+  "source": "sprint-3-self-checks.md",
+  "total": 50,
+  "passing": 35,
+  "blank_rung": "1",
+  "criteria": [
+    {
+      "id": "1",
+      "full": {
+        "text": "All five fields in Section A are answered, including one assumption the conversation will test.",
+        "points": 5
+      },
+      "3": {
+        "text": "Three or four fields in Section A are answered.",
+        "points": 3
+      },
+      "1": {
+        "text": "One or two fields in Section A are answered.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "2",
+      "full": {
+        "text": "Three questions are written, each with what the student hopes to learn.",
+        "points": 4
+      },
+      "3": {
+        "text": "Two questions are written, each with what the student hopes to learn.",
+        "points": 3
+      },
+      "1": {
+        "text": "One question is written, with what the student hopes to learn.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "3",
+      "full": {
+        "text": "All three questions ask about an experience, a decision, or a tradeoff, not the stakeholder's opinion of the student's idea.",
+        "points": 5
+      },
+      "3": {
+        "text": "Two of the three questions ask about an experience, a decision, or a tradeoff.",
+        "points": 4
+      },
+      "1": {
+        "text": "One of the three questions asks about an experience, a decision, or a tradeoff.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "4",
+      "full": {
+        "text": "All three rows in Section B are answered, using the stakeholder's words or a close paraphrase.",
+        "points": 6
+      },
+      "3": {
+        "text": "Two rows in Section B are answered, using the stakeholder's words or a close paraphrase.",
+        "points": 4
+      },
+      "1": {
+        "text": "One row in Section B is answered, using the stakeholder's words or a close paraphrase.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "5",
+      "full": {
+        "text": "Section B keeps what the stakeholder said separate from the student's own interpretation.",
+        "points": 4
+      },
+      "3": {
+        "text": "Section B mostly records what the stakeholder said, with some interpretation mixed in.",
+        "points": 3
+      },
+      "1": {
+        "text": "Section B is mostly the student's interpretation.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "6",
+      "full": {
+        "text": "All four rows in Section C are answered.",
+        "points": 4
+      },
+      "3": {
+        "text": "Two or three rows in Section C are answered.",
+        "points": 3
+      },
+      "1": {
+        "text": "One row in Section C is answered.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "7",
+      "full": {
+        "text": "What the stakeholder confirmed and what they challenged each point to something recorded in Section B.",
+        "points": 3
+      },
+      "3": {
+        "text": "One of the two points to something recorded in Section B.",
+        "points": 2
+      },
+      "1": {
+        "text": "Neither points to something recorded in Section B.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "8",
+      "full": {
+        "text": "Section D says what changed in the Problem Frame and why, or says it held and why.",
+        "points": 5
+      },
+      "3": {
+        "text": "Section D says what changed or that the frame held, but gives no reason.",
+        "points": 3
+      },
+      "1": {
+        "text": "Section D says something changed but does not say what.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "9",
+      "full": {
+        "text": "Section D names what moved from Inferred to Confirmed (or says nothing moved) and what still needs validation.",
+        "points": 4
+      },
+      "3": {
+        "text": "Section D answers one of the two.",
+        "points": 3
+      },
+      "1": {
+        "text": "Section D answers neither clearly.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "10",
+      "full": {
+        "text": "All seven parts of the Problem Frame are included and reflect what Section D says changed.",
+        "points": 10
+      },
+      "3": {
+        "text": "Four to six parts are included, or the frame does not show the change named in Section D.",
+        "points": 7
+      },
+      "1": {
+        "text": "Three or fewer parts are included.",
+        "points": 2
+      },
+      "rank": null,
+      "tag": null
+    }
+  ],
+  "gate": {
+    "rule": null,
+    "failure_grade": null
+  },
+  "grading_note": "Read for meaning. Score each criterion once across the submission set. A blank part receives its criterion’s 1 rung. Cite the part and frame or table for every below-full judgment.",
+  "open_questions": [
+    "Assign unique ranks and quality tags.",
+    "Review full-line counts, compound criteria, learner-facing rung wording and set thresholds without silently rewriting them.",
+    "Decide whether a core-absence gate applies.",
+    "Decide the numeric grade on gate failure; do not infer zero, a cap, or a floor.",
+    "Revise provisional rung descriptions after the first batch."
+  ]
+}

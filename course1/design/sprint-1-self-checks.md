@@ -1,10 +1,10 @@
 ---
-purpose: Draft Self-checks for the two 50-point Sprint 1 items, First frames and the Problem Frame, in Sathya's Self-check shape (course-wide list items 39 and 43), for Leslie to edit; the 5-line goes on the page, the 3 and 1 rungs stay in this record for graders and feedback comments
-status: v0.2, 1 October 2026, five lines per item (Leslie, 30 September: closer to five, quality over completion)
+purpose: Draft Self-checks for the two 50-point Sprint 1 items, First frames and the Problem Frame, in Sathya's Self-check shape (course-wide list items 39 and 43), for Leslie to edit; the full-points lines go on the page, the 3 and 1 rungs stay in this record for graders and feedback comments
+status: reconciliation draft, 1 October 2026; First frames follows the settled six-line guide example; Problem Frame remains an author draft
 depends_on: course-wide-list.md (items 39, 41, 43); Common-Curriculum skills/writing-assignments/references/rules.md (Criteria for success, 27 September); sprint-1-working-draft-v1.md (v1.4); course1/sprints/sprint-14/first-frames-walk-through.md; course1/sprints/sprint-14/problem-frame.md
 ---
 
-# Sprint 1 Self-checks, v0.2
+# Sprint 1 Self-checks, reconciliation draft
 
 ## The shape, from Sathya's rules (27 September)
 
@@ -15,27 +15,28 @@ depends_on: course-wide-list.md (items 39, 41, 43); Common-Curriculum skills/wri
 
 What the renderer offers today: per-task criteria ("What to check in your work", collapsed under each frame) and Melisa's new page-level `final_check` block (PR #167, an open list directly before "Submit your work in Canvas"). Neither carries points or checkboxes; points can be written into the line text. Clickable boxes whose state travels with the Word file would be a renderer feature (Jeremy, item 39).
 
-Rung labels below: 5 = full points, 3 = partial, 1 = minimal. Priority: H, M, L. Tag: completeness, specificity, honesty, judgment.
+The 1 October guide supersedes the earlier shape above. Full/3/1 are rung labels, not literal points. First frames is reconciled below; Problem Frame retains its draft weights and text until authors supply exact rung points and unique numeric ranks. Its tied H priorities are unresolved. Tag: completeness, specificity, honesty, judgment.
 
 ## First frames, 50 points
 
-Submission: one Word file with three to five frame tables. Five lines: one completeness line, four quality tests. The two 12-point lines decide whether a frame is usable in Sprint 2.
+Submission: one Word file with three to five frame tables. Six lines, as settled in self-check-guide.md section 4 on 1 October. Lines 2 to 6 are judged once across the submitted frames.
 
-| # | On the page (the 5 line) | Points | 3 rung | 1 rung | Priority | Tag |
+| # | On the page (full points) | Points | 3 rung (pts) | 1 rung (pts) | Rank | Tag |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | At least three frames, every part filled or marked "I do not know yet." | 8 | Three frames, one or two parts blank without the marker. | Fewer than three frames, or a frame with most parts blank. | H | completeness |
-| 2 | Part 2 is a condition someone lives with, and Part 5 is a changed situation. Neither is a task, a fix, or a solution. | 12 | One of the two leaks a solution or a "should." | A task or a solution stated as the problem, or a solution as the fixed state. | H | judgment |
-| 3 | Each cost in Part 3b is attached to a person or role named in Part 3a. | 10 | A cost for some of the people in 3a, or people named vaguely ("the team"). | A cost with nobody attached, or none. | H | specificity |
-| 4 | Part 4 says what happens now and where it stops working, without proposing a fix. | 8 | Current handling described, the shortfall missing or a fix included. | A fix or a "should" in place of the current handling. | H | specificity |
-| 5 | Part 6 has at least four assumptions, each marked confirmed or unverified, and every unverified one names who could tell you. | 12 | Four or more assumptions, some unmarked or without a name. | Fewer than four, or none marked. | H | honesty |
+| 1 | At least three frames, every part filled or marked "I do not know yet." | 10 | Two frames, every part filled or marked. Two gives you a runner-up; three gives the Dojo Lab a real choice. (7) | One frame, or frames with most parts blank. (2) | 6 | completeness |
+| 2 | Part 2 names a gap: something going wrong for someone, in one or two sentences. | 8 | A gap is named, but either who it happens to or what goes wrong is unclear. Say both. (6) | Part 2 is a task, a complaint, or a solution, not a gap. Go back to your table and start from the gap. (2) | 1 | judgment |
+| 3 | Part 5 describes what would be different if this were fixed, and it answers the gap in Part 2. | 8 | A changed situation is described, even if a fix is named with it or it does not fully match Part 2. Describe the day after this gap is closed. (6) | Part 5 is a solution, such as "build an app," or is missing. Describe what would be different, not how. (2) | 3 | judgment |
+| 4 | Part 3a names all the people or roles who feel this, and Part 3b names a cost, in time, money, mistakes, or stress, for each of them. | 8 | Only one person or role is named, or some named people have no cost. A gap usually touches more than one person: who else feels it, and what does it cost them? (6) | One vague group, such as "everyone," or a cost with nobody attached. Start from who feels this and say what each one loses. (2) | 4 | specificity |
+| 5 | Part 4 names how people deal with this now and says where that stops working well enough. | 6 | The current habit, process, or workaround is there, but not where it falls short. Say what it does not cover. (4) | A fix or a "should" instead of what people do today. Describe the current habit first. (1) | 5 | specificity |
+| 6 | Part 6 lists at least four assumptions, each naming the part it comes from and who could tell you. | 10 | Four assumptions, but some do not say which part or who could tell you. Each line needs both: that is how Sprint 2 knows where to look. (7) | Fewer than four, or none names who could tell you. Reread parts 2 to 5 and mark every sentence you have not seen yourself. (2) | 2 | honesty |
 
-Total: 50.
+Total: 50. Passing: 35. Partial on every line: 36.
 
-Parts 1 and 7 no longer score on their own. Line 1 covers their presence; their quality shows up in the Dojo Lab, not in a grade.
+Gate: fewer than two frames does not pass. The numeric grade on gate failure remains undecided.
 
-**What makes it strong.** The cost in 3b is the thing Part 5 would change. The assumptions in Part 6 are the sentences in 2 to 5 that are not from direct observation. Three frames that differ in kind (a process, a habit, a decision) are stronger than three versions of one situation.
+Grading note. Read for meaning. A blank part receives the line's 1 rung, not zero on the item. Cite the part and frame for every below-full judgment.
 
-**Grading, in the open.** Points per line as above. The Dojo Lab tests these frames next, so the grader's comment on any line at the 3 or 1 rung is the same nudge the Dojo would give: which part, which line, what is missing.
+**What makes it strong.** The cost in 3b is the thing Part 5 would change. The assumptions in Part 6 are the sentences in 2 to 5 that are not from direct observation.
 
 ## Problem Frame, 50 points
 
@@ -55,7 +56,7 @@ Total: 50.
 
 **Grading, in the open.** Points per line as above. This frame is what Sprint 2 works on, so a Part 6 at the 3 rung gets the comment "which lines are unverified, and who could tell you," which is the Sprint 2 opening move.
 
-## Open for Leslie
+## Earlier open questions for Leslie (First frames weights and six-line shape now settled by the guide)
 
 1. The weights: the two 12-point lines in each list are the ones Sprint 2 depends on. Say if any line feels too heavy or too light.
 2. Parts 1 and 7 of a frame no longer carry points on their own. If that undersells Part 1 (the goal, written last), it could take 4 from line 1.

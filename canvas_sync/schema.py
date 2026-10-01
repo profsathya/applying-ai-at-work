@@ -125,6 +125,18 @@ def validate_artifact(md_path: Path) -> list[str]:
     except jsonschema.ValidationError as e:
         errors.append(f"{md_path}: {e.message} (at {'/'.join(str(p) for p in e.path)})")
 
+    guided = frontmatter.get('guided_assignment')
+    reference = guided.get('self_check_record') if isinstance(guided, dict) else None
+    if reference is not None:
+        from canvas_sync.self_check import load_record
+        try:
+            record = load_record(reference)
+            if frontmatter.get('points') != record['total']:
+                errors.append(f'{md_path}: self-check total must match assignment points')
+            if frontmatter.get('guided_assignment', {}).get('presentation') != 'walkthrough':
+                errors.append(f'{md_path}: self_check_record currently requires walkthrough presentation')
+        except (ValueError, OSError) as exc:
+            errors.append(f'{md_path}: self-check: {exc}')
     errors.extend(validate_ai_activity_delivery(md_path, frontmatter))
     errors.extend(validate_guided_assignment(md_path, frontmatter, body))
     from canvas_sync.walkthrough_feedback_check import check_registration
@@ -481,6 +493,12 @@ def validate_all() -> list[str]:
     artifact_ids: dict[str, Path] = {}
 
     for course_path in discover_course_dirs():
+        from canvas_sync.self_check import load_record
+        for record_path in sorted((course_path / 'design' / 'self-check-records').glob('*.json')):
+            try:
+                load_record(record_path.relative_to(REPO_ROOT).as_posix())
+            except (ValueError, OSError) as exc:
+                errors.append(f'{record_path}: {exc}')
         md_pattern = str(course_path / "sprints" / "sprint-*" / "**" / "*.md")
         for md_file in glob.glob(md_pattern, recursive=True):
             md_path = Path(md_file)

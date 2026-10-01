@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "id": "first-frames",
+  "source": "self-check-guide.md#4-a-worked-example",
+  "total": 50,
+  "passing": 35,
+  "blank_rung": "1",
+  "criteria": [
+    {
+      "id": "1",
+      "full": {
+        "text": "At least three frames, every part filled or marked \"I do not know yet.\"",
+        "points": 10
+      },
+      "3": {
+        "text": "Two frames, every part filled or marked. Two gives you a runner-up; three gives the Dojo Lab a real choice.",
+        "points": 7
+      },
+      "1": {
+        "text": "One frame, or frames with most parts blank.",
+        "points": 2
+      },
+      "rank": 6,
+      "tag": "completeness"
+    },
+    {
+      "id": "2",
+      "full": {
+        "text": "Part 2 names a gap: something going wrong for someone, in one or two sentences.",
+        "points": 8
+      },
+      "3": {
+        "text": "A gap is named, but either who it happens to or what goes wrong is unclear. Say both.",
+        "points": 6
+      },
+      "1": {
+        "text": "Part 2 is a task, a complaint, or a solution, not a gap. Go back to your table and start from the gap.",
+        "points": 2
+      },
+      "rank": 1,
+      "tag": "judgment"
+    },
+    {
+      "id": "3",
+      "full": {
+        "text": "Part 5 describes what would be different if this were fixed, and it answers the gap in Part 2.",
+        "points": 8
+      },
+      "3": {
+        "text": "A changed situation is described, even if a fix is named with it or it does not fully match Part 2. Describe the day after this gap is closed.",
+        "points": 6
+      },
+      "1": {
+        "text": "Part 5 is a solution, such as \"build an app,\" or is missing. Describe what would be different, not how.",
+        "points": 2
+      },
+      "rank": 3,
+      "tag": "judgment"
+    },
+    {
+      "id": "4",
+      "full": {
+        "text": "Part 3a names all the people or roles who feel this, and Part 3b names a cost, in time, money, mistakes, or stress, for each of them.",
+        "points": 8
+      },
+      "3": {
+        "text": "Only one person or role is named, or some named people have no cost. A gap usually touches more than one person: who else feels it, and what does it cost them?",
+        "points": 6
+      },
+      "1": {
+        "text": "One vague group, such as \"everyone,\" or a cost with nobody attached. Start from who feels this and say what each one loses.",
+        "points": 2
+      },
+      "rank": 4,
+      "tag": "specificity"
+    },
+    {
+      "id": "5",
+      "full": {
+        "text": "Part 4 names how people deal with this now and says where that stops working well enough.",
+        "points": 6
+      },
+      "3": {
+        "text": "The current habit, process, or workaround is there, but not where it falls short. Say what it does not cover.",
+        "points": 4
+      },
+      "1": {
+        "text": "A fix or a \"should\" instead of what people do today. Describe the current habit first.",
+        "points": 1
+      },
+      "rank": 5,
+      "tag": "specificity"
+    },
+    {
+      "id": "6",
+      "full": {
+        "text": "Part 6 lists at least four assumptions, each naming the part it comes from and who could tell you.",
+        "points": 10
+      },
+      "3": {
+        "text": "Four assumptions, but some do not say which part or who could tell you. Each line needs both: that is how Sprint 2 knows where to look.",
+        "points": 7
+      },
+      "1": {
+        "text": "Fewer than four, or none names who could tell you. Reread parts 2 to 5 and mark every sentence you have not seen yourself.",
+        "points": 2
+      },
+      "rank": 2,
+      "tag": "honesty"
+    }
+  ],
+  "gate": {
+    "rule": "Fewer than two frames does not pass.",
+    "failure_grade": null
+  },
+  "grading_note": "Read for meaning. Score each criterion once across the submission set. A blank part receives its criterion’s 1 rung. Cite the part and frame or table for every below-full judgment.",
+  "open_questions": [
+    "Decide the numeric grade on gate failure; do not infer zero, a cap, or a floor.",
+    "Revise provisional rung descriptions after the first batch."
+  ]
+}

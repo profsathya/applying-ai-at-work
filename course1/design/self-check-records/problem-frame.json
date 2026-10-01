@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "id": "problem-frame",
+  "source": "sprint-1-self-checks.md",
+  "total": 50,
+  "passing": 35,
+  "blank_rung": "1",
+  "criteria": [
+    {
+      "id": "1",
+      "full": {
+        "text": "Box 1 answers all four questions, with a reason against each frame you did not choose and a runner-up.",
+        "points": 10
+      },
+      "3": {
+        "text": "Three of four answered, or some frames not covered.",
+        "points": null
+      },
+      "1": {
+        "text": "One or two answered, only the chosen frame discussed.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "completeness"
+    },
+    {
+      "id": "2",
+      "full": {
+        "text": "Box 2 is the whole frame, seven parts in your own words, Part 3c blank.",
+        "points": 10
+      },
+      "3": {
+        "text": "A part missing, or a part in the Dojo's words.",
+        "points": null
+      },
+      "1": {
+        "text": "Several parts missing, or the frame summarized rather than pasted.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "completeness"
+    },
+    {
+      "id": "3",
+      "full": {
+        "text": "Every assumption in Part 6 is marked, and every unverified one names who could tell you.",
+        "points": 12
+      },
+      "3": {
+        "text": "Some lines unmarked or without a name.",
+        "points": null
+      },
+      "1": {
+        "text": "Part 6 unchanged from the first draft with unmarked lines, or empty.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "honesty"
+    },
+    {
+      "id": "4",
+      "full": {
+        "text": "Box 3 names what moved and the argument or evidence that moved it, or gives the reason nothing moved.",
+        "points": 10
+      },
+      "3": {
+        "text": "A change named without the evidence, or the Dojo's suggestion restated as the evidence.",
+        "points": null
+      },
+      "1": {
+        "text": "\"Nothing changed\" with no reason.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "honesty"
+    },
+    {
+      "id": "5",
+      "full": {
+        "text": "Box 3 names one thing the Dojo suggested that you rejected, and why.",
+        "points": 8
+      },
+      "3": {
+        "text": "A rejection with no reason.",
+        "points": null
+      },
+      "1": {
+        "text": "Missing.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "judgment"
+    }
+  ],
+  "gate": {
+    "rule": "No pasted frame does not pass.",
+    "failure_grade": null
+  },
+  "grading_note": "Read for meaning. Score each criterion once across the submission set. A blank part receives its criterion’s 1 rung. Cite the part and frame or table for every below-full judgment.",
+  "open_questions": [
+    "Assign unique ranks and exact 3/1 points; preserve existing weights and text.",
+    "Decide the numeric grade on gate failure; do not infer zero, a cap, or a floor.",
+    "Revise provisional rung descriptions after the first batch."
+  ]
+}
