@@ -412,17 +412,17 @@
       "canvas_payload_hash": "ecabb542c2ee2d9c36ffe5cc9e4c147393a91c7aee9d0a687138bf62202e9ce2",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "e7f89f36e730ced95533fa34986eaf426eb3e6226ef8edda57f0f274588ea172",
+      "content_hash": "0ac1fe96cf7a571ef983657a78e6ca6a03cdf37a31ffa4a2efbcbf56cd6c5ed0",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "cef442bec29703bb330fd4e9317f12b33d6291b21ee067595f8df75c2be5b539",
-      "hosted_last_rendered": "2026-10-01T06:15:28+00:00",
+      "hosted_hash": "8882b57e5176470e87cd84675189488c3485cb9fc0c944fa7942ad22d4864ede",
+      "hosted_last_rendered": "2026-10-01T07:03:26+00:00",
       "hosted_path": "course1/assignments/dojo-lab-test-widen-choose-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-test-widen-choose-v3.html",
-      "last_pushed": "2026-10-01T06:15:28+00:00",
+      "last_pushed": "2026-10-01T07:03:26+00:00",
       "local_path": "course1/sprints/sprint-15/dojo-lab-test-widen-choose-v3.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "811e521cdad941e290c750d9a9ea3adedf98aa43"
+      "source_commit": "f1bc55347eb3477ffdcc93ca647f62305e62c5a9"
     },
     "course1-sprints-sprint-15-introduction-integrate-people-and-context": {
       "artifact_id": "course1-sprints-sprint-15-introduction-integrate-people-and-context",
@@ -1572,17 +1572,17 @@
       "canvas_payload_hash": "caec83e924b5b6718fe94b64c86dc7bd681c865d55362a7ba320412bf780e594",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "a23deaba6bf5123ebe0b2fba6bc2369bed81115c4049024e40eff70afee2ea6e",
+      "content_hash": "4585775c7940b626e7dd1ff0a56443e7527ea715ca3a7f2598bb3a7367b96c4b",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "681942f1833f8fcccc2d24bf83ad39c469e7922d6bbc5ae7c8e12e3e98ab0c49",
-      "hosted_last_rendered": "2026-10-01T04:27:14+00:00",
+      "hosted_hash": "3efb21a1b7e2f91acaf4f791720e7a2f04464981c51f1dc39188c753b96276c1",
+      "hosted_last_rendered": "2026-10-01T07:03:32+00:00",
       "hosted_path": "course1/assignments/stakeholder-conversation-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/stakeholder-conversation-canvas-walkthrough.html",
-      "last_pushed": "2026-10-01T04:27:14+00:00",
+      "last_pushed": "2026-10-01T07:03:32+00:00",
       "local_path": "course1/sprints/sprint-16/stakeholder-conversation-canvas-walkthrough.md",
       "position": 9,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "6746bf26408c41e2f252f6ade9af5bb1da33150a"
+      "source_commit": "f1bc55347eb3477ffdcc93ca647f62305e62c5a9"
     },
     "course1-stakeholder-map-canvas-walkthrough": {
       "artifact_id": "course1-stakeholder-map-canvas-walkthrough",
@@ -1613,5 +1613,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-01T06:15:28+00:00"
+  "last_sync": "2026-10-01T07:03:32+00:00"
 }
