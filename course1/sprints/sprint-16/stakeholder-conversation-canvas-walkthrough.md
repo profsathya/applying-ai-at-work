@@ -85,7 +85,9 @@ guided_assignment:
       if nothing moved. Name the argument or evidence behind the change. Name one AI
       suggestion you rejected and give a reason.
     instruction_section: What the Dojo Lab changed
-    feedback_enabled: true
+    feedback_enabled: false
+    feedback_omission_reason: The content editor chose a self-check for this reflection;
+      no AI feedback button is needed.
   - id: meeting-plan
     kind: table
     prompt: A. Before the meeting

@@ -4,7 +4,7 @@
   "packet_sha256": "242d7920b490e1288f2d9fd8c030304f8db2a901984c7577e81a81078d610b9a",
   "map_sha256": "199d2897dff45aed7ce4e7bd1a73845180b459df18862a48b5fc1f0d843ad2f7",
   "body_sha256": "9ec33638ee2db63667006952aafe72b47f89bf2085f3635c5dead8d5bfcde030",
-  "frontmatter_sha256": "9fc3f1e41c0591ca8e87b095cebded24b704d8c5f315b0364939442880dca5b8",
+  "frontmatter_sha256": "44492d8294c216c9a7b4d1babd1a65d8babb349c98d0b5bf95e92fe208625f57",
   "parts": [
     {
       "kind": "new",
@@ -46,7 +46,7 @@
     "Version 1.1 rerenders assignment 7166 with one Word download action and Canvas Start Assignment attachment directions.",
     "2026-09-30: Sprint 2 to Sprint 3 continuity, per the content editor: Section A rows name The problem (Part 2) and the Stakeholder Map's assumption blocks; the outreach steps name the Outreach log; the JSON file is named as the AI question exchange in Part 1; Part 4 adds the 'my frame did not hold' case and lists the Problem Frame parts to update (Part 6 Status, Parts 2, 3a, 4a if changed, Part 7, Last updated). Walkthrough mechanics unchanged.",
     "2026-09-30: guided_assignment.final_check adds a display-only \"What to check in your work\" list just before the submit section; not saved, exported, or sent for AI feedback.",
-    "2026-10-01: New Step 2 \"What the Dojo Lab changed\" (dojo-changes), one row \"What changed, and why\" with optional AI feedback, moved from the Stakeholder Map per the content editor; the Part 4 sentence about leaving that paragraph at the top of the map is removed. Points, grading, and other tasks unchanged."
+    "2026-10-01: New Step 2 \"What the Dojo Lab changed\" (dojo-changes), one row \"What changed, and why\" with a self-check and no AI feedback button, moved from the Stakeholder Map per the content editor; the Part 4 sentence about leaving that paragraph at the top of the map is removed. Points, grading, and other tasks unchanged."
   ],
   "source_roles": {
     "d-92d6b91158f50fe2": {
