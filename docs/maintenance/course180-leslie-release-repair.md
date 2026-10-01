@@ -19,6 +19,11 @@ PR #202's ten-link cleanup is separate.
 - Sprint 3 Concept Check 7180 was staged unpublished on September 25. The current
   live module has this assignment published as its Concept Check. Reconcile the
   source flag to true, retaining all content, grading and the live placement.
+- Read-only export verification exposed the identical mismatch on Sprint 4
+  Concept Check7181 (item18015, module2082), published live at 08:32:04 Pacific
+  October1. It is that module's sole live Concept Check, with unchanged authored
+  content and an exactly publication-only fingerprint difference. Reconcile its
+  flag and state too; otherwise the export still fails after7180 is reconciled.
 - Get underneath 7152 is aligned. Leave its source, state and Canvas object alone.
 - `verify_walkthrough_adjacency` still called `int(None)` for intentionally retired
   original placements, after the publisher already supported those placements.
@@ -39,14 +44,14 @@ python maintenance/prepare_course180_repair.py \
 python canvas_sync/schema.py --state /tmp/new-course180-proposal/production.proposed.json
 ```
 
-The command can issue only GETs for the four instructional objects and module
+The command can issue only GETs for the five instructional objects and module
 metadata. It cannot write Canvas or read submission/user endpoints. It does not
 fetch overrides containing participant identities; any flagged override requires
 separate instructor review. It leaves the input state untouched and writes a new
 proposal plus a review token. The token identifies the exact evidence, not a
 production authorization or an apply command.
 
-The proposal checks all four exact identities, unique current placements,
+The proposal checks all five exact identities, unique current placements,
 published parent modules, matching object/item visibility, preserved grading,
 Brainstorm assessment parity, reviewed hosted hashes and unchanged instructional source.
 It accepts only the known iframe sanitizer normalization, never arbitrary wrapper
@@ -59,8 +64,8 @@ publication to adopt `publish: true` source only once a fresh object/module read
 confirms it. No hypothetical future Canvas state is marked released.
 
 The hosted hashes stored for 7149/3624 predate shared navigation/branding changes;
-7180's hosted incorrect-answer feedback was also subsequently improved. Those
-three exact files at Common-Curriculum commit
+7180/7181 hosted incorrect-answer feedback was also subsequently improved. Those
+four exact files at Common-Curriculum commit
 `74569ebcbb75a471bdb8725f364192d29f7eb00b` were reviewed and their current hashes
 are explicitly allowed. Their existing state `hosted_hash` values stay unchanged:
 this repair does not pretend it rendered or deployed new content. Any further
@@ -78,7 +83,7 @@ staged hosted hash exactly.
 2. Apply only the reviewed field changes to the latest remote state, with a
    compare-and-swap check on its commit. Do not replace a collaborator's newer
    state with an older complete proposal. Expected initial changes concern
-   7185's fingerprint, and 3624/7180 publication fingerprints, content hashes and
+   7185's fingerprint, and 3624/7180/7181 publication fingerprints, content hashes and
    source commits. Original 7149 and Get underneath 7152 stay unchanged in state.
 3. Publish **assignment 7185 only** using a publication-only payload:
    `{"assignment":{"published":true,"notify_of_update":false}}`.
@@ -110,8 +115,8 @@ applied state by the read-only tool.
 
 ## Separate homepage limitation
 
-The curated homepage still links Brainstorm's original and the older Sprint 3 v3
+The curated homepage still links Brainstorm's original and the older Sprint 3 and Sprint 4 v3
 Concept Check; v3's source still says published although the current live module
-uses v4. Do not regenerate the homepage or republish all course artifacts as part
+uses v4 for both. Do not regenerate the homepage or republish all course artifacts as part
 of this repair. A later explicitly scoped homepage/release cleanup must resolve
 those older references; it is not a reason to overwrite current Canvas placement.

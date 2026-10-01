@@ -24,18 +24,20 @@ from canvas_sync.walkthrough_release import ASSESSMENT_KEYS, _rubric_shape
 
 ROOT = Path(__file__).resolve().parents[1]
 # Reviewed at Common-Curriculum 74569ebcbb75a471bdb8725f364192d29f7eb00b.
-# Shared navigation/branding changed 7149/3624; 7180's incorrect-choice feedback
+# Shared navigation/branding changed 7149/3624; 7180/7181 incorrect-choice feedback
 # changed. Preserve those files and their existing state hashes, never regenerate.
 REVIEWED_HOSTED_HASHES = {
     7149: 'ae1ea8c71c180c8949bab141017a5e5537ce660a2fc0e44c53f5c4cc188c2982',
     3624: 'e907102834136ae747a518867eb51b1854b38acc764340af174b18e9f81d2ea2',
     7180: '559a6bed782e9990b298b7cd086580d656e13e817d1e564066a4ba1452ef7b92',
+    7181: '98dae1258ccd02862e9af867f89db50e3852ca292dded2900e19a27997c2bcae',
 }
 TARGETS = {
     7149: ('course1/sprints/sprint-14/brainstorm-your-list.md', 2079, 17977),
     7185: ('course1/sprints/sprint-14/brainstorm-your-list-walk-through.md', 2079, 18020),
     3624: ('course1/sprints/sprint-14/the-problem-frame.md', 2079, 17985),
     7180: ('course1/sprints/sprint-15/sprint-3-concept-check-v4.md', 2081, 18014),
+    7181: ('course1/sprints/sprint-8/sprint-4-concept-check-v4.md', 2082, 18015),
 }
 
 
@@ -48,7 +50,7 @@ class ReadOnlyClient(CanvasClient):
         # Pagination may be absolute; CanvasClient also enforces the same origin.
         route = path.split('?', 1)[0].split('/api/v1/courses/180/')[-1]
         if method != 'GET' or not re.fullmatch(
-            r'(assignments/(7149|7185|7180)|pages/the-problem-frame|modules(/\d+/items)?)', route
+            r'(assignments/(7149|7185|7180|7181)|pages/the-problem-frame|modules(/\d+/items)?)', route
         ):
             raise ValueError('Repair preflight allows only target metadata and module GETs')
         return super()._request_response(method, path, json_body, params)
@@ -107,7 +109,7 @@ def check_shell(live, title, hosted_url):
 
 
 def prepare(state, live, modules, items, sources, released, hosted_hashes, source_commit):
-    """Pure local proposal; fail closed if any of the four reviewed items changed."""
+    """Pure local proposal; fail closed if any of the five reviewed items changed."""
     if state.get('instance', {}).get('course_id') != 180 or state['instance'].get('base_url', '').rstrip('/') != 'https://cti-courses.instructure.com':
         raise ValueError('Expected CTI course 180 state')
     if not re.fullmatch('[0-9a-f]{40}', source_commit):
@@ -153,15 +155,15 @@ def prepare(state, live, modules, items, sources, released, hosted_hashes, sourc
             raise ValueError(f'{ident}: live grading/submission contract changed')
         if ident in (7149, 7185) and (obj.get('grading_type'), obj.get('assignment_group_id')) != ('pass_fail', 429):
             raise ValueError(f'{ident}: Brainstorm grading configuration changed')
-        if ident == 7180 and (obj.get('grading_type'), obj.get('assignment_group_id')) != ('points', 429):
-            raise ValueError('7180: Concept Check grading configuration changed')
+        if ident in (7180, 7181) and (obj.get('grading_type'), obj.get('assignment_group_id')) != ('points', 429):
+            raise ValueError(f'{ident}: Concept Check grading configuration changed')
         if hosted_hashes.get(ident) != entry.get('hosted_hash'):
             if ident not in REVIEWED_HOSTED_HASHES or hosted_hashes.get(ident) != REVIEWED_HOSTED_HASHES[ident]:
                 raise ValueError(f'{ident}: hosted HTML changed; review before accepting a new baseline')
             preserved_hosted_differences.append(ident)
         check_shell(obj, fm['title'], entry['hosted_url'])
         fingerprint = canvas_fingerprint(obj, expected_type)
-        if ident in (3624, 7180) and fingerprint != entry['canvas_fingerprint'] and canvas_fingerprint(dict(obj, published=not obj['published']), expected_type) != entry['canvas_fingerprint']:
+        if ident in (3624, 7180, 7181) and fingerprint != entry['canvas_fingerprint'] and canvas_fingerprint(dict(obj, published=not obj['published']), expected_type) != entry['canvas_fingerprint']:
             raise ValueError(f'{ident}: stored drift exceeds a publication-only change')
         if ident == 7149 and fingerprint != entry['canvas_fingerprint']:
             raise ValueError('7149: original changed; preserve and review')

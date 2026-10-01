@@ -12,21 +12,21 @@ class Course180RepairTests(unittest.TestCase):
         self.state = {'instance': {'course_id': 180, 'base_url': 'https://cti-courses.instructure.com/'},
                       'artifacts': {'unrelated': {'canvas_id': 7152, 'content_hash': 'untouched'}}}
         self.live, self.sources, self.released, self.hashes = {}, {}, {}, {}
-        self.modules = [{'id': 2079, 'published': True}, {'id': 2081, 'published': True}]
-        self.items = {2079: [], 2081: []}
+        self.modules = [{'id': 2079, 'published': True}, {'id': 2081, 'published': True}, {'id': 2082, 'published': True}]
+        self.items = {2079: [], 2081: [], 2082: []}
         for ident, (path, module, item) in TARGETS.items():
             title = f'Activity {ident}'
             is_page = ident == 3624
-            raw = f'---\ntitle: {title}\npoints: {5 if ident == 7180 else 0}\npublish: {str(not is_page).lower()}\n---\n\nKeep instructions.\n'
-            old = raw.replace('publish: true', 'publish: false') if ident in (7185, 7180) else raw.replace('publish: false', 'publish: true')
+            raw = f'---\ntitle: {title}\npoints: {5 if ident in (7180, 7181) else 0}\npublish: {str(not is_page).lower()}\n---\n\nKeep instructions.\n'
+            old = raw.replace('publish: true', 'publish: false') if ident in (7185, 7180, 7181) else raw.replace('publish: false', 'publish: true')
             self.sources[path], self.released[path] = raw, old
             url = f'https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/{ident}.html'
-            published = ident in (7149, 7180)
+            published = ident in (7149, 7180, 7181)
             obj = {'page_id' if is_page else 'id': ident, 'title' if is_page else 'name': title,
                    'body' if is_page else 'description': iframe_shell(url, title), 'published': published}
             if not is_page:
-                obj.update(points_possible=5 if ident == 7180 else 0, submission_types=['online_text_entry'],
-                           grading_type='points' if ident == 7180 else 'pass_fail', assignment_group_id=429)
+                obj.update(points_possible=5 if ident in (7180, 7181) else 0, submission_types=['online_text_entry'],
+                           grading_type='points' if ident in (7180, 7181) else 'pass_fail', assignment_group_id=429)
             self.live[ident] = obj
             previous = dict(obj, published=ident in (7149, 3624))
             self.state['artifacts'][str(ident)] = {
@@ -57,7 +57,7 @@ class Course180RepairTests(unittest.TestCase):
         self.assertNotEqual(proposal['artifacts']['7185']['canvas_fingerprint'], before['artifacts']['7185']['canvas_fingerprint'])
         self.assertFalse(report['brainstorm_published'])
         self.assertEqual({x['field'] for x in report['changes']}, {'canvas_fingerprint', 'content_hash', 'source_commit'})
-        self.assertEqual({x['canvas_id'] for x in report['changes']}, {7185, 3624, 7180})
+        self.assertEqual({x['canvas_id'] for x in report['changes']}, {7185, 3624, 7180, 7181})
 
     def test_post_publication_records_only_freshly_verified_release(self):
         self.live[7185]['published'] = True
@@ -118,7 +118,7 @@ class Course180RepairTests(unittest.TestCase):
         for ident, reviewed in REVIEWED_HOSTED_HASHES.items():
             self.hashes[ident] = reviewed
         proposal, report = self.run_plan()
-        self.assertEqual(set(report['preserved_hosted_differences']), {7149, 3624, 7180})
+        self.assertEqual(set(report['preserved_hosted_differences']), {7149, 3624, 7180, 7181})
         for ident in REVIEWED_HOSTED_HASHES:
             self.assertEqual(proposal['artifacts'][str(ident)]['hosted_hash'], self.state['artifacts'][str(ident)]['hosted_hash'])
         self.hashes[7180] = 'unreviewed edit'
