@@ -1,6 +1,6 @@
 ---
 type: assignment
-title: 'Dojo Lab: test, widen, choose'
+title: 'Dojo Lab: Test Your Stakeholder Map'
 slug: dojo-lab-test-widen-choose-v3
 artifact_id: course1-sprints-sprint-15-dojo-lab-test-widen-choose
 sprint: 15
@@ -12,15 +12,14 @@ submission_type: text_entry
 delivery_mode: guided_assignment
 completion_requirement: must_submit
 learner_labels: true
-learning_goal: Use AI to test and widen your Stakeholder Map, then decide which changes to keep and whom to contact first.
+learning_goal: Have AI test and widen your Stakeholder Map, and confirm who you will talk to first, with your reasons.
 publish: true
 dojo_submission:
   mode: transcript
   prompt_version: v1
 guided_assignment:
   version: '2.0'
-  purpose: Test and widen your stakeholder map with AI, then decide yourself what changes
-    and who you talk to first.
+  purpose: Have AI test and widen your Stakeholder Map, and confirm who you will talk to first, with your reasons.
   builds_on: Bring the Stakeholder Map you just submitted, your Problem Frame, and the
     AI chat you already use.
   standing_instruction: Own your progress · 0 points. Submit to complete this module
@@ -31,112 +30,69 @@ guided_assignment:
     prompt: Paste the complete Dojo transcript, including every CONTINUED chunk, in
       order.
     criteria:
-    - Include the required header and every turn in the conversation, in order.
-    - Keep every CONTINUED marker and include all continuation chunks.
-    - Include a final Me turn that states the activity decisions in your own words.
+    - The required header and every turn, in order.
+    - Every CONTINUED marker and continuation chunk kept.
+    - The conversation reaches the method's last round, where you say what changed and what
+      you chose.
 ---
 
-# Dojo Lab: test, widen, choose
-
-Bring your stakeholder map. This activity uses AI in the one way Sprint 3 asks for: to test a map you are too close to see around, and to widen it.
-
-AI can spot the need you are guessing at. But it cannot know that your account lead never answers email, or that the person with the most authority here is the one who least wants this raised. You can. That is the division of labor.
+# Dojo Lab: Test Your Stakeholder Map
 
 ## What you need for this Dojo Lab
 
-- Your **Stakeholder Map**, as you submitted it.
+- Your **Stakeholder Map** Word file.
 - Your **Problem Frame**.
 
-**Start in your Dojo**
+## The three parts to this activity
 
-Open your Dojo and say: "Walk me through the Sprint 3 Dojo Lab: test, widen, choose." Then paste your Stakeholder Map and your Problem Frame. Your Dojo knows this activity and will lead you through the four steps below, one at a time. Use the sections below to follow along.
+1. Your Dojo conversation.
+2. Requesting a transcript from the Dojo and submitting it back into Canvas.
+3. Updating your Stakeholder Map based on your conversation.
 
-*More help: if your Dojo is not set up yet.* Use any AI chat you already have (ChatGPT, Claude, or Gemini) and paste the prompt in each section below, in order.
+## Part 1: Your Dojo conversation
 
-Whichever you use, do not paste confidential workplace, client, education, patient, or personal details. De-identify details and keep sensitive information out of the prompt.
+Open your Dojo and say: "Walk me through Dojo Lab: Test Your Stakeholder Map." Then paste your Stakeholder Map and your Problem Frame. Your Dojo knows what this activity is for and will take it from there: it tests your map, widens it with people you may have missed, and helps you confirm who to talk to first.
 
-One rule holds for the whole activity. **Your map stays in your words.** AI may point at a field, and you rewrite it. If you find yourself pasting its sentences into your map, stop and write the sentence yourself.
+One rule holds for the whole conversation. Your map is yours, not the AI's. AI can spot a need you are only guessing at, but it cannot know that your account lead never answers email. You can. Push back, tell it when you disagree, or ask it to justify its reasoning. If you find yourself pasting its sentences into your map, stop and write the sentence yourself.
 
-## 1. Test your map
+*More help: if your Dojo is not set up yet.* Use any AI chat. Paste the text below as your first message, then your Stakeholder Map and your Problem Frame.
 
-Without a Dojo, paste this prompt, followed by your map:
+> Before we start, here is how to work with me. Be my coach, not my editor. Ask one question at a time and wait for my answer. Keep each reply under 120 words. Ask what I think before you offer your own read. Never rewrite my work; point at a line and make me change it myself. When you push on something weak, say you are pushing and why. When I have defended a line, ease off and say so. If I lean on you two turns running, say so and make me put it in my own words. Do not invent anything about my workplace; ask. End with a recap I can save.
+>
+> == Sprint 3: Dojo Lab: Test Your Stakeholder Map ==
+>
+> Purpose: Test and widen the learner's Stakeholder Map, then help them confirm who to talk to first and sharpen what they will ask. Use the Sprint 3 page with this title in the Course tab.
+>
+> What the learner brings: Their Stakeholder Map, with the seven fields for each stakeholder, their assumption blocks, and their "Who you will talk to first" section. Their Problem Frame. If they bring only a list of names, ask for the written map before testing it.
+>
+> The rounds:
+>
+> 1. Read first (Sensei). Before looking at the map, ask the learner which stakeholder they understand least, and which assumption would hurt most if they are wrong. Say back what you heard.
+>
+> 2. Test the map (Auditor, then Challenger). Read the seven fields and the assumption blocks. Rank at most three findings, naming the stakeholder or assumption and quoting the learner's words. Pay particular attention to a field marked Confirmed with no evidence, a need or constraint treated as known but only Inferred, a level with nothing behind it, and an assumption whose different answer changes nothing. Take one finding at a time. Have the learner state the change they will make in their map. Send larger desk work back to the map.
+>
+> 3. Widen the map (Framer). Offer up to three stakeholders the learner may have missed, with one line each on what they would make visible. Flag anyone positioned to challenge the learner's frame. Ask which, if any, changes the map. Treat all of these as possibilities, not workplace facts.
+>
+> 4. Choose and prepare (Sensei, then Auditor). Start from the learner's "Who you will talk to first" section. Ask whether the first choice still holds: can this person speak to the riskiest assumption, can the learner reach them this week, and could their answer change the next move? Do the same for the backup. Then, for both, check each question the learner plans to ask: does it help them listen, or pitch their idea? Have the learner rewrite weak ones.
+>
+> 5. Close (Reflector). Ask the learner to state, in their own words, what changed or was rejected in the map, what moved their judgment, and who they will talk to first. If the choice changed, check the outreach dates still work. Recap only the decisions they actually made.
+>
+> Do not rewrite the map, suggest solutions, or draft the learner's message to a stakeholder.
 
-```text
-I am going to paste a stakeholder map for a real problem I am
-working on. Each stakeholder has seven fields: role, relationship
-to the problem (affected, influential, responsible for a
-constraint, or positioned to challenge my frame), impact level,
-influence or authority level, need, constraints, and the next
-question I would ask them. Each field is marked Confirmed or
-Inferred. Most of my fields are Inferred, and that is expected at
-this stage; I will check them over the coming weeks.
+## Part 2: Requesting and submitting the transcript
 
-Your job is to be a skeptic who works in this situation, not an
-editor. Do not rewrite anything, do not add stakeholders, and do
-not suggest solutions. Do not list everything you notice.
+The transcript is the only thing you submit for this Dojo Lab. Five steps:
 
-1. Which needs am I treating as known when they are actually
-   inferred?
-2. Which constraints should I verify before I change direction?
-3. The three things that would make my map most misleading to
-   someone who knows this situation, ranked. One or two lines
-   each, naming the field and quoting my words.
+1. Copy the transcript request at the bottom of this page.
+2. Paste it into your Dojo conversation as your next message.
+3. If the reply ends with CONTINUED, type "continue" and repeat until it stops.
+4. Copy the Dojo's reply, every chunk, in order.
+5. Paste it into the Canvas text box below this page and submit.
 
-Nothing else. Here is the map:
-```
+## Part 3: Updating your map
 
-Take what lands and fix the map yourself. Change a Confirmed to an Inferred where you cannot actually point to evidence. Attach a specific to a field that said "high." Reject what does not fit your situation. If a finding needs more than a line or two to fix, it is desk work, so go and do it in your map rather than in the chat.
+After you submit the transcript, go back to your Stakeholder Map Word file and make the changes you decided on in the conversation: change a Confirmed to an Inferred, attach a reason to a "high," add a stakeholder, or rewrite a question. Change what you decided to change and leave the rest. If your first choice changed, update "Who you will talk to first" and your outreach dates.
 
-## 2. Widen your map
+If the Dojo raised something about your Problem Frame, note it. You will test it in your stakeholder conversation.
 
-Follow up with:
-
-```text
-Now widen it. Still no rewriting and no solutions.
-
-1. Which stakeholders am I overlooking? For each, one line on
-   what they would make visible that my map does not.
-2. For the people already on my map, what might each of them
-   need, fear, or value that I have not written down?
-3. Who among them is most likely to disagree with how I have
-   framed this problem, and what would they say?
-
-Two lines each. Then one line on whether any of this suggests my
-problem is already being handled somewhere I have not looked.
-```
-
-Read these against your own situation. One will usually be generic and worth ignoring. One will usually land. If one lands, decide what it changes in your map, and write that change yourself.
-
-Pay attention to anything that speaks to the fourth category. A stakeholder positioned to challenge your frame is the hardest one to think of unaided, and this is the step most likely to surface one.
-
-## 3. Polish your questions
-
-```text
-Here are the validation questions I plan to ask the stakeholder I
-have chosen. For each one, tell me whether it would help me
-listen or whether it pitches my own idea, and why. Do not
-rewrite them.
-```
-
-Then rewrite the weak ones yourself. Use the Stakeholder Map self-check: ask about a specific experience, past behavior, or concrete tradeoff, not an opinion about your idea.
-
-## 4. Choose: confirm who you talk to first
-
-Look again at the person you named as your first choice, and your backup. Does the testing change who you should talk to first? If a new stakeholder surfaced in step 2, or an assumption you rated low risk turned out to be high risk, your first choice may have moved.
-
-Confirm or change it now, then go and make contact. The Stakeholder Conversation gives you three days before you follow up and five before you switch to your backup, so the sooner you send the ask, the more of this sprint you have left to act on what you hear.
-
-## State your decisions before requesting the transcript
-
-Send one final `Me:` turn in the same Dojo conversation. In your own words, state:
-
-- what moved between your first map and this one, or why nothing moved;
-- the argument or evidence that moved your judgment;
-- one AI suggestion you rejected and why; and
-- whether your first-choice stakeholder stayed the same or changed, and why.
-
-A map that did not change is a legitimate result if you can say what you tested it against. After this final turn, use the transcript request and submission steps below.
-
-## Updating your map
-
-After you submit the transcript, go back to your Stakeholder Map and update it from the conversation: change a status, sharpen a field, or add a stakeholder where the Dojo moved you, in your own words. You will write up what changed, and why, at the start of the Stakeholder Conversation walkthrough. You will upload the updated map with your Stakeholder Conversation.
+You will upload your updated map with your Stakeholder Conversation.
