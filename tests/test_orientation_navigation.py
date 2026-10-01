@@ -44,7 +44,8 @@ class OrientationNavigationTests(unittest.TestCase):
         expected = {
             'start-here-v2': ['welcome-v2', 'how-this-course-works-v2',
                               'your-first-week-v2', 'set-up-your-ai-dojo-v2',
-                              'introduction-post-v2', 'help-and-resources-v2'],
+                              'introduction-post-v2', 'help-and-resources-v2',
+                              'schedule-a-five-minute-check-in'],
             'your-first-week-v2': ['welcome-v2', 'how-this-course-works-v2',
                                    'introduction-post-v2'],
             'how-this-course-works-v2': ['help-and-resources-v2'],

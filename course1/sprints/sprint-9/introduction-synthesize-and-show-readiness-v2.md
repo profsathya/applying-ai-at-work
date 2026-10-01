@@ -9,26 +9,24 @@ module: 'Sprint 5: Synthesize And Show Readiness (V2)'
 position: 2
 points: null
 submission_type: none
+learner_labels: true
+page_presentation: reading
 publish: true
 ---
 
-This module is a placeholder. The Sprint 5 rebuild has not been written yet, and this page is a stub that holds the module's place in the course order.
+This module is a placeholder. The Sprint 5 activities are still being written and are not yet available.
 
-By the end of Sprint 4 you had a gap you closed, evidence you checked, and a note of what you were still not ready to claim. Across the four sprints before this one you have also built a problem frame, a prompting record, and stakeholder evidence. Each of those was made on its own.
+Sprint 5 will bring together your updated Problem Frame, your work on assumptions and existing solutions, your Stakeholder Map and Stakeholder Validation Report, and your Learning Plan. You will use those materials to explain the problem and judge what you are ready to do next.
 
-This sprint is where they become one argument.
+## What this sprint will cover
 
-## What This Sprint Will Cover
+1. **Assemble the Integrated Problem Document.** Connect your earlier work into one document a reader who has never seen it can follow.
+2. **Audit the argument for gaps.** Use the Dojo as an outside reader, then address the places where your argument needs support.
+3. **Write the Readiness Report.** Explain your readiness judgment, what it rests on, and your next step using the Learning Plan.
+4. **Reflect on what changed.** Read back your four sprint reflections and consider how your answers developed.
 
-1. **Turn artifacts into an argument.** Connect what you have made into a claim a reader can follow, rather than a folder of separate deliverables.
-2. **Audit the argument for gaps.** Find the places where the evidence, the logic, or the stakeholder grounding does not hold, before a reader finds them.
-3. **Submit the integrated document.** Produce the final Integrated Problem Document and Readiness Report, and say what your readiness rests on.
-4. **Close the loop on your Goal Plan.** Compare where you are now against the goal you set in Sprint 0, and say what changed.
+## What to keep
 
-## Carry Forward
+Keep your earlier documents and reflections available. The Learning Plan describes learning you still need to do; this sprint does not assume you have already completed it.
 
-Nothing new is carried out of this sprint. This is where the portfolio gets spent: your problem frame, your prompting record, your stakeholder evidence, and your learning evidence all feed the final report.
-
-## Next
-
-The remaining activities in this module are still being written.
+The remaining activities will stay unpublished while their content is being prepared.
