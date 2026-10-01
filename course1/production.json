@@ -106,7 +106,7 @@
     },
     "course1-sprints-sprint-14-brainstorm-your-list-walk-through": {
       "artifact_id": "course1-sprints-sprint-14-brainstorm-your-list-walk-through",
-      "canvas_fingerprint": "f8854132bd8344ecd6affe69415cd1ca58eb473c6948ee3420bd41586e434eca",
+      "canvas_fingerprint": "2fdbb6d5e157e3d754b3eefcc368bb029d6ab536968c7776b372f8da6ccc4ab8",
       "canvas_id": 7185,
       "canvas_module_id": 2079,
       "canvas_module_item_id": 18020,
@@ -114,7 +114,7 @@
       "canvas_payload_hash": "646d4b913240bdc3af12fab820b1ce924e9ac4013585f26f9bbcb396f1830b87",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "89522775d7fe9a87350c0826177b1cc48ce7b2adc63515f555e2150749448f8e",
+      "content_hash": "166bb5641e7bb27cd0bdf74b7b923e0bdc983970743077cdd4a477ec3590442d",
       "delivery_mode": "guided_assignment",
       "hosted_hash": "5c2220f7596cf19f022a9160edb917648ee0eee82c67ff9fee31de3c0d3ee9c3",
       "hosted_last_rendered": "2026-09-30T23:34:25+00:00",
@@ -124,7 +124,7 @@
       "local_path": "course1/sprints/sprint-14/brainstorm-your-list-walk-through.md",
       "position": 3,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "712e04c4942972085bfaf7aaa313af3361fac97f"
+      "source_commit": "12f25546b7f17507fb7efbdaf67313308bbc4ca9"
     },
     "course1-sprints-sprint-14-dojo-lab-test-widen-choose": {
       "artifact_id": "course1-sprints-sprint-14-dojo-lab-test-widen-choose",
