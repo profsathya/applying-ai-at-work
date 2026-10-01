@@ -93,14 +93,12 @@ When you're done working with the AI, copy or download the JSON response file fr
 ## Part 2: Set Up the Conversation
 
 - Pick the channel this person actually answers. In person to set a time if you see them regularly; email if you want it in writing; phone or text if that is how you two normally talk.
-- Send the ask on the date you planned in the **Outreach log** of your Stakeholder Map. Keep it short: who you are, that you're investigating the problem, and that you would like 20 to 30 minutes.
+- Send the ask, and note the date you sent it on your stakeholder map. Keep it short: who you are, that you're investigating the problem, and that you would like 20 to 30 minutes.
 - No reply in 3 days? Follow up once in the same thread, and make it easier to say yes: offer 15 minutes, or offer to send two questions they can answer in writing.
-- Still no reply by day 5? Go to your backup stakeholder and start again. A stakeholder who does not respond is itself information about access and influence.
+- Still no reply by day 5? Go to your backup stakeholder and start again. Note the switch on your map. A stakeholder who does not respond is itself information about access and influence.
 - Got a yes? Confirm the time, the format, and the length, so you both arrive expecting the same conversation.
 
 This is a real problem in your own work, and it is in both your interests to connect early. The sooner you talk, the more of this sprint you have left to act on what you hear.
-
-If you planned dates in your Outreach log, look back at them once the conversation is set: did you send, follow up, and switch when you planned? If not, what got in the way?
 
 ## Part 3: Have the Conversation
 
@@ -115,7 +113,7 @@ Complete Section D of your report, the same day or the next. This is the only se
 
 Two things to hold on to as you write it. Update your Problem Frame on evidence, not on your own interpretation of what you heard. If the conversation fully confirmed your original frame, report that honestly. A clear confirmation is a real and valuable result.
 
-Then open your Stakeholder Map and make those changes in it. Update the status of every field the conversation settled, correct anything that turned out to be wrong, and add any stakeholder this person made you aware of. You submit the updated map with your report.
+Then open your Stakeholder Map and make those changes in it. Update the status of every field the conversation settled, correct anything that turned out to be wrong, and add any stakeholder this person made you aware of. Leave your "What changed, and why" paragraph from the Dojo Lab sitting at the top of the file. You submit the updated map with your report.
 
 ## The Stakeholder Validation Report
 
@@ -151,7 +149,7 @@ The template has four sections, each filled at the time it names.
 
 ## Submission
 
-Upload three files: the JSON response file from the AI activity in Part 1, your completed Stakeholder Validation Report, and your updated Stakeholder Map.
+Upload three files: the JSON response file from the AI activity in Part 1, your completed Stakeholder Validation Report, and your updated Stakeholder Map with your "What changed, and why" paragraph at the top of it.
 
 ## Portfolio Capture
 
