@@ -132,6 +132,14 @@ class CreateIdentityPersistenceTests(unittest.TestCase):
                 self.assertEqual(entry['content_hash'], push.PROVISIONAL_CONTENT_HASH)
                 client.list_module_items.return_value = [{'id': 9000, 'position': 1}, {'id': 9001, 'position': 2}]
                 push.push_artifact(md, manifest, state_dir=state_dir)
+                # Retiring the source anchor must preserve the released item's
+                # live order on a later push, without recreating either item.
+                client.list_module_items.return_value = [{'id': 9001, 'position': 2}]
+                with patch.object(push, 'walkthrough_position', return_value=(55, None, 2, [9001])):
+                    push.push_artifact(md, manifest, state_dir=state_dir)
+                    client.list_module_items.return_value = [{'id': 777, 'position': 1}, {'id': 9001, 'position': 2}]
+                    with self.assertRaisesRegex(ValueError, 'module order'):
+                        push.push_artifact(md, manifest, state_dir=state_dir)
             self.assertEqual(client.add_module_item.call_count, 1)
             self.assertEqual(client.creates, 1)
 
