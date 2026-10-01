@@ -221,8 +221,22 @@ def verify_walkthrough_adjacency(client, course_paths: list[Path], state: dict) 
             raise ValueError(f"{fm['artifact_id']}: source or module is missing from deployment state")
         ordered = [int(item['id']) for item in sorted(
             client.list_module_items(int(source_entry['canvas_module_id'])), key=lambda item: item['position'])]
-        source_item, new_item = int(source_entry['canvas_module_item_id']), int(new_entry['canvas_module_item_id'])
-        if source_item not in ordered or ordered.index(source_item) + 1 >= len(ordered) or ordered[ordered.index(source_item) + 1] != new_item:
+        source_item = source_entry.get('canvas_module_item_id')
+        source_item = int(source_item) if source_item is not None else None
+        new_item = int(new_entry['canvas_module_item_id'])
+        if source_item not in ordered:
+            # Match the publisher's retired-original policy. A cleared or stale
+            # anchor is safe only when the original assignment still exists,
+            # has no placement anywhere, and the replacement retains its sole
+            # identity-matched placement in the intended module. This is read-only.
+            from canvas_sync.push import walkthrough_position
+            walkthrough_position(
+                client, source_id, artifacts, module_name=fm['module'],
+                current_item_id=new_item, current_content_id=new_entry.get('canvas_id'),
+            )
+            checked.append(fm['artifact_id'])
+            continue
+        if ordered.index(source_item) + 1 >= len(ordered) or ordered[ordered.index(source_item) + 1] != new_item:
             raise ValueError(f"{fm['artifact_id']}: Canvas item is not directly below source {source_id}")
         checked.append(fm['artifact_id'])
     return checked

@@ -41,4 +41,4 @@ This module has **six pages and one discussion**, including this page:
 6. **[Introduction Post](artifact:course1-sprints-welcome-and-orientation-v2-introduction-post-v2):** your one orientation submission, graded complete or incomplete, worth zero points.
 7. **[Help and Resources](artifact:course1-sprints-welcome-and-orientation-v2-help-and-resources-v2):** submission steps, key terms, and instructor contact. Read it after posting your introduction, then return when needed.
 
-Continue to [Welcome](artifact:course1-sprints-welcome-and-orientation-v2-welcome-v2).
+Continue to Welcome.

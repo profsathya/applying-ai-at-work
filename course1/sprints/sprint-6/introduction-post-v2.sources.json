@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-introduction-post-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "6f63926ccabc0997d147041f102475b5770c172ff78f6a6a319dba92f7534249",
-  "body_sha256": "bf3a6ed0f19b8e5499576f2d5f2887c691a5d8eca78c6c3bf6195c0cfb958d81",
+  "body_sha256": "048a088eb0ea6672ef39734b833f52bb415be206f8b793b2a16ae44263215a22",
   "frontmatter_sha256": "617eb6cbd0b757282b97ed4cdfefc896e422949c537fa35a852790d0ef3d1303",
   "parts": [
     {
@@ -142,8 +142,8 @@
     },
     {
       "kind": "new",
-      "markdown": "Continue to [Help and Resources](artifact:course1-sprints-welcome-and-orientation-v2-help-and-resources-v2), then begin [Sprint 1: Find the Problem Worth Solving](artifact:course1-sprints-sprint-14-introduction-find-the-problem-worth-solving).",
-      "reason": "Link the help page and verified current Sprint 1 Introduction, not its unpublished duplicate.",
+      "markdown": "Continue to Help and Resources, then begin Sprint 1: Find the Problem Worth Solving.",
+      "reason": "Link the help page and verified current Sprint 1 Introduction, not its unpublished duplicate. Authorized ten-link cleanup: retain the wording and sequence as plain text; remove only the sequential artifact hyperlinks.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.t7zlel2grtq6/body/20"
       ]
