@@ -1636,6 +1636,26 @@
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
       "source_commit": "8bbfafbdcd9975b5000189fecd26b6e15f65e316"
     },
+    "course1-sprints-welcome-and-orientation-v2-schedule-a-five-minute-check-in": {
+      "artifact_id": "course1-sprints-welcome-and-orientation-v2-schedule-a-five-minute-check-in",
+      "canvas_fingerprint": "6c8482ecf311ba97ae40cef5fdeb45e4e1e8162e56d78119d814368e6c287b19",
+      "canvas_id": 3629,
+      "canvas_module_id": 2075,
+      "canvas_module_item_id": 18029,
+      "canvas_page_url": "schedule-a-5-minute-check-in",
+      "canvas_payload_hash": "e5998a770fb6919da59fd5dd72e4b01da277decf6b7c5c103e3709a3fc0bbe02",
+      "canvas_type": "page",
+      "content_hash": "0a3b8c3d7b15ddcb40f34ca2ca1b2fc068d0ed91b4ee8330810af72592a44389",
+      "hosted_hash": "09a9838282361873ef79d50d55136f3061634656a3e7931804b240372dcc28b6",
+      "hosted_last_rendered": "2026-10-01T20:34:04+00:00",
+      "hosted_path": "course1/activities/schedule-a-five-minute-check-in.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/schedule-a-five-minute-check-in.html",
+      "last_pushed": "2026-10-01T20:34:04+00:00",
+      "local_path": "course1/sprints/sprint-6/schedule-a-five-minute-check-in.md",
+      "position": 9,
+      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "source_commit": "e0557378771a6a195c84122e5b8275bf1677ff8f"
+    },
     "course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2": {
       "artifact_id": "course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2",
       "canvas_fingerprint": "c9c3114b93bcf679693de4f6c98187bac2ba3d81b9a33346aeef4ae146c79887",
@@ -1787,5 +1807,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-01T19:58:43+00:00"
+  "last_sync": "2026-10-01T20:34:04+00:00"
 }
