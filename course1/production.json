@@ -412,17 +412,17 @@
       "canvas_payload_hash": "b346189583b7561e2ab77cac07883357b2ca4d80e2b24266f4977fd248c5090c",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "c3b6466b129cd7ab66da4516ac332739202e6cca6f948c87b39d20b3cdb0f32d",
+      "content_hash": "8e83ef23abc85f8f1ddaaa3e3a182bbee64222f641b7098fafede4e8ae1c2bc8",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "0e4422d63aff761df1011a4da3a474ae3630956a1bcd467420dc869ca804be49",
-      "hosted_last_rendered": "2026-09-30T04:54:09+00:00",
+      "hosted_hash": "e3f12f4af62a42fe31e81704d4e8f8eca3c9c0b8923425a55105687e931e9026",
+      "hosted_last_rendered": "2026-10-01T04:29:12+00:00",
       "hosted_path": "course1/assignments/dojo-lab-test-widen-choose-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-test-widen-choose-v3.html",
-      "last_pushed": "2026-09-30T04:54:09+00:00",
+      "last_pushed": "2026-10-01T04:29:12+00:00",
       "local_path": "course1/sprints/sprint-15/dojo-lab-test-widen-choose-v3.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "cc182438cb4d872f0ebb6f253470d4d815f14d26"
+      "source_commit": "6746bf26408c41e2f252f6ade9af5bb1da33150a"
     },
     "course1-sprints-sprint-15-introduction-integrate-people-and-context": {
       "artifact_id": "course1-sprints-sprint-15-introduction-integrate-people-and-context",
@@ -1613,5 +1613,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-01T04:27:14+00:00"
+  "last_sync": "2026-10-01T04:29:12+00:00"
 }
