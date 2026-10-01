@@ -378,27 +378,6 @@
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
       "source_commit": "1dd9edfa30acb62cb8523f11142d522a3b57a69f"
     },
-    "course1-sprints-sprint-15-sprint-3-concept-check": {
-      "artifact_id": "course1-sprints-sprint-15-sprint-3-concept-check",
-      "canvas_fingerprint": "24011affebd658e54077209d2e2d6f5fa2f570784d719a3fcb5ecb8ef4a66738",
-      "canvas_id": 3101,
-      "canvas_module_id": 2081,
-      "canvas_module_item_id": 17988,
-      "canvas_page_url": null,
-      "canvas_payload_hash": "2318b92c5752384a3d5b9f1e53cc64eff30bbabe16f9d27632ccbb1504a886f9",
-      "canvas_type": "quiz",
-      "completion_requirement": "must_submit",
-      "content_hash": "3f5aa9ace07b746cc6c27fd135e6c36c20b1827c520ea9816cd3604f37d99283",
-      "hosted_hash": "8c174857ce2baf59e4123a08a804671545b0eedbf9d792c6898ea275d0518f6d",
-      "hosted_last_rendered": "2026-09-18T21:20:44+00:00",
-      "hosted_path": "course1/activities/sprint-3-concept-check-v3.html",
-      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/sprint-3-concept-check-v3.html",
-      "last_pushed": "2026-09-18T21:20:44+00:00",
-      "local_path": "course1/sprints/sprint-15/sprint-3-concept-check-v3.md",
-      "position": 3,
-      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "e40031a3c49523620e5313f987387dea1f7c6d14"
-    },
     "course1-sprints-sprint-15-sprint-3-concept-check-v4": {
       "artifact_id": "course1-sprints-sprint-15-sprint-3-concept-check-v4",
       "canvas_fingerprint": "2ad5f5dc9ccd3bf8a66ba9534fdd224b88b394ed628106db17112411348c01ee",
@@ -1091,27 +1070,6 @@
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
       "source_commit": "421d2464957a61001a6fdbdbd65d02ac387cac21"
     },
-    "course1-sprints-sprint-9-sprint-4-concept-check-v3": {
-      "artifact_id": "course1-sprints-sprint-9-sprint-4-concept-check-v3",
-      "canvas_fingerprint": "8fac92f27cf404602fd3f3c76e0722b8de959dcd38f66a02ac9b625ae133fe17",
-      "canvas_id": 3099,
-      "canvas_module_id": 2082,
-      "canvas_module_item_id": 17955,
-      "canvas_page_url": null,
-      "canvas_payload_hash": "d0757dcc4f2c16ea223da3dfe89d0f4c6e58df09bc298cb89d9c054a72904c15",
-      "canvas_type": "quiz",
-      "completion_requirement": "must_submit",
-      "content_hash": "893634562b59c811062142fe349ae6344dc49f631089048e8e73a26b540dbfe8",
-      "hosted_hash": "68d624a51880403225c7967bdd4b375d247fac93f60b4384b045de2ac6da721b",
-      "hosted_last_rendered": "2026-09-21T04:17:14+00:00",
-      "hosted_path": "course1/activities/sprint-4-concept-check-v3.html",
-      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/sprint-4-concept-check-v3.html",
-      "last_pushed": "2026-09-21T04:17:14+00:00",
-      "local_path": "course1/sprints/sprint-8/sprint-4-concept-check-v3.md",
-      "position": 3,
-      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "421d2464957a61001a6fdbdbd65d02ac387cac21"
-    },
     "course1-sprints-sprint-9-sprint-5-concept-check": {
       "artifact_id": "course1-sprints-sprint-9-sprint-5-concept-check",
       "canvas_fingerprint": "3c410581568c021b72f72f0e1c12b8284bff6a88edbcae16bedd29f257cc42eb",
@@ -1426,5 +1384,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-01T21:45:57+00:00"
+  "last_sync": "2026-10-01T22:15:41+00:00"
 }
