@@ -1328,6 +1328,28 @@
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
       "source_commit": "0cd5a8a38dc9f6856a3025f641c00ab45bad9659"
     },
+    "course1-sprints-sprint-9-integrated-problem-document-canvas-walkthrough": {
+      "artifact_id": "course1-sprints-sprint-9-integrated-problem-document-canvas-walkthrough",
+      "canvas_fingerprint": "e888cb0b6e48762f6e2535ab3015417182c7375d3beb0f423a415e63ecf4ef37",
+      "canvas_id": 7192,
+      "canvas_module_id": 2076,
+      "canvas_module_item_id": 18027,
+      "canvas_page_url": null,
+      "canvas_payload_hash": "71341cb14d51196e41ddabc071e526a73d922bfee8f681627a64f11c8857f4dc",
+      "canvas_type": "assignment",
+      "completion_requirement": "must_submit",
+      "content_hash": "383ea58c5da08865c8daad2ed79900e7f6700d1a6ba43b6a09ca1421d988b2a3",
+      "delivery_mode": "guided_assignment",
+      "hosted_hash": "0b3abca9abb5991efd1c4190913610380eb1e9416c97e54009435c14946d0c24",
+      "hosted_last_rendered": "2026-10-01T19:58:39+00:00",
+      "hosted_path": "course1/assignments/integrated-problem-document-canvas-walkthrough.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/integrated-problem-document-canvas-walkthrough.html",
+      "last_pushed": "2026-10-01T19:58:39+00:00",
+      "local_path": "course1/sprints/sprint-9/integrated-problem-document-canvas-walkthrough.md",
+      "position": 5,
+      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "source_commit": "0cd5a8a38dc9f6856a3025f641c00ab45bad9659"
+    },
     "course1-sprints-sprint-9-introduction-close-the-learning-gap-v3": {
       "artifact_id": "course1-sprints-sprint-9-introduction-close-the-learning-gap-v3",
       "canvas_fingerprint": "ad813731b5e38a3e27a61c41de2a9d9b8f77672913e3d116ffad1df1f40ce88e",
@@ -1409,6 +1431,28 @@
       "last_pushed": "2026-10-01T19:53:41+00:00",
       "local_path": "course1/sprints/sprint-9/readiness-report.md",
       "position": 6,
+      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "source_commit": "0cd5a8a38dc9f6856a3025f641c00ab45bad9659"
+    },
+    "course1-sprints-sprint-9-readiness-report-canvas-walkthrough": {
+      "artifact_id": "course1-sprints-sprint-9-readiness-report-canvas-walkthrough",
+      "canvas_fingerprint": "550f5a95de22690c36e9e96097ffc2fbfc814ea7e2d09643f80c9aeecf907159",
+      "canvas_id": 7193,
+      "canvas_module_id": 2076,
+      "canvas_module_item_id": 18028,
+      "canvas_page_url": null,
+      "canvas_payload_hash": "b3b624afbdf354bb8610d037347368e75846efb9fb6d6977838e4220015ff759",
+      "canvas_type": "assignment",
+      "completion_requirement": "must_submit",
+      "content_hash": "2f51f9bc6fe6ddde7b78d9dd313f5071c70012f66c4be733da0541cac676de36",
+      "delivery_mode": "guided_assignment",
+      "hosted_hash": "a67466de72effbeed0cd7411b3b412821a000f5b12b23ebb69714d870e7ae200",
+      "hosted_last_rendered": "2026-10-01T19:58:43+00:00",
+      "hosted_path": "course1/assignments/readiness-report-canvas-walkthrough.html",
+      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/readiness-report-canvas-walkthrough.html",
+      "last_pushed": "2026-10-01T19:58:43+00:00",
+      "local_path": "course1/sprints/sprint-9/readiness-report-canvas-walkthrough.md",
+      "position": 8,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
       "source_commit": "0cd5a8a38dc9f6856a3025f641c00ab45bad9659"
     },
@@ -1743,5 +1787,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-01T19:53:50+00:00"
+  "last_sync": "2026-10-01T19:58:43+00:00"
 }
