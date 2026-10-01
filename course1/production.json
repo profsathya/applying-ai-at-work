@@ -222,16 +222,16 @@
       "canvas_payload_hash": "6917ed7c0f7862733debcd49ed308e277de87c6f11356b8f24fbd7c17cc39ed2",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "d8395e16665c0a39bd9a0a90d69c776f4bc753c8b9cc3e25f96ecde8721e2459",
-      "hosted_hash": "85edbebce17c40ee9ad809ace93488c53df595ef59f523b5a49e704a9d1b7a60",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "content_hash": "7cbd917b164f677a91defbedab0ba08d820644d4b8e14bef9bae793855f887e6",
+      "hosted_hash": "a4eb9b94106ea746763088a645f038facfaab8cc2e8453066e6cdb0044fd9240",
+      "hosted_last_rendered": "2026-10-01T23:45:55+00:00",
       "hosted_path": "course1/activities/introduction-find-the-problem-worth-solving.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-find-the-problem-worth-solving.html",
-      "last_pushed": "2026-09-30T13:37:42+00:00",
+      "last_pushed": "2026-10-01T23:45:55+00:00",
       "local_path": "course1/sprints/sprint-14/introduction-find-the-problem-worth-solving.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "93ecf7be5ffeaf4d763f5f1dc0e7e528a148da3c"
+      "source_commit": "1ff98967dfad876e4d8bc90b78ca0c5a52fa2ba6"
     },
     "course1-sprints-sprint-14-problem-frame": {
       "artifact_id": "course1-sprints-sprint-14-problem-frame",
@@ -1384,5 +1384,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-01T22:15:41+00:00"
+  "last_sync": "2026-10-01T23:45:55+00:00"
 }
