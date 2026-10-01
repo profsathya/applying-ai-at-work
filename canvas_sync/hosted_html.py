@@ -1097,6 +1097,19 @@ def _write_if_changed(path: Path, text: str) -> tuple[bool, str]:
     return True, digest
 
 
+def _module_backlink(document: str, manifest_path: Path, frontmatter: dict) -> str:
+    """Route to the named module, not the folder storing a walkthrough source."""
+    headers = [parse_frontmatter(path)[0] for path in discover_artifact_files(manifest_path)]
+    headers = [fm for fm in headers if fm.get("type") == "module_header"
+               and fm.get("publish") is True and fm.get("module") == frontmatter.get("module")]
+    sprints = {int(fm["sprint"]) for fm in headers}
+    if len(sprints) != 1:
+        return document
+    sprint = sprints.pop()
+    return re.sub(r'(<a class="back-link" href=")\.\./sprint-\d+\.html\?context=web(")',
+                  lambda match: match[1] + f"../sprint-{sprint}.html?context=web" + match[2], document)
+
+
 def render_hosted_artifact(
     md_path: Path,
     manifest_path: Path,
@@ -1150,6 +1163,7 @@ def render_hosted_artifact(
             asset_path.parent.mkdir(parents=True, exist_ok=True)
             asset_path.write_bytes(asset['payload'])
         asset_outputs.append({'path': str(asset_path), 'hash': asset['hash'], 'changed': asset_changed})
+    document = _module_backlink(document, manifest_path, fm)
     document = apply_native_canvas(apply_course_styles(document, course_dir_for_manifest(manifest_path).name), manifest_data)
     changed, hosted_hash = _write_if_changed(output_path, document)
     return {
