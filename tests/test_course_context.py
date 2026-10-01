@@ -11,7 +11,7 @@ from canvas_sync.state import canvas_fingerprint
 
 def fixture():
     live = {'title': 'Welcome', 'body': 'Published', 'published': True, 'html_url': 'https://canvas.example/pages/welcome'}
-    return dict(artifacts={'a.md': {'canvas_type': 'page', 'canvas_page_url': 'welcome', 'canvas_module_id': 1, 'content_hash': 'hash', 'canvas_fingerprint': canvas_fingerprint(live, 'page'), 'hosted_path': 'course1/activities/welcome.html'}},
+    return dict(artifacts={'a.md': {'canvas_type': 'page', 'canvas_page_url': 'welcome', 'canvas_module_id': 1, 'content_hash': 'hash', 'canvas_fingerprint': canvas_fingerprint(live, 'page'), 'hosted_path': 'course1/activities/welcome.html', 'hosted_url': 'https://host.example/course1/activities/welcome.html', 'artifact_id': 'welcome'}},
                 sources={'a.md': {'frontmatter': {'type': 'page', 'sprint': 6, 'slug': 'welcome', 'title': 'Welcome', 'publish': True}, 'body': 'Published', 'content_hash': 'hash'}},
                 modules=[{'id': 1, 'published': True, 'position': 1}],
                 items={1: [{'type': 'Page', 'page_url': 'welcome', 'published': True, 'position': 1}]}, objects={'a.md': live})
@@ -51,6 +51,23 @@ class CourseContextTests(unittest.TestCase):
                 if change == 'missing_live': args['objects'] = {}
                 with self.assertRaises(ValueError): build_release(**args)
 
+
+    def test_portable_citations_and_internal_links(self):
+        args = fixture()
+        args['sources']['a.md']['body'] = '[Welcome](artifact:welcome)'
+        page = build_release(**args)['pages'][0]
+        assert page['source_url'] == 'https://host.example/course1/activities/welcome.html?context=web'
+        assert page['content'] == '[Welcome](https://host.example/course1/activities/welcome.html?context=web)\n'
+        assert 'canvas.example' not in str(page)
+        args['sources']['a.md']['body'] = '[Missing](artifact:missing)'
+        with self.assertRaisesRegex(ValueError, 'Missing portable artifact target'):
+            build_release(**args)
+
+    def test_missing_hosted_citation_does_not_fall_back_to_canvas(self):
+        args = fixture()
+        del args['artifacts']['a.md']['hosted_url']
+        with self.assertRaisesRegex(ValueError, 'Missing portable hosted source URL'):
+            build_release(**args)
 
     def test_explicit_learner_allowlist(self):
         fm = {'guided_assignment': {'purpose': 'Purpose', 'feedback_endpoint': 'SECRET', 'tasks': [

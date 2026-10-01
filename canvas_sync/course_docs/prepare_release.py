@@ -34,8 +34,46 @@ def deployment_succeeded(statuses):
     return any(status.get('state') == 'success' for status in statuses)
 
 
+def refresh_current_release(config, hosting_attempts=40):
+    """GET-only refresh from released sources and current placement, including callbacks."""
+    from canvas_sync.canvas_client import CanvasClient
+    from canvas_sync.course_context import export_release
+
+    class ReadOnlyCanvas(CanvasClient):
+        def _request_response(self, method, path, json_body=None, params=None):
+            if method != 'GET':
+                raise ValueError('Course context refresh cannot write Canvas')
+            return super()._request_response(method, path, json_body, params)
+
+    hosted_repo = config['hosted_repository']
+    token = os.environ.get('HOSTED_READ_TOKEN') or os.environ['GH_TOKEN']
+    hosted = api(hosted_repo, '/commits/main', token)['sha']
+    for attempt in range(hosting_attempts):
+        deployments = api(hosted_repo, '/deployments?environment=github-pages&sha=' + hosted, token)
+        if any(deployment_succeeded(api(hosted_repo, '/deployments/' + str(d['id']) + '/statuses', token))
+               for d in deployments):
+            break
+        if attempt + 1 < hosting_attempts:
+            time.sleep(15)
+    else:
+        raise ValueError('Current hosted main has not deployed successfully; retry after deployment')
+    manifest_path = Path('course1/manifests/production.json').resolve()
+    config_manifest = json.loads(manifest_path.read_text())
+    client = ReadOnlyCanvas.from_env(course_id=config_manifest['instance']['course_id'])
+    release = export_release(manifest_path, Path('.canvas-state').resolve(),
+                             repo_root=Path.cwd(), client=client)
+    release.update(source_commit=subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
+                   hosted_commit=hosted,
+                   state_commit=subprocess.check_output(['git', '-C', '.canvas-state', 'rev-parse', 'HEAD'], text=True).strip())
+    Path('course-context-release.json').write_text(json.dumps(release, indent=2) + '\n')
+    return release
+
+
 def main():
     config = json.loads(Path('config/course-docs.json').read_text())
+    if os.environ.get('COURSE_DOC_REFRESH_CURRENT') == 'true':
+        refresh_current_release(config)
+        return
     repo = os.environ['GITHUB_REPOSITORY']
     # Always use newest successful release; a delayed callback must not restore
     # an older publication merely because its sync run was created later.

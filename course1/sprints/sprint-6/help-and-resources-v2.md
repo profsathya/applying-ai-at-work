@@ -53,7 +53,7 @@ A **JSON file** stores responses in a structured text format so they can be revi
 3. Open the Canvas assignment, choose file upload, select that file, and submit.
 4. Check the submission details.
 
-The available Sprint 1 guided activities use Canvas text entry instead. Follow each activity's instructions for the required format.
+Submission formats vary across Sprint 1 activities. Follow each activity’s instructions: some use Canvas text entry, while walkthroughs may ask you to download and upload a Word document.
 
 ## Key terms
 
