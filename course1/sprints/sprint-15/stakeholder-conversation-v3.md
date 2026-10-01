@@ -113,7 +113,7 @@ Complete Section D of your report, the same day or the next. This is the only se
 
 Two things to hold on to as you write it. Update your Problem Frame on evidence, not on your own interpretation of what you heard. If the conversation fully confirmed your original frame, report that honestly. A clear confirmation is a real and valuable result.
 
-Then open your Stakeholder Map and make those changes in it. Update the status of every field the conversation settled, correct anything that turned out to be wrong, and add any stakeholder this person made you aware of. Leave your "What changed, and why" paragraph from the Dojo Lab sitting at the top of the file. You submit the updated map with your report.
+Then open your Stakeholder Map and make those changes in it. Update the status of every field the conversation settled, correct anything that turned out to be wrong, and add any stakeholder this person made you aware of. You submit the updated map with your report.
 
 ## The Stakeholder Validation Report
 
@@ -149,7 +149,7 @@ The template has four sections, each filled at the time it names.
 
 ## Submission
 
-Upload three files: the JSON response file from the AI activity in Part 1, your completed Stakeholder Validation Report, and your updated Stakeholder Map with your "What changed, and why" paragraph at the top of it.
+Upload three files: the JSON response file from the AI activity in Part 1, your completed Stakeholder Validation Report, and your updated Stakeholder Map.
 
 ## Portfolio Capture
 

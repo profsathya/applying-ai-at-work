@@ -60,6 +60,34 @@ guided_assignment:
     instruction_section: Set up your report
     feedback_enabled: false
     feedback_omission_reason: Identity field is setup and does not need AI feedback.
+  - id: dojo-changes
+    kind: table
+    prompt: What the Dojo Lab changed
+    columns:
+    - id: column-1
+      label: Field
+    - id: column-2
+      label: Your answer
+    rows:
+    - id: row-1
+      cells:
+      - text: 'What changed, and why
+
+          One short paragraph, in your own words: what moved between your first map
+          and your updated one, what argument or evidence moved it, and one AI suggestion
+          you rejected, and why. If nothing moved, say what you tested your map against.'
+      - text:   
+        response: true
+      label: What changed, and why
+    header_rows: 0
+    criteria:
+    - Name at least one specific change to your map, or say what you tested it against
+      if nothing moved. Name the argument or evidence behind the change. Name one AI
+      suggestion you rejected and give a reason.
+    instruction_section: What the Dojo Lab changed
+    feedback_enabled: false
+    feedback_omission_reason: The content editor chose a self-check for this reflection;
+      no AI feedback button is needed.
   - id: meeting-plan
     kind: table
     prompt: A. Before the meeting
@@ -291,6 +319,10 @@ Write before requesting optional AI feedback. It sees only the selected row, can
 
 Enter your name for the report you will keep with your portfolio. This setup field stays out of AI feedback.
 
+## What the Dojo Lab changed
+
+Before you prepare for your conversation, look at what the Dojo Lab did to your map. Your last turn in the Dojo already says most of this, so start there.
+
 ## A. Before the meeting
 
 Carry the stakeholder, relationship, assumption, and starting Problem Frame over from your Stakeholder Map. Do not write a new assumption just for this report. Record the planned format, date, and time, then correct those details if the conversation moves. The map names four stakeholder relationships: affected, influential, responsible for a constraint, and positioned to challenge your frame. Name each relationship that applies.
@@ -359,6 +391,6 @@ Two things to hold on to as you write it. Update your Problem Frame on evidence,
 
 In your Problem Frame, update: the **Status** column in **Your assumptions** (Part 6) for every assumption this conversation tested; **The problem** (Part 2), **Who is affected** (Part 3a), or **How it is handled today** (Part 4a) if what you heard changed them; **What you do not know yet** (Part 7); and **Last updated** at the top: Sprint 3 and the date.
 
-Then open your Stakeholder Map and make those changes in it. Update the status of every field the conversation settled, correct anything that turned out to be wrong, and add any stakeholder this person made you aware of. Leave your "What changed, and why" paragraph from the Dojo Lab sitting at the top of the file. You submit the updated map with your report.
+Then open your Stakeholder Map and make those changes in it. Update the status of every field the conversation settled, correct anything that turned out to be wrong, and add any stakeholder this person made you aware of. You submit the updated map with your report.
 
 Download this report as a Word document below. In Canvas, select **Start Assignment**, attach **three files** (the Part 1 AI JSON response, this completed report, and the updated Stakeholder Map), then select **Submit Assignment**. Downloading or saving a browser draft does not submit them.
