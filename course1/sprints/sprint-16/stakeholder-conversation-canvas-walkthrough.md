@@ -389,7 +389,7 @@ Complete Section D of your report, the same day or the next. This is the only se
 
 Two things to hold on to as you write it. Update your Problem Frame on evidence, not on your own interpretation of what you heard. If the conversation fully confirmed your original frame, report that honestly. A clear confirmation is a real and valuable result. The same holds the other way: if the person told you the problem is not what you framed, or not there at all, say so. A supported "my frame did not hold" is also a valid result.
 
-In your Problem Frame, update: the **Status** column in **Your assumptions** (Part 6) for every assumption this conversation tested; **The problem** (Part 2), **Who is affected** (Part 3a), or **How it is handled today** (Part 4a) if what you heard changed them; **What you do not know yet** (Part 7); and **Last updated** at the top: Sprint 3 and the date.
+In your Problem Frame, update: the **Status** column in **Your assumptions** (Part 6) for every assumption this conversation tested; **The problem** (Part 2), **Who is affected** (Part 3a), or **How it is handled today** (Part 4a) if what you heard changed them; **What you do not know yet** (Part 7); and **Last updated** at the top: Sprint 3 and the date. Mark an assumption confirmed if this conversation settled it. If it didn't, it stays unverified, the same way it stays Inferred on your map.
 
 Then open your Stakeholder Map and make those changes in it. Update the status of every field the conversation settled, correct anything that turned out to be wrong, and add any stakeholder this person made you aware of. You submit the updated map with your report.
 
