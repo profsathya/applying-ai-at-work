@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-welcome-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "6f63926ccabc0997d147041f102475b5770c172ff78f6a6a319dba92f7534249",
-  "body_sha256": "14fc6572a9852ca30c8efcf5724c1ad33d9fdd94d1dbc7208f3fd72f1336f1da",
+  "body_sha256": "3606ecb328a9ccbd26ebb131a6539ac243726df37264fcd0545d0f023d11e214",
   "frontmatter_sha256": "52112fa5c322e11fdfde9f21ea4f348e21a57755abe31f822ab306690d01f4dc",
   "parts": [
     {
@@ -188,8 +188,8 @@
     },
     {
       "kind": "new",
-      "markdown": "Continue to [How This Course Works](artifact:course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2) to plan your weekly work.",
-      "reason": "Link the next step using the existing Canvas page identity. Missing instructor bio/video material is omitted under the user decision.",
+      "markdown": "Continue to How This Course Works to plan your weekly work.",
+      "reason": "Link the next step using the existing Canvas page identity. Missing instructor bio/video material is omitted under the user decision. Authorized ten-link cleanup: retain the wording and sequence as plain text; remove only the sequential artifact hyperlinks.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.61m2fwihmg1q/body/34"
       ]

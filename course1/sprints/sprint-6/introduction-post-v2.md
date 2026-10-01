@@ -42,4 +42,4 @@ Your post introduces you to the group; writing quality is not assessed. Post you
 
 Read a few other posts when they are available. You will be learning alongside these people. Replies are welcome and optional.
 
-Continue to [Help and Resources](artifact:course1-sprints-welcome-and-orientation-v2-help-and-resources-v2), then begin [Sprint 1: Find the Problem Worth Solving](artifact:course1-sprints-sprint-14-introduction-find-the-problem-worth-solving).
+Continue to Help and Resources, then begin Sprint 1: Find the Problem Worth Solving.

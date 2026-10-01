@@ -70,4 +70,4 @@ Submit through Canvas using the type specified by the activity: discussion, text
 
 CIS 501 develops your problem frame and goals. In **CIS 502: Designing Solutions with AI**, you use the integrated problem document to begin building and refining a solution. Continuing into CIS 502 is recommended to complete the certificate sequence.
 
-Continue to [Your First Week](artifact:course1-sprints-welcome-and-orientation-v2-your-first-week-v2) for your orientation checklist.
+Continue to Your First Week for your orientation checklist.

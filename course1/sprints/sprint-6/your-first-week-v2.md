@@ -36,10 +36,10 @@ Find **Canvas Inbox** in the course navigation so you know where to contact your
 
 ## 4. Set up your AI coach
 
-Continue to [Set up your AI Dojo](artifact:course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2). Configure one tool and try its short coaching check. There is no setup submission. In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames without AI; use the Dojo only when the Dojo Lab introduces it.
+Continue to Set up your AI Dojo. Configure one tool and try its short coaching check. There is no setup submission. In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames without AI; use the Dojo only when the Dojo Lab introduces it.
 
 ## 5. Post your introduction
 
 Open [Introduction Post](artifact:course1-sprints-welcome-and-orientation-v2-introduction-post-v2) and follow its prompts. This zero-point discussion is graded complete or incomplete. Read a few introductions when they are available; replies are optional.
 
-After the Dojo setup and your introduction, continue to [Help and Resources](artifact:course1-sprints-welcome-and-orientation-v2-help-and-resources-v2) for any guidance you need, then begin [Sprint 1: Find the Problem Worth Solving](artifact:course1-sprints-sprint-14-introduction-find-the-problem-worth-solving).
+After the Dojo setup and your introduction, continue to Help and Resources for any guidance you need, then begin Sprint 1: Find the Problem Worth Solving.
