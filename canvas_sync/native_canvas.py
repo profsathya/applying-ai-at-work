@@ -21,7 +21,7 @@ def apply_native_canvas(document: str, manifest: dict) -> str:
     document = re.sub(r'\sdata-canvas-(?:href|target)="[^"]*"', '', document)
     document = re.sub(r'<span class="progress-check"[^>]*><span class="progress-box"></span><span class="progress-label">.*?</span></span>', '', document, flags=re.S)
     document = re.sub(r'\sdata-(?:progress-id|progress-state|canvas-module-item-id|completion-requirement)="[^"]*"', '', document)
-    document = document.replace('<div class="progress-status" id="progress-status" hidden></div>', '')
+    document = re.sub(r'^[ \t]*<div class="progress-status" id="progress-status" hidden></div>\n', '', document, flags=re.M)
     # The directory's progress client is a single generator-owned block. Do not
     # touch other scripts (walkthrough drafts, DOCX downloads, AI, disclosure).
     document = re.sub(r'      var progressEndpoint = .*?      loadProgress\(\);\n', '', document, flags=re.S)
@@ -52,11 +52,14 @@ html.native-canvas-context .back-link { display: none !important; }
   if (ctx !== 'canvas') return;
   document.documentElement.classList.add('native-canvas-context');
   document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('[data-native-canvas-navigation]').hidden = false;
+    var notice = document.querySelector('[data-native-canvas-navigation]');
+    if (notice) notice.hidden = false;
   });
 })();
 </script>
 '''
     document = document.replace('</head>', setup + '</head>', 1)
-    document = re.sub(r'(<body\b[^>]*>)', lambda m: m[1] + '\n' + notice, document, count=1)
+    # Keep the scheduled homepage design unchanged; guidance belongs with the activity.
+    if 'id="course-schedule"' not in document:
+        document = re.sub(r'(<body\b[^>]*>)', lambda m: m[1] + '\n' + notice, document, count=1)
     return document

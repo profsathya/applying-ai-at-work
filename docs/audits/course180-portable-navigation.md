@@ -7,7 +7,7 @@ The shared hosted pages remain in their existing iframes. Opt-in
 `hosted_html.native_canvas_navigation` removes generated Canvas-ID shortcuts,
 custom progress indicators/client, and progress-token transport. Useful authored
 references, hosted browsing, AI activity configuration, draft controls, downloads,
-and submission instructions remain. In Canvas, a short notice directs participants
+and submission instructions remain. In Canvas activities/directories, a short notice directs participants
 to native Modules for completion and to the enclosing activity for submission.
 There is no attempt to infer destination IDs from a cross-origin iframe referrer.
 
@@ -35,8 +35,7 @@ removing the ten hyperlink tags. AI JSON and shared engine files are unchanged.
 ## Validation
 
 - Schema and repository link audit pass.
-- Full suite: 356 tests, one skipped (before final token/AI-shortcut refinements);
-  targeted native-navigation/style tests pass after those refinements.
+- Full suite: 356 tests, one skipped; targeted native-navigation/style tests pass.
 - 104 browser views: 52 pages at 1280px and 390px; no horizontal overflow,
   JavaScript errors, CTI anchors, visible Canvas back-links or custom progress
   requests. Standalone web navigation remains available.
@@ -49,3 +48,6 @@ stay unchanged, so this scope requires no Canvas API write. Source merges must
 avoid triggering an unrelated broad Canvas publish. Keep experimental work separate
 from deliberate updates to these shared URLs: the official De Anza course will
 consume the same hosted content. This change adds no hosting architecture.
+
+Homepage layout/design is intentionally unchanged; only its CTI-specific targets
+and progress-token transport are removed. Homepage redesign is deferred.
