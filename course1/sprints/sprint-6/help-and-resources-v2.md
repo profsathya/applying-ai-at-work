@@ -87,4 +87,4 @@ The available Sprint 1 guided activities use Canvas text entry instead. Follow e
 
 **UMPIRE.** Understand, Map, Plan, Implement, Review, Evaluate. You may encounter this sequence in the Dojo; CIS 501 focuses on understanding and mapping the problem.
 
-When you have finished orientation, begin [Sprint 1: Find the Problem Worth Solving](artifact:course1-sprints-sprint-14-introduction-find-the-problem-worth-solving). Keep this page available for later questions.
+When you have finished orientation, begin Sprint 1: Find the Problem Worth Solving. Keep this page available for later questions.
