@@ -33,7 +33,7 @@ guided_assignment:
     - stakeholder-4
     field_guide_heading: How to fill in each field
     field_guide_intro: All four stakeholder tables use these seven fields. To see this
-      guide again while you work on a later table, reopen Step 3.
+      guide again while you work on a later table, reopen Step 2.
     check_intro: These checks apply to every stakeholder table.
   export_filename: stakeholder-map.docx
   records_destination:
@@ -79,27 +79,6 @@ guided_assignment:
     feedback_enabled: false
     feedback_omission_reason: Setup records your identity and existing frame; feedback
       belongs with the stakeholder judgments below.
-  - id: later-reflection
-    kind: table
-    prompt: What changed, and why
-    columns:
-    - id: column-1
-      label: Field
-    - id: column-2
-      label: Your answer
-    rows:
-    - id: row-1
-      cells:
-      - text: 'After the Dojo Lab
-
-          One short paragraph, in your own words: what moved between your first map
-          and this one, what argument or evidence moved it, and one thing the AI suggested
-          that you rejected, and why.'
-      - text:   
-      label: After the Dojo Lab
-    header_rows: 0
-    read_only: true
-    instruction_section: What changed, and why
   - id: stakeholder-1
     kind: table
     prompt: Stakeholder Table 1
@@ -851,10 +830,6 @@ Before you talk to anyone, write down what you already believe about the people 
 ## Set up your map
 
 Write your name and your problem, from **The problem** (Part 2) of your Problem Frame as you left it at the end of Sprint 2. This is the map you will keep working in throughout the sprint. Use roles or initials for other people, and keep confidential details out of responses you send for feedback.
-
-## What changed, and why
-
-*Leave this table blank for now.* It stays in your copied or downloaded map so you can fill it in after the **Dojo Lab: test, widen, choose**.
 
 ## Stakeholder Table 1
 

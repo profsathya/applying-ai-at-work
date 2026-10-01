@@ -139,4 +139,4 @@ A map that did not change is a legitimate result if you can say what you tested 
 
 ## Updating your map
 
-After you submit the transcript, go back to your Stakeholder Map and update it from the conversation: change a status, sharpen a field, or add a stakeholder where the Dojo moved you, in your own words. Then fill in the **What changed, and why** table at the top of your map. You will upload the updated map with your Stakeholder Conversation.
+After you submit the transcript, go back to your Stakeholder Map and update it from the conversation: change a status, sharpen a field, or add a stakeholder where the Dojo moved you, in your own words. You will write up what changed, and why, at the start of the Stakeholder Conversation walkthrough. You will upload the updated map with your Stakeholder Conversation.
