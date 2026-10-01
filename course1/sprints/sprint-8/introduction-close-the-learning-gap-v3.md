@@ -16,6 +16,10 @@ publish: true
 
 # Introduction: Close the Learning Gap
 
+```video
+{"src":"assets/sprint-intro/sprint-4-welcome-v2.mp4","title":"Welcome to Sprint 4 (44 seconds)","captions":"assets/sprint-intro/sprint-4-welcome-v2.vtt"}
+```
+
 You have been identifying what you know and don't know entirely about your problem since Sprint 1. Part 7 of your Problem Frame asks for what you do not know yet directly. In Sprint 3 you marked fields on your stakeholder map as Inferred, wrote assumption blocks for the guesses that would change your next move, and ended your validation report with what still needs validation.
 
 This sprint calls those open items gaps, and it is where they stop sitting at the end of a report and become a plan. You will not close them all in two weeks. You will plan how to close them, and that planning will show you which parts of your frame you can trust and which you cannot yet.

@@ -16,6 +16,10 @@ publish: true
 
 # Introduction: Integrate People and Context
 
+```video
+{"src":"assets/sprint-intro/sprint-3-welcome-v2.mp4","title":"Welcome to Sprint 3 (46 seconds)","captions":"assets/sprint-intro/sprint-3-welcome-v2.vtt"}
+```
+
 A Problem Frame gets stronger when it meets real people and real constraints. In this sprint, you will identify the stakeholders connected to your problem across four relationships: **Affected, Influential, Responsible for a constraint, Positioned to challenge your frame**. You will draft a stakeholder map that shows what you actually know versus what you are assuming, test and widen it with AI, and then have at least one real validation conversation to test your Problem Frame against a person's input. Based on what you learn, you may revise your Problem Frame.
 
 In Sprint 2 you rated your assumptions without checking any of them. This sprint is the first time one of them meets a real person.

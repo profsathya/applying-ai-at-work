@@ -15,6 +15,10 @@ publish: true
 
 # Introduction: Find the Problem Worth Solving
 
+```video
+{"src":"assets/sprint-intro/sprint-1-welcome-v2.mp4","title":"Welcome to Sprint 1 (40 seconds)","captions":"assets/sprint-intro/sprint-1-welcome-v2.vtt"}
+```
+
 This sprint is about choosing a problem you can investigate throughout this course. You will begin with your own experience, and by the end you will have one problem, written up as a **Problem Frame**, that the rest of the course builds on.
 
 ## Sprint 1 key terms
