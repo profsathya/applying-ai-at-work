@@ -434,16 +434,16 @@
       "canvas_payload_hash": "3a40339c5ef462d4f657e67d250485bc32d2a12d11bea019129d8cdaa9e56e61",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "63b688d7380639c4af20fb92d54f7775794ebca8e04510dcccff83071fe9201f",
-      "hosted_hash": "059950a74a35bce3cdfe4789244f143cca2a2a531146a4ccf915c26e8ba129b2",
-      "hosted_last_rendered": "2026-09-30T02:31:44+00:00",
+      "content_hash": "493402519f49779d41981d1bcc23939694e61ef2c5ce07b916bf62512fd48ee9",
+      "hosted_hash": "4ed31924056edfe6616f3423703396e2099879212a055a748218f82d9bd879b2",
+      "hosted_last_rendered": "2026-10-01T02:22:35+00:00",
       "hosted_path": "course1/activities/introduction-integrate-people-and-context-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-integrate-people-and-context-v3.html",
-      "last_pushed": "2026-09-30T02:31:44+00:00",
+      "last_pushed": "2026-10-01T02:22:35+00:00",
       "local_path": "course1/sprints/sprint-15/introduction-integrate-people-and-context-v3.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "29dac03120bbc10def7e5f9c14a6a7e55da84fb1"
+      "source_commit": "1dd9edfa30acb62cb8523f11142d522a3b57a69f"
     },
     "course1-sprints-sprint-15-sprint-3-concept-check": {
       "artifact_id": "course1-sprints-sprint-15-sprint-3-concept-check",
@@ -1594,17 +1594,17 @@
       "canvas_payload_hash": "f3d919b2bf7fbcf4e5bbf0fc2e08ed66513b77ece47ce69046a363318420ec7a",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "55fd70cccec301784d8d659e0c2fa65085432ecc2ed6d955bd9b84e7df435456",
+      "content_hash": "5713218906b5bb94522cd4e55127f2e5272a5a72d6cfb62f4abdf0ebd1d1f6ed",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "d0d2b39a2e2de3771eea322618f862855de32e0ae5819afac6c8e848bc500956",
-      "hosted_last_rendered": "2026-09-30T19:40:36+00:00",
+      "hosted_hash": "b499a5780f44e0d715c71febddfd27dff41417ecee43acb3ea3f26908ca2d2fe",
+      "hosted_last_rendered": "2026-10-01T02:22:41+00:00",
       "hosted_path": "course1/assignments/stakeholder-map-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/stakeholder-map-canvas-walkthrough.html",
-      "last_pushed": "2026-09-30T19:40:36+00:00",
+      "last_pushed": "2026-10-01T02:22:41+00:00",
       "local_path": "course1/sprints/sprint-16/stakeholder-map-canvas-walkthrough.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "22fbe8cb80568af41ea688c492f1d987f93ed170"
+      "source_commit": "1dd9edfa30acb62cb8523f11142d522a3b57a69f"
     }
   },
   "instance": {
@@ -1613,5 +1613,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-09-30T23:57:33+00:00"
+  "last_sync": "2026-10-01T02:22:41+00:00"
 }
