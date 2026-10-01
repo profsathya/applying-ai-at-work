@@ -404,25 +404,25 @@
     },
     "course1-sprints-sprint-15-dojo-lab-test-widen-choose": {
       "artifact_id": "course1-sprints-sprint-15-dojo-lab-test-widen-choose",
-      "canvas_fingerprint": "473844134f329cf998af332fc2aaceb59ac745e6098822f63c0b5abd651af6e5",
+      "canvas_fingerprint": "2c849c85a0b33935a566a89dd80d40d147d10065719faf2c72aef01ba4080195",
       "canvas_id": 7156,
       "canvas_module_id": 2081,
       "canvas_module_item_id": 17986,
       "canvas_page_url": null,
-      "canvas_payload_hash": "b346189583b7561e2ab77cac07883357b2ca4d80e2b24266f4977fd248c5090c",
+      "canvas_payload_hash": "ecabb542c2ee2d9c36ffe5cc9e4c147393a91c7aee9d0a687138bf62202e9ce2",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "8e83ef23abc85f8f1ddaaa3e3a182bbee64222f641b7098fafede4e8ae1c2bc8",
+      "content_hash": "e7f89f36e730ced95533fa34986eaf426eb3e6226ef8edda57f0f274588ea172",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "e3f12f4af62a42fe31e81704d4e8f8eca3c9c0b8923425a55105687e931e9026",
-      "hosted_last_rendered": "2026-10-01T04:29:12+00:00",
+      "hosted_hash": "cef442bec29703bb330fd4e9317f12b33d6291b21ee067595f8df75c2be5b539",
+      "hosted_last_rendered": "2026-10-01T06:15:28+00:00",
       "hosted_path": "course1/assignments/dojo-lab-test-widen-choose-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-test-widen-choose-v3.html",
-      "last_pushed": "2026-10-01T04:29:12+00:00",
+      "last_pushed": "2026-10-01T06:15:28+00:00",
       "local_path": "course1/sprints/sprint-15/dojo-lab-test-widen-choose-v3.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "6746bf26408c41e2f252f6ade9af5bb1da33150a"
+      "source_commit": "811e521cdad941e290c750d9a9ea3adedf98aa43"
     },
     "course1-sprints-sprint-15-introduction-integrate-people-and-context": {
       "artifact_id": "course1-sprints-sprint-15-introduction-integrate-people-and-context",
@@ -1613,5 +1613,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-01T04:29:12+00:00"
+  "last_sync": "2026-10-01T06:15:28+00:00"
 }
