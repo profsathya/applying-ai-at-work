@@ -79,7 +79,7 @@ guided_assignment:
     correct_index: 1
     explanation: Either side works. A disagreement is information, so talking to someone in it early helps you understand it.
   presentation: reading
-publish: false
+publish: true
 ---
 
 # Sprint 3 Concept Check

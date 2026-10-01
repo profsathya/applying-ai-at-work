@@ -58,3 +58,43 @@ class ReleasedPlacementTests(unittest.TestCase):
         self.assertEqual(reconcile(after,mapping),(after,mapping))
         state['artifacts'][str(PAIRS[0][0])]['canvas_module_item_id']=777
         with self.assertRaises(ValueError):reconcile(state,progress)
+
+class FinalPlacementVerificationTests(unittest.TestCase):
+    """The final post-publish verifier must accept the same retired anchors."""
+    setup_pair = ReleasedPlacementTests.setup_pair
+    def verify(self):
+        from tempfile import TemporaryDirectory
+        from pathlib import Path
+        from canvas_sync.walkthrough_release import verify_walkthrough_adjacency
+        self.state['new'] = {'canvas_id': self.kw['current_content_id'],
+                             'canvas_module_item_id': self.kw['current_item_id'],
+                             'canvas_module_id': self.state['source']['canvas_module_id']}
+        with TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'new.md'
+            path.write_text('---\nartifact_id: new\nwalkthrough_after: source\nmodule: Sprint\n---\n')
+            return verify_walkthrough_adjacency(self.client, [path], {'artifacts': self.state})
+
+    def test_final_verifier_accepts_all_eight_retired_anchors_without_writes(self):
+        for pair in PAIRS:
+            for stale in (True, False):
+                with self.subTest(pair=pair, stale=stale):
+                    self.setup_pair(pair, stale)
+                    before = copy.deepcopy(self.items)
+                    self.assertEqual(self.verify(), ['new'])
+                    self.assertEqual(self.items, before)
+                    self.client.update_module_item.assert_not_called()
+                    self.client.update_assignment.assert_not_called()
+                    self.client.delete_module_item.assert_not_called()
+
+    def test_final_verifier_rejects_ambiguous_retired_placement(self):
+        self.setup_pair(PAIRS[0], False)
+        self.items.append(dict(self.items[0], id=999))
+        with self.assertRaisesRegex(ValueError, 'ambiguous'):
+            self.verify()
+
+    def test_final_verifier_still_requires_adjacency_for_present_anchor(self):
+        self.setup_pair(PAIRS[0])
+        self.items.insert(0, {'id': PAIRS[0][1], 'position': 1, 'type': 'Assignment', 'content_id': PAIRS[0][0]})
+        self.items.insert(1, {'id': 777, 'position': 3, 'type': 'Page'})
+        with self.assertRaisesRegex(ValueError, 'directly below'):
+            self.verify()
