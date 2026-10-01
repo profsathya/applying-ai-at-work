@@ -235,25 +235,11 @@ modules:
     groups:
       - label: "Sprint Week 1: Understand and map"
         items:
-          - slug: "introduction-integrate-people-and-context-v2"
-            nav_meta: "Read"
-            meta: "Page - how stakeholders, evidence, and validation work in this sprint"
           - slug: "sprint-3-concept-check-v2"
             nav_meta: "Practice · Ungraded"
             meta: "Practice quiz - check your understanding before you start; ungraded, unlimited attempts"
             badge: "Self-check"
             selfcheck: true
-          - slug: "dojo-lab-stakeholder-map-v2"
-            nav_meta: "35 points"
-            meta: "Assignment - profile your stakeholders with the Dojo and mark what you know"
-      - label: "Sprint Week 2: Validate and revise"
-        items:
-          - slug: "stakeholder-conversation-v2"
-            nav_meta: "50 points"
-            meta: "Assignment - prepare, hold, and document a real stakeholder conversation"
-          - slug: "sprint-3-reflection-and-mid-course-goal-plan-revision-v2"
-            nav_meta: "10 points"
-            meta: "AI reflection activity - refine your goal plan revision based on evidence"
 
   - sprint: 8
     order: 4
@@ -320,11 +306,6 @@ modules:
       - "Explain your choice of a problem with reasons and a runner-up, or identify where to look next if nothing survives."
     prereq: "Only the first half of Sprint 1 is available here, ending with Test and commit. The Introduction also describes second-half work that is not yet available. Start with your own observations; you do not need a chosen problem. Keep one table across these activities and carry your choice into later framing. Work without AI in this half. The three own-your-progress activities are encouraged, carry zero points, and do not block later activities if skipped."
     groups:
-      - label: "Introduction"
-        items:
-          - slug: "introduction-find-the-problem-worth-solving-v2"
-            nav_meta: "Read"
-            meta: "Page - orient to candidate problems, the first-half sequence, and what to submit"
       - label: "Build your table"
         items:
           - slug: "start-your-list-and-get-underneath-it-v2"
@@ -346,22 +327,6 @@ modules:
           - slug: "test-and-commit-v2"
             nav_meta: "35 points"
             meta: "Guided assignment - select three to five candidate gaps, run four checks, and explain your choice with reasons and a runner-up or recovery plan; copy and submit once in Canvas, 35 points reviewed by your instructor"
-
-  - sprint: 13
-    order: 6
-    title: "AI Feedback Check"
-    tag: "Optional"
-    open: false
-    learning_goals:
-      - "Check that AI follow-up questions, a saved response, and an exported file are available before using the feedback workflow."
-    prereq: "No prior coursework is needed. This optional, ungraded check uses a supplied sample and requires no Canvas submission."
-    groups:
-      - label: "Try the repaired connection"
-        items:
-          - slug: "ai-feedback-check"
-            nav_meta: "Optional · Ungraded"
-            meta: "AI activity - see what changed, generate three questions, save a response, and inspect the exported JSON; no Canvas submission required"
-            badge: "Optional"
 
   - sprint: 14
     hidden: false

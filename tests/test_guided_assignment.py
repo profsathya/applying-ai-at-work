@@ -48,7 +48,7 @@ def dojo_frontmatter():
 
 class GuidedAssignmentTests(unittest.TestCase):
     def test_brainstorm_interleaved_example_once_moves_examples_above_cards(self):
-        path = ROOT / 'course1/sprints/sprint-15/brainstorm-your-list-ai-guided-activity.md'
+        path = ROOT / 'archive/course180-retired-2026-10-01/sprint-15/brainstorm-your-list-ai-guided-activity.md'
         fm, body = parse_frontmatter(path)
         fm['guided_assignment']['example_placement'] = 'once'
         rendered = render_guided_body(fm, markdown_body_to_html(body))
@@ -66,7 +66,7 @@ class GuidedAssignmentTests(unittest.TestCase):
         self.assertLess(rendered.index('example-once'), rendered.index('A long list is the goal'))
 
     def test_brainstorm_interleaved_keeps_original_body_and_canvas_assignment_identity(self):
-        path = ROOT / 'course1/sprints/sprint-15/brainstorm-your-list-ai-guided-activity.md'
+        path = ROOT / 'archive/course180-retired-2026-10-01/sprint-15/brainstorm-your-list-ai-guided-activity.md'
         source_path = ROOT / 'course1/sprints/sprint-14/brainstorm-your-list.md'
         fm, body = parse_frontmatter(path)
         _source_fm, source_body = parse_frontmatter(source_path)
