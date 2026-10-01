@@ -16,6 +16,10 @@ publish: true
 
 # Introduction: Is This Problem Worth Pursuing?
 
+```video
+{"src":"assets/sprint-intro/sprint-2-welcome-v2.mp4","title":"Welcome to Sprint 2 (43 seconds)","captions":"assets/sprint-intro/sprint-2-welcome-v2.vtt"}
+```
+
 You have started a Problem Frame for one problem. Now it's time to dig into that problem to make sure it's one you want to carry through this course. By the end of this sprint you should be able to say, with reasons, that this problem seems worth pursuing, or that it does not.
 
 ## Your route through this sprint
