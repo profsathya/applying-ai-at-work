@@ -106,7 +106,7 @@
     },
     "course1-sprints-sprint-14-brainstorm-your-list-walk-through": {
       "artifact_id": "course1-sprints-sprint-14-brainstorm-your-list-walk-through",
-      "canvas_fingerprint": "a7fa75e0c4b6f11bade9934b2f59e40a8899253c9f5addfa4b9154853260bac7",
+      "canvas_fingerprint": "f8854132bd8344ecd6affe69415cd1ca58eb473c6948ee3420bd41586e434eca",
       "canvas_id": 7185,
       "canvas_module_id": 2079,
       "canvas_module_item_id": 18020,
@@ -360,7 +360,7 @@
     },
     "course1-sprints-sprint-14-the-problem-frame": {
       "artifact_id": "course1-sprints-sprint-14-the-problem-frame",
-      "canvas_fingerprint": "23db68d52bb1748c6811c2f7731ab9b8ceb5bf11fd4ff142283b69b585fa9992",
+      "canvas_fingerprint": "2d55ec035581b6b98b27e984a5c40c6f8d19bd86b3328273679d660c425fb7e1",
       "canvas_id": 3624,
       "canvas_module_id": 2079,
       "canvas_module_item_id": 17985,
@@ -368,7 +368,7 @@
       "canvas_payload_hash": "1931b5942ac315cae0a8e75340a21aa101cd7d51ec276d23340b3a4ae9ee3203",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "1b6a8a0fa4650c07c41a912b3b0caaa7bd0af5a4b6007fff5b58b7e2fcc85145",
+      "content_hash": "8e922add2b860c4b2abb9fdb90399fcc42ef8147b308b850dab313876319ccc2",
       "hosted_hash": "c469967f5dc74490cff7ecb16058eb6989ad5eb28a11673cb2beeed0ec35f63a",
       "hosted_last_rendered": "2026-09-16T23:27:46+00:00",
       "hosted_path": "course1/activities/the-problem-frame.html",
@@ -377,7 +377,7 @@
       "local_path": "course1/sprints/sprint-14/the-problem-frame.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "6d822f0cbe7da816bf02f93fcd73b5669ba9df7c"
+      "source_commit": "12f25546b7f17507fb7efbdaf67313308bbc4ca9"
     },
     "course1-sprints-sprint-15-brainstorm-your-list-ai-guided-activity": {
       "artifact_id": "course1-sprints-sprint-15-brainstorm-your-list-ai-guided-activity",
@@ -468,7 +468,7 @@
     },
     "course1-sprints-sprint-15-sprint-3-concept-check-v4": {
       "artifact_id": "course1-sprints-sprint-15-sprint-3-concept-check-v4",
-      "canvas_fingerprint": "cec3535a27915d8c89aecd73b1252de551c3611fcc36594ae1320c938226b2ce",
+      "canvas_fingerprint": "2ad5f5dc9ccd3bf8a66ba9534fdd224b88b394ed628106db17112411348c01ee",
       "canvas_id": 7180,
       "canvas_module_id": 2081,
       "canvas_module_item_id": 18014,
@@ -476,7 +476,7 @@
       "canvas_payload_hash": "b99d9cb98e9c579696fd8b547d5ead0b63feb2272cdbd4bf6c4fff24390dd20c",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "8fd3ef40ffa8a36bab87a6c78e726661ceb0a2890587fafbdc065930f5c6a087",
+      "content_hash": "6f1e5d5635e68ea74d9a662ed2067f89590079f84aadef0c0ba5e63a2466658a",
       "delivery_mode": "guided_assignment",
       "hosted_hash": "bfd41a38b851fd0138dfa535b5a32d8960e4aa081690d01b77312ba7bf7130f4",
       "hosted_last_rendered": "2026-09-25T06:19:58+00:00",
@@ -486,7 +486,7 @@
       "local_path": "course1/sprints/sprint-15/sprint-3-concept-check-v4.md",
       "position": 10,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "5fc106b707d90a5463854f22c08ae99505aadf4f"
+      "source_commit": "12f25546b7f17507fb7efbdaf67313308bbc4ca9"
     },
     "course1-sprints-sprint-15-sprint-3-integrate-people-and-context": {
       "artifact_id": "course1-sprints-sprint-15-sprint-3-integrate-people-and-context",
@@ -1221,7 +1221,7 @@
     },
     "course1-sprints-sprint-8-sprint-4-concept-check-v4": {
       "artifact_id": "course1-sprints-sprint-8-sprint-4-concept-check-v4",
-      "canvas_fingerprint": "730e9cc7e33bd4e0c2e0ba0264fd9a15d5b0226974531266c2bc1129a0ca830c",
+      "canvas_fingerprint": "7b862aef82fe075ff5b0af3816d48bbbff7c3842846e8a730b2acdc443da8ff8",
       "canvas_id": 7181,
       "canvas_module_id": 2082,
       "canvas_module_item_id": 18015,
@@ -1229,7 +1229,7 @@
       "canvas_payload_hash": "20269424624d1f0cf76cd83e97a1f6d5023cb263cbed23c76505ba7332a642d0",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "c427e5e302e3b54b0eca1f86a46a6caf768ed1db7a84cdacef2d06a589338471",
+      "content_hash": "54c0cdceed977d431ea75afbb70ff50d6cb22932407bc2f2b027d36d593e0d85",
       "delivery_mode": "guided_assignment",
       "hosted_hash": "7d2887c60bfaf6238d3175f88cacd7bc5a80845a047917b5c30d9d66b1acc490",
       "hosted_last_rendered": "2026-09-25T06:20:00+00:00",
@@ -1239,7 +1239,7 @@
       "local_path": "course1/sprints/sprint-8/sprint-4-concept-check-v4.md",
       "position": 10,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "5fc106b707d90a5463854f22c08ae99505aadf4f"
+      "source_commit": "12f25546b7f17507fb7efbdaf67313308bbc4ca9"
     },
     "course1-sprints-sprint-8-sprint-4-reflection-what-changed-v3": {
       "artifact_id": "course1-sprints-sprint-8-sprint-4-reflection-what-changed-v3",
