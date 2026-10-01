@@ -566,7 +566,7 @@ modules:
         items:
           - slug: "stakeholder-conversation-canvas-walkthrough"
             nav_meta: "50 points"
-            meta: "Canvas Walkthrough - document a real stakeholder conversation; submit the Word report, updated Stakeholder Map, and AI response file, 50 points"
+            meta: "Canvas Walkthrough - document a real stakeholder conversation and update your Problem Frame; submit the Word report, 50 points"
           - slug: "sprint-3-reflection-and-mid-course-problem-frame-revision-v3"
             nav_meta: "10 points"
             meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 10 points"

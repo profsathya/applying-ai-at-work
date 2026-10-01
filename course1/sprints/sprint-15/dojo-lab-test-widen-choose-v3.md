@@ -95,4 +95,4 @@ After you submit the transcript, go back to your Stakeholder Map Word file and m
 
 If the Dojo raised something about your Problem Frame, note it. You will test it in your stakeholder conversation.
 
-You will upload your updated map with your Stakeholder Conversation.
+Keep your updated map. You will use it in your stakeholder conversation.
