@@ -562,6 +562,7 @@
     }
   },
   "hosted_html": {
+    "native_canvas_navigation": true,
     "base_url": "https://profsathya.github.io/Common-Curriculum/deanza",
     "enabled": true,
     "path_prefix": "deanza",
