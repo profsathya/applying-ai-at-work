@@ -44,28 +44,6 @@
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
       "source_commit": "a1ab8bd1197b1100e58fcb24565e30adebf4a0d3"
     },
-    "course1-sprint-13-ai-feedback-check": {
-      "artifact_id": "course1-sprint-13-ai-feedback-check",
-      "canvas_fingerprint": "36f0c0bd4ee4c35a4225f6a9faa227dba7dfc70df1f035e6e9ab03ecda278377",
-      "canvas_id": 7148,
-      "canvas_module_id": 2080,
-      "canvas_module_item_id": 17975,
-      "canvas_page_url": null,
-      "canvas_payload_hash": "26d34a43bfac73e8b08703d359242cd6a51b9170796919727803f60ffeab0863",
-      "canvas_type": "assignment",
-      "content_hash": "774e4052debf52a689ac8e59230a698c7cc824706ab451d55488cf7a87a3141d",
-      "delivery_mode": "ai_activity",
-      "hosted_hash": "8ae1df3885b07a9cc17c183152e3c95da18c7cd9f2ca0e3b762f11dbed31fd49",
-      "hosted_last_rendered": "2026-09-14T19:38:18+00:00",
-      "hosted_path": "course1/assignments/ai-feedback-check.html",
-      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/ai-feedback-check.html",
-      "last_pushed": "2026-09-14T19:38:18+00:00",
-      "local_path": "course1/sprints/sprint-13/ai-feedback-check.md",
-      "position": 1,
-      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "eaa470c2345e380388d63ae543273b9fe8d666b4",
-      "source_type": "quiz"
-    },
     "course1-sprints-sprint-12-sprint-1-find-the-problem-worth-solving-v2": {
       "artifact_id": "course1-sprints-sprint-12-sprint-1-find-the-problem-worth-solving-v2",
       "canvas_id": null,
@@ -356,29 +334,6 @@
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
       "source_commit": "12f25546b7f17507fb7efbdaf67313308bbc4ca9"
-    },
-    "course1-sprints-sprint-15-brainstorm-your-list-ai-guided-activity": {
-      "artifact_id": "course1-sprints-sprint-15-brainstorm-your-list-ai-guided-activity",
-      "canvas_fingerprint": "d4706870a010e589b91c6dd06ef5a141bb6cfd9e84f18af81078814d8af97c91",
-      "canvas_id": 7162,
-      "canvas_module_id": 2083,
-      "canvas_module_item_id": 17994,
-      "canvas_page_url": null,
-      "canvas_payload_hash": "90b8875a7124495966cd992abbb50424ccab160224f5650758891bf002e1c98e",
-      "canvas_type": "assignment",
-      "completion_requirement": "must_submit",
-      "content_hash": "53b89f5ac851084e495566f3188fdb904b60a86ef72dc39da9f83b0ce30a8e99",
-      "delivery_mode": "guided_assignment",
-      "hosted_hash": "0b1f4b5533cf7fa4e8ccc88f5b8dcf1582ce3bd6a03ddebb12a4f80ab76bc6e5",
-      "hosted_last_rendered": "2026-09-22T21:26:37+00:00",
-      "hosted_path": "course1/activities/brainstorm-your-list-ai-guided-activity.html",
-      "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/brainstorm-your-list-ai-guided-activity.html",
-      "last_pushed": "2026-09-22T21:26:37+00:00",
-      "local_path": "course1/sprints/sprint-15/brainstorm-your-list-ai-guided-activity.md",
-      "position": 1,
-      "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "dbe998cc78ac8cd8d7fb9401a8165c91a4455b1c",
-      "source_type": "quiz"
     },
     "course1-sprints-sprint-15-dojo-lab-test-widen-choose": {
       "artifact_id": "course1-sprints-sprint-15-dojo-lab-test-widen-choose",
@@ -1471,5 +1426,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-01T21:28:57+00:00"
+  "last_sync": "2026-10-01T21:45:57+00:00"
 }
