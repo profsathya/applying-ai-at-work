@@ -394,7 +394,7 @@ def enforce_module_order(client, desired):
     return verified
 
 
-def walkthrough_position(client, source_artifact_id, artifacts, *, module_name, current_item_id=None):
+def walkthrough_position(client, source_artifact_id, artifacts, *, module_name, current_item_id=None, current_content_id=None):
     """Resolve a new walk-through's live source anchor before any Canvas write."""
     matches = [entry for key, entry in artifacts.items()
                if key == source_artifact_id or entry.get('artifact_id') == source_artifact_id]
@@ -402,16 +402,38 @@ def walkthrough_position(client, source_artifact_id, artifacts, *, module_name, 
         raise ValueError(f'Walk-through source {source_artifact_id!r} must resolve to one deployment entry')
     source = matches[0]
     module_id, anchor_id = source.get('canvas_module_id'), source.get('canvas_module_item_id')
-    if not module_id or not anchor_id:
-        raise ValueError(f'Walk-through source {source_artifact_id!r} lacks a Canvas module item in deployment state')
+    if not module_id:
+        raise ValueError(f'Walk-through source {source_artifact_id!r} lacks a Canvas module in deployment state')
     module = next((item for item in client.list_modules() if int(item['id']) == int(module_id)), None)
     if not module or module.get('name') != module_name:
         raise ValueError(f'Walk-through source {source_artifact_id!r} is not in the requested live module')
     ordered = sorted(client.list_module_items(int(module_id)), key=lambda item: item['position'])
     original_ids = [int(item['id']) for item in ordered]
-    anchor_id = int(anchor_id)
+    anchor_id = int(anchor_id) if anchor_id is not None else None
     if anchor_id not in original_ids:
-        raise ValueError(f'Walk-through source {source_artifact_id!r} is missing from its live module')
+        # A released walkthrough remains independently placed after its original
+        # is removed from Modules. Never infer identity from a title, recreate
+        # the original placement, or move an existing walkthrough back silently.
+        if not current_item_id or not current_content_id or source.get('canvas_type') != 'assignment':
+            raise ValueError('Missing source anchor requires an existing assignment walkthrough')
+        original = client._request('GET', f"assignments/{source['canvas_id']}")
+        if original.get('id') != source['canvas_id']:
+            raise ValueError('Retained original assignment identity could not be verified')
+        placements = []
+        for candidate_module in client.list_modules():
+            candidate_id = int(candidate_module['id'])
+            candidates = ordered if candidate_id == int(module_id) else client.list_module_items(candidate_id)
+            for item in candidates:
+                if item.get('type') == 'Assignment' and item.get('content_id') == current_content_id:
+                    placements.append((candidate_id, item))
+                if item.get('type') == 'Assignment' and item.get('content_id') == source['canvas_id']:
+                    raise ValueError('Original assignment still has a placement; reconcile its source anchor')
+        if len(placements) != 1:
+            raise ValueError('Released walkthrough placement is missing or ambiguous')
+        placed_module, placed_item = placements[0]
+        if placed_module != int(module_id) or int(placed_item['id']) != int(current_item_id):
+            raise ValueError('Released walkthrough has moved; reconcile deployment state before publishing')
+        return int(module_id), None, int(placed_item['position']), original_ids
     current_item_id = int(current_item_id) if current_item_id is not None else None
     without_new = [item_id for item_id in original_ids if item_id != current_item_id]
     # Canvas positions can be sparse (for example 2, 3, 4 after a deletion).
@@ -483,7 +505,7 @@ def push_artifact(
         if fm.get('walkthrough_after'):
             source_module, source_item, adjacent_position, prior_order = walkthrough_position(
                 client, fm['walkthrough_after'], artifacts, module_name=fm['module'],
-                current_item_id=existing.get('canvas_module_item_id'))
+                current_item_id=existing.get('canvas_module_item_id'), current_content_id=existing_id)
             fm = {**fm, 'position': adjacent_position}
             canvas_fm = frontmatter_for_canvas_push(fm)
             walkthrough_order = (source_module, source_item, prior_order)
@@ -771,7 +793,8 @@ def push_artifact(
             live_ids = [int(item['id']) for item in sorted(client.list_module_items(module_id), key=lambda item: item['position'])]
             new_item_id = int(canvas_module_item_id)
             expected = list(prior_order)
-            expected.insert(expected.index(source_item) + 1, new_item_id)
+            if source_item is not None:
+                expected.insert(expected.index(source_item) + 1, new_item_id)
             if live_ids != expected:
                 raise ValueError(f'{rel_path}: Canvas did not preserve source-adjacent module order')
 
