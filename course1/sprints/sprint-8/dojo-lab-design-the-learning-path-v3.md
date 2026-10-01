@@ -30,104 +30,79 @@ guided_assignment:
     prompt: Paste the complete Dojo transcript, including every CONTINUED chunk, in
       order.
     criteria:
-    - Include the required header and every turn, in order.
-    - Keep every CONTINUED marker and all continuation chunks.
-    - Include a final Me turn that states the decisions in your own words.
+    - The required header and every turn, in order.
+    - Every CONTINUED marker and continuation chunk kept.
+    - The conversation reaches the method's last round, where you say what changed and what
+      you chose.
 ---
 
 # Dojo Lab: Design the Learning Plan
 
-Bring your list from Name the Gap. This activity follows the Dojo Flow you know from Sprints 1 and 3: test what you wrote, widen your options, test how you will know, then choose. AI does one job at a time, and each prompt tells it which.
+## What you need for this Dojo Lab
 
-AI can spot a vague gap in seconds. It cannot know that Dana never answers email, or which manager would tell you what actually happens. You can. That is the division of labor.
+- Your **Learning Plan** template, with Part A filled in from Name the Gap.
+- Your **Problem Frame**, the version in C1 of your template.
 
-Use any AI chat you already have (ChatGPT, Claude, or Gemini). Do not paste confidential workplace, client, or personal details. Change names and remove anything sensitive before you start.
+## The three parts to this activity
 
-One rule holds for the whole activity. **Your list and your plan stay in your words.** AI may point at something; you rewrite it. If you find yourself pasting its sentences into your template, stop and type the sentence yourself.
+1. Your Dojo conversation.
+2. Requesting a transcript from the Dojo and submitting it back into Canvas.
+3. Updating your Learning Plan based on your conversation.
 
-## 1. Test your list
+## Part 1: Your Dojo conversation
 
-Paste this prompt, then your list:
+Open your Dojo and say: "Walk me through Dojo Lab: Design the Learning Plan." Then paste Part A of your Learning Plan and your Problem Frame. Your Dojo knows what this activity is for and will take it from there: it tests your gap list, widens the ways you could close each gap, and tests how you will know you closed it.
 
-```text
-I am working on this problem: [paste your Problem Frame, parts 1 to 7]
+You may notice AI does more in this lab than in earlier sprints. That is on purpose. For three sprints, you did the hard thinking yourself: you dug to root causes, tested your assumptions, and heard from a real person. That work is what makes AI useful now, because it can only build good options on a problem you already understand. This is symbiotic thinking at work. AI does the fast part, laying out ways to learn and ways to check. You do the part only you can do: judging what fits your situation and deciding what goes into your plan.
 
-Here is my list of what I do not know yet, sorted as blocking, useful,
-or interesting, and ranked: [paste Part A of your template]
+One rule holds for the whole conversation. Your list and your plan are yours, not the AI's. AI can spot a vague gap in seconds, but it cannot know that Dana never answers email, or which manager would tell you what actually happens. You can. Push back, tell it when you disagree, or ask it to justify its reasoning. If you find yourself pasting its sentences into your template, stop and write the sentence yourself.
 
-Your job is to be a skeptic, not an editor. Do not rewrite anything
-and do not suggest solutions. Do not list everything you notice. Name
-what fails before saying anything encouraging.
+**The 3Cs in this conversation.** You learned these in Sprint 2. Here is what each one looks like when you are planning your learning.
 
-1. The three gaps most likely to mislead me, ranked. One or two lines
-   each, quoting my words. For each, say which of these it fails:
-   - I cannot finish "Until I know this, I can't ___" from what you
-     wrote.
-   - It is sorted wrong: marked blocking but really useful or
-     interesting, or the other way around.
-   - A different answer would change nothing in your Problem Frame.
-2. One line on whether my ranking makes sense.
-```
-
-Take what lands and fix your list yourself, in Part A of your template. Update it as needed. A longer description does not make a gap more important. You do not have to accept a verdict. If you think the AI misread your situation, say so and give your reasons. Keep the exchange going until you are comfortable that it understands your situation.
-
-## 2. Widen your options, using your 3Cs
-
-**The 3Cs, in this step.** You learned these in Sprint 2. Here is what each one looks like when you are planning your learning.
-
-**Context. Tell your AI your situation before you ask for anything.** Who will actually talk to you, how much time you have, what you can get access to, what is off limits. Sprint 2's test still works: if your prompt could have been sent by anyone in the class, it needs more of you in it.
-
-**Choices. Ask for more than one way to close each gap.** Two or three, with what each would take and what it would miss. A single suggestion is not a choice.
-
-**Confirmation. A plan built on AI suggestions is inferred until something independent backs it up.** Naming that confirmation comes in step 3.
+- **Context.** Tell your AI your situation before you ask for anything: who will actually talk to you, how much time you have, what you can get access to, and what is off limits. Sprint 2's test still works: if your message could have been sent by anyone in the class, it needs more of you in it.
+- **Choices.** Ask for more than one way to close each gap: two or three, with what each would take and what it would miss. A single suggestion is not a choice.
+- **Confirmation.** A plan built on AI suggestions is inferred until something independent backs it up. Your Dojo will ask you to name that for each gap.
 
 In between Choices and Confirmation sits your judgment.
 
-Follow up with:
+*More help: if your Dojo is not set up yet.* Use any AI chat. Paste the text below as your first message, then Part A of your Learning Plan and your Problem Frame.
 
-```text
-Here is my situation and what I can reach: [paste your context]
+> Before we start, here is how to work with me. Be my coach, not my editor. Ask one question at a time and wait for my answer. Keep each reply under 120 words. Ask what I think before you offer your own read. Never rewrite my work; point at a line and make me change it myself. When you push on something weak, say you are pushing and why. When I have defended a line, ease off and say so. If I lean on you two turns running, say so and make me put it in my own words. Do not invent anything about my workplace; ask. End with a recap I can save.
+>
+> == Sprint 4: Dojo Lab: Design the Learning Plan ==
+>
+> Purpose: Test the learner's gap list, widen the ways they could close each gap, and test how they will know each gap is closed. The learner decides what goes into the plan. Use the Sprint 4 page with this title in the Course tab.
+>
+> What the learner brings: Part A of their Learning Plan, with each gap sorted as blocking, useful, or interesting, and ranked. Their Problem Frame. If they bring only topics, ask for the written list before testing it.
+>
+> The rounds:
+>
+> 1. Read first (Sensei). Before looking at the list, ask the learner which gap they are least sure is real, which one they would most like to skip, and what their Sprint 3 stakeholder said that they still cannot answer. Say back what you heard.
+>
+> 2. Test the list (Auditor, then Challenger). Read the gaps against the Problem Frame. Rank at most three findings, naming the gap and quoting the learner's words. Pay particular attention to a gap that cannot finish "Until I know this, I can't ___," a gap sorted wrong, a gap whose different answer changes nothing in the frame, an assumption the stakeholder proved wrong that left a new question behind, and a part of the frame that could still be wrong with no gap pointing at it. Take one finding at a time. Have the learner state the change they will make in Part A. Then ask whether the ranking holds: which answer could change what the others mean?
+>
+> 3. Widen the ways to close each gap (Framer). Start with context: ask who will actually talk to the learner, how much time they have, what they can reach, and what is off limits. Then, for each gap in rank order, offer two or three ways to close it, with one line each on what it would take and what it would miss. Go deep on the blocking gaps; keep the useful ones brief. At least one must use a person, document, record, or observation, not AI. Ask for the smallest steps and their order, what the learner can skip and still make the decision, and what they would lose if they cut the plan in half. For each way they reject, ask what rejecting it costs. Treat all of these as possibilities, not workplace facts.
+>
+> 4. Test how they will know (Auditor). For each gap, ask the learner what answer would confirm it, what answer would prove them wrong, and what independent source would show it. Check each one: would it catch the learner being wrong, is it circular, is it vague, or is it checking an AI answer with another AI answer? Have the learner rewrite weak ones. Send larger desk work back to the template. The checks are run in CIS 502, not now.
+>
+> 5. Close (Reflector). Ask the learner to state, in their own words, which gaps changed and why, one way they kept and one they rejected with their reason, one check they changed or kept, and what they are still unsure about. Then ask which part of their Problem Frame they now trust less, and which more. Recap only the decisions they actually made.
+>
+> Do not rewrite the list or the plan, add gaps, answer the gaps, or suggest solutions to the problem.
 
-Now widen it. Help me plan how to close the gaps in my plan, in rank
-order. Do not add gaps and do not answer them for me. For each gap:
-1. Give me two or three different ways I could close it, not one. For
-   each, what would it take, and what would it miss?
-2. Where could I learn this? Name sources besides AI: a person,
-   a document, a system, an observation.
-3. What are the smallest steps, and in what order?
-4. What can I skip and still make the decision?
-Then: if I cut this plan in half, what would I lose?
-```
+## Part 2: Requesting and submitting the transcript
 
-Now confirm. For every suggestion, write **keep** or **reject** in your template, with one line of your own reasoning. Reject anything your situation rules out, and say what ruling it out costs you. "The AI said so" is not a reason to keep something. Then write what you kept into Part B of your template as bullets: possible sources, possible steps, possible ways to check, under the gap they belong to. Bullets, not sentences. You are collecting raw material here, not writing the plan. That happens next week, and nobody grades the wording of these notes.
+The transcript is the only thing you submit for this Dojo Lab. Five steps:
 
-## 3. Test how you will know
+1. Copy the transcript request at the bottom of this page.
+2. Paste it into your Dojo conversation as your next message.
+3. If the reply ends with CONTINUED, type "continue" and repeat until it stops.
+4. Copy the Dojo's reply, every chunk, in order.
+5. Paste it into the Canvas text box below this page and submit.
 
-For each gap, write how you will know you learned it, and name something independent that could confirm it, in the Sprint 3 sense: a person, a document, a record, anything that is not you or the AI. Then paste:
+## Part 3: Updating your Learning Plan
 
-```text
-Now test how I plan to know I closed each gap. Your job is still to be
-a skeptic, not an editor. Here are my checks: [paste]
-For each one: would this catch me being wrong? Is it circular, meaning
-it comes back to the same source as my belief? Is it vague, meaning
-there is no named person or document I could actually go to? Am I
-planning to check an AI answer with another AI answer?
-Do not rewrite my checks.
-```
+After you submit the transcript, go back to your Learning Plan template and make the changes you decided on in the conversation: rewrite a topic as a gap, re-sort a gap, or change your ranking in Part A. Then, in Part B, under each gap, write what you kept as bullets: possible sources, possible steps, possible ways to check. Bullets, not sentences. You write the plan itself next week. Leave C1 as it is.
 
-You do not run these checks now. You will run them in CIS 502. The plan only needs to show they would work.
+If the Dojo raised something about your Problem Frame, note it. You will update parts 6 and 7 next week, in C2.
 
-## 4. Choose
-
-The Dojo will suggest more than you might take. Decide what to keep, what to reject, and what you are still unsure about. Rejecting a good suggestion is fine, as long as you say what it costs you.
-
-## State your decisions before requesting the transcript
-
-Send one final Me: turn in the same conversation. In your own words, state:
-
-- which gaps changed after the first test, and what you did about them;
-- one suggestion from the widening step you kept, and one you rejected, with your reason;
-- one check the AI pushed on in step 3, and how you changed it, or why you kept it; and
-- what you are still unsure about.
-
-A list that did not change is a legitimate result if you can say what you tested it against.
+You will upload your updated template with your Learning Plan.

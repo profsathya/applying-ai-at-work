@@ -350,7 +350,7 @@ modules:
             meta: "Canvas Walkthrough - gather, rank, and connect your gaps to Problem Frame decisions; submit the Week 7 Word document, 50 points"
           - slug: "dojo-lab-design-the-learning-path-v3"
             nav_meta: "Practice · Own your progress"
-            meta: "Guided assignment - use your own AI chat to test your gap list, widen your options, and test how you will know; 0 points, submit the complete Dojo transcript to complete the module"
+            meta: "Guided assignment - use your Dojo to test your gap list, widen the ways to close each gap, and test how you will know; 0 points, submit the complete Dojo transcript to complete the module"
       - label: "Sprint Week 2: Plan and reflect"
         items:
           - slug: "learning-plan-and-updated-problem-frame-canvas-walkthrough"
