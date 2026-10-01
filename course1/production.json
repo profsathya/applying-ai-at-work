@@ -958,16 +958,16 @@
       "canvas_payload_hash": "cb514faaaf679fb445a303626a050a9dadb38fc7f45aaa1afc525ccdefc74eb6",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "5b04ecd487b2a97f94dc01aaf825a1a8ec18bfc43733ca67892c050c341e3009",
-      "hosted_hash": "13f2b57a0c3597a6559eb8579c088499253c7c94edd37a9446425e7371f6a28a",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "content_hash": "21298013b0ad9b4369f536b71c77c6b84e54d3d9b495401be2f8390130ed6a1c",
+      "hosted_hash": "43d570237259a9ec0f367bc8a10c90d20292f24dbc56336c69c48f3ff61913d5",
+      "hosted_last_rendered": "2026-10-01T23:54:23+00:00",
       "hosted_path": "course1/activities/introduction-close-the-learning-gap-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-close-the-learning-gap-v3.html",
-      "last_pushed": "2026-09-29T02:51:08+00:00",
+      "last_pushed": "2026-10-01T23:54:23+00:00",
       "local_path": "course1/sprints/sprint-8/introduction-close-the-learning-gap-v3.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "628cf623b01e0d30357091afe2101e4d404a7002"
+      "source_commit": "1ff98967dfad876e4d8bc90b78ca0c5a52fa2ba6"
     },
     "course1-sprints-sprint-9-introduction-synthesize-and-show-readiness-v2": {
       "artifact_id": "course1-sprints-sprint-9-introduction-synthesize-and-show-readiness-v2",
@@ -1384,5 +1384,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-01T23:51:50+00:00"
+  "last_sync": "2026-10-01T23:54:23+00:00"
 }
