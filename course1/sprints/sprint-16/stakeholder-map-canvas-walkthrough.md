@@ -810,22 +810,28 @@ guided_assignment:
     rows:
     - id: row-1
       cells:
-      - text: Date I sent the ask
+      - text: Date I will send the ask
       - text:   
-      label: Date I sent the ask
+        response: true
+      label: Date I will send the ask
     - id: row-2
       cells:
-      - text: Date I followed up (if no reply after 3 days)
+      - text: Date I will follow up (if no reply after 3 days)
       - text:   
-      label: Date I followed up (if no reply after 3 days)
+        response: true
+      label: Date I will follow up (if no reply after 3 days)
     - id: row-3
       cells:
-      - text: Date I switched to my backup (if no reply by day 5)
+      - text: Date I will switch to my backup (if no reply by day 5)
       - text:   
-      label: Date I switched to my backup (if no reply by day 5)
+        response: true
+      label: Date I will switch to my backup (if no reply by day 5)
     header_rows: 0
-    read_only: true
+    criteria:
+    - 'Optional: your dates follow the 3-day follow-up and day-5 switch.'
     instruction_section: Outreach log
+    feedback_enabled: false
+    feedback_omission_reason: Optional planning dates; no AI feedback is needed.
 source_provenance: stakeholder-map-canvas-walkthrough.sources.json
 ---
 
@@ -935,6 +941,4 @@ Some strong reasons to contact someone first:
 
 ## Outreach log
 
-*Leave this table blank now.* Fill it in during the **Stakeholder Conversation**, as it happens.
-
-Before you submit, check that your map has **four stakeholders**, every field marked **Confirmed or Inferred with a reason**, **two or three complete assumption blocks**, and **a first choice, a backup, and your reasoning**. Keep this file with your portfolio. You will update it in the Dojo Lab and after your conversation, then upload it again with your Stakeholder Conversation.
+Plan your outreach to your first choice. This is optional, but strongly encouraged. Setting your dates now makes it much easier to follow through, and to switch to your backup on time if you need to. In the Stakeholder Conversation, you will look back at whether you kept to them.

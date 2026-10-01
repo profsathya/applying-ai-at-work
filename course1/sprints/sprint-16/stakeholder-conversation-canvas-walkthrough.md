@@ -330,12 +330,14 @@ The row feedback in this walkthrough is optional and narrower than the Part 1 ex
 ### Part 2: Set Up the Conversation
 
 - Pick the method of communication this person actually answers: in person to set a time if you see them regularly; email if you want it in writing; phone or text if that is how you two normally talk.
-- Send the ask, and note the date in the **Outreach log** of your Stakeholder Map. Keep it short: who you are, that you're investigating the problem, and that you would like 20 to 30 minutes.
+- Send the ask on the date you planned in the **Outreach log** of your Stakeholder Map. Keep it short: who you are, that you're investigating the problem, and that you would like 20 to 30 minutes.
 - No reply in 3 days? Follow up once in the same thread, and make it easier to say yes: offer 15 minutes, or offer to send two questions they can answer in writing.
-- Still no reply by day 5? Go to your backup stakeholder and start again. Note the switch in the **Outreach log**. A stakeholder who does not respond is itself information about access and influence.
+- Still no reply by day 5? Go to your backup stakeholder and start again. A stakeholder who does not respond is itself information about access and influence.
 - Got a yes? Confirm the time, the format, and the length, so you both arrive expecting the same conversation.
 
 This is a real problem in your own work, and it is in both your interests to connect early. The sooner you talk, the more of this sprint you have left to act on what you hear.
+
+If you planned dates in your Outreach log, look back at them once the conversation is set: did you send, follow up, and switch when you planned? If not, what got in the way?
 
 ### Part 3: Have the Conversation
 
