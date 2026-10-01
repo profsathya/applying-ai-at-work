@@ -23,6 +23,14 @@ from canvas_sync.state import canvas_fingerprint, utc_now
 from canvas_sync.walkthrough_release import ASSESSMENT_KEYS, _rubric_shape
 
 ROOT = Path(__file__).resolve().parents[1]
+# Reviewed at Common-Curriculum 74569ebcbb75a471bdb8725f364192d29f7eb00b.
+# Shared navigation/branding changed 7149/3624; 7180's incorrect-choice feedback
+# changed. Preserve those files and their existing state hashes, never regenerate.
+REVIEWED_HOSTED_HASHES = {
+    7149: 'ae1ea8c71c180c8949bab141017a5e5537ce660a2fc0e44c53f5c4cc188c2982',
+    3624: 'e907102834136ae747a518867eb51b1854b38acc764340af174b18e9f81d2ea2',
+    7180: '559a6bed782e9990b298b7cd086580d656e13e817d1e564066a4ba1452ef7b92',
+}
 TARGETS = {
     7149: ('course1/sprints/sprint-14/brainstorm-your-list.md', 2079, 17977),
     7185: ('course1/sprints/sprint-14/brainstorm-your-list-walk-through.md', 2079, 18020),
@@ -106,6 +114,7 @@ def prepare(state, live, modules, items, sources, released, hosted_hashes, sourc
         raise ValueError('Expected exact source commit')
     proposed = copy.deepcopy(state)
     changes = []
+    preserved_hosted_differences = []
     module_by_id = {m['id']: m for m in modules}
     for ident, (path, module_id, item_id) in TARGETS.items():
         matches = [(k, e) for k, e in state['artifacts'].items() if e.get('canvas_id') == ident and e.get('local_path') == path]
@@ -147,7 +156,9 @@ def prepare(state, live, modules, items, sources, released, hosted_hashes, sourc
         if ident == 7180 and (obj.get('grading_type'), obj.get('assignment_group_id')) != ('points', 429):
             raise ValueError('7180: Concept Check grading configuration changed')
         if hosted_hashes.get(ident) != entry.get('hosted_hash'):
-            raise ValueError(f'{ident}: hosted HTML changed; review before accepting a new baseline')
+            if ident not in REVIEWED_HOSTED_HASHES or hosted_hashes.get(ident) != REVIEWED_HOSTED_HASHES[ident]:
+                raise ValueError(f'{ident}: hosted HTML changed; review before accepting a new baseline')
+            preserved_hosted_differences.append(ident)
         check_shell(obj, fm['title'], entry['hosted_url'])
         fingerprint = canvas_fingerprint(obj, expected_type)
         if ident in (3624, 7180) and fingerprint != entry['canvas_fingerprint'] and canvas_fingerprint(dict(obj, published=not obj['published']), expected_type) != entry['canvas_fingerprint']:
@@ -178,6 +189,7 @@ def prepare(state, live, modules, items, sources, released, hosted_hashes, sourc
     token = digest(json.dumps(material, sort_keys=True, separators=(',', ':')))
     return proposed, {'mode': 'review-only', 'checked_at': utc_now(), 'source_commit': source_commit,
                       'review_token': token, 'changes': changes,
+                      'preserved_hosted_differences': preserved_hosted_differences,
                       'brainstorm_published': new['published'],
                       'next_action': 'Verify export readiness; no further Canvas publication needed' if new['published'] else
                       'After separate approval, publish assignment 7185 only, preserving its wrapper/settings and all original 7149 data; read back object and module visibility, then rerun this planner.',

@@ -48,7 +48,7 @@ production authorization or an apply command.
 
 The proposal checks all four exact identities, unique current placements,
 published parent modules, matching object/item visibility, preserved grading,
-Brainstorm assessment parity, unchanged hosted hashes and instructional source.
+Brainstorm assessment parity, reviewed hosted hashes and unchanged instructional source.
 It accepts only the known iframe sanitizer normalization, never arbitrary wrapper
 text, scripts, targets or behavior. Problem frame and Concept Check drift must
 be provably publication-only against stored fingerprints.
@@ -57,6 +57,15 @@ Before 7185 is published, only its fingerprint is reconciled; its staged content
 hash and released source commit remain unchanged. Re-run after an approved
 publication to adopt `publish: true` source only once a fresh object/module read
 confirms it. No hypothetical future Canvas state is marked released.
+
+The hosted hashes stored for 7149/3624 predate shared navigation/branding changes;
+7180's hosted incorrect-answer feedback was also subsequently improved. Those
+three exact files at Common-Curriculum commit
+`74569ebcbb75a471bdb8725f364192d29f7eb00b` were reviewed and their current hashes
+are explicitly allowed. Their existing state `hosted_hash` values stay unchanged:
+this repair does not pretend it rendered or deployed new content. Any further
+hosted edit blocks the proposal. Replacement7185 must still match its original
+staged hosted hash exactly.
 
 ## Exact production boundary for separate approval
 

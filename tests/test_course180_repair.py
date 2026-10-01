@@ -4,7 +4,7 @@ from unittest.mock import patch
 
 from canvas_sync.hosted_html import iframe_shell
 from canvas_sync.state import canvas_fingerprint
-from maintenance.prepare_course180_repair import TARGETS, ReadOnlyClient, check_shell, digest, prepare
+from maintenance.prepare_course180_repair import TARGETS, REVIEWED_HOSTED_HASHES, ReadOnlyClient, check_shell, digest, prepare
 
 
 class Course180RepairTests(unittest.TestCase):
@@ -113,3 +113,14 @@ class Course180RepairTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     client._request_response(method, path)
             request.assert_not_called()
+
+    def test_only_explicitly_reviewed_hosted_variations_are_preserved(self):
+        for ident, reviewed in REVIEWED_HOSTED_HASHES.items():
+            self.hashes[ident] = reviewed
+        proposal, report = self.run_plan()
+        self.assertEqual(set(report['preserved_hosted_differences']), {7149, 3624, 7180})
+        for ident in REVIEWED_HOSTED_HASHES:
+            self.assertEqual(proposal['artifacts'][str(ident)]['hosted_hash'], self.state['artifacts'][str(ident)]['hosted_hash'])
+        self.hashes[7180] = 'unreviewed edit'
+        with self.assertRaisesRegex(ValueError, 'hosted HTML changed'):
+            self.run_plan()
