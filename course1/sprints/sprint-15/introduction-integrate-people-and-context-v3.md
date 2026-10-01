@@ -38,7 +38,7 @@ AI is your thinking partner throughout, but you own the goal, the data, and the 
 What you will do:
 
 1. **Identify your stakeholders.** Name at least one person in each of the four relationships: Affected, Influential, Responsible for a constraint, Positioned to challenge your frame.
-2. **Draft a stakeholder map with honest evidence status.** Lay out what you know for each stakeholder, and be clear about what is confirmed fact versus your own assumption.
+2. **Draft a stakeholder map with honest evidence status.** Lay out what you know for each stakeholder, and be clear about what is confirmed fact versus your own assumption. You will mark each one Confirmed or Inferred, the same idea as confirmed and unverified in Sprint 1.
 3. **Name what you are guessing, and write the questions that would settle it.** Start with the rows in **Your assumptions** (Part 6) that you rated high risk in Sprint 2, add anything new your map turns up, and write a question for each.
 4. **Test and widen your map with AI.** Use your own AI chat to poke holes in what you wrote and to offer other ways to see the same situation. You decide what changes.
 5. **Conduct at least one real validation conversation.** Talk to an actual stakeholder and see whether your Problem Frame holds up.
