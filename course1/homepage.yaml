@@ -257,9 +257,9 @@ modules:
           - slug: "introduction-close-the-learning-gap-v3"
             nav_meta: "Read"
             meta: "Page - what separates a gap from a topic, how to sort blocking from interesting, and what closed means"
-          - slug: "sprint-4-concept-check-v3"
+          - slug: "sprint-4-concept-check-v4"
             nav_meta: "Practice · 5 points"
-            meta: "Practice quiz - check your understanding before you start; unlimited attempts, 5 points"
+            meta: "Guided concept check - answer all five questions before Name the Gap; submit all five answers for 5 completion points reviewed by your instructor"
             badge: "Self-check"
             selfcheck: true
           - slug: "name-the-gap-canvas-walkthrough"
@@ -447,9 +447,9 @@ modules:
           - slug: "introduction-integrate-people-and-context-v3"
             nav_meta: "Read"
             meta: "Page - how stakeholders, evidence status, and validation conversations work in this sprint"
-          - slug: "sprint-3-concept-check-v3"
+          - slug: "sprint-3-concept-check-v4"
             nav_meta: "Practice · 5 points"
-            meta: "Practice quiz - check your understanding before you start mapping; unlimited attempts, 5 points"
+            meta: "Guided concept check - answer all five questions before the Stakeholder Map; submit all five answers for 5 completion points reviewed by your instructor"
             badge: "Self-check"
             selfcheck: true
           - slug: "stakeholder-map-canvas-walkthrough"
