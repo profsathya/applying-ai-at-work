@@ -861,7 +861,7 @@ If you can, choose someone who is **Positioned to challenge your frame**. This p
 
 ### What you are guessing, and what would tell you
 
-Now step back. Start with **Your assumptions** (Part 6) in your Problem Frame: the rows you rated high risk in Sprint 2 are your first candidates. Then look at what you marked **Inferred** on this map. Some of those guesses barely matter. A few of them hold your whole frame up and are high-stakes.
+Now step back. Start with **Your assumptions** (Part 6) in your Problem Frame: the rows you rated high risk in Sprint 2 are your first candidates. Then look at what you marked **Inferred** on this map. Inferred works like unverified in your Problem Frame: something you believe but have not checked yet. Some of those guesses barely matter. A few of them hold your whole frame up and are high-stakes.
 
 **What “high-stakes” means.** An assumption is high-stakes if being wrong about it would change what you do next. Not a small correction, but a real change: a different problem, different people affected, or a different picture of what a fixed problem would look like.
 
