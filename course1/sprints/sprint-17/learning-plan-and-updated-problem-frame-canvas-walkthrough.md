@@ -400,7 +400,7 @@ Plan how you will close the gaps in your Problem Frame, and update the frame so 
 
 You are not doing the learning now. You will follow this plan in CIS 502. What you write here needs to be clear enough that you could pick it up on the first day of that course and start.
 
-Continue with Part B below, then Part C. Your Dojo Lab bullets are the raw material: pick from them, cut what did not survive, and write the five questions in full sentences, in your own words. Two things the Dojo never touched are yours to add here: the reason each gap matters to your frame, and the updated frame itself.
+Continue with Part B below, then Part C. Your Dojo Lab bullets are the raw material: pick from them, cut what did not survive, and write the five questions in full sentences, in your own words. Two things are yours to write here: the reason each gap matters to your frame, and the updated frame itself.
 
 Write your own answers before requesting optional AI feedback. A selected row may be sent for formative feedback, but the service cannot know your workplace or supply evidence. Remove names and confidential details from any row you send. You can use the self-checks and finish every part without AI.
 
@@ -446,7 +446,7 @@ Add a block for each remaining planned gap here. Use the same six lines as the t
 
 ## Keep your Dojo decisions
 
-Keep your Dojo Lab record of the context you gave AI, which suggestions you kept or rejected, and what changed. Enter up to three decisions that affected your plan in the source grid below. This records choices you already made; it is not a request to repeat the Dojo or accept a new suggestion now.
+Look back at your Dojo transcript for the context you gave, which suggestions you kept or rejected, and what rejecting cost you. Enter up to three decisions that affected your plan in the source grid below. This records choices you already made; it is not a request to repeat the Dojo or accept a new suggestion now.
 
 ## C2. Update your Problem Frame
 
@@ -455,13 +455,13 @@ Your frame from Sprint 3 is already in C1, in your Week 7 Word file. Leave it th
 - **Part 6, assumptions.** Keep each assumption marked confirmed or inferred. For each one still inferred, add which gap in your plan will check it, in place of “who could tell me.”
 - **Part 7, what you do not know yet.** Rewrite it so it lists the gaps in your plan, in rank order, plus the interesting ones you left out.
 
-If writing the plan showed you that another part of the frame is wrong or vague, fix it, and note which part you changed.
+If the Dojo or writing the plan showed you that another part of the frame is wrong or vague, fix it, and note which part you changed.
 
 *Example, part 6:*
 
 From part 3: All four managers are affected. Status: inferred. Checked by: Gap 1 in my plan.
 
-From part 4: Nobody has tried to fix this before. Status: inferred. Checked by: Gap 2 in my plan.
+From part 4: The shared sheet stopped because the person who set it up left. Status: inferred. Checked by: Gap 2 in my plan.
 
 The response rows below help you review all seven parts. If a selected row contains private workplace details, use the self-check without sending it for feedback.
 
