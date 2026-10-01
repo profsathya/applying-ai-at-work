@@ -24,6 +24,7 @@ from markdown.treeprocessors import Treeprocessor
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from canvas_sync.schema import parse_frontmatter, validate_artifact
 from canvas_sync.branding import partner_brand_row
+from canvas_sync.course_styles import apply_course_styles
 from canvas_sync.item_sequence import live_sequences, source_sequences, sequence_line, update_sequence_line
 from canvas_sync.local_images import local_image_assets
 from canvas_sync.videos import render_video_blocks
@@ -1054,6 +1055,8 @@ def _render_ai_activity_artifact(
     config_site_path = _ai_activity_config_site_path(course_key, fm, manifest)
     config_path = output_dir / config_site_path
 
+    wrapper = apply_course_styles(wrapper, course_key)
+    shell = apply_course_styles(shell, course_key)
     wrapper_changed, wrapper_hash = _write_if_changed(wrapper_path, wrapper)
     shell_changed, shell_hash = _write_if_changed(shell_path, shell)
     config_changed, config_hash = _write_if_changed(
@@ -1146,6 +1149,7 @@ def render_hosted_artifact(
             asset_path.parent.mkdir(parents=True, exist_ok=True)
             asset_path.write_bytes(asset['payload'])
         asset_outputs.append({'path': str(asset_path), 'hash': asset['hash'], 'changed': asset_changed})
+    document = apply_course_styles(document, course_dir_for_manifest(manifest_path).name)
     changed, hosted_hash = _write_if_changed(output_path, document)
     return {
         "file": str(md_path),
@@ -1928,6 +1932,7 @@ def _render_career_sprint_index(
         back_href="home.html?context=web",
         progress_endpoint=hosted_config_from_manifest(manifest).progress_endpoint,
     )
+    document = apply_course_styles(document, course_key)
     path = output_dir / hosted_config_from_manifest(manifest).path_prefix / course_key / f"sprint-{sprint}.html"
     changed, digest = _write_if_changed(path, document)
     return {"path": str(path), "changed": changed, "hash": digest}
@@ -2022,6 +2027,9 @@ def _render_career_course_index(
         directory = render_scheduled_homepage(
             course_meta, schedule, directory=True, **scheduled_options,
         )
+    document = apply_course_styles(document, course_key)
+    if homepage and homepage.get("schedule"):
+        directory = apply_course_styles(directory, course_key)
     course_dir_out = output_dir / hosted_config_from_manifest(manifest).path_prefix / course_key
     index_changed, index_digest = _write_if_changed(course_dir_out / "index.html", document)
     home_changed, home_digest = _write_if_changed(course_dir_out / "home.html", document)
@@ -2206,6 +2214,7 @@ def _render_sprint_index(
         sections,
         back_href="home.html?context=web",
     )
+    document = apply_course_styles(document, course_key)
     path = output_dir / hosted_config_from_manifest(manifest).path_prefix / course_key / f"sprint-{sprint}.html"
     changed, digest = _write_if_changed(path, document)
     return {"path": str(path), "changed": changed, "hash": digest}
