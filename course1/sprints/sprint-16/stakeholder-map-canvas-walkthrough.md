@@ -654,9 +654,11 @@ guided_assignment:
       label: What a different answer changes
     header_rows: 0
     criteria:
-    - Choose an assumption whose opposite would change what you do next.
-    - Complete all four lines. Your question should ask about experience, past behavior,
-      or a concrete tradeoff.
+    - If this assumption turned out wrong, your next step would change.
+    - Your question asks about a real experience, a past decision, or a tradeoff, not
+      their opinion of your idea.
+    - “What a different answer changes” names a specific change to your frame or your
+      plan.
     instruction_section: Assumption 1
   - id: assumption-2
     kind: table
@@ -701,9 +703,11 @@ guided_assignment:
       label: What a different answer changes
     header_rows: 0
     criteria:
-    - Choose an assumption whose opposite would change what you do next.
-    - Complete all four lines. Your question should ask about experience, past behavior,
-      or a concrete tradeoff.
+    - If this assumption turned out wrong, your next step would change.
+    - Your question asks about a real experience, a past decision, or a tradeoff, not
+      their opinion of your idea.
+    - “What a different answer changes” names a specific change to your frame or your
+      plan.
     instruction_section: Assumption 2
   - id: assumption-3
     kind: table
@@ -748,9 +752,11 @@ guided_assignment:
       label: What a different answer changes
     header_rows: 0
     criteria:
-    - Choose an assumption whose opposite would change what you do next.
-    - Complete all four lines. Your question should ask about experience, past behavior,
-      or a concrete tradeoff.
+    - If this assumption turned out wrong, your next step would change.
+    - Your question asks about a real experience, a past decision, or a tradeoff, not
+      their opinion of your idea.
+    - “What a different answer changes” names a specific change to your frame or your
+      plan.
     instruction_section: Assumption 3 (only if you have a third)
   - id: first-contact
     kind: table
@@ -787,9 +793,11 @@ guided_assignment:
       label: Why this person, before anyone else?
     header_rows: 0
     criteria:
-    - Name your first choice and backup for a real conversation.
-    - Explain in two or three sentences why this person can test an important assumption
-      or fill a meaningful gap.
+    - Your first choice can test your highest-stakes assumption, or knows the part of
+      your map where your evidence is thinnest.
+    - Your backup is someone you can actually reach.
+    - Your reason explains why this person comes before anyone else, not just why they’re
+      relevant.
     instruction_section: Who you will talk to first
   - id: outreach-log
     kind: table
