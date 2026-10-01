@@ -33,7 +33,7 @@
   const hash = new URLSearchParams(root.location.hash.slice(1));
   const incomingToken = hash.get("progress_token") || params.get("progress_token");
   let unsavedToken = null;
-  if (incomingToken) {
+  if (incomingToken && !schedule.native_completion) {
     try {
       root.sessionStorage.setItem("canvas_progress_token", incomingToken);
       params.delete("progress_token");

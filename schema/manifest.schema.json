@@ -44,6 +44,10 @@
           "type": "string",
           "pattern": "^[a-z0-9][a-z0-9_/-]*$"
         },
+        "native_canvas_navigation": {
+          "type": "boolean",
+          "description": "Use native Canvas completion/submission controls without hosted Canvas-ID shortcuts or personalized progress."
+        },
         "progress_endpoint": {
           "type": "string",
           "format": "uri"
