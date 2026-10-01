@@ -42,45 +42,62 @@ Unchanged from course1/design/sprint-3-stakeholder-map-rubric.md (v0.1).
 Bullet 3 currently reads "Your fields show real thinking." Suggested:
 "Impact and authority are kept separate, and each Need says what the person cares about."
 
+### Principles used
+
+1. **Two layers.** The short "before you submit" box is the student's quick check. The rubric is the full grading breakdown behind it.
+2. **Built on Sathya's Self-check rule and Leslie's Sprint 1 example.** Neutral, observable lines; points per row; full, partial, and minimal levels.
+3. **Grade only what is on the page.** No row depends on what the student knows or could do outside the assignment.
+4. **Read for meaning, not wording.** Short or plain answers earn the points if the idea is there.
+5. **Points follow effort.** Rows are weighted by how much students actually write: about 66% stakeholder tables, 24% assumption blocks, 10% first contact.
+6. **Each thing is graded once.** No blank field loses points in two rows.
+7. **Clear on full, generous on partial.** The full-points line states exact counts. Partial covers "most of it." Minimal is for real gaps.
+8. **Every cell is a full statement.** Numbers are written out, and no cell relies on another to make sense.
+9. **Partial everywhere equals a pass.** Partial is set near 70% of each row, so a student who does most of each part reaches 35 of 50.
+
 ## Part 2. Stakeholder Conversation Canvas Walkthrough
 
-Built in the same shape as Part 1, from the walkthrough as it stands after the one-file submission change: Steps 1 to 7, submitted as one Word report that includes the updated Problem Frame.
+CIS 501, Sprint 3: Integrate People and Context (V3)
+50 points. Passing: 35 points (70%).
+Status: first pass, 1 October 2026.
 
 ### Rubric
 
 | # | Full points | Pts | Partial | Minimal |
 |---|---|---|---|---|
-| **Before the meeting** | | | | |
-| 1 | Section A names the stakeholder and role, the relationship, the format, date and time, one assumption from the Stakeholder Map, and the starting problem. | 4 | Section A is answered, with one or two of the five rows missing. (3) | Section A has one or two rows answered. (1) |
-| 2 | All three validation questions ask about an experience, a decision, or a tradeoff, not an opinion of the idea, and each says what you hope to learn. | 9 | Two of the three validation questions ask about an experience, a decision, or a tradeoff, and each of those says what you hope to learn. (6) | One validation question asks about an experience, a decision, or a tradeoff. (2) |
-| **The conversation** | | | | |
-| 3 | Section B records what the stakeholder said, in their words or a privacy-safe paraphrase, kept apart from interpretation, and answers what was unexpected and what they offered to follow up on. | 7 | Section B records what the stakeholder said, but mixes in interpretation or leaves one of the three rows blank. (5) | Section B has one row answered. (1) |
-| 4 | All four rows of Section C are answered, and what was confirmed or challenged points to something the stakeholder said. | 5 | Three of the four rows of Section C are answered, or the rows are answered without pointing to what the stakeholder said. (3) | One or two rows of Section C are answered. (1) |
-| **Afterward** | | | | |
-| 5 | Section D says what changed in the Problem Frame and why, or states honestly that it held, and points to what the stakeholder said. | 8 | Section D says what changed in the Problem Frame, or that it held, without pointing to what the stakeholder said. (6) | Section D names a change or no change, with no reason. (2) |
-| 6 | Section D names what moved from Inferred to Confirmed, with the evidence, and names a specific claim that still needs validation. | 7 | Section D names what moved or what still needs validation, but not both, or names them without the evidence. (5) | One of the two rows is answered in a few words. (1) |
+| **A. Before the meeting** | | | | |
+| 1 | All five fields in Section A are answered, including one assumption the conversation will test. | 5 | Three or four fields in Section A are answered. (3) | One or two fields in Section A are answered. (1) |
+| **Validation questions** | | | | |
+| 2 | Three questions are written, each with what the student hopes to learn. | 4 | Two questions are written, each with what the student hopes to learn. (3) | One question is written, with what the student hopes to learn. (1) |
+| 3 | All three questions ask about an experience, a decision, or a tradeoff, not the stakeholder's opinion of the student's idea. | 5 | Two of the three questions ask about an experience, a decision, or a tradeoff. (4) | One of the three questions asks about an experience, a decision, or a tradeoff. (1) |
+| **B. During the meeting** | | | | |
+| 4 | All three rows in Section B are answered, using the stakeholder's words or a close paraphrase. | 6 | Two rows in Section B are answered, using the stakeholder's words or a close paraphrase. (4) | One row in Section B is answered, using the stakeholder's words or a close paraphrase. (1) |
+| 5 | Section B keeps what the stakeholder said separate from the student's own interpretation. | 4 | Section B mostly records what the stakeholder said, with some interpretation mixed in. (3) | Section B is mostly the student's interpretation. (1) |
+| **C. First impressions** | | | | |
+| 6 | All four rows in Section C are answered. | 4 | Two or three rows in Section C are answered. (3) | One row in Section C is answered. (1) |
+| 7 | What the stakeholder confirmed and what they challenged each point to something recorded in Section B. | 3 | One of the two points to something recorded in Section B. (2) | Neither points to something recorded in Section B. (1) |
+| **D. Afterward** | | | | |
+| 8 | Section D says what changed in the Problem Frame and why, or says it held and why. | 5 | Section D says what changed or that the frame held, but gives no reason. (3) | Section D says something changed but does not say what. (1) |
+| 9 | Section D names what moved from Inferred to Confirmed (or says nothing moved) and what still needs validation. | 4 | Section D answers one of the two. (3) | Section D answers neither clearly. (1) |
 | **Updated Problem Frame** | | | | |
-| 7 | Step 7 holds all seven parts of the Problem Frame, with the Part 6 Status marked for each assumption this conversation tested, Part 7 updated, and Last updated set to Sprint 3 and the date. | 10 | Step 7 holds the Problem Frame with Part 6 Status marked for the tested assumptions, but Part 7 or Last updated is not updated. (7) | Step 7 holds the Problem Frame with no visible update. (2) |
-| | **Total** | **50** | **35** | **10** |
+| 10 | All seven parts of the Problem Frame are included and reflect what Section D says changed. | 10 | Four to six parts are included, or the frame does not show the change named in Section D. (7) | Three or fewer parts are included. (2) |
+| | **Total** | **50** | **35** | **11** |
 
-**Grader note.** Read for meaning. If the idea is there in the student's own words, give the points. A blank row earns 0. Section B may be a paraphrase; a privacy-safe paraphrase earns full points. A frame that held is a valid result in rows 5 and 7.
+**Grader note.** Read for meaning. If the idea is there in the student's own words, give the points. A blank row earns 0. A Problem Frame that held, with a reason, earns full points; no change is a valid result.
 
-**What makes it strong.** The assumption in Section A is the one the questions test, Section D answers it from what the stakeholder said, and the Part 6 Status in Step 7 matches Section D.
+**What makes it strong.** The assumption in Section A is the one the questions go after. What was confirmed or challenged in Section C shows up in Section D and in the updated Problem Frame.
 
 **Grading, in the open.** Do most of each part and you pass. Do all of it for full points. A partial comment doubles as the nudge: which section, which row, what is missing.
 
-### Weighting
+**Weighting by effort.** Section A 10%, questions 18%, Section B 20%, Section C 14%, Section D 18%, updated Problem Frame 20%. Section B is weighted for the conversation itself, not only the writing.
 
-About 26% before the meeting (13 points), 24% the conversation record (12 points), 30% Section D (15 points), and 20% the updated Problem Frame (10 points). Partial in each row is set near 70% of that row, so partial everywhere is 35 of 50.
+### Suggested updates to the student "before you submit" box
 
-### Suggested update to the student "before you submit" box
+Two current bullets ask for things a grader cannot see on the page.
 
-The current box has no line for Step 7. Suggested addition:
-"Your updated Problem Frame is in Step 7, with the Status marked for each assumption this conversation tested."
+- "Your three validation questions are sharpened, not just copied." Suggested: "Each of your three questions asks about an experience, a decision, or a tradeoff."
+- "Section C records your first impressions right after the conversation." Suggested: "Section C answers all four rows."
 
-## Shared principles
-
-The principles below were written for Part 1 and apply to both rubrics.
+The box does not mention the updated Problem Frame. Suggested addition to the last bullet: "Your Problem Frame, all seven parts, is brought up to date."
 
 ### Principles used
 
