@@ -5,6 +5,9 @@ Common Curriculum `74569ebcbb75a471bdb8725f364192d29f7eb00b`, and deployment sta
 `8db17e38ffa0d380d36d5747568e10baa5e354c3` on October 1, 2026.
 PR 206 contributes a grading-rubric draft only. Its content and pending grading
 choices are unrelated to this CSS repair and remain unchanged.
+The later documentation-only PR 207 (`3c2941aa19d963b716ad46d5c9ecee6a3a8a3c70`)
+was incorporated before final delivery; it adds Sprint 3 self-check rubric drafts
+and changes no renderer, instructional artifact or reviewed HTML.
 
 ## Findings and bounded changes
 
