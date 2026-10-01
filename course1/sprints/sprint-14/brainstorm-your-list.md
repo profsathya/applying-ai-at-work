@@ -29,7 +29,7 @@ guided_assignment:
     - Do not examine or rule out items yet.
     - If the list is short, report honestly what you tried.
   presentation: reading
-publish: false
+publish: true
 source_provenance: brainstorm-your-list.sources.json
 ---
 

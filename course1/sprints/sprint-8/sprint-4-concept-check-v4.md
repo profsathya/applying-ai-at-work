@@ -76,7 +76,7 @@ guided_assignment:
     correct_index: 1
     explanation: Closed means answered, even when the answer shows you were wrong.
   presentation: reading
-publish: false
+publish: true
 ---
 
 # Sprint 4 Concept Check
