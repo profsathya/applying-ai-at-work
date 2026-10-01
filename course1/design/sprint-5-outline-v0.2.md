@@ -1,6 +1,6 @@
-# Sprint 5 outline, v0.1
+# Sprint 5 outline, v0.2
 
-Draft for review by Melisa and Jeremy, 2 October 2026. Owner of this draft: Leslie. Sprint 5 has no content owner yet.
+Draft for review by Melisa and Jeremy, 2 October 2026. v0.2 trims the overlap between the two walkthroughs and the reflection, so learners do not answer the same question twice. Owner of this draft: Leslie. Sprint 5 has no content owner yet.
 
 Purpose of this draft: agree what Sprint 5 asks learners to produce, so a Canvas shell with the right items can be created before the course moves to the De Anza instance. The shell fixes the items and their types. Wording, points, and bodies can change later through the normal pull request path.
 
@@ -37,7 +37,7 @@ What it is: the learner assembles the four sprints' work into one document about
 Output: one Word document, `integrated-problem-document.docx`, five sections. Each section has one grid with a "pull from" column naming the earlier artifact and a "write it for a stranger" column.
 
 1. The problem, in one page. The current Problem Frame, Parts 1 to 7, as it stands after Sprint 4's C2. Copied in and tightened, not rewritten.
-2. How the frame changed, and why. One table: version (Sprint 1 draft, after the Dojo conversation, after Sprint 2, after Sprint 4), what moved, what moved it. Pulled from Problem Frame Part 3, Sprint 2's taking stock, and Sprint 4's C1 to C2.
+2. The biggest change to the frame. One short table, three rows: the biggest change, when it happened, what moved it. Learners have already written "what changed and why" in Sprints 1, 2, and 4, so this section selects from those answers rather than asking the question again.
 3. What people said. From the Stakeholder Map and the Validation Report: who was heard, what they confirmed, what they contradicted, and what the frame did about it.
 4. What already exists, and why it is not enough. From Sprint 2's What solutions already exist.
 5. What you still do not know, and how you plan to learn it. From the Learning Plan Part A and Part B, in summary, with the learning order.
@@ -48,13 +48,12 @@ Reader test on the page: "Could someone who has never met you read this and expl
 
 What it is: the learner judges whether the problem is ready to carry into CIS 502 and shows what that judgment rests on. The spine's one-thing-before-AI rule for Sprint 5 is the verdict itself, written before reviewing the evidence.
 
-Output: one Word document, `readiness-report.docx`, five sections.
+Output: one Word document, `readiness-report.docx`, four short sections. The report points at the integrated document; it does not restate it.
 
 1. Your verdict, before you look. One of three: ready to carry forward; ready with conditions; not ready yet, with a clear reason and next step. Two sentences on why, written first.
-2. What the verdict rests on. One grid, five rows, one per strand: the frame, the people, what exists, the assumptions you checked, the gaps and the plan. Columns: the evidence, where it lives in the integrated document, how strong it is (confirmed, partly confirmed, still assumed).
-3. What would change your mind. The one assumption or gap most likely to break the frame, and what finding it would mean.
-4. Your next move. The first step in CIS 502, taken from the Learning Plan. If the verdict is not ready yet: the reason and the next step, in the same form.
-5. Your verdict after looking. The same three options. Did it move from section 1, and why or why not.
+2. What it rests on. One grid, three rows: the strongest strand, the weakest strand, and the one assumption or gap that would change your mind. Each row names the strand, points to where it lives in the integrated document, and says how strong it is (confirmed, partly confirmed, still assumed).
+3. Your next move. One line: the first Learning Plan gap and the first action, with the plan attached. If the verdict is not ready yet: the reason and the next step, in the same form.
+4. Your verdict after looking. One line. The same three options; did it move from section 1, and why or why not. This repeat is on purpose: the first verdict is the one thing written before reviewing the evidence, and the second shows whether the evidence moved it.
 
 Reader test on the page: "Could a reader tell, from this report alone, what you are ready to do next and what you are betting on?"
 
@@ -73,11 +72,11 @@ Same pattern as Sprints 1, 3, and 4. Total 115 points.
 | 5 | 10 | Dojo Lab: audit your argument for gaps | Dojo Lab, text entry | 0 | new, placeholder |
 | 6 | 10 | Readiness Report Canvas Walkthrough | walkthrough, file upload | 50 | new, placeholder |
 | 7 | 10 | Sprint 5 Reflection: what changed | reflection, text entry | 10 | new, placeholder |
-| 8 | 10 | Working with AI: synthesis | page | | optional spare, per Jeremy's advice to guess high |
+| 8 | 10 | Spare item | assignment, file upload | 0 | optional spare, per Jeremy's advice to guess high; covers a second stakeholder conversation or anything else file-based the team adds, without a new Canvas item after the move |
 
 The Dojo Lab sits between the two walkthroughs. The learner pastes the integrated document; the Dojo plays an outside reader who has never seen the work and says where it cannot follow. The learner fixes those holes before judging readiness. Its Dojo method needs an entry in Jeremy's Dojo Labs file later, with a plain-chat fallback prompt on the page, as the Sprint 1 lab has.
 
-The Reflection asks the same five questions and adds the read-back: "Read your four reflections. Which answer moved the most, and what moved it?"
+The Reflection is the read-back, not a fifth round of the five questions: "Reread your four reflections. For each of the first four questions, which answer moved the most, and what moved it?" plus the pace question. This changes the "same five questions every sprint" pattern, which runs across all four sprints, so it is a team decision (question 3 for the team below).
 
 Dropped from the April plan: the peer review discussion (nothing else in the course uses peer review, and it puts a dependency on classmates in the last two weeks), the separate draft assignment (the walkthrough is the draft), and the readiness self-check quiz (the concept check covers it).
 
@@ -94,7 +93,7 @@ The old April capstone files stay where they are, unpublished and untouched.
 For Melisa:
 
 1. Sprint 4's C2 frame is the one Sprint 5 treats as current. Is that right, or does anything after week 8 revise it?
-2. The stakeholder section pulls from the Map's confirmed or unconfirmed fields and the Validation Report's "what changed." Are those the right names, and is one conversation enough grounding for a readiness verdict?
+2. The stakeholder section pulls from the Map's confirmed or unconfirmed fields and the Validation Report's "what changed." Are those the right names? And if one conversation is thin grounding for a readiness verdict, should Sprint 3 ask for two, or should "ready with conditions" carry it? Sprint 5 adds no new evidence gathering by design.
 3. Does the readiness verdict need to say anything about CIS 502's first week, beyond the Learning Plan's first step?
 
 For Jeremy:
@@ -107,3 +106,4 @@ For the team:
 
 1. Who owns Sprint 5 content after the shell?
 2. The verdict-before-evidence rule puts the three-way verdict at the top of the report. Any objection to a learner choosing "not ready yet" and earning full marks?
+3. The Sprint 5 Reflection drops the five questions in favour of the read-back plus the pace question. Any objection to breaking the five-question pattern in the last sprint?
