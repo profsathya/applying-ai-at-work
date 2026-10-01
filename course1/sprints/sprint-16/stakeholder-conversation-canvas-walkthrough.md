@@ -60,34 +60,6 @@ guided_assignment:
     instruction_section: Set up your report
     feedback_enabled: false
     feedback_omission_reason: Identity field is setup and does not need AI feedback.
-  - id: dojo-changes
-    kind: table
-    prompt: What the Dojo Lab changed
-    columns:
-    - id: column-1
-      label: Field
-    - id: column-2
-      label: Your answer
-    rows:
-    - id: row-1
-      cells:
-      - text: 'What changed, and why
-
-          One short paragraph, in your own words: what moved between your first map
-          and your updated one, what argument or evidence moved it, and one AI suggestion
-          you rejected, and why. If nothing moved, say what you tested your map against.'
-      - text:   
-        response: true
-      label: What changed, and why
-    header_rows: 0
-    criteria:
-    - Name at least one specific change to your map, or say what you tested it against
-      if nothing moved. Name the argument or evidence behind the change. Name one AI
-      suggestion you rejected and give a reason.
-    instruction_section: What the Dojo Lab changed
-    feedback_enabled: false
-    feedback_omission_reason: The content editor chose a self-check for this reflection;
-      no AI feedback button is needed.
   - id: meeting-plan
     kind: table
     prompt: A. Before the meeting
@@ -318,10 +290,6 @@ Write before requesting optional AI feedback. It sees only the selected row, can
 ## Set up your report
 
 Enter your name for the report you will keep with your portfolio. This setup field stays out of AI feedback.
-
-## What the Dojo Lab changed
-
-Before you prepare for your conversation, look at what the Dojo Lab did to your map. Your last turn in the Dojo already says most of this, so start there.
 
 ## A. Before the meeting
 
