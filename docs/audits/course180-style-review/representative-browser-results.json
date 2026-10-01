@@ -1,0 +1,103 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "id": 7150,
+      "title": "Dojo Lab: test, widen, choose",
+      "checks": [
+        "baseline drafts restored for 1 shared tasks",
+        "heading hierarchy",
+        "local image loading and image text alternatives",
+        "save and reload all response/choice tasks",
+        "transcript-only copy and exact transcript-request copy",
+        "keyboard copy and clipboard-denial fallback focus",
+        "disclosure keyboard operation and visible focus",
+        "visible control names",
+        "desktop/mobile overflow and enlarged base text"
+      ],
+      "errors": [],
+      "skipped": []
+    },
+    {
+      "id": 3623,
+      "title": "Introduction: Find the Problem Worth Solving",
+      "checks": [
+        "heading hierarchy",
+        "local image loading and image text alternatives",
+        "visible control names",
+        "desktop/mobile overflow and enlarged base text"
+      ],
+      "errors": [],
+      "skipped": [
+        "Guided-response controls are not applicable; Canvas interactions are outside this preview"
+      ]
+    },
+    {
+      "id": 7155,
+      "title": "Sprint 1 Reflection",
+      "checks": [
+        "heading hierarchy",
+        "local image loading and image text alternatives",
+        "visible control names",
+        "desktop/mobile overflow and enlarged base text"
+      ],
+      "errors": [],
+      "skipped": [
+        "Guided-response controls are not applicable; Canvas interactions are outside this preview"
+      ]
+    },
+    {
+      "id": 7180,
+      "title": "Sprint 3 Concept Check",
+      "checks": [
+        "baseline drafts restored for 5 shared tasks",
+        "heading hierarchy",
+        "local image loading and image text alternatives",
+        "save and reload all response/choice tasks",
+        "correct/incorrect feedback and radio arrow keys",
+        "keyboard copy and clipboard-denial fallback focus",
+        "disclosure keyboard operation and visible focus",
+        "visible control names",
+        "desktop/mobile overflow and enlarged base text"
+      ],
+      "errors": [],
+      "skipped": []
+    },
+    {
+      "id": 1533,
+      "title": "Introduction Post",
+      "checks": [
+        "heading hierarchy",
+        "local image loading and image text alternatives",
+        "visible control names",
+        "desktop/mobile overflow and enlarged base text"
+      ],
+      "errors": [],
+      "skipped": [
+        "Guided-response controls are not applicable; Canvas interactions are outside this preview"
+      ]
+    },
+    {
+      "id": 3622,
+      "title": "Set up your AI Dojo",
+      "checks": [
+        "heading hierarchy",
+        "local image loading and image text alternatives",
+        "visible control names",
+        "desktop/mobile overflow and enlarged base text"
+      ],
+      "errors": [],
+      "skipped": [
+        "Guided-response controls are not applicable; Canvas interactions are outside this preview"
+      ]
+    }
+  ],
+  "comparison": {
+    "screenshots": [
+      "screenshots/comparison-1680.png",
+      "screenshots/comparison-390.png"
+    ],
+    "errors": []
+  },
+  "limitations": "Scoped Chromium checks, not screen-reader certification or participant validation. External requests blocked. Enlarged-base-text check is not full browser zoom."
+}

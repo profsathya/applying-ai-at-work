@@ -1,0 +1,18 @@
+{
+  "checked": 258,
+  "overflow": [
+    {
+      "phase": "delivered-before",
+      "width": 320,
+      "id": 7184,
+      "details": [
+        "TABLE.",
+        "THEAD.",
+        "TR.",
+        "TH.",
+        "TBODY."
+      ]
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,266 @@
+[
+  {
+    "path": "deanza/course1/assignments/learning-plan-and-updated-problem-frame-canvas-walkthrough.html",
+    "before_sha256": "a6b1029d181ce29804ba9a4bb26909c4d450c61393a08208686e5c1a9fd14cb5",
+    "after_sha256": "f02ab57383a8e785206985d061ced29050f1042f1385febf1c7b9ec6cd192140",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/name-the-gap-canvas-walkthrough.html",
+    "before_sha256": "44b9effc36e4d15398bb4ee5cbc9db55c52c7a214867f12a1d709a7b10557b60",
+    "after_sha256": "88fa10e373339183e301b77edab50dfa154432b391db248590b832c408757ea9",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/ai-feedback-check.html",
+    "before_sha256": "7b0c5abd3fd9a0f9f3e5cb919a7fe0127e77a40714e228ee5351847a2c045194",
+    "after_sha256": "ea7220ead70a7631a7a29f94f41143a8c37021c5d72326b703732835764263ae",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/brainstorm-your-list.html",
+    "before_sha256": "ae1ea8c71c180c8949bab141017a5e5537ce660a2fc0e44c53f5c4cc188c2982",
+    "after_sha256": "b40981b95d778ef383db0af51051750303d090b8c00d9303b3b0dd9e8b3efbd3",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/brainstorm-your-list-walk-through.html",
+    "before_sha256": "5c2220f7596cf19f022a9160edb917648ee0eee82c67ff9fee31de3c0d3ee9c3",
+    "after_sha256": "f18ff516d5a1583ca7802a4150e734267add20c2076ee6fb48502bc1ae006968",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/dojo-lab-test-widen-choose.html",
+    "before_sha256": "c23b2cadc4bc8a9aeaca97f31911e1586e2bb7d57b69cc553bef3a79ecae4801",
+    "after_sha256": "8f996398197b7f8c661695f2e5a772b22d157ec4ccfe71b505206f8d49508a1d",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/first-frames-walk-through.html",
+    "before_sha256": "225a328cd177409ca0e9b793f87b2a1d3c7b0017a07f1165d1a46c2a829614d0",
+    "after_sha256": "364fcea12f2346413184a448dac138c07592dc1a101fa339225d475e594a9cb6",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/get-underneath-three-to-five-walk-through.html",
+    "before_sha256": "ca38b008b375ddf1491e02f352d98a647e8ae8b64a0559d9730bcc8d4ee4e8dd",
+    "after_sha256": "94a41abfcded08ef1eb024a733a401519d8105f8c3b5605806f2dfdd90710b69",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/activities/introduction-find-the-problem-worth-solving.html",
+    "before_sha256": "4e1ff3942f34fe9310cd2bce6c80c173548a365480726bc6fc3a0550b8f87e74",
+    "after_sha256": "2a63a5c7e75b61c4b623a01a8bb548725eda565727d429c4f24abe10ba2d9de1",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/problem-frame.html",
+    "before_sha256": "b6cf1bf157e997d81f12999ecbe953469027237d108adedb6ee97e108efab5b0",
+    "after_sha256": "4b0192d5743dcb406091bbecfad8c7a25ad185675e8d07fc6d91fdc8997ca385",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/sprint-1-concept-check.html",
+    "before_sha256": "d71003c67b4af466e8e9b298294cbf7175ac439a8fdc6531966b0150e16ae218",
+    "after_sha256": "b8ea162b1192bfca909b0fa1c190a7029bd9bda41f3d1f07f0d0c54b8c1c45c6",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/sprint-1-reflection-what-changed-v54.html",
+    "before_sha256": "190b319eb23e626e2ba6217c7ac7272c47571d495b96786016306682ef01f7fc",
+    "after_sha256": "455ebe6ab3d8b96f65f5482a59f6b58adbf254dba7f9bf4a9ed65f64e5faf781",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/dojo-lab-test-widen-choose-v3.html",
+    "before_sha256": "ad8dc7330ffecfb9f1f7d34f044c53d41015d473f5aa7984b7e77f045ce0e27a",
+    "after_sha256": "42e9e3787f22ece6bc47ef8368dcfc670d772076719413cc629b541989936c4e",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/activities/introduction-integrate-people-and-context-v3.html",
+    "before_sha256": "d7da3065e4bcf200557028df9cea7d2758b69db13912fad1d2ef2cd6bb2164d6",
+    "after_sha256": "e4b78def31560f0dd868cc3d43f809451bd4092199cffaa17d2fc8061559b506",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/sprint-3-concept-check-v4.html",
+    "before_sha256": "559a6bed782e9990b298b7cd086580d656e13e817d1e564066a4ba1452ef7b92",
+    "after_sha256": "90db13dd4185f08a1c7572c726177804cfa4b394ccb1c72458f1a6c9d8f45bf7",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/sprint-3-reflection-and-mid-course-problem-frame-revision-v3.html",
+    "before_sha256": "1f252855036ca49e736aae6e393a9962bde5befd04dba5ad6096c9d904675762",
+    "after_sha256": "88b4b5e541e1225afde431d6045709aec089276ab92b65de389044100508482d",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/dig-into-your-assumptions-walk-through.html",
+    "before_sha256": "17d35e902e6d62efadabb0894259f0fc260c35695e3274424472a5ccc4ded0b4",
+    "after_sha256": "740f87ff5897f39a2d97f0779cd1509f76e877f5d7cd5a439d95ad3d2dcf393b",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/dojo-lab-explore-what-already-exists.html",
+    "before_sha256": "735010b52296bb6d423c71a846a75e80c9e057d8ce3ee9e2102e6fc440fa89d6",
+    "after_sha256": "54da0f46842a70d4e5b37989c45a17941ec909e7d312c367e32b629586ba27ad",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/dojo-lab-test-your-assumptions.html",
+    "before_sha256": "3d291aaa0974156913fcfabe651c38d581776c8b8b5d9454b1d9d0ec150607e4",
+    "after_sha256": "d7ac83e8eed2af99ab83b30c2d41b0dbd25dcf2a8ccbb2aa0ddda61924aeec13",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/activities/introduction-is-this-problem-worth-pursuing.html",
+    "before_sha256": "5220d3f32fa959deed9417603c42d837f65f0ca6308f0c3883f1c11ac6df5f3b",
+    "after_sha256": "bf3dbafaab530944fc971451be0ffb0860bbf6a98899c8083cf771378098e6cd",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/problem-frame-is-it-worth-pursuing.html",
+    "before_sha256": "98c008bccde1749d1e75f9b793ac6416529d5e95025ee1b41e45879195df160e",
+    "after_sha256": "651192fa8ac29ae6bfaf6a1ff34eeb5bf4a19d73492f2081775ab1db7422f2d9",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/sprint-2-reflection-what-the-world-said-back.html",
+    "before_sha256": "0b61d868f53149da996d1b80d3f5cdeb91e50c584daaa8be23e9ac3f794f9ea4",
+    "after_sha256": "6dedf0d51664949a45f803edb8e6e1b1ecce0a7f65a1ae25ae225ba5eae702b9",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/sprint-2-self-check.html",
+    "before_sha256": "f5940be7c34df39c58695241817a1e4da1f8a6d04b1aceb3ea2ac1c0afbbe162",
+    "after_sha256": "e3b78dcedfaba4d106180a62bd7a21bb6dc8ec4a0cf2c88cf90e8e81ed0c99ce",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/what-exists-and-what-it-means.html",
+    "before_sha256": "df80db11baf9960bb2a0fbbb5f12dee18001ae2c6358a182ab167e169fd02580",
+    "after_sha256": "065c8002d8bedb1d409bd8a5f9bbd038af17b264269f9c4bd0a23dc1be423d57",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/what-solutions-already-exist-walk-through.html",
+    "before_sha256": "db60bf62cbbd7600670223ed6704c293faabf31f21d763b263d986a6ec78b2d8",
+    "after_sha256": "cd5cbea8d12b997995c66f66e5a91a95232cdaa01b9925dc58688bb6c7450588",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/which-assumptions.html",
+    "before_sha256": "f13319acfc4ddcbcee9eb1dc2a69fa2bff31239ade6ea0b7cd468be1b5563db4",
+    "after_sha256": "ef470445b2e36a767470dfeb1eca2525d2bd072abf1910520cf2faced766a694",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/sprint-4-concept-check-v4.html",
+    "before_sha256": "98dae1258ccd02862e9af867f89db50e3852ca292dded2900e19a27997c2bcae",
+    "after_sha256": "78d8a41776fd780007f0321554ccf141bb013053b7d2c7134d0bad3082b482ce",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/sprint-4-reflection-what-changed-v3.html",
+    "before_sha256": "61d0d45879e8422d75b98fb2f018d0683a0f864d04532bf23fa95fc5a65fc9ef",
+    "after_sha256": "b989291a03076fab46aeadb0dff8dabb45ad695479a4b04bb8ec6c32a6a94383",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/dojo-lab-design-the-learning-path-v3.html",
+    "before_sha256": "ce5a7764d3460f525e5e017af8aaf81ada5aa4881e5d5f4ba45408836cfa2202",
+    "after_sha256": "2bac1fed4a1d6db0835a466d04b3170a4e2d38dcb37b8b3c65202278eaa499b8",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/activities/introduction-close-the-learning-gap-v3.html",
+    "before_sha256": "526bd0060654d1205cf2f20d86be92bb8709f1b4bdd886af4cd9d604a3e7513f",
+    "after_sha256": "4cbf62332f405ffee7f99017c01eb9d1d59d67660a367f50074576ce118f426d",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/activities/introduction-synthesize-and-show-readiness-v2.html",
+    "before_sha256": "85b532c2ac61e08d14f8afc288acfc99e5b6f7d4fce4fd00c5f458eb5ca8a071",
+    "after_sha256": "83349c3bc515a8113708ec5d484ca811361e488c01b74fde93a4131519e2f541",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/activities/help-and-resources-v2.html",
+    "before_sha256": "215c1870b1c33190514d5c9af56920d159ce61e5e0c374fca0757e10a39198de",
+    "after_sha256": "96b359235ea4d67052dbf9c0599061db023342627d0457bca27a4bbeff07770b",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/activities/how-this-course-works-v2.html",
+    "before_sha256": "3c34ec1d837b51ab209cc89fcfb8bd1ee629327ab1bb6f249f5db09223509699",
+    "after_sha256": "c1dad0a9e39c323ab8f06773f1d756e386a3175be134f963d2a0e99ac5da2e98",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/activities/introduction-post-v2.html",
+    "before_sha256": "2aa06629285ac26757a77aab7d9459cd0b7ae6cb696f3cee98491bc5e792d1e7",
+    "after_sha256": "718a7f548585391b717e0a1712aeb9f4b368bd4313b265b465c812af30bc555b",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/activities/set-up-your-ai-dojo-v2.html",
+    "before_sha256": "a52d4ec2cb6faf41610154fd279236d12009f0419c1b631a4d0230bf91a63e78",
+    "after_sha256": "188c060a42d1c5dd093d70ce7c9902656333919a57f44523ab1bb0ba15c3a4ea",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/activities/start-here-v2.html",
+    "before_sha256": "66e8f2b4734fd08a1b416eb32b82bdb1b92d2d4270cea622c9817c82dbc20648",
+    "after_sha256": "54dea82ba1f47ed7d09f56e7361d3db10ee00e24fa99526d785d7ca54d407df2",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/activities/welcome-v2.html",
+    "before_sha256": "e280451d6bf10ed11b228c1fd63739c650124a58679ff2ccb08a57088edf9bd8",
+    "after_sha256": "290be65e585fa34620411c2b5a378309ec7c8f93e7eac53f92cb5f6586229fbf",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/activities/your-first-week-v2.html",
+    "before_sha256": "478f3d4ab02bdf6e2920bf8e30a9bcba1bd2781305ea9c9ec42016c74e47e96d",
+    "after_sha256": "61ee95712d172ea99a8808859baa2e7addc6aa6c901ceb53af7644cd6263641e",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/stakeholder-conversation-canvas-walkthrough.html",
+    "before_sha256": "5b762bce468e271f8e5a4d8229fbacacc247e1ede9f99cd068508d06e3b25f83",
+    "after_sha256": "5c349259b76e2262c602752e13a1a5432060fb3c65f8dc620c18bde0f112ddc7",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/assignments/stakeholder-map-canvas-walkthrough.html",
+    "before_sha256": "f6b80bc5a289149eabbf42d01cba414f8d42d2b42adec511af515cd75a80f459",
+    "after_sha256": "ae855c81beaad78be9a63459a18ab285ce30af72dd3a64aacca841db6983db80",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/activities/ai-feedback-check.html",
+    "before_sha256": "535f720c5997c4834f32bbb7415b079393db8b9e4ec0a7d0473568d9f921942d",
+    "after_sha256": "cace85e36a609589c0371e8aaa2c962210d65c562210bf8520694a16141b9529",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/home.html",
+    "before_sha256": "65f4cdfd761c6355e783a45ed195fb0809ecb147e3ed4d8720b795c44d183944",
+    "after_sha256": "3763d152c27782881b9b57a395a1f9a573a1037805ce673cb405fe915c99186c",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/index.html",
+    "before_sha256": "65f4cdfd761c6355e783a45ed195fb0809ecb147e3ed4d8720b795c44d183944",
+    "after_sha256": "3763d152c27782881b9b57a395a1f9a573a1037805ce673cb405fe915c99186c",
+    "only_change": "one shared CSS style block"
+  },
+  {
+    "path": "deanza/course1/modules.html",
+    "before_sha256": "8675259e2e4673d6605f5c3f9d1533cc54e9aa382cf34a430c0454b8812a996a",
+    "after_sha256": "412f67a8f6124bf79ff095a916c717b5b13b85fae909099f4c7a3feade366e92",
+    "only_change": "one shared CSS style block"
+  }
+]
