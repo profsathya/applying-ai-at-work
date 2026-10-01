@@ -26,7 +26,7 @@ self_check_record: course1/design/self-check-records/first-frames.json
 
 The existing walkthrough renderer then places an always-visible Self-check before submission controls, replacing `final_check` with the record's full-credit lines and points. Rungs, tags, ranks, gate internals, and open questions never enter the HTML or browser payload. Existing per-task guidance is unchanged. No course artifact is opted in by this PR: rollout needs the normal source/Canvas drift review and content-owner checks. Standard/native pages still need their own integration; this change does not pretend to support them. Checkbox persistence and checked-state export from item 39 are also not implemented.
 
-`schema.py --all` validates normalized records even if no artifact references them. Artifact validation additionally checks reference syntax, total points, and walkthrough presentation. Draft validation permits explicit null ranks/tags/rung points. `validate_record(..., grading=True)` requires exact rung points, allowed tags and a permutation of ranks 1 through N. `score_rungs` refuses incomplete records and requires exactly one allowed rung per criterion. It performs deterministic lookup only, not evidence interpretation or AI grading.
+`schema.py --all` validates normalized records even if no artifact references them. Artifact validation additionally checks reference syntax, total points, and walkthrough presentation. Draft validation permits explicit null ranks/tags/rung points. `validate_record(..., grading=True)` requires exact rung points, allowed tags and a permutation of ranks 1 through N. `score_rungs` also blocks an unresolved gate rule; authors can explicitly state that no gate applies when that is their decision. Gate failure grade must remain null until a policy is implemented. `score_rungs` refuses incomplete records and requires exactly one allowed rung per criterion. It performs deterministic lookup only, not evidence interpretation or AI grading.
 
 A failed gate returns the raw sum separately, `passes: false`, and `numeric_grade: null`. An unreviewed gate returns no pass decision or numeric grade. A passed gate permits the summed grade, but every result still requires human review. There is deliberately no assumed zero, 34-point cap, 35-point floor, or late-penalty policy. The team must specify those policies, including absent submissions versus blank parts, before any posting adapter is enabled. `gate.failure_grade: null` documents that unresolved decision; the scorer never uses it to invent a rule.
 
@@ -41,8 +41,12 @@ The separate private JeremyCSUMB/canvas-grading-bridge baseline supplied for coo
 Run from the repository root with the repository virtualenv:
 
 ```sh
-python -m unittest tests.test_self_check tests.test_walkthrough tests.test_guided_assignment -q
+python -m unittest discover
 python canvas_sync/schema.py --all
+python canvas_sync/link_audit.py --all
+python -m py_compile canvas_sync/*.py
 ```
 
 The mocked publish tests expect the synthetic `CANVAS_API_URL=https://example.instructure.com/`; no live publishing is part of these checks.
+
+The validation workflow also renders all enabled hosted manifests locally. Its path filters include self-check records and source self-check Markdown so record-only PRs receive validation. Contract tests independently compare every normalized criterion and authored rung against its source table, check internal-field exclusion and HTML escaping, and reject malformed fields and unresolved gate rules.

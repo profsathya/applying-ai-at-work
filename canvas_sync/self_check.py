@@ -14,7 +14,7 @@ def validate_record(record: dict, *, grading: bool = False) -> list[str]:
     errors = []
     if not isinstance(record, dict):
         return ['record must be an object']
-    if record.get('version') != 1 or not record.get('id'):
+    if type(record.get('version')) is not int or record['version'] != 1 or not isinstance(record.get('id'), str) or not record['id'].strip():
         errors.append('version 1 and a record id are required')
     lines = record.get('criteria', [])
     if not isinstance(lines, list) or any(not isinstance(line, dict) for line in lines):
@@ -24,7 +24,7 @@ def validate_record(record: dict, *, grading: bool = False) -> list[str]:
     if record.get('total') != 50 or record.get('passing') != 35 or record.get('blank_rung') != '1':
         errors.append('total 50, passing 35 and blank_rung 1 required')
     ids = [line.get('id') for line in lines]
-    if len(set(ids)) != len(ids) or any(not isinstance(i, str) or not i for i in ids):
+    if any(not isinstance(i, str) or not i for i in ids) or len(set(ids)) != len(ids):
         errors.append('criterion ids must be unique nonempty strings')
     totals = {rung: 0 for rung in ('full', '3', '1')}
     complete = True
@@ -50,7 +50,7 @@ def validate_record(record: dict, *, grading: bool = False) -> list[str]:
         if all(type(p) is int for p in points) and not points[0] > points[1] > points[2]:
             errors.append(f'{line.get("id")}: require full > 3 > 1')
         tag = line.get('tag')
-        if tag not in TAGS and (grading or tag is not None):
+        if (not isinstance(tag, str) or tag not in TAGS) and (grading or tag is not None):
             errors.append(f'{line.get("id")}: approved tag required')
     ranks = [line.get('rank') for line in lines]
     known = [rank for rank in ranks if rank is not None]
@@ -60,8 +60,17 @@ def validate_record(record: dict, *, grading: bool = False) -> list[str]:
         errors.append('full points must sum to 50')
     if complete and totals['3'] < 35:
         errors.append('partial everywhere must reach 35')
-    if not record.get('grading_note') or not isinstance(record.get('gate'), dict):
-        errors.append('grading note and explicit gate record required')
+    if not isinstance(record.get('grading_note'), str) or not record['grading_note'].strip():
+        errors.append('grading note required')
+    gate = record.get('gate')
+    if not isinstance(gate, dict):
+        errors.append('explicit gate record required')
+    else:
+        rule = gate.get('rule')
+        if 'rule' not in gate or (rule is not None and (not isinstance(rule, str) or not rule.strip())) or (grading and rule is None):
+            errors.append('gate rule must be explicit; null remains a grading blocker')
+        if 'failure_grade' not in gate or gate['failure_grade'] is not None:
+            errors.append('gate failure grade must remain null until a policy is implemented')
     return errors
 
 

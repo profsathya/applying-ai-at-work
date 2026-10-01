@@ -82,3 +82,49 @@ class SelfCheckTests(unittest.TestCase):
         jsonschema.validate(REFERENCE, field)
         with self.assertRaises(jsonschema.ValidationError):
             jsonschema.validate('../../secret.json', field)
+
+    def test_malformed_fields_return_errors(self):
+        for mutate in (lambda r: r.update(version=True),
+                       lambda r: r.update(id=[]),
+                       lambda r: r['criteria'][0].update(id=[]),
+                       lambda r: r['criteria'][0].update(tag=[]),
+                       lambda r: r['criteria'][0].update(rank=[]),
+                       lambda r: r.update(gate={}),
+                       lambda r: r['gate'].update(failure_grade=0)):
+            record = copy.deepcopy(self.record)
+            mutate(record)
+            self.assertTrue(validate_record(record))
+
+    def test_unresolved_gate_cannot_be_scored(self):
+        self.record['gate']['rule'] = None
+        self.assertEqual(validate_record(self.record), [])
+        with self.assertRaisesRegex(ValueError, 'gate rule'):
+            score_rungs(self.record, {c['id']:'full' for c in self.record['criteria']}, gate_passed=True)
+
+    def test_all_records_preserve_authored_criteria(self):
+        import re
+        directory = Path(__file__).resolve().parents[1] / 'course1/design'
+        for path in (directory / 'self-check-records').glob('*.json'):
+            record = json.loads(path.read_text())
+            source = (directory / record['source'].split('#')[0]).read_text()
+            rows = [[cell.strip() for cell in row.strip('|').split('|')]
+                    for row in source.splitlines() if re.match(r'\| \d+ \|', row)]
+            for criterion in record['criteria']:
+                matching = [row for row in rows if row[1] == criterion['full']['text']]
+                self.assertEqual(len(matching), 1, (path.name, criterion['id']))
+                row = matching[0]
+                self.assertEqual(int(row[2]), criterion['full']['points'])
+                for rung, index in [('3', 3), ('1', 4)]:
+                    value = criterion[rung]
+                    expected = value['text'] + (f" ({value['points']})" if value['points'] is not None else '')
+                    self.assertEqual(row[index], expected, (path.name, criterion['id'], rung))
+
+    def test_render_escapes_text_and_omits_internal_metadata(self):
+        self.record['criteria'][0]['full']['text'] = '<script>alert("test")</script>'
+        output = render_full_credit(self.record)
+        self.assertIn('&lt;script&gt;', output)
+        for line in self.record['criteria']:
+            for rung in ('3','1'):
+                self.assertNotIn(line[rung]['text'], output)
+        self.assertNotIn(self.record['grading_note'], output)
+        self.assertNotIn(self.record['gate']['rule'], output)
