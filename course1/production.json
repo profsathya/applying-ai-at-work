@@ -892,17 +892,17 @@
       "canvas_payload_hash": "7c0cdf4e12c39096228e079354b21b67ea29f7983fb25fb083d879b588ae5350",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "4e04b013e8b8ee9bfe88c3e7ef9ae9e6f55400e7740c15a452e55dbeabc36f1b",
+      "content_hash": "a20d00566df399d780f7d4854990449b52c6e4b7622c19f1a5b58b8dc4c9da12",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "afaed15e65a4c300a8122108815aa8d059a06c317144e6c003ac7748877709d5",
-      "hosted_last_rendered": "2026-10-02T14:36:24+00:00",
+      "hosted_hash": "9c2f2fa1c263b16a7b14f2bdd3d52c5fcadf3d24ab0393f6cb71763b37a16f77",
+      "hosted_last_rendered": "2026-10-02T15:35:29+00:00",
       "hosted_path": "course1/assignments/dojo-lab-design-the-learning-path-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-design-the-learning-path-v3.html",
-      "last_pushed": "2026-10-02T14:36:24+00:00",
+      "last_pushed": "2026-10-02T15:35:29+00:00",
       "local_path": "course1/sprints/sprint-8/dojo-lab-design-the-learning-path-v3.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "a050e6991cad2a892412d0974bf8c3223b0482f1"
+      "source_commit": "9e37486e86c48a6c1158b295b607918c56f2854f"
     },
     "course1-sprints-sprint-9-integrated-problem-document": {
       "artifact_id": "course1-sprints-sprint-9-integrated-problem-document",
@@ -1384,5 +1384,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-02T15:01:39+00:00"
+  "last_sync": "2026-10-02T15:35:29+00:00"
 }
