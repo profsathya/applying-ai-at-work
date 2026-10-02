@@ -26,6 +26,12 @@ guided_assignment:
   feedback_protocol: walkthrough-v1
   document_prefix:
   - 'Learning Plan, Sprint 4 Week 2. Attach this Word file and the separate Week 1 Word file (learning-plan-week-7.docx) from Name the Gap. Keep Part A and C1 in that earlier file unchanged.'
+  final_check:
+  - 'Part B, My learning plan, has a plan for every blocking gap, in rank order, and each plan answers all five questions. (8 points)'
+  - 'In Part B, My learning plan, each plan names the sources you will learn from, and gives small steps in order, each with a rough time. (14 points)'
+  - 'In Part B, My learning plan, each plan says what you will be able to show, and names an independent check that could confirm it or prove you wrong. (10 points)'
+  - 'Changes to my gap list since Name the Gap, and Choices from the Dojo Lab, say what you changed, kept, or rejected, and why. (6 points)'
+  - 'C2, My updated frame, holds all seven parts, Part 6 names the gap that checks each inferred assumption, and Part 7 lists your planned gaps in rank order. (12 points)'
   tasks:
   - id: template-timing
     kind: table

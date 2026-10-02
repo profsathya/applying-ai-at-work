@@ -4,7 +4,7 @@
   "packet_sha256": "095c658a39e481917734876f60a6516dd14a81977441391fece36873cd9f1dd6",
   "map_sha256": "dd0957d10e08d605f1352664496c22ff2162340c901554ac3371698db7870f79",
   "body_sha256": "d3285600c3b08c65f265c369cc60d4d6026976892da1c8370ea92f0a43c86e60",
-  "frontmatter_sha256": "3b2033c84606a1fc2480e232020548e0e04361928f486d37408b8bfbdb328165",
+  "frontmatter_sha256": "4a532e0f6b99b065800f29e55bb6575ef7d2bf868ed8dc8092a92a5095882662",
   "parts": [
     {
       "kind": "new",
@@ -33,7 +33,8 @@
     "2026-09-30: Reconcile the instructor-confirmed 50-point major-assignment policy from live Canvas; preserve Main Assignments group 430 and existing publication intent.",
     "2026-10-02: Apply editor-requested Sprint 4 wording edits (week numbering, Sprint 3 document name, C1 row labels, A2 field count); display text only, row and task ids unchanged.",
     "2026-10-02: Problem Frame document handoff: point learners to one dated Problem Frame document they update first, then copy. Wording only; tasks, ids and export unchanged.",
-    "2026-10-02: Word file first line says Sprint 4 Week 1 / Week 2 to match the pages (issue #221); export file names unchanged mid-term."
+    "2026-10-02: Word file first line says Sprint 4 Week 1 / Week 2 to match the pages (issue #221); export file names unchanged mid-term.",
+    "2026-10-02: \"What to check in your work\" box (final_check) holds the five full-points lines from the Self-check record, word for word, with points (course1/design/self-checks)."
   ],
   "source_roles": {
     "d-83aa73137f01cb9d": {

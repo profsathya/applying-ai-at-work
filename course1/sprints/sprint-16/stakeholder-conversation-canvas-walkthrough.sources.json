@@ -4,7 +4,7 @@
   "packet_sha256": "242d7920b490e1288f2d9fd8c030304f8db2a901984c7577e81a81078d610b9a",
   "map_sha256": "199d2897dff45aed7ce4e7bd1a73845180b459df18862a48b5fc1f0d843ad2f7",
   "body_sha256": "f3107ebb5a63acb2e7f8064ddd92db3df86d7884da10b30649eecff0dbf2b010",
-  "frontmatter_sha256": "740364d7a2adc1bd019c1959edb1cf2dc5ab6a80b920d85de57b9530af46110c",
+  "frontmatter_sha256": "2203faf3a9a3061ffd7345549b7a8149bcd7a5952a42e3e829f4b2bb240e5d27",
   "parts": [
     {
       "kind": "new",
@@ -49,7 +49,8 @@
     "2026-10-01: The Part 4 sentence about leaving the \"What changed, and why\" paragraph at the top of the map is removed, per the content editor. A reflection step added briefly on the same day was removed again before release; the walkthrough keeps its original six tasks. Points, grading, and other tasks unchanged.",
     "2026-10-01: Part 2 points to the planned dates in the Stakeholder Map Outreach log instead of recording actual dates there, and adds a look-back question about the planned dates, per the content editor.",
     "2026-10-01: One-file submission, per the content editor: the report is the only upload. The JSON and updated-map submission text and the Word prefix line about them are removed; Section D prose is replaced with approved copy; the first Section D row is relabelled (row id kept so saved drafts survive); a new Step 7 \"Update your Problem Frame\" adds one optional-feedback-free answer row that saves and exports with the report. The built-in submit line next to the download button is used.",
-    "2026-10-02: Problem Frame document handoff: point learners to one dated Problem Frame document they update first, then copy. Wording only; tasks, ids and export unchanged."
+    "2026-10-02: Problem Frame document handoff: point learners to one dated Problem Frame document they update first, then copy. Wording only; tasks, ids and export unchanged.",
+    "2026-10-02: \"What to check in your work\" box (final_check) holds the five full-points lines from the Self-check record, word for word, with points (course1/design/self-checks)."
   ],
   "source_roles": {
     "d-92d6b91158f50fe2": {

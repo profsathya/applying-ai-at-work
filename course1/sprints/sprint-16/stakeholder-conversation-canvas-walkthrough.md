@@ -31,11 +31,11 @@ guided_assignment:
   - 'Complete this report across the conversation: Section A before, Section B during,
     Section C within five minutes, and Section D the same day or next.'
   final_check:
-  - Section A is complete and carried over from your Stakeholder Map.
-  - Your three validation questions are sharpened, not just copied.
-  - Section B uses the stakeholder's own words, not your interpretation.
-  - Section C records your first impressions right after the conversation.
-  - Section D is based on evidence, and everything is submitted as one Word document.
+  - 'All five fields in Section A are complete, and each of your three validation questions asks about an experience, a decision, or a tradeoff. (8 points)'
+  - 'All three rows in Section B are complete, and the first row records the stakeholder''s words, as close as you can capture them. (10 points)'
+  - 'All four rows in Section C are complete, and each one connects to what the stakeholder said in Section B. (8 points)'
+  - 'All three rows in Section D are complete, and the first row says what changed in your Problem Frame and why, or why it held. (12 points)'
+  - 'All seven parts of your Problem Frame are pasted, and Parts 6 and 7 are brought up to date with what you heard. (12 points)'
   tasks:
   - id: report-name
     kind: table
