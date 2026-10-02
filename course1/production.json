@@ -10,17 +10,17 @@
       "canvas_payload_hash": "ffb2538ac7045f997029917b311dae6c79d9a232c8740c0aff04f2472f87ad5f",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "4ad73372f42e2e3333062c589badb260f739796e424b8f82bf3307ee17cd15ac",
+      "content_hash": "2d8ac401639261df16e8c01f4f605cfca601827e84c1a1597a81d0ed079fb34c",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "39498648d7ea3f1e1349d963dec565cc83381316cfc73269d024d81d17bb0cb1",
-      "hosted_last_rendered": "2026-10-02T14:36:13+00:00",
+      "hosted_hash": "862342e7d23db976e4ac721ff895c3d069d4c3cc18cc9d99b9414637da550b6f",
+      "hosted_last_rendered": "2026-10-02T16:06:32+00:00",
       "hosted_path": "course1/assignments/learning-plan-and-updated-problem-frame-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/learning-plan-and-updated-problem-frame-canvas-walkthrough.html",
-      "last_pushed": "2026-10-02T14:36:13+00:00",
+      "last_pushed": "2026-10-02T16:06:32+00:00",
       "local_path": "course1/sprints/sprint-17/learning-plan-and-updated-problem-frame-canvas-walkthrough.md",
       "position": 8,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "a050e6991cad2a892412d0974bf8c3223b0482f1"
+      "source_commit": "0b4a884f2687fe383d9ff0a89eef836f45a60861"
     },
     "course1-name-the-gap-canvas-walkthrough": {
       "artifact_id": "course1-name-the-gap-canvas-walkthrough",
@@ -32,17 +32,17 @@
       "canvas_payload_hash": "bc248eab4bb2720ee5ff5f7c91d5e5cde6fc44f6b54619cb611fbc422a272657",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "3c7b30fc25ad57708810bd48c1c7f0a3e8c6b144e67b34960df4aeeea7576cb0",
+      "content_hash": "0b33464b7d18abd82ae2cee4324cb76c238bb9e4cc5b502ac3166a0d6e517183",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "0cade1a7fca45cd9cc5b58bb6a2ec16298a32c6d362824582284be0367fc7951",
-      "hosted_last_rendered": "2026-10-02T14:36:20+00:00",
+      "hosted_hash": "a87b86d579d6aefa92fbd713256e6d5f632da155a4fcbd0b041012b1c46fb268",
+      "hosted_last_rendered": "2026-10-02T16:06:38+00:00",
       "hosted_path": "course1/assignments/name-the-gap-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/name-the-gap-canvas-walkthrough.html",
-      "last_pushed": "2026-10-02T14:36:20+00:00",
+      "last_pushed": "2026-10-02T16:06:38+00:00",
       "local_path": "course1/sprints/sprint-17/name-the-gap-canvas-walkthrough.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "a050e6991cad2a892412d0974bf8c3223b0482f1"
+      "source_commit": "0b4a884f2687fe383d9ff0a89eef836f45a60861"
     },
     "course1-sprints-sprint-12-sprint-1-find-the-problem-worth-solving-v2": {
       "artifact_id": "course1-sprints-sprint-12-sprint-1-find-the-problem-worth-solving-v2",
@@ -1383,5 +1383,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-02T15:45:52+00:00"
+  "last_sync": "2026-10-02T16:06:38+00:00"
 }
