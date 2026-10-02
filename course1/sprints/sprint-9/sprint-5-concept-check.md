@@ -1,5 +1,5 @@
 ---
-type: assignment
+type: page
 title: Sprint 5 Concept check
 slug: sprint-5-concept-check
 artifact_id: course1-sprints-sprint-9-sprint-5-concept-check
@@ -7,16 +7,18 @@ sprint: 9
 week: 9
 module: 'Sprint 5: Synthesize And Show Readiness (V2)'
 position: 3
-points: 5
-submission_type: text_entry
+points: null
+submission_type: none
 delivery_mode: guided_assignment
-completion_requirement: must_submit
+hosted_aliases: [course1/assignments/sprint-5-concept-check.html]
+completion_requirement: must_view
 publish: false
+completion_requires_published: true
 guided_assignment:
   version: '1.0'
   presentation: reading
   purpose: Practice the readiness judgment on a sample before applying it to your own problem.
-  standing_instruction: Submit all answers for 5 completion points reviewed by your instructor. Unlimited attempts.
+  standing_instruction: Practice with the questions and check your answers. No submission or grade; viewing this page counts for Canvas module progress.
   tasks:
   - id: placeholder
     kind: response

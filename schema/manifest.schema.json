@@ -44,6 +44,10 @@
           "type": "string",
           "pattern": "^[a-z0-9][a-z0-9_/-]*$"
         },
+        "assignment_copy_ui": {
+          "type": "boolean",
+          "description": "Set false to remove generated assignment copy controls, retaining downloads and transcript prompt copying."
+        },
         "native_canvas_navigation": {
           "type": "boolean",
           "description": "Use native Canvas completion/submission controls without hosted Canvas-ID shortcuts or personalized progress."

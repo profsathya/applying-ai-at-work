@@ -46,8 +46,8 @@ The goal is to move from a wide list of possible problems to one framed problem,
 
 5. **Dojo Lab: test, widen, choose.** Your Dojo tests and widens your frames and helps you choose one. (Own your progress, 0 points.)
 6. **Problem Frame.** Write up the problem you chose and say why this one (50 points).
-7. Take the **Concept check** (5 points).
-8. **Write the Reflection** (10 points).
+7. Take the **Concept check** (ungraded page; no submission).
+8. **Write the Reflection** (0 points; complete or incomplete, submission required).
 
 Spread week 1 across several days. The brainstorm asks you to keep adding to your list for a day or two before you pick.
 

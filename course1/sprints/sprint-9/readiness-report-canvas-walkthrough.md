@@ -15,6 +15,7 @@ completion_requirement: must_submit
 learner_labels: true
 learning_goal: Judge whether your problem is ready to carry into CIS 502 and show what that judgment rests on.
 publish: false
+completion_requires_published: true
 guided_assignment:
   version: '1.0'
   presentation: walkthrough

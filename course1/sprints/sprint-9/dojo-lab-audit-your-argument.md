@@ -12,6 +12,7 @@ submission_type: text_entry
 delivery_mode: guided_assignment
 completion_requirement: must_submit
 publish: false
+completion_requires_published: true
 guided_assignment:
   version: '1.0'
   purpose: Have the Dojo read your integrated document as a stranger and say where it cannot follow, then fix those holes before you judge readiness.

@@ -10,6 +10,9 @@ position: 1
 points: null
 submission_type: none
 publish: true
+require_sequential_progress: true
+prerequisite_modules: [course1-sprints-welcome-and-orientation-v2-welcome-and-orientation-v2, course1-sprints-sprint-15-sprint-3-integrate-people-and-context]
+module_unlock_at: "2026-11-15T23:59:00-08:00"
 ---
 
 # Sprint 4: Close the Learning Gap (V3)

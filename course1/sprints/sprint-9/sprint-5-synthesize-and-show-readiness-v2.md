@@ -10,6 +10,9 @@ position: 1
 points: null
 submission_type: none
 publish: true
+require_sequential_progress: true
+prerequisite_modules: [course1-sprints-welcome-and-orientation-v2-welcome-and-orientation-v2, course1-sprints-sprint-9-sprint-4-close-the-learning-gap-v3]
+module_unlock_at: "2026-11-29T23:59:00-08:00"
 ---
 
 # Sprint 5: Synthesize And Show Readiness (V2)

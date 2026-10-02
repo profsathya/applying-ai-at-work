@@ -1,5 +1,5 @@
 ---
-type: assignment
+type: page
 title: Sprint 3 Concept Check
 slug: sprint-3-concept-check-v4
 artifact_id: course1-sprints-sprint-15-sprint-3-concept-check-v4
@@ -7,16 +7,17 @@ sprint: 15
 week: 5
 module: 'Sprint 3: Integrate People and Context (V3)'
 position: 10
-points: 5
-submission_type: text_entry
+points: null
+submission_type: none
 delivery_mode: guided_assignment
-completion_requirement: must_submit
+hosted_aliases: [course1/assignments/sprint-3-concept-check-v4.html]
+completion_requirement: must_view
 learner_labels: true
 guided_assignment:
   version: '1.0'
   purpose: Practice the judgment you'll use in the Stakeholder Map on a sample first, then use the same judgment on your own map.
   builds_on: 'Read Introduction: Integrate People and Context.'
-  standing_instruction: Submit all five answers for 5 completion points reviewed by your instructor.
+  standing_instruction: Practice with the questions and check your answers. No submission or grade; viewing this page counts for Canvas module progress.
   tasks:
   - id: dana-relationship
     kind: choice

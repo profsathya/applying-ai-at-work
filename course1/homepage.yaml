@@ -14,27 +14,31 @@ schedule:
       ready: true
       title: "Find the problem worth solving"
       summary: "Use your own observations to compare candidate problems and explain which one is worth investigating."
-      note: "Both weeks available. Start without AI, then use it to test and widen your frames."
+      note: "Complete Sprint 0 first, then follow the required items in order. Start without AI, then use it to test and widen your frames."
     - number: 2
       sprint: 16
       ready: true
       title: "Is this problem worth pursuing?"
       summary: "Dig into your assumptions, check one against a real person or record, explore what already exists, and decide whether your problem is worth pursuing."
+      note: "Opens Sunday, October 18, 2026 at 11:59 p.m. Pacific after Sprint 0 and Sprint 1 completion. Follow the required items in order."
     - number: 3
       sprint: 15
       ready: true
       title: "Integrate people and context"
       summary: "Talk with a real stakeholder and revise your problem frame using what you learn."
+      note: "Opens Sunday, November 1, 2026 at 11:59 p.m. Pacific after Sprint 0 and Sprint 2 completion. Follow the required items in order."
     - number: 4
       sprint: 8
       ready: true
       title: "Close the learning gap"
       summary: "Learn what your problem requires and check the claims you will rely on."
+      note: "Opens Sunday, November 15, 2026 at 11:59 p.m. Pacific after Sprint 0 and Sprint 3 completion. Follow the required items in order."
     - number: 5
       sprint: 9
       ready: true
       title: "Synthesize and show readiness"
       summary: "Connect your problem frame, stakeholder input, and learning evidence into one supported argument."
+      note: "Opens Sunday, November 29, 2026 at 11:59 p.m. Pacific after Sprint 0 and Sprint 4 completion. Remaining activities are in preparation."
 modules:
   - sprint: 0
     hidden: true
@@ -189,7 +193,7 @@ modules:
       - "Plan 4-6 hours of weekly work within the recommended ten-week schedule."
       - "Set up an AI coach and check that it supports your thinking while leaving decisions with you."
       - "Find submission guidance and contact your instructor when you need help."
-    prereq: "Start here before Sprint 1. Follow six pages and one discussion in order; the Introduction Post is your only Sprint 0 submission. In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames without AI; use AI when the Dojo Lab introduces it."
+    prereq: "Complete Sprint 0 before any later sprint. Follow six pages and one discussion in order; the Introduction Post is your only Sprint 0 submission. In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames without AI; use AI when the Dojo Lab introduces it."
     groups:
       - label: "Read these in order"
         items:
@@ -250,7 +254,7 @@ modules:
       - "Name what you do not yet know about your problem, and tell a gap that blocks you apart from something that is only interesting."
       - "Build a learning plan that says, for each gap, why it matters, where you will learn it, what steps you will take, and how you will know you learned it."
       - "Update your Problem Frame so it shows clearly what you know, what you are still assuming, and how you plan to find out."
-    prereq: "Carry forward the same real problem and the open items Sprint 3 left you. Gather your gaps without AI, then use AI to test the list and widen how you could close each one."
+    prereq: "Complete Sprint 0 and Sprint 3. Sprint 4 opens Sunday, November 15, 2026 at 11:59 p.m. Pacific; follow its required items in order. Carry forward the same real problem and the open items Sprint 3 left you. Gather your gaps without AI, then use AI to test the list and widen how you could close each one."
     groups:
       - label: "Sprint Week 1: Name the gap"
         items:
@@ -258,8 +262,8 @@ modules:
             nav_meta: "Read"
             meta: "Page - what separates a gap from a topic, how to sort blocking from interesting, and what closed means"
           - slug: "sprint-4-concept-check-v4"
-            nav_meta: "Practice · 5 points"
-            meta: "Guided concept check - answer all five questions before Name the Gap; submit all five answers for 5 completion points reviewed by your instructor"
+            nav_meta: "Practice · No submission · Ungraded"
+            meta: "Page - guided practice quiz with five questions before Name the Gap; view the page to complete this item; no submission or grading"
             badge: "Self-check"
             selfcheck: true
           - slug: "name-the-gap-canvas-walkthrough"
@@ -274,8 +278,8 @@ modules:
             nav_meta: "50 points"
             meta: "Canvas Walkthrough - plan how to close each gap and update your Problem Frame; submit the Week 7 and Week 8 Word documents, 50 points"
           - slug: "sprint-4-reflection-what-changed-v3"
-            nav_meta: "10 points"
-            meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 10 points"
+            nav_meta: "0 points · Complete or incomplete"
+            meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 0 points, complete or incomplete; submission required for module completion"
 
   - sprint: 9
     order: 5
@@ -286,7 +290,7 @@ modules:
       - "Turn course artifacts into a coherent argument about the problem and your readiness."
       - "Identify gaps in evidence, logic, and stakeholder grounding before final submission."
       - "Submit a final integrated problem document that a reader can follow."
-    prereq: "A rebuild of Sprint 5, kept separate from the original Sprint 5. Placeholder module: the activities are still being written."
+    prereq: "Complete Sprint 0 and Sprint 4. Sprint 5 opens Sunday, November 29, 2026 at 11:59 p.m. Pacific. The introduction is published; remaining activities are in preparation."
     groups:
       - label: "Sprint Week 1: Start here"
         items:
@@ -341,7 +345,7 @@ modules:
       - "Write complete draft problem frames that separate current conditions, a changed state, assumptions, and remaining unknowns."
       - "Use AI to test and widen your frames while deciding what to accept or reject, then choose a problem that is workable for further inquiry."
       - "Submit one problem frame that shows how your judgment changed, and explain what AI contributed, what only you could contribute, and what remains uncertain."
-    prereq: "Bring observations from your real work or life and use one Candidate Log throughout. Complete the brainstorm, table, and first frames without AI before using AI in the Dojo Lab."
+    prereq: "Complete Sprint 0, then follow Sprint 1's required items in order. Bring observations from your real work or life and use one Candidate Log throughout. Complete the brainstorm, table, and first frames without AI before using AI in the Dojo Lab."
     groups:
       - label: "Sprint Week 1: Build candidate frames"
         items:
@@ -363,16 +367,16 @@ modules:
             nav_meta: "Practice · 0 points"
             meta: "Guided assignment - use AI to test and widen every frame, then choose one with your own judgment; 0 points, submit the complete Dojo transcript to complete the module"
           - slug: "sprint-1-concept-check"
-            nav_meta: "5 points"
-            meta: "Guided concept check - answer six questions about indicators, gaps, changed states, failure moments, and goals; 5 completion points"
+            nav_meta: "Practice · No submission · Ungraded"
+            meta: "Page - guided practice quiz with six questions about indicators, gaps, changed states, failure moments, and goals; view the page to complete this item; no submission or grading"
             badge: "Self-check"
             selfcheck: true
           - slug: "problem-frame"
             nav_meta: "50 points"
             meta: "Guided assignment - submit the chosen seven-part Problem Frame and explain what changed, what moved your judgment, and what you rejected; 50 points"
           - slug: "sprint-1-reflection-what-changed-v54"
-            nav_meta: "10 points"
-            meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 10 points"
+            nav_meta: "0 points · Complete or incomplete"
+            meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 0 points, complete or incomplete; submission required for module completion"
 
   - sprint: 16
     hidden: false
@@ -384,7 +388,7 @@ modules:
       - "Walk the assumptions in your Problem Frame and rate how risky each one is to the problem."
       - "Find out what already exists that could solve or ease your problem, with AI helping you explore and by looking for yourself."
       - "Bring your Problem Frame up to date and give a verdict, in your own words, on whether the problem is worth pursuing."
-    prereq: "Carry forward the Problem Frame you wrote at the end of Sprint 1. Walk your assumptions and start your table without AI, then use AI to push on each."
+    prereq: "Complete Sprint 0 and Sprint 1. Sprint 2 opens Sunday, October 18, 2026 at 11:59 p.m. Pacific; follow its required items in order. Carry forward the Problem Frame you wrote at the end of Sprint 1. Walk your assumptions and start your table without AI, then use AI to push on each."
     groups:
       - label: "Sprint Week 1: Understanding your assumptions"
         items:
@@ -412,16 +416,16 @@ modules:
             nav_meta: "Practice · 0 points"
             meta: "Guided assignment - write up what exists, what you made of it, and whether it changes your problem; 0 points, submission required for module completion"
           - slug: "sprint-2-self-check"
-            nav_meta: "5 points"
-            meta: "Guided concept check - five questions from both weeks, before you write your verdict; 5 completion points"
+            nav_meta: "Practice · No submission · Ungraded"
+            meta: "Page - guided practice quiz with five questions from both weeks, before you write your verdict; view the page to complete this item; no submission or grading"
             badge: "Self-check"
             selfcheck: true
           - slug: "problem-frame-is-it-worth-pursuing"
             nav_meta: "50 points"
             meta: "Guided assignment - what fixing this would ask of people, your Problem Frame up to date, and your verdict; 50 points"
           - slug: "sprint-2-reflection-what-the-world-said-back"
-            nav_meta: "10 points"
-            meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 10 points"
+            nav_meta: "0 points · Complete or incomplete"
+            meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 0 points, complete or incomplete; submission required for module completion"
 
   - sprint: 15
     order: 3
@@ -432,7 +436,7 @@ modules:
       - "Identify stakeholders and their relationship to the problem across four relationships: affected, influential, responsible for a constraint, and positioned to challenge your frame."
       - "Design validation questions for stakeholders that produce real evidence rather than agreement."
       - "Revise your Problem Frame using human input and context, and name what still needs validation."
-    prereq: "Carry forward the same real problem you have worked on since Sprint 1. Build the stakeholder map without AI, then use AI to test and widen it before you speak with a real stakeholder."
+    prereq: "Complete Sprint 0 and Sprint 2. Sprint 3 opens Sunday, November 1, 2026 at 11:59 p.m. Pacific; follow its required items in order. Carry forward the same real problem you have worked on since Sprint 1. Build the stakeholder map without AI, then use AI to test and widen it before you speak with a real stakeholder."
     groups:
       - label: "Sprint Week 1: Understand and map"
         items:
@@ -440,8 +444,8 @@ modules:
             nav_meta: "Read"
             meta: "Page - how stakeholders, evidence status, and validation conversations work in this sprint"
           - slug: "sprint-3-concept-check-v4"
-            nav_meta: "Practice · 5 points"
-            meta: "Guided concept check - answer all five questions before the Stakeholder Map; submit all five answers for 5 completion points reviewed by your instructor"
+            nav_meta: "Practice · No submission · Ungraded"
+            meta: "Page - guided practice quiz with five questions before the Stakeholder Map; view the page to complete this item; no submission or grading"
             badge: "Self-check"
             selfcheck: true
           - slug: "stakeholder-map-canvas-walkthrough"
@@ -456,5 +460,5 @@ modules:
             nav_meta: "50 points"
             meta: "Canvas Walkthrough - document a real stakeholder conversation and update your Problem Frame; submit the Word report, 50 points"
           - slug: "sprint-3-reflection-and-mid-course-problem-frame-revision-v3"
-            nav_meta: "10 points"
-            meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 10 points"
+            nav_meta: "0 points · Complete or incomplete"
+            meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 0 points, complete or incomplete; submission required for module completion"

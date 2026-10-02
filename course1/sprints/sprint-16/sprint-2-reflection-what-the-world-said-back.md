@@ -7,7 +7,8 @@ sprint: 16
 week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 12
-points: 10
+points: 0
+grading_type: pass_fail
 submission_type: text_entry
 delivery_mode: canvas_native
 completion_requirement: must_submit

@@ -11,7 +11,7 @@ points: null
 submission_type: none
 page_presentation: reading
 learner_labels: true
-publish: true
+publish: false
 ---
 
 # Sprint 3: Integrate People and Context (V3)

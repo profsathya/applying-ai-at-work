@@ -78,7 +78,8 @@
       button.disabled = !current.trim() || (stored && stored.onText === feedbackKey(key));
       if (stored) showFeedback(key, stored.text, stored.onText);
     }
-    byId('copy-list').disabled = !keys.some(key => lines(key).length);
+    const exportButton = byId('copy-list') || byId('download-list');
+    if (exportButton) exportButton.disabled = !keys.some(key => lines(key).length);
     const output = byId('summary-output');
     if (output.value && output.style.display === 'block') output.value = copyText();
   }
@@ -129,7 +130,8 @@
     input.addEventListener('blur', save);
   });
   all('[data-ai]').forEach(button => button.addEventListener('click', () => requestFeedback(button.dataset.ai, button)));
-  byId('copy-list').addEventListener('click', async () => {
+  const copyList = byId('copy-list');
+  if (copyList) copyList.addEventListener('click', async () => {
     const output = byId('summary-output');
     const text = copyText();
     output.value = text;
@@ -145,6 +147,12 @@
       byId('copy-status').textContent = 'Copy did not work in this browser. Select and copy the text shown below.';
       output.focus(); output.select();
     }
+  });
+  const downloadList = byId('download-list');
+  if (downloadList) downloadList.addEventListener('click', () => {
+    const url = URL.createObjectURL(new Blob([copyText()], {type: 'text/plain;charset=utf-8'}));
+    const link = document.createElement('a'); link.href = url; link.download = config.artifactId + '.txt';
+    link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   });
   byId('clear-draft').addEventListener('click', () => { byId('clear-confirmation').hidden = false; });
   byId('cancel-clear').addEventListener('click', () => { byId('clear-confirmation').hidden = true; });

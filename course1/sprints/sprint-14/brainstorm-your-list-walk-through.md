@@ -93,4 +93,4 @@ If your list is too short or you are having trouble, here is some additional gui
 
 *More help: what you stopped noticing.* A **workaround** is something you do to get around a difficulty. For example, the report that never generates how your team actually needs it, so you spend 20 minutes every Monday morning reformatting it. These workaround moments can be great indicators of a problem.
 
-When you finish, select **Copy my brainstorm list** below, then paste it into the Canvas text box and submit. Keep a copy of your list for the next activity, which starts from it.
+When you finish, select **Download my brainstorm list** below, then use the downloaded text in the Canvas text box and submit. Keep a copy of your list for the next activity, which starts from it.

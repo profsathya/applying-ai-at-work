@@ -1,5 +1,5 @@
 ---
-type: assignment
+type: page
 title: Sprint 2 Concept check
 slug: sprint-2-self-check
 artifact_id: course1-sprints-sprint-16-sprint-2-self-check
@@ -7,15 +7,16 @@ sprint: 16
 week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 10
-points: 5
-submission_type: text_entry
+points: null
+submission_type: none
 delivery_mode: guided_assignment
-completion_requirement: must_submit
+hosted_aliases: [course1/assignments/sprint-2-self-check.html]
+completion_requirement: must_view
 guided_assignment:
   version: '1.0'
   purpose: Practice the judgment you'll use in your Problem Frame update and verdict on a sample first, then use the same judgment on your own frame.
   builds_on: Finish both weeks' activities up to What exists, and what it means.
-  standing_instruction: Submit all five answers for 5 completion points reviewed by your instructor. Unlimited attempts.
+  standing_instruction: Practice with the questions and check your answers. No submission or grade; viewing this page counts for Canvas module progress.
   tasks:
   - id: assumption-is
     kind: choice
