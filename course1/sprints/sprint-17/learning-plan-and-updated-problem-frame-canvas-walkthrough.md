@@ -40,15 +40,15 @@ guided_assignment:
     - id: row-1
       cells:
       - text: A. My gaps
-      - text: Name the Gap (week 7)
+      - text: Name the Gap (Week 1)
     - id: row-2
       cells:
       - text: B. My learning plan
-      - text: Dojo Lab (week 7), then Learning Plan (week 8)
+      - text: Dojo Lab (Week 1), then Learning Plan (Week 2)
     - id: row-3
       cells:
       - text: 'C. My Problem Frame: C1 coming in, C2 updated'
-      - text: C1 in Name the Gap (week 7), C2 in Learning Plan (week 8)
+      - text: C1 in Name the Gap (Week 1), C2 in Learning Plan (Week 2)
     - id: row-4
       cells:
       - text: D. Results
@@ -212,7 +212,7 @@ guided_assignment:
     kind: response
     prompt: Additional planned gaps, if needed
     criteria:
-    - For each additional gap, include the same six source-template lines, including
+    - For each additional gap, include the same six template lines, including
       an independent check.
     instruction_section: If your plan has more than three gaps
   - id: dojo-choices
@@ -267,47 +267,45 @@ guided_assignment:
       width: 8
     rows:
     - id: row-1
-      label: The goal it serves
+      label: '1. The goal it serves'
       cells:
-      - text: The goal it serves
+      - text: '1. The goal it serves'
       - text:  
         response: true
     - id: row-2
-      label: The problem
+      label: '2. The problem'
       cells:
-      - text: The problem
+      - text: '2. The problem'
       - text:  
         response: true
     - id: row-3
-      label: Who is affected, and what it costs them
+      label: '3. Who is affected, what it costs them, and what fixing it would ask of them'
       cells:
-      - text: Who is affected, and what it costs them
+      - text: '3. Who is affected, what it costs them, and what fixing it would ask of them'
       - text:  
         response: true
     - id: row-4
-      label: How it is handled today, and where that falls short
+      label: '4. How it is handled today, and where that falls short'
       cells:
-      - text: How it is handled today, and where that falls short
+      - text: '4. How it is handled today, and where that falls short'
       - text:  
         response: true
     - id: row-5
-      label: What fixed would look like
+      label: '5. What fixed would look like'
       cells:
-      - text: What fixed would look like
+      - text: '5. What fixed would look like'
       - text:  
         response: true
     - id: row-6
-      label: 'Assumptions: confirmed or inferred, and which gap checks each inference'
+      label: '6. Assumptions: confirmed or inferred, and which gap checks each inference'
       cells:
-      - text: 'Assumptions: confirmed or inferred, and which gap checks each inference'
+      - text: '6. Assumptions: confirmed or inferred, and which gap checks each inference'
       - text:  
         response: true
     - id: row-7
-      label: 'What I do not know yet: planned gaps in order and interesting gaps left
-        out'
+      label: '7. What I do not know yet: planned gaps in order and interesting gaps left out'
       cells:
-      - text: 'What I do not know yet: planned gaps in order and interesting gaps
-          left out'
+      - text: '7. What I do not know yet: planned gaps in order and interesting gaps left out'
       - text:  
         response: true
     criteria:
@@ -406,7 +404,7 @@ Write your own answers before requesting optional AI feedback. A selected row ma
 
 ## Bring your Week 7 Word file
 
-The [Learning Plan template](https://docs.google.com/document/d/1XgCf1cTadZOCQtHdLEoebhJ8FWNjV6IzKUslKAtqxIA/copy) is a reference if you need to see the source layout. Keep your Week 7 Word file with Part A and C1 unchanged. This walkthrough produces a separate Week 8 Word file with Part B and C2. Attach both files in this assignment. The table below shows when each part belongs.
+The [Learning Plan template](https://docs.google.com/document/d/1XgCf1cTadZOCQtHdLEoebhJ8FWNjV6IzKUslKAtqxIA/copy) is a reference if you need to see the layout. Keep your Week 1 Word file with Part A and C1 unchanged. This walkthrough produces a separate Week 2 Word file with Part B and C2. Attach both files in this assignment. The table below shows when each part belongs.
 
 ## Plan for Gap 1
 
@@ -432,6 +430,8 @@ For each gap in your plan, in rank order, answer five questions. One or two sent
 
 If a gap does not fit in five small steps, it is probably a topic. Go back and narrow it.
 
+First paste your Dojo Lab bullets for this gap into 'Raw material from the Dojo'. Then answer the five questions in the rows below it.
+
 ## Plan for Gap 2
 
 Use the next planned gap, if you have one. Keep it separate from Gap 1 so the source, steps, and independent check fit this specific unknown. If you have only one planned gap, leave this block blank.
@@ -442,15 +442,15 @@ Use this block for a third planned gap. Leave it blank if your ranked list stops
 
 ## If your plan has more than three gaps
 
-Add a block for each remaining planned gap here. Use the same six lines as the template: Dojo raw material and the five planning questions. Keep the ranking from Part A unless your Dojo work gave you a reason to change it; record that reason in your Week 8 file.
+Add a block for each remaining planned gap here. Use the same six lines as the template: Dojo raw material and the five planning questions. Keep the ranking from Part A unless your Dojo work gave you a reason to change it; record that reason here.
 
 ## Keep your Dojo decisions
 
-Look back at your Dojo transcript for the context you gave, which suggestions you kept or rejected, and what rejecting cost you. Enter up to three decisions that affected your plan in the source grid below. This records choices you already made; it is not a request to repeat the Dojo or accept a new suggestion now.
+Look back at your Dojo transcript for the context you gave, which suggestions you kept or rejected, and what rejecting cost you. Enter up to three decisions that affected your plan in the table below. This records choices you already made; it is not a request to repeat the Dojo or accept a new suggestion now.
 
 ## C2. Update your Problem Frame
 
-Your frame from Sprint 3 is already in C1, in your Week 7 Word file. Leave it there. Copy it into C2, “My updated frame,” and in C2 update parts 6 and 7 so they match your plan:
+Your frame from Sprint 3 is already in C1, in your Week 1 Word file. Leave it there. Open that file and paste each of the seven parts from C1 into the matching row of C2, 'My updated frame,' below. Then, in C2, update parts 6 and 7 so they match your plan:
 
 - **Part 6, assumptions.** Keep each assumption marked confirmed or inferred. For each one still inferred, add which gap in your plan will check it, in place of “who could tell me.”
 - **Part 7, what you do not know yet.** Rewrite it so it lists the gaps in your plan, in rank order, plus the interesting ones you left out.
@@ -467,7 +467,7 @@ The response rows below help you review all seven parts. If a selected row conta
 
 ## Track what will test each assumption
 
-Use the source template's assumption table to link each inference to a gap. A confirmed claim still needs a real basis. If you have more than two assumptions, record the additional ones in the response below the table; the source grid shows only two.
+Use this table to link each inference to a gap. A confirmed claim still needs a real basis. If you have more than two assumptions, keep the rest in row 6 of the C2 table above; this table shows only two.
 
 ## Record any other correction
 
@@ -475,9 +475,9 @@ If planning changed another part of your frame, name the part and explain what m
 
 ## Keep Part D for later
 
-This source table records what you find while following the plan in CIS 502. Leave it blank for now.
+This table records what you find while following the plan in CIS 502. Leave it blank for now.
 
-Select **Download as Word document** below. In Canvas, select **Start Assignment**, attach this Week 8 Word file **and** your separate Week 7 Word file, then select **Submit Assignment**. The assessed work is Part B and C2; Part A and C1 in the Week 7 file provide the starting record. Keep your Dojo Lab decisions with these files. Saving a browser draft or downloading the file alone does not submit your work.
+Select **Download as Word document** below. In Canvas, select **Start Assignment**, attach this Week 2 Word file **and** your separate Week 1 Word file, then select **Submit Assignment**. The assessed work is Part B and C2; Part A and C1 in the Week 1 file provide the starting record. Keep your Dojo Lab decisions with these files. Saving a browser draft or downloading the file alone does not submit your work.
 
 ### Portfolio Capture
 
