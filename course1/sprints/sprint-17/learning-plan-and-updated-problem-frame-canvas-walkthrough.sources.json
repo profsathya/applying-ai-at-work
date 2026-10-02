@@ -4,7 +4,7 @@
   "packet_sha256": "095c658a39e481917734876f60a6516dd14a81977441391fece36873cd9f1dd6",
   "map_sha256": "f9439b11b07478208479611fb51b735c9f13988a85bab5fe8165554bf79a5d10",
   "body_sha256": "23deda8aaed927ca3f2424cee41c4c566b893cd4769d2dc740a02c1b3a49f2d4",
-  "frontmatter_sha256": "79a215ebf76dc22bc1d814a5a40c363673dd91ad651bd691a885568463b91a77",
+  "frontmatter_sha256": "8bb2365c837f64064e2cc8432e5d781425b46b1b4130e2ea726fe98debc05ad8",
   "parts": [
     {
       "kind": "new",
@@ -37,7 +37,8 @@
     "Publish the instructor-approved Canvas Walkthrough in place of its original while retaining both Canvas identities.",
     "2026-10-01: Four approved wording edits so the walkthrough picks up from the rebuilt Dojo Lab: Design the Learning Plan (Purpose, Step 6 first sentence, Step 7 part 6 example, Step 7 other-parts sentence). Tasks, fields, feedback, and export unchanged.",
     "2026-10-02: Apply editor-requested Sprint 4 wording edits (Week 1 and Week 2 names, \"source\" removed, Raw material instruction, C2 copy instruction, numbered C2 row labels, assumption overflow pointer); display text only, row and task ids unchanged.",
-    "2026-10-02: Problem Frame document handoff: point learners to one dated Problem Frame document they update first, then copy. Wording only; tasks, ids and export unchanged."
+    "2026-10-02: Problem Frame document handoff: point learners to one dated Problem Frame document they update first, then copy. Wording only; tasks, ids and export unchanged.",
+    "2026-10-02: Word file first line says Sprint 4 Week 1 / Week 2 to match the pages (issue #221); export file names unchanged mid-term."
   ],
   "source_roles": {
     "d-83aa73137f01cb9d": {

@@ -24,8 +24,7 @@ guided_assignment:
   feedback_endpoint: https://cti-course-ai.netlify.app/.netlify/functions/walkthrough-feedback
   feedback_protocol: walkthrough-v1
   document_prefix:
-  - Name the Gap, week 7. Keep this Word file with your Sprint 4 work. You will attach
-    it alongside a separate week 8 Word file in the next assignment.
+  - 'Name the Gap, Sprint 4 Week 1. Keep this Word file unchanged with your Sprint 4 work. You will attach it alongside a separate Week 2 Word file in the Learning Plan assignment.'
   tasks:
   - id: template-timing
     kind: table
