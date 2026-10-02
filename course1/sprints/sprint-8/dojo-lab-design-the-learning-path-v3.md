@@ -102,7 +102,7 @@ The transcript is the only thing you submit for this Dojo Lab. Six steps:
 
 ## Part 3: Updating your Learning Plan
 
-Do not change learning-plan-week-7.docx. It is your submitted record from Name the Gap. After you submit the transcript, write down the changes you decided on in the conversation: a topic rewritten as a gap, a re-sorted gap, or a new ranking. Then, for each gap, write what you kept as bullets: possible sources, possible steps, possible ways to check. Bullets, not sentences. You will put these notes into the Learning Plan walkthrough next week, where you also write the plan itself.
+Do not change learning-plan-week-7.docx. It is your submitted record from Name the Gap. After you submit the transcript, write down the changes you decided on in the conversation: a topic rewritten as a gap, a re-sorted gap, or a new ranking. Then, for each gap, write what you kept as bullets: possible sources, possible steps, possible ways to check. Bullets, not sentences. Keep a copy of your transcript. The recap at the end of your Dojo conversation is a good place to start your notes. You will put these notes into the Learning Plan walkthrough next week, where you also write the plan itself.
 
 If the Dojo raised something about your Problem Frame, note it. Do not change your Problem Frame document yet. You will update it next week, in the Learning Plan activity.
 
