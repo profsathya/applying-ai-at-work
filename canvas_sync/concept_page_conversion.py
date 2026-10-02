@@ -6,6 +6,28 @@ so an interrupted conversion can adopt its already-created page and placement.
 
 from copy import deepcopy
 
+from canvas_sync.state import canvas_fingerprint
+
+
+def inactive_shell(assignment):
+    return (assignment.get('published') is False
+            and assignment.get('points_possible') in (None, 0)
+            and assignment.get('grading_type') == 'not_graded'
+            and assignment.get('submission_types') == ['none']
+            and assignment.get('omit_from_final_grade') is True)
+
+
+def interrupted_retirement(assignment, checkpoint):
+    # Older conversion attempts sent not_graded as a submission type. Canvas
+    # accepted it and normalized points to null without changing grading_type.
+    # Adopt only this known partial retirement with an existing page checkpoint.
+    return (checkpoint.get('page_id') and checkpoint.get('item_id')
+            and assignment.get('published') is False
+            and assignment.get('points_possible') in (None, 0)
+            and assignment.get('grading_type') == checkpoint['previous_assignment'].get('grading_type')
+            and assignment.get('submission_types') == ['not_graded']
+            and assignment.get('omit_from_final_grade') is True)
+
 
 def convert_empty_assignment(client, frontmatter, entry, body, save_checkpoint):
     if entry.get('canvas_type') == 'page':
@@ -24,6 +46,10 @@ def convert_empty_assignment(client, frontmatter, entry, body, save_checkpoint):
         raise ValueError('Concept assignment has submitted work; conversion is blocked')
     module_id, old_item_id = entry['canvas_module_id'], entry['canvas_module_item_id']
     checkpoint = deepcopy(entry.get('page_conversion') or {})
+    if checkpoint and entry.get('canvas_fingerprint'):
+        original = {**assignment, **checkpoint['previous_assignment']}
+        if canvas_fingerprint(original, 'assignment') != entry['canvas_fingerprint']:
+            raise ValueError('Original concept content changed during conversion; reconcile before resuming')
     placements = [(m['id'], i) for m in client.list_modules()
                   for i in client.list_module_items(m['id'])
                   if i.get('type') == 'Assignment' and i.get('content_id') == assignment_id]
@@ -31,7 +57,10 @@ def convert_empty_assignment(client, frontmatter, entry, body, save_checkpoint):
         if len(placements) != 1 or placements[0][0] != module_id or placements[0][1]['id'] != old_item_id:
             raise ValueError('Original concept assignment placement is missing, moved, or ambiguous')
         old_item = placements[0][1]
-        if old_item.get('published') is not frontmatter.get('publish', True):
+        resumed_retirement = checkpoint and (inactive_shell(assignment)
+                                              or interrupted_retirement(assignment, checkpoint))
+        if (old_item.get('published') is not frontmatter.get('publish', True)
+                and not resumed_retirement):
             raise ValueError('Concept-check publication changed; reconcile before converting')
         checkpoint.setdefault('position', old_item['position'])
     elif placements:
@@ -55,12 +84,11 @@ def convert_empty_assignment(client, frontmatter, entry, body, save_checkpoint):
         checkpoint['item_id'] = item['id']
         persist()
     if not checkpoint.get('old_placement_removed'):
-        retired = client.update_assignment(assignment_id, {'published': False, 'points_possible': 0,
-                                                          'submission_types': ['not_graded'],
-                                                          'omit_from_final_grade': True})
-        if (retired.get('published') is not False or retired.get('points_possible') != 0
-                or retired.get('submission_types') != ['not_graded']
-                or retired.get('omit_from_final_grade') is not True):
+        retired = assignment if inactive_shell(assignment) else client.update_assignment(
+            assignment_id, {'published': False, 'points_possible': 0,
+                            'grading_type': 'not_graded', 'submission_types': ['none'],
+                            'omit_from_final_grade': True})
+        if not inactive_shell(retired):
             raise ValueError('Canvas did not confirm the original concept shell as inactive and ungraded')
         client.delete_module_item(module_id, old_item_id)
         checkpoint['old_placement_removed'] = True
