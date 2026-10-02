@@ -20,7 +20,7 @@ publish: true
 {"src":"assets/sprint-intro/sprint-4-welcome-v2.mp4","title":"Welcome to Sprint 4 (44 seconds)","captions":"assets/sprint-intro/sprint-4-welcome-v2.vtt"}
 ```
 
-You have been identifying what you know and don't know entirely about your problem since Sprint 1. Part 7 of your Problem Frame asks for what you do not know yet directly. In Sprint 3 you marked fields on your stakeholder map as Inferred, wrote assumption blocks for the guesses that would change your next move, and ended your validation report with what still needs validation.
+You have been identifying what you know and don't know entirely about your problem since Sprint 1. Part 7 of your Problem Frame asks for what you do not know yet directly. In Sprint 3 you marked fields on your stakeholder map as Inferred, wrote assumption blocks for the guesses that would change your next move, and ended your Stakeholder Conversation Canvas Walkthrough with what still needs validation.
 
 This sprint calls those open items gaps, and it is where they stop sitting at the end of a report and become a plan. You will not close them all in two weeks. You will plan how to close them, and that planning will show you which parts of your frame you can trust and which you cannot yet.
 
@@ -43,7 +43,7 @@ By the end of this sprint you can say, about your own problem, what you know, wh
 - Topic: "I don't know how teams handle account handovers." Nothing specific fills the blank because what you don't know is a high level topic.
 - Gap: "I don't know whether the other account managers really find out late when an account changes hands, so I can't tell whether my problem is for the whole team or for the account managers only." The blank fills itself.
 
-**Blocking, useful, interesting.** Not everything you do not know is in your way. Sprint 3 called an assumption high-stakes if being wrong about it would change your next move.
+**Blocking, useful, interesting.** Not everything you do not know is in your way. Sprint 3 called an assumption high-stakes if being wrong about it would change your next move. That is what blocking means here.
 
 - **Blocking:** a decision or next step is waiting on it.
 - **Useful:** it would improve the work, but nothing is stopped.
@@ -60,6 +60,6 @@ By the end of this sprint you can say, about your own problem, what you know, wh
 
 ## Portfolio Capture
 
-Keep everything in your Learning Plan template. In Sprint 5, your readiness report asks what you are ready to do next. Your plan is a large part of that answer, and it is where you start in CIS 502.
+Keep the Word file you download from each walkthrough. In Sprint 5, your readiness report asks what you are ready to do next. Your plan is a large part of that answer, and it is where you start in CIS 502.
 
 Next: take the Sprint 4 Concept Check, then start Name the Gap.
