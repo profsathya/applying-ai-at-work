@@ -113,18 +113,18 @@ guided_assignment:
         response: true
       guidance:
         ask: 'What in parts 2 to 5 have you not seen for yourself or heard from someone who
-          would know? One per line: which part, what you assumed, confirmed or unverified,
+          would know? One per line: which part, what you assumed,
           and who could tell you. At least four.'
-        example: 'From Part 2: Nothing reaches the rest of the team. Unverified. Who could
+        example: 'From Part 2: Nothing reaches the rest of the team. Who could
           tell me: the other managers.
 
-          From Part 3a: All four managers are affected, not just the one I sat next to. Unverified.
-          Who could tell me: the other three managers.
+          From Part 3a: All four managers are affected, not just the one I sat next to.
+         Who could tell me: the other three managers.
 
-          From Part 3b: Clients notice and it costs them something. Unverified. Who could
+          From Part 3b: Clients notice and it costs them something. Who could
           tell me: the account lead.
 
-          From Part 4: Nobody has tried to fix this before. Unverified. Who could tell me:
+          From Part 4: Nobody has tried to fix this before. Who could tell me:
           the account lead.'
     - id: f1-p7
       label: 'Part 7: what you do not know yet'
@@ -141,8 +141,8 @@ guided_assignment:
     - Every part present or marked "I do not know yet."
     - 3b attaches a cost to each person in 3a.
     - Part 5 is a state, not a solution.
-    - Part 6 has at least four assumptions, each marked confirmed or unverified, each unverified
-      one with who could tell you.
+    - Part 6 has at least four assumptions, each naming the part it comes from and who could
+      tell you.
   - id: frame-2
     kind: table
     prompt: Frame 2
@@ -230,18 +230,18 @@ guided_assignment:
         response: true
       guidance:
         ask: 'What in parts 2 to 5 have you not seen for yourself or heard from someone who
-          would know? One per line: which part, what you assumed, confirmed or unverified,
+          would know? One per line: which part, what you assumed,
           and who could tell you. At least four.'
-        example: 'From Part 2: Nothing reaches the rest of the team. Unverified. Who could
+        example: 'From Part 2: Nothing reaches the rest of the team. Who could
           tell me: the other managers.
 
-          From Part 3a: All four managers are affected, not just the one I sat next to. Unverified.
-          Who could tell me: the other three managers.
+          From Part 3a: All four managers are affected, not just the one I sat next to.
+         Who could tell me: the other three managers.
 
-          From Part 3b: Clients notice and it costs them something. Unverified. Who could
+          From Part 3b: Clients notice and it costs them something. Who could
           tell me: the account lead.
 
-          From Part 4: Nobody has tried to fix this before. Unverified. Who could tell me:
+          From Part 4: Nobody has tried to fix this before. Who could tell me:
           the account lead.'
     - id: f2-p7
       label: 'Part 7: what you do not know yet'
@@ -342,18 +342,18 @@ guided_assignment:
         response: true
       guidance:
         ask: 'What in parts 2 to 5 have you not seen for yourself or heard from someone who
-          would know? One per line: which part, what you assumed, confirmed or unverified,
+          would know? One per line: which part, what you assumed,
           and who could tell you. At least four.'
-        example: 'From Part 2: Nothing reaches the rest of the team. Unverified. Who could
+        example: 'From Part 2: Nothing reaches the rest of the team. Who could
           tell me: the other managers.
 
-          From Part 3a: All four managers are affected, not just the one I sat next to. Unverified.
-          Who could tell me: the other three managers.
+          From Part 3a: All four managers are affected, not just the one I sat next to.
+         Who could tell me: the other three managers.
 
-          From Part 3b: Clients notice and it costs them something. Unverified. Who could
+          From Part 3b: Clients notice and it costs them something. Who could
           tell me: the account lead.
 
-          From Part 4: Nobody has tried to fix this before. Unverified. Who could tell me:
+          From Part 4: Nobody has tried to fix this before. Who could tell me:
           the account lead.'
     - id: f3-p7
       label: 'Part 7: what you do not know yet'
@@ -454,18 +454,18 @@ guided_assignment:
         response: true
       guidance:
         ask: 'What in parts 2 to 5 have you not seen for yourself or heard from someone who
-          would know? One per line: which part, what you assumed, confirmed or unverified,
+          would know? One per line: which part, what you assumed,
           and who could tell you. At least four.'
-        example: 'From Part 2: Nothing reaches the rest of the team. Unverified. Who could
+        example: 'From Part 2: Nothing reaches the rest of the team. Who could
           tell me: the other managers.
 
-          From Part 3a: All four managers are affected, not just the one I sat next to. Unverified.
-          Who could tell me: the other three managers.
+          From Part 3a: All four managers are affected, not just the one I sat next to.
+         Who could tell me: the other three managers.
 
-          From Part 3b: Clients notice and it costs them something. Unverified. Who could
+          From Part 3b: Clients notice and it costs them something. Who could
           tell me: the account lead.
 
-          From Part 4: Nobody has tried to fix this before. Unverified. Who could tell me:
+          From Part 4: Nobody has tried to fix this before. Who could tell me:
           the account lead.'
     - id: f4-p7
       label: 'Part 7: what you do not know yet'
@@ -566,18 +566,18 @@ guided_assignment:
         response: true
       guidance:
         ask: 'What in parts 2 to 5 have you not seen for yourself or heard from someone who
-          would know? One per line: which part, what you assumed, confirmed or unverified,
+          would know? One per line: which part, what you assumed,
           and who could tell you. At least four.'
-        example: 'From Part 2: Nothing reaches the rest of the team. Unverified. Who could
+        example: 'From Part 2: Nothing reaches the rest of the team. Who could
           tell me: the other managers.
 
-          From Part 3a: All four managers are affected, not just the one I sat next to. Unverified.
-          Who could tell me: the other three managers.
+          From Part 3a: All four managers are affected, not just the one I sat next to.
+         Who could tell me: the other three managers.
 
-          From Part 3b: Clients notice and it costs them something. Unverified. Who could
+          From Part 3b: Clients notice and it costs them something. Who could
           tell me: the account lead.
 
-          From Part 4: Nobody has tried to fix this before. Unverified. Who could tell me:
+          From Part 4: Nobody has tried to fix this before. Who could tell me:
           the account lead.'
     - id: f5-p7
       label: 'Part 7: what you do not know yet'
@@ -621,7 +621,7 @@ Below is a complete example frame for the account handover problem. Refer back t
 | Part 3c: what fixing this would ask of them | Filled in Sprint 2. Leave blank. | Filled in Sprint 2. |
 | Part 4: how it is handled today, and where that falls short | How do people deal with this now? Name the process, habit, workaround, or person, and anything that was tried and dropped. Then, where does that not work well enough? | The outgoing owner tells the incoming owner directly. Nobody remembers anyone trying anything else. It works for the two people in the conversation and reaches nobody else. |
 | Part 5: what fixed would look like | If this were fixed, what would be different? One sentence about the changed situation, not the fix. | Everyone on the team knows within a day when an account changes hands. |
-| Part 6: your assumptions | What in parts 2 to 5 have you not seen for yourself or heard from someone who would know? One per line: which part, what you assumed, confirmed or unverified, and who could tell you. At least four. | From Part 2: Nothing reaches the rest of the team. Unverified. Who could tell me: the other managers.<br>From Part 3a: All four managers are affected, not just the one I sat next to. Unverified. Who could tell me: the other three managers.<br>From Part 3b: Clients notice and it costs them something. Unverified. Who could tell me: the account lead.<br>From Part 4: Nobody has tried to fix this before. Unverified. Who could tell me: the account lead. |
+| Part 6: your assumptions | What in parts 2 to 5 have you not seen for yourself or heard from someone who would know? One per line: which part, what you assumed, and who could tell you. At least four. | From Part 2: Nothing reaches the rest of the team. Who could tell me: the other managers.<br>From Part 3a: All four managers are affected, not just the one I sat next to. Who could tell me: the other three managers.<br>From Part 3b: Clients notice and it costs them something. Who could tell me: the account lead.<br>From Part 4: Nobody has tried to fix this before. Who could tell me: the account lead. |
 | Part 7: what you do not know yet | What do you still not know? For example, who owns the process, or whether anyone tried to fix it before. Leave tool ideas for later. | I do not know who owns the handover process, if anyone. Nobody obvious to ask. Start with the account lead. |
 
 The tables below will guide you through creating your draft problem frames. Fill in at least three frames; the fourth and fifth are optional. Refer to your **Get underneath three to five** Word file, where you have already done some of this thinking. Write parts 2, 3, 4 first, then 5, then 6 and 7, then 1 last, because you cannot write the goal until you know what fixed looks like. Keep the Word file you download: the Dojo Lab tests these frames, and the one you choose becomes your Problem Frame document. Under each part name, select **Example and guidance** to see the question for that part and the example line again.
