@@ -35,13 +35,12 @@ Own your progress activities carry 0 points, but Canvas requires a submission to
 
 **Week 2: what exists, and your verdict on proceeding**
 
-5. Read **Working with AI: Context**.
-6. **What solutions already exist.** Start your What already exists table on your own: what you know of, what you guess, and what you want to find out (50 points).
-7. **Dojo Lab: explore what already exists.** Work with AI and on your own to fill in the gaps in the table, then do a deeper dive to better understand the existing solutions. (Own your progress, 0 points.)
-8. **What exists, and what it means.** Submit your updated table and what the Dojo changed. (Own your progress, 0 points.)
-9. Take the **Concept check** (5 points).
-10. **Problem Frame: taking stock of where you are.** Work out what fixing this would ask of people, bring your frame up to date, and decide whether to proceed (50 points).
-11. **Write the Reflection** (10 points).
+5. **What solutions already exist.** Start your What already exists table on your own: what you know of, what you guess, and what you want to find out (50 points).
+6. **Dojo Lab: explore what already exists.** Work with AI and on your own to fill in the gaps in the table, then do a deeper dive to better understand the existing solutions. (Own your progress, 0 points.)
+7. **What exists, and what it means.** Submit your updated table and what the Dojo changed. (Own your progress, 0 points.)
+8. Take the **Concept check** (5 points).
+9. **Problem Frame: taking stock of where you are.** Work out what fixing this would ask of people, bring your frame up to date, and decide whether to proceed (50 points).
+10. **Write the Reflection** (10 points).
 
 ## If you determine your first problem is not worth solving
 
