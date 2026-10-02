@@ -597,16 +597,16 @@
       "canvas_payload_hash": "de429a7a162a8076f46c125a80829e2a9dad3797af608d62ae6f7a1e934a124a",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "a23d30c72b04fa5bfe3826c1a984a3afb04e2e20e6a592027f83349cba38a3b0",
-      "hosted_hash": "3e1ae5b81194f7e8da3ef660a9d581faab314afd6dc77cb63354a2018896f77f",
-      "hosted_last_rendered": "2026-10-01T23:48:35+00:00",
+      "content_hash": "1ae71ccd276ca7195fff3b35ba1e83fd8f34fb696c5f416801ac4a58c710aa57",
+      "hosted_hash": "0bb80f6c88d54473e39e4a32b1d96dbe88808eb2e89ff7634199043af14cd66b",
+      "hosted_last_rendered": "2026-10-02T15:01:39+00:00",
       "hosted_path": "course1/activities/introduction-is-this-problem-worth-pursuing.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-is-this-problem-worth-pursuing.html",
-      "last_pushed": "2026-10-01T23:48:35+00:00",
+      "last_pushed": "2026-10-02T15:01:39+00:00",
       "local_path": "course1/sprints/sprint-16/introduction-is-this-problem-worth-pursuing.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "1ff98967dfad876e4d8bc90b78ca0c5a52fa2ba6"
+      "source_commit": "684cc09945a3d2d7b6215239c5fea120f7a8bf14"
     },
     "course1-sprints-sprint-16-problem-frame-is-it-worth-pursuing": {
       "artifact_id": "course1-sprints-sprint-16-problem-frame-is-it-worth-pursuing",
@@ -1384,5 +1384,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-02T14:36:25+00:00"
+  "last_sync": "2026-10-02T15:01:39+00:00"
 }
