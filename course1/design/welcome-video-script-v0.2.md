@@ -1,10 +1,10 @@
 ---
 purpose: Script for the welcome video Tacey, Leslie, Melisa, and Jeremy record together for CIS 501, three to four minutes, two goals: who we are and how to reach us, and that this is a first-run course we are learning alongside the learners; each person rewrites their own lines in their own words
-status: v0.1, 2 October 2026, draft for the four to edit
+status: v0.2, 2 October 2026 (the welcome paragraph describes the course as understanding one problem deeply, not deciding whether it is worth solving; Leslie). v0.1, draft for the four to edit
 depends_on: course1/sprints/sprint-6 (Sprint 0 pages, which left the instructor video and office-hour details as a known gap)
 ---
 
-# Welcome video, v0.1
+# Welcome video, v0.2
 
 About 520 words, which is three and a half minutes at a conversational pace. Record together on Zoom, speaker view, one take straight through with one restart allowed. Small stumbles stay in. Jeremy trims the ends and adds the final text frame.
 
@@ -14,7 +14,7 @@ Square brackets mark things to fill in or decide. Everything else is a suggestio
 
 Hi, and welcome to Reframing Problems with AI. I'm Tacey [last name], and I'm your instructor for this course. [One sentence about Tacey: what she teaches at De Anza, or why she took this course on.]
 
-Here is what the next ten weeks are about. You are going to pick one real problem from your own work or life, and take it as far as knowing whether it is worth solving, who it affects, what is already being done about it, and what you would need to learn to do something about it. You will use AI the whole way through, and you will learn where it helps and where you have to do the thinking yourself.
+Here is what the next ten weeks are about. You are going to pick one real problem from your own work or life, and understand it properly: who it affects and what it costs them, what is already being done about it, what you are assuming, and what you still need to learn. That depth is the point. It is what lets you work on a problem, and it is what lets you explain the problem to AI well enough to get real help with it. You will use AI the whole way through, and you will find out where it helps and where the thinking has to be yours.
 
 I didn't build this course alone. Three people designed and built it with me, and you will be meeting them in office hours and one-on-ones. Let me hand over so they can introduce themselves.
 
