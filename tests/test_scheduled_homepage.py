@@ -104,6 +104,10 @@ class ScheduledHomepageTests(unittest.TestCase):
             write_page(md)
             md.write_text(md.read_text().replace("publish: false", "publish: true"))
             write_manifest(manifest)
+            deployment = json.loads(manifest.read_text())
+            deployment["hosted_html"]["native_canvas_navigation"] = True
+            deployment["instance"] = {"base_url": "https://another-college.instructure.com", "course_id": 987}
+            manifest.write_text(json.dumps(deployment))
             data = homepage()
             data["modules"][0]["groups"] = [{"label": "Begin", "items": [{"slug": "tuple-overview", "nav_meta": "Read", "meta": "Long instructions stay on the module page."}]}]
             (root / "course1/homepage.yaml").write_text(yaml.safe_dump(data))

@@ -18,7 +18,11 @@ def apply_native_canvas(document: str, manifest: dict) -> str:
     # cross-origin referrer policies often expose only the origin. Instructions
     # use the enclosing Canvas controls instead of guessing destination IDs.
     document = re.sub(r'<a\b[^>]*\bdata-canvas-only\b[^>]*>.*?</a>', '', document, flags=re.S)
-    document = re.sub(r'\sdata-canvas-(?:href|target)="[^"]*"', '', document)
+    # Scheduled navigation is generated from this deployment's manifest/state.
+    # Keep its native module/item destinations separate from completion tracking.
+    scheduled = 'id="course-schedule"' in document
+    if not scheduled:
+        document = re.sub(r'\sdata-canvas-(?:href|target)="[^"]*"', '', document)
     document = re.sub(r'<span class="progress-check"[^>]*><span class="progress-box"></span><span class="progress-label">.*?</span></span>', '', document, flags=re.S)
     document = re.sub(r'\sdata-(?:progress-id|progress-state|canvas-module-item-id|completion-requirement)="[^"]*"', '', document)
     document = re.sub(r'^[ \t]*<div class="progress-status" id="progress-status" hidden></div>\n', '', document, flags=re.M)
@@ -32,10 +36,6 @@ def apply_native_canvas(document: str, manifest: dict) -> str:
     def portable_schedule(match):
         data = json.loads(match[2])
         data['native_completion'] = True
-        data['help'].pop('canvas', None)
-        data['orientation'].pop('canvas_href', None)
-        for item in data['sprints']:
-            item.pop('canvas_href', None)
         return match[1] + json.dumps(data) + match[3]
     document = re.sub(r'(<script id="course-schedule" type="application/json">)(.*?)(</script>)', portable_schedule, document, flags=re.S)
     setup = '''<style data-native-canvas-navigation>
