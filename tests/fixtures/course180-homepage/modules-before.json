@@ -1,0 +1,379 @@
+[
+  {
+    "id": 2075,
+    "name": "Sprint 0: Welcome and Orientation (V2)",
+    "published": true,
+    "items": [
+      {
+        "id": 17937,
+        "title": "Start Here",
+        "type": "Page",
+        "published": true
+      },
+      {
+        "id": 17938,
+        "title": "Welcome",
+        "type": "Page",
+        "published": true
+      },
+      {
+        "id": 17935,
+        "title": "How This Course Works",
+        "type": "Page",
+        "published": true
+      },
+      {
+        "id": 17939,
+        "title": "Your First Week",
+        "type": "Page",
+        "published": true
+      },
+      {
+        "id": 17976,
+        "title": "Set up your AI Dojo",
+        "type": "Page",
+        "published": true
+      },
+      {
+        "id": 17936,
+        "title": "Introduction Post",
+        "type": "Discussion",
+        "content_id": 1533,
+        "published": true
+      },
+      {
+        "id": 17934,
+        "title": "Help and Resources",
+        "type": "Page",
+        "published": true
+      },
+      {
+        "id": 18029,
+        "title": "Schedule a 5-minute check-in",
+        "type": "Page",
+        "published": true
+      }
+    ]
+  },
+  {
+    "id": 2079,
+    "name": "Sprint 1: Find the Problem Worth Solving (V2)",
+    "published": true,
+    "items": [
+      {
+        "id": 17981,
+        "title": "Introduction: Find the Problem Worth Solving",
+        "type": "Page",
+        "published": true
+      },
+      {
+        "id": 18020,
+        "title": "Brainstorm your list Canvas Walkthrough",
+        "type": "Assignment",
+        "content_id": 7185,
+        "published": true
+      },
+      {
+        "id": 18018,
+        "title": "Get underneath three to five Canvas Walkthrough",
+        "type": "Assignment",
+        "content_id": 7183,
+        "published": true
+      },
+      {
+        "id": 17985,
+        "title": "The problem frame",
+        "type": "Page",
+        "published": false
+      },
+      {
+        "id": 18019,
+        "title": "First frames Canvas Walkthrough",
+        "type": "Assignment",
+        "content_id": 7184,
+        "published": true
+      },
+      {
+        "id": 17978,
+        "title": "Dojo Lab: test, widen, choose",
+        "type": "Assignment",
+        "content_id": 7150,
+        "published": true
+      },
+      {
+        "id": 17983,
+        "title": "Sprint 1 Concept check",
+        "type": "Assignment",
+        "content_id": 7154,
+        "published": true
+      },
+      {
+        "id": 17982,
+        "title": "Problem Frame",
+        "type": "Assignment",
+        "content_id": 7153,
+        "published": true
+      },
+      {
+        "id": 17984,
+        "title": "Sprint 1 Reflection",
+        "type": "Assignment",
+        "content_id": 7155,
+        "published": true
+      }
+    ]
+  },
+  {
+    "id": 2084,
+    "name": "Sprint 2: Is This Problem Worth Pursuing?",
+    "published": true,
+    "items": [
+      {
+        "id": 18004,
+        "title": "Introduction: Is This Problem Worth Pursuing?",
+        "type": "Page",
+        "published": true
+      },
+      {
+        "id": 18011,
+        "title": "Dig into your assumptions Canvas Walkthrough",
+        "type": "Assignment",
+        "content_id": 7178,
+        "published": true
+      },
+      {
+        "id": 18003,
+        "title": "Dojo Lab: test your assumptions",
+        "type": "Assignment",
+        "content_id": 7171,
+        "published": true
+      },
+      {
+        "id": 18010,
+        "title": "Your updated assumptions",
+        "type": "Assignment",
+        "content_id": 7177,
+        "published": true
+      },
+      {
+        "id": 18012,
+        "title": "What solutions already exist Canvas Walkthrough",
+        "type": "Assignment",
+        "content_id": 7179,
+        "published": true
+      },
+      {
+        "id": 18002,
+        "title": "Dojo Lab: explore what already exists",
+        "type": "Assignment",
+        "content_id": 7170,
+        "published": true
+      },
+      {
+        "id": 18008,
+        "title": "What exists, and what it means",
+        "type": "Assignment",
+        "content_id": 7175,
+        "published": true
+      },
+      {
+        "id": 18007,
+        "title": "Sprint 2 Concept check",
+        "type": "Assignment",
+        "content_id": 7174,
+        "published": true
+      },
+      {
+        "id": 18005,
+        "title": "Problem Frame: taking stock of where you are",
+        "type": "Assignment",
+        "content_id": 7172,
+        "published": true
+      },
+      {
+        "id": 18006,
+        "title": "Sprint 2 Reflection",
+        "type": "Assignment",
+        "content_id": 7173,
+        "published": true
+      },
+      {
+        "id": 18013,
+        "title": "Working with AI: Context",
+        "type": "Page",
+        "published": false
+      }
+    ]
+  },
+  {
+    "id": 2081,
+    "name": "Sprint 3: Integrate People and Context (V3)",
+    "published": true,
+    "items": [
+      {
+        "id": 18017,
+        "title": "Sprint 3: Integrate People and Context (V3)",
+        "type": "Page",
+        "published": false
+      },
+      {
+        "id": 17987,
+        "title": "Introduction: Integrate People and Context",
+        "type": "Page",
+        "published": true
+      },
+      {
+        "id": 18014,
+        "title": "Sprint 3 Concept Check",
+        "type": "Assignment",
+        "content_id": 7180,
+        "published": true
+      },
+      {
+        "id": 17997,
+        "title": "Stakeholder Map Canvas Walkthrough",
+        "type": "Assignment",
+        "content_id": 7165,
+        "published": true
+      },
+      {
+        "id": 17986,
+        "title": "Dojo Lab: Test Your Stakeholder Map",
+        "type": "Assignment",
+        "content_id": 7156,
+        "published": true
+      },
+      {
+        "id": 17998,
+        "title": "Stakeholder Conversation Canvas Walkthrough",
+        "type": "Assignment",
+        "content_id": 7166,
+        "published": true
+      },
+      {
+        "id": 17989,
+        "title": "Sprint 3 Reflection",
+        "type": "Assignment",
+        "content_id": 7157,
+        "published": true
+      }
+    ]
+  },
+  {
+    "id": 2082,
+    "name": "Sprint 4: Close the Learning Gap (V3)",
+    "published": true,
+    "items": [
+      {
+        "id": 17952,
+        "title": "Introduction: Close the Learning Gap",
+        "type": "Page",
+        "published": true
+      },
+      {
+        "id": 18015,
+        "title": "Sprint 4 Concept Check",
+        "type": "Assignment",
+        "content_id": 7181,
+        "published": true
+      },
+      {
+        "id": 17999,
+        "title": "Name the Gap Canvas Walkthrough",
+        "type": "Assignment",
+        "content_id": 7167,
+        "published": true
+      },
+      {
+        "id": 17951,
+        "title": "Dojo Lab: Design the Learning Plan",
+        "type": "Assignment",
+        "content_id": 7132,
+        "published": true
+      },
+      {
+        "id": 18000,
+        "title": "Learning Plan and Updated Problem Frame Canvas Walkthrough",
+        "type": "Assignment",
+        "content_id": 7168,
+        "published": true
+      },
+      {
+        "id": 17993,
+        "title": "Sprint 4 Reflection",
+        "type": "Assignment",
+        "content_id": 7161,
+        "published": true
+      }
+    ]
+  },
+  {
+    "id": 2076,
+    "name": "Sprint 5: Synthesize And Show Readiness (V2)",
+    "published": true,
+    "items": [
+      {
+        "id": 17957,
+        "title": "Introduction: Synthesize and Show Readiness",
+        "type": "Page",
+        "published": true
+      },
+      {
+        "id": 18024,
+        "title": "Sprint 5 Concept check",
+        "type": "Assignment",
+        "content_id": 7189,
+        "published": false
+      },
+      {
+        "id": 18022,
+        "title": "Integrated Problem Document",
+        "type": "Assignment",
+        "content_id": 7187,
+        "published": false
+      },
+      {
+        "id": 18027,
+        "title": "Integrated Problem Document Canvas Walkthrough",
+        "type": "Assignment",
+        "content_id": 7192,
+        "published": false
+      },
+      {
+        "id": 18021,
+        "title": "Dojo Lab: audit your argument for gaps",
+        "type": "Assignment",
+        "content_id": 7186,
+        "published": false
+      },
+      {
+        "id": 18023,
+        "title": "Readiness Report",
+        "type": "Assignment",
+        "content_id": 7188,
+        "published": false
+      },
+      {
+        "id": 18028,
+        "title": "Readiness Report Canvas Walkthrough",
+        "type": "Assignment",
+        "content_id": 7193,
+        "published": false
+      },
+      {
+        "id": 18025,
+        "title": "Sprint 5 Reflection",
+        "type": "Assignment",
+        "content_id": 7190,
+        "published": false
+      },
+      {
+        "id": 18026,
+        "title": "Sprint 5 spare item",
+        "type": "Assignment",
+        "content_id": 7191,
+        "published": false
+      }
+    ]
+  }
+]

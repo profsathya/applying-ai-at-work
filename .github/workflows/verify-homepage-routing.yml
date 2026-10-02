@@ -1,0 +1,55 @@
+name: Verify deployed Course 180 homepage routing
+on:
+  push:
+    branches: [verify/course180-homepage-routing]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: profsathya/Common-Curriculum
+          ref: 0dadb03f3b487c85400709d471f789bcd3467be6
+          path: release
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser verification dependencies
+        run: |
+          npm install --no-save playwright@1.62.1
+          npx playwright install --with-deps chromium
+      - name: Verify all three live files match the exact release
+        run: |
+          mkdir -p evidence wrapper
+          cp tests/fixtures/course180-homepage/*.json evidence/
+          python - <<'PY'
+          import hashlib, json, urllib.request
+          from pathlib import Path
+          results = []
+          for name in ['home.html', 'index.html', 'modules.html']:
+              url = 'https://profsathya.github.io/Common-Curriculum/deanza/course1/' + name
+              with urllib.request.urlopen(url) as response:
+                  data = response.read()
+                  assert response.status == 200
+              expected = (Path('release/deanza/course1') / name).read_bytes()
+              assert data == expected, f'{name} does not match the release'
+              results.append({'url': url, 'status': 200, 'matches_release': True, 'sha256': hashlib.sha256(data).hexdigest()})
+          Path('evidence/deployment-hashes.json').write_text(json.dumps(results, indent=2))
+          print(json.dumps(results, indent=2))
+          PY
+      - name: Verify deployed desktop mobile iframe clicks and 39 activity parity
+        env:
+          EVIDENCE_DIR: evidence
+          WRAPPER_DIR: wrapper
+        run: |
+          python -m http.server 8766 --directory wrapper > /tmp/wrapper-server.log 2>&1 &
+          node tests/homepage-routing-browser.cjs https://profsathya.github.io/Common-Curriculum/deanza/course1/ deployed
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: course180-deployed-routing-evidence
+          path: evidence
