@@ -29,7 +29,7 @@ guided_assignment:
   - id: problem-frame
     kind: response
     prompt: 'Your Problem Frame, pasted whole: all seven parts, Part 6 with every assumption
-      marked, 3c blank.'
+      on its own line, 3c blank.'
     criteria:
     - All seven parts present, in your own words.
     - Every assumption in Part 6 names the part it comes from and who could tell you.
