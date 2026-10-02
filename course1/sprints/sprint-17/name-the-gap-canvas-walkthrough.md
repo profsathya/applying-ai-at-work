@@ -25,6 +25,12 @@ guided_assignment:
   feedback_protocol: walkthrough-v1
   document_prefix:
   - 'Name the Gap, Sprint 4 Week 1. Keep this Word file unchanged with your Sprint 4 work. You will attach it alongside a separate Week 2 Word file in the Learning Plan assignment.'
+  final_check:
+  - 'A1, What I already understand well enough, names two or three things, and each one says how you know. (6 points)'
+  - 'In A2, What I do not know yet, each gap is marked blocking, useful, or interesting, and each blocking gap names the decision or next step that is waiting on it. (14 points)'
+  - 'A3, My learning order, puts every blocking gap in order, says why the first one goes first, and says for each interesting gap what would make it start to matter. (10 points)'
+  - 'In A4, Why each planned gap matters to my frame, each gap in your plan names the part of your Problem Frame that depends on it, and what would change if the answer went the other way. (14 points)'
+  - 'C1, My frame coming in, holds your Sprint 3 Problem Frame in all seven slots, or a note on a slot you cannot fill yet. (6 points)'
   tasks:
   - id: template-timing
     kind: table

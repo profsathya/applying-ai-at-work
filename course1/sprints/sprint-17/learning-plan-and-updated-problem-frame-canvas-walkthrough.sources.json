@@ -4,7 +4,7 @@
   "packet_sha256": "095c658a39e481917734876f60a6516dd14a81977441391fece36873cd9f1dd6",
   "map_sha256": "f9439b11b07478208479611fb51b735c9f13988a85bab5fe8165554bf79a5d10",
   "body_sha256": "5812f6ea09c74e5896fd3600ef89b827ddd5ec35dad511e34c83c6fd24e153fc",
-  "frontmatter_sha256": "e00df71fcf12c4b2549d127485f3da7e7e9964e2f476fa4714b96fd3ed23866d",
+  "frontmatter_sha256": "8dc077f0c858f412d728befbc19a002b59481f2b4e0051bb2dd9865ea0f45e86",
   "parts": [
     {
       "kind": "new",
@@ -40,7 +40,8 @@
     "2026-10-02: Problem Frame document handoff: point learners to one dated Problem Frame document they update first, then copy. Wording only; tasks, ids and export unchanged.",
     "2026-10-02: Word file first line says Sprint 4 Week 1 / Week 2 to match the pages (issue #221); export file names unchanged mid-term.",
     "2026-10-02: Part B Gap 1: say what goes in 'Raw material from the Dojo' (bullets of sources, steps, checks kept) and that the five answers are full sentences.",
-    "2026-10-02: Add one response task, gap-list-changes (\"Changes to my gap list since Name the Gap\"), before Part B Gap 1 so Dojo Lab changes to Part A have a place in the Week 2 file; AI feedback off for it, as for dojo-choices. The re-ranking sentence moved out of the additional-gaps step. Other tasks, ids, feedback and export file name unchanged."
+    "2026-10-02: Add one response task, gap-list-changes (\"Changes to my gap list since Name the Gap\"), before Part B Gap 1 so Dojo Lab changes to Part A have a place in the Week 2 file; AI feedback off for it, as for dojo-choices. The re-ranking sentence moved out of the additional-gaps step. Other tasks, ids, feedback and export file name unchanged.",
+    "2026-10-02: \"What to check in your work\" box (final_check) holds the five full-points lines from the Self-check record, word for word, with points (course1/design/self-checks)."
   ],
   "source_roles": {
     "d-83aa73137f01cb9d": {
