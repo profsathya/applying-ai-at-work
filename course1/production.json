@@ -778,24 +778,23 @@
     },
     "course1-sprints-sprint-16-working-with-ai-context": {
       "artifact_id": "course1-sprints-sprint-16-working-with-ai-context",
-      "canvas_fingerprint": "611b957382e9b3d9de20aae6701399adeecad0226a8c6644d97dbd52f3d1499d",
+      "canvas_fingerprint": "44c1076e5f46c4ddfd2026a42499202adb3a6049f1fe58e8cc81f96a7ca52520",
       "canvas_id": 3627,
       "canvas_module_id": 2084,
-      "canvas_module_item_id": 18013,
+      "canvas_module_item_id": null,
       "canvas_page_url": "working-with-ai-context",
-      "canvas_payload_hash": "ad5c9abf0f8e0959e51e1c0140d8ad4037fecd83478c6a91af2052afb712a704",
       "canvas_type": "page",
-      "completion_requirement": "must_view",
-      "content_hash": "dd0be81477320bb88d2a4a9cf379a09468900340702845c450822db442ecd128",
+      "content_hash": "efc862fbfcf429e9b97a13bd81e824d01d25960da001e4dde6d7e6e718267aa2",
       "hosted_hash": "8564407fe842614d8e211ed37813dd94e2c5378b1bdf0f101f481d0310a9d3fd",
       "hosted_last_rendered": "2026-09-24T21:09:59+00:00",
       "hosted_path": "course1/activities/working-with-ai-context.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/working-with-ai-context.html",
+      "last_pulled": "2026-10-02T15:45:52+00:00",
       "last_pushed": "2026-09-24T21:09:59+00:00",
       "local_path": "course1/sprints/sprint-16/working-with-ai-context.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "061b9eab37123e1bb31ad1bda6762043bb07291f"
+      "source_commit": "684cc09945a3d2d7b6215239c5fea120f7a8bf14"
     },
     "course1-sprints-sprint-8-learning-plan-and-updated-problem-frame-v3": {
       "artifact_id": "course1-sprints-sprint-8-learning-plan-and-updated-problem-frame-v3",
@@ -1384,5 +1383,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-02T15:35:29+00:00"
+  "last_sync": "2026-10-02T15:45:52+00:00"
 }
