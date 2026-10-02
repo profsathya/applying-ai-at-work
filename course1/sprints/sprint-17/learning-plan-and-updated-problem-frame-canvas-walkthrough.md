@@ -429,7 +429,7 @@ For each gap in your plan, in rank order, answer five questions. One or two sent
 
 If a gap does not fit in five small steps, it is probably a topic. Go back and narrow it.
 
-First paste your Dojo Lab bullets for this gap into 'Raw material from the Dojo'. Then answer the five questions in the rows below it.
+First paste your Dojo Lab bullets for this gap into 'Raw material from the Dojo': the possible sources, possible steps, and possible ways to check that you kept. Bullets are fine here. Then answer the five questions in the rows below it, in full sentences.
 
 ## Plan for Gap 2
 
