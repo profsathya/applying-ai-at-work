@@ -39,15 +39,15 @@ guided_assignment:
     - id: row-1
       cells:
       - text: A. My gaps
-      - text: Name the Gap (week 7)
+      - text: Name the Gap (Week 1)
     - id: row-2
       cells:
       - text: B. My learning plan
-      - text: Dojo Lab (week 7), then Learning Plan (week 8)
+      - text: Dojo Lab (Week 1), then Learning Plan (Week 2)
     - id: row-3
       cells:
       - text: 'C. My Problem Frame: C1 coming in, C2 updated'
-      - text: C1 in Name the Gap (week 7), C2 in Learning Plan (week 8)
+      - text: C1 in Name the Gap (Week 1), C2 in Learning Plan (Week 2)
     - id: row-4
       cells:
       - text: D. Results
@@ -121,7 +121,7 @@ guided_assignment:
     kind: response
     prompt: More gaps, if your list needs them
     criteria:
-    - Use the same four fields as A2 for every additional gap.
+    - Use the same three fields as A2 for every additional gap.
     instruction_section: If you need more than four rows
   - id: learning-order
     kind: response
@@ -149,45 +149,45 @@ guided_assignment:
       width: 8
     rows:
     - id: row-1
-      label: The goal it serves
+      label: '1. The goal it serves'
       cells:
-      - text: The goal it serves
+      - text: '1. The goal it serves'
       - text:  
         response: true
     - id: row-2
-      label: The problem
+      label: '2. The problem'
       cells:
-      - text: The problem
+      - text: '2. The problem'
       - text:  
         response: true
     - id: row-3
-      label: Who is affected, and what it costs them
+      label: '3. Who is affected, what it costs them, and what fixing it would ask of them'
       cells:
-      - text: Who is affected, and what it costs them
+      - text: '3. Who is affected, what it costs them, and what fixing it would ask of them'
       - text:  
         response: true
     - id: row-4
-      label: How it is handled today, and where that falls short
+      label: '4. How it is handled today, and where that falls short'
       cells:
-      - text: How it is handled today, and where that falls short
+      - text: '4. How it is handled today, and where that falls short'
       - text:  
         response: true
     - id: row-5
-      label: What fixed would look like
+      label: '5. What fixed would look like'
       cells:
-      - text: What fixed would look like
+      - text: '5. What fixed would look like'
       - text:  
         response: true
     - id: row-6
-      label: Assumptions
+      label: '6. Assumptions'
       cells:
-      - text: Assumptions
+      - text: '6. Assumptions'
       - text:  
         response: true
     - id: row-7
-      label: What I do not know yet
+      label: '7. What I do not know yet'
       cells:
-      - text: What I do not know yet
+      - text: '7. What I do not know yet'
       - text:  
         response: true
     criteria:
@@ -240,28 +240,17 @@ source_provenance: name-the-gap-canvas-walkthrough.sources.json
 
 If you ask an AI what someone working on your problem would need to learn, it will hand you a clean, sensible list. But it will be generic, not tailored to you. AI comes in at the Dojo Lab. Right now, the list has to come from your thinking.
 
-The original Name the Gap assignment asks for work without AI. This Canvas Walkthrough adds instructor-requested, optional formative feedback **after** you write. It reviews only the response or row you select; it cannot know your workplace, add evidence, or decide your ranking. Leave out names and confidential details in any feedback request. You can use the self-checks and complete every part without AI.
+Write first, without AI. The Get AI feedback buttons are optional and only for after you have written.
 
 ## Keep your Week 7 Word file
 
-Use this walkthrough to complete Part A and C1. The [Learning Plan template](https://docs.google.com/document/d/1XgCf1cTadZOCQtHdLEoebhJ8FWNjV6IzKUslKAtqxIA/copy) is available if you want to compare the source layout. Part B begins in the Dojo Lab and is completed in week 8; C2 is updated then. Part D stays empty until CIS 502. The table below keeps that schedule visible. Download and keep your Week 7 Word file. You will attach it alongside a separate Week 8 Word file in the next assignment.
+Your Learning Plan has four parts (A–D). This walkthrough covers Part A and C1. The [Learning Plan template](https://docs.google.com/document/d/1XgCf1cTadZOCQtHdLEoebhJ8FWNjV6IzKUslKAtqxIA/copy) is available if you want to compare the layout. Part B begins in the Dojo Lab and is completed in Week 2 of this sprint; C2 is updated then. Part D stays empty until CIS 502. The table below keeps that schedule visible. Download and keep your Week 1 Word file. You will attach it alongside a separate Week 2 Word file in the Learning Plan assignment.
 
 ## A1. Start from what you know
 
 ### Start with your frame
 
-Your latest Problem Frame is the one you revised in Sprint 3, after your stakeholder conversation. It is in Section D of your Stakeholder Validation Report. Copy that version into C1 of your template, “My frame coming in.” After this week, leave C1 as it is. It is your record of where you started.
-
-### Where to look for gaps
-
-With your frame in front of you, and your Sprint 3 report open next to it, look for four things:
-
-1. **Your assumptions** (part 6): anything still unverified or inferred. If your frame never marked them, mark them now.
-2. **What you do not know yet** (part 7).
-3. **Section D of your Sprint 3 report:** what still needs validation.
-4. **Anything you describe vaguely** because you do not know the specifics.
-
-The fourth is the easiest to miss. Vagueness in how you describe your own problem is usually a gap you have been routing around.
+Your latest Problem Frame is the one you revised in Sprint 3, after your stakeholder conversation. It is under 'Update your Problem Frame' at the end of your Sprint 3 Stakeholder Conversation Canvas Walkthrough. Copy that version into C1 (Step 7 below) first, then come back here. After this week, leave C1 as it is. It is your record of where you started.
 
 Write two or three things about your problem that you understand well enough. One line each on how you know.
 
@@ -271,9 +260,20 @@ Keep this short. It is here so you start from solid ground, not a list of everyt
 
 ## A2. Name and sort your gaps
 
+### Where to look for gaps
+
+With your frame in front of you, and your Sprint 3 Stakeholder Conversation Canvas Walkthrough open next to it, look for four things:
+
+1. **Your assumptions** (part 6): anything still unverified or inferred. If your frame never marked them, mark them now.
+2. **What you do not know yet** (part 7).
+3. **Section D of your Sprint 3 Stakeholder Conversation Canvas Walkthrough:** what still needs validation.
+4. **Anything you describe vaguely** because you do not know the specifics.
+
+The fourth is the easiest to miss. Vagueness in how you describe your own problem is usually a gap you have been routing around.
+
 Write your gaps, one line each.
 
-**How many should you have?** It depends on where Sprint 3 left you. You tested one assumption with a real person, so one of your blocks may already be settled, and that conversation probably raised things you had not thought of before. Some people arrive with two open items, some with six.
+**How many should you have?** It depends on where Sprint 3 left you. You tested one assumption with a real person, so one of your assumptions may already be settled, and that conversation probably raised things you had not thought of before. Some people arrive with two open items, some with six.
 
 You have enough when you can read your Problem Frame end to end and every part that could still be wrong has a gap pointing at it. Nothing unnamed. Most people land between three and five, but the number is a result, not a target.
 
@@ -296,11 +296,11 @@ A finished list looks like this:
 
 Be honest about the marks. There is no right number of blocking gaps. If none are blocking, go back to “Where to look for gaps,” especially the vagueness step. Lists with nothing blocking are usually too polite. If you have looked twice and still find none, say so and describe what you looked at.
 
-Keep the numbered source rows and leave unused rows blank.
+Keep the numbered rows and leave unused rows blank.
 
 ## If you need more than four rows
 
-The source grid has four rows. If your frame still contains a consequential unknown, add it here using the same fields: unknown, decision it affects, and priority. Do not stop at four merely because the table ends.
+The table above has four rows. If your frame still contains a consequential unknown, add it here using the same fields: unknown, decision it affects, and priority. Do not stop at four merely because the table ends.
 
 ## A3. Put them in order
 
@@ -322,12 +322,12 @@ If the answer would change nothing in your frame, it is not blocking. Move it do
 
 ## C1. Keep your Sprint 3 frame
 
-The seven slots are already there, from Sprint 1: the goal, the problem, who is affected, how it is handled today, what fixed looks like, your assumptions, and what you do not know yet. If your Sprint 3 revision came out as a paragraph rather than seven parts, split it back out as best you can. A slot you cannot fill is a finding, not a failure. Note it and carry on.
+The table below has the seven parts of your Problem Frame, from Sprint 1: the goal, the problem, who is affected, how it is handled today, what fixed looks like, your assumptions, and what you do not know yet. If your Sprint 3 revision came out as a paragraph rather than seven parts, split it back out as best you can. A slot you cannot fill is a finding, not a failure. Note it and carry on.
 
 ## Keep Part D for later
 
-The source template includes this results table for CIS 502. Keep it with your Word file, but leave it blank now.
+The template includes this results table for CIS 502. Keep it with your Word file, but leave it blank now.
 
-Select **Download as Word document** below. In Canvas, select **Start Assignment**, attach your Week 7 Word file, and select **Submit Assignment**. Part A and C1 are graded here. Keep this file for the Dojo Lab and week 8. Saving a browser draft or downloading the file alone does not submit your work.
+Select **Download as Word document** below. In Canvas, select **Start Assignment**, attach your Week 1 Word file, and select **Submit Assignment**. Part A and C1 are graded here. Keep this file for the Dojo Lab and Week 2. Saving a browser draft or downloading the file alone does not submit your work.
 
 Next: take your list to the Dojo Lab, later this week. Leave yourself time for it. The Dojo Lab only works once this list exists, so the two go back to back.
