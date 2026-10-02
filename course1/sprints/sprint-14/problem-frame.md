@@ -25,7 +25,7 @@ guided_assignment:
     - All four questions answered.
     - Why not the others covers every frame you tested.
     - A runner-up named, or the reason none is workable.
-    instruction_section: Part 1. Which problem you selected and why
+    instruction_section: Step 1. Which problem you selected and why
   - id: problem-frame
     kind: response
     prompt: 'Your Problem Frame, pasted whole: all seven parts, Part 6 with every assumption
@@ -34,7 +34,7 @@ guided_assignment:
     - All seven parts present, in your own words.
     - Every assumption in Part 6 names the part it comes from and who could tell you.
     - Part 3c left blank for Sprint 2.
-    instruction_section: Part 2. Your Problem Frame
+    instruction_section: Step 2. Your Problem Frame
   - id: what-changed
     kind: response
     prompt: What moved, what moved it, and one thing the Dojo suggested that you rejected,
@@ -43,7 +43,7 @@ guided_assignment:
     - At least one change, or a stated reason nothing changed.
     - The evidence or argument that moved it, named.
     - One rejected suggestion with a reason.
-    instruction_section: Part 3. What changed after the Dojo conversation, and why
+    instruction_section: Step 3. What changed after the Dojo conversation, and why
   presentation: reading
 publish: true
 learning_goal: Write up the one problem you chose and say why this one.
@@ -53,11 +53,11 @@ learning_goal: Write up the one problem you chose and say why this one.
 
 In the Dojo Lab you explored your problem frames and, hopefully, narrowed down to one to proceed with for this course. On this page you are going to share more about that process and where you landed. Specifically, you will answer:
 
-1. Part 1: Which problem you selected and why
-2. Part 2: Your updated Problem Frame for the problem you chose
-3. Part 3: What changed after the Dojo conversation, and why
+1. Step 1: Which problem you selected and why
+2. Step 2: Your updated Problem Frame for the problem you chose
+3. Step 3: What changed after the Dojo conversation, and why
 
-## Part 1. Which problem you selected and why
+## Step 1. Which problem you selected and why
 
 Your Dojo walked you through whether each frame is the right size and helped you choose. Write up where you landed, in a few sentences for each of the four questions below, in order.
 
@@ -70,13 +70,13 @@ Your Dojo walked you through whether each frame is the right size and helped you
 
 If nothing held up, or the only survivor does not matter to you, go back to your brainstorm list and work through a different problem. Items you set aside are still there. Take the new one through Get underneath and First frames on your own, in your Word files, and test it in your Dojo the same way. Then write it up here, and say what you tried first and why it did not survive.
 
-## Part 2. Your Problem Frame
+## Step 2. Your Problem Frame
 
 Open your First frames Word file and find the frame you chose. If you haven't already, bring it up to date with everything that changed as a result of the Dojo Lab. In Part 6, each assumption is its own line, with the part it comes from and who could tell you. Leave 3c blank; Sprint 2 fills it. From here on, that table in your Word file is your Problem Frame document: keep it, and update it as the course goes on.
 
 Then paste the whole frame into the box below.
 
-## Part 3. What changed after the Dojo conversation, and why
+## Step 3. What changed after the Dojo conversation, and why
 
 The Dojo should have pushed your thinking in some areas, even if you ultimately decided to reject its feedback or accept it with adjustments. Capture what happened in that exchange here. Review the recap your Dojo gave you, check your First frames file against your updated Problem Frame, then, in a few sentences each, answer:
 
@@ -85,3 +85,5 @@ The Dojo should have pushed your thinking in some areas, even if you ultimately 
 3. **One thing the Dojo suggested that you rejected,** and why.
 
 A frame that did not change is a legitimate result if you can say what you tested it against.
+
+If you name a change here that is not yet in your frame above, go back and make it. Your frame in Step 2 is your Problem Frame from here on, so the two have to agree.
