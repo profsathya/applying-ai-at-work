@@ -29,11 +29,10 @@ guided_assignment:
   - id: problem-frame
     kind: response
     prompt: 'Your Problem Frame, pasted whole: all seven parts, Part 6 with every assumption
-      marked, 3c blank.'
+      on its own line, 3c blank.'
     criteria:
     - All seven parts present, in your own words.
-    - Every assumption in Part 6 marked confirmed or unverified, each unverified one with
-      who could tell you.
+    - Every assumption in Part 6 names the part it comes from and who could tell you.
     - Part 3c left blank for Sprint 2.
     instruction_section: Part 2. Your Problem Frame
   - id: what-changed
@@ -73,7 +72,7 @@ If nothing held up, or the only survivor does not matter to you, go back to your
 
 ## Part 2. Your Problem Frame
 
-Open your First frames Word file and find the frame you chose. If you haven't already, bring it up to date with everything that changed as a result of the Dojo Lab. In Part 6, each assumption is its own line, marked confirmed or unverified, with who could tell you. Leave 3c blank; Sprint 2 fills it. From here on, that table in your Word file is your Problem Frame document: keep it, and update it as the course goes on.
+Open your First frames Word file and find the frame you chose. If you haven't already, bring it up to date with everything that changed as a result of the Dojo Lab. In Part 6, each assumption is its own line, with the part it comes from and who could tell you. Leave 3c blank; Sprint 2 fills it. From here on, that table in your Word file is your Problem Frame document: keep it, and update it as the course goes on.
 
 Then paste the whole frame into the box below.
 
