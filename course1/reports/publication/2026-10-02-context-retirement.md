@@ -25,6 +25,9 @@ Readback compared all six modules and every placement. All49 remaining items
 retain identity, relative order, position, publication state and completion
 requirements. Other modules are unchanged; module2084 only loses one item from
 its count. No submission, grade, user, or Test Student endpoint was accessed.
+Canvas's direct item18013 GET still returns HTTP200 with an unpublished retained
+record, but its completion requirement is absent. It is absent from the active
+module-item listing; this repair does not claim the direct URL returns404.
 
 The stored fingerprint was
 `611b957382e9b3d9de20aae6701399adeecad0226a8c6644d97dbd52f3d1499d`.
@@ -57,8 +60,18 @@ Its release digest is exactly the successful publication/refresh digest:
 The hidden placement cleanup requires no additional document refresh.
 
 The Common Curriculum progress map at `725ff1f7` still retained the obsolete
-item/completion fields. A separate exact metadata correction clears only those
-two fields; its integration/deployment outcome must be recorded separately.
+item/completion fields. Jeremy separately approved merging/deploying the exact
+two-field correction at15:50:42UTC. Common Curriculum PR494 merged at15:54:37UTC,
+commit `96256a9bf2b1616056e9e28ed1f13d343f864f1f`. GitHub Pages deployment
+run37030274198 succeeded. Canonical and fresh public URLs both returned the exact
+approved62102-byte file, SHA256
+`c55166ef5ac338fbc32386573bbb4f045a33e9cef4b64951cadc7bf4a8e41a77`.
+Only the retired row's `canvasModuleItemId` and `completionRequirement` become
+null. All119 other rows and every other hosted file are unchanged.
+
+The maintenance code remains separate in applying-ai-at-work draft PR238,
+unmerged. Its GitHub Validate schemas check succeeded at15:55:19UTC. No additional
+code merge, broad course publish or document refresh was authorized or performed.
 
 ## Validation and evidence
 
