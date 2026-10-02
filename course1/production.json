@@ -10,17 +10,17 @@
       "canvas_payload_hash": "ffb2538ac7045f997029917b311dae6c79d9a232c8740c0aff04f2472f87ad5f",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "d3b6701f05336b6ee7847f669433f3ba2634bb6ba2a9a3748437e75bf3914e74",
+      "content_hash": "fa669176a88963208b143dff55de3b9f209ea8e119bc3c5cac1eb81061bc0927",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "9717f9f1fb18b7f5b6f2bbf6f0ddc3c221524cb00c1e1905e7e4e005711fd575",
-      "hosted_last_rendered": "2026-10-02T17:04:07+00:00",
+      "hosted_hash": "b576ca08bdee5cfa670d53a1d2c536183ac1531cb41bc5317a2ebd73d923a7dc",
+      "hosted_last_rendered": "2026-10-02T18:31:24+00:00",
       "hosted_path": "course1/assignments/learning-plan-and-updated-problem-frame-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/learning-plan-and-updated-problem-frame-canvas-walkthrough.html",
-      "last_pushed": "2026-10-02T17:04:07+00:00",
+      "last_pushed": "2026-10-02T18:31:24+00:00",
       "local_path": "course1/sprints/sprint-17/learning-plan-and-updated-problem-frame-canvas-walkthrough.md",
       "position": 8,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "0bc7335df2dcdf3db87b28a3b183996ce338a1c1"
+      "source_commit": "e8756aa9b96744a5cdd4832fc6d6bd13aadf9333"
     },
     "course1-name-the-gap-canvas-walkthrough": {
       "artifact_id": "course1-name-the-gap-canvas-walkthrough",
@@ -32,17 +32,17 @@
       "canvas_payload_hash": "bc248eab4bb2720ee5ff5f7c91d5e5cde6fc44f6b54619cb611fbc422a272657",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "0b33464b7d18abd82ae2cee4324cb76c238bb9e4cc5b502ac3166a0d6e517183",
+      "content_hash": "a3624326c8e641b254024aa1c45335b304948a2959140e8cc854b876e02d7b8a",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "a87b86d579d6aefa92fbd713256e6d5f632da155a4fcbd0b041012b1c46fb268",
-      "hosted_last_rendered": "2026-10-02T16:06:38+00:00",
+      "hosted_hash": "d45654fa936c68de42a79d6688c2b13a87843106b819d2f017a77eba7478073d",
+      "hosted_last_rendered": "2026-10-02T18:31:31+00:00",
       "hosted_path": "course1/assignments/name-the-gap-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/name-the-gap-canvas-walkthrough.html",
-      "last_pushed": "2026-10-02T16:06:38+00:00",
+      "last_pushed": "2026-10-02T18:31:31+00:00",
       "local_path": "course1/sprints/sprint-17/name-the-gap-canvas-walkthrough.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "0b4a884f2687fe383d9ff0a89eef836f45a60861"
+      "source_commit": "e8756aa9b96744a5cdd4832fc6d6bd13aadf9333"
     },
     "course1-sprints-sprint-12-sprint-1-find-the-problem-worth-solving-v2": {
       "artifact_id": "course1-sprints-sprint-12-sprint-1-find-the-problem-worth-solving-v2",
@@ -1342,17 +1342,17 @@
       "canvas_payload_hash": "caec83e924b5b6718fe94b64c86dc7bd681c865d55362a7ba320412bf780e594",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "749c688f7b4827ced793b20eebf0accb8cd34213d86b960842c317a80dcdbf51",
+      "content_hash": "9e6ae7c79f1ee47e4ec1ab331239e5964ef4aa30fb98487709ec37ddafc258db",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "2ef43393dcebfdba0d95d8fb764e1ea4bd5955e9c74654cf85012059ded687b7",
-      "hosted_last_rendered": "2026-10-02T14:36:07+00:00",
+      "hosted_hash": "055faf6f396a68dc95858d1482cf1f42aeb11109c694f0c4f87e67cb43ef440b",
+      "hosted_last_rendered": "2026-10-02T18:31:18+00:00",
       "hosted_path": "course1/assignments/stakeholder-conversation-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/stakeholder-conversation-canvas-walkthrough.html",
-      "last_pushed": "2026-10-02T14:36:07+00:00",
+      "last_pushed": "2026-10-02T18:31:18+00:00",
       "local_path": "course1/sprints/sprint-16/stakeholder-conversation-canvas-walkthrough.md",
       "position": 9,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "a050e6991cad2a892412d0974bf8c3223b0482f1"
+      "source_commit": "e8756aa9b96744a5cdd4832fc6d6bd13aadf9333"
     },
     "course1-stakeholder-map-canvas-walkthrough": {
       "artifact_id": "course1-stakeholder-map-canvas-walkthrough",
@@ -1383,5 +1383,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-02T17:04:07+00:00"
+  "last_sync": "2026-10-02T18:31:31+00:00"
 }
