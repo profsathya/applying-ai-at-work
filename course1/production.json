@@ -10,17 +10,17 @@
       "canvas_payload_hash": "ffb2538ac7045f997029917b311dae6c79d9a232c8740c0aff04f2472f87ad5f",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "cfa93c1e8cee705b06a9e4a6a931233a5f130aadac5def6d911f484a07d443ed",
+      "content_hash": "4ad73372f42e2e3333062c589badb260f739796e424b8f82bf3307ee17cd15ac",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "1a1ca4005f17d067888b2c4be4a5a0c5d79962116e5630e63955896405557f90",
-      "hosted_last_rendered": "2026-10-02T08:13:29+00:00",
+      "hosted_hash": "39498648d7ea3f1e1349d963dec565cc83381316cfc73269d024d81d17bb0cb1",
+      "hosted_last_rendered": "2026-10-02T14:36:13+00:00",
       "hosted_path": "course1/assignments/learning-plan-and-updated-problem-frame-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/learning-plan-and-updated-problem-frame-canvas-walkthrough.html",
-      "last_pushed": "2026-10-02T08:13:29+00:00",
+      "last_pushed": "2026-10-02T14:36:13+00:00",
       "local_path": "course1/sprints/sprint-17/learning-plan-and-updated-problem-frame-canvas-walkthrough.md",
       "position": 8,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "171f388e3ef41cd4faa8651bf7d5d99b529dbc21"
+      "source_commit": "a050e6991cad2a892412d0974bf8c3223b0482f1"
     },
     "course1-name-the-gap-canvas-walkthrough": {
       "artifact_id": "course1-name-the-gap-canvas-walkthrough",
@@ -32,17 +32,17 @@
       "canvas_payload_hash": "bc248eab4bb2720ee5ff5f7c91d5e5cde6fc44f6b54619cb611fbc422a272657",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "2da3c17145f8e8dc9801fb505104c96785080053e2a312ac9552339563b86750",
+      "content_hash": "3c7b30fc25ad57708810bd48c1c7f0a3e8c6b144e67b34960df4aeeea7576cb0",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "92c424c6357c3456d396b4e539da65ef4026e7fbf251d026c1dc6eabeb9a596f",
-      "hosted_last_rendered": "2026-10-02T05:37:27+00:00",
+      "hosted_hash": "0cade1a7fca45cd9cc5b58bb6a2ec16298a32c6d362824582284be0367fc7951",
+      "hosted_last_rendered": "2026-10-02T14:36:20+00:00",
       "hosted_path": "course1/assignments/name-the-gap-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/name-the-gap-canvas-walkthrough.html",
-      "last_pushed": "2026-10-02T05:37:27+00:00",
+      "last_pushed": "2026-10-02T14:36:20+00:00",
       "local_path": "course1/sprints/sprint-17/name-the-gap-canvas-walkthrough.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "eb344459a325347fd0f26d0f0e604ae0b0f8a7f9"
+      "source_commit": "a050e6991cad2a892412d0974bf8c3223b0482f1"
     },
     "course1-sprints-sprint-12-sprint-1-find-the-problem-worth-solving-v2": {
       "artifact_id": "course1-sprints-sprint-12-sprint-1-find-the-problem-worth-solving-v2",
@@ -345,17 +345,17 @@
       "canvas_payload_hash": "ecabb542c2ee2d9c36ffe5cc9e4c147393a91c7aee9d0a687138bf62202e9ce2",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "0ac1fe96cf7a571ef983657a78e6ca6a03cdf37a31ffa4a2efbcbf56cd6c5ed0",
+      "content_hash": "d35b3ab3ce2ea226749c91f6e532a7a4d64f444e292f4bb8a24339de807a3223",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "dab88ebfbded8ff3e57cc6c5fe0054f72e1a9c8f63a2f0f5113777916a258e25",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "hosted_hash": "280d175b52559f94a8046303fa79bc194c952ee53feb4366852d2690109ab4ac",
+      "hosted_last_rendered": "2026-10-02T14:36:01+00:00",
       "hosted_path": "course1/assignments/dojo-lab-test-widen-choose-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-test-widen-choose-v3.html",
-      "last_pushed": "2026-10-01T07:03:26+00:00",
+      "last_pushed": "2026-10-02T14:36:01+00:00",
       "local_path": "course1/sprints/sprint-15/dojo-lab-test-widen-choose-v3.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "f1bc55347eb3477ffdcc93ca647f62305e62c5a9"
+      "source_commit": "a050e6991cad2a892412d0974bf8c3223b0482f1"
     },
     "course1-sprints-sprint-15-introduction-integrate-people-and-context": {
       "artifact_id": "course1-sprints-sprint-15-introduction-integrate-people-and-context",
@@ -892,17 +892,17 @@
       "canvas_payload_hash": "7c0cdf4e12c39096228e079354b21b67ea29f7983fb25fb083d879b588ae5350",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "28abb92a5de891a30a4f08c1d1c672bc2ebf1f0060a2bec2023d3362d84df602",
+      "content_hash": "4e04b013e8b8ee9bfe88c3e7ef9ae9e6f55400e7740c15a452e55dbeabc36f1b",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "2c7cd49cec50d8aeaf19b43f1aa4a59d2c503f847dafcd92c10bce743c627e7a",
-      "hosted_last_rendered": "2026-10-02T07:53:41+00:00",
+      "hosted_hash": "afaed15e65a4c300a8122108815aa8d059a06c317144e6c003ac7748877709d5",
+      "hosted_last_rendered": "2026-10-02T14:36:24+00:00",
       "hosted_path": "course1/assignments/dojo-lab-design-the-learning-path-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-design-the-learning-path-v3.html",
-      "last_pushed": "2026-10-02T07:53:41+00:00",
+      "last_pushed": "2026-10-02T14:36:24+00:00",
       "local_path": "course1/sprints/sprint-8/dojo-lab-design-the-learning-path-v3.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "47f54fc43f142beabe1cfc8d1a491474e5694e77"
+      "source_commit": "a050e6991cad2a892412d0974bf8c3223b0482f1"
     },
     "course1-sprints-sprint-9-integrated-problem-document": {
       "artifact_id": "course1-sprints-sprint-9-integrated-problem-document",
@@ -958,16 +958,16 @@
       "canvas_payload_hash": "cb514faaaf679fb445a303626a050a9dadb38fc7f45aaa1afc525ccdefc74eb6",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "89cae7289d53ba80c49288d991e7c7e2849258f364e0dc8fcbb910865004bb89",
-      "hosted_hash": "5e9733e173331cc7810d0b4aad8adf5512c0a9e9440a7df5ea2398cde7de0d12",
-      "hosted_last_rendered": "2026-10-02T05:37:29+00:00",
+      "content_hash": "9dbfc8eda54321b4b14dbd24b9dae530a1e792a2941d1edc309982abe5a02d9d",
+      "hosted_hash": "1d096e35b007629b27c5944883e630136176fc1f5fd3d771310c54bb9747e313",
+      "hosted_last_rendered": "2026-10-02T14:36:25+00:00",
       "hosted_path": "course1/activities/introduction-close-the-learning-gap-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-close-the-learning-gap-v3.html",
-      "last_pushed": "2026-10-02T05:37:29+00:00",
+      "last_pushed": "2026-10-02T14:36:25+00:00",
       "local_path": "course1/sprints/sprint-8/introduction-close-the-learning-gap-v3.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "eb344459a325347fd0f26d0f0e604ae0b0f8a7f9"
+      "source_commit": "a050e6991cad2a892412d0974bf8c3223b0482f1"
     },
     "course1-sprints-sprint-9-introduction-synthesize-and-show-readiness-v2": {
       "artifact_id": "course1-sprints-sprint-9-introduction-synthesize-and-show-readiness-v2",
@@ -1160,16 +1160,16 @@
       "canvas_payload_hash": "9bf2116c5508ad380ae9cb1b778f37105e8151b7f4838eb5c0f96da24c1bc5d7",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "edb483d6a95d63a8e0cb4408ae5597d44eb9cf7b34fc5b8f6e0ad443fd1873dd",
-      "hosted_hash": "4230f519b66b69af04481a7255e067de6864e8d1afd2225b6054dde0a3fc42c6",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "content_hash": "b21c8adfd8db5af28cf2c3409addd609906ac0f52667e138e150cba0e3d22269",
+      "hosted_hash": "509f60b398214a9b132a0bea5f04229f4ce0ccf2768bf54913e054d736378903",
+      "hosted_last_rendered": "2026-10-02T14:36:21+00:00",
       "hosted_path": "course1/activities/help-and-resources-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/help-and-resources-v2.html",
-      "last_pushed": "2026-09-18T21:22:19+00:00",
+      "last_pushed": "2026-10-02T14:36:21+00:00",
       "local_path": "course1/sprints/sprint-6/help-and-resources-v2.md",
       "position": 8,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "7330a96ec429795df04bef81f4e445b262545deb"
+      "source_commit": "a050e6991cad2a892412d0974bf8c3223b0482f1"
     },
     "course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2": {
       "artifact_id": "course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2",
@@ -1181,16 +1181,16 @@
       "canvas_payload_hash": "5045a5d7b3503d9606041d643a01f99c6fb8242681090bcac4bf52e4d54fefd9",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "590275cae886b83c08c1c7da178b5744e230cadd0f82d2ee93eefa79e9f02951",
-      "hosted_hash": "34994cd8ab753f1f040a3bfeb0ff4d5ce510b5e2d2f0ef3c153670cc07a4020f",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "content_hash": "71c3e490a8c2fcb4c251084c336b70b75ab5a0a48101dfdfe9c22cb40b8cd9ba",
+      "hosted_hash": "b02e70244be079ea42de091071c5dfe589c0717e640d25a332587725626e624e",
+      "hosted_last_rendered": "2026-10-02T14:36:23+00:00",
       "hosted_path": "course1/activities/how-this-course-works-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/how-this-course-works-v2.html",
-      "last_pushed": "2026-09-18T21:22:20+00:00",
+      "last_pushed": "2026-10-02T14:36:23+00:00",
       "local_path": "course1/sprints/sprint-6/how-this-course-works-v2.md",
       "position": 4,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "8bbfafbdcd9975b5000189fecd26b6e15f65e316"
+      "source_commit": "a050e6991cad2a892412d0974bf8c3223b0482f1"
     },
     "course1-sprints-welcome-and-orientation-v2-introduction-post-v2": {
       "artifact_id": "course1-sprints-welcome-and-orientation-v2-introduction-post-v2",
@@ -1343,17 +1343,17 @@
       "canvas_payload_hash": "caec83e924b5b6718fe94b64c86dc7bd681c865d55362a7ba320412bf780e594",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "4585775c7940b626e7dd1ff0a56443e7527ea715ca3a7f2598bb3a7367b96c4b",
+      "content_hash": "749c688f7b4827ced793b20eebf0accb8cd34213d86b960842c317a80dcdbf51",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "85cb36d4f94e9ac0080f3cc7af5b256e986355053ecc5938ecf0f20760e33ee6",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "hosted_hash": "2ef43393dcebfdba0d95d8fb764e1ea4bd5955e9c74654cf85012059ded687b7",
+      "hosted_last_rendered": "2026-10-02T14:36:07+00:00",
       "hosted_path": "course1/assignments/stakeholder-conversation-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/stakeholder-conversation-canvas-walkthrough.html",
-      "last_pushed": "2026-10-01T07:03:32+00:00",
+      "last_pushed": "2026-10-02T14:36:07+00:00",
       "local_path": "course1/sprints/sprint-16/stakeholder-conversation-canvas-walkthrough.md",
       "position": 9,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "f1bc55347eb3477ffdcc93ca647f62305e62c5a9"
+      "source_commit": "a050e6991cad2a892412d0974bf8c3223b0482f1"
     },
     "course1-stakeholder-map-canvas-walkthrough": {
       "artifact_id": "course1-stakeholder-map-canvas-walkthrough",
@@ -1384,5 +1384,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-02T08:13:29+00:00"
+  "last_sync": "2026-10-02T14:36:25+00:00"
 }
