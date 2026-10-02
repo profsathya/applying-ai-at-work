@@ -191,7 +191,7 @@ guided_assignment:
       - text:  
         response: true
     criteria:
-    - Copy the Sprint 3 frame into all seven slots; note a slot you cannot yet fill.
+    - Copy the frame from your Problem Frame document into all seven slots; note a slot you cannot yet fill.
     instruction_section: C1. Keep your Sprint 3 frame
     feedback_enabled: false
     feedback_omission_reason: C1 carries the participant's existing Sprint 3 frame;
@@ -250,7 +250,9 @@ Your Learning Plan has four parts (A–D). This walkthrough covers Part A and C1
 
 ### Start with your frame
 
-Your latest Problem Frame is the one you revised in Sprint 3, after your stakeholder conversation. It is under 'Update your Problem Frame' at the end of your Sprint 3 Stakeholder Conversation Canvas Walkthrough. Copy that version into C1 (Step 7 below) first, then come back here. After this week, leave C1 as it is. It is your record of where you started.
+Open your Problem Frame document. It should say "Last updated: Sprint 3" at the top, from the update you made after your stakeholder conversation. Copy that version into C1 (Step 7 below) first, then come back here. After this week, leave C1 as it is. It is your record of where your frame stood coming into this sprint.
+
+If your document does not say Sprint 3 at the top, bring it up to date before you copy it. The version you submitted is in your Sprint 3 Stakeholder Conversation report, under "Update your Problem Frame."
 
 Write two or three things about your problem that you understand well enough. One line each on how you know.
 
@@ -262,7 +264,7 @@ Keep this short. It is here so you start from solid ground, not a list of everyt
 
 ### Where to look for gaps
 
-With your frame in front of you, and your Sprint 3 Stakeholder Conversation Canvas Walkthrough open next to it, look for four things:
+With your Problem Frame document in front of you, and your Sprint 3 Stakeholder Conversation Canvas Walkthrough open next to it, look for four things:
 
 1. **Your assumptions** (part 6): anything still unverified or inferred. If your frame never marked them, mark them now.
 2. **What you do not know yet** (part 7).
@@ -322,7 +324,7 @@ If the answer would change nothing in your frame, it is not blocking. Move it do
 
 ## C1. Keep your Sprint 3 frame
 
-The table below has the seven parts of your Problem Frame, from Sprint 1: the goal, the problem, who is affected, how it is handled today, what fixed looks like, your assumptions, and what you do not know yet. If your Sprint 3 revision came out as a paragraph rather than seven parts, split it back out as best you can. A slot you cannot fill is a finding, not a failure. Note it and carry on.
+Copy your frame from your Problem Frame document into the table below, one part per row. The table has the same seven parts: the goal, the problem, who is affected, how it is handled today, what fixed looks like, your assumptions, and what you do not know yet. Do not edit the frame here. C1 is a copy of where your frame stood coming into this sprint. If your Sprint 3 revision came out as a paragraph rather than seven parts, split it back out as best you can. A slot you cannot fill is a finding, not a failure. Note it and carry on.
 
 ## Keep Part D for later
 

@@ -63,6 +63,8 @@ Submission formats vary across Sprint 1 activities. Follow each activity’s ins
 
 **Frame, framing.** Defining the problem you are investigating before deciding how to solve it.
 
+**Problem Frame document.** The one document where you keep your current Problem Frame. You update it every sprint and change the "Last updated" line at the top. When you need your latest frame, open this document.
+
 **Reframing.** Revising that definition as you learn more.
 
 **Root cause.** An underlying reason something happens. A symptom, such as a late report, points to something to investigate; it does not establish the cause.

@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-help-and-resources-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "48b9395e7076ae24827273853f18f1e718d3376750d8b81f284c5f17a63b5ba8",
-  "body_sha256": "8ba805170a6e08b932a08ae4b2b40ff0773770599c6b81e53bfd3b9618bc4c07",
+  "body_sha256": "fd016137458547e53711f4f0f759cbb71f09ae35b3530b4e05d77d1355e7935a",
   "frontmatter_sha256": "73f575daf6972f795044ff1b0012c6e51ff09217e6172f47d22ac73e10b5d37c",
   "parts": [
     {
@@ -75,7 +75,7 @@
     },
     {
       "kind": "new",
-      "markdown": "## Key terms\n\n**Sprint.** A stage of course work, recommended to take two weeks. There are five, plus this orientation.\n\n**Artifact.** Something you create as evidence of your thinking, such as a table, log, problem frame, or report. An activity tells you which work to submit.\n\n**Frame, framing.** Defining the problem you are investigating before deciding how to solve it.\n\n**Reframing.** Revising that definition as you learn more.\n\n**Root cause.** An underlying reason something happens. A symptom, such as a late report, points to something to investigate; it does not establish the cause.",
+      "markdown": "## Key terms\n\n**Sprint.** A stage of course work, recommended to take two weeks. There are five, plus this orientation.\n\n**Artifact.** Something you create as evidence of your thinking, such as a table, log, problem frame, or report. An activity tells you which work to submit.\n\n**Frame, framing.** Defining the problem you are investigating before deciding how to solve it.\n\n**Problem Frame document.** The one document where you keep your current Problem Frame. You update it every sprint and change the \"Last updated\" line at the top. When you need your latest frame, open this document.\n\n**Reframing.** Revising that definition as you learn more.\n\n**Root cause.** An underlying reason something happens. A symptom, such as a late report, points to something to investigate; it does not establish the cause.",
       "reason": "Remove the one-document claim, align recommended pacing, and clarify that causes need evidence.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.r7f4tyvql3ki/body/17",
@@ -128,7 +128,8 @@
   "metadata_decisions": [
     "Preserve existing type, title, slug, artifact_id, storage sprint, module, position, publication intent, points, submission and completion settings.",
     "Use reading presentation for informational pages only. This local build makes no Canvas writes.",
-    "No new assessment or response control."
+    "No new assessment or response control.",
+    "2026-10-02: Problem Frame document handoff: point learners to one dated Problem Frame document they update first, then copy. Wording only; tasks, ids and export unchanged."
   ],
   "source_roles": {
     "d-a5a526bfcb8ecc4c": {

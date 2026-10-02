@@ -33,7 +33,7 @@ By the end of this sprint you can say, about your own problem, what you know, wh
 1. **Gather your gaps.** Bring together what Sprint 1 and Sprint 3 already left open, in your own words, before any AI. Add any new gap. Sort each one as blocking, useful, or interesting.
 2. **Test and plan.** In the Dojo Lab, AI tests your list of gaps, helps you build the plan, and tests how you will check your answers.
 3. **Write the plan.** For each gap, say why it matters, where you will learn it, the steps, and how you will know.
-4. **Update your frame.** Revise parts 6 and 7 of your Problem Frame to match your plan.
+4. **Update your frame.** Revise parts 6 and 7 in your Problem Frame document to match your plan.
 5. **Say what changed.** Reflect on how planning changed your view of the problem.
 
 ## Sprint 4 Concepts
@@ -55,8 +55,8 @@ By the end of this sprint you can say, about your own problem, what you know, wh
 
 ## Two-Week Sprint Map
 
-- **Week 1.** Read this page. Take the Concept Check. Write Name the Gap, without AI, and upload it. Then run the Dojo Lab at the end of the same week, while your list is fresh. These two go back to back, so plan for both.
-- **Week 2.** Write your Learning Plan and update your Problem Frame. Finish with the reflection.
+- **Week 1.** Read this page. Take the Concept Check. Open your Problem Frame document, the one with "Last updated: Sprint 3" at the top. Write Name the Gap, without AI, and upload it. Then run the Dojo Lab at the end of the same week, while your list is fresh. These two go back to back, so plan for both.
+- **Week 2.** Write your Learning Plan and update your Problem Frame document. Finish with the reflection.
 
 ## Portfolio Capture
 

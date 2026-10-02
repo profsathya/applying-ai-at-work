@@ -41,7 +41,7 @@ guided_assignment:
 ## What you need for this Dojo Lab
 
 - Your **Learning Plan** template, with Part A filled in from Name the Gap.
-- Your **Problem Frame**, the version in C1 of your template.
+- Your **Problem Frame document**.
 
 ## The three parts to this activity
 
@@ -104,6 +104,6 @@ The transcript is the only thing you submit for this Dojo Lab. Six steps:
 
 After you submit the transcript, go back to your Learning Plan template and make the changes you decided on in the conversation: rewrite a topic as a gap, re-sort a gap, or change your ranking in Part A. Then, in Part B, under each gap, write what you kept as bullets: possible sources, possible steps, possible ways to check. Bullets, not sentences. You write the plan itself next week. Leave C1 as it is.
 
-If the Dojo raised something about your Problem Frame, note it. You will update parts 6 and 7 next week, in C2.
+If the Dojo raised something about your Problem Frame, note it. Do not change your Problem Frame document yet. You will update it next week, in the Learning Plan activity.
 
 You will upload your updated template with your Learning Plan.

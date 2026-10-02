@@ -41,7 +41,7 @@ guided_assignment:
 ## What you need for this Dojo Lab
 
 - Your **Stakeholder Map** Word file.
-- Your **Problem Frame**.
+- Your **Problem Frame document**.
 
 ## The three parts to this activity
 

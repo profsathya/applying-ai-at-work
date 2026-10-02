@@ -450,12 +450,14 @@ Look back at your Dojo transcript for the context you gave, which suggestions yo
 
 ## C2. Update your Problem Frame
 
-Your frame from Sprint 3 is already in C1, in your Week 1 Word file. Leave it there. Open that file and paste each of the seven parts from C1 into the matching row of C2, 'My updated frame,' below. Then, in C2, update parts 6 and 7 so they match your plan:
+Open your Problem Frame document. You update the frame there first, then copy it here. Leave C1 in your Week 1 Word file as it is. In your Problem Frame document, update parts 6 and 7 so they match your plan:
 
 - **Part 6, assumptions.** Keep each assumption marked confirmed or inferred. For each one still inferred, add which gap in your plan will check it, in place of “who could tell me.”
 - **Part 7, what you do not know yet.** Rewrite it so it lists the gaps in your plan, in rank order, plus the interesting ones you left out.
 
-If the Dojo or writing the plan showed you that another part of the frame is wrong or vague, fix it, and note which part you changed.
+If the Dojo or writing the plan showed you that another part of the frame is wrong or vague, fix it in your Problem Frame document, and note which part you changed.
+
+Then change the line at the top of your document to "Last updated: Sprint 4" and the date. Copy each of the seven parts into the matching row of C2, "My updated frame," below. If you change anything in C2 after that, make the same change in your Problem Frame document so the two match.
 
 *Example, part 6:*
 
@@ -481,4 +483,4 @@ Select **Download as Word document** below. In Canvas, select **Start Assignment
 
 ### Portfolio Capture
 
-This plan is part of your readiness report in Sprint 5, and it is where you start in CIS 502.
+This plan is part of your readiness report in Sprint 5, and it is where you start in CIS 502. Your Problem Frame document, with "Last updated: Sprint 4" at the top, is your current frame. Bring it to Sprint 5 and to CIS 502.
