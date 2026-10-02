@@ -48,10 +48,10 @@ class NativeCanvasTests(unittest.TestCase):
                 else:
                     self.assertEqual(old.read_bytes(), new.read_bytes())
 
-    def test_schedule_removes_all_canvas_ids(self):
+    def test_schedule_preserves_deployment_navigation_without_progress(self):
         config = {'help': {'web': 'help.html', 'canvas': 'CTI'}, 'orientation': {'canvas_href':'CTI'}, 'sprints':[{'canvas_href':'CTI'}]}
         old = '<html><head></head><body><script id="course-schedule" type="application/json">'+json.dumps(config)+'</script></body></html>'
         new = apply_native_canvas(old, NATIVE)
-        self.assertNotIn('CTI', new)
+        self.assertIn('CTI', new)
         self.assertIn('"native_completion": true', new)
         self.assertIn('help.html', new)
