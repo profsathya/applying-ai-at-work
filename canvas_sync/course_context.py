@@ -86,6 +86,19 @@ def released_source(repo_root: Path, path: str, entry: dict) -> dict:
     return {'frontmatter': fm, 'body': body, 'content_hash': expected}
 
 
+def portable_artifact_links(content: str, artifacts: dict) -> str:
+    """Resolve internal references to shared reading URLs, never CTI object IDs."""
+    targets = {entry.get('artifact_id'): entry.get('hosted_url') for entry in artifacts.values()
+               if entry.get('artifact_id') and entry.get('hosted_url')}
+    def replace(match):
+        artifact_id = match[1]
+        url = targets.get(artifact_id)
+        if not url or not url.startswith('https://'):
+            raise ValueError(f'Missing portable artifact target: {artifact_id}')
+        return '](' + url + ('&' if '?' in url else '?') + 'context=web)'
+    return re.sub(r'\]\(artifact:([^\s)]+)\)', replace, content)
+
+
 def build_release(*, artifacts: dict, sources: dict,
                   modules: list[dict], items: dict, objects: dict,
                   generated_at: str | None = None) -> dict:
@@ -127,12 +140,12 @@ def build_release(*, artifacts: dict, sources: dict,
         relative = hosted.split('/', 1)[1] if '/' in hosted else ''
         if not relative or '..' in Path(relative).parts or Path(relative).is_absolute():
             raise ValueError(f'Missing or unsafe hosted path: {path}')
-        url = live.get('html_url') or entry.get('hosted_url')
+        url = entry.get('hosted_url')
         if not url or not url.startswith('https://'):
-            raise ValueError(f'Missing source URL: {path}')
+            raise ValueError(f'Missing portable hosted source URL: {path}')
         pages.append(((module.get('position', 0), item.get('position', 0), path), {
-            'path': relative, 'title': fm['title'], 'source_url': url,
-            'content': learner_content(fm, source['body']),
+            'path': relative, 'title': fm['title'], 'source_url': url + ('&' if '?' in url else '?') + 'context=web',
+            'content': portable_artifact_links(learner_content(fm, source['body']), artifacts),
         }))
     result = [p for _, p in sorted(pages, key=lambda p: p[0])]
     if not result:

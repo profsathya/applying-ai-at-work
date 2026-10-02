@@ -36,6 +36,7 @@ jobs:
   sync:
     if: github.ref == 'refs/heads/main' && (github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == 'main'))
     runs-on: ubuntu-latest
+    environment: canvas-production
     steps:
       - uses: actions/checkout@v4
         with:
@@ -56,12 +57,24 @@ jobs:
       - name: Report pending provisioning
         if: steps.config.outputs.enabled != 'true'
         run: echo 'Document sync is disabled pending receiver and document provisioning.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Install read-only current-context dependencies
+        if: github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.section == 'course' || inputs.section == 'all'))
+        run: pip install -r canvas_sync/requirements.txt
+      - name: Read authoritative Canvas deployment state
+        if: github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.section == 'course' || inputs.section == 'all'))
+        uses: actions/checkout@v4
+        with:
+          ref: canvas-state
+          path: .canvas-state
       - name: Select successful publication and verify hosted deployment
         if: steps.config.outputs.enabled == 'true' && github.event_name != 'push'
         env:
           GH_TOKEN: ${{ github.token }}
           HOSTED_READ_TOKEN: ${{ secrets.COMMON_CURRICULUM_TOKEN }}
           TRIGGER_RUN: ${{ github.event.workflow_run.id }}
+          COURSE_DOC_REFRESH_CURRENT: ${{ github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && (inputs.section == 'course' || inputs.section == 'all')) }}
+          CANVAS_API_URL: ${{ secrets.CANVAS_API_URL }}
+          CANVAS_API_TOKEN: ${{ secrets.CANVAS_API_TOKEN }}
         run: python -m canvas_sync.course_docs.prepare_release
       - name: Sync selected sections
         if: steps.config.outputs.enabled == 'true'

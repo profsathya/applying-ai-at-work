@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-help-and-resources-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "48b9395e7076ae24827273853f18f1e718d3376750d8b81f284c5f17a63b5ba8",
-  "body_sha256": "c6cbc8ba6ec032e9dceda579e7526dc83f20f70ea6efbe7c07f545161a4cf16c",
+  "body_sha256": "8ba805170a6e08b932a08ae4b2b40ff0773770599c6b81e53bfd3b9618bc4c07",
   "frontmatter_sha256": "73f575daf6972f795044ff1b0012c6e51ff09217e6172f47d22ac73e10b5d37c",
   "parts": [
     {
@@ -66,8 +66,8 @@
     },
     {
       "kind": "new",
-      "markdown": "## Download a JSON file only when requested\n\nA **JSON file** stores responses in a structured text format so they can be reviewed together. If an activity asks for a JSON upload:\n\n1. Save your responses in the activity and use its download or export control.\n2. Keep the downloaded `.json` file where you can find it.\n3. Open the Canvas assignment, choose file upload, select that file, and submit.\n4. Check the submission details.\n\nThe available Sprint 1 guided activities use Canvas text entry instead. Follow each activity's instructions for the required format.",
-      "reason": "Fulfill the source how-to requirement using current delivery behavior; distinguish JSON from the latest Sprint 1 text-entry workflow.",
+      "markdown": "## Download a JSON file only when requested\n\nA **JSON file** stores responses in a structured text format so they can be reviewed together. If an activity asks for a JSON upload:\n\n1. Save your responses in the activity and use its download or export control.\n2. Keep the downloaded `.json` file where you can find it.\n3. Open the Canvas assignment, choose file upload, select that file, and submit.\n4. Check the submission details.\n\nSubmission formats vary across Sprint 1 activities. Follow each activity’s instructions: some use Canvas text entry, while walkthroughs may ask you to download and upload a Word document.",
+      "reason": "Fulfill the source how-to requirement using current delivery behavior; distinguish JSON from the latest Sprint 1 text-entry workflow. Updated with current Canvas submission types: Brainstorm7185 text entry; walkthroughs7183/7184 Word upload.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.r7f4tyvql3ki/body/13",
         "d-a5a526bfcb8ecc4c:tab/t.r7f4tyvql3ki/body/14"

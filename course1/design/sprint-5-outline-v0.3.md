@@ -1,6 +1,6 @@
-# Sprint 5 outline, v0.2
+# Sprint 5 outline, v0.3
 
-Draft for review by Melisa and Jeremy, 2 October 2026. v0.2 trims the overlap between the two walkthroughs and the reflection, so learners do not answer the same question twice. Owner of this draft: Leslie. Sprint 5 has no content owner yet.
+v0.3, 1 October 2026: Melisa's review applied (Sprint 4's C2 frame is final; Stakeholder Map and Validation Report terms corrected; one conversation, with "ready with conditions" carrying a thin case; CIS 502 kept vague; no objection to "not ready yet" at full marks or to the read-back reflection). Jeremy's questions on the shell are still open. v0.2 trimmed the overlap between the two walkthroughs and the reflection. Owner of this draft: Leslie. Sprint 5 has no content owner yet.
 
 Purpose of this draft: agree what Sprint 5 asks learners to produce, so a Canvas shell with the right items can be created before the course moves to the De Anza instance. The shell fixes the items and their types. Wording, points, and bodies can change later through the normal pull request path.
 
@@ -18,7 +18,7 @@ These are the artifacts as they exist in the built sprints, by name. Sprint 5 sh
 |---|---|---|
 | Sprint 1 | Problem Frame (Word document from First frames, revised on the Problem Frame page) | Parts 1 to 7: the goal it serves, the problem, who is affected, what it costs them, what fixing it would ask of them, how it is handled today, what fixed would look like, assumptions, what you do not know yet. Plus Part 3 of the Problem Frame page: what changed after the Dojo conversation, and why. |
 | Sprint 2 | Dig into your assumptions, What solutions already exist (two Word documents), Problem Frame: taking stock | Assumptions tested, what exists and why it is not enough, the frame updated. |
-| Sprint 3 | Stakeholder Map, Stakeholder Validation Report (two Word documents) | Four stakeholders profiled with fields marked confirmed or unconfirmed; one real conversation and what it changed. |
+| Sprint 3 | Stakeholder Map, Stakeholder Validation Report (two Word documents) | Four stakeholders profiled with each field marked Inferred or Confirmed; one real conversation, written up as what they confirmed, what they challenged or complicated (Section C), what still needs validation, and a revised Problem Frame or an honest statement that it held (Section D). |
 | Sprint 4 | Learning Plan week 7 and week 8 (two Word documents) | Part A: what I understand and what I do not know yet, ranked. Part B: a plan per gap. C1 and C2: the frame coming in and the updated frame. Part D: results, left blank for CIS 502. |
 | Sprints 1 to 4 | Four sprint reflections | The same five questions each sprint. Sprint 4 says: "In Sprint 5 you will read all four sprint reflections back to see how your answers changed." |
 
@@ -38,7 +38,7 @@ Output: one Word document, `integrated-problem-document.docx`, five sections. Ea
 
 1. The problem, in one page. The current Problem Frame, Parts 1 to 7, as it stands after Sprint 4's C2. Copied in and tightened, not rewritten.
 2. The biggest change to the frame. One short table, three rows: the biggest change, when it happened, what moved it. Learners have already written "what changed and why" in Sprints 1, 2, and 4, so this section selects from those answers rather than asking the question again.
-3. What people said. From the Stakeholder Map and the Validation Report: who was heard, what they confirmed, what they contradicted, and what the frame did about it.
+3. What people said. From the Stakeholder Map and the Validation Report: who was heard, what they confirmed, what they challenged or complicated, and whether the frame was revised or held (Section D).
 4. What already exists, and why it is not enough. From Sprint 2's What solutions already exist.
 5. What you still do not know, and how you plan to learn it. From the Learning Plan Part A and Part B, in summary, with the learning order.
 
@@ -52,7 +52,7 @@ Output: one Word document, `readiness-report.docx`, four short sections. The rep
 
 1. Your verdict, before you look. One of three: ready to carry forward; ready with conditions; not ready yet, with a clear reason and next step. Two sentences on why, written first.
 2. What it rests on. One grid, three rows: the strongest strand, the weakest strand, and the one assumption or gap that would change your mind. Each row names the strand, points to where it lives in the integrated document, and says how strong it is (confirmed, partly confirmed, still assumed).
-3. Your next move. One line: the first Learning Plan gap and the first action, with the plan attached. If the verdict is not ready yet: the reason and the next step, in the same form.
+3. Your next move. One line: the first Learning Plan gap and the first action, with the plan attached. If the verdict is not ready yet: the reason and the next step, in the same form. It says nothing more specific about CIS 502, whose positioning is not settled (Melisa).
 4. Your verdict after looking. One line. The same three options; did it move from section 1, and why or why not. This repeat is on purpose: the first verdict is the one thing written before reviewing the evidence, and the second shows whether the evidence moved it.
 
 Reader test on the page: "Could a reader tell, from this report alone, what you are ready to do next and what you are betting on?"
@@ -92,9 +92,7 @@ The old April capstone files stay where they are, unpublished and untouched.
 
 For Melisa:
 
-1. Sprint 4's C2 frame is the one Sprint 5 treats as current. Is that right, or does anything after week 8 revise it?
-2. The stakeholder section pulls from the Map's confirmed or unconfirmed fields and the Validation Report's "what changed." Are those the right names? And if one conversation is thin grounding for a readiness verdict, should Sprint 3 ask for two, or should "ready with conditions" carry it? Sprint 5 adds no new evidence gathering by design.
-3. Does the readiness verdict need to say anything about CIS 502's first week, beyond the Learning Plan's first step?
+Answered 1 October: Sprint 4's C2 is the last updated frame with an assumptions check, so Sprint 5 treats it as final. Terms corrected above. One conversation stays; "ready with conditions" carries a thin case, and the Validation Report's "What still needs validation" feeds it. Keep CIS 502 vague beyond the Learning Plan's first step.
 
 For Jeremy:
 
@@ -105,5 +103,5 @@ For Jeremy:
 For the team:
 
 1. Who owns Sprint 5 content after the shell?
-2. The verdict-before-evidence rule puts the three-way verdict at the top of the report. Any objection to a learner choosing "not ready yet" and earning full marks?
-3. The Sprint 5 Reflection drops the five questions in favour of the read-back plus the pace question. Any objection to breaking the five-question pattern in the last sprint?
+2. The verdict-before-evidence rule puts the three-way verdict at the top of the report. Any objection to a learner choosing "not ready yet" and earning full marks? Melisa: no objection.
+3. The Sprint 5 Reflection drops the five questions in favour of the read-back plus the pace question. Melisa: makes sense for the last sprint to look different.

@@ -31,7 +31,7 @@ You will be ready to:
 
 ## Your route through Sprint 0
 
-This module has **six pages and one discussion**, including this page:
+This module has **seven pages and one discussion**, including this page:
 
 1. **Start Here:** the route and goals you are reading now.
 2. **[Welcome](artifact:course1-sprints-welcome-and-orientation-v2-welcome-v2):** what the course helps you do and what you will have by the end.
@@ -40,5 +40,6 @@ This module has **six pages and one discussion**, including this page:
 5. **[Set up your AI Dojo](artifact:course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2):** configure your AI coach and check its behavior without completing Sprint 1 work.
 6. **[Introduction Post](artifact:course1-sprints-welcome-and-orientation-v2-introduction-post-v2):** your one orientation submission, graded complete or incomplete, worth zero points.
 7. **[Help and Resources](artifact:course1-sprints-welcome-and-orientation-v2-help-and-resources-v2):** submission steps, key terms, and instructor contact. Read it after posting your introduction, then return when needed.
+8. **[Schedule a 5-minute check-in](artifact:course1-sprints-welcome-and-orientation-v2-schedule-a-five-minute-check-in):** choose one member of the course team for a short conversation; booking links are coming soon. There is no submission or completion requirement for this page.
 
 Continue to Welcome.

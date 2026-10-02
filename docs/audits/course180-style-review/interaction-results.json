@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "baseline_checker_limitation": "stakeholder-1: shared self-check\n\n2 !== 1\n"
+    },
+    "baseline drafts restored for 76 shared walk-through fields",
+    "Accordion remains a transparent disclosure, keyboard toggles and retains focus",
+    "Word document download still produced",
+    "Wide tables scroll internally at 390 and 320px without page overflow",
+    "Interleaved Brainstorm draft reload and keyboard copy preserve answers",
+    "Homepage module disclosure keyboard interaction"
+  ],
+  "external_writes": 0,
+  "limitations": "AI requests, Canvas submissions, remote video playback and live progress are not invoked."
+}

@@ -32,7 +32,7 @@ schedule:
       summary: "Learn what your problem requires and check the claims you will rely on."
     - number: 5
       sprint: 9
-      ready: false
+      ready: true
       title: "Synthesize and show readiness"
       summary: "Connect your problem frame, stakeholder input, and learning evidence into one supported argument."
 modules:
@@ -107,42 +107,6 @@ modules:
           - slug: "sprint-1-reflection-what-changed"
             meta: "AI reflection activity - refine what changed between your starting goal and your current problem frame"
 
-  - sprint: 2
-    hidden: true
-    tag: "AI Direction"
-    open: false
-    learning_goals:
-      - "Give AI enough context, constraints, and standards to make its output useful."
-      - "Judge AI suggestions instead of accepting the first fluent answer."
-      - "Document how your choices improved the work."
-    prereq: "Builds on the problem frame from Sprint 1. AI can help only after you can explain what needs to be explored."
-    groups:
-      - label: "Sprint Week 1: Start here"
-        items:
-          - slug: "start-here-direct-ai-deliberately"
-            meta: "Page - orient to deliberate AI direction and the sprint rhythm"
-      - label: "Sprint Week 1: Practice direction"
-        items:
-          - slug: "concept-context-choices-confirmation"
-            meta: "Page - learn the context, choices, and confirmation pattern"
-          - slug: "dojo-lab-3cs-exploration-round-1"
-            meta: "Dojo activity - run a focused Symbiotic Thinking Dojo exploration round on your real problem"
-          - slug: "ai-output-assessment-and-pushback"
-            meta: "Assignment - push back on weak, generic, or unverified AI output"
-      - label: "Sprint Week 2: Compare, check, and reflect"
-        items:
-          - slug: "peer-exchange-which-ai-suggestion-would-you-not-trust-yet"
-            meta: "AI activity - test what remains unverified in a plausible AI suggestion"
-          - slug: "ai-exploration-log-and-3cs-application-log"
-            meta: "Assignment - preserve prompts, choices, outputs, and judgment calls"
-          - slug: "directing-ai-check"
-            meta: "AI self-check - refine context, choices, and confirmation for one AI interaction"
-            badge: "Self-check"
-            selfcheck: true
-            verify: "Show one AI output and your pushback notes to a peer. Ask whether your standard is clear."
-          - slug: "sprint-2-reflection-my-judgment-improved-the-output"
-            meta: "AI reflection activity - refine where your judgment changed the result"
-
   - sprint: 3
     hidden: true
     tag: "People and Context"
@@ -215,42 +179,6 @@ modules:
           - slug: "sprint-4-reflection-what-i-learned-and-how-i-know"
             meta: "AI reflection activity - refine what you learned and what evidence proves it"
 
-  - sprint: 5
-    hidden: true
-    tag: "Synthesis"
-    open: false
-    learning_goals:
-      - "Turn course artifacts into a coherent argument about the problem and your readiness."
-      - "Identify gaps in evidence, logic, and stakeholder grounding before final submission."
-      - "Submit a final integrated problem document that a reader can follow."
-    prereq: "Builds on the full course portfolio. Synthesis works when your artifacts show real changes in judgment, evidence, and scope."
-    groups:
-      - label: "Sprint Week 1: Start here"
-        items:
-          - slug: "start-here-synthesize-and-show-readiness"
-            meta: "Page - orient to the final synthesis and readiness standard"
-      - label: "Sprint Week 1: Draft the argument"
-        items:
-          - slug: "concept-from-artifacts-to-argument"
-            meta: "Page - connect artifacts into a claim a reader can follow"
-          - slug: "dojo-lab-synthesis-gap-audit"
-            meta: "Dojo activity - use the Symbiotic Thinking Dojo to find gaps without letting it write the argument"
-          - slug: "integrated-problem-document-draft"
-            meta: "Assignment - draft the integrated problem document"
-      - label: "Sprint Week 2: Review, submit, and close"
-        items:
-          - slug: "peer-review-can-a-reader-follow-the-argument"
-            meta: "AI activity - test whether a reader can follow your readiness argument"
-          - slug: "final-integrated-problem-document-and-readiness-report"
-            meta: "Assignment - submit the final integrated document and readiness report"
-          - slug: "closing-reflection-and-final-goal-plan-check"
-            meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry"
-          - slug: "readiness-self-check"
-            meta: "AI self-check - refine an evidence-backed readiness judgment"
-            badge: "Self-check"
-            selfcheck: true
-            verify: "Walk a peer or stakeholder through the argument before final submission and note where they get lost."
-
   - sprint: 6
     order: 0
     title: "Welcome and orientation"
@@ -283,13 +211,16 @@ modules:
       - label: "The one submission"
         items:
           - slug: "introduction-post-v2"
-            nav_meta: "Post · Complete or incomplete"
+            nav_meta: "Post · 0 points · Complete or incomplete"
             meta: "Discussion - post a short introduction and read a few others; complete or incomplete, 0 points, peer replies optional"
       - label: "Read after your introduction, then return anytime"
         items:
           - slug: "help-and-resources-v2"
             nav_meta: "Read"
             meta: "Page - submission steps, saved drafts, key terms, and instructor contact through Canvas Inbox"
+          - slug: "schedule-a-five-minute-check-in"
+            nav_meta: "No submission"
+            meta: "Page - arrange one short check-in; booking links coming soon; no submission"
 
   - sprint: 7
     hidden: true
@@ -304,25 +235,11 @@ modules:
     groups:
       - label: "Sprint Week 1: Understand and map"
         items:
-          - slug: "introduction-integrate-people-and-context-v2"
-            nav_meta: "Read"
-            meta: "Page - how stakeholders, evidence, and validation work in this sprint"
           - slug: "sprint-3-concept-check-v2"
             nav_meta: "Practice · Ungraded"
             meta: "Practice quiz - check your understanding before you start; ungraded, unlimited attempts"
             badge: "Self-check"
             selfcheck: true
-          - slug: "dojo-lab-stakeholder-map-v2"
-            nav_meta: "35 points"
-            meta: "Assignment - profile your stakeholders with the Dojo and mark what you know"
-      - label: "Sprint Week 2: Validate and revise"
-        items:
-          - slug: "stakeholder-conversation-v2"
-            nav_meta: "50 points"
-            meta: "Assignment - prepare, hold, and document a real stakeholder conversation"
-          - slug: "sprint-3-reflection-and-mid-course-goal-plan-revision-v2"
-            nav_meta: "10 points"
-            meta: "AI reflection activity - refine your goal plan revision based on evidence"
 
   - sprint: 8
     order: 4
@@ -340,16 +257,16 @@ modules:
           - slug: "introduction-close-the-learning-gap-v3"
             nav_meta: "Read"
             meta: "Page - what separates a gap from a topic, how to sort blocking from interesting, and what closed means"
-          - slug: "sprint-4-concept-check-v3"
+          - slug: "sprint-4-concept-check-v4"
             nav_meta: "Practice · 5 points"
-            meta: "Practice quiz - check your understanding before you start; unlimited attempts, 5 points"
+            meta: "Guided concept check - answer all five questions before Name the Gap; submit all five answers for 5 completion points reviewed by your instructor"
             badge: "Self-check"
             selfcheck: true
           - slug: "name-the-gap-canvas-walkthrough"
             nav_meta: "50 points"
             meta: "Canvas Walkthrough - gather, rank, and connect your gaps to Problem Frame decisions; submit the Week 7 Word document, 50 points"
           - slug: "dojo-lab-design-the-learning-path-v3"
-            nav_meta: "Practice · Own your progress"
+            nav_meta: "Practice · 0 points"
             meta: "Guided assignment - use your Dojo to test your gap list, widen the ways to close each gap, and test how you will know; 0 points, submit the complete Dojo transcript to complete the module"
       - label: "Sprint Week 2: Plan and reflect"
         items:
@@ -374,7 +291,8 @@ modules:
       - label: "Sprint Week 1: Start here"
         items:
           - slug: "introduction-synthesize-and-show-readiness-v2"
-            meta: "Page - placeholder stub for the Sprint 5 rebuild"
+            nav_meta: "Read · Remaining activities in preparation"
+            meta: "Page - published introduction; remaining Sprint 5 activities are in preparation"
 
   - sprint: 12
     hidden: true
@@ -389,11 +307,6 @@ modules:
       - "Explain your choice of a problem with reasons and a runner-up, or identify where to look next if nothing survives."
     prereq: "Only the first half of Sprint 1 is available here, ending with Test and commit. The Introduction also describes second-half work that is not yet available. Start with your own observations; you do not need a chosen problem. Keep one table across these activities and carry your choice into later framing. Work without AI in this half. The three own-your-progress activities are encouraged, carry zero points, and do not block later activities if skipped."
     groups:
-      - label: "Introduction"
-        items:
-          - slug: "introduction-find-the-problem-worth-solving-v2"
-            nav_meta: "Read"
-            meta: "Page - orient to candidate problems, the first-half sequence, and what to submit"
       - label: "Build your table"
         items:
           - slug: "start-your-list-and-get-underneath-it-v2"
@@ -416,22 +329,6 @@ modules:
             nav_meta: "35 points"
             meta: "Guided assignment - select three to five candidate gaps, run four checks, and explain your choice with reasons and a runner-up or recovery plan; copy and submit once in Canvas, 35 points reviewed by your instructor"
 
-  - sprint: 13
-    order: 6
-    title: "AI Feedback Check"
-    tag: "Optional"
-    open: false
-    learning_goals:
-      - "Check that AI follow-up questions, a saved response, and an exported file are available before using the feedback workflow."
-    prereq: "No prior coursework is needed. This optional, ungraded check uses a supplied sample and requires no Canvas submission."
-    groups:
-      - label: "Try the repaired connection"
-        items:
-          - slug: "ai-feedback-check"
-            nav_meta: "Optional · Ungraded"
-            meta: "AI activity - see what changed, generate three questions, save a response, and inspect the exported JSON; no Canvas submission required"
-            badge: "Optional"
-
   - sprint: 14
     hidden: false
     order: 1
@@ -451,28 +348,25 @@ modules:
           - slug: "introduction-find-the-problem-worth-solving"
             nav_meta: "Read"
             meta: "Page - learn the two-week route, point structure, AI boundaries, and how to use the Candidate Log"
-          - slug: "brainstorm-your-list"
-            nav_meta: "Practice · Own your progress"
+          - slug: "brainstorm-your-list-walk-through"
+            nav_meta: "Practice · 0 points"
             meta: "Guided assignment - build a broad list from your own week without AI; 0 points, submission required for module completion"
           - slug: "get-underneath-three-to-five-walk-through"
-            nav_meta: "Practice · Own your progress"
+            nav_meta: "Practice · 0 points"
             meta: "Guided assignment - describe three to five situations, their current handling, costs, and gaps; optional feedback after writing; 0 points, submission required for module completion"
-          - slug: "the-problem-frame"
-            nav_meta: "Read"
-            meta: "Page - learn the seven-part problem frame through two worked examples"
+          - slug: "first-frames-walk-through"
+            nav_meta: "50 points"
+            meta: "Canvas Walkthrough - write at least three complete draft problem frames without AI and submit them together in one Word document; 50 points"
+      - label: "Sprint Week 2: Test, choose, and reflect"
+        items:
+          - slug: "dojo-lab-test-widen-choose"
+            nav_meta: "Practice · 0 points"
+            meta: "Guided assignment - use AI to test and widen every frame, then choose one with your own judgment; 0 points, submit the complete Dojo transcript to complete the module"
           - slug: "sprint-1-concept-check"
             nav_meta: "5 points"
             meta: "Guided concept check - answer six questions about indicators, gaps, changed states, failure moments, and goals; 5 completion points"
             badge: "Self-check"
             selfcheck: true
-          - slug: "first-frames"
-            nav_meta: "50 points"
-            meta: "Guided assignment - write at least three complete draft problem frames without AI and submit them together; 50 points"
-      - label: "Sprint Week 2: Test, choose, and reflect"
-        items:
-          - slug: "dojo-lab-test-widen-choose"
-            nav_meta: "Practice · Own your progress"
-            meta: "Guided assignment - use AI to test and widen every frame, then choose one with your own judgment; 0 points, submit the complete Dojo transcript to complete the module"
           - slug: "problem-frame"
             nav_meta: "50 points"
             meta: "Guided assignment - submit the chosen seven-part Problem Frame and explain what changed, what moved your judgment, and what you rejected; 50 points"
@@ -498,36 +392,33 @@ modules:
             nav_meta: "Read"
             meta: "Page - the route through the sprint, the key terms, and where things get written"
           - slug: "dig-into-your-assumptions-walk-through"
-            nav_meta: "Practice · Own your progress"
-            meta: "Canvas Walkthrough - rate the risk of each assumption without AI; submit the Word document to complete the module, 0 points"
+            nav_meta: "50 points"
+            meta: "Canvas Walkthrough - rate the risk of each assumption without AI; submit the Word document to complete the module, 50 points"
           - slug: "dojo-lab-test-your-assumptions"
-            nav_meta: "Practice · Own your progress"
+            nav_meta: "Practice · 0 points"
             meta: "Guided assignment - have AI push on your walk and your risk ratings; 0 points, submit the complete Dojo transcript to complete the module"
           - slug: "which-assumptions"
-            nav_meta: "20 points"
-            meta: "Guided assignment - submit your updated assumption tables and what the Dojo changed; 20 points"
+            nav_meta: "Practice · 0 points"
+            meta: "Guided assignment - submit your updated assumption tables and what the Dojo changed; 0 points, submission required for module completion"
       - label: "Sprint Week 2: What exists, and is it worth it?"
         items:
-          - slug: "working-with-ai-context"
-            nav_meta: "Read"
-            meta: "Page - what Context means when you work with AI, and the two other kinds you can give it"
           - slug: "what-solutions-already-exist-walk-through"
-            nav_meta: "Practice · Own your progress"
-            meta: "Canvas Walkthrough - start your table of existing solutions without AI; submit the Word document to complete the module, 0 points"
+            nav_meta: "50 points"
+            meta: "Canvas Walkthrough - start your table of existing solutions without AI; submit the Word document to complete the module, 50 points"
           - slug: "dojo-lab-explore-what-already-exists"
-            nav_meta: "Practice · Own your progress"
+            nav_meta: "Practice · 0 points"
             meta: "Guided assignment - fill the table with AI and by looking for yourself, one row at a time; 0 points, submit the complete Dojo transcript to complete the module"
           - slug: "what-exists-and-what-it-means"
-            nav_meta: "20 points"
-            meta: "Guided assignment - write up what exists, what you made of it, and whether it changes your problem; 20 points"
+            nav_meta: "Practice · 0 points"
+            meta: "Guided assignment - write up what exists, what you made of it, and whether it changes your problem; 0 points, submission required for module completion"
           - slug: "sprint-2-self-check"
             nav_meta: "5 points"
             meta: "Guided concept check - five questions from both weeks, before you write your verdict; 5 completion points"
             badge: "Self-check"
             selfcheck: true
           - slug: "problem-frame-is-it-worth-pursuing"
-            nav_meta: "45 points"
-            meta: "Guided assignment - what fixing this would ask of people, your Problem Frame up to date, and your verdict; 45 points"
+            nav_meta: "50 points"
+            meta: "Guided assignment - what fixing this would ask of people, your Problem Frame up to date, and your verdict; 50 points"
           - slug: "sprint-2-reflection-what-the-world-said-back"
             nav_meta: "10 points"
             meta: "Assignment - five questions on how you are working, what AI made possible, what you brought, and how the course is landing; text entry, 10 points"
@@ -545,22 +436,19 @@ modules:
     groups:
       - label: "Sprint Week 1: Understand and map"
         items:
-          - slug: "sprint-3-overview-v3"
-            nav_meta: "Read"
-            meta: "Page - what this sprint asks of you, how the work flows, and when you are done"
           - slug: "introduction-integrate-people-and-context-v3"
             nav_meta: "Read"
             meta: "Page - how stakeholders, evidence status, and validation conversations work in this sprint"
-          - slug: "sprint-3-concept-check-v3"
+          - slug: "sprint-3-concept-check-v4"
             nav_meta: "Practice · 5 points"
-            meta: "Practice quiz - check your understanding before you start mapping; unlimited attempts, 5 points"
+            meta: "Guided concept check - answer all five questions before the Stakeholder Map; submit all five answers for 5 completion points reviewed by your instructor"
             badge: "Self-check"
             selfcheck: true
           - slug: "stakeholder-map-canvas-walkthrough"
             nav_meta: "50 points"
             meta: "Canvas Walkthrough - profile four stakeholders, mark confirmed and inferred fields, and choose a first contact; submit the Word document, 50 points"
           - slug: "dojo-lab-test-widen-choose-v3"
-            nav_meta: "Practice · Own your progress"
+            nav_meta: "Practice · 0 points"
             meta: "Guided assignment - use your Dojo to test and widen your map, confirm your first contact, and sharpen your questions; 0 points, submit the complete Dojo transcript to complete the module"
       - label: "Sprint Week 2: Validate and revise"
         items:
