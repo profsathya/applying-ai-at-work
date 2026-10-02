@@ -29,20 +29,20 @@
       "canvas_module_id": 2082,
       "canvas_module_item_id": 17999,
       "canvas_page_url": null,
+      "canvas_payload_hash": "bc248eab4bb2720ee5ff5f7c91d5e5cde6fc44f6b54619cb611fbc422a272657",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "f47eefbb7cede083b7a7feadd9d0cf0f6aa0b6294f2fa38252faea73256bbac8",
+      "content_hash": "2da3c17145f8e8dc9801fb505104c96785080053e2a312ac9552339563b86750",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "ad55e60c75855dc16a1b7d0dc044faa387774c1f114c88fdf9c830057856eaad",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "hosted_hash": "92c424c6357c3456d396b4e539da65ef4026e7fbf251d026c1dc6eabeb9a596f",
+      "hosted_last_rendered": "2026-10-02T05:37:27+00:00",
       "hosted_path": "course1/assignments/name-the-gap-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/name-the-gap-canvas-walkthrough.html",
-      "last_pulled": "2026-09-30T18:30:31+00:00",
-      "last_pushed": "2026-09-29T03:14:27+00:00",
+      "last_pushed": "2026-10-02T05:37:27+00:00",
       "local_path": "course1/sprints/sprint-17/name-the-gap-canvas-walkthrough.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "a1ab8bd1197b1100e58fcb24565e30adebf4a0d3"
+      "source_commit": "eb344459a325347fd0f26d0f0e604ae0b0f8a7f9"
     },
     "course1-sprints-sprint-12-sprint-1-find-the-problem-worth-solving-v2": {
       "artifact_id": "course1-sprints-sprint-12-sprint-1-find-the-problem-worth-solving-v2",
@@ -958,16 +958,16 @@
       "canvas_payload_hash": "cb514faaaf679fb445a303626a050a9dadb38fc7f45aaa1afc525ccdefc74eb6",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "21298013b0ad9b4369f536b71c77c6b84e54d3d9b495401be2f8390130ed6a1c",
-      "hosted_hash": "43d570237259a9ec0f367bc8a10c90d20292f24dbc56336c69c48f3ff61913d5",
-      "hosted_last_rendered": "2026-10-01T23:54:23+00:00",
+      "content_hash": "89cae7289d53ba80c49288d991e7c7e2849258f364e0dc8fcbb910865004bb89",
+      "hosted_hash": "5e9733e173331cc7810d0b4aad8adf5512c0a9e9440a7df5ea2398cde7de0d12",
+      "hosted_last_rendered": "2026-10-02T05:37:29+00:00",
       "hosted_path": "course1/activities/introduction-close-the-learning-gap-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-close-the-learning-gap-v3.html",
-      "last_pushed": "2026-10-01T23:54:23+00:00",
+      "last_pushed": "2026-10-02T05:37:29+00:00",
       "local_path": "course1/sprints/sprint-8/introduction-close-the-learning-gap-v3.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "1ff98967dfad876e4d8bc90b78ca0c5a52fa2ba6"
+      "source_commit": "eb344459a325347fd0f26d0f0e604ae0b0f8a7f9"
     },
     "course1-sprints-sprint-9-introduction-synthesize-and-show-readiness-v2": {
       "artifact_id": "course1-sprints-sprint-9-introduction-synthesize-and-show-readiness-v2",
@@ -1384,5 +1384,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-01T23:54:23+00:00"
+  "last_sync": "2026-10-02T05:37:29+00:00"
 }
