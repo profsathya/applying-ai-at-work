@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 const code = fs.readFileSync('canvas_sync/assets/guided-assignment.js', 'utf8');
-function boot({saved = null, storageFails = false, clipboardFails = false, feedbackFails = false, compact = false, reading = false, transcript = false} = {}) {
+function boot({saved = null, storageFails = false, clipboardFails = false, feedbackFails = false, compact = false, reading = false, transcript = false, practiceOnly = false} = {}) {
   let config = {artifactId:'test', version:'1', title:'Decide', module:'Sprint One', feedback_endpoint:'https://example.invalid/feedback',
     tasks:[{id:'reason',prompt:'Why this one?',criteria:['Name the deciding check.']},
            {id:'choice',kind:'choice',prompt:'Choose the gap',criteria:['Compare states.'],options:['Complaint','Gap'],correct_index:1,explanation:'Compare current and possible.'}]};
@@ -12,6 +12,7 @@ function boot({saved = null, storageFails = false, clipboardFails = false, feedb
     transcriptRequest:'Exact transcript request\n', tasks:[{id:'dojo-transcript',kind:'response',prompt:'Paste the complete transcript.',criteria:['Complete.']}]};
   if (compact) config.presentation = 'compact';
   if (reading) config.presentation = 'reading';
+  if (practiceOnly) { config.presentation = 'reading'; config.practiceOnly = true; }
   const nodes = new Map();
   function node(name) {
     if (!nodes.has(name)) nodes.set(name, {textContent:'',value:'',checked:false,disabled:false,listeners:{},
@@ -21,7 +22,7 @@ function boot({saved = null, storageFails = false, clipboardFails = false, feedb
   node('guided-config').textContent=JSON.stringify(config);
   const radios=[node('radio0'),node('radio1')]; radios.forEach((r,i)=>r.value=String(i));
   const writes=[], requests=[], copies=[], removed=[];
-  vm.runInNewContext(code, {document:{getElementById:node,
+  vm.runInNewContext(code, {document:{getElementById:id => practiceOnly && ['copy-output','copy-answers','copy-tasks','copy-status','download-answers'].includes(id) ? null : node(id),
     querySelector(s){return node(s);},querySelectorAll(){return radios;}},
     localStorage:{getItem(){if(storageFails)throw Error();return saved;},setItem(k,v){if(storageFails)throw Error();writes.push([k,v]);},removeItem(k){if(storageFails)throw Error();removed.push(k);}},
     navigator:{clipboard:{async writeText(text){if(clipboardFails)throw Error();copies.push(text);}}},
@@ -97,5 +98,12 @@ function boot({saved = null, storageFails = false, clipboardFails = false, feedb
   const transcriptFallback = boot({transcript:true,clipboardFails:true});
   await transcriptFallback.node('copy-transcript-request').listeners.click();
   assert.equal(transcriptFallback.node('transcript-request-text').selected,true);
+  const practice = boot({practiceOnly:true});
+  practice.radios[1].listeners.change();
+  practice.node('[data-check="choice"]').listeners.click();
+  assert.match(practice.node('[data-result="choice"]').textContent,/That fits/);
+  assert.match(practice.node('completion-status').textContent,/No submission or grade/);
+  practice.node('clear-draft').listeners.click(); practice.node('confirm-clear').listeners.click();
+  assert.equal(practice.radios[1].checked,false);
   console.log('guided runtime passed: save/restore, copy/fallback, choice feedback, optional requests, stale feedback, failure retention');
 })().catch(e=>{console.error(e);process.exitCode=1;});

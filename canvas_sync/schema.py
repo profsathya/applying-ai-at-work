@@ -148,8 +148,8 @@ def validate_artifact(md_path: Path) -> list[str]:
     for key in ("quiz_type", "allowed_attempts"):
         if key in frontmatter and (frontmatter.get("type") != "quiz" or frontmatter.get("delivery_mode") == "ai_activity"):
             errors.append(f"{md_path}: {key} requires a native quiz")
-    if "grading_type" in frontmatter and frontmatter.get("type") != "discussion":
-        errors.append(f"{md_path}: grading_type requires a discussion")
+    if "grading_type" in frontmatter and frontmatter.get("type") not in {"assignment", "discussion"}:
+        errors.append(f"{md_path}: grading_type requires an assignment or discussion")
 
     # Soft checks that aren't easily expressed in JSON Schema
     if frontmatter.get("type") in ("assignment", "quiz", "discussion"):
@@ -223,6 +223,19 @@ def validate_guided_assignment(label: object, payload: dict, body: str | None = 
     errors = []
     if "require_sequential_progress" in payload and payload.get("type") != "module_header":
         errors.append(f"{label}: require_sequential_progress requires a module_header")
+    for key in ('module_unlock_at', 'prerequisite_modules'):
+        if key in payload and payload.get('type') != 'module_header':
+            errors.append(f'{label}: {key} requires a module_header')
+    if payload.get('module_unlock_at') is not None:
+        from datetime import datetime
+        try:
+            release = datetime.fromisoformat(payload['module_unlock_at'].replace('Z', '+00:00'))
+            if release.utcoffset() is None:
+                raise ValueError
+        except (ValueError, TypeError, AttributeError):
+            errors.append(f'{label}: module_unlock_at requires an ISO 8601 timestamp with timezone')
+    if payload.get('artifact_id') in payload.get('prerequisite_modules', []):
+        errors.append(f'{label}: a module cannot be its own prerequisite')
     if payload.get("page_presentation") and payload.get("type") not in {"page", "discussion"}:
         errors.append(f"{label}: page_presentation requires a page or discussion")
     mode = payload.get("delivery_mode")
@@ -244,7 +257,10 @@ def validate_guided_assignment(label: object, payload: dict, body: str | None = 
     )
     walkthrough = config.get('presentation') == 'walkthrough' if isinstance(config, dict) else False
     permitted_submissions = {'text_entry', 'file_upload'} if walkthrough else {'text_entry'}
-    if (payload.get("type") != "assignment" and not quiz_backed_assignment) or payload.get("submission_type") not in permitted_submissions:
+    practice_page = (payload.get("type") == "page" and payload.get("submission_type") == "none"
+                     and payload.get("completion_requirement") == "must_view"
+                     and isinstance(config, dict) and config.get("presentation") == "reading")
+    if not practice_page and ((payload.get("type") != "assignment" and not quiz_backed_assignment) or payload.get("submission_type") not in permitted_submissions):
         errors.append(f"{label}: guided_assignment requires an assignment with text_entry (or file_upload for walkthrough)")
     if not isinstance(config, dict):
         return errors + [f"{label}: guided_assignment requires configuration"]

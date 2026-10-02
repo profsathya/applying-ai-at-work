@@ -7,7 +7,8 @@ sprint: 15
 week: 6
 module: 'Sprint 3: Integrate People and Context (V3)'
 position: 7
-points: 10
+points: 0
+grading_type: pass_fail
 submission_type: text_entry
 delivery_mode: canvas_native
 completion_requirement: must_submit

@@ -42,6 +42,8 @@ CANVAS_ITEM_TYPE_BY_ARTIFACT = {
 
 def completion_requirement_for(frontmatter: dict, canvas_type: str) -> dict | None:
     """Return the Canvas completion_requirement payload for an artifact."""
+    if frontmatter.get("completion_requires_published") and frontmatter.get("publish") is False:
+        return None
     configured = frontmatter.get("completion_requirement", "auto")
     if configured not in COMPLETION_VALUES:
         raise ValueError(f"Unsupported completion_requirement: {configured!r}")

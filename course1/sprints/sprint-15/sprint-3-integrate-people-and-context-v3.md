@@ -10,6 +10,9 @@ position: 1
 points: null
 submission_type: none
 publish: true
+require_sequential_progress: true
+prerequisite_modules: [course1-sprints-welcome-and-orientation-v2-welcome-and-orientation-v2, course1-sprints-sprint-16-sprint-2-is-this-problem-worth-pursuing]
+module_unlock_at: "2026-11-01T23:59:00-08:00"
 ---
 
 # Sprint 3: Integrate People and Context (V3)

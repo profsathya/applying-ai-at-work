@@ -1,5 +1,5 @@
 ---
-type: assignment
+type: page
 title: Sprint 1 Concept check
 slug: sprint-1-concept-check
 artifact_id: course1-sprints-sprint-14-sprint-1-concept-check
@@ -7,15 +7,16 @@ sprint: 14
 week: 1
 module: 'Sprint 1: Find the Problem Worth Solving (V2)'
 position: 6
-points: 5
-submission_type: text_entry
+points: null
+submission_type: none
 delivery_mode: guided_assignment
-completion_requirement: must_submit
+hosted_aliases: [course1/assignments/sprint-1-concept-check.html]
+completion_requirement: must_view
 guided_assignment:
   version: '1.0'
   purpose: Practice the judgment you'll use in First frames on a sample first, then use the same judgment on your own frames.
   builds_on: Complete Brainstorm your list, Get underneath three to five, and read The problem frame.
-  standing_instruction: Submit all six answers for 5 completion points reviewed by your instructor.
+  standing_instruction: Practice with the questions and check your answers. No submission or grade; viewing this page counts for Canvas module progress.
   tasks:
   - id: indicator
     kind: choice

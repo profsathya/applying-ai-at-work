@@ -437,7 +437,7 @@ def _canvas_only_anchor(canvas_url: str | None, label: str, *, css_class: str = 
 
 def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
     artifact_type = frontmatter["type"]
-    if artifact_type == "page" and frontmatter.get("page_presentation") == "reading":
+    if artifact_type == "page" and (frontmatter.get("page_presentation") == "reading" or frontmatter.get("delivery_mode") == "guided_assignment"):
         return ""
     if frontmatter.get("delivery_mode") == "guided_assignment":
         if frontmatter.get("guided_assignment", {}).get("presentation") in ("interleaved", "walkthrough"):
@@ -497,6 +497,7 @@ def render_artifact_document(
     artifact_links: dict[str, dict[str, str]] | None = None,
     item_position: tuple[int, int] | None = None,
 ) -> str:
+    frontmatter = {**frontmatter, "_assignment_copy_ui": manifest.get("hosted_html", {}).get("assignment_copy_ui", True)}
     rendered = _strip_leading_h1(
         markdown_body_to_html(body, artifact_links=artifact_links)
     )
@@ -1166,6 +1167,15 @@ def render_hosted_artifact(
     document = _module_backlink(document, manifest_path, fm)
     document = apply_native_canvas(apply_course_styles(document, course_dir_for_manifest(manifest_path).name), manifest_data)
     changed, hosted_hash = _write_if_changed(output_path, document)
+    aliases = []
+    for alias in fm.get('hosted_aliases', []):
+        course_key = course_dir_for_manifest(manifest_path).name
+        if not re.fullmatch(re.escape(course_key) + r'/(?:activities|assignments)/[a-z0-9-]+\.html', alias):
+            raise ValueError('Hosted alias must be an existing-style path within this course')
+        alias_path = hosted_output_path(output_dir, manifest_data, alias)
+        alias_changed, alias_hash = _write_if_changed(alias_path, document)
+        changed = changed or alias_changed
+        aliases.append({'output_path': str(alias_path), 'hosted_hash': alias_hash, 'changed': alias_changed})
     return {
         "file": str(md_path),
         "hosted_path": hosted_info["hosted_path"],
@@ -1173,6 +1183,7 @@ def render_hosted_artifact(
         "output_path": str(output_path),
         "hosted_hash": hosted_hash,
         "changed": changed or any(a["changed"] for a in asset_outputs),
+        "aliases": aliases,
         **({"outputs": [{"path": str(output_path), "hash": hosted_hash, "changed": changed}, *asset_outputs]} if assets else {}),
     }
 

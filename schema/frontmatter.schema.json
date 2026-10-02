@@ -30,8 +30,22 @@
         "pass_fail"
       ]
     },
+    "hosted_aliases": {
+      "type": "array", "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[a-z0-9-]+/(activities|assignments)/[a-z0-9-]+\\.html$"},
+      "description": "Previously deployed course-relative paths that receive the same rendered document after a type change."
+    },
     "learner_labels": {
       "type": "boolean"
+    },
+    "module_unlock_at": {
+      "type": ["string", "null"],
+      "description": "Module-header release time, ISO 8601 with explicit offset."
+    },
+    "prerequisite_modules": {
+      "type": "array", "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+      "description": "Module-header artifact IDs that must be complete before this module unlocks."
     },
     "require_sequential_progress": {
       "type": "boolean",
@@ -103,6 +117,10 @@
     "delivery_mode": {
       "type": "string",
       "enum": ["canvas_native", "ai_activity", "guided_assignment"]
+    },
+    "completion_requires_published": {
+      "type": "boolean",
+      "description": "Keep unpublished work outside module completion requirements; apply its requirement when published."
     },
     "completion_requirement": {
       "type": "string",
@@ -503,8 +521,8 @@
       "then": {
         "required": ["guided_assignment", "submission_type"],
         "properties": {
-          "type": {"enum": ["assignment", "quiz"]},
-          "submission_type": {"enum": ["text_entry", "file_upload"]}
+          "type": {"enum": ["assignment", "quiz", "page"]},
+          "submission_type": {"enum": ["text_entry", "file_upload", "none"]}
         }
       }
     },

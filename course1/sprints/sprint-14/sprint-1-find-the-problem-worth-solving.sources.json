@@ -4,7 +4,7 @@
   "packet_sha256": "9b168398a5aa339c0ee0049a17b167a89e1d9b097719f7de1ad657071e1afe4f",
   "map_sha256": "7d4093e50e068c34ff551f640f491c3f71920a68e3149647c5bf5a7626d2d10f",
   "body_sha256": "d971ecb219acac4f21efc3ae70728f38816aba9108122d5222452dd5dce490bf",
-  "frontmatter_sha256": "5654326c79e4bca47c71d96a6f941e1d2fa3823908fbf507cbae8f2e2a791b88",
+  "frontmatter_sha256": "857939744824fa30dd52fad3b267be37f0c907f4353b2933e27713ebed2febfa",
   "parts": [
     {
       "ref": "d-bb7cd50440dd3015:word/document.xml/23",
@@ -347,5 +347,14 @@
     },
     "block_sha256": "4ce0baad51196927086f2050f2408b408f97c6aa5402029dcfcdd7b0449a3360",
     "markdown": "# Sprint 1: Find the Problem Worth Solving"
+  },
+  "frontmatter_revision": {
+    "authority": "User-approved module progression, 2026-10-02",
+    "previous_sha256": "5654326c79e4bca47c71d96a6f941e1d2fa3823908fbf507cbae8f2e2a791b88",
+    "changes": [
+      "require_sequential_progress: true",
+      "prerequisite_modules: Sprint 0 header"
+    ],
+    "body_unchanged": true
   }
 }

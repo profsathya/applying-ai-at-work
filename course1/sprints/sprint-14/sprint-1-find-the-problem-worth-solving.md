@@ -11,6 +11,8 @@ points: null
 submission_type: none
 publish: true
 source_provenance: sprint-1-find-the-problem-worth-solving.sources.json
+require_sequential_progress: true
+prerequisite_modules: [course1-sprints-welcome-and-orientation-v2-welcome-and-orientation-v2]
 ---
 
 # Sprint 1: Find the Problem Worth Solving

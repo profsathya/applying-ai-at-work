@@ -14,6 +14,7 @@ completion_requirement: must_submit
 learner_labels: true
 learning_goal: Read your four sprint reflections back and say which answers moved, and what moved them.
 publish: false
+completion_requires_published: true
 ---
 
 # Sprint 5 Reflection

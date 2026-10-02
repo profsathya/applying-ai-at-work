@@ -11,6 +11,7 @@ points: 0
 submission_type: file_upload
 completion_requirement: must_submit
 publish: false
+completion_requires_published: true
 ---
 
 # Sprint 5 spare item

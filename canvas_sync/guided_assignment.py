@@ -52,6 +52,26 @@ def load_dojo_transcript_prompt(version: str) -> str:
 
 
 def render_guided_body(frontmatter: dict, instructions_html: str, *, task_sections: dict[str, str] | None = None, canvas_url: str | None = None) -> str:
+    document = _render_guided_body(frontmatter, instructions_html, task_sections=task_sections, canvas_url=canvas_url)
+    if frontmatter.get('_assignment_copy_ui', True):
+        return document
+    # Only generator-owned response-copy controls; transcript-prompt copying is retained.
+    document = re.sub(r'<button\b[^>]*\bid="(?:copy-tasks|walk-copy)"[^>]*>.*?</button>', '', document, flags=re.S)
+    download = '' if frontmatter['type'] == 'page' else '<button type="button" id="download-answers">Download my answers</button>'
+    document = re.sub(r'<button\b[^>]*\bid="copy-answers"[^>]*>.*?</button>', download, document, flags=re.S)
+    document = re.sub(r'<button\b[^>]*\bid="copy-list"[^>]*>.*?</button>', '<button type="button" id="download-list">Download my brainstorm list</button>', document, flags=re.S)
+    document = document.replace('Copy your list', 'Save your list').replace('Copy your assembled list and paste it into the Canvas text-entry box below.', 'Download your assembled list, then use it in the Canvas text-entry box below.').replace('The text that gets copied', 'Your assembled list')
+    document = re.sub(r'<label\b[^>]*\bfor="copy-output"[^>]*>.*?</label>\s*<textarea\b[^>]*\bid="copy-output"[^>]*>.*?</textarea>', '', document, flags=re.S)
+    document = document.replace('Copy the final text into the Canvas assignment.', 'Download your answers, then use them in the Canvas assignment.')
+    document = document.replace('Copy any work you want to keep first.', 'Save any work you want to keep first.')
+    document = document.replace('Use the copy or download controls below', 'Use the download controls below')
+    document = document.replace('Copy your completed work.', 'Download your completed work.')
+    document = document.replace('Copy or download this table if useful.', 'Download this table if useful.')
+
+    return document
+
+
+def _render_guided_body(frontmatter: dict, instructions_html: str, *, task_sections: dict[str, str] | None = None, canvas_url: str | None = None) -> str:
     config = frontmatter['guided_assignment']
     if config.get('presentation') == 'walkthrough':
         from canvas_sync.walkthrough import render_walkthrough_body
@@ -65,7 +85,7 @@ def render_guided_body(frontmatter: dict, instructions_html: str, *, task_sectio
     if config.get('presentation') == 'compact':
         return render_compact_body(frontmatter, instructions_html, task_sections or {}, canvas_url)
     payload = {'artifactId': frontmatter['artifact_id'], 'title': frontmatter['title'],
-               'module': frontmatter['module'], **config}
+               'module': frontmatter['module'], 'practiceOnly': frontmatter['type'] == 'page', **config}
     cards = []
     task_sections = task_sections or {}
     check_label = 'Self-check' if task_sections else 'Guidance and self-check'
@@ -283,7 +303,7 @@ def render_compact_body(frontmatter: dict, instructions_html: str, task_sections
     ident = html.escape(task['id'], quote=True)
     criteria = ''.join(f'<li>{html.escape(c)}</li>' for c in task['criteria'])
     reflection = f'<p>{html.escape(task["reflection"])}</p>' if task.get('reflection') else ''
-    payload = {'artifactId': frontmatter['artifact_id'], 'title': frontmatter['title'], 'module': frontmatter['module'], **config}
+    payload = {'artifactId': frontmatter['artifact_id'], 'title': frontmatter['title'], 'module': frontmatter['module'], 'practiceOnly': frontmatter['type'] == 'page', **config}
     serialized = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     link = _canvas_only_link(canvas_url)
     return f'''<style>{(ASSETS / 'guided-assignment.css').read_text()}
@@ -341,8 +361,22 @@ def render_reading_body(frontmatter: dict, instructions_html: str, task_sections
                          f'<label for="answer-{ident}">{prompt}</label>'
                          f'<textarea id="answer-{ident}" data-answer="{ident}" maxlength="20000" rows="7" aria-describedby="save-status"></textarea>'
                          f'<details><summary>Self-check</summary><ul>{criteria}</ul>{reflection}</details></div>')
-    payload = {'artifactId': frontmatter['artifact_id'], 'title': frontmatter['title'], 'module': frontmatter['module'], **config}
+    payload = {'artifactId': frontmatter['artifact_id'], 'title': frontmatter['title'], 'module': frontmatter['module'], 'practiceOnly': frontmatter['type'] == 'page', **config}
     serialized = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+    if frontmatter['type'] == 'page':
+        return f'''<style>{(ASSETS / 'guided-assignment.css').read_text()}
+{(ASSETS / 'guided-reading.css').read_text()}</style>
+<div class="guided-workspace guided-reading" id="guided-workspace">
+{instructions_html}
+<p>{html.escape(config.get('standing_instruction', 'Practice here. No Canvas submission is required.'))}</p>
+{''.join(cards)}
+<p id="save-status" role="status">Practice answers save in this browser.</p>
+<p id="completion-status" role="status"></p>
+<button type="button" id="clear-draft">Clear practice answers</button>
+<div id="clear-confirmation" hidden><p>Clear this practice draft?</p><button type="button" id="confirm-clear">Clear saved responses</button><button type="button" id="cancel-clear">Keep my responses</button></div>
+<script type="application/json" id="guided-config">{serialized}</script>
+<script>{(ASSETS / 'guided-assignment.js').read_text()}</script>
+</div>'''
     link = _canvas_only_link(canvas_url)
     return f'''<style>{(ASSETS / 'guided-assignment.css').read_text()}
 {(ASSETS / 'guided-reading.css').read_text()}</style>

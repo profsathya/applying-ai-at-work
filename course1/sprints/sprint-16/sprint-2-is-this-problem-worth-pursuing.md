@@ -12,6 +12,9 @@ submission_type: none
 learning_goal: Gather evidence, adjust your frame, and decide whether the problem you chose
   is worth the rest of the course.
 publish: true
+require_sequential_progress: true
+prerequisite_modules: [course1-sprints-welcome-and-orientation-v2-welcome-and-orientation-v2, course1-sprints-sprint-14-sprint-1-find-the-problem-worth-solving]
+module_unlock_at: "2026-10-18T23:59:00-07:00"
 ---
 
 

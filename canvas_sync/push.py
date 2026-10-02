@@ -36,6 +36,7 @@ from canvas_sync.completion import (
     completion_requirement_state_value,
 )
 from canvas_sync.instance_guard import check_env_matches_instance, check_instance_ready
+from canvas_sync.module_controls import module_control_payload, verify_module_controls
 from canvas_sync.hosted_html import (
     artifact_hosted_info,
     discover_artifact_files as discover_hosted_artifact_files,
@@ -452,6 +453,7 @@ def push_artifact(
     hosted_output_dir: Path | None = None,
     *,
     render_course: bool = True,
+    convert_concept_page: bool = False,
 ) -> dict:
     repo_root = Path.cwd().resolve()
     md_path = md_path.resolve()
@@ -499,6 +501,22 @@ def push_artifact(
         artifacts = deployment_state.setdefault("artifacts", {})
         state_key = artifact_entry_key(fm, rel_path, external_state=store.external)
         existing = artifacts.get(state_key, {})
+        if convert_concept_page and existing.get('canvas_type') == 'assignment' and artifact_type == 'page':
+            from canvas_sync.concept_page_conversion import convert_empty_assignment
+            if hosted_output_dir is None:
+                raise ValueError('Concept-page conversion requires hosted-output-dir')
+            info = artifact_hosted_info(md_path, manifest_path, manifest, fm)
+            if not info['enabled']:
+                raise ValueError('Concept-page conversion requires hosted HTML')
+            render_hosted_artifact(md_path, manifest_path, hosted_output_dir,
+                                   manifest=manifest, state=deployment_state)
+
+            def save_conversion(entry):
+                artifacts[state_key] = entry
+                store.save(deployment_state, state_path)
+
+            existing = convert_empty_assignment(client, fm, existing,
+                iframe_shell(info['hosted_url'], fm['title']), save_conversion)
         existing_id = existing.get("canvas_id")
         existing_page_url = existing.get("canvas_page_url")
         walkthrough_order = None
@@ -674,14 +692,13 @@ def push_artifact(
             publish=fm.get("publish", True),
         )
 
-        # Module-level progression is owned by the header, not repeated by items.
-        if canvas_artifact_type == "module_header" and "require_sequential_progress" in fm:
-            desired_sequential = fm["require_sequential_progress"]
-            updated_module = client.update_module(
-                module_id, {"require_sequential_progress": desired_sequential}
-            )
-            if updated_module.get("require_sequential_progress") is not desired_sequential:
-                raise ValueError(f"Module {module_id}: Canvas did not confirm sequential progression")
+        # Module-level progression, prerequisites and release dates are owned by the header.
+        if canvas_artifact_type == "module_header" and any(key in fm for key in ("require_sequential_progress", "module_unlock_at", "prerequisite_modules")):
+            modules = client.list_modules() if "prerequisite_modules" in fm else []
+            controls = module_control_payload(fm, artifacts, modules, module_id)
+            if controls:
+                updated_module = client.update_module(module_id, controls)
+                verify_module_controls(updated_module, controls)
 
         canvas_module_item_id = existing.get("canvas_module_item_id")
         # A provisional entry (identity saved right after creation, publish
@@ -767,10 +784,16 @@ def push_artifact(
                 and not completion_requirement
                 and existing.get("completion_requirement")
             ):
-                raise ValueError(
-                    f"{rel_path}: completion_requirement none cannot safely clear an existing Canvas "
-                    "module completion requirement through the artifact push path"
-                )
+                if fm.get('completion_requires_published') and fm.get('publish') is False:
+                    updated_item = client.update_module_item(module_id, int(canvas_module_item_id),
+                                                             {"completion_requirement": {}})
+                    if updated_item.get('completion_requirement'):
+                        raise ValueError(f'{rel_path}: Canvas did not clear the unpublished item requirement')
+                else:
+                    raise ValueError(
+                        f"{rel_path}: completion_requirement none cannot safely clear an existing Canvas "
+                        "module completion requirement through the artifact push path"
+                    )
 
         # Record successful module placement into the provisional entry right
         # away, so a failure in the remaining steps leaves a retry that knows
@@ -830,6 +853,8 @@ def push_artifact(
             external_state=store.external,
         )
         entry["canvas_payload_hash"] = new_payload_hash
+        if existing.get('retired_assignment'):
+            entry['retired_assignment'] = existing['retired_assignment']
         if rubric_changed:
             # Keep the old stored hash (or none) so the warning repeats until
             # the maintainer acknowledges via canvas_sync/ack_rubric.py.
@@ -887,6 +912,8 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--file", type=Path, required=True)
     parser.add_argument("--manifest", type=Path, required=True)
+    parser.add_argument('--convert-concept-page', action='store_true',
+                        help='Recoverably replace an empty concept assignment with its configured practice page.')
     parser.add_argument(
         "--state-dir",
         type=Path,
@@ -905,6 +932,7 @@ def main() -> int:
             args.manifest,
             state_dir=args.state_dir,
             hosted_output_dir=args.hosted_output_dir,
+            convert_concept_page=args.convert_concept_page,
         )
         print(json.dumps(result, indent=2))
         return 0

@@ -15,6 +15,7 @@ completion_requirement: must_submit
 learner_labels: true
 learning_goal: Assemble the four sprints' work into one document about one problem that a stranger can follow.
 publish: false
+completion_requires_published: true
 guided_assignment:
   version: '1.0'
   presentation: walkthrough
