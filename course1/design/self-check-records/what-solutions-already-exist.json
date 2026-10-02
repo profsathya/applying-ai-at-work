@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "id": "what-solutions-already-exist",
+  "source": "sprint-2-self-checks.md",
+  "total": 50,
+  "passing": 35,
+  "blank_rung": "1",
+  "criteria": [
+    {
+      "id": "1",
+      "full": {
+        "text": "At least three rows, each a thing that already exists (a tool, a practice, a workaround, a person), not something you would build.",
+        "points": 10
+      },
+      "3": {
+        "text": "Three rows, one of them a solution you would build.",
+        "points": null
+      },
+      "1": {
+        "text": "Fewer than three rows, or mostly things you would build.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "completeness"
+    },
+    {
+      "id": "2",
+      "full": {
+        "text": "\"How it works\" is written from what you have actually seen or read, and says \"cannot tell yet\" where you have not looked.",
+        "points": 12
+      },
+      "3": {
+        "text": "Mostly seen; one row written from how it probably works.",
+        "points": null
+      },
+      "1": {
+        "text": "Rows written from guesses dressed as facts.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "honesty"
+    },
+    {
+      "id": "3",
+      "full": {
+        "text": "\"What using it here would involve\" names what would have to change for the people in your frame, not whether you like the option.",
+        "points": 12
+      },
+      "3": {
+        "text": "Names a change for some rows; others give an opinion of the option.",
+        "points": null
+      },
+      "1": {
+        "text": "Opinions or blanks in place of what would change.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "specificity"
+    },
+    {
+      "id": "4",
+      "full": {
+        "text": "The rows include something close to home, how people already cope, as well as something from outside the situation.",
+        "points": 8
+      },
+      "3": {
+        "text": "Only outside tools, or only workarounds.",
+        "points": null
+      },
+      "1": {
+        "text": "One kind of row only, and fewer than three.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "judgment"
+    },
+    {
+      "id": "5",
+      "full": {
+        "text": "No row is marked as the answer; open questions and blanks are left standing.",
+        "points": 8
+      },
+      "3": {
+        "text": "One row favoured before looking, questions kept.",
+        "points": null
+      },
+      "1": {
+        "text": "A row chosen as the solution, blanks filled with guesses.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "judgment"
+    }
+  ],
+  "gate": {
+    "rule": null,
+    "failure_grade": null
+  },
+  "grading_note": "Read for meaning. Score each criterion once across the submission set. A blank part receives its criterion\u2019s 1 rung. Cite the part and frame or table for every below-full judgment.",
+  "open_questions": [
+    "Assign unique ranks and exact 3/1 points; preserve existing weights and text.",
+    "Decide the numeric grade on gate failure; do not infer zero, a cap, or a floor.",
+    "Revise provisional rung descriptions after the first batch.",
+    "Decide whether a core-absence gate applies."
+  ]
+}

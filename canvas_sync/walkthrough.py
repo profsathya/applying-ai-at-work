@@ -281,8 +281,11 @@ def render_walkthrough_body(frontmatter: dict, intro_html: str, task_sections: d
 <div class="walk-teaching">{teaching}</div>
 {self_check}
 {response}</section>''')
+    if config.get('self_check_record'):
+        from canvas_sync.self_check import load_record, render_full_credit
+        cards.append(render_full_credit(load_record(config['self_check_record'])))
     final_items = ''.join(f'<li>{html.escape(item)}</li>' for item in config.get('final_check', []))
-    if final_items:
+    if final_items and not config.get('self_check_record'):
         cards.append(f'<details class="walk-check walk-shared-check" open><summary>What to check in your work</summary>'
                      f'<ul>{final_items}</ul></details>')
     submission = frontmatter['submission_type']

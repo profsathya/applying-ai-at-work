@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "id": "stakeholder-map",
+  "source": "sprint-3-self-checks.md",
+  "total": 50,
+  "passing": 35,
+  "blank_rung": "1",
+  "criteria": [
+    {
+      "id": "1",
+      "full": {
+        "text": "All four stakeholders have a Role and a relationship that say how they connect to the problem.",
+        "points": 7
+      },
+      "3": {
+        "text": "Two or three stakeholders have a Role and a relationship that say how they connect to the problem.",
+        "points": 5
+      },
+      "1": {
+        "text": "One stakeholder has a Role and a relationship that say how they connect to the problem.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "2",
+      "full": {
+        "text": "For all four stakeholders, impact and authority are answered, with different answers or a note on why they are the same.",
+        "points": 7
+      },
+      "3": {
+        "text": "For two or three stakeholders, impact and authority are answered, with different answers or a note on why they are the same.",
+        "points": 5
+      },
+      "1": {
+        "text": "For one stakeholder, impact and authority are answered, with different answers or a note on why they are the same.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "3",
+      "full": {
+        "text": "For all four stakeholders, the Need describes what the person cares about, not a tool or fix.",
+        "points": 6
+      },
+      "3": {
+        "text": "For two or three stakeholders, the Need describes what the person cares about, not a tool or fix.",
+        "points": 4
+      },
+      "1": {
+        "text": "For one stakeholder, the Need describes what the person cares about, not a tool or fix.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "4",
+      "full": {
+        "text": "For all four stakeholders, Constraints and Next question are answered. Short answers count.",
+        "points": 4
+      },
+      "3": {
+        "text": "For two or three stakeholders, Constraints and Next question are answered.",
+        "points": 3
+      },
+      "1": {
+        "text": "For one stakeholder, Constraints and Next question are answered.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "5",
+      "full": {
+        "text": "Every answered field is marked Confirmed or Inferred, with a short reason.",
+        "points": 9
+      },
+      "3": {
+        "text": "Most answered fields are marked Confirmed or Inferred, with a short reason.",
+        "points": 6
+      },
+      "1": {
+        "text": "A few answered fields are marked Confirmed or Inferred, with a short reason.",
+        "points": 2
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "6",
+      "full": {
+        "text": "Two or three assumption blocks are included, each with all four lines answered.",
+        "points": 6
+      },
+      "3": {
+        "text": "Two or three assumption blocks are included, with one or two lines missing in total.",
+        "points": 4
+      },
+      "1": {
+        "text": "One assumption block is included, or three or more lines are missing.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "7",
+      "full": {
+        "text": "In every assumption block, the question asks what happened or what the person does, and a change is named.",
+        "points": 6
+      },
+      "3": {
+        "text": "In some assumption blocks, but not all, the question asks what happened or what the person does, and a change is named.",
+        "points": 4
+      },
+      "1": {
+        "text": "In one assumption block at most, the question asks what happened or what the person does.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    },
+    {
+      "id": "8",
+      "full": {
+        "text": "A first choice and a backup are named, with a reason for talking to the first choice first.",
+        "points": 5
+      },
+      "3": {
+        "text": "A first choice and a backup are named, but the reason for talking to the first choice first is unclear.",
+        "points": 4
+      },
+      "1": {
+        "text": "A first choice or a backup is missing, or no reason is given.",
+        "points": 1
+      },
+      "rank": null,
+      "tag": null
+    }
+  ],
+  "gate": {
+    "rule": "Fewer than two stakeholders does not pass.",
+    "failure_grade": null
+  },
+  "grading_note": "Read for meaning. Score each criterion once across the submission set. A blank part receives its criterion’s 1 rung. Cite the part and frame or table for every below-full judgment.",
+  "open_questions": [
+    "Assign unique ranks and quality tags.",
+    "Review full-line counts, compound criteria, learner-facing rung wording and set thresholds without silently rewriting them.",
+    "Decide the numeric grade on gate failure; do not infer zero, a cap, or a floor.",
+    "Revise provisional rung descriptions after the first batch."
+  ]
+}

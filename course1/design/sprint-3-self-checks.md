@@ -8,11 +8,11 @@ depends_on: Common-Curriculum skills/writing-assignments/references/rules.md (Cr
 
 CIS 501, Sprint 3: Integrate People and Context (V3)
 Two rubrics, 50 points each. Passing: 35 points (70%).
-Status: first pass, 1 October 2026. Documentation only.
+Status: reconciliation draft. Full lines and points belong openly on the page under the newer guide; the earlier quick-check-only principles below are historical. Unique numeric ranks, tags, gate policy and wording review remain author decisions. Normalized records preserve existing weights and exact rung points in self-check-records/.
 
 ## Part 1. Stakeholder Map Canvas Walkthrough
 
-Unchanged from course1/design/sprint-3-stakeholder-map-rubric.md (v0.1).
+Weights and criterion text from course1/design/sprint-3-stakeholder-map-rubric.md (v0.1); blank handling follows the newer self-check-guide.md rule 13.
 
 ### Rubric
 
@@ -31,7 +31,7 @@ Unchanged from course1/design/sprint-3-stakeholder-map-rubric.md (v0.1).
 | 8 | A first choice and a backup are named, with a reason for talking to the first choice first. | 5 | A first choice and a backup are named, but the reason for talking to the first choice first is unclear. (4) | A first choice or a backup is missing, or no reason is given. (1) |
 | | **Total** | **50** | **35** | **9** |
 
-**Grader note.** Read for meaning. If the idea is there in the student's own words, give the points. A blank row earns 0.
+**Grader note.** Read for meaning. If the idea is there in the student's own words, give the points. A blank row receives that criterion's minimal (1) rung points, not zero. Cite the section and row or stakeholder for each below-full judgment.
 
 **What makes it strong.** The Inferred fields are the ones the assumption blocks go after. The first choice is the person who can answer the top assumption.
 
@@ -82,7 +82,7 @@ Status: first pass, 1 October 2026.
 | 10 | All seven parts of the Problem Frame are included and reflect what Section D says changed. | 10 | Four to six parts are included, or the frame does not show the change named in Section D. (7) | Three or fewer parts are included. (2) |
 | | **Total** | **50** | **35** | **11** |
 
-**Grader note.** Read for meaning. If the idea is there in the student's own words, give the points. A blank row earns 0. A Problem Frame that held, with a reason, earns full points; no change is a valid result.
+**Grader note.** Read for meaning. If the idea is there in the student's own words, give the points. A blank row receives that criterion's minimal (1) rung points, not zero. Cite the section and row or stakeholder for each below-full judgment. A Problem Frame that held, with a reason, earns full points; no change is a valid result.
 
 **What makes it strong.** The assumption in Section A is the one the questions go after. What was confirmed or challenged in Section C shows up in Section D and in the updated Problem Frame.
 
@@ -105,7 +105,7 @@ The box does not mention the updated Problem Frame. Suggested addition to the la
 2. **Built on Sathya's Self-check rule and Leslie's Sprint 1 example.** Neutral, observable lines; points per row; full, partial, and minimal levels.
 3. **Grade only what is on the page.** No row depends on what the student knows or could do outside the assignment.
 4. **Read for meaning, not wording.** Short or plain answers earn the points if the idea is there.
-5. **Points follow effort.** Rows are weighted by how much students actually write: about 66% stakeholder tables, 24% assumption blocks, 10% first contact.
+5. **Points follow effort.** Rows are weighted by how much students actually write: 10% Section A, 18% questions, 20% Section B, 14% Section C, 18% Section D, 20% updated Problem Frame.
 6. **Each thing is graded once.** No blank field loses points in two rows.
 7. **Clear on full, generous on partial.** The full-points line states exact counts. Partial covers "most of it." Minimal is for real gaps.
 8. **Every cell is a full statement.** Numbers are written out, and no cell relies on another to make sense.

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "id": "problem-frame-taking-stock",
+  "source": "sprint-2-self-checks.md",
+  "total": 50,
+  "passing": 35,
+  "blank_rung": "1",
+  "criteria": [
+    {
+      "id": "1",
+      "full": {
+        "text": "Box 1 names at least one person and what fixing this would ask of them (a step, a habit, time, or a decision), drawn from column 3 of your What exists table.",
+        "points": 10
+      },
+      "3": {
+        "text": "A person named, the ask vague, or not tied to column 3.",
+        "points": null
+      },
+      "1": {
+        "text": "No person, or a solution described instead of what it asks.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "specificity"
+    },
+    {
+      "id": "2",
+      "full": {
+        "text": "Box 2 holds all seven parts, dated, Part 3c now filled, and every row of Part 6 with its Status column filled and a reason for each rating.",
+        "points": 12
+      },
+      "3": {
+        "text": "A part or a few Status entries missing, or ratings without reasons.",
+        "points": null
+      },
+      "1": {
+        "text": "Several parts missing, 3c blank, or Part 6 unchanged from Sprint 1.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "completeness"
+    },
+    {
+      "id": "3",
+      "full": {
+        "text": "Part 6 has at least one assumption rated high risk and unconfirmed.",
+        "points": 6
+      },
+      "3": {
+        "text": "A high-risk row marked confirmed without saying how.",
+        "points": null
+      },
+      "1": {
+        "text": "No high-risk row at all.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "honesty"
+    },
+    {
+      "id": "4",
+      "full": {
+        "text": "Box 3 gives one of the three verdicts, and the reasons draw on the risk ratings, what exists, and what the change would ask.",
+        "points": 12
+      },
+      "3": {
+        "text": "A verdict with reasons from one of the three sources.",
+        "points": null
+      },
+      "1": {
+        "text": "A verdict with no reasons, or reasons from feeling alone.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "judgment"
+    },
+    {
+      "id": "5",
+      "full": {
+        "text": "Box 3 says what is still uncertain and what would settle it. A \"depends on\" names what and who. A no names the runner-up.",
+        "points": 10
+      },
+      "3": {
+        "text": "Uncertainty named without what would settle it.",
+        "points": null
+      },
+      "1": {
+        "text": "Nothing uncertain named, or a \"depends on\" with no condition.",
+        "points": null
+      },
+      "rank": null,
+      "tag": "honesty"
+    }
+  ],
+  "gate": {
+    "rule": null,
+    "failure_grade": null
+  },
+  "grading_note": "Read for meaning. Score each criterion once across the submission set. A blank part receives its criterion\u2019s 1 rung. Cite the part and frame or table for every below-full judgment.",
+  "open_questions": [
+    "Assign unique ranks and exact 3/1 points; preserve existing weights and text.",
+    "Decide the numeric grade on gate failure; do not infer zero, a cap, or a floor.",
+    "Revise provisional rung descriptions after the first batch.",
+    "Decide whether a core-absence gate applies."
+  ]
+}
