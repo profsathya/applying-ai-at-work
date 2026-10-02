@@ -25,8 +25,7 @@ guided_assignment:
   feedback_endpoint: https://cti-course-ai.netlify.app/.netlify/functions/walkthrough-feedback
   feedback_protocol: walkthrough-v1
   document_prefix:
-  - Learning Plan, week 8. Attach this Word file and the separate Week 7 Word file
-    from Name the Gap. Keep Part A and C1 in that earlier file unchanged.
+  - 'Learning Plan, Sprint 4 Week 2. Attach this Word file and the separate Week 1 Word file (learning-plan-week-7.docx) from Name the Gap. Keep Part A and C1 in that earlier file unchanged.'
   tasks:
   - id: template-timing
     kind: table
