@@ -91,13 +91,14 @@ In between Choices and Confirmation sits your judgment.
 
 ## Part 2: Requesting and submitting the transcript
 
-The transcript is the only thing you submit for this Dojo Lab. Five steps:
+The transcript is the only thing you submit for this Dojo Lab. Six steps:
 
 1. Copy the transcript request at the bottom of this page.
 2. Paste it into your Dojo conversation as your next message.
 3. If the reply ends with CONTINUED, type "continue" and repeat until it stops.
 4. Copy the Dojo's reply, every chunk, in order.
-5. Paste it into the Canvas text box below this page and submit.
+5. Scroll to the top of this Canvas page and select **Start Assignment**. A text box opens below this page.
+6. Paste the transcript into that box and select **Submit Assignment**. The box near the bottom of this page only saves a draft; pasting there does not submit.
 
 ## Part 3: Updating your Learning Plan
 
