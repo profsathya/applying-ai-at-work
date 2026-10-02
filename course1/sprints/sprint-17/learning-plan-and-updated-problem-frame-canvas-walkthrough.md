@@ -54,6 +54,15 @@ guided_assignment:
       - text: CIS 502
     read_only: true
     instruction_section: Bring your Week 7 Word file
+  - id: gap-list-changes
+    kind: response
+    prompt: Changes to my gap list since Name the Gap
+    feedback_enabled: false
+    feedback_omission_reason: This response records completed Dojo Lab decisions rather than requesting a new AI review.
+    criteria:
+    - Each change names the gap, what changed, and why.
+    - Part B follows the updated list.
+    instruction_section: Record changes to your gap list
   - id: plan-gap-1
     kind: table
     prompt: Part B. Gap 1
@@ -405,6 +414,18 @@ Write your own answers before requesting optional AI feedback. A selected row ma
 
 The [Learning Plan template](https://docs.google.com/document/d/1XgCf1cTadZOCQtHdLEoebhJ8FWNjV6IzKUslKAtqxIA/copy) is a reference if you need to see the layout. Keep your Week 1 Word file with Part A and C1 unchanged. This walkthrough produces a separate Week 2 Word file with Part B and C2. Attach both files in this assignment. The table below shows when each part belongs.
 
+## Record changes to your gap list
+
+Your Week 1 Word file stays as you submitted it. If the Dojo Lab led you to rewrite, re-sort, or re-rank a gap, record it here: which gap, what changed, and why. One line per change. Part B below follows this updated list.
+
+If nothing changed, write "No changes" and one sentence on why your list held up.
+
+*Example:*
+
+Gap 2, rewritten. Was "whether anyone tried to fix handovers before." Now "why the shared handover sheet stopped being used." The first version was too broad to plan steps for.
+
+Gap 3, re-sorted from useful to blocking. Until I know how many handovers happen each month, I can't say how big the problem is.
+
 ## Plan for Gap 1
 
 For each gap in your plan, in rank order, answer five questions. One or two sentences each is enough.
@@ -441,7 +462,7 @@ Use this block for a third planned gap. Leave it blank if your ranked list stops
 
 ## If your plan has more than three gaps
 
-Add a block for each remaining planned gap here. Use the same six lines as the template: Dojo raw material and the five planning questions. Keep the ranking from Part A unless your Dojo work gave you a reason to change it; record that reason here.
+Add a block for each remaining planned gap here. Use the same six lines as the template: Dojo raw material and the five planning questions.
 
 ## Keep your Dojo decisions
 
