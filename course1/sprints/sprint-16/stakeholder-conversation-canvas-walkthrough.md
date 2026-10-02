@@ -293,7 +293,7 @@ guided_assignment:
       label: Your Problem Frame, all seven parts, brought up to date.
     header_rows: 0
     criteria:
-    - All seven parts of your Problem Frame, brought up to date.
+    - 'All seven parts of your Problem Frame, copied from your Problem Frame document, with "Last updated: Sprint 3" and the date at the top.'
     instruction_section: Update your Problem Frame
     feedback_enabled: false
     feedback_omission_reason: The updated Problem Frame is pasted whole for the report;
@@ -303,7 +303,7 @@ source_provenance: stakeholder-conversation-canvas-walkthrough.sources.json
 
 # Stakeholder Conversation Canvas Walkthrough
 
-Now it's time to test your Problem Frame against an actual stakeholder, not AI. This activity has four parts: preparing for the conversation, setting it up, having it, and documenting what you learned. Bring your current Stakeholder Map and Problem Frame. You will submit this report, with your updated Problem Frame in it.
+Now it's time to test your Problem Frame against an actual stakeholder, not AI. This activity has four parts: preparing for the conversation, setting it up, having it, and documenting what you learned. Bring your current Stakeholder Map and your Problem Frame document. You will submit this report, with a copy of your updated Problem Frame in it.
 
 Write before requesting optional AI feedback. It sees only the selected row, cannot know what happened in your workplace, and cannot supply evidence. Use roles or initials in feedback requests, leave out confidential details, and keep a path through every step without feedback. You decide what to revise.
 
@@ -379,13 +379,13 @@ If the conversation fully confirmed your original frame, report that honestly. A
 
 ## Update your Problem Frame
 
-Now bring your Problem Frame up to date with what you heard. Update it on evidence, not on your own read of what you heard. The parts that will have updates are at least:
+Open your Problem Frame document and bring it up to date with what you heard. Make the changes in the document itself. Update it on evidence, not on your own read of what you heard. The parts that will have updates are at least:
 
 1. **Part 6, your assumptions.** In the Status column, mark each assumption this conversation tested: confirmed if it settled it, unverified if it did not.
 2. **Parts 2, 3a, or 4a,** only if what you heard changed them.
 3. **Part 7, what you do not know yet.**
 4. **Last updated,** at the top: Sprint 3 and the date.
 
-You can change anything in your Problem Frame if your thinking has changed. Then copy and paste its entire contents into the box below.
+You can change anything in your Problem Frame if your thinking has changed. When your Problem Frame document is up to date, copy its entire contents and paste them into the box below. Your document stays your current version. The copy in this report is your record of where your frame stood at the end of Sprint 3.
 
 Then update your Stakeholder Map the same way. Keep it for your own work; you do not submit it here.

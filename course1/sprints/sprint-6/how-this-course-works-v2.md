@@ -30,7 +30,7 @@ Each sprint develops your thinking and contributes evidence to the final integra
 
 ### 1. Find the problem worth solving · Weeks 1-2
 
-Use observations from work or life to compare candidate problems, write draft problem frames, use AI to test and widen them, and choose one problem worth investigating. Keep one Candidate Log across the sprint and carry your chosen **Problem Frame** into Sprint 2.
+Use observations from work or life to compare candidate problems, write draft problem frames, use AI to test and widen them, and choose one problem worth investigating. Carry your chosen **Problem Frame** into Sprint 2 as your Problem Frame document.
 
 **Available now:** the complete two-week Sprint 1 sequence. Complete Brainstorm your list, Get underneath three to five, and First frames without AI. Use AI only when the Dojo Lab introduces it, then submit your Problem Frame and reflection.
 
@@ -53,6 +53,18 @@ Identify knowledge that is blocking your next move. Follow a focused learning pa
 Bring your problem frame, stakeholder input, and learning evidence together in the integrated problem document and readiness report. Show both your argument and how your thinking developed.
 
 This is the course roadmap. The course homepage identifies which activities are currently available.
+
+## Your Problem Frame document
+
+In Sprint 1 you write a Problem Frame, your written account of the problem you chose. You keep it in one document for the whole course. This is your Problem Frame document.
+
+Each sprint teaches you something that changes your frame. Each time an activity asks for your updated frame:
+
+1. Open your Problem Frame document and make the changes there first.
+2. Change the line at the top to the current sprint and the date, for example "Last updated: Sprint 3, October 20."
+3. Copy the updated frame into the activity.
+
+Your Problem Frame document is always your current version. If you are ever unsure which version is the latest, open this document and check the date at the top. Each sprint's submission keeps the version from that sprint, so you can look back and see how your thinking changed.
 
 ## What gets assessed
 
