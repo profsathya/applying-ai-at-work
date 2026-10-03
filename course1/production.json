@@ -773,17 +773,17 @@
       "canvas_payload_hash": "056422725850685a9024887e860840954be30fa529ac485240e574d3d529fd02",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "9c523531f128eb79c44d05ac0594d6d48ea06baea513df8686408d099fa930d1",
+      "content_hash": "73e52329e1b2db081263259a17510ca6e2aca641a5d87efbd3a9b4795c6d933a",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "62e394b2a70eda64caabcfb4b1b3a448753d2a344aac804c1d3ad77de7a0415c",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "hosted_hash": "f4bf27166e40dd033d46fb5318d9e2954e75bed4fbab074f3aafb87b15594faa",
+      "hosted_last_rendered": "2026-10-03T15:29:51+00:00",
       "hosted_path": "course1/assignments/what-exists-and-what-it-means.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/what-exists-and-what-it-means.html",
-      "last_pushed": "2026-09-30T23:57:27+00:00",
+      "last_pushed": "2026-10-03T15:29:51+00:00",
       "local_path": "course1/sprints/sprint-16/what-exists-and-what-it-means.md",
       "position": 9,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "a2007f7768a7eb8959bf02af520223ea53b5a303"
+      "source_commit": "2ff076840969a925ff2131705ba44075480cf7d3"
     },
     "course1-sprints-sprint-16-what-solutions-already-exist": {
       "artifact_id": "course1-sprints-sprint-16-what-solutions-already-exist",
@@ -816,17 +816,17 @@
       "canvas_payload_hash": "dd33f84f3cccdbfa411342ac4a9ae9bf84ff85d1717f99d5b8a330d4ab3caf28",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "3dcc0e9c25ae6220f1336ca141037f57a2a50dfd20b7cf172f85d514910342c0",
+      "content_hash": "36b334bc6e75cb3baf60cce2d9ca9ff673cd1f998a7d47be5eebf0d813af4379",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "ef2524e67c94a3cc40f07550cddb928a0ef284ac6bbf07073150978d12490fbe",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "hosted_hash": "0bb0ae9b91622e24c49a520d5eeb5f9ef311dcd505827319a4853d5d10d46a4a",
+      "hosted_last_rendered": "2026-10-03T15:29:56+00:00",
       "hosted_path": "course1/assignments/what-solutions-already-exist-walk-through.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/what-solutions-already-exist-walk-through.html",
-      "last_pushed": "2026-09-30T23:57:31+00:00",
+      "last_pushed": "2026-10-03T15:29:56+00:00",
       "local_path": "course1/sprints/sprint-16/what-solutions-already-exist-walk-through.md",
       "position": 7,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "a2007f7768a7eb8959bf02af520223ea53b5a303"
+      "source_commit": "2ff076840969a925ff2131705ba44075480cf7d3"
     },
     "course1-sprints-sprint-16-which-assumptions": {
       "artifact_id": "course1-sprints-sprint-16-which-assumptions",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-03T15:27:41+00:00"
+  "last_sync": "2026-10-03T15:29:56+00:00"
 }
