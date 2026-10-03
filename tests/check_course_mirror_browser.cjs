@@ -4,6 +4,7 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright-core');
 const hosted = path.resolve(process.argv[2]);
+const live = process.argv[3] === '--live';
 const config = JSON.parse(fs.readFileSync(path.join(hosted, 'deanza/mirrors/deanza46601/config.json')));
 const mime = {'.html':'text/html', '.js':'text/javascript', '.json':'application/json', '.css':'text/css', '.svg':'image/svg+xml', '.png':'image/png', '.jpg':'image/jpeg', '.txt':'text/plain'};
 let changed = false;
@@ -19,6 +20,7 @@ async function main() {
       forbidden.push(url.hostname); await route.abort(); return;
     }
     if (url.origin !== 'https://profsathya.github.io') { await route.abort(); return; }
+    if (live) { await route.continue(); return; }
     const relative = decodeURIComponent(url.pathname.replace(/^\/Common-Curriculum\//, ''));
     const target = path.resolve(hosted, relative.endsWith('/') ? relative+'index.html' : relative);
     if (!target.startsWith(hosted+path.sep) || !fs.existsSync(target) || !fs.statSync(target).isFile()) { await route.fulfill({status:404,body:'Missing fixture'}); return; }
@@ -56,15 +58,23 @@ async function main() {
   await page.locator('#mirror-fragment-test').click();
   assert.equal(new URL(page.url()).searchParams.get('page'), 'assignments/problem-frame-is-it-worth-pursuing.html');
   await page.locator('textarea').first().fill('Synthetic mirror QA response');
-  changed = true;
+  changed = !live;
   await page.reload();
-  await page.waitForSelector('#mirror-live-proof');
+  await page.waitForSelector(live ? '[data-course-mirror-source]' : '#mirror-live-proof');
   assert.equal(await page.locator('textarea').first().inputValue(), 'Synthetic mirror QA response');
+  for (const [value, phrase] of [
+    ['assignments/what-exists-and-what-it-means.html','Any question still open says what you tried to find out.'],
+    ['assignments/what-solutions-already-exist-walk-through.html','Where you do not know, write the question you would need answered rather than a guess dressed as a fact.']
+  ]) {
+    await page.goto(entry(value));
+    await page.waitForSelector('[data-course-mirror-source]');
+    assert.ok((await page.locator('body').textContent()).includes(phrase));
+  }
   await page.goto(entry('../course2/home.html'));
   await page.waitForSelector('[role="alert"]');
   assert.equal(forbidden.length, 0, JSON.stringify(forbidden));
   assert.equal(errors.length, 0, JSON.stringify(errors));
-  console.log(JSON.stringify({passed:true,pages:results.length,live_upstream_change_seen:true,draft_retained:true,native_home_links:true,web_context_retained:true,unknown_page_blocked:true,forbidden_requests:forbidden,script_errors:errors,results},null,2));
+  console.log(JSON.stringify({passed:true,mode:live?'live_public':'local_fixtures',pages:results.length,live_upstream_fixture_change_seen:!live,latest_merged_wording_verified:true,draft_retained:true,native_home_links:true,web_context_retained:true,unknown_page_blocked:true,forbidden_requests:forbidden,script_errors:errors,results},null,2));
   await browser.close();
 }
 main().catch(error => {console.error(error);process.exit(1);});
