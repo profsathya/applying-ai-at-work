@@ -114,7 +114,16 @@ def snapshot(api, config, side, extra):
     return data
 
 
-def mirrored_body(body, config):
+INSTITUTIONAL_CHROME = re.compile(
+    r'^(<link\b[^>]*\bhref="https://instructure-uploads\.s3\.amazonaws\.com/account_\d+/attachments/\d+/dp_app\.css"[^>]*>)(.*?)(<script\b[^>]*\bsrc="https://instructure-uploads\.s3\.amazonaws\.com/account_\d+/attachments/\d+/dp_app\.js"[^>]*></script>)$',
+    re.S,
+)
+
+
+def mirrored_body(body, config, destination_body=None):
+    source_chrome = INSTITUTIONAL_CHROME.fullmatch(body)
+    if source_chrome:
+        body = source_chrome[2]
     def replace(match):
         source = urlsplit(html.unescape(match[2]))
         base = urlsplit(config["sharedBaseUrl"])
@@ -125,6 +134,12 @@ def mirrored_body(body, config):
     result, count = re.subn(r'(<iframe\b[^>]*\bsrc=")(.*?)(")', replace, body)
     if count != 1 or config["sourceCanvasUrl"] in result:
         raise ValueError("Expected exactly one shared hosted iframe without source Canvas links")
+    # Institutional editor assets belong to the destination. Preserve their
+    # exact existing wrapper rather than copying source institutional chrome or
+    # treating Canvas's retained wrapper as a failed content write.
+    destination_chrome = INSTITUTIONAL_CHROME.fullmatch(destination_body or "")
+    if destination_chrome:
+        result = destination_chrome[1] + result + destination_chrome[3]
     return result
 
 
@@ -147,7 +162,7 @@ def plan(before, config, extra):
         target_id = mapping["assignments"][str(original["id"])]
         current = next(row for row in dst["assignments"] if row["id"] == target_id)
         desired = {k: original[k] for k in ASSIGNMENT_FIELDS if k not in ("id", "description", "assignment_group_id")}
-        desired["description"] = mirrored_body(original["description"], config)
+        desired["description"] = mirrored_body(original["description"], config, current["description"])
         desired["assignment_group_id"] = extra["assignment_groups"][str(original["assignment_group_id"])]
         change("/assignments/" + str(target_id), desired, current, "assignment")
     for original in src["pages"]:
@@ -155,11 +170,11 @@ def plan(before, config, extra):
         current = next(row for row in dst["pages"] if row["url"] == slug)
         assert current["page_id"] == extra["pages"][str(original["page_id"])]
         assert original["front_page"] == current["front_page"], "Front-page identity must remain unchanged"
-        change("/pages/" + slug, {"title": original["title"], "body": mirrored_body(original["body"], config), "published": original["published"]}, current, "wiki_page")
+        change("/pages/" + slug, {"title": original["title"], "body": mirrored_body(original["body"], config, current["body"]), "published": original["published"]}, current, "wiki_page")
     for original in src["discussion_topics"]:
         target_id = mapping["discussion_topics"][str(original["id"])]
         current = next(row for row in dst["discussion_topics"] if row["id"] == target_id)
-        change("/discussion_topics/" + str(target_id), {"title": original["title"], "message": mirrored_body(original["message"], config), "published": original["published"]}, current, None)
+        change("/discussion_topics/" + str(target_id), {"title": original["title"], "message": mirrored_body(original["message"], config, current["message"]), "published": original["published"]}, current, None)
         if original.get("assignment_id"):
             # Canvas owns the discussion's backing assignment and updates its
             # description from the topic message. Verify its grading separately.

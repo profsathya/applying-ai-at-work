@@ -75,6 +75,15 @@ assert.equal(runtime.canvasLink('https://deanza.instructure.com/courses/46601/as
         for method, endpoint in [('POST','/assignments'), ('PUT',''), ('DELETE','/modules/2075'), ('PUT','/users/1')]:
             with self.assertRaises(ValueError): api.request(method, endpoint)
 
+    def test_destination_institutional_chrome_is_preserved(self):
+        source = '<div><iframe title="Home" src="'+self.config['sharedBaseUrl']+'home.html?context=canvas"></iframe></div>'
+        prefix = '<link rel="stylesheet" href="https://instructure-uploads.s3.amazonaws.com/account_1/attachments/2/dp_app.css">'
+        suffix = '<script src="https://instructure-uploads.s3.amazonaws.com/account_1/attachments/3/dp_app.js"></script>'
+        destination = prefix + source + suffix
+        desired = mirrored_body(source, self.config, destination)
+        self.assertEqual(desired, prefix + mirrored_body(source, self.config) + suffix)
+        self.assertEqual(mirrored_body(source, self.config, desired), desired)
+
     def test_source_position_gaps_do_not_reorder_destination(self):
         config = copy.deepcopy(self.config)
         config['mapping'] = {'modules':{'1':101},'module_items':{'2':102},'assignments':{},'discussion_topics':{},'page_urls':{'home':'home'}}

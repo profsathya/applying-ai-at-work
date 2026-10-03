@@ -32,7 +32,8 @@ mapping update; the tool does not create, delete, reimport, or enroll anyone.
 
 The destination shell stays unpublished. Institution-specific course name,
 timezone, term/dates, homepage setting, enrollments, submissions, and grades are
-preserved. The selected modules retain their logical order even if source
+preserved. Existing destination DesignPLUS stylesheet/script wrappers are also
+preserved around the mirrored iframe. The selected modules retain their logical order even if source
 position numbers have gaps from retired content.
 
 All credentials remain in local ignored `.env` files. There is no De Anza CI
