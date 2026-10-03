@@ -1,9 +1,9 @@
 ---
 purpose: Script for the CIS 501 welcome video, recorded together on Zoom by Tacey, Leslie, Melisa, and Jeremy; three and a half to four minutes; each person edits their own lines
-status: v0.4, 2 October 2026 (Tacey's opening in Leslie's words; three team points as reasons, not tips; Jeremy introduces the Dojo; trimmed to what the team needs). Earlier versions in git history.
+status: v0.5, 3 October 2026 (Leslie's segment in her own words; surname corrected). v0.4, 2 October 2026 (Tacey's opening in Leslie's words; three team points as reasons, not tips; Jeremy introduces the Dojo; trimmed to what the team needs). Earlier versions in git history.
 ---
 
-# Welcome video, v0.4
+# Welcome video, v0.5
 
 Record together on Zoom in speaker view, one take straight through, one restart allowed. Small stumbles stay in. Jeremy trims the ends and adds the closing text frame. Brackets mark what to fill in. Everything else is yours to reword. Keep each turn under 30 seconds.
 
@@ -17,7 +17,7 @@ I also want you to meet three other people who did a lot of work on the design a
 
 ## 2. The team (one point each)
 
-**Leslie.** I'm Leslie Kern. This course is going to ask you to slow down and really think about a problem, which might be a little uncomfortable. We all want to solve problems quickly. But AI will start working on whatever you put in front of it, and if that is the wrong thing, or a half-baked thing, or there is not enough clarity, the output is not going to be helpful. The human value in this age of AI is being able to direct AI to help you accomplish your goals. That means you have to be very clear on what your goal is.
+**Leslie.** Hi. I'm Leslie Maxwell, and I'm excited to welcome you. This course is going to ask you to slow down and really think about a problem, which might feel a little uncomfortable. We tend to want to solve problems quickly and move on. But as many of us are finding out, AI will work on whatever you put in front of it. Give it the wrong thing, or a half-baked thing, and what you get back is not very helpful. One of the real human values in this age of AI is being able to direct it toward what you actually want. That means being able to clearly frame your problem, and that is what we're going to do here.
 
 **Melisa.** I'm Melisa Villafuerte Mendoza. Another crazy thing about the introduction of AI into our lives is that human conversations have become even more important. This course is going to ask you to go talk to other people about the problem you're working on. Getting their perspectives will help you better understand what you're trying to solve.
 
