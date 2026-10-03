@@ -7,7 +7,7 @@ sprint: 16
 week: 2
 module: 'Sprint 2: Is This Problem Worth Pursuing?'
 position: 7
-points: 50
+points: 0
 submission_type: file_upload
 delivery_mode: guided_assignment
 completion_requirement: must_submit
@@ -23,8 +23,8 @@ guided_assignment:
     your own, before AI.
   builds_on: Bring your Problem Frame. Work without AI on this page; the next activity fills
     the table in.
-  standing_instruction: 50 points. Submit this walkthrough as one Word document,
-    and keep the exported file for the Dojo Lab.
+  standing_instruction: Own your progress · 0 points. Submit this walkthrough as one Word document
+    to complete this module requirement, and keep the exported file for the Dojo Lab.
   tasks:
   - id: your-table
     kind: table
