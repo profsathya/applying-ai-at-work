@@ -243,17 +243,17 @@
       "canvas_payload_hash": "d3cdd2489a4dfb21cf00d6763c3fb916218528b3a34bb244ea39897c44246735",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "544b7777ba018b14c3fd73f0ca9f266b0b25e60f1d8f27acaf0cddc590a45fc4",
+      "content_hash": "5fc3323ddd228dc15638436197070d46ad8005c8722dfb1072e3c994c4978934",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "da86e956f5d2a75a7da487f5bf70fc31410c5afe9f938dde8701b757f8b84501",
-      "hosted_last_rendered": "2026-10-02T20:19:57+00:00",
+      "hosted_hash": "eddb0271d89bb68342b7a02c51e0538b97d5b78339a04ec27e1f32cd4b1ef46b",
+      "hosted_last_rendered": "2026-10-03T13:46:07+00:00",
       "hosted_path": "course1/assignments/problem-frame.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/problem-frame.html",
-      "last_pushed": "2026-10-02T20:19:57+00:00",
+      "last_pushed": "2026-10-03T13:46:07+00:00",
       "local_path": "course1/sprints/sprint-14/problem-frame.md",
       "position": 9,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "a33d1c5e08d554454494f15d2853c14797b7fd33"
+      "source_commit": "fb44580ff390237b62dc230dd4bf996fa36379d7"
     },
     "course1-sprints-sprint-14-sprint-1-concept-check": {
       "artifact_id": "course1-sprints-sprint-14-sprint-1-concept-check",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-02T23:43:15+00:00"
+  "last_sync": "2026-10-03T13:46:07+00:00"
 }
