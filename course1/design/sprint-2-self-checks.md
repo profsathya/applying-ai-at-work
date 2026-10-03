@@ -1,10 +1,10 @@
 ---
 purpose: The Self-check records for the three 50-point Sprint 2 items (Dig into your assumptions, What solutions already exist, Problem Frame: taking stock of where you are) in the shape set by course1/design/self-check-guide.md; the on-the-page line and its points go on the page, the rungs, rank, and tag stay here for graders and the grading comment
-status: v0.3, 3 October 2026 (Leslie's read: Dig lines 2 and 3 in her wording, Dig line 5 and taking-stock line 5 folded into their neighbours, taking-stock line 2 as a transfer check only; an alternative record for What exists, and what it means, pending Jeremy on moving the points). v0.2, 3 October 2026, regenerated with the guide applied (page's words, one cell per line, real tests, 3 rung as the pass standard, rank 1 to N, set scoring, gates, plain-language lines in the Sprint 1 style); for Leslie's read. Rungs are a draft until the first batch (guide rule 14). v0.1, 1 October: first draft.
+status: v0.4, 3 October 2026 (What exists in both versions settled with Leslie: four lines on the walkthrough, six on the write-up; questions in place of cannot tell yet; picking an answer dropped as unobservable). v0.3, 3 October 2026 (Leslie's read: Dig lines 2 and 3 in her wording, Dig line 5 and taking-stock line 5 folded into their neighbours, taking-stock line 2 as a transfer check only; an alternative record for What exists, and what it means, pending Jeremy on moving the points). v0.2, 3 October 2026, regenerated with the guide applied (page's words, one cell per line, real tests, 3 rung as the pass standard, rank 1 to N, set scoring, gates, plain-language lines in the Sprint 1 style); for Leslie's read. Rungs are a draft until the first batch (guide rule 14). v0.1, 1 October: first draft.
 depends_on: self-check-guide.md; sprint-1-self-checks.md (v0.3.1); course1/sprints/sprint-16/dig-into-your-assumptions-walk-through.md; what-solutions-already-exist-walk-through.md; problem-frame-is-it-worth-pursuing.md
 ---
 
-# Sprint 2 Self-checks, v0.3
+# Sprint 2 Self-checks, v0.4
 
 The rules are in `self-check-guide.md`. Rung points follow its rule: a 3 earns about 70 percent of the line, a 1 about 20 percent. Passing is 35 of 50. Lines are written for the learner; rungs are written as the sentence the learner receives in the grading comment.
 
@@ -29,45 +29,45 @@ Total 50. Passing 35. Partial on every line gives 36.
 
 **Open, for the first-batch revision.** Whether "restate the assumption with a question mark on the end" is the common miss on line 2. Whether "all tables the same rating" shows up often enough to need its own line again.
 
-## What solutions already exist, 50 points
+## What solutions already exist, 50 points (applies while the points stay on the walkthrough)
 
-Submission: one Word file, the three-column table (What exists, How it works as far as I know, What using it here would involve), at least three rows. Lines 2, 3, and 5 are judged across every row submitted. Line 1 counts rows; line 4 reads the set.
+Submission: one Word file, the three-column table (What exists; How it works, as far as I know; What using it here would involve), at least three rows, filled before the Dojo Lab. Page edit, 3 October: where the learner does not know, the columns ask for the specific question they would need answered, not a bare "cannot tell yet." Lines 2 and 3 are judged across every row submitted; line 1 counts rows; line 4 reads the set.
 
 Gate: fewer than two rows does not pass, whatever the other lines score.
 
 | # | On the page | Pts | 3 rung (pts) | 1 rung (pts) | Rank | Tag |
 |---|---|---|---|---|---|---|
-| 1 | You submitted at least three rows, and each one is something that already exists, such as a tool, a practice, a workaround, or a person, not something you would build. | 10 | Three rows, one of them something you would build. Keep what you would build for later; this table is about what is already there. (7) | Fewer than three rows, or mostly things you would build. (2) | 4 | completeness |
-| 2 | In each row, "How it works" comes from what you have actually seen or read, and says "cannot tell yet" where you have not looked. | 12 | Most rows are from what you have seen; one or two are written from how it probably works. Mark those "cannot tell yet" until you have looked. (9) | The rows are guesses written as facts. Which of these have you actually seen working, and where? (2) | 1 | honesty |
-| 3 | In each row, "What using it here would involve" says what would have to change for the people in your frame, not whether you like the option. | 12 | Most rows name a change for someone; some give an opinion of the option instead. Say who would have to do what differently. (9) | Opinions, or blanks, where the changes should be. Start from the people in Part 3a and say what each would have to take on. (2) | 2 | specificity |
-| 4 | Your rows include at least one thing people already do to cope with this problem, and at least one thing from outside your situation. | 8 | Only one kind: all outside tools, or all local workarounds. Look in the other direction too. (6) | One kind only, and fewer than three rows. (2) | 5 | judgment |
-| 5 | No row is marked as the answer, and your open questions and blanks are left standing. | 8 | One row is favoured before you have looked, but the questions are kept. Hold the verdict for the Problem Frame page. (6) | A row is chosen as the solution, or blanks are filled with guesses. (2) | 3 | judgment |
+| 1 | You submitted at least three rows, and each one is something that already exists, not something you would build. | 12 | Three rows, one of them something you would build. Keep what you would build for later; this table is about what is already there. (9) | Fewer than three rows, or mostly things you would build. (2) | 4 | completeness |
+| 2 | In each row, "How it works" says what you have actually seen or read. Where you have not, it lists the specific question you still need answered. | 14 | Most rows are from what you have seen; one or two are written from how it probably works, or say "not sure" without a question. Turn each unknown into the question you would ask. (10) | The rows are guesses written as facts. Which of these have you actually seen working, and where? (3) | 1 | honesty |
+| 3 | In each row, "What using it here would involve" says what would have to change for the people in your frame. Where you cannot tell yet, it lists the specific question you still need answered. | 14 | Most rows name a change for someone; some give an opinion of the option, or a blank with no question. Say who would have to do what differently, or what you would need to find out. (10) | Opinions, or blanks, where the changes should be. Start from the people in Part 3a and say what each would have to take on. (3) | 2 | specificity |
+| 4 | At least one row is something people already do to cope with this problem, and at least one comes from outside your situation. | 10 | Only one kind: all outside tools, or all local workarounds. Look in the other direction too. (7) | One kind only, and fewer than three rows. (2) | 3 | judgment |
 
-Total 50. Passing 35. Partial on every line gives 37.
+Total 50. Passing 35. Partial on every line gives 36.
 
 **Grading note.** Every rung below full names the row and the column. Read for meaning. A blank cell is a 1 on its line, not a 0 on the row.
 
-**What makes it strong.** Column 3 is where the Problem Frame's Part 3c comes from, so a strong column 3 names people and the habit or step they would have to take on. A row that says "cannot tell yet" in column 2 and names who could tell you is better than a confident row written from a product page.
+**What makes it strong.** Column 3 is where the Problem Frame's Part 3c comes from, so a strong column 3 names people and the habit or step they would have to take on. A row that asks a sharp question in column 2 is better than a confident row written from a product page.
 
 **Open, for the first-batch revision.** Whether line 4 reads as a second completeness check; if so, drop it and split its points between lines 2 and 3.
 
-## If the 50 points move to What exists, and what it means
+## What exists, and what it means, 50 points (applies if the points move; draft PR #253)
 
-Pending Jeremy's answer on whether the Sprint 2 points can still move before the course copy (Leslie, 3 October). If they move, the walkthrough above becomes own-your-progress at 0 and this record applies to the write-up instead. Submission: two responses in one Canvas text entry: Step 1, the What already exists table as it stands after the Dojo Lab; Step 2, what the Dojo changed and what you found. Lines 2 and 3 are judged across every row of the pasted table.
+Pending Jeremy's answer on whether the Sprint 2 points can still move before the course copy (Leslie, 3 October). If they move, the walkthrough above becomes own-your-progress at 0 and this record applies instead. Submission: two responses in one Canvas text entry: Step 1, the What already exists table as it stands after the Dojo Lab; Step 2, what the Dojo changed and what you found. Lines 3 and 4 are judged across every row of the pasted table. Line 2 is checked against the learner's walkthrough submission from earlier in the week. Lines 5 and 6 follow the same pattern as the Sprint 1 Problem Frame's Step 3 lines: the decision is named and the reason is there.
 
 Gate: no pasted table in Step 1 is not a pass.
 
 | # | On the page | Pts | 3 rung (pts) | 1 rung (pts) | Rank | Tag |
 |---|---|---|---|---|---|---|
-| 1 | In Step 1, your table has at least three rows, each one something that already exists, not something you would build, and it shows at least one change from before the Dojo Lab, or you say why nothing changed. | 10 | Three rows, with one you would build, or no change and no reason. The table is supposed to move; say what the Dojo did to it, even if the answer is nothing. (7) | Fewer than three rows, or mostly things you would build. (2) | 4 | completeness |
-| 2 | In each row, "How it works" comes from what you have actually seen or read, and says "cannot tell yet" where you still have not looked. | 12 | Most rows are from what you have seen; one or two are written from how it probably works. Mark those "cannot tell yet" until you have looked. (9) | The rows are guesses written as facts. Which of these have you actually seen working, and where? (2) | 2 | honesty |
-| 3 | In each row, "What using it here would involve" says what would have to change for the people in your frame, not whether you like the option. | 10 | Most rows name a change for someone; some give an opinion of the option instead. Say who would have to do what differently. (7) | Opinions, or blanks, where the changes should be. Start from the people in Part 3a and say what each would have to take on. (2) | 3 | specificity |
-| 4 | In Step 2, you name at least one thing the Dojo added or pushed on, and for each one say what you changed or what you kept and why. | 12 | A push is named, with what you did but not why, or bare agreement with the Dojo. The reason is where your judgment shows. (9) | Nothing the Dojo did is named, or "I agreed with everything" with no reason. What did it push on, and what did you decide? (2) | 1 | judgment |
-| 5 | In Step 2, for at least one row, you say where you looked outside the chat and what you found. | 6 | A place is named without what was found, or a finding with no source. Say both: where, and what it told you. (4) | Nothing looked at outside the chat. Pick the row you are least sure of and go and look. (1) | 5 | honesty |
+| 1 | In Step 1, your table has at least three rows, and each one is something that already exists, not something you would build. | 8 | Three rows, one of them something you would build. Keep what you would build for later. (6) | Fewer than three rows, or mostly things you would build. (2) | 5 | completeness |
+| 2 | Your table shows at least one change from before the Dojo Lab: a row added, or a cell rewritten after you looked. | 10 | A change is described in Step 2 but the table does not show it. Put the change in the row it belongs to. (7) | No change from your walkthrough table. The Dojo Lab is supposed to move this table; what did it push on? (2) | 2 | honesty |
+| 3 | In each row, "How it works" says what you have actually seen or read. Any question still open says what you tried to find out. | 10 | Most rows are from what you have seen; one or two still carry an open question with no word on what you tried. Say where you looked, or who you asked. (7) | The rows are guesses written as facts, or the questions from before the Dojo are untouched. (2) | 3 | honesty |
+| 4 | In each row, "What using it here would involve" says what would have to change for the people in your frame. Any question still open says what you tried to find out. | 8 | Most rows name a change for someone; some give an opinion of the option, or an open question with nothing tried. Say who would have to do what differently. (6) | Opinions, or blanks, where the changes should be. (2) | 4 | specificity |
+| 5 | In Step 2, you name at least one thing the Dojo added or pushed on, and say what you changed or kept, and why. | 10 | A push is named, with what you did but not why, or bare agreement with the Dojo. The reason is where your judgment shows. (7) | Nothing the Dojo did is named, or "I agreed with everything" with no reason. What did it push on, and what did you decide? (2) | 1 | judgment |
+| 6 | In Step 2, for at least one row, you say where you looked outside the chat and what you found. | 4 | A place is named without what was found, or a finding with no source. Say both: where, and what it told you. (3) | Nothing looked at outside the chat. Pick the row you are least sure of and go and look. (1) | 6 | honesty |
 
 Total 50. Passing 35. Partial on every line gives 36.
 
-**Grading note.** Line 1's "shows at least one change" is checked against the learner's walkthrough submission from earlier in the week. Every rung below full names the step, the row, and the column. Read for meaning. A blank step is a 1 on its lines.
+**Grading note.** Every rung below full names the step, the row, and the column. Read for meaning. A blank step is a 1 on its lines.
 
 **What makes it strong.** The changed cell in Step 1 is the one Step 2 explains. The row the learner went and looked at is the one they were least sure of. Column 3 is where the Problem Frame's Part 3c comes from.
 
@@ -95,5 +95,6 @@ Total 50. Passing 35. Partial on every line gives 36.
 ## Page edits that follow from this record
 
 - To do: the taking-stock page's three headings become Step 1, Step 2, Step 3 (as on the Sprint 1 Problem Frame page, PR #247), and its "4a" becomes "Part 4."
+- Done, 3 October: columns 2 and 3 of the What exists walkthrough ask for the specific open question in place of a bare "cannot tell yet"; the write-up asks that any question still open says what was tried.
 - Pending Jeremy: the What exists points swap (walkthrough to 0, write-up to 50), as a PR like #173 if the course has not moved; if it has, the walkthrough record stands for this run.
 - To do, when the renderer question (list item 39) is settled: the on-the-page lines, with points, onto each page.
