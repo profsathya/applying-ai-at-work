@@ -27,11 +27,11 @@ guided_assignment:
       time, or a decision).
     - Draws on the third column of your What already exists table, not on a solution you
       have chosen.
-    instruction_section: Part 1. What fixing this would ask of people
+    instruction_section: Step 1. What fixing this would ask of people
   - id: problem-frame
     kind: response
     prompt: 'Your Problem Frame, all seven parts, brought up to date: part 6 with its Status
-      column filled, part 3c in, 4a if changed, the date at the top.'
+      column filled, part 3c in, Part 4 if changed, the date at the top.'
     criteria:
     - All seven parts present, in the participant's words.
     - Every row of part 6 has an entry in its Status column.
@@ -39,7 +39,7 @@ guided_assignment:
     - Part 3c is present.
     - At least one assumption is rated high risk and unconfirmed, since a frame with none at
       this stage is a warning sign.
-    instruction_section: Part 2. Your Problem Frame, brought up to date
+    instruction_section: Step 2. Your Problem Frame, brought up to date
   - id: verdict
     kind: response
     prompt: Worth pursuing, not worth pursuing, or depends on something specific, with your
@@ -50,7 +50,7 @@ guided_assignment:
     - Says what is still uncertain, and what would settle it.
     - '"depends on" says what it depends on and who or what could settle it.'
     - A no gives the reasoning, and the runner-up's pass comes back to this page.
-    instruction_section: Part 3. Taking stock of your problem
+    instruction_section: Step 3. Taking stock of your problem
   presentation: reading
 learning_goal: Work out what fixing this would ask of people, bring your Problem Frame up to
   date, and decide whether this problem is worth pursuing.
@@ -69,7 +69,7 @@ This page has three parts:
 
 You will tackle them one at a time following the guidance below.
 
-## Part 1. What fixing this would ask of people
+## Step 1. What fixing this would ask of people
 
 You have already thought about what using an existing solution for your problem might involve, in the third column of your What already exists table. Now you are going to think specifically about who would be involved if those or similar solutions were put in place, and what the change would ask of them.
 
@@ -77,22 +77,22 @@ You have already thought about what using an existing solution for your problem 
 
 To complete the box below, open your What already exists table. Look at column 3 and think about what any change would ask of the people involved. Who would need to complete a new step, build a habit, take time out of their day, or make a decision in order to put a solution in place? Write down who they are, whether or not they are in Part 3a of your frame, and what each of them would have to do differently. Enter that information in the box below. Then, copy the same information into Part 3c of your Problem Frame.
 
-## Part 2. Your Problem Frame, brought up to date
+## Step 2. Your Problem Frame, brought up to date
 
 The work you have done this sprint should have expanded your understanding of your problem, which means your Problem Frame should be adjusted accordingly.
 
 Open your Problem Frame document, and the two items you have worked on this sprint: your Dig into your assumptions tables, and your What already exists table. Use these materials to update your Problem Frame. The likely places you will have updates are at least:
 
 1. **Part 6, your assumptions.** In the Status column, mark each one high risk or low risk from your walk, with the reason, and note anything you found out along the way. Add, delete, or adjust rows as you need.
-2. **Part 3c.** If you haven't already, paste in what you wrote in Part 1 above, trimmed to one or two sentences.
-3. **Part 4a, how it is handled today,** only if what exists changed how you would describe it.
+2. **Part 3c.** If you haven't already, paste in what you wrote in Step 1 above, trimmed to one or two sentences.
+3. **Part 4, how it is handled today,** only if what exists changed how you would describe it.
 4. **Last updated,** at the top: Sprint 2 and the date.
 
 Remember, you can change anything in your Problem Frame if your thinking has changed. The Problem Frame should reflect your current understanding.
 
 Make the changes to your Problem Frame, then copy and paste its entire contents into the box below.
 
-## Part 3. Taking stock of your problem
+## Step 3. Taking stock of your problem
 
 Now it's time to consider whether to continue with this problem. One very important thing to keep in mind is that you don't have to be able to answer with a resounding "Yes, it is definitely worth pursuing." You can still be unsure or even have open questions. Go ahead and note that uncertainty here in your write-up. What you don't want is to decide to keep going with a problem that is already signaling it is a likely no.
 
