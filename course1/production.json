@@ -661,16 +661,16 @@
       "canvas_payload_hash": "de429a7a162a8076f46c125a80829e2a9dad3797af608d62ae6f7a1e934a124a",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "7bde6e0483395668105450de256569508eec82e0e0c6defb8b3729816b572597",
-      "hosted_hash": "62a49fbf04aced82ab959aac3fdf0c0604187149897f9ed628ad8285b048457e",
-      "hosted_last_rendered": "2026-10-02T23:43:15+00:00",
+      "content_hash": "7b2cc821e8d6674e86b907661b7b35ce54422f44807ee998b61ee6e2e0950266",
+      "hosted_hash": "816fcf256288eb3dff0ae098468ab4c2e0f4f199655660d3fd62689f4608d3e3",
+      "hosted_last_rendered": "2026-10-03T18:10:18+00:00",
       "hosted_path": "course1/activities/introduction-is-this-problem-worth-pursuing.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-is-this-problem-worth-pursuing.html",
-      "last_pushed": "2026-10-02T23:43:15+00:00",
+      "last_pushed": "2026-10-03T18:10:18+00:00",
       "local_path": "course1/sprints/sprint-16/introduction-is-this-problem-worth-pursuing.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "9b3e03da3267887c8283f7ae44d3ea5c4295f123"
+      "source_commit": "36268fbe510b10e2e6dc08bb62f327b28221363a"
     },
     "course1-sprints-sprint-16-problem-frame-is-it-worth-pursuing": {
       "artifact_id": "course1-sprints-sprint-16-problem-frame-is-it-worth-pursuing",
@@ -765,25 +765,25 @@
     },
     "course1-sprints-sprint-16-what-exists-and-what-it-means": {
       "artifact_id": "course1-sprints-sprint-16-what-exists-and-what-it-means",
-      "canvas_fingerprint": "66d0bed253f7e8af3e5c9683458b933cc9dee9510b37c8587d9e078dcfaa860f",
+      "canvas_fingerprint": "904db3a8f89c2336a6047e10d49b230e8fccf4e972bcb89958616310ae8c50f1",
       "canvas_id": 7175,
       "canvas_module_id": 2084,
       "canvas_module_item_id": 18008,
       "canvas_page_url": null,
-      "canvas_payload_hash": "056422725850685a9024887e860840954be30fa529ac485240e574d3d529fd02",
+      "canvas_payload_hash": "b755ef08a0e65bfc6d26262f1c0f0bd6145912f050ce736e8cf5047c9c9f78ce",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "73e52329e1b2db081263259a17510ca6e2aca641a5d87efbd3a9b4795c6d933a",
+      "content_hash": "023bb18e0e4c75c1a382cc14149806a3a56e81375156dbbb6753d7ca88d670c7",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "f4bf27166e40dd033d46fb5318d9e2954e75bed4fbab074f3aafb87b15594faa",
-      "hosted_last_rendered": "2026-10-03T15:29:51+00:00",
+      "hosted_hash": "7e12b49b023c17219f41e7ba7745af5d257c8799196aeb915ec0f55c198a7017",
+      "hosted_last_rendered": "2026-10-03T18:10:19+00:00",
       "hosted_path": "course1/assignments/what-exists-and-what-it-means.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/what-exists-and-what-it-means.html",
-      "last_pushed": "2026-10-03T15:29:51+00:00",
+      "last_pushed": "2026-10-03T18:10:19+00:00",
       "local_path": "course1/sprints/sprint-16/what-exists-and-what-it-means.md",
       "position": 9,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "2ff076840969a925ff2131705ba44075480cf7d3"
+      "source_commit": "36268fbe510b10e2e6dc08bb62f327b28221363a"
     },
     "course1-sprints-sprint-16-what-solutions-already-exist": {
       "artifact_id": "course1-sprints-sprint-16-what-solutions-already-exist",
@@ -808,25 +808,25 @@
     },
     "course1-sprints-sprint-16-what-solutions-already-exist-walk-through": {
       "artifact_id": "course1-sprints-sprint-16-what-solutions-already-exist-walk-through",
-      "canvas_fingerprint": "f50c831b49dd4064ad135a9ce86a854070ef5c8f5d049821d511a40e500eac84",
+      "canvas_fingerprint": "116d87600b7afb10d17c95688a6f3a44e1a1ffecf1c0701704178314b69cd4e1",
       "canvas_id": 7179,
       "canvas_module_id": 2084,
       "canvas_module_item_id": 18012,
       "canvas_page_url": null,
-      "canvas_payload_hash": "dd33f84f3cccdbfa411342ac4a9ae9bf84ff85d1717f99d5b8a330d4ab3caf28",
+      "canvas_payload_hash": "51c2182a8bc3c44af561e620c9c1d65ba1de45e3fbf8d7d3e0e34188a93e107f",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "36b334bc6e75cb3baf60cce2d9ca9ff673cd1f998a7d47be5eebf0d813af4379",
+      "content_hash": "7677d87dfc662b2356c5e7f0eed1ad32c467defa141516974536c22dfa631381",
       "delivery_mode": "guided_assignment",
       "hosted_hash": "0bb0ae9b91622e24c49a520d5eeb5f9ef311dcd505827319a4853d5d10d46a4a",
-      "hosted_last_rendered": "2026-10-03T15:29:56+00:00",
+      "hosted_last_rendered": "2026-10-03T18:10:25+00:00",
       "hosted_path": "course1/assignments/what-solutions-already-exist-walk-through.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/what-solutions-already-exist-walk-through.html",
-      "last_pushed": "2026-10-03T15:29:56+00:00",
+      "last_pushed": "2026-10-03T18:10:25+00:00",
       "local_path": "course1/sprints/sprint-16/what-solutions-already-exist-walk-through.md",
       "position": 7,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "2ff076840969a925ff2131705ba44075480cf7d3"
+      "source_commit": "36268fbe510b10e2e6dc08bb62f327b28221363a"
     },
     "course1-sprints-sprint-16-which-assumptions": {
       "artifact_id": "course1-sprints-sprint-16-which-assumptions",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-03T15:29:56+00:00"
+  "last_sync": "2026-10-03T18:10:25+00:00"
 }
