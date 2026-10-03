@@ -84,7 +84,7 @@ The work you have done this sprint should have expanded your understanding of yo
 Open your Problem Frame document, and the two items you have worked on this sprint: your Dig into your assumptions tables, and your What already exists table. Use these materials to update your Problem Frame. The likely places you will have updates are at least:
 
 1. **Part 6, your assumptions.** In the Status column, mark each one high risk or low risk from your walk, with the reason, and note anything you found out along the way. Add, delete, or adjust rows as you need.
-2. **Part 3c.** If you haven't already, paste in what you wrote in Part 1 above, trimmed to one or two sentences.
+2. **Part 3c.** If you haven't already, paste in what you wrote in Step 1 above, trimmed to one or two sentences.
 3. **Part 4, how it is handled today,** only if what exists changed how you would describe it.
 4. **Last updated,** at the top: Sprint 2 and the date.
 
