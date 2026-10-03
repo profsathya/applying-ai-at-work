@@ -1,10 +1,10 @@
 ---
 purpose: The Self-check records for the three 50-point Sprint 2 items (Dig into your assumptions, What solutions already exist, Problem Frame: taking stock of where you are) in the shape set by course1/design/self-check-guide.md; the on-the-page line and its points go on the page, the rungs, rank, and tag stay here for graders and the grading comment
-status: v0.4, 3 October 2026 (What exists in both versions settled with Leslie: four lines on the walkthrough, six on the write-up; questions in place of cannot tell yet; picking an answer dropped as unobservable). v0.3, 3 October 2026 (Leslie's read: Dig lines 2 and 3 in her wording, Dig line 5 and taking-stock line 5 folded into their neighbours, taking-stock line 2 as a transfer check only; an alternative record for What exists, and what it means, pending Jeremy on moving the points). v0.2, 3 October 2026, regenerated with the guide applied (page's words, one cell per line, real tests, 3 rung as the pass standard, rank 1 to N, set scoring, gates, plain-language lines in the Sprint 1 style); for Leslie's read. Rungs are a draft until the first batch (guide rule 14). v0.1, 1 October: first draft.
+status: v0.5, 3 October 2026 (points moved to What exists, and what it means, PR #253; that record applies and the walkthrough record is the alternative). v0.4, 3 October 2026 (What exists in both versions settled with Leslie: four lines on the walkthrough, six on the write-up; questions in place of cannot tell yet; picking an answer dropped as unobservable). v0.3, 3 October 2026 (Leslie's read: Dig lines 2 and 3 in her wording, Dig line 5 and taking-stock line 5 folded into their neighbours, taking-stock line 2 as a transfer check only; an alternative record for What exists, and what it means, pending Jeremy on moving the points). v0.2, 3 October 2026, regenerated with the guide applied (page's words, one cell per line, real tests, 3 rung as the pass standard, rank 1 to N, set scoring, gates, plain-language lines in the Sprint 1 style); for Leslie's read. Rungs are a draft until the first batch (guide rule 14). v0.1, 1 October: first draft.
 depends_on: self-check-guide.md; sprint-1-self-checks.md (v0.3.1); course1/sprints/sprint-16/dig-into-your-assumptions-walk-through.md; what-solutions-already-exist-walk-through.md; problem-frame-is-it-worth-pursuing.md
 ---
 
-# Sprint 2 Self-checks, v0.4
+# Sprint 2 Self-checks, v0.5
 
 The rules are in `self-check-guide.md`. Rung points follow its rule: a 3 earns about 70 percent of the line, a 1 about 20 percent. Passing is 35 of 50. Lines are written for the learner; rungs are written as the sentence the learner receives in the grading comment.
 
@@ -29,9 +29,9 @@ Total 50. Passing 35. Partial on every line gives 36.
 
 **Open, for the first-batch revision.** Whether "restate the assumption with a question mark on the end" is the common miss on line 2. Whether "all tables the same rating" shows up often enough to need its own line again.
 
-## What solutions already exist, 50 points (applies while the points stay on the walkthrough)
+## What solutions already exist (alternative: applies only if the points return to the walkthrough)
 
-Submission: one Word file, the three-column table (What exists; How it works, as far as I know; What using it here would involve), at least three rows, filled before the Dojo Lab. Page edit, 3 October: where the learner does not know, the columns ask for the specific question they would need answered, not a bare "cannot tell yet." Lines 2 and 3 are judged across every row submitted; line 1 counts rows; line 4 reads the set.
+Not in use: the walkthrough is own-your-progress at 0 from 3 October (PR #253). Kept for a second run. Submission: one Word file, the three-column table (What exists; How it works, as far as I know; What using it here would involve), at least three rows, filled before the Dojo Lab. Page edit, 3 October: where the learner does not know, the columns ask for the specific question they would need answered, not a bare "cannot tell yet." Lines 2 and 3 are judged across every row submitted; line 1 counts rows; line 4 reads the set.
 
 Gate: fewer than two rows does not pass, whatever the other lines score.
 
@@ -50,9 +50,9 @@ Total 50. Passing 35. Partial on every line gives 36.
 
 **Open, for the first-batch revision.** Whether line 4 reads as a second completeness check; if so, drop it and split its points between lines 2 and 3.
 
-## What exists, and what it means, 50 points (applies if the points move; draft PR #253)
+## What exists, and what it means, 50 points
 
-Pending Jeremy's answer on whether the Sprint 2 points can still move before the course copy (Leslie, 3 October). If they move, the walkthrough above becomes own-your-progress at 0 and this record applies instead. Submission: two responses in one Canvas text entry: Step 1, the What already exists table as it stands after the Dojo Lab; Step 2, what the Dojo changed and what you found. Lines 3 and 4 are judged across every row of the pasted table. Line 2 is checked against the learner's walkthrough submission from earlier in the week. Lines 5 and 6 follow the same pattern as the Sprint 1 Problem Frame's Step 3 lines: the decision is named and the reason is there.
+Applies: Jeremy confirmed on 3 October that the points could move, and PR #253 moves them; the walkthrough is own-your-progress at 0. Submission: two responses in one Canvas text entry: Step 1, the What already exists table as it stands after the Dojo Lab; Step 2, what the Dojo changed and what you found. Lines 3 and 4 are judged across every row of the pasted table. Line 2 is checked against the learner's walkthrough submission from earlier in the week. Lines 5 and 6 follow the same pattern as the Sprint 1 Problem Frame's Step 3 lines: the decision is named and the reason is there.
 
 Gate: no pasted table in Step 1 is not a pass.
 
@@ -96,5 +96,5 @@ Total 50. Passing 35. Partial on every line gives 36.
 
 - To do: the taking-stock page's three headings become Step 1, Step 2, Step 3 (as on the Sprint 1 Problem Frame page, PR #247), and its "4a" becomes "Part 4."
 - Done, 3 October: columns 2 and 3 of the What exists walkthrough ask for the specific open question in place of a bare "cannot tell yet"; the write-up asks that any question still open says what was tried.
-- Pending Jeremy: the What exists points swap (walkthrough to 0, write-up to 50), as a PR like #173 if the course has not moved; if it has, the walkthrough record stands for this run.
+- Done, 3 October (PR #253): the What exists points swap, walkthrough to 0 and own your progress, write-up to 50.
 - To do, when the renderer question (list item 39) is settled: the on-the-page lines, with points, onto each page.
