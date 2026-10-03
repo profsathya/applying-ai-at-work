@@ -47,9 +47,9 @@ guided_assignment:
       cells:
       - text: 'Guidance: a thing that exists somewhere now, or a question about one.'
       - text: 'Guidance: what I have actually seen, where it lives, who can change or see
-          it, and what I do not know.'
-      - text: 'Guidance: in a sentence or two, what would change for the better, what it would
-          ask of the people involved, and what I cannot tell yet.'
+          it. Where I do not know, the specific question I would need answered.'
+      - text: 'Guidance: in a sentence or two, what would change for the better and what it would
+          ask of the people involved. Where I cannot tell yet, the specific question I would need answered.'
     - id: example-1
       label: Example 1
       cells:
@@ -124,8 +124,8 @@ guided_assignment:
     - Fill at least three rows; questions count.
     - Keep solutions you would build out of the first column.
     - Write how it works from what you have actually seen, not how it probably works.
-    - Leave blanks and "cannot tell yet" as they are rather than filling them with guesses dressed
-      as facts.
+    - Where you do not know, write the question you would need answered rather than a guess
+      dressed as a fact.
     - Do not decide a row is the answer before you have looked.
     document_after:
     - After the Dojo Lab
@@ -159,8 +159,8 @@ Then, think about how that solution actually works, and what it might mean for y
 The table below has three columns: what exists, how it works, and what using it here would involve. Fill it in three steps.
 
 1. **Fill the first column, What exists, with everything from your brainstorm**, one row per thing. Ask yourself: What products or services claim to have solutions in this problem space? Do I know anyone who is already handling this problem well? Does my own organization already have something for this, used or not? Could AI help with this problem?
-2. **For each row, fill in How it works, as far as I know.** Write what you have actually seen, where it lives, who can change or see it, or indicate that you don't know if that is the case.
-3. **For each row, fill in What using it here would involve.** In a sentence or two: what would change for the better, what it would ask of the people involved, and what you cannot tell yet.
+2. **For each row, fill in How it works, as far as I know.** Write what you have actually seen, where it lives, who can change or see it. Where you don't know, write the specific question you would need answered.
+3. **For each row, fill in What using it here would involve.** In a sentence or two: what would change for the better and what it would ask of the people involved. Where you cannot tell yet, write the specific question you would need answered.
 
 As always, questions and question marks where you don't know something are encouraged. It is better to mark what you don't know than make something up; a table that is mostly questions will still be very useful for the next activity.
 

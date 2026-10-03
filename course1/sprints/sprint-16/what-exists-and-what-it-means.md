@@ -25,7 +25,7 @@ guided_assignment:
     criteria:
     - At least three rows, questions allowed.
     - Nothing in the first column is a solution the participant would build.
-    - Blanks and "not sure" left as they are.
+    - Any question still open says what you tried to find out.
     - At least one row changed after the Dojo Lab, or the reason none did.
     instruction_section: 'Part 1: Your updated table'
   - id: what-the-dojo-changed
