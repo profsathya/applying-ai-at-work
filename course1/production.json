@@ -682,17 +682,17 @@
       "canvas_payload_hash": "3989932442da503e37370624457ba93301a823e72965e90a933d6c844d0a7930",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "6c8691745f0be0d6c42bd0b33c0de0d54c1a4d00128b08d3807b2ad81f9b2a56",
+      "content_hash": "a0d8ed36db3c4aafe662a77d05f3cbeafc9fe934947fce4e525328fcff9aef1a",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "f8722338d9a20405f5be97e896db30a657963367d53da11f802b319652e82a95",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "hosted_hash": "59c963288f3b621c99f439d33bb5b32873b833b8baa33dab13086e0642e7cafa",
+      "hosted_last_rendered": "2026-10-03T15:27:41+00:00",
       "hosted_path": "course1/assignments/problem-frame-is-it-worth-pursuing.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/problem-frame-is-it-worth-pursuing.html",
-      "last_pushed": "2026-09-30T23:57:25+00:00",
+      "last_pushed": "2026-10-03T15:27:41+00:00",
       "local_path": "course1/sprints/sprint-16/problem-frame-is-it-worth-pursuing.md",
       "position": 11,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "a2007f7768a7eb8959bf02af520223ea53b5a303"
+      "source_commit": "51dce5c7c1021194bc950fd180dfc5ca8b669393"
     },
     "course1-sprints-sprint-16-sprint-2-is-this-problem-worth-pursuing": {
       "artifact_id": "course1-sprints-sprint-16-sprint-2-is-this-problem-worth-pursuing",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-03T13:46:07+00:00"
+  "last_sync": "2026-10-03T15:27:41+00:00"
 }
