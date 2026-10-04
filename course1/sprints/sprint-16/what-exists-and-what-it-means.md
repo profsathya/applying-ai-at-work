@@ -18,26 +18,25 @@ guided_assignment:
   builds_on: Bring your table as it stands after the Dojo Lab, and what you found where you
     looked.
   standing_instruction: 50 points. Submit both responses together as one Canvas text entry.
+  criteria_open: true
   tasks:
   - id: the-table
     kind: response
     prompt: Your What already exists table, as it stands after the Dojo Lab.
     criteria:
-    - At least three rows, questions allowed.
-    - Nothing in the first column is a solution the participant would build.
-    - Any question still open says what you tried to find out.
-    - At least one row changed after the Dojo Lab, or the reason none did.
-    instruction_section: 'Part 1: Your updated table'
+    - 'In Step 1, your table has at least three rows, and each one is something that already exists, not something you would build. (8 points)'
+    - 'Your table shows at least one change from before the Dojo Lab: a row added, or a cell rewritten after you looked. (10 points)'
+    - 'In each row, "How it works" says what you have actually seen or read. Any question still open says what you tried to find out. (10 points)'
+    - 'In each row, "What using it here would involve" says what would have to change for the people in your frame. Any question still open says what you tried to find out. (8 points)'
+    instruction_section: 'Step 1. Your updated table'
   - id: what-the-dojo-changed
     kind: response
     prompt: 'In your own words: what the Dojo added or pushed on, what you changed, and what
       you kept and why; where you looked and what you found; or why you did not use it.'
     criteria:
-    - At least one push or added row named in the participant's words.
-    - At least one thing changed or one thing kept with a reason.
-    - At least one place looked at outside the chat, with what was found.
-    - No bare agreement.
-    instruction_section: 'Part 2: What the Dojo changed, and what you found'
+    - 'In Step 2, you name at least one thing the Dojo added or pushed on, and say what you changed or kept, and why. (10 points)'
+    - 'In Step 2, for at least one row, you say where you looked outside the chat and what you found. (4 points)'
+    instruction_section: 'Step 2. What the Dojo changed, and what you found'
   presentation: reading
 learning_goal: Show your What already exists table after the Dojo Lab, and say what changed,
   what you kept, and what you found when you looked.
@@ -46,13 +45,13 @@ publish: true
 
 # What exists, and what it means
 
-This is where your week 2 work gets read. Two parts.
+This is where your week 2 work gets read. Two steps.
 
-## Part 1: Your updated table
+## Step 1. Your updated table
 
 Paste your **What already exists** table from your **Sprint 2 working book**, as it stands after the Dojo Lab. If the Dojo Lab added rows, or you changed a cell after you went and looked, paste the changed version; the table is yours and it is supposed to move.
 
-## Part 2: What the Dojo changed, and what you found
+## Step 2. What the Dojo changed, and what you found
 
 In your own words: what the Dojo added or pushed on, what you changed, and what you kept and why. Then, for each row you went and looked at, where you looked and what you found. A few sentences is plenty. If you did not use the Dojo Lab, say so and why.
 

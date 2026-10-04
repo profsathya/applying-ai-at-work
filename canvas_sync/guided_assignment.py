@@ -340,6 +340,7 @@ def render_reading_body(frontmatter: dict, instructions_html: str, task_sections
     config = frontmatter['guided_assignment']
     if config.get('feedback_endpoint'):
         raise ValueError('Reading presentation does not support an AI feedback endpoint')
+    check_open = ' open' if config.get('criteria_open') else ''
     cards = []
     for n, task in enumerate(config['tasks'], 1):
         ident = html.escape(task['id'], quote=True)
@@ -360,7 +361,7 @@ def render_reading_body(frontmatter: dict, instructions_html: str, task_sections
             cards.append(f'<div class="response-task" data-task="{ident}">'
                          f'<label for="answer-{ident}">{prompt}</label>'
                          f'<textarea id="answer-{ident}" data-answer="{ident}" maxlength="20000" rows="7" aria-describedby="save-status"></textarea>'
-                         f'<details><summary>Self-check</summary><ul>{criteria}</ul>{reflection}</details></div>')
+                         f'<details{check_open}><summary>Self-check</summary><ul>{criteria}</ul>{reflection}</details></div>')
     payload = {'artifactId': frontmatter['artifact_id'], 'title': frontmatter['title'], 'module': frontmatter['module'], 'practiceOnly': frontmatter['type'] == 'page', **config}
     serialized = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     if frontmatter['type'] == 'page':
