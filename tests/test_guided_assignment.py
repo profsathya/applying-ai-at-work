@@ -222,6 +222,36 @@ class GuidedAssignmentTests(unittest.TestCase):
         fm['guided_assignment']['feedback_endpoint'] = 'https://example.invalid/feedback'
         self.assertTrue(any('AI feedback' in e for e in self.validate(fm, body)))
 
+    def test_reading_scored_checks_can_start_open_without_changing_other_controls(self):
+        fm = frontmatter()
+        config = fm['guided_assignment']
+        config['presentation'] = 'reading'
+        config['tasks'][0]['instruction_section'] = 'Reasons'
+        config['tasks'][0]['criteria'] = ['Name a deciding check. (8 points)']
+        body = 'Opening.\n\n## Reasons\n\nUse your evidence.\n'
+        def render():
+            return render_artifact_document(fm, body,
+                {'canvas_base_url': 'https://example.invalid', 'canvas_course_id': 180},
+                {'hosted_path': 'deanza/course1/pages/decide.html'}, {})
+        legacy = render()
+        self.assertIn('<details><summary>Self-check</summary>', legacy)
+        self.assertNotIn('<details open>', legacy)
+        config['criteria_open'] = True
+        self.assertEqual(self.validate(fm, body), [])
+        result = render()
+        self.assertIn('<details open><summary>Self-check</summary>', result)
+        self.assertIn('<li>Name a deciding check. (8 points)</li>', result)
+        self.assertEqual(result.count('data-answer="reasons"'), 1)
+        self.assertEqual(result.count('id="copy-answers"'), 1)
+        self.assertIn('<details id="more-options"><summary>More options</summary>', result)
+        config['criteria_open'] = False
+        self.assertNotIn('<details open>', render())
+        config['presentation'] = 'standard'
+        self.assertTrue(any('criteria_open requires reading' in e for e in self.validate(fm, body)))
+        config['presentation'] = 'reading'
+        config['criteria_open'] = 'yes'
+        self.assertTrue(self.validate(fm, body))
+
     def test_reading_page_is_opt_in_and_rejects_assignments(self):
         fm = frontmatter()
         fm.pop('guided_assignment'); fm.pop('delivery_mode')

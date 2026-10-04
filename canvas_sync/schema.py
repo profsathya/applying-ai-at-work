@@ -366,6 +366,8 @@ def validate_guided_assignment(label: object, payload: dict, body: str | None = 
         errors.extend(f'{label}: repeated_tables {message}' for message in _repeated_table_errors(config, tasks, walkthrough))
     if config.get('presentation') == 'reading' and config.get('feedback_endpoint'):
         errors.append(f'{label}: reading presentation does not support an AI feedback endpoint')
+    if 'criteria_open' in config and config.get('presentation') != 'reading':
+        errors.append(f'{label}: criteria_open requires reading presentation')
     if config.get('presentation') == 'compact':
         if (not isinstance(tasks, list) or len(tasks) != 1 or not isinstance(tasks[0], dict)
                 or tasks[0].get('kind', 'response') != 'response' or not tasks[0].get('instruction_section')):

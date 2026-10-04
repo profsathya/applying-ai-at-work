@@ -151,6 +151,10 @@
         "standing_instruction": {
           "type": "string"
         },
+        "criteria_open": {
+          "type": "boolean",
+          "description": "Reading presentation only: show the per-task self-check lists expanded initially, so scored expectations are visible."
+        },
         "export_filename": {
           "type": "string",
           "pattern": "^[a-z0-9]+(-[a-z0-9]+)*\\.docx$"
