@@ -31,8 +31,7 @@ publish: true
 dojo_submission:
   mode: transcript
   prompt_version: v1
-  submit_in_part_2:
-    final_round: where you say what changed and what you chose
+  submit_in_part_2: true
 learning_goal: Have AI test and widen every draft frame, and choose one to carry forward,
   with your reasons.
 ---

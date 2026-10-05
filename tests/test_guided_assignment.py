@@ -155,11 +155,11 @@ class GuidedAssignmentTests(unittest.TestCase):
         self.assertLess(default.index('Part 3: Updating'), default.index('id="transcript-request-text"'))
 
         fm = dojo_frontmatter()
-        fm['dojo_submission']['submit_in_part_2'] = {'final_round': 'where you say what you chose'}
+        fm['dojo_submission']['submit_in_part_2'] = True
         self.assertEqual(self.validate(fm, body), [])
         result = render_artifact_document(fm, body, manifest, hosted, {})
         self.assertNotIn('<h2>Submit the complete transcript</h2>', result)
-        order = ['Part 1: Your Dojo', 'Part 2: Requesting', 'through the last round, where you say what you chose.',
+        order = ['Part 1: Your Dojo', 'Part 2: Requesting', 'every round of this Dojo, through the last round.</li>',
                  'id="transcript-request-text"', 'id="copy-transcript-request"', 'Paste every chunk into the box below',
                  'header line "CIS501 \u2014 Dojo transcript \u2014 [date]"', 'data-answer="dojo-transcript"',
                  '<summary>Self-check</summary>', 'id="save-status"', 'id="copy-answers"',
@@ -176,7 +176,7 @@ class GuidedAssignmentTests(unittest.TestCase):
                     body.replace('transcript\n\n## Part 3', 'transcript\n\nOld steps.\n\n## Part 3')):
             with self.subTest(bad=bad):
                 self.assertTrue(any('submit_in_part_2' in e for e in self.validate(fm, bad)))
-        fm['dojo_submission']['submit_in_part_2'] = {}
+        fm['dojo_submission']['submit_in_part_2'] = 'yes'
         self.assertTrue(self.validate(fm, body))
 
     def test_dojo_transcript_semantic_mutations_fail_closed(self):

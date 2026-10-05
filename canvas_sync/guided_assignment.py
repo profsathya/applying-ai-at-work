@@ -248,8 +248,7 @@ def split_at_dojo_part_2(instructions_html: str) -> tuple[str, str, str]:
     return instructions_html[:match.start()], match.group(1), after
 
 
-def _dojo_part_2_submit(heading_tag: str, final_round: str, transcript_request: str,
-                        request_box: str, response_block: str) -> str:
+def _dojo_part_2_submit(heading_tag: str, transcript_request: str, request_box: str, response_block: str) -> str:
     """Part 2 with the generated transcript controls, in the order students act."""
     if f'Start with one header line: {DOJO_TRANSCRIPT_HEADER.split("[")[0]}[' not in transcript_request:
         raise ValueError('Transcript request header no longer matches the Part 2 header line')
@@ -257,7 +256,7 @@ def _dojo_part_2_submit(heading_tag: str, final_round: str, transcript_request: 
 {heading_tag}{html.escape(DOJO_PART_2_HEADING)}</h2>
 <p>The complete transcript is the only evidence you submit for this Dojo Lab.</p>
 <ol>
-<li>Before requesting the transcript, make sure you have gone through every round of this Dojo, through the last round, {html.escape(final_round, quote=False)}.</li>
+<li>Before requesting the transcript, make sure you have gone through every round of this Dojo, through the last round.</li>
 <li>Paste the transcript request below into the same conversation exactly as written.</li>
 </ol>
 {request_box}
@@ -307,15 +306,13 @@ def render_dojo_transcript_body(frontmatter: dict, instructions_html: str, canva
 <label for="copy-output">Select and copy manually</label><textarea id="copy-output" readonly rows="10"></textarea>
 <p id="completion-status"></p>
 </details>'''
-    part_2 = frontmatter['dojo_submission'].get('submit_in_part_2')
-    if part_2:
+    if frontmatter['dojo_submission'].get('submit_in_part_2'):
         # Opt-in: the generated controls fill the authored Part 2 heading. The Canvas
         # submit note follows outside the workspace, so it keeps its page styling,
         # and later authored parts follow the note in their own reading column.
         from canvas_sync.hosted_html import guided_submit_note
         before, heading_tag, after = split_at_dojo_part_2(instructions_html)
-        content = before + _dojo_part_2_submit(heading_tag, part_2['final_round'], transcript_request,
-                                               request_box, response_block)
+        content = before + _dojo_part_2_submit(heading_tag, transcript_request, request_box, response_block)
         trailing = '\n' + guided_submit_note(canvas_url)
         if after.strip():
             trailing += f'\n<div class="guided-reading dojo-transcript">\n{after.strip()}\n</div>'
