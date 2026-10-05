@@ -22,12 +22,13 @@ guided_assignment:
     kind: response
     prompt: Paste the complete Dojo transcript, including every CONTINUED chunk, in order.
     criteria:
-    - The required header and every turn, in order.
+    - The header line and every turn, in order.
     - Every CONTINUED marker and continuation chunk kept.
     - The conversation reaches the module's last round, where you say what you keep.
 dojo_submission:
   mode: transcript
   prompt_version: v1
+  submit_in_part_2: true
 learning_goal: Fill in what exists with AI's help and your own look, and say what using each
   thing here would involve.
 publish: true
@@ -77,14 +78,6 @@ Note: throughout the lab, your Dojo might send you out to look up information an
 > Start as the Sensei: say what this module does in two lines, ask for my table if it is not here, then begin Round 1. One question at a time.
 
 ## Part 2: Requesting and submitting the transcript
-
-The transcript is the only thing you submit for this Dojo Lab. Five steps:
-
-1. Copy the transcript request at the bottom of this page.
-2. Paste it into your Dojo conversation as your next message.
-3. If the reply ends with CONTINUED, type "continue" and repeat until it stops.
-4. Copy the Dojo's reply, every chunk, in order.
-5. Paste it into the Canvas text box below this page and submit.
 
 ## Part 3: Updating your table
 
