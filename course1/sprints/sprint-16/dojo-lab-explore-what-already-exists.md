@@ -54,7 +54,7 @@ Open your Dojo and say: "Walk me through Dojo Lab: explore what already exists."
 
 Note: throughout the lab, your Dojo might send you out to look up information and research for yourself. Go and look, then come back to the same conversation and say what you found.
 
-*More help: if your Dojo is not set up yet.* Use any AI chat. Paste the text below as your first message, then your Problem Frame and your table.
+*What your Dojo is working from.* You do not need to paste this. It is the brief your Dojo already has for this lab, shown so you can see what it has been asked to do. This lab runs in your Dojo: if yours is not set up yet, go to Set up your AI Dojo in Sprint 0 first. If it still will not load, contact your instructor.
 
 > Before we start, here is how to work with me. Be my coach, not my editor. Ask one question at a time and wait for my answer. Keep each reply under 120 words. Ask what I think before you offer your own read. Never rewrite my work; point at a line and make me change it myself. When you push on something weak, say you are pushing and why. When I have defended a line, ease off and say so. If I lean on you two turns running, say so and make me put it in my own words. Do not invent anything about my workplace; ask. End with a recap I can save.
 >
