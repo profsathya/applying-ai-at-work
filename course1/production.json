@@ -1300,23 +1300,23 @@
     },
     "course1-sprints-welcome-and-orientation-v2-schedule-a-five-minute-check-in": {
       "artifact_id": "course1-sprints-welcome-and-orientation-v2-schedule-a-five-minute-check-in",
-      "canvas_fingerprint": "6c8482ecf311ba97ae40cef5fdeb45e4e1e8162e56d78119d814368e6c287b19",
+      "canvas_fingerprint": "6db28de5212a6c64f1bcf17989c4b5c05854f7764f1f101d99eef7c3dbeffb18",
       "canvas_id": 3629,
       "canvas_module_id": 2075,
       "canvas_module_item_id": 18029,
-      "canvas_page_url": "schedule-a-5-minute-check-in",
-      "canvas_payload_hash": "e5998a770fb6919da59fd5dd72e4b01da277decf6b7c5c103e3709a3fc0bbe02",
+      "canvas_page_url": "schedule-a-15-minute-time-slot",
+      "canvas_payload_hash": "9a47cab4894e45d39e4bc1eeb6b8ef7b96d052be8e9f70ed784e96ef97513f3a",
       "canvas_type": "page",
-      "content_hash": "0a3b8c3d7b15ddcb40f34ca2ca1b2fc068d0ed91b4ee8330810af72592a44389",
-      "hosted_hash": "95e0bf0e8fab15d8697c0dce3cd527fa3918eabf13617e3471408d41792f34e9",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "content_hash": "8a0b7193bb4335012d49820494be2ad74e9bff2f7de639b5a19917fe4d83988e",
+      "hosted_hash": "fe4cc8c7a1d0fcbe2c5d16a7b86255bada25fe4a4dcde5e36eea8afe57415a94",
+      "hosted_last_rendered": "2026-10-05T22:17:04+00:00",
       "hosted_path": "course1/activities/schedule-a-five-minute-check-in.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/schedule-a-five-minute-check-in.html",
-      "last_pushed": "2026-10-01T20:34:04+00:00",
+      "last_pushed": "2026-10-05T22:17:04+00:00",
       "local_path": "course1/sprints/sprint-6/schedule-a-five-minute-check-in.md",
       "position": 9,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "e0557378771a6a195c84122e5b8275bf1677ff8f"
+      "source_commit": "14bbdeee35d2e2eadf6459866a4b7add0703f74c"
     },
     "course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2": {
       "artifact_id": "course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-05T22:00:06+00:00"
+  "last_sync": "2026-10-05T22:17:04+00:00"
 }
