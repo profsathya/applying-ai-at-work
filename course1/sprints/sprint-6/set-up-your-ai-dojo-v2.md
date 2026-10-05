@@ -33,6 +33,12 @@ Watch the walkthrough for the tool you choose, then follow the steps below. Keep
 {"src":"assets/dojo-setup/cis501-dojo-setup-gemini-narrated.mp4","title":"Set up a Gemini Gem (2:26)","captions":"assets/dojo-setup/cis501-dojo-setup-gemini-narrated.vtt"}
 ```
 
+```video
+{"src":"assets/dojo-setup/cis501-dojo-setup-claude-narrated.mp4","title":"Set up a Claude Project (5:09)","captions":"assets/dojo-setup/cis501-dojo-setup-claude-narrated.vtt"}
+```
+
+Review the permissions before connecting Google Drive and use an account approved for your course. If connecting is unavailable or inappropriate, use the dated-copy fallback below.
+
 ## 1. Create your Dojo
 
 Name your project or Gem **CIS 501 AI Dojo**:
