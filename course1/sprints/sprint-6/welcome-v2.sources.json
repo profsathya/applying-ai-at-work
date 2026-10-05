@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-welcome-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "6f63926ccabc0997d147041f102475b5770c172ff78f6a6a319dba92f7534249",
-  "body_sha256": "3606ecb328a9ccbd26ebb131a6539ac243726df37264fcd0545d0f023d11e214",
+  "body_sha256": "b90e1480d4a6269fccf03a86332ffa8a194f929ab04a1632429ea45d0cc5ce98",
   "frontmatter_sha256": "52112fa5c322e11fdfde9f21ea4f348e21a57755abe31f822ab306690d01f4dc",
   "parts": [
     {
@@ -23,6 +23,12 @@
         "d-a5a526bfcb8ecc4c:tab/t.61m2fwihmg1q/body/13",
         "d-a5a526bfcb8ecc4c:tab/t.61m2fwihmg1q/body/20"
       ]
+    },
+    {
+      "kind": "new",
+      "markdown": "```video\n{\"src\":\"assets/course-intro/cis501-course-introduction-with-tacey-opening.mp4\",\"title\":\"Welcome to Reframing Problems with AI (4:17)\",\"captions\":\"assets/course-intro/cis501-course-introduction-with-tacey-opening.vtt\"}\n```",
+      "reason": "User approved adding the updated course introduction with Tacey opening and the supplied English captions to the existing shared Welcome page, using the established accessible video renderer. This narrow addition supersedes the earlier omission of pending video material.",
+      "based_on": []
     },
     {
       "kind": "new",
@@ -218,7 +224,8 @@
     "Current Canvas wrappers/settings show no target drift. Retain existing source submission and Inbox fixes rather than restoring outdated Google Doc placeholders.",
     "2026-09-15 visual follow-up: replace the reused Sprint 1 image with a new original illustration in the same art style; add selective blue callouts on Welcome, How This Course Works, Your First Week, and Help. Existing Start Here goals accent remains the reference. No instructional or assessment redesign.",
     "User authorized live publication, five must_view pages and sequential item progression; preserve must_contribute discussion and existing identities. Clarify early help guidance to avoid a locked later-page dependency.",
-    "Replace institution-specific and fixed hosted links with portable artifact references so public routing and the selected Canvas profile resolve at render time."
+    "Replace institution-specific and fixed hosted links with portable artifact references so public routing and the selected Canvas profile resolve at render time.",
+    "2026-10-05: User explicitly approved public repository hosting and shared-site publication of the updated welcome recording and captions, and approved its placement on the existing Welcome page. Preserve all surrounding prose, illustration, navigation, course identities, settings, and unfinished booking links."
   ],
   "title_source": {
     "ref": "d-a5a526bfcb8ecc4c:tab/t.61m2fwihmg1q/body/4",
