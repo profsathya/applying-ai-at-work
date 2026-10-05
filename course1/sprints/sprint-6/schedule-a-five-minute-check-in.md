@@ -1,6 +1,6 @@
 ---
 type: page
-title: Schedule a 5-minute check-in
+title: Schedule a 15-minute check-in
 slug: schedule-a-five-minute-check-in
 artifact_id: course1-sprints-welcome-and-orientation-v2-schedule-a-five-minute-check-in
 sprint: 6
@@ -15,17 +15,20 @@ learner_labels: true
 page_presentation: reading
 ---
 
-# Schedule a 5-minute check-in
+# Schedule a 15-minute check-in
 
-Choose one member of the course team for a short check-in. Use the five minutes to introduce yourself, share what you hope to work on, or ask a question about getting started. You do not need to meet with all four people.
+Book a short one-to-one with a member of the course team on Zoom. Use it to introduce yourself, say what you hope to work on, or ask about anything that has you stuck. Any of us can help with any part of the course.
 
-## Choose one person
+## Book a time
 
-Booking links will be added here when they are available.
+[Book a 15-minute check-in](https://calendar.app.google/muQzq817xkR6aQXZ6)
 
-- **Tacey:** Booking link coming soon.
-- **Jeremy:** Booking link coming soon.
-- **Leslie:** Booking link coming soon.
-- **Melisa:** Booking link coming soon.
+One link covers Leslie, Jeremy, and Melisa, so you do not have to choose a person. Pick any open time. We are starting with times between 7 and 17 October and will add more as they fill. If you need longer than 15 minutes, book two slots back to back.
 
-There is nothing to submit on this page, and it does not block your progress through the course. While the links are being added, continue with the orientation activities. You can use Canvas Inbox if you need help getting started.
+## Join the meeting
+
+At your booked time, join Zoom: [https://csumb.zoom.us/j/83429226221](https://csumb.zoom.us/j/83429226221). The same link is in your booking confirmation.
+
+If something comes up, move the booking rather than skipping it.
+
+There is nothing to submit on this page, and it does not block your progress through the course. If you cannot find a time that works, use Canvas Inbox and say when you are free.
