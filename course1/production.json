@@ -114,17 +114,17 @@
       "canvas_payload_hash": "98c742c4dc2acb3c2951c7b8ff409282d2a5522356061c2202b886678255e891",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "501c2795aee854a19600e3110daf86686896ba72dd661e2a068d59552fe19f56",
+      "content_hash": "d01b71df96fac8e69d6e555582feff921ce7ed527c37956b0eb5d4dda1954c2c",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "8d662015fde976b0106c690abd96937ec08a9483e57b53536cd57f392a3ca6fd",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "hosted_hash": "e2d8f4ddf332920f96b0fded6b2bcdd694ed9311c744eed29467e65a70f632bd",
+      "hosted_last_rendered": "2026-10-05T21:42:47+00:00",
       "hosted_path": "course1/assignments/dojo-lab-test-widen-choose.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-test-widen-choose.html",
-      "last_pushed": "2026-09-30T13:37:41+00:00",
+      "last_pushed": "2026-10-05T21:42:47+00:00",
       "local_path": "course1/sprints/sprint-14/dojo-lab-test-widen-choose.md",
       "position": 8,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "93ecf7be5ffeaf4d763f5f1dc0e7e528a148da3c"
+      "source_commit": "86798827cea90130bb262b68165a3142da2b6b23"
     },
     "course1-sprints-sprint-14-first-frames": {
       "artifact_id": "course1-sprints-sprint-14-first-frames",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-05T16:13:01+00:00"
+  "last_sync": "2026-10-05T21:42:47+00:00"
 }
