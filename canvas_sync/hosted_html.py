@@ -435,6 +435,12 @@ def _canvas_only_anchor(canvas_url: str | None, label: str, *, css_class: str = 
     )
 
 
+def guided_submit_note(canvas_url: str | None) -> str:
+    anchor = _canvas_only_anchor(canvas_url, "Open the Canvas assignment")
+    link = f"<p>{anchor}</p>" if anchor else ""
+    return '<div class="submit"><h2>Submit to Canvas</h2><p>Paste your final response text into the Canvas assignment. A document link or a saved browser draft is not a submission.</p>' + link + '</div>'
+
+
 def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
     artifact_type = frontmatter["type"]
     if artifact_type == "page" and (frontmatter.get("page_presentation") == "reading" or frontmatter.get("delivery_mode") == "guided_assignment"):
@@ -444,9 +450,9 @@ def _submit_guidance(frontmatter: dict, canvas_url: str | None) -> str:
             return ""
         if frontmatter.get('guided_assignment', {}).get('presentation') in ('compact', 'reading'):
             return ''  # The compact workspace owns its single submission instruction/link.
-        anchor = _canvas_only_anchor(canvas_url, "Open the Canvas assignment")
-        link = f"<p>{anchor}</p>" if anchor else ""
-        return '<div class="submit"><h2>Submit to Canvas</h2><p>Paste your final response text into the Canvas assignment. A document link or a saved browser draft is not a submission.</p>' + link + '</div>'
+        if frontmatter.get('dojo_submission', {}).get('submit_in_part_2'):
+            return ''  # The Dojo renderer places this note at the end of Part 2.
+        return guided_submit_note(canvas_url)
     if is_ai_activity_delivery(frontmatter):
         guidance = (
             "Complete the interactive activity, copy or download the JSON response file, "

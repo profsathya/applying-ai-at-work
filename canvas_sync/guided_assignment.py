@@ -18,6 +18,15 @@ DOJO_PRIVACY_NOTICE = ('Before you begin, replace names and remove confidential 
                        'financial, or personal details. Use role labels and approximate details when the exact detail is '
                        'not needed. Do this before you send anything to the AI. Do not edit the transcript later; it must '
                        'preserve the exact words and order of the conversation.')
+DOJO_PART_2_HEADING = 'Part 2: Requesting and submitting the transcript'
+DOJO_TRANSCRIPT_HEADER = 'CIS501 — Dojo transcript — [date]'
+# Part 3 card after the Canvas note; inline so the shared reading stylesheet stays unchanged.
+DOJO_NEXT_STEP_STYLE = ('<style>.guided-reading.dojo-next-step { background: var(--accent-light); border: 1px solid #a3bffa; '
+                        'border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 14px 18px; }\n'
+                        '.dojo-next-label { margin: 0; font-size: 12px; font-weight: 700; letter-spacing: .06em; '
+                        'text-transform: uppercase; color: var(--accent); }\n'
+                        '.guided-reading.dojo-next-step h2 { margin-top: 8px; }\n'
+                        '.guided-reading.dojo-next-step section:last-child { margin-bottom: 0; }</style>')
 
 
 def _canvas_only_link(canvas_url: str | None) -> str:
@@ -233,6 +242,42 @@ def render_interleaved_brainstorm_body(frontmatter: dict, instructions_html: str
 </div>'''
 
 
+def split_at_dojo_part_2(instructions_html: str) -> tuple[str, str, str]:
+    """Return (before, authored Part 2 heading tag, after) for an empty authored Part 2 anchor."""
+    pattern = re.compile(r'(?:<section>\s*)?(<h2\b[^>]*>)' + re.escape(DOJO_PART_2_HEADING) + r'</h2>\s*(?:</section>\s*)?')
+    matches = list(pattern.finditer(instructions_html))
+    if len(matches) != 1:
+        raise ValueError(f'submit_in_part_2 requires exactly one "## {DOJO_PART_2_HEADING}" heading')
+    match = matches[0]
+    after = instructions_html[match.end():]
+    if after.strip() and not after.lstrip().startswith(('<section>', '<h2')):
+        raise ValueError(f'submit_in_part_2 requires "## {DOJO_PART_2_HEADING}" to have no authored body')
+    return instructions_html[:match.start()], match.group(1), after
+
+
+def _dojo_part_2_submit(heading_tag: str, transcript_request: str, request_box: str, response_block: str,
+                        *, continue_to_part_3: bool) -> str:
+    """Part 2 with the generated transcript controls, in the order students act."""
+    if f'Start with one header line: {DOJO_TRANSCRIPT_HEADER.split("[")[0]}[' not in transcript_request:
+        raise ValueError('Transcript request header no longer matches the Part 2 header line')
+    next_step = ' <strong>Then continue to Part 3 below.</strong>' if continue_to_part_3 else ''
+    return f'''<section class="dojo-transcript-submit">
+{heading_tag}{html.escape(DOJO_PART_2_HEADING)}</h2>
+<p>The complete transcript is the only evidence you submit for this Dojo Lab.</p>
+<ol>
+<li>Before requesting the transcript, make sure you have gone through every round of this Dojo, through the last round.</li>
+<li>Paste the transcript request below into the same conversation exactly as written.</li>
+</ol>
+{request_box}
+<ol start="3">
+<li>If the reply ends with CONTINUED, type "continue". Repeat until a reply does not end with CONTINUED.</li>
+<li>Paste every chunk into the box below, in order. Keep any CONTINUED markers. Do not submit a summary, link, separate answer, or edited excerpt.</li>
+<li>Check that the transcript begins with the header line "{html.escape(DOJO_TRANSCRIPT_HEADER, quote=False)}" and includes every turn from your first message through the transcript request. Then paste it into the Canvas assignment and submit it there.{next_step}</li>
+</ol>
+{response_block}
+</section>'''
+
+
 def render_dojo_transcript_body(frontmatter: dict, instructions_html: str, canvas_url: str | None) -> str:
     """Render one uncapped transcript field as the sole Canvas evidence for a Dojo assignment."""
     config = frontmatter['guided_assignment']
@@ -250,29 +295,13 @@ def render_dojo_transcript_body(frontmatter: dict, instructions_html: str, canva
     serialized = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     criteria = ''.join(f'<li>{html.escape(item)}</li>' for item in task['criteria'])
     link = _canvas_only_link(canvas_url)
-    return f'''<style>{(ASSETS / 'guided-assignment.css').read_text()}
-{(ASSETS / 'guided-reading.css').read_text()}</style>
-<div class="guided-workspace guided-reading dojo-transcript" id="guided-workspace">
-<p class="dojo-privacy">{html.escape(DOJO_PRIVACY_NOTICE)}</p>
-{instructions_html}
-<section class="dojo-transcript-submit">
-<h2>Submit the complete transcript</h2>
-<p>The complete transcript is the only evidence you submit for this Dojo Lab.</p>
-<ol>
-<li>Before requesting the transcript, send one final <code>Me:</code> turn that states the decisions this activity asks you to make, in your own words.</li>
-<li>Paste the transcript request below into the same conversation exactly as written.</li>
-</ol>
-<label for="transcript-request-text">Transcript request</label>
+    task_id = html.escape(task['id'], quote=True)
+    request_box = f'''<label for="transcript-request-text">Transcript request</label>
 <textarea id="transcript-request-text" readonly rows="18">{html.escape(transcript_request)}</textarea>
-<button type="button" id="copy-transcript-request">Copy transcript request</button>
-<ol start="3">
-<li>If the response ends with <code>CONTINUED</code>, reply <code>continue</code>. Repeat until the conversation is complete.</li>
-<li>Paste every chunk into the one Canvas text-entry field in order. Keep any <code>CONTINUED</code> markers. Do not submit a summary, link, separate answer, or edited excerpt.</li>
-<li>Check that the transcript begins with the required header and includes every turn from your first message through the transcript request, then submit it in Canvas.</li>
-</ol>
-<div class="response-task" data-task="{html.escape(task['id'], quote=True)}">
-<label for="answer-{html.escape(task['id'], quote=True)}">{html.escape(task['prompt'])}</label>
-<textarea id="answer-{html.escape(task['id'], quote=True)}" data-answer="{html.escape(task['id'], quote=True)}" rows="20" aria-describedby="save-status"></textarea>
+<button type="button" id="copy-transcript-request">Copy transcript request</button>'''
+    response_block = f'''<div class="response-task" data-task="{task_id}">
+<label for="answer-{task_id}">{html.escape(task['prompt'])}</label>
+<textarea id="answer-{task_id}" data-answer="{task_id}" rows="20" aria-describedby="save-status"></textarea>
 <details><summary>Self-check</summary><ul>{criteria}</ul></details>
 </div>
 <p id="save-status" role="status">Drafts save in this browser. Keep your own copy.</p>
@@ -285,11 +314,48 @@ def render_dojo_transcript_body(frontmatter: dict, instructions_html: str, canva
 <div id="clear-confirmation" hidden><p>Clear this saved draft? Keep a copy first.</p><button type="button" id="confirm-clear">Clear saved responses</button><button type="button" id="cancel-clear">Keep my responses</button></div>
 <label for="copy-output">Select and copy manually</label><textarea id="copy-output" readonly rows="10"></textarea>
 <p id="completion-status"></p>
-</details>
-</section>
+</details>'''
+    if frontmatter['dojo_submission'].get('submit_in_part_2'):
+        # Opt-in: the generated controls fill the authored Part 2 heading. The Canvas
+        # submit note follows outside the workspace, so it keeps its page styling,
+        # and later authored parts follow the note in their own reading column.
+        from canvas_sync.hosted_html import guided_submit_note
+        before, heading_tag, after = split_at_dojo_part_2(instructions_html)
+        part_3 = re.match(r'\s*(?:<section>\s*)?<h2\b[^>]*>Part 3:', after) is not None
+        content = before + _dojo_part_2_submit(heading_tag, transcript_request, request_box, response_block,
+                                               continue_to_part_3=part_3)
+        trailing = '\n' + guided_submit_note(canvas_url)
+        if part_3:
+            trailing += (f'\n{DOJO_NEXT_STEP_STYLE}\n<div class="guided-reading dojo-transcript dojo-next-step">\n'
+                         f'<p class="dojo-next-label">Before you leave this page</p>\n{after.strip()}\n</div>')
+        elif after.strip():
+            trailing += f'\n<div class="guided-reading dojo-transcript">\n{after.strip()}\n</div>'
+    else:
+        trailing = ''
+        content = f'''{instructions_html}
+<section class="dojo-transcript-submit">
+<h2>Submit the complete transcript</h2>
+<p>The complete transcript is the only evidence you submit for this Dojo Lab.</p>
+<ol>
+<li>Before requesting the transcript, send one final <code>Me:</code> turn that states the decisions this activity asks you to make, in your own words.</li>
+<li>Paste the transcript request below into the same conversation exactly as written.</li>
+</ol>
+{request_box}
+<ol start="3">
+<li>If the response ends with <code>CONTINUED</code>, reply <code>continue</code>. Repeat until the conversation is complete.</li>
+<li>Paste every chunk into the one Canvas text-entry field in order. Keep any <code>CONTINUED</code> markers. Do not submit a summary, link, separate answer, or edited excerpt.</li>
+<li>Check that the transcript begins with the required header and includes every turn from your first message through the transcript request, then submit it in Canvas.</li>
+</ol>
+{response_block}
+</section>'''
+    return f'''<style>{(ASSETS / 'guided-assignment.css').read_text()}
+{(ASSETS / 'guided-reading.css').read_text()}</style>
+<div class="guided-workspace guided-reading dojo-transcript" id="guided-workspace">
+<p class="dojo-privacy">{html.escape(DOJO_PRIVACY_NOTICE)}</p>
+{content}
 <script type="application/json" id="guided-config">{serialized}</script>
 <script>{(ASSETS / 'guided-assignment.js').read_text()}</script>
-</div>'''
+</div>{trailing}'''
 
 
 def render_compact_body(frontmatter: dict, instructions_html: str, task_sections: dict[str, str], canvas_url: str | None) -> str:

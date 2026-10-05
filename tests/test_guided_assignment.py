@@ -144,6 +144,43 @@ class GuidedAssignmentTests(unittest.TestCase):
                 self.assertEqual(len(editable), 1)
                 self.assertNotIn('maxlength=', editable[0])
 
+    def test_dojo_submit_in_part_2_is_opt_in_and_orders_part_3_after_submit_note(self):
+        body = ('## Part 1: Your Dojo conversation\n\nTalk.\n\n'
+                '## Part 2: Requesting and submitting the transcript\n\n'
+                '## Part 3: Updating your frames\n\nUpdate.\n')
+        manifest = {'canvas_base_url': 'https://example.invalid', 'canvas_course_id': 180}
+        hosted = {'hosted_path': 'deanza/course1/assignments/dojo-lab-decide.html'}
+        default = render_artifact_document(dojo_frontmatter(), body, manifest, hosted, {})
+        self.assertIn('<h2>Submit the complete transcript</h2>', default)
+        self.assertLess(default.index('Part 3: Updating'), default.index('id="transcript-request-text"'))
+
+        fm = dojo_frontmatter()
+        fm['dojo_submission']['submit_in_part_2'] = True
+        self.assertEqual(self.validate(fm, body), [])
+        result = render_artifact_document(fm, body, manifest, hosted, {})
+        self.assertNotIn('<h2>Submit the complete transcript</h2>', result)
+        order = ['Part 1: Your Dojo', 'Part 2: Requesting', 'every round of this Dojo, through the last round.</li>',
+                 'id="transcript-request-text"', 'id="copy-transcript-request"', 'Paste every chunk into the box below',
+                 'header line "CIS501 \u2014 Dojo transcript \u2014 [date]"',
+                 'submit it there. <strong>Then continue to Part 3 below.</strong></li>', 'data-answer="dojo-transcript"',
+                 '<summary>Self-check</summary>', 'id="save-status"', 'id="copy-answers"',
+                 'Copying or saving here does not submit your work.', 'id="more-options"',
+                 '<div class="submit"><h2>Submit to Canvas</h2>', 'class="guided-reading dojo-transcript dojo-next-step"',
+                 'Before you leave this page', 'Part 3: Updating', '<footer']
+        positions = [result.index(marker) for marker in order]
+        self.assertEqual(positions, sorted(positions))
+        self.assertEqual(result.count('<div class="submit">'), 1)
+        self.assertEqual(result.count('Part 2: Requesting'), 1)
+        # The submit note stays outside the reading workspace so its page styling is unchanged.
+        self.assertLess(result.index('</div>', result.index('id="guided-config"')), result.index('<div class="submit">'))
+
+        for bad in (body.replace('## Part 2: Requesting and submitting the transcript\n\n', ''),
+                    body.replace('transcript\n\n## Part 3', 'transcript\n\nOld steps.\n\n## Part 3')):
+            with self.subTest(bad=bad):
+                self.assertTrue(any('submit_in_part_2' in e for e in self.validate(fm, bad)))
+        fm['dojo_submission']['submit_in_part_2'] = 'yes'
+        self.assertTrue(self.validate(fm, body))
+
     def test_dojo_transcript_semantic_mutations_fail_closed(self):
         cases = {
             'wrong type': ('type', 'page'),
