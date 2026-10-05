@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "total_points": 50,
+  "items": 9,
+  "source_unchanged": true,
+  "schema_all": "PASS",
+  "browser_checks": {
+    "manual_cua": "PASS",
+    "participant_checkboxes": 9,
+    "participant_reload": "PASS",
+    "responses_reload": "PASS",
+    "native_clear_resets_checks_and_responses": "PASS",
+    "keyboard_checkbox_and_disclosure": "PASS",
+    "desktop": "PASS",
+    "mobile_390": "PASS",
+    "mobile_page_overflow": false,
+    "instructor_full_evidence_total": 50.0,
+    "instructor_all_partial_total": 30.0,
+    "illustrative_total": 41.2,
+    "illustrative_feedback_priorities": [
+      "frame-judgment",
+      "updated-map"
+    ],
+    "synthetic_responses_and_checks_cleared": true
+  },
+  "word_export": {
+    "offline_exact_js_execution": "PASS",
+    "tables": 6,
+    "checked": 2,
+    "unchecked": 7,
+    "cua_download_ui": "downloaded status observed",
+    "download_receipt": "not obtained: CUA download event waiter timed out; exported binary verified separately offline"
+  },
+  "limitations": [
+    "No Canvas rubric created or associated",
+    "No participant testing or Sathya approval",
+    "No screen-reader certification or enlarged-text/zoom testing",
+    "Full module preview browser suite not run; scope is a separate rubric prototype"
+  ]
+}
