@@ -23,7 +23,7 @@ guided_assignment:
     kind: response
     prompt: Paste the complete Dojo transcript, including every CONTINUED chunk, in order.
     criteria:
-    - The required header and every turn, in order.
+    - The header line and every turn, in order.
     - Every CONTINUED marker and continuation chunk kept.
     - The conversation reaches the method's last round, where you say what changed and what
       you chose.
@@ -31,6 +31,8 @@ publish: true
 dojo_submission:
   mode: transcript
   prompt_version: v1
+  submit_in_part_2:
+    final_round: where you say what changed and what you chose
 learning_goal: Have AI test and widen every draft frame, and choose one to carry forward,
   with your reasons.
 ---
@@ -76,14 +78,6 @@ One rule holds for the whole conversation. Your frames are yours, not the AI's. 
 > Do not rewrite the frames, suggest solutions, or require evidence that later sprints are designed to gather. Do not turn a first-draft test into an exhaustive audit.
 
 ## Part 2: Requesting and submitting the transcript
-
-The transcript is the only thing you submit for this Dojo Lab. Five steps:
-
-1. Copy the transcript request at the bottom of this page.
-2. Paste it into your Dojo conversation as your next message.
-3. If the reply ends with CONTINUED, type "continue" and repeat until it stops.
-4. Copy the Dojo's reply, every chunk, in order.
-5. Paste it into the Canvas text box below this page and submit.
 
 ## Part 3: Updating your frames
 

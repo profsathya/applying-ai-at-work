@@ -282,6 +282,13 @@ def validate_guided_assignment(label: object, payload: dict, body: str | None = 
             load_dojo_transcript_prompt(dojo.get('prompt_version'))
         except ValueError as exc:
             errors.append(f'{label}: {exc}')
+        if dojo.get('submit_in_part_2') and body is not None:
+            from canvas_sync.guided_assignment import split_at_dojo_part_2
+            from canvas_sync.hosted_html import markdown_body_to_html
+            try:
+                split_at_dojo_part_2(markdown_body_to_html(body))
+            except ValueError as exc:
+                errors.append(f'{label}: {exc}')
     ids = []
     for task in config.get("tasks", []) if isinstance(config.get("tasks"), list) else []:
         if not isinstance(task, dict):

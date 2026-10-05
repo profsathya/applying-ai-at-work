@@ -421,6 +421,14 @@
         "prompt_version": {
           "type": "string",
           "pattern": "^v[1-9][0-9]*$"
+        },
+        "submit_in_part_2": {
+          "type": "object",
+          "required": ["final_round"],
+          "properties": {
+            "final_round": {"type": "string", "minLength": 1}
+          },
+          "additionalProperties": false
         }
       },
       "additionalProperties": false
