@@ -32,11 +32,11 @@ Each sprint develops your thinking and contributes evidence to the final integra
 
 Use observations from work or life to compare candidate problems, write draft problem frames, use AI to test and widen them, and choose one problem worth investigating. Carry your chosen **Problem Frame** into Sprint 2 as your Problem Frame document.
 
-**Available now:** the complete two-week Sprint 1 sequence. Complete Brainstorm your list, Get underneath three to five, and First frames without AI. Use AI only when the Dojo Lab introduces it, then submit your Problem Frame and reflection.
+**Available now:** the complete two-week Sprint 1 sequence. Write your own answers in Brainstorm your list and Get underneath three to five before using their optional AI feedback. Complete First frames without AI. Use your Dojo in the Dojo Lab to test and widen your frames, then submit your Problem Frame and reflection.
 
-### 2. Direct AI deliberately · Weeks 3-4
+### 2. Is this problem worth pursuing? · Weeks 3-4
 
-Give AI useful context, compare choices, and identify what needs confirmation. Your application log records suggestions, assumptions, and the judgment behind your decisions.
+Check the assumptions in your Problem Frame and investigate what solutions already exist. Use what you learn to update the frame and decide, with reasons, whether this problem is worth pursuing.
 
 ### 3. Integrate people and context · Weeks 5-6
 

@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-how-this-course-works-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "48b9395e7076ae24827273853f18f1e718d3376750d8b81f284c5f17a63b5ba8",
-  "body_sha256": "0c71a05153019ffb3082bc2cbfc43e50cc5e91e65de43a82a34a7c28b7909017",
+  "body_sha256": "91e252bd4a61727ca5198041387150fbdd3558d366e5d8a333ea994f5d096901",
   "frontmatter_sha256": "c1e137fd927aba742410388633e9f380f95585a157529ab1a20918943ededb2b",
   "parts": [
     {
@@ -49,8 +49,8 @@
     },
     {
       "kind": "new",
-      "markdown": "### 1. Find the problem worth solving · Weeks 1-2\n\nUse observations from work or life to compare candidate problems, write draft problem frames, use AI to test and widen them, and choose one problem worth investigating. Carry your chosen **Problem Frame** into Sprint 2 as your Problem Frame document.\n\n**Available now:** the complete two-week Sprint 1 sequence. Complete Brainstorm your list, Get underneath three to five, and First frames without AI. Use AI only when the Dojo Lab introduces it, then submit your Problem Frame and reflection.",
-      "reason": "Apply the user-authorized 2026-09-18 reconciliation to current Sprint 1 scope and artifact names.",
+      "markdown": "### 1. Find the problem worth solving · Weeks 1-2\n\nUse observations from work or life to compare candidate problems, write draft problem frames, use AI to test and widen them, and choose one problem worth investigating. Carry your chosen **Problem Frame** into Sprint 2 as your Problem Frame document.\n\n**Available now:** the complete two-week Sprint 1 sequence. Write your own answers in Brainstorm your list and Get underneath three to five before using their optional AI feedback. Complete First frames without AI. Use your Dojo in the Dojo Lab to test and widen your frames, then submit your Problem Frame and reflection.",
+      "reason": "Apply the user-authorized 2026-09-18 reconciliation to current Sprint 1 scope and artifact names. User-authorized 2026-10-05 cleanup aligns this authored passage with current activity rules and the published Sprint 2 curriculum; original source selections remain unchanged.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.xs6l5nx7b5hl/body/14",
         "d-a5a526bfcb8ecc4c:tab/t.xs6l5nx7b5hl/body/31"
@@ -58,8 +58,8 @@
     },
     {
       "kind": "new",
-      "markdown": "### 2. Direct AI deliberately · Weeks 3-4\n\nGive AI useful context, compare choices, and identify what needs confirmation. Your application log records suggestions, assumptions, and the judgment behind your decisions.",
-      "reason": "Convert the supplied roadmap row to a mobile-readable section without adding tasks or claiming availability.",
+      "markdown": "### 2. Is this problem worth pursuing? · Weeks 3-4\n\nCheck the assumptions in your Problem Frame and investigate what solutions already exist. Use what you learn to update the frame and decide, with reasons, whether this problem is worth pursuing.",
+      "reason": "Convert the supplied roadmap row to a mobile-readable section without adding tasks or claiming availability. User-authorized 2026-10-05 cleanup aligns this authored passage with current activity rules and the published Sprint 2 curriculum; original source selections remain unchanged.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.xs6l5nx7b5hl/body/14"
       ]

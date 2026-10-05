@@ -36,7 +36,7 @@ Find **Canvas Inbox** in the course navigation so you know where to contact your
 
 ## 4. Set up your AI coach
 
-Continue to Set up your AI Dojo. Configure one tool and try its short coaching check. There is no setup submission. In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames without AI; use the Dojo only when the Dojo Lab introduces it.
+Continue to Set up your AI Dojo. Configure one tool and try its short coaching check. There is no setup submission. In Sprint 1, write your own answers in Brainstorm your list and Get underneath three to five before using their optional AI feedback. Complete First frames without AI; use your Dojo when the Dojo Lab introduces it.
 
 ## 5. Post your introduction
 
