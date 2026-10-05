@@ -1,6 +1,6 @@
 ---
 type: page
-title: Schedule a 5-minute check-in
+title: Schedule a 15-minute check-in
 slug: schedule-a-five-minute-check-in
 artifact_id: course1-sprints-welcome-and-orientation-v2-schedule-a-five-minute-check-in
 sprint: 6
@@ -15,17 +15,20 @@ learner_labels: true
 page_presentation: reading
 ---
 
-# Schedule a 5-minute check-in
+# Schedule a 15-minute check-in
 
-Choose one member of the course team for a short check-in. Use the five minutes to introduce yourself, share what you hope to work on, or ask a question about getting started. You do not need to meet with all four people.
+Book a short one-to-one on Zoom. Use it to introduce yourself, say what you hope to work on, or ask about anything that has you stuck. Appointments are 15 minutes; a brief question is welcome. These check-ins will be with either Leslie, Jeremy, or Melisa. All three of us can help with any part of the course and we talk with each other regularly, so meeting with any of us works.
 
-## Choose one person
+## Book a time
 
-Booking links will be added here when they are available.
+[Book a 15-minute check-in](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0s81JZi6-RV_udgzJpG0w267b_L-U_PnKJPnMWSXKDbRRtQ3fsTTmz_mdfpIsrfaa5GAIUGovL)
 
-- **Tacey:** Booking link coming soon.
-- **Jeremy:** Booking link coming soon.
-- **Leslie:** Booking link coming soon.
-- **Melisa:** Booking link coming soon.
+Choose a time shown on the booking page and check the time zone before confirming.
 
-There is nothing to submit on this page, and it does not block your progress through the course. While the links are being added, continue with the orientation activities. You can use Canvas Inbox if you need help getting started.
+## Join the meeting
+
+Use the Zoom meeting details in your booking confirmation to join at your booked time.
+
+If you need to change your appointment, use your booking confirmation.
+
+Check-ins are optional. There is nothing to submit on this page, and it does not block your progress through the course. If you cannot find a time that works, use Canvas Inbox and say when you are free.
