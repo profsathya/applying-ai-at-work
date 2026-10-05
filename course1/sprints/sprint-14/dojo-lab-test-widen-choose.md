@@ -10,6 +10,7 @@ position: 8
 points: 0
 submission_type: text_entry
 delivery_mode: guided_assignment
+learner_labels: true
 completion_requirement: must_submit
 guided_assignment:
   version: '2.0'

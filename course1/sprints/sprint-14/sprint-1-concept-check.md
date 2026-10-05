@@ -10,12 +10,13 @@ position: 6
 points: null
 submission_type: none
 delivery_mode: guided_assignment
+learner_labels: true
 hosted_aliases: [course1/assignments/sprint-1-concept-check.html]
 completion_requirement: must_view
 guided_assignment:
   version: '1.0'
-  purpose: Practice the judgment you'll use in First frames on a sample first, then use the same judgment on your own frames.
-  builds_on: Complete Brainstorm your list, Get underneath three to five, and read The problem frame.
+  purpose: Check your framing judgment on a sample before you finalize your chosen Problem Frame.
+  builds_on: Bring your First frames Word file after the Dojo Lab.
   standing_instruction: Practice with the questions and check your answers. No submission or grade; viewing this page counts for Canvas module progress.
   tasks:
   - id: indicator
@@ -29,10 +30,10 @@ guided_assignment:
     - A solution idea you should build next
     correct_index: 1
     explanation: A feeling that something is off points toward a problem. Describing how it works now is what shows the gap.
-    instruction_section: Practice before First frames
+    instruction_section: Check your framing before Problem Frame
   - id: current-actions
     kind: choice
-    prompt: Preparing for your First frames, which sentence best answers "How does it work now?"
+    prompt: When reviewing a frame, which sentence best answers "How does it work now?"
     criteria:
     - Choose the sentence that describes actions without blame or a proposed fix.
     options:
@@ -43,7 +44,7 @@ guided_assignment:
     explanation: That part describes what happens and who does what. It doesn't suggest a fix or blame anyone.
   - id: finished-gap
     kind: choice
-    prompt: 'Preparing for your First frames: a sample gap reads, "The process is manual and inconsistent." Is it finished?'
+    prompt: 'A sample gap reads, "The process is manual and inconsistent." Is it finished?'
     criteria:
     - Choose the answer that names what the gap is missing.
     options:
@@ -54,7 +55,7 @@ guided_assignment:
     explanation: A process isn't a gap yet. A gap says who can't know, can't do, or has to redo something.
   - id: changed-state
     kind: choice
-    prompt: Preparing for your First frames, which of these is a changed state, not a solution?
+    prompt: When reviewing a frame, which of these is a changed state, not a solution?
     criteria:
     - Choose the outcome that does not say what to build.
     options:
@@ -65,7 +66,7 @@ guided_assignment:
     explanation: A changed state says what's true once the problem is gone, not what you built. Solutions come later in the course.
   - id: failure-moment
     kind: choice
-    prompt: Preparing for your First frames, which sentence names the moment the current way stops working?
+    prompt: When reviewing a frame, which sentence names the moment the current way stops working?
     criteria:
     - Choose the condition under which the current handling breaks.
     options:
@@ -76,7 +77,7 @@ guided_assignment:
     explanation: The breaking point is when the current way fails. What follows, like clients repeating themselves, is the result.
   - id: specific-goal
     kind: choice
-    prompt: 'Preparing for your First frames: a sample goal reads, "Better client communication." What''s wrong with it?'
+    prompt: 'A sample goal reads, "Better client communication." What''s wrong with it?'
     criteria:
     - Choose the test that makes a goal point to this problem rather than its neighbours.
     options:
@@ -91,8 +92,8 @@ publish: true
 
 # Sprint 1 Concept check
 
-## Practice before First frames
+## Check your framing before Problem Frame
 
-Practice the judgment you'll use in First frames on a sample first. Then use the same judgment on your own frames. Answer all six from your own thinking, without AI.
+Use a sample to check the judgments you used in First frames and the Dojo Lab. Then use what you notice to finalize your chosen Problem Frame. Answer all six from your own thinking, without AI.
 
 These questions use a handover example you'll see throughout the course. Some details are made up for practice.

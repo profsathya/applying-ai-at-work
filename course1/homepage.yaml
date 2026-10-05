@@ -193,7 +193,7 @@ modules:
       - "Plan 4-6 hours of weekly work within the recommended ten-week schedule."
       - "Set up an AI coach and check that it supports your thinking while leaving decisions with you."
       - "Find submission guidance and contact your instructor when you need help."
-    prereq: "Complete Sprint 0 before any later sprint. Follow six pages and one discussion in order; the Introduction Post is your only Sprint 0 submission. In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames without AI; use AI when the Dojo Lab introduces it."
+    prereq: "Complete Sprint 0 before any later sprint. Follow six pages and one discussion in order; the Introduction Post is your only Sprint 0 submission. In Sprint 1, write your own answers in Brainstorm your list and Get underneath three to five before using their optional built-in AI feedback. Complete First frames without AI; use your Dojo when the Dojo Lab introduces it."
     groups:
       - label: "Read these in order"
         items:
@@ -345,16 +345,16 @@ modules:
       - "Write complete draft problem frames that separate current conditions, a changed state, assumptions, and remaining unknowns."
       - "Use AI to test and widen your frames while deciding what to accept or reject, then choose a problem that is workable for further inquiry."
       - "Submit one problem frame that shows how your judgment changed, and explain what AI contributed, what only you could contribute, and what remains uncertain."
-    prereq: "Complete Sprint 0, then follow Sprint 1's required items in order. Bring observations from your real work or life and use one Candidate Log throughout. Complete the brainstorm, table, and first frames without AI before using AI in the Dojo Lab."
+    prereq: "Complete Sprint 0, then follow Sprint 1's required items in order. Bring observations from your real work or life and keep each activity's download for the next activity. Write your own answers in Brainstorm your list and Get underneath three to five before using their optional built-in AI feedback. Complete First frames without AI, then carry its Word file into the Dojo Lab and Problem Frame."
     groups:
       - label: "Sprint Week 1: Build candidate frames"
         items:
           - slug: "introduction-find-the-problem-worth-solving"
             nav_meta: "Read"
-            meta: "Page - learn the two-week route, point structure, AI boundaries, and how to use the Candidate Log"
+            meta: "Page - learn the two-week route, point structure, and when to use AI"
           - slug: "brainstorm-your-list-walk-through"
             nav_meta: "Practice · 0 points"
-            meta: "Guided assignment - build a broad list from your own week without AI; 0 points, submission required for module completion"
+            meta: "Guided assignment - write a broad list from your own week first, then use optional built-in AI feedback; 0 points, submission required for module completion"
           - slug: "get-underneath-three-to-five-walk-through"
             nav_meta: "Practice · 0 points"
             meta: "Guided assignment - describe three to five situations, their current handling, costs, and gaps; optional feedback after writing; 0 points, submission required for module completion"
