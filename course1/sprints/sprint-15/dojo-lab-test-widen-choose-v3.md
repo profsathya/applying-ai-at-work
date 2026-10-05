@@ -17,6 +17,7 @@ publish: true
 dojo_submission:
   mode: transcript
   prompt_version: v1
+  submit_in_part_2: true
 guided_assignment:
   version: '2.0'
   purpose: Have AI test and widen your Stakeholder Map, and confirm who you will talk to first, with your reasons.
@@ -30,7 +31,7 @@ guided_assignment:
     prompt: Paste the complete Dojo transcript, including every CONTINUED chunk, in
       order.
     criteria:
-    - The required header and every turn, in order.
+    - The header line and every turn, in order.
     - Every CONTINUED marker and continuation chunk kept.
     - The conversation reaches the method's last round, where you say what changed and what
       you chose.
@@ -80,14 +81,6 @@ One rule holds for the whole conversation. Your map is yours, not the AI's. AI c
 > Do not rewrite the map, suggest solutions, or draft the learner's message to a stakeholder.
 
 ## Part 2: Requesting and submitting the transcript
-
-The transcript is the only thing you submit for this Dojo Lab. Five steps:
-
-1. Copy the transcript request at the bottom of this page.
-2. Paste it into your Dojo conversation as your next message.
-3. If the reply ends with CONTINUED, type "continue" and repeat until it stops.
-4. Copy the Dojo's reply, every chunk, in order.
-5. Paste it into the Canvas text box below this page and submit.
 
 ## Part 3: Updating your map
 
