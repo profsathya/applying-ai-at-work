@@ -42,7 +42,7 @@ Sprint 1 guided activities save drafts in the browser you use. Keep a copy of im
 
 Use [Set up your AI Dojo](artifact:course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2) to prepare your coach.
 
-> In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames **without AI**. Use the Dojo when the Dojo Lab introduces it. Keep the activity page available so you can return to its prompts and submission instructions.
+> In Sprint 1, write your own answers in Brainstorm your list and Get underneath three to five before using their optional built-in AI feedback. Complete First frames **without AI**. Use the Dojo when the Dojo Lab introduces it. Keep the activity page available so you can return to its prompts and submission instructions.
 
 ## Download a JSON file only when requested
 
