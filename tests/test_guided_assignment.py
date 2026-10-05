@@ -161,10 +161,12 @@ class GuidedAssignmentTests(unittest.TestCase):
         self.assertNotIn('<h2>Submit the complete transcript</h2>', result)
         order = ['Part 1: Your Dojo', 'Part 2: Requesting', 'every round of this Dojo, through the last round.</li>',
                  'id="transcript-request-text"', 'id="copy-transcript-request"', 'Paste every chunk into the box below',
-                 'header line "CIS501 \u2014 Dojo transcript \u2014 [date]"', 'data-answer="dojo-transcript"',
+                 'header line "CIS501 \u2014 Dojo transcript \u2014 [date]"',
+                 'submit it there. <strong>Then continue to Part 3 below.</strong></li>', 'data-answer="dojo-transcript"',
                  '<summary>Self-check</summary>', 'id="save-status"', 'id="copy-answers"',
                  'Copying or saving here does not submit your work.', 'id="more-options"',
-                 '<div class="submit"><h2>Submit to Canvas</h2>', 'Part 3: Updating', '<footer']
+                 '<div class="submit"><h2>Submit to Canvas</h2>', 'class="guided-reading dojo-transcript dojo-next-step"',
+                 'Before you leave this page', 'Part 3: Updating', '<footer']
         positions = [result.index(marker) for marker in order]
         self.assertEqual(positions, sorted(positions))
         self.assertEqual(result.count('<div class="submit">'), 1)
