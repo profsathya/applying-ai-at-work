@@ -17,13 +17,13 @@ page_presentation: reading
 
 # Schedule a 15-minute check-in
 
-Book a short one-to-one with a member of the course team on Zoom. Use it to introduce yourself, say what you hope to work on, or ask about anything that has you stuck. Any of us can help with any part of the course.
+Book a short one-to-one on Zoom. Use it to introduce yourself, say what you hope to work on, or ask about anything that has you stuck. These check-ins will be with either Leslie, Jeremy, or Melisa. All three of us can help with any part of the course and we talk with each other regularly, so meeting with any of us works.
 
 ## Book a time
 
 [Book a 15-minute check-in](https://calendar.app.google/muQzq817xkR6aQXZ6)
 
-One link covers Leslie, Jeremy, and Melisa, so you do not have to choose a person. Pick any open time. We are starting with times between 7 and 17 October and will add more as they fill. If you need longer than 15 minutes, book two slots back to back.
+Pick any open time. We are starting with times between 7 and 17 October and will add more as they fill. If you need longer than 15 minutes, book two slots back to back.
 
 ## Join the meeting
 
