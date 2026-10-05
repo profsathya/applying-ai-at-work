@@ -1,0 +1,50 @@
+{
+  "video": {
+    "name": "CIS501-Course-Introduction-with-Tacey-Opening.mp4",
+    "size": 46723676,
+    "sha256": "74f19f15789135bb30de198c668b80947fc43159b95c42b6ab3401ee924cc22e"
+  },
+  "captions": {
+    "name": "CIS501-Course-Introduction-with-Tacey-Opening.vtt",
+    "size": 6334,
+    "sha256": "1d42fb51d952878f6465b48568b39a944ecf9257a06ef146435c26699809065a"
+  },
+  "parts": [
+    {
+      "path": "welcome.mp4.part00",
+      "size": 9000000,
+      "sha256": "d6ffd2740b280119dade736caf203aa3776328e923044faec5aed22a9ac5f12b",
+      "blob_sha": "40cba36ac93ef5c380d742ac2bda0262cbe6b3ed"
+    },
+    {
+      "path": "welcome.mp4.part01",
+      "size": 9000000,
+      "sha256": "884f8995f0eceebc650df9d111146322c91d54ad0896fd0de116307abbad9c7a",
+      "blob_sha": "ba728a3b88192fcaaa071c172ab421cf11fa704b"
+    },
+    {
+      "path": "welcome.mp4.part02",
+      "size": 9000000,
+      "sha256": "41e55900c17d9d11b0c68428402a6155da574a9ecbfabc2c067f4cf298a5008a",
+      "blob_sha": "ca87c0d703c4a07f90f67549378086ecc88404ea"
+    },
+    {
+      "path": "welcome.mp4.part03",
+      "size": 9000000,
+      "sha256": "11dc1aedc7ac2fa78234cb90212ab1e09df30ef805c8493c723d8bbbdb47eb1d",
+      "blob_sha": "9a5f37385ceaf4f526e122182c15dc47b31fd56e"
+    },
+    {
+      "path": "welcome.mp4.part04",
+      "size": 9000000,
+      "sha256": "2a2590e45b1a5d3856305f5f609db6a976e9863ebfb52d1059d73a5dcb586853",
+      "blob_sha": "c9399092d56d521a9196bb27527a86e3e397af78"
+    },
+    {
+      "path": "welcome.mp4.part05",
+      "size": 1723676,
+      "sha256": "b293c0c0a5a96c781368792bc3e49c310e32e047d0aa5b9c6800f3a8bb3e3cfa",
+      "blob_sha": "527b1bdf5c9b1fd6d78c4ff92df41f69852db365"
+    }
+  ]
+}
