@@ -3,7 +3,7 @@
   "artifact_id": "course1-sprints-welcome-and-orientation-v2-help-and-resources-v2",
   "packet_sha256": "32ab6fcda01edd497b16abbc2dcd6e46482e908919cabdb031bfe78e11cdb017",
   "map_sha256": "48b9395e7076ae24827273853f18f1e718d3376750d8b81f284c5f17a63b5ba8",
-  "body_sha256": "fd016137458547e53711f4f0f759cbb71f09ae35b3530b4e05d77d1355e7935a",
+  "body_sha256": "39e10761afe1dd1f6d8355e14865fb0ebbeec2aba5e69173f7cad596811fb6c1",
   "frontmatter_sha256": "73f575daf6972f795044ff1b0012c6e51ff09217e6172f47d22ac73e10b5d37c",
   "parts": [
     {
@@ -56,8 +56,8 @@
     },
     {
       "kind": "new",
-      "markdown": "## Use AI tools when an activity introduces them\n\nUse [Set up your AI Dojo](artifact:course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2) to prepare your coach.\n\n> In Sprint 1, complete Brainstorm your list, Get underneath three to five, and First frames **without AI**. Use the Dojo when the Dojo Lab introduces it. Keep the activity page available so you can return to its prompts and submission instructions.",
-      "reason": "Apply the user-authorized 2026-09-18 reconciliation to the complete Sprint 1 sequence and AI boundary.",
+      "markdown": "## Use AI tools when an activity introduces them\n\nUse [Set up your AI Dojo](artifact:course1-sprints-welcome-and-orientation-v2-set-up-your-ai-dojo-v2) to prepare your coach.\n\n> In Sprint 1, write your own answers in Brainstorm your list and Get underneath three to five before using their optional built-in AI feedback. Complete First frames **without AI**. Use the Dojo when the Dojo Lab introduces it. Keep the activity page available so you can return to its prompts and submission instructions.",
+      "reason": "Apply the user-authorized 2026-09-18 reconciliation to the complete Sprint 1 sequence and AI boundary. User-authorized 2026-10-05 follow-up aligns this authored guidance with optional built-in feedback after participants write their own answers; First frames remains without AI. Original source selections remain unchanged.",
       "based_on": [
         "d-a5a526bfcb8ecc4c:tab/t.r7f4tyvql3ki/body/11",
         "d-a5a526bfcb8ecc4c:tab/t.r7f4tyvql3ki/body/12",
