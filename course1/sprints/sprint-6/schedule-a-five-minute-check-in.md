@@ -1,6 +1,6 @@
 ---
 type: page
-title: Schedule a 15-minute check-in
+title: Schedule a 15 minute time slot
 slug: schedule-a-five-minute-check-in
 artifact_id: course1-sprints-welcome-and-orientation-v2-schedule-a-five-minute-check-in
 sprint: 6
@@ -15,13 +15,13 @@ learner_labels: true
 page_presentation: reading
 ---
 
-# Schedule a 15-minute check-in
+# Schedule a 15 minute time slot
 
 Book a short one-to-one on Zoom. Use it to introduce yourself, say what you hope to work on, or ask about anything that has you stuck. Appointments are 15 minutes; a brief question is welcome. These check-ins will be with either Leslie, Jeremy, or Melisa. All three of us can help with any part of the course and we talk with each other regularly, so meeting with any of us works.
 
 ## Book a time
 
-[Book a 15-minute check-in](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0s81JZi6-RV_udgzJpG0w267b_L-U_PnKJPnMWSXKDbRRtQ3fsTTmz_mdfpIsrfaa5GAIUGovL)
+[Book a 15 minute time slot](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0s81JZi6-RV_udgzJpG0w267b_L-U_PnKJPnMWSXKDbRRtQ3fsTTmz_mdfpIsrfaa5GAIUGovL)
 
 Choose a time shown on the booking page and check the time zone before confirming.
 

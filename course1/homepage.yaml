@@ -224,7 +224,7 @@ modules:
             meta: "Page - submission steps, saved drafts, key terms, and instructor contact through Canvas Inbox"
           - slug: "schedule-a-five-minute-check-in"
             nav_meta: "No submission"
-            meta: "Page - book an optional 15-minute Zoom check-in with the course team through the shared booking page; no submission"
+            meta: "Page - book an optional 15 minute time slot for a Zoom check-in with the course team through the shared booking page; no submission"
 
   - sprint: 7
     hidden: true
