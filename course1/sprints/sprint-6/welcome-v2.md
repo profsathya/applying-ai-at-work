@@ -20,6 +20,10 @@ source_provenance: welcome-v2.sources.json
 
 Take a real problem from your work or personal life and investigate what would make a meaningful difference. This course helps you clarify the problem and your goals before committing to a solution. AI supports your thinking; you make the decisions at every step.
 
+```video
+{"src":"assets/course-intro/cis501-course-introduction-with-tacey-opening.mp4","title":"Welcome to Reframing Problems with AI (4:17)","captions":"assets/course-intro/cis501-course-introduction-with-tacey-opening.vtt"}
+```
+
 ![Two professionals examine connections among observations on a pinboard while one holds an open notebook.](assets/problem-investigation.png)
 
 *Investigating a problem starts with observations, questions, and people who know the context. Illustration created with AI for this course.*
