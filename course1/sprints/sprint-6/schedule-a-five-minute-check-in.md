@@ -23,7 +23,7 @@ Book a short one-to-one on Zoom. Use it to introduce yourself, say what you hope
 
 [Book a 15-minute check-in](https://calendar.app.google/muQzq817xkR6aQXZ6)
 
-Pick any open time. We are starting with times between 7 and 17 October and will add more as they fill. If you need longer than 15 minutes, book two slots back to back.
+Pick any open time. We are starting with times between October 7-17 and will add more as they fill.
 
 ## Join the meeting
 
