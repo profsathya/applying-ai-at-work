@@ -639,17 +639,17 @@
       "canvas_payload_hash": "e73df95ab84d974a878702074c9fcf7bb962a20722e9aaf205fa57a35977cd4a",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "a6c8e803b524cb193e77a5515eb5939ae757c78ea48e8d731ff9732adcb173d5",
+      "content_hash": "b0b37ff8f71b1d52c70f17d00c8f197e67ab4195405cbc9dbb7fc988b4be1da3",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "191bc8850e72a7347c361a9f8ba772ad310243e28751940b263adedc9f3c7a33",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "hosted_hash": "05258303d7b4f7e673d014d853a6fbd30c71aee2fa5479c04bf42e39d6846efb",
+      "hosted_last_rendered": "2026-10-05T22:00:06+00:00",
       "hosted_path": "course1/assignments/dojo-lab-test-your-assumptions.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-test-your-assumptions.html",
-      "last_pushed": "2026-09-26T19:41:21+00:00",
+      "last_pushed": "2026-10-05T22:00:06+00:00",
       "local_path": "course1/sprints/sprint-16/dojo-lab-test-your-assumptions.md",
       "position": 4,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "e392db1602504eee6bfb0fbfd78667c14740cd67"
+      "source_commit": "e9b50ac421058922e51e2c1714bf94f5a7da5caf"
     },
     "course1-sprints-sprint-16-introduction-is-this-problem-worth-pursuing": {
       "artifact_id": "course1-sprints-sprint-16-introduction-is-this-problem-worth-pursuing",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-05T21:42:47+00:00"
+  "last_sync": "2026-10-05T22:00:06+00:00"
 }
