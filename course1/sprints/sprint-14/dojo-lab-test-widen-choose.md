@@ -54,7 +54,7 @@ Open your Dojo and say: "Walk me through Dojo Lab: test, widen, choose." Then pa
 
 One rule holds for the whole conversation. Your frames are yours, not the AI's. Your Dojo conversation should be a conversation, meaning you do not take its feedback blindly. Push back, engage, tell it when you disagree, or ask it to justify its reasoning. If you find yourself pasting its sentences into your frames, you are letting it take over. This is about you grappling with and understanding your problem, so stop and make sure that is happening.
 
-*What your Dojo is working from.* You do not need to paste this. It is the brief your Dojo already has for this lab, shown so you can see what it has been asked to do. This lab runs in your Dojo: if yours is not set up yet, go to Set up your AI Dojo in Sprint 0 first. If it still will not load, contact your instructor.
+***What your Dojo is working from.*** **You do not need to paste this.** It is the brief your Dojo already has for this lab, shown so you can see what it has been asked to do. This lab runs in your Dojo: if yours is not set up yet, go to Set up your AI Dojo in Sprint 0 first. If it still will not load, contact your instructor.
 
 > Before we start, here is how to work with me. Be my coach, not my editor. Ask one question at a time and wait for my answer. Keep each reply under 120 words. Ask what I think before you offer your own read. Never rewrite my work; point at a line and make me change it myself. When you push on something weak, say you are pushing and why. When I have defended a line, ease off and say so. If I lean on you two turns running, say so and make me put it in my own words. Do not invent anything about my workplace; ask. End with a recap I can save.
 >
