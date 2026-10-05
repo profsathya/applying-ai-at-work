@@ -38,7 +38,7 @@ Watch the walkthrough for the tool you choose, then follow the steps below. Keep
 Name your project or Gem **CIS 501 AI Dojo**:
 
 - **[ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt):** create a project and open **Project settings**.
-- **[Claude](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects):** create a project and choose **Set project instructions**.
+- **[Claude](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects):** create a project, then click **+** next to **Instructions**.
 - **[Gemini](https://support.google.com/gemini/answer/15146780?hl=en):** create a Gem and use **Instructions**.
 
 If projects or Gems are unavailable, use a regular chat and provide the instruction and sources at the start of each conversation.
@@ -51,7 +51,7 @@ If projects or Gems are unavailable, use a regular chat and provide the instruct
 https://docs.google.com/document/d/1q4Dpbzr1quGMw-_i5mn99EO4bi-xj-VK-DoAJG13r38/edit
 ```
 
-- **Paste it into your Dojo:** use **Add source** in a ChatGPT project, **Google Drive** in Claude project knowledge, or **Knowledge → Drive** in a Gemini Gem. The document combines the [shared Dojo Core](https://profsathya.github.io/Common-Curriculum/common/dojo/dojo-core.txt), released course material, and the Dojo Lab methods.
+- **Paste it into your Dojo:** use **Add source** in a ChatGPT project, or **Knowledge → Drive** in a Gemini Gem. In Claude, connect Google Drive once (**Settings → Connectors → Google Drive → Connect**), open the course document once in a browser tab using the link above, then in your project use **Context → + → Drive** and paste the link there. If the connector hangs, reload the page and try again. The document combines the [shared Dojo Core](https://profsathya.github.io/Common-Curriculum/common/dojo/dojo-core.txt), released course material, and the Dojo Lab methods.
 - **If the source cannot be read:** paste or upload a dated copy of all three tabs: Dojo, Course, and Dojo Labs. Replace that copy when the document changes.
 
 Copy this instruction into your project or Gem:
