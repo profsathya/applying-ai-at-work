@@ -114,17 +114,17 @@
       "canvas_payload_hash": "98c742c4dc2acb3c2951c7b8ff409282d2a5522356061c2202b886678255e891",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "d01b71df96fac8e69d6e555582feff921ce7ed527c37956b0eb5d4dda1954c2c",
+      "content_hash": "d7d91fd039e1d80ef2d6c94484f2c28eb42aef5c30d9679fd7d7df938f49c509",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "e2d8f4ddf332920f96b0fded6b2bcdd694ed9311c744eed29467e65a70f632bd",
-      "hosted_last_rendered": "2026-10-05T21:42:47+00:00",
+      "hosted_hash": "47f16c42daa515fb86803a382da3c722366640eb57d80d460472397a279aea9f",
+      "hosted_last_rendered": "2026-10-05T23:21:12+00:00",
       "hosted_path": "course1/assignments/dojo-lab-test-widen-choose.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-test-widen-choose.html",
-      "last_pushed": "2026-10-05T21:42:47+00:00",
+      "last_pushed": "2026-10-05T23:21:12+00:00",
       "local_path": "course1/sprints/sprint-14/dojo-lab-test-widen-choose.md",
       "position": 8,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "86798827cea90130bb262b68165a3142da2b6b23"
+      "source_commit": "30eee1d0345d8723d38ee04786f10f0ff6481256"
     },
     "course1-sprints-sprint-14-first-frames": {
       "artifact_id": "course1-sprints-sprint-14-first-frames",
@@ -377,17 +377,17 @@
       "canvas_payload_hash": "ecabb542c2ee2d9c36ffe5cc9e4c147393a91c7aee9d0a687138bf62202e9ce2",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "bc2fd40b75ec6ea29d0b516e8081dc4927efeb8d6693ddd7fc58751360801523",
+      "content_hash": "70071045e72d71754602fb4981e23f9ff1cc224932f28835f49f30d561f3edf2",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "2ee77457c96a4db6a236b78e244611bfe540f3cef30d2e2bb3cc95b4018e8d1a",
-      "hosted_last_rendered": "2026-10-05T22:33:34+00:00",
+      "hosted_hash": "e500b355fb16d5228c510fea5e6e53dd8e2a73e91c4d8f4faaf22e262a0abaf3",
+      "hosted_last_rendered": "2026-10-05T23:21:13+00:00",
       "hosted_path": "course1/assignments/dojo-lab-test-widen-choose-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-test-widen-choose-v3.html",
-      "last_pushed": "2026-10-05T22:33:34+00:00",
+      "last_pushed": "2026-10-05T23:21:13+00:00",
       "local_path": "course1/sprints/sprint-15/dojo-lab-test-widen-choose-v3.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "7b8842e999bf53a950c8de34551b169126e30c5d"
+      "source_commit": "30eee1d0345d8723d38ee04786f10f0ff6481256"
     },
     "course1-sprints-sprint-15-introduction-integrate-people-and-context": {
       "artifact_id": "course1-sprints-sprint-15-introduction-integrate-people-and-context",
@@ -617,17 +617,17 @@
       "canvas_payload_hash": "629a1cbd0487a9b1d8df2ea6d9a322a80c6a4f06298024a54d817d3ede08a0c7",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "6537a2311cf57259afd779e480223e784c96832abdd2107a40b0de4de4195167",
+      "content_hash": "46afe7cfb46cc0003d382b3a9bb33068b0089294c072d969678e83be0aed3426",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "a71b0e0100145827df1ff529061ec678698ab09d5465203fad25938835e5c979",
-      "hosted_last_rendered": "2026-10-05T22:33:35+00:00",
+      "hosted_hash": "b1cd0e6132d55e3c470bce9d08f2bd4b20bb2655ac9183f19833c501e9077ae5",
+      "hosted_last_rendered": "2026-10-05T23:21:14+00:00",
       "hosted_path": "course1/assignments/dojo-lab-explore-what-already-exists.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-explore-what-already-exists.html",
-      "last_pushed": "2026-10-05T22:33:35+00:00",
+      "last_pushed": "2026-10-05T23:21:14+00:00",
       "local_path": "course1/sprints/sprint-16/dojo-lab-explore-what-already-exists.md",
       "position": 8,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "7b8842e999bf53a950c8de34551b169126e30c5d"
+      "source_commit": "30eee1d0345d8723d38ee04786f10f0ff6481256"
     },
     "course1-sprints-sprint-16-dojo-lab-test-your-assumptions": {
       "artifact_id": "course1-sprints-sprint-16-dojo-lab-test-your-assumptions",
@@ -639,17 +639,17 @@
       "canvas_payload_hash": "e73df95ab84d974a878702074c9fcf7bb962a20722e9aaf205fa57a35977cd4a",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "b0b37ff8f71b1d52c70f17d00c8f197e67ab4195405cbc9dbb7fc988b4be1da3",
+      "content_hash": "6293e0d25f69b53eeeef82da3523dde47adf1e27379b4586a9204d36eb311a82",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "05258303d7b4f7e673d014d853a6fbd30c71aee2fa5479c04bf42e39d6846efb",
-      "hosted_last_rendered": "2026-10-05T22:00:06+00:00",
+      "hosted_hash": "da9595fa05285b6c3e19f8e221d29b27681b3beaed7b7f2addd1790694f29867",
+      "hosted_last_rendered": "2026-10-05T23:21:15+00:00",
       "hosted_path": "course1/assignments/dojo-lab-test-your-assumptions.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-test-your-assumptions.html",
-      "last_pushed": "2026-10-05T22:00:06+00:00",
+      "last_pushed": "2026-10-05T23:21:15+00:00",
       "local_path": "course1/sprints/sprint-16/dojo-lab-test-your-assumptions.md",
       "position": 4,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "e9b50ac421058922e51e2c1714bf94f5a7da5caf"
+      "source_commit": "30eee1d0345d8723d38ee04786f10f0ff6481256"
     },
     "course1-sprints-sprint-16-introduction-is-this-problem-worth-pursuing": {
       "artifact_id": "course1-sprints-sprint-16-introduction-is-this-problem-worth-pursuing",
@@ -974,17 +974,17 @@
       "canvas_payload_hash": "7c0cdf4e12c39096228e079354b21b67ea29f7983fb25fb083d879b588ae5350",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "0f4b9a379e56a647504798feb6087d06ecd5fc0e241f93d2ab3f9c793bf14b15",
+      "content_hash": "b804642abcafa95533c790d9ca77aee778182845422d156ae86dbd2883378e26",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "336fc7ed6b470b2180eb2bff967c46d92f7caf6e7c98123a8fcf4a51c20169ce",
-      "hosted_last_rendered": "2026-10-05T22:33:36+00:00",
+      "hosted_hash": "77104eaf8b0e246316ea2829079d3142ef08bd076f8244ca0ce4403fa2a4ccb7",
+      "hosted_last_rendered": "2026-10-05T23:21:16+00:00",
       "hosted_path": "course1/assignments/dojo-lab-design-the-learning-path-v3.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-design-the-learning-path-v3.html",
-      "last_pushed": "2026-10-05T22:33:36+00:00",
+      "last_pushed": "2026-10-05T23:21:16+00:00",
       "local_path": "course1/sprints/sprint-8/dojo-lab-design-the-learning-path-v3.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "7b8842e999bf53a950c8de34551b169126e30c5d"
+      "source_commit": "30eee1d0345d8723d38ee04786f10f0ff6481256"
     },
     "course1-sprints-sprint-9-integrated-problem-document": {
       "artifact_id": "course1-sprints-sprint-9-integrated-problem-document",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-05T22:40:59+00:00"
+  "last_sync": "2026-10-05T23:21:16+00:00"
 }
