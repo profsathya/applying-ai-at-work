@@ -58,6 +58,7 @@ https://docs.google.com/document/d/1q4Dpbzr1quGMw-_i5mn99EO4bi-xj-VK-DoAJG13r38/
 ```
 
 - **Paste it into your Dojo:** use **Add source** in a ChatGPT project, or **Knowledge → Drive** in a Gemini Gem. In Claude, connect Google Drive once (**Settings → Connectors → Google Drive → Connect**), open the course document once in a browser tab using the link above, then in your project use **Context → + → Drive** and paste the link there. If the connector hangs, reload the page and try again. The document combines the [shared Dojo Core](https://profsathya.github.io/Common-Curriculum/common/dojo/dojo-core.txt), released course material, and the Dojo Lab methods.
+- If you're having trouble connecting Google Drive, download the course PDF linked [here](https://deanza.instructure.com/courses/48509/pages/ai-dojo-project-file-help?module_item_id=4551792) to your device. Open your AI Dojo Project in your choice of AI Chat and use the option to add a file or source to upload the saved PDF. Once it finishes uploading, continue in a chat within that Project. You can use this option without connecting Google Drive.
 - **If the source cannot be read:** paste or upload a dated copy of all three tabs: Dojo, Course, and Dojo Labs. Replace that copy when the document changes.
 
 Copy this instruction into your project or Gem:
