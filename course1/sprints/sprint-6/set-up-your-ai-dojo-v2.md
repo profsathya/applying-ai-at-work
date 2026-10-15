@@ -26,7 +26,7 @@ There is no setup submission. In Sprint 1, write your own answers in Brainstorm 
 Watch the walkthrough for the tool you choose, then follow the steps below. Keep this page open for the source link and instruction text.
 
 ```video
-{"src":"assets/dojo-setup/cis501-dojo-setup-chatgpt-narrated.mp4","title":"Set up a ChatGPT Project (2:07)","captions":"assets/dojo-setup/cis501-dojo-setup-chatgpt-narrated.vtt"}
+{"src":"assets/dojo-setup/ai-dojo-chatgpt-authentic-walkthrough-private-review.mp4","title":"Set up a ChatGPT Project (2:46)","captions":"assets/dojo-setup/ai-dojo-chatgpt-authentic-walkthrough-private-review.vtt"}
 ```
 
 ```video
