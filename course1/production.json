@@ -157,17 +157,17 @@
       "canvas_payload_hash": "9ebec425b78fc350ed85f94450d80e77d0f16872f4220a02e738a1ceb3f7df2d",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "d2b7b9349754435fb0d9eb5a82f0490e237828aee79fe52b3c0ffa6d3e137994",
+      "content_hash": "27bf7790ee3fc46c70a1322fdbd2cc080f5267460800ff178bebd6ef4e021f4a",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "8e210f8cd0558c04962d9e9647558a2d4a8d0c971cea36081b0e2465f122e33c",
-      "hosted_last_rendered": "2026-10-19T20:11:49+00:00",
+      "hosted_hash": "91623ced515dc029c16be05fc194409be02945aa701f86eb03880719e9d6b2ff",
+      "hosted_last_rendered": "2026-10-19T20:36:02+00:00",
       "hosted_path": "course1/assignments/first-frames-walk-through.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/first-frames-walk-through.html",
-      "last_pushed": "2026-10-19T20:11:49+00:00",
+      "last_pushed": "2026-10-19T20:36:02+00:00",
       "local_path": "course1/sprints/sprint-14/first-frames-walk-through.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "6b937ee3a9bc0e548886202eb2d4c3d050f59701"
+      "source_commit": "f66631b2468ee3564b4c968fe101e51adfad707b"
     },
     "course1-sprints-sprint-14-get-underneath-three-to-five": {
       "artifact_id": "course1-sprints-sprint-14-get-underneath-three-to-five",
@@ -595,17 +595,17 @@
       "canvas_payload_hash": "c86b47e20d29ee65a8501a49761d037ecbc62f4cc5912bfbcb1e7ea696fb7b64",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "b1b57aea37654d72a519b3e8ab125c36c448812b3967721d208cacafbc21dabe",
+      "content_hash": "3f22ecb8c976d696a8b44d5e02f0e687e801b9d38578b0881770718351d4ac12",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "e2e4e1be1239a6098a901d98f73eb0d74b489ee23dec3e9421561e040104b41a",
-      "hosted_last_rendered": "2026-10-19T20:11:55+00:00",
+      "hosted_hash": "3a0299c01bb7cad596cce164f7be3ba709515427601d7abbfb618b93e67a57b3",
+      "hosted_last_rendered": "2026-10-19T20:36:09+00:00",
       "hosted_path": "course1/assignments/dig-into-your-assumptions-walk-through.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dig-into-your-assumptions-walk-through.html",
-      "last_pushed": "2026-10-19T20:11:55+00:00",
+      "last_pushed": "2026-10-19T20:36:09+00:00",
       "local_path": "course1/sprints/sprint-16/dig-into-your-assumptions-walk-through.md",
       "position": 3,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "6b937ee3a9bc0e548886202eb2d4c3d050f59701"
+      "source_commit": "f66631b2468ee3564b4c968fe101e51adfad707b"
     },
     "course1-sprints-sprint-16-dojo-lab-explore-what-already-exists": {
       "artifact_id": "course1-sprints-sprint-16-dojo-lab-explore-what-already-exists",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-19T20:16:26+00:00"
+  "last_sync": "2026-10-19T20:36:09+00:00"
 }
