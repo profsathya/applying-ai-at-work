@@ -57,5 +57,5 @@ Total 50. Passing 35. Partial on every line gives 35.
 ## Page edits that follow from this record
 
 - Done, 2 October (PR #245): Part 6 on both pages asks for the part and who could tell you, not confirmed or unverified.
-- To do: the Problem Frame page's three headings become Step 1, Step 2, Step 3, and Step 3 ends with: "If you name a change here that is not yet in your frame above, go back and make it. Your frame in Step 2 is your Problem Frame from here on, so the two have to agree."
-- To do, when the renderer question (list item 39) is settled: the six on-the-page lines, with points, onto each page.
+- Done, 2 October (PR #247): the Problem Frame page's three headings are Step 1, Step 2, Step 3, and Step 3 ends with: "If you name a change here that is not yet in your frame above, go back and make it. Your frame in Step 2 is your Problem Frame from here on, so the two have to agree."
+- Done, 19 October (PRs #274 and #275): the on-the-page lines, each ending "(N points)", are on both pages as page text in the format Melisa used on Sprints 3 and 4. First frames carries its six lines in the walkthrough's "What to check in your work" block, with the pass mark and the two-frame gate in the body. Problem Frame carries two lines under each Step, shown open, with the pass mark and the no-pasted-frame gate in the standing line. Rung text stays off the page (grading comments only). If Jeremy's renderer later takes a self-check record, these lines are what it should show.
