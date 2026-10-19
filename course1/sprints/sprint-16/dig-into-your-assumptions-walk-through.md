@@ -80,7 +80,8 @@ guided_assignment:
       a question mark on the end.
     - At least one of the different answers would change or end your problem.
     - The risk rating says how likely that answer is and why.
-    - Points are on the four lines at the bottom of the page, judged across all your tables.
+    - To see the breakdown of how many points per item above, scroll to the bottom of this
+      page, right before "Submit your work in Canvas."
 publish: true
 ---
 

@@ -154,7 +154,8 @@ guided_assignment:
     - Part 4 says how people deal with this problem now and where that stops working.
     - Part 6 lists at least four assumptions, and each one says which part of the frame it
       comes from and who could tell you whether it is true.
-    - Points are on the six lines at the bottom of the page, judged across all your frames.
+    - To see the breakdown of how many points per item above, scroll to the bottom of this
+      page, right before "Submit your work in Canvas."
   - id: frame-2
     kind: table
     prompt: Frame 2
