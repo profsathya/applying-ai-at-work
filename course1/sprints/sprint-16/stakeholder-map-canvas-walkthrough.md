@@ -46,8 +46,8 @@ guided_assignment:
     feedback.
   final_check:
   - Four stakeholders, each defined by their relationship to your problem.
-  - All seven fields are complete for every stakeholder, and each one is marked Confirmed or Inferred with a specific reason.
-  - Your fields show real thinking.
+  - All seven fields are complete for every stakeholder, and every field except Next question to ask is marked Confirmed or Inferred with a specific reason.
+  - Impact says how the problem affects each stakeholder, authority says what they have a say over, and each Need says what the stakeholder cares about.
   - Two or three complete assumption blocks, each with all four lines.
   - A first choice, a backup and your reasoning, submitted as one Word document.
   tasks:
@@ -853,7 +853,7 @@ Identify four stakeholders. You have already started naming them. Look back at y
 
 For each stakeholder, fill in the seven corresponding questions. One to three sentences each is plenty; the example answers below show the length to aim for. The last field asks you for a question; write a first attempt, and sharpen it in the next sections.
 
-Mark each field's status honestly. **Confirmed** means supported by evidence: a conversation, an observation, or reliable documentation. **Inferred** means a reasoned hypothesis based on what you currently know, that should be validated later. For the question field, mark whether the concern behind your question is Confirmed or Inferred and say why. In Sprint 1 you marked your assumptions confirmed or unverified. Sprint 3 uses the same idea with one change: Inferred means unverified, but you can say why you believe it.
+Mark each field's status honestly. **Confirmed** means supported by evidence: a conversation, an observation, or reliable documentation. **Inferred** means a reasoned hypothesis based on what you currently know, that should be validated later. The question field does not need a mark. You can write "Not applicable" there. In Sprint 1 you marked your assumptions confirmed or unverified. Sprint 3 uses the same idea with one change: Inferred means unverified, but you can say why you believe it.
 
 Below is an example of how someone would answer each question in the table. The example stakeholder is the account lead from the handover problem. Sprint 1's worked example ended with "Start with the account lead," and Sprint 2's verdict left the question she can answer: if the fix is that easy, why has it not happened? Feedback beside a row reviews only that row.
 
