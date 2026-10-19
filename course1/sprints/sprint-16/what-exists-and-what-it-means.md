@@ -17,7 +17,8 @@ guided_assignment:
     you kept, and what you found when you looked.
   builds_on: Bring your table as it stands after the Dojo Lab, and what you found where you
     looked.
-  standing_instruction: 50 points. Submit both responses together as one Canvas text entry.
+  standing_instruction: Submit both responses together as one Canvas text entry · 50 points;
+    35 passes. No pasted table in Step 1 is not a pass.
   criteria_open: true
   tasks:
   - id: the-table
