@@ -22,8 +22,13 @@ guided_assignment:
   purpose: Walk every assumption in your Problem Frame and rate how risky each one is to your
     problem.
   builds_on: Bring your Problem Frame from Sprint 1. Work without AI on this page.
-  standing_instruction: 50 points. Submit this walkthrough as one Word document,
-    and keep the exported file for week 2.
+  standing_instruction: 50 points; 35 passes. Submit this walkthrough as one Word document,
+    and keep the exported file for week 2. Fewer than two tables does not pass.
+  final_check:
+  - 'You submitted a table for every assumption in Part 6 of your Problem Frame, with each assumption pasted as it is written there. (10 points)'
+  - 'In each table, your "Questions behind my assumption" ask what would help you verify the assumption, not just restate the assumption with a question mark on the end. (12 points)'
+  - 'In each table, your "Different answers that could change my problem" include at least one that would change or end your problem. (14 points)'
+  - 'In each table, your risk rating says how likely that answer is and why. (14 points)'
   tasks:
   - id: the-walk
     kind: group
@@ -106,4 +111,4 @@ With that in mind, take each assumption from Part 6 of your frame and ask three 
 
 The table below will help you think through each assumption. Fill one table per assumption.
 
-When you finish, select **Download as Word document** below. In Canvas, select **Start Assignment**, attach that Word file, and select **Submit Assignment**. Keep the file for the Dojo Lab, where you will test these assumptions. Downloading it alone does not submit your work.
+When you finish, select **Download as Word document** below. In Canvas, select **Start Assignment**, attach that Word file, and select **Submit Assignment**. Keep the file for the Dojo Lab, where you will test these assumptions. Downloading it alone does not submit your work. This activity is worth 50 points, and 35 passes. Before you submit, read **What to check in your work** at the bottom of the page: those lines, with their points, are what your tables are graded on. Fewer than two tables does not pass.

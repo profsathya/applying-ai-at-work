@@ -23,8 +23,15 @@ guided_assignment:
   purpose: Write a complete first frame for each candidate, in your own words, with your assumptions
     marked.
   builds_on: Bring your Get underneath three to five Word file.
-  standing_instruction: 50 points. Submit at least three complete frames together in one Word
-    document. Frames 4 and 5 are optional.
+  standing_instruction: 50 points; 35 passes. Submit at least three complete frames together
+    in one Word document. Frames 4 and 5 are optional. Fewer than two frames does not pass.
+  final_check:
+  - 'You submitted at least three frames, and every part of each one is filled in or says, "I do not know yet." (10 points)'
+  - 'In each frame, Part 2 says what is going wrong and who it is going wrong for, in one or two sentences. (8 points)'
+  - 'In each frame, Part 5 describes what it would look like if the problem in Part 2 were solved, without saying how to solve it. (8 points)'
+  - 'In each frame, Part 3a names everyone who feels this problem, and Part 3b says what it costs each of them: time, money, mistakes, or stress. (8 points)'
+  - 'In each frame, Part 4 says how people deal with this problem now and where that stops working. (6 points)'
+  - 'In each frame, Part 6 lists at least four assumptions, and each one says which part of the frame it comes from and who could tell you whether it is true. (10 points)'
   tasks:
   - id: frame-1
     kind: table
@@ -624,4 +631,4 @@ Below is a complete example frame for the account handover problem. Refer back t
 | Part 6: your assumptions | What in parts 2 to 5 have you not seen for yourself or heard from someone who would know? One per line: which part, what you assumed, and who could tell you. At least four. | From Part 2: Nothing reaches the rest of the team. Who could tell me: the other managers.<br>From Part 3a: All four managers are affected, not just the one I sat next to. Who could tell me: the other three managers.<br>From Part 3b: Clients notice and it costs them something. Who could tell me: the account lead.<br>From Part 4: Nobody has tried to fix this before. Who could tell me: the account lead. |
 | Part 7: what you do not know yet | What do you still not know? For example, who owns the process, or whether anyone tried to fix it before. Leave tool ideas for later. | I do not know who owns the handover process, if anyone. Nobody obvious to ask. Start with the account lead. |
 
-The tables below will guide you through creating your draft problem frames. Fill in at least three frames; the fourth and fifth are optional. Refer to your **Get underneath three to five** Word file, where you have already done some of this thinking. Write parts 2, 3, 4 first, then 5, then 6 and 7, then 1 last, because you cannot write the goal until you know what fixed looks like. Keep the Word file you download: the Dojo Lab tests these frames, and the one you choose becomes your Problem Frame document. Under each part name, select **Example and guidance** to see the question for that part and the example line again.
+The tables below will guide you through creating your draft problem frames. Fill in at least three frames; the fourth and fifth are optional. Refer to your **Get underneath three to five** Word file, where you have already done some of this thinking. Write parts 2, 3, 4 first, then 5, then 6 and 7, then 1 last, because you cannot write the goal until you know what fixed looks like. Keep the Word file you download: the Dojo Lab tests these frames, and the one you choose becomes your Problem Frame document. Under each part name, select **Example and guidance** to see the question for that part and the example line again. This activity is worth 50 points, and 35 passes. Before you submit, read **What to check in your work** at the bottom of the page: those lines, with their points, are what your frames are graded on. Fewer than two frames does not pass.

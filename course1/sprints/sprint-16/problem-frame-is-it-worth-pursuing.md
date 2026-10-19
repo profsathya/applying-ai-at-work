@@ -17,39 +17,30 @@ guided_assignment:
     and decide whether this problem is worth pursuing.
   builds_on: Bring your Problem Frame document, your assumption tables, and your What already
     exists table, both as they stand after the Dojo Labs.
-  standing_instruction: Submit all three responses together as one Canvas text entry · 50 points.
+  standing_instruction: Submit all three responses together as one Canvas text entry · 50 points;
+    35 passes. No pasted frame in Step 2 is not a pass.
+  criteria_open: true
   tasks:
   - id: what-a-change-would-ask
     kind: response
     prompt: What fixing this problem would ask of the people involved.
     criteria:
-    - Names at least one thing fixing this would ask of a named person (a step, a habit,
-      time, or a decision).
-    - Draws on the third column of your What already exists table, not on a solution you
-      have chosen.
+    - 'In Step 1, you name at least one person and what fixing this problem would ask of them: a new step, a habit, time, or a decision. (12 points)'
     instruction_section: Step 1. What fixing this would ask of people
   - id: problem-frame
     kind: response
     prompt: 'Your Problem Frame, all seven parts, brought up to date: part 6 with its Status
       column filled, part 3c in, Part 4 if changed, the date at the top.'
     criteria:
-    - All seven parts present, in the participant's words.
-    - Every row of part 6 has an entry in its Status column.
-    - Every risk rating carries a reason.
-    - Part 3c is present.
-    - At least one assumption is rated high risk and unconfirmed, since a frame with none at
-      this stage is a warning sign.
+    - 'In Step 2, your Problem Frame is pasted whole and brought up to date: it is dated, Part 3c is filled in, every row of Part 6 has its Status column filled, and anything that changed since Sprint 1 is updated. (10 points)'
     instruction_section: Step 2. Your Problem Frame, brought up to date
   - id: verdict
     kind: response
     prompt: Worth pursuing, not worth pursuing, or depends on something specific, with your
       reasons and what is still uncertain.
     criteria:
-    - One of the three, stated.
-    - Reasons draw on the risk ratings, what exists, and what a change would ask.
-    - Says what is still uncertain, and what would settle it.
-    - '"depends on" says what it depends on and who or what could settle it.'
-    - A no gives the reasoning, and the runner-up's pass comes back to this page.
+    - 'In Step 3, you give one of the three verdicts, and your reasons point to your risk ratings, your What exists table, and what the change would ask of people. (16 points)'
+    - 'In Step 3, you say what is still uncertain and what would settle it. If your verdict is "depends on," you say what it depends on and who could settle it. If it is "no," you name your runner-up. (12 points)'
     instruction_section: Step 3. Taking stock of your problem
   presentation: reading
 learning_goal: Work out what fixing this would ask of people, bring your Problem Frame up to
