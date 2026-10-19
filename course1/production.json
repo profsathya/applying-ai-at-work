@@ -154,20 +154,20 @@
       "canvas_module_id": 2079,
       "canvas_module_item_id": 18019,
       "canvas_page_url": null,
-      "canvas_payload_hash": "e005d47d69c2effb6a94f4a9742bb84731766d65c40bc6db438b34f52b34ff88",
+      "canvas_payload_hash": "9ebec425b78fc350ed85f94450d80e77d0f16872f4220a02e738a1ceb3f7df2d",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "98e65fe0c56a29a0cd5f61aa2c20ae0b60822adf0b08d62071fc30817abddf51",
+      "content_hash": "d2b7b9349754435fb0d9eb5a82f0490e237828aee79fe52b3c0ffa6d3e137994",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "fc58ba8c8e0cce13f46886ea898c082678ff3fb7952e8dedfc5fe7018655f43f",
-      "hosted_last_rendered": "2026-10-02T20:19:56+00:00",
+      "hosted_hash": "8e210f8cd0558c04962d9e9647558a2d4a8d0c971cea36081b0e2465f122e33c",
+      "hosted_last_rendered": "2026-10-19T20:11:49+00:00",
       "hosted_path": "course1/assignments/first-frames-walk-through.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/first-frames-walk-through.html",
-      "last_pushed": "2026-10-02T20:19:56+00:00",
+      "last_pushed": "2026-10-19T20:11:49+00:00",
       "local_path": "course1/sprints/sprint-14/first-frames-walk-through.md",
-      "position": 8,
+      "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "a33d1c5e08d554454494f15d2853c14797b7fd33"
+      "source_commit": "6b937ee3a9bc0e548886202eb2d4c3d050f59701"
     },
     "course1-sprints-sprint-14-get-underneath-three-to-five": {
       "artifact_id": "course1-sprints-sprint-14-get-underneath-three-to-five",
@@ -595,17 +595,17 @@
       "canvas_payload_hash": "c86b47e20d29ee65a8501a49761d037ecbc62f4cc5912bfbcb1e7ea696fb7b64",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "5cf6b2294c0283db8389eedbc674e83ff791be726b83a306b4facfd9816047d7",
+      "content_hash": "b1b57aea37654d72a519b3e8ab125c36c448812b3967721d208cacafbc21dabe",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "ab5978eef5818820cc12ef63788edf6f1cac449f1660227e1a48f41c1fbc6f83",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "hosted_hash": "e2e4e1be1239a6098a901d98f73eb0d74b489ee23dec3e9421561e040104b41a",
+      "hosted_last_rendered": "2026-10-19T20:11:55+00:00",
       "hosted_path": "course1/assignments/dig-into-your-assumptions-walk-through.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dig-into-your-assumptions-walk-through.html",
-      "last_pushed": "2026-09-30T23:57:23+00:00",
+      "last_pushed": "2026-10-19T20:11:55+00:00",
       "local_path": "course1/sprints/sprint-16/dig-into-your-assumptions-walk-through.md",
       "position": 3,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "a2007f7768a7eb8959bf02af520223ea53b5a303"
+      "source_commit": "6b937ee3a9bc0e548886202eb2d4c3d050f59701"
     },
     "course1-sprints-sprint-16-dojo-lab-explore-what-already-exists": {
       "artifact_id": "course1-sprints-sprint-16-dojo-lab-explore-what-already-exists",
@@ -682,17 +682,17 @@
       "canvas_payload_hash": "3989932442da503e37370624457ba93301a823e72965e90a933d6c844d0a7930",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "a0d8ed36db3c4aafe662a77d05f3cbeafc9fe934947fce4e525328fcff9aef1a",
+      "content_hash": "fc3da52966bf9e1fe9cd5623fe792263d3013625fad2dad2f70dfaffb4144d3a",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "59c963288f3b621c99f439d33bb5b32873b833b8baa33dab13086e0642e7cafa",
-      "hosted_last_rendered": "2026-10-03T15:27:41+00:00",
+      "hosted_hash": "a3b2a8d4c2fbf9f9f7572fe4fddb672ee834890b84ac99e9a31163221a463073",
+      "hosted_last_rendered": "2026-10-19T20:11:57+00:00",
       "hosted_path": "course1/assignments/problem-frame-is-it-worth-pursuing.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/problem-frame-is-it-worth-pursuing.html",
-      "last_pushed": "2026-10-03T15:27:41+00:00",
+      "last_pushed": "2026-10-19T20:11:57+00:00",
       "local_path": "course1/sprints/sprint-16/problem-frame-is-it-worth-pursuing.md",
       "position": 11,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "51dce5c7c1021194bc950fd180dfc5ca8b669393"
+      "source_commit": "6b937ee3a9bc0e548886202eb2d4c3d050f59701"
     },
     "course1-sprints-sprint-16-sprint-2-is-this-problem-worth-pursuing": {
       "artifact_id": "course1-sprints-sprint-16-sprint-2-is-this-problem-worth-pursuing",
@@ -773,17 +773,17 @@
       "canvas_payload_hash": "b755ef08a0e65bfc6d26262f1c0f0bd6145912f050ce736e8cf5047c9c9f78ce",
       "canvas_type": "assignment",
       "completion_requirement": "must_submit",
-      "content_hash": "c12820cd179e7d1a61398b3c7b660bc6a93494b395b6c31e3aab9706f656411f",
+      "content_hash": "03b08467c1feef99e38ee30d6c47438cbad3897950227922339b67d17093b8c4",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "9962753e7378c6eaa73dc1b18440bee94b016ce8eea48e53f2297d6a4b5bca8f",
-      "hosted_last_rendered": "2026-10-04T16:13:39+00:00",
+      "hosted_hash": "c81e34ca99cc7019a69f6dc24fce350fa0df93793d9edee2955b08a2488e779d",
+      "hosted_last_rendered": "2026-10-19T20:11:58+00:00",
       "hosted_path": "course1/assignments/what-exists-and-what-it-means.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/what-exists-and-what-it-means.html",
-      "last_pushed": "2026-10-04T16:13:39+00:00",
+      "last_pushed": "2026-10-19T20:11:58+00:00",
       "local_path": "course1/sprints/sprint-16/what-exists-and-what-it-means.md",
       "position": 9,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "df3377e494e94ca46e444aa41d54fda3820cd0d8"
+      "source_commit": "6b937ee3a9bc0e548886202eb2d4c3d050f59701"
     },
     "course1-sprints-sprint-16-what-solutions-already-exist": {
       "artifact_id": "course1-sprints-sprint-16-what-solutions-already-exist",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-15T22:03:21+00:00"
+  "last_sync": "2026-10-19T20:11:58+00:00"
 }
