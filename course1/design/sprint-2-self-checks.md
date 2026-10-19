@@ -94,7 +94,7 @@ Total 50. Passing 35. Partial on every line gives 36.
 
 ## Page edits that follow from this record
 
-- To do: the taking-stock page's three headings become Step 1, Step 2, Step 3 (as on the Sprint 1 Problem Frame page, PR #247), and its "4a" becomes "Part 4."
+- Done, 4 October (PR #252): the taking-stock page's three headings are Step 1, Step 2, Step 3, and its "4a" is "Part 4."
 - Done, 3 October: columns 2 and 3 of the What exists walkthrough ask for the specific open question in place of a bare "cannot tell yet"; the write-up asks that any question still open says what was tried.
 - Done, 3 October (PR #253): the What exists points swap, walkthrough to 0 and own your progress, write-up to 50.
-- To do, when the renderer question (list item 39) is settled: the on-the-page lines, with points, onto each page.
+- Done, 19 October (PR #275): the on-the-page lines, each ending "(N points)", are on Dig into your assumptions (four lines in the walkthrough's "What to check in your work" block, pass mark and two-table gate in the body), Problem Frame: taking stock (four lines under the Steps, shown open, pass mark and no-pasted-frame gate in the standing line), and What exists, and what it means (six lines under the Steps, shown open, standing line reworded to match). The walkthrough alternative for What exists stays off the page while that walkthrough is own-your-progress at 0.
