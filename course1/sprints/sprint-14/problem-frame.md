@@ -17,35 +17,33 @@ guided_assignment:
   purpose: Write up the one problem you chose and say why this one.
   builds_on: Bring your First frames Word file, brought up to date after the Dojo Lab.
   standing_instruction: Submit all three responses together as one Canvas text entry · 50
-    points.
+    points; 35 passes. No pasted frame in Step 2 is not a pass.
   tasks:
   - id: which-and-why
     kind: response
     prompt: 'Which problem you selected and why: the four questions, in order.'
     criteria:
-    - All four questions answered.
-    - Why not the others covers every frame you tested.
-    - A runner-up named, or the reason none is workable.
+    - Your answer to Step 1, Which problem you selected and why, answers all four questions and includes your runner-up. (7 points)
+    - In Step 1, your explanation of why this problem is good for this course points to a reason beyond your interest, such as the people you can reach or a question you can actually test. (6 points)
     instruction_section: Step 1. Which problem you selected and why
   - id: problem-frame
     kind: response
     prompt: 'Your Problem Frame, pasted whole: all seven parts, Part 6 with every assumption
       on its own line, 3c blank.'
     criteria:
-    - All seven parts present, in your own words.
-    - Every assumption in Part 6 names the part it comes from and who could tell you.
-    - Part 3c left blank for Sprint 2.
+    - In Step 2, your Problem Frame is pasted whole, all seven parts in your own words, with 3c left blank. (10 points)
+    - Your pasted Problem Frame includes every change you describe in Step 3. (12 points)
     instruction_section: Step 2. Your Problem Frame
   - id: what-changed
     kind: response
     prompt: What moved, what moved it, and one thing the Dojo suggested that you rejected,
       and why.
     criteria:
-    - At least one change, or a stated reason nothing changed.
-    - The evidence or argument that moved it, named.
-    - One rejected suggestion with a reason.
+    - In Step 3, you explain what changed in your Problem Frame as a result of your Dojo conversation and what convinced you. If you didn't change anything, you explain why. (9 points)
+    - In Step 3, you name one Dojo suggestion you turned down and why, or say you kept them all and why. (6 points)
     instruction_section: Step 3. What changed after the Dojo conversation, and why
   presentation: reading
+  criteria_open: true
 publish: true
 learning_goal: Write up the one problem you chose and say why this one.
 ---
