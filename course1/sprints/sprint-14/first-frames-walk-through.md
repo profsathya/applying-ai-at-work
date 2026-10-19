@@ -145,11 +145,16 @@ guided_assignment:
         example: I do not know who owns the handover process, if anyone. Nobody obvious to
           ask. Start with the account lead.
     criteria: &id001
-    - Every part present or marked "I do not know yet."
-    - 3b attaches a cost to each person in 3a.
-    - Part 5 is a state, not a solution.
-    - Part 6 has at least four assumptions, each naming the part it comes from and who could
-      tell you.
+    - Every part of this frame is filled in or says, "I do not know yet."
+    - Part 2 says what is going wrong and who it is going wrong for, in one or two sentences.
+    - Part 5 describes what it would look like if the problem in Part 2 were solved, without
+      saying how to solve it.
+    - 'Part 3a names everyone who feels this problem, and Part 3b says what it costs each
+      of them: time, money, mistakes, or stress.'
+    - Part 4 says how people deal with this problem now and where that stops working.
+    - Part 6 lists at least four assumptions, and each one says which part of the frame it
+      comes from and who could tell you whether it is true.
+    - Points are on the six lines at the bottom of the page, judged across all your frames.
   - id: frame-2
     kind: table
     prompt: Frame 2

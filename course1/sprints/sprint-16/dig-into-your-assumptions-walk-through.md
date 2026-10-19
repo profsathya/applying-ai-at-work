@@ -75,10 +75,12 @@ guided_assignment:
         example: Low risk. The length of time doesn't change whether this is worth pursuing.
         avoid: '"Low risk" with no reason, or marking every row high risk.'
     criteria:
-    - Give every assumption from Part 6 a table.
-    - Write at least one question behind each assumption.
-    - Vary the different-answers lines rather than repeating one formula.
-    - Give a reason with every risk rating.
+    - This assumption is pasted as it is written in Part 6 of your Problem Frame.
+    - The questions ask what would help you verify the assumption, not just restate it with
+      a question mark on the end.
+    - At least one of the different answers would change or end your problem.
+    - The risk rating says how likely that answer is and why.
+    - Points are on the four lines at the bottom of the page, judged across all your tables.
 publish: true
 ---
 
