@@ -952,17 +952,17 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "a6334f6648fbaf0297bbd3c7ea6a00c74056a155712433ab1e4997b8528d70e1",
       "canvas_type": "assignment",
-      "content_hash": "bb24cb2fc8b3470cfc2c229e70966346cb5f53ce91b134f229c1bf85983514ae",
+      "content_hash": "45081b365f12d71373187674565c52b1d3b4b57b41181293ff1375666114efc8",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "3740c60c683d52c177a1b040b94087f52434d13e5f5d50e4704ecccc6b191b4d",
-      "hosted_last_rendered": "2026-10-02T23:19:07+00:00",
+      "hosted_hash": "649a207f6912e93c1a83d359abe4c8244f6cee35fc225ffa733c36b4875d57ff",
+      "hosted_last_rendered": "2026-10-23T18:35:52+00:00",
       "hosted_path": "course1/assignments/dojo-lab-audit-your-argument.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-audit-your-argument.html",
-      "last_pushed": "2026-10-02T23:19:07+00:00",
+      "last_pushed": "2026-10-23T18:35:52+00:00",
       "local_path": "course1/sprints/sprint-9/dojo-lab-audit-your-argument.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "1abba3d95efc5e58aad13af1eb02f1dbd12ce8da"
+      "source_commit": "b35ad3bbb154a74000ebe9640d58fef4bab22f48"
     },
     "course1-sprints-sprint-9-dojo-lab-design-the-learning-path-v3": {
       "artifact_id": "course1-sprints-sprint-9-dojo-lab-design-the-learning-path-v3",
@@ -995,17 +995,17 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "4c33bc4a7f7674d826ee5fb9f8b2b647db5abd35ba97e3d6131ed1ab78eb01cd",
       "canvas_type": "assignment",
-      "content_hash": "83f7824b3d69242830c1e8a7571d37c94dcf27386651511f8c6966984204539c",
+      "content_hash": "d33ee7f79ca6ac26a45bb898cc001e51cc97190818041ab0661f02f939237ec8",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "f3a6f0c56096cddd52716f3164938ed7dc7f47c7157f6f3bb4f384e42270cef1",
-      "hosted_last_rendered": "2026-10-02T23:19:15+00:00",
+      "hosted_hash": "18f77c38d5fd4dd2c1c5d2217d85a1376bc459eaf70712c5e8f83fed10e00d19",
+      "hosted_last_rendered": "2026-10-23T18:35:57+00:00",
       "hosted_path": "course1/assignments/integrated-problem-document.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/integrated-problem-document.html",
-      "last_pushed": "2026-10-02T23:19:15+00:00",
+      "last_pushed": "2026-10-23T18:35:57+00:00",
       "local_path": "course1/sprints/sprint-9/integrated-problem-document.md",
       "position": 4,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "1abba3d95efc5e58aad13af1eb02f1dbd12ce8da"
+      "source_commit": "b35ad3bbb154a74000ebe9640d58fef4bab22f48"
     },
     "course1-sprints-sprint-9-integrated-problem-document-canvas-walkthrough": {
       "artifact_id": "course1-sprints-sprint-9-integrated-problem-document-canvas-walkthrough",
@@ -1016,17 +1016,17 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "c3b8b5828298364d54dae8a5f2216141d0a967719b08bc17afa41599add738c6",
       "canvas_type": "assignment",
-      "content_hash": "0d5dd8d90f90fe9d06677e48d5eee7c71c6724e1eeac70c7bee7315f3cf84800",
+      "content_hash": "60bd2e1db318ccd52e21eee183c7082e082a204a7a86580de397f709dec58a3c",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "054f1b1a880903224febef7b0db849e45ae56e62ee5cbab2fd25681047d4f682",
-      "hosted_last_rendered": "2026-10-02T23:19:12+00:00",
+      "hosted_hash": "a6756746aa4b9ad6328a1009c19fc86dc79a634cd97cffcce0151d3d00838512",
+      "hosted_last_rendered": "2026-10-23T18:35:56+00:00",
       "hosted_path": "course1/assignments/integrated-problem-document-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/integrated-problem-document-canvas-walkthrough.html",
-      "last_pushed": "2026-10-02T23:19:12+00:00",
+      "last_pushed": "2026-10-23T18:35:56+00:00",
       "local_path": "course1/sprints/sprint-9/integrated-problem-document-canvas-walkthrough.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "1abba3d95efc5e58aad13af1eb02f1dbd12ce8da"
+      "source_commit": "b35ad3bbb154a74000ebe9640d58fef4bab22f48"
     },
     "course1-sprints-sprint-9-introduction-close-the-learning-gap-v3": {
       "artifact_id": "course1-sprints-sprint-9-introduction-close-the-learning-gap-v3",
@@ -1059,16 +1059,16 @@
       "canvas_payload_hash": "a8f401e9cd3f17239ba98fd8301b9f1f23b076addc6a5b394a94cba9efed5efc",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "76fea022a69e95e74408a8ab55163908387d864d68f845f1503e9024b05eba97",
-      "hosted_hash": "f301f369e489def54852be0bb7dc83976192a06bb89c1361822210ab73da9a1b",
-      "hosted_last_rendered": "2026-10-01T23:26:36.261463+00:00",
+      "content_hash": "4fd57e51c5a24be45b303c13c78b8d81a4b656c7828fd276340e5c3cb19cdfc3",
+      "hosted_hash": "84d53edf73ca2536e7247adb596584c9594e4328bedf8c3a85da103cbce44b64",
+      "hosted_last_rendered": "2026-10-23T18:35:58+00:00",
       "hosted_path": "course1/activities/introduction-synthesize-and-show-readiness-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-synthesize-and-show-readiness-v2.html",
-      "last_pushed": "2026-10-01T20:40:38+00:00",
+      "last_pushed": "2026-10-23T18:35:58+00:00",
       "local_path": "course1/sprints/sprint-9/introduction-synthesize-and-show-readiness-v2.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "e0557378771a6a195c84122e5b8275bf1677ff8f"
+      "source_commit": "b35ad3bbb154a74000ebe9640d58fef4bab22f48"
     },
     "course1-sprints-sprint-9-name-the-gap-v3": {
       "artifact_id": "course1-sprints-sprint-9-name-the-gap-v3",
@@ -1099,17 +1099,17 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "a13cd9c12eefe6f98d81e8ccedd9a07b0e8bac613078d997b731f42bedbced1b",
       "canvas_type": "assignment",
-      "content_hash": "3bf5203cb181b0281a18475749e78ad6765c25c7ddccd40e340240ca48590365",
+      "content_hash": "7d9ec57c9bb7f14a9b45d13d6899ad4949a4ad40ae1df4b41ed81759f8d7bbee",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "81ad29d796f17e783061ad6dcd95b0aa5701291f1486db3fc0e0ee975924cbb1",
-      "hosted_last_rendered": "2026-10-02T23:19:24+00:00",
+      "hosted_hash": "9888995e4452e7be6e5a5185f544c6e1769b73974eb0da98eb9651d4eed7a6f2",
+      "hosted_last_rendered": "2026-10-23T18:36:03+00:00",
       "hosted_path": "course1/assignments/readiness-report.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/readiness-report.html",
-      "last_pushed": "2026-10-02T23:19:24+00:00",
+      "last_pushed": "2026-10-23T18:36:03+00:00",
       "local_path": "course1/sprints/sprint-9/readiness-report.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "1abba3d95efc5e58aad13af1eb02f1dbd12ce8da"
+      "source_commit": "b35ad3bbb154a74000ebe9640d58fef4bab22f48"
     },
     "course1-sprints-sprint-9-readiness-report-canvas-walkthrough": {
       "artifact_id": "course1-sprints-sprint-9-readiness-report-canvas-walkthrough",
@@ -1120,17 +1120,17 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "e852467175c9698123375d2b3667dba7cfb6579db0ee5b34d9c0e33610a13265",
       "canvas_type": "assignment",
-      "content_hash": "1cf1afcb11e62ee8eef410a6a35dc7122382cc202838b6c820e61772d0af6293",
+      "content_hash": "07436cafdcf786edd84b0ba036361a8e57eb2544e6a262f48ee377728cef41f8",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "971ab22104b107db29631cfddbac3d5a37bf06fcfc83b668fc9d6c6d5cb30be2",
-      "hosted_last_rendered": "2026-10-02T23:19:21+00:00",
+      "hosted_hash": "af9edc7ea308668fb37ad590fff450fbc4bc35eda437f0700c9071f56a41e28d",
+      "hosted_last_rendered": "2026-10-23T18:36:02+00:00",
       "hosted_path": "course1/assignments/readiness-report-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/readiness-report-canvas-walkthrough.html",
-      "last_pushed": "2026-10-02T23:19:21+00:00",
+      "last_pushed": "2026-10-23T18:36:02+00:00",
       "local_path": "course1/sprints/sprint-9/readiness-report-canvas-walkthrough.md",
       "position": 9,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "1abba3d95efc5e58aad13af1eb02f1dbd12ce8da"
+      "source_commit": "b35ad3bbb154a74000ebe9640d58fef4bab22f48"
     },
     "course1-sprints-sprint-9-sprint-4-close-the-learning-gap-v3": {
       "artifact_id": "course1-sprints-sprint-9-sprint-4-close-the-learning-gap-v3",
@@ -1157,13 +1157,13 @@
       "canvas_page_url": "sprint-5-concept-check",
       "canvas_payload_hash": "1899eb05b84b0be9a8b1c32be6fb8e2700a4b280fcd60b11354fc270bb358269",
       "canvas_type": "page",
-      "content_hash": "c3f552d8d268980e72cf4d254ac8669ae6f1ac59e139bb517dbebf88716f9a23",
+      "content_hash": "bb82a2f1e516ae4456f9e05d2433803c2ea8da7e21b117e64b621060e2df148a",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "696e0521247d3754e4b996c19323d06cbff88327d423a7013c8fe238ce143bb8",
-      "hosted_last_rendered": "2026-10-02T23:18:31+00:00",
+      "hosted_hash": "7dc9631b371483dac570bf9f5b93afa0325899b7600d46be4c80bd1826e3dec9",
+      "hosted_last_rendered": "2026-10-23T18:36:04+00:00",
       "hosted_path": "course1/activities/sprint-5-concept-check.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/sprint-5-concept-check.html",
-      "last_pushed": "2026-10-02T23:18:31+00:00",
+      "last_pushed": "2026-10-23T18:36:04+00:00",
       "local_path": "course1/sprints/sprint-9/sprint-5-concept-check.md",
       "position": 3,
       "retired_assignment": {
@@ -1177,7 +1177,7 @@
         ]
       },
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "1abba3d95efc5e58aad13af1eb02f1dbd12ce8da"
+      "source_commit": "b35ad3bbb154a74000ebe9640d58fef4bab22f48"
     },
     "course1-sprints-sprint-9-sprint-5-reflection-what-changed": {
       "artifact_id": "course1-sprints-sprint-9-sprint-5-reflection-what-changed",
@@ -1188,16 +1188,16 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "e166ea6fb41437d4fb7815dd85374eebdf636d2dd287634b853e70f5e1250239",
       "canvas_type": "assignment",
-      "content_hash": "f0e94bbfb9422b72c56d7a043fc1ef62fded861ddadf97b14d1c56c6a6ef1dd0",
-      "hosted_hash": "e0ecb90c4ce5bee45078763bf177fb1617757b8a455d4f57a17b026158d154af",
-      "hosted_last_rendered": "2026-10-02T23:19:28+00:00",
+      "content_hash": "6c1a1b4e9a244701fc78988055f458f334042832f69495f60396acc3f7495087",
+      "hosted_hash": "709b5e20acf564ff8b71e8932a0843a4e77b8be7a67f12e217fcf2a6b4d24149",
+      "hosted_last_rendered": "2026-10-23T18:36:05+00:00",
       "hosted_path": "course1/assignments/sprint-5-reflection-what-changed.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/sprint-5-reflection-what-changed.html",
-      "last_pushed": "2026-10-02T23:19:28+00:00",
+      "last_pushed": "2026-10-23T18:36:05+00:00",
       "local_path": "course1/sprints/sprint-9/sprint-5-reflection-what-changed.md",
       "position": 7,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "1abba3d95efc5e58aad13af1eb02f1dbd12ce8da"
+      "source_commit": "b35ad3bbb154a74000ebe9640d58fef4bab22f48"
     },
     "course1-sprints-sprint-9-sprint-5-spare-upload": {
       "artifact_id": "course1-sprints-sprint-9-sprint-5-spare-upload",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-10-19T20:52:36+00:00"
+  "last_sync": "2026-10-23T18:36:05+00:00"
 }
