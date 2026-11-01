@@ -39,7 +39,7 @@ guided_assignment:
   tasks:
   - id: report-name
     kind: table
-    prompt: Your name
+    prompt: Keep your report anonymous
     columns:
     - id: column-1
       label: Field
@@ -48,16 +48,16 @@ guided_assignment:
     rows:
     - id: row-1
       cells:
-      - text: Your name
+      - text: Type I understand to confirm your report contains no names.
       - text:   
         response: true
-      label: Your name
+      label: Confirm your report contains no names
     header_rows: 0
     criteria:
-    - Record your name in your own working copy.
+    - Your report contains no names, including yours and your stakeholder's.
     instruction_section: Set up your report
     feedback_enabled: false
-    feedback_omission_reason: Identity field is setup and does not need AI feedback.
+    feedback_omission_reason: Privacy confirmation is setup and does not need AI feedback.
   - id: meeting-plan
     kind: table
     prompt: A. Before the meeting
@@ -69,10 +69,10 @@ guided_assignment:
     rows:
     - id: row-1
       cells:
-      - text: Stakeholder name and role
+      - text: Stakeholder role (initials if needed)
       - text:   
         response: true
-      label: Stakeholder name and role
+      label: Stakeholder role (initials if needed)
     - id: row-2
       cells:
       - text: 'Relationship to the problem
@@ -253,10 +253,10 @@ guided_assignment:
     rows:
     - id: row-1
       cells:
-      - text: What changed in your Problem Frame, and why, or an honest statement that it held
+      - text: What changed in your Problem Frame, and why, or an honest statement of why it held
       - text:   
         response: true
-      label: What changed in your Problem Frame, and why, or an honest statement that it held
+      label: What changed in your Problem Frame, and why, or an honest statement of why it held
     - id: row-2
       cells:
       - text: What moved from Inferred to Confirmed on your map
@@ -309,7 +309,14 @@ Write before requesting optional AI feedback. It sees only the selected row, can
 
 ## Set up your report
 
-Enter your name for the report you will keep with your portfolio. This setup field stays out of AI feedback.
+The privacy guidance above applies to the report you submit, not only to AI feedback. Don't put your name anywhere in it. Canvas records who submitted. This setup field stays out of AI feedback.
+
+**How to keep it anonymous:**
+
+- **People:** Use roles, not names ("my team lead," "a front-desk coordinator"). This applies to quotes in Section B too.
+- **Your workplace:** Describe it in general terms ("a mid-sized county agency") instead of naming it.
+- **Unique details:** Broaden anything only one person or place could match, like a one-of-a-kind job title, an exact headcount or budget, or a specific location.
+- **Your Problem Frame:** Check the pasted copy for names. It was written before this rule applied.
 
 ## A. Before the meeting
 
@@ -367,7 +374,7 @@ Keep this short. You are listening, not writing. This table has no AI button bec
 
 ## C. Within five minutes of finishing
 
-Within five minutes of finishing, fill in Section C, while it is still fresh. A line or two for each. You are catching your first impressions, not polishing them. Optional row feedback can help you check whether an impression points to actual evidence.
+Within five minutes of finishing, fill in Section C, while it is still fresh. A line or two for each. You are catching your first impressions, not polishing them. Each row should point back to something the stakeholder said in Section B. Optional row feedback can help you check whether an impression points to actual evidence.
 
 ## D. Afterward, same day or next
 
@@ -383,7 +390,7 @@ Open your Problem Frame document and bring it up to date with what you heard. Ma
 
 1. **Part 6, your assumptions.** In the Status column, mark each assumption this conversation tested: confirmed if it settled it, unverified if it did not.
 2. **Parts 2, 3a, or 4a,** only if what you heard changed them.
-3. **Part 7, what you do not know yet.**
+3. **Part 7, what you do not know yet.** Add what this conversation left open, and remove anything it answered.
 4. **Last updated,** at the top: Sprint 3 and the date.
 
 You can change anything in your Problem Frame if your thinking has changed. When your Problem Frame document is up to date, copy its entire contents and paste them into the box below. Your document stays your current version. The copy in this report is your record of where your frame stood at the end of Sprint 3.
