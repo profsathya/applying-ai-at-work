@@ -245,7 +245,7 @@ source_provenance: name-the-gap-canvas-walkthrough.sources.json
 
 If you ask an AI what someone working on your problem would need to learn, it will hand you a clean, sensible list. But it will be generic, not tailored to you. AI comes in at the Dojo Lab. Right now, the list has to come from your thinking.
 
-Write first, without AI. The Get AI feedback buttons are optional and only for after you have written.
+Write first, without AI. The Get AI feedback buttons are optional and only for after you have written. Use roles, not names, for anyone you mention, and leave your own name out. Canvas records who submitted.
 
 ## Keep your Week 7 Word file
 
@@ -261,7 +261,7 @@ If your document does not say Sprint 3 at the top, bring it up to date before yo
 
 Write two or three things about your problem that you understand well enough. One line each on how you know.
 
-*Example:* I know the outgoing manager tells the incoming manager directly. I have watched it happen twice, and Dana described it the same way.
+*Example:* I know the outgoing manager tells the incoming manager directly. I have watched it happen twice, and the account lead described it the same way.
 
 Keep this short. It is here so you start from solid ground, not a list of everything you do not know.
 
@@ -317,7 +317,7 @@ Useful gaps can go into your plan too, below the blocking ones. You decide.
 
 Interesting gaps stay on your list but not in your plan. For each one, write one line: what would tell you it has started to matter.
 
-*Example:* Not in my plan: how other companies handle handovers. It starts to matter if Dana says the team wants to copy another company’s approach.
+*Example:* Not in my plan: how other companies handle handovers. It starts to matter if the account lead says the team wants to copy another company’s approach.
 
 ## A4. Explain the stakes
 
