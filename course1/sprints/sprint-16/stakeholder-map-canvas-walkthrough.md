@@ -62,10 +62,10 @@ guided_assignment:
     rows:
     - id: row-1
       cells:
-      - text: Your name
+      - text: Type I understand to confirm your map contains no names.
       - text:   
         response: true
-      label: Your name
+      label: Type I understand to confirm your map contains no names.
     - id: row-2
       cells:
       - text: Your problem, from The problem (Part 2) of your Problem Frame as you left it in Sprint 2
@@ -77,7 +77,7 @@ guided_assignment:
     - Bring the Problem Frame you are already working on.
     instruction_section: Set up your map
     feedback_enabled: false
-    feedback_omission_reason: Setup records your identity and existing frame; feedback
+    feedback_omission_reason: Setup records your privacy confirmation and existing frame; feedback
       belongs with the stakeholder judgments below.
   - id: stakeholder-1
     kind: table
@@ -106,7 +106,7 @@ guided_assignment:
         response: true
       label: Role
       guidance:
-        example: Dana, the account lead. She assigns accounts when they change hands
+        example: The account lead. She assigns accounts when they change hands
           and is the only person who sees every handover. Confirmed. I have watched
           her make the assignment twice.
         avoid: A job title with no relationship attached. "Account lead" is a title.
@@ -239,7 +239,7 @@ guided_assignment:
         response: true
       label: Role
       guidance:
-        example: Dana, the account lead. She assigns accounts when they change hands
+        example: The account lead. She assigns accounts when they change hands
           and is the only person who sees every handover. Confirmed. I have watched
           her make the assignment twice.
         avoid: A job title with no relationship attached. "Account lead" is a title.
@@ -372,7 +372,7 @@ guided_assignment:
         response: true
       label: Role
       guidance:
-        example: Dana, the account lead. She assigns accounts when they change hands
+        example: The account lead. She assigns accounts when they change hands
           and is the only person who sees every handover. Confirmed. I have watched
           her make the assignment twice.
         avoid: A job title with no relationship attached. "Account lead" is a title.
@@ -505,7 +505,7 @@ guided_assignment:
         response: true
       label: Role
       guidance:
-        example: Dana, the account lead. She assigns accounts when they change hands
+        example: The account lead. She assigns accounts when they change hands
           and is the only person who sees every handover. Confirmed. I have watched
           her make the assignment twice.
         avoid: A job title with no relationship attached. "Account lead" is a title.
@@ -771,7 +771,7 @@ guided_assignment:
       cells:
       - text: 'First choice
 
-          Name and role.'
+          Role (initials if needed).'
       - text:   
         response: true
       label: First choice
@@ -828,10 +828,10 @@ guided_assignment:
       label: Date I will switch to my backup (if no reply by day 5)
     header_rows: 0
     criteria:
-    - 'Optional: your dates follow the 3-day follow-up and day-5 switch.'
+    - Your dates follow the 3-day follow-up and day-5 switch.
     instruction_section: Outreach log
     feedback_enabled: false
-    feedback_omission_reason: Optional planning dates; no AI feedback is needed.
+    feedback_omission_reason: Planning dates; no AI feedback is needed.
 source_provenance: stakeholder-map-canvas-walkthrough.sources.json
 ---
 
@@ -843,7 +843,7 @@ Before you talk to anyone, write down what you already believe about the people 
 
 ## Set up your map
 
-Write your name and your problem, from **The problem** (Part 2) of your Problem Frame as you left it at the end of Sprint 2. This is the map you will keep working in throughout the sprint. Use roles or initials for other people, and keep confidential details out of responses you send for feedback.
+Write your problem, from **The problem** (Part 2) of your Problem Frame as you left it at the end of Sprint 2. Don't put your name anywhere in this map. Canvas records who submitted. This is the map you will keep working in throughout the sprint. Use roles or initials for other people throughout your map, and keep confidential details out.
 
 ## Stakeholder Table 1
 
@@ -941,4 +941,4 @@ Some strong reasons to contact someone first:
 
 ## Outreach log
 
-Plan your outreach to your first choice. This is optional, but strongly encouraged. Setting your dates now makes it much easier to follow through, and to switch to your backup on time if you need to. In the Stakeholder Conversation, you will look back at whether you kept to them.
+Plan your outreach to your first choice. Setting your dates now makes it much easier to follow through, and to switch to your backup on time if you need to. In the Stakeholder Conversation, you will look back at whether you kept to them.

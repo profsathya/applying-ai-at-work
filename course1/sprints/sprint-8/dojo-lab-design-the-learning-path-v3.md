@@ -56,11 +56,11 @@ Open your Dojo and say: "Walk me through Dojo Lab: Design the Learning Plan." Th
 
 You may notice AI does more in this lab than in earlier sprints. That is on purpose. For three sprints, you did the hard thinking yourself: you dug to root causes, tested your assumptions, and heard from a real person. That work is what makes AI useful now, because it can only build good options on a problem you already understand. This is symbiotic thinking at work. AI does the fast part, laying out ways to learn and ways to check. You do the part only you can do: judging what fits your situation and deciding what goes into your plan.
 
-One rule holds for the whole conversation. Your list and your plan are yours, not the AI's. AI can spot a vague gap in seconds, but it cannot know that Dana never answers email, or which manager would tell you what actually happens. You can. Push back, tell it when you disagree, or ask it to justify its reasoning. If you find yourself pasting its sentences into your template, stop and write the sentence yourself.
+One rule holds for the whole conversation. Your list and your plan are yours, not the AI's. AI can spot a vague gap in seconds, but it cannot know that your account lead never answers email, or which manager would tell you what actually happens. You can. Push back, tell it when you disagree, or ask it to justify its reasoning. If you find yourself pasting its sentences into your template, stop and write the sentence yourself.
 
 **The 3Cs in this conversation.** You learned these in Sprint 2. Here is what each one looks like when you are planning your learning.
 
-- **Context.** Tell your AI your situation before you ask for anything: who will actually talk to you, how much time you have, what you can get access to, and what is off limits. Sprint 2's test still works: if your message could have been sent by anyone in the class, it needs more of you in it.
+- **Context.** Tell your AI your situation before you ask for anything: who will actually talk to you, how much time you have, what you can get access to, and what is off limits. Use roles, not names. Sprint 2's test still works: if your message could have been sent by anyone in the class, it needs more of you in it.
 - **Choices.** Ask for more than one way to close each gap: two or three, with what each would take and what it would miss. A single suggestion is not a choice.
 - **Confirmation.** A plan built on AI suggestions is inferred until something independent backs it up. Your Dojo will ask you to name that for each gap.
 

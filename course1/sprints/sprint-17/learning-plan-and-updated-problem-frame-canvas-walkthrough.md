@@ -414,7 +414,7 @@ You are not doing the learning now. You will follow this plan in CIS 502. What y
 
 Continue with Part B below, then Part C. Your Dojo Lab bullets are the raw material: pick from them, cut what did not survive, and write the five questions in full sentences, in your own words. Two things are yours to write here: the reason each gap matters to your frame, and the updated frame itself.
 
-Write your own answers before requesting optional AI feedback. A selected row may be sent for formative feedback, but the service cannot know your workplace or supply evidence. Remove names and confidential details from any row you send. You can use the self-checks and finish every part without AI.
+Write your own answers before requesting optional AI feedback. A selected row may be sent for formative feedback, but the service cannot know your workplace or supply evidence. Remove names and confidential details from any row you send. Use roles, not names, for anyone you mention, and leave your own name out. Canvas records who submitted. You can use the self-checks and finish every part without AI.
 
 ## Bring your Week 7 Word file
 
@@ -438,7 +438,7 @@ For each gap in your plan, in rank order, answer five questions. One or two sent
 
 - **What do I need to learn?** The gap, in one line, and whether it is blocking or useful.
 - **Why does my Problem Frame need it?** The part of the frame that depends on it, from A4.
-- **Where will I learn it?** The sources: a person, a document, a system, an observation. Name them. A person counts; say how you will reach them.
+- **Where will I learn it?** The sources: a person, a document, a system, an observation. Name them, using a role for any person. A person counts; say how you will reach them.
 - **What steps will I take, and in what order?** Small steps you could finish in one sitting, with a rough time for each.
 - **How will I know I learned it?** What you will be able to show, and the independent thing you will check it against, which could confirm it or prove you wrong.
 
@@ -448,9 +448,9 @@ For each gap in your plan, in rank order, answer five questions. One or two sent
 
 **Why:** Part 3 of my frame, who is affected, says all four managers are. If they are not, the problem is smaller than I said.
 
-**Where:** The four account managers. Dana, who sees every handover. The last three handover emails.
+**Where:** The four account managers. The account lead, who sees every handover. The last three handover emails.
 
-**Steps:** First, ask Dana for the dates of the last three handovers (15 min). Then ask each manager when they found out about those handovers (four short chats, about 1 hour). Then compare the dates (30 min).
+**Steps:** First, ask the account lead for the dates of the last three handovers (15 min). Then ask each manager when they found out about those handovers (four short chats, about 1 hour). Then compare the dates (30 min).
 
 **Know:** I can say, for each of the last three handovers, how many days passed before each manager knew. Confirmed if most managers found out more than a day late; wrong if most knew the same day. Checked against: the managers’ own answers, set beside the handover email dates.
 

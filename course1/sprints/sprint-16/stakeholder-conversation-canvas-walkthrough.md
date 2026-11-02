@@ -362,7 +362,7 @@ The row feedback in this walkthrough is optional and narrower than the Part 1 ex
 
 This is a real problem in your own work, and it is in both your interests to connect early. The sooner you talk, the more of this sprint you have left to act on what you hear.
 
-If you planned dates in your Outreach log, look back at them once the conversation is set: did you send, follow up, and switch when you planned? If not, what got in the way?
+Look back at the dates in your Outreach log once the conversation is set: did you send, follow up, and switch when you planned? If not, what got in the way?
 
 ### Part 3: Have the Conversation
 

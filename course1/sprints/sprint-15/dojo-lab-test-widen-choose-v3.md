@@ -52,7 +52,7 @@ guided_assignment:
 
 ## Part 1: Your Dojo conversation
 
-Open your Dojo and say: "Walk me through Dojo Lab: Test Your Stakeholder Map." Then paste your Stakeholder Map and your Problem Frame. Your Dojo knows what this activity is for and will take it from there: it tests your map, widens it with people you may have missed, and helps you confirm who to talk to first.
+Open your Dojo and say: "Walk me through Dojo Lab: Test Your Stakeholder Map." Then paste your Stakeholder Map and your Problem Frame. Check both for names first, and use roles instead. Your Dojo knows what this activity is for and will take it from there: it tests your map, widens it with people you may have missed, and helps you confirm who to talk to first.
 
 One rule holds for the whole conversation. Your map is yours, not the AI's. AI can spot a need you are only guessing at, but it cannot know that your account lead never answers email. You can. Push back, tell it when you disagree, or ask it to justify its reasoning. If you find yourself pasting its sentences into your map, stop and write the sentence yourself.
 
@@ -84,7 +84,7 @@ One rule holds for the whole conversation. Your map is yours, not the AI's. AI c
 
 ## Part 3: Updating your map
 
-After you submit the transcript, go back to your Stakeholder Map Word file and make the changes you decided on in the conversation: change a Confirmed to an Inferred, attach a reason to a "high," add a stakeholder, or rewrite a question. Change what you decided to change and leave the rest. If your first choice changed, update "Who you will talk to first" and your outreach dates.
+After you submit the transcript, go back to your Stakeholder Map Word file and make the changes you decided on in the conversation: change a Confirmed to an Inferred, add a reason to an Impact or Influence level, add a stakeholder, or rewrite a question. Change what you decided to change and leave the rest. If your first choice changed, update "Who you will talk to first" and your outreach dates.
 
 If the Dojo raised something about your Problem Frame, note it. You will test it in your stakeholder conversation.
 
