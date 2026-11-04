@@ -1,10 +1,10 @@
 ---
 purpose: The Self-check records for the two 50-point Sprint 1 items, First frames and the Problem Frame, in the shape set by course1/design/self-check-guide.md; the on-the-page line and its points go on the page, the rungs, rank, and tag stay here for graders and the grading comment
-status: v0.4, 29 October 2026 (First frames rungs revised after the first batch of seven, graded by Leslie, Jeremy, and Melisa with a blind second read by Claude; on-the-page lines unchanged; open questions listed for the team). v0.3.1, 3 October 2026 (First frames lines 1, 3, and 6 in Leslie's wording). v0.3, 2 October 2026. First frames settled with Leslie on 1 October (six lines, set scoring, the two-frame gate, Part 6 without confirmed or unverified); Problem Frame settled 2 October (six lines, the frame compared against First frames, Steps instead of Parts, Leslie's plain-language on-the-page lines). Rungs are a draft until the first batch (guide rule 14). v0.2, 1 October: five lines per item. v0.1, 30 September: first draft.
+status: v0.4.1, 4 November 2026 (First frames line 6 rungs revised, applies from the second batch; Problem Frame first-pass findings on two submissions; viability placed; Problem Frame line 6 any-frame note). v0.4, 29 October 2026 (First frames rungs revised after the first batch of seven, graded by Leslie, Jeremy, and Melisa with a blind second read by Claude; on-the-page lines unchanged; open questions listed for the team). v0.3.1, 3 October 2026 (First frames lines 1, 3, and 6 in Leslie's wording). v0.3, 2 October 2026. First frames settled with Leslie on 1 October (six lines, set scoring, the two-frame gate, Part 6 without confirmed or unverified); Problem Frame settled 2 October (six lines, the frame compared against First frames, Steps instead of Parts, Leslie's plain-language on-the-page lines). Rungs are a draft until the first batch (guide rule 14). v0.2, 1 October: five lines per item. v0.1, 30 September: first draft.
 depends_on: self-check-guide.md; course-wide-list.md (items 39, 41, 43, 46); course1/sprints/sprint-14/first-frames-walk-through.md; course1/sprints/sprint-14/problem-frame.md
 ---
 
-# Sprint 1 Self-checks, v0.4
+# Sprint 1 Self-checks, v0.4.1
 
 The rules are in `self-check-guide.md`. Rung points follow its rule: a 3 earns about 70 percent of the line, a 1 about 20 percent. Passing is 35 of 50. Lines are written for the learner; rungs are written as the sentence the learner receives in the grading comment.
 
@@ -21,7 +21,7 @@ Gate: fewer than two frames does not pass, whatever the other lines score. The g
 | 3 | In each frame, Part 5 describes what it would look like if the problem in Part 2 were solved, without saying how to solve it. | 8 | A changed situation is described, even if a fix is named with it or it does not quite match Part 2. Describe the day after this problem is gone. (6) | Part 5 is a solution, such as "build an app," or is missing. Describe what would be different, not how. (2) | 3 | judgment |
 | 4 | In each frame, Part 3a names everyone who feels this problem, and Part 3b says what it costs each of them: time, money, mistakes, or stress. | 8 | Only one person or role is named, or the other people named have no cost of their own. A problem usually touches more than one person: who else feels it, and what does it cost each of them? (6) | One vague group, such as "everyone," or a cost with nobody attached. Start from who feels this and say what each one loses. (2) | 4 | specificity |
 | 5 | In each frame, Part 4 says how people deal with this problem now and where that stops working. | 6 | How people deal with it now is there, but the shortfall is missing or only repeats Part 2. Say the step where it stops working. (4) | A fix or a "should" instead of what people do today. Describe the current habit first. (1) | 5 | specificity |
-| 6 | In each frame, Part 6 lists at least four assumptions, and each one says which part of the frame it comes from and who could tell you whether it is true. | 10 | Four assumptions, but some do not say which part or who could tell you. Each line needs both: that is how Sprint 2 knows where to look. (7) | Fewer than four, or none says who could tell you. Reread parts 2 to 5 and mark every sentence you have not seen for yourself. (2) | 2 | honesty |
+| 6 | In each frame, Part 6 lists at least four assumptions, and each one says which part of the frame it comes from and who could tell you whether it is true. | 10 | Four assumptions, but some do not say which part or who could tell you, or some are about whether other people share the problem rather than about your own frame. Each line needs the part, the person, and a claim of yours from Parts 2 to 5 that you have not checked. (7) | Fewer than four, or none says who could tell you. Reread Parts 2 to 5 and mark every sentence you have not seen for yourself. (2) | 2 | honesty |
 
 Total 50. Passing 35. Partial on every line gives 36.
 
@@ -32,6 +32,8 @@ Total 50. Passing 35. Partial on every line gives 36.
 **Line 3 test.** Part 5 may be Part 2 negated; that is what the page asks, and the page example does it ("nothing reaches the rest of the team" becomes "everyone on the team knows within a day"). A fix is something the learner could buy, build, or schedule tomorrow. "A single consolidated snapshot" is a fix; "I practice regularly" is a state.
 
 **Line 5 test.** Full needs the place where the current handling stops working, not the reason it stops working. The reason is Sprint 2's question and is scored on Part 6. A shortfall that only restates Part 2 ("this can take a long time") is the 3 rung.
+
+**Line 6 test (from 4 November, the second batch onward; the first eight were scored on the earlier text).** The count is the full-points bar, not the floor. Two assumptions that are each about the learner's own frame, with part and person, are the 3 rung, not the 1 rung. Four lines of "other people have this problem too" are the 3 rung, not full. Decided by Leslie after the first batch; Jeremy and Melisa to read.
 
 **Score once.** A weak Part 2 pulls the whole frame down, and graders felt it on the first batch. Score it once, on line 2. Do not carry it into lines 3, 4, or 5 unless those parts fail their own test.
 
@@ -45,9 +47,9 @@ Total 50. Passing 35. Partial on every line gives 36.
 
 **Open for the team, after the first batch.**
 
-- Line 6's bar. Four assumptions is easy to meet with four "other people have this problem too" lines and hard to meet with two good ones. Proposed direction: full needs four that are about the frame's own claims in Parts 2 to 5; the 3 rung is fewer than four, or any that are about other people having the problem; the 1 rung is none saying who could tell you. Changes scores on most submissions, so it needs a team decision before it applies.
+- Line 6's bar: decided 4 November, see the line 6 test above. Forward only.
 - The collapse at three frames. Lines 2 to 6 collapse to the 3 rung when one frame of three is weak, which on one submission decided the pass. Whether two of three is "most," and what "most" is at four or five frames.
-- Viability. All three graders reached for "would this carry to Sprint 3" and "is it within the learner's control." The rubric has no line for it, and the page example (the account manager does not control the handover process) is the test case for any control-based wording. For now it lives in the comment and the check-in, not the score. The course-level finding is that most first candidates are complaints about time; that is a Sprint 1 page question (Brainstorm, Get underneath), logged on the course-wide list.
+- Viability: placed, 4 November. Three tests were in play and each has a home. "Is this a problem, not a complaint" is the Dojo Lab's round 3 size checks (current handling, someone beyond themselves, something consequential to find out), run before the Problem Frame is written. "Could something come of it" is the taking-stock page's questions 2 and 3 in Sprint 2, and Sprint 5's readiness report for real. Neither Sprint 1 score carries it; the comment carries a steer. The Dojo round 1 brief gains the Part 2 and Part 4 tests from v0.4 so the Dojo catches what the batch showed (PR, 4 November). The course-level finding that most first candidates are complaints about time stays a Sprint 1 page question.
 - AI-shaped submissions. One of seven followed the page example's Part 4 pattern word for word in all three frames. No line deducts for it and none should without the team saying so.
 - Whether First frames and the Problem Frame should be scored together next run, since Problem Frames arrive before First frames feedback can land. Jeremy's end-of-sprint check-in would also fix this.
 
@@ -72,7 +74,15 @@ Total 50. Passing 35. Partial on every line gives 35.
 
 **What makes it strong.** The change described in Step 3 is visible in Step 2: a line moved, an assumption added, a cost attached. The "why for this course" reason in Step 1 is the same thing Part 6 says you have not seen yet, because that is what Sprint 2 goes and checks. The suggestion turned down shows a judgment the learner made against the AI, in their own words.
 
-**Open, for the first-batch revision.** Whether line 2's example ("the people you can reach or a question you can actually test") steers answers too narrowly. How often "nothing changed" appears, and whether it needs its own rung text.
+**What the score means.** Full marks say the learner did the Sprint 1 process honestly: answered the four questions, pasted the frame whole, and described changes the frame actually shows. They do not say the frame is strong. A thin frame carried forward honestly scores full here, and the frame's quality is Sprint 2's test. Readers of the grade, Tacey included, should know that.
+
+**Line 6, any frame.** The rejected suggestion may be about any frame the Dojo tested, not only the frame carried; the line scores the judgment against the AI, not the frame it was about (Leslie, 4 November). Where the rejection is about another frame, the comment asks what the Dojo said about the frame they kept and whether they agreed with all of it.
+
+**Line 5, what convinced.** "The Dojo's reasoning held up against my own experience" meets the line. Outside evidence is not required in Sprint 1; the 1 rung is for bare restatement of the suggestion.
+
+**First pass, 4 November, two submissions.** Both carried their strongest First frames frame, both made real changes the pasted frame shows, both scored 50 from two graders scoring blind with no cell differing. Line 2's example did not steer answers narrowly; both gave a reach reason and a testable question in their own words. "Nothing changed" has not appeared yet. The Dojo pushed on assumptions in both and on the problem statement in neither; the deadlines frame's Part 2 and Part 4 came through unchanged, which is the Dojo round 1 gap now closed. At full marks the comment is a steer, written as questions the learner can answer, without Step or Part numbers. Research with the Dojo is a legitimate "who could tell me" in Sprint 2, with the person conversation in Sprint 3.
+
+**Open, after the first pass.** How often "nothing changed" appears across the eight. Whether the score-means-process point needs a sentence on the page.
 
 ## Page edits that follow from this record
 
