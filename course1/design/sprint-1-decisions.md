@@ -3143,3 +3143,15 @@ the working book question is list item 33.
 Provenance: Leslie, every ruling; Jeremy, the release and its wording; Melisa, the reflection
 format; Claude, the builds, the merges, the Dojo reading, and the record.
 
+---
+
+## 19 October to 4 November: the self-check lines on the pages, and the first grading batch
+
+**Lines on the pages (19 October, PRs #274, #275, #277, #278).** The settled self-check lines went onto all five Sprint 1 and 2 graded pages as page text, in Melisa's Sprint 3 and 4 format: walkthroughs carry them in the "What to check in your work" block before submit, reading pages carry them open under each Step, each line ending "(N points)." The walkthrough card boxes carry the same tests in one-frame wording without points and a pointer line in Leslie's wording. Rung text stays off the pages. The Problem Frame publish failed once on a push race between two merges and was re-run by Leslie; one page PR at a time from then on.
+
+**First batch (26 to 29 October).** Seven First frames submissions, then an eighth, graded by Leslie, Jeremy, and Melisa with two blind-scored by all three and four blind-scored by Claude. Calibration meeting 29 October. Leslie's rulings: scores on the batch stand; rung text revised forward only (record v0.4: line 2 from the Get underneath gap definition, line 5 restating rule, score-once, rungs not deductions, the comment format); line 6 revised from the second batch (v0.4.1: the count is the bar, not the floor; "others have this too" lines are the 3 rung). The team held viability out of the score and passed the thinnest submission with pointed feedback and a check-in nudge rather than an incomplete (Jeremy's reasoning on disengagement).
+
+**Problem Frame first pass (4 November).** Two submissions, both 50, two graders blind, no cell differed. Leslie's rulings: the Problem Frame score means process, not frame quality; line 6's rejected suggestion may be about any frame the Dojo tested; feedback at full marks is a steer written as questions without Step or Part numbers; research with the Dojo is a fair "who could tell me" in Sprint 2. Viability placed at Dojo round 3 and the taking-stock page; the Dojo round 1 brief gains the Part 2 and Part 4 tests.
+
+Provenance: Leslie, every ruling and the grading; Jeremy, the tracker, the eighth submission, the check-in proposal; Melisa, rows 6 and 7 and the AI-assisted read; Claude, the blind reads, the workbooks, the record, and the feedback drafts in Leslie's voice.
+
