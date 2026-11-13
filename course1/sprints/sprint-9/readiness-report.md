@@ -16,7 +16,7 @@ completion_requires_published: true
 guided_assignment:
   version: '1.0'
   presentation: reading
-  purpose: Say whether your problem is ready to carry into CIS 502, how you have grown, and what you will do next.
+  purpose: Say whether your problem is ready to carry into CIS 502, how you have grown, and the direction you want to take it.
   standing_instruction: 50 points. Submit as one Canvas text entry.
   tasks:
   - id: verdict-before
@@ -57,19 +57,19 @@ guided_assignment:
     instruction_section: 'Part 4: What I still need to learn'
   - id: next-step
     kind: response
-    prompt: 'Part 5: My next step'
+    prompt: 'Part 5: My direction'
     criteria:
-    - Name the first gap you'll work on and the first thing you'll do about it.
-    - Say what you're most curious to try when you start building.
+    - Pick the direction you're most curious to take on from the list. No steps, dates, or tools yet.
+    - Say why, pointing to your own work, and what you hope it shows you.
     - Make your verdict again and say whether it changed from Part 0, and why or why not.
-    instruction_section: 'Part 5: My next step'
+    instruction_section: 'Part 5: My direction'
 ---
 
 # Readiness Report
 
-Your Integrated Problem Document is about your problem. This report is about you: whether your problem is ready to carry into CIS 502, how you have grown, and what you will do next.
+Your Integrated Problem Document is about your problem. This report is about you: whether your problem is ready to carry into CIS 502, how you have grown, and the direction you want to take it.
 
-**What to bring:** your updated Integrated Problem Document, your Learning Plan, your first Problem Frame from Sprint 1, and your four sprint reflections.
+**What to bring:** your updated Integrated Problem Document, your Learning Plan, your first Problem Frame from Sprint 1, your Stakeholder Map and Stakeholder Validation Report, and your four sprint reflections.
 
 **Length:** one to two pages.
 
@@ -147,16 +147,33 @@ Don't summarize the whole plan. Your reader only needs the top of it.
 
 *Sample:* My most important gap is whether the other managers really find out late when an account changes hands. My problem says all four are affected, and if they aren't, the problem is smaller than I said. My plan still holds, but writing my document moved one gap up: why the shared handover sheet stopped being used. The hardest part will be getting time with all four managers.
 
-## Part 5: My next step
+## Part 5: My direction
 
-Looking ahead. In CIS 502, you'll start building toward a solution to your problem, with AI as your partner. Everything you've done here is what you'll build on.
+You've spent this course framing your problem. Now turn toward where you'll take it. In CIS 502, you'll start building toward a solution, with AI as your partner.
 
-In a few sentences:
+Here are some directions you could take. Pick the one that fits where your work left you:
 
-- **Your first step.** The first gap from your Learning Plan you'll work on, and the first thing you'll do about it.
-- **What you're most curious to try.** Looking ahead, what are you most looking forward to exploring when you start building? There's no wrong answer, and you don't need a plan yet.
+- **Read up.** Choose this if your top gap is something you don't understand yet. Look for articles, guides, or videos that explain how it works, until you understand it well enough to explain it in your own words.
+- **Investigate what's out there.** Choose this if your Integrated Problem Document found only a few things that already exist or have been tried, or only what you already knew. Search further, try a few tools, or see how others handle the same problem.
+- **Talk to someone.** Choose this if key parts of your problem are still inferred, or your Stakeholder Map or Stakeholder Validation Report has a next question you haven't asked yet. That person could be a stakeholder again, someone new, someone who's solved something similar, or someone whose go-ahead you need.
+- **Watch and measure.** Choose this if you need more information or data about your problem, like how often it happens, when, or how big it is. Track it for a week or two. That also gives you a starting point to compare against in CIS 502.
+- **Try something small.** Choose this if you know enough, and the only way to learn more is to see what happens. Pick one change that's quick, low-risk, and easy to undo, and try it for a short time, like a few days or a week. For example, use something that already exists yourself, or change one step in how you do things. The point is to learn, not to fix it yet.
+
+**Where to look** (these are good places to start, but not the only ones):
+
+- **Integrated Problem Document:** what you marked as inferred, what you don't know yet, and what already exists or has been tried, against your requirements.
+- **Problem Frame:** your assumptions that are still unverified, and what you don't know yet.
+- **Stakeholder Map:** each person's "Next question to ask."
+- **Stakeholder Validation Report:** "The next question you would ask" and "What still needs validation."
+- **Name the Gap and Learning Plan:** the gaps you marked as blocking, and your learning order.
+
+In three to five sentences:
+
+- **The direction you're most curious to take on.** Pick one from the list above. No steps, dates, or tools yet.
+- **Why this direction?** Point to your own work: a gap from your Learning Plan, what your Integrated Problem Document showed about what already exists, something it marks as inferred, or a next question from your Stakeholder Map or Stakeholder Validation Report.
+- **What you hope it shows you.** How would it get you closer to solving your problem in CIS 502?
 - **Your verdict, after looking.** Make the call from Part 0 again: ready to carry forward, ready with conditions, or not ready yet. Did it change? Why or why not?
 
-*Sample:* My first step is asking Dana for the dates of the last three handovers, so I can check when each manager found out. I'm most curious to see whether AI can help me draft something simple the whole team would actually use. My verdict is still "ready with conditions." Writing the report showed me my evidence is strong for how handovers happen, but thin for clients and the other managers, which is exactly where my plan starts.
+*Sample:* The direction I'm most curious to take on is talking to someone new: the other managers. My top gap is whether they really find out late, and that part of my problem is still inferred. My Integrated Problem Document also showed the old handover sheet faded because it added a step for Dana. Hearing from the managers would show me whether a solution has to reach them at all, and what it would need to fit into their day. My verdict is still "ready with conditions." My evidence is strong for how handovers happen, but thin for the other managers.
 
 Download your answers as a Word file and upload it here.
