@@ -52,7 +52,7 @@ publish: true
 
 Open your Dojo and say: "Walk me through Dojo Lab: explore what already exists." Then paste your Problem Frame and your What already exists table. Your Dojo knows what this activity is for and will take it from there.
 
-Note: throughout the lab, your Dojo might send you out to look up information and research for yourself. Go and look, then come back to the same conversation and say what you found.
+Note: during the lab, your Dojo will send you out to look at least once. Go and look, then come back to the same conversation and say what you found. For a product, open its website or help pages, or read a few reviews. For a practice, ask someone who does it. For a resource, open it and see what is in it.
 
 ***What your Dojo is working from.*** **You do not need to paste this.** It is the brief your Dojo already has for this lab, shown so you can see what it has been asked to do. This lab runs in your Dojo: if yours is not set up yet, go to Set up your AI Dojo in Sprint 0 first. If it still will not load, contact your instructor.
 
