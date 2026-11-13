@@ -82,12 +82,24 @@ guided_assignment:
     - She should mark everything confirmed to look ready.
     correct_index: 2
     explanation: Being ready doesn't mean having every answer. What matters is a clear reason and knowing what you still need to find out.
+  - id: choose-a-direction
+    kind: choice
+    prompt: Elena's office has scheduling software with an insurance check, but no one uses it, and she doesn't know why. Preparing for your Readiness Report, which direction fits best?
+    criteria:
+    - Choose the direction that targets what Elena still needs to find out.
+    options:
+    - Buy new software that checks insurance.
+    - Talk to the office manager about why the check isn't used.
+    - Write a 10-step plan to roll out online forms.
+    - Read general articles about patient wait times.
+    correct_index: 1
+    explanation: Her gap is why something that already exists isn't used, and someone at the office can tell her. A direction points at what you still need to find out, not at a fix or a full plan.
 ---
 
 # Sprint 5 Concept check
 
 ## Practice before your Integrated Problem Document
 
-Practice putting a problem together on a new example. Then do the same with your own work. Answer all five from your own thinking, without AI.
+Practice putting a problem together on a new example. Then do the same with your own work. Answer all six from your own thinking, without AI.
 
 These questions use a short made-up example: Elena works at the front desk of a dental office. Patients often wait 20 minutes at check-in because insurance is checked only when they arrive.

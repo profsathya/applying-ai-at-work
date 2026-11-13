@@ -62,6 +62,14 @@ guided_assignment:
     - Name where two requirements, or two people, pull in different directions, and what that means for any solution.
     - If you didn't find one, say so and where one might show up.
     instruction_section: 'Section 4b: One conflict'
+  - id: what-already-exists
+    kind: response
+    prompt: 'Section 4c: What already exists or has been tried, against my requirements'
+    criteria:
+    - Pick two or three things that already exist or have been tried, and say what each is and where you learned about it.
+    - For each one, say which of your 4a requirements it meets and which it misses, and how.
+    - Don't pick a winner or suggest a fix.
+    instruction_section: 'Section 4c: What already exists or has been tried, against my requirements'
 ---
 
 # Integrated Problem Document
@@ -96,7 +104,7 @@ Your reader's next question will be "How do you know?" This section answers it h
 
 In two or three short paragraphs:
 
-- **Name the two or three things your problem rests on most.** For example, who it affects, what it costs them, how it's handled today, or what already exists that touches it. If you include what already exists, say what you found when you looked, not whether it's good enough.
+- **Name the two or three things your problem rests on most.** For example, who it affects, what it costs them, how it's handled today, or what already exists that touches it. If you include what already exists, say what you found when you looked. You'll weigh it against your requirements later in this document.
 - **For each one, say what supports it in plain words.** What did you see, who did you talk to, what did you read? Write "When I talked to Dana...", not "In my Sprint 3 report..."
 - **Say how sure you are.** Confirmed means you checked it against something independent, and it held. Inferred means you believe it but haven't checked.
 - **End with what you don't know yet,** and why it matters to the problem.
@@ -146,5 +154,24 @@ Check that each requirement doesn't already name a tool or a fix. If it does, it
 Name one place where two requirements, or two people, pull in different directions, and say what that means for any solution. If you didn't find one, say so and where one might show up. In the Dojo Lab that follows, the "Who might push back?" question will test your conflict. You decide whether to change it.
 
 *Sample:* These two pull against each other. Dana thinks the handover process works fine, while the managers say clients keep repeating their history. Any solution has to close the gap for the managers without feeling like extra work to Dana.
+
+## Section 4c: What already exists or has been tried, against my requirements
+
+Your reader will ask, "Doesn't something already do this, or try to?" This section answers that.
+
+You'll use the two to four requirements you just wrote in 4a. Each one says what any solution must do, or must not break.
+
+Pick two or three things that already exist or have been tried, and that touch your problem. For each one, write a sentence or two:
+
+- **What it is:** a tool, a process, a person handling it, or an earlier attempt.
+- **Where you learned about it:** your What solutions already exist table, a stakeholder conversation, a Dojo Lab, or your Learning Plan.
+- **Which of your 4a requirements it meets.**
+- **Which of your 4a requirements it misses,** and how.
+
+Don't pick a winner or suggest a fix. You're showing where the gap is.
+
+**Where to look:** your requirements in 4a, your What solutions already exist table (Sprint 2), your Stakeholder Map and Stakeholder Validation Report (Sprint 3), your Learning Plan (Sprint 4), and your Dojo Lab transcripts.
+
+*Sample:* The CRM's owner field meets my first requirement, that everyone knows within a day, but only on paper. Nobody has to fill it in, so in practice it misses. The old shared handover sheet met that requirement too, but it added a step for Dana, so it misses my second requirement. That may be why it faded.
 
 Download your answers as a Word file and upload it here. After the Dojo Lab, you will update this same file and upload it again as a new attempt.
