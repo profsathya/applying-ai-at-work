@@ -1,6 +1,6 @@
 ---
 purpose: The Self-check records for the three 50-point Sprint 2 items (Dig into your assumptions, What solutions already exist, Problem Frame: taking stock of where you are) in the shape set by course1/design/self-check-guide.md; the on-the-page line and its points go on the page, the rungs, rank, and tag stay here for graders and the grading comment
-status: v0.5, 3 October 2026 (points moved to What exists, and what it means, PR #253; that record applies and the walkthrough record is the alternative). v0.4, 3 October 2026 (What exists in both versions settled with Leslie: four lines on the walkthrough, six on the write-up; questions in place of cannot tell yet; picking an answer dropped as unobservable). v0.3, 3 October 2026 (Leslie's read: Dig lines 2 and 3 in her wording, Dig line 5 and taking-stock line 5 folded into their neighbours, taking-stock line 2 as a transfer check only; an alternative record for What exists, and what it means, pending Jeremy on moving the points). v0.2, 3 October 2026, regenerated with the guide applied (page's words, one cell per line, real tests, 3 rung as the pass standard, rank 1 to N, set scoring, gates, plain-language lines in the Sprint 1 style); for Leslie's read. Rungs are a draft until the first batch (guide rule 14). v0.1, 1 October: first draft.
+status: v0.6, 13 November 2026 (first Sprint 2 batch: findings on Dig, What exists, and taking stock from one learner each plus one Dig, with Leslie's rung decisions; the risk-rating field finding; page edit PR #286). v0.5, 3 October 2026 (points moved to What exists, and what it means, PR #253; that record applies and the walkthrough record is the alternative). v0.4, 3 October 2026 (What exists in both versions settled with Leslie: four lines on the walkthrough, six on the write-up; questions in place of cannot tell yet; picking an answer dropped as unobservable). v0.3, 3 October 2026 (Leslie's read: Dig lines 2 and 3 in her wording, Dig line 5 and taking-stock line 5 folded into their neighbours, taking-stock line 2 as a transfer check only; an alternative record for What exists, and what it means, pending Jeremy on moving the points). v0.2, 3 October 2026, regenerated with the guide applied (page's words, one cell per line, real tests, 3 rung as the pass standard, rank 1 to N, set scoring, gates, plain-language lines in the Sprint 1 style); for Leslie's read. Rungs are a draft until the first batch (guide rule 14). v0.1, 1 October: first draft.
 depends_on: self-check-guide.md; sprint-1-self-checks.md (v0.3.1); course1/sprints/sprint-16/dig-into-your-assumptions-walk-through.md; what-solutions-already-exist-walk-through.md; problem-frame-is-it-worth-pursuing.md
 ---
 
@@ -27,7 +27,13 @@ Total 50. Passing 35. Partial on every line gives 36.
 
 **What makes it strong.** The answer that would end the problem is the one the learner least wants to hear, and it is written down anyway. The high-risk rows are the ones the Problem Frame's Status column carries forward, so a strong walk makes the taking-stock verdict almost write itself.
 
-**Open, for the first-batch revision.** Whether "restate the assumption with a question mark on the end" is the common miss on line 2. Whether "all tables the same rating" shows up often enough to need its own line again.
+**First batch, 12 November (one submission, learner A; the Problem Frame did not come through).** Lines 2 and 3 were strong; line 4 is where the points went. Decisions (Leslie): a table whose questions test a different table's assumption fails line 2 for that table, even if the questions are good ones. One answer that would end the problem meets line 3 on its own; thinness is not scored. Line 1 is scored provisional at the 3 rung when the Problem Frame is missing from the export, and settled when it arrives.
+
+**Line 4 rung gap.** The learner described High, Medium and Low with a reason for each and chose none. Neither rung text covers "reasons given, rating not chosen." Decided: the 3 rung, read for meaning; the 1 rung is for no reasons. Add to the 3 rung text next revision: "or every option is described and none is chosen."
+
+**The risk field itself.** Two of the three Dig submissions read so far did not use the field as asked: one chose no rating, the other rated every assumption Low with reasons about how much the assumption matters rather than how likely the problem-ending answer is, then flipped two to High at taking stock with no reason. Learners read "how risky" as "how serious." For the next run, the field's name should carry the likelihood question, for example "How likely is the answer that would end my problem, and why?" Course-level finding, not a deduction.
+
+**Open.** Whether "restate the assumption with a question mark on the end" is the common miss on line 2 (not seen yet). Whether "all tables the same rating" needs its own line (seen once, in the Low-everywhere case above).
 
 ## What solutions already exist (alternative: applies only if the points return to the walkthrough)
 
@@ -69,6 +75,8 @@ Total 50. Passing 35. Partial on every line gives 36.
 
 **Grading note.** Every rung below full names the step, the row, and the column. Read for meaning. A blank step is a 1 on its lines.
 
+**First batch, 13 November (one submission, learner C).** F, F, 3, 3, F, 1, total 42. Decisions (Leslie): "I chose not to investigate" is not "what you tried to find out"; a row kept as an open question after the Dojo Lab fails lines 3 and 4 unless something was tried. Three of four rows passing is the 3 rung, consistent with First frames (every row for full, most for 3). Line 6, "where you looked outside the chat," means looking during this sprint; experience from before the sprint is scored on line 3, not here. The pages had only implied that looking was required ("your Dojo might send you out"); PR #286 (13 November) makes it explicit on both the What exists page and the Dojo Lab page, with examples of what looking is for a product, a practice, and a resource. Line 2 was given full on meaning where the Dojo-added row sat below the table rather than in it.
+
 **What makes it strong.** The changed cell in Step 1 is the one Step 2 explains. The row the learner went and looked at is the one they were least sure of. Column 3 is where the Problem Frame's Part 3c comes from.
 
 ## Problem Frame: taking stock of where you are, 50 points
@@ -90,7 +98,9 @@ Total 50. Passing 35. Partial on every line gives 36.
 
 **What makes it strong.** The verdict's reasons point at specific rows: a risk rating in Part 6, a row in What exists, a person in Step 1. "What would settle it" is the thing Sprint 3's stakeholder conversation goes and asks.
 
-**Open, for the first-batch revision.** How often "no" appears, and whether the resubmission on the runner-up (list item 34) needs its own note here. Whether line 4's three conditions should split.
+**First batch, 13 November (one submission, learner C).** F, F, 3, 1, total 35. Decision (Leslie): line 4 is read from Step 3 only. A Part 7 that lists the unknowns does not substitute; carrying them into Step 3 is the reflection the line asks for, and a grader reading them off the frame would be doing the learner's work. Line 3: a yes that cites the ask of people and the What exists table but says nothing about two High-risk assumptions in Part 6 is the 3 rung; the comment asks "if either of those turned out to be true, would you still say yes?" Two ratings changed from Low (Dig) to High (here) with no reason given; see the risk-field finding under Dig.
+
+**Open, for the next batch.** How often "no" appears, and whether the resubmission on the runner-up (list item 34) needs its own note here. Whether line 4's three conditions should split.
 
 ## Page edits that follow from this record
 
