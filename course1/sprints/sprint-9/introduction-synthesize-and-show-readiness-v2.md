@@ -62,7 +62,7 @@ By the end of this sprint you will have two documents. Your Integrated Problem D
 
 ## If you still have open questions
 
-Putting it all together may show you that some of your evidence is thinner than you hoped. That's normal, and it's part of being ready. Name what's still open in your Readiness Report, and say how you'll find out. If your problem truly isn't ready to carry forward, say so, with your reason and your next step.
+Putting it all together may show you that some of your evidence is thinner than you hoped. That's normal, and it's part of being ready. Name what's still open in your Readiness Report, and say how you'll find out. If your problem truly isn't ready to carry forward, say so, with your reason and your direction.
 
 ## Two-Week Sprint Map
 
