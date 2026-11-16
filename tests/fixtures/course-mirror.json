@@ -1,0 +1,14 @@
+{
+  "sourceCanvasUrl": "https://source.example/courses/1",
+  "destinationCanvasUrl": "https://destination.example/courses/99",
+  "sharedBaseUrl": "https://hosted.example/course1/",
+  "mirrorBaseUrl": "https://hosted.example/mirrors/reviewer/",
+  "pages": ["home.html", "index.html", "sprint-1.html", "assignments/problem-frame.html"],
+  "mapping": {
+    "modules": {"1": 101},
+    "module_items": {"3": 103},
+    "assignments": {"2": 102},
+    "discussion_topics": {"4": 104},
+    "page_urls": {"home": "home"}
+  }
+}
