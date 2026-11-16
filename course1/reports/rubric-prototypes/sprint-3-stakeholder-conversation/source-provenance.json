@@ -1,0 +1,39 @@
+{
+  "common_curriculum_commit": "0f6ef025cd8b0526370909d5770c518cf902629c",
+  "sources": [
+    {
+      "path": "skills/writing-foundation/SKILL.md",
+      "sha256": "b7c167df86356b36379bf4227051a9f0ba51dee2422d572bc2ae505b095d8207"
+    },
+    {
+      "path": "skills/writing-assignments/SKILL.md",
+      "sha256": "1c737f6cc7cffdbe992c5f344efd46d5fcd6dc9fc66dfe3f291c895cb2bb5874"
+    },
+    {
+      "path": "skills/writing-to-teach/SKILL.md",
+      "sha256": "f43bff8ad7a7ac1c18227e41b8c793fea5217274c91c0cdf4a917d746329ed43"
+    },
+    {
+      "path": "cst349/my-sprint-2-growth-goal-online-chat.md",
+      "sha256": "14894bc92fc75470b4593dca37915969f7ce7ae7920dd3e03b94bd8170931f9e"
+    },
+    {
+      "path": "cst349/my-sprint-2-growth-goal-online-chat.html",
+      "sha256": "78105318f961014b4f777a042a08eb2b8416b9172bec432b6420e08f179e3159"
+    },
+    {
+      "path": "cst499/learning-plan.html",
+      "sha256": "64d2ddaaa2fdc4869a2bdd5e2c5cebdbe492ac5d45c4dff7acc779428c58df91"
+    },
+    {
+      "path": "cst499/project-proposal.html",
+      "sha256": "cc47a0c832b7c8d73dd7483d185cc7d957dc955a079bf509640f13c1825db37d"
+    },
+    {
+      "path": "config/rubrics/README.md",
+      "sha256": "0e17fd14345a4dc8b08e93dc0efa8015763e336d16cc0250298c6bb7a9952bd3"
+    }
+  ],
+  "assignment_source": "course1/sprints/sprint-16/stakeholder-conversation-canvas-walkthrough.md",
+  "assignment_sha256": "d56367cfa2cefd1e7b5ab62e49a3fe6d13e917ab2bdab893d1152cf2fd67d871"
+}

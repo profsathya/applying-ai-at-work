@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "base_commit": "cb1d6b83fe1f18c7e6e5a72d8f9dcaa3cdf483c3",
+  "rubric_items": 9,
+  "total_points": 50,
+  "builder_compiles": true,
+  "stale_rebuild_guard": "PASS: rejects before writes",
+  "pinned_source_hashes": "8 verified",
+  "production_source_unchanged": true,
+  "stash_preserved": true,
+  "backup_sha256": "3d22b92ec5c1ee14cd7f04fafaaedd17ad335bd50e4289f617c3a1b523a0eec4",
+  "recovered_files": [
+    {
+      "path": "course1/reports/authoring/20260929T192127Z-sprint-3-rubric-prototype.md",
+      "original_sha256": "ff6fc55043737241433408b42b1bf5d30b66eeec9ab13cb7b4bd70b424e94141",
+      "current_sha256": "ff6fc55043737241433408b42b1bf5d30b66eeec9ab13cb7b4bd70b424e94141",
+      "unchanged": true
+    },
+    {
+      "path": "course1/reports/rubric-prototypes/sprint-3-stakeholder-conversation/README.md",
+      "original_sha256": "131e186d3a7de928e2b299a26c1d5b1fa312aca2ccecd660ca4fe8bf705fbe29",
+      "current_sha256": "b357a37cf824c458f7fc613cc6316d7c74c656e5dc177afb685a493925335075",
+      "unchanged": false
+    },
+    {
+      "path": "course1/reports/rubric-prototypes/sprint-3-stakeholder-conversation/build_preview.py",
+      "original_sha256": "d9846e10f9be7d9df2d0c58003595b3b49edca6603adc7193266183aa216e010",
+      "current_sha256": "ba63147455ac882086d9ef9fe3c6ac0aa8386016a1f29f51ba46ddafca2013c9",
+      "unchanged": false
+    },
+    {
+      "path": "course1/reports/rubric-prototypes/sprint-3-stakeholder-conversation/instructor-rubric.md",
+      "original_sha256": "d7d99856dcede775b1390aa0d8e7b168336dc8e7a7a386c9cd4fdfaa8e6ce642",
+      "current_sha256": "d7d99856dcede775b1390aa0d8e7b168336dc8e7a7a386c9cd4fdfaa8e6ce642",
+      "unchanged": true
+    },
+    {
+      "path": "course1/reports/rubric-prototypes/sprint-3-stakeholder-conversation/participant-self-check.md",
+      "original_sha256": "436529b30ed21b85b22e92b24f8ef52b334e290db0302b257203fc3d49d00de2",
+      "current_sha256": "436529b30ed21b85b22e92b24f8ef52b334e290db0302b257203fc3d49d00de2",
+      "unchanged": true
+    },
+    {
+      "path": "course1/reports/rubric-prototypes/sprint-3-stakeholder-conversation/preview/index.html",
+      "original_sha256": "dff72c08fd0f15d86a5f0b0353938c2a3b594e6414f125fb3505c31b64380c6d",
+      "current_sha256": "136c4b419c567026bfc52d8df9210f625133b9ba2468f90c261206a7fd990379",
+      "unchanged": false
+    },
+    {
+      "path": "course1/reports/rubric-prototypes/sprint-3-stakeholder-conversation/preview/instructor.html",
+      "original_sha256": "b0b277c70a4fbd6dee2bbe4e3db069795fa160d55e4a45227c64692c5685a9df",
+      "current_sha256": "c5df5bc3ae0606a4968b410f40bcd5202bc2fd53c8739ed1a25bde6c4eebb641",
+      "unchanged": false
+    },
+    {
+      "path": "course1/reports/rubric-prototypes/sprint-3-stakeholder-conversation/rubric.json",
+      "original_sha256": "05f7f464a61134ca0300f8d3dd6d09ef6842e698d046f473ad56bc7d66fe7c79",
+      "current_sha256": "05f7f464a61134ca0300f8d3dd6d09ef6842e698d046f473ad56bc7d66fe7c79",
+      "unchanged": true
+    },
+    {
+      "path": "course1/reports/rubric-prototypes/sprint-3-stakeholder-conversation/source-provenance.json",
+      "original_sha256": "6a202829e12f214dc8cb53d291c2dcffcadb07bccf9ac5244999c2badb5845ef",
+      "current_sha256": "6a202829e12f214dc8cb53d291c2dcffcadb07bccf9ac5244999c2badb5845ef",
+      "unchanged": true
+    },
+    {
+      "path": "course1/reports/rubric-prototypes/sprint-3-stakeholder-conversation/validation.json",
+      "original_sha256": "1cb7e1732b93c8ee1aa58a2e6512bf7535b9d7fc82791e62755f62e169a7d4db",
+      "current_sha256": "1cb7e1732b93c8ee1aa58a2e6512bf7535b9d7fc82791e62755f62e169a7d4db",
+      "unchanged": true
+    }
+  ],
+  "schema_all": "PASS",
+  "link_audit": {
+    "artifacts": 190,
+    "links": 63,
+    "errors": 0
+  },
+  "browser_checks": [
+    {
+      "width": 1280,
+      "status": "PASS",
+      "checkboxes": 9,
+      "persistence": "PASS",
+      "keyboard": "PASS",
+      "clear": "PASS",
+      "word_download": "PASS",
+      "full_score": 50,
+      "partial_score": 30,
+      "example_score": 41.2,
+      "page_overflow": false,
+      "external_requests": "blocked",
+      "script_errors": 0
+    },
+    {
+      "width": 375,
+      "status": "PASS",
+      "checkboxes": 9,
+      "persistence": "PASS",
+      "keyboard": "PASS",
+      "clear": "PASS",
+      "word_download": "PASS",
+      "full_score": 50,
+      "partial_score": 30,
+      "example_score": 41.2,
+      "page_overflow": false,
+      "external_requests": "blocked",
+      "script_errors": 0
+    }
+  ],
+  "word_export": {
+    "status": "PASS",
+    "tables": 6,
+    "checked": 2,
+    "unchecked": 7,
+    "synthetic_response_present": true
+  },
+  "scope": "Recovery of a historical review prototype; no production integration or rubric approval"
+}
