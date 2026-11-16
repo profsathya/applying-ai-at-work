@@ -1059,16 +1059,16 @@
       "canvas_payload_hash": "a8f401e9cd3f17239ba98fd8301b9f1f23b076addc6a5b394a94cba9efed5efc",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "df82500f61af47206609712d9540bd221395b1f3c3a845185582b7a1a7fc50a4",
-      "hosted_hash": "77a742521b5aff638e84494a7611e96b69b0e5cba392d21f229a92a3f0fccf40",
-      "hosted_last_rendered": "2026-11-16T23:15:17+00:00",
+      "content_hash": "758daddfe258e305cb494cb520851c268f98f6ddb3a6ab113a058ae5495591ec",
+      "hosted_hash": "36057c50c54d974224232ecc78aee19bdbd4c0ed88bd10770450aba34c892577",
+      "hosted_last_rendered": "2026-11-16T23:17:57+00:00",
       "hosted_path": "course1/activities/introduction-synthesize-and-show-readiness-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-synthesize-and-show-readiness-v2.html",
-      "last_pushed": "2026-11-16T23:15:17+00:00",
+      "last_pushed": "2026-11-16T23:17:57+00:00",
       "local_path": "course1/sprints/sprint-9/introduction-synthesize-and-show-readiness-v2.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "890dec486737128c91ad5f978a9e27c2a3bd49e9"
+      "source_commit": "5c667e8c096d4af70bf2882f1a7d26193471590f"
     },
     "course1-sprints-sprint-9-name-the-gap-v3": {
       "artifact_id": "course1-sprints-sprint-9-name-the-gap-v3",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-11-16T23:15:17+00:00"
+  "last_sync": "2026-11-16T23:17:57+00:00"
 }
