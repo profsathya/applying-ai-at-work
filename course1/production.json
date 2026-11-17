@@ -1157,13 +1157,13 @@
       "canvas_page_url": "sprint-5-concept-check",
       "canvas_payload_hash": "1899eb05b84b0be9a8b1c32be6fb8e2700a4b280fcd60b11354fc270bb358269",
       "canvas_type": "page",
-      "content_hash": "bb82a2f1e516ae4456f9e05d2433803c2ea8da7e21b117e64b621060e2df148a",
+      "content_hash": "1bc7f2cfb72dcc39a0ad661c7f25da6bf753166f83636626ec86cc369fe38ce1",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "7dc9631b371483dac570bf9f5b93afa0325899b7600d46be4c80bd1826e3dec9",
-      "hosted_last_rendered": "2026-10-23T18:36:04+00:00",
+      "hosted_hash": "3a82a1d0fb9135ae6317c10dc70efb9bd8024119ed1174c65f538943c9e6d7df",
+      "hosted_last_rendered": "2026-11-17T01:30:39+00:00",
       "hosted_path": "course1/activities/sprint-5-concept-check.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/sprint-5-concept-check.html",
-      "last_pushed": "2026-10-23T18:36:04+00:00",
+      "last_pushed": "2026-11-17T01:30:39+00:00",
       "local_path": "course1/sprints/sprint-9/sprint-5-concept-check.md",
       "position": 3,
       "retired_assignment": {
@@ -1177,7 +1177,7 @@
         ]
       },
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "b35ad3bbb154a74000ebe9640d58fef4bab22f48"
+      "source_commit": "b75eb8286c228539b088ac0e792926e3833c0a7c"
     },
     "course1-sprints-sprint-9-sprint-5-reflection-what-changed": {
       "artifact_id": "course1-sprints-sprint-9-sprint-5-reflection-what-changed",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-11-16T23:17:57+00:00"
+  "last_sync": "2026-11-17T01:30:39+00:00"
 }
