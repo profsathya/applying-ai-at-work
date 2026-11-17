@@ -1099,17 +1099,17 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "a13cd9c12eefe6f98d81e8ccedd9a07b0e8bac613078d997b731f42bedbced1b",
       "canvas_type": "assignment",
-      "content_hash": "7d9ec57c9bb7f14a9b45d13d6899ad4949a4ad40ae1df4b41ed81759f8d7bbee",
+      "content_hash": "7d94740c92eeba27f41b10e535acadfb457dba1a1c80240ad5b00900077cfa3e",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "9888995e4452e7be6e5a5185f544c6e1769b73974eb0da98eb9651d4eed7a6f2",
-      "hosted_last_rendered": "2026-10-23T18:36:03+00:00",
+      "hosted_hash": "2a7ba6f20fd26d36dfe6ef3ad0714c6d6fef88b3c1ea394225c87ee146510d55",
+      "hosted_last_rendered": "2026-11-17T03:17:46+00:00",
       "hosted_path": "course1/assignments/readiness-report.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/readiness-report.html",
-      "last_pushed": "2026-10-23T18:36:03+00:00",
+      "last_pushed": "2026-11-17T03:17:46+00:00",
       "local_path": "course1/sprints/sprint-9/readiness-report.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "b35ad3bbb154a74000ebe9640d58fef4bab22f48"
+      "source_commit": "db87c2906e672a0e9a752930e381c2767f12f8ff"
     },
     "course1-sprints-sprint-9-readiness-report-canvas-walkthrough": {
       "artifact_id": "course1-sprints-sprint-9-readiness-report-canvas-walkthrough",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-11-17T03:06:46+00:00"
+  "last_sync": "2026-11-17T03:17:46+00:00"
 }
