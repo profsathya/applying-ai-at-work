@@ -995,17 +995,17 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "4c33bc4a7f7674d826ee5fb9f8b2b647db5abd35ba97e3d6131ed1ab78eb01cd",
       "canvas_type": "assignment",
-      "content_hash": "d33ee7f79ca6ac26a45bb898cc001e51cc97190818041ab0661f02f939237ec8",
+      "content_hash": "688fd41e8ae00db69222e4a42c50c16579d2d4c9c710abcc51289fb966ebe256",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "18f77c38d5fd4dd2c1c5d2217d85a1376bc459eaf70712c5e8f83fed10e00d19",
-      "hosted_last_rendered": "2026-10-23T18:35:57+00:00",
+      "hosted_hash": "c61bb9ea342987c4589e9deb017df3b547c533b25f29e82efddba175bc542f83",
+      "hosted_last_rendered": "2026-11-17T03:06:46+00:00",
       "hosted_path": "course1/assignments/integrated-problem-document.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/integrated-problem-document.html",
-      "last_pushed": "2026-10-23T18:35:57+00:00",
+      "last_pushed": "2026-11-17T03:06:46+00:00",
       "local_path": "course1/sprints/sprint-9/integrated-problem-document.md",
       "position": 4,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "b35ad3bbb154a74000ebe9640d58fef4bab22f48"
+      "source_commit": "db87c2906e672a0e9a752930e381c2767f12f8ff"
     },
     "course1-sprints-sprint-9-integrated-problem-document-canvas-walkthrough": {
       "artifact_id": "course1-sprints-sprint-9-integrated-problem-document-canvas-walkthrough",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-11-17T02:37:37+00:00"
+  "last_sync": "2026-11-17T03:06:46+00:00"
 }
