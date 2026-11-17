@@ -1,6 +1,6 @@
 ---
 type: assignment
-title: 'Dojo Lab: audit your argument for gaps'
+title: 'Dojo Lab: Test Your Integrated Problem Document'
 slug: dojo-lab-audit-your-argument
 artifact_id: course1-sprints-sprint-9-dojo-lab-audit-your-argument
 sprint: 9
@@ -34,7 +34,7 @@ guided_assignment:
       you chose.
 ---
 
-# Dojo Lab: Test Your Argument
+# Dojo Lab: Test Your Integrated Problem Document
 
 ## What you need for this Dojo Lab
 
@@ -49,7 +49,7 @@ guided_assignment:
 
 ## Part 1: Your Dojo conversation
 
-Open your Dojo and say: "Walk me through Dojo Lab: Test Your Argument." Then paste your Integrated Problem Document. Your Dojo knows what this activity is for and will take it from there: it listens to you explain your problem, reads your document the way someone new would, asks the questions that person might ask, and helps you name what you feel confident about.
+Open your Dojo and say: "Walk me through Dojo Lab: Test Your Integrated Problem Document." Then paste your Integrated Problem Document. Your Dojo knows what this activity is for and will take it from there: it listens to you explain your problem, reads your document the way someone new would, asks the questions that person might ask, and helps you name what you feel confident about.
 
 This lab is a rehearsal. For four sprints you built your problem, tested it, and heard from a real person. Now you practice explaining it to someone new. Each question shows you whether your document already has the answer. Where it doesn't, you fix it, so you go into your Readiness Report with a document you can stand behind.
 
@@ -65,7 +65,7 @@ One rule holds for the whole conversation. Your document and your answers are yo
 
 > Before we start, here is how to work with me. Be my coach, not my editor. Ask one question at a time and wait for my answer. Keep each reply under 120 words. Ask what I think before you offer your own read. Never rewrite my work; point at a line and make me change it myself. When you push on something weak, say you are pushing and why. When I have defended a line, ease off and say so. If I lean on you two turns running, say so and make me put it in my own words. Do not invent anything about my workplace; ask. End with a recap I can save.
 >
-> == Sprint 5: Dojo Lab: Test Your Argument ==
+> == Sprint 5: Dojo Lab: Test Your Integrated Problem Document ==
 >
 > Purpose: Help the learner present their Integrated Problem Document to someone new, check that it makes sense, and leave confident about what they are carrying forward. The learner makes every change themselves. Use the Sprint 5 page with this title in the Course tab.
 >
@@ -89,4 +89,4 @@ One rule holds for the whole conversation. Your document and your answers are yo
 
 After you submit the transcript, open your Integrated Problem Document Word file and make the changes you decided on in the conversation: a sentence rewritten so someone new can follow it, an answer you added, a claim you re-marked as inferred. Change what you decided to change and leave the rest. Keep your transcript; its recap is a good list to work from.
 
-At the top of the same file, add one line: "Updated after the Dojo Lab:" and what you changed. Then upload it again to the Integrated Problem Document assignment as a new attempt. You will use it in your Readiness Report.
+At the top of the same file, add one line: "Updated after the Dojo Lab:" and what you changed. Then upload it again to the Integrated Problem Document Canvas Walkthrough assignment as a new attempt. You will use it in your Readiness Report.
