@@ -27,7 +27,7 @@ guided_assignment:
   - 'Part 0, My verdict, before I look, makes one of the three calls before you reread your work, with two sentences on why, left as you first wrote it.'
   - 'Part 1, Where I stand, names one or two things you can now do well, each tied to a specific moment in your work, and one or two places you still need support, with what makes them hard.'
   - 'Part 2, How I''ve grown in how I work, names one or two real shifts, each with how you worked before, how you work now, and what caused it, or says little changed and why.'
-  - 'Part 3, How my thinking has changed, compares how you saw problems, AI, or your own role at the start with how you see them now, or says what held and why.'
+  - 'Part 3, How my thinking has changed, compares how you saw problems, AI, or your own role at the start with how you see them now, each tied to a moment in your work, or says what held and why.'
   - 'Part 4, What I still need to learn, starts from the unknowns in your Integrated Problem Document, names your top one or two gaps and why your problem depends on them, says whether your plan still holds, and what would make it hard.'
   - 'Part 5, My direction, names the direction you are most curious to take on, why, pointing to your own work, and what you hope it shows you, and gives your verdict after looking, with whether it changed from Part 0 and why.'
   tasks:
@@ -57,7 +57,7 @@ guided_assignment:
     kind: response
     prompt: 'Part 3: How my thinking has changed'
     criteria:
-    - Compare how you saw problems, AI, or your own role when the course started with how you see them now.
+    - Compare how you saw problems, AI, or your own role when the course started with how you see them now, each tied to a moment in your work.
     - If your thinking stayed the same, say what you believed and why it held.
     instruction_section: 'Part 3: How my thinking has changed'
   - id: still-to-learn
@@ -83,7 +83,9 @@ Your Integrated Problem Document is about your problem. This report is about you
 
 **What to bring:** your updated Integrated Problem Document, your Learning Plan, your first Problem Frame from Sprint 1, your Stakeholder Map and Stakeholder Validation Report, and your four sprint reflections.
 
-**Length:** one to two pages.
+**Length:** two to three pages.
+
+**Detail:** In every part, point to your own work. Name the sprint, the document, or the conversation, and say what you did, wrote, or heard. A specific moment says more than a general statement.
 
 ## Part 0: My verdict, before I look
 
@@ -97,24 +99,20 @@ Write two sentences on why. Don't go back and change this later. At the end of t
 
 Most of you will land on ready, or ready with conditions. What matters is the reason behind your call.
 
-*Sample:* Ready with conditions. I'm confident about how handovers happen today, but I haven't heard from clients or the other managers yet.
-
 ## Part 1: Where I stand
 
-Take an honest look at where you are now, at the end of CIS 501. In a short paragraph or two:
+Take an honest look at where you are now, at the end of CIS 501. In two or three paragraphs:
 
 - **Name one or two things you can now do well** when working on a problem, such as testing an assumption, talking to a stakeholder, or directing AI. Point to a specific moment in your work that shows it.
 - **Name one or two places where you still need support.** Say what makes them hard for you.
 
 Stick to the present. How you got here comes in Part 2.
 
-*Sample:* I can now spot when I'm treating a guess as a fact. When I listed my assumptions, I marked "nobody has tried to fix this" as unverified, and that turned out to matter. Where I still need support is the stakeholder conversations themselves. I only had one, and I found it hard to ask questions without leading the person toward my answer.
-
 ## Part 2: How I've grown in how I work
 
 Compare how you work on a problem now with how you worked in Sprint 1. This part is about you, not the problem.
 
-In a short paragraph or two, name one or two real shifts in how you work. For each one:
+In two or three paragraphs, name one or two real shifts in how you work. For each one:
 
 - **How you worked before.** Point to something from early in the course.
 - **How you work now.** Point to something recent.
@@ -129,25 +127,23 @@ If little or nothing changed, say so and why. That's a full answer.
 
 **Where to look:** your first Problem Frame, your latest one, and your four sprint reflections. You answered these same two questions in each reflection.
 
-*Sample:* In Sprint 1, I took my first idea of the problem as the answer. Now I list what I'm assuming before I trust it. The shift came in the Dojo, when AI pushed on my idea that the CRM field would solve it. I couldn't have caught that on my own. But AI didn't know our team, and I did. I'm the one who knew Dana might push back, so I'm the one who made the call.
-
 ## Part 3: How my thinking has changed
 
 This part is about what you believe, not what you do. Think back to how you saw things when the course started, and how you see them now.
 
-In a paragraph or two, reflect on any of these:
+In two or three paragraphs, reflect on any of these:
 
 - **How you see problems.** For example, what you thought a "problem" was, or where you thought the real problem usually sits.
 - **How you see AI.** What you expected from it, and what you think it's good and not good for now.
 - **How you see your own role.** What you thought your job was when facing a problem, and what you think it is now.
 
-Pick what's true for you. If your thinking stayed the same, say what you believed and why it held.
+For each one you pick, point to a moment in your work that shows the change: something you wrote, said, or decided.
 
-*Sample:* When I started, I thought my job was to fix problems fast. Now I think my job is to understand them first. I also expected AI to give me answers. Now I see it more as something to argue with. It's most useful when it pushes back on me.
+Pick what's true for you. If your thinking stayed the same, say what you believed and why it held.
 
 ## Part 4: What I still need to learn
 
-Your Sprint 4 Learning Plan lists the gaps you still need to close. You haven't closed them yet, and that's expected. This part checks whether your plan is still right now that you've pulled your work together. In a short paragraph or two:
+Your Sprint 4 Learning Plan lists the gaps you still need to close. You haven't closed them yet, and that's expected. This part checks whether your plan is still right now that you've pulled your work together. In two or three paragraphs:
 
 - **Start from the unknowns you named in your Integrated Problem Document.** Then name your top one or two gaps from your plan, in plain words, and why your problem depends on them.
 - **Say whether your plan still holds.** Did writing your Integrated Problem Document change the order, add a gap, or make one matter less? If nothing changed, say so.
@@ -156,8 +152,6 @@ Your Sprint 4 Learning Plan lists the gaps you still need to close. You haven't 
 Don't summarize the whole plan. Your reader only needs the top of it.
 
 **Where to look:** your Learning Plan and the updated Problem Frame inside it (parts 6 and 7).
-
-*Sample:* My most important gap is whether the other managers really find out late when an account changes hands. My problem says all four are affected, and if they aren't, the problem is smaller than I said. My plan still holds, but writing my document moved one gap up: why the shared handover sheet stopped being used. The hardest part will be getting time with all four managers.
 
 ## Part 5: My direction
 
@@ -179,13 +173,11 @@ Here are some directions you could take. Pick the one that fits where your work 
 - **Stakeholder Validation Report:** "The next question you would ask" and "What still needs validation."
 - **Name the Gap and Learning Plan:** the gaps you marked as blocking, and your learning order.
 
-In three to five sentences:
+In a paragraph or two:
 
 - **The direction you're most curious to take on.** Pick one from the list above. No steps, dates, or tools yet.
 - **Why this direction?** Point to your own work: a gap from your Learning Plan, what your Integrated Problem Document showed about what already exists, something it marks as inferred, or a next question from your Stakeholder Map or Stakeholder Validation Report.
 - **What you hope it shows you.** How would it get you closer to solving your problem in CIS 502?
 - **Your verdict, after looking.** Make the call from Part 0 again: ready to carry forward, ready with conditions, or not ready yet. Did it change? Why or why not?
-
-*Sample:* The direction I'm most curious to take on is talking to someone new: the other managers. My top gap is whether they really find out late, and that part of my problem is still inferred. My Integrated Problem Document also showed the old handover sheet faded because it added a step for Dana. Hearing from the managers would show me whether a solution has to reach them at all, and what it would need to fit into their day. My verdict is still "ready with conditions." My evidence is strong for how handovers happen, but thin for the other managers.
 
 Download your answers as a Word file and upload it here.
