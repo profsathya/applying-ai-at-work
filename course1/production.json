@@ -945,24 +945,24 @@
     },
     "course1-sprints-sprint-9-dojo-lab-audit-your-argument": {
       "artifact_id": "course1-sprints-sprint-9-dojo-lab-audit-your-argument",
-      "canvas_fingerprint": "245842ca604d7aae8fb999b46ebf592748e37aef3f614475bc3380da567ea097",
+      "canvas_fingerprint": "d1b8774331da1e81096f3fa5477c7f02170a6dbaa2e83197d6261f22a74c239e",
       "canvas_id": 7186,
       "canvas_module_id": 2076,
       "canvas_module_item_id": 18021,
       "canvas_page_url": null,
-      "canvas_payload_hash": "a6334f6648fbaf0297bbd3c7ea6a00c74056a155712433ab1e4997b8528d70e1",
+      "canvas_payload_hash": "f0e76c5f5a50630fc48e79e63111784ef78d943eedae0dd137a559d948eaf89c",
       "canvas_type": "assignment",
-      "content_hash": "45081b365f12d71373187674565c52b1d3b4b57b41181293ff1375666114efc8",
+      "content_hash": "5a6279dbdb483d41ce41a37d6b3b5d0a69f2f3d745821b72f32b169f14edb57e",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "649a207f6912e93c1a83d359abe4c8244f6cee35fc225ffa733c36b4875d57ff",
-      "hosted_last_rendered": "2026-10-23T18:35:52+00:00",
+      "hosted_hash": "dd705045957f6100155beed35d855790025d4c3509154c8978ea3489df938a24",
+      "hosted_last_rendered": "2026-11-17T03:34:55+00:00",
       "hosted_path": "course1/assignments/dojo-lab-audit-your-argument.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-audit-your-argument.html",
-      "last_pushed": "2026-10-23T18:35:52+00:00",
+      "last_pushed": "2026-11-17T03:34:55+00:00",
       "local_path": "course1/sprints/sprint-9/dojo-lab-audit-your-argument.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "b35ad3bbb154a74000ebe9640d58fef4bab22f48"
+      "source_commit": "db87c2906e672a0e9a752930e381c2767f12f8ff"
     },
     "course1-sprints-sprint-9-dojo-lab-design-the-learning-path-v3": {
       "artifact_id": "course1-sprints-sprint-9-dojo-lab-design-the-learning-path-v3",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-11-17T03:17:46+00:00"
+  "last_sync": "2026-11-17T03:34:55+00:00"
 }
