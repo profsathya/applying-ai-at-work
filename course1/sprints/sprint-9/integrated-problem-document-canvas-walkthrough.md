@@ -276,7 +276,7 @@ Pick two or three things that already exist or have been tried, and that touch y
 - **Which of your 4a requirements it meets.**
 - **Which of your 4a requirements it misses,** and how.
 
-Don't pick a winner or suggest a fix. You're showing where the gap is.
+Don't pick a winner or suggest a fix. You're showing where the gap is. In the Dojo Lab, "Doesn't something already do this, or try to?" will test this section.
 
 **Where to look:** your requirements in 4a, your What solutions already exist table (Sprint 2), your Stakeholder Map and Stakeholder Validation Report (Sprint 3), your Learning Plan (Sprint 4), and your Dojo Lab transcripts.
 

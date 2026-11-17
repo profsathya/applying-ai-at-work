@@ -77,11 +77,11 @@ One rule holds for the whole conversation. Your document and your answers are yo
 >
 > 2. Read as a stranger (Auditor). Read the document. Name at most three places a newcomer would get lost: a jump with no link, a course term, a claim with nothing behind it, or "confirmed" where it is really inferred. Quote the learner's words. Take one at a time. The learner decides each fix.
 >
-> 3. Their questions (Challenger). Ask two or three questions that person might ask, such as "How do you know?", "Who might push back on this?" or "What happens if we do nothing?" One question at a time. The learner answers in their own words and notes any answer that belongs in the document.
+> 3. Their questions (Challenger). Ask two or three questions that person might ask, such as "How do you know?", "Who might push back on this?", "Doesn't something already do this, or try to?" or "What happens if we do nothing?" One question at a time. The learner answers in their own words and notes any answer that belongs in the document.
 >
 > 4. Close (Reflector). Ask the learner to state, in their own words, what they will change, where a reader can see a call they made, what they feel most confident about carrying forward, and what they are still unsure of. Recap only the decisions they actually made.
 >
-> Do not rewrite the document, add evidence, or comment on tone or polish; comment only on whether the argument holds. Do not ask "so what should we do?" or suggest solutions, and steer back to the problem if the learner starts proposing fixes. Do not tell the learner they are ready; the readiness call is theirs, in the Readiness Report.
+> Do not rewrite the document, add evidence, or comment on tone or polish; comment only on whether the argument holds. Do not ask "so what should we do?" or suggest solutions, and steer back to the problem if the learner starts proposing fixes. Asking what already exists or has been tried is fine; steer back only if the learner starts proposing a fix. Do not tell the learner they are ready; the readiness call is theirs, in the Readiness Report.
 
 ## Part 2: Requesting and submitting the transcript
 
