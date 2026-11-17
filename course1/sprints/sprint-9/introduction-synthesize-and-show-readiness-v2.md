@@ -58,7 +58,7 @@ By the end of this sprint you will have two documents. Your Integrated Problem D
 - Overstated: "Clients are frustrated by every handover."
 - Honest: "I've watched two handovers, and Dana described them the same way. I haven't heard from a client yet."
 
-**Your verdict.** At the start and end of your Readiness Report, you make a call on your problem: ready to carry forward, ready with conditions, or not ready yet. Most of you will land on ready, or ready with conditions. What matters is the reason behind your call, and what you still need to find out.
+**Your verdict.** At the start and end of your Readiness Report, you make a call on your problem: ready to carry forward, ready with conditions, or not ready yet. What matters is the reason behind your call, and what you still need to find out.
 
 ## If you still have open questions
 

@@ -97,7 +97,7 @@ Before you reread any of your work, make a gut call. Is your problem ready to ca
 
 Write two sentences on why. Don't go back and change this later. At the end of the report you'll make the call again and see whether your evidence moved it.
 
-Most of you will land on ready, or ready with conditions. What matters is the reason behind your call.
+What matters is the reason behind your call.
 
 ## Part 1: Where I stand
 
