@@ -21,17 +21,17 @@ guided_assignment:
   tasks:
   - id: the-problem
     kind: response
-    prompt: 'Section 1: The problem'
+    prompt: 'Section 1a: The problem'
     criteria:
     - Three to five plain sentences on what is happening, who it affects and what it costs them, and where things break down today.
     - No solution and no course terms like "frame" or "assumption."
-    instruction_section: 'Section 1: The problem'
+    instruction_section: 'Section 1a: The problem'
   - id: current-frame
     kind: response
-    prompt: 'Section 1: My current Problem Frame'
+    prompt: 'Section 1b: My current Problem Frame'
     criteria:
     - Paste your current frame from your Sprint 4 Learning Plan into all seven parts, tightening the wording where needed without rewriting it.
-    instruction_section: 'Section 1: Your current Problem Frame'
+    instruction_section: 'Section 1b: Your current Problem Frame'
   - id: what-i-know
     kind: response
     prompt: 'Section 2: What I know, and how sure I am'
@@ -80,7 +80,7 @@ Put four sprints of work together into one short document that someone who could
 
 **Length:** one to two pages, not counting your pasted Problem Frame.
 
-## Section 1: The problem
+## Section 1a: The problem
 
 This is the first thing your reader sees. In three to five plain sentences, tell them:
 
@@ -94,7 +94,7 @@ A quick test: could someone outside the course read it once and explain your pro
 
 *Sample:* On our account team, when a client account changes hands, the handover happens in a private conversation between the outgoing and incoming manager. Nothing reaches the rest of the team. As a result, other managers may not know who owns an account, and clients may end up repeating their history to someone who should already know it. The current approach works for the two people in the conversation but breaks down the moment anyone else needs to know.
 
-## Section 1: Your current Problem Frame
+## Section 1b: Your current Problem Frame
 
 Under your paragraph, paste your current Problem Frame (Parts 1-7, from your Sprint 4 Learning Plan's updated frame) and tighten the wording where needed. Don't rewrite it.
 
