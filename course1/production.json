@@ -1059,16 +1059,16 @@
       "canvas_payload_hash": "a8f401e9cd3f17239ba98fd8301b9f1f23b076addc6a5b394a94cba9efed5efc",
       "canvas_type": "page",
       "completion_requirement": "must_view",
-      "content_hash": "758daddfe258e305cb494cb520851c268f98f6ddb3a6ab113a058ae5495591ec",
-      "hosted_hash": "36057c50c54d974224232ecc78aee19bdbd4c0ed88bd10770450aba34c892577",
-      "hosted_last_rendered": "2026-11-16T23:17:57+00:00",
+      "content_hash": "dab12d3984765dba348f901bf5cf05f79858ebe49dbc04b27f0268f63892129d",
+      "hosted_hash": "ba35707419bc238b8d0ccc06cc490be99555e91e59fbfc390b49ea947094bbc9",
+      "hosted_last_rendered": "2026-11-17T06:21:50+00:00",
       "hosted_path": "course1/activities/introduction-synthesize-and-show-readiness-v2.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/activities/introduction-synthesize-and-show-readiness-v2.html",
-      "last_pushed": "2026-11-16T23:17:57+00:00",
+      "last_pushed": "2026-11-17T06:21:50+00:00",
       "local_path": "course1/sprints/sprint-9/introduction-synthesize-and-show-readiness-v2.md",
       "position": 2,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "5c667e8c096d4af70bf2882f1a7d26193471590f"
+      "source_commit": "b10519bec32d2e9ab9921ecac14f9aa95d0d263d"
     },
     "course1-sprints-sprint-9-name-the-gap-v3": {
       "artifact_id": "course1-sprints-sprint-9-name-the-gap-v3",
@@ -1099,17 +1099,17 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "a13cd9c12eefe6f98d81e8ccedd9a07b0e8bac613078d997b731f42bedbced1b",
       "canvas_type": "assignment",
-      "content_hash": "7d94740c92eeba27f41b10e535acadfb457dba1a1c80240ad5b00900077cfa3e",
+      "content_hash": "ef5b938a7265b2491af795395ec4a9a474589d07d563d3d5a12ba236033b761c",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "2a7ba6f20fd26d36dfe6ef3ad0714c6d6fef88b3c1ea394225c87ee146510d55",
-      "hosted_last_rendered": "2026-11-17T03:17:46+00:00",
+      "hosted_hash": "592a683d034e0dd568e817d0987a769edfc61ba769fae5478b10ea68eb70b167",
+      "hosted_last_rendered": "2026-11-17T06:21:56+00:00",
       "hosted_path": "course1/assignments/readiness-report.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/readiness-report.html",
-      "last_pushed": "2026-11-17T03:17:46+00:00",
+      "last_pushed": "2026-11-17T06:21:56+00:00",
       "local_path": "course1/sprints/sprint-9/readiness-report.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "db87c2906e672a0e9a752930e381c2767f12f8ff"
+      "source_commit": "b10519bec32d2e9ab9921ecac14f9aa95d0d263d"
     },
     "course1-sprints-sprint-9-readiness-report-canvas-walkthrough": {
       "artifact_id": "course1-sprints-sprint-9-readiness-report-canvas-walkthrough",
@@ -1120,17 +1120,17 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "e852467175c9698123375d2b3667dba7cfb6579db0ee5b34d9c0e33610a13265",
       "canvas_type": "assignment",
-      "content_hash": "256f709fa2ec32dcdb0fc90be31679461e54168a598c764f71d75025883db069",
+      "content_hash": "ff04fb562fa747295026c3e4de29e0c4f0af25ac3b1d93a8d5057b34e24fc6c7",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "c9cc5fd61448a3f673d05e208ebc68a4ba8b356d86a0b327547194abb8406ccb",
-      "hosted_last_rendered": "2026-11-17T01:32:53+00:00",
+      "hosted_hash": "d0204c01e15c464440d1833e69334a9eeefb3b6ad1f7bd617fe22958eec749c7",
+      "hosted_last_rendered": "2026-11-17T06:21:54+00:00",
       "hosted_path": "course1/assignments/readiness-report-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/readiness-report-canvas-walkthrough.html",
-      "last_pushed": "2026-11-17T01:32:53+00:00",
+      "last_pushed": "2026-11-17T06:21:54+00:00",
       "local_path": "course1/sprints/sprint-9/readiness-report-canvas-walkthrough.md",
       "position": 9,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "db87c2906e672a0e9a752930e381c2767f12f8ff"
+      "source_commit": "b10519bec32d2e9ab9921ecac14f9aa95d0d263d"
     },
     "course1-sprints-sprint-9-sprint-4-close-the-learning-gap-v3": {
       "artifact_id": "course1-sprints-sprint-9-sprint-4-close-the-learning-gap-v3",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-11-17T06:01:54+00:00"
+  "last_sync": "2026-11-17T06:21:56+00:00"
 }
