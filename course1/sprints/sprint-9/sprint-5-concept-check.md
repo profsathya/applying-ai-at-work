@@ -23,7 +23,7 @@ guided_assignment:
   tasks:
   - id: opening-for-a-newcomer
     kind: choice
-    prompt: Preparing for your Integrated Problem Document, which opening would someone new to Elena's office follow best?
+    prompt: Preparing for your Integrated Problem Document, which problem statement would someone new to Elena's office follow best?
     criteria:
     - Choose the one that says the problem in plain words, without jargon or a solution.
     options:
