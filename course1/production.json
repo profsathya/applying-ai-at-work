@@ -1120,17 +1120,17 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "e852467175c9698123375d2b3667dba7cfb6579db0ee5b34d9c0e33610a13265",
       "canvas_type": "assignment",
-      "content_hash": "07436cafdcf786edd84b0ba036361a8e57eb2544e6a262f48ee377728cef41f8",
+      "content_hash": "256f709fa2ec32dcdb0fc90be31679461e54168a598c764f71d75025883db069",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "af9edc7ea308668fb37ad590fff450fbc4bc35eda437f0700c9071f56a41e28d",
-      "hosted_last_rendered": "2026-10-23T18:36:02+00:00",
+      "hosted_hash": "c9cc5fd61448a3f673d05e208ebc68a4ba8b356d86a0b327547194abb8406ccb",
+      "hosted_last_rendered": "2026-11-17T01:32:53+00:00",
       "hosted_path": "course1/assignments/readiness-report-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/readiness-report-canvas-walkthrough.html",
-      "last_pushed": "2026-10-23T18:36:02+00:00",
+      "last_pushed": "2026-11-17T01:32:53+00:00",
       "local_path": "course1/sprints/sprint-9/readiness-report-canvas-walkthrough.md",
       "position": 9,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "b35ad3bbb154a74000ebe9640d58fef4bab22f48"
+      "source_commit": "db87c2906e672a0e9a752930e381c2767f12f8ff"
     },
     "course1-sprints-sprint-9-sprint-4-close-the-learning-gap-v3": {
       "artifact_id": "course1-sprints-sprint-9-sprint-4-close-the-learning-gap-v3",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-11-17T01:30:39+00:00"
+  "last_sync": "2026-11-17T01:32:53+00:00"
 }
