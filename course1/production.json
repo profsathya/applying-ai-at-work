@@ -952,17 +952,17 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "f0e76c5f5a50630fc48e79e63111784ef78d943eedae0dd137a559d948eaf89c",
       "canvas_type": "assignment",
-      "content_hash": "5a6279dbdb483d41ce41a37d6b3b5d0a69f2f3d745821b72f32b169f14edb57e",
+      "content_hash": "470828860e0b6d0bfb015a8ad12d1406b383cd483b42cfc5cc8e8a243e918b69",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "dd705045957f6100155beed35d855790025d4c3509154c8978ea3489df938a24",
-      "hosted_last_rendered": "2026-11-17T03:34:55+00:00",
+      "hosted_hash": "aaea94dce8e05a983009e74596911353b03d8a35635b2d1de564b435eeb840c8",
+      "hosted_last_rendered": "2026-11-17T06:01:50+00:00",
       "hosted_path": "course1/assignments/dojo-lab-audit-your-argument.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/dojo-lab-audit-your-argument.html",
-      "last_pushed": "2026-11-17T03:34:55+00:00",
+      "last_pushed": "2026-11-17T06:01:50+00:00",
       "local_path": "course1/sprints/sprint-9/dojo-lab-audit-your-argument.md",
       "position": 5,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "db87c2906e672a0e9a752930e381c2767f12f8ff"
+      "source_commit": "6c9017dbe8664c3cfa5a16f426e8a3eb29e90b7d"
     },
     "course1-sprints-sprint-9-dojo-lab-design-the-learning-path-v3": {
       "artifact_id": "course1-sprints-sprint-9-dojo-lab-design-the-learning-path-v3",
@@ -1016,17 +1016,17 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "c3b8b5828298364d54dae8a5f2216141d0a967719b08bc17afa41599add738c6",
       "canvas_type": "assignment",
-      "content_hash": "2021919764f564351c124dbc17ba88e923e3accdfe26422de047a33e81cf53f3",
+      "content_hash": "7936d243e1a2d83b24e4156ed082935a6c3f666d817ee723a738a3702b1acfd1",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "c2aa6412d7a7a5676c19560696efa7c836b02f45b5bb86d54c278684c36e1602",
-      "hosted_last_rendered": "2026-11-17T02:37:37+00:00",
+      "hosted_hash": "855a035ef7e3f8519832bfbb8c1bade78727e55cc13899e05987e830e56adcb5",
+      "hosted_last_rendered": "2026-11-17T06:01:54+00:00",
       "hosted_path": "course1/assignments/integrated-problem-document-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/integrated-problem-document-canvas-walkthrough.html",
-      "last_pushed": "2026-11-17T02:37:37+00:00",
+      "last_pushed": "2026-11-17T06:01:54+00:00",
       "local_path": "course1/sprints/sprint-9/integrated-problem-document-canvas-walkthrough.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "db87c2906e672a0e9a752930e381c2767f12f8ff"
+      "source_commit": "6c9017dbe8664c3cfa5a16f426e8a3eb29e90b7d"
     },
     "course1-sprints-sprint-9-introduction-close-the-learning-gap-v3": {
       "artifact_id": "course1-sprints-sprint-9-introduction-close-the-learning-gap-v3",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-11-17T03:34:55+00:00"
+  "last_sync": "2026-11-17T06:01:54+00:00"
 }
