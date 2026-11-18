@@ -315,7 +315,7 @@ Pick two or three things that already exist or have been tried, and that touch y
 
 - **What it is:** a tool, a process, a person handling it, or an earlier attempt.
 - **Where you learned about it:** your What solutions already exist table, a stakeholder conversation, a Dojo Lab, or your Learning Plan.
-- **Which of your 4a requirements it meets.** Name them by number.
+- **Which of your 4a requirements it meets.**
 - **Which of your 4a requirements it misses,** and how.
 
 Check every one of your 4a requirements against each row. Each requirement should show up as met or missed.
