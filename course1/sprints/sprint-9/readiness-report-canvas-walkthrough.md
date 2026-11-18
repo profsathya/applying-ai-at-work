@@ -24,9 +24,9 @@ guided_assignment:
   purpose: Say whether your problem is ready to carry into CIS 502, how you have grown, and the direction you want to take it.
   standing_instruction: 50 points. Submit this walkthrough as one Word document.
   final_check:
-  - 'Part 0, My verdict, before I look, makes one of the three calls before you reread your work, with two sentences on why, left as you first wrote it.'
+  - 'Part 0, My verdict, before I look, makes one of the three calls before you reread your work, with two sentences on why (naming the condition, if you chose ready with conditions), left as you first wrote it.'
   - 'Part 1, Where I stand, names one or two things you can now do well, each tied to a specific moment in your work, and one or two places you still need support, with what makes them hard.'
-  - 'Part 2, How I''ve grown in how I work, names one or two real shifts, each with how you worked before, how you work now, and what caused it, or says little changed and why.'
+  - 'Part 2, How I''ve grown in how I work, names one or two real shifts, each with how you worked before, how you work now, and what caused it, or says little changed and why, and answers what you tackled with AI that you could not have alone and how the work is better because you were involved.'
   - 'Part 3, How my thinking has changed, compares how you saw problems, AI, or your own role at the start with how you see them now, each tied to a moment in your work, or says what held and why.'
   - 'Part 4, What I still need to learn, starts from the unknowns in your Integrated Problem Document, names your top one or two gaps and why your problem depends on them, says whether your plan still holds, and what would make it hard.'
   - 'Part 5, My direction, names the direction you are most curious to take on, why, pointing to your own work, and what you hope it shows you, and gives your verdict after looking, with whether it changed from Part 0 and why.'
@@ -36,6 +36,7 @@ guided_assignment:
     prompt: 'Part 0: My verdict, before I look'
     criteria:
     - Pick one of the three calls before you reread your work, and write two sentences on why.
+    - If you pick ready with conditions, name the condition.
     - Leave it as written, even if your call changes later.
     instruction_section: 'Part 0: My verdict, before I look'
   - id: where-i-stand
@@ -92,7 +93,7 @@ Your Integrated Problem Document is about your problem. This report is about you
 Before you reread any of your work, make a gut call. Is your problem ready to carry into CIS 502? Pick one:
 
 - Ready to carry forward
-- Ready with conditions
+- Ready with conditions, naming the condition
 - Not ready yet, with a clear reason and next step
 
 Write two sentences on why. Don't go back and change this later. At the end of the report you'll make the call again and see whether your evidence moved it.
@@ -106,7 +107,7 @@ Take an honest look at where you are now, at the end of CIS 501. In two or three
 - **Name one or two things you can now do well** when working on a problem, such as testing an assumption, talking to a stakeholder, or directing AI. Point to a specific moment in your work that shows it.
 - **Name one or two places where you still need support.** Say what makes them hard for you.
 
-Stick to the present. How you got here comes in Part 2.
+Point to one moment as proof of each. How you got here, before and after, comes in Part 2.
 
 ## Part 2: How I've grown in how I work
 
@@ -118,7 +119,7 @@ In two or three paragraphs, name one or two real shifts in how you work. For eac
 - **How you work now.** Point to something recent.
 - **What caused the shift:** a conversation, an AI exchange, a moment you got stuck.
 
-As you write, think about two questions:
+As you write, answer these two questions, in a sentence or two each:
 
 - Did you tackle something you couldn't have on your own, with the help of AI?
 - How is what you did better because you were involved?
@@ -173,11 +174,11 @@ Here are some directions you could take. Pick the one that fits where your work 
 - **Stakeholder Validation Report:** "The next question you would ask" and "What still needs validation."
 - **Name the Gap and Learning Plan:** the gaps you marked as blocking, and your learning order.
 
-In a paragraph or two:
+In two or three paragraphs:
 
 - **The direction you're most curious to take on.** Pick one from the list above. No steps, dates, or tools yet.
 - **Why this direction?** Point to your own work: a gap from your Learning Plan, what your Integrated Problem Document showed about what already exists, something it marks as inferred, or a next question from your Stakeholder Map or Stakeholder Validation Report.
 - **What you hope it shows you.** How would it get you closer to solving your problem in CIS 502?
-- **Your verdict, after looking.** Make the call from Part 0 again: ready to carry forward, ready with conditions, or not ready yet. Did it change? Why or why not?
+- **End with your verdict, after looking.** Make the call from Part 0 again: ready to carry forward, ready with conditions, or not ready yet. Did it change? Why or why not?
 
 Download your answers as a Word file and upload it here.
