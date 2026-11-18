@@ -186,7 +186,18 @@ Put four sprints of work together into one short document that someone who could
 
 **What to bring:** your Problem Frame ("Last updated: Sprint 4"), your Sprint 2 tables (Dig into your assumptions and What solutions already exist), your Stakeholder Map and Stakeholder Validation Report, Name the Gap, your Learning Plan, and your Dojo Lab transcripts from Sprints 1-4.
 
-**Length:** one to two pages, not counting your pasted Problem Frame.
+**Missing something? Use what you have.** If a piece from an earlier sprint is missing or thin, don't stop:
+
+- **No updated Sprint 4 frame:** paste your most recent Problem Frame and bring it up to date now.
+- **No Stakeholder Map or Validation Report:** use whatever conversations you did have, and mark anything you didn't hear from a person as inferred.
+- **No What solutions already exist table:** name the tools or workarounds you know about and say how you know them.
+- **Missing Dojo transcripts:** describe the exchange as you remember it and say it's from memory.
+
+Naming a gap is fine. Writing as if it isn't there is not.
+
+**Length:** about one to two pages, not counting your pasted Problem Frame. Going a little over is fine. Leaving part of a step unanswered is not.
+
+**Each section has one job.** 1a tells the problem in brief. 1b is your frame, pasted; it will overlap with 1a, and that's expected. Section 2 is about how you know, so don't restate the problem. If your problem rests on something that already exists, mention it briefly in Section 2 and save the comparison for 4c. Section 3 is what testing did to the problem; how you grew belongs in your Readiness Report.
 
 ## Section 1a: The problem
 
@@ -200,7 +211,7 @@ Keep it to the problem. Don't suggest a solution, and leave out course terms lik
 
 A quick test: could someone outside the course read it once and explain your problem back to you?
 
-*Sample:* On our account team, when a client account changes hands, the handover happens in a private conversation between the outgoing and incoming manager. Nothing reaches the rest of the team. As a result, other managers may not know who owns an account, and clients may end up repeating their history to someone who should already know it. The current approach works for the two people in the conversation but breaks down the moment anyone else needs to know.
+*Sample:* On our account team, when a client account changes hands, the handover happens in a private conversation between the outgoing and incoming manager, and nothing reaches the rest of the team. Other managers lose time tracking down who owns an account, and clients have to repeat their history to someone who should already know it. The current approach works for the two people in the conversation but breaks down the moment anyone else needs to know.
 
 ## Section 1b: Your current Problem Frame
 
@@ -217,9 +228,13 @@ In two or three short paragraphs:
 - **Say how sure you are.** Confirmed means you checked it against something independent, and it held. Inferred means you believe it but haven't checked.
 - **End with what you don't know yet,** and why it matters to the problem.
 
+**How to tell confirmed from inferred.** It's *confirmed* if you checked it against something besides your own belief and it held: you saw it happen, read it in a document or data, or heard it from the person it's about (for example, Dana telling you what she needs). It's still *inferred* if it's only your read, or one person's explanation of why *other* people do something. For that, you need a second source, like watching it happen or hearing it from someone else.
+
 **Where to look:** your Problem Frame (parts 6 and 7), your What solutions already exist table, your Stakeholder Validation Report (Sections B and D), and Name the Gap (A1 and A2).
 
-*Sample:* I know how handovers happen today. The outgoing manager tells the incoming manager directly. I've watched it happen twice, and Dana described it the same way. I believe clients end up repeating their history, but that's still inferred, since I haven't heard it from a client. What I don't know yet is whether the other managers find out late too, and why the shared handover sheet stopped being used. Until I know those, I can't say how widespread this problem is.
+*Sample:* My problem rests on two things. The first is how handovers happen today: the outgoing manager tells the incoming manager directly, and no one else hears it. I've watched it happen twice, and Dana, the account lead, described it the same way, so I count this as confirmed. The second is what it costs: clients end up repeating their history. I believe that, but it's still inferred, since I haven't heard it from a client.
+
+What I don't know yet is whether the other managers find out late too, and why the shared handover sheet stopped being used. Until I know those, I can't say how widespread this problem is.
 
 ## Section 3: How the problem changed, or why it held
 
@@ -237,8 +252,8 @@ Both outcomes are full answers. A problem that held up after real testing is jus
 
 *Sample:*
 
-- **Changed:** I thought the CRM's owner field would solve this. In the Dojo, AI pushed on that. When I looked, the field already exists. The real issue is that nobody makes people fill it in.
-- **Changed:** My frame said nobody had tried to fix handovers before. Then I learned a shared handover sheet once existed and stopped being used, so the problem includes why that attempt faded.
+- **Changed:** I believed the problem was that our CRM had no way to record who owns an account. In the Dojo, AI asked whether I'd checked. When I looked, the owner field already exists, so the problem changed from a missing field to the fact that nobody is expected to fill it in.
+- **Changed:** My frame said nobody had tried to fix handovers before. Then Dana mentioned a shared handover sheet the team used to keep, which stopped being used. The problem now includes why that attempt faded.
 - **Held:** I still believe handovers happen only in a private conversation. I've watched it twice, and Dana described it the same way, so I kept it.
 
 ## Section 4: What a solution must do
@@ -251,7 +266,7 @@ Your reader will want to know what a good solution to your problem would have to
 
 - **The requirement,** in plain words.
 - **Where it comes from:** a part of your Problem Frame, or a person on your Stakeholder Map.
-- **How sure you are:** confirmed or inferred.
+- **How sure you are:** confirmed or inferred. Use the same test as Section 2.
 
 Check that each requirement doesn't already name a tool or a fix. If it does, it is a solution, not a requirement. "We need a shared tracker" is already a solution. "Everyone knows within a day" leaves it open.
 
@@ -261,7 +276,7 @@ Check that each requirement doesn't already name a tool or a fix. If it does, it
 
 Name one place where two requirements, or two people, pull in different directions, and say what that means for any solution. If you didn't find one, say so and where one might show up. In the Dojo Lab that follows, the "Who might push back?" question will test your conflict. You decide whether to change it.
 
-*Sample:* These two pull against each other. Dana thinks the handover process works fine, while the managers say clients keep repeating their history. Any solution has to close the gap for the managers without feeling like extra work to Dana.
+*Sample:* Dana and the other managers pull in different directions. Dana, who runs handovers, thinks the process works fine. The managers who weren't in the conversation are the ones left not knowing who owns an account. Any solution has to close the gap for those managers without feeling like extra work to Dana.
 
 ## Section 4c: What already exists or has been tried, against my requirements
 
@@ -280,6 +295,6 @@ Don't pick a winner or suggest a fix. You're showing where the gap is. In the Do
 
 **Where to look:** your requirements in 4a, your What solutions already exist table (Sprint 2), your Stakeholder Map and Stakeholder Validation Report (Sprint 3), your Learning Plan (Sprint 4), and your Dojo Lab transcripts.
 
-*Sample:* The CRM's owner field meets my first requirement, that everyone knows within a day, but only on paper. Nobody has to fill it in, so in practice it misses. The old shared handover sheet met that requirement too, but it added a step for Dana, so it misses my second requirement. That may be why it faded.
+*Sample:* The CRM's owner field, which I found when I checked the CRM after my Dojo Lab, misses my first requirement in practice: nobody has to fill it in, so the team still doesn't know within a day. It meets my second requirement, since it asks nothing of Dana, which is also why it goes unused. The old shared handover sheet, which Dana told me about, met my first requirement while people used it. It missed the second because it added a step for Dana, which may be why it faded.
 
 Download your answers as a Word file and upload it here. After the Dojo Lab, you will update this same file and upload it again as a new attempt.
