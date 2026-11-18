@@ -24,14 +24,11 @@ guided_assignment:
   purpose: Put four sprints of work together into one short document that someone who could help along the way can read and follow.
   standing_instruction: 50 points. Submit this walkthrough as one Word document.
   final_check:
-  - 'Section 1a, The problem, says in three to five plain sentences what is happening, who it affects and what it costs them, and where things break down today, with no solution and no course terms.'
-  - 'Section 1b includes your current Problem Frame, Parts 1-7, tightened where needed but not rewritten.'
-  - 'Section 2, What I know, and how sure I am, names the two or three things your problem rests on most, says in plain words what supports each one, marks each confirmed or inferred, and ends with what you don''t know yet and why it matters.'
-  - 'Section 3, How the problem changed, or why it held, describes two or three moments where your problem was tested, each with what you believed before, what tested it, and whether it changed or held.'
-  - 'Section 4a, What a solution must do, lists two to four requirements, each with where it comes from and whether it is confirmed or inferred, and none of them names a tool or a fix.'
-  - 'Section 4b, One conflict, names one conflict and what it means for any solution, or says you did not find one and where one might show up.'
-  - 'Section 4c, What already exists or has been tried, names two or three things, says where you learned about each, and which of your 4a requirements each one meets and misses, without picking a winner or a fix.'
-  - 'Someone outside the course could read your document once and explain your problem back to you.'
+  - 'Section 1a, The problem, says in plain words what is happening, who it affects and what it costs them, and where things break down today, with no solution and no course terms. (10 points)'
+  - 'Section 2, What I know, and how sure I am, names the things your problem rests on most, says what supports each one, marks each confirmed or inferred, and ends with what you don''t know yet and why it matters. (10 points)'
+  - 'Section 3, How the problem changed, or why it held, describes the moments your problem was tested, each with what you believed before, what tested it, and whether it changed or held. If AI changed your mind, it says whether you checked it. (8 points)'
+  - 'In Section 4a, What a solution must do, each requirement says where it comes from and whether it is confirmed or inferred, and names no tool or fix. Section 4b, One conflict, names one conflict and what it means for any solution, or says where one might show up. (12 points)'
+  - 'In Section 4c, What already exists or has been tried, each row says where you learned about it, and every one of your 4a requirements shows up as met or missed, without picking a winner or a fix. (10 points)'
   tasks:
   - id: the-problem
     kind: response
