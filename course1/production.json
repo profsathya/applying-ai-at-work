@@ -1016,17 +1016,17 @@
       "canvas_page_url": null,
       "canvas_payload_hash": "c3b8b5828298364d54dae8a5f2216141d0a967719b08bc17afa41599add738c6",
       "canvas_type": "assignment",
-      "content_hash": "876564bb7808f5791f865c242176dc12086d91fc78abb8dce7e4a076d86b32d0",
+      "content_hash": "5b121c9a3f1567c8861ef39a8ff4627951c5d720abfd9937751cecc6b324bb7f",
       "delivery_mode": "guided_assignment",
-      "hosted_hash": "610b88d6f459a9c8d15181eef84e9fb85d73f918079c515afaa282b639cb6028",
-      "hosted_last_rendered": "2026-11-17T06:28:00+00:00",
+      "hosted_hash": "9d616f22bdb74aed3c96169f951da81caad4fe27eec1ab8097c2a2aac98608e5",
+      "hosted_last_rendered": "2026-11-18T04:32:48+00:00",
       "hosted_path": "course1/assignments/integrated-problem-document-canvas-walkthrough.html",
       "hosted_url": "https://profsathya.github.io/Common-Curriculum/deanza/course1/assignments/integrated-problem-document-canvas-walkthrough.html",
-      "last_pushed": "2026-11-17T06:28:00+00:00",
+      "last_pushed": "2026-11-18T04:32:48+00:00",
       "local_path": "course1/sprints/sprint-9/integrated-problem-document-canvas-walkthrough.md",
       "position": 6,
       "rubric_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
-      "source_commit": "a29f079cd95ca4cea86a676d6f51418b0a215b12"
+      "source_commit": "3e1bfbc021b3402fedace5736baadb82105f7f47"
     },
     "course1-sprints-sprint-9-introduction-close-the-learning-gap-v3": {
       "artifact_id": "course1-sprints-sprint-9-introduction-close-the-learning-gap-v3",
@@ -1469,5 +1469,5 @@
     "name": "production",
     "term": "Fall 2026"
   },
-  "last_sync": "2026-11-17T06:28:02+00:00"
+  "last_sync": "2026-11-18T04:32:48+00:00"
 }
