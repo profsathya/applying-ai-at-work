@@ -171,11 +171,54 @@ guided_assignment:
     - If you didn't find one, say so and where one might show up.
     instruction_section: 'Section 4b: One conflict'
   - id: what-already-exists
-    kind: response
+    kind: table
     prompt: 'Section 4c: What already exists or has been tried, against my requirements'
+    columns:
+    - id: what
+      label: What it is
+    - id: source
+      label: Where I learned about it
+    - id: meets
+      label: Which 4a requirements it meets
+    - id: misses
+      label: Which 4a requirements it misses, and how
+    rows:
+    - id: row-1
+      label: Item 1
+      cells:
+      - text:  
+        response: true
+      - text:  
+        response: true
+      - text:  
+        response: true
+      - text:  
+        response: true
+    - id: row-2
+      label: Item 2
+      cells:
+      - text:  
+        response: true
+      - text:  
+        response: true
+      - text:  
+        response: true
+      - text:  
+        response: true
+    - id: row-3
+      label: Item 3 (optional)
+      cells:
+      - text:  
+        response: true
+      - text:  
+        response: true
+      - text:  
+        response: true
+      - text:  
+        response: true
     criteria:
-    - Pick two or three things that already exist or have been tried, and say what each is and where you learned about it.
-    - For each one, say which of your 4a requirements it meets and which it misses, and how.
+    - Fill two or three rows, one for each thing that already exists or has been tried.
+    - In each row, say where you learned about it, and which of your 4a requirements it meets and misses, and how.
     - Don't pick a winner or suggest a fix.
     instruction_section: 'Section 4c: What already exists or has been tried, against my requirements'
 ---
@@ -284,17 +327,24 @@ Your reader will ask, "Doesn't something already do this, or try to?" This secti
 
 You'll use the two to four requirements you just wrote in 4a. Each one says what any solution must do, or must not break.
 
-Pick two or three things that already exist or have been tried, and that touch your problem. For each one, write a sentence or two:
+Pick two or three things that already exist or have been tried, and that touch your problem. Give each one its own row in the table:
 
 - **What it is:** a tool, a process, a person handling it, or an earlier attempt.
 - **Where you learned about it:** your What solutions already exist table, a stakeholder conversation, a Dojo Lab, or your Learning Plan.
-- **Which of your 4a requirements it meets.**
+- **Which of your 4a requirements it meets.** Name them by number.
 - **Which of your 4a requirements it misses,** and how.
+
+Check every one of your 4a requirements against each row. Each requirement should show up as met or missed.
 
 Don't pick a winner or suggest a fix. You're showing where the gap is. In the Dojo Lab, "Doesn't something already do this, or try to?" will test this section.
 
 **Where to look:** your requirements in 4a, your What solutions already exist table (Sprint 2), your Stakeholder Map and Stakeholder Validation Report (Sprint 3), your Learning Plan (Sprint 4), and your Dojo Lab transcripts.
 
-*Sample:* The CRM's owner field, which I found when I checked the CRM after my Dojo Lab, misses my first requirement in practice: nobody has to fill it in, so the team still doesn't know within a day. It meets my second requirement, since it asks nothing of Dana, which is also why it goes unused. The old shared handover sheet, which Dana told me about, met my first requirement while people used it. It missed the second because it added a step for Dana, which may be why it faded.
+*Sample:*
+
+| What it is | Where I learned about it | Meets | Misses, and how |
+| --- | --- | --- | --- |
+| The CRM's owner field | I checked the CRM after my Dojo Lab | Requirement 2: it asks nothing of Dana | Requirement 1: nobody has to fill it in, so the team still doesn't know within a day |
+| The old shared handover sheet | Dana told me about it | Requirement 1, while people used it | Requirement 2: it added a step for Dana, which may be why it faded |
 
 Download your answers as a Word file and upload it here. After the Dojo Lab, you will update this same file and upload it again as a new attempt.
