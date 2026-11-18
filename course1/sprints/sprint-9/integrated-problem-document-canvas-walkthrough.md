@@ -254,8 +254,6 @@ Keep it to the problem. Don't suggest a solution, and leave out course terms lik
 
 A quick test: could someone outside the course read it once and explain your problem back to you?
 
-*Sample:* On our account team, when a client account changes hands, the handover happens in a private conversation between the outgoing and incoming manager, and nothing reaches the rest of the team. Other managers lose time tracking down who owns an account, and clients have to repeat their history to someone who should already know it. The current approach works for the two people in the conversation but breaks down the moment anyone else needs to know.
-
 ## Section 1b: Your current Problem Frame
 
 Under your paragraph, paste your current Problem Frame (Parts 1-7, from your Sprint 4 Learning Plan's updated frame) and tighten the wording where needed. Don't rewrite it.
@@ -271,13 +269,9 @@ In two or three short paragraphs:
 - **Say how sure you are.** Confirmed means you checked it against something independent, and it held. Inferred means you believe it but haven't checked.
 - **End with what you don't know yet,** and why it matters to the problem.
 
-**How to tell confirmed from inferred.** It's *confirmed* if you checked it against something besides your own belief and it held: you saw it happen, read it in a document or data, or heard it from the person it's about (for example, Dana telling you what she needs). It's still *inferred* if it's only your read, or one person's explanation of why *other* people do something. For that, you need a second source, like watching it happen or hearing it from someone else.
+**How to tell confirmed from inferred.** It's *confirmed* if you checked it against something besides your own belief and it held: you saw it happen, read it in a document or data, or heard it from the person it's about (for example, a team lead telling you what she needs). It's still *inferred* if it's only your read, or one person's explanation of why *other* people do something. For that, you need a second source, like watching it happen or hearing it from someone else.
 
 **Where to look:** your Problem Frame (parts 6 and 7), your What solutions already exist table, your Stakeholder Validation Report (Sections B and D), and Name the Gap (A1 and A2).
-
-*Sample:* My problem rests on two things. The first is how handovers happen today: the outgoing manager tells the incoming manager directly, and no one else hears it. I've watched it happen twice, and Dana, the account lead, described it the same way, so I count this as confirmed. The second is what it costs: clients end up repeating their history. I believe that, but it's still inferred, since I haven't heard it from a client.
-
-What I don't know yet is whether the other managers find out late too, and why the shared handover sheet stopped being used. Until I know those, I can't say how widespread this problem is.
 
 ## Section 3: How the problem changed, or why it held
 
@@ -293,12 +287,6 @@ Both outcomes are full answers. A problem that held up after real testing is jus
 
 **Where to look:** your Problem Frame updates in Sprint 2 (taking stock), Sprint 3 (mid-course revision), and Sprint 4 (Learning Plan), plus your Dojo Lab transcripts from Sprints 1-4.
 
-*Sample:*
-
-- **Changed:** I believed the problem was that our CRM had no way to record who owns an account. In the Dojo, AI asked whether I'd checked. When I looked, the owner field already exists, so the problem changed from a missing field to the fact that nobody is expected to fill it in.
-- **Changed:** My frame said nobody had tried to fix handovers before. Then Dana mentioned a shared handover sheet the team used to keep, which stopped being used. The problem now includes why that attempt faded.
-- **Held:** I still believe handovers happen only in a private conversation. I've watched it twice, and Dana described it the same way, so I kept it.
-
 ## Section 4: What a solution must do
 
 Your reader will want to know what a good solution to your problem would have to achieve. This section says that, without picking the solution. Choosing and building a solution comes in CIS 502.
@@ -313,13 +301,9 @@ Your reader will want to know what a good solution to your problem would have to
 
 Check that each requirement doesn't already name a tool or a fix. If it does, it is a solution, not a requirement. "We need a shared tracker" is already a solution. "Everyone knows within a day" leaves it open.
 
-*Sample:* Any solution to late handovers must let everyone on the team know within a day when an account changes hands. This comes from my Problem Frame, but it's inferred, since nobody has said what "fast enough" is. A solution also can't add another step for Dana, the account lead. That comes from her Need on my Stakeholder Map, and it's inferred too, because it's my read of her, not something she said.
-
 ## Section 4b: One conflict
 
 Name one place where two requirements, or two people, pull in different directions, and say what that means for any solution. If you didn't find one, say so and where one might show up. In the Dojo Lab that follows, the "Who might push back?" question will test your conflict. You decide whether to change it.
-
-*Sample:* Dana and the other managers pull in different directions. Dana, who runs handovers, thinks the process works fine. The managers who weren't in the conversation are the ones left not knowing who owns an account. Any solution has to close the gap for those managers without feeling like extra work to Dana.
 
 ## Section 4c: What already exists or has been tried, against my requirements
 
@@ -339,12 +323,5 @@ Check every one of your 4a requirements against each row. Each requirement shoul
 Don't pick a winner or suggest a fix. You're showing where the gap is. In the Dojo Lab, "Doesn't something already do this, or try to?" will test this section.
 
 **Where to look:** your requirements in 4a, your What solutions already exist table (Sprint 2), your Stakeholder Map and Stakeholder Validation Report (Sprint 3), your Learning Plan (Sprint 4), and your Dojo Lab transcripts.
-
-*Sample:*
-
-| What it is | Where I learned about it | Meets | Misses, and how |
-| --- | --- | --- | --- |
-| The CRM's owner field | I checked the CRM after my Dojo Lab | Requirement 2: it asks nothing of Dana | Requirement 1: nobody has to fill it in, so the team still doesn't know within a day |
-| The old shared handover sheet | Dana told me about it | Requirement 1, while people used it | Requirement 2: it added a step for Dana, which may be why it faded |
 
 Download your answers as a Word file and upload it here. After the Dojo Lab, you will update this same file and upload it again as a new attempt.
