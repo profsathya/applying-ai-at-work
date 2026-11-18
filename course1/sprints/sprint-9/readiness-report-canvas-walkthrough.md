@@ -24,12 +24,11 @@ guided_assignment:
   purpose: Say whether your problem is ready to carry into CIS 502, how you have grown, and the direction you want to take it.
   standing_instruction: 50 points. Submit this walkthrough as one Word document.
   final_check:
-  - 'Part 0, My verdict, before I look, makes one of the three calls before you reread your work, with two sentences on why, left as you first wrote it.'
-  - 'Part 1, Where I stand, names one or two things you can now do well, each tied to a specific moment in your work, and one or two places you still need support, with what makes them hard.'
-  - 'Part 2, How I''ve grown in how I work, names one or two real shifts, each with how you worked before, how you work now, and what caused it, or says little changed and why.'
-  - 'Part 3, How my thinking has changed, compares how you saw problems, AI, or your own role at the start with how you see them now, each tied to a moment in your work, or says what held and why.'
-  - 'Part 4, What I still need to learn, starts from the unknowns in your Integrated Problem Document, names your top one or two gaps and why your problem depends on them, says whether your plan still holds, and what would make it hard.'
-  - 'Part 5, My direction, names the direction you are most curious to take on, why, pointing to your own work, and what you hope it shows you, and gives your verdict after looking, with whether it changed from Part 0 and why.'
+  - 'Part 0, My verdict, before I look, makes one of the three calls and says why, and Part 5, My direction, makes the call again and says whether it changed, and why. (10 points)'
+  - 'Part 1, Where I stand, names what you can now do well, each tied to a specific moment in your work, and where you still need support, with what makes it hard. (8 points)'
+  - 'Part 2, How I''ve grown in how I work, and Part 3, How my thinking has changed, each compare then and now, tied to a moment in your work, or say what held and why. Part 2 also says what caused each shift, what you tackled with AI that you couldn''t have alone, and how the work is better because you were involved. (12 points)'
+  - 'Part 4, What I still need to learn, starts from the unknowns in your Integrated Problem Document, names your top gaps and why your problem depends on them, says whether your plan still holds, and what would make it hard. (10 points)'
+  - 'Part 5, My direction, names the direction you are most curious to take on, why, pointing to your own work, and what you hope it shows you. (10 points)'
   tasks:
   - id: verdict-before
     kind: response
@@ -118,7 +117,7 @@ In two or three paragraphs, name one or two real shifts in how you work. For eac
 - **How you work now.** Point to something recent.
 - **What caused the shift:** a conversation, an AI exchange, a moment you got stuck.
 
-As you write, think about two questions:
+Answer these two questions:
 
 - Did you tackle something you couldn't have on your own, with the help of AI?
 - How is what you did better because you were involved?
