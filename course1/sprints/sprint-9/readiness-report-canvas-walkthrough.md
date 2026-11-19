@@ -19,7 +19,7 @@ completion_requires_published: true
 guided_assignment:
   version: '1.0'
   presentation: walkthrough
-  feedback_omission_reason: Shell item. AI feedback is added when the content is written and its checkpoint is registered (list item 46).
+  feedback_omission_reason: 'No AI feedback on this page by design: the report is the learner''s own account of their work, and the Self-check lines carry the feedback.'
   export_filename: readiness-report.docx
   purpose: Say whether your problem is ready to carry into CIS 502, how you have grown, and the direction you want to take it.
   standing_instruction: 50 points. Submit this walkthrough as one Word document.

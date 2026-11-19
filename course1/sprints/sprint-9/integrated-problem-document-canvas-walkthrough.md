@@ -19,7 +19,7 @@ completion_requires_published: true
 guided_assignment:
   version: '1.0'
   presentation: walkthrough
-  feedback_omission_reason: Shell item. AI feedback is added when the content is written and its checkpoint is registered (list item 46).
+  feedback_omission_reason: 'No AI feedback on this page by design: the Dojo Lab tests the document, and the Self-check lines carry the feedback.'
   export_filename: integrated-problem-document.docx
   purpose: Put four sprints of work together into one short document that someone who could help along the way can read and follow.
   standing_instruction: 50 points. Submit this walkthrough as one Word document.

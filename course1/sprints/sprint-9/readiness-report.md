@@ -108,7 +108,7 @@ In a short paragraph or two, name one or two real shifts in how you work. For ea
 - **How you work now.** Point to something recent.
 - **What caused the shift:** a conversation, an AI exchange, a moment you got stuck.
 
-As you write, think about two questions:
+Answer these two questions:
 
 - Did you tackle something you couldn't have on your own, with the help of AI?
 - How is what you did better because you were involved?
